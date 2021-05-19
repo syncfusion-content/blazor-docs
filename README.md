@@ -1,1 +1,1 @@
-Update your product
+This repository contains the user guide documents for blazor platform.
