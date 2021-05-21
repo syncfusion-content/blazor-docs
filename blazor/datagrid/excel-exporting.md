@@ -65,7 +65,7 @@ The excel export allows exporting DataGrid data to Excel document. You need to u
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## To customize excel export
 
@@ -128,7 +128,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Export hidden columns
 
@@ -187,7 +187,7 @@ The excel export provides an option to export hidden columns of datagrid by defi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 <!-- Show or hide columns on exported excel
 
@@ -256,7 +256,7 @@ This is demonstrated in the below sample code where initially the **CustomerID**
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ### Theme
 
@@ -327,7 +327,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > By default, material theme is applied to exported excel document.
 
@@ -493,7 +493,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ### File name for exported document
 
@@ -552,7 +552,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Exporting grouped records
 
@@ -611,7 +611,7 @@ In datagrid, we have provided the outline option for the exported document when 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## How to export the Grid with specific columns
 
@@ -677,7 +677,7 @@ You can export the Excel grid with specific columns instead of all columns which
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Limitations
 
@@ -773,7 +773,7 @@ This is demonstrated in the below sample code block,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > By default, [`BlankRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.MultipleExport.html#Syncfusion_Blazor_Grids_MultipleExport_BlankRows) value is 5. -->
 
@@ -862,7 +862,7 @@ This is demonstrated in the below sample code block,
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ## Custom data source
 
@@ -924,7 +924,7 @@ The following sample code demonstrates dynamically modifying the data source bef
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Customizing columns
 
@@ -988,7 +988,7 @@ The following sample code demonstrates dynamically adding `ShipCountry` column i
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -1093,4 +1093,4 @@ The following sample code demonstrates modifying the export options for hierarch
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->

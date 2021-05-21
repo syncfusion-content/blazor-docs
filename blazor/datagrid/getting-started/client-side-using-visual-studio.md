@@ -64,7 +64,7 @@ The official prerequisites to create and run an ASP.NET Core Razor Components on
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Adding Scripts and CSS reference
 
@@ -82,7 +82,7 @@ You can add the client-side resources through CDN in the `<head>` element of the
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Add DataGrid Component
 
@@ -98,7 +98,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Row Data
 
@@ -122,7 +122,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Columns
 
@@ -160,7 +160,7 @@ Let’s check the properties used here:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Paging
 
@@ -191,7 +191,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Sorting
 
@@ -222,7 +222,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Filtering
 
@@ -253,7 +253,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Grouping
 
@@ -284,7 +284,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Output be like the below.
 

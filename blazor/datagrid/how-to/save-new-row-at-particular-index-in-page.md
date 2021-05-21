@@ -66,4 +66,4 @@ The following sample code demonstrates changing the save index of the new row th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

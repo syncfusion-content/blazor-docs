@@ -59,4 +59,4 @@ In the below demo, the **CustomerID** column is rendered with the template.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

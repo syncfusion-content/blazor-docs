@@ -20,6 +20,7 @@ documentation: ug
 * Set `DisableScriptManager` as true to the `AddSyncfusionBlazor` service in the `~/Startup.cs` file for Blazor server app or `~/Program.cs` file for Blazor WebAssembly app.
 
     **Blazor Server App (~/Startup.cs)**
+
 {% tabs %}
 
 {% highlight C# %}
@@ -76,6 +77,7 @@ documentation: ug
 {% endhighlight %}
 
 {% endtabs %}
+
 * Now, publish the application with the production environment in the server.
 
 ## Creating custom themes for Syncfusion Blazor UI Components

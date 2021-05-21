@@ -73,7 +73,7 @@ public abstract class DataAdaptor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Data binding
 
@@ -167,7 +167,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
@@ -196,7 +196,7 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following sample code demonstrates injecting service into Custom Adaptor,
 
@@ -264,7 +264,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Custom adaptor as Component
 
@@ -284,7 +284,7 @@ Ensure to register your service in **Startup.cs** file.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following sample code demonstrates creating Custom Adaptor as a component,
 
@@ -330,7 +330,7 @@ The following sample code demonstrates creating Custom Adaptor as a component,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase<T>`. This provides a single service of type T. We can access this service by using the `Service` property.
 
@@ -391,7 +391,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase`. This provides the possibility to request multiple services.
 
@@ -452,7 +452,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CRUD operation
 
@@ -605,7 +605,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF displays the CRUD operations performed on the custom bounded data displayed in the DataGrid component,
 ![Editing custom bound data](./images/custom-binding-editing.gif)
@@ -735,4 +735,4 @@ The following sample code demonstrates implementing the aggregates for the custo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

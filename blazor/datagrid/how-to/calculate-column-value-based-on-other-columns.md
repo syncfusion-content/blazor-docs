@@ -67,7 +67,7 @@ This is demonstrated in the below sample code where the value for **FinalCost** 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the output of the above sample code,
 ![Column rendered based on other columns](../images/grid-columns-calculated.png)

@@ -102,7 +102,7 @@ In the below example, we have rendered the datagrid columns [`OrderDate`] as hid
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Output be like the below.
 ![`Final output`](../images/columndialog.PNG)

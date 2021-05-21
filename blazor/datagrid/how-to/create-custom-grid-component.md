@@ -30,7 +30,7 @@ CustomGrid.razor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 CustomGrid.razor.cs
 
@@ -70,7 +70,7 @@ namespace SF_Grid_Inheritance.Shared
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Index.razor
 
@@ -104,4 +104,4 @@ Index.razor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

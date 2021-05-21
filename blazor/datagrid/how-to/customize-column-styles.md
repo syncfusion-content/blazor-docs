@@ -30,7 +30,7 @@ Create a CSS class with custom style to override the default style for rowcell a
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 **Step 2**:
 
@@ -85,7 +85,7 @@ Add the custom CSS class to the specified column by using the [`CustomAttributes
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Output be like the below.
 

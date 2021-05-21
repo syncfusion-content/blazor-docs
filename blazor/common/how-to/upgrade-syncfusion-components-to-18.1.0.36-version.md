@@ -143,7 +143,6 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
     <script src="https://cdn.syncfusion.com/ej2/17.4.55/dist/ejs.interop.min.js"></script>
 </head>
 
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -160,7 +159,6 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
     ....
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 </head>
-
 
 {% endhighlight %}
 
@@ -208,7 +206,6 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
     ....
 </EjsChart>
 
-
 {% endhighlight %}
 
 {% endtabs %}
@@ -234,7 +231,6 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
     ....
     ....
 </SfChart>
-
 
 {% endhighlight %}
 

@@ -34,7 +34,7 @@ Initialize the template for your custom component. Using the following code add 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 **Step 2**:
 
@@ -121,7 +121,7 @@ You can select the datagrid row index based on the selected data in the DropDown
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Output be like the below.
 ![`Final output`](../images/dropdowntoolbar.PNG)

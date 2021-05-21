@@ -54,7 +54,7 @@ To enable sorting in the DataGrid, set the [`AllowSorting`](https://help.syncfus
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * DataGrid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
 > * You can apply and clear sorting by invoking **SortColumn** and **ClearSorting** methods.
@@ -111,7 +111,7 @@ To sort at initial rendering, set the **Field** and
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Multi-column sorting
 
@@ -162,7 +162,7 @@ To clear sorting for a particular column, press the "Shift + mouse left click".
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Sort order
 
@@ -219,7 +219,7 @@ During the sort action, the datagrid component triggers two events. The [`OnActi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Touch interaction
 

@@ -101,7 +101,7 @@ The following sample code demonstrates enabling context menu with its default it
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the DataGrid enabled with default context menu items,
 ![Grid with context menu](images/grid-context-menu.gif)
@@ -164,7 +164,7 @@ The following sample code demonstrates defining custom context menu item and its
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the DataGrid enabled with custom context menu item,
 ![Grid with custom context menu item](images/custom-context-menu.png)
@@ -227,7 +227,7 @@ The following sample code demonstrates defining built-in and custom context menu
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Sub context menu items in DataGrid
 
@@ -293,7 +293,7 @@ The following sample code demonstrates defining sub context menu item and its co
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Disable the Context menu for specific columns in DataGrid
 
@@ -361,7 +361,7 @@ The following sample code demonstrates the disabling the context for specific co
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Disable context menu items dynamically in DataGrid
 
@@ -426,6 +426,6 @@ The following sample code demonstrates how to enable or disable context menu ite
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

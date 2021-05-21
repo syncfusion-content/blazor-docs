@@ -105,4 +105,4 @@ To overcome this behavior we suggest you to render a container element enclosing
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

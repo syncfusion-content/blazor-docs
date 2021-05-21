@@ -64,7 +64,6 @@ documentation: ug
 
 {% highlight C# %}
 
-
     @using Syncfusion.Blazor;
     @using Syncfusion.Blazor.Grids;
 
@@ -107,9 +106,8 @@ documentation: ug
         }
     }
 
-
 {% endhighlight %}
 
 {% endtabs %}
 
-    ![Blazor Grid component is rendered from the right to left](images/rteGrid.png)
+![Blazor Grid component is rendered from the right to left](images/rteGrid.png)

@@ -75,7 +75,7 @@ public abstract class DataAdaptor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 For implementing the custom data binding alone in the DataGrid component provide the custom adaptor class and override the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
@@ -227,7 +227,7 @@ The following sample code demonstrates implementing custom adaptor of the [`SfDa
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 

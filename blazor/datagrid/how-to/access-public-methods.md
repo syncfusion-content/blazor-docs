@@ -67,6 +67,6 @@ This is demonstrated in the below sample code where the [`Print`](https://help.s
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Similarly all the public methods of the DataGrid can be invoked. The available public methods can be found in this [`link`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).

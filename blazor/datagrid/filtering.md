@@ -51,7 +51,7 @@ Filtering allows you to view particular records based on filter criteria. To ena
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows filtering using FilterBar
 ![Default Filter](./images/default-filtering.png)
@@ -111,7 +111,7 @@ To apply the filter at initial rendering, set the filter **Predicate** object in
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows Initial filtering using FilterBar
 ![Initial Filter](./images/initial-filtering.png)
@@ -197,7 +197,7 @@ N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows filtering using FilterBar
 ![Default Filter](./images/default-filtering.png)
@@ -283,7 +283,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows filtering using custom component
 ![Filterbar customcomponent](./images/filterbarcustom.PNG)
@@ -335,7 +335,7 @@ In the following sample, we have changed the default operator for CustomerID col
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Filter with change in default operator as contains
 ![Default operator](./images/defaultoperator.PNG)
@@ -386,7 +386,7 @@ You can filter the records with different operators.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Menu filter
 ![Menu Filter](./images/menu-filter.png)
@@ -449,7 +449,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows filter menu using custom component
 ![Filtermenu customcomponent](./images/Customfiltermenu.PNG)
@@ -461,7 +461,7 @@ The default filter operators for a GridColumn can be overridden by using the [`O
 
 {% endhighlight %}
 
-{% endtabs  %}charp
+{% endtabs %}charp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -523,7 +523,7 @@ The default filter operators for a GridColumn can be overridden by using the [`O
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Enable different filter for a column
 
@@ -573,7 +573,7 @@ In the following sample menu filter is enabled by default and checkbox filter is
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents CheckBox filter
 ![CheckBox Filter](./images/checkbox-filter.png)
@@ -628,7 +628,7 @@ CheckBox filter contains an option such as searching and Clear filter.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Checkbox filter
 ![CheckBox Type](./images/Checkboxtype.png)
@@ -678,7 +678,7 @@ You can enable Excel like filter by defining [`Type`](https://help.syncfusion.co
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Excel filter
 ![Excel Filter](./images/excel-filter.png)
@@ -693,7 +693,7 @@ This **`FilterItemTemplate`** helps to you customize the each CheckBox list elem
 
 {% endhighlight %}
 
-{% endtabs  %}charp
+{% endtabs %}charp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="375">
@@ -739,7 +739,7 @@ This **`FilterItemTemplate`** helps to you customize the each CheckBox list elem
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Filter Item template
 ![Item Template](./images/ItemTemplate.png)

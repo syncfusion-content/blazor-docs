@@ -34,17 +34,18 @@ The following steps help you to use the Syncfusion Blazor code snippet in your B
 {% endhighlight %}
 
 {% endtabs %}
-    Choose the Syncfusion component and click the **Enter or Tab** key, the Syncfusion Blazor component will be added in the razor file.
 
-    ![Code Snippet](../images/codesnippet.gif)
+Choose the Syncfusion component and click the **Enter or Tab** key, the Syncfusion Blazor component will be added in the razor file.
 
-    After adding the Syncfusion Blazor component in the razor file, use the tab key to fill the required values to render the component. You can find the comment section in the code snippet to find what are values need to fill.
+![Code Snippet](../images/codesnippet.gif)
 
-    ![Comment](../images/Comment.png)
+After adding the Syncfusion Blazor component in the razor file, use the tab key to fill the required values to render the component. You can find the comment section in the code snippet to find what are values need to fill.
 
-    Also, you can find the Syncfusion help link at the top of the added snippet to know more about the added Syncfusion Blazor component feature.
+![Comment](../images/Comment.png)
 
-    ![Help](../images/Help.png)
+Also, you can find the Syncfusion help link at the top of the added snippet to know more about the added Syncfusion Blazor component feature.
+
+![Help](../images/Help.png)
 
 ## Configure Blazor application with Syncfusion
 

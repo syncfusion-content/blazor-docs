@@ -87,7 +87,7 @@ For example, you can access the data of the column template using **context** as
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the column Template.
 ![Column template](./images/column-template.png)
@@ -232,7 +232,7 @@ This prevents us from directly specifying templates such as **RowTemplate** and 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the Row Template
 ![Row Template](./images/row-template.png)

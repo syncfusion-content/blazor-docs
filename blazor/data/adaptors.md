@@ -67,7 +67,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Url adaptor
 
@@ -103,7 +103,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > The above provided url is given for reference purpose. In that place you can provide your service url.
 
@@ -122,7 +122,7 @@ The sample response object should be as follows,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OData adaptor
 
@@ -158,7 +158,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > By default, `ODataAdaptor` is used by DataManager.
 
@@ -196,7 +196,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Web API adaptor
 
@@ -236,7 +236,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 `WebApiAdaptor` expects JSON response from the server and the response object should contain properties `Items` and `Count` whose values are collection of entities and total count of the entities respectively.
 
@@ -253,7 +253,7 @@ The sample response object should look like below.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## WebMethod adaptor
 
@@ -293,7 +293,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > The above provided url is given for reference purpose. In that place you can provide your service url.
 
@@ -312,7 +312,7 @@ The sample response object should look like below.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > The controller method’s data parameter name must be `value`.
 

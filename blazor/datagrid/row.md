@@ -154,7 +154,7 @@ The **RowTemplate** has an option to customize the look and behavior of the data
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -306,7 +306,7 @@ Here [`Custom DateTime`](https://docs.microsoft.com/en-us/dotnet/standard/base-t
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -444,7 +444,7 @@ The detail template provides additional information about a particular row by ex
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -536,7 +536,7 @@ In the below sample, a datagrid component is rendered as custom component using 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -664,7 +664,7 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * You can expand all the rows by using `ExpandAll` method.
 > * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [`dataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
@@ -858,7 +858,7 @@ Also DataGrid supports the spanning of rows and columns for same cells. **Lunch 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > When paging is enabled in datagrid, you can disable the rows and columns spanning for any particular page. To achieve this, we need to check **RequestType** as paging `<code class='language-text'> string</code>` in [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of datagrid. -->
 
@@ -943,7 +943,7 @@ The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -963,7 +963,7 @@ You can change the datagrid's alternative rows background color by overriding th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Please refer to the following example.
 
@@ -1017,7 +1017,7 @@ Please refer to the following example.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -1074,7 +1074,7 @@ In the below example, the `RowHeight` is set as '60'.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -1146,7 +1146,7 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 

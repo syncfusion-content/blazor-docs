@@ -67,7 +67,7 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents DataGrid data source modified dynamically on button click,
 ![`Update datasource dynamically`](../images/grid-dynamic-datasource.gif)

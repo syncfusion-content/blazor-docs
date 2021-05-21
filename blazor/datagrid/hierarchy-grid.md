@@ -76,7 +76,7 @@ The DataGrid allows display of table data in a hierarchical structure to visuali
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * DataGrid supports n level of child grids.
 > * Hierarchical binding is not supported when [`DetailTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) is enabled.
@@ -181,7 +181,7 @@ By default, datagrid renders in collapsed state. You can expand all child datagr
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Expand child datagrid initially
 
@@ -268,7 +268,7 @@ You can expand a particular child datagrid at initial rendering by invoking the 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Adding Record in ChildGrid
 
@@ -355,4 +355,4 @@ with parent record's `QueryString` field value.
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->

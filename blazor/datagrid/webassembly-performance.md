@@ -82,7 +82,7 @@ In the following example:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Notes
 
@@ -155,7 +155,7 @@ In the following example:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Notes
 

@@ -74,4 +74,4 @@ This is demonstrated in the below sample code we have render the tooltip for **F
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

@@ -83,7 +83,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 <!-- You can also apply style directly to the DataGrid using the `SetAttribute` method in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event. But, this will override the default styles of the grid.
 
@@ -145,7 +145,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 The following image represents customized datagrid columns,
 ![`Grid Customization`](../images/grid-customization.png)

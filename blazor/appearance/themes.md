@@ -26,6 +26,7 @@ The Syncfusion Blazor components library provides the following list of built-in
 * Add the below link reference inside the `<head>` element of the `~/Pages/_Host.cshtml` file for Blazor server app or `~/wwwroot/index.html` file for Blazor WebAssembly app.
 
     If you are using [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
+    
 {% tabs %}
 
 {% highlight HTML %}

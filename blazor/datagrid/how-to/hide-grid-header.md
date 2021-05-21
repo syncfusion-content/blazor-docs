@@ -23,6 +23,6 @@ You can hide the DataGrid header by applying the below styles to DataGrid compon
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > if you want to hide the header for particular DataGrid, then you can apply the above styles to that DataGrid using the ID (#Grid.e-grid .e-gridheader .e-columnheader) property value.

@@ -52,7 +52,7 @@ To enable grouping in the datagrid, set the [`AllowGrouping`](https://help.syncf
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF image represents a DataGrid Grouping.
 
@@ -110,7 +110,7 @@ To apply group at initial rendering, set the column field name in the [`Columns`
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents a DataGrid with initial grouping.
 
@@ -164,7 +164,7 @@ grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents hiding the Group drop area in DataGrid.
 
@@ -226,7 +226,7 @@ datagrid columns.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Grouping events
 
@@ -279,7 +279,7 @@ triggers before the group action starts and the [`OnActionComplete`](https://hel
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > The **args.RequestType** is based on the current action name. For example, when grouping, the **args.RequestType** value will be 'grouping'.
 
@@ -340,7 +340,7 @@ The following sample code demonstrates the above,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents a DataGrid with customized group caption,
 ![Custom group caption](./images/custom-group-caption.png)

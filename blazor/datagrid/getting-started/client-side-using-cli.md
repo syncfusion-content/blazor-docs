@@ -29,7 +29,7 @@ This article provides a step-by-step introduction to configure Essential JS 2 fo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 **Step 2:** Once project templates installed, run the following command line to create a new Blazor client-side application.
 
@@ -43,7 +43,7 @@ This article provides a step-by-step introduction to configure Essential JS 2 fo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Adding Syncfusion Packages
 
@@ -59,7 +59,7 @@ This article provides a step-by-step introduction to configure Essential JS 2 fo
 
 {% endhighlight %}
 
-{% endtabs  %}  
+{% endtabs %}  
 
 **Step 2:** The Syncfusion Blazor package will be included in the newly created project after the installation process is completed
 
@@ -75,7 +75,7 @@ This article provides a step-by-step introduction to configure Essential JS 2 fo
 
 {% endhighlight %}
 
-{% endtabs  %}  
+{% endtabs %}  
 
 ## Adding Scripts and CSS reference
 
@@ -93,7 +93,7 @@ Add the client-side resource through CDN or local npm package in the `<head>` el
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Add DataGrid Component
 
@@ -109,7 +109,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Row Data
 
@@ -133,7 +133,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Columns
 
@@ -171,7 +171,7 @@ Let’s check the properties used here:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Paging
 
@@ -202,7 +202,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Sorting
 
@@ -233,7 +233,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Filtering
 
@@ -264,7 +264,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Grouping
 
@@ -295,7 +295,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Output be like the below.
 

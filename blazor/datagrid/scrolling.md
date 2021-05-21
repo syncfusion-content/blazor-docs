@@ -64,7 +64,7 @@ To specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Responsive with parent container
 
@@ -113,7 +113,7 @@ Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Frozen rows and columns
 
@@ -176,7 +176,7 @@ is set as '3'. Hence, the left two columns and top three rows are frozen.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Freeze particular columns
 
@@ -240,7 +240,7 @@ the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Frozen rows and columns should not be set outside the datagrid view port.
 
