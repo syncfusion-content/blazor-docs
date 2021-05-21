@@ -31,7 +31,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 {% tabs %}
 
-{% highlight CMD %}
+{% highlight BASH %}
 
     npm install @syncfusion/ej2
 
