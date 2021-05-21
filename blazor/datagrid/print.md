@@ -57,7 +57,7 @@ The below sample code demonstrates DataGrid with print option added in the toolb
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents DataGrid with print toolbar item,
 ![Print Grid Content](./images/grid-print.png)
@@ -127,7 +127,7 @@ The below sample code demonstrates invoking print using an external button,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents DataGrid with external button for invoking print operation,
 ![Print using external button](./images/grid-print-external-button.png)
@@ -180,7 +180,7 @@ The below sample code demonstrates this,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 <!-- Print the hierarchy datagrid
 
@@ -267,7 +267,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents Hierarchial Grid with print toolbar item,
 ![Print Hierarchial Grid Content](./images/grid-hierarchial-print.png) -->
@@ -350,7 +350,7 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ## Limitations of printing large data
 

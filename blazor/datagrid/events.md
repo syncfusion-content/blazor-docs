@@ -67,7 +67,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnActionComplete
 
@@ -118,7 +118,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnActionFailure
 
@@ -159,7 +159,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## BeforeOpenColumnChooser
 
@@ -216,7 +216,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Created
 
@@ -267,7 +267,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnLoad
 
@@ -318,7 +318,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Destroyed
 
@@ -369,7 +369,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnDataBound
 
@@ -420,7 +420,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## DataBound
 
@@ -471,7 +471,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## RowDataBound
 
@@ -522,7 +522,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## DetailDataBound
 
@@ -641,7 +641,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## HeaderCellInfo
 
@@ -692,7 +692,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## QueryCellInfo
 
@@ -743,7 +743,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnBeginEdit
 
@@ -795,7 +795,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnBatchAdd
 
@@ -847,7 +847,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnBatchSave
 
@@ -900,7 +900,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnBatchDelete
 
@@ -952,7 +952,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnCellEdit
 
@@ -1005,7 +1005,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnCellSave
 
@@ -1058,7 +1058,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CellSaved
 
@@ -1110,7 +1110,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## RowSelecting
 
@@ -1161,7 +1161,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## RowSelected
 
@@ -1212,7 +1212,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## RowDeselecting
 
@@ -1264,7 +1264,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## RowDeselected
 
@@ -1315,7 +1315,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CellSelecting
 
@@ -1368,7 +1368,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CellSelected
 
@@ -1420,7 +1420,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CellDeselecting
 
@@ -1474,7 +1474,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CellDeselected
 
@@ -1528,7 +1528,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnRecordClick
 
@@ -1581,7 +1581,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnRecordDoubleClick
 
@@ -1633,7 +1633,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnToolbarClick
 
@@ -1685,7 +1685,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## CommandClicked
 
@@ -1748,7 +1748,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ColumnMenuItemClicked
 
@@ -1802,7 +1802,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ContextMenuItemClicked
 
@@ -1856,7 +1856,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ContextMenuOpen
 
@@ -1910,7 +1910,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnPdfExport
 
@@ -1969,7 +1969,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## PdfHeaderQueryCellInfoEvent
 
@@ -2028,7 +2028,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## PdfQueryCellInfoEvent
 
@@ -2087,7 +2087,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## PdfAggregateTemplateInfo
 
@@ -2176,7 +2176,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnExcelExport
 
@@ -2235,7 +2235,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ExcelHeaderQueryCellInfoEvent
 
@@ -2294,7 +2294,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ExcelQueryCellInfoEvent
 
@@ -2353,7 +2353,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ExcelAggregateTemplateInfo
 
@@ -2442,7 +2442,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ExportComplete
 
@@ -2512,7 +2512,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnResizeStart
 
@@ -2564,7 +2564,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## ResizeStopped
 
@@ -2616,7 +2616,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## OnRowDragStart
 
@@ -2668,7 +2668,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## RowDropped
 
@@ -2722,6 +2722,6 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

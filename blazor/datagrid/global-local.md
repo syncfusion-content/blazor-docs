@@ -38,7 +38,7 @@ namespace BlazorApplication
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Localization
 
@@ -196,7 +196,7 @@ namespace BlazorApplication
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
@@ -230,7 +230,7 @@ namespace BlazorServer
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > **Note** BlazorServer denotes the ApplicationNameSpace of your project.
 
@@ -278,7 +278,7 @@ namespace BlazorServer
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Blazor WebAssembly
 
@@ -320,7 +320,7 @@ namespace ClientApplication
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 * Then, create a **~/Shared/SyncfusionLocalizer.cs** file and implement **ISyncfusionStringLocalizer** interface to the class and override the ResourceManager property to get the resource file details from the application end.
 
@@ -352,7 +352,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > **Note** ClientApplication denotes the ApplicationNameSpace of your project.
 
@@ -400,7 +400,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Internationalization
 
@@ -453,6 +453,6 @@ RTL provides an option to switch the text direction and layout of the DataGrid c
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

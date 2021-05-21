@@ -90,7 +90,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the search operation performed on the datagrid using the Autocomplete component rendered in the toolbar,
 

@@ -57,7 +57,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following represents the multiple selected rows
 ![Multiple Selection](./images/multi-selection.png)
@@ -111,7 +111,7 @@ the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridS
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows selection mode using both(row and cells selection)
 ![Both Selection](./images/rowcell-selection.png)
@@ -166,7 +166,7 @@ the [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows selection mode using cell
 ![Cell Selection](./images/cellselectionmode.png)
@@ -221,7 +221,7 @@ To render the checkbox in each datagrid row, you need to assign the type as **Ch
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot shows CheckBox Selection
 ![CheckBox Selection](./images/checkbox-selection.png)
@@ -281,7 +281,7 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Toggle selection
 
@@ -327,7 +327,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following shows selection and deselection of row
 ![Enable Toggle](images/enable-toggle.gif)
@@ -379,7 +379,7 @@ To select a row at initial rendering, set the [`SelectedRowIndex`](https://help.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image will be displayed with row selected in initial Rendering  
 ![Initial Selection](./images/initial-selection.png)
@@ -450,7 +450,7 @@ You can get the selected row indexes by using [`GetSelectedRowIndexes`](https://
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image will be displayed with selected row and its indexes  
 ![Selected row index](./images/rowindex.PNG)
@@ -532,7 +532,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image will be displayed with Multiple selection  
 ![Multiple selection](./images/initialselect.PNG)
@@ -581,6 +581,6 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

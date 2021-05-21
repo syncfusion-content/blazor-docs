@@ -118,7 +118,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the dialog edit template with foreign key column value,
 

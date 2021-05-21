@@ -109,7 +109,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the FooterTemplate with aggregates
 ![Footer Template](./images/footertemplate.png)
@@ -193,7 +193,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Group and caption aggregate
 
@@ -282,7 +282,7 @@ To access the aggregate values inside the **GroupFooterTemplate** and **GroupCap
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the Group and Caption template with aggregates.
 ![Group Template](./images/captionaggregate.png)
@@ -357,7 +357,7 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -484,7 +484,7 @@ The following sample code demonstrates implementing the aggregates for the custo
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 <!-- Reactive aggregate update
 
@@ -540,4 +540,4 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 
 {% endhighlight %}
 
-{% endtabs  %}-->
+{% endtabs %}-->

@@ -71,4 +71,4 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

@@ -63,7 +63,7 @@ PDF export allows exporting DataGrid data to PDF document. You need to use the
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 <!-- Multiple exporting
 
@@ -142,7 +142,7 @@ This is demonstrated in the below sample code block,
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ## To customize PDF export
 
@@ -203,7 +203,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 <!-- Default fonts for pdf exporting
 
@@ -293,7 +293,7 @@ The following sample code demonstrates changing the default font value on export
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 <!-- Add custom font for pdf exporting
 
@@ -375,7 +375,7 @@ The following sample code demonstrates changing the default font value to custom
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ### To add header and footer
 
@@ -450,7 +450,7 @@ The following sample code demonstrates adding text and customizing it's styles i
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 #### How to draw a line in header/footer
 
@@ -529,7 +529,7 @@ The following sample code demonstrates adding line in the Header section of the 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 #### How to add repeat headers in PDF Export
 
@@ -586,7 +586,7 @@ You can add headers for every page of PDF exported document by enabling [`IsRepe
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 #### How to export the Grid with specific columns
 
@@ -650,7 +650,7 @@ You can export the PDF grid with specific columns instead of all columns which a
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 #### Add page number in header/footer
 
@@ -729,7 +729,7 @@ The following sample code demonstrates adding page number in the Header section 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 #### Insert an image in header/footer
 
@@ -800,7 +800,7 @@ The following sample code demonstrates inserting image in the Header section of 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### How to change page orientation
 
@@ -857,7 +857,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### How to change page size
 
@@ -944,7 +944,7 @@ Supported page sizes are:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Export current page
 
@@ -1001,7 +1001,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Export hidden columns
 
@@ -1058,7 +1058,7 @@ PDF export provides an option to export hidden columns of DataGrid by defining t
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Theme
 
@@ -1151,7 +1151,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > By default, material theme is applied to exported PDF document.
 
@@ -1221,7 +1221,7 @@ This is demonstrated in the below sample code where initially the **CustomerID**
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ## Custom data source
 
@@ -1280,6 +1280,6 @@ The following sample code demonstrates dynamically modifying the data source bef
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

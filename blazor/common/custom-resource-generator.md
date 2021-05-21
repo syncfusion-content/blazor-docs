@@ -70,6 +70,7 @@ Refer to the following steps to download the custom resources in CRG:
 2. Set `DisableScriptManager` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
     **Blazor Server App (~/Startup.cs)**
+
 {% tabs %}
 
 {% highlight C# %}
@@ -89,7 +90,8 @@ Refer to the following steps to download the custom resources in CRG:
 
 {% endtabs %}
 
-    **Blazor WebAssembly App (~/Program.cs)**
+**Blazor WebAssembly App (~/Program.cs)**
+
 {% tabs %}
 
 {% highlight C# %}

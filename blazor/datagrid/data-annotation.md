@@ -84,7 +84,7 @@ The following sample code demonstrates data annotations implemented in the DataG
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents data annotations enabled in the DataGrid columns,
 ![Data Annotations](./images/data-annotations.png)

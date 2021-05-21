@@ -89,7 +89,7 @@ the [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.S
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represent a datagrid with Row virtualization.
 ![Row virtualization](./images/Row.gif)
@@ -172,7 +172,7 @@ To setup the column virtualization, set the
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Column's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's width is not defined then DataGrid will consider its value as **200px**.
 
@@ -258,7 +258,7 @@ To setup the enable cell placeholder during virtualization, you need to define [
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represent a datagrid with Mask row virtualization.
 ![Mask Row virtualization](./images/Mask.gif)

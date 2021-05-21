@@ -70,7 +70,7 @@ In the below sample, [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can achieve better performance by using datagrid paging to fetch only a pre-defined number of records from the data source.
 
@@ -120,7 +120,7 @@ The pager dropdown allows you to change the number of records in the DataGrid dy
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor Grid Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) Feature tour page to know about paging and  its feature representations.
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

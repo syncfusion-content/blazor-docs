@@ -58,7 +58,7 @@ Interaction keys |Description
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Copy to clipboard by external buttons
 
@@ -119,7 +119,7 @@ To copy selected rows or cells data into the clipboard with help of toolbar butt
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -169,7 +169,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following represents Autofill in datagrid
 ![Grid Autofill](images/autofill.gif)
@@ -227,7 +227,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * If [`EnableAutoFill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
 > * To perform paste functionality, it requires the selection [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be **Cell** and [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CellSelectionMode) to be **Box** and also Batch Editing should be enabled.

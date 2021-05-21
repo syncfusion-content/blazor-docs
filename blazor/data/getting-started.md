@@ -35,7 +35,7 @@ This section explains about how to connect the [`SfDataManager`](https://help.sy
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Adding component package to the application
 
@@ -49,7 +49,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Data** package
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Add Data Manager Component
 
@@ -67,7 +67,7 @@ To initialize the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-bl
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Since the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component is mainly used in conjunction with Syncfusion Blazor components that supports data binding, we are going to use Blazor DataGrid component to depict the usage of [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) throughout this documentation.
 
@@ -122,7 +122,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Binding to OData
 
@@ -159,7 +159,7 @@ The following sample code demonstrates binding OData through the [`SfDataManager
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Component binding
 
@@ -204,7 +204,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents DropDownList bound with local data through the `SfDataManager` component,
 ![Local Data](./images/dropdown-local-binding.png)
@@ -239,7 +239,7 @@ The following sample code demonstrates binding remote data through the [`SfDataM
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents DropDownList bound with remote data through the `SfDataManager` component,
 ![Remote Data](./images/dropdown-remote-binding.png)

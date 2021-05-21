@@ -76,7 +76,7 @@ The following table shows built-in tool bar items and its actions.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshots represent a datagrid with Built-in toolbar,
 ![Built in Toolbar](./images/built.PNG)
@@ -158,7 +158,7 @@ Custom toolbar items can be achieved by using Expand all and Collapse all functi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshots represent a datagrid with Custom toolbar items,
 ![Custom toolbat items](./images/customtoolbaritems.PNG)
@@ -227,7 +227,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshots represent a datagrid with Built-in and custom items in toolbar,
 ![Built in and custom items in Toolbar](./images/builtintoolbar.PNG)
@@ -308,7 +308,7 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshots represent a datagrid with Custom toolbar,
 ![Custom Toolbar](./images/customtoolbar.PNG)
@@ -401,7 +401,7 @@ Drop down list can be added by using dropdownlist in the tool bar section.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshots represent a datagrid with Custom toolbar dropdown list,
 ![Custom Toolbar with dropdown list](./images/dropdownlist.PNG)
@@ -503,7 +503,7 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshots represent a datagrid with Enable/disable toolbar items,
 ![Enable/disable Toolbar items](./images/Enabledisablegif.gif)

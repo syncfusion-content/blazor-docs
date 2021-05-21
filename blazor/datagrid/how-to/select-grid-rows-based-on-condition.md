@@ -84,4 +84,4 @@ This is demonstrated in the below sample code where the index value of datagrid 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

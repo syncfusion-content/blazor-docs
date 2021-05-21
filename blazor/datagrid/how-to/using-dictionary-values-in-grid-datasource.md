@@ -81,7 +81,7 @@ This is demonstrated in the below sample code where **ShipName** is defined as D
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represent the datagrid rendered using the above sample code,
 ![`Dictionary Values`](../images/dictionary-values-grid.png)

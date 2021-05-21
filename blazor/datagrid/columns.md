@@ -55,7 +55,7 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Dynamic column building
 
@@ -97,7 +97,7 @@ You can refer the following code example to achieve this
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents datagrid with dynamically build columns
 ![Dynamic Column](./images/dynamic-column-building.png)
@@ -154,7 +154,7 @@ You can achieve complex data binding in the datagrid by using the dot(.) operato
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents complex data binding
 ![Complex Data](./images/complexdata.png)
@@ -212,7 +212,7 @@ Before proceeding this you learn about [`ExpandoObject Binding`](https://blazor.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
@@ -285,7 +285,7 @@ Before proceeding this you learn about [`DynamicObject Binding`](https://blazor.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
@@ -357,7 +357,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### ForeignKey Column - Remote Data
 
@@ -416,7 +416,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents foreign key column
 ![Foreignkey Column](./images/foreignkey-value.png)
@@ -467,7 +467,7 @@ By default, column header title is displayed from column [`Field`](https://help.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The Output image for header text is as follows
 ![Header Text](./images/header-text.png)
@@ -562,7 +562,7 @@ The Header Template has options to display custom element value or content in th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the Header Template.
 ![Header template](./images/header-template.png)
@@ -639,7 +639,7 @@ The Column template has options to display custom element value or content in th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the column Template.
 ![Column template](./images/column-template.png)
@@ -713,7 +713,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the Conditional Template.
 ![Conditional Template](./images/conditional-template.png)
@@ -782,7 +782,7 @@ This can be achieved using the Column template property as it has options to dis
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the Image Template.
 ![Image Template](./images/image-template.png)
@@ -850,7 +850,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 In the above code, the url to be navigated is specified in the Link variable of the DataGrid data. Based on this the page is routed to the corresponding url.
 
@@ -880,7 +880,7 @@ After this add new razor page for routing with routing url along with the parame
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents template routing in DataGrid
 ![Grid with routing template](./images/template-routing.gif)
@@ -959,7 +959,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can hide the column names in column chooser by defining the [`ShowInColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
 
@@ -1028,7 +1028,7 @@ In this below example, we have opened column chooser using external button click
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents opening column chooser functionality in DataGrid using external button.
 ![Grid with open column chooser](./images/opencolumn-chooser.gif)
@@ -1078,7 +1078,7 @@ values.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > By default, the **number** and **date** values are formatted in **en-US** locale.
 
@@ -1141,7 +1141,7 @@ You can hide any particular column in DataGrid before rendering by defining [`Vi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the DataGrid with Freight column set to visible false.
 ![Visible False](./images/visible-false.png)
@@ -1206,7 +1206,7 @@ You can auto fit a column interactively by double clicking the right border of t
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 In the  following Image **Autofit** Property is set to true for CustomerName and OrderDate.
 ![Autofit Columns](./images/autofit-column.png)
@@ -1263,7 +1263,7 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents AutoFit column by method
 ![Autofit Method](./images/autofit-methods.png)
@@ -1313,7 +1313,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following represents Reordering of columns
 ![Reorder Column](images/reorder.gif)
@@ -1373,7 +1373,7 @@ DataGrid has option to reorder single column either by Interaction or by using t
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents Reordering column **Freight** by using method,
 ![Reorder method](images/reordermethod.gif)
@@ -1432,7 +1432,7 @@ In the below sample, **Customer Name** and **Freight** columns are reordered to 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents Reordering Columns **Freight** and **OrderDate** by using method
 ![Reorder multiple columns](images/reorder-multiple-columns.gif)
@@ -1498,7 +1498,7 @@ During the reorder action, the grid component triggers the below events,
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 <!-- ## Lock columns
 
@@ -1542,7 +1542,7 @@ In the below example, Order ID column is locked and its reordering functionality
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ## Column resizing
 
@@ -1587,7 +1587,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents column resizing
 ![Resizing](images/resizing.gif)
@@ -1640,7 +1640,7 @@ In the following sample, minimum and maximum width are defined for **CustomerID*
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Resize stacked column
 
@@ -1689,7 +1689,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following shows resizing of stacked header
 ![Resize Stacked](images/resize-stacked.gif)
@@ -1763,7 +1763,7 @@ During the resizing action the grid component triggers the below events,
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 ## Column menu
 
@@ -1826,7 +1826,7 @@ The default menu items are displayed in the following table,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * You can disable column menu for a particular column by defining the column's [`ShowColumnMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
 > * You can customize the default menu items by defining the [`ColumnMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) with the required items.
@@ -1890,7 +1890,7 @@ The grid component triggers the below events when column menu operations are per
 
 {% endhighlight %}
 
-{% endtabs  %} -->
+{% endtabs %} -->
 
 <!-- Custom column menu item
 
@@ -1968,7 +1968,7 @@ Actions for the customized items can be defined in the [`ColumnMenuItemClicked`]
 
 {% endhighlight %}
 
-{% endtabs  %} 
+{% endtabs %} 
 
 The following GIF shows the sorting cleared on clicking the custom column menu item in Grid
 -->
@@ -2032,7 +2032,7 @@ In the following sample code, Filter item is hidden in column menu for the Order
 
 {% endhighlight %}
 
-{% endtabs  %} 
+{% endtabs %} 
 
 The following GIF shows the customized column menu item for particular column in Grid -->
 
@@ -2217,7 +2217,7 @@ In the following demo, the cells have been spanned based on the employees schedu
 
 {% endhighlight %}
 
-{% endtabs  %} 
+{% endtabs %} 
 
 The following GIF shows the column spanning in Grid -->
 
@@ -2267,7 +2267,7 @@ In the below sample code, for OrderID column - HideAtMedia property value is set
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF shows the responsive columns behaviour when window is resized,
 ![Responsive columns](images/responsive-columns.gif)
@@ -2319,7 +2319,7 @@ The following sample code shows datagrid actions disabled for particular columns
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF shows the datagrid actions for different columns,
 ![Responsive columns](images/grid-actions.gif)
@@ -2389,7 +2389,7 @@ The following sample code demonstrates showing and hiding of columns using their
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the showing/hiding DataGrid columns on button click,
 ![Show/Hide columns](images/show-hide-columns.gif)
@@ -2445,7 +2445,7 @@ The following sample code demonstrates the displayed data manipulated for two co
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the Grid with manipulated column data. -->
 
@@ -2503,7 +2503,7 @@ In the following sample code, the name field having an array of two objects, Fir
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the binded column data in Grid using ValueAccessor property -->
 
@@ -2562,7 +2562,7 @@ The following sample code demonstrates expression column achieved using [`ValueA
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents expression column achieved in Grid -->
 
@@ -2614,7 +2614,7 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Need to define [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_EditType) as **EditType.BooleanEdit** to GridColumn to render checkbox while editing a boolean value.
 
@@ -2626,7 +2626,7 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,
 ![Display as checkbox](./images/checkbox-boolean-values.png)

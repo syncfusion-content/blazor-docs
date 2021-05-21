@@ -53,4 +53,4 @@ The following sample code demonstrates adding custom headers to the [`SfDataMana
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

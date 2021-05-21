@@ -32,7 +32,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -47,7 +47,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 2. The Syncfusion Blazor package will be included in the newly created project after the installation process is completed.
 
@@ -62,7 +62,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 4. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
@@ -87,7 +87,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
@@ -103,7 +103,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
 > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
@@ -129,7 +129,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 ## Add DataGrid Component
 
 To initialize the DataGrid component add the below code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
@@ -146,7 +146,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Row Data
 
@@ -172,7 +172,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Columns
 
@@ -213,7 +213,7 @@ Let’s check the properties used here:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Paging
 
@@ -246,7 +246,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Sorting
 
@@ -279,7 +279,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Filtering
 
@@ -312,7 +312,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Grouping
 
@@ -345,7 +345,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Output be like the below.
 

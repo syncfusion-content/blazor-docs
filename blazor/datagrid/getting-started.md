@@ -37,7 +37,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
  For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
@@ -53,7 +53,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Grids** packag
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Add SyncfusionBlazor service in Startup.cs
 
@@ -82,7 +82,7 @@ namespace BlazorApplication
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Add DataGrid Component
 
@@ -100,7 +100,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Row Data
 
@@ -140,7 +140,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Defining Columns
 
@@ -193,7 +193,7 @@ Let’s check the properties used here:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Paging
 
@@ -239,7 +239,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Sorting
 
@@ -285,7 +285,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Filtering
 
@@ -331,7 +331,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Enable Grouping
 
@@ -377,7 +377,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents datagrid with paging, sorting, filtering and grouping.
 ![Grid Features](images/getting-started.gif)
@@ -438,7 +438,7 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## See Also
 

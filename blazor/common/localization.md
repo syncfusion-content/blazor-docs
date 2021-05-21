@@ -117,7 +117,7 @@ The culture can be set using one of the following approaches:
 
 {% endtabs %}
 
-    > **Note** Here, the `ApplicationNamespace` is your application name.
+> **Note** Here, the `ApplicationNamespace` is your application name.
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
@@ -347,7 +347,7 @@ The culture can be set using one of the following approaches:
 
 {% endtabs %}
 
-    > **Note** Here, the `ApplicationNamespace` is your application name.
+> **Note** Here, the `ApplicationNamespace` is your application name.
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
@@ -382,6 +382,7 @@ The culture can be set using one of the following approaches:
 
 {% endtabs %}
     > **Note**: For .NET 5.0 Blazor Webassembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes.
+
 {% tabs %}
 
 {% highlight C# %}
@@ -393,6 +394,7 @@ The culture can be set using one of the following approaches:
 {% endhighlight %}
 
 {% endtabs %}
+
     Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-5.0#blazor-webassembly) for more details.
 
 3. Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application.

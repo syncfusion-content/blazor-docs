@@ -21,7 +21,7 @@ You can customize the column menu icon by overriding the default icon class `.e-
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 This is demonstrated in the below sample code,
 
@@ -72,7 +72,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents datagrid with customized column menu icon
 ![Customize column menu icon](../images/customize-column-menu-icon.png)

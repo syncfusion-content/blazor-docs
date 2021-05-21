@@ -60,7 +60,7 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > By default, [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -117,7 +117,7 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### ExpandoObject Complex data binding
 
@@ -170,7 +170,7 @@ You can achieve ExpandoObject complex data binding in the datagrid by using the 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
@@ -246,7 +246,7 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 #### DynamicObject Complex data binding
 
@@ -314,7 +314,7 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
@@ -363,7 +363,7 @@ To bind remote data to datagrid component, assign service data as an instance of
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Binding with OData v4 services
 
@@ -399,7 +399,7 @@ The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`]
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Web API
 
@@ -435,7 +435,7 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The response object from the Web API should contain properties, **Items** and **Count**, whose values are a collection of entities and total count of the entities, respectively.
 
@@ -444,7 +444,7 @@ The sample response object should look like this:
 
 {% endhighlight %}
 
-{% endtabs  %}javascript
+{% endtabs %}javascript
 {
     Items: [{..}, {..}, {..}, ...],
     Count: 830
@@ -452,7 +452,7 @@ The sample response object should look like this:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Enable SfDataManager after initial rendering
 
@@ -504,7 +504,7 @@ The following sample code demonstrates enabling data manager condition in the Da
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents dynamically rendering data manager in DataGrid,
 ![Render data manager dynamically](./images/data-manager-dynamic.gif)
@@ -553,7 +553,7 @@ The following sample code demonstrates sending additional paramaters using the Q
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Configuring HttpClient
 
@@ -621,7 +621,7 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Authorization and Authentication
 
@@ -654,7 +654,7 @@ It is common to have authorization in the server of origin to prevent anonymous 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 * Setting the access token in the **Headers** property of the **SfDataManager**. See [here](#setting-custom-headers) for adding headers.
 
@@ -699,7 +699,7 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Change Query parameter value dynamically
 
@@ -747,7 +747,7 @@ The following sample code demonstrates achieving this,
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents dynamically modifying the query property in DataGrid,
 ![Modify query dynamically](./images/query-update.gif)
@@ -792,7 +792,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 {% tabs %}
 
@@ -868,7 +868,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > * In this [`sample`](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding),paging action is handled for Blazor grid based on your need you can extend the given logic for other operations.
 > * For performing data manipulation, you can override available methods such as **Insert**, **Update** and **Remove** of the Custom Adaptor.
@@ -910,7 +910,7 @@ namespace EFGrid.Shared.DataAccess
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Create data access layer to perform data operation
 
@@ -948,7 +948,7 @@ namespace EFGrid.Shared.DataAccess
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Creating Web API Controller
 
@@ -1000,7 +1000,7 @@ namespace WebApplication1.Server.Controllers
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Configure datagrid component using Web API adaptor
 
@@ -1033,7 +1033,7 @@ Now you can configure the datagrid using the **'SfDataManager'** to interact wit
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 To perform datagrid CRUD operation using Entity Framework. You can refer [`here`](./editing/#entity-framework).
 >You can find the fully working sample [`here`](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
@@ -1053,7 +1053,7 @@ This can be achieved by initially injecting the `HttpClient` instance in the app
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 After that the data to be fetched is defined in the api controller of the blazor WebAssembly app.
 
@@ -1092,7 +1092,7 @@ public class Employee
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 Then using the `GetJsonAsync` method request is sent to the api controller for fetching data which is bounded to the DataGrid's data source
 
@@ -1133,7 +1133,7 @@ Then using the `GetJsonAsync` method request is sent to the api controller for f
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > The above steps are processed in the blazor WebAssembly app which has the preconfigured `HttpClient` service. For blazor server apps, web api calls are created using [`IHttpClientFactory`](https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory). More information on making requests using `IHttpClientFactory` is available in this [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0).
 
@@ -1265,7 +1265,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
  The following screenshot represents the DataGrid with **Observable Collection**.![ObservableCollection](./images/ObservableCollection.PNG)
 
@@ -1292,7 +1292,7 @@ public void ConfigureServices(IServiceCollection services)
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Handling exceptions
 
@@ -1350,6 +1350,6 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

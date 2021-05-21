@@ -53,7 +53,7 @@ The HTML tags can be displayed in the DataGrid header and content by enabling th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents a DataGrid displaying the HTML content.
 
@@ -142,7 +142,7 @@ The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents a DataGrid with customize cell styles.
 
@@ -208,7 +208,7 @@ In the following example, the [`TextWrapSettings.WrapMode`](https://help.syncfus
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents a DataGrid with auto wrap.
 
@@ -266,7 +266,7 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## DataGrid Lines
 
@@ -323,7 +323,7 @@ The available modes of datagrid lines are:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 >By default, the datagrid renders with **Default** mode.
 
@@ -382,7 +382,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents a clip mode in DataGrid
 

@@ -35,10 +35,10 @@ documentation: ug
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </head>
 
-
 {% endhighlight %}
 
 {% endtabs %}
+
     > This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js) is required to configure in Blazor server application for IE 11 support.
 
 3. Add the required configuration from [Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation and run the Application. The Syncfusion Blazor Component will render in the IE 11 web browser.

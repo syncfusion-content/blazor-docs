@@ -64,7 +64,7 @@ Deletion of the record is possible by selecting the required row and click on **
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Editing with Default Mode.
 ![Edit Action](./images/edit-action.png)
@@ -130,7 +130,7 @@ You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blaz
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Toolbar with Edit option.
 ![Edit Action](./images/edit-action.png)
@@ -193,7 +193,7 @@ To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusio
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Editing in Normal Mode.
 ![Normal Editing](./images/normal-editing.png)
@@ -251,7 +251,7 @@ To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Editing in Dialog Mode.
 ![Dialog Editing](./images/dialog-editing.png)
@@ -306,7 +306,7 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents Editing in Batch mode.
 ![Batch Editing](./images/batch-editing.png)
@@ -362,7 +362,7 @@ Pressing TAB from the last cell of the current row allows editing the next row a
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents Editing in Batch mode.
 ![AllowNextRowEdit](./images/nextrow-edit.gif)
@@ -458,7 +458,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### NumericEdit
 
@@ -529,7 +529,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### DropDownEdit
 
@@ -605,7 +605,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### BooleanEdit
 
@@ -674,7 +674,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### DatePickerEdit
 
@@ -743,7 +743,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Similar way customization can be applied to default DateTimePicker Component using same [`DateEditCellParams`]
 
@@ -804,7 +804,7 @@ The cell edit template is used to add a custom component for a particular column
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
 ![Celledit Template](./images/celledit-template.png)
@@ -873,7 +873,7 @@ The available built-in command buttons are:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the command column.
 ![Command Column](./images/command-column.png)
@@ -938,7 +938,7 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the custom command added in the **Manage Records** column of the DataGrid component,
 ![Custom Command](./images/custom-command.png)
@@ -990,7 +990,7 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following screenshot represents the Column Validation in Normal Editing.
 ![Validation Rules](./images/validation-rules.png)
@@ -1110,7 +1110,7 @@ The following sample code demonstrates custom validations implemented in the fie
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Custom validator component
 
@@ -1187,7 +1187,7 @@ In the below code example, the following things have been done.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 {% tabs %}
 
@@ -1230,7 +1230,7 @@ In the below code example, the following things have been done.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -1273,7 +1273,7 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The output will be as follows.
 
@@ -1316,7 +1316,7 @@ The output will be as follows.
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Provide new item or edited item using events
 
@@ -1401,7 +1401,7 @@ In the following example:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Batch editing
 
@@ -1478,7 +1478,7 @@ In the following example:
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Entity Framework
 
@@ -1557,7 +1557,7 @@ namespace EFGrid.Shared.DataAccess
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Enable CRUD in Web API
 
@@ -1634,7 +1634,7 @@ namespace WebApplication1.Server.Controllers
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ### Configure the datagrid to perform CRUD operations
 
@@ -1666,7 +1666,7 @@ namespace WebApplication1.Server.Controllers
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 >You can find the fully working sample [`here`](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
@@ -1750,7 +1750,7 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the datagrid with Add, Update, Delete items,
 ![CRUD operations](./images/Editing.gif)
@@ -1865,7 +1865,7 @@ You can perform the edit operation of Datagrid in a Custom external form. The ed
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represent the datagrid with Custom External form editing,
 ![Custom external form](./images/Customform.gif)
@@ -1998,7 +1998,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > In the above sample code, the textbox rendered for **OrderID** column inside the dialog template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
@@ -2139,7 +2139,7 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the dialog template of the DataGrid component with disabled components,
 ![Disable components](./images/disable-component.png)
@@ -2267,7 +2267,7 @@ This is demonstrated in the below sample code where the first input element is i
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
 ![Dynamic focus of components](./images/dynamic-focus.png)
@@ -2395,7 +2395,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > In the above sample code, the textbox rendered for **OrderID** column inside the Inline editing template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
@@ -2445,7 +2445,7 @@ The following sample code demonstrates changing the position of the new row that
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the new row added at the bottom of the DataGrid,
 ![New Row Position](./images/new-row-position.png)
@@ -2503,7 +2503,7 @@ The following sample code demonstrates enabling delete confirmation dialog in th
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the delete confirmation dialog displayed while deleting a record in DataGrid,
 ![Delete confirmation dialog](./images/delete-confirm-dialog.gif)
@@ -2557,7 +2557,7 @@ The following sample code demonstrates enabling confirmation dialog for batch op
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following GIF represents the confirmation dialog displayed while performing batch operations in DataGrid,
 ![Confirmation dialog](./images/confirmation-dialog.gif)
@@ -2612,7 +2612,7 @@ The following sample code demonstrates setting default value as **ANTON** to the
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents the default value displayed in the **CustomerID** column while adding a new record in DataGrid,
 ![Default Column Value](./images/default-column-value.png)
@@ -2664,7 +2664,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > Similarly [`AllowAdding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
 
@@ -2786,7 +2786,7 @@ The following sample code demonstrates the different **RequestType** parameters 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 ## Customize the edit dialog
 
@@ -2873,7 +2873,7 @@ In the below example we have changed the dialog's header text and footer button 
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -2958,4 +2958,4 @@ The following sample code demonstrates the CRUD operation for complex objects wi
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}

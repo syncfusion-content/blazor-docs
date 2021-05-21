@@ -60,7 +60,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents DataGrid bound with local data through the `SfDataManager` component,
 ![Local Data Binding](./images/grid-local-binding.png)
@@ -100,7 +100,7 @@ The following sample code demonstrates binding remote data through the [`SfDataM
 
 {% endhighlight %}
 
-{% endtabs  %}
+{% endtabs %}
 
 The following image represents DataGrid bound with remote data through the `SfDataManager` component,
 ![Remote Data Binding](./images/grid-remote-binding.png)

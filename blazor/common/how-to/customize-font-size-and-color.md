@@ -29,13 +29,11 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 2. Install the Syncfusion `node_modules` in this application using this command.
 
+{% tabs %}
 
-{% endhighlight %}
-
-{% endtabs %}cmd
+{% highlight CMD %}
 
     npm install @syncfusion/ej2
-
 
 {% endhighlight %}
 
@@ -43,10 +41,9 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 3. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
+{% tabs %}
 
-{% endhighlight %}
-
-{% endtabs %} scss
+{% highlight SCSS %}
 
     $calendar-normal-max-width: 362px !default;
     $calendar-normal-min-width: 256px !default;
@@ -55,7 +52,6 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
     @import 'ej2-base/styles/bootstrap4.scss';
     @import 'ej2-buttons/styles/bootstrap4.scss';
     @import 'ej2-calendars/styles/bootstrap4.scss';
-
 
 {% endhighlight %}
 
@@ -67,10 +63,10 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 5. The **compilerconfig.json** file is created. Then provide the location of the compiled CSS file and include path like the following code snippet.
 
+{% tabs %}
 
-{% endhighlight %}
+{% highlight JSON %}
 
-{% endtabs %}json
         [
             {
                 "outputFile": "wwwroot/styles/custom.css",
@@ -98,7 +94,6 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
     <link href="~/styles/custom.css" rel="stylesheet" />
     <head>
-
 
 {% endhighlight %}
 
