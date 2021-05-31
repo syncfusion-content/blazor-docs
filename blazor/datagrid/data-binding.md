@@ -442,7 +442,7 @@ The sample response object should look like this:
 
 {% tabs %}
 
-{% highlight %}
+{% highlight js %}
 
 javascript
 {
