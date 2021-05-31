@@ -440,10 +440,11 @@ The response object from the Web API should contain properties, **Items** and **
 
 The sample response object should look like this:
 
+{% tabs %}
 
-{% endhighlight %}
+{% highlight %}
 
-{% endtabs %}javascript
+javascript
 {
     Items: [{..}, {..}, {..}, ...],
     Count: 830
