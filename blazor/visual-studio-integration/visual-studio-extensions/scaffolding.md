@@ -79,19 +79,9 @@ N>Check that at least one Entity Framework model exists. If no Entity Framework 
 
 Install **syncfusion.scaffolding** tool globally by using below command.
 
-
-{% endhighlight %}
-
-{% endtabs %}
-
 ## Update Command-line scaffolding
 
 Update **syncfusion.scaffolding** tool globally by using below command.
-
-
-{% endhighlight %}
-
-{% endtabs %}
 
 ## Add a scaffolded item from command-line
 
@@ -130,11 +120,6 @@ The following steps explains how to add a scaffolded item from command-line to y
     ![control parameter details](../images/controlparameter.png)
 
 4. Run the following command to generate controller and view files through command-line by passing required arguments of the given control.
-
-
-{% endhighlight %}
-
-{% endtabs %}
 
     ![CommandLine Scaffold](../images/commandline.png)
 
