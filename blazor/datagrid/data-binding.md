@@ -22,7 +22,7 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -76,7 +76,7 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
@@ -125,7 +125,7 @@ You can achieve ExpandoObject complex data binding in the datagrid by using the 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
@@ -191,7 +191,7 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
@@ -254,7 +254,7 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
@@ -334,7 +334,7 @@ To bind remote data to datagrid component, assign service data as an instance of
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -371,7 +371,7 @@ The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`]
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -407,7 +407,7 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -431,7 +431,6 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
         public double? Freight { get; set; }
     }
 }
-
 
 {% endhighlight %}
 
@@ -462,7 +461,7 @@ The following sample code demonstrates enabling data manager condition in the Da
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
@@ -517,7 +516,7 @@ The following sample code demonstrates sending additional paramaters using the Q
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -577,7 +576,7 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -632,7 +631,7 @@ It is common to have authorization in the server of origin to prevent anonymous 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @inject HttpClient _httpClient
@@ -668,7 +667,7 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -709,7 +708,7 @@ The following sample code demonstrates achieving this,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
@@ -762,7 +761,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.Data;
@@ -796,7 +795,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Data;
@@ -883,7 +882,7 @@ The first step is to create a DBContext class called **OrderContext** to connect
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -918,7 +917,7 @@ Now you need to create a class named **OrderDataAccessLayer**, which act as data
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -956,7 +955,7 @@ namespace EFGrid.Shared.DataAccess
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using System;
 using System.Collections;
@@ -1008,7 +1007,7 @@ Now you can configure the datagrid using the **'SfDataManager'** to interact wit
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -1046,7 +1045,7 @@ This can be achieved by initially injecting the `HttpClient` instance in the app
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using System.Net.Http
 @inject HttpClient Http
@@ -1059,7 +1058,7 @@ After that the data to be fetched is defined in the api controller of the blazor
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 [Route("api/[controller]")]
 [ApiController]
@@ -1098,7 +1097,7 @@ Then using the `GetJsonAsync` method request is sent to the api controller for f
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1144,7 +1143,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -1277,7 +1276,7 @@ To avoid this problem, you need to add [DefaultContractResolver](https://docs.mi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public void ConfigureServices(IServiceCollection services)
 {
@@ -1306,7 +1305,7 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

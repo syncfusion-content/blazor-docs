@@ -73,7 +73,7 @@ Refer to the following steps to download the custom resources in CRG:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -94,7 +94,7 @@ Refer to the following steps to download the custom resources in CRG:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public static async Task Main(string[] args)
     {
@@ -116,7 +116,7 @@ Refer to the following steps to download the custom resources in CRG:
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....

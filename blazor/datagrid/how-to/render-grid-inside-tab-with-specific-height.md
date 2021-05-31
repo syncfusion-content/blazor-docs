@@ -15,7 +15,7 @@ To overcome this behavior we suggest you to render a container element enclosing
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations

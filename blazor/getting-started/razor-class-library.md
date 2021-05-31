@@ -42,7 +42,7 @@ This section provides information about creating Razor Class Library with the Sy
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
@@ -77,7 +77,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
     <div class="my-component">
@@ -108,7 +108,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using Syncfusion.Blazor
 
@@ -120,7 +120,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using Syncfusion.Blazor.Calendars
 
@@ -182,7 +182,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using RazorClassLibrary
 
@@ -194,7 +194,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     ....
     using Syncfusion.Blazor;
@@ -222,7 +222,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
@@ -249,7 +249,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <Component></Component>
 
@@ -309,7 +309,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using RazorClassLibrary
 
@@ -321,7 +321,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
 
@@ -347,7 +347,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
@@ -374,7 +374,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <Component></Component>
 

@@ -5,7 +5,7 @@ The DataGrid allows display of table data in a hierarchical structure to visuali
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -87,7 +87,7 @@ By default, datagrid renders in collapsed state. You can expand all child datagr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -189,7 +189,7 @@ You can expand a particular child datagrid at initial rendering by invoking the 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -280,7 +280,7 @@ with parent record's `QueryString` field value.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

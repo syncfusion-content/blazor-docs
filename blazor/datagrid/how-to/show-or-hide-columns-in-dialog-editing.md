@@ -14,7 +14,7 @@ In the below example, we have rendered the datagrid columns [`OrderDate`] as hid
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns

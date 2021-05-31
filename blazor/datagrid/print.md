@@ -17,7 +17,7 @@ The below sample code demonstrates DataGrid with print option added in the toolb
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -79,7 +79,7 @@ The below sample code demonstrates invoking print using an external button,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -140,7 +140,7 @@ The below sample code demonstrates this,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -196,7 +196,7 @@ This is demonstrated in the below sample code,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -292,7 +292,7 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations

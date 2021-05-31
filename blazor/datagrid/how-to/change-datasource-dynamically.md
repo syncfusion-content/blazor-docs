@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons

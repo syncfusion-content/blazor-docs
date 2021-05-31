@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where we have custom toolbar items
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

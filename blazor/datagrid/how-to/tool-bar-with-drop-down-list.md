@@ -17,7 +17,7 @@ Initialize the template for your custom component. Using the following code add 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfToolbar>
         <ToolbarItems>
@@ -43,7 +43,7 @@ You can select the datagrid row index based on the selected data in the DropDown
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids

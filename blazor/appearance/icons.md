@@ -13,7 +13,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 ## Steps to use Icon
 
-1. Add a class `e-icons` to the HTML element that shows the icon. This class contains the font-family and common property of the font icons.
+1. Add a class `e-icons` to the html element that shows the icon. This class contains the font-family and common property of the font icons.
 
 2. Add the icon class with corresponding icon content from the [available icons](#available-icons). For example, the below code snippet represents the search icon class.
 
@@ -29,11 +29,11 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 {% endtabs %}
 
-3. Add `e-icons` and `e-search` class to the HTML element.
+3. Add `e-icons` and `e-search` class to the html element.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <span class="e-icons e-search"></span>
 
@@ -45,7 +45,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         <link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />
@@ -59,7 +59,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
         <div class="icons">
             <ul>
@@ -90,7 +90,7 @@ The Syncfusion Blazor icon library can customize its color, size by overriding t
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <style>
         .e-icons{

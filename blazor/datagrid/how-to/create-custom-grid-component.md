@@ -17,7 +17,7 @@ CustomGrid.razor
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @typeparam TValue
@@ -36,7 +36,7 @@ CustomGrid.razor.cs
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Microsoft.AspNetCore.Components;
 using Syncfusion.Blazor.Grids;
@@ -76,7 +76,7 @@ Index.razor
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 <CustomGrid DataSource="Orders" TValue="Order"></CustomGrid>

@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where **ShipName** is defined as D
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

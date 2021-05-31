@@ -22,7 +22,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -75,7 +75,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -126,7 +126,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -167,7 +167,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -224,7 +224,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -275,7 +275,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -326,7 +326,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -377,7 +377,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -428,7 +428,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -479,7 +479,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -530,7 +530,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -649,7 +649,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -700,7 +700,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -751,7 +751,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -803,7 +803,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -855,7 +855,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -908,7 +908,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -960,7 +960,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1013,7 +1013,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1066,7 +1066,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1118,7 +1118,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1169,7 +1169,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1220,7 +1220,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1272,7 +1272,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1323,7 +1323,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1376,7 +1376,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1428,7 +1428,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1482,7 +1482,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1536,7 +1536,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1589,7 +1589,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1641,7 +1641,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1693,7 +1693,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1756,7 +1756,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1810,7 +1810,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1864,7 +1864,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1918,7 +1918,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1977,7 +1977,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2036,7 +2036,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2095,7 +2095,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2184,7 +2184,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2243,7 +2243,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2302,7 +2302,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2361,7 +2361,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2450,7 +2450,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2520,7 +2520,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2572,7 +2572,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2624,7 +2624,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2678,7 +2678,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

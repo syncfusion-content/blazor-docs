@@ -13,7 +13,7 @@ Accessibility is achieved in the DataGrid component through WAI-ARIA standard an
 
 ## WAI-ARIA
 
-WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, HTML, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
+WAI-ARIA (Accessibility Initiative – Accessible Rich Internet Applications) defines a way to increase the accessibility of web pages, dynamic content, and user interface components developed with Ajax, html, JavaScript, and related technologies. ARIA provides additional semantics to describe the role, state, and functionality of web components.
 
 The following ARIA attributes are used in the DataGrid:
 

@@ -25,7 +25,7 @@ The following steps help you to use the Syncfusion Blazor code snippet in your B
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
     sf<Syncfusion component name>-<Syncfusion component feature>
 

@@ -19,7 +19,7 @@ The **DataAdaptor** abstract class has both synchronous and asynchronous method 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public abstract class DataAdaptor
 {
@@ -94,7 +94,7 @@ The following sample code demonstrates implementing custom adaptor of the [`SfDa
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

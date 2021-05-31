@@ -15,7 +15,7 @@ Refer the following code to add configuration in Startup.cs file
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
@@ -156,7 +156,7 @@ In the following examples, demonstrate how to enable **Localization** for DataGr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Blazor;
 using System.Globalization;
@@ -204,7 +204,7 @@ namespace BlazorApplication
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Blazor;
 
@@ -238,7 +238,7 @@ namespace BlazorServer
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -288,7 +288,7 @@ In the following examples, demonstrate how to enable **Localization** for DataGr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Blazor;
 using System.Globalization;
@@ -326,7 +326,7 @@ namespace ClientApplication
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Blazor;
 
@@ -360,7 +360,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -416,7 +416,7 @@ RTL provides an option to switch the text direction and layout of the DataGrid c
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

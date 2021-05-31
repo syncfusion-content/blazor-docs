@@ -13,7 +13,7 @@ You can search records in a DataGrid, by using the **Search** method with search
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -65,7 +65,7 @@ To apply search at initial rendering, set the **Fields**, **Operator**, **Key**,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -137,7 +137,7 @@ To search datagrid records from an external button, invoke the **Search** method
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -194,7 +194,7 @@ By default, datagrid searches all visible columns. You can search specific colum
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -249,7 +249,7 @@ In the below code example, the **Order ID** column search functionality is disab
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -297,7 +297,7 @@ By default, the datagrid will initiate searching operation after the Enter key i
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

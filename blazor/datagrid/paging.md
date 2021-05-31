@@ -16,7 +16,7 @@ In the below sample, [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -82,7 +82,7 @@ The pager dropdown allows you to change the number of records in the DataGrid dy
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

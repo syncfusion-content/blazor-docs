@@ -57,7 +57,7 @@ The official prerequisites to create and run an ASP.NET Core Razor Components on
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
         @using Syncfusion.Blazor
         @using Syncfusion.Blazor.Grids
@@ -72,7 +72,7 @@ You can add the client-side resources through CDN in the `<head>` element of the
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
     ....
@@ -90,7 +90,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid >
 
@@ -106,7 +106,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid DataSource="@gridData">
 
@@ -138,7 +138,7 @@ Let’s check the properties used here:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid DataSource="@gridData">
     <GridColumns>
@@ -168,7 +168,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid DataSource="@gridData" AllowPaging="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -199,7 +199,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -230,7 +230,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true" AllowFiltering="true">
  <GridPageSettings PageSize="5"></GridPageSettings>
@@ -261,7 +261,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
  <GridPageSettings PageSize="5"></GridPageSettings>

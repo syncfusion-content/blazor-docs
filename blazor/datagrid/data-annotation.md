@@ -29,7 +29,7 @@ The following sample code demonstrates data annotations implemented in the DataG
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.ComponentModel.DataAnnotations;

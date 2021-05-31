@@ -17,7 +17,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
     @using Syncfusion.Blazor.DropDowns
@@ -62,7 +62,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using Syncfusion.Blazor;
     @using Syncfusion.Blazor.Grids;

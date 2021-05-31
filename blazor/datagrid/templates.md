@@ -26,7 +26,7 @@ For example, you can access the data of the column template using **context** as
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -102,7 +102,7 @@ This prevents us from directly specifying templates such as **RowTemplate** and 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids

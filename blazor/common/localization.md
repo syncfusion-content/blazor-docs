@@ -31,7 +31,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <Component_Name>_<Feature_Name>_<Locale_Key>
 
@@ -51,7 +51,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
     using System.Globalization;
@@ -125,7 +125,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
 
@@ -160,7 +160,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <ItemGroup>
         <EmbeddedResource Update="Resources\SfResources.en-US.resx">
@@ -180,7 +180,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Localization;
@@ -208,7 +208,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Http;
@@ -239,7 +239,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @inject NavigationManager NavigationManager
 
@@ -272,7 +272,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <div class="main">
         <div class="top-row px-4">
@@ -301,7 +301,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
     using Microsoft.JSInterop;
@@ -355,7 +355,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
 
@@ -385,7 +385,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <PropertyGroup>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
@@ -405,7 +405,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <ItemGroup>
       <Compile Update="Resources\SfResources.Designer.cs">
@@ -430,7 +430,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <body>
         .....
@@ -454,7 +454,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using  System.Globalization
     @inject IJSRuntime JSRuntime
@@ -497,7 +497,7 @@ The culture can be set using one of the following approaches:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <div class="main">
         <div class="top-row px-4">

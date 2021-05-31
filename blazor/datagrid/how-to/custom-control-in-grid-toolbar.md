@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations

@@ -20,7 +20,7 @@ Interaction keys |Description
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -66,7 +66,7 @@ To copy selected rows or cells data into the clipboard with help of toolbar butt
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -129,7 +129,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -188,7 +188,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

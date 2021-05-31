@@ -33,7 +33,7 @@ The following table shows built-in tool bar items and its actions.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -88,7 +88,7 @@ Custom toolbar items can be achieved by using Expand all and Collapse all functi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor
@@ -171,7 +171,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
@@ -238,7 +238,7 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -321,7 +321,7 @@ Drop down list can be added by using dropdownlist in the tool bar section.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -412,7 +412,7 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids

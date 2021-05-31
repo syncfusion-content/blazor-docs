@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview
 
-The Syncfusion Blazor library styles are developed under the SCSS environment with `base64` embed font icons. A list of key features is described as follows.
+The Syncfusion Blazor library styles are developed under the scss environment with `base64` embed font icons. A list of key features is described as follows.
 
 ## Key Features
 

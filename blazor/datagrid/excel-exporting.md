@@ -16,7 +16,7 @@ The excel export allows exporting DataGrid data to Excel document. You need to u
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -77,7 +77,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -136,7 +136,7 @@ The excel export provides an option to export hidden columns of datagrid by defi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -197,7 +197,7 @@ This is demonstrated in the below sample code where initially the **CustomerID**
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -266,7 +266,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -339,7 +339,7 @@ This is demonstrated in the below sample code,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -501,7 +501,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -561,7 +561,7 @@ In datagrid, we have provided the outline option for the exported document when 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -619,7 +619,7 @@ You can export the Excel grid with specific columns instead of all columns which
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -695,7 +695,7 @@ This is demonstrated in the below sample code block,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -785,7 +785,7 @@ This is demonstrated in the below sample code block,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -872,7 +872,7 @@ The following sample code demonstrates dynamically modifying the data source bef
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -934,7 +934,7 @@ The following sample code demonstrates dynamically adding `ShipCountry` column i
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1008,7 +1008,7 @@ The following sample code demonstrates modifying the export options for hierarch
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids

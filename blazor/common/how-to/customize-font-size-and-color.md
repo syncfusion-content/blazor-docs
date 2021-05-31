@@ -11,7 +11,7 @@ documentation: ug
 
 ## Install Web Compiler
 
-Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
+Install the Web Compiler to compile the `scss` files in the Blazor Applications.
 
 ## Steps to install the Web Compiler in Visual Studio 2019**
 
@@ -31,7 +31,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
     npm install @syncfusion/ej2
 
@@ -39,11 +39,11 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 {% endtabs %}
 
-3. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
+3. Create a `scss` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
 {% tabs %}
 
-{% highlight SCSS %}
+{% highlight scss %}
 
     $calendar-normal-max-width: 362px !default;
     $calendar-normal-min-width: 256px !default;
@@ -57,7 +57,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 {% endtabs %}
 
-4. Right-click the `SCSS` file and click the Web Compiler to compile the file.
+4. Right-click the `scss` file and click the Web Compiler to compile the file.
 
     ![compile](../images/compile.png)
 
@@ -81,11 +81,11 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 {% endtabs %}
 
-6. The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
+6. The `scss` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
 

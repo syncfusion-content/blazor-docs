@@ -13,7 +13,7 @@ Filtering allows you to view particular records based on filter criteria. To ena
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -67,7 +67,7 @@ To apply the filter at initial rendering, set the filter **Predicate** object in
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -159,7 +159,7 @@ N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -209,7 +209,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Data
@@ -295,7 +295,7 @@ In the following sample, we have changed the default operator for CustomerID col
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 
@@ -347,7 +347,7 @@ You can filter the records with different operators.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -402,7 +402,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
@@ -534,7 +534,7 @@ In the following sample menu filter is enabled by default and checkbox filter is
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -588,7 +588,7 @@ CheckBox filter contains an option such as searching and Clear filter.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -639,7 +639,7 @@ You can enable Excel like filter by defining [`Type`](https://help.syncfusion.co
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -753,7 +753,7 @@ In the following sample, type aero in [`CustomerID`] column to filter diacritic 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 

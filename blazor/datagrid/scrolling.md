@@ -23,7 +23,7 @@ To specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -73,7 +73,7 @@ Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.G
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -124,7 +124,7 @@ is set as '3'. Hence, the left two columns and top three rows are frozen.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -187,7 +187,7 @@ the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

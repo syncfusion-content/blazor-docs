@@ -25,7 +25,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         <environment include="Development">
@@ -47,7 +47,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Grids** packag
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
         @using Syncfusion.Blazor.Grids
 
@@ -61,7 +61,7 @@ Open the **Startup.cs** file and add services required by Syncfusion components 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Syncfusion.Blazor;
 
@@ -90,7 +90,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 <SfGrid>
@@ -108,7 +108,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -156,7 +156,7 @@ Let’s check the properties used here:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -201,7 +201,7 @@ The paging feature enables users to view the datagrid record in a paged view. It
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -247,7 +247,7 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -293,7 +293,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -339,7 +339,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -394,7 +394,7 @@ The following sample code demonstrates notifying user when server-side exception
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

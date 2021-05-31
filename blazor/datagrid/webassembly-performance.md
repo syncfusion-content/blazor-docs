@@ -26,7 +26,7 @@ In the following example:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <h1>Counter</h1>
 
@@ -102,7 +102,7 @@ In the following example:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <p>Selected OrderID: <span style="color:red">@SelectedOrder.OrderID</span></p>
 

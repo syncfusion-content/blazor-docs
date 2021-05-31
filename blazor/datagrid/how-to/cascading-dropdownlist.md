@@ -6,7 +6,7 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns

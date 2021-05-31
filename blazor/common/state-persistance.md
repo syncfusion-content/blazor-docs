@@ -13,7 +13,7 @@ Syncfusion Blazor platform supports for persisting a component's state across pa
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids

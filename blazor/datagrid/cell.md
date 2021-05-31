@@ -9,13 +9,13 @@ documentation: ug
 
 # Cell
 
-## Displaying the HTML content
+## Displaying the html content
 
-The HTML tags can be displayed in the DataGrid header and content by enabling the [`DisableHtmlEncode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property.
+The html tags can be displayed in the DataGrid header and content by enabling the [`DisableHtmlEncode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -55,7 +55,7 @@ The HTML tags can be displayed in the DataGrid header and content by enabling th
 
 {% endtabs %}
 
-The following screenshot represents a DataGrid displaying the HTML content.
+The following screenshot represents a DataGrid displaying the html content.
 
 ![disable html encode](./images/disable-html-encode.png)
 
@@ -67,7 +67,7 @@ The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -166,7 +166,7 @@ In the following example, the [`TextWrapSettings.WrapMode`](https://help.syncfus
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -222,7 +222,7 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -285,7 +285,7 @@ The available modes of datagrid lines are:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -341,7 +341,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

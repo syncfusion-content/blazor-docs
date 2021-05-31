@@ -17,7 +17,7 @@ The following sample code demonstrates adding custom headers to the [`SfDataMana
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

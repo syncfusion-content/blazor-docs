@@ -40,7 +40,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -124,7 +124,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -206,7 +206,7 @@ To access the aggregate values inside the **GroupFooterTemplate** and **GroupCap
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -297,7 +297,7 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -369,7 +369,7 @@ The following sample code demonstrates implementing the aggregates for the custo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -494,7 +494,7 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

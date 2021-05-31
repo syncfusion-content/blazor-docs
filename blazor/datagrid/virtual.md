@@ -21,7 +21,7 @@ the [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.S
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -104,7 +104,7 @@ To setup the column virtualization, set the
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -189,7 +189,7 @@ To setup the enable cell placeholder during virtualization, you need to define [
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids

@@ -27,7 +27,7 @@ Ensure our CSS files have been properly configured in your application.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 

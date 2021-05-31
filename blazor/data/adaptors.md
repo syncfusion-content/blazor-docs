@@ -27,7 +27,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -77,7 +77,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -113,7 +113,7 @@ The sample response object should be as follows,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 {
     "result": [{..}, {..}, {..}, ...],
@@ -132,7 +132,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -170,7 +170,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -208,7 +208,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -244,7 +244,7 @@ The sample response object should look like below.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 {
     "Items": [{..}, {..}, {..}, ...],
@@ -265,7 +265,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -303,7 +303,7 @@ The sample response object should look like below.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 {
     "result": [{..}, {..}, {..}, ...],

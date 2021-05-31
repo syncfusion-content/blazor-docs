@@ -19,7 +19,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -73,7 +73,7 @@ the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridS
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -128,7 +128,7 @@ the [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -182,7 +182,7 @@ To render the checkbox in each datagrid row, you need to assign the type as **Ch
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -242,7 +242,7 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -289,7 +289,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -340,7 +340,7 @@ To select a row at initial rendering, set the [`SelectedRowIndex`](https://help.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -390,7 +390,7 @@ You can get the selected row indexes by using [`GetSelectedRowIndexes`](https://
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -473,7 +473,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -543,7 +543,7 @@ You can select multiple rows by clicking on rows one by one. This will not desel
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

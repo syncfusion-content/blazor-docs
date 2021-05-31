@@ -15,7 +15,7 @@ The following sample code demonstrates changing the save index of the new row th
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Action = Syncfusion.Blazor.Grids.Action

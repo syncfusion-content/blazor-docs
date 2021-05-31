@@ -21,7 +21,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -73,7 +73,7 @@ The following sample code demonstrates binding remote data through the [`SfDataM
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

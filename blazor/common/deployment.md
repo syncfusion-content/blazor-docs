@@ -48,7 +48,7 @@ For CLI deployment, run the following command from your root directory.
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
     dotnet publish -c Release
 
@@ -60,7 +60,7 @@ For Blazor Server CLI deployment.
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
     dotnet publish -c Release --self-contained true -r win-x86
 
@@ -76,7 +76,7 @@ Use the following command to specify the path for the output directory.
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
     dotnet publish -c Release -o <output directory>
 

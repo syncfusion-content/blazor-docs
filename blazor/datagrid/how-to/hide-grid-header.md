@@ -13,7 +13,7 @@ You can hide the DataGrid header by applying the below styles to DataGrid compon
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
 <style>
     .e-grid .e-gridheader .e-columnheader{

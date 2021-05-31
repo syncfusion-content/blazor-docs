@@ -16,7 +16,7 @@ To enable sorting in the DataGrid, set the [`AllowSorting`](https://help.syncfus
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -67,7 +67,7 @@ To sort at initial rendering, set the **Field** and
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -124,7 +124,7 @@ To clear sorting for a particular column, press the "Shift + mouse left click".
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -176,7 +176,7 @@ During the sort action, the datagrid component triggers two events. The [`OnActi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids

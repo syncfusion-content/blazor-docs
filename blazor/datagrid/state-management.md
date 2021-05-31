@@ -29,7 +29,7 @@ State persistence allows the Grid to retain the current grid state in the browse
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -77,7 +77,7 @@ You can handle the grid's state manually by using in-built state persistence met
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons

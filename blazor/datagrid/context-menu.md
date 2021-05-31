@@ -61,7 +61,7 @@ The following sample code demonstrates enabling context menu with its default it
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -114,7 +114,7 @@ The following sample code demonstrates defining custom context menu item and its
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -177,7 +177,7 @@ The following sample code demonstrates defining built-in and custom context menu
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -237,7 +237,7 @@ The following sample code demonstrates defining sub context menu item and its co
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
@@ -303,7 +303,7 @@ The following sample code demonstrates the disabling the context for specific co
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -371,7 +371,7 @@ The following sample code demonstrates how to enable or disable context menu ite
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

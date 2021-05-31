@@ -15,7 +15,7 @@ This is demonstrated in the below sample code we have render the tooltip for **F
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups

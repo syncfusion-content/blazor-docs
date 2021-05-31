@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the value for **FinalCost** 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

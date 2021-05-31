@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the [`GetSelectedRowCellInde
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids

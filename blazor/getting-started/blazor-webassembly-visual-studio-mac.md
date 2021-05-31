@@ -64,7 +64,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
@@ -96,7 +96,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
@@ -116,7 +116,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
@@ -129,7 +129,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
 
@@ -155,7 +155,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <SfCalendar TValue="DateTime"></SfCalendar>
 

@@ -25,7 +25,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
 

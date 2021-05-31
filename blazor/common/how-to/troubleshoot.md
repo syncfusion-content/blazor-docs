@@ -29,7 +29,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
     public class Startup
@@ -169,7 +169,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
         <head>
              ....

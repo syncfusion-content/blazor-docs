@@ -25,7 +25,7 @@ Ensure your CSS files have been properly configured in your application.
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 
@@ -36,7 +36,7 @@ Ensure your CSS files have been properly configured in your application.
     If you are using [individual NuGet packages](http://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 

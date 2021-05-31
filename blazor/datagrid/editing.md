@@ -25,7 +25,7 @@ Deletion of the record is possible by selecting the required row and click on **
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -92,7 +92,7 @@ You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blaz
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -151,7 +151,7 @@ To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusio
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -208,7 +208,7 @@ To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -264,7 +264,7 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -320,7 +320,7 @@ Pressing TAB from the last cell of the current row allows editing the next row a
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -408,7 +408,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Grids
@@ -479,7 +479,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -555,7 +555,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
@@ -624,7 +624,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -691,7 +691,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.Grids
@@ -757,7 +757,7 @@ The cell edit template is used to add a custom component for a particular column
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
@@ -824,7 +824,7 @@ The available built-in command buttons are:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -886,7 +886,7 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -951,7 +951,7 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1015,7 +1015,7 @@ The following sample code demonstrates custom validations implemented in the fie
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids;
 @using System.ComponentModel.DataAnnotations;
@@ -1127,7 +1127,7 @@ In the below code example, the following things have been done.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 [MyCustomValidator.cs]
 
@@ -1191,7 +1191,7 @@ In the below code example, the following things have been done.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 [Index.razor]
 
@@ -1244,7 +1244,7 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
         protected void HandleValidation(FieldIdentifier identifier)
@@ -1285,7 +1285,7 @@ The output will be as follows.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfGrid TValue="OrdersDetails" DataSource="GridData"
         Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
@@ -1336,7 +1336,7 @@ In the following example:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -1418,7 +1418,7 @@ In the following example:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })">
@@ -1490,7 +1490,7 @@ Now add methods **AddOrder**, **UpdateOrder**, **DeleteOrder** in the **"OrderDa
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -1565,7 +1565,7 @@ Now you have to create a new **Post**, **Put**, **Delete** method in the Web API
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 using System;
 using System.Collections;
@@ -1640,7 +1640,7 @@ namespace WebApplication1.Server.Controllers
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -1680,7 +1680,7 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -1761,7 +1761,7 @@ You can perform the edit operation of Datagrid in a Custom external form. The ed
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 @using Syncfusion.Blazor.Grids
@@ -1878,7 +1878,7 @@ To know about customizing the  **Dialog Template** in Blazor DataGrid Component,
 
 `youtube:Cfj476xT2ao`
 
-The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the html elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -1888,7 +1888,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -2013,7 +2013,7 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -2152,7 +2152,7 @@ This is demonstrated in the below sample code where the first input element is i
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -2276,7 +2276,7 @@ The following image represents the AutoComplete component in focused state insid
 
 > Before adding an Inline template to the DataGrid, we strongly recommend you to go through the [`Template`](./templates/#templates) section topic to configure the template.
 
-The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the html elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Inline Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -2286,7 +2286,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
@@ -2407,7 +2407,7 @@ The following sample code demonstrates changing the position of the new row that
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2464,7 +2464,7 @@ The following sample code demonstrates enabling delete confirmation dialog in th
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2518,7 +2518,7 @@ The following sample code demonstrates enabling confirmation dialog for batch op
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2573,7 +2573,7 @@ The following sample code demonstrates setting default value as **ANTON** to the
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2625,7 +2625,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2698,7 +2698,7 @@ The following sample code demonstrates the different **RequestType** parameters 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2796,7 +2796,7 @@ In the below example we have changed the dialog's header text and footer button 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -2893,7 +2893,7 @@ The following sample code demonstrates the CRUD operation for complex objects wi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns

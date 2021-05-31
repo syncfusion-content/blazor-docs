@@ -23,7 +23,7 @@ The **RowTemplate** has an option to customize the look and behavior of the data
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -162,12 +162,12 @@ The output will be as follows.
 
 ### Row template with formatting
 
-If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, C# custom formats can be used.
+If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, c# custom formats can be used.
 Here [`Custom DateTime`](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -338,7 +338,7 @@ The detail template provides additional information about a particular row by ex
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -459,7 +459,7 @@ In the below sample, a datagrid component is rendered as custom component using 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
@@ -548,7 +548,7 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -679,7 +679,7 @@ Also DataGrid supports the spanning of rows and columns for same cells. **Lunch 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -870,7 +870,7 @@ The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gri
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -969,7 +969,7 @@ Please refer to the following example.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1032,7 +1032,7 @@ In the below example, the `RowHeight` is set as '60'.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1089,7 +1089,7 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

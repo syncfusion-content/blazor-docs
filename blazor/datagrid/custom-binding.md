@@ -17,7 +17,7 @@ The **DataAdaptor** abstract class has both synchronous and asynchronous method 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 public abstract class DataAdaptor
 {
@@ -83,7 +83,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -184,7 +184,7 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -202,7 +202,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -274,7 +274,7 @@ Ensure to register your service in **Startup.cs** file.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -290,7 +290,7 @@ The following sample code demonstrates creating Custom Adaptor as a component,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -336,7 +336,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 [CustomAdaptorComponent.razor]
 
@@ -397,7 +397,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 [CustomAdaptorComponent.razor]
 
@@ -469,7 +469,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -620,7 +620,7 @@ The following sample code demonstrates implementing the aggregates for the custo
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data

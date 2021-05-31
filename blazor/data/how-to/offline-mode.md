@@ -17,7 +17,7 @@ The following sample code demonstrates enabling offline mode for the [`SfDataMan
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

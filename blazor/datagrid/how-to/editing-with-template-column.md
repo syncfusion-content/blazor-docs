@@ -15,7 +15,7 @@ In the below demo, the **CustomerID** column is rendered with the template.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

@@ -21,7 +21,7 @@ This section explains about how to connect the [`SfDataManager`](https://help.sy
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         <environment include="Development">
@@ -43,7 +43,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Data** package
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
         @using Syncfusion.Blazor.Data
 
@@ -57,7 +57,7 @@ To initialize the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-bl
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 <SfDataManager>
@@ -83,7 +83,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -132,7 +132,7 @@ The following sample code demonstrates binding OData through the [`SfDataManager
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -175,7 +175,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
@@ -217,7 +217,7 @@ The following sample code demonstrates binding remote data through the [`SfDataM
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data

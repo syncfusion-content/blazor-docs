@@ -25,7 +25,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
         dotnet new blazorserver -o WebApplication1
         cd WebApplication1
@@ -46,7 +46,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
         dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
         dotnet restore
@@ -61,7 +61,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
@@ -83,7 +83,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight BASH %}
+{% highlight bash %}
 
         dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
         dotnet restore
@@ -98,7 +98,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
@@ -118,7 +118,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
@@ -131,7 +131,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     using Syncfusion.Blazor;
 
@@ -156,7 +156,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     <SfCalendar TValue="DateTime"></SfCalendar>
 

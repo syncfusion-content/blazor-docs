@@ -16,7 +16,7 @@ PDF export allows exporting DataGrid data to PDF document. You need to use the
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -73,7 +73,7 @@ This is demonstrated in the below sample code block,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -154,7 +154,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -221,7 +221,7 @@ The following sample code demonstrates changing the default font value on export
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -303,7 +303,7 @@ The following sample code demonstrates changing the default font value to custom
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -389,7 +389,7 @@ The following sample code demonstrates adding text and customizing it's styles i
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -468,7 +468,7 @@ The following sample code demonstrates adding line in the Header section of the 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -537,7 +537,7 @@ You can add headers for every page of PDF exported document by enabling [`IsRepe
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -594,7 +594,7 @@ You can export the PDF grid with specific columns instead of all columns which a
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -668,7 +668,7 @@ The following sample code demonstrates adding page number in the Header section 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -739,7 +739,7 @@ The following sample code demonstrates inserting image in the Header section of 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -808,7 +808,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -895,7 +895,7 @@ Supported page sizes are:
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -952,7 +952,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1009,7 +1009,7 @@ PDF export provides an option to export hidden columns of DataGrid by defining t
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1068,7 +1068,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1163,7 +1163,7 @@ This is demonstrated in the below sample code where initially the **CustomerID**
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -1231,7 +1231,7 @@ The following sample code demonstrates dynamically modifying the data source bef
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

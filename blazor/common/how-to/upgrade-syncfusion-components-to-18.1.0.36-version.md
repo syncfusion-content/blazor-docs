@@ -56,7 +56,7 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <EjsButton>Button</EjsButton>
 
@@ -70,7 +70,7 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <SfButton>Button</SfButton>
 
@@ -86,7 +86,7 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <EjsCalendar TValue="DateTime"></EjsCalendar>
 
@@ -100,7 +100,7 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 
 <SfCalendar TValue="DateTime"></SfCalendar>
@@ -133,7 +133,7 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <head>
     ....
@@ -152,7 +152,7 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <head>
     ....
@@ -189,7 +189,7 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.EJ2.Blazor.Data
 
@@ -215,7 +215,7 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Data
 

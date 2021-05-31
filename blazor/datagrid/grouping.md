@@ -15,7 +15,7 @@ To enable grouping in the datagrid, set the [`AllowGrouping`](https://help.syncf
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -69,7 +69,7 @@ To apply group at initial rendering, set the column field name in the [`Columns`
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -123,7 +123,7 @@ grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/blazor/Sync
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -185,7 +185,7 @@ datagrid columns.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -235,7 +235,7 @@ triggers before the group action starts and the [`OnActionComplete`](https://hel
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -291,7 +291,7 @@ The following sample code demonstrates the above,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

@@ -24,7 +24,7 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -65,7 +65,7 @@ You can refer the following code example to achieve this
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -108,7 +108,7 @@ You can achieve complex data binding in the datagrid by using the dot(.) operato
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -167,7 +167,7 @@ Before proceeding this you learn about [`ExpandoObject Binding`](https://blazor.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
@@ -225,7 +225,7 @@ Before proceeding this you learn about [`DynamicObject Binding`](https://blazor.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
@@ -306,7 +306,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -365,7 +365,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -430,7 +430,7 @@ By default, column header title is displayed from column [`Field`](https://help.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -487,7 +487,7 @@ The Header Template has options to display custom element value or content in th
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -579,7 +579,7 @@ The Column template has options to display custom element value or content in th
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -652,7 +652,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -724,7 +724,7 @@ This can be achieved using the Column template property as it has options to dis
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -795,7 +795,7 @@ This can be achieved by initially defining an anchor tag inside the column templ
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.Grids
@@ -858,7 +858,7 @@ After this add new razor page for routing with routing url along with the parame
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @page "/nancy_fuller/{EmpID}/{Name}/{Title}"
 
@@ -915,7 +915,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -974,7 +974,7 @@ In this below example, we have opened column chooser using external button click
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -1040,7 +1040,7 @@ values.
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1104,7 +1104,7 @@ You can hide any particular column in DataGrid before rendering by defining [`Vi
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1168,7 +1168,7 @@ You can auto fit a column interactively by double clicking the right border of t
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1217,7 +1217,7 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1276,7 +1276,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1326,7 +1326,7 @@ DataGrid has option to reorder single column either by Interaction or by using t
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -1386,7 +1386,7 @@ In the below sample, **Customer Name** and **Freight** columns are reordered to 
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -1447,7 +1447,7 @@ During the reorder action, the grid component triggers the below events,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1508,7 +1508,7 @@ In the below example, Order ID column is locked and its reordering functionality
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1550,7 +1550,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1603,7 +1603,7 @@ In the following sample, minimum and maximum width are defined for **CustomerID*
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1648,7 +1648,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1712,7 +1712,7 @@ During the resizing action the grid component triggers the below events,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1784,7 +1784,7 @@ The default menu items are displayed in the following table,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1843,7 +1843,7 @@ The grid component triggers the below events when column menu operations are per
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -1900,7 +1900,7 @@ Actions for the customized items can be defined in the [`ColumnMenuItemClicked`]
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
@@ -1981,7 +1981,7 @@ In the following sample code, Filter item is hidden in column menu for the Order
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2044,7 +2044,7 @@ In the following demo, the cells have been spanned based on the employees schedu
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2229,7 +2229,7 @@ In the below sample code, for OrderID column - HideAtMedia property value is set
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2280,7 +2280,7 @@ The following sample code shows datagrid actions disabled for particular columns
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2332,7 +2332,7 @@ The following sample code demonstrates showing and hiding of columns using their
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
@@ -2402,7 +2402,7 @@ The following sample code demonstrates the displayed data manipulated for two co
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2457,7 +2457,7 @@ In the following sample code, the name field having an array of two objects, Fir
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2515,7 +2515,7 @@ The following sample code demonstrates expression column achieved using [`ValueA
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2574,7 +2574,7 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -2620,7 +2620,7 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" Type="ColumnType.Boolean" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
 

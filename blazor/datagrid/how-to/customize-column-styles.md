@@ -38,7 +38,7 @@ Add the custom CSS class to the specified column by using the [`CustomAttributes
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids

@@ -7,7 +7,7 @@ This is demonstrated in the below sample code,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars

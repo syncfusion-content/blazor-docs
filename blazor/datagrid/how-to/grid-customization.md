@@ -15,7 +15,7 @@ This is demonstrated in the below sample code,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 
@@ -91,7 +91,7 @@ This is demonstrated in the below sample code,
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
 @using Syncfusion.Blazor.Grids
 

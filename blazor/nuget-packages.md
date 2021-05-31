@@ -1381,7 +1381,7 @@ SfRangeNavigator
 
 ### Syncfusion.Blazor.RichTextEditor
 
-The Rich Text Editor component is the HTML and markdown editor that provides the best user experience for creating, updating, and formatting the content.
+The Rich Text Editor component is the html and markdown editor that provides the best user experience for creating, updating, and formatting the content.
 
 <table>
 <tr>

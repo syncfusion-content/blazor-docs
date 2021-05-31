@@ -23,7 +23,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public void ConfigureServices(IServiceCollection services)
     {
@@ -43,7 +43,7 @@ documentation: ug
     **Blazor WebAssembly App (~/Program.cs)**
 {% tabs %}
 
-{% highlight C# %}
+{% highlight c# %}
 
     public static async Task Main(string[] args)
     {
@@ -65,7 +65,7 @@ documentation: ug
 
 {% tabs %}
 
-{% highlight HTML %}
+{% highlight html %}
 
     <head>
         ....
