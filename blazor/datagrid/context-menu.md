@@ -112,6 +112,12 @@ $("#button11").ejButton({
 
 {% endhighlight %}
 
+{% highlight bash %}
+
+> npm install aurelia-cli -g
+> au new
+
+{% endhighlight %}
 
 {% highlight html %} 
 
