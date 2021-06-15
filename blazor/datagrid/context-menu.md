@@ -122,8 +122,8 @@ $("#button11").ejButton({
 {% highlight html %} 
 
 <div class="frame">
-    <div class="ctrllabel">Select a car</div>
-    <ej-listbox id="defaultlistbox" style="display:block;" width="100%" [dataSource]="data" width="100%" [fields]="fieldList" [sortOrder]="sorting"></ej-listbox>
+<div class="ctrllabel">Select a car</div>
+<ej-listbox id="defaultlistbox" style="display:block;" width="100%" [dataSource]="data" width="100%" [fields]="fieldList" [sortOrder]="sorting"></ej-listbox>
 </div>
 
 {% endhighlight %}
