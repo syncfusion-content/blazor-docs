@@ -95,6 +95,44 @@ This section contains guidelines on naming files, sections, documents and other 
 > \{{"{{"}} code block here {{}}}}
 
 
+
+
+### YouTube
+
+* For embedding the Youtube video link use the following pattern.
+ 
+* >	**Syntax**:  {% youtube "Link" %}  
+* >	**Example**: {% youtube "https://www.youtube.com/watch?9YF9HnFY5Ew" %}
+
+
+### Razor Code Block
+
+* For Using the Razor code in the code snippet 
+
+* >	**Syntax**:  {% highlight razor %} [CODE] {% endhighlight %}
+* >	**Example**: 
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowSorting="true" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
+   .
+   .
+   .
+</SfGrid>
+
+@code{
+   .
+   .
+   .
+}
+
+{% endhighlight %}
+
+
+
+
+
 ### Bullet style
 * Refer the syntax provided in the [Kramdown site](http://kramdown.gettalong.org/syntax.html#lists).
 * Do not provide a line gap between the bullet points.
