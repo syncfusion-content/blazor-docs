@@ -1,3 +1,12 @@
+---
+layout: post
+title: Customization in Blazor Chip Component | Syncfusion 
+description: Learn about Customization in Blazor Chip component of Syncfusion, and more details.
+platform: Blazor
+control: Chip
+documentation: ug
+---
+
 # Chip Customization
 
 This section explains the customization of styles, leading icons, avatar, and trailing icons in Chip control.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Time Line in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Time Line in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Timeline
 
 In the [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component, timeline is used to represent the project duration as individual cells with defined unit and formats.

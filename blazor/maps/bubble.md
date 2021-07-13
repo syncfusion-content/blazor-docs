@@ -1,3 +1,12 @@
+---
+layout: post
+title: Bubble in Blazor Maps Component | Syncfusion 
+description: Learn about Bubble in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Bubbles
 
 Bubbles in the Maps component represent the underlying data values of the maps. Bubbles are scattered throughout the map shapes that contain bound values.

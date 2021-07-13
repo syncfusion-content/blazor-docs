@@ -1,3 +1,12 @@
+---
+layout: post
+title: Olap in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Olap in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 

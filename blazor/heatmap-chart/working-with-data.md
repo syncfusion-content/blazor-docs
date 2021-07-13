@@ -1,3 +1,12 @@
+---
+layout: post
+title: Working With Data in Blazor HeatMap Chart Component | Syncfusion 
+description: Learn about Working With Data in Blazor HeatMap Chart component of Syncfusion, and more details.
+platform: Blazor
+control: HeatMap Chart
+documentation: ug
+---
+
 # Working with data
 
 Heat map visualizes the JSON data and two-dimensional array data. Using the data adaptor support, data can be bound to the heat map.

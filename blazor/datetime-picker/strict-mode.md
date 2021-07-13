@@ -1,3 +1,12 @@
+---
+layout: post
+title: Strict Mode in Blazor Datetime Picker  Component | Syncfusion 
+description: Learn about Strict Mode in Blazor Datetime Picker  component of Syncfusion, and more details.
+platform: Blazor
+control: Datetime Picker 
+documentation: ug
+---
+
 # Strict Mode
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_StrictMode) is an act, that allows the users to enter only the valid date and time within the specified `Min/Max` range in text box.

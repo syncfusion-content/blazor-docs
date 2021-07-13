@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Header Footer in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Header Footer in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Headers and Footers"
 component: "Word processor"
 description: "Learn header footer support in Blazor Word processor and how to work with it."

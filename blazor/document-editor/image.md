@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Image in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Image in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Images"
 component: "Word processor"
 description: "Learn the supported image types in Blazor Word processor and how to insert, resize, format images."

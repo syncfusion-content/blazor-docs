@@ -1,3 +1,12 @@
+---
+layout: post
+title: Interactions in Blazor Diagram Component | Syncfusion 
+description: Learn about Interactions in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Interaction
 
 Connectors can be selected, dragged, and routed over the diagram page.

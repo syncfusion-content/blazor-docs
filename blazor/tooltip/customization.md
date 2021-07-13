@@ -1,3 +1,12 @@
+---
+layout: post
+title: Customization in Blazor Tooltip Component | Syncfusion 
+description: Learn about Customization in Blazor Tooltip component of Syncfusion, and more details.
+platform: Blazor
+control: Tooltip
+documentation: ug
+---
+
 # Customization
 
 The Tooltip can be customized by using the `CssClass` property, which accepts custom CSS class names that define specific user-defined

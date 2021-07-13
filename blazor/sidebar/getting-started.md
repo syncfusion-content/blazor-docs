@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Sidebar Component | Syncfusion 
+description: Learn about Getting Started in Blazor Sidebar component of Syncfusion, and more details.
+platform: Blazor
+control: Sidebar
+documentation: ug
+---
+
 <!-- markdownlint-disable MD009 -->
 
 # Getting Started

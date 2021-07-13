@@ -1,3 +1,12 @@
+---
+layout: post
+title: Appearance in Blazor Diagram Component | Syncfusion 
+description: Learn about Appearance in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Appearance
 
 * The appearance of a node can be customized by changing its [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html) color, [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), and [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow).

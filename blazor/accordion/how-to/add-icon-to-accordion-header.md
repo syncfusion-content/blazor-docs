@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Icon To Accordion Header in Blazor Accordion Component | Syncfusion
+description: Checkout and learn about Add Icon To Accordion Header in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Add Icon to Header
 
 You can add the icon custom css class to the Accordion header using `IconCss` property and also add css styles to the defined class.  The accordion icon element is rendered before the header text in the DOM element.

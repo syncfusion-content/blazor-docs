@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Achieve Two Way Binding To The Visible Property in Blazor Dialog Component | Syncfusion
+description: Checkout and learn about Achieve Two Way Binding To The Visible Property in Blazor Dialog component of Syncfusion, and more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
 # Achieve two-way binding to the visible property
 
 ## Two-way binding

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Tabs Component | Syncfusion 
+description: Learn about Index in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Overview
 
 The Tabs component is a content panel to show multiple contents in a specific space, one at a time.

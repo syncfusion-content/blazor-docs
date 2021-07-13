@@ -1,3 +1,12 @@
+---
+layout: post
+title: Icons in Blazor Split Button Component | Syncfusion 
+description: Learn about Icons in Blazor Split Button component of Syncfusion, and more details.
+platform: Blazor
+control: Split Button
+documentation: ug
+---
+
 # Icons
 
 ## Split Button Icons

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor Tabs Component | Syncfusion 
+description: Learn about Style in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # CSS Structure
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.

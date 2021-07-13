@@ -1,3 +1,12 @@
+---
+layout: post
+title: Native Events in Blazor DatePicker Component | Syncfusion 
+description: Learn about Native Events in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Overview
 
 This section explains the steps to include native events and pass data to event handler in the DatePicker component.

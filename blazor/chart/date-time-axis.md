@@ -1,3 +1,12 @@
+---
+layout: post
+title: Date Time Axis in Blazor Chart Component | Syncfusion 
+description: Learn about Date Time Axis in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # DateTime and DateTimeCategory Axis

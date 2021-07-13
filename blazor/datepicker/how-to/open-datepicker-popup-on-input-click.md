@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Open Datepicker Popup On Input Click in Blazor DatePicker Component | Syncfusion
+description: Checkout and learn about Open Datepicker Popup On Input Click in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Open the DatePicker popup upon focusing input of DatePicker
 
 You can open the DatePicker popup on input focus by calling the `show` method in the input `focus` event.

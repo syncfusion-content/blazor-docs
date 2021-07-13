@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor DataManager Component | Syncfusion 
+description: Learn about Getting Started in Blazor DataManager component of Syncfusion, and more details.
+platform: Blazor
+control: DataManager
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

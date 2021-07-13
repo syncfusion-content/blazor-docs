@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Items in Blazor List Box Component | Syncfusion
+description: Checkout and learn about Add Items in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Add items to the listbox
 
 To add an item or multiple items, `AddItem` method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.

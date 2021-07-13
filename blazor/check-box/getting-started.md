@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Checkbox Component | Syncfusion 
+description: Learn about Getting Started in Blazor Checkbox component of Syncfusion, and more details.
+platform: Blazor
+control: Checkbox
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Checkbox Component
@@ -6,7 +15,8 @@ This section briefly explains about how to include Checkbox Component in your Bl
 
 To get start quickly with CheckBox Component using Blazor, you can check on this video:
 
-`youtube:a6HR1QGAvLo`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=a6HR1QGAvLo"%}
 
 ## Importing Syncfusion Blazor component in the application
 

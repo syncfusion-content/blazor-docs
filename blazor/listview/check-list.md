@@ -1,3 +1,12 @@
+---
+layout: post
+title: Check List in Blazor Listview Component | Syncfusion 
+description: Learn about Check List in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # Checklist
 
 The ListView supports checkbox in default and group-lists which is used to select multiple items.

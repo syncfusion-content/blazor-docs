@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor DataManager Component | Syncfusion 
+description: Learn about Data Binding in Blazor DataManager component of Syncfusion, and more details.
+platform: Blazor
+control: DataManager
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Data Binding

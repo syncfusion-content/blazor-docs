@@ -1,3 +1,12 @@
+---
+layout: post
+title: Server Side Using Visual Studio in Blazor DataGrid Component | Syncfusion 
+description: Learn about Server Side Using Visual Studio in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Essential JS 2 for Blazor server-side in Visual Studio 2019

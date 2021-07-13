@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Checkbox Component | Syncfusion 
+description: Learn about Accessibility in Blazor Checkbox component of Syncfusion, and more details.
+platform: Blazor
+control: Checkbox
+documentation: ug
+---
+
 # Accessibility
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.

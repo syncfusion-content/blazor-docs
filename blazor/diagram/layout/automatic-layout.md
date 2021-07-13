@@ -1,3 +1,12 @@
+---
+layout: post
+title: Automatic Layout in Blazor Diagram Component | Syncfusion 
+description: Learn about Automatic Layout in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Automatic Layout
 
 Diagram provides support to auto-arrange the nodes in the diagram area that is referred as [`Layout`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html). It includes the following layout modes:

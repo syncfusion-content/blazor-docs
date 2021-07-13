@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor In Place Editor  Component | Syncfusion 
+description: Learn about Index in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
 # Overview
 
 The In-place Editor component is used to edit and update the input value dynamically to the server. It supports integrating many component types such as "DropDownList", "DatePicker", "AutoComplete", and more.

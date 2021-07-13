@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Source in Blazor MultiSelect Dropdown Component | Syncfusion 
+description: Learn about Data Source in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+platform: Blazor
+control: MultiSelect Dropdown
+documentation: ug
+---
+
 # Data Source
 
 The MultiSelect loads the data either from local data sources or

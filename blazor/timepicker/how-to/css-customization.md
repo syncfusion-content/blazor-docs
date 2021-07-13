@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Css Customization in Blazor TimePicker Component | Syncfusion
+description: Checkout and learn about Css Customization in Blazor TimePicker component of Syncfusion, and more details.
+platform: Blazor
+control: TimePicker
+documentation: ug
+---
+
 # CSS customization
 
 TimePicker allows you to customize the text box and popup list appearance to suit your

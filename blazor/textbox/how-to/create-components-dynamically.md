@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Components Dynamically in Blazor TextBox Component | Syncfusion
+description: Checkout and learn about Create Components Dynamically in Blazor TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: TextBox
+documentation: ug
+---
+
 # Create TextBox component dynamically
 
 You can render the TextBox component at runtime in the following ways:

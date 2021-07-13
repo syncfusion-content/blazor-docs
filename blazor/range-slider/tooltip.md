@@ -1,3 +1,12 @@
+---
+layout: post
+title: Tooltip in Blazor Range Slider Component | Syncfusion 
+description: Learn about Tooltip in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Tooltip
 
 The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag

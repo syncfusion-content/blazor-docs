@@ -1,3 +1,12 @@
+---
+layout: post
+title: Selection And Nesting in Blazor ButtonGroup Component | Syncfusion 
+description: Learn about Selection And Nesting in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Selection and Nesting
 
 ## Single selection

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Native Events in Blazor Input Mask Component | Syncfusion 
+description: Learn about Native Events in Blazor Input Mask component of Syncfusion, and more details.
+platform: Blazor
+control: Input Mask
+documentation: ug
+---
+
 # Overview
 
 The following section explains the steps to include native events and pass data to event handler in MaskedTextBox component.

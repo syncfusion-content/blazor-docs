@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Events in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Events
 
 The following section list out the events provided in PDF Viewer component:

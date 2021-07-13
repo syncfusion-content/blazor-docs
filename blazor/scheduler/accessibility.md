@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Scheduler Component | Syncfusion 
+description: Learn about Accessibility in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Accessibility
 
 Accessibility is achieved in the Scheduler component through WAI-ARIA standard and keyboard navigation. The Scheduler features can be effectively accessed through assistive technologies such as screen readers.

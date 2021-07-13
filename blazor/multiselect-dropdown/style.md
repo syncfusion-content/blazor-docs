@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor MultiSelect Dropdown Component | Syncfusion 
+description: Learn about Style in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+platform: Blazor
+control: MultiSelect Dropdown
+documentation: ug
+---
+
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.

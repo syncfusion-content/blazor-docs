@@ -1,3 +1,12 @@
+---
+layout: post
+title: Toolbar in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Toolbar in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Toolbar
 
 The Tree Grid provides Toolbar support to handle tree grid actions.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Source in Blazor ComboBox Component | Syncfusion 
+description: Learn about Data Source in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Data Source
 
 The ComboBox loads the data either from local data sources or

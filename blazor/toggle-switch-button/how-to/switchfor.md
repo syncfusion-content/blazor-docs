@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Switchfor in Blazor Toggle Switch Button  Component | Syncfusion
+description: Checkout and learn about Switchfor in Blazor Toggle Switch Button  component of Syncfusion, and more details.
+platform: Blazor
+control: Toggle Switch Button 
+documentation: ug
+---
+
 # Data Annotations for Toggle Switch Button
 
 This section demonstrates the Strongly typed extension support in Toggle Switch Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Webassembly Performance in Blazor Scheduler Component | Syncfusion 
+description: Learn about Webassembly Performance in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # WebAssembly performance
 
 This section provides performance guidelines for using Syncfusion Scheduler component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).

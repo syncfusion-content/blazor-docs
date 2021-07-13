@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Index in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
 # Overview
 
 The [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.

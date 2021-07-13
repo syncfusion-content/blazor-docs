@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Collapsible Tabs in Blazor Tabs Component | Syncfusion
+description: Checkout and learn about Create Collapsible Tabs in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Create collapsible Tabs
 
 You can achieve collapse and expand functionality in Tab by adding/removing a custom CSS class in the click event handler for each tab.

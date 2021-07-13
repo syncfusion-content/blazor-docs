@@ -1,3 +1,12 @@
+---
+layout: post
+title: Buttons in Blazor In Place Editor  Component | Syncfusion 
+description: Learn about Buttons in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
 # Buttons
 
 The In-place Editor has an option to save and cancel using buttons. The `InPlaceEditorSaveButton` and `InPlaceEditorCancelButton` tags accept the button properties for customizing the save and cancel button.

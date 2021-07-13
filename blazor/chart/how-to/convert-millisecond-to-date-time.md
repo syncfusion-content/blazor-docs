@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Convert Millisecond To Date Time in Blazor Chart Component | Syncfusion
+description: Checkout and learn about Convert Millisecond To Date Time in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Convert millisecond value in datetime axis to date format

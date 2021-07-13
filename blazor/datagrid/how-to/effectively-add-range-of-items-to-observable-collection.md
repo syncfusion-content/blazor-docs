@@ -1,4 +1,13 @@
 ---
+layout: post
+title: How to Effectively Add Range Of Items To Observable Collection in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Effectively Add Range Of Items To Observable Collection in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
+---
 title: "Effectively add a range of items into ObservableCollection"
 component: "DataGrid"
 description: "Learn how to add a range of items into ObservableCollection data bind to Blazor DataGrid component"

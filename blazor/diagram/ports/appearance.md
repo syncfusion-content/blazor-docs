@@ -1,3 +1,12 @@
+---
+layout: post
+title: Appearance in Blazor Diagram Component | Syncfusion 
+description: Learn about Appearance in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Port appearance and positioning
 
 ## Appearance

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Spinner Integration in Blazor Spinner Component | Syncfusion 
+description: Learn about Spinner Integration in Blazor Spinner component of Syncfusion, and more details.
+platform: Blazor
+control: Spinner
+documentation: ug
+---
+
 # Integrate Spinner into Blazor UI components
 
 The Spinner component rendered with other Blazor components.

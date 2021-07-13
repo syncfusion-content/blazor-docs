@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor Diagram Component | Syncfusion 
+description: Learn about Events in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Events
 
 Diagram provides some events support for node that triggers when interacting the node.

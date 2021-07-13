@@ -1,3 +1,12 @@
+---
+layout: post
+title: Formats in Blazor Numeric TextBox Component | Syncfusion 
+description: Learn about Formats in Blazor Numeric TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: Numeric TextBox
+documentation: ug
+---
+
 # Number Formats
 
 You can format the value of NumericTextBox using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.

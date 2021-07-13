@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Dropdownlist Dropdownbutton in Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn about Dropdownlist Dropdownbutton in Blazor Dropdown Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Dropdown Menu
+documentation: ug
+---
+
 # Create Dropdown List in Popup
 
 We have render the `DropDownList` component in `DropDownMenu` popup using `PopupContent` property.

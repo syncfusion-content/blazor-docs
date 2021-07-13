@@ -1,3 +1,12 @@
+---
+layout: post
+title: Editor Modes in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Editor Modes in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Editor modes
 
 The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component is used to create and edit the content and return valid HTML markup or markdown (MD) of the content. It supports the following two editing formations:

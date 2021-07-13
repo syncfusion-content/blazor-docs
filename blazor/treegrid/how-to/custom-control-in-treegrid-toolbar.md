@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Custom Control In Treegrid Toolbar in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn about Custom Control In Treegrid Toolbar in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Custom control in Tree Grid toolbar
 
 You can render custom controls inside the Tree Grid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the Toolbar component. This toolbar component is defined inside the Tree Grid component.

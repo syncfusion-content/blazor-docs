@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor DataGrid Component | Syncfusion 
+description: Learn about Data Binding in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Data Binding
 
 The DataGrid uses [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
@@ -55,7 +64,8 @@ Grid is a generic component which is strongly bound to a model type. There are c
 
 To know about **ExpandoObject** data binding in Blazor DataGrid component, you can check on this video.
 
-`youtube:Xhaw3DdHmJk`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
 
 **ExpandoObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
 
@@ -156,7 +166,8 @@ Grid is a generic component which is strongly bound to a model type. There are c
 
 To know about **DynamicObject** data binding in Blazor DataGrid component, you can check on this video.
 
-`youtube:Xhaw3DdHmJk`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
 
 **DynamicObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in DynamicObject.
 

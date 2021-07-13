@@ -1,3 +1,12 @@
+---
+layout: post
+title: Global Local in Blazor DataGrid Component | Syncfusion 
+description: Learn about Global Local in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Globalization
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.

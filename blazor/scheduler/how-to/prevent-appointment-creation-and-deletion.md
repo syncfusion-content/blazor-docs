@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Prevent Appointment Creation And Deletion in Blazor Scheduler Component | Syncfusion
+description: Checkout and learn about Prevent Appointment Creation And Deletion in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Prevent Appointment Creation and Deletion
 
 By default, Scheduler allows the user to perform all the CRUD actions. We can prevent a particular action by setting `false` to the respective property. In the following code example, only edit actions are allowed as `AllowAdding` and `AllowDeleting` properties are set to `false`.

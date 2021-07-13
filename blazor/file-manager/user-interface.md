@@ -1,3 +1,12 @@
+---
+layout: post
+title: User Interface in Blazor File Manager Component | Syncfusion 
+description: Learn about User Interface in Blazor File Manager component of Syncfusion, and more details.
+platform: Blazor
+control: File Manager
+documentation: ug
+---
+
 # User Interface Structure
 
 The file manager UI is comprised of several sections like view, toolbar, breadcrumb, context menu, and so on. The UI of the file manager is enhanced with  `Details View` for browsing files and folders in a grid, `Navigation Pane` for folder navigation, and `Toolbar` for file operations. The file manager with all feature have the following sections in its UI.

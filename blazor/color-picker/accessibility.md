@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Color Picker Component | Syncfusion 
+description: Learn about Accessibility in Blazor Color Picker component of Syncfusion, and more details.
+platform: Blazor
+control: Color Picker
+documentation: ug
+---
+
 # Accessibility
 
 ## ARIA attributes

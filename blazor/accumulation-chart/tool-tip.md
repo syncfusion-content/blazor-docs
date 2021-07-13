@@ -1,3 +1,12 @@
+---
+layout: post
+title: Tool Tip in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Tool Tip in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Tooltip
 
 Tooltip for the accumulation chart can be enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property.

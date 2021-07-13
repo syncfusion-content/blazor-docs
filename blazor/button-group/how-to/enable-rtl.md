@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Enable Rtl in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about Enable Rtl in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Enable RTL
 
 ButtonGroup supports RTL functionality. This can be achieved by adding `e-rtl` class to the target element.

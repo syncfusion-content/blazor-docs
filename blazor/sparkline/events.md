@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Events in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Events in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
+---
 title: "Events in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"

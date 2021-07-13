@@ -1,3 +1,12 @@
+---
+layout: post
+title: Undo Redo in Blazor Diagram Component | Syncfusion 
+description: Learn about Undo Redo in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # History List
 
 Diagram tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.

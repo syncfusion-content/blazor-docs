@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Or Remove Context Menu Items in Blazor Context Menu Component | Syncfusion
+description: Checkout and learn about Add Or Remove Context Menu Items in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
 # Add or remove context menu items
 
 Context Menu items can be added or removed using the [`InsertAfter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertAfter.html), [`InsertBefore`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertBefore.html) and [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~RemoveItems.html) methods.

@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor DatePicker Component | Syncfusion 
+description: Learn about Getting Started in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains about how to include a [Blazor DatePicker](https://www.syncfusion.com/blazor-components/blazor-datepicker) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side DatePicker](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly DatePicker](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
 To get start quickly with Blazor DatePicker component, you can check on this video.
 
-`youtube:ZN0zSIU59nY`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=ZN0zSIU59nY"%}
 
 ## Importing Syncfusion Blazor component in the application
 

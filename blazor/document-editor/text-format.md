@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Text Format in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Text Format in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Working with Text Formatting"
 component: "Word processor"
 description: "Learn text formatting supported in Blazor Word processor and how to apply it for selected contents."

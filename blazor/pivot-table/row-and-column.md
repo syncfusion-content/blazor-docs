@@ -1,3 +1,12 @@
+---
+layout: post
+title: Row And Column in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Row And Column in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 <!-- markdownlint-disable MD012 -->
 
 # Row and Column

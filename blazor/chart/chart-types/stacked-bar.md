@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Stacked Bar in Blazor Chart Component | Syncfusion 
+description: Learn about Stacked Bar in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Stacked Bar Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

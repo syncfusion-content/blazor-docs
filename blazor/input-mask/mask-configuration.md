@@ -1,3 +1,12 @@
+---
+layout: post
+title: Mask Configuration in Blazor Input Mask Component | Syncfusion 
+description: Learn about Mask Configuration in Blazor Input Mask component of Syncfusion, and more details.
+platform: Blazor
+control: Input Mask
+documentation: ug
+---
+
 # Mask Configuration
 
 The [Mask](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.MaskedTextBoxModel.html#Syncfusion_Blazor_Inputs_MaskedTextBoxModel_Mask) is a combination of standard and custom mask elements that validates the user input based on its behavior.

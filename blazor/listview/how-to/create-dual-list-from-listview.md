@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Dual List From Listview in Blazor Listview Component | Syncfusion
+description: Checkout and learn about Create Dual List From Listview in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # How to create dual list from listview
 
 The dual list contains two ListView. This allows you to move list items from one list to another using the client-side

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Templates in Blazor DataGrid Component | Syncfusion 
+description: Learn about Templates in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Templates
 
 Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. DataGrid is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allow you to render custom components or content based on your own logic.

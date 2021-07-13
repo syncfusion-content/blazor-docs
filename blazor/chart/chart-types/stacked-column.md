@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Stacked Column in Blazor Chart Component | Syncfusion 
+description: Learn about Stacked Column in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Stacked Column Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

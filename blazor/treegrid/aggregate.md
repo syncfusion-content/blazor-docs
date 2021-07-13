@@ -1,3 +1,12 @@
+---
+layout: post
+title: Aggregate in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Aggregate in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Aggregates
 
 Aggregate values are displayed in the Tree Grid footer and in parent row footer for child row aggregate values. It can be configured through [`TreeGridAggregateColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn.html) property.

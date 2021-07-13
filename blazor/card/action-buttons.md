@@ -1,3 +1,12 @@
+---
+layout: post
+title: Action Buttons in Blazor Card Component | Syncfusion 
+description: Learn about Action Buttons in Blazor Card component of Syncfusion, and more details.
+platform: Blazor
+control: Card
+documentation: ug
+---
+
 # Action Buttons
 
 You can include Action buttons within the Card and customize them. Action button is a `div` element with `CardFooter` component followed by button tag or anchor tag within the card root element.

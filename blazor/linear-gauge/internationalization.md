@@ -1,3 +1,12 @@
+---
+layout: post
+title: Internationalization in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Internationalization in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
+---
+
 # Internationalization
 
 Linear gauge provide supports for internationalization for below gauge elements.

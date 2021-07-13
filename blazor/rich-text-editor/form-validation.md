@@ -1,3 +1,12 @@
+---
+layout: post
+title: Form Validation in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Form Validation in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Form validation
 
 This following sample demonstrate how to get the Rich Text Editor validation error message in button click.

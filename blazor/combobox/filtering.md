@@ -1,3 +1,12 @@
+---
+layout: post
+title: Filtering in Blazor ComboBox Component | Syncfusion 
+description: Learn about Filtering in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Filtering
 
 The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter

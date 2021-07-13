@@ -1,3 +1,12 @@
+---
+layout: post
+title: Template in Blazor Toast Component | Syncfusion 
+description: Learn about Template in Blazor Toast component of Syncfusion, and more details.
+platform: Blazor
+control: Toast
+documentation: ug
+---
+
 # Template
 
 Configure templates to display within a header, content, and footer section of Toast.

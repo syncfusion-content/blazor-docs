@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor DropDown List Component | Syncfusion 
+description: Learn about Getting Started in Blazor DropDown List component of Syncfusion, and more details.
+platform: Blazor
+control: DropDown List
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains how to include a **DropDownList** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
 To get start quickly with Blazor DropDownList component, you can check on this video.
 
-`youtube:bavTLtVAn6I`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bavTLtVAn6I"%}
 
 ## Importing Syncfusion Blazor component in the application
 

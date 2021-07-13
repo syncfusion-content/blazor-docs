@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Accessibility in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Accessibility
 
 The Rich Text Editor component has been designed, keeping in mind the WAI-ARIA specifications, and applies the WAI-ARIA roles, states, and properties. This component is characterized by complete ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.

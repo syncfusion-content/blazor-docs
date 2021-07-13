@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Events in Blazor TreeMap Component | Syncfusion 
+description: Learn about Events in Blazor TreeMap component of Syncfusion, and more details.
+platform: Blazor
+control: TreeMap
+documentation: ug
+---
+
+---
 title: "Events in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"

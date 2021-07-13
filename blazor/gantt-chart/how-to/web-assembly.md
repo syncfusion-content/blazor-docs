@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Web Assembly in Blazor Gantt Chart Component | Syncfusion
+description: Checkout and learn about Web Assembly in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Getting Started with Blazor WebAssembly Gantt Chart Using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

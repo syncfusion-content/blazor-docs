@@ -1,3 +1,12 @@
+---
+layout: post
+title: Opening A Document in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Opening A Document in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
 # Open documents in Blazor Word processor from various storage location
 
 You might need to open and view Word documents from various location. In this section, you can find the information about how to open Word documents from URL, cloud, database, and local file system and also how to load a document during control initialization.

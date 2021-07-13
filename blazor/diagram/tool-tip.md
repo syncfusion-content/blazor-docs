@@ -1,3 +1,12 @@
+---
+layout: post
+title: Tool Tip in Blazor Diagram Component | Syncfusion 
+description: Learn about Tool Tip in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Tooltip
 
 In Graphical User Interface (GUI), the tooltip is a message that is displayed when mouse hovers over an element. The diagram provides tooltip support while dragging, resizing, rotating a node, and when the mouse hovers any diagram element.

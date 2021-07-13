@@ -1,5 +1,0 @@
-* [Overview](licensing/overview.md)
-* [Generating license keys](licensing/license-key-generation.md)
-* [Registering license keys](licensing/license-key-registration.md)
-* [Licensing Errors](licensing/licensing-errors.md)
-* [Licensing FAQ](licensing/licensing-troubleshoot.md)

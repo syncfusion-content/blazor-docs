@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor TreeView Component | Syncfusion 
+description: Learn about Getting Started in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started
@@ -6,7 +15,8 @@ This section briefly explains about how to include a `TreeView` in your Blazor s
 
 To get start quickly with Blazor TreeView, you can check on this video:
 
-`youtube:mScCY8cgyM0`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=mScCY8cgyM0"%}
 
 ## Importing Syncfusion Blazor component in the application
 

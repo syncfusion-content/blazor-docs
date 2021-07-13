@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize Menu Items in Blazor Menu Bar  Component | Syncfusion
+description: Checkout and learn about Customize Menu Items in Blazor Menu Bar  component of Syncfusion, and more details.
+platform: Blazor
+control: Menu Bar 
+documentation: ug
+---
+
 # Customize Menu Items
 
 ## Add or Remove Menu Items

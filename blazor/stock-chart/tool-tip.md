@@ -1,3 +1,12 @@
+---
+layout: post
+title: Tool Tip in Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Tool Tip in Blazor Stock Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Stock Chart 
+documentation: ug
+---
+
 # Tooltip
 
 <!-- markdownlint-disable MD036 -->

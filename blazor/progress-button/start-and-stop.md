@@ -1,3 +1,12 @@
+---
+layout: post
+title: Start And Stop in Blazor Progress Button Component | Syncfusion 
+description: Learn about Start And Stop in Blazor Progress Button component of Syncfusion, and more details.
+platform: Blazor
+control: Progress Button
+documentation: ug
+---
+
 # Start and Stop Methods
 
 ```csharp

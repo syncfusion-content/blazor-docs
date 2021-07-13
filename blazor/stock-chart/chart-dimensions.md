@@ -1,3 +1,12 @@
+---
+layout: post
+title: Chart Dimensions in Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Chart Dimensions in Blazor Stock Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Stock Chart 
+documentation: ug
+---
+
 # Stock Chart Dimensions
 
 ## Size for Container

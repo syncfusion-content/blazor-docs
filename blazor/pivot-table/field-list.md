@@ -1,3 +1,12 @@
+---
+layout: post
+title: Field List in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Field List in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Field List
 
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) provides a built-in Field List similar to Microsoft Excel. It allows to add or remove fields and also rearrange them between different axes, including column, row, value, and filter along with sort and filter options dynamically at runtime.

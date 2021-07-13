@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor AutoComplete Component | Syncfusion 
+description: Learn about Accessibility in Blazor AutoComplete component of Syncfusion, and more details.
+platform: Blazor
+control: AutoComplete
+documentation: ug
+---
+
 # Accessibility
 
 The AutoComplete component has been designed, keeping in mind the `WAI-ARIA` specifications,

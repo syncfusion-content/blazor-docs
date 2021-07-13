@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor Sidebar Component | Syncfusion 
+description: Learn about Style in Blazor Sidebar component of Syncfusion, and more details.
+platform: Blazor
+control: Sidebar
+documentation: ug
+---
+
 # Styles and Appearance
 
 The following content provides the exact CSS structure that can be used to modify the component's appearance based on the user's preference.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Interaction Mode in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Interaction Mode in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Interaction Mode
 
 The PDF Viewer provides interaction mode for easy interaction with the loaded PDF document.  Selection mode and panning mode are the two interactions modes.

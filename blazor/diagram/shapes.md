@@ -1,3 +1,12 @@
+---
+layout: post
+title: Shapes in Blazor Diagram Component | Syncfusion 
+description: Learn about Shapes in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Shapes
 
 Diagram provides support to add different kind of nodes. They are as follows:

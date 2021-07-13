@@ -1,4 +1,13 @@
 ---
+layout: post
+title: How to Half Yearly View in Blazor Scheduler Component | Syncfusion
+description: Checkout and learn about Half Yearly View in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
+---
 title: "Scheduler Year view customization"
 component: "Scheduler"
 description: "This section explains how to customize the Year view using different properties in scheduler"

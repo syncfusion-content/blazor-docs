@@ -1,3 +1,12 @@
+---
+layout: post
+title: Action Buttons in Blazor Toast Component | Syncfusion 
+description: Learn about Action Buttons in Blazor Toast component of Syncfusion, and more details.
+platform: Blazor
+control: Toast
+documentation: ug
+---
+
 # Action Buttons
 
 You can include action buttons to the toast control by adding the `ToastButton` property. You can also include the click event callback function for each button.

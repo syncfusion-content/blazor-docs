@@ -1,3 +1,12 @@
+---
+layout: post
+title: Label And Size in Blazor Checkbox Component | Syncfusion 
+description: Learn about Label And Size in Blazor Checkbox component of Syncfusion, and more details.
+platform: Blazor
+control: Checkbox
+documentation: ug
+---
+
 # Label and Size
 
 This section explains the different sizes and labels.

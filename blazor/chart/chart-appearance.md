@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Chart Appearance in Blazor Chart Component | Syncfusion 
+description: Learn about Chart Appearance in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Appearance in Blazor Charts component | Syncfusion"
 
 component: "Charts"

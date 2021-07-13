@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Center The Dialog Based On Current Scroll Position in Blazor Dialog Component | Syncfusion
+description: Checkout and learn about Center The Dialog Based On Current Scroll Position in Blazor Dialog component of Syncfusion, and more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
 # Center the dialog based on the current scroll position
 
 The dialog is always centered based on the target container. If the target is not specified, then the dialog will be rendered based on its body and centered in the position of the current viewpoint.

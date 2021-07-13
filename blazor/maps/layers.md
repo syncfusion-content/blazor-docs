@@ -1,3 +1,12 @@
+---
+layout: post
+title: Layers in Blazor Maps Component | Syncfusion 
+description: Learn about Layers in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Layers
 
 The Maps component is rendered through [`MapsLayers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayers.html) class and any number of layers can be added to the Maps.

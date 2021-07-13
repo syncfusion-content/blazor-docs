@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sort in Blazor Kanban Component | Syncfusion 
+description: Learn about Sort in Blazor Kanban component of Syncfusion, and more details.
+platform: Blazor
+control: Kanban
+documentation: ug
+---
+
 # Sort
 
 The Kanban provides built-in support to arrange the cards in their columns based on the JSON data order and drop the cards in the columns based on the dropped clone.

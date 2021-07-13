@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Methods in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Methods in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
+---
 title: "Methods in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Clipboard in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Clipboard in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Clipboard
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Connectors in Blazor Diagram Component | Syncfusion 
+description: Learn about Connectors in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Connector
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.

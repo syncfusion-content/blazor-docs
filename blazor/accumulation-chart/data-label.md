@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Label in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Data Label in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Data Label
 
 Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible)

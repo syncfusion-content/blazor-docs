@@ -1,3 +1,12 @@
+---
+layout: post
+title: Positioning in Blazor Diagram Component | Syncfusion 
+description: Learn about Positioning in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Position
 
 ## Arrange the nodes

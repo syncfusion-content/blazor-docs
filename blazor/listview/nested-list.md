@@ -1,3 +1,12 @@
+---
+layout: post
+title: Nested List in Blazor Listview Component | Syncfusion 
+description: Learn about Nested List in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # Nested List
 
 The ListView component supports Nested list. For that, the child property should be defined for the nested list in the array of JSON.

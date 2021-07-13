@@ -1,3 +1,12 @@
+---
+layout: post
+title: Feature Module in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Feature Module in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Feature modules
 
 The PDF Viewer features are segregated into individual feature-wise modules to enable selectively referencing in the application. The required modules should be injected to extend its functionality. The following are the selective modules of PDF Viewer that can be included as required:

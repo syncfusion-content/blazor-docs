@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Column in Blazor Chart Component | Syncfusion 
+description: Learn about Column in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Column Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

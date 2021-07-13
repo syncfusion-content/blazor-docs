@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Hide Treegrid Header in Blazor Tree Grid Component | Syncfusion
+description: Checkout and learn about Hide Treegrid Header in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Hide Tree Grid header
 
 You can hide the Tree Grid header by applying the below styles to Tree Grid component.

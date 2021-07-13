@@ -1,3 +1,12 @@
+---
+layout: post
+title: Position in Blazor Tooltip Component | Syncfusion 
+description: Learn about Position in Blazor Tooltip component of Syncfusion, and more details.
+platform: Blazor
+control: Tooltip
+documentation: ug
+---
+
 # Tooltip Positioning
 
 Tooltips can be attached to 12 static locations around the target.

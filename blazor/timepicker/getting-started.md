@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor TimePicker Component | Syncfusion 
+description: Learn about Getting Started in Blazor TimePicker component of Syncfusion, and more details.
+platform: Blazor
+control: TimePicker
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains about how to include a [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side TimePicker](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TimePicker](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
 To get start quickly with Blazor TimePicker component, you can check on this video.
 
-`youtube:X6RsjJIJLIY`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=X6RsjJIJLIY"%}
 
 ## Importing Syncfusion Blazor component in the application
 

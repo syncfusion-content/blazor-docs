@@ -1,3 +1,12 @@
+---
+layout: post
+title: Swimlane in Blazor Kanban Component | Syncfusion 
+description: Learn about Swimlane in Blazor Kanban component of Syncfusion, and more details.
+platform: Blazor
+control: Kanban
+documentation: ug
+---
+
 # Swimlane
 
 Swimlanes are horizontal categorizations of cards on the Kanban board.  It is used for grouping of cards, which brings transparency to the workflow process.

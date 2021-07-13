@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Html Attribute Support in Blazor Button Component | Syncfusion
+description: Checkout and learn about Html Attribute Support in Blazor Button component of Syncfusion, and more details.
+platform: Blazor
+control: Button
+documentation: ug
+---
+
 # HTML Attribute Support
 
 HTML attribute support is given for button using [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Style And Appearance in Blazor Color Picker Component | Syncfusion 
+description: Learn about Style And Appearance in Blazor Color Picker component of Syncfusion, and more details.
+platform: Blazor
+control: Color Picker
+documentation: ug
+---
+
+---
 title: "Styles and Appearances"
 component: "ColorPicker"
 description: "This section explains the details of the styles and appearances of the ColorPicker"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Data Binding in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Data Binding
 
 The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) uses [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.

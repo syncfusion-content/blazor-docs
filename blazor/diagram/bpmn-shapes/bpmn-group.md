@@ -1,3 +1,12 @@
+---
+layout: post
+title: Bpmn Group in Blazor Diagram Component | Syncfusion 
+description: Learn about Bpmn Group in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # BPMN group
 
 A group is used to frame a part of the diagram, shows that elements included in it are logically belong together and does not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set to **group**. The following code example explains how to create a BPMN group.

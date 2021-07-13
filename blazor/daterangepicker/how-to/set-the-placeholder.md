@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Set The Placeholder in Blazor DateRangePicker Component | Syncfusion
+description: Checkout and learn about Set The Placeholder in Blazor DateRangePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DateRangePicker
+documentation: ug
+---
+
 # Set the Placeholder
 
 The following code demonstrates how to set [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_Placeholder) in the DateRangePicker component.

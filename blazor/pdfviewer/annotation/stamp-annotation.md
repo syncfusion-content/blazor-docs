@@ -1,3 +1,12 @@
+---
+layout: post
+title: Stamp Annotation in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Stamp Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Stamp annotation
 
 The PDF Viewer control provides options to add, edit, delete and rotate the following stamp annotation in the PDF documents:

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Editing in Blazor DataGrid Component | Syncfusion 
+description: Learn about Editing in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Editing
 
 The DataGrid component has options to dynamically insert, delete and update records.
@@ -6,7 +15,8 @@ The DataGrid component has options to dynamically insert, delete and update reco
 
 To know about editing feature in Blazor DataGrid component, you can check on this video.
 
-`youtube:jOiZpLexDB0`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=jOiZpLexDB0"%}
 
 To define the primary key, set [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** in particular column whose value is unique.
 
@@ -2066,7 +2076,8 @@ The following GIF represent the datagrid with Custom External form editing,
 
 To know about customizing the  **Dialog Template** in Blazor DataGrid Component, you can check this video.
 
-`youtube:Cfj476xT2ao`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Cfj476xT2ao"%}
 
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 

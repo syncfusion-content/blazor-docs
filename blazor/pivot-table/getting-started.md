@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Getting Started in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD029 -->
@@ -9,7 +18,8 @@ This section briefly explains about how to include a **Pivot Table** in your Bla
 
 To get start quickly with Blazor Pivot Table component, you can check out this video.
 
-`youtube:1roaubxylGc`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=1roaubxylGc"%}
 
 ## Importing Syncfusion Blazor Pivot Table component in the application
 

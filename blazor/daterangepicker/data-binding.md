@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor DateRangePicker Component | Syncfusion 
+description: Learn about Data Binding in Blazor DateRangePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DateRangePicker
+documentation: ug
+---
+
 # Data Binding
 
 This section briefly explains how to bind the value to the DateRangePicker component in the below different ways.

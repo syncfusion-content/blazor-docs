@@ -1,3 +1,12 @@
+---
+layout: post
+title: Configuration in Blazor In Place Editor  Component | Syncfusion 
+description: Learn about Configuration in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
 # Configuration
 
 ## Rendering modes

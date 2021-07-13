@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Remove in Blazor Chart Component | Syncfusion
+description: Checkout and learn about Add Remove in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Add or remove a series from the chart dynamically

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Area in Blazor Chart Component | Syncfusion 
+description: Learn about Area in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Area Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

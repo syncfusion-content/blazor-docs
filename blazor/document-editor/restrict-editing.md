@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Restrict Editing in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Restrict Editing in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Restrict Editing"
 component: "Word processor"
 description: "Learn how to find a text in Blazor Word processor and replace it with another text."

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Open Menu Click in Blazor Menu Bar  Component | Syncfusion
+description: Checkout and learn about Open Menu Click in Blazor Menu Bar  component of Syncfusion, and more details.
+platform: Blazor
+control: Menu Bar 
+documentation: ug
+---
+
 # Open a Sub Menu on Menu item click
 
 This section explains about how to open a sub menu on Menu item click. This can be achieved by using `ShowItemOnClick` property of the Menu.

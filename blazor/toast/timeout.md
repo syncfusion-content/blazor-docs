@@ -1,3 +1,12 @@
+---
+layout: post
+title: Timeout in Blazor Toast Component | Syncfusion 
+description: Learn about Timeout in Blazor Toast component of Syncfusion, and more details.
+platform: Blazor
+control: Toast
+documentation: ug
+---
+
 # Time out
 
 The toast can be expired based on the `Timeout` property. The toast can live till the time out reaches without user interaction, a time out value is considered as a millisecond.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Empty Points in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Empty Points in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Empty Points
 
 Data points that contains `NaN` value are considered as empty points. The empty data points

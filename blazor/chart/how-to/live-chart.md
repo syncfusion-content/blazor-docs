@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Live Chart in Blazor Chart Component | Syncfusion
+description: Checkout and learn about Live Chart in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Live Data Update

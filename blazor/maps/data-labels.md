@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Labels in Blazor Maps Component | Syncfusion 
+description: Learn about Data Labels in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Data labels
 
 Data labels provide information to users about the shapes of the Map component.

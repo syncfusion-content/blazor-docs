@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Labels in Blazor Range Selector Component | Syncfusion 
+description: Learn about Labels in Blazor Range Selector component of Syncfusion, and more details.
+platform: Blazor
+control: Range Selector
+documentation: ug
+---
+
+---
 title: " Labels in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Chip Component | Syncfusion 
+description: Learn about Accessibility in Blazor Chip component of Syncfusion, and more details.
+platform: Blazor
+control: Chip
+documentation: ug
+---
+
 # Accessibility
 
 ## Keyboard Interaction

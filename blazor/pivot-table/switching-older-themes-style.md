@@ -1,3 +1,12 @@
+---
+layout: post
+title: Switching Older Themes Style in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Switching Older Themes Style in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 <!-- markdownlint-disable MD012 -->
 <!-- markdownlint-disable MD009 -->
 

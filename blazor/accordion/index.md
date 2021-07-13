@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Accordion Component | Syncfusion 
+description: Learn about Index in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Overview
 
 The Accordion is a vertically collapsible content panel that displays one or more panels at a time within the available space.

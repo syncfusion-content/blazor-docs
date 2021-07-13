@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Using Dictionary Values In Grid Datasource in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Using Dictionary Values In Grid Datasource in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Using dictionary values in datagrid data source
 
 You can assign dictionary values in the datagrid's data source by accessing them using **KeyValuePair** data type inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component

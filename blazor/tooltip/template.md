@@ -1,3 +1,12 @@
+---
+layout: post
+title: Template in Blazor Tooltip Component | Syncfusion 
+description: Learn about Template in Blazor Tooltip component of Syncfusion, and more details.
+platform: Blazor
+control: Tooltip
+documentation: ug
+---
+
 # Tooltip template
 
 Tooltip Template property can be used to customize the tooltip layout or to add any custom elements within the tooltip. You can add any content or HTML elements as tooltip content by specifying them in the `<content>` tag of the tooltip templates.

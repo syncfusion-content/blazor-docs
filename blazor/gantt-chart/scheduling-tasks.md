@@ -1,3 +1,12 @@
+---
+layout: post
+title: Scheduling Tasks in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Scheduling Tasks in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Scheduling Tasks
 
 By default, Gantt tasks are validated based on the child tasks with some factors like working time, holidays, weekends, and predecessors. The Gantt provides support for automatic and manual task scheduling modes. It is used to indicate whether the start date and end date of all the tasks will be automatically validated or not. `TaskMode` is the property used to change the schedule mode of a task.

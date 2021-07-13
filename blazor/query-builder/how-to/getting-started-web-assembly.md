@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Getting Started Web Assembly in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn about Getting Started Web Assembly in Blazor QueryBuilder component of Syncfusion, and more details.
+platform: Blazor
+control: QueryBuilder
+documentation: ug
+---
+
 # Getting Started with Blazor WebAssembly Query Builder Using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sorting in Blazor DataGrid Component | Syncfusion 
+description: Learn about Sorting in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Sorting
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order.

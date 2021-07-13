@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Index in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Overview
 
 The Chart control is used to visualize the data with user interactivity and provides customizing options to configure the data visually.

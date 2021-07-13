@@ -1,3 +1,12 @@
+---
+layout: post
+title: Internationalization in Blazor Maps Component | Syncfusion 
+description: Learn about Internationalization in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Internationalization
 
 Maps provides support for internationalization for the below elements.

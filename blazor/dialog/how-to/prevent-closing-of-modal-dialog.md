@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Prevent Closing Of Modal Dialog in Blazor Dialog Component | Syncfusion
+description: Checkout and learn about Prevent Closing Of Modal Dialog in Blazor Dialog component of Syncfusion, and more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
 # Prevent closing of modal dialog
 
 You can prevent closing of modal dialog by setting the `OnClose` event argument cancel value to true.

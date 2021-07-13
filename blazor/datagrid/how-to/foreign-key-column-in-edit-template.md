@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Foreign Key Column In Edit Template in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Foreign Key Column In Edit Template in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- Access foreign key column in edit template
 
 You can define the **ForeignKeyColumn** in the grid and access it's value in the edit template property.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Native Event in Blazor In Place Editor  Component | Syncfusion 
+description: Learn about Native Event in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
 # Overview
 
 You can define the native event using on `<event>` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.

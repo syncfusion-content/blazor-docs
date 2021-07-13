@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Set The Readonly in Blazor DatePicker Component | Syncfusion
+description: Checkout and learn about Set The Readonly in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Set the Readonly
 
 ## Enabled

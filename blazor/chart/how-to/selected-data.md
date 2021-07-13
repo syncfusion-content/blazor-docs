@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Selected Data in Blazor Chart Component | Syncfusion
+description: Checkout and learn about Selected Data in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Chart selected data in grid

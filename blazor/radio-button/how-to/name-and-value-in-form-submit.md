@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Name And Value In Form Submit in Blazor Radio Button Component | Syncfusion
+description: Checkout and learn about Name And Value In Form Submit in Blazor Radio Button component of Syncfusion, and more details.
+platform: Blazor
+control: Radio Button
+documentation: ug
+---
+
 # Name and Value in form submit
 
 The name attribute of the RadioButton is used to group RadioButton. When the RadioButton are grouped in form, the checked items value attribute

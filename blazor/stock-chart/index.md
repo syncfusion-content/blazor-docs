@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Index in Blazor Stock Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Stock Chart 
+documentation: ug
+---
+
 # Overview
 
 The Chart control is used to visualize the data with user interactivity and provides customizing options to configure the data visually.

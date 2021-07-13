@@ -1,3 +1,12 @@
+---
+layout: post
+title: Dimensions in Blazor HeatMap Chart Component | Syncfusion 
+description: Learn about Dimensions in Blazor HeatMap Chart component of Syncfusion, and more details.
+platform: Blazor
+control: HeatMap Chart
+documentation: ug
+---
+
 # Dimensions
 
 ## Size for heat map

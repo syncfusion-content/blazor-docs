@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Style And Appearance in Blazor Split Button Component | Syncfusion 
+description: Learn about Style And Appearance in Blazor Split Button component of Syncfusion, and more details.
+platform: Blazor
+control: Split Button
+documentation: ug
+---
+
+---
 title: "Styles and Appearances"
 component: "SplitButton"
 description: "This section explains the details of the styles and appearances of the SplitButton"

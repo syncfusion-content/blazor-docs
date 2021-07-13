@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Load Accordion Items Dynamically in Blazor Accordion Component | Syncfusion
+description: Checkout and learn about Load Accordion Items Dynamically in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Load items dynamically
 
 Accordion provides support to add/remove items dynamically by iteration of Accordion items using looping.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Dual Listbox in Blazor List Box Component | Syncfusion 
+description: Learn about Dual Listbox in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Dual ListBox
 
 The dual ListBox allows the user to move items between two listbox by clicking the toolbar buttons. Dual ListBox can be created by listing items in the

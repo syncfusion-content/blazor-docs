@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor Accordion Component | Syncfusion 
+description: Learn about Data Binding in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # DataBinding
 
 Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding.

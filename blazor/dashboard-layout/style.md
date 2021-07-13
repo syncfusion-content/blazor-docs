@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor Dashboard Layout Component | Syncfusion 
+description: Learn about Style in Blazor Dashboard Layout component of Syncfusion, and more details.
+platform: Blazor
+control: Dashboard Layout
+documentation: ug
+---
+
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Limits in Blazor Range Slider Component | Syncfusion 
+description: Learn about Limits in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Movement Limits and Drag Interval
 
 The slider limits restrict the slider thumb between a particular range. This is used if higher or lower value affects the process

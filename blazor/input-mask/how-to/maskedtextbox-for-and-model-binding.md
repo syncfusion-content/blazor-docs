@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Maskedtextbox For And Model Binding in Blazor Input Mask Component | Syncfusion
+description: Checkout and learn about Maskedtextbox For And Model Binding in Blazor Input Mask component of Syncfusion, and more details.
+platform: Blazor
+control: Input Mask
+documentation: ug
+---
+
 # MaskedTextBoxFor and Model Binding
 
 This section demonstrates the Strongly typed extension support in MaskedTextBox. The view that can bind with any model is called as

@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor ComboBox Component | Syncfusion 
+description: Learn about Getting Started in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains how to include a **ComboBox** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
 To get start quickly with Blazor ComboBox component, you can check on this video.
 
-`youtube:VYK2xHC_Lrg`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=VYK2xHC_Lrg"%}
 
 ## Importing Syncfusion Blazor component in the application
 

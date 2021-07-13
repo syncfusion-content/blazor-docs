@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Listview With Hyper Link Navigation in Blazor Listview Component | Syncfusion
+description: Checkout and learn about Listview With Hyper Link Navigation in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # How to ListView with hyper-link navigation
 
 We can use `anchor` tag along with `href` attribute in our ListView `Template` property for navigation.

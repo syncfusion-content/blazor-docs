@@ -1,3 +1,12 @@
+---
+layout: post
+title: Client Side Application in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Client Side Application in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Create a PDF Viewer in Blazor client-side application
 
 >Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.

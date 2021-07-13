@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Light Weight in Blazor Range Selector Component | Syncfusion 
+description: Learn about Light Weight in Blazor Range Selector component of Syncfusion, and more details.
+platform: Blazor
+control: Range Selector
+documentation: ug
+---
+
+---
 title: " Lightweight Range Selector in the Blazor Range Selector component | Syncfusion "
 
 component: "RangeNavigator"

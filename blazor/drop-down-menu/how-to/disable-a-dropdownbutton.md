@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Disable A Dropdownbutton in Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn about Disable A Dropdownbutton in Blazor Dropdown Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Dropdown Menu
+documentation: ug
+---
+
 # Disable a Dropdown Menu
 
 Dropdown Menu component can be enabled/disabled by giving [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_Disabled) property.

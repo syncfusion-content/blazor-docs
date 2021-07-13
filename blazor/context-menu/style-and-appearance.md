@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Style And Appearance in Blazor Context Menu Component | Syncfusion 
+description: Learn about Style And Appearance in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
+---
 title: "Styles and Appearances"
 component: "ContextMenu"
 description: "This section explains the details of the styles and appearances of the ContextMenu"

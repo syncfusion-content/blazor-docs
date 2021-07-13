@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Upgrade Application To Latest Version in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Upgrade Application To Latest Version in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Upgrade Application To Latest Version
 
 **Step 1:** Update the latest Syncfusion blazor [`nuget`](https://www.nuget.org/packages/Syncfusion.Blazor/) from Nuget package manager in your application.

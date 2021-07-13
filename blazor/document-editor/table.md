@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Table in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Table in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Tables"
 component: "Word processor"
 description: "Learn how to insert, select, or delete table, row(s), and column(s) in Blazor Word processor."

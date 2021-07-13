@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Show Multiple Toasts In Various Positions in Blazor Toast Component | Syncfusion
+description: Checkout and learn about Show Multiple Toasts In Various Positions in Blazor Toast component of Syncfusion, and more details.
+platform: Blazor
+control: Toast
+documentation: ug
+---
+
 # Show multiple toasts in various positions
 
 By default, the positions of the new toasts are only updated after the visible toasts have been destroyed. If You need to display multiple toasts with different positions, initiate another toast.

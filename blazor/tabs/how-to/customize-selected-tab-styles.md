@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize Selected Tab Styles in Blazor Tabs Component | Syncfusion
+description: Checkout and learn about Customize Selected Tab Styles in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Style Customization for active Item
 
 You can customize the style of tabs by overriding its header and active tab CSS classes. Define HTML string for adding animation and customizing the tab header and pass it to [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_Text) property. Now you can override the style using custom CSS classes added to the tab elements.

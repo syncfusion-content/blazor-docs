@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Custom Tool Bar in Blazor File Manager Component | Syncfusion
+description: Checkout and learn about Add Custom Tool Bar in Blazor File Manager component of Syncfusion, and more details.
+platform: Blazor
+control: File Manager
+documentation: ug
+---
+
 # How to add custom button in toolbar
 
 The toolbar items can be customized using the `ToolbarSettings` API and `ToolbarItemClicked` events.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Getting Started in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started

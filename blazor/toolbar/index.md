@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Toolbar Component | Syncfusion 
+description: Learn about Index in Blazor Toolbar component of Syncfusion, and more details.
+platform: Blazor
+control: Toolbar
+documentation: ug
+---
+
 # Overview
 
 The ToolBar displays a group of command buttons arranged horizontally.

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Legend in Blazor TreeMap Component | Syncfusion 
+description: Learn about Legend in Blazor TreeMap component of Syncfusion, and more details.
+platform: Blazor
+control: TreeMap
+documentation: ug
+---
+
+---
 title: "Legend in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"

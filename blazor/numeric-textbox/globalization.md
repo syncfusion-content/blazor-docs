@@ -1,3 +1,12 @@
+---
+layout: post
+title: Globalization in Blazor Numeric TextBox Component | Syncfusion 
+description: Learn about Globalization in Blazor Numeric TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: Numeric TextBox
+documentation: ug
+---
+
 # Globalization
 
 ## Blazor server side

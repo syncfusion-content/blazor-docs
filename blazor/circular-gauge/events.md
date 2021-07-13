@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor Circular Gauge Component | Syncfusion 
+description: Learn about Events in Blazor Circular Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Circular Gauge
+documentation: ug
+---
+
 # Events
 
 ## Using events in Circular Gauge component

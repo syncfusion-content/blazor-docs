@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor ButtonGroup Component | Syncfusion 
+description: Learn about Index in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Overview
 
 The **ButtonGroup** is a container that groups a series of buttons on a single line. It has an optional radio button (single selection) and checkbox (multiple selection) behavior.

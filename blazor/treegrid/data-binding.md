@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Data Binding in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Data binding
 
 The Tree Grid uses **SfDataManager**, which supports both RESTful Web Services binding and List binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DataSource.html) property can be assigned either using the **SfDataManager** as child component of the Tree Grid Blazor component or list of business objects.

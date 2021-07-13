@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Splitter Component | Syncfusion 
+description: Learn about Getting Started in Blazor Splitter component of Syncfusion, and more details.
+platform: Blazor
+control: Splitter
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

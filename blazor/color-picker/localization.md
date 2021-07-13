@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor Color Picker Component | Syncfusion 
+description: Learn about Localization in Blazor Color Picker component of Syncfusion, and more details.
+platform: Blazor
+control: Color Picker
+documentation: ug
+---
+
 
 # Localization and RTL
 

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Download in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Download in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Download
 
 The PDF Viewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the `EnableDownload` API.

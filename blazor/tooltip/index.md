@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Tooltip Component | Syncfusion 
+description: Learn about Index in Blazor Tooltip component of Syncfusion, and more details.
+platform: Blazor
+control: Tooltip
+documentation: ug
+---
+
 # Overview
 
 The **Tooltip** control displays a pop-up containing an information or a message when you hover, click, focus, or touch an element. The information displayed in the Tooltip can include simple text, images, hyperlinks, or custom templates. In mobile devices, to display the Tooltip, you need to tap and hold the target elements.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Events in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Events
 
 In this section, we have provided the list of events of Accumulation Chart component which will be

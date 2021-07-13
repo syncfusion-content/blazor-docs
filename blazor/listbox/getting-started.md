@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor List Box Component | Syncfusion 
+description: Learn about Getting Started in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Getting Started with Blazor ListBox Component
 
 This section briefly explains about how to include ListBox Component in your Blazor server-side  application.
 
 To get start quickly with ListBox Component using Blazor, you can check on this video:
 
-`youtube:-nZ1n8zFIPI`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=-nZ1n8zFIPI"%}
 
 You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

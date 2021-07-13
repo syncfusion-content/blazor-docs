@@ -1,3 +1,12 @@
+---
+layout: post
+title: Cell in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Cell in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Cell
 
 ## Displaying the HTML content

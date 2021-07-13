@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Progress Button Component | Syncfusion 
+description: Learn about Getting Started in Blazor Progress Button component of Syncfusion, and more details.
+platform: Blazor
+control: Progress Button
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Progress Button Component

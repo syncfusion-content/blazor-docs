@@ -1,3 +1,12 @@
+---
+layout: post
+title: Linear Arrangement in Blazor Diagram Component | Syncfusion 
+description: Learn about Linear Arrangement in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Linear Arrangement
 
 Linear arrangement is used to linearly arrange the child nodes in layout, which means the parent node is placed in the center corresponding to its children. When line distribution is enabled, linear arrangement is also activated by default. The [`Arrangement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Arrangement) property of layout is used to enable or disable the linear arrangement in layout. By default Arrangement will be `Nonlinear`.

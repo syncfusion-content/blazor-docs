@@ -1,3 +1,12 @@
+---
+layout: post
+title: Magnification in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Magnification in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Magnification
 
 The built-in toolbar of PDF Viewer contains the following zooming options:

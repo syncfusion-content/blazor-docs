@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor Color Picker Component | Syncfusion 
+description: Learn about Getting Started in Blazor Color Picker component of Syncfusion, and more details.
+platform: Blazor
+control: Color Picker
+documentation: ug
+---
+
 # Getting Started with Blazor Color Picker Component
 
 This section briefly explains about how to include Color Picker Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Color Picker Component using Blazor, you can check on this video:
 
-`youtube:lI_5h-ZUSHw`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=lI_5h-ZUSHw"%}
 
 ## Importing Syncfusion Blazor component in the application
 

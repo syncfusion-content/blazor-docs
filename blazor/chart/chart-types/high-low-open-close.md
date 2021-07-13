@@ -1,4 +1,13 @@
 ---
+layout: post
+title: High Low Open Close in Blazor Chart Component | Syncfusion 
+description: Learn about High Low Open Close in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "High Low Open Close Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

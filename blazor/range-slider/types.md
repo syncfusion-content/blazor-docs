@@ -1,3 +1,12 @@
+---
+layout: post
+title: Types in Blazor Range Slider Component | Syncfusion 
+description: Learn about Types in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Types
 
 The types of Slider are as follows:

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Adding Custom Headers in Blazor DataManager Component | Syncfusion
+description: Checkout and learn about Adding Custom Headers in Blazor DataManager component of Syncfusion, and more details.
+platform: Blazor
+control: DataManager
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Adding Custom Headers

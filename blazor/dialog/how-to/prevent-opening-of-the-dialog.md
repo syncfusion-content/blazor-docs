@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Prevent Opening Of The Dialog in Blazor Dialog Component | Syncfusion
+description: Checkout and learn about Prevent Opening Of The Dialog in Blazor Dialog component of Syncfusion, and more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
 # Prevent opening of the dialog
 
 You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Header Bar in Blazor Scheduler Component | Syncfusion 
+description: Learn about Header Bar in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Header customization
 
 The header part of Scheduler can be customized easily with the built-in options available.

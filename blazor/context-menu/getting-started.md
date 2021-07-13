@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor Context Menu Component | Syncfusion 
+description: Learn about Getting Started in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
 # Getting Started with Blazor Context Menu Component
 
 This section briefly explains about how to include Context Menu Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Context Menu Component using Blazor, you can check on this video:
 
-`youtube:0-II6YezL1s`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=0-II6YezL1s"%}
 
 ## Importing Syncfusion Blazor component in the application
 

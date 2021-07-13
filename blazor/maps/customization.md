@@ -1,3 +1,12 @@
+---
+layout: post
+title: Customization in Blazor Maps Component | Syncfusion 
+description: Learn about Customization in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Customization
 
 ## Setting the size

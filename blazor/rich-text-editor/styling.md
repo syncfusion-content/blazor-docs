@@ -1,3 +1,12 @@
+---
+layout: post
+title: Styling in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Styling in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Styling
 
 ## Font name and size

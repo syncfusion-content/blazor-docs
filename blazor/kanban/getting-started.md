@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Kanban Component | Syncfusion 
+description: Learn about Getting Started in Blazor Kanban component of Syncfusion, and more details.
+platform: Blazor
+control: Kanban
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

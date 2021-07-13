@@ -1,3 +1,12 @@
+---
+layout: post
+title: Row in Blazor DataGrid Component | Syncfusion 
+description: Learn about Row in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Row
 
 The row represents record details fetched from data source.
@@ -8,7 +17,8 @@ The row represents record details fetched from data source.
 
 To know about **Row Template** in Blazor DataGrid Component, you can check this video.
 
-`youtube:Dft0kerEGUQ`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
 The **RowTemplate** has an option to customize the look and behavior of the datagrid rows. The **RowTemplate** should be wrapped around a component named [`GridTemplates`](./templates/#gridtemplates-component) as follows. The **RowTemplate** content must be **TD** elements and the number of **TD** elements must match the number of datagrid columns.
 
@@ -311,7 +321,8 @@ Row template feature is not compatible with all the features which are available
 
 To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
 
-`youtube:Dft0kerEGUQ`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
 The detail template provides additional information about a particular row by expanding or collapsing detail content. The **DetailTemplate** should be wrapped around a component named [`GridTemplates`](./templates/#gridtemplates-component) as follows.
 

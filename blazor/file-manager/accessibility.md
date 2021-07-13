@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor File Manager Component | Syncfusion 
+description: Learn about Accessibility in Blazor File Manager component of Syncfusion, and more details.
+platform: Blazor
+control: File Manager
+documentation: ug
+---
+
 # Accessibility
 
 The File Manager component has been designed with keeping the `WAI-ARIA` specifications in mind, and applying the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support, which makes navigation easy for people who use assistive technologies (AT) or for users who completely rely on keyboard navigation.

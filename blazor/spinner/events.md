@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor Spinner Component | Syncfusion 
+description: Learn about Events in Blazor Spinner component of Syncfusion, and more details.
+platform: Blazor
+control: Spinner
+documentation: ug
+---
+
 # Events
 
 This section explains the list of events of the Spinner component which will be triggered for appropriate Spinner actions.

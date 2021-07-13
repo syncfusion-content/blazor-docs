@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Radio Button Component | Syncfusion 
+description: Learn about Getting Started in Blazor Radio Button component of Syncfusion, and more details.
+platform: Blazor
+control: Radio Button
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Radio Button Component
@@ -6,7 +15,8 @@ This section briefly explains about how to include Radio Button Component in you
 
 To get start quickly with Radio Button Component using Blazor, you can check on this video:
 
-`youtube:a6HR1QGAvLo`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=a6HR1QGAvLo"%}
 
 ## Importing Syncfusion Blazor component in the application
 

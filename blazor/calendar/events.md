@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor Calendar Component | Syncfusion 
+description: Learn about Events in Blazor Calendar component of Syncfusion, and more details.
+platform: Blazor
+control: Calendar
+documentation: ug
+---
+
 # Events
 
 This section explains the list of events of the Calendar component which will be

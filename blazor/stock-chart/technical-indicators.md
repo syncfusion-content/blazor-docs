@@ -1,3 +1,12 @@
+---
+layout: post
+title: Technical Indicators in Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Technical Indicators in Blazor Stock Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Stock Chart 
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Technical Indicators

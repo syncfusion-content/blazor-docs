@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sorting in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Sorting in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Sorting
 
 Sorting enables you to sort data in the ascending or descending order. To sort a column, click the column header.

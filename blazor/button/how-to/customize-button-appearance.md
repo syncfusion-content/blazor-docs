@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize Button Appearance in Blazor Button Component | Syncfusion
+description: Checkout and learn about Customize Button Appearance in Blazor Button component of Syncfusion, and more details.
+platform: Blazor
+control: Button
+documentation: ug
+---
+
 # Customize Button Appearance
 
 You can customize the appearance of the Button by using the Cascading Style Sheets (CSS). Define the CSS according to your requirement, and assign the class name to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass)

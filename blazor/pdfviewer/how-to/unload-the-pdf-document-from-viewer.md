@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Unload The Pdf Document From Viewer in Blazor PDF Viewer Component | Syncfusion
+description: Checkout and learn about Unload The Pdf Document From Viewer in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # How to unload PDF document from Blazor PDF Viewer programmatically
 
 The PDF Viewer component will automatically unload and clear the resources occupied by the PDF document when the control is disposed. Also, when loading another PDF file, the resources occupied by previous loaded file in viewer will be automatically unloaded and cleared.

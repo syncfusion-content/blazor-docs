@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Enable Ripple in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about Enable Ripple in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Enable ripple
 
 The following example illustrates how to enable ripple for ButtonGroup.

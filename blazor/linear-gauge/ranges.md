@@ -1,3 +1,12 @@
+---
+layout: post
+title: Ranges in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Ranges in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
+---
+
 # Ranges
 
 You can categorize the axis values using the [`Start`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~Start.html) and [`End`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~End.html) properties in the [`LinearGaugeRange`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange_members.html). You can add any number of ranges for an axis using array of range objects.

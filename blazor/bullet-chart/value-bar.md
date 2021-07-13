@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Value Bar in Blazor Bullet Chart  Component | Syncfusion 
+description: Learn about Value Bar in Blazor Bullet Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Bullet Chart 
+documentation: ug
+---
+
+---
 title: "Actual Bar in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"

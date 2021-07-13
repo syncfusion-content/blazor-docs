@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Hide Control Buttons in Blazor Color Picker Component | Syncfusion
+description: Checkout and learn about Hide Control Buttons in Blazor Color Picker component of Syncfusion, and more details.
+platform: Blazor
+control: Color Picker
+documentation: ug
+---
+
 # Hide control buttons
 
 Color Picker can be rendered without control buttons (Apply/Cancel). In this case, while selecting a color, the

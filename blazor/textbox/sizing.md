@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sizing in Blazor TextBox Component | Syncfusion 
+description: Learn about Sizing in Blazor TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: TextBox
+documentation: ug
+---
+
 # Sizing
 
 You can render the TextBox in two different sizes:

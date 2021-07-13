@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Table Format in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Table Format in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Working with Table Formatting"
 component: "Word processor"
 description: "Learn table, cell, and row formatting supported in Blazor Word processor and how to apply it for selected contents."

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor ComboBox Component | Syncfusion 
+description: Learn about Accessibility in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Accessibility
 
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies

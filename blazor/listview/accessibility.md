@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Listview Component | Syncfusion 
+description: Learn about Accessibility in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # Accessibility
 
 ## Keyboard interaction

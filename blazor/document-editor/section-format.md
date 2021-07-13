@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Section Format in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Section Format in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Working with Section Formatting"
 component: "Word processor"
 description: "Learn section formatting supported in Blazor document editor like page size and margins, and how to customize it."

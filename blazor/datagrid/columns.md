@@ -1,3 +1,12 @@
+---
+layout: post
+title: Columns in Blazor DataGrid Component | Syncfusion 
+description: Learn about Columns in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Columns
 
 The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format.
@@ -424,7 +433,8 @@ are not defined in the column, the column renders with “empty” header text.
 
 To know about **Header Template** in Blazor DataGrid Component, you can check this video.
 
-`youtube:9YF9HnFY5Ew`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
 The Header Template has options to display custom element value or content in the header. You can use the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate)  of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content.
 
@@ -510,7 +520,8 @@ The following screenshot represents the Header Template.
 
 To know about **Column Template** in Blazor DataGrid Component, you can check this video.
 
-`youtube:9YF9HnFY5Ew`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
 The Column template has options to display custom element value or content in the column. You can use the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template)  of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content. Inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
 

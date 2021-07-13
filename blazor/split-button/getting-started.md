@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Split Button Component | Syncfusion 
+description: Learn about Getting Started in Blazor Split Button component of Syncfusion, and more details.
+platform: Blazor
+control: Split Button
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Split Button Component

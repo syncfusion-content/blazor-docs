@@ -1,3 +1,12 @@
+---
+layout: post
+title: Excel Exporting in Blazor DataGrid Component | Syncfusion 
+description: Learn about Excel Exporting in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- markdownlint-disable MD033 -->
 
 # Excel export

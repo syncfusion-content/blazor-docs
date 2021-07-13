@@ -1,3 +1,12 @@
+---
+layout: post
+title: Expand Mode in Blazor Accordion Component | Syncfusion 
+description: Learn about Expand Mode in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Expand Mode
 
  The Accordion supports the two listed types of expand modes while expanding or collapsing the item.

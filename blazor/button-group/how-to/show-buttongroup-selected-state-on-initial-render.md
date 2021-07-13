@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Show Buttongroup Selected State On Initial Render in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about Show Buttongroup Selected State On Initial Render in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Show ButtonGroup selected state on initial render
 
 To show selected state on initial render, `checked` property should to added to the corresponding

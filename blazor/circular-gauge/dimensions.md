@@ -1,3 +1,12 @@
+---
+layout: post
+title: Dimensions in Blazor Circular Gauge Component | Syncfusion 
+description: Learn about Dimensions in Blazor Circular Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Circular Gauge
+documentation: ug
+---
+
 # Circular Gauge Dimensions
 
 ## Size for Circular Gauge

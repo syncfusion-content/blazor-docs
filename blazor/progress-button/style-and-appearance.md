@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Style And Appearance in Blazor Progress Button Component | Syncfusion 
+description: Learn about Style And Appearance in Blazor Progress Button component of Syncfusion, and more details.
+platform: Blazor
+control: Progress Button
+documentation: ug
+---
+
+---
 title: "Styles and Appearances"
 component: "ProgressButton"
 description: "This section explains the details of the styles and appearances of the ProgressButton"

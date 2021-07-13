@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Open A Dialog On Popup Item Click in Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn about Open A Dialog On Popup Item Click in Blazor Dropdown Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Dropdown Menu
+documentation: ug
+---
+
 # Open a dialog on popup item click
 
 This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by

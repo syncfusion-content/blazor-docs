@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Read Only in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn about Read Only in Blazor QueryBuilder component of Syncfusion, and more details.
+platform: Blazor
+control: QueryBuilder
+documentation: ug
+---
+
 # Readonly
 
 The readonly property in the querybuilder disables the user interactions on the component.

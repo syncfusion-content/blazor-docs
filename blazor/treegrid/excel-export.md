@@ -1,3 +1,12 @@
+---
+layout: post
+title: Excel Export in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Excel Export in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Excel export
 
 The excel export allows exporting Tree Grid data to Excel document. You need to use the

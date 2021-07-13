@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Bar in Blazor Chart Component | Syncfusion 
+description: Learn about Bar in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Bar Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Change Submenu Position in Blazor Menu Bar  Component | Syncfusion
+description: Checkout and learn about Change Submenu Position in Blazor Menu Bar  component of Syncfusion, and more details.
+platform: Blazor
+control: Menu Bar 
+documentation: ug
+---
+
 # Change SubMenu Position
 
 The submenu position can be changed by using the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuEvents~OnOpen.html) event. Assign the `Top` and `Left` position where you want to open the submenu.

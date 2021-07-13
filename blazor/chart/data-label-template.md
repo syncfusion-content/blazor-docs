@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Label Template in Blazor Chart Component | Syncfusion 
+description: Learn about Data Label Template in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # DataLabel Template

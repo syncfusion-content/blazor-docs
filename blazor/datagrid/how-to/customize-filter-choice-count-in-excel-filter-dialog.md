@@ -1,4 +1,13 @@
 ---
+layout: post
+title: How to Customize Filter Choice Count In Excel Filter Dialog in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Customize Filter Choice Count In Excel Filter Dialog in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
+---
 title: "Customize filter choice items count for Excel filter dialog"
 component: "DataGrid"
 description: "Learn how to customize filter choice items count of Excel filter dialog in Blazor DataGrid component"

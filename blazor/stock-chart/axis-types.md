@@ -1,3 +1,12 @@
+---
+layout: post
+title: Axis Types in Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Axis Types in Blazor Stock Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Stock Chart 
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # DateTime and Logarithmic Axis

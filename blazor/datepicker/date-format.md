@@ -1,3 +1,12 @@
+---
+layout: post
+title: Date Format in Blazor DatePicker Component | Syncfusion 
+description: Learn about Date Format in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Date Format
 
 Date format is a way of representing the date value in different string formats in text box.

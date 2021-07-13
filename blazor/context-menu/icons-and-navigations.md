@@ -1,3 +1,12 @@
+---
+layout: post
+title: Icons And Navigations in Blazor Context Menu Component | Syncfusion 
+description: Learn about Icons And Navigations in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
 # Icons and Navigation
 
 ## Icons

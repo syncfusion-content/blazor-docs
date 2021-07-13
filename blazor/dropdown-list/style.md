@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor DropDown List Component | Syncfusion 
+description: Learn about Style in Blazor DropDown List component of Syncfusion, and more details.
+platform: Blazor
+control: DropDown List
+documentation: ug
+---
+
 # CSS structures
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.

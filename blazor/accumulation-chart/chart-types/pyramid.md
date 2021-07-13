@@ -1,3 +1,12 @@
+---
+layout: post
+title: Pyramid in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Pyramid in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Pyramid Chart
 
 To render a pyramid series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)

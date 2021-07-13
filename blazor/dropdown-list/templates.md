@@ -1,3 +1,12 @@
+---
+layout: post
+title: Templates in Blazor DropDown List Component | Syncfusion 
+description: Learn about Templates in Blazor DropDown List component of Syncfusion, and more details.
+platform: Blazor
+control: DropDown List
+documentation: ug
+---
+
 # Templates
 
 The DropDownList has been provided with several options to customize each list item, group title,

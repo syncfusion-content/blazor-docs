@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Rename Image in Blazor RichTextEditor Component | Syncfusion
+description: Checkout and learn about Rename Image in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Rename uploaded images in server before inserting it in the Rich Text Editor
 
 By using the `RichTextEditorImageSettings` property, we can specify the server handler to upload and rename the selected image. Then we can bind the `OnImageUploadSuccess` event, to receive the modified file name from the server and update it in the Rich Text Editor's insert image dialog.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Popup Items in Blazor Dropdown Menu Component | Syncfusion 
+description: Learn about Popup Items in Blazor Dropdown Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Dropdown Menu
+documentation: ug
+---
+
 # Popup items
 
 ## Icons

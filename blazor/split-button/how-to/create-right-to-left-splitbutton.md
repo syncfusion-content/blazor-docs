@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Right To Left Splitbutton in Blazor Split Button Component | Syncfusion
+description: Checkout and learn about Create Right To Left Splitbutton in Blazor Split Button component of Syncfusion, and more details.
+platform: Blazor
+control: Split Button
+documentation: ug
+---
+
 # Create right-to-left Split Button
 
 Split Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_EnableRtl) as `true`.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Progress Button Component | Syncfusion 
+description: Learn about Accessibility in Blazor Progress Button component of Syncfusion, and more details.
+platform: Blazor
+control: Progress Button
+documentation: ug
+---
+
 # Accessibility
 
 ## ARIA attributes

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor File Upload Component | Syncfusion 
+description: Learn about Localization in Blazor File Upload component of Syncfusion, and more details.
+platform: Blazor
+control: File Upload
+documentation: ug
+---
+
 # Localization
 
 ## Blazor server side

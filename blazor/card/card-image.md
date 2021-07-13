@@ -1,3 +1,12 @@
+---
+layout: post
+title: Card Image in Blazor Card Component | Syncfusion 
+description: Learn about Card Image in Blazor Card component of Syncfusion, and more details.
+platform: Blazor
+control: Card
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Images and Divider

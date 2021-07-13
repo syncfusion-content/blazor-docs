@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Remove Toolbar Items in Blazor Toolbar Component | Syncfusion
+description: Checkout and learn about Add Remove Toolbar Items in Blazor Toolbar component of Syncfusion, and more details.
+platform: Blazor
+control: Toolbar
+documentation: ug
+---
+
 # Add/Remove Toolbar Items
 
 Toolbar items can be added/removed dynamically by iteration of Toolbar Items using conditional **foreach** loop.

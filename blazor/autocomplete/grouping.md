@@ -1,3 +1,12 @@
+---
+layout: post
+title: Grouping in Blazor AutoComplete Component | Syncfusion 
+description: Learn about Grouping in Blazor AutoComplete component of Syncfusion, and more details.
+platform: Blazor
+control: AutoComplete
+documentation: ug
+---
+
 # Grouping
 
 The AutoComplete supports wrapping nested elements into a group based on different categories. The

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Blazor Web Assembly Scheduler in Blazor Scheduler Component | Syncfusion
+description: Checkout and learn about Blazor Web Assembly Scheduler in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Getting Started with Blazor WebAssembly Scheduler Using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Scheduler in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

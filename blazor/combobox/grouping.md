@@ -1,3 +1,12 @@
+---
+layout: post
+title: Grouping in Blazor ComboBox Component | Syncfusion 
+description: Learn about Grouping in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Grouping
 
 The ComboBox supports wrapping nested elements into a group based on different categories. The category

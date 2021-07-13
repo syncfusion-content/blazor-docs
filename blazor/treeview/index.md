@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor TreeView Component | Syncfusion 
+description: Learn about Index in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Overview
 
 The **TreeView** component is used to represent hierarchical data in a tree like structure with advanced functions to edit, drag and drop, select with CheckBox and more. TreeView can be populated from a data source such as an array of JavaScript objects or from DataManager.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize The Step Value And Hide Spin Buttons in Blazor Numeric TextBox Component | Syncfusion
+description: Checkout and learn about Customize The Step Value And Hide Spin Buttons in Blazor Numeric TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: Numeric TextBox
+documentation: ug
+---
+
 # Customize the step value and hide spin buttons
 
 The spin buttons allows you to increase or decrease the value with the predefined [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_Step)

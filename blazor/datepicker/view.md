@@ -1,3 +1,12 @@
+---
+layout: post
+title: View in Blazor DatePicker Component | Syncfusion 
+description: Learn about View in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Start and Depth View
 
 The DatePicker has the following predefined views

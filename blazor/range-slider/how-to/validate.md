@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Validate in Blazor Range Slider Component | Syncfusion
+description: Checkout and learn about Validate in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Validate the slider using FormValidator
 
 The Slider component can be validated using our FormValidator. The following steps walk-through slider validation.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Edit in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Edit in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Editing
 
 The Tree Grid component has options to dynamically insert, delete and update records.

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: How to Blazor Webassembly Data Grid Using Cli in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Blazor Webassembly Data Grid Using Cli in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
+---
 title: "Getting Started with Blazor WebAssembly DataGrid Using CLI – Syncfusion"
 component: "DataGrid"
 description: "Checkout and learn more about getting started with blazor webassembly datagrid using CLI of Syncfusion, and more details."

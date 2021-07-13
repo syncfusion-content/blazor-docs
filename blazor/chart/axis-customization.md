@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Axis Customization in Blazor Chart Component | Syncfusion 
+description: Learn about Axis Customization in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Axis Customization in Blazor Charts component | Syncfusion"
 
 component: "Charts"

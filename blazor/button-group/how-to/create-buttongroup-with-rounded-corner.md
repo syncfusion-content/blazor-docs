@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Buttongroup With Rounded Corner in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about Create Buttongroup With Rounded Corner in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Create ButtonGroup with rounded corner
 
 The ButtonGroup with rounded corner has round edges on both sided. To ButtonGroup with rounded corner, `e-round-corner` class is to be

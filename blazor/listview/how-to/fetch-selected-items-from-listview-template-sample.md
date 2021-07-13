@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Fetch Selected Items From Listview Template Sample in Blazor Listview Component | Syncfusion
+description: Checkout and learn about Fetch Selected Items From Listview Template Sample in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # How To fetch selected items from listview template sample
 
 Single or multiple items can be selected by users in the ListView control.

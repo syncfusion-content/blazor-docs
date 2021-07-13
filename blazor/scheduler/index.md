@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Scheduler Component | Syncfusion 
+description: Learn about Index in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Overview
 
 The [**Blazor Scheduler**](https://www.syncfusion.com/blazor-components/blazor-scheduler/) component is an event calendar which facilitates user with the common Outlook-calendar features,

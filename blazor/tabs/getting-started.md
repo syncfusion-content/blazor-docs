@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor Tabs Component | Syncfusion 
+description: Learn about Getting Started in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains about how to include a `Tabs` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Tabs, you can check on this video:
 
-`youtube:8OgywAA_XHg`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=8OgywAA_XHg"%}
 
 ## Importing Syncfusion Blazor component in the application
 

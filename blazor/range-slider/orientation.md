@@ -1,3 +1,12 @@
+---
+layout: post
+title: Orientation in Blazor Range Slider Component | Syncfusion 
+description: Learn about Orientation in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Orientation
 
 The Slider can be displayed, either in horizontal or vertical orientation. By default, the Slider renders in horizontal orientation.

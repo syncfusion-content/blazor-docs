@@ -1,3 +1,12 @@
+---
+layout: post
+title: Validation in Blazor Kanban Component | Syncfusion 
+description: Learn about Validation in Blazor Kanban component of Syncfusion, and more details.
+platform: Blazor
+control: Kanban
+documentation: ug
+---
+
 # Validation
 
 Validate particular column using the `MinCount` or `MaxCount` properties. The corresponding columns gets different appearance when validation fails. In default layout, `ConstraintType` property accept only `Column` type. In swimlane layout, accept both `Column` and `Swimlane` constraint type.

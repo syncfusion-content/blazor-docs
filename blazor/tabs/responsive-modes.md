@@ -1,3 +1,12 @@
+---
+layout: post
+title: Responsive Modes in Blazor Tabs Component | Syncfusion 
+description: Learn about Responsive Modes in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Responsive Modes
 
 The following section explains about rendering Tab when its width exceeds the viewable area or particularly in a given width. The available modes are as follows:

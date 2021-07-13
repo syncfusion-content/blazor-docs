@@ -1,3 +1,12 @@
+---
+layout: post
+title: Toolbar in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Toolbar in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Built-in toolbar
 
 The PDF Viewer comes with a powerful built-in toolbar to execute important actions such as page navigation, text search,view mode,download,print,bookmark, and thumbnails.

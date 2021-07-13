@@ -1,3 +1,12 @@
+---
+layout: post
+title: Date Range in Blazor DatePicker Component | Syncfusion 
+description: Learn about Date Range in Blazor DatePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DatePicker
+documentation: ug
+---
+
 # Date Range
 
 The DatePicker provides an option to select a date value within a specified range by using the

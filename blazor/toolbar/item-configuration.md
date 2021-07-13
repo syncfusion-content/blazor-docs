@@ -1,3 +1,12 @@
+---
+layout: post
+title: Item Configuration in Blazor Toolbar Component | Syncfusion 
+description: Learn about Item Configuration in Blazor Toolbar component of Syncfusion, and more details.
+platform: Blazor
+control: Toolbar
+documentation: ug
+---
+
 # Item Configuration
 
 The Toolbar can be rendered by defining a list of items. Items can be constructed with the following built-in command types or item template.

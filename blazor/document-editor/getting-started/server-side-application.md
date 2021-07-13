@@ -1,3 +1,12 @@
+---
+layout: post
+title: Server Side Application in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about Server Side Application in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
 # Create a Word processing application in Blazor server app
 
 This article provides the step-by-step instructions to integrate the Word processor in Blazor server app using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

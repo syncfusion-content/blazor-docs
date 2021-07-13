@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Multiple Sidebar in Blazor Sidebar Component | Syncfusion
+description: Checkout and learn about Multiple Sidebar in Blazor Sidebar component of Syncfusion, and more details.
+platform: Blazor
+control: Sidebar
+documentation: ug
+---
+
 <!-- markdownlint-disable MD009 -->
 
 # Multiple Sidebar

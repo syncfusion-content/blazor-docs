@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Restrict Group in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn about Restrict Group in Blazor QueryBuilder component of Syncfusion, and more details.
+platform: Blazor
+control: QueryBuilder
+documentation: ug
+---
+
 # Restrict the groups
 
 The Querybuilder allows you to restrict the groups from creation based on group count. You can enable this feature by setting the [`MaxGroupCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_MaxGroupCount) property.

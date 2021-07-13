@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Getting Started in Blazor TreeMap Component | Syncfusion 
+description: Learn about Getting Started in Blazor TreeMap component of Syncfusion, and more details.
+platform: Blazor
+control: TreeMap
+documentation: ug
+---
+
+---
 title: "Getting Started with the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"

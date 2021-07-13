@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize The Tree Nodes Based On Levels in Blazor TreeView Component | Syncfusion
+description: Checkout and learn about Customize The Tree Nodes Based On Levels in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Customize the tree nodes based on levels
 
 You can customize the tree nodes level wise by adding custom CssClass to the component and enabling styles.

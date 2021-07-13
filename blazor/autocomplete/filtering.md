@@ -1,3 +1,12 @@
+---
+layout: post
+title: Filtering in Blazor AutoComplete Component | Syncfusion 
+description: Learn about Filtering in Blazor AutoComplete component of Syncfusion, and more details.
+platform: Blazor
+control: AutoComplete
+documentation: ug
+---
+
 # Filtering
 
 The AutoComplete has built-in support to filter data items. The filter operation

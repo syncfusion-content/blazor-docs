@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor ComboBox Component | Syncfusion 
+description: Learn about Data Binding in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Data Binding
 
 Data binding can be achieved by using the `bind-Value` attribute and its supports string, int, Enum, and bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.

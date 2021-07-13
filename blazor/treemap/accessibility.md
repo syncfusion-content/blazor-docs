@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Accessibility in Blazor TreeMap Component | Syncfusion 
+description: Learn about Accessibility in Blazor TreeMap component of Syncfusion, and more details.
+platform: Blazor
+control: TreeMap
+documentation: ug
+---
+
+---
 title: "Accessibility in the Blazor TreeMap component | Syncfusion"
 
 component: "TreeMap"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Css Customization in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Css Customization in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # CSS Customization
 
 ## Hiding Axis

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Dimensions in Blazor Scheduler Component | Syncfusion 
+description: Learn about Dimensions in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Scheduler dimensions
 
 The Scheduler dimensions refers to both height and width of the entire layout and it accepts 3 types of values.

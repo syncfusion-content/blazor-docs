@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor Accordion Component | Syncfusion 
+description: Learn about Style in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # CSS Structure
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.

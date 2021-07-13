@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Name And Value In Form Submit in Blazor Checkbox Component | Syncfusion
+description: Checkout and learn about Name And Value In Form Submit in Blazor Checkbox component of Syncfusion, and more details.
+platform: Blazor
+control: Checkbox
+documentation: ug
+---
+
 # Name and Value in form submit
 
 The name attribute of the CheckBox is used to group Checkboxes. When the Checkboxes are grouped in form, the checked items value attribute

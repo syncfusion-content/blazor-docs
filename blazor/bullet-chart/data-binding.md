@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Data Binding in Blazor Bullet Chart  Component | Syncfusion 
+description: Learn about Data Binding in Blazor Bullet Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Bullet Chart 
+documentation: ug
+---
+
+---
 title: "Data Binding in the Blazor Bullet Chart component | Syncfusion"
 
 component: "Bullet Chart"

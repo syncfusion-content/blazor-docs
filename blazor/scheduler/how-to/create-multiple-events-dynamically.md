@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Multiple Events Dynamically in Blazor Scheduler Component | Syncfusion
+description: Checkout and learn about Create Multiple Events Dynamically in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Create Multiple Events in different time slots through CTRL key
 
 In Blazor Scheduler, we can able to select the different time slots(10:00 - 10:30, 8:00 - 8:30) by holding CTRL key and click on cells using `OnCellClick` event. In the following code example, events are created on selected timeslots when clicking the **Add Appointments** button.

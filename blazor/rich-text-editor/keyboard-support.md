@@ -1,3 +1,12 @@
+---
+layout: post
+title: Keyboard Support in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Keyboard Support in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Keyboard support
 
 The editor has full keyboard accessibility that includes shortcuts to open and other actions with toolbar items, drop-down lists, and dialogs.

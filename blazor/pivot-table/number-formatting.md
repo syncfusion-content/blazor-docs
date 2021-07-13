@@ -1,3 +1,12 @@
+---
+layout: post
+title: Number Formatting in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Number Formatting in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Number Formatting
 
 Allows you to specify the required display format that should be used in values of the pivot table. Supported display formats are:

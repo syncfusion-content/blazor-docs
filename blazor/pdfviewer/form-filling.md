@@ -1,3 +1,12 @@
+---
+layout: post
+title: Form Filling in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Form Filling in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Form filling and signature fields
 
 PDF Viewer component allows you to display the form fields available in the PDF document. By using this you can edit and download the form fields.

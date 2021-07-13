@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor TreeView Component | Syncfusion 
+description: Learn about Accessibility in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Accessibility
 
 The TreeView control has been designed keeping in mind the `WAI-ARIA` specifications, and applies WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized

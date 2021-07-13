@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor Datetime Picker  Component | Syncfusion 
+description: Learn about Events in Blazor Datetime Picker  component of Syncfusion, and more details.
+platform: Blazor
+control: Datetime Picker 
+documentation: ug
+---
+
 # Events
 
 This section explains the list of events of the DateTimePicker component which will be

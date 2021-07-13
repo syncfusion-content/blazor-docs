@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Card Component | Syncfusion 
+description: Learn about Getting Started in Blazor Card component of Syncfusion, and more details.
+platform: Blazor
+control: Card
+documentation: ug
+---
+
 <!-- markdownlint-disable MD040 -->
 
 # Getting Started in Blazor Card
@@ -5,7 +14,8 @@
 This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Card component, you can check on this video.
-`youtube:k8KSZIf5VPs`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=k8KSZIf5VPs"%}
 
 ## Importing Syncfusion Blazor component in the application
 

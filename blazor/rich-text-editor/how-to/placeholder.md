@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Placeholder in Blazor RichTextEditor Component | Syncfusion
+description: Checkout and learn about Placeholder in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Customize placeholder style
 
 By using `e-rte-placeholder` class, you can customize the placeholder style.

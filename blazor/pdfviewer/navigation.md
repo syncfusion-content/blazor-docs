@@ -1,3 +1,12 @@
+---
+layout: post
+title: Navigation in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Navigation in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Navigation
 
 You can navigate between pages in Syncfusion PDF Viewer in the following ways:

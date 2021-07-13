@@ -1,3 +1,12 @@
+---
+layout: post
+title: Appearance in Blazor Circular Gauge Component | Syncfusion 
+description: Learn about Appearance in Blazor Circular Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Circular Gauge
+documentation: ug
+---
+
 # Appearance
 
 ## Circular gauge title

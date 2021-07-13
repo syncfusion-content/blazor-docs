@@ -1,3 +1,12 @@
+---
+layout: post
+title: Custom Binding in Blazor DataManager Component | Syncfusion 
+description: Learn about Custom Binding in Blazor DataManager component of Syncfusion, and more details.
+platform: Blazor
+control: DataManager
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Custom Binding

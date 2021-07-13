@@ -1,3 +1,12 @@
+---
+layout: post
+title: Template Configuration in Blazor Toolbar Component | Syncfusion 
+description: Learn about Template Configuration in Blazor Toolbar component of Syncfusion, and more details.
+platform: Blazor
+control: Toolbar
+documentation: ug
+---
+
 # Template Configuration
 
 The Toolbar can be rendered by item based collection and by HTML elements.  To render it based on the given HTML element, use `id` as the `target` property. To render the Toolbar, follow the below structure of the HTML elements:

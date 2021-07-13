@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Open Add Edit Dialog Dynamically in Blazor Gantt Chart Component | Syncfusion
+description: Checkout and learn about Open Add Edit Dialog Dynamically in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Open Add Edit Dialog Dynamically
 
 Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDialog` and `OpenEditDialog` methods. The following code example shows how to open add and edit dialog on separate button click actions.

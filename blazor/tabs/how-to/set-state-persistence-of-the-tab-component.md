@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Set State Persistence Of The Tab Component in Blazor Tabs Component | Syncfusion
+description: Checkout and learn about Set State Persistence Of The Tab Component in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Set state persistence
 
 State persistence allows the Tab to retain the current [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property which is set to false by default.

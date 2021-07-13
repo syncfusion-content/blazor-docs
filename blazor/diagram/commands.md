@@ -1,3 +1,12 @@
+---
+layout: post
+title: Commands in Blazor Diagram Component | Syncfusion 
+description: Learn about Commands in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Commands
 
 <!-- markdownlint-disable MD010 -->

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Progress Annotation in Blazor Progress Bar  Component | Syncfusion 
+description: Learn about Progress Annotation in Blazor Progress Bar  component of Syncfusion, and more details.
+platform: Blazor
+control: Progress Bar 
+documentation: ug
+---
+
+---
 title: "Annotations and Label in the Blazor Progress Bar component | Syncfusion"
 
 component: "Progress Bar"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor HeatMap Chart Component | Syncfusion 
+description: Learn about Index in Blazor HeatMap Chart component of Syncfusion, and more details.
+platform: Blazor
+control: HeatMap Chart
+documentation: ug
+---
+
 # Overview
 
 The HeatMap control is used to visualize a two-dimensional data in which the values are represented in gradient or fixed colors.

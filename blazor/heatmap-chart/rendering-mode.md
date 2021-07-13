@@ -1,3 +1,12 @@
+---
+layout: post
+title: Rendering Mode in Blazor HeatMap Chart Component | Syncfusion 
+description: Learn about Rendering Mode in Blazor HeatMap Chart component of Syncfusion, and more details.
+platform: Blazor
+control: HeatMap Chart
+documentation: ug
+---
+
 # Rendering mode
 
 Heat map can be displayed using `Scalable Vector Graphics (SVG)` rendering logic to improve the initial load performance and scalability.

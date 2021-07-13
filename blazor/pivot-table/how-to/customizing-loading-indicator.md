@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customizing Loading Indicator in Blazor Pivot Table Component | Syncfusion
+description: Checkout and learn about Customizing Loading Indicator in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Customizing loading indicator
 
 You can customize the appearance of the loading indicator in the pivot table by using the [`SpinnerTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_SpinnerTemplate) property. This property accepts an HTML string which can be used for appearance customization.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Set Tool Tip To The Commands in Blazor Toolbar Component | Syncfusion
+description: Checkout and learn about Set Tool Tip To The Commands in Blazor Toolbar component of Syncfusion, and more details.
+platform: Blazor
+control: Toolbar
+documentation: ug
+---
+
 # Set Blazor Tooltip to the commands
 
 The `TooltipText` property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.

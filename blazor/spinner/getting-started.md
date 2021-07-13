@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Spinner Component | Syncfusion 
+description: Learn about Getting Started in Blazor Spinner component of Syncfusion, and more details.
+platform: Blazor
+control: Spinner
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains how to include a Spinner component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor DataGrid Component | Syncfusion 
+description: Learn about Getting Started in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started
@@ -6,7 +15,8 @@ This section briefly explains about how to include a DataGrid Component in your 
 
 To get start quickly with Blazor DataGrid component, you can check on this video.
 
-`youtube:ClAlwPUv0_s`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=ClAlwPUv0_s" %}
 
 ## Importing Syncfusion Blazor component in the application
 

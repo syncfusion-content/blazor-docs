@@ -1,3 +1,12 @@
+---
+layout: post
+title: Show Hide Totals in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Show Hide Totals in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Show or hide totals
 
 ## Show or hide grand totals

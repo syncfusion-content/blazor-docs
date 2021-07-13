@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Form Submit in Blazor List Box Component | Syncfusion
+description: Checkout and learn about Form Submit in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Form submit to the listbox
 
 In the following code snippet, the value that is in selected state will be sent on form submit.

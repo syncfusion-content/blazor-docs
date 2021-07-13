@@ -1,3 +1,12 @@
+---
+layout: post
+title: Rtl in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Rtl in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # RTL support
 
 ## RTL

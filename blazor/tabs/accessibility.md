@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Tabs Component | Syncfusion 
+description: Learn about Accessibility in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Accessibility
 
 ## ARIA attributes

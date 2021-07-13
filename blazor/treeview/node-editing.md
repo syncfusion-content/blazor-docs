@@ -1,3 +1,12 @@
+---
+layout: post
+title: Node Editing in Blazor TreeView Component | Syncfusion 
+description: Learn about Node Editing in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Node Editing
 
 The Blazor TreeView allows you to edit nodes by setting the `AllowEditing` property to **true**.

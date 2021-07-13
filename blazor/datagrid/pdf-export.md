@@ -1,3 +1,12 @@
+---
+layout: post
+title: Pdf Export in Blazor DataGrid Component | Syncfusion 
+description: Learn about Pdf Export in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- markdownlint-disable MD033 -->
 
 # PDF Export

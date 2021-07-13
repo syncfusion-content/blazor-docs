@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Cascading Dropdownlist in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Cascading Dropdownlist in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- Cascading dropdownlist with grid editing
 
 You can achieve the Cascading DropDownList with grid editing by using the [`EditTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Drag And Drop in Blazor TreeView Component | Syncfusion 
+description: Learn about Drag And Drop in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Drag and Drop
 
 The Blazor TreeView component allows you to drag and drop any node by setting `AllowDragAndDrop` &nbsp;to **true**. Nodes can be dragged and dropped at all levels of the same TreeView.

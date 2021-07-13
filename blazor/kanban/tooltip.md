@@ -1,3 +1,12 @@
+---
+layout: post
+title: Tooltip in Blazor Kanban Component | Syncfusion 
+description: Learn about Tooltip in Blazor Kanban component of Syncfusion, and more details.
+platform: Blazor
+control: Kanban
+documentation: ug
+---
+
 # Tooltip
 
 The tooltip is used to show the card information when the cursor hover over the card elements using the `EnableTooltip` property. Tooltip content is dynamically set based on hovering over the card elements.

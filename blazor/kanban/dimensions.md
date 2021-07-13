@@ -1,3 +1,12 @@
+---
+layout: post
+title: Dimensions in Blazor Kanban Component | Syncfusion 
+description: Learn about Dimensions in Blazor Kanban component of Syncfusion, and more details.
+platform: Blazor
+control: Kanban
+documentation: ug
+---
+
 # Kanban dimensions
 
 The Kanban dimensions refers to both height and width of the entire layout and it accepts three types of values.

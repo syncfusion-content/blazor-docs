@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Sidebar With List View in Blazor Sidebar Component | Syncfusion
+description: Checkout and learn about Sidebar With List View in Blazor Sidebar component of Syncfusion, and more details.
+platform: Blazor
+control: Sidebar
+documentation: ug
+---
+
 <!-- markdownlint-disable MD009 -->
 
 # Initialize the Sidebar with ListView

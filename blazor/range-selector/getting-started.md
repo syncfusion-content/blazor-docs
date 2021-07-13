@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Getting Started in Blazor Range Selector Component | Syncfusion 
+description: Learn about Getting Started in Blazor Range Selector component of Syncfusion, and more details.
+platform: Blazor
+control: Range Selector
+documentation: ug
+---
+
+---
 title: " Getting Started with the Blazor Range Selector component | Syncfusion "
 
 component: "RangeNavigator"

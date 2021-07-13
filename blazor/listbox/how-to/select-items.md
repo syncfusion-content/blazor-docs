@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Select Items in Blazor List Box Component | Syncfusion
+description: Checkout and learn about Select Items in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Select items to the listbox
 
 In the following example, `Bugatti Chiron` is selected using [`SelectItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItems_System_Object_System_Boolean_) method.

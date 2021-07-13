@@ -1,3 +1,12 @@
+---
+layout: post
+title: Title And Sub Title in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Title And Sub Title in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Title

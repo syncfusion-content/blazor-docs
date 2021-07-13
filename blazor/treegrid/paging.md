@@ -1,3 +1,12 @@
+---
+layout: post
+title: Paging in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Paging in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Paging
 
 Paging provides an option to display Tree Grid data in page segments. To enable paging, set the [`AllowPaging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowPaging.html) to true. When paging is enabled, pager component renders at the bottom of the tree grid.

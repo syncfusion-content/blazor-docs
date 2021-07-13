@@ -1,4 +1,13 @@
 ---
+layout: post
+title: How to Enable Scroll Option On All Day Section in Blazor Scheduler Component | Syncfusion
+description: Checkout and learn about Enable Scroll Option On All Day Section in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
+---
 title: "All-day scroller"
 component: "Scheduler"
 description: "This section explains how to enable scroller for all-day row in the scheduler"

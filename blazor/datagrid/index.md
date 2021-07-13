@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor DataGrid Component | Syncfusion 
+description: Learn about Index in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Overview
 
 The DataGrid component is used to display and manipulate tabular data with configuration options to control the way the data is presented. It can pull data from data sources such as array of JavaScript objects, `OData web services`, or `DataManager` and binding data fields to columns. It also displays the column header to identify the field with support for grouped records.

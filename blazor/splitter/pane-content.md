@@ -1,3 +1,12 @@
+---
+layout: post
+title: Pane Content in Blazor Splitter Component | Syncfusion 
+description: Learn about Pane Content in Blazor Splitter component of Syncfusion, and more details.
+platform: Blazor
+control: Splitter
+documentation: ug
+---
+
 # Pane Content
 
 This section explains how to provide plain text content or HTML markup to splitter pane.

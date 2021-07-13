@@ -1,3 +1,12 @@
+---
+layout: post
+title: Marker in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Marker in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
 # Markers
 
 This section explains how to add markers to the Sparkline Charts.

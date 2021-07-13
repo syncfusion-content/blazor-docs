@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor ComboBox Component | Syncfusion 
+description: Learn about Localization in Blazor ComboBox component of Syncfusion, and more details.
+platform: Blazor
+control: ComboBox
+documentation: ug
+---
+
 # Localization
 
 ## Blazor server side

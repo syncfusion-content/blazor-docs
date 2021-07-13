@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sorting in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Sorting in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Sorting
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order.

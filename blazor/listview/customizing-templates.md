@@ -1,3 +1,12 @@
+---
+layout: post
+title: Customizing Templates in Blazor Listview Component | Syncfusion 
+description: Learn about Customizing Templates in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # Customizing templates
 
 The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.

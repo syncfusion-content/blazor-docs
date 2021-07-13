@@ -1,3 +1,12 @@
+---
+layout: post
+title: Strict Mode in Blazor TimePicker Component | Syncfusion 
+description: Learn about Strict Mode in Blazor TimePicker component of Syncfusion, and more details.
+platform: Blazor
+control: TimePicker
+documentation: ug
+---
+
 # Strict Mode
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~StrictMode.html)

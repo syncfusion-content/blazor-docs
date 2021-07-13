@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Set Tool Tip For Tree Nodes in Blazor TreeView Component | Syncfusion
+description: Checkout and learn about Set Tool Tip For Tree Nodes in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Set tooltip for TreeView nodes
 
 TreeView control allows you to set tooltip option to tree nodes using the `Tooltip` property. The following code example demonstrates how to set tooltip for TreeView nodes.

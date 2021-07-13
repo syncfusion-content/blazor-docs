@@ -1,3 +1,12 @@
+---
+layout: post
+title: Tools in Blazor Diagram Component | Syncfusion 
+description: Learn about Tools in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Tools
 
 ## Drawing tools

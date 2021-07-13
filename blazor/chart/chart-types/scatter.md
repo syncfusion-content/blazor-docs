@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Scatter in Blazor Chart Component | Syncfusion 
+description: Learn about Scatter in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Scatter Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

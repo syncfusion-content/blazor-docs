@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Avatar Component | Syncfusion 
+description: Learn about Getting Started in Blazor Avatar component of Syncfusion, and more details.
+platform: Blazor
+control: Avatar
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

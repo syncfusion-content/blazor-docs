@@ -1,3 +1,12 @@
+---
+layout: post
+title: Blazor Web Assembly Diagram in Blazor Diagram Component | Syncfusion 
+description: Learn about Blazor Web Assembly Diagram in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Getting Started with Blazor WebAssembly Diagram Using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).

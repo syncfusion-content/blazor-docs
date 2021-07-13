@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Dimensions in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Dimensions in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
+---
 title: "Dimensions in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"

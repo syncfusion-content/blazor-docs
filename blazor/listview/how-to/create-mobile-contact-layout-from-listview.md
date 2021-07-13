@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Mobile Contact Layout From Listview in Blazor Listview Component | Syncfusion
+description: Checkout and learn about Create Mobile Contact Layout From Listview in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # How to create mobile contact layout from listview
 
 You can customize the ListView using the `Template` property. Refer

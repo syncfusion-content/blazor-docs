@@ -1,3 +1,12 @@
+---
+layout: post
+title: Filtering in Blazor QueryBuilder Component | Syncfusion 
+description: Learn about Filtering in Blazor QueryBuilder component of Syncfusion, and more details.
+platform: Blazor
+control: QueryBuilder
+documentation: ug
+---
+
 # Filtering
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to create or delete conditions and groups. You can use [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_ShowButtons) to enable/disable these buttons.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Drill Down in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Drill Down in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 <!-- markdownlint-disable MD034 -->
 
 # Drill Down

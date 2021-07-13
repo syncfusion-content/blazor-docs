@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize Progress Using Cssclass in Blazor Progress Button Component | Syncfusion
+description: Checkout and learn about Customize Progress Using Cssclass in Blazor Progress Button component of Syncfusion, and more details.
+platform: Blazor
+control: Progress Button
+documentation: ug
+---
+
 # Customize progress using cssClass
 
 You can customize the background filler UI using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property.

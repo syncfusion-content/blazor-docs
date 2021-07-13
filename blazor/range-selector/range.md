@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Range in Blazor Range Selector Component | Syncfusion 
+description: Learn about Range in Blazor Range Selector component of Syncfusion, and more details.
+platform: Blazor
+control: Range Selector
+documentation: ug
+---
+
+---
 title: " Selecting range in Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"

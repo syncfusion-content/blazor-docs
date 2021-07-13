@@ -1,3 +1,12 @@
+---
+layout: post
+title: Map Providers in Blazor Maps Component | Syncfusion 
+description: Learn about Map Providers in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Map Providers
 
 Maps component support map providers such as OpenStreetMap that can be added to any layers in maps.

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Chart Series in Blazor Chart Component | Syncfusion 
+description: Learn about Chart Series in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Chart Series in Blazor Charts component | Syncfusion"
 
 component: "Charts"

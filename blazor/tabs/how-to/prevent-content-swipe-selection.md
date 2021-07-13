@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Prevent Content Swipe Selection in Blazor Tabs Component | Syncfusion
+description: Checkout and learn about Prevent Content Swipe Selection in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Prevent content swipe selection
 
 We can prevent the tab selection on touch swipe action by using the Tab [Selecting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabEvents.html#Syncfusion_Blazor_Navigations_TabEvents_Selecting) event. Refer the below sample with preventing swipe selection.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Display Geometry Shapes In Bing Maps in Blazor Maps Component | Syncfusion
+description: Checkout and learn about Display Geometry Shapes In Bing Maps in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Display geometry shapes in Bing Maps
 
 Usually, the Bing Maps displays the maps in satellite view, in which you cannot make changes as you need. To overcome this, add maps shape as sub layer over the Bing Maps and customize it. The following steps explain how to add geometry shapes as sublayer in Bing Maps.

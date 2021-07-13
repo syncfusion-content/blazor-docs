@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor TimePicker Component | Syncfusion 
+description: Learn about Accessibility in Blazor TimePicker component of Syncfusion, and more details.
+platform: Blazor
+control: TimePicker
+documentation: ug
+---
+
 # Accessibility
 
 The web accessibility makes web applications and its content more accessible to people with disabilities

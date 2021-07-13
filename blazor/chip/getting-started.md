@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Chip Component | Syncfusion 
+description: Learn about Getting Started in Blazor Chip component of Syncfusion, and more details.
+platform: Blazor
+control: Chip
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains how to include a `Chip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.

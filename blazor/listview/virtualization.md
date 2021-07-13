@@ -1,3 +1,12 @@
+---
+layout: post
+title: Virtualization in Blazor Listview Component | Syncfusion 
+description: Learn about Virtualization in Blazor Listview component of Syncfusion, and more details.
+platform: Blazor
+control: Listview
+documentation: ug
+---
+
 # UI Virtualization
 
 UI virtualization loads only viewable list items in a view port, which will improve the ListView performance while loading a large number of data.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Server Actions in Blazor In Place Editor  Component | Syncfusion 
+description: Learn about Server Actions in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
 # Server actions
 
 By passing In-place Editor component value to the server, the `PrimaryKey` property value must require, otherwise action not performed for remote data.

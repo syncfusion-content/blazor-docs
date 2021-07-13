@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Process The Tree Node Operations Using Context Menu in Blazor TreeView Component | Syncfusion
+description: Checkout and learn about Process The Tree Node Operations Using Context Menu in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Process the tree node operations using context menu
 
 You can integrate the context menu with `TreeView` component in order to perform the TreeView related operations like add, remove and renaming node.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Customization in Blazor Diagram Component | Syncfusion 
+description: Learn about Customization in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Customization
 
 ## Decorator

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: History in Blazor DocumentEditor Component | Syncfusion 
+description: Learn about History in Blazor DocumentEditor component of Syncfusion, and more details.
+platform: Blazor
+control: DocumentEditor
+documentation: ug
+---
+
+---
 title: "Undo and redo"
 component: "Word processor"
 description: "Learn how undo and redo can be done in Blazor Word processor and how to customize its limit."

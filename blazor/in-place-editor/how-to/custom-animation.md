@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Custom Animation in Blazor In Place Editor  Component | Syncfusion
+description: Checkout and learn about Custom Animation in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
 # Set custom animation for popup mode
 
 In popup mode, the In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.

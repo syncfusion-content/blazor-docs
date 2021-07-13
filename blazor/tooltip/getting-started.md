@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor Tooltip Component | Syncfusion 
+description: Learn about Getting Started in Blazor Tooltip component of Syncfusion, and more details.
+platform: Blazor
+control: Tooltip
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains how to include a `Tooltip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Tooltip, you can check on this video
 
-`youtube:Lzpm6x6TXO8`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Lzpm6x6TXO8"%}
 
 ## Importing Syncfusion Blazor component in the application
 

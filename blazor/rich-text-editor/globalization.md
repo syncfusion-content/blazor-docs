@@ -1,3 +1,12 @@
+---
+layout: post
+title: Globalization in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Globalization in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Globalization
 
 ## Localization

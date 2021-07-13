@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Button Component | Syncfusion 
+description: Learn about Getting Started in Blazor Button component of Syncfusion, and more details.
+platform: Blazor
+control: Button
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started with Blazor Button Component
@@ -6,7 +15,8 @@ This section briefly explains about how to include Button Component in your Blaz
 
 To get start quickly with Button Component using Blazor, you can check on this video:
 
-`youtube:qkHqP_CymrI`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=qkHqP_CymrI"%}
 
 ## Importing Syncfusion Blazor component in the application
 

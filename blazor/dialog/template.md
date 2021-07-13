@@ -1,3 +1,12 @@
+---
+layout: post
+title: Template in Blazor Dialog Component | Syncfusion 
+description: Learn about Template in Blazor Dialog component of Syncfusion, and more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
 # Template
 
 In Dialog, the template support is provided to the header and footer sections. So any text or HTML content can be appended in these sections.

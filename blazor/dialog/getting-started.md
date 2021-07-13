@@ -1,9 +1,19 @@
+---
+layout: post
+title: Getting Started in Blazor Dialog Component | Syncfusion 
+description: Learn about Getting Started in Blazor Dialog component of Syncfusion, and more details.
+platform: Blazor
+control: Dialog
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains how to include a Dialog component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor Server-Side Popups in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Dialog component, you can check on this video:
-`youtube:uSyGKuB8ghg`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=uSyGKuB8ghg"%}
 
 ## Importing Syncfusion Blazor component in the application
 

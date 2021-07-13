@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor Scheduler Component | Syncfusion 
+description: Learn about Localization in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Globalization and Localization
 
 The Scheduler integrates different date-time formats and cultures, which allows it to function globally, thus meeting the diverse needs of different regions.

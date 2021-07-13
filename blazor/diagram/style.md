@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor Diagram Component | Syncfusion 
+description: Learn about Style in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # CSS Structure
 
 ## Customizing the connector end point handle

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Floating Of Panels in Blazor Dashboard Layout Component | Syncfusion 
+description: Learn about Floating Of Panels in Blazor Dashboard Layout component of Syncfusion, and more details.
+platform: Blazor
+control: Dashboard Layout
+documentation: ug
+---
+
 # Floating panels
 
 The DashboardLayout component is also provided with the panel floating functionality that can be enabled or disabled using the `AllowFloating` property. The floating functionality of the component allows to effectively use the entire layout for the panel’s placement. If the floating functionality is enabled, the panels within the layout will float upwards automatically to occupy the empty cells available in previous rows.

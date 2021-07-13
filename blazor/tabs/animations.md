@@ -1,3 +1,12 @@
+---
+layout: post
+title: Animations in Blazor Tabs Component | Syncfusion 
+description: Learn about Animations in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Animations
 
 The Tabs component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows you to set `Easing`, `Duration` and various other effects.

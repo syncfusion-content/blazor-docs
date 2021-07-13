@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Period Selector in Blazor Range Selector Component | Syncfusion 
+description: Learn about Period Selector in Blazor Range Selector component of Syncfusion, and more details.
+platform: Blazor
+control: Range Selector
+documentation: ug
+---
+
+---
 title: " Period selector in the Blazor Range Selector component | Syncfusion "
 
 component: "Range Selector"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor Range Slider Component | Syncfusion 
+description: Learn about Localization in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Localization
 
 The `Localization` library allows you to localize default text content of the Slider. The slider control has static text on some features (like increase and decrease button) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `Locale` value.

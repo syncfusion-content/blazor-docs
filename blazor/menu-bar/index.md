@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Menu Bar  Component | Syncfusion 
+description: Learn about Index in Blazor Menu Bar  component of Syncfusion, and more details.
+platform: Blazor
+control: Menu Bar 
+documentation: ug
+---
+
 # Overview
 
 The **Menu Bar** is a graphical user interface that serves as navigation header for your application or site. It has the support to provide multi-level nested menu items.

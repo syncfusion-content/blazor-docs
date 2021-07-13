@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Cross Hair And Track Ball in Blazor Chart Component | Syncfusion 
+description: Learn about Cross Hair And Track Ball in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Crosshair in Blazor Charts component | Syncfusion"
 
 component: "Charts"

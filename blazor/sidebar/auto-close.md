@@ -1,3 +1,12 @@
+---
+layout: post
+title: Auto Close in Blazor Sidebar Component | Syncfusion 
+description: Learn about Auto Close in Blazor Sidebar component of Syncfusion, and more details.
+platform: Blazor
+control: Sidebar
+documentation: ug
+---
+
 <!-- markdownlint-disable MD009 -->
 
 # Responsive Sidebar

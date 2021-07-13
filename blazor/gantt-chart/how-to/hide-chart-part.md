@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Hide Chart Part in Blazor Gantt Chart Component | Syncfusion
+description: Checkout and learn about Hide Chart Part in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Hide Chart part
 
 In the Gantt Chart component, you can hide chart part and display Tree Grid part alone by setting the value of `GanttSplitterSettings.View` property as `Grid`.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor TextBox Component | Syncfusion 
+description: Learn about Data Binding in Blazor TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: TextBox
+documentation: ug
+---
+
 # Data Binding
 
 This section briefly explains how to bind the value to the TextBox component in the following different ways.

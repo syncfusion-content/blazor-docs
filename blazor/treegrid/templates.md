@@ -1,3 +1,12 @@
+---
+layout: post
+title: Templates in Blazor Tree Grid Component | Syncfusion 
+description: Learn about Templates in Blazor Tree Grid component of Syncfusion, and more details.
+platform: Blazor
+control: Tree Grid
+documentation: ug
+---
+
 # Templates
 
 Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Tree Grid is a templated razor component, that allow you to customize various part of the UI using template parameters. It allow you to render custom components or content based on your own logic.

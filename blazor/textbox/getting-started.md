@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor TextBox Component | Syncfusion 
+description: Learn about Getting Started in Blazor TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: TextBox
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains about how to include a [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TextBox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
 To get start quickly with Blazor TextBox component, you can check on this video.
 
-`youtube:vzBKF4Gs-Mc`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=vzBKF4Gs-Mc"%}
 
 ## Importing Syncfusion Blazor component in the application
 

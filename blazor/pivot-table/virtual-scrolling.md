@@ -1,3 +1,12 @@
+---
+layout: post
+title: Virtual Scrolling in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Virtual Scrolling in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Virtual Scrolling

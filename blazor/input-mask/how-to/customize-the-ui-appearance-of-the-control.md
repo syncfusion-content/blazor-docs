@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize The Ui Appearance Of The Control in Blazor Input Mask Component | Syncfusion
+description: Checkout and learn about Customize The Ui Appearance Of The Control in Blazor Input Mask component of Syncfusion, and more details.
+platform: Blazor
+control: Input Mask
+documentation: ug
+---
+
 # Customize the UI appearance of the component
 
 The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.

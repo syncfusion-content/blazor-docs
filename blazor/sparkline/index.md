@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Index in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
 # Overview
 
 The Sparkline Charts is a very small chart; it is drawn without axes or coordinates. This presents a common shape of data in a simple and highly condensed way. The Sparklines are easy to interpret, and convey more information to the users by visualizing data in a small amount of space.

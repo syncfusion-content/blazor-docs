@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor Tabs Component | Syncfusion 
+description: Learn about Localization in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Localization
 
 Localization library allows to localize the default text content of

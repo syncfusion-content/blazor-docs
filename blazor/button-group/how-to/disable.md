@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Disable in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about Disable in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Disable
 
 ## Particular button

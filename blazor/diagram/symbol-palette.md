@@ -1,3 +1,12 @@
+---
+layout: post
+title: Symbol Palette in Blazor Diagram Component | Syncfusion 
+description: Learn about Symbol Palette in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Symbol Palette
 
 The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.

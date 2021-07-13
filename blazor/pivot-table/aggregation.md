@@ -1,3 +1,12 @@
+---
+layout: post
+title: Aggregation in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Aggregation in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Aggregation
 
 > This feature is applicable only for relational data source.

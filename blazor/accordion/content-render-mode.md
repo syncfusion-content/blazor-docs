@@ -1,3 +1,12 @@
+---
+layout: post
+title: Content Render Mode in Blazor Accordion Component | Syncfusion 
+description: Learn about Content Render Mode in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Content Render Mode
 
 Accordion provides support render the content of all `AccordionItem` at initial load which will be maintained DOM. For that, you can disable the `LoadOnDemand` property to load all contents.

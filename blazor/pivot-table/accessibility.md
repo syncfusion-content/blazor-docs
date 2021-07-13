@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Accessibility in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Accessibility
 
 Accessibility is achieved in the pivot table component through WAI-ARIA standard and keyboard navigation. The pivot table features can be effectively accessed through assistive technologies such as screen readers.

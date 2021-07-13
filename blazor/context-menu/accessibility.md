@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Context Menu Component | Syncfusion 
+description: Learn about Accessibility in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
 # Accessibility
 
 ## ARIA attributes

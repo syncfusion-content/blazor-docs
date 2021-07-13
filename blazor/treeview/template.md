@@ -1,3 +1,12 @@
+---
+layout: post
+title: Template in Blazor TreeView Component | Syncfusion 
+description: Learn about Template in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Template
 
 The Blazor TreeView component allows you to customize the look of TreeView nodes using the `NodeTemplate` property.

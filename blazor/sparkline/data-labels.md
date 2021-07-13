@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Data Labels in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Data Labels in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
+---
 title: "Data Labels in the Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"

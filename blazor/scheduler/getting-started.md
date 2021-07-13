@@ -1,10 +1,20 @@
+---
+layout: post
+title: Getting Started in Blazor Scheduler Component | Syncfusion 
+description: Learn about Getting Started in Blazor Scheduler component of Syncfusion, and more details.
+platform: Blazor
+control: Scheduler
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains about how to include a simple Scheduler Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side Scheduler](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications..
 
 To get start quickly with Blazor Scheduler, you can check on this video:
 
-`youtube:bXaHu6qjxV8`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bXaHu6qjxV8"%}
 
 ## Importing Syncfusion Blazor component in the application
 

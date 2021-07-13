@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Wizard Using Accordion in Blazor Accordion Component | Syncfusion
+description: Checkout and learn about Create Wizard Using Accordion in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Create wizard
 
 Accordion items can be disabled and expanded dynamically using accordion item **Disabled** and **Expanded** property.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Right To Left in Blazor Radio Button Component | Syncfusion
+description: Checkout and learn about Right To Left in Blazor Radio Button component of Syncfusion, and more details.
+platform: Blazor
+control: Radio Button
+documentation: ug
+---
+
 # Right-To-Left
 
 Radio Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) as `true`.

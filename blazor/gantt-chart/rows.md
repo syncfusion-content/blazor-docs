@@ -1,3 +1,12 @@
+---
+layout: post
+title: Rows in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Rows in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Rows
 
 Row represents a task information from the data source, and it is possible to perform the following actions in Gantt Chart rows.

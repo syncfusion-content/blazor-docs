@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Pare To in Blazor Chart Component | Syncfusion 
+description: Learn about Pare To in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "Pareto Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

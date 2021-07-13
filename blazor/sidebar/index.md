@@ -1,3 +1,12 @@
+---
+layout: post
+title: Index in Blazor Sidebar Component | Syncfusion 
+description: Learn about Index in Blazor Sidebar component of Syncfusion, and more details.
+platform: Blazor
+control: Sidebar
+documentation: ug
+---
+
 # Overview
 
 The **Sidebar** is an expandable and collapsible component that typically acts as a side container to place primary or secondary content alongside the main content.

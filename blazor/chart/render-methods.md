@@ -1,3 +1,12 @@
+---
+layout: post
+title: Render Methods in Blazor Chart Component | Syncfusion 
+description: Learn about Render Methods in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD036 -->
 
 # Rendering Types

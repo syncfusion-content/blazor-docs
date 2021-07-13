@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Remove Items in Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn about Add Remove Items in Blazor Dropdown Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Dropdown Menu
+documentation: ug
+---
+
 # Add and Remove Items
 
 Dropdown Menu component can be dynamically add or remove items using  `AddItems`, `RemoveItems` method.

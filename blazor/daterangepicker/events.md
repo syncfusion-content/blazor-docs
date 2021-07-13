@@ -1,3 +1,12 @@
+---
+layout: post
+title: Events in Blazor DateRangePicker Component | Syncfusion 
+description: Learn about Events in Blazor DateRangePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DateRangePicker
+documentation: ug
+---
+
 # Events
 
 This section explains the list of events of the DateRangePicker component which will be

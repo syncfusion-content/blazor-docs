@@ -1,3 +1,12 @@
+---
+layout: post
+title: Text Markup Annotation in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Text Markup Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Text Markup Annotation
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.

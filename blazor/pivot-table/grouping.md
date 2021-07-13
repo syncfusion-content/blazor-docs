@@ -1,3 +1,12 @@
+---
+layout: post
+title: Grouping in Blazor Pivot Table Component | Syncfusion 
+description: Learn about Grouping in Blazor Pivot Table component of Syncfusion, and more details.
+platform: Blazor
+control: Pivot Table
+documentation: ug
+---
+
 # Grouping
 
 > This feature is applicable only for relational data source.

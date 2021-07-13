@@ -1,3 +1,12 @@
+---
+layout: post
+title: Legend in Blazor Accumulation Chart Component | Syncfusion 
+description: Learn about Legend in Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 # Legend
 
 As like a chart, the legend is also available for accumulation charts, which gives information about the points. By default, the legend will be placed on the right, if the width of the chart is high or will be placed on the bottom, if the height of the chart is high. Here, the legend for a point can be collapsed by giving the empty string to the x value of the point.

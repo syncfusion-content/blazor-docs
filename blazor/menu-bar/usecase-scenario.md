@@ -1,3 +1,12 @@
+---
+layout: post
+title: Usecase Scenario in Blazor Menu Bar  Component | Syncfusion 
+description: Learn about Usecase Scenario in Blazor Menu Bar  component of Syncfusion, and more details.
+platform: Blazor
+control: Menu Bar 
+documentation: ug
+---
+
 # Use Case Scenario
 
 ## Scrollable Menu Bar

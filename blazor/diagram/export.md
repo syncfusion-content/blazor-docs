@@ -1,3 +1,12 @@
+---
+layout: post
+title: Export in Blazor Diagram Component | Syncfusion 
+description: Learn about Export in Blazor Diagram component of Syncfusion, and more details.
+platform: Blazor
+control: Diagram
+documentation: ug
+---
+
 # Exporting
 
 Diagram provides support to export its content as image/svg files.

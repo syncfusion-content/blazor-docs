@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Show Different Types Of Toast in Blazor Toast Component | Syncfusion
+description: Checkout and learn about Show Different Types Of Toast in Blazor Toast component of Syncfusion, and more details.
+platform: Blazor
+control: Toast
+documentation: ug
+---
+
 # Show different types of toast
 
 The Blazor toast has the following predefined styles that can be defined using the `CssClass` property for achieving different types of toast:

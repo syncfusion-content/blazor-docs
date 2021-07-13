@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Stack Area in Blazor Chart Component | Syncfusion 
+description: Learn about Stack Area in Blazor Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Chart
+documentation: ug
+---
+
+---
 title: "100% Stacked Area Chart in Blazor Charts component | Syncfusion"
 
 component: "Charts"

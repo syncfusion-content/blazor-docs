@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Group Items In Popup in Blazor Split Button Component | Syncfusion
+description: Checkout and learn about Group Items In Popup in Blazor Split Button component of Syncfusion, and more details.
+platform: Blazor
+control: Split Button
+documentation: ug
+---
+
 # Group items in Popup
 
 Items in popup can be grouped in Split Button by templating entire popup with ListView. To achieve grouping in ListView,

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Miscellaneous in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Miscellaneous in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Miscellaneous
 
 ## Placeholder

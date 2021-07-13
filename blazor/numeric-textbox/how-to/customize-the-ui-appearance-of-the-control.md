@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize The Ui Appearance Of The Control in Blazor Numeric TextBox Component | Syncfusion
+description: Checkout and learn about Customize The Ui Appearance Of The Control in Blazor Numeric TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: Numeric TextBox
+documentation: ug
+---
+
 # Customize the UI appearance of the component
 
 You can change the appearance of the NumericTextBox by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_CssClass) to the component and enabling styles. Refer to the following example to change the appearance of the NumericTextBox.

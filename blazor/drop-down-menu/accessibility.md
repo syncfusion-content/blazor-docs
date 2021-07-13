@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Dropdown Menu Component | Syncfusion 
+description: Learn about Accessibility in Blazor Dropdown Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Dropdown Menu
+documentation: ug
+---
+
 # Accessibility
 
 ## ARIA attributes

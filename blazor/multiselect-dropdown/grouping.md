@@ -1,3 +1,12 @@
+---
+layout: post
+title: Grouping in Blazor MultiSelect Dropdown Component | Syncfusion 
+description: Learn about Grouping in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+platform: Blazor
+control: MultiSelect Dropdown
+documentation: ug
+---
+
 # Grouping
 
 The MultiSelect supports wrapping nested elements into a group based on different categories. The category

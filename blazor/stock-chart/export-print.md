@@ -1,3 +1,12 @@
+---
+layout: post
+title: Export Print in Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Export Print in Blazor Stock Chart  component of Syncfusion, and more details.
+platform: Blazor
+control: Stock Chart 
+documentation: ug
+---
+
 # Print and Export
 
 The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` format using the export dropdown button in the period selector toolbar. You can choose the required format using the export dropdown button in stock-chart.

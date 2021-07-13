@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Badge Component | Syncfusion 
+description: Learn about Getting Started in Blazor Badge component of Syncfusion, and more details.
+platform: Blazor
+control: Badge
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting Started

@@ -1,4 +1,13 @@
 ---
+layout: post
+title: Range Band in Blazor Sparkline Charts Component | Syncfusion 
+description: Learn about Range Band in Blazor Sparkline Charts component of Syncfusion, and more details.
+platform: Blazor
+control: Sparkline Charts
+documentation: ug
+---
+
+---
 title: "Range Band in Blazor Sparkline component | Syncfusion"
 
 component: "Sparkline"

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Grouping in Blazor DataGrid Component | Syncfusion 
+description: Learn about Grouping in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 # Grouping
 
 The DataGrid has options to group records by dragging and dropping the column header to the group drop area. When grouping is applied, datagrid records are organized into a hierarchical structure to facilitate easier expansion and collapse of records.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Data Binding in Blazor List Box Component | Syncfusion 
+description: Learn about Data Binding in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Data Binding
 
 The ListBox loads the data from local data sources using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.

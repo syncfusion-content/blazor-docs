@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Summary View in Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn about Summary View in Blazor QueryBuilder component of Syncfusion, and more details.
+platform: Blazor
+control: QueryBuilder
+documentation: ug
+---
+
 # Summary View
 
 The Querybuilder allows you to view the filtered query in a compact view and you can switch to builder mode by clicking `Edit` button.

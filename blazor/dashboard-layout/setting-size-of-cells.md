@@ -1,3 +1,12 @@
+---
+layout: post
+title: Setting Size Of Cells in Blazor Dashboard Layout Component | Syncfusion 
+description: Learn about Setting Size Of Cells in Blazor Dashboard Layout component of Syncfusion, and more details.
+platform: Blazor
+control: Dashboard Layout
+documentation: ug
+---
+
 # Configuring the grid layout
 
 The **Dashboard Layout** is a grid structured component, which can be split into subsections of equal size known as cells.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Accessibility in Blazor Range Slider Component | Syncfusion 
+description: Learn about Accessibility in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
 # Accessibility
 
 The Slider is characterized with complete ARIA Accessibility support that helps to access by on-screen readers and other assistive technology devices. This control is designed with the reference of guidelines document given in the [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices/#slider).

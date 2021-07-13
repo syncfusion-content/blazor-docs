@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Get All Child Nodes in Blazor TreeView Component | Syncfusion
+description: Checkout and learn about Get All Child Nodes in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Get all child nodes through parentID
 
 This section demonstrates how to get the child nodes from corresponding Parent ID. Using the `GetTreeData` method, you can get the node details of TreeView. Please refer to the following sample.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Accordion Tree in Blazor TreeView Component | Syncfusion
+description: Checkout and learn about Accordion Tree in Blazor TreeView component of Syncfusion, and more details.
+platform: Blazor
+control: TreeView
+documentation: ug
+---
+
 # Customize the TreeView into accordion
 
 Accordion is an interface where a list of items can be collapsed or expanded, but only one list can be collapsed or expanded at a time. You can customize the TreeView to make it behave as an accordion. Refer to the following code sample to create an accordion tree.

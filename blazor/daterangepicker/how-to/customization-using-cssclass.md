@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customization Using Cssclass in Blazor DateRangePicker Component | Syncfusion
+description: Checkout and learn about Customization Using Cssclass in Blazor DateRangePicker component of Syncfusion, and more details.
+platform: Blazor
+control: DateRangePicker
+documentation: ug
+---
+
 # Customization using CssClass
 
 To customize UI, you can make use of [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_CssClass) that will be added to the DateRangePicker component as the root CSS class. With this CSS class, you can override existing styles of DateRangePicker.

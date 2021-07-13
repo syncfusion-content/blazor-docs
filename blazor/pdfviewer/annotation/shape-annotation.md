@@ -1,3 +1,12 @@
+---
+layout: post
+title: Shape Annotation in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Shape Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Shape annotation
 
 The PDF Viewer control provides the options to add, edit and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:

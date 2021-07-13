@@ -1,3 +1,12 @@
+---
+layout: post
+title: Columns in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Columns in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Columns
 
 The column displays information from a bound data source, and you can edit the values of column to update the task details through Tree Grid. The operations such as sorting, filtering, and searching can be performed based on column definitions. To display a Gantt Chart column, the `Field` property should be mapped from the data source to the column.

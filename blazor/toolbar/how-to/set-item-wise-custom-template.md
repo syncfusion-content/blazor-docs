@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Set Item Wise Custom Template in Blazor Toolbar Component | Syncfusion
+description: Checkout and learn about Set Item Wise Custom Template in Blazor Toolbar component of Syncfusion, and more details.
+platform: Blazor
+control: Toolbar
+documentation: ug
+---
+
 # Set item-wise custom template
 
 The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`.

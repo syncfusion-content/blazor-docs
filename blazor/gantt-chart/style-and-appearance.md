@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style And Appearance in Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Style And Appearance in Blazor Gantt Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Gantt Chart
+documentation: ug
+---
+
 # Styling
 
 To modify the Gantt Chart appearance, you need to override the default CSS of gantt chart. Please find the list of CSS classes and its corresponding section in Gantt Chart. Also, you have an option to create your own custom theme for all the JavaScript controls using our [`Theme Studio`](https://blazor.syncfusion.com/documentation/appearance/theme-studio/).

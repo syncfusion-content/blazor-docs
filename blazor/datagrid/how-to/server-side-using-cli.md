@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Server Side Using Cli in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Server Side Using Cli in Blazor DataGrid component of Syncfusion, and more details.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+
 <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Data Grid in Blazor Server Side App using .NET Core CLI

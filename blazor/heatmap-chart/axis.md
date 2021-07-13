@@ -1,3 +1,12 @@
+---
+layout: post
+title: Axis in Blazor HeatMap Chart Component | Syncfusion 
+description: Learn about Axis in Blazor HeatMap Chart component of Syncfusion, and more details.
+platform: Blazor
+control: HeatMap Chart
+documentation: ug
+---
+
 # Axis
 
 Heat map consists of two axes namely, `X-axis` and `Y-axis` that displays the row headers and column headers to plot the data points respectively. You can define the type, format, and other customizing options for both axes in the heat map.

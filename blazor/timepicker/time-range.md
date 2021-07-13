@@ -1,3 +1,12 @@
+---
+layout: post
+title: Time Range in Blazor TimePicker Component | Syncfusion 
+description: Learn about Time Range in Blazor TimePicker component of Syncfusion, and more details.
+platform: Blazor
+control: TimePicker
+documentation: ug
+---
+
 # Time Range
 
 TimePicker provides an option to select a time value within a specified range by using the

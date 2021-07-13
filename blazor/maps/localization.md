@@ -1,3 +1,12 @@
+---
+layout: post
+title: Localization in Blazor Maps Component | Syncfusion 
+description: Learn about Localization in Blazor Maps component of Syncfusion, and more details.
+platform: Blazor
+control: Maps
+documentation: ug
+---
+
 # Localization
 
 The localization library allows to localize the default text content of the Maps component. It has static text on some features such as zooming toolbars, and this can be changed to any other culture such as Arabic, Deutsch, and French by defining the locale value and translation object.

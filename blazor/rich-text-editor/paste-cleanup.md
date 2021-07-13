@@ -1,3 +1,12 @@
+---
+layout: post
+title: Paste Cleanup in Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Paste Cleanup in Blazor RichTextEditor component of Syncfusion, and more details.
+platform: Blazor
+control: RichTextEditor
+documentation: ug
+---
+
 # Paste from MS Word
 
 The Rich Text Editor allows you to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.

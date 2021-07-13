@@ -1,3 +1,12 @@
+---
+layout: post
+title: Print in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Print in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Print
 
 The PDF Viewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the `EnablePrint` property.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Style in Blazor Card Component | Syncfusion 
+description: Learn about Style in Blazor Card component of Syncfusion, and more details.
+platform: Blazor
+control: Card
+documentation: ug
+---
+
 # Style and Appearance
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.

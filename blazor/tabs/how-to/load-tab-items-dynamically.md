@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Load Tab Items Dynamically in Blazor Tabs Component | Syncfusion
+description: Checkout and learn about Load Tab Items Dynamically in Blazor Tabs component of Syncfusion, and more details.
+platform: Blazor
+control: Tabs
+documentation: ug
+---
+
 # Load Tab items dynamically
 
 Tabs can be added dynamically by list of items and index value to the `AddTab` method.

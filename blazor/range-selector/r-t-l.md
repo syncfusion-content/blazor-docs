@@ -1,4 +1,13 @@
 ---
+layout: post
+title: R T L in Blazor Range Selector Component | Syncfusion 
+description: Learn about R T L in Blazor Range Selector component of Syncfusion, and more details.
+platform: Blazor
+control: Range Selector
+documentation: ug
+---
+
+---
 title: " RTL in the Blazor Range Selector component | Syncfusion "
 
 component: "RangeNavigator"

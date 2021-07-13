@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Data Binding in Blazor Context Menu Component | Syncfusion
+description: Checkout and learn about Data Binding in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
 # Data Binding
 
 To bind local data source to the Context Menu, menu items are populated from data source and mapped to `Items` property. In the following example, custom data with different data type is mapped to `Items` property.

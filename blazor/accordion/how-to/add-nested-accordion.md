@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Add Nested Accordion in Blazor Accordion Component | Syncfusion
+description: Checkout and learn about Add Nested Accordion in Blazor Accordion component of Syncfusion, and more details.
+platform: Blazor
+control: Accordion
+documentation: ug
+---
+
 # Add Nested Accordion
 
 Accordion supports to render the nested level of Accordion by using `ContentTemplate` property. To render the nested Accordion, you can define nested Accordion elements within the `ContentTemplate` property of the parent Accordion.

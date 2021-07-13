@@ -1,3 +1,12 @@
+---
+layout: post
+title: Multiline in Blazor TextBox Component | Syncfusion 
+description: Learn about Multiline in Blazor TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: TextBox
+documentation: ug
+---
+
 # Multiline TextBox
 
 This feature allows the textbox to accept one or more lines of text like address, description, comments, and more.

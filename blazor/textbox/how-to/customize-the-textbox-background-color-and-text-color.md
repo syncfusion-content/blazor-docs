@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Customize The Textbox Background Color And Text Color in Blazor TextBox Component | Syncfusion
+description: Checkout and learn about Customize The Textbox Background Color And Text Color in Blazor TextBox component of Syncfusion, and more details.
+platform: Blazor
+control: TextBox
+documentation: ug
+---
+
 # Customize the textbox background-color and text-color
 
 You can customize the text box styles such as background-color, text-color and border-color by overriding its default styles.

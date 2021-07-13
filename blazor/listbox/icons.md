@@ -1,3 +1,12 @@
+---
+layout: post
+title: Icons in Blazor List Box Component | Syncfusion 
+description: Learn about Icons in Blazor List Box component of Syncfusion, and more details.
+platform: Blazor
+control: List Box
+documentation: ug
+---
+
 # Icons and Customization
 
 ## Icons

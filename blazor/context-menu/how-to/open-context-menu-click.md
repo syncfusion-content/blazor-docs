@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Open Context Menu Click in Blazor Context Menu Component | Syncfusion
+description: Checkout and learn about Open Context Menu Click in Blazor Context Menu component of Syncfusion, and more details.
+platform: Blazor
+control: Context Menu
+documentation: ug
+---
+
 # Open a Sub Menu on Context Menu item click
 
 This section explains about how to open a sub menu on Context Menu item click. This can be achieved by using `ShowItemOnClick` property of the Context Menu.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: How to Create Buttongroup With Icons in Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about Create Buttongroup With Icons in Blazor ButtonGroup component of Syncfusion, and more details.
+platform: Blazor
+control: ButtonGroup
+documentation: ug
+---
+
 # Create ButtonGroup with icons
 
 ButtonGroup with icons can be achieved by `IconCss` property of the Button component.

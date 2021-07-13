@@ -1,3 +1,12 @@
+---
+layout: post
+title: Linear Gauge Dimensions in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Linear Gauge Dimensions in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
+---
+
 # Linear Gauge Dimensions
 
 ## Size for Linear Gauge

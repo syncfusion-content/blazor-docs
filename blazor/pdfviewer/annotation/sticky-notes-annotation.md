@@ -1,3 +1,12 @@
+---
+layout: post
+title: Sticky Notes Annotation in Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Sticky Notes Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+platform: Blazor
+control: PDF Viewer
+documentation: ug
+---
+
 # Sticky note annotations
 
 The PDF Viewer control provides the options to add, edit, and delete the sticky note annotations in the PDF document.

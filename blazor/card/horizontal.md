@@ -1,3 +1,12 @@
+---
+layout: post
+title: Horizontal in Blazor Card Component | Syncfusion 
+description: Learn about Horizontal in Blazor Card component of Syncfusion, and more details.
+platform: Blazor
+control: Card
+documentation: ug
+---
+
 # Horizontal Card
 
 By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using Orientation property..
