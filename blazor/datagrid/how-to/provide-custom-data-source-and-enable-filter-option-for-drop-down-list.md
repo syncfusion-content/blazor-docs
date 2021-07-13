@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Provide custom data source and enabling filtering for DropDownList in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Provide custom data source and enabling filtering for DropDownList in Blazor DataGrid component of Syncfusion, and more details
+title: How to Provide Custom Data Source And Enable Filter Option For Drop Down List in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Provide Custom Data Source And Enable Filter Option For Drop Down List in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -15,10 +15,7 @@ While setting new data source for DropDownList using [`Edit`](https://help.syncf
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -68,7 +65,4 @@ This is demonstrated in the below sample code,
                 new Order() { CustomerID= "India" }
     };
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

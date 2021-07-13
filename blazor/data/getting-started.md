@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Getting started with Blazor DataManager component - Syncfusion
-description: Checkout and learn about getting started with Blazor DataManager component of Syncfusion, and more details
+title: Getting Started in Blazor DataManager Component | Syncfusion 
+description: Learn about Getting Started in Blazor DataManager component of Syncfusion, and more details.
 platform: Blazor
-component: DataManager
+control: DataManager
 documentation: ug
 ---
 
@@ -19,10 +19,7 @@ This section explains about how to connect the [`SfDataManager`](https://help.sy
 
  2. You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-{% tabs %}
-
-{% highlight html %}
-
+```html
     <head>
         <environment include="Development">
         ....
@@ -32,42 +29,27 @@ This section explains about how to connect the [`SfDataManager`](https://help.sy
             @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/fabric.css" rel="stylesheet" />*@
        </environment>
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Adding component package to the application
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Data** package.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
         @using Syncfusion.Blazor.Data
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Add Data Manager Component
 
 To initialize the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 <SfDataManager>
 
 </SfDataManager>
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Since the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component is mainly used in conjunction with Syncfusion Blazor components that supports data binding, we are going to use Blazor DataGrid component to depict the usage of [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) throughout this documentation.
 
@@ -81,10 +63,7 @@ Local JSON data can be bound to the DataGrid component by assigning the array of
 
 The following sample code demonstrates binding local data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
@@ -119,10 +98,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
         new EmployeeData { EmployeeID = 10, Name = "Andrew Buchanan", Title = "Sales Representative" }
     };
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Binding to OData
 
@@ -130,10 +106,7 @@ Remote data can be bound to the DataGrid component by binding the [`SfDataManage
 
 The following sample code demonstrates binding OData through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -156,10 +129,7 @@ The following sample code demonstrates binding OData through the [`SfDataManager
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Component binding
 
@@ -173,10 +143,7 @@ Local data can be bound to the DropDownList component by assigning the array of 
 
 The following sample code demonstrates binding local data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DropDownList component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -201,10 +168,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
         new Countries { Name = "Cameroon", Code = "CM" }
     };
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents DropDownList bound with local data through the `SfDataManager` component,
 ![Local Data](./images/dropdown-local-binding.png)
@@ -215,10 +179,7 @@ Remote data can be bound to the DropDownList component by binding the [`SfDataMa
 
 The following sample code demonstrates binding remote data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DropDownList component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
@@ -236,10 +197,7 @@ The following sample code demonstrates binding remote data through the [`SfDataM
         public string CustomerID { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents DropDownList bound with remote data through the `SfDataManager` component,
 ![Remote Data](./images/dropdown-remote-binding.png)

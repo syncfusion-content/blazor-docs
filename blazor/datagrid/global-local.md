@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Globalization in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Globalization in Blazor DataGrid component of Syncfusion, and more details
+title: Global Local in Blazor DataGrid Component | Syncfusion 
+description: Learn about Global Local in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -13,10 +13,7 @@ Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs**
 
 Refer the following code to add configuration in Startup.cs file
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Localization;
 
@@ -35,10 +32,7 @@ namespace BlazorApplication
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Localization
 
@@ -154,10 +148,7 @@ In the following examples, demonstrate how to enable **Localization** for DataGr
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Syncfusion.Blazor;
 using System.Globalization;
 using Microsoft.AspNetCore.Localization;
@@ -193,19 +184,13 @@ namespace BlazorApplication
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Syncfusion.Blazor;
 
 namespace BlazorServer
@@ -227,19 +212,13 @@ namespace BlazorServer
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > **Note** BlazorServer denotes the ApplicationNameSpace of your project.
 
 * Finally, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Locale="de" AllowGrouping="true" Height="400">
@@ -275,10 +254,7 @@ namespace BlazorServer
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Blazor WebAssembly
 
@@ -286,10 +262,7 @@ In the following examples, demonstrate how to enable **Localization** for DataGr
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Syncfusion.Blazor;
 using System.Globalization;
 
@@ -317,17 +290,11 @@ namespace ClientApplication
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 * Then, create a **~/Shared/SyncfusionLocalizer.cs** file and implement **ISyncfusionStringLocalizer** interface to the class and override the ResourceManager property to get the resource file details from the application end.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Syncfusion.Blazor;
 
 public class SyncfusionLocalizer : ISyncfusionStringLocalizer
@@ -349,19 +316,13 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > **Note** ClientApplication denotes the ApplicationNameSpace of your project.
 
 * Now, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Locale="de" AllowGrouping="true" Height="400">
@@ -397,10 +358,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Internationalization
 
@@ -414,10 +372,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 RTL provides an option to switch the text direction and layout of the DataGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** property is used to enable RTL in the DataGrid.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSorting="true" EnableRtl="true" AllowPaging="true">
@@ -450,9 +405,6 @@ RTL provides an option to switch the text direction and layout of the DataGrid c
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

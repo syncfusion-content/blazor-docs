@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Custom control in datagrid toolbar in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Custom control in datagrid toolbar in Blazor DataGrid component of Syncfusion, and more details
+title: How to Custom Control In Grid Toolbar in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Custom Control In Grid Toolbar in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -13,10 +13,7 @@ You can render custom controls inside the datagrid's toolbar area. This can be a
 
 This is demonstrated in the below sample code where Autocomplete component is rendered inside the DataGrid's toolbar and is used for performing search operation on the datagrid,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
@@ -87,10 +84,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents the search operation performed on the datagrid using the Autocomplete component rendered in the toolbar,
 

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Data Annotation in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Data Annotation in Blazor DataGrid component of Syncfusion, and more details
+title: Data Annotation in Blazor DataGrid Component | Syncfusion 
+description: Learn about Data Annotation in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -27,10 +27,7 @@ The list of data annotation attributes that are supported in DataGrid component 
 
 The following sample code demonstrates data annotations implemented in the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using System.ComponentModel.DataAnnotations;
 
@@ -81,10 +78,7 @@ The following sample code demonstrates data annotations implemented in the DataG
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents data annotations enabled in the DataGrid columns,
 ![Data Annotations](./images/data-annotations.png)

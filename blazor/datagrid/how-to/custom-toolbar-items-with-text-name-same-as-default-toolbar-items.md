@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Custom toolbar items with text name same as default toolbar items in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Custom toolbar items with text name same as default toolbar items in Blazor DataGrid component of Syncfusion, and more details
+title: How to Custom Toolbar Items With Text Name Same As Default Toolbar Items in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Custom Toolbar Items With Text Name Same As Default Toolbar Items in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -13,10 +13,7 @@ You can create the Custom toolbar items with text name same as default toolbar i
 
 This is demonstrated in the below sample code where we have custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when GridEditSettings is defined in DataGrid. So custom toolbar will be disabled state considering it as default toolbar item. We have overcome that behaviour by defining the Id property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -69,7 +66,4 @@ This is demonstrated in the below sample code where we have custom toolbar items
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

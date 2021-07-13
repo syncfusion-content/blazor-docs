@@ -1,0 +1,63 @@
+---
+layout: post
+title: How to Time Range Slider in Blazor Range Slider Component | Syncfusion
+description: Checkout and learn about Time Range Slider in Blazor Range Slider component of Syncfusion, and more details.
+platform: Blazor
+control: Range Slider
+documentation: ug
+---
+
+# Time Range Slider
+
+The time formatting can be achieved same as the date formatting using `TicksRendering` and `TooltipChange` events. The process of time formatting is explained in the below sample.
+
+```csharp
+@using Syncfusion.Blazor.Inputs
+
+<SfSlider TValue="int[]" Min="MinValue()" Max="@MaxValue()" Type="SliderType.Range" @bind-Value="@SliderValues">
+    <SliderEvents TValue="int[]" OnTooltipChange="@TooltipChange" TicksRendering="@TickesRendering"></SliderEvents>
+    <SliderTicks Placement="Placement.Before" LargeStep="7200000" SmallStep="3600000" ShowSmallTicks="true"></SliderTicks>
+    <SliderTooltip Placement="TooltipPlacement.After" IsVisible="true"></SliderTooltip>
+</SfSlider>
+
+@code{
+    int[] SliderValues = new int[] { 43200000, 54000000 };
+    public double MinValue()
+    {
+        DateTime datetime = new DateTime(2013, 6, 13, 11, 0, 0);
+        return datetime.TimeOfDay.TotalMilliseconds;
+    }
+    public double MaxValue()
+    {
+        DateTime datetime = new DateTime(2013, 6, 13, 23, 0, 0);
+        return datetime.TimeOfDay.TotalMilliseconds;
+    }
+    public void TickesRendering(SliderTickEventArgs args)
+    {
+        double time = args.Value / 3600000;
+        args.Text = time > 11 ? time + ".00 PM" : time + ".00 AM";
+    }
+    public void TooltipChange(SliderTooltipEventArgs<int[]> args)
+    {
+        double FirstValue = args.Value[0] / 3600000;
+        double SecondValue = args.Value[1] / 3600000;
+
+        if (FirstValue <= 11 && SecondValue < 11)
+        {
+            args.Text = FirstValue + ".00 AM -" + SecondValue + ".00 AM";
+        }
+        else if (FirstValue <= 11 && SecondValue > 11)
+        {
+            args.Text = FirstValue + ".00 AM -" + SecondValue + ".00 PM";
+        }
+        else if (FirstValue > 11 && SecondValue > 11)
+        {
+            args.Text = FirstValue + ".00 PM -" + SecondValue + ".00 PM";
+        }
+    }
+}
+```
+
+The output will be as follows.
+
+![TimeSlider](../images/timeslider.gif)

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Custom delete confirmation dialog in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Custom delete confirmation dialog in Blazor DataGrid component of Syncfusion, and more details
+title: How to Custom Delete Confirmation Dialog in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Custom Delete Confirmation Dialog in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -13,10 +13,7 @@ You can customize the appearance and contents of delete confirmation dialog by r
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
 
@@ -101,7 +98,4 @@ This is demonstrated in the below sample code,
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

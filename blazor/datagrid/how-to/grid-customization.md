@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to DataGrid customization in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about DataGrid customization in Blazor DataGrid component of Syncfusion, and more details
+title: How to Grid Customization in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Grid Customization in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -13,10 +13,7 @@ It is possible to customize the default styles of the DataGrid component. This c
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -80,19 +77,13 @@ This is demonstrated in the below sample code,
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 <!-- You can also apply style directly to the DataGrid using the `SetAttribute` method in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event. But, this will override the default styles of the grid.
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -142,10 +133,7 @@ This is demonstrated in the below sample code,
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} -->
+``` -->
 
 The following image represents customized datagrid columns,
 ![`Grid Customization`](../images/grid-customization.png)

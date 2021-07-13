@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Styling and appearance in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Styling and appearance in Blazor DataGrid component of Syncfusion, and more details
+title: How to Grid Styling in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Grid Styling in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 

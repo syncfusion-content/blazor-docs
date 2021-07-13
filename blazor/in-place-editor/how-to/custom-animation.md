@@ -1,0 +1,101 @@
+---
+layout: post
+title: How to Custom Animation in Blazor In Place Editor  Component | Syncfusion
+description: Checkout and learn about Custom Animation in Blazor In Place Editor  component of Syncfusion, and more details.
+platform: Blazor
+control: In Place Editor 
+documentation: ug
+---
+
+# Set custom animation for popup mode
+
+In popup mode, the In-place Editor is rendered with the Blazor `Tooltip` component. You can use the tooltip properties and events to customize the popup by configuring properties using the `InPlaceEditorPopupSettings` tag.
+
+In the following example, popup animation can be customized by passing animation effect using the `InPlaceEditorPopupSettings` tag and the dynamic animation effect changes configured from the Blazor `DropDownList` component `ValueChange` event.
+
+```csharp
+
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.InPlaceEditor
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Popups
+
+<div id='container'>
+    <table class="table-section">
+        <tr>
+            <td> Open Animation: </td>
+            <td>
+                <SfDropDownList PopupHeight="150px" @bind-Value="DropdownValue" Placeholder="Select a animate type" DataSource="OpenAnimateData">
+                    <DropDownListEvents ValueChange="@OnChange" TValue="string" TItem="DropDownFields"></DropDownListEvents>
+                    <DropDownListFieldSettings Value="Text" Text="Text"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </td>
+        </tr>
+        <tr>
+            <td class="sample-td"> Enter your name: </td>
+            <td class="sample-td">
+                <SfInPlaceEditor @bind-Value="@TextValue" Mode="RenderMode.Popup" TValue="string">
+                    <EditorComponent>
+                        <SfTextBox @bind-Value="@TextValue" Placeholder="Enter some text"></SfTextBox>
+                    </EditorComponent>
+                    <InPlaceEditorPopupSettings Animation="@Animation"></InPlaceEditorPopupSettings>
+                </SfInPlaceEditor>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<style>
+    #container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .table-section {
+        margin: 0 auto;
+    }
+
+    tr td:first-child {
+        text-align: right;
+        padding-right: 20px;
+    }
+
+    .sample-td {
+        padding-top: 10px;
+        min-width: 230px;
+        height: 100px;
+    }
+</style>
+
+@code {
+    public class DropDownFields
+    {
+        public string Text { get; set; }
+    }
+    public List<DropDownFields> OpenAnimateData = new List<DropDownFields>()
+{
+        new DropDownFields(){ Text= "None" },
+        new DropDownFields(){ Text= "FadeIn" },
+        new DropDownFields(){ Text= "FadeZoomIn" },
+        new DropDownFields() { Text= "ZoomIn" }
+    };
+
+    public string DropdownValue { get; set; } = "ZoomIn";
+    public string TextValue { get; set; } = "Andrew";
+
+    public AnimationModel Animation { get; set; } = new AnimationModel
+    {
+        Open = new TooltipAnimationSettings { Delay = 0, Duration = 150, Effect = Effect.ZoomIn }
+    };
+
+    public void OnChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, DropDownFields> args)
+    {
+        Animation = new AnimationModel
+        {
+            Open = new TooltipAnimationSettings { Delay = 0, Duration = 150, Effect = (Effect)System.Enum.Parse(typeof(Effect), args.Value) }
+        };
+    }
+
+}
+
+```

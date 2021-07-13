@@ -1,9 +1,9 @@
 ---
 layout: post
-title: WebAssembly Performance in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about WebAssembly Performance in Blazor DataGrid component of Syncfusion, and more details
+title: Webassembly Performance in Blazor DataGrid Component | Syncfusion 
+description: Learn about Webassembly Performance in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -24,10 +24,7 @@ In the following example:
 * **PreventRender** method is called in the **IncrementCount** method which is a click callback.
 * Now grid component will not be a part of the rendering which happens as result of the click event and **currentCount** alone will get updated.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 <h1>Counter</h1>
 
 <p>Current count: @currentCount</p>
@@ -79,10 +76,7 @@ In the following example:
     }
 
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Notes
 
@@ -100,10 +94,7 @@ In the following example:
 * **RowSelected** event is bound with a callback method, so once row selection event is completed the **StateHasChanged** will be invoked for the parent component.
 * `RowSelectEventArgs<Order>.PreventRender` is set as **true** so now grid will not be part of the **StateHasChanged** invoked as result of the grid.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 <p>Selected OrderID: <span style="color:red">@SelectedOrder.OrderID</span></p>
 
 <SfGrid @ref="grid" DataSource="@Orders">
@@ -152,10 +143,7 @@ In the following example:
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Notes
 

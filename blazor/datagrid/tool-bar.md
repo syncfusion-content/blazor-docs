@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Toolbar in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Toolbar in Blazor DataGrid component of Syncfusion, and more details
+title: Tool Bar in Blazor DataGrid Component | Syncfusion 
+description: Learn about Tool Bar in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -31,10 +31,7 @@ The following table shows built-in tool bar items and its actions.
 | PdfExport | Exports the datagrid to PDF.|
 | CsvExport | Exports the datagrid to CSV.|
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -52,7 +49,6 @@ The following table shows built-in tool bar items and its actions.
 
 @code{
     public List<Order>Orders{ get; set; }
-    private string[] Tool = (new string[] { "OrderID" });
     protected override void OnInitialized()
     {
         Orders = Enumerable.Range(1, 75).Select(x => new Order()
@@ -73,10 +69,7 @@ The following table shows built-in tool bar items and its actions.
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshots represent a datagrid with Built-in toolbar,
 ![Built in Toolbar](./images/built.PNG)
@@ -86,10 +79,7 @@ The following screenshots represent a datagrid with Built-in toolbar,
 Custom tool bar items can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
 Custom toolbar items can be achieved by using Expand all and Collapse all functions.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -155,10 +145,7 @@ Custom toolbar items can be achieved by using Expand all and Collapse all functi
      }
  }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshots represent a datagrid with Custom toolbar items,
 ![Custom toolbat items](./images/customtoolbaritems.PNG)
@@ -169,10 +156,7 @@ DataGrid have an option to use both built-in and custom tool bar items at same t
 
 In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in toolbar items and `Click` is custom toolbar item.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
@@ -224,10 +208,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshots represent a datagrid with Built-in and custom items in toolbar,
 ![Built in and custom items in Toolbar](./images/builtintoolbar.PNG)
@@ -236,10 +217,7 @@ The following screenshots represent a datagrid with Built-in and custom items in
 
 Custom tool bar items can be added by defining the [`Toolbar Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) .Custom toolbar can be placed inside datagrid using [`ToolbarTemplate`] as below.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
@@ -305,10 +283,7 @@ Custom tool bar items can be added by defining the [`Toolbar Template`](https://
 }
 
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshots represent a datagrid with Custom toolbar,
 ![Custom Toolbar](./images/customtoolbar.PNG)
@@ -319,10 +294,7 @@ The following screenshots represent a datagrid with Custom toolbar,
 
 Drop down list can be added by using dropdownlist in the tool bar section.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
@@ -398,10 +370,7 @@ Drop down list can be added by using dropdownlist in the tool bar section.
 }
 
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshots represent a datagrid with Custom toolbar dropdown list,
 ![Custom Toolbar with dropdown list](./images/dropdownlist.PNG)
@@ -410,10 +379,7 @@ The following screenshots represent a datagrid with Custom toolbar dropdown list
 
 You can enable / disable tool bar items by using the [`EnableToolbarItems method`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_EnableItems_System_Collections_Generic_List_System_Int32__System_Nullable_System_Boolean__).
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -500,12 +466,117 @@ You can enable / disable tool bar items by using the [`EnableToolbarItems method
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshots represent a datagrid with Enable/disable toolbar items,
 ![Enable/disable Toolbar items](./images/Enabledisablegif.gif)
+
+## Customize Toolbar Text
+
+You can able to customize the toolbar text by using the [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor) properties.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Navigations
+
+<SfGrid ID="Grid" DataSource="@Orders" AllowPaging="true" Toolbar=@ToolbarItems>
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) IsPrimaryKey="true" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    private List<object> ToolbarItems = new List<object>() {
+        new ItemModel() { Text = "Add Record", PrefixIcon = "e-add", Id = "Grid_add"},//Here Grid is SfGrid ID
+        new ItemModel(){ Text = "Edit Record", PrefixIcon= "e-edit", Id="Grid_edit"},
+        new ItemModel(){ Text = "Delete Record", PrefixIcon= "e-delete", Id="Grid_delete"},
+        new ItemModel(){ Text = "Update Record", PrefixIcon= "e-update", Id="Grid_update"},
+        new ItemModel(){ Text = "Cancel Changes", PrefixIcon= "e-cancel", Id="Grid_cancel"}
+    };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
+
+The following screenshots represent a datagrid by customizing toolbar text.
+![Customize Toolbar Text](./images/customize-toolbar-text.jpg)
+
+## Customize toolbar styles
+
+You can able to customize the toolbar styles by using the toolbar class(.e-toolbar-item .e-tbar-btn)
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+<style>
+    .e-toolbar-item .e-tbar-btn {
+        background-color: powderblue;
+    }
+</style>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+
+```
+
+The following screenshots represent a datagrid by customizing toolbar styles.
+![Customize toolbar styles](./images/customize-toolbar-bgcolor.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

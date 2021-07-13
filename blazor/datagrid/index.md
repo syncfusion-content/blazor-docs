@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Overview in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Overview in Blazor DataGrid component of Syncfusion, and more details
+title: Index in Blazor DataGrid Component | Syncfusion 
+description: Learn about Index in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 

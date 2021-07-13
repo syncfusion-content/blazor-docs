@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Single click editing with Batch mode in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Single click editing with Batch mode in Blazor DataGrid component of Syncfusion, and more details
+title: How to Single Click Editing With Batch Mode in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Single Click Editing With Batch Mode in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -15,10 +15,7 @@ Set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="GridInstance" AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Cancel", "Update" })">
@@ -70,7 +67,4 @@ This is demonstrated in the below sample code,
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

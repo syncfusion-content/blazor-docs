@@ -1,22 +1,19 @@
 ---
 layout: post
-title: Cell in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Cell in Blazor DataGrid component of Syncfusion, and more details
+title: Cell in Blazor DataGrid Component | Syncfusion 
+description: Learn about Cell in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
 # Cell
 
-## Displaying the html content
+## Displaying the HTML content
 
-The html tags can be displayed in the DataGrid header and content by enabling the [`DisableHtmlEncode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property.
+The HTML tags can be displayed in the DataGrid header and content by enabling the [`DisableHtmlEncode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -50,12 +47,9 @@ The html tags can be displayed in the DataGrid header and content by enabling th
         public string ShipCity { get; set; }
     }
 }
+```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-The following screenshot represents a DataGrid displaying the html content.
+The following screenshot represents a DataGrid displaying the HTML content.
 
 ![disable html encode](./images/disable-html-encode.png)
 
@@ -65,10 +59,7 @@ The appearance of cells can be customized by using the [`QueryCellInfo`](https:/
 The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event triggers for every cell. In that event handler, you can get
 [`QueryCellInfoEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) that contains the details of the cell.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" Height="315">
@@ -139,10 +130,7 @@ The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
         background-color: greenyellow
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents a DataGrid with customize cell styles.
 
@@ -164,10 +152,7 @@ There are three types of [`WrapMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 In the following example, the [`TextWrapSettings.WrapMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) is set to **Content**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
@@ -205,10 +190,7 @@ In the following example, the [`TextWrapSettings.WrapMode`](https://help.syncfus
         public string MainFields { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents a DataGrid with auto wrap.
 
@@ -220,10 +202,7 @@ You can customize the datagrid cells by adding a CSS class to the [`CustomAttrib
 
 In the below example, we have customized the cells of **OrderID** and **ShipCity** columns.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -263,10 +242,7 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
         background: #d7f0f4;
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## DataGrid Lines
 
@@ -283,10 +259,7 @@ The available modes of datagrid lines are:
 | Vertical | Displays the vertical datagrid lines only.|
 | Default | Displays datagrid lines based on the theme.|
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" GridLines="GridLine.Both" Height="315">
@@ -320,10 +293,7 @@ The available modes of datagrid lines are:
         public DateTime? OrderDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 >By default, the datagrid renders with **Default** mode.
 
@@ -339,10 +309,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 >By default, [`Columns.ClipMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -379,10 +346,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
         public string MainFields { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents a clip mode in DataGrid
 

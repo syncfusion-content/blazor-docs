@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Upgrade Application To Latest Version in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Upgrade Application To Latest Version in Blazor DataGrid component of Syncfusion, and more details
+title: How to Upgrade Application To Latest Version in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Upgrade Application To Latest Version in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -25,15 +25,9 @@ Ensure our CSS files have been properly configured in your application.
 
 * If you use the Blazor WebAssembly app, add the following style file references in **~/wwwroot/index.html**.
 
-{% tabs %}
-
-{% highlight html %}
-
+```html
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > For production purpose and minimal requirement, Syncfusion provides an option to generate scripts and styles of selective control by using the Custom Resource Generator (CRG) web tool. Refer to this [link](https://crg.syncfusion.com/) for more details on CRG.
 

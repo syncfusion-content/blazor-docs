@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Selection in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Selection in Blazor DataGrid component of Syncfusion, and more details
+title: Selection in Blazor DataGrid Component | Syncfusion 
+description: Learn about Selection in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -17,10 +17,7 @@ The datagrid supports two types of selection that can be set by using the [`Type
 * **Multiple**: Allows you to select multiple rows or cells.
 To perform the multi-selection, press and hold CTRL key and click the desired rows or cells. To select range of rows or cells, press and hold the SHIFT key and click the rows or cells.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -54,10 +51,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following represents the multiple selected rows
 ![Multiple Selection](./images/multi-selection.png)
@@ -71,10 +65,7 @@ the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridS
 * **Cell**: Allows you to select only cells.
 * **Both**: Allows you to select rows and cells at the same time.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -108,10 +99,7 @@ the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridS
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows selection mode using both(row and cells selection)
 ![Both Selection](./images/rowcell-selection.png)
@@ -126,10 +114,7 @@ the [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * **Flow**: The **Flow** value is set by default. The range of cells are selected between the start index and end index that includes in between cells of rows.
 * **Box**: Range of cells are selected from the start and end column indexes that includes in between cells of rows within the range.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -163,10 +148,7 @@ the [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows selection mode using cell
 ![Cell Selection](./images/cellselectionmode.png)
@@ -180,10 +162,7 @@ Checkbox selection provides an option to select multiple datagrid records with h
 
 To render the checkbox in each datagrid row, you need to assign the type as **CheckBox** using the  column [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) property of **GridColumn** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -218,10 +197,7 @@ To render the checkbox in each datagrid row, you need to assign the type as **Ch
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows CheckBox Selection
 ![CheckBox Selection](./images/checkbox-selection.png)
@@ -240,10 +216,7 @@ In checkbox selection, selection can also be done by clicking on rows. This sele
 * **ResetOnRowClick**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also you can perform multiple-selection in this mode by press
 and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -278,19 +251,13 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Toggle selection
 
 The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [`EnableToggle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableToggle) property of **GridSelectionSettings** as true. If you click on the selected row or cell then it will be unselected and vice versa.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -324,10 +291,7 @@ The Toggle selection allows to perform selection and unselection of the particul
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following shows selection and deselection of row
 ![Enable Toggle](images/enable-toggle.gif)
@@ -338,10 +302,7 @@ The following shows selection and deselection of row
 
 To select a row at initial rendering, set the [`SelectedRowIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectedRowIndex) value.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" SelectedRowIndex="2" AllowPaging="true">
@@ -376,10 +337,7 @@ To select a row at initial rendering, set the [`SelectedRowIndex`](https://help.
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image will be displayed with row selected in initial Rendering  
 ![Initial Selection](./images/initial-selection.png)
@@ -388,10 +346,7 @@ The following image will be displayed with row selected in initial Rendering
 
 You can get the selected row indexes by using [`GetSelectedRowIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowIndexes) method.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
@@ -447,10 +402,7 @@ You can get the selected row indexes by using [`GetSelectedRowIndexes`](https://
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image will be displayed with selected row and its indexes  
 ![Selected row index](./images/rowindex.PNG)
@@ -471,10 +423,7 @@ The following screenshot represents a datagrid touch selection in the device.
 
 You can select multiple rows at the initial rendering of the datagrid by using [`SelectRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method. The initial selection is based on the condition which we given. Here the initial selection is based on the row which is having the **CustomerID** as **ALFKI**. We have used [`GetCurrentViewRecords`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetCurrentViewRecords) method to get current page records and applied the condition.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -529,10 +478,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image will be displayed with Multiple selection  
 ![Multiple selection](./images/initialselect.PNG)
@@ -541,10 +487,7 @@ The following image will be displayed with Multiple selection
 
 You can select multiple rows by clicking on rows one by one. This will not deselect the previously selected rows. To deselect the previously selected row, you can click on the  selected row. You can enable this behavior by using [`EnableSimpleMultiRowSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_EnableSimpleMultiRowSelection) property of **GridSelectionSettings** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
@@ -578,9 +521,6 @@ You can select multiple rows by clicking on rows one by one. This will not desel
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

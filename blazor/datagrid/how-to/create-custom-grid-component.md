@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Create custom Grid component in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Create custom Grid component in Blazor DataGrid component of Syncfusion, and more details
+title: How to Create Custom Grid Component in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Create Custom Grid Component in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -15,10 +15,7 @@ This is demonstrated in below example by create a custom Grid component called C
 
 CustomGrid.razor
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @typeparam TValue
 @inherits SfGrid<TValue>
@@ -27,17 +24,11 @@ CustomGrid.razor
     @ChildContent
     <GridPageSettings PageCount="PAGE_COUNT" PageSize="DEFAULT_PAGE_SIZE" PageSizes="PageSizes"></GridPageSettings>
 </SfGrid>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 CustomGrid.razor.cs
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Microsoft.AspNetCore.Components;
 using Syncfusion.Blazor.Grids;
 using System;
@@ -67,17 +58,11 @@ namespace SF_Grid_Inheritance.Shared
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 Index.razor
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 <CustomGrid DataSource="Orders" TValue="Order"></CustomGrid>
 
@@ -101,7 +86,4 @@ Index.razor
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

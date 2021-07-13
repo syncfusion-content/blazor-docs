@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Columns in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Columns in Blazor DataGrid component of Syncfusion, and more details.
+title: Columns in Blazor DataGrid Component | Syncfusion 
+description: Learn about Columns in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -22,10 +22,7 @@ is necessary to map the datasource values in DataGrid columns.
 The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) are automatically generated when
 [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders"></SfGrid>
@@ -52,10 +49,7 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusi
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Dynamic column building
 
@@ -63,10 +57,7 @@ It is possible to dynamically build and customize each of the datagrid column us
 
 You can refer the following code example to achieve this
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@OrderData">
@@ -94,10 +85,7 @@ You can refer the following code example to achieve this
         public int? EmployeeID { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents datagrid with dynamically build columns
 ![Dynamic Column](./images/dynamic-column-building.png)
@@ -106,10 +94,7 @@ The following image represents datagrid with dynamically build columns
 
 You can achieve complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples **Name.FirstName** and **Name.LastName** are complex data.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" Height="315">
@@ -151,10 +136,7 @@ You can achieve complex data binding in the datagrid by using the dot(.) operato
         public string LastName { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents complex data binding
 ![Complex Data](./images/complexdata.png)
@@ -165,10 +147,7 @@ The following image represents complex data binding
 
 Before proceeding this you learn about [`ExpandoObject Binding`](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#expandoobject-binding). You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -209,10 +188,7 @@ Before proceeding this you learn about [`ExpandoObject Binding`](https://blazor.
 
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
@@ -223,10 +199,7 @@ The following image represents ExpandoObject complex data binding
 
 Before proceeding this you learn about [`DynamicObject Binding`](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#dynamicobject-binding). You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -282,10 +255,7 @@ Before proceeding this you learn about [`DynamicObject Binding`](https://blazor.
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
@@ -304,10 +274,7 @@ Foreign key column can be enabled by using [`ForeignDataSource`](https://help.sy
 
 In the following example, **Employee Name** is a foreign column which shows **FirstName** column from foreign data.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -354,19 +321,13 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
         public string FirstName { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### ForeignKey Column - Remote Data
 
 In the following example, **Employee Name** is a foreign column which shows **FirstName** column from foreign data.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Grids.Internal
@@ -413,10 +374,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
         public string FirstName { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents foreign key column
 ![Foreignkey Column](./images/foreignkey-value.png)
@@ -428,10 +386,7 @@ The following image represents foreign key column
 
 By default, column header title is displayed from column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) value. To override the default header title, you have to define the **HeaderText** value in the [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText) property of **GridColumn** directive.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -464,10 +419,7 @@ By default, column header title is displayed from column [`Field`](https://help.
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The Output image for header text is as follows
 ![Header Text](./images/header-text.png)
@@ -481,14 +433,12 @@ are not defined in the column, the column renders with “empty” header text.
 
 To know about **Header Template** in Blazor DataGrid Component, you can check this video.
 
-{% youtube "https://www.youtube.com/watch?9YF9HnFY5Ew" %}
+{% youtube
+"youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
 The Header Template has options to display custom element value or content in the header. You can use the [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderTemplate)  of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" AllowPaging="true" Height="315">
@@ -559,10 +509,7 @@ The Header Template has options to display custom element value or content in th
         public string Country { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the Header Template.
 ![Header template](./images/header-template.png)
@@ -573,14 +520,12 @@ The following screenshot represents the Header Template.
 
 To know about **Column Template** in Blazor DataGrid Component, you can check this video.
 
-{% youtube "https://www.youtube.com/watch?9YF9HnFY5Ew" %}
+{% youtube
+"youtube:https://www.youtube.com/watch?v=9YF9HnFY5Ew"%}
 
 The Column template has options to display custom element value or content in the column. You can use the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template)  of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom content. Inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees">
@@ -636,10 +581,7 @@ The Column template has options to display custom element value or content in th
         public DateTime? HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the column Template.
 ![Column template](./images/column-template.png)
@@ -650,10 +592,7 @@ Template elements can be rendered based on required conditions inside the [`Temp
 
 In the following code, checkbox is rendered based on Discontinued field value in the datasource. This data can be accessed inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) using the implicit named parameter **context**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees">
@@ -710,10 +649,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
         public Boolean Discontinued { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the Conditional Template.
 ![Conditional Template](./images/conditional-template.png)
@@ -722,10 +658,7 @@ The following screenshot represents the Conditional Template.
 
 This can be achieved using the Column template property as it has options to display custom elements like, image content in the column. You can use the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component to specify the custom image content. Inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) , you can access the data using the implicit named parameter **context**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid  DataSource="@Employees">
@@ -779,10 +712,7 @@ This can be achieved using the Column template property as it has options to dis
         public DateTime? HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the Image Template.
 ![Image Template](./images/image-template.png)
@@ -793,10 +723,7 @@ The Column template property can be used to provide routing links inside the [`T
 
 This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. In this event the DataGrid data **context** is passed on to its function.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @inject NavigationManager UriHelper
 @using Syncfusion.Blazor.Grids
 
@@ -847,19 +774,13 @@ This can be achieved by initially defining an anchor tag inside the column templ
         UriHelper.NavigateTo($"{ Employee.Link}/{Employee.EmployeeID.ToString()}/{Employee.Name}/{ Employee.Title}");
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 In the above code, the url to be navigated is specified in the Link variable of the DataGrid data. Based on this the page is routed to the corresponding url.
 
 After this add new razor page for routing with routing url along with the parameters to be received and initialize it with the required details.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @page "/nancy_fuller/{EmpID}/{Name}/{Title}"
 
 <h2>Hello @Name!</h2>
@@ -877,10 +798,7 @@ After this add new razor page for routing with routing url along with the parame
     [Parameter]
     private string Title { get; set; }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents template routing in DataGrid
 ![Grid with routing template](./images/template-routing.gif)
@@ -913,10 +831,7 @@ DataGrid column supports the following types:
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [`ShowColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
@@ -956,10 +871,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
         public DateTime? HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can hide the column names in column chooser by defining the [`ShowInColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
 
@@ -972,10 +884,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 
 In this below example, we have opened column chooser using external button click.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -1025,10 +934,7 @@ In this below example, we have opened column chooser using external button click
         public DateTime? HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents opening column chooser functionality in DataGrid using external button.
 ![Grid with open column chooser](./images/opencolumn-chooser.gif)
@@ -1038,10 +944,7 @@ The following GIF represents opening column chooser functionality in DataGrid us
 To format cell values based on specific culture, use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of **GridColumn** component . The datagrid uses **Internalization** library to format **number** and **date**.
 values.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -1075,10 +978,7 @@ values.
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > By default, the **number** and **date** values are formatted in **en-US** locale.
 
@@ -1102,10 +1002,7 @@ For built-in date format you can specify [`Format`](https://help.syncfusion.com/
 
 You can hide any particular column in DataGrid before rendering by defining [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of **GridColumn** as false. In the below sample **Freight** column is defined as visible false.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -1138,10 +1035,7 @@ You can hide any particular column in DataGrid before rendering by defining [`Vi
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the DataGrid with Freight column set to visible false.
 ![Visible False](./images/visible-false.png)
@@ -1166,10 +1060,7 @@ You can auto fit a column interactively by double clicking the right border of t
 
 **AutoFit** resizes the column to fit the widest cell’s content without wrapping. To enable AutoFit for specific columns you need to set the AutoFit property to true.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -1203,10 +1094,7 @@ You can auto fit a column interactively by double clicking the right border of t
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 In the  following Image **Autofit** Property is set to true for CustomerName and OrderDate.
 ![Autofit Columns](./images/autofit-column.png)
@@ -1215,10 +1103,7 @@ In the  following Image **Autofit** Property is set to true for CustomerName and
 
 The **AutoFitColumns** method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the **AutoFitColumns** method in [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" Height="315" Width="540">
@@ -1260,10 +1145,7 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
         this.Grid.AutoFitColumns(new string[] { "OrderDate", "Freight" });
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents AutoFit column by method
 ![Autofit Method](./images/autofit-methods.png)
@@ -1274,10 +1156,7 @@ The following image represents AutoFit column by method
 
 Reordering can be done by drag and drop of a particular column header from one index to another index within the datagrid. To enable reordering, set the [`AllowReordering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property to true.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowReordering="true" AllowPaging="true">
@@ -1310,10 +1189,7 @@ Reordering can be done by drag and drop of a particular column header from one i
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following represents Reordering of columns
 ![Reorder Column](images/reorder.gif)
@@ -1324,10 +1200,7 @@ The following represents Reordering of columns
 
 DataGrid has option to reorder single column either by Interaction or by using the [`ReorderColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method. In the below sample, **Freight** column is reordered to last column position by using the method.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -1370,10 +1243,7 @@ DataGrid has option to reorder single column either by Interaction or by using t
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents Reordering column **Freight** by using method,
 ![Reorder method](images/reordermethod.gif)
@@ -1384,10 +1254,7 @@ User can reorder a single column at a time by Interaction. Sometimes we need to 
 
 In the below sample, **Customer Name** and **Freight** columns are reordered to last column position by using this method on button click.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -1429,10 +1296,7 @@ In the below sample, **Customer Name** and **Freight** columns are reordered to 
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents Reordering Columns **Freight** and **OrderDate** by using method
 ![Reorder multiple columns](images/reorder-multiple-columns.gif)
@@ -1445,10 +1309,7 @@ During the reorder action, the grid component triggers the below events,
 2. [`ColumnDrag`]      -  Triggers when a column header element is dragged(moved) continuously.
 3. [`ColumnDrop`]      -  Triggers when a column header element is dropped on the target column.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowReordering="true" AllowPaging="true" Height ="315">
@@ -1495,10 +1356,7 @@ During the reorder action, the grid component triggers the below events,
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} -->
+``` -->
 
 <!-- ## Lock columns
 
@@ -1506,10 +1364,7 @@ You can lock columns by using [`LockColumn`](https://help.syncfusion.com/cr/blaz
 
 In the below example, Order ID column is locked and its reordering functionality is disabled.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" AllowReordering="true" Height="215">
@@ -1539,19 +1394,13 @@ In the below example, Order ID column is locked and its reordering functionality
         public DateTime HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} -->
+``` -->
 
 ## Column resizing
 
 Column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the respective column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To enable column resize, set the [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowResizing) property to true.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
@@ -1584,10 +1433,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents column resizing
 ![Resizing](images/resizing.gif)
@@ -1601,10 +1447,7 @@ Column resize can be restricted between minimum and maximum width by defining th
 
 In the following sample, minimum and maximum width are defined for **CustomerID** and **Freight** columns.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
@@ -1637,19 +1480,13 @@ In the following sample, minimum and maximum width are defined for **CustomerID*
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Resize stacked column
 
 Stacked columns can be resized by clicking and dragging the right edge of the stacked column header. While dragging, the width of the respective child columns will be resized at the same time. You can disable resize for any particular stacked column by setting [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property **GridColumn** as **false** to its columns.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true" AllowPaging="true" Height="315">
@@ -1686,10 +1523,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following shows resizing of stacked header
 ![Resize Stacked](images/resize-stacked.gif)
@@ -1710,10 +1544,7 @@ During the resizing action the grid component triggers the below events,
 2. [`Resizing`]     -  Triggers when a column is getting resized continuously.
 3. [`ResizeStop`]   -  Triggers when a column resize stops.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true" AllowPaging="true" Height ="315">
@@ -1760,10 +1591,7 @@ During the resizing action the grid component triggers the below events,
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} -->
+``` -->
 
 ## Column menu
 
@@ -1782,10 +1610,7 @@ The default menu items are displayed in the following table,
 | **ColumnChooser** | Choose the column visibility. |
 | **Filter** | Show the filter option as given in filterSettings [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) property |
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowGrouping="true" ColumnMenuItems=@MenuItems AllowFiltering="true" ShowColumnMenu="true" AllowPaging="true">
@@ -1823,10 +1648,7 @@ The default menu items are displayed in the following table,
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > * You can disable column menu for a particular column by defining the column's [`ShowColumnMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowColumnMenu) property as false.
 > * You can customize the default menu items by defining the [`ColumnMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) with the required items.
@@ -1841,10 +1663,7 @@ The grid component triggers the below events when column menu operations are per
 1. [`ColumnMenuOpen`]   -  Triggers before the column menu opens
 2. [`ColumnMenuItemClicked`]  -  Triggers when a column menu is clicked
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" ShowColumnMenu="true" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" Height ="315">
@@ -1887,10 +1706,7 @@ The grid component triggers the below events when column menu operations are per
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} -->
+``` -->
 
 <!-- Custom column menu item
 
@@ -1898,10 +1714,7 @@ Custom column menu items can be added by defining the [`ColumnMenuItems`](https:
 
 Actions for the customized items can be defined in the [`ColumnMenuItemClicked`] event.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
@@ -1965,10 +1778,7 @@ Actions for the customized items can be defined in the [`ColumnMenuItemClicked`]
     }
 
 }
-
-{% endhighlight %}
-
-{% endtabs %} 
+``` 
 
 The following GIF shows the sorting cleared on clicking the custom column menu item in Grid
 -->
@@ -1979,10 +1789,7 @@ Sometimes, you have a scenario where you need to hide an item from column menu f
 
 In the following sample code, Filter item is hidden in column menu for the OrderID column.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowSorting="true" AllowFiltering="true" AllowGrouping="true"  ShowColumnMenu="true" AllowPaging="true">
@@ -2029,10 +1836,7 @@ In the following sample code, Filter item is hidden in column menu for the Order
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} 
+``` 
 
 The following GIF shows the customized column menu item for particular column in Grid -->
 
@@ -2042,10 +1846,7 @@ The grid has option to span the adjacent cells. To achieve this define the [`Col
 
 In the following demo, the cells have been spanned based on the employees schedule
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@MergeData" GridLines=GridLine.Both AllowTextWrap="true">
@@ -2214,10 +2015,7 @@ In the following demo, the cells have been spanned based on the employees schedu
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} 
+``` 
 
 The following GIF shows the column spanning in Grid -->
 
@@ -2227,10 +2025,7 @@ You can toggle column visibility based on media queries. This can be achieved by
 
 In the below sample code, for OrderID column - HideAtMedia property value is set as (min-width: 700px). This hides the OrderID column when the browser screen width is less than 700px.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -2264,10 +2059,7 @@ In the below sample code, for OrderID column - HideAtMedia property value is set
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF shows the responsive columns behaviour when window is resized,
 ![Responsive columns](images/responsive-columns.gif)
@@ -2278,10 +2070,7 @@ You can enable or disable datagrid action for a particular column by using the [
 
 The following sample code shows datagrid actions disabled for particular columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowFiltering="true" AllowGrouping="true" AllowSorting="true" AllowReordering="true">
@@ -2316,10 +2105,7 @@ The following sample code shows datagrid actions disabled for particular columns
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF shows the datagrid actions for different columns,
 ![Responsive columns](images/grid-actions.gif)
@@ -2330,10 +2116,7 @@ You can show or hide datagrid columns dynamically using external buttons by invo
 
 The following sample code demonstrates showing and hiding of columns using their header texts **("Order Date", "Freight")** on button click,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -2386,10 +2169,7 @@ The following sample code demonstrates showing and hiding of columns using their
         this.DefaultGrid.HideColumns(ColumnItems);
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents the showing/hiding DataGrid columns on button click,
 ![Show/Hide columns](images/show-hide-columns.gif)
@@ -2400,10 +2180,7 @@ The [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gr
 
 The following sample code demonstrates the displayed data manipulated for two columns using the [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -2442,10 +2219,7 @@ The following sample code demonstrates the displayed data manipulated for two co
         return "€" + new List<string> Data["Freight"];
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the Grid with manipulated column data. -->
 
@@ -2455,10 +2229,7 @@ You can bind an array of objects in a column by using the [`ValueAccessor`](http
 
 In the following sample code, the name field having an array of two objects, FirstName and LastName are joined and bound to a column using the [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees">
@@ -2500,10 +2271,7 @@ In the following sample code, the name field having an array of two objects, Fir
         return Data[Field].Select(s => s.LastName || s.FirstName).Join("");
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the binded column data in Grid using ValueAccessor property -->
 
@@ -2513,10 +2281,7 @@ You can achieve the expression column by using the [`ValueAccessor`](https://hel
 
 The following sample code demonstrates expression column achieved using [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) for **Calories** column,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@FoodInformation">
@@ -2559,10 +2324,7 @@ The following sample code demonstrates expression column achieved using [`ValueA
         return Data.Protein * 4 + Data.Fat * 9 + Data.Carbohydrate * 4;
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents expression column achieved in Grid -->
 
@@ -2572,10 +2334,7 @@ To render boolean values as checkbox in columns, you need to set [`DisplayAsChec
 
 The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisplayAsCheckBox) property enabled for **Verified** column,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@OrderData">
@@ -2611,22 +2370,13 @@ The following sample code demonstrates [`DisplayAsCheckBox`](https://help.syncfu
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Need to define [`EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_EditType) as **EditType.BooleanEdit** to GridColumn to render checkbox while editing a boolean value.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 <GridColumn Field=@nameof(Order.Verified) HeaderText="Verified" Type="ColumnType.Boolean" EditType="EditType.BooleanEdit" TextAlign="TextAlign.Center" DisplayAsCheckBox="true" Width="120"></GridColumn>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,
 ![Display as checkbox](./images/checkbox-boolean-values.png)

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Adaptors in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Adaptors in Blazor DataManager component of Syncfusion, and more details
+title: Index in Blazor DataManager Component | Syncfusion 
+description: Learn about Index in Blazor DataManager component of Syncfusion, and more details.
 platform: Blazor
-component: DataManager
+control: DataManager
 documentation: ug
 ---
 

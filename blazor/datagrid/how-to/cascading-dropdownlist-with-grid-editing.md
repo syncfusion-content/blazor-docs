@@ -1,9 +1,9 @@
 ---
 layout: post
-title: How to Cascading DropDownList with DataGrid editing in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Cascading DropDownList with DataGrid editing in Blazor DataGrid component of Syncfusion, and more details
+title: How to Cascading Dropdownlist With Grid Editing in Blazor DataGrid Component | Syncfusion
+description: Checkout and learn about Cascading Dropdownlist With Grid Editing in Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
-component: DataGrid
+control: DataGrid
 documentation: ug
 ---
 
@@ -13,10 +13,7 @@ You can achieve the Cascading DropDownList with datagrid editing by using the [`
 
 This is demonstrated in the below sample code where cascading dropdownlist is rendered for the **ShipCountry** and **ShipState** column when perform editing in datagrid.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -113,7 +110,4 @@ This is demonstrated in the below sample code where cascading dropdownlist is re
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
