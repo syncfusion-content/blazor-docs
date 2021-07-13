@@ -1,22 +1,10 @@
----
-layout: post
-title: How to Editing with template column in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Editing with template column in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Editing with template column
 
 You can edit a template column value by defining the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property for that particular [`GridColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) component
 
 In the below demo, the **CustomerID** column is rendered with the template.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
@@ -56,7 +44,4 @@ In the below demo, the **CustomerID** column is rendered with the template.
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

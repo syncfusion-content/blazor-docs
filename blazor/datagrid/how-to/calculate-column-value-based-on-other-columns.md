@@ -1,22 +1,10 @@
----
-layout: post
-title: How to Calculate column value based on other columns in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Calculate column value based on other columns in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Calculate column value based on other column values
 
 You can calculate the values for a datagrid column based on other column values by using the **context** parameter in the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. Inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template), you can access the column values using the implicit named parameter **context** and then calculate the values for the new column as required.
 
 This is demonstrated in the below sample code where the value for **FinalCost** column is calculated based on the values of **ManfCost** and **LabCost** columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -64,10 +52,7 @@ This is demonstrated in the below sample code where the value for **FinalCost** 
         public double? FinalCost { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the output of the above sample code,
 ![Column rendered based on other columns](../images/grid-columns-calculated.png)

@@ -1,10 +1,7 @@
 ---
-layout: post
-title: Customize empty grid display message
-description: Learn how to customize empty grid display message in Blazor DataGrid component
-platform: Blazor
-component: DataGrid
-documentation: ug
+title: "Customize empty grid display message"
+component: "DataGrid"
+description: "Learn how to customize empty grid display message in Blazor DataGrid component"
 ---
 
 # Customize empty grid display message
@@ -13,10 +10,7 @@ You can customize the message shown when rendering an empty grid by using the `E
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -44,7 +38,4 @@ This is demonstrated in the below sample code,
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

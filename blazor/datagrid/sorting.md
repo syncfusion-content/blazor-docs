@@ -1,12 +1,3 @@
----
-layout: post
-title: Sorting in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Sorting in Blazor DataGrid component of Syncfusion, and more details.
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Sorting
 
 Sorting enables you to sort data in the **Ascending** or **Descending** order.
@@ -14,10 +5,7 @@ To sort a column, click the column header.
 
 To enable sorting in the DataGrid, set the [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) to true. Sorting options can be configured through the [`GridSortSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SortSettings) component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -51,10 +39,7 @@ To enable sorting in the DataGrid, set the [`AllowSorting`](https://help.syncfus
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > * DataGrid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
 > * You can apply and clear sorting by invoking **SortColumn** and **ClearSorting** methods.
@@ -65,10 +50,7 @@ To enable sorting in the DataGrid, set the [`AllowSorting`](https://help.syncfus
 To sort at initial rendering, set the **Field** and
 **Direction** in [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSortSettings.html#Syncfusion_Blazor_Grids_GridSortSettings_Columns) property of **GridSortSettings** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -108,10 +90,7 @@ To sort at initial rendering, set the **Field** and
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Multi-column sorting
 
@@ -122,10 +101,7 @@ To clear sorting for a particular column, press the "Shift + mouse left click".
 > The [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowSorting) must be **true** while enabling multi-column sort.
 > Set [`AllowMultiSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowMultiSorting) property as **false** to disable multi-column sorting.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -159,10 +135,7 @@ To clear sorting for a particular column, press the "Shift + mouse left click".
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Sort order
 
@@ -174,10 +147,7 @@ When first click a column header it sorts the column in ascending. Again click t
 
 During the sort action, the datagrid component triggers two events. The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the sort action starts, and the [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the sort action is completed. Using these events you can perform the needed actions.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -216,10 +186,7 @@ During the sort action, the datagrid component triggers two events. The [`OnActi
         // You can get action information from the argument.
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Touch interaction
 

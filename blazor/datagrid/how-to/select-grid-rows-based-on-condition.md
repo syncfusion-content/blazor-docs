@@ -1,22 +1,10 @@
----
-layout: post
-title: How to Select datagrid rows based on certain condition in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Select datagrid rows based on certain condition in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Select datagrid rows based on certain condition
 
 You can select specific rows in the datagrid based on some conditions by using the [`SelectRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid component.
 
 This is demonstrated in the below sample code where the index value of datagrid rows with **Freight** column value greater than 10 are stored in the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event and then selected in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true">
@@ -81,7 +69,4 @@ This is demonstrated in the below sample code where the index value of datagrid 
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

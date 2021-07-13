@@ -1,12 +1,3 @@
----
-layout: post
-title: Browser Compatibility in Blazor - Syncfusion
-description: Check out the documentation for Browser Compatibility in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Browser Support
 
 Syncfusion Blazor UI components support or compatible for all modern web browsers.

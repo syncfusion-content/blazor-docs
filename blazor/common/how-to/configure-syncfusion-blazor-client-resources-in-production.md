@@ -1,82 +1,71 @@
----
-layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # How to Configure Syncfusion Blazor Client Resources in Production Environment
 
-* The Syncfusion Blazor suit maintains the built-in script resources (interop scripts) by default. So, there is no need to include script reference in the application end.
-
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, you don’t need to add `DisableScriptManager` anymore in the `AddSyncfusionBlazor` service for your production environment to configure the Syncfusion init interop script (`syncfusion-blazor.min.js`) manually. i.e. The Syncfusion Blazor library itself handles the Syncfusion init interop script and it is no longer need to be added manually in the layout page (_Host.cshtml/index.html) for production.
+* Syncfusion Blazor suit maintains the built-in script resources (interop scripts) by default. So, there is no need to include script reference in the application end. Also, from v19.2.0.44, Syncfusion provides an option to load the scripts and styles by manually at application end.
 
 ## Adding Syncfusion Blazor init interop script in the production application
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the below configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
+* By using [Blazor Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool, generate the required components scripts and styles. Refer [here for how to generate the component wise scripts manually](../custom-resource-generator/).
 
-* Set `DisableScriptManager` as true to the `AddSyncfusionBlazor` service in the `~/Startup.cs` file for Blazor server app or `~/Program.cs` file for Blazor WebAssembly app.
+* Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
     **Blazor Server App (~/Startup.cs)**
-
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddRazorPages();
         services.AddServerSideBlazor();
 
-        // Set DisableScriptManager as true to load init script manually in the application end
-        services.AddSyncfusionBlazor(true);
+        // Set IgnoreScriptIsolation as true to load custom  scripts
+        services.AddSyncfusionBlazor(options => {
+            options.IgnoreScriptIsolation = true;
+            });
 
         services.AddSingleton<WeatherForecastService>();
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     **Blazor WebAssembly App (~/Program.cs)**
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     public static async Task Main(string[] args)
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
         ....
         ....
 
-        // Set DisableScriptManager as true to load init script manually in the application end
-        builder.Services.AddSyncfusionBlazor(true);
+        // Set IgnoreScriptIsolation as true to load custom  scripts
+        builder.Services.AddSyncfusionBlazor(options => {
+            options.IgnoreScriptIsolation = true;
+            });
 
         await builder.Build().RunAsync();
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 * Add Syncfusion Blazor resources manually in the `~/Pages/_Host.cshtml` file for Blazor server app or `~/wwwroot/index.html` file for Blazor WebAssembly app.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js" type="text/javascript"></script>
+        <link href="material.css" rel="stylesheet" />
+        <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
+    ```
+***How to use CDN resources in the Blazor application***
 
-{% endhighlight %}
+    * The same theme and script files can be referred through the CDN version by set `IgnoreScriptIsolation`
+    as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
-{% endtabs %}
+    * After that add the CDN interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js" type="text/javascript"></script>
+    </head>
+    ```
 
 * Now, publish the application with the production environment in the server.
 

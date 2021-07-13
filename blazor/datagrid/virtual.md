@@ -1,12 +1,3 @@
----
-layout: post
-title: Virtualization in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Virtualization in Blazor DataGrid component of Syncfusion, and more details.
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Virtualization
 
 DataGrid allows you to load large amount of data without [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation.
@@ -19,10 +10,7 @@ Row virtualization allows you to load and render rows only in the content viewpo
 The number of records displayed in the DataGrid is determined implicitly by height of the content area. Also, you have an option to define a visible number of records by
 the [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) property of [`GridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component. The loaded data will be cached and reused when it is needed for next time.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -86,10 +74,7 @@ the [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.S
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represent a datagrid with Row virtualization.
 ![Row virtualization](./images/Row.gif)
@@ -102,10 +87,7 @@ To setup the column virtualization, set the
 [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization) and
 [`EnableColumnVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization) properties as **true**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -169,10 +151,7 @@ To setup the column virtualization, set the
         public string ShipAddress { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Column's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's width is not defined then DataGrid will consider its value as **200px**.
 
@@ -187,10 +166,7 @@ This enable cell placeholder during virtualization feature much of a muchness of
 
 To setup the enable cell placeholder during virtualization, you need to define [`EnableVirtualMaskRow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualMaskRow) as true along with [`EnableVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableVirtualization)/[`EnableColumnVirtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableColumnVirtualization)  property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -255,24 +231,133 @@ To setup the enable cell placeholder during virtualization, you need to define [
         public string ShipAddress { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represent a datagrid with Mask row virtualization.
 ![Mask Row virtualization](./images/Mask.gif)
+
+## Frozen Columns Virtualization
+
+This feature virtualize the row and movable column data. Column virtualization allows you to virtualize the movable columns and cell placeholder renders before new columns loading the viewport.
+
+Row virtualization allows you to virtualize the vertical data with cell placeholder. This placeholder renders before new row data loading in the viewport.
+
+To setup the frozen right/left columns, you need to define Column property of **Freeze** as Right/Left along with enabling the column property of [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen).
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@GridData" Height="400" Width="500"  EnableHover="false" RowHeight="38" EnableVirtualization="true" EnableColumnVirtualization="true" EnableVirtualMaskRow="true">
+    <GridPageSettings PageSize="40"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field="Field1" HeaderText="Player Name" IsFrozen="true" Freeze="FreezeDirection.Left" Width="120"></GridColumn>
+        <GridColumn Field="Field2" HeaderText="Year" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field3" HeaderText="Stint" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field4" HeaderText="TMID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field5" HeaderText="LGID" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field6" HeaderText="Game Paused" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field7" HeaderText="Game Started" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field8" HeaderText="Minutes" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field9" HeaderText="Points"  IsFrozen="true" Freeze="FreezeDirection.Right" TextAlign="TextAlign.Right"  Width="150"></GridColumn>
+        <GridColumn Field="Field10" HeaderText="Offensive Rebounds" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field11" HeaderText="Defensive Rebounds" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field12" HeaderText="Rebounds" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field13" HeaderText="Assists" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field14" HeaderText="Steals" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field15" HeaderText="Blocks" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field16" HeaderText="TurnOvers" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field17" HeaderText="Power Forward" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field18" HeaderText="fgAttempted" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field19" HeaderText="fgMade" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+        <GridColumn Field="Field20" HeaderText="ftAttempted" TextAlign="TextAlign.Right" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<VirtualData> GridData { get; set; } = new List<VirtualData>();
+
+    protected override void OnInitialized()
+    {
+        List<VirtualData> data = new List<VirtualData>();
+        Random Random = new Random();
+        string[] Name = new string[] {"hardire", "abramjo01", "aubucch01", "Hook", "Rumpelstiltskin", "Belle", "Emma", "Regina", "Aurora", "Elsa",
+          "Anna", "Snow White", "Prince Charming", "Cora", "Zelena", "August", "Mulan", "Graham", "Discord", "Will", "Robin Hood",
+          "Jiminy Cricket", "Henry", "Neal", "Red", "Aaran", "Aaren", "Aarez", "Aarman", "Aaron", "Aaron-James", "Aarron", "Aaryan", "Aaryn",
+          "Aayan", "Aazaan", "Abaan", "Abbas", "Abdallah", "Abdalroof", "Abdihakim", "Abdirahman", "Abdisalam", "Abdul", "Abdul-Aziz",
+          "Abdulbasir", "Abdulkadir", "Abdulkarem", "Abdulkhader", "Abdullah", "Abdul-Majeed", "Abdulmalik", "Abdul-Rehman", "Abdur",
+          "Abdurraheem", "Abdur-Rahman", "Abdur-Rehmaan", "Abel", "Abhinav", "Abhisumant", "Abid", "Abir", "Abraham", "Abu", "Abubakar",
+          "Ace", "Adain", "Adam", "Adam-James", "Addison", "Addisson", "Adegbola", "Adegbolahan", "Aden", "Adenn", "Adie", "Adil", "Aditya",
+          "Adnan", "Adrian", "Adrien", "Aedan", "Aedin", "Aedyn", "Aeron", "Afonso", "Ahmad", "Ahmed", "Ahmed-Aziz", "Ahoua", "Ahtasham",
+          "Aiadan", "Aidan", "Aiden", "Aiden-Jack", "Aiden-Vee" };
+        GridData = Enumerable.Range(1, 1000).Select(x => new VirtualData()
+        {
+            Field1 = Name[Random.Next(96)],
+            Field2 = 1967 + (x % 10),
+            Field3 = (int)Math.Floor(Random.NextDouble() * 200),
+            Field4 = (int)Math.Floor(Random.NextDouble() * 100),
+            Field5 = (int)Math.Floor(Random.NextDouble() * 2000),
+            Field6 = (int)Math.Floor(Random.NextDouble() * 1000),
+            Field7 = (int)Math.Floor(Random.NextDouble() * 100),
+            Field8 = (int)Math.Floor(Random.NextDouble() * 10),
+            Field9 = (int)Math.Floor(Random.NextDouble() * 10),
+            Field10 = (int)Math.Floor(Random.NextDouble() * 100),
+            Field11 = (int)Math.Floor(Random.NextDouble() * 100),
+            Field12 = (int)Math.Floor(Random.NextDouble() * 1000),
+            Field13 = (int)Math.Floor(Random.NextDouble() * 10),
+            Field14 = (int)Math.Floor(Random.NextDouble() * 10),
+            Field15 = (int)Math.Floor(Random.NextDouble() * 1000),
+            Field16 = (int)Math.Floor(Random.NextDouble() * 200),
+            Field17 = (int)Math.Floor(Random.NextDouble() * 300),
+            Field18 = (int)Math.Floor(Random.NextDouble() * 400),
+            Field19 = (int)Math.Floor(Random.NextDouble() * 500),
+            Field20 = (int)Math.Floor(Random.NextDouble() * 700)
+
+        }).ToList();
+    }
+
+    public class VirtualData
+    {
+        public string Field1 { get; set; }
+        public int Field2 { get; set; }
+        public int Field3 { get; set; }
+        public int Field4 { get; set; }
+        public int Field5 { get; set; }
+        public int Field6 { get; set; }
+        public int Field7 { get; set; }
+        public int Field8 { get; set; }
+        public int Field9 { get; set; }
+        public int Field10 { get; set; }
+        public int Field11 { get; set; }
+        public int Field12 { get; set; }
+        public int Field13 { get; set; }
+        public int Field14 { get; set; }
+        public int Field15 { get; set; }
+        public int Field16 { get; set; }
+        public int Field17 { get; set; }
+        public int Field18 { get; set; }
+        public int Field19 { get; set; }
+        public int Field20 { get; set; }
+    }
+}
+```
+
+The following GIF represent a datagrid with Frozen columns/row virtualization.
+![Frozen virtualization](./images/FrozenVirtual.gif)
 
 ## Limitations for Virtualization
 
 * While using column virtualization, column width should be in the pixel. Percentage values are not accepted.
 * Due to the element height limitation in browsers, the maximum number of records loaded by the datagrid is limited by the browser capability.
 * Cell selection will not be persisted in both row and column virtualization.
-* Virtual scrolling is not compatible with detail template, frozen rows, frozen columns and hierarchy features
+* Virtual scrolling is not compatible with detail template, and hierarchy features
 * Group expand and collapse state will not be persisted.
 * Since data is virtualized in datagrid, the aggregated information and total group items are displayed based on the current view items.
 * The page size provided must be two times larger than the number of visible rows in the datagrid. If the page size is failed to meet this condition then the size will be determined by datagrid.
 * The height of the datagrid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height using **RowHeight** property to ensure all the table rows are in same height.
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
+
+## See Also
+
+* [Row virtualization with Lazy load grouping in DataGrid](https://blazor.syncfusion.com/documentation/datagrid/grouping/#lazy-load-grouping-with-row-virtualization)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

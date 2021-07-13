@@ -1,12 +1,3 @@
----
-layout: post
-title: Upgrade Syncfusion Components to Latest Version in Blazor - Syncfusion
-description: Check out the documentation for Upgrade Syncfusion Components to Latest Version in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # How to upgrade Syncfusion Blazor Components to the latest version
 
 To upgrade Syncfusion Blazor Components to the latest version, you need to ensure the following:
@@ -23,26 +14,14 @@ Ensure your CSS files have been properly configured in your application.
 
     If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     If you are using [individual NuGet packages](http://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 > For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for more details on ThemeStudio.
 

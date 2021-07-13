@@ -1,12 +1,3 @@
----
-layout: post
-title: System Requirements in Blazor - Syncfusion
-description: Check out the documentation for System Requirements in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # System requirements
 
 To get started with the Blazor application, we need to ensure the following software to be installed on the machine.

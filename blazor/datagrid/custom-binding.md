@@ -1,12 +1,3 @@
----
-layout: post
-title: Custom Binding in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Custom Binding in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Custom Binding
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
@@ -15,10 +6,7 @@ For implementing custom data binding in DataGrid, the **DataAdaptor** class is u
 
 The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 public abstract class DataAdaptor
 {
     /// <summary>
@@ -70,10 +58,7 @@ public abstract class DataAdaptor
     /// </summary>
     public virtual Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key, int? dropIndex)
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Data binding
 
@@ -81,10 +66,7 @@ The custom data binding can be performed in the DataGrid component by providing 
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -164,10 +146,7 @@ The following sample code demonstrates implementing custom data binding using cu
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
@@ -182,10 +161,7 @@ If you want to inject some of your service into Custom Adaptor and use the servi
 
 Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
     public void ConfigureServices(IServiceCollection services)
     {
         ...
@@ -193,17 +169,11 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
         services.AddScoped<CustomAdaptor>();
         services.AddScoped<ServiceClass>();
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following sample code demonstrates injecting service into Custom Adaptor,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor
@@ -261,10 +231,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Custom adaptor as Component
 
@@ -272,26 +239,17 @@ Custom Adaptor can be created as a component when `DataAdaptor` is extended from
 
 Ensure to register your service in **Startup.cs** file.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
     public void ConfigureServices(IServiceCollection services)
     {
         ...
         services.AddScoped<Order>();
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following sample code demonstrates creating Custom Adaptor as a component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -327,17 +285,11 @@ The following sample code demonstrates creating Custom Adaptor as a component,
         public double Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase<T>`. This provides a single service of type T. We can access this service by using the `Service` property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 [CustomAdaptorComponent.razor]
 
 @using Syncfusion.Blazor;
@@ -388,17 +340,11 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
         return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase`. This provides the possibility to request multiple services.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 [CustomAdaptorComponent.razor]
 
 @using Syncfusion.Blazor;
@@ -449,10 +395,7 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
         return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CRUD operation
 
@@ -467,10 +410,7 @@ The CRUD operations for the custom bounded data in the DataGrid component can be
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -602,10 +542,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF displays the CRUD operations performed on the custom bounded data displayed in the DataGrid component,
 ![Editing custom bound data](./images/custom-binding-editing.gif)
@@ -618,10 +555,7 @@ When using Custom Adaptor, the aggregates has to be handled in the Read/ReadAsyn
 
 The following sample code demonstrates implementing the aggregates for the custom bounded data,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
@@ -732,7 +666,4 @@ The following sample code demonstrates implementing the aggregates for the custo
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

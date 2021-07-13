@@ -1,12 +1,3 @@
----
-layout: post
-title: How to Customize Column Styles in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Customize Column Styles in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Customize Column Styles
 
 You can customise the appearance of the header and content of a particular column using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
@@ -17,29 +8,20 @@ To customize the datagrid column, follow the given steps:
 
 Create a CSS class with custom style to override the default style for rowcell and headercell.
 
-{% tabs %}
-
-{% highlight CSS %}
-
+```css
 .e-attr{
         background: #5DADE2;
         font-family: "Bell MT";
         color: red;
         font-size: 5px;
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 **Step 2**:
 
 Add the custom CSS class to the specified column by using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
@@ -82,10 +64,7 @@ Add the custom CSS class to the specified column by using the [`CustomAttributes
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 Output be like the below.
 

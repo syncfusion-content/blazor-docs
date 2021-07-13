@@ -1,12 +1,3 @@
----
-layout: post
-title: Scaffolding in Blazor - Syncfusion
-description: Check out the documentation for Scaffolding in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Syncfusion Blazor Scaffolding
 
 Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor platform to quickly add code that interacts with data models and reduce the amount of time to develop with data operation in your project. Scaffolding provides an easier way to create Razor and Controller action methods for Syncfusion Blazor DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer controls.
@@ -79,13 +70,19 @@ N>Check that at least one Entity Framework model exists. If no Entity Framework 
 
 Install **syncfusion.scaffolding** tool globally by using below command.
 
+   ```dotnet tool install -g syncfusion.scaffolding```
+
 ## Update Command-line scaffolding
 
 Update **syncfusion.scaffolding** tool globally by using below command.
 
+   ```dotnet tool update -g syncfusion.scaffolding```
+
 ## Add a scaffolded item from command-line
 
 The following steps explains how to add a scaffolded item from command-line to your Blazor application.
+
+> Before adding the scaffolded item from command-line, check whether the **dotnet-aspnet-codegenerator** tool is installed or not by **dotnet tool list -g** command in command prompt. if it is not installed, then install **dotnet-aspnet-codegenerator** tool globally by using this command **dotnet tool install -g dotnet-aspnet-codegenerator**.
 
 1. After installed syncfusion.scaffolding tool, we can invoke syncfusion_scaffold command it shows the available controls
 
@@ -120,6 +117,8 @@ The following steps explains how to add a scaffolded item from command-line to y
     ![control parameter details](../images/controlparameter.png)
 
 4. Run the following command to generate controller and view files through command-line by passing required arguments of the given control.
+
+    ```syncfusion_scaffold {controlName} --project "{projectFileNamewithPath}" --model {model} -dc {dbContext} -cname {controllerName} -vname {viewName} [controlMantoryParameter] [controlMantatoryParameterValue]```
 
     ![CommandLine Scaffold](../images/commandline.png)
 

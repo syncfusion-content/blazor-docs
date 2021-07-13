@@ -1,12 +1,3 @@
----
-layout: post
-title: How to Working in offline mode in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Working in offline mode in Blazor DataManager component of Syncfusion, and more details
-platform: Blazor
-component: DataManager
-documentation: ug
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Work in offline mode
@@ -15,10 +6,7 @@ On binding data through remote services, request will be sent to the server-side
 
 The following sample code demonstrates enabling offline mode for the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) which is bound with the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -40,9 +28,6 @@ The following sample code demonstrates enabling offline mode for the [`SfDataMan
     public int EmployeeID { get; set; }
   }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > **Note:** Return the complete list from server-side when using `Offline` property.

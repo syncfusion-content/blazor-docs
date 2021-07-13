@@ -1,12 +1,3 @@
----
-layout: post
-title: Download and Installation in Blazor - Syncfusion
-description: Check out the documentation for Download and Installation in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Download and Installation
 
 Syncfusion publishing the Visual Studio extension in [Visual Studio marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension). You can either install it from Visual Studio or download and install it from Visual Studio marketplace.

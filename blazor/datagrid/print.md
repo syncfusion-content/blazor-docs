@@ -1,12 +1,3 @@
----
-layout: post
-title: Print in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Print in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 <!-- markdownlint-disable MD033 -->
 
 # Print
@@ -15,10 +6,7 @@ To print the DataGrid, call the [`Print`](https://help.syncfusion.com/cr/blazor/
 
 The below sample code demonstrates DataGrid with print option added in the toolbar,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" AllowPaging="true">
@@ -54,10 +42,7 @@ The below sample code demonstrates DataGrid with print option added in the toolb
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents DataGrid with print toolbar item,
 ![Print Grid Content](./images/grid-print.png)
@@ -77,10 +62,7 @@ To print the datagrid from an external button, invoke the print method using the
 
 The below sample code demonstrates invoking print using an external button,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -124,10 +106,7 @@ The below sample code demonstrates invoking print using an external button,
         this.DefaultGrid.Print();
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents DataGrid with external button for invoking print operation,
 ![Print using external button](./images/grid-print-external-button.png)
@@ -138,10 +117,7 @@ By default, the datagrid prints all the pages. To print the current page alone, 
 
 The below sample code demonstrates this,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode=PrintMode.CurrentPage AllowPaging="true">
@@ -177,10 +153,7 @@ The below sample code demonstrates this,
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 <!-- Print the hierarchy datagrid
 
@@ -194,10 +167,7 @@ None |Prints the master datagrid alone.
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -264,10 +234,7 @@ This is demonstrated in the below sample code,
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents Hierarchial Grid with print toolbar item,
 ![Print Hierarchial Grid Content](./images/grid-hierarchial-print.png) -->
@@ -290,10 +257,7 @@ Then in the PrintComplete event, we can reverse the state back to the previous s
 
 In the below example, we have **CustomerID** as a hidden column in the datagrid. While printing, we have changed **CustomerID** to visible column and **Freight** as hidden column.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
@@ -347,10 +311,7 @@ In the below example, we have **CustomerID** as a hidden column in the datagrid.
         this.FreightVisibility = true;
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %} -->
+``` -->
 
 ## Limitations of printing large data
 

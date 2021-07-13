@@ -1,21 +1,12 @@
----
-layout: post
-title: Syncfusion
-description: Checkout
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Editing
 
 The DataGrid component has options to dynamically insert, delete and update records.
 
-> * [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/) feature requires a primary key column for CRUD operations.
+> [Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/) feature requires a primary key column for CRUD operations.
 
 To know about editing feature in Blazor DataGrid component, you can check on this video.
 
-{% youtube "https://www.youtube.com/watch?jOiZpLexDB0" %}
+`youtube:jOiZpLexDB0`
 
 To define the primary key, set [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) to **true** in particular column whose value is unique.
 
@@ -23,10 +14,7 @@ You can start the edit action either by double-clicking the particular row or by
 
 Deletion of the record is possible by selecting the required row and click on **Delete** button in the toolbar.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height ="315">
@@ -61,10 +49,7 @@ Deletion of the record is possible by selecting the required row and click on **
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Editing with Default Mode.
 ![Edit Action](./images/edit-action.png)
@@ -90,10 +75,7 @@ The datagrid toolbar has the  following built-in items to execute editing action
 
 You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
@@ -127,10 +109,7 @@ You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blaz
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Toolbar with Edit option.
 ![Edit Action](./images/edit-action.png)
@@ -149,10 +128,7 @@ In Normal edit mode, when you start editing the currently selected record is cha
 You can change the cell values and save edited data to the data source.
 To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
@@ -190,10 +166,7 @@ To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusio
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Editing in Normal Mode.
 ![Normal Editing](./images/normal-editing.png)
@@ -206,10 +179,7 @@ In dialog edit mode, when you start editing the currently selected row data will
 You can change the cell values and save edited data to the data source.
 To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Dialog**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
@@ -248,10 +218,7 @@ To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Editing in Dialog Mode.
 ![Dialog Editing](./images/dialog-editing.png)
@@ -262,10 +229,7 @@ In batch edit mode, when you double-click on the datagrid cell, then the target 
 You can bulk save (added, changed, and deleted data in the single request) to the data source by click on the toolbar's **Update** button or by externally calling the **EndEdit** method.
 To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
@@ -303,10 +267,7 @@ To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Editing in Batch mode.
 ![Batch Editing](./images/batch-editing.png)
@@ -318,10 +279,7 @@ by enabling [`EditSettings.AllowNextRowEdit`](https://help.syncfusion.com/cr/bla
 
 Pressing TAB from the last cell of the current row allows editing the next row and Pressing SHIFT + TAB from the first cell of the current row allows editing the previous row.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
@@ -359,10 +317,7 @@ Pressing TAB from the last cell of the current row allows editing the next row a
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents Editing in Batch mode.
 ![AllowNextRowEdit](./images/nextrow-edit.gif)
@@ -406,10 +361,7 @@ You can customize the behavior of the editor component through the [`EditorSetti
 
 The following sample code demonstrates the customization applied to TextBox component set for the DataGrid columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Grids
 
@@ -455,10 +407,7 @@ The following sample code demonstrates the customization applied to TextBox comp
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### NumericEdit
 
@@ -477,10 +426,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 
 The following sample code demonstrates the customization applied to NumericTextBox component set for the DataGrid columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 
@@ -526,10 +472,7 @@ The following sample code demonstrates the customization applied to NumericTextB
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### DropDownEdit
 
@@ -551,12 +494,11 @@ The following sample code demonstrates the customization applied to NumericTextB
 | ActionFailureTemplate | Accepts the template and assigns it to the popup list content of the component when the data fetch request from the remote server fails |
 | DataSource | Accepts the list items either through local or remote service and binds it to the component. It can be an array of JSON Objects or an instance of `DataManager`. |
 
+> [`IEnumerable<TItem>`] is the type of [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [`DropDownListModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind [`string[]`] or [`List<string>`] type to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
+
 The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
@@ -602,10 +544,7 @@ The following sample code demonstrates the customization applied to DropDownList
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### BooleanEdit
 
@@ -622,10 +561,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
 The following sample code demonstrates the customization applied to Checkbox component set for the DataGrid columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -671,10 +607,7 @@ The following sample code demonstrates the customization applied to Checkbox com
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### DatePickerEdit
 
@@ -689,10 +622,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
 The following sample code demonstrates the customization applied to DatePicker component set for the DataGrid columns,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.Grids
 
@@ -740,10 +670,7 @@ The following sample code demonstrates the customization applied to DatePicker c
         public bool Verified { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Similar way customization can be applied to default DateTimePicker Component using same [`DateEditCellParams`]
 
@@ -755,10 +682,11 @@ The cell edit template is used to add a custom component for a particular column
 
 > Custom components inside the EditTemplate must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
-{% tabs %}
+### Using AutoComplete in EditTemplate
 
-{% highlight c# %}
+You can able to render SfAutoComplete component in EditTemplate. In the below sample we have rendered  **SfAutoComplete** component in **EditTemplate** for Customer ID column.
 
+```csharp
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
@@ -801,13 +729,198 @@ The cell edit template is used to add a custom component for a particular column
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
 ![Celledit Template](./images/celledit-template.png)
+
+### Using DropDownList in EditTemplate
+
+You can able to render SfDropDownList component in EditTemplate. In the below sample we have rendered  **SfDropDownList** component in **EditTemplate** for ShipCountry column.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.DropDowns
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+            <EditTemplate>
+                <SfDropDownList ID="ShipCountry" TItem="Country" TValue="string" @bind-Value="@((context as Order).ShipCountry)" DataSource="@Countries">
+                    <DropDownListFieldSettings Value="CountryName" Text="CountryName"></DropDownListFieldSettings>
+                </SfDropDownList>
+            </EditTemplate>
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+    public List<Country> Countries { get; set; } = new List<Country>()
+    {
+        new Country(){ CountryName="Brazil", ID=1},
+        new Country(){ CountryName="Argentina", ID=2},
+        new Country(){ CountryName="Canada", ID=3}
+    };
+    public class Country
+    {
+        public string CountryName { get; set; }
+        public int ID { get; set; }
+    }
+}
+```
+
+In the following image, **SfDropDownList** component is rendered with **EditTemplate** in ShipCountry column
+![Custom SfDropDownList in EditTemplate](./images/sfdropdownlist-edittemplate.png)
+
+### Using TimePicker in EditTemplate
+
+You can able to render SfTimePicker component in EditTemplate. In the below sample we have rendered  **SfTimePicker** component in **EditTemplate** for OrderDate column.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Calendars
+
+<SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" ValidationRules="@(new ValidationRules{ Required=true})" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" ValidationRules="@(new ValidationRules{ Required=true})" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" TextAlign="TextAlign.Right" Width="130" Format="hh:mm tt" DefaultValue="DateTime.Now" Type="ColumnType.DateTime">
+            <EditTemplate>
+                <SfTimePicker TValue="DateTime?" @bind-Value="@((context as Order).OrderDate)"
+                              AllowEdit="true" Format="hh:mm:tt" CssClass="CustomDateCSS" ShowClearButton="true"></SfTimePicker>
+            </EditTemplate>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150">
+        </GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] { "USA", "UK", "CHINA", "RUSSIA", "INDIA" })[new Random().Next(5)]
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+}
+```
+
+In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
+![Custom SfTimePicker in EditTemplate](./images/sftimepicker-edittemplate.png)
+
+### Using MultiSelect Dropdown in EditTemplate
+
+You can able to render SfMultiSelect component in EditTemplate. In the below sample we have rendered  **SfMultiSelect** component in **EditTemplate** for ChosenItems column.
+
+```csharp
+@using Syncfusion.Blazor.DropDowns
+@using Syncfusion.Blazor.Grids
+
+<SfGrid AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
+    <GridEditSettings AllowEditing="true" AllowDeleting="true" AllowAdding="true" Mode="@EditMode.Normal"></GridEditSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ChosenItems) HeaderText="Chosen Items" Width="150">
+            <EditTemplate>
+                <SfMultiSelect ID="ChosenItems" @bind-Value="@((context as Order).ChosenItems)" DataSource="@AvailableChoices" TValue="string[]" TItem="MyChoiceItem">
+                    <MultiSelectFieldSettings Value="ChosenItems" Text="ChosenItems"></MultiSelectFieldSettings>
+                </SfMultiSelect>
+            </EditTemplate>
+            <Template>
+                @{
+                    var d = (context as Order).ChosenItems;
+                    <span>@String.Join(",", d)</span>
+                }
+            </Template>
+        </GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" EditType="EditType.NumericEdit" Format="C2" Width="90" TextAlign="@TextAlign.Right"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" EditType="EditType.DatePickerEdit" Format="d" Type="ColumnType.Date" Width="100"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+    public List<MyChoiceItem> AvailableChoices { get; set; }
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            ChosenItems = new string[] { x + "ItemA" },
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+        AvailableChoices = Enumerable.Range(1, 75).Select(x => new MyChoiceItem()
+        {
+            Id = x,
+            ChosenItems = x + "ItemA"
+        }).ToList();
+    }
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public string[] ChosenItems { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    public class MyChoiceItem
+    {
+        public int Id { get; set; }
+        public string ChosenItems { get; set; }
+    }
+}
+```
+
+In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
+![Custom SfMultiSelect in EditTemplate](./images/multiselect-edittemplate.png)
 
 ## Command column
 
@@ -822,10 +935,7 @@ The available built-in command buttons are:
 | Save | Update the edited row.|
 | Cancel | Cancel the edited state. |
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -870,10 +980,7 @@ The available built-in command buttons are:
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the command column.
 ![Command Column](./images/command-column.png)
@@ -884,10 +991,7 @@ The custom command buttons can be added in a column by using the [`Commands`](ht
 
 The following sample code demonstrates adding custom command in the **Manage Records** column and the `CommandClicked` event which triggers when the command is clicked,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -935,10 +1039,7 @@ The following sample code demonstrates adding custom command in the **Manage Rec
         // Perform required operations here
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the custom command added in the **Manage Records** column of the DataGrid component,
 ![Custom Command](./images/custom-command.png)
@@ -949,10 +1050,9 @@ Column validation allows you to validate the edited or added row data and it dis
 DataGrid uses **Form Validator** library for column validation.
 You can set validation rules by defining the [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
 
-{% tabs %}
+> Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Please refer the [Microsoft Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
 
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -987,10 +1087,7 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the Column Validation in Normal Editing.
 ![Validation Rules](./images/validation-rules.png)
@@ -1013,10 +1110,7 @@ Custom Validation can be used by overriding the IsValid method inside the class 
 
 The following sample code demonstrates custom validations implemented in the fields EmployeeID and Freight.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids;
 @using System.ComponentModel.DataAnnotations;
 @using System.Text.RegularExpressions;
@@ -1107,10 +1201,7 @@ The following sample code demonstrates custom validations implemented in the fie
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Custom validator component
 
@@ -1125,10 +1216,7 @@ In the below code example, the following things have been done.
 * This validator component will check whether Freight value is in between 0 to 100.
 * Displayed the validation error messages using **ValidationMessage** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 [MyCustomValidator.cs]
 
     using Microsoft.AspNetCore.Components;
@@ -1184,15 +1272,9 @@ In the below code example, the following things have been done.
         }
 
     }
+```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 [Index.razor]
 
 <SfGrid TValue="OrdersDetails" DataSource="GridData"
@@ -1227,10 +1309,7 @@ In the below code example, the following things have been done.
         }).ToList();
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The output will be as follows.
 
@@ -1242,10 +1321,7 @@ In the above code example, you can see that **ValidationMessage** component is u
 
 Now the HandleValidation method of the MyCustomValidator component would be changed like below.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
         protected void HandleValidation(FieldIdentifier identifier)
         {
@@ -1270,10 +1346,7 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
             }
         }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The output will be as follows.
 
@@ -1283,10 +1356,7 @@ The output will be as follows.
 
 **Validator** property can also be used to disable the in-built validator component used by the grid. For instance, by default, the grid uses two validator components, **DataAnnotationValidator** and an internal [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property handling validator, for handling edit form validation. If you are willing to use only the **DataAnnotationValidator** component, then it could be simply achieved by using the below code.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 <SfGrid TValue="OrdersDetails" DataSource="GridData"
         Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
         <GridEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">
@@ -1313,10 +1383,7 @@ The output will be as follows.
         }).ToList();
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Provide new item or edited item using events
 
@@ -1334,10 +1401,7 @@ In the following example:
 * Enabled inline editing feature in grid.
 * `OnActionBegin` event callback is assigned in which `Data` property is assigned with custom object for both add and edit operation.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GridEditSettings AllowEditing="true" AllowAdding="true" Mode="EditMode.Normal"></GridEditSettings>
@@ -1389,7 +1453,7 @@ In the following example:
     // This class does not contain any parameter-less constructor, hence this cannot be instantiated using Activator.CreateInstance.
     public class Order
     {
-        public Order(int orderid) => OrderID = orderid;
+        public Order(int? orderid) => OrderID = orderid;
 
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
@@ -1398,10 +1462,7 @@ In the following example:
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Batch editing
 
@@ -1416,10 +1477,7 @@ In the following example:
 * `OnBatchAdd` event callback is assigned in which `DefaultData` property is assigned with custom object for add operation.
 * `OnCellEdit` event callback is assigned in which the `Data` property is assigned with a custom object for handling edit operation.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Update", "Cancel" })">
     <GridEditSettings AllowEditing="true" AllowAdding="true" Mode="EditMode.Batch"></GridEditSettings>
@@ -1475,10 +1533,7 @@ In the following example:
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Entity Framework
 
@@ -1488,10 +1543,7 @@ This section uses and follows the code explained in the [`Entity Framework data 
 
 Now add methods **AddOrder**, **UpdateOrder**, **DeleteOrder** in the **"OrderDataAccessLayer.cs"** to handle the insert, update and remove operations respectively.**CRUD** record details are bound to the **Order** parameter. Please refer the following code.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -1554,19 +1606,13 @@ namespace EFGrid.Shared.DataAccess
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Enable CRUD in Web API
 
 Now you have to create a new **Post**, **Put**, **Delete** method in the Web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **'SfDataManager'** will make requests to this action based on route name.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -1631,17 +1677,11 @@ namespace WebApplication1.Server.Controllers
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Configure the datagrid to perform CRUD operations
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
@@ -1663,12 +1703,174 @@ namespace WebApplication1.Server.Controllers
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 >You can find the fully working sample [`here`](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
+
+## Perform CRUD operation using Grid Events
+
+IQueryable data can be bound directly to Grid component from database without using Data Adaptors. IQueryable data bound to Grid component using DataSource property of SfGrid. While binding the Data to Grid component using **DataSource** property, CRUD actions needs to be handled using Grid Action Events (i.e.) using **OnActionBegin** and **OnActionComplete** events of Grid.
+
+### Create an interface layer to the Database
+
+Create an interface with CRUD methods like below based on your model class.
+
+```csharp
+using System.Collections.Generic;
+using System.Linq;
+
+namespace LibraryManagement.Models
+{
+    interface ILibraryService
+    {
+        IQueryable<Book> GetBooks();
+        void InsertBook(Book employee);
+        void UpdateBook(long id, Book employee);
+        Book SingleBook(long id);
+        void DeleteBook(long id);
+    }
+}
+```
+
+### Create an intermediate service using the interface
+
+By inheriting the interface, create a new service to retrieve the data from database and perform CRUD operation. Refer the below demonstration.
+
+```csharp
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
+
+namespace LibraryManagement.Models
+{
+    public class LibraryService : ILibraryService
+    {
+        private LibraryContext _context;
+        public LibraryService(LibraryContext context)
+        {
+            _context = context;
+        }
+
+        public void DeleteBook(long id)
+        {
+            try
+            {
+                Book ord = _context.Books.Find(id);
+                _context.Books.Remove(ord);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public IQueryable<Book> GetBooks()
+        {
+            try
+            {
+                return _context.Books.AsQueryable();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void InsertBook(Book book)
+        {
+            try
+            {
+                _context.Books.Add(book);
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+        public void UpdateBook(long id, Book book)
+        {
+            try
+            {
+                var local = _context.Set<Book>().Local.FirstOrDefault(entry => entry.Id.Equals(book.Id));
+                // check if local is not null
+                if (local != null)
+                {
+                    // detach
+                    _context.Entry(local).State = EntityState.Detached;
+                }
+                _context.Entry(book).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
+            catch
+            {
+                throw;
+            }
+        }
+    }
+}
+```
+
+### Configure the DataGrid component to perform CRUD actions using Grid events
+
+Since data is bound to Grid using DataSource property, perform CRUD actions will be reflected at Grid component level only. To reflect the changes in database, we need to handle the changes in Grid action events.
+
+**OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, **RequestType Save** will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, we can differentiate them by using the **Args.Action** property, which will indicate the current action.
+**OnActionComplete** – It will be triggered when certain actions are completed. Here, we can refresh the Grid component with an updated datasource to reflect the changes.
+
+```csharp
+@using LibraryManagement.Models
+@inject ILibraryService LibraryService
+
+<SfGrid DataSource="@LibraryBooks" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" TValue="Book">
+    <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true" Mode="EditMode.Normal"></GridEditSettings>
+    <GridEvents OnActionBegin="ActionBeginHandler" OnActionComplete="ActionCompleteHandler" TValue="Book"></GridEvents>
+    <GridColumns>
+        <GridColumn Field="@nameof(Book.Id)" IsPrimaryKey="true" IsIdentity="true" Visible="false"></GridColumn>
+        <GridColumn Field="@nameof(Book.Name)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Book.Author)" Width="150"></GridColumn>
+        <GridColumn Field="@nameof(Book.Quantity)" Width="90" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(Book.Price)" Width="90" Format="C2" TextAlign="TextAlign.Right"></GridColumn>
+        <GridColumn Field="@nameof(Book.Available)" DisplayAsCheckBox="true" Width="70"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code
+{
+    public IQueryable<Book> LibraryBooks { get; set; }
+    protected override void OnInitialized()
+    {
+        LibraryBooks = LibraryService.GetBooks();
+    }
+    public void ActionBeginHandler(ActionEventArgs<Book> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            if (Args.Action == "Add")
+            {
+                LibraryService.InsertBook(Args.Data);
+            }
+            else
+            {
+                LibraryService.UpdateBook(Args.Data.Id, Args.Data);
+            }
+        }
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
+        {
+            LibraryService.DeleteBook(Args.Data.Id);
+        }
+    }
+    public void ActionCompleteHandler(ActionEventArgs<Book> Args)
+    {
+        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        {
+            LibraryBooks = LibraryService.GetBooks(); //to fetch the updated data from db to Grid
+        }
+    }
+}
+```
+
+> Please find the sample from this [Github](https://github.com/SyncfusionExamples/blazor-server-datagrid-efcore-crud/) location.
 
 ## Performing CRUD operations programmatically
 
@@ -1678,10 +1880,7 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
 * **UpdateRow** - Update a existing record in a datagrid.
 * **DeleteRow** - Delete a selected row in the datagrid
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -1747,10 +1946,7 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents the datagrid with Add, Update, Delete items,
 ![CRUD operations](./images/Editing.gif)
@@ -1759,10 +1955,7 @@ The following GIF represents the datagrid with Add, Update, Delete items,
 
 You can perform the edit operation of Datagrid in a Custom external form. The edit operation can be done by [`RowSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowSelected) property.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
@@ -1862,10 +2055,7 @@ You can perform the edit operation of Datagrid in a Custom external form. The ed
 
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represent the datagrid with Custom External form editing,
 ![Custom external form](./images/Customform.gif)
@@ -1876,9 +2066,9 @@ The following GIF represent the datagrid with Custom External form editing,
 
 To know about customizing the  **Dialog Template** in Blazor DataGrid Component, you can check this video.
 
-{% youtube "https://www.youtube.com/watch?Cfj476xT2ao" %}
+`youtube:Cfj476xT2ao`
 
-The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the html elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Dialog** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Dialog Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -1886,10 +2076,7 @@ In some cases, you would need to add new field editors in the dialog which are n
 
 The following sample code demonstrates DataGrid enabled with dialog template editing,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -1995,10 +2182,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
         top: 10%;
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > In the above sample code, the textbox rendered for **OrderID** column inside the dialog template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
@@ -2011,10 +2195,7 @@ It is possible to disable particular components rendered inside the dialog templ
 
 This is demonstrated in the below sample code where if the `RequestType` argument value of the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event is **BeginEdit** then the `Enabled` property of the **OrderID** Textbox is set to false.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2136,10 +2317,7 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
         top: 10%;
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the dialog template of the DataGrid component with disabled components,
 ![Disable components](./images/disable-component.png)
@@ -2150,10 +2328,7 @@ By default, the first input element in the dialog will be focused while opening 
 
 This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [`FocusIn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-1.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_1_DataBound) event.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2264,10 +2439,7 @@ This is demonstrated in the below sample code where the first input element is i
         top: 10%;
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
 ![Dynamic focus of components](./images/dynamic-focus.png)
@@ -2276,7 +2448,7 @@ The following image represents the AutoComplete component in focused state insid
 
 > Before adding an Inline template to the DataGrid, we strongly recommend you to go through the [`Template`](./templates/#templates) section topic to configure the template.
 
-The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the html elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
+The Inline template editing provides an option to customize the default behavior of Inline editing. Using the Inline template, you can render your editors by defining the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component's [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property as **Normal** and wrapping the HTML elements inside the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Template) property of [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html).
 
 > Custom components inside the Inline Template must be specified with two-way (**@bind-Value**) binding to reflect the changes in DataGrid.
 
@@ -2284,10 +2456,7 @@ In some cases, you would need to add new field editors in the Inline editing whi
 
 The following sample code demonstrates DataGrid enabled with Inline template editing,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2392,10 +2561,7 @@ The following sample code demonstrates DataGrid enabled with Inline template edi
         top: 10%;
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > In the above sample code, the textbox rendered for **OrderID** column inside the Inline editing template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
@@ -2405,10 +2571,7 @@ By default, a new row will be added at the top of the datagrid. You can change i
 
 The following sample code demonstrates changing the position of the new row that gets added in the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2442,10 +2605,7 @@ The following sample code demonstrates changing the position of the new row that
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the new row added at the bottom of the DataGrid,
 ![New Row Position](./images/new-row-position.png)
@@ -2462,10 +2622,7 @@ The delete confirms dialog can be shown on deleting a record by setting the [`Sh
 
 The following sample code demonstrates enabling delete confirmation dialog in the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2500,10 +2657,7 @@ The following sample code demonstrates enabling delete confirmation dialog in th
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents the delete confirmation dialog displayed while deleting a record in DataGrid,
 ![Delete confirmation dialog](./images/delete-confirm-dialog.gif)
@@ -2516,10 +2670,7 @@ The confirmation dialog can be enabled for all the batch operations by setting t
 
 The following sample code demonstrates enabling confirmation dialog for batch operations in the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2554,10 +2705,7 @@ The following sample code demonstrates enabling confirmation dialog for batch op
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents the confirmation dialog displayed while performing batch operations in DataGrid,
 ![Confirmation dialog](./images/confirmation-dialog.gif)
@@ -2571,10 +2719,7 @@ The datagrid provides an option to set the default value for the columns when ad
 
 The following sample code demonstrates setting default value as **ANTON** to the **CustomerID** column,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2609,10 +2754,7 @@ The following sample code demonstrates setting default value as **ANTON** to the
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the default value displayed in the **CustomerID** column while adding a new record in DataGrid,
 ![Default Column Value](./images/default-column-value.png)
@@ -2623,10 +2765,7 @@ You can disable editing for particular columns by setting value as **false** to 
 
 The following sample code demonstrates editing disabled for the **CustomerID** column,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2661,10 +2800,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Similarly [`AllowAdding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
 
@@ -2696,10 +2832,7 @@ The **RequestType** values for the editing operations are listed in the below ta
 
 The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
@@ -2783,10 +2916,7 @@ The following sample code demonstrates the different **RequestType** parameters 
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Customize the edit dialog
 
@@ -2794,10 +2924,7 @@ You can use [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 In the below example we have changed the dialog's header text and footer button content for editing and adding records.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -2870,10 +2997,7 @@ In the below example we have changed the dialog's header text and footer button 
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -2891,10 +3015,7 @@ For focus and Column Validation to work properly, you have to define the **ID** 
 
 The following sample code demonstrates the CRUD operation for complex objects with EditTemplate.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
@@ -2955,7 +3076,4 @@ The following sample code demonstrates the CRUD operation for complex objects wi
         public string FirstName { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

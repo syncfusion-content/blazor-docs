@@ -1,22 +1,10 @@
----
-layout: post
-title: How to Prevent default datagrid action in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Prevent default datagrid action in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Prevent default datagrid action
 
 The default datagrid actions can be prevented by cancelling them in the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) event.
 
 This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) event to **false**,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Update", "Cancel" })" AllowPaging="true">
@@ -60,7 +48,4 @@ This is demonstrated in the below sample code where the `Add` operation is preve
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

@@ -1,0 +1,11 @@
+{
+	"fr-BE": {
+		"inplace-editor": {
+			"save": "enregistrer",
+			"cancel": "Annuler",
+			"editIcon": "Cliquez pour éditer",
+			"editAreaClick": "Cliquez pour éditer",
+			"editAreaDoubleClick": "Double-cliquez pour éditer"
+		}
+  }
+}

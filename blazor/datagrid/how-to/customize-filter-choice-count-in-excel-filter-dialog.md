@@ -1,10 +1,7 @@
 ---
-layout: post
-title: Customize filter choice items count for Excel filter dialog
-description: Learn how to customize filter choice items count of Excel filter dialog in Blazor DataGrid component
-platform: Blazor
-component: DataGrid
-documentation: ug
+title: "Customize filter choice items count for Excel filter dialog"
+component: "DataGrid"
+description: "Learn how to customize filter choice items count of Excel filter dialog in Blazor DataGrid component"
 ---
 
 # Customize filter choice items count for Excel filter dialog
@@ -15,10 +12,7 @@ To overcome this default behavior, you can customize the count of filter choice 
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="GridInstance" AllowFiltering="true" AllowPaging="true" DataSource="@Orders">
@@ -63,7 +57,4 @@ This is demonstrated in the below sample code,
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

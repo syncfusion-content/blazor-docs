@@ -1,34 +1,16 @@
----
-layout: post
-title: How to Customize column menu icon in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Customize column menu icon in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Customize column menu icon
 
 You can customize the column menu icon by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.
 
-{% tabs %}
-
-{% highlight CSS %}
-
+```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
     content: "\e941";
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 This is demonstrated in the below sample code,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" ShowColumnMenu="true">
@@ -69,10 +51,7 @@ This is demonstrated in the below sample code,
         .content: "\e84f";
     }
 </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents datagrid with customized column menu icon
 ![Customize column menu icon](../images/customize-column-menu-icon.png)

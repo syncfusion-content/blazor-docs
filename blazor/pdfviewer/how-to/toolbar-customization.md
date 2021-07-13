@@ -1,0 +1,1 @@
+documentation/pdfviewer/toolbar-customization/

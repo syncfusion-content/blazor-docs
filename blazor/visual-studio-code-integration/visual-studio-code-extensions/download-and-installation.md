@@ -1,12 +1,3 @@
----
-layout: post
-title: Download and Installation in Blazor - Syncfusion
-description: Check out the documentation for Download and Installation in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Download and Installation
 
 Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension). You can either install it from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
@@ -23,7 +14,7 @@ The following prerequisites software need to be installed for the Syncfusion Bla
 
 * [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later.
 
-* [c# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 
 ## Install through the Visual Studio Code Extensions
 

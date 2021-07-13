@@ -1,20 +1,8 @@
----
-layout: post
-title: Search in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Search in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Search
 
 You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -50,10 +38,7 @@ You can search records in a DataGrid, by using the **Search** method with search
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF image represents a DataGrid Searching.
 
@@ -63,10 +48,7 @@ The following GIF image represents a DataGrid Searching.
 
 To apply search at initial rendering, set the **Fields**, **Operator**, **Key**, and **IgnoreCase** using [`GridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -104,10 +86,7 @@ To apply search at initial rendering, set the **Fields**, **Operator**, **Key**,
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents a DataGrid with initial searching.
 
@@ -135,10 +114,7 @@ NotEqual |Checks for values not equal to the specified value.
 
 To search datagrid records from an external button, invoke the **Search** method.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -183,19 +159,13 @@ To search datagrid records from an external button, invoke the **Search** method
         this.DefaultGrid.Search("1001");
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Search specific columns
 
 By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -236,10 +206,7 @@ By default, datagrid searches all visible columns. You can search specific colum
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Disable search for particular column
 
@@ -247,10 +214,7 @@ By default, DataGrid searches all visible columns. You can disable searching for
 
 In the below code example, the **Order ID** column search functionality is disabled.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Search" })">
@@ -284,10 +248,7 @@ In the below code example, the **Order ID** column search functionality is disab
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -295,10 +256,7 @@ In the below code example, the **Order ID** column search functionality is disab
 
 By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the Search method of the datagrid in the Input event of the SfTextBox.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
@@ -352,7 +310,4 @@ By default, the datagrid will initiate searching operation after the Enter key i
         }).ToList();
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

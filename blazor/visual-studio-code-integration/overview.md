@@ -1,12 +1,3 @@
----
-layout: post
-title: Overview in Blazor - Syncfusion
-description: Check out the documentation for Overview in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Visual Studio Code Integration
 
 ## Overview

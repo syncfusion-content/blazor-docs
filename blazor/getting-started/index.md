@@ -1,12 +1,3 @@
----
-layout: post
-title: Getting started with Syncfusion Blazor - Blazor WebAssembly App in Visual Studio for Mac
-description: Check out the documentation for Getting started with Syncfusion Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Overview
 
 This document illustrates how to build and run a simple Syncfusion Blazor Components in Server/Webassembly application in blazor.

@@ -1,12 +1,3 @@
----
-layout: post
-title: Individual NuGet Packages in Blazor - Syncfusion
-description: Check out the documentation for Individual NuGet Packages in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Individual NuGet packages for Syncfusion Blazor UI components
 
 * Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace.
@@ -1381,7 +1372,7 @@ SfRangeNavigator
 
 ### Syncfusion.Blazor.RichTextEditor
 
-The Rich Text Editor component is the html and markdown editor that provides the best user experience for creating, updating, and formatting the content.
+The Rich Text Editor component is the HTML and markdown editor that provides the best user experience for creating, updating, and formatting the content.
 
 <table>
 <tr>

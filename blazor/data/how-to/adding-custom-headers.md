@@ -1,12 +1,3 @@
----
-layout: post
-title: How to Adding custom headers in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Adding custom headers in Blazor DataManager component of Syncfusion, and more details
-platform: Blazor
-component: DataManager
-documentation: ug
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Adding Custom Headers
@@ -15,10 +6,7 @@ Custom headers can be added to the [`SfDataManager`](https://help.syncfusion.com
 
 The following sample code demonstrates adding custom headers to the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) request which is bound with the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -50,7 +38,4 @@ The following sample code demonstrates adding custom headers to the [`SfDataMana
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

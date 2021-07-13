@@ -1,12 +1,3 @@
----
-layout: post
-title: Context Menu in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Context Menu in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Context menu
 
 The DataGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`ContextMenuItems`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
@@ -59,10 +50,7 @@ Pager     |   NextPage
 
 The following sample code demonstrates enabling context menu with its default items,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSorting="true" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
@@ -98,80 +86,7 @@ The following sample code demonstrates enabling context menu with its default it
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-
-{% highlight javascript %} 
-
-//  initialization of ejButton widget 
-$("#button11").ejButton({
-     size: "normal",
-     showRoundedCorner : true
-});
-
-{% endhighlight %}
-
-{% highlight bash %}
-
-> npm install aurelia-cli -g
-> au new
-
-{% endhighlight %}
-
-{% highlight html %} 
-
-<div class="frame">
-    <div class="ctrllabel">Select a car</div>
-      <ej-listbox id="defaultlistbox" style="display:block;" width="100%" [dataSource]="data" width="100%" [fields]="fieldList" [sortOrder]="sorting"></ej-listbox>
-</div>
-
-{% endhighlight %}
-
-
-
-
-{% highlight razor %}
-
-@using Syncfusion.Blazor.Grids
-
-<SfGrid DataSource="@Orders" AllowSorting="true" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
-    <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridEditSettings AllowEditing="true" AllowDeleting="true"></GridEditSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code{
-    public List<Order> Orders { get; set; }
-
-    protected override void OnInitialized()
-    {
-        Orders = Enumerable.Range(1, 75).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following GIF represents the DataGrid enabled with default context menu items,
 ![Grid with context menu](images/grid-context-menu.gif)
@@ -182,10 +97,7 @@ The custom context menu items can be added by defining the [`ContextMenuItems`](
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
@@ -231,10 +143,7 @@ The following sample code demonstrates defining custom context menu item and its
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the DataGrid enabled with custom context menu item,
 ![Grid with custom context menu item](images/custom-context-menu.png)
@@ -245,10 +154,7 @@ DataGrid have an option to use both built-in and custom context menu items at sa
 
 The following sample code demonstrates defining built-in and custom context menu items and custom context menu item corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<Object>() { "Copy", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
@@ -294,10 +200,7 @@ The following sample code demonstrates defining built-in and custom context menu
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Sub context menu items in DataGrid
 
@@ -305,10 +208,7 @@ The sub context menu items can be added by defining the collection of **MenuItem
 
 The following sample code demonstrates defining sub context menu item and its corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
@@ -360,10 +260,7 @@ The following sample code demonstrates defining sub context menu item and its co
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Disable the Context menu for specific columns in DataGrid
 
@@ -371,10 +268,7 @@ Context Menu can be prevented for specific columns using [`ContextMenuOpen`](htt
 
 The following sample code demonstrates the disabling the context for specific column using event arguments of [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
@@ -428,10 +322,7 @@ The following sample code demonstrates the disabling the context for specific co
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Disable context menu items dynamically in DataGrid
 
@@ -439,10 +330,7 @@ You can enable or disable context menu items using the **Disabled** property. He
 
 The following sample code demonstrates how to enable or disable context menu items dynamically in Grid using event arguments of [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<object>() { "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
@@ -493,9 +381,6 @@ The following sample code demonstrates how to enable or disable context menu ite
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

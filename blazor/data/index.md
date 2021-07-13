@@ -1,12 +1,3 @@
----
-layout: post
-title: Adaptors in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Adaptors in Blazor DataManager component of Syncfusion, and more details
-platform: Blazor
-component: DataManager
-documentation: ug
----
-
 # Overview
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) is a data management component used for performing data operations in applications. It acts as an abstraction for using local data source - array of objects and remote data source - web services returning JSON, JSONP, oData or XML.

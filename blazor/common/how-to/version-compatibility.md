@@ -1,12 +1,3 @@
----
-layout: post
-title: Version Compatibility in Blazor - Syncfusion
-description: Check out the documentation for Version Compatibility in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Version Convention For Blazor
 
 ## Version Information

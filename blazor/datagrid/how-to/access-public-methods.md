@@ -1,22 +1,10 @@
----
-layout: post
-title: How to Access public methods in datagrid in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Access public methods in datagrid in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Access public method in datagrid
 
 You can access the public methods available in the DataGrid component by using its reference defined in the component initialization.
 
 This is demonstrated in the below sample code where the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Print) method of the datagrid component is invoked on button click using the datagrid reference,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -64,9 +52,6 @@ This is demonstrated in the below sample code where the [`Print`](https://help.s
         public DateTime? HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > Similarly all the public methods of the DataGrid can be invoked. The available public methods can be found in this [`link`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.SfGrid-1.html).

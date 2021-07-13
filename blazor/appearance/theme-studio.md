@@ -1,19 +1,10 @@
----
-layout: post
-title: Theme Studio in Blazor - Syncfusion
-description: Check out the documentation for Theme Studio in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Overview
 
 Theme Studio for Syncfusion Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps. Since Syncfusion Blazor components follow the same UI pattern as Syncfusion's EJ2 components, you can use the [Syncfusion EJ2 Theme studio](https://ej2.syncfusion.com/themestudio/) for customizing Syncfusion Blazor components appearance.
 
 ## Customizing theme color from theme studio
 
-The Syncfusion Blazor themes are developed under the scss environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion Blazor components. All Syncfusion Blazor component styles are derived from these [theme-based common variables](themes#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
+The Syncfusion Blazor themes are developed under the SCSS environment. Each theme has a unique common variable list. When you change the common variable color code value, it will reflect in all the Syncfusion Blazor components. All Syncfusion Blazor component styles are derived from these [theme-based common variables](themes#common-variables). This common variable list is handled inside the Theme Studio application for customizing theme-based colors.
 
 **Step 1:** Navigate to the Theme Studio application from this link: [Theme Studio](https://ej2.syncfusion.com/themestudio/).
 
@@ -57,7 +48,7 @@ You can download the custom styles after customizing the theme colors.
 
 ![Theme Studio download-dialog](images/download-dialog.png)
 
-**Step 3:** The download styles will come as a zip file that contains scss and CSS files for the selected Syncfusion Blazor components. The current settings are stored in the `settings.json` file.
+**Step 3:** The download styles will come as a zip file that contains SCSS and CSS files for the selected Syncfusion Blazor components. The current settings are stored in the `settings.json` file.
 
 ![Theme Studio output-files](images/output-files.png)
 
@@ -69,17 +60,11 @@ You can directly use the customized CSS file in the web application.
 
 **Step 2:** Refer the customized CSS file reference in the `~/wwwroot/index.html` or `~/Pages/_Host.cshtml` main page head section.
 
-{% tabs %}
-
-{% highlight html %}
-
+```html
     <head>
         <link href="styles/{file-name}.css" rel="stylesheet"/>
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Import previously changed settings into theme studio
 

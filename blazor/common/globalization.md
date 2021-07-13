@@ -1,12 +1,3 @@
----
-layout: post
-title: Globalization in Blazor - Syncfusion
-description: Check out the documentation for Globalization in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Globalization
 
 * Globalization is the combination of adapting the control to various languages by parsing and formatting the date or numbers (`Internationalization (L18N)`) and adding cultural-specific customizations and translating the text (`Localization (L10N)`).

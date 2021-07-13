@@ -1,12 +1,3 @@
----
-layout: post
-title: Events in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Events in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Events
 
 In this section, we have provided the list of events of the datagrid component which will be
@@ -20,10 +11,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping, [`editing`](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing) etc., starts.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -64,19 +52,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnActionComplete
 
 [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when DataGrid actions such as sorting, filtering, paging, grouping,[`editing`](https://blazor.syncfusion.com/documentation/datagrid/editing/#event-trace-while-editing) etc. are completed.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -115,19 +97,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnActionFailure
 
 [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when any DataGrid action failed to achieve the desired results. By using this event you can get the error details and its cause. In the below sample we have provided the wrong url so that it will throw the OnActionFailure event.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -156,19 +132,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## BeforeOpenColumnChooser
 
 [`BeforeOpenColumnChooser`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before ColumnChooser gets opened.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" ShowColumnChooser="true" Toolbar=@ToolbarItems>
@@ -213,19 +183,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         //customize your code here
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Created
 
 [`Created`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when the datagrid component is created. You can able to modify the datagrid properties by using this event.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -264,19 +228,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnLoad
 
 [`OnLoad`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the rendering process starts which allows customization of DataGrid properties before the DataGrid rendering.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -315,19 +273,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Destroyed
 
 [`Destroyed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when the datagrid component is destroyed. By using this event you can confirm that the datagrid gets completely destroyed.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -366,19 +318,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnDataBound
 
 [`OnDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before data is bound to DataGrid.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -417,19 +363,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## DataBound
 
 [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when data source is populated in the DataGrid. You can able to customize you code.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -468,19 +408,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## RowDataBound
 
 [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers every time a request is made to access row information, element, or data and also before the row element is appended to the DataGrid element.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -519,19 +453,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## DetailDataBound
 
 [`DetailDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after detail row expands.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees">
@@ -638,19 +566,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
     // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## HeaderCellInfo
 
 [`HeaderCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers during the rendering of every header cells in the DataGrid so that you can able to customize the header cells.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -689,19 +611,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## QueryCellInfo
 
 [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers every time a request is made to access cell information, element, or data and also before the cell element is appended to the DataGrid element.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -740,19 +656,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnBeginEdit
 
 [`OnBeginEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the record is to be edit.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -792,19 +702,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnBatchAdd
 
 [`OnBatchAdd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before records are added in batch mode.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
@@ -844,19 +748,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnBatchSave
 
 [`OnBatchSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before records are saved in batch mode.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
@@ -897,19 +795,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnBatchDelete
 
 [`OnBatchDelete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before records are deleted in batch mode.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })">
@@ -949,19 +841,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnCellEdit
 
 [`OnCellEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when the cell is being edited.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1002,19 +888,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnCellSave
 
 [`OnCellSave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before saving the cell.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1055,19 +935,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CellSaved
 
 [`CellSaved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when cell is saved.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1107,19 +981,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## RowSelecting
 
 [`RowSelecting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before row selection occurs.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1158,19 +1026,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## RowSelected
 
 [`RowSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when a row is selected.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1209,19 +1071,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## RowDeselecting
 
 [`RowDeselecting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before a selected row is being deselected.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1261,19 +1117,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## RowDeselected
 
 [`RowDeselected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when a selected row is deselected.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1312,19 +1162,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CellSelecting
 
 [`CellSelecting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before cell selection occurs.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1365,19 +1209,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CellSelected
 
 [`CellSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after a cell is selected.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1417,19 +1255,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CellDeselecting
 
 [`CellDeselecting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before cell is deselected.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1471,19 +1303,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CellDeselected
 
 [`CellDeselected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after a cell is deselected.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1525,19 +1351,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnRecordClick
 
 [`OnRecordClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when record is clicked.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1578,19 +1398,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnRecordDoubleClick
 
 [`OnRecordDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when record is double clicked.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -1630,19 +1444,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnToolbarClick
 
 [`OnToolbarClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when toolbar item is clicked.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
@@ -1682,19 +1490,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## CommandClicked
 
 [`CommandClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when command button is clicked. It provides the row data of the currently clicked row.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -1745,19 +1547,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Perform required operations here
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ColumnMenuItemClicked
 
 [`ColumnMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when click on column menu.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" ShowColumnMenu="true">
@@ -1799,19 +1595,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ContextMenuItemClicked
 
 [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when click on context menu.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
@@ -1853,19 +1643,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ContextMenuOpen
 
 [`ContextMenuOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before opening the context menu.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" AllowFiltering="true" AllowPaging="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
@@ -1907,19 +1691,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnPdfExport
 
 [`OnPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
@@ -1966,19 +1744,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## PdfHeaderQueryCellInfoEvent
 
 [`PdfHeaderQueryCellInfoEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document. It can be used to customize the header content in pdf document.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
@@ -2025,19 +1797,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## PdfQueryCellInfoEvent
 
 [`PdfQueryCellInfoEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid content in pdf document.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
@@ -2084,19 +1850,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## PdfAggregateTemplateInfo
 
 [`PdfAggregateTemplateInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to PDF document. It can be used to customize the DataGrid aggregate content in pdf document.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" Toolbar="@(new List<string>() { "PdfExport" })">
@@ -2173,19 +1933,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnExcelExport
 
 [`OnExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to excel file.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -2232,19 +1986,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ExcelHeaderQueryCellInfoEvent
 
 [`ExcelHeaderQueryCellInfoEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to Excel file. It can be used to customize the header content in Excel file.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -2291,19 +2039,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ExcelQueryCellInfoEvent
 
 [`ExcelQueryCellInfoEvent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid content in Excel file.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -2350,19 +2092,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ExcelAggregateTemplateInfo
 
 [`ExcelAggregateTemplateInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before DataGrid data is exported to Excel file. It can be used to customize the DataGrid aggregate content in Excel File.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -2439,19 +2175,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ExportComplete
 
 [`ExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers once DataGrid data is exported to file formats (Pdf, Excel and CSV).
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowPdfExport="true" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport","CsvExport","PdfExport" })">
@@ -2509,19 +2239,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnResizeStart
 
 [`OnResizeStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when column resize starts.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
@@ -2561,19 +2285,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## ResizeStopped
 
 [`ResizeStopped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when column resize ends.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowResizing="true">
@@ -2613,19 +2331,13 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OnRowDragStart
 
 [`OnRowDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers when row drag starts.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid AllowRowDragAndDrop="true" DataSource="@Orders">
@@ -2665,10 +2377,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## RowDropped
 
@@ -2676,10 +2385,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
 
 > We are not going to limit datagrid with these events, we will be adding new events in future based on the user requests. If the event, you are looking for is not in the list, then please request [`here`](https://www.syncfusion.com/feedback/blazor-components).
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid AllowRowDragAndDrop="true" DataSource="@Orders">
@@ -2719,9 +2425,6 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         // Here you can customize your code
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

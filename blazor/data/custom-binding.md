@@ -1,12 +1,3 @@
----
-layout: post
-title: How to Adding custom headers in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Adding custom headers in Blazor DataManager component of Syncfusion, and more details
-platform: Blazor
-component: DataManager
-documentation: ug
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Custom Binding
@@ -17,10 +8,7 @@ For implementing custom data binding in DataGrid, the **DataAdaptor** class is u
 
 The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 public abstract class DataAdaptor
 {
     /// <summary>
@@ -72,10 +60,7 @@ public abstract class DataAdaptor
     /// </summary>
     public virtual Task<object> BatchUpdateAsync(DataManager dataManager, object changedRecords, object addedRecords, object deletedRecords, string keyField, string key)
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 For implementing the custom data binding alone in the DataGrid component provide the custom adaptor class and override the **Read** or **ReadAsync** method of the **DataAdaptor** abstract class.
 
@@ -92,10 +77,7 @@ For implementing the CRUD operations for the custom bounded data override the fo
 
 The following sample code demonstrates implementing custom adaptor of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding and editing operations in the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -224,10 +206,7 @@ The following sample code demonstrates implementing custom adaptor of the [`SfDa
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 

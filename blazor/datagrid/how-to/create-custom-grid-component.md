@@ -1,12 +1,3 @@
----
-layout: post
-title: How to Create custom Grid component in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Create custom Grid component in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Create Custom Grid component
 
 You can create a custom Grid component by rendering the SfGrid as a new razor component. It helps to create your own custom component when you might want to create multiple grids with same configuration or with default configuration through out your application.
@@ -15,10 +6,7 @@ This is demonstrated in below example by create a custom Grid component called C
 
 CustomGrid.razor
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @typeparam TValue
 @inherits SfGrid<TValue>
@@ -27,17 +15,11 @@ CustomGrid.razor
     @ChildContent
     <GridPageSettings PageCount="PAGE_COUNT" PageSize="DEFAULT_PAGE_SIZE" PageSizes="PageSizes"></GridPageSettings>
 </SfGrid>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 CustomGrid.razor.cs
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 using Microsoft.AspNetCore.Components;
 using Syncfusion.Blazor.Grids;
 using System;
@@ -67,17 +49,11 @@ namespace SF_Grid_Inheritance.Shared
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 Index.razor
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 <CustomGrid DataSource="Orders" TValue="Order"></CustomGrid>
 
@@ -101,7 +77,4 @@ Index.razor
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

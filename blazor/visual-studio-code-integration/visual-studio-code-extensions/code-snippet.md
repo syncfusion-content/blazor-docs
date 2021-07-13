@@ -1,12 +1,3 @@
----
-layout: post
-title: Code Snippet in Blazor - Syncfusion
-description: Check out the documentation for Code Snippet in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Add Syncfusion Blazor component in the Blazor application
 
 The Syncfusion Blazor code snippet utility for Visual Studio Code provides snippets for adding a Syncfusion Blazor component with various features in the Razor code editor file of the Blazor Application.
@@ -23,29 +14,22 @@ The following steps help you to use the Syncfusion Blazor code snippet in your B
 
 3. You can find the Syncfusion Blazor component with the various features by typing the word in the following format.
 
-{% tabs %}
-
-{% highlight bash %}
-
+    ```bash
     sf<Syncfusion component name>-<Syncfusion component feature>
 
     For Example, sfgrid-grouping
+    ```
+    Choose the Syncfusion component and click the **Enter or Tab** key, the Syncfusion Blazor component will be added in the razor file.
 
-{% endhighlight %}
+    ![Code Snippet](../images/codesnippet.gif)
 
-{% endtabs %}
+    After adding the Syncfusion Blazor component in the razor file, use the tab key to fill the required values to render the component. You can find the comment section in the code snippet to find what are values need to fill.
 
-Choose the Syncfusion component and click the **Enter or Tab** key, the Syncfusion Blazor component will be added in the razor file.
+    ![Comment](../images/Comment.png)
 
-![Code Snippet](../images/codesnippet.gif)
+    Also, you can find the Syncfusion help link at the top of the added snippet to know more about the added Syncfusion Blazor component feature.
 
-After adding the Syncfusion Blazor component in the razor file, use the tab key to fill the required values to render the component. You can find the comment section in the code snippet to find what are values need to fill.
-
-![Comment](../images/Comment.png)
-
-Also, you can find the Syncfusion help link at the top of the added snippet to know more about the added Syncfusion Blazor component feature.
-
-![Help](../images/Help.png)
+    ![Help](../images/Help.png)
 
 ## Configure Blazor application with Syncfusion
 

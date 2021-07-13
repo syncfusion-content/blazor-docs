@@ -1,12 +1,3 @@
----
-layout: post
-title: Data Binding in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Data Binding in Blazor DataManager component of Syncfusion, and more details
-platform: Blazor
-component: DataManager
-documentation: ug
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Data Binding
@@ -19,10 +10,7 @@ Local data can be bound to the DataGrid component by assigning the array of obje
 
 The following sample code demonstrates binding local data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
@@ -57,10 +45,7 @@ The following sample code demonstrates binding local data through the [`SfDataMa
         new EmployeeData { EmployeeID = 10, Name = "Andrew Buchanan", Title = "Sales Representative" }
     };
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents DataGrid bound with local data through the `SfDataManager` component,
 ![Local Data Binding](./images/grid-local-binding.png)
@@ -71,10 +56,7 @@ Remote data can be bound to the Grid component by binding the [`SfDataManager`](
 
 The following sample code demonstrates binding remote data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -97,10 +79,7 @@ The following sample code demonstrates binding remote data through the [`SfDataM
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents DataGrid bound with remote data through the `SfDataManager` component,
 ![Remote Data Binding](./images/grid-remote-binding.png)

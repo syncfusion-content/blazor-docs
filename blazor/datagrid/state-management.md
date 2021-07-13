@@ -1,12 +1,3 @@
----
-layout: post
-title: State Management in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about State Management in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # State Management
 
 State management allows users to save and load grid state. The grid will use user-provided state to render instead of its properties provided declaratively.
@@ -27,10 +18,7 @@ State persistence allows the Grid to retain the current grid state in the browse
 
 > The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Grid.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" DataSource="@Orders" Height="315" EnablePersistence="true" AllowPaging="true" AllowFiltering="true" AllowGrouping="true" AllowSorting="true">
@@ -64,10 +52,7 @@ State persistence allows the Grid to retain the current grid state in the browse
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 You can use [`ResetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) method to reset grid state to its original state. This will clear persisted data in window local storage and renders grid with its original property values.
 
@@ -75,10 +60,7 @@ You can use [`ResetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 You can handle the grid's state manually by using in-built state persistence methods. You can use [`GetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData), [`SetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistData_System_String_), [`ResetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) methods of grid to save, load and reset the Grid's persisted state manually. [`GetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData) method will return grid current state as a string value, which is suitable for sending them over network and storing in data bases.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -121,9 +103,6 @@ You can handle the grid's state manually by using in-built state persistence met
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

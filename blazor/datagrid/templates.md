@@ -1,12 +1,3 @@
----
-layout: post
-title: Templates in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Templates in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Templates
 
 Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. DataGrid is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allow you to render custom components or content based on your own logic.
@@ -24,10 +15,7 @@ Most of the templates used by datagrid are of type **RenderFragment** and they w
 
 For example, you can access the data of the column template using **context** as follows.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -84,10 +72,7 @@ For example, you can access the data of the column template using **context** as
         public DateTime? HireDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents the column Template.
 ![Column template](./images/column-template.png)
@@ -100,10 +85,7 @@ This prevents us from directly specifying templates such as **RowTemplate** and 
 
 > From `v17.4.39`,the `ModelType` property has been removed from the DataGrid Component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Grids
 
@@ -229,10 +211,7 @@ This prevents us from directly specifying templates such as **RowTemplate** and 
         public DateTime? BirthDate { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following image represents the Row Template
 ![Row Template](./images/row-template.png)

@@ -1,12 +1,3 @@
----
-layout: post
-title: Create Project in Blazor - Syncfusion
-description: Create Project in Blazor - Syncfusion
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Create a project
 
 Syncfusion provides the Visual Studio Project Templates to create the Syncfusion Blazor Application. The Syncfusion Blazor application creates an application with the required Syncfusion references, namespaces, component code snippet, and CDN links for the earlier development with Syncfusion components.

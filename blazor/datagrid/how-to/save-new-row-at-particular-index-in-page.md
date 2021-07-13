@@ -1,10 +1,7 @@
 ---
-layout: post
-title: Saving a new row at a particular index of the grid page
-description: Learn how to save the newly added row at a particular index of the grid page in Blazor DataGrid component
-platform: Blazor
-component: DataGrid
-documentation: ug
+title: "Saving a new row at a particular index of the grid page"
+component: "DataGrid"
+description: "Learn how to save the newly added row at a particular index of the grid page in Blazor DataGrid component"
 ---
 
 # Saving a new row at a particular index of the grid page
@@ -13,10 +10,7 @@ By default, a newly added row will be saved at the top of the datagrid. You can 
 
 The following sample code demonstrates changing the save index of the new row that gets added in the DataGrid component,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Action = Syncfusion.Blazor.Grids.Action
 
@@ -63,7 +57,4 @@ The following sample code demonstrates changing the save index of the new row th
         public string ShipCountry { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```

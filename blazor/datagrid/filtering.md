@@ -1,20 +1,8 @@
----
-layout: post
-title: Filtering in Blazor DataGrid component - Syncfusion
-description: Checkout and learn about Filtering in Blazor DataGrid component of Syncfusion, and more details
-platform: Blazor
-component: DataGrid
-documentation: ug
----
-
 # Filtering
 
 Filtering allows you to view particular records based on filter criteria. To enable filtering in the DataGrid, set the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true. Filtering options can be configured through [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
@@ -48,10 +36,7 @@ Filtering allows you to view particular records based on filter criteria. To ena
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows filtering using FilterBar
 ![Default Filter](./images/default-filtering.png)
@@ -65,10 +50,7 @@ The following screenshot shows filtering using FilterBar
 To apply the filter at initial rendering, set the filter **Predicate** object in
 [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true">
@@ -108,10 +90,7 @@ To apply the filter at initial rendering, set the filter **Predicate** object in
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows Initial filtering using FilterBar
 ![Initial Filter](./images/initial-filtering.png)
@@ -157,10 +136,7 @@ Expression |Example |Description |Column Type
 N/A |N/A | `equal` operator will always be used for date filter. |Date
 N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
@@ -194,10 +170,7 @@ N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows filtering using FilterBar
 ![Default Filter](./images/default-filtering.png)
@@ -207,10 +180,7 @@ The following screenshot shows filtering using FilterBar
 The [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column. The following sample shows the dropdown, used as a custom component in the Customer Name column.
 To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as PredicateModel to get filter values inside template.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -221,7 +191,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150">
             <FilterTemplate>
                 <SfDropDownList PlaceHolder="Customer Name" ID="CustomerID" Value="@((string)(context as PredicateModel).Value)" DataSource="@Dropdown" TValue="string" TItem="Data">
-                    <DropDownListEvents ValueChange="@Change" TValue="string"></DropDownListEvents>
+                    <DropDownListEvents ValueChange="@Change" TItem="Data" TValue="string"></DropDownListEvents>
                     <DropDownListFieldSettings Value="CustomerID" Text="CustomerID"></DropDownListFieldSettings>
                 </SfDropDownList>
             </FilterTemplate>
@@ -268,7 +238,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
         public double? Freight { get; set; }
     }
 
-    public void Change(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string> args)
+    public void Change(@Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, Data> args)
     {
         if (args.Value == "All")
         {
@@ -280,10 +250,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
         }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows filtering using custom component
 ![Filterbar customcomponent](./images/filterbarcustom.PNG)
@@ -293,10 +260,7 @@ The following screenshot shows filtering using custom component
 You can change the default filter operator by extending `FilterSettings` property in the column.
 In the following sample, we have changed the default operator for CustomerID column as **contains** from **startswith**
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 
 <SfGrid @ref="@Grid" ID="Egrid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -332,23 +296,63 @@ In the following sample, we have changed the default operator for CustomerID col
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Filter with change in default operator as contains
 ![Default operator](./images/defaultoperator.PNG)
+
+### Filter Modes
+
+By default filter bar [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) will be of OnEnter type. So we need to press the Enter key after typing a value in the filter bar.
+
+You can also perform filtering operation without pressing Enter key in the filter bar by Setting the filter bar [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Mode) property as [`Immediate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterBarMode.html#Syncfusion_Blazor_Grids_FilterBarMode_Immediate).
+
+The [`ImmediateModeDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ImmediateModeDelay) property of [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) is used to define the time Grid has to wait for performing filter operation after completion of user typing word.
+
+```csharp
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
+    <GridFilterSettings Mode="FilterBarMode.Immediate" ImmediateModeDelay="300"></GridFilterSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+}
+
+```
 
 ## Filter menu
 
 You can enable filter menu by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of **GridFilterSettings** as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data.
 You can filter the records with different operators.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -383,10 +387,7 @@ You can filter the records with different operators.
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Menu filter
 ![Menu Filter](./images/menu-filter.png)
@@ -400,10 +401,7 @@ You can use **Menu** type filter in the datagrid. To do so, set the [`Type`](htt
 In the following sample the [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column.
 To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -446,10 +444,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot shows filter menu using custom component
 ![Filtermenu customcomponent](./images/Customfiltermenu.PNG)
@@ -458,10 +453,7 @@ The following screenshot shows filter menu using custom component
 
 The default filter operators for a GridColumn can be overridden by using the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the grid. In the below code, we have overridden the filter operators for the `CustomerID` column.
 
-{% tabs %}
-
-{% highlight c#%}
-
+```charp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -520,10 +512,7 @@ The default filter operators for a GridColumn can be overridden by using the [`O
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ### Enable different filter for a column
 
@@ -532,10 +521,7 @@ You can use different filter types such as **Menu**,**CheckBox** and **Excel** f
 
 In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`Filter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -570,10 +556,7 @@ In the following sample menu filter is enabled by default and checkbox filter is
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents CheckBox filter
 ![CheckBox Filter](./images/checkbox-filter.png)
@@ -586,14 +569,11 @@ To enable the checkbox list filtering in the DataGrid component by setting the [
 
 CheckBox filter contains an option such as searching and Clear filter.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="375">
-    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.Excel"></GridFilterSettings>
+    <GridFilterSettings Type="Syncfusion.Blazor.Grids.FilterType.CheckBox"></GridFilterSettings>
     <GridColumns>
         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
@@ -625,10 +605,7 @@ CheckBox filter contains an option such as searching and Clear filter.
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Checkbox filter
 ![CheckBox Type](./images/Checkboxtype.png)
@@ -637,10 +614,7 @@ The following screenshot represents Checkbox filter
 
 You can enable Excel like filter by defining [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Excel**.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true">
@@ -675,10 +649,7 @@ You can enable Excel like filter by defining [`Type`](https://help.syncfusion.co
     }
 }
 
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Excel filter
 ![Excel Filter](./images/excel-filter.png)
@@ -690,11 +661,7 @@ The following screenshot represents Custom filter in Excel filter
 
 This **`FilterItemTemplate`** helps to you customize the each CheckBox list element/value for display purpose. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [`FilterItemTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
 
-
-{% tabs %}
-
-{% highlight c# %}
-
+```charp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="375">
@@ -737,12 +704,53 @@ This **`FilterItemTemplate`** helps to you customize the each CheckBox list elem
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 The following screenshot represents Filter Item template
 ![Item Template](./images/ItemTemplate.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+
+<!-- Diacritics
+
+By default, datagrid ignores diacritic characters while filtering. To include diacritic characters, set the [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) [`IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) property to be true.
+In the following sample, type aero in [`CustomerID`] column to filter diacritic characters.
+
+```csharp
+@using Syncfusion.Blazor
+
+<SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
+    <GridFilterSettings IgnoreAccent="true"></GridFilterSettings>
+     <GridColumns>
+         <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" TextAlign="TextAlign.Center" Width="150"></GridColumn>
+         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="date" TextAlign="TextAlign.Center" Width="130"></GridColumn>
+         <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Center" Width="120"></GridColumn>
+     </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 5).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "Aeróbics", "Aerógrafía en Agua", "AerografÃ­a", "Aeromodelaje", "Ãerografía" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+                        OrderDate = (new DateTime[] { new DateTime(2010, 5, 1), new DateTime(2010, 5, 2), new DateTime(2010, 5, 3), })[new Random().Next(3)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public List<PredicateModel> Columns { get; set; }
+    }
+  }
+} -->

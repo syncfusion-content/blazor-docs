@@ -1,12 +1,3 @@
----
-layout: post
-title: Introduction in Blazor - Syncfusion
-description: Check out the documentation for Introduction in Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 # Syncfusion Blazor
 
 Welcome to Syncfusion Blazor!

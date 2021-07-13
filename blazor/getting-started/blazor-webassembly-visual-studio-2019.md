@@ -1,13 +1,4 @@
----
-layout: post
-title: Getting started with Syncfusion Blazor - Blazor WebAssembly App in Visual Studio 2019
-description: Check out the documentation for Getting started with Syncfusion Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
-<!-- markdownlint-disable MD024 -->
+ <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Blazor components in Blazor WebAssembly App using Visual Studio 2019
 
@@ -18,7 +9,7 @@ This article provides a step-by-step instructions about how to create Blazor Web
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 > **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
 >
@@ -68,19 +59,13 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 5. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     > Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
@@ -100,42 +85,27 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 4. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
          <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
-    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
+    ```
+    > **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/19.2.46/styles/bootstrap4.css).
 
 ## Adding Syncfusion Blazor component and running the application
 
 1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -151,22 +121,13 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
             }
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 3. Now, add the Syncfusion Blazor component in any web page (razor) in the `Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <SfCalendar TValue="DateTime"></SfCalendar>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 4. Run the application. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 

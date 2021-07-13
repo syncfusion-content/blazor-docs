@@ -1,12 +1,3 @@
----
-layout: post
-title: Adaptors in Blazor DataManager component - Syncfusion
-description: Checkout and learn about Adaptors in Blazor DataManager component of Syncfusion, and more details
-platform: Blazor
-component: DataManager
-documentation: ug
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Data Adaptors
@@ -25,10 +16,7 @@ The `JsonAdaptor` is used to query and manipulate object array.
 
 The following sample code demonstrates binding data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `JsonAdaptor`,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -64,10 +52,7 @@ The following sample code demonstrates binding data to the DataGrid component th
         new EmployeeData { EmployeeID = 10, Name = "Andrew Buchanan", Title = "Sales Representative" }
     };
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Url adaptor
 
@@ -75,10 +60,7 @@ The `UrlAdaptor` acts as the base adaptor for interacting with remote data servi
 
 The following sample code demonstrates binding data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `UrlAdaptor`,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -100,10 +82,7 @@ The following sample code demonstrates binding data to the DataGrid component th
         public string Title { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > The above provided url is given for reference purpose. In that place you can provide your service url.
 
@@ -111,18 +90,12 @@ The following sample code demonstrates binding data to the DataGrid component th
 
 The sample response object should be as follows,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 {
     "result": [{..}, {..}, {..}, ...],
     "count": 67
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## OData adaptor
 
@@ -130,10 +103,7 @@ The sample response object should be as follows,
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using OData service,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -155,10 +125,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
         public int EmployeeID { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > By default, `ODataAdaptor` is used by DataManager.
 
@@ -168,10 +135,7 @@ The ODataV4 is an improved version of OData protocols and the [`SfDataManager`](
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using ODataV4 service,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -193,10 +157,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
         public int EmployeeID { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Web API adaptor
 
@@ -206,10 +167,7 @@ To enable OData query option for Web API, please refer to this [`documentation`]
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web API service,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -233,27 +191,18 @@ The following sample code demonstrates binding remote data to the DataGrid compo
         public double? Freight { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 `WebApiAdaptor` expects JSON response from the server and the response object should contain properties `Items` and `Count` whose values are collection of entities and total count of the entities respectively.
 
 The sample response object should look like below.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 {
     "Items": [{..}, {..}, {..}, ...],
     "Count": 830
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## WebMethod adaptor
 
@@ -263,10 +212,7 @@ To enable OData query option for Web API, please refer to this [`documentation`]
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web method service,
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -290,10 +236,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
         public string Country { get; set; }
     }
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > The above provided url is given for reference purpose. In that place you can provide your service url.
 
@@ -301,18 +244,12 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 
 The sample response object should look like below.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 {
     "result": [{..}, {..}, {..}, ...],
     "count": 830
 }
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > The controller method’s data parameter name must be `value`.
 
