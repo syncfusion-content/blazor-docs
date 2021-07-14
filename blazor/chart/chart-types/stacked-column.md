@@ -13,9 +13,42 @@ documentation: ug
 
 [`Blazor Stacked Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. Shows the relation between individual values to the total sum of the points. To render a [`Stacked Column`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn).
 
-{% aspTab template="chart/series/column-charts/stackedcolumn", sourceFiles="stackedcolumn.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+        new ChartData { X= "USA", YValue= 46, YValue1=56 },
+        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
+        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
+        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
+        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
+        new ChartData { X= "IND", YValue= 26, YValue1=16 },
+        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
+        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+    };
+}
+
+{% endhighlight %}
 
 ![Stacked Column](../images/chart-types-images/stacked-column.png)
 
@@ -25,9 +58,45 @@ documentation: ug
 
 [`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group the stacked columns and 100% stacked columns. Columns with same group name are stacked on top of each other.
 
-{% aspTab template="chart/series/column-charts/group", sourceFiles="group.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue1" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group2" XName="X" YName="YValue2" Type="ChartSeriesType.StackingColumn">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+        public double YValue2 { get; set; }
+    }
+
+    public List<ChartData> DataSource = new List<ChartData>
+	{
+        new ChartData { X= "USA", YValue= 46, YValue1=56, YValue2=26},
+        new ChartData { X= "GBR", YValue= 27, YValue1=17, YValue2=37},
+        new ChartData { X= "CHN", YValue= 26, YValue1=36, YValue2=56},
+        new ChartData { X= "UK", YValue= 56,  YValue1=16, YValue2=36},
+        new ChartData { X= "AUS", YValue= 12, YValue1=46, YValue2=26},
+        new ChartData { X= "IND", YValue= 26, YValue1=16, YValue2=76},
+        new ChartData { X= "DEN", YValue= 26, YValue1=12, YValue2=42},
+        new ChartData { X= "MEX", YValue= 34, YValue1=32, YValue2=82 },
+    };
+}
+
+{% endhighlight %}
 
 ![Stacking Group](../images/chart-types-images/groupcolumn.png)
 
@@ -40,9 +109,44 @@ The following properties can be used to customize the [`Stacked Column`](https:/
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-{% aspTab template="chart/series/column-charts/custom-column", sourceFiles="custom-stacked-column.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="blue" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" XName="X" DashArray="5,5" Fill="green" Opacity="0.7" YName="YValue" Type="ChartSeriesType.StackingColumn">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+    }
+
+    public List<ChartData> DataSource = new List<ChartData>
+    {
+        new ChartData { X= "USA", YValue= 46, YValue1=56 },
+        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
+        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
+        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
+        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
+        new ChartData { X= "IND", YValue= 26, YValue1=16 },
+        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
+        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+    };
+}
+
+{% endhighlight %}
 
 ![Custom Stacked Column](../images/chart-types-images/custom-stacked-column.png)
 

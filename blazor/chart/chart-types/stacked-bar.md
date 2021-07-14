@@ -13,9 +13,42 @@ documentation: ug
 
 [`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is a chart with Y values stacked over one another in the series order. Shows the relation between individual values to the total sum of the points. To render a [`Stacked Bar`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StackingBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingBar).
 
-{% aspTab template="chart/series/bar-charts/stackedbar", sourceFiles="stackedbar.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" Type="ChartSeriesType.StackingBar">
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" Type="ChartSeriesType.StackingBar">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+    {
+        new ChartData { X= "USA", YValue= 46, YValue1=56 },
+        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
+        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
+        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
+        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
+        new ChartData { X= "IND", YValue= 26, YValue1=16 },
+        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
+        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+    };
+}
+
+{% endhighlight %}
 
 ![Stacked Bar](../images/chart-types-images/stackedbar.png)
 
@@ -25,9 +58,45 @@ documentation: ug
 
 [`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group the stacked bar and 100% stacked bar. Columns with same group name are stacked on top of each other.
 
-{% aspTab template="chart/series/bar-charts/group", sourceFiles="group.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue" Type="ChartSeriesType.StackingBar">
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group1" XName="X" YName="YValue1" Type="ChartSeriesType.StackingBar">
+        </ChartSeries>
+        <ChartSeries DataSource="@DataSource" StackingGroup="Group2" XName="X" YName="YValue2" Type="ChartSeriesType.StackingBar">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+        public double YValue2 { get; set; }
+    }
+
+    public List<ChartData> DataSource = new List<ChartData>
+{
+        new ChartData { X= "USA", YValue= 46, YValue1=56, YValue2=26},
+        new ChartData { X= "GBR", YValue= 27, YValue1=17, YValue2=37},
+        new ChartData { X= "CHN", YValue= 26, YValue1=36, YValue2=56},
+        new ChartData { X= "UK", YValue= 56,  YValue1=16, YValue2=36},
+        new ChartData { X= "AUS", YValue= 12, YValue1=46, YValue2=26},
+        new ChartData { X= "IND", YValue= 26, YValue1=16, YValue2=76},
+        new ChartData { X= "DEN", YValue= 26, YValue1=12, YValue2=42},
+        new ChartData { X= "MEX", YValue= 34, YValue1=32, YValue2=82 },
+    };
+}
+
+{% endhighlight %}
 
 ![Stacking Group](../images/chart-types-images/groupbar.png)
 
@@ -40,9 +109,44 @@ The following properties can be used to customize the [`Stacked Bar`](https://he
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-{% aspTab template="chart/series/bar-charts/custom-bar", sourceFiles="custom-stacked-bar.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue" DashArray="5,5" Fill="blue" Opacity="0.7" Type="ChartSeriesType.StackingBar">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        </ChartSeries>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="YValue1" DashArray="5,5" Fill="green" Opacity="0.7" Type="ChartSeriesType.StackingBar">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double YValue { get; set; }
+        public double YValue1 { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+    {
+        new ChartData { X= "USA", YValue= 46, YValue1=56 },
+        new ChartData { X= "GBR", YValue= 27, YValue1=17 },
+        new ChartData { X= "CHN", YValue= 26, YValue1=36 },
+        new ChartData { X= "UK", YValue= 56,  YValue1=16 },
+        new ChartData { X= "AUS", YValue= 12, YValue1=46 },
+        new ChartData { X= "IND", YValue= 26, YValue1=16 },
+        new ChartData { X= "DEN", YValue= 26, YValue1=12 },
+        new ChartData { X= "MEX", YValue= 34, YValue1=32},
+    };
+}
+
+{% endhighlight %}
 
 ![Custom Stacked bar](../images/chart-types-images/custom-stacked-bar.png)
 

@@ -24,6 +24,45 @@ To display the text placing center of the doughnut, `ContentTemplate` should be 
         </AccumulationChartAnnotations>
 ```
 
-{% aspTab template="chart/accumulation-charts/how-to/do-nut", sourceFiles="do-nut.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<div class="col-6">
+    <SfAccumulationChart>
+        <AccumulationChartAnnotations>
+            <AccumulationChartAnnotation X="40%" Y="48%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
+                <ContentTemplate>
+                    <div class="donut-text">Chart Annotation</div>
+                </ContentTemplate>
+            </AccumulationChartAnnotation>
+        </AccumulationChartAnnotations>
+        <AccumulationChartSeriesCollection>
+            <AccumulationChartSeries InnerRadius="60%" Name="@nameof(MyDataModel.XValue)" DataSource="@chartData" YName="@nameof(MyDataModel.YValue)" XName="@nameof(MyDataModel.XValue)"></AccumulationChartSeries>
+        </AccumulationChartSeriesCollection>
+    </SfAccumulationChart>
+</div>
+<style>
+    .donut-text {
+        align-content: center;
+    }
+</style>
+@code {
+    public class MyDataModel
+    {
+        public int XValue { get; set; }
+        public int YValue { get; set; }
+    }
+    private Random rnd = new Random();
+    public List<MyDataModel> chartData = new List<MyDataModel>();
+
+    protected override async Task OnInitializedAsync()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            chartData.Add(new MyDataModel() { XValue = i, YValue = rnd.Next(10, 100) });
+        }
+    }
+}
+
+```

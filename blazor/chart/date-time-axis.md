@@ -15,9 +15,36 @@ documentation: ug
 
  Date time axis uses date time scale and displays the date time values as axis labels in the specified format.
 
-{% aspTab template="chart/axis/datetime/dateTime", sourceFiles="datetime.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set;}
+        public double YValue {get; set;}
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 ![DateTime Axis](images/datetime/datetime.png)
 
@@ -25,9 +52,36 @@ documentation: ug
 
 Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone can been depicted in a week here.
 
-{% aspTab template="chart/axis/datetime/datetimeCategory", sourceFiles="dateCategory.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis Skeleton="Ed" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTimeCategory">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue{ get; set; }
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 ### Range
 
@@ -35,9 +89,36 @@ Range for the axis, will be calculated automatically based on the provided data,
 of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
 [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Interval) property of the axis.
 
-{% aspTab template="chart/axis/datetime/range", sourceFiles="range.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis Interval="1" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 ![Range](images/datetime/range.png)
 
@@ -56,9 +137,36 @@ DateTime axis supports following Interval types,
 * Minutes
 * Seconds
 
-{% aspTab template="chart/axis/datetime/interval", sourceFiles="interval.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis IntervalType="IntervalType.Years" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set;}
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 **Applying Padding to the Range**
 
@@ -74,9 +182,36 @@ of padding,
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **None**, minimum and maximum of the axis is based on the data.
 
-{% aspTab template="chart/axis/datetime/none", sourceFiles="none.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis RangePadding="ChartRangePadding.None" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 **DateTime - Round**
 
@@ -84,26 +219,105 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 rounded to the nearest possible value divisible by interval. For example, when the minimum is 15th Jan, interval is
 1 and the interval type is ‘month’, then the axis minimum will be Jan 1st.
 
-{% aspTab template="chart/axis/datetime/round", sourceFiles="round.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis RangePadding="ChartRangePadding.Round" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 **DateTime - Additional**
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Additional**, interval of an axis will
 be padded to the minimum and maximum of the axis.
 
-{% aspTab template="chart/axis/datetime/additional", sourceFiles="additional.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis RangePadding="ChartRangePadding.Additional" 
+                       ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="@nameof(ChartData.XValue)" YName=@nameof(ChartData.YValue)/>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 ## Label Format
 
 You can format and parse the date to all globalize format using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelFormat) property in an axis.
 
-{% aspTab template="chart/axis/datetime/label-format", sourceFiles="label-format.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Width="60%">
+    <ChartPrimaryXAxis LabelFormat="d" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"/>
+    
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="XValue" YName="YValue" />        
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+     new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+     new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+     new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+     new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+   };
+}
+
+{% endhighlight %}
 
 The following table describes the result of applying some common date time formats to the labelFormat property
 

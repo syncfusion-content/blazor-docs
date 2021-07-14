@@ -425,17 +425,29 @@ When [`LoadChildOnDemand`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 The following code example describes the behavior of the `LoadChildOnDemand` feature of Tree Grid.
 
-{% aspTab template="tree-grid/loadchildondemand", sourceFiles="index.razor,treegriddata.cs,DefaultController.cs" %}
+```csharp
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid @ref="grid" TValue="SelfReferenceData" LoadChildOnDemand="true" HasChildMapping="isParent" Height="315" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true">
+    <SfDataManager Url="api/Default" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <TreeGridPageSettings PageSize="2"></TreeGridPageSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+```
 
 <!-- Custom Adaptor
 
 You can create your own adaptor by extending the built-in adaptors. The following demonstrates custom adaptor approach and how to add a serial number for the records by overriding the built-in response processing using the **processResponse** method of the **ODataAdaptor**.
 
-{% aspTab template="tree-grid/data-binding-mvc/customadaptor", sourceFiles="customadaptor.cs" %}
-
-{% endaspTab %}
 -->
 
 ### Sending additional parameters to the Rest Web Services
@@ -489,10 +501,6 @@ During server interaction from the tree grid, some server-side exceptions may oc
 in client-side using the [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event.
 
 The argument passed to the [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event contains the error details returned from the server.
-
-{% aspTab template="tree-grid/data-binding-mvc/http-error", sourceFiles="http-error.cs" %}
-
-{% endaspTab %}
 
 > The [`ActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionFailure.html) event will be triggered not only for the server errors, but
 also when there is an exception while processing the tree grid actions.

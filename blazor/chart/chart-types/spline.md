@@ -13,9 +13,42 @@ documentation: ug
 
 [`Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) connects the data points with smooth curves. To render a [`Spline Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline).
 
-{% aspTab template="chart/series/line-charts/spline", sourceFiles="spline.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Spline">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+{% endhighlight %}
 
 ![Spline](../images/chart-types-images/spline.png)
 
@@ -25,9 +58,42 @@ documentation: ug
 
 To specify the type of [`Spline Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Spline) use [`SplineType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SplineType) property. The spline [`types`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html) are **Clamped**, **Cardinal**, **Monotonic** and **Natural**.
 
-{% aspTab template="chart/series/line-charts/spline", sourceFiles="splinetype.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals" Width="60%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Spline" SplineType="SplineType.Cardinal">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X;
+        public double Y;
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+{% endhighlight %}
 
 ![Cardinal](../images/chart-types-images/cardinal.png)
 
@@ -40,9 +106,43 @@ The following properties can be used to customize the [`Spline`](https://help.sy
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
-{% aspTab template="chart/series/line-charts/spline", sourceFiles="custom-spline.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals" Width="60%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Width="3" Opacity="0.5"
+                     DashArray="5,5" Fill="blue" Type="ChartSeriesType.Spline">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X;
+        public double Y;
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+{% endhighlight %}
 
 ![Custom Spline](../images/chart-types-images/custom-spline.png)
 

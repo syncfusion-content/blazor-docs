@@ -20,9 +20,32 @@ The number of records displayed in the Tree Grid is determined implicitly by hei
 
 Expand and Collapse state of any child record will be persisted.
 
-{% aspTab template="tree-grid/virtualization", sourceFiles="index.razor,treegriddata.cs" %}
+```csharp
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+
+<SfTreeGrid TValue="VirtualData" DataSource="@TreeGridData" ChildMapping="Children" EnableVirtualization="true" Height="350" TreeColumnIndex="1">
+        <TreeGridColumns>
+            <TreeGridColumn Field="TaskID" HeaderText="Player Jersey" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field="FIELD1" HeaderText="Player Name" Width="100"></TreeGridColumn>
+            <TreeGridColumn Field="FIELD2" HeaderText="Year" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field="FIELD3" HeaderText="Stint" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+            <TreeGridColumn Field="FIELD4" HeaderText="TMID" Width="80"></TreeGridColumn>
+        </TreeGridColumns>
+    </SfTreeGrid>
+
+@code{
+    public VirtualData[] TreeGridData { get; set; }   
+
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = VirtualData.GetVirtualData().ToArray();
+    } 
+}
+
+```
 
 The following output is displayed as a result of the above code example.
 

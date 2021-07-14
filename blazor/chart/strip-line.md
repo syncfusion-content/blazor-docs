@@ -20,9 +20,47 @@ Blazor chart supports horizontal and vertical strip lines and customization of s
 You can create horizontal stripline by adding the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the vertical axis.
 Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
 
-{% aspTab template="chart/axis/strip-line/horizontal", sourceFiles="horizontal.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
+
+    <ChartPrimaryYAxis>
+        <ChartStriplines>
+            <ChartStripline Start="20" End="25" Color="red"/>
+            <ChartStripline Start="32" End="35" Color="blue"/>
+        </ChartStriplines>
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Type="ChartSeriesType.Column" DataSource="@WeatherReports" XName="X" YName="Y">
+        </ChartSeries>
+    </ChartSeriesCollection>
+
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+    new ChartData { X = "Sun", Y = 28 },
+    new ChartData { X = "Mon", Y = 27 },
+    new ChartData { X = "Tue", Y = 33 },
+    new ChartData { X = "Wed", Y = 36 },
+    new ChartData { X = "Thu", Y = 28 },
+    new ChartData { X = "Fri", Y = 30 },
+    new ChartData { X = "Sat", Y = 31 }
+    };
+}
+
+{% endhighlight %}
 
 ![Horizontal Strip lines](images/strip-line/horizontal.png)
 
@@ -30,9 +68,45 @@ Striplines are rendered in the specified start to end range and you can add more
 
 You can create vertical stripline by adding the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the horizontal axis. Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
 
-{% aspTab template="chart/axis/strip-line/vertical", sourceFiles="vertical.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartStriplines>
+            <ChartStripline Start="2" End="3" Color="#EEFFCC" />
+            <ChartStripline Start="4" End="5" Color="pink" />
+        </ChartStriplines>
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Type="ChartSeriesType.Column" DataSource="@WeatherReports" XName="X" YName="Y">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+    {
+    new ChartData { X = "Sun", Y = 28 },
+    new ChartData { X = "Mon", Y = 27 },
+    new ChartData { X = "Tue", Y = 33 },
+    new ChartData { X = "Wed", Y = 36 },
+    new ChartData { X = "Thu", Y = 28 },
+    new ChartData { X = "Fri", Y = 30 },
+    new ChartData { X = "Sat", Y = 31 }
+    };
+
+}
+
+{% endhighlight %}
 
 ![Vertical Striplines](images/strip-line/vertical.png)
 
@@ -44,9 +118,45 @@ Size and border of the strip line can be customized by [`Size`](https://help.syn
 Order of the strip line such that whether it should be rendered  behind or over the series elements
 can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_ZIndex) property.
 
-{% aspTab template="chart/axis/strip-line/custom-stripline", sourceFiles="custom-stripline.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartStriplines>
+            <ChartStripline StartFromAxis="true" Size="4" ZIndex="ZIndex.Behind" Opacity="0.5" Color="green"/>
+        </ChartStriplines>
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Type="ChartSeriesType.Column" DataSource="@WeatherReports" XName="X" YName="Y">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+    new ChartData { X = "Sun", Y = 28 },
+    new ChartData { X = "Mon", Y = 27 },
+    new ChartData { X = "Tue", Y = 33 },
+    new ChartData { X = "Wed", Y = 36 },
+    new ChartData { X = "Thu", Y = 28 },
+    new ChartData { X = "Fri", Y = 30 },
+    new ChartData { X = "Sat", Y = 31 }
+};
+
+}
+
+{% endhighlight %}
 
 ![Customize the strip line](images/strip-line/custom-stripline.png)
 
@@ -55,9 +165,48 @@ can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion
 You can customize and rotate the text rendered in stripline by [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_TextStyle) and [`Rotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripLine.html) properties.
 Horizontal and Vertical alignment of stripline text can be customized by [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_VerticalAlignment) property.
 
-{% aspTab template="chart/axis/strip-line/custom-striptext", sourceFiles="custom-striptext.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        <ChartStriplines>
+            <ChartStripline StartFromAxis="true" Size="4" ZIndex="ZIndex.Behind" Opacity="0.5" Color="green" Text="Good"
+                            HorizontalAlignment="Anchor.Middle" VerticalAlignment="Anchor.Middle">
+                <ChartStriplineTextStyle Size="15px"/>
+            </ChartStripline>
+        </ChartStriplines>
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Type="ChartSeriesType.Column" DataSource="@WeatherReports" XName="X" YName="Y">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+    new ChartData { X = "Sun", Y = 28 },
+    new ChartData { X = "Mon", Y = 27 },
+    new ChartData { X = "Tue", Y = 33 },
+    new ChartData { X = "Wed", Y = 36 },
+    new ChartData { X = "Thu", Y = 28 },
+    new ChartData { X = "Fri", Y = 30 },
+    new ChartData { X = "Sat", Y = 31 }
+};
+
+}
+
+{% endhighlight %}
 
 ![Customize the strip line](images/strip-line/custom-striptext.png)
 

@@ -22,9 +22,39 @@ It supports the following kinds of data binding method:
 [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName)
 properties.
 
-{% aspTab template="chart/axis/working-data/local-data", sourceFiles="local-data.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Inflation - Consumer Price" Width="60%">
+    <ChartPrimaryXAxis IntervalType="IntervalType.Years" LabelFormat="y" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ConsumerReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public DateTime XValue { get; set; }
+        public double YValue { get; set; }
+    }
+
+    public List<ChartData> ConsumerReports = new List<ChartData>
+    {
+            new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+            new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+            new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+            new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+            new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
+            new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
+            new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
+        };
+}
+
+
+{% endhighlight %}
 
 ![Local Data](images/working-data/local-data.png)
 
@@ -69,9 +99,23 @@ Chart is a generic component which is strongly bound to a model type. There are 
 
 To bind remote data to chart component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to the `DataSource` property. To interact with remote data source, provide the endpoint Url.
 
-{% aspTab template="chart/axis/working-data/remote-data", sourceFiles="remote-data.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
+
+    <ChartPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
+                       RangePadding="ChartRangePadding.Additional"></ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries XName="OrderID" YName="Freight" Type="ChartSeriesType.Column"></ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+{% endhighlight %}
 
 ### Binding with OData services
 
@@ -355,17 +399,89 @@ On the other hand, to configure the chart using Web API, provide the appropriate
 
 Data points with NaN values are regarded as empty points. By using [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) property in series, you can customize the empty point. Default Empty Point [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html) is `Gap`.
 
-{% aspTab template="chart/axis/working-data/empty-points", sourceFiles="empty-points.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Inflation - Consumer Price" Width="60%">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@ConsumerReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Column">
+            <ChartEmptyPointSettings Fill="blue" Mode="@mode"></ChartEmptyPointSettings>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public String XValue { get; set; }
+        public double YValue { get; set; }
+    }
+    public EmptyPointMode mode = EmptyPointMode.Average;
+    public List<ChartData> ConsumerReports = new List<ChartData> {
+            new ChartData { XValue = "Rice", YValue = 80 },
+            new ChartData { XValue = "Wheat", YValue = Double.NaN },
+            new ChartData { XValue = "Oil", YValue = 70 },
+            new ChartData { XValue = "Corn", YValue = 60 },
+            new ChartData { XValue = "Gram", YValue = Double.NaN },
+            new ChartData { XValue = "Milk", YValue = 70 },
+            new ChartData { XValue = "Peas", YValue = 80 },
+            new ChartData { XValue = "Fruit", YValue = 60 },
+            new ChartData { XValue = "Butter", YValue = Double.NaN },
+        };
+}
+
+{% endhighlight %}
 
 **Customizing empty point**
 
 Specific color and border for empty point can be set by [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) properties in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings).
 
-{% aspTab template="chart/axis/working-data/custom-emptypoint", sourceFiles="custom-emptypoint.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="ChartSeriesType.Column">
+            <ChartEmptyPointSettings Fill="blue" Mode="@Mode"></ChartEmptyPointSettings>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string Month { get; set; }
+        public Nullable<double> Sales { get; set; }
+    }
+    public EmptyPointMode Mode = EmptyPointMode.Average;
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+    new ChartData{ Month="Jan", Sales= 35 },
+    new ChartData{ Month= "Feb", Sales= 28 },
+    new ChartData{ Month="Mar", Sales=null },
+    new ChartData{ Month="Apr", Sales=32 },
+    new ChartData{ Month="May", Sales=40 },
+    new ChartData{ Month= "Jun", Sales=32 },
+    new ChartData{ Month="Jul", Sales=35 },
+    new ChartData{ Month="Aug", Sales=null },
+    new ChartData{ Month="Sep", Sales=38 },
+    new ChartData{ Month="Oct", Sales=30 },
+    new ChartData{ Month="Nov", Sales=25 },
+    new ChartData{ Month= "Dec", Sales=32 }
+    };
+}
+
+
+{% endhighlight %}
 
 ![Empty points](images/working-data/custom-emptypoint.png)
 

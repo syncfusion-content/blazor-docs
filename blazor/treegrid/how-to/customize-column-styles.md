@@ -30,9 +30,45 @@ Create a CSS class with custom style to override the default style for rowcell a
 
 Add the custom CSS class to the specified column by using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 
-{% aspTab template="tree-grid/how-to/column-styles", sourceFiles="index.razor,treegriddata.cs" %}
+```csharp
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using  Syncfusion.Blazor.Grids;
+@using  Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" 
+            TreeColumnIndex="1" AllowPaging="true" Height="200">
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" CustomAttributes="@(new Dictionary<string, object>() { { "class", "e-attr" } })" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+<style>
+    .e-attr {
+        background: #5DADE2;
+        font-family: "Bell MT";
+        color: red;
+        font-size: 5px;
+    }
+</style>
+
+
+@code{
+        SfTreeGrid<TreeData> TreeGrid;
+
+    public List<TreeData> TreeGridData { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+}
+
+```
 
 Output be like the below.
 

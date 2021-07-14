@@ -13,9 +13,40 @@ documentation: ug
 
 [`Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) is the most commonly used chart type to compare different categories of data, such as  **Frequency**, **Count**, **Total**, or **Average** displayed in horizontal bars. It is ideal for showing variations in the value of an item over time.
 
-{% aspTab template="chart/series/bar-charts/bar", sourceFiles="bar.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">    
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="Country" YName="Gold" Type="ChartSeriesType.Bar">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string Country { get; set; }
+        public double Gold { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+{
+    new ChartData{ Country= "USA", Gold=50  },
+    new ChartData{ Country="China", Gold=40 },
+    new ChartData{ Country= "Japan", Gold=70 },
+    new ChartData{ Country= "Australia", Gold=60},
+    new ChartData{ Country= "France", Gold=50 },
+    new ChartData{ Country= "Germany", Gold=40 },
+    new ChartData{ Country= "Italy", Gold=40 },
+    new ChartData{ Country= "Sweden", Gold=30 }
+    };
+}
+
+```
 
 > Refer to our Blazor [`Bar Charts`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our Blazor [`Bar Chart Example`](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
 

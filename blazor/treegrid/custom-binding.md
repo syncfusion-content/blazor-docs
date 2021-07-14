@@ -75,9 +75,75 @@ The custom data binding can be performed in the Tree Grid component by providing
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-{% aspTab template="tree-grid/custom-binding/data-binding", sourceFiles="index.razor,treegriddata.cs" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor;
+
+<SfTreeGrid TValue="SelfReferenceData" AllowFiltering="true" HasChildMapping="isParent" IdMapping="TaskID" ParentIdMapping="ParentID"
+ TreeColumnIndex="1" AllowPaging="true" AllowSorting="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <TreeGridPageSettings PageSize="3"></TreeGridPageSettings>
+    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar"></TreeGridFilterSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="88" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public static List<SelfReferenceData> TreeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TreeData = SelfReferenceData.GetTree().ToList();
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<SelfReferenceData> DataSource = TreeData;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<SelfReferenceData>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }        
+    }
+}
+
+{% endhighlight %}
 
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 > If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
@@ -179,9 +245,32 @@ Ensure to register your service in **Startup.cs** file.
 
 The following sample code demonstrates creating Custom Adaptor as a component,
 
-{% aspTab template="tree-grid/custom-binding/custom-component", sourceFiles="index.razor,CustomAdaptorComponent.razor,treegriddata.cs" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor;
+
+<SfTreeGrid TValue="SelfReferenceData" AllowFiltering="true" HasChildMapping="isParent" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1" AllowPaging="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <SfDataManager Adaptor="Adaptors.CustomAdaptor">
+        <CustomAdaptorComponent></CustomAdaptorComponent>
+    </SfDataManager>
+    <TreeGridPageSettings PageSize="3"></TreeGridPageSettings>
+    <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
+    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar"></TreeGridFilterSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="88" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+{% endhighlight %}
 
 The following sample code demonstrates `DataAdaptor` extended from `OwningComponentBase`. This provides the possibility to request multiple services.
 
@@ -251,6 +340,104 @@ The CRUD operations for the custom bounded data in the Tree Grid component can b
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
-{% aspTab template="tree-grid/custom-binding/crud", sourceFiles="index.razor,treegriddata.cs" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@using Syncfusion.Blazor.Data;
+@using Syncfusion.Blazor.Grids;
+@using Syncfusion.Blazor;
+
+<SfTreeGrid TValue="SelfReferenceData" AllowFiltering="true" HasChildMapping="isParent" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1"
+ AllowPaging="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel", "Search" })">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <TreeGridPageSettings PageSize="3"></TreeGridPageSettings>
+    <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"></TreeGridEditSettings>
+    <TreeGridFilterSettings Type="Syncfusion.Blazor.TreeGrid.FilterType.FilterBar"></TreeGridFilterSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" IsPrimaryKey="true" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="145"></TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="88" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public static List<SelfReferenceData> TreeData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        TreeData = SelfReferenceData.GetTree().ToList();
+    }
+
+        // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<SelfReferenceData> DataSource = TreeData;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<SelfReferenceData>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+
+
+        // Performs Insert operation
+        public override object Insert(DataManager dm, object value, string key)
+        {
+            TreeData.Insert(0, value as SelfReferenceData);
+            return value;
+        }
+
+        // Performs Remove operation
+        public override object Remove(DataManager dm, object value, string keyField, string key)
+        {
+            TreeData.Remove(TreeData.Where(or => or.TaskID == int.Parse(value.ToString())).FirstOrDefault());
+            return value;
+        }
+
+        // Performs Update operation
+        public override object Update(DataManager dm, object value, string keyField, string key)
+        {
+            var data = TreeData.Where(or => or.TaskID == (value as SelfReferenceData).TaskID).FirstOrDefault();
+            if (data != null)
+            {
+                data.TaskID = (value as SelfReferenceData).TaskID;
+                data.TaskName = (value as SelfReferenceData).TaskName;
+                data.StartDate = (value as SelfReferenceData).StartDate;
+                data.Duration = (value as SelfReferenceData).Duration;
+                data.Priority = (value as SelfReferenceData).Priority;
+                data.Progress = (value as SelfReferenceData).Progress;
+            }
+            return value;
+        }
+    }
+}
+
+{% endhighlight %}

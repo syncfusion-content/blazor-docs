@@ -13,9 +13,52 @@ You can create the Custom toolbar items with text name same as default toolbar i
 
 This is demonstrated in the below sample code where we have custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when TreeGridEditSettings is defined in TreeGrid. So custom toolbar will be disabled state considering it as default toolbar item. We have overcome that behaviour by defining the Id property.
 
-{% aspTab template="tree-grid/how-to/custom-toolbar-text", sourceFiles="index.razor,treegriddata.cs" %}
+```csharp
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using  Syncfusion.Blazor.Grids;
+@using  Syncfusion.Blazor.TreeGrid;
+
+@{
+    List<Syncfusion.Blazor.Navigations.ItemModel> Toolbaritems = new List<Syncfusion.Blazor.Navigations.ItemModel>();
+    Toolbaritems.Add(new Syncfusion.Blazor.Navigations.ItemModel() { Text = "Add", Id = "add", TooltipText = "Add Record", PrefixIcon = "add" });
+    Toolbaritems.Add(new Syncfusion.Blazor.Navigations.ItemModel() { Text = "Delete", Id = "delete", TooltipText = "Delete Record", PrefixIcon = "delete" });
+}
+<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true"
+            TreeColumnIndex="1" Toolbar="Toolbaritems">
+    <TreeGridEvents OnToolbarClick="ToolbarClickHandler" TValue="TreeData"></TreeGridEvents>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="85"></TreeGridColumn>
+        <TreeGridColumn Field="Resources" HeaderText="Resource" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duation" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="70"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    SfTreeGrid<TreeData> TreeGrid;
+
+    public List<TreeData> TreeGridData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Text == "Add")
+        {
+            //perform your actions here
+        }
+        if (args.Item.Text == "Delete")
+        {
+            //perform your actions here
+        }
+    }
+}
+
+```
 
 Output be like the below.
 

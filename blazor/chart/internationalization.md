@@ -26,9 +26,51 @@ chart component using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Sync
 
 In the below example, axis, point  and tooltip labels are globalized to EUR.
 
-{% aspTab template="chart/number-format", sourceFiles="number-format.razor" %}
+@using Syncfusion.Blazor.Charts
 
-{% endaspTab %}
+<SfChart Title="Average Sales Comparison">
+    <ChartPrimaryXAxis Title="Year"></ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis LabelFormat="c" Title="Sales Amount in Millions">
+    </ChartPrimaryYAxis>
+
+    <ChartTooltipSettings Enable="true" Format="${series.name} <br>${point.x} : ${point.y}">
+    </ChartTooltipSettings>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Column" Name="Product X">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y1" Type="ChartSeriesType.Column" Name="Product Y">
+            <ChartMarker>
+                <ChartDataLabel Visible="true"></ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+        public double Y1 { get; set; }
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+{
+         new ChartData {X= 1900, Y= 4, Y1= 2.6 },
+         new ChartData{ X= 1920, Y= 3.0, Y1= 2.8 },
+         new ChartData{ X= 1940, Y= 3.8, Y1= 2.6},
+         new ChartData{ X= 1960, Y= 3.4, Y1= 3 },
+         new ChartData{ X= 1980, Y= 3.2, Y1= 3.6 },
+         new ChartData{ X= 2000, Y= 3.9, Y1= 3 }
+    };
+}
+
+```
 
 ![Globalization](images/internationalization.png)
 

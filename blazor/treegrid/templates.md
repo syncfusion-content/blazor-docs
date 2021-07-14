@@ -22,9 +22,42 @@ The available template options in tree grid are as follows,
 
 To use templates, the tree grid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the tree grid component as follows.
 
-{% aspTab template="tree-grid/temp/temptype", sourceFiles="index.razor,treegriddata.cs" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid ModelType="@model" Height="400" DataSource="@TreeData" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="0">
+    <TreeGridColumns>
+        <TreeGridColumn Field="Name" HeaderText="Name" Width="160">
+            <HeaderTemplate>
+                <div class="rating">
+                    <span class="star"></span> DOB
+                </div>
+            </HeaderTemplate>
+        </TreeGridColumn>
+        <TreeGridColumn Field="Designation" HeaderText="Designation" Width="120"></TreeGridColumn>
+        <TreeGridColumn Field="EmpID" HeaderText="Progress" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
+        </TreeGridColumns>
+</SfTreeGrid>
+
+<style>
+    .rating .star:before {
+        content: '★';
+    }
+</style>
+
+@code{
+    public Employee model = new Employee();
+    public IEnumerable<Employee> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = Employee.GetTemplateData();
+    }
+}
+
+{% endhighlight %}
 
 The following output is displayed as a result of the above code example.
 
@@ -36,9 +69,42 @@ Most of the templates used by tree grid are of type `RenderFragment<T>` and they
 
 For example, you can access the data of the column template using `context` as follows.
 
-{% aspTab template="tree-grid/temp/tempcontext", sourceFiles="index.razor,treegriddata.cs" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+
+<SfTreeGrid ModelType="@model" Height="400" DataSource="@TreeData" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="0">
+    <TreeGridColumns>
+        <TreeGridColumn Field="Name" HeaderText="Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn HeaderText="Employee Image" Width="80">
+            <Template>
+                @{
+                    var employee = (context as Employee);
+                    <div class="image">
+                        <img src="@UriHelper.ToAbsoluteUri($"images/TreeGrid/{employee.Name}.png")" alt="@employee.EmployeeID" />
+                    </div>
+                }
+            </Template>
+        </TreeGridColumn>
+        <TreeGridColumn Field="DOB" HeaderText="DOB" Width="10" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="yMd"></TreeGridColumn>
+        <TreeGridColumn Field="Designation" HeaderText="Designation" Width="120"></TreeGridColumn>
+        <TreeGridColumn Field="EmpID" HeaderText="Progress" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public Employee model = new Employee();
+    public IEnumerable<Employee> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = Employee.GetTemplateData();
+    }
+}
+
+{% endhighlight %}
 
 The following output is displayed as a result of the above code example.
 
@@ -50,9 +116,62 @@ If a component contains any `RenderFragment` type property then it does not allo
 
 This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendent of Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
-{% aspTab template="tree-grid/temp/tempcomponent", sourceFiles="index.razor,treegriddata.cs" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+
+<SfTreeGrid ModelType="@model" Height="335" DataSource="@TreeData" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="0" RowHeight="83" GridLines="@GridLine.Vertical">
+    <TreeGridTemplates>
+        <RowTemplate>
+           @{
+            var employee = (context as Employee);
+
+            <td style='padding-left:18px; border-bottom: 0.5px solid #e0e0e0;'>
+                <div>@employee.EmpID</div>
+            </td>
+            <td style='padding: 10px 0px 0px 20px; border-bottom: 0.5px solid #e0e0e0;'>
+                <div style="font-size:14px;">
+                    @employee.FullName
+                </div>
+            </td>
+            <td style="border-bottom: 0.5px solid #e0e0e0;">
+                <div>
+                    <div style="position:relative;display:inline-block;">
+                        <img src="@UriHelper.ToAbsoluteUri($"images/" + employee.Name + ".png")" alt="@employee.Name" />
+                    </div>
+                    <div style="display:inline-block;">
+                        <div style="padding:5px;">@employee.Address</div>
+                        <div style="padding:5px;">@employee.Country</div>
+                        <div style="padding:5px;font-size:12px;">@employee.Contact</div>
+                    </div>
+                </div>
+            </td>
+            <td style='padding-left: 20px; border-bottom: 0.5px solid #e0e0e0;'>
+                <div>@employee.Designation</div>
+            </td>
+          }
+        </RowTemplate>
+    </TreeGridTemplates>
+    <TreeGridColumns>
+        <TreeGridColumn Field="EmpID" HeaderText="Employee ID" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Name" HeaderText="Employee Name"></TreeGridColumn>
+        <TreeGridColumn Field="Address" HeaderText="Employee Details" Width="340" TextAlign="@TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Designation" HeaderText="Designation"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public Employee model = new Employee();
+    public IEnumerable<Employee> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = Employee.GetTemplateData();
+    }
+}
+
+{% endhighlight %}
 
 The following output is displayed as a result of the above code example.
 

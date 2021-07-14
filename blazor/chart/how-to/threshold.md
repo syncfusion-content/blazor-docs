@@ -29,8 +29,46 @@ for y values of the data.
 
   ```
 
-{% aspTab template="chart/how-to/threshold", sourceFiles="threshold.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartPrimaryYAxis>
+        <ChartStriplines>
+            <ChartStripline Start="30" End="30.1" Color="red"></ChartStripline>
+        </ChartStriplines>
+    </ChartPrimaryYAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries Type="ChartSeriesType.Line" DataSource="@WeatherReports" XName="X" YName="Y">
+            <ChartMarker Visible="true"></ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+    new ChartData { X = "Sun", Y = 28 },
+    new ChartData { X = "Mon", Y = 27 },
+    new ChartData { X = "Tue", Y = 33 },
+    new ChartData { X = "Wed", Y = 36 },
+    new ChartData { X = "Thu", Y = 28 },
+    new ChartData { X = "Fri", Y = 30 },
+    new ChartData { X = "Sat", Y = 31 }
+    };
+}
+
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

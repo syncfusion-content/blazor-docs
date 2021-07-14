@@ -15,9 +15,51 @@ Set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGri
 
 This is demonstrated in the below sample code,
 
-{% aspTab template="tree-grid/how-to/single-click-edit", sourceFiles="index.razor,treegriddata.cs" %}
+```csharp
 
-{% endaspTab %}
+@using TreeGridComponent.Data;
+@using  Syncfusion.Blazor.Grids;
+@using  Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid @ref="TreeGrid" DataSource="@TreeGridData" IdMapping="TaskId" ParentIdMapping="ParentId" AllowPaging="true" TreeColumnIndex="1" Toolbar="@(new List<string>() { "Cancel", "Update" })">
+    <TreeGridEditSettings AllowEditing="true" Mode="Syncfusion.Blazor.TreeGrid.EditMode.Batch"></TreeGridEditSettings>
+    <TreeGridSelectionSettings Mode="Syncfusion.Blazor.Grids.SelectionMode.Both"></TreeGridSelectionSettings>
+    <TreeGridEvents CellSelected="CellSelectHandler" TValue="TreeData"></TreeGridEvents>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="85"></TreeGridColumn>
+        <TreeGridColumn Field="Resources" HeaderText="Resource" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duation" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="70"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    SfTreeGrid<TreeData> TreeGrid;
+
+    public List<TreeData> TreeGridData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+    public async Task CellSelectHandler(CellSelectEventArgs<TreeData> args)
+    {
+        //get selected cell index
+        var CellIndexes = await TreeGrid.GetSelectedRowCellIndexes();
+
+        //get the row and cell index
+        var CurrentEditRowIndex = CellIndexes[0].Item1;
+        var CurrentEditCellIndex = (int)CellIndexes[0].Item2;
+
+        //get the available fields
+        var fields = await TreeGrid.GetColumnFieldNames();
+        // edit the selected cell using the cell index and column name
+        await TreeGrid.EditCell(CurrentEditRowIndex, fields[CurrentEditCellIndex]);
+    }
+}
+
+```
 
 The following GIF represents the single click edit performed on the Tree Grid with Edit Mode as "Batch",
 

@@ -19,9 +19,44 @@ To bind list binding to the stock chart, you can assign a IEnumerable object to 
 [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_High), [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Low), [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Open) and [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Close)
 properties.
 
-{% aspTab template="stock-chart/axis/working-data/local-data", sourceFiles="local-data.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price">
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume" Name="Google"></StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
+@code {
+
+    public class ChartData
+    {
+        public DateTime Date;
+        public Double Open;
+        public Double Low;
+        public Double Close;
+        public Double High;
+        public Double Volume;
+    }
+
+    public List<ChartData> StockDetails = new List<ChartData>
+{
+         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
+         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
+         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
+         new ChartData { Date = new DateTime(2012, 04, 23), Open= 81.5157, High = 88.2857,Low = 79.2857, Close = 86.1428,Volume = 965935749},
+         new ChartData { Date = new DateTime(2012, 04, 30), Open= 85.4, High =  85.4857,Low = 80.7385, Close = 80.75,Volume = 615249365},
+         new ChartData { Date = new DateTime(2012, 05, 07), Open= 80.2143, High = 82.2685,Low = 79.8185, Close = 80.9585,Volume = 541742692},
+         new ChartData { Date = new DateTime(2012, 05, 14), Open= 80.3671, High = 81.0728,Low = 74.5971, Close = 75.7685,Volume = 708126233},
+         new ChartData { Date = new DateTime(2012, 05, 21), Open= 76.3571, High = 82.3571,Low = 76.2928, Close = 80.3271,Volume = 682076215},
+         new ChartData { Date = new DateTime(2012, 05, 28), Open= 81.5571, High = 83.0714,Low = 80.0743, Close = 80.1414,Volume = 480059584}
+   };
+}
+
+
+{% endhighlight %}
 
 ![Local Data](images/common/local-data.png)
 
@@ -29,9 +64,29 @@ properties.
 
 To bind remote data to stock chart component, assign service data as an instance of `SfDataManager` to the `DataSource` property or by using EjsDataManager component. To interact with remote data source, provide the endpoint `Url`.
 
-{% aspTab template="stock-chart/axis/working-data/remote-data", sourceFiles="remote-data.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Data
+
+<SfStockChart Title="Remote Data" EnableSelector="false" TrendlineType="@TrendlineType" IndicatorType="@Indicator" SeriesType="@SeriesType" ExportType="@ExportType">
+    <SfDataManager Url="https://mvc.syncfusion.com/Services/Northwnd.svc/Tasks/" CrossDomain="true"></SfDataManager>
+    <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></StockChartPrimaryXAxis>
+    <StockChartPrimaryYAxis Maximum="3"></StockChartPrimaryYAxis>
+    <StockChartSeriesCollection>
+        <StockChartSeries XName="Assignee" YName="Estimate" Query="new ej.data.Query().take(10).where('Estimate', 'lessThan', 3, false)" Type="ChartSeriesType.Column">
+        </StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
+@code {
+    public List<TrendlineTypes> TrendlineType = new List<TrendlineTypes>();
+    public List<TechnicalIndicators> Indicator = new List<TechnicalIndicators>();
+    public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>();
+    public List<ExportType> ExportType = new List<ExportType>();
+}
+
+{% endhighlight %}
 
 ![Remote Data](images/common/remote.png)
 

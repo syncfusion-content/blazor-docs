@@ -11,9 +11,37 @@ documentation: ug
 
 [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) can be transposed vertically to view the data in a different perspective. All series types support this feature. By setting [`IsTransposed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_IsTransposed) property to **true** in chart to render a chart in vertical manner.
 
-{% aspTab template="chart/series/other-types/vertical", sourceFiles="vertical.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart IsTransposed="true">
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Spline">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public double X { get; set; }
+        public double Y { get; set; }
+    }
+
+    public List<ChartData> SalesReports = new List<ChartData>
+{
+        new ChartData{ X= 2005, Y= 28 },
+        new ChartData{ X= 2006, Y= 25 },
+        new ChartData{ X= 2007, Y= 26 },
+        new ChartData{ X= 2008, Y= 27 },
+        new ChartData{ X= 2009, Y= 32 },
+        new ChartData{ X= 2010, Y= 35 },
+        new ChartData{ X= 2011, Y= 30 }
+    };
+}
+
+```
 
 ![Vertical Chart](../images/othertypes/vertical.png)
 

@@ -13,9 +13,42 @@ documentation: ug
 
 [`Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) represents and visualizes the time-dependent data to show the trends at equal intervals. It can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Line).
 
-{% aspTab template="chart/series/line-charts/line", sourceFiles="line.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set;}
+        public double Y {get; set;}
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+{% endhighlight %}
 
 ![Line Charts](../images/chart-types-images/line.png)
 
@@ -25,9 +58,37 @@ documentation: ug
 
 To render a multicolored area series, by specifying the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property as [`MultiColoredArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_MultiColoredArea) in [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html). Here, the individual colors of the segment can be mapped by using [`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_PointColorMapping) property in [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
 
-{% aspTab template="chart/series/line-charts/multi-line", sourceFiles="multi-line.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" PointColorMapping="Color" Type="ChartSeriesType.MultiColoredLine">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Color { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+{
+        new ChartData { X= "South Korea", Y= 39.4, Color="red" },
+        new ChartData { X= "India", Y= 61.3, Color="green" },
+        new ChartData { X= "Pakistan", Y= 20.4, Color="#ff0097" },
+        new ChartData { X= "Germany", Y= 65.1, Color="crimson" },
+        new ChartData { X= "Australia", Y= 15.8, Color="blue" },
+        new ChartData { X= "Italy", Y= 29.2, Color="darkorange" },
+    };
+}
+
+{% endhighlight %}
 
 ![Multicolored Line Chart](../images/chart-types-images/multi-line.png)
 
@@ -40,9 +101,43 @@ The following properties can be used to customize the [`Line`](https://help.sync
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes for series.
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) – Specifies the width for series.
 
-{% aspTab template="chart/series/line-charts/custom-line", sourceFiles="custom-line.razor" %}
+{% highlight csharp %}
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Width="3" Opacity="0.5"
+                     DashArray="5,5" Fill="blue" Type="ChartSeriesType.Line">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+{% endhighlight %}
 
 ![Line Chart with Series Customization](../images/chart-types-images/line-cus.png)
 
