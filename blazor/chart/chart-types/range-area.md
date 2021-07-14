@@ -1,19 +1,12 @@
 ---
 layout: post
-title: Range Area in Blazor Chart Component | Syncfusion 
-description: Learn about Range Area in Blazor Chart component of Syncfusion, and more details.
+title: Range Area Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Range Area Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
----
-title: "Range Area Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Range Area Chart of Syncfusion Charts (SfCharts) component and more."
----
 # Range Area Chart in Blazor Charts (SfCharts)
 
 ## Range Area

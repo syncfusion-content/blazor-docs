@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Tool Tip in Blazor Range Selector Component | Syncfusion 
-description: Learn about Tool Tip in Blazor Range Selector component of Syncfusion, and more details.
+title: Tooltip in the Blazor Range Selector component | Syncfusion 
+description: Learn here all about the tooltip feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Tooltip in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about the tooltip feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Tooltip in the Blazor Range Selector (SfRangeNavigator)

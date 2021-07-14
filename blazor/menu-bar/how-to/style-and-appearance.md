@@ -1,16 +1,10 @@
 ---
 layout: post
-title: How to Style And Appearance in Blazor Menu Bar  Component | Syncfusion
-description: Checkout and learn about Style And Appearance in Blazor Menu Bar  component of Syncfusion, and more details.
+title: How to
+description: Learn how to change default styling of the Menu component
 platform: Blazor
 control: Menu Bar 
 documentation: ug
----
-
----
-title: "How To"
-component: "Menu"
-description: "Learn how to change default styling of the Menu component"
 ---
 
 # Styling and Appearance

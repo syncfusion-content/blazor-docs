@@ -1,16 +1,10 @@
 ---
 layout: post
-title: How to Blazor Webassembly Datagrid Using Visual Studio in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Blazor Webassembly Datagrid Using Visual Studio in Blazor DataGrid component of Syncfusion, and more details.
+title: Getting Started with Blazor WebAssembly DataGrid Using Visual Studio – Syncfusion
+description: Checkout and learn more about getting started with blazor webassembly datagrid using Visual Studio of Syncfusion, and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
----
-
----
-title: "Getting Started with Blazor WebAssembly DataGrid Using Visual Studio – Syncfusion"
-component: "DataGrid"
-description: "Checkout and learn more about getting started with blazor webassembly datagrid using Visual Studio of Syncfusion, and more details."
 ---
 
  <!-- markdownlint-disable MD024 -->

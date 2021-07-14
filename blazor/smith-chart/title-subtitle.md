@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Title Subtitle in Blazor Smith Chart Component | Syncfusion 
-description: Learn about Title Subtitle in Blazor Smith Chart component of Syncfusion, and more details.
+title: Title and Subtitle with the Blazor Smith Chart component | Syncfusion 
+description: Learn here about title and subtitle of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
----
-
----
-title: " Title and Subtitle with the Blazor Smith Chart component | Syncfusion "
-
-component: "Smith Chart"
-
-description: "Learn here about title and subtitle of Syncfusion Blazor Smith Chart (SfSmithChart) component and more."
 ---
 
 # Title and Subtitle in the Blazor Smith Chart

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Line in Blazor Chart Component | Syncfusion 
-description: Learn about Line in Blazor Chart component of Syncfusion, and more details.
+title: Line Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Line Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Line Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Line Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Line Chart in Blazor Charts (SfCharts)

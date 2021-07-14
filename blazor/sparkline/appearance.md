@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Appearance in Blazor Sparkline Charts Component | Syncfusion 
-description: Learn about Appearance in Blazor Sparkline Charts component of Syncfusion, and more details.
+title: Appearance in the Blazor Sparkline component | Syncfusion
+description: Learn here all about the appearance of Syncfusion Sparkline (SfSparkline) component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
----
-
----
-title: "Appearance in the Blazor Sparkline component | Syncfusion"
-
-component: "Sparkline"
-
-description: "Learn here all about the appearance of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Appearance in the Blazor Sparkline (SfSparkline)

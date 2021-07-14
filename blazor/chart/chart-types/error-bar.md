@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Error Bar in Blazor Chart Component | Syncfusion 
-description: Learn about Error Bar in Blazor Chart component of Syncfusion, and more details.
+title: Error Bar Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Error Bar Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Error Bar Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Error Bar Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Error Bar Chart in Blazor Charts (SfCharts)

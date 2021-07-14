@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Grid Tick in Blazor Range Selector Component | Syncfusion 
-description: Learn about Grid Tick in Blazor Range Selector component of Syncfusion, and more details.
+title:  Grid and ticklines in the Blazor Range Selector component | Syncfusion 
+description: Learn here all about grid and ticklines of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Grid and ticklines in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about grid and ticklines of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Grid and ticklines in Blazor Range Selector (SfRangeNavigator)

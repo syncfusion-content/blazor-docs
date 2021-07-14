@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Column in Blazor Chart Component | Syncfusion 
-description: Learn about Column in Blazor Chart component of Syncfusion, and more details.
+title: Column Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Column Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Column Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Column Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Column Chart in Blazor Charts (SfCharts)

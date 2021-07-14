@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Getting Started in Blazor Smith Chart Component | Syncfusion 
-description: Learn about Getting Started in Blazor Smith Chart component of Syncfusion, and more details.
+title: Getting Started with the Blazor Smith Chart component | Syncfusion 
+description: Learn here about getting started with Syncfusion Blazor Smith Chart (SfSmithChart) component, its elements, and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
----
-
----
-title: " Getting Started with the Blazor Smith Chart component | Syncfusion "
-
-component: "SmithChart"
-
-description: "Learn here about getting started with Syncfusion Blazor Smith Chart (SfSmithChart) component, its elements, and more."
 ---
 
 # Getting Started in the Blazor Smith Chart (SfSmithChart)

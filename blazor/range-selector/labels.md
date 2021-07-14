@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Labels in Blazor Range Selector Component | Syncfusion 
-description: Learn about Labels in Blazor Range Selector component of Syncfusion, and more details.
+title: Labels in the Blazor Range Selector component | Syncfusion 
+description: Learn here all about the labels in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Labels in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about the labels in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Labels in the Blazor Range Selector (SfRangeNavigator)

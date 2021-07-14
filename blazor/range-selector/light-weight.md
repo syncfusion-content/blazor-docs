@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Light Weight in Blazor Range Selector Component | Syncfusion 
-description: Learn about Light Weight in Blazor Range Selector component of Syncfusion, and more details.
+title: Lightweight Range Selector in the Blazor Range Selector component | Syncfusion 
+description: Learn here all about Lightweight Range Selector of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Lightweight Range Selector in the Blazor Range Selector component | Syncfusion "
-
-component: "RangeNavigator"
-
-description: "Learn here all about Lightweight Range Selector of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Lightweight Range Selector in the Blazor Range Selector (SfRangeNavigator)

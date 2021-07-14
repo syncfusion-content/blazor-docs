@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Data in Blazor Range Selector Component | Syncfusion 
-description: Learn about Data in Blazor Range Selector component of Syncfusion, and more details.
+title: Types of data in the Blazor Range Selector component | Syncfusion
+description: Learn here all about different types of data for Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Types of data in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about different types of data for Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 <!-- markdownlint-disable MD036 -->

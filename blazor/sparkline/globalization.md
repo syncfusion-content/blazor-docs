@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Globalization in Blazor Sparkline Charts Component | Syncfusion 
-description: Learn about Globalization in Blazor Sparkline Charts component of Syncfusion, and more details.
+title: Globalization in the Blazor Sparkline component | Syncfusion
+description: Learn here all about globalization of Syncfusion Sparkline (SfSparkline) component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
----
-
----
-title: "Globalization in the Blazor Sparkline component | Syncfusion"
-
-component: "Sparkline"
-
-description: "Learn here all about globalization of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Globalization in the Blazor Sparkline (SfSparkline)

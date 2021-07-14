@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Chart Annotations in Blazor Chart Component | Syncfusion 
-description: Learn about Chart Annotations in Blazor Chart component of Syncfusion, and more details.
+title: Annotation in Blazor Charts component | Syncfusion
+description: Learn here all about Annotation of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Annotation in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Annotation of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Annotation in Blazor Charts (SfCharts)

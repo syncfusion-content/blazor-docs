@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Export in Blazor Range Selector Component | Syncfusion 
-description: Learn about Export in Blazor Range Selector component of Syncfusion, and more details.
+title: Print and export in the Blazor Range Selector component | Syncfusion
+description: Learn here all about print and export of the Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Print and export in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about print and export of the Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Print and export in the Blazor Range Selector (SfRangeNavigator)

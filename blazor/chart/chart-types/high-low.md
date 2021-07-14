@@ -1,18 +1,10 @@
 ---
 layout: post
-title: High Low in Blazor Chart Component | Syncfusion 
-description: Learn about High Low in Blazor Chart component of Syncfusion, and more details.
+title: Hilo Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Hilo Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Hilo Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Hilo Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Hilo Chart in Blazor Charts (SfCharts)

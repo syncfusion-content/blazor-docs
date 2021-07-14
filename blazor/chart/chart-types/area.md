@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Area in Blazor Chart Component | Syncfusion 
-description: Learn about Area in Blazor Chart component of Syncfusion, and more details.
+title: Area Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Area Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Area Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Area Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Area Chart in Blazor Charts (SfCharts)

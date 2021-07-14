@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Drill Down in Blazor TreeMap Component | Syncfusion 
-description: Learn about Drill Down in Blazor TreeMap component of Syncfusion, and more details.
+title: Drill-down in the Blazor TreeMap component | Syncfusion
+description: Learn here all about Drill-down of Syncfusion TreeMap (SfTreeMap) component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
----
-
----
-title: "Drill-down in the Blazor TreeMap component | Syncfusion"
-
-component: "TreeMap"
-
-description: "Learn here all about Drill-down of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
 # Drill-down in the Blazor TreeMap (SfTreeMap)

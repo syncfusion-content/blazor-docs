@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Chart Dimensions in Blazor Chart Component | Syncfusion 
-description: Learn about Chart Dimensions in Blazor Chart component of Syncfusion, and more details.
+title: Chart Dimensions in Blazor Charts component | Syncfusion
+description: Learn here all about Chart Dimensions of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Chart Dimensions in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Chart Dimensions of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Chart Dimensions in Blazor Charts (SfCharts)

@@ -1,18 +1,10 @@
 ---
 layout: post
 title: Target Bar in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Target Bar in Blazor Bullet Chart  component of Syncfusion, and more details.
+description: Learn here all about the Target Bar of Syncfusion Bullet Chart (SfBulletChart) component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: "Target Bar in the Blazor Bullet Chart component | Syncfusion"
-
-component: "Bullet Chart"
-
-description: "Learn here all about the Target Bar of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Target Bar in the Blazor Bullet Chart (SfBulletChart)

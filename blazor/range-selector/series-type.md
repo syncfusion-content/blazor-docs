@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Series Type in Blazor Range Selector Component | Syncfusion 
-description: Learn about Series Type in Blazor Range Selector component of Syncfusion, and more details.
+title: Series types in the Blazor Range Selector component | Syncfusion 
+description: Learn here all about the series types feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Series types in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about the series types feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Series Types in the Blazor Range Selector (SfRangeNavigator)

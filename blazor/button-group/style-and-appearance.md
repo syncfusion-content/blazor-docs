@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Style And Appearance in Blazor ButtonGroup Component | Syncfusion 
-description: Learn about Style And Appearance in Blazor ButtonGroup component of Syncfusion, and more details.
+title: Styles and Appearances
+description: This section explains the details of the styles and appearances of the ButtonGroup.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
----
-
----
-title: "Styles and Appearances"
-component: "ButtonGroup"
-description: "This section explains the details of the styles and appearances of the ButtonGroup."
 ---
 
 # Styles and Appearances

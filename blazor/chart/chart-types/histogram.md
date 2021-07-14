@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Histogram in Blazor Chart Component | Syncfusion 
-description: Learn about Histogram in Blazor Chart component of Syncfusion, and more details.
+title: Histogram Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Histogram Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Histogram Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Histogram Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Histogram Chart in Blazor Charts (SfCharts)

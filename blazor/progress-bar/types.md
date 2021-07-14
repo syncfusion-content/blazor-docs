@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Types in Blazor Progress Bar  Component | Syncfusion 
-description: Learn about Types in Blazor Progress Bar  component of Syncfusion, and more details.
+title: Types in the Blazor Progress Bar component | Syncfusion
+description: Learn here all about the types of Syncfusion Progress Bar (SfProgressBar) component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
----
-
----
-title: "Types in the Blazor Progress Bar component | Syncfusion"
-
-component: "Progress Bar"
-
-description: "Learn here all about the types of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
 # Types in the Blazor Progress Bar (SfProgressBar)

@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Style And Appearance in Blazor Checkbox Component | Syncfusion 
-description: Learn about Style And Appearance in Blazor Checkbox component of Syncfusion, and more details.
+title: Styles and Appearances
+description: This section explains the details of the styles and appearances of the CheckBox
 platform: Blazor
 control: Checkbox
 documentation: ug
----
-
----
-title: "Styles and Appearances"
-component: "CheckBox"
-description: "This section explains the details of the styles and appearances of the CheckBox"
 ---
 
 # Styles and Appearances
