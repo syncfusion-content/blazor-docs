@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Data Label in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Data Label in Blazor Bullet Chart  component of Syncfusion, and more details.
+title: Data Labels in the Blazor Bullet Chart component | Syncfusion
+description: Learn here all about the Data Labels of Syncfusion Bullet Chart (SfBulletChart) component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: "Data Labels in the Blazor Bullet Chart component | Syncfusion"
-
-component: "Bullet Chart"
-
-description: "Learn here all about the Data Labels of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Data Labels in Blazor Bullet Chart (SfBulletChart)

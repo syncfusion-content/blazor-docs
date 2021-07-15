@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Paragraph Format in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about Paragraph Format in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Working with Paragraph Formatting
+description: Learn paragraph formatting supported in Blazor Word processor and how to apply it for selected contents.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
----
-
----
-title: "Working with Paragraph Formatting"
-component: "Word processor"
-description: "Learn paragraph formatting supported in Blazor Word processor and how to apply it for selected contents."
 ---
 
 # Working with Paragraph Formatting

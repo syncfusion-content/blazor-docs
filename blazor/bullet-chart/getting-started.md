@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Getting Started in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Bullet Chart  component of Syncfusion, and more details.
+title: Getting Started with the Blazor Bullet Chart component | Syncfusion 
+description: Learn here about getting started with Syncfusion Blazor Bullet Chart (SfBulletChart) component, its elements, and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: " Getting Started with the Blazor Bullet Chart component | Syncfusion "
-
-component: "Bullet Chart"
-
-description: "Learn here about getting started with Syncfusion Blazor Bullet Chart (SfBulletChart) component, its elements, and more."
 ---
 
 # Getting Started with the Blazor Bullet Chart (SfBulletChart)

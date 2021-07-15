@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Table Of Contents in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about Table Of Contents in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Table of contents
+description: Learn how to insert, edit, or update table of contents in Blazor Word processor.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
----
-
----
-title: "Table of contents"
-component: "Word processor"
-description: "Learn how to insert, edit, or update table of contents in Blazor Word processor."
 ---
 
 # Table of contents

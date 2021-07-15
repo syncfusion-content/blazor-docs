@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Methods in Blazor Sparkline Charts Component | Syncfusion 
-description: Learn about Methods in Blazor Sparkline Charts component of Syncfusion, and more details.
+title: Methods in the Blazor Sparkline component | Syncfusion
+description: Learn here all about the methods of Syncfusion Sparkline (SfSparkline) component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
----
-
----
-title: "Methods in the Blazor Sparkline component | Syncfusion"
-
-component: "Sparkline"
-
-description: "Learn here all about the methods of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Methods in the Blazor Sparkline (SfSparkline)

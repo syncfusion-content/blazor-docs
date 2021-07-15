@@ -1,18 +1,10 @@
 ---
 layout: post
-title: States in Blazor Progress Bar  Component | Syncfusion 
-description: Learn about States in Blazor Progress Bar  component of Syncfusion, and more details.
+title: States in the Blazor Progress Bar component | Syncfusion
+description: Learn here all about states of Syncfusion Progress Bar (SfProgressBar) component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
----
-
----
-title: "States in the Blazor Progress Bar component | Syncfusion"
-
-component: "Progress Bar"
-
-description: "Learn here all about states of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
 # States in the Blazor Progress Bar (SfProgressBar)

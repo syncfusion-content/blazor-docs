@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Column in Blazor Chart Component | Syncfusion 
-description: Learn about Column in Blazor Chart component of Syncfusion, and more details.
+title: Column Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Column Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Column Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Column Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Column Chart in Blazor Charts (SfCharts)
@@ -21,9 +13,44 @@ description: "Learn here all about Column Chart of Syncfusion Charts (SfCharts) 
 
 [`Column Charts`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time.
 
-{% aspTab template="chart/series/column-charts/column", sourceFiles="column.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+
+```
 
 > Refer to our Blazor [`Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our Blazor [`Column Charts Example`](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Maps Event in Blazor Maps Component | Syncfusion 
-description: Learn about Maps Event in Blazor Maps component of Syncfusion, and more details.
+title: Events in the Blazor Maps component | Syncfusion 
+description: Learn here about the events in Syncfusion Blazor Maps (SfMaps) component and more.
 platform: Blazor
 control: Maps
 documentation: ug
----
-
----
-title: " Events in the Blazor Maps component | Syncfusion "
-
-component: "Maps"
-
-description: "Learn here about the events in Syncfusion Blazor Maps (SfMaps) component and more."
 ---
 
 # Events in the Blazor Maps

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Tool Tip in Blazor Range Selector Component | Syncfusion 
-description: Learn about Tool Tip in Blazor Range Selector component of Syncfusion, and more details.
+title: Tooltip in the Blazor Range Selector component | Syncfusion 
+description: Learn here all about the tooltip feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Tooltip in the Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about the tooltip feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Tooltip in the Blazor Range Selector (SfRangeNavigator)
@@ -27,9 +19,42 @@ The tooltip for sliders are supported by the Range Selector. Sliders are used in
 
 The tooltip can be used to display information about the selected data and it is enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) property to **true**.
 
-{% aspTab template="range-navigator/tooltip/tooltip", sourceFiles="tooltip.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime">
+    <RangeNavigatorRangeTooltipSettings Enable="true" DisplayMode="TooltipDisplayMode.Always">
+    </RangeNavigatorRangeTooltipSettings>
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@StockInfo" XName="Date" Type="RangeNavigatorType.Area" YName="Close">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code {
+
+    public class StockDetails
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+    }
+
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+
+    public List<StockDetails> StockInfo = new List<StockDetails>
+    {
+        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
+    };
+}
+
+```
 
 ![Enable tooltip](images/tooltip/tooltip.png)
 
@@ -45,9 +70,43 @@ The tooltip can be customized using the following properties:
 * [`RangeNavigatorTooltipTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorTooltipTextStyle.html) - Customizes the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorTooltipTextStyle.html#Syncfusion_Blazor_Charts_RangeNavigatorTooltipTextStyle_Size), the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_Color), the [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontFamily), the [`FontStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontStyle), the [`FontWeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontWeight), the [`TextAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_TextAlignment) and the [`TextOverflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_TextOverflow) of the tooltip text.
 * [`RangeNavigatorTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorTooltipBorder.html) - Customize the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the tooltip border.
 
-{% aspTab template="range-navigator/tooltip/tooltip-custom", sourceFiles="tooltip-custom.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime">
+    <RangeNavigatorRangeTooltipSettings Enable="true" Fill="red" Opacity="0.6" DisplayMode="TooltipDisplayMode.Always">
+        <RangeNavigatorTooltipTextStyle Color="blue" Size="12px" FontStyle="italic"></RangeNavigatorTooltipTextStyle>
+    </RangeNavigatorRangeTooltipSettings>
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@StockInfo" XName="Date" Type="RangeNavigatorType.Area" YName="Close">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code {
+
+    public class StockDetails
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+    }
+
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+
+    public List<StockDetails> StockInfo = new List<StockDetails>
+    {
+        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
+    };
+}
+
+```
 
 ![Tooltip Customization](images/tooltip/tooltip-custom.png)
 
@@ -55,9 +114,42 @@ The tooltip can be customized using the following properties:
 
 The [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property in the tooltip is used to format and parse the date to all globalize formats.
 
-{% aspTab template="range-navigator/tooltip/format", sourceFiles="format.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime">
+    <RangeNavigatorRangeTooltipSettings Enable="true" DisplayMode="TooltipDisplayMode.Always" Format="y/M/d">
+    </RangeNavigatorRangeTooltipSettings>
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@StockInfo" XName="Date" Type="RangeNavigatorType.Area" YName="Close">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code {
+
+    public class StockDetails
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+    }
+
+    public DateTime[] Value = new DateTime[] { new DateTime(2006, 01, 01), new DateTime(2008, 01, 01) };
+
+    public List<StockDetails> StockInfo = new List<StockDetails>
+    {
+        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
+    };
+}
+
+```
 
 ![Label Format](images/tooltip/tooltip-format.png)
 

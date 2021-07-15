@@ -22,9 +22,81 @@ The available template options in tree grid are as follows,
 
 To use templates, the tree grid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the tree grid component as follows.
 
-{% aspTab template="tree-grid/temp/temptype", sourceFiles="index.razor,treegriddata.cs" %}
+{% tabs %}
 
-{% endaspTab %}
+{% highlight csharp %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid;
+
+<SfTreeGrid ModelType="@model" Height="400" DataSource="@TreeData" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="0">
+    <TreeGridColumns>
+        <TreeGridColumn Field="Name" HeaderText="Name" Width="160">
+            <HeaderTemplate>
+                <div class="rating">
+                    <span class="star"></span> DOB
+                </div>
+            </HeaderTemplate>
+        </TreeGridColumn>
+        <TreeGridColumn Field="Designation" HeaderText="Designation" Width="120"></TreeGridColumn>
+        <TreeGridColumn Field="EmpID" HeaderText="Progress" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
+        </TreeGridColumns>
+</SfTreeGrid>
+
+<style>
+    .rating .star:before {
+        content: '★';
+    }
+</style>
+
+@code{
+    public Employee model = new Employee();
+    public IEnumerable<Employee> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = Employee.GetTemplateData();
+    }
+}
+
+{% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class Employee
+    {
+        public string Name { get; set; }
+        public string FullName { get; set; }
+        public DateTime? DOB { get; set; }
+        public string Designation { get; set; }
+        public string EmpID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string Country { get; set; }
+        public string Address { get; set; }
+        public string Contact { get; set; }
+        public int? ParentId { get; set; }
+        public TreeData Treedata { get; set; }
+
+        public static List<Employee> GetTemplateData()
+        {
+            List<Employee> DataCollection = new List<Employee>();
+
+            DataCollection.Add(new Employee { Name = "Robert King",FullName = "RobertKing",Designation = "Chief Executive Officer",EmployeeID = 1,EmpID = "EMP001",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
+            DataCollection.Add(new Employee { Name = "David william",FullName = "DavidWilliam",Designation = "Vice President",EmployeeID = 2,EmpID = "EMP004",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Nancy Davolio",FullName = "NancyDavolio",Designation = "Marketing Executive",EmployeeID = 3,EmpID = "EMP035",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Andrew Fuller",FullName = "AndrewFuller",Designation = "Sales Representative",EmployeeID = 4,EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Anne Dodsworth",FullName = "AnneDodsworth",Designation = "Sales Representative",EmployeeID = 5,EmpID = "EMP091",Country = "USA",ParentId = null,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Michael Suyama",FullName = "MichaelSuyama",Designation = "Sales Representative",EmployeeID = 6,EmpID = "EMP110",Country = "UK",ParentId = 5,Treedata = new TreeData() { ID = 21 }});
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -36,9 +108,79 @@ Most of the templates used by tree grid are of type `RenderFragment<T>` and they
 
 For example, you can access the data of the column template using `context` as follows.
 
-{% aspTab template="tree-grid/temp/tempcontext", sourceFiles="index.razor,treegriddata.cs" %}
+{% tabs %}
 
-{% endaspTab %}
+{% highlight csharp %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+
+<SfTreeGrid ModelType="@model" Height="400" DataSource="@TreeData" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="0">
+    <TreeGridColumns>
+        <TreeGridColumn Field="Name" HeaderText="Name" Width="160"></TreeGridColumn>
+        <TreeGridColumn HeaderText="Employee Image" Width="80">
+            <Template>
+                @{
+                    var employee = (context as Employee);
+                    <div class="image">
+                        <img src="@UriHelper.ToAbsoluteUri($"images/TreeGrid/{employee.Name}.png")" alt="@employee.EmployeeID" />
+                    </div>
+                }
+            </Template>
+        </TreeGridColumn>
+        <TreeGridColumn Field="DOB" HeaderText="DOB" Width="10" Type="Syncfusion.Blazor.Grids.ColumnType.Date" Format="yMd"></TreeGridColumn>
+        <TreeGridColumn Field="Designation" HeaderText="Designation" Width="120"></TreeGridColumn>
+        <TreeGridColumn Field="EmpID" HeaderText="Progress" Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Country" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public Employee model = new Employee();
+    public IEnumerable<Employee> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = Employee.GetTemplateData();
+    }
+}
+
+{% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class Employee
+    {
+        public string Name { get; set; }
+        public string FullName { get; set; }
+        public DateTime? DOB { get; set; }
+        public string Designation { get; set; }
+        public string EmpID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string Country { get; set; }
+        public string Address { get; set; }
+        public string Contact { get; set; }
+        public int? ParentId { get; set; }
+        public TreeData Treedata { get; set; }
+
+        public static List<Employee> GetTemplateData()
+        {
+            List<Employee> DataCollection = new List<Employee>();
+
+            DataCollection.Add(new Employee { Name = "Robert King",FullName = "RobertKing",Designation = "Chief Executive Officer",EmployeeID = 1,EmpID = "EMP001",Address = "507 - 20th Ave. E.Apt. 2A, Seattle",Contact = "(206) 555-9857",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
+            DataCollection.Add(new Employee { Name = "David william",FullName = "DavidWilliam",Designation = "Vice President",EmployeeID = 2,EmpID = "EMP004",Address = "722 Moss Bay Blvd., Kirkland",Contact = "(206) 555-3412",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Nancy Davolio",FullName = "NancyDavolio",Designation = "Marketing Executive",EmployeeID = 3,EmpID = "EMP035",Address = "4110 Old Redmond Rd., Redmond",Contact = "(206) 555-8122",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Andrew Fuller",FullName = "AndrewFuller",Designation = "Sales Representative",EmployeeID = 4,EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -50,9 +192,94 @@ If a component contains any `RenderFragment` type property then it does not allo
 
 This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendent of Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
-{% aspTab template="tree-grid/temp/tempcomponent", sourceFiles="index.razor,treegriddata.cs" %}
+{% tabs %}
 
-{% endaspTab %}
+{% highlight csharp %}
+
+@using TreeGridComponent.Data
+@using Syncfusion.Blazor.TreeGrid;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+
+<SfTreeGrid ModelType="@model" Height="335" DataSource="@TreeData" IdMapping="EmployeeID" ParentIdMapping="ParentId" TreeColumnIndex="0" RowHeight="83" GridLines="@GridLine.Vertical">
+    <TreeGridTemplates>
+        <RowTemplate>
+           @{
+            var employee = (context as Employee);
+
+            <td style='padding-left:18px; border-bottom: 0.5px solid #e0e0e0;'>
+                <div>@employee.EmpID</div>
+            </td>
+            <td style='padding: 10px 0px 0px 20px; border-bottom: 0.5px solid #e0e0e0;'>
+                <div style="font-size:14px;">
+                    @employee.FullName
+                </div>
+            </td>
+            <td style="border-bottom: 0.5px solid #e0e0e0;">
+                <div>
+                    <div style="position:relative;display:inline-block;">
+                        <img src="@UriHelper.ToAbsoluteUri($"images/" + employee.Name + ".png")" alt="@employee.Name" />
+                    </div>
+                    <div style="display:inline-block;">
+                        <div style="padding:5px;">@employee.Address</div>
+                        <div style="padding:5px;">@employee.Country</div>
+                        <div style="padding:5px;font-size:12px;">@employee.Contact</div>
+                    </div>
+                </div>
+            </td>
+            <td style='padding-left: 20px; border-bottom: 0.5px solid #e0e0e0;'>
+                <div>@employee.Designation</div>
+            </td>
+          }
+        </RowTemplate>
+    </TreeGridTemplates>
+    <TreeGridColumns>
+        <TreeGridColumn Field="EmpID" HeaderText="Employee ID" Width="160"></TreeGridColumn>
+        <TreeGridColumn Field="Name" HeaderText="Employee Name"></TreeGridColumn>
+        <TreeGridColumn Field="Address" HeaderText="Employee Details" Width="340" TextAlign="@TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Designation" HeaderText="Designation"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+    public Employee model = new Employee();
+    public IEnumerable<Employee> TreeData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.TreeData = Employee.GetTemplateData();
+    }
+}
+
+{% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class Employee
+    {
+        public string Name { get; set; }
+        public DateTime? DOB { get; set; }
+        public string Designation { get; set; }
+        public string EmpID { get; set; }
+        public string Country { get; set; }
+        public int? ParentId { get; set; }
+        public TreeData Treedata { get; set; }
+
+        public static List<Employee> GetTemplateData()
+        {
+            List<Employee> DataCollection = new List<Employee>();
+            DataCollection.Add(new Employee { Name = "Robert King",Designation = "Chief Executive Officer",EmpID = "EMP001",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
+            DataCollection.Add(new Employee { Name = "David william",Designation = "Vice President",EmpID = "EMP004",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Nancy Davolio",Designation = "Marketing Executive",EmpID = "EMP035",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Andrew Fuller",Designation = "Sales Representative",EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 

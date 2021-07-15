@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Styles in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about Styles in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Working with Styles
+description: Learn the types of styles supported in Blazor Word processor and how to create a style for the document, and apply it for selected contents.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
----
-
----
-title: "Working with Styles"
-component: "Word processor"
-description: "Learn the types of styles supported in Blazor Word processor and how to create a style for the document, and apply it for selected contents."
 ---
 
 # Styles

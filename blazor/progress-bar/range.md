@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Range in Blazor Progress Bar  Component | Syncfusion 
-description: Learn about Range in Blazor Progress Bar  component of Syncfusion, and more details.
+title: Range in the Blazor Progress Bar component | Syncfusion
+description: Learn here all about the range of Syncfusion Progress Bar (SfProgressBar) component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
----
-
----
-title: "Range in the Blazor Progress Bar component | Syncfusion"
-
-component: "Progress Bar"
-
-description: "Learn here all about the range of Syncfusion Progress Bar (SfProgressBar) component and more."
 ---
 
 # Range in the Blazor Progress Bar (SfProgressBar)

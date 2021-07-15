@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Title in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Title in Blazor Bullet Chart  component of Syncfusion, and more details.
+title: Title and SubTitle in Blazor Bullet Chart component | Syncfusion
+description: Learn here all about Title and SubTitle of Syncfusion Bullet Chart (SfBulletChart) component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: "Title and SubTitle in Blazor Bullet Chart component | Syncfusion"
-
-component: "Bullet Chart"
-
-description: "Learn here all about Title and SubTitle of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Title and SubTitle in Blazor Bullet Chart (SfBulletChart)

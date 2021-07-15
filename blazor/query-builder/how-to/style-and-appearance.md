@@ -1,16 +1,10 @@
 ---
 layout: post
-title: How to Style And Appearance in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn about Style And Appearance in Blazor QueryBuilder component of Syncfusion, and more details.
+title: How to
+description: Learn how to change default styling of the QueryBuilder component
 platform: Blazor
 control: QueryBuilder
 documentation: ug
----
-
----
-title: "How To"
-component: "QueryBuilder"
-description: "Learn how to change default styling of the QueryBuilder component"
 ---
 
 # Styling and Appearance

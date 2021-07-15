@@ -1,16 +1,10 @@
 ---
 layout: post
 title: Style And Appearance in Blazor Dropdown Menu Component | Syncfusion 
-description: Learn about Style And Appearance in Blazor Dropdown Menu component of Syncfusion, and more details.
+description: Styles and Appearances
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
----
-
----
-title: "Styles and Appearances"
-component: "DropDownButton"
-description: "This section explains the details of the styles and appearances of the DropDownButton"
 ---
 
 # Styles and Appearances

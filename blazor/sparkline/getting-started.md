@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Getting Started in Blazor Sparkline Charts Component | Syncfusion 
-description: Learn about Getting Started in Blazor Sparkline Charts component of Syncfusion, and more details.
+title: Getting Started with the Blazor Sparkline component | Syncfusion
+description: Learn here about getting started with Syncfusion Blazor Sparkline (SfSparkline) component, its elements, and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
----
-
----
-title: "Getting Started with the Blazor Sparkline component | Syncfusion"
-
-component: "Sparkline"
-
-description: "Learn here about getting started with Syncfusion Blazor Sparkline (SfSparkline) component, its elements, and more."
 ---
 
 # Getting Started with the Blazor Sparkline (SfSparkline)

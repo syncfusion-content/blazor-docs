@@ -33,8 +33,46 @@ For example, you can access the data label template using context as follows.
   
 ```
 
-{% aspTab template="chart/data-label-template", sourceFiles="data-label-template.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y">
+            <ChartMarker>
+                <ChartDataLabel Visible="true">
+                    <Template>
+                        @{ 
+                            var data = context as ChartDataPointInfo;
+                        }
+                        <div style="background-color: aliceblue">@data.PointX</div>
+                    </Template>
+                </ChartDataLabel>
+            </ChartMarker>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public string Fill { get; set; }
+        public string Text { get; set; }
+    }
+
+    public List<Data> WeatherReports = new List<Data> {
+           new Data{ X= "Jan", Y= 3,   Fill= "#498fff", Text= "January" },
+           new Data{ X= "Feb", Y= 3.5, Fill= "#ffa060", Text= "February" },
+           new Data{ X= "Mar", Y= 7,   Fill= "#ff68b6", Text= "March" },
+           new Data{ X= "Apr", Y= 13.5,Fill= "#81e2a1", Text= "April" }
+        };
+};
+
+
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

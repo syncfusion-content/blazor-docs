@@ -1,16 +1,10 @@
 ---
 layout: post
-title: How to Save New Row At Particular Index In Page in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Save New Row At Particular Index In Page in Blazor DataGrid component of Syncfusion, and more details.
+title: Saving a new row at a particular index of the grid page
+description: Learn how to save the newly added row at a particular index of the grid page in Blazor DataGrid component
 platform: Blazor
 control: DataGrid
 documentation: ug
----
-
----
-title: "Saving a new row at a particular index of the grid page"
-component: "DataGrid"
-description: "Learn how to save the newly added row at a particular index of the grid page in Blazor DataGrid component"
 ---
 
 # Saving a new row at a particular index of the grid page

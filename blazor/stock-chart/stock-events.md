@@ -31,8 +31,95 @@ The [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) property specifies the content of the stock event tooltip that appears on the Chart when the mouse is moved over the stock event. The description will be displayed as the text of the tooltip. For instance, if [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) **Q1** contains a [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) as **Quarter 1**, the tooltip will show **Quarter 1**.
 
-{% aspTab template="stock-chart/stockchart-feature/stock-events", sourceFiles="stockEvents.razor" %}
+```csharp
 
-{% endaspTab %}
+@page "/"
+
+@using Syncfusion.Blazor.Charts
+@using Newtonsoft.Json
+
+<SfStockChart Title="AAPL Stock Price" SeriesType="@SeriesValue">
+    <StockChartStockEvents>
+        @foreach (StockEventDetails stockEvent in StockEvents)
+        {
+            <StockChartStockEvent Date=@stockEvent.Date Text=@stockEvent.Text Description=@stockEvent.Description Type=@stockEvent.Type Background=@stockEvent.Background ShowOnSeries=@stockEvent.ShowOnSeries>
+                <StockChartStockEventsBorder Color=@stockEvent.BorderColor></StockChartStockEventsBorder>
+                <StockChartStockEventsTextStyle Color=@stockEvent.TextColor></StockChartStockEventsTextStyle>
+            </StockChartStockEvent>
+        }
+    </StockChartStockEvents>
+    <StockChartPrimaryXAxis>
+        <StockChartAxisMajorGridLines Width="0"></StockChartAxisMajorGridLines>
+        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryXAxis>
+    <StockChartPrimaryYAxis>
+        <StockChartAxisLineStyle Width="0"></StockChartAxisLineStyle>
+        <StockChartAxisMajorTickLines Width="0"></StockChartAxisMajorTickLines>
+        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryYAxis>
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@DataSource" Type="ChartSeriesType.Spline"></StockChartSeries>
+    </StockChartSeriesCollection>
+    <StockChartChartArea>
+        <StockChartChartAreaBorder Width="0"></StockChartChartAreaBorder>
+    </StockChartChartArea>
+</SfStockChart>
+@code{
+    public class ChartData
+    {
+        public DateTime date { get; set; }
+        public double open { get; set; }
+        public double low { get; set; }
+        public double close { get; set; }
+        public double high { get; set; }
+        public double volume { get; set; }
+    }
+    public class StockEventDetails
+    {
+        public DateTime Date { get; set; }
+        public string Text { get; set; }
+        public string Description { get; set; }
+        public FlagType Type { get; set; } = FlagType.Flag;
+        public string Background { get; set; }
+        public string BorderColor { get; set; }
+        public string TextColor { get; set; } = "#FFFFFF";
+        public bool ShowOnSeries { get; set; } = true;
+    }
+    public List<ChartSeriesType> SeriesValue = new List<ChartSeriesType>();
+    private ChartData[] DataSource;
+    private List<StockEventDetails> StockEvents;
+    protected override async Task OnInitializedAsync()
+    {
+        GetStockEventsDetails();
+        await Task.Run(() =>
+        {
+            DataSource = JsonConvert.DeserializeObject<ChartData[]>(System.IO.File.ReadAllText("./wwwroot/data/chart-data.json"));
+        });
+    }
+    private void GetStockEventsDetails()
+    {
+        StockEvents = new List<StockEventDetails>()
+        {
+            new StockEventDetails(){ Date = new DateTime(2011, 03, 01), Text ="Q2", Description = "2012 Quarter2", Type = FlagType.Flag, Background = "#6C6D6D", BorderColor = "#6C6D6D"},
+            new StockEventDetails(){ Date = new DateTime(2012, 03, 20), Text ="Open", Description = "Markets opened", Background = "#f48a21", Type = FlagType.Circle, BorderColor = "#f48a21"},
+            new StockEventDetails(){ Date = new DateTime(2012, 06, 01), Text ="Q3", Description = "2013 Quarter3", Background = "#6C6D6D", Type = FlagType.Flag, BorderColor = "#6C6D6D"},
+            new StockEventDetails(){ Date = new DateTime(2012, 09, 01), Text ="Q4", Description = "2013 Quarter4", Background = "#6C6D6D", Type = FlagType.Flag, BorderColor = "#6C6D6D"},
+            new StockEventDetails(){ Date = new DateTime(2013, 07, 30), Text ="G", Description = "Google Stock", Background = "#f48a21", Type = FlagType.Circle, BorderColor = "#f48a21"},
+            new StockEventDetails(){ Date = new DateTime(2013, 10, 01), Text ="Y", Description = "Yahoo Stock", Background = "#841391", Type = FlagType.Square, BorderColor = "#841391"},
+            new StockEventDetails(){ Date = new DateTime(2013, 12, 04), Text ="Y2", Description = "Year 2013", Background = "#6322e0", Type = FlagType.Pin, BorderColor = "#6322e0", ShowOnSeries = false},
+            new StockEventDetails(){ Date = new DateTime(2016, 03, 01), Text ="Q2", Description = "2014 Quarter2", Background = "#6C6D6D", Type = FlagType.Circle, BorderColor = "#6C6D6D"},
+            new StockEventDetails(){ Date = new DateTime(2016, 06, 01), Text ="Q3", Description = "2014 Quarter3", Background = "#f48a21", Type = FlagType.Circle, BorderColor = "#f48a21"},
+            new StockEventDetails(){ Date = new DateTime(2016, 09, 01), Text ="Q4", Description = "2014 Quarter4", Background = "#f48a21", Type = FlagType.Flag, BorderColor = "#f48a21"},
+            new StockEventDetails(){ Date = new DateTime(2016, 12, 01), Text ="Y4", Description = "Year 2015", Background = "#6322e0", Type = FlagType.Pin, BorderColor = "#6322e0", ShowOnSeries= false},
+            new StockEventDetails(){ Date = new DateTime(2016, 02, 02), Text ="End", Description = "Markets closed", Background = "#3ab0f9", Type = FlagType.ArrowDown, BorderColor = "#3ab0f9"},
+            new StockEventDetails(){ Date = new DateTime(2017, 01, 07), Text ="A", Description = "Amazon Stock", Background = "#f48a21", Type = FlagType.Circle, BorderColor = "#f48a21"},
+            new StockEventDetails(){ Date = new DateTime(2017, 01, 02), Text ="Q1", Description = "AAPL Stock", Background = "#dd3c9f", Type = FlagType.Text, BorderColor = "#dd3c9f"},
+            new StockEventDetails(){ Date = new DateTime(2017, 02, 12), Text ="Close", Description = "Markets closed", Background = "#f48a21", Type = FlagType.Circle, BorderColor = "#f48a21"}
+        };
+    }
+
+}
+
+```
 
 ![Stock Events in Stock Chart](images/stock-events.png)

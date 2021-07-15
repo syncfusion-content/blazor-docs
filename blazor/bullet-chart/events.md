@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Events in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Events in Blazor Bullet Chart  component of Syncfusion, and more details.
+title: Events in the Blazor Bullet Chart component | Syncfusion
+description: Learn here all about the Events of Syncfusion Bullet Chart (SfBulletChart) component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: "Events in the Blazor Bullet Chart component | Syncfusion"
-
-component: "Bullet Chart"
-
-description: "Learn here all about the Events of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Events in the Blazor Bullet Chart (SfBulletChart)

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Candle in Blazor Chart Component | Syncfusion 
-description: Learn about Candle in Blazor Chart component of Syncfusion, and more details.
+title: Candle Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Candle Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
----
-
----
-title: "Candle Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Candle Chart of Syncfusion Charts (SfCharts) component and more."
 ---
 
 # Candle Chart in Blazor Charts (SfCharts)
@@ -22,9 +14,42 @@ description: "Learn here all about Candle Chart of Syncfusion Charts (SfCharts) 
 [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series are similar to Hilo Open Close series, are used to represent the **Low**, **High**, **Open and Closing** price over time. To render a candle series, use series
 [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle).
 
-{% aspTab template="chart/series/financial-charts/candle", sourceFiles="candle.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StockDetails" XName="X" High="High" Low="Low" Type="ChartSeriesType.Candle" Open="Open" Close="Close">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X {get; set;}
+        public double Y {get; set; }
+        public double High {get; set; }
+        public double Low {get; set; }
+        public double Open {get; set; }
+        public double Close { get; set;}
+    }
+
+    public List<Data> StockDetails = new List<Data>
+{
+        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
+        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
+        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
+        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
+        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+    };
+}
+
+```
 
 ![Candle](../images/financial-types/candles.png)
 
@@ -55,9 +80,42 @@ The color of the candle will be defined by comparing with previous values. [`Bea
 [`EnableSolidCandles`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~EnableSolidCandles.html) is used to enable/disable the solid candles. By default it is set as **false**. The fill color of the candle will be defined by its opening and closing values. [`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~BearFillColor.html) will be applied when the opening value is less than the closing value. [`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~BullFillColor.html)
 will be applied when the opening value is greater than closing value.
 
-{% aspTab template="chart/series/financial-charts/solid-candles", sourceFiles="solid-candles.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@StockDetails" XName="X" High="High" BearFillColor="#e56590" BullFillColor="#f8b883" EnableSolidCandles="true"
+                     Low="Low" Type="ChartSeriesType.Candle" Open="Open" Close="Close">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class Data
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+        public double High { get; set; }
+        public double Low { get; set; }
+        public double Open { get; set; }
+        public double Close { get; set; }
+    }
+
+    public List<Data> StockDetails = new List<Data>
+{
+        new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
+        new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
+        new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
+        new Data{ X= "Apr", Open= 160, High= 180, Low= 120, Close= 140 },
+        new Data{ X= "May", Open= 150, High= 170, Low= 110, Close= 130 }
+    };
+}
+
+```
 
 ![Solid Candles](../images/financial-types/solid-candles.png)
 

@@ -1,28 +1,50 @@
 ---
 layout: post
-title: Step Area in Blazor Chart Component | Syncfusion 
-description: Learn about Step Area in Blazor Chart component of Syncfusion, and more details.
+title: Step Area Chart in Blazor Charts component | Syncfusion
+description: Learn here all about Step Area Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
----
-title: "Step Area Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Step Area Chart of Syncfusion Charts (SfCharts) component and more."
----
 # Step Area Chart in Blazor Charts (SfCharts)
 
 ## Step Area
 
 [`Blazor Step Area chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) is like a step line chart except that the area connected through vertical and horizontal lines are shaded with color. To render a [`Step Area`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StepArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepArea).
 
-{% aspTab template="chart/series/area-charts/steparea", sourceFiles="steparea.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Low" Type="ChartSeriesType.StepArea">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Low { get; set; }
+        public double High { get; set; }
+    }
+
+    public List<ChartData> WeatherReports = new List<ChartData>
+{
+         new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
+         new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
+         new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
+         new ChartData { X= "Wed", Low= 9.6, High= 17.2 },
+         new ChartData { X= "Thu", Low= 7.5, High= 15.1 },
+         new ChartData { X= "Fri", Low= 3.0, High= 10.5 },
+         new ChartData { X= "Sat", Low= 1.2, High= 7.9 }
+    };
+}
+
+```
 
 ![Step Area](../images/chart-types-images/steparea.png)
 

@@ -1,18 +1,10 @@
 ---
 layout: post
 title: Tool Tip in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Tool Tip in Blazor Bullet Chart  component of Syncfusion, and more details.
+description: Learn here all about the tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: "Tooltip in the Blazor Bullet Chart component | Syncfusion"
-
-component: "Bullet Chart"
-
-description: "Learn here all about the tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Tooltip in the Blazor Bullet Chart (SfBulletChart)

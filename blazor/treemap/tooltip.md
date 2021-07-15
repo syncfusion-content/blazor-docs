@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Tooltip in Blazor TreeMap Component | Syncfusion 
-description: Learn about Tooltip in Blazor TreeMap component of Syncfusion, and more details.
+title: Tooltip in the Blazor TreeMap component | Syncfusion
+description: Learn here all about the Tooltip of Syncfusion TreeMap (SfTreeMap) component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
----
-
----
-title: "Tooltip in the Blazor TreeMap component | Syncfusion"
-
-component: "TreeMap"
-
-description: "Learn here all about the Tooltip of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
 # Tooltip in the Blazor TreeMap (SfTreeMap)

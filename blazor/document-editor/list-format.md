@@ -1,16 +1,10 @@
 ---
 layout: post
-title: List Format in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about List Format in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Working with Lists
+description: Learn the types of lists supported in Blazor document editor and how to apply or clear it for selected contents.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
----
-
----
-title: "Working with Lists"
-component: "Word processor"
-description: "Learn the types of lists supported in Blazor document editor and how to apply or clear it for selected contents."
 ---
 
 # Working with Lists

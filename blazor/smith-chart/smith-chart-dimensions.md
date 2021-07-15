@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Smith Chart Dimensions in Blazor Smith Chart Component | Syncfusion 
-description: Learn about Smith Chart Dimensions in Blazor Smith Chart component of Syncfusion, and more details.
+title: Dimensions in the Blazor Smith Chart component | Syncfusion 
+description: Learn here about the dimensions in Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
----
-
----
-title: " Dimensions in the Blazor Smith Chart component | Syncfusion "
-
-component: "Smith Chart"
-
-description: "Learn here about the dimensions in Syncfusion Blazor Smith Chart (SfSmithChart) component and more."
 ---
 
 # Dimensions in the Blazor Smith Chart

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Selection And Highlight in Blazor TreeMap Component | Syncfusion 
-description: Learn about Selection And Highlight in Blazor TreeMap component of Syncfusion, and more details.
+title: Selection and Highlight in the Blazor TreeMap component | Syncfusion
+description: Learn here all about Selection and Highlight of Syncfusion TreeMap (SfTreeMap) component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
----
-
----
-title: "Selection and Highlight in the Blazor TreeMap component | Syncfusion"
-
-component: "TreeMap"
-
-description: "Learn here all about Selection and Highlight of Syncfusion TreeMap (SfTreeMap) component and more."
 ---
 
 # Selection and Highlight in the Blazor TreeMap (SfTreeMap)

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Axis Customization in Blazor Sparkline Charts Component | Syncfusion 
-description: Learn about Axis Customization in Blazor Sparkline Charts component of Syncfusion, and more details.
+title: Axis Customization in the Blazor Sparkline component | Syncfusion
+description: Learn here all about the axis customization of Syncfusion Sparkline (SfSparkline) component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
----
-
----
-title: "Axis Customization in the Blazor Sparkline component | Syncfusion"
-
-component: "Sparkline"
-
-description: "Learn here all about the axis customization of Syncfusion Sparkline (SfSparkline) component and more."
 ---
 
 # Axis Customization in the Blazor Sparkline (SfSparkline)

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Range in Blazor Range Selector Component | Syncfusion 
-description: Learn about Range in Blazor Range Selector component of Syncfusion, and more details.
+title: Selecting range in Blazor Range Selector component | Syncfusion 
+description: Learn here all about selecting range in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
----
-
----
-title: " Selecting range in Blazor Range Selector component | Syncfusion "
-
-component: "Range Selector"
-
-description: "Learn here all about selecting range in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more."
 ---
 
 # Selecting range in the Blazor Range Selector (SfRangeNavigator)
@@ -36,9 +28,42 @@ This section describes how to bind the value to the Range Selector component in 
 
 As shown in the following example, the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property can be used directly as an object or from code-behind for the Range Selector.
 
-{% aspTab template="range-navigator/range", sourceFiles="range.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime"
+                  LabelFormat="MMM-yy" IntervalType="RangeIntervalType.Years" Interval="1">
+    <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@StockInfo" XName="Date" Type="RangeNavigatorType.Area" YName="Close">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code {
+
+    public class StockDetails
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+    }
+
+    public DateTime[] Value = new DateTime[] { new DateTime(2009, 01, 01), new DateTime(2010, 01, 01) };
+
+    public List<StockDetails> StockInfo = new List<StockDetails>
+    {
+        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
+    };
+}
+
+```
 
 ![Selecting range via one way binding](images/common/range.png)
 
@@ -46,8 +71,41 @@ As shown in the following example, the [`Value`](https://help.syncfusion.com/cr/
 
 The **@bind-Value** code-behind attribute in the Range Selector can be used to achieve two-way binding. The following example shows how to achieve two-way binding for the Range Selector.
 
-{% aspTab template="range-navigator/range", sourceFiles="value.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfRangeNavigator @bind-Value="@Value" ValueType="RangeValueType.DateTime"
+                  LabelFormat="MMM-yy" IntervalType="RangeIntervalType.Years" Interval="1">
+    <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
+    <RangeNavigatorSeriesCollection>
+        <RangeNavigatorSeries DataSource="@StockInfo" XName="Date" Type="RangeNavigatorType.Area" YName="Close">
+        </RangeNavigatorSeries>
+    </RangeNavigatorSeriesCollection>
+</SfRangeNavigator>
+
+@code {
+
+    public class StockDetails
+    {
+        public DateTime Date { get; set; }
+        public double Close { get; set; }
+    }
+
+    public object Value = new DateTime[] { new DateTime(2009, 01, 01), new DateTime(2010, 01, 01) };
+
+    public List<StockDetails> StockInfo = new List<StockDetails>
+    {
+        new StockDetails { Date = new DateTime(2005, 01, 01), Close = 21 },
+        new StockDetails { Date = new DateTime(2006, 01, 01), Close = 24 },
+        new StockDetails { Date = new DateTime(2007, 01, 01), Close = 36 },
+        new StockDetails { Date = new DateTime(2008, 01, 01), Close = 38 },
+        new StockDetails { Date = new DateTime(2009, 01, 01), Close = 54 },
+        new StockDetails { Date = new DateTime(2010, 01, 01), Close = 57 },
+        new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70 }
+    };
+}
+
+```
 
 ![Selecting range via two way binding](images/common/range.png)

@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Getting Started in Blazor Progress Bar  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Progress Bar  component of Syncfusion, and more details.
+title: Getting Started with the Blazor Progress Bar component | Syncfusion
+description: Learn here about getting started with Syncfusion Blazor Progress Bar (SfProgressBar) component, its elements, and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
----
-
----
-title: "Getting Started with the Blazor Progress Bar component | Syncfusion"
-
-component: "Progress Bar"
-
-description: "Learn here about getting started with Syncfusion Blazor Progress Bar (SfProgressBar) component, its elements, and more."
 ---
 
 # Getting Started with the Blazor Progress Bar (SfProgressBar)

@@ -14,9 +14,45 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable)
 property in the `Crosshair`.
 
-{% aspTab template="stock-chart/user-interaction/crosshair-trackball/crosshair", sourceFiles="crosshair.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price">
+    <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
+
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
+@code {
+
+    public class ChartData
+    {
+        public DateTime Date;
+        public Double Open;
+        public Double Low;
+        public Double Close;
+        public Double High;
+        public Double Volume;
+    }
+
+    public List<ChartData> StockDetails = new List<ChartData>
+ {
+          new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
+          new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
+          new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
+          new ChartData { Date = new DateTime(2012, 04, 23), Open= 81.5157, High = 88.2857,Low = 79.2857, Close = 86.1428,Volume = 965935749},
+          new ChartData { Date = new DateTime(2012, 04, 30), Open= 85.4, High =  85.4857,Low = 80.7385, Close = 80.75,Volume = 615249365},
+          new ChartData { Date = new DateTime(2012, 05, 07), Open= 80.2143, High = 82.2685,Low = 79.8185, Close = 80.9585,Volume = 541742692},
+          new ChartData { Date = new DateTime(2012, 05, 14), Open= 80.3671, High = 81.0728,Low = 74.5971, Close = 75.7685,Volume = 708126233},
+          new ChartData { Date = new DateTime(2012, 05, 21), Open= 76.3571, High = 82.3571,Low = 76.2928, Close = 80.3271,Volume = 682076215},
+          new ChartData { Date = new DateTime(2012, 05, 28), Open= 81.5571, High = 83.0714,Low = 80.0743, Close = 80.1414,Volume = 480059584}
+    };
+}
+
+```
 
 ![Crosshair](images/common/crosshair.png)
 
@@ -25,9 +61,56 @@ property in the `Crosshair`.
 Tooltip label for an axis can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable)
 property of `CrosshairTooltip` in the corresponding axis.
 
-{% aspTab template="stock-chart/user-interaction/crosshair-trackball/axis-tooltip", sourceFiles="axis-tooltip.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price">
+    <StockChartCrosshairSettings Enable="true"></StockChartCrosshairSettings>
+
+    <StockChartPrimaryYAxis>
+        <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
+        <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
+        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryYAxis>
+
+    <StockChartPrimaryXAxis>
+        <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
+        <StockChartAxisCrosshairTooltip Enable="true"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryXAxis>
+
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
+@code {
+
+    public class ChartData
+    {
+        public DateTime Date;
+        public Double Open;
+        public Double Low;
+        public Double Close;
+        public Double High;
+        public Double Volume;
+    }
+
+    public List<ChartData> StockDetails = new List<ChartData>
+{
+          new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
+          new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
+          new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
+          new ChartData { Date = new DateTime(2012, 04, 23), Open= 81.5157, High = 88.2857,Low = 79.2857, Close = 86.1428,Volume = 965935749},
+          new ChartData { Date = new DateTime(2012, 04, 30), Open= 85.4, High =  85.4857,Low = 80.7385, Close = 80.75,Volume = 615249365},
+          new ChartData { Date = new DateTime(2012, 05, 07), Open= 80.2143, High = 82.2685,Low = 79.8185, Close = 80.9585,Volume = 541742692},
+          new ChartData { Date = new DateTime(2012, 05, 14), Open= 80.3671, High = 81.0728,Low = 74.5971, Close = 75.7685,Volume = 708126233},
+          new ChartData { Date = new DateTime(2012, 05, 21), Open= 76.3571, High = 82.3571,Low = 76.2928, Close = 80.3271,Volume = 682076215},
+          new ChartData { Date = new DateTime(2012, 05, 28), Open= 81.5571, High = 83.0714,Low = 80.0743, Close = 80.1414,Volume = 480059584}
+    };
+}
+
+```
 
 ![Crosshair Tooltip](images/common/crosshair-tooltip.png)
 
@@ -36,9 +119,58 @@ property of `CrosshairTooltip` in the corresponding axis.
 The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and Width of the crosshair line can be customized by using the
 [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Line) property in the crosshair.
 
-{% aspTab template="stock-chart/user-interaction/crosshair-trackball/custom", sourceFiles="custom.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price">
+    <StockChartCrosshairSettings Enable="true">
+        <StockChartCrosshairLine Width="2" Color="green"></StockChartCrosshairLine>
+    </StockChartCrosshairSettings>
+
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+    </StockChartSeriesCollection>
+
+    <StockChartPrimaryYAxis>
+        <StockChartAxisLineStyle Color="Transparent"></StockChartAxisLineStyle>
+        <StockChartAxisMajorTickLines Color="Transparent" Width="0"></StockChartAxisMajorTickLines>
+        <StockChartAxisCrosshairTooltip Enable="true" Fill="green"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryYAxis>
+
+    <StockChartPrimaryXAxis>
+        <StockChartAxisMajorGridLines Color="Transparent"></StockChartAxisMajorGridLines>
+        <StockChartAxisCrosshairTooltip Enable="true" Fill="green"></StockChartAxisCrosshairTooltip>
+    </StockChartPrimaryXAxis>
+</SfStockChart>
+
+@code {
+
+    public class ChartData
+    {
+        public DateTime Date;
+        public Double Open;
+        public Double Low;
+        public Double Close;
+        public Double High;
+        public Double Volume;
+    }
+
+    public List<ChartData> StockDetails = new List<ChartData>
+{
+        new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
+        new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
+        new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
+        new ChartData { Date = new DateTime(2012, 04, 23), Open= 81.5157, High = 88.2857,Low = 79.2857, Close = 86.1428,Volume = 965935749},
+        new ChartData { Date = new DateTime(2012, 04, 30), Open= 85.4, High =  85.4857,Low = 80.7385, Close = 80.75,Volume = 615249365},
+        new ChartData { Date = new DateTime(2012, 05, 07), Open= 80.2143, High = 82.2685,Low = 79.8185, Close = 80.9585,Volume = 541742692},
+        new ChartData { Date = new DateTime(2012, 05, 14), Open= 80.3671, High = 81.0728,Low = 74.5971, Close = 75.7685,Volume = 708126233},
+        new ChartData { Date = new DateTime(2012, 05, 21), Open= 76.3571, High = 82.3571,Low = 76.2928, Close = 80.3271,Volume = 682076215},
+        new ChartData { Date = new DateTime(2012, 05, 28), Open= 81.5571, High = 83.0714,Low = 80.0743, Close = 80.1414,Volume = 480059584}
+    };
+}
+
+```
 
 ![Customization](images/common/crosshair-custom.png)
 
@@ -49,8 +181,46 @@ Trackball is used to track a data point closest to the mouse or touch position. 
 Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of the crosshair to true and
 `Shared` property in `Tooltip` to true in chart.
 
-{% aspTab template="stock-chart/user-interaction/crosshair-trackball/trackball", sourceFiles="trackball.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfStockChart Title="AAPL Stock Price">
+    <StockChartCrosshairSettings Enable="true" LineType="LineType.Vertical"></StockChartCrosshairSettings>
+
+    <StockChartTooltipSettings Enable="true" Shared="true"></StockChartTooltipSettings>
+
+    <StockChartSeriesCollection>
+        <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume"></StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+
+@code {
+
+    public class ChartData
+    {
+        public DateTime Date;
+        public Double Open;
+        public Double Low;
+        public Double Close;
+        public Double High;
+        public Double Volume;
+    }
+
+    public List<ChartData> StockDetails = new List<ChartData>
+{
+        new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
+        new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
+        new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
+        new ChartData { Date = new DateTime(2012, 04, 23), Open= 81.5157, High = 88.2857,Low = 79.2857, Close = 86.1428,Volume = 965935749},
+        new ChartData { Date = new DateTime(2012, 04, 30), Open= 85.4, High =  85.4857,Low = 80.7385, Close = 80.75,Volume = 615249365},
+        new ChartData { Date = new DateTime(2012, 05, 07), Open= 80.2143, High = 82.2685,Low = 79.8185, Close = 80.9585,Volume = 541742692},
+        new ChartData { Date = new DateTime(2012, 05, 14), Open= 80.3671, High = 81.0728,Low = 74.5971, Close = 75.7685,Volume = 708126233},
+        new ChartData { Date = new DateTime(2012, 05, 21), Open= 76.3571, High = 82.3571,Low = 76.2928, Close = 80.3271,Volume = 682076215},
+        new ChartData { Date = new DateTime(2012, 05, 28), Open= 81.5571, High = 83.0714,Low = 80.0743, Close = 80.1414,Volume = 480059584}
+    };
+}
+
+```
 
 ![Trackball](images/common/trackball.png)

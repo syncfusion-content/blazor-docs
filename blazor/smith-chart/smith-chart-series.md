@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Smith Chart Series in Blazor Smith Chart Component | Syncfusion 
-description: Learn about Smith Chart Series in Blazor Smith Chart component of Syncfusion, and more details.
+title: Series customization in the Blazor Smith Chart component | Syncfusion 
+description: Learn here about series customization of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
----
-
----
-title: " Series customization in the Blazor Smith Chart component | Syncfusion "
-
-component: "Smith Chart"
-
-description: "Learn here about series customization of Syncfusion Blazor Smith Chart (SfSmithChart) component and more."
 ---
 
 # Series customization in Blazor Smith Chart

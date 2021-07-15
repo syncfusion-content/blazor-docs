@@ -1,16 +1,10 @@
 ---
 layout: post
-title: Style And Appearance in Blazor Button Component | Syncfusion 
-description: Learn about Style And Appearance in Blazor Button component of Syncfusion, and more details.
+title: Styles and Appearances
+description: This section explains the details of the styles and appearances of the Button.
 platform: Blazor
 control: Button
 documentation: ug
----
-
----
-title: "Styles and Appearances"
-component: "Button"
-description: "This section explains the details of the styles and appearances of the Button."
 ---
 
 # Styles and Appearances

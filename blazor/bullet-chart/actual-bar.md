@@ -1,18 +1,10 @@
 ---
 layout: post
-title: Actual Bar in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn about Actual Bar in Blazor Bullet Chart  component of Syncfusion, and more details.
+title: Actual Bar in Blazor Bullet Chart component | Syncfusion 
+description: Learn here all about the Actual Bar of Syncfusion Bullet Chart (SfBulletChart) component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
----
-
----
-title: "Actual Bar in Blazor Bullet Chart component | Syncfusion"
-
-component: "Bullet Chart"
-
-description: "Learn here all about the Actual Bar of Syncfusion Bullet Chart (SfBulletChart) component and more."
 ---
 
 # Actual Bar in the Blazor Bullet Chart (SfBulletChart)

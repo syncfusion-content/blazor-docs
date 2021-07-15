@@ -1,28 +1,54 @@
 ---
 layout: post
-title: Spline Area in Blazor Chart Component | Syncfusion 
-description: Learn about Spline Area in Blazor Chart component of Syncfusion, and more details.
+title: Spline Area Chart in Blazor Charts component | Syncfusion"
+description: Learn here all about Spline Area Chart of Syncfusion Charts (SfCharts) component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
----
-title: "Spline Area Chart in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Spline Area Chart of Syncfusion Charts (SfCharts) component and more."
----
 # Spline Area Chart in Blazor Charts (SfCharts)
 
 ## Spline Area
 
 [`Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) represents time dependent data and visualizes the trends at equal intervals, but with the data points connected with a smooth line. To render a [`Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Spline Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea).
 
-{% aspTab template="chart/series/line-charts/splinearea", sourceFiles="splinearea.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.SplineArea">
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set;}
+        public double Y { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+   {
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+```
 
 ![Spline Area](../images/chart-types-images/splinearea.png)
 
@@ -37,9 +63,43 @@ The following properties can be used to customize the [`Spline Area`](https://he
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-{% aspTab template="chart/series/line-charts/splinearea", sourceFiles="custom-splinearea.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfChart Title="Olympic Medals">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Opacity="0.5" DashArray="5,5" Fill="blue" Type="ChartSeriesType.SplineArea">
+            <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string X { get; set; }
+        public double Y { get; set; }
+    }
+    public List<ChartData> MedalDetails = new List<ChartData>
+	{
+        new ChartData { X= "South Korea", Y= 39.4 },
+        new ChartData { X= "India", Y= 61.3 },
+        new ChartData { X= "Pakistan", Y= 20.4 },
+        new ChartData { X= "Germany", Y= 65.1 },
+        new ChartData { X= "Australia", Y= 15.8 },
+        new ChartData { X= "Italy", Y= 29.2 },
+        new ChartData { X= "United Kingdom", Y= 44.6 },
+        new ChartData { X= "Saudi Arabia", Y= 9.7 },
+        new ChartData { X= "Russia", Y= 40.8 },
+        new ChartData { X= "Mexico", Y= 31 },
+        new ChartData { X= "Brazil", Y= 75.9 },
+        new ChartData { X= "China", Y= 51.4 }
+    };
+}
+
+```
 
 ![Custom Spline Area](../images/chart-types-images/custom-spline-area.png)
 
