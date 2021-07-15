@@ -15,7 +15,7 @@ When the axis labels overlap, the [`LabelIntersectAction`](https://help.syncfusi
 
 When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Hide**,
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -54,13 +54,13 @@ When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 
 
-{% endhighlight %}
+```
 
 ![Hide](images/axis-labels/hide.png)
 
 When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Rotate45**
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -99,13 +99,13 @@ When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 
 
-{% endhighlight %}
+```
 
 ![Rotate45](images/axis-labels/rotate45.png)
 
 When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Rotate90**
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -144,7 +144,7 @@ When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 
 
-{% endhighlight %}
+```
 
 ![Rotate90](images/axis-labels/rotate90.png)
 
@@ -152,7 +152,7 @@ When [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 The axis labels can be put **Outside** of the axis line by default, however the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPosition) property may also be used to position them **Inside** the axis line.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -188,7 +188,7 @@ The axis labels can be put **Outside** of the axis line by default, however the 
         };
 }
 
-{% endhighlight %}
+```
 
 ![Axis Labels Positioning](images/axis-labels/position.png)
 
@@ -200,7 +200,7 @@ The [`MultiLevelLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCategory.html#Syncfusion_Blazor_Charts_ChartCategory_Start), [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCategory.html#Syncfusion_Blazor_Charts_ChartCategory_End), [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCategory.html#Syncfusion_Blazor_Charts_ChartCategory_Text), and [`MaximumTextWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCategory.html#Syncfusion_Blazor_Charts_ChartCategory_MaximumTextWidth) of multilevel labels can be customized using the [`Categories`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Categories).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -245,7 +245,7 @@ The [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 
-{% endhighlight %}
+```
 
 ![Axis Labels Positioning](images/axis-labels/categories.png)
 
@@ -253,7 +253,7 @@ The [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 [`Trim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_Trim) or [`Wrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextOverflow.html#Syncfusion_Blazor_Charts_TextOverflow_Wrap) the multilevel labels using the [`Overflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Overflow) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -297,7 +297,7 @@ The [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 
-{% endhighlight %}
+```
 
 ![Axis Labels Positioning](images/axis-labels/overflow.png)
 
@@ -307,7 +307,7 @@ The [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 The [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Alignment) property allows to place multilevel labels in a [`Far`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far), [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), or [`Near`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near) location.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -352,7 +352,7 @@ The [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 }
 
 
-{% endhighlight %}
+```
 
 ![Axis Labels Positioning](images/axis-labels/alignment.png)
 
@@ -360,7 +360,7 @@ The [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 The [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisMultiLevelLabelTextStyle.html#Syncfusion_Blazor_Charts_ChartAxisMultiLevelLabelTextStyle_Size), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisMultiLevelLabelTextStyle.html#Syncfusion_Blazor_Charts_ChartAxisMultiLevelLabelTextStyle_Color), [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontFamily), [`FontWeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontWeight), [`FontStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontStyle), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_Opacity), [`TextAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_TextAlignment) and [`TextOverflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_TextOverflow) may all be customized using the [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_TextStyle) property of multilevel labels.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -406,7 +406,7 @@ The [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 }
 
 
-{% endhighlight %}
+```
 
 ![Axis Labels Positioning](images/axis-labels/textcustom.png)
 
@@ -414,7 +414,7 @@ The [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 
 The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonLabelBorder.html#Syncfusion_Blazor_Charts_ChartCommonLabelBorder_Width), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonLabelBorder.html#Syncfusion_Blazor_Charts_ChartCommonLabelBorder_Color), and [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonLabelBorder.html#Syncfusion_Blazor_Charts_ChartCommonLabelBorder_Type) of the border using the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_Border) can be changed. [`Rectangle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_Rectangle), [`Brace`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_Brace), [`WithoutBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_WithoutBorder), [`WithoutTopBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_WithoutTopBorder), [`WithoutTopandBottomBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_WithoutTopandBottomBorder), [`Auto`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_Auto), and [`CurlyBrace`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderType.html#Syncfusion_Blazor_Charts_BorderType_CurlyBrace) are the different types of borders.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -459,7 +459,7 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 }
 
 
-{% endhighlight %}
+```
 
 ![Axis Labels Positioning](images/axis-labels/border-custom.png)
 
@@ -467,7 +467,7 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 Long text labels at the axes' edges may display partially in the chart. To avoid this, utilise the axis' [`EdgeLabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EdgeLabelPlacement) property, which moves or hides the label within the chart area for a better appearance using the [`Shift`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelPlacement.html#Syncfusion_Blazor_Charts_EdgeLabelPlacement_Shift), [`Hide`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelPlacement.html#Syncfusion_Blazor_Charts_EdgeLabelPlacement_Hide) Options. [`None`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EdgeLabelPlacement.html#Syncfusion_Blazor_Charts_EdgeLabelPlacement_None) will leave the text as it is.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -500,13 +500,13 @@ Long text labels at the axes' edges may display partially in the chart. To avoi
     };
 }
 
-{% endhighlight %}
+```
 
 ## Labels Customization
 
 An axis' [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMultiLevelLabel.html#Syncfusion_Blazor_Charts_ChartMultiLevelLabel_TextStyle) property allows you to change the [`Colour`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisMultiLevelLabelTextStyle.html#Syncfusion_Blazor_Charts_ChartAxisMultiLevelLabelTextStyle_Color) and [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisMultiLevelLabelTextStyle.html#Syncfusion_Blazor_Charts_ChartAxisMultiLevelLabelTextStyle_Size) of the axis labels.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -540,13 +540,13 @@ An axis' [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Label Trim
 
 The label may be trimmed with [`EnableTrim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableTrim), and the width of the labels may be modified with the [`MaximumLabelWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MaximumLabelWidth) property in the axis; **34px** is the default value of [`MaximumLabelWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MaximumLabelWidth) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -579,7 +579,7 @@ The label may be trimmed with [`EnableTrim`](https://help.syncfusion.com/cr/blaz
     };
 }
 
-{% endhighlight %}
+```
 
 ![Trim using maximum label width](images/axis-labels/labels-trim.png)
 
@@ -587,7 +587,7 @@ The label may be trimmed with [`EnableTrim`](https://help.syncfusion.com/cr/blaz
 
 The <br> tag can used to separate the long axis label into multiple lines utilizing the line break functionality.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -622,7 +622,7 @@ The <br> tag can used to separate the long axis label into multiple lines utili
 }
 
 
-{% endhighlight %}
+```
 
 ![Line break support](images/axis-labels/line-break.png)
 

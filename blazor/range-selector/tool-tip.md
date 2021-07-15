@@ -19,7 +19,7 @@ The tooltip for sliders are supported by the Range Selector. Sliders are used in
 
 The tooltip can be used to display information about the selected data and it is enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorRangeTooltipSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorRangeTooltipSettings_Enable) property to **true**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -54,7 +54,7 @@ The tooltip can be used to display information about the selected data and it is
     };
 }
 
-{% endhighlight %}
+```
 
 ![Enable tooltip](images/tooltip/tooltip.png)
 
@@ -70,7 +70,7 @@ The tooltip can be customized using the following properties:
 * [`RangeNavigatorTooltipTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorTooltipTextStyle.html) - Customizes the [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorTooltipTextStyle.html#Syncfusion_Blazor_Charts_RangeNavigatorTooltipTextStyle_Size), the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_Color), the [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontFamily), the [`FontStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontStyle), the [`FontWeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_FontWeight), the [`TextAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_TextAlignment) and the [`TextOverflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonFont.html#Syncfusion_Blazor_Charts_ChartCommonFont_TextOverflow) of the tooltip text.
 * [`RangeNavigatorTooltipBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorTooltipBorder.html) - Customize the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the tooltip border.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -106,7 +106,7 @@ The tooltip can be customized using the following properties:
     };
 }
 
-{% endhighlight %}
+```
 
 ![Tooltip Customization](images/tooltip/tooltip-custom.png)
 
@@ -114,7 +114,7 @@ The tooltip can be customized using the following properties:
 
 The [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property in the tooltip is used to format and parse the date to all globalize formats.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -149,7 +149,7 @@ The [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     };
 }
 
-{% endhighlight %}
+```
 
 ![Label Format](images/tooltip/tooltip-format.png)
 

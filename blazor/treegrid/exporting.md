@@ -12,6 +12,8 @@ documentation: ug
 PDF export allows exporting Tree Grid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the Tree Grid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data;
@@ -52,6 +54,41 @@ PDF export allows exporting Tree Grid data to PDF document. You need to use the
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ## To customize PDF export
 
 PDF export provides an option to customize mapping of Tree Grid to exported PDF document.
@@ -59,6 +96,8 @@ PDF export provides an option to customize mapping of Tree Grid to exported PDF 
 ### File name for exported document
 
 You can assign the file name for the exported document by defining **fileName** property in **PdfExportProperties**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -102,9 +141,46 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ### How to change page orientation
 
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the export properties.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -148,6 +224,41 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ### How to change page size
 
 Page size can be customized for the exported document using the export properties.
@@ -181,6 +292,8 @@ Supported page sizes are:
 * HalfLetter
 * Letter11x17
 * Ledger
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -224,9 +337,46 @@ Supported page sizes are:
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ### Export current page
 
 PDF export provides an option to export the current page into PDF. To export current page, define the **exportType** to **CurrentPage**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -270,9 +420,46 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ### Export hidden columns
 
 PDF export provides an option to export hidden columns of Tree Grid by defining the **includeHiddenColumn** as **true**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -316,11 +503,48 @@ PDF export provides an option to export hidden columns of Tree Grid by defining 
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ### Theme
 
 PDF export provides an option to include theme for exported PDF document.
 
 To apply theme in exported PDF, define the **theme** in export properties.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -396,5 +620,40 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+       
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+      
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> BusinessObjectCollection = new List<TreeData>();
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 2 });
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 > By default, material theme is applied to exported PDF document.

@@ -13,7 +13,7 @@ documentation: ug
 
 You can use numeric axis to represent numeric values of data in chart. By default, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_ValueType) of an axis is `Double`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -42,7 +42,7 @@ You can use numeric axis to represent numeric values of data in chart. By defaul
         };
 }
 
-{% endhighlight %}
+```
 
 ![Numeric Axis](images/numeric-axis/double.png)
 
@@ -53,7 +53,7 @@ of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~Interval.html) property of
 the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -83,7 +83,7 @@ the axis.
         };
 }
 
-{% endhighlight %}
+```
 
 ![Range](images/numeric-axis/range.png)
 
@@ -102,7 +102,7 @@ Padding can be applied to the minimum and maximum extremes of the axis range by 
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **None**, minimum and maximum of an axis is based on the data.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -133,7 +133,7 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
         };
 }
 
-{% endhighlight %}
+```
 
 **Numeric - Round**
 
@@ -141,7 +141,7 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 rounded to the nearest possible value divisible by interval. For example, when the minimum is 3.5 and the interval
 is 1, then the minimum will be rounded to 3.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -172,14 +172,14 @@ is 1, then the minimum will be rounded to 3.
         };
 }
 
-{% endhighlight %}
+```
 
 **Numeric - Additional**
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Additional**, interval of an axis will
 be padded to the minimum and maximum of the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -210,14 +210,14 @@ be padded to the minimum and maximum of the axis.
         };
 }
 
-{% endhighlight %}
+```
 
 **Numeric - Normal**
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Normal**, padding is applied to the axis
 based on default range calculation.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -248,14 +248,14 @@ based on default range calculation.
         };
 }
 
-{% endhighlight %}
+```
 
 **Numeric - Auto**
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Auto**, horizontal numeric axis takes
 None as padding calculation, while the vertical numeric axis takes Normal as padding calculation.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -287,7 +287,7 @@ None as padding calculation, while the vertical numeric axis takes Normal as pad
         };
 }
 
-{% endhighlight %}
+```
 
 ## Label Format
 
@@ -296,7 +296,7 @@ None as padding calculation, while the vertical numeric axis takes Normal as pad
 Numeric labels can be formatted by using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelFormat) property.
 Numeric labels supports all globalize format.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -332,7 +332,7 @@ Numeric labels supports all globalize format.
         };
 }
 
-{% endhighlight %}
+```
 
 The following table describes the result of applying some commonly used label formats on numeric values.
 
@@ -400,7 +400,7 @@ The following table describes the result of applying some commonly used label fo
 Axis also supports custom label format using placeholder like {value}°C, in which the value represent the axis
 label e.g 20°C.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -431,7 +431,7 @@ label e.g 20°C.
     };
 }
 
-{% endhighlight %}
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

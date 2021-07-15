@@ -20,7 +20,7 @@ Data markers are used to provide information about the data points in the series
 Markers can be added to the points by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartMarker~Visible.html)
 option of the marker property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -51,7 +51,7 @@ option of the marker property.
         };
 }
 
-{% endhighlight %}
+```
 
 ![Marker](images/marker/marker-razor.png)
 
@@ -59,7 +59,7 @@ option of the marker property.
 
 Markers can be assigned with different shapes such as Rectangle, Circle, Diamond etc using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Shape) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -90,7 +90,7 @@ Markers can be assigned with different shapes such as Rectangle, Circle, Diamond
         };
 }
 
-{% endhighlight %}
+```
 
 ![Shape](images/marker/shape-razor.png)
 
@@ -99,7 +99,7 @@ Markers can be assigned with different shapes such as Rectangle, Circle, Diamond
 Apart from the shapes, you can also add custom images to mark the data point using the
 [`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_ImageUrl) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -131,13 +131,13 @@ Apart from the shapes, you can also add custom images to mark the data point usi
         };
 }
 
-{% endhighlight %}
+```
 
 ## Customization
 
 Marker color and border can be customized using [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMarker.html#Syncfusion_Blazor_Charts_ChartCommonMarker_Border) properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -173,7 +173,7 @@ Marker color and border can be customized using [`Fill`](https://help.syncfusion
         };
 }
 
-{% endhighlight %}
+```
 
 ![Customization](images/marker/custom-razor.png)
 

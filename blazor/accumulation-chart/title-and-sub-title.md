@@ -14,7 +14,7 @@ documentation: ug
 Accumulation chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Title) property, to show the information
 about the data plotted.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -46,7 +46,7 @@ about the data plotted.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Title](images/title/title-razor.png)
 
@@ -54,7 +54,7 @@ about the data plotted.
 
 Title can be customized by using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_TitleStyle) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -88,14 +88,14 @@ Title can be customized by using [`TitleStyle`](https://help.syncfusion.com/cr/b
     };
 }
 
-{% endhighlight %}
+```
 
 ## Subtitle
 
 Accumulation Chart can be given a subtitle using [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_SubTitle) property, to show the information
 about the data plotted.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -127,7 +127,7 @@ about the data plotted.
 }
 
 
-{% endhighlight %}
+```
 
 ![Subtitle](images/title/sub-title-razor.png)
 
@@ -135,7 +135,7 @@ about the data plotted.
 
 Subtitle in accumulation chart can be customized using [`SubTitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_SubTitleStyle) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
@@ -167,7 +167,7 @@ Subtitle in accumulation chart can be customized using [`SubTitleStyle`](https:/
     };
 }
 
-{% endhighlight %}
+```
 
 * [Grouping](./grouping/)
 * [Datalabel](./data-label/)

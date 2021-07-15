@@ -13,7 +13,7 @@ documentation: ug
 
 [`Blazor Step Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) is like a line chart except that the data points are connected using vertical and horizontal lines, showing a step-like progress. To render a [`Step Line`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stepline-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StepLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepLine).
 
-```csharp
+T```csharp
 
 @using Syncfusion.Blazor.Charts
 

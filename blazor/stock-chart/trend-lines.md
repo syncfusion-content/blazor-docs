@@ -18,7 +18,7 @@ Stock Chart supports 6 types of trendlines namely `Linear`,`Exponential`,`Logari
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline,
 use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Linear`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -69,7 +69,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
      };
 }
 
-{% endhighlight %}
+```
 
 ![Linear](images/trendlines/linear.png)
 
@@ -78,7 +78,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 A logarithmic trendline is a best-fit curved line that is most useful when the rate of change in the data increases or decreases quickly and then levels out. A logarithmic trendline can use negative and/or positive values.
 To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Logarithmic`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -128,7 +128,7 @@ To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusio
      };
 }
 
-{% endhighlight %}
+```
 
 ![Logarithmic](images/trendlines/logarithmic.png)
 
@@ -138,7 +138,7 @@ An exponential trendline is a curved line that is most useful when data values r
 To render a exponential trendline,
 use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Exponential`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -196,7 +196,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
                                 }
 
 
-{% endhighlight %}
+```
 
 ![Exponential](images/trendlines/exponential.png)
 
@@ -207,7 +207,7 @@ to render a polynomial trendline,
 use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Polynomial`.
 `PolynomialOrder` used to define the polynomial value.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -257,7 +257,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
      };
 }
 
-{% endhighlight %}
+```
 
 ![Polynomial](images/trendlines/polynomial.png)
 
@@ -273,7 +273,7 @@ To render a moving average trendline, use trendline [`Type`](https://help.syncfu
 
 `Period` property defines the period to find the moving average.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -323,7 +323,7 @@ To render a moving average trendline, use trendline [`Type`](https://help.syncfu
    };
 }
 
-{% endhighlight %}
+```
 
 ![Trendline](images/common/trendlines.png)
 
@@ -331,7 +331,7 @@ To render a moving average trendline, use trendline [`Type`](https://help.syncfu
 
 The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Fill) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Width) properties are used to customize the appearance of the trendline.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -371,6 +371,6 @@ The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
 }
 
 
-{% endhighlight %}
+```
 
 ![Trendline Customization](images/common/custom-trendlines.png)

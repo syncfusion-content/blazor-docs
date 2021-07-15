@@ -20,7 +20,7 @@ Blazor chart supports horizontal and vertical strip lines and customization of s
 You can create horizontal stripline by adding the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the vertical axis.
 Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -60,7 +60,7 @@ Striplines are rendered in the specified start to end range and you can add more
     };
 }
 
-{% endhighlight %}
+```
 
 ![Horizontal Strip lines](images/strip-line/horizontal.png)
 
@@ -68,7 +68,7 @@ Striplines are rendered in the specified start to end range and you can add more
 
 You can create vertical stripline by adding the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in the horizontal axis. Striplines are rendered in the specified start to end range and you can add more than one stripline for an axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -106,7 +106,7 @@ You can create vertical stripline by adding the [`ChartStripline`](https://help.
 
 }
 
-{% endhighlight %}
+```
 
 ![Vertical Striplines](images/strip-line/vertical.png)
 
@@ -118,7 +118,7 @@ Size and border of the strip line can be customized by [`Size`](https://help.syn
 Order of the strip line such that whether it should be rendered  behind or over the series elements
 can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_ZIndex) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -156,7 +156,7 @@ can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 }
 
-{% endhighlight %}
+```
 
 ![Customize the strip line](images/strip-line/custom-stripline.png)
 
@@ -165,7 +165,7 @@ can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion
 You can customize and rotate the text rendered in stripline by [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_TextStyle) and [`Rotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripLine.html) properties.
 Horizontal and Vertical alignment of stripline text can be customized by [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_VerticalAlignment) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -206,7 +206,7 @@ Horizontal and Vertical alignment of stripline text can be customized by [`Horiz
 
 }
 
-{% endhighlight %}
+```
 
 ![Customize the strip line](images/strip-line/custom-striptext.png)
 

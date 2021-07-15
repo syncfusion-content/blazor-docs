@@ -15,7 +15,7 @@ documentation: ug
 
  Date time axis uses date time scale and displays the date time values as axis labels in the specified format.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -44,7 +44,7 @@ documentation: ug
    };
 }
 
-{% endhighlight %}
+```
 
 ![DateTime Axis](images/datetime/datetime.png)
 
@@ -52,7 +52,7 @@ documentation: ug
 
 Date-time category axis is used to display the date-time values with non-linear intervals. For example, the business days alone can been depicted in a week here.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -81,7 +81,7 @@ Date-time category axis is used to display the date-time values with non-linear 
    };
 }
 
-{% endhighlight %}
+```
 
 ### Range
 
@@ -89,7 +89,7 @@ Range for the axis, will be calculated automatically based on the provided data,
 of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
 [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Interval) property of the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -118,7 +118,7 @@ of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.
    };
 }
 
-{% endhighlight %}
+```
 
 ![Range](images/datetime/range.png)
 
@@ -137,7 +137,7 @@ DateTime axis supports following Interval types,
 * Minutes
 * Seconds
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -166,7 +166,7 @@ DateTime axis supports following Interval types,
    };
 }
 
-{% endhighlight %}
+```
 
 **Applying Padding to the Range**
 
@@ -182,7 +182,7 @@ of padding,
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **None**, minimum and maximum of the axis is based on the data.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -211,7 +211,7 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
    };
 }
 
-{% endhighlight %}
+```
 
 **DateTime - Round**
 
@@ -219,7 +219,7 @@ When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 rounded to the nearest possible value divisible by interval. For example, when the minimum is 15th Jan, interval is
 1 and the interval type is ‘month’, then the axis minimum will be Jan 1st.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -248,14 +248,14 @@ rounded to the nearest possible value divisible by interval. For example, when t
    };
 }
 
-{% endhighlight %}
+```
 
 **DateTime - Additional**
 
 When the [`RangePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_RangePadding) is set to **Additional**, interval of an axis will
 be padded to the minimum and maximum of the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -283,13 +283,13 @@ be padded to the minimum and maximum of the axis.
    };
 }
 
-{% endhighlight %}
+```
 
 ## Label Format
 
 You can format and parse the date to all globalize format using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelFormat) property in an axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -317,7 +317,7 @@ You can format and parse the date to all globalize format using [`LabelFormat`]
    };
 }
 
-{% endhighlight %}
+```
 
 The following table describes the result of applying some common date time formats to the labelFormat property
 

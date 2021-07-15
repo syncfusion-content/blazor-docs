@@ -13,7 +13,7 @@ documentation: ug
 
 The [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property allows to add multiple series to the chart. The series are rendered in the order they were added to the series array.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -52,7 +52,7 @@ The [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 }
 
 
-{% endhighlight %}
+```
 
 ![Multiple Series](images/multiple-series/multiple-series-razor.png)
 
@@ -62,7 +62,7 @@ A chart can be created by combining several types such as line, column, and so o
 
 >Bar series cannot be combined with any other series as the axis orientation is different from other series.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -110,7 +110,7 @@ A chart can be created by combining several types such as line, column, and so o
     };
 }
 
-{% endhighlight %}
+```
 
 ![Combination Series](images/multiple-series/combination-razor.png)
 

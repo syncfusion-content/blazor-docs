@@ -12,7 +12,7 @@ documentation: ug
 Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible)
 option in the DataLabel property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
@@ -45,7 +45,7 @@ option in the DataLabel property.
 }
 
 
-{% endhighlight %}
+```
 
 ![Data Label](images/data-label/default-razor.png)
 
@@ -53,7 +53,7 @@ option in the DataLabel property.
 
 Accumulation chart provides support for placing the data label either `Inside` or `Outside` of the chart by using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Position) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -85,7 +85,7 @@ Accumulation chart provides support for placing the data label either `Inside` o
     };
 }
 
-{% endhighlight %}
+```
 
 ![Positioning](images/data-label/position-razor.png)
 
@@ -95,7 +95,7 @@ Datalabels will be arranged smartly without overlapping with each other. You can
 the [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableSmartLabels)
 property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart EnableSmartLabels="true">
@@ -137,7 +137,7 @@ property.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Smart Labels](images/data-label/smartlabels-razor.png)
 
@@ -146,7 +146,7 @@ property.
 Connector line will be visible when the data label is placed `Outside` the chart.
 The connector line can be customized using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Type), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Color), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Width), [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Length) and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_DashArray) properties
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
@@ -180,7 +180,7 @@ The connector line can be customized using the [`Type`](https://help.syncfusion.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Connector Line](images/data-label/connector-razor.png)
 
@@ -188,7 +188,7 @@ The connector line can be customized using the [`Type`](https://help.syncfusion.
 
 Text from the data source can be mapped to data label using [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
@@ -220,7 +220,7 @@ Text from the data source can be mapped to data label using [`Name`](https://he
     };
 }
 
-{% endhighlight %}
+```
 
 ![Text Mapping](images/data-label/map-razor.png)
 

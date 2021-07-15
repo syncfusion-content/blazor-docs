@@ -13,6 +13,8 @@ The Tree Grid component has options to dynamically insert, delete and update rec
 Editing feature is enabled by using [`TreeGridEditSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations.
 To define the primary key, set [`TreeGridColumn.IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data;
@@ -39,6 +41,43 @@ To define the primary key, set [`TreeGridColumn.IsPrimaryKey`](https://help.sync
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 You can disable editing for a particular column, by specifying
 [`TreeGridColumn.AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
 
@@ -60,6 +99,8 @@ You can disable editing for a particular column, by specifying
 
 The tree grid toolbar has the built-in items to execute Editing actions.
 You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Toolbar.html) property.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -87,6 +128,43 @@ TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Up
 }
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -121,6 +199,8 @@ Component |Example
 [`DatePicker`](../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
 [`DateTimePicker`](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
 [`Checkbox`](../check-box/getting-started) | @(new { @params = new { checked = true} })
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -160,6 +240,44 @@ Component |Example
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public DateTime? StartDate { get; set;}
+            public bool Approved { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Celledit Type](images/celledittype.png)
@@ -171,6 +289,8 @@ The following output is displayed as a result of the above code example.
 The cell edit template is used to add a custom component for a particular column when the column is edited.
 
 The following code example describes, how to define the Edit template for a particular column.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -212,6 +332,40 @@ The following code example describes, how to define the Edit template for a part
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {      
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> TreeDataCollection = new List<TreeData>();
+            TreeDataCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            TreeDataCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Duration = 50,Priority = "Low",ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            TreeDataCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return TreeDataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![CellEdit Template](images/edit-template.png)
@@ -229,6 +383,8 @@ Tree Grid supports the following types of edit modes, they are:
 In Cell edit mode, when you double click on a cell, it is changed to edit state.
 You can change the cell value and save to the data source.
 To enable Cell edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Cell**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -256,6 +412,44 @@ To enable Cell edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusi
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public DateTime? StartDate { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",StartDate = new DateTime(2017, 10, 25),Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![CellEdit Mode](images/celleditmode.png)
@@ -267,6 +461,8 @@ The following output is displayed as a result of the above code example.
 In Row edit mode, when you start editing the currently selected record, the entire row is changed to edit state.
 You can change the cell values of the row and save edited data to the data source.
 To enable Row edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Row**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -294,6 +490,43 @@ To enable Row edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusio
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![RowEdit mode](images/roweditmode.png)
@@ -303,6 +536,8 @@ The following output is displayed as a result of the above code example.
 In Dialog edit mode, when you start editing the currently selected row, data will be shown on a dialog.
 You can change the cell values and save edited data to the data source.
 To enable Dialog edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -330,6 +565,43 @@ To enable Dialog edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfu
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",StartDate = new DateTime(2017, 10, 23),ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",StartDate = new DateTime(2017, 10, 23),Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,StartDate = new DateTime(2017, 10, 23),Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,StartDate = new DateTime(2017, 10, 23),Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,StartDate = new DateTime(2017, 10, 23),Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,StartDate = new DateTime(2017, 10, 23),Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![DialogEdit Mode](images/dialogeditmode.png)
@@ -339,6 +611,8 @@ The following output is displayed as a result of the above code example.
 In Batch edit mode, when you double-click on the tree grid cell, the target cell goes into edit state.
 You can bulk save (added, changed and deleted data in the single request) to data source by clicking on the toolbar's **Update** button or by externally invoking the [`EndEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEdit) method.
 To enable Batch edit, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) property of `TreeGridEditSettings` as **Batch**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -368,6 +642,41 @@ To enable Batch edit, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syn
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public DateTime? StartDate { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 5,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5",StartDate = new DateTime(2017, 10, 26), Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6",StartDate = new DateTime(2017, 10, 27), Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3",StartDate = new DateTime(2017, 10, 28), Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7",StartDate = new DateTime(2017, 10, 29), Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8",StartDate = new DateTime(2017, 10, 30), Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            return BusinessObjectCollection;
+        }
+    }
+
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ## Dialog template
 
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, you can render your own editors by defining the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog** and [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Template.html) using the **Template** of the **TreeGridEditSettings**.
@@ -375,6 +684,8 @@ The dialog template editing provides an option to customize the default behavior
 In some cases, you need to add the new field editors in the dialog which are not present in the column model. In that situation, the dialog template will help you to customize the default edit dialog.
 
 In the following sample, tree grid enabled with dialog template editing.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -457,6 +768,40 @@ In the following sample, tree grid enabled with dialog template editing.
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+       
+        public static List<TreeData> GetSelfDataSource()
+        {
+            List<TreeData> TreeDataCollection = new List<TreeData>();
+            TreeDataCollection.Add(new TreeData() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            TreeDataCollection.Add(new TreeData() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",Duration = 50,ParentId = 1 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            TreeDataCollection.Add(new TreeData() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            TreeDataCollection.Add(new TreeData() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            TreeDataCollection.Add(new TreeData() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return TreeDataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Dialog Template](images/dlg-template.png)
@@ -517,6 +862,8 @@ If you have used additional fields that are not present in the column model, the
 
 The Tree Grid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using [`TreeGridEditSettings.NewRowPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~NewRowPosition.html) property. By default, a new row will be added at the top of the tree grid.
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data;
@@ -543,6 +890,43 @@ The Tree Grid control provides the support to add the new row in the top, bottom
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following examples shows how to set new row position as **Child** in tree grid.
 
 ## Command column
@@ -557,6 +941,8 @@ The available built-in command buttons are:
 | Delete | Delete the current row.|
 | Save | Update the edited row.|
 | Cancel | Cancel the edited state. |
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -591,6 +977,42 @@ The available built-in command buttons are:
 }
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -671,6 +1093,8 @@ The following image represents the custom command added in the **Manage Records*
 
 The delete confirm dialog can be shown when deleting a record by defining the [`ShowDeleteConfirmDialog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~ShowDeleteConfirmDialog.html) as **true**
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data;
@@ -696,6 +1120,42 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Delete Confirmation](images/delconfirm.png)
@@ -707,6 +1167,8 @@ The following output is displayed as a result of the above code example.
 Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
 Tree Grid uses **Form Validator** component for column validation.
 You can set validation rules by defining the [`TreeGridColumn.ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -734,6 +1196,42 @@ You can set validation rules by defining the [`TreeGridColumn.ValidationRules`](
 }
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null,IsParent = true,});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 
@@ -1019,6 +1517,8 @@ namespace TreeGridWebApiEFSample.Controllers
 The tree grid provides an option to set the default value for the columns when adding a new record in it.
 To set a default value for the particular column by defining the [`TreeGridColumn.DefaultValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DefaultValue.html).
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data;
@@ -1047,11 +1547,49 @@ To set a default value for the particular column by defining the [`TreeGridColum
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 ## Disable editing for particular column
 
 You can disable editing for particular columns by using the [`TreeGridColumn.AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html).
 
 In the following demo, editing is disabled for the **Duration** column.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -1077,6 +1615,42 @@ In the following demo, editing is disabled for the **Duration** column.
 }
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 ## Troubleshoot: Editing works only for first row
 

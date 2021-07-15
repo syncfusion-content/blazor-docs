@@ -51,6 +51,7 @@ documentation: ug
         };
 }
 
+
 ```
 
 ![Hilo](../images/financial-types/hilo.png)

@@ -13,7 +13,7 @@ documentation: ug
 
 The [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Print) method can be used to print a rendered chart directly from the browser. This method accepts an array of elements' ID or a single element. By default, it picks a chart element.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
@@ -59,7 +59,7 @@ The [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfC
 }
 
 
-{% endhighlight %}
+```
 
 ## Export
 
@@ -69,7 +69,7 @@ The optional parameters for this method are,
 * `Orientation` - Specifies the portrait or landscape orientation of the page.
 * `AllowDownload` - Specifies whether to download or not.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
@@ -114,7 +114,7 @@ The optional parameters for this method are,
     };
 }
 
-{% endhighlight %}
+```
 
 > Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

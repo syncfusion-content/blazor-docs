@@ -11,7 +11,7 @@ documentation: ug
 
 Annotations are used to mark the specific area of interest in the chart with texts, shapes or images. By using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Content) option of annotation property, you can specify the Id of the HTML element that needs to be displayed in the chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -50,7 +50,7 @@ Annotations are used to mark the specific area of interest in the chart with tex
     };
 }
 
-{% endhighlight %}
+```
 
 ![Annotation](images/annotation/annotation-razor.png)
 
@@ -58,7 +58,7 @@ Annotations are used to mark the specific area of interest in the chart with tex
 
 The annotation can be placed with respect to `Series` or `Chart`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -97,7 +97,7 @@ The annotation can be placed with respect to `Series` or `Chart`.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Region](images/annotation/region-razor.png)
 
@@ -105,7 +105,7 @@ The annotation can be placed with respect to `Series` or `Chart`.
 
 Specifies the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) of an annotation either in `Pixel` or `Point`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -144,6 +144,6 @@ Specifies the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusi
     };
 }
 
-{% endhighlight %}
+```
 
 ![Co-ordinate Units](images/annotation/co-ordinate-razor.png)

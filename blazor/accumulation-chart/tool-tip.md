@@ -11,7 +11,7 @@ documentation: ug
 
 Tooltip for the accumulation chart can be enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -46,7 +46,7 @@ Tooltip for the accumulation chart can be enabled by using the [`Enable`](https
     };
 }
 
-{% endhighlight %}
+```
 
 ![Tooltip](images/tool-tip/default-razor.png)
 
@@ -54,7 +54,7 @@ Tooltip for the accumulation chart can be enabled by using the [`Enable`](https
 
 We can specify header for the tooltip using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Header) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -87,7 +87,7 @@ We can specify header for the tooltip using [`Header`](https://help.syncfusion.c
     };
 }
 
-{% endhighlight %}
+```
 
 ![Header](images/tool-tip/header-razor.png)
 
@@ -96,7 +96,7 @@ We can specify header for the tooltip using [`Header`](https://help.syncfusion.c
 By default, tooltip shows information about x and y value in points. In addition to that, you can show more
 information in tooltip. For example the format `${point.x} : <b>${point.y}%</b>` shows series name and point x value.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -129,7 +129,7 @@ information in tooltip. For example the format `${point.x} : <b>${point.y}%</b>
     };
 }
 
-{% endhighlight %}
+```
 
 ![Format](images/tool-tip/format-razor.png)
 
@@ -141,7 +141,7 @@ properties are used to customize the background color and border of the tooltip 
 The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_TextStyle)
 property in the tooltip is used to customize the font of the tooltip text.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -175,7 +175,7 @@ property in the tooltip is used to customize the font of the tooltip text.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Customization](images/tool-tip/custom-razor.png)
 
@@ -183,7 +183,7 @@ property in the tooltip is used to customize the font of the tooltip text.
 
 By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the [`TooltipMappingName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_TooltipMappingName) . You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -218,7 +218,7 @@ By default, tooltip shows information of x and y value in points. You can show m
     };
 }
 
-{% endhighlight %}
+```
 
 ![mapping](images/tool-tip/mapping-razor.png)
 

@@ -13,7 +13,7 @@ documentation: ug
 
 The default colour of series or points can be changed by providing a custom colour palette to the [`Palettes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Palettes) property .
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -54,7 +54,7 @@ The default colour of series or points can be changed by providing a custom colo
 }
 
 
-{% endhighlight %}
+```
 
 ![Custom Color Palette](images/appearance/custom-razor.png)
 
@@ -70,7 +70,7 @@ The default colour of series or points can be changed by providing a custom colo
 
 The chart's background colour and border can be changed using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html) properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -105,7 +105,7 @@ The chart's background colour and border can be changed using the [`Background`]
     };
 }
 
-{% endhighlight %}
+```
 
 ![Customize the Chart Background](images/appearance/area-razor.png)
 
@@ -113,7 +113,7 @@ The chart's background colour and border can be changed using the [`Background`]
 
 The [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html) property allows you to set the chart's margin from its container.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -152,14 +152,14 @@ The [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     };
 }
 
-{% endhighlight %}
+```
 
 **Chart Area Background**
 
 The chart area background can be customized by using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background)
 property in the [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -191,13 +191,13 @@ property in the [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
     };
 }
 
-{% endhighlight %}
+```
 
 ## Animation
 
 The [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Animation) property allows you to customize animation for a certain series. The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Enable) property can be used to enable or disable the series' animation. The duration of the animation is specified by [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Duration), and [`Delay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCommonAnimation.html#Syncfusion_Blazor_Charts_StockChartCommonAnimation_Delay) allows to start the animation at a specific moment.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -237,13 +237,13 @@ The [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 
 
-{% endhighlight %}
+```
 
 ## Chart Title
 
 The [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property can be used to give a title to a chart in order to provide information about the data shown.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -278,7 +278,7 @@ The [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfC
     };
 }
 
-{% endhighlight %}
+```
 
 ![Chart Title](images/appearance/title-razor.png)
 
@@ -286,7 +286,7 @@ The [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfC
 
 The [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to provide a chart a subtitle that displays information about the data shown.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -323,7 +323,7 @@ The [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Chart SubTitle](images/appearance/subtitle-razor.png)
 

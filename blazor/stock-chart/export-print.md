@@ -13,7 +13,7 @@ The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` forma
 
 The rendered stock chart can be printed directly using print button in period selector toolbar.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -56,7 +56,7 @@ The rendered stock chart can be printed directly using print button in period se
     };
 }
 
-{% endhighlight %}
+```
 
 ![Print](images/print/print-razor.png)
 
@@ -64,7 +64,7 @@ The rendered stock chart can be printed directly using print button in period se
 
 Empty the value of `ExportType` to disable the Export.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -100,6 +100,6 @@ Empty the value of `ExportType` to disable the Export.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Disable Export Print](images/print/disable-razor.png)

@@ -14,7 +14,7 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable)
 property in the `Crosshair`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -52,7 +52,7 @@ property in the `Crosshair`.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Crosshair](images/common/crosshair.png)
 
@@ -61,7 +61,7 @@ property in the `Crosshair`.
 Tooltip label for an axis can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable)
 property of `CrosshairTooltip` in the corresponding axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -110,7 +110,7 @@ property of `CrosshairTooltip` in the corresponding axis.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Crosshair Tooltip](images/common/crosshair-tooltip.png)
 
@@ -119,7 +119,7 @@ property of `CrosshairTooltip` in the corresponding axis.
 The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customize the background color and font style of the crosshair label respectively. Color and Width of the crosshair line can be customized by using the
 [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Line) property in the crosshair.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -170,7 +170,7 @@ The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customi
     };
 }
 
-{% endhighlight %}
+```
 
 ![Customization](images/common/crosshair-custom.png)
 
@@ -181,7 +181,7 @@ Trackball is used to track a data point closest to the mouse or touch position. 
 Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property of the crosshair to true and
 `Shared` property in `Tooltip` to true in chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -221,6 +221,6 @@ Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/c
     };
 }
 
-{% endhighlight %}
+```
 
 ![Trackball](images/common/trackball.png)

@@ -13,7 +13,7 @@ documentation: ug
 
 Visualize data with three numeric parameters such as [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName), [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) and [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size) . The bubble size depends on third parameter. To render a bubble series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Bubble`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Bubble).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -56,7 +56,7 @@ Visualize data with three numeric parameters such as [`XName`](https://help.sync
 }
 
 
-{% endhighlight %}
+```
 
 > Refer to our Blazor [`Bubble Charts`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bubble-chart) feature tour page to know about its other groundbreaking feature representations and also explore our Blazor [`Bubble Chart example`](https://blazor.syncfusion.com/demos/chart/bubble?theme=bootstrap4) to know how to render and configure the Bubble type charts.
 
@@ -64,7 +64,7 @@ Visualize data with three numeric parameters such as [`XName`](https://help.sync
 
 [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Size) property can be used to map the size value specified from datasource.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -107,7 +107,7 @@ Visualize data with three numeric parameters such as [`XName`](https://help.sync
     };
 }
 
-{% endhighlight %}
+```
 
 ![Bubble Chart with Size Mapping](../images/chart-types-images/bubblesize.png)
 

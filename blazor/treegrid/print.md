@@ -11,6 +11,8 @@ documentation: ug
 
 To print the Tree Grid, use the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method from tree grid instance. The print option can be displayed on the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data;
@@ -36,6 +38,43 @@ To print the Tree Grid, use the [`Print`](https://help.syncfusion.com/cr/blazor/
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Print](images/printing.png)
@@ -52,6 +91,8 @@ Some of the print options cannot be configured through JavaScript code. So, you 
 ## Print using an external button
 
 To print the tree grid from an external button, invoke the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -85,6 +126,43 @@ To print the tree grid from an external button, invoke the [`Print`](https://hel
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Print Button](images/printbutton.png)
@@ -92,6 +170,8 @@ The following output is displayed as a result of the above code example.
 ## Print the visible page
 
 By default, the tree grid prints all the pages. To print the current page alone, set the [`PrintMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~PrintMode.html) to **CurrentPage**.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -118,6 +198,43 @@ By default, the tree grid prints all the pages. To print the current page alone,
 }
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public string Priority { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,TaskName = "Parent Task 2",Duration = 10,Progress = 70,Priority = "Critical",ParentId = null});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,TaskName = "Child task 1",Duration = 4,Progress = 80,Priority = "Critical",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,TaskName = "Child Task 2",Duration = 5,Progress = 65,Priority = "Low",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,TaskName = "Child task 3",Duration = 6,Progress = 77,Priority = "High",ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,TaskName = "Child task 4",Duration = 6,Progress = 77,Priority = "Low",ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 

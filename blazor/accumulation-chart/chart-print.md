@@ -13,7 +13,7 @@ documentation: ug
 
 The rendered chart can be printed directly from the browser by calling the public method print.
 
-{% highlight csharp %}
+```csharp
 
 
 
@@ -60,13 +60,13 @@ The rendered chart can be printed directly from the browser by calling the publi
 
 }
 
-{% endhighlight %}
+```
 
 ## Export
 
 The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` format by using the export method. Input parameters for this method are `Export` Type for `format` and `FileName` of result.
 
-{% highlight csharp %}
+```csharp
 
 @page "/"
 
@@ -113,4 +113,6 @@ The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` for
 
 }
 
-{% endhighlight %}
+```
+
+{% endaspTab %}

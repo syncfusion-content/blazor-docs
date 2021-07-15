@@ -11,7 +11,7 @@ documentation: ug
 
 Inspect or target any data point on mouse move or touch position with the help of crosshair. A thin horizontal line and a vertical line indicate the data point with the information displayed in an interactive tooltip. Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property in the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -43,7 +43,7 @@ Inspect or target any data point on mouse move or touch position with the help o
     };
 }
 
-{% endhighlight %}
+```
 
 ![Crosshair](images/crosshair/crosshair-razor.png)
 
@@ -51,7 +51,7 @@ Inspect or target any data point on mouse move or touch position with the help o
 
 The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_Enable) property of [`ChartAxisCrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxisCrosshairTooltip.html) in the corresponding axis can be set to **true** to enable the tooltip label for that axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -89,13 +89,13 @@ The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     };
 }
 
-{% endhighlight %}
+```
 
 ## Customization
 
 The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_Fill) and [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_TextStyle) property of the [`CrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html) is used to customize the background color and font style of the crosshair label respectively. Color and width of the crosshair line can be customized by using the [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Line) property in the crosshair.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -131,13 +131,13 @@ The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Char
 }
 
 
-{% endhighlight %}
+```
 
 ## Trackball
 
 The trackball is used to track the data point that is closest to the mouse or touch position. The closest point is indicated by a trackball marker, and the information about the point is displayed via a trackball tooltip. Trackball can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property of the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html) to **true** and [`Shared`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Shared) property in [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true** in chart.
 
-{% highlight csharp %}
+```csharp
 
 using Syncfusion.Blazor.Charts
 
@@ -185,7 +185,7 @@ using Syncfusion.Blazor.Charts
     };
 }
 
-{% endhighlight %}
+```
 
 ![Trackball](images/crosshair/trackball-razor.png)
 

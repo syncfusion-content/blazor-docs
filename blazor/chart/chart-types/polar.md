@@ -23,7 +23,7 @@ documentation: ug
 
 To render a [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Line). [`IsClosed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~IsClosed.html) property specifies whether to join start and end point of a line series used in [`Polar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/polar-chart) to form a closed path. Default value of [`IsClosed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~IsClosed.html) is **true**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -55,7 +55,7 @@ To render a [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Line Draw Type](../images/polar-radar/polar-line-razor.png)
 
@@ -63,7 +63,7 @@ To render a [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 
 To render a [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Spline).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -95,7 +95,7 @@ To render a [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Spline Draw Type](../images/polar-radar/polar-spline-razor.png)
 
@@ -103,7 +103,7 @@ To render a [`Spline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 To render a [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Area).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -135,7 +135,9 @@ To render a [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
     };
 }
 
-{% endhighlight %}
+```
+
+{% endaspTab %}
   
 ![Polar Chart with Area Draw Type](../images/polar-radar/polar-area-razor.png)
 
@@ -143,7 +145,7 @@ To render a [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 
 To render a [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingArea).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -190,7 +192,7 @@ To render a [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Stacked Area Draw Type](../images/polar-radar/polar-stackedarea-razor.png)
 
@@ -198,7 +200,7 @@ To render a [`StackingArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 To render a [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Column).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -230,7 +232,7 @@ To render a [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Column Draw Type](../images/polar-radar/polar-column-razor.png)
 
@@ -238,7 +240,7 @@ To render a [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 To render a [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_StackingColumn).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -282,7 +284,7 @@ To render a [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Stacked Column Draw Type](../images/polar-radar/polar-stackedcolumn-razor.png)
 
@@ -290,7 +292,7 @@ To render a [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 To render a [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_RangeColumn).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -330,7 +332,7 @@ To render a [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Range Column Draw Type](../images/polar-radar/polar-rangecolumn-razor.png)
 
@@ -338,7 +340,7 @@ To render a [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
   
 To render a [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter) series in  [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar), specify the [`DrawType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DrawType) property to [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDrawType.html#Syncfusion_Blazor_Charts_ChartDrawType_Scatter).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -371,7 +373,7 @@ To render a [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Scatter Draw Type](../images/polar-radar/polar-scatter-razor.png)
 
@@ -381,7 +383,7 @@ To render a [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 Customize the start angle of the [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar) using [`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_StartAngle) property. By default, [`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_StartAngle) value is **0**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -415,7 +417,7 @@ Customize the start angle of the [`Polar Chart`](https://help.syncfusion.com/cr/
 }
 
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Start Angle](../images/polar-radar/polar-start-angle.png)
 
@@ -423,7 +425,7 @@ Customize the start angle of the [`Polar Chart`](https://help.syncfusion.com/cr/
 
 Customize the radius of the [`Polar Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Polar) using [`Coefficient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Coefficient) property. By default [`Coefficient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Coefficient) value is **100**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -456,7 +458,7 @@ Customize the radius of the [`Polar Chart`](https://help.syncfusion.com/cr/blazo
     };
 }
 
-{% endhighlight %}
+```
 
 ![Polar Chart with Coefficient](../images/polar-radar/polar-co-efficient.png)
 

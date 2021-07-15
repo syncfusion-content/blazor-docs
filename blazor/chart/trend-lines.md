@@ -23,7 +23,7 @@ Chart supports 6 types of trendlines.
 A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline,
 use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Linear**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -74,7 +74,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 }
 
-{% endhighlight %}
+```
 
 ![Linear](images/trend-lines/linear-razor.png)
 
@@ -86,7 +86,7 @@ at increasingly higher rates. You cannot create an exponential trendline, if you
 To render a exponential trendline,
 use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Exponential**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -140,7 +140,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 }
 
-{% endhighlight %}
+```
 
 ## Logarithmic
 
@@ -151,7 +151,7 @@ A logarithmic trendline can use negative and/or positive values.
 
 To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Logarithmic**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -205,7 +205,7 @@ To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusio
 
 }
 
-{% endhighlight %}
+```
 
 ## Polynomial
 
@@ -214,7 +214,7 @@ A polynomial trendline is a curved line that is used when data fluctuates.
 To render a polynomial trendline,
 use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Polynomial**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -268,7 +268,7 @@ use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 }
 
-{% endhighlight %}
+```
 
 ## Power
 
@@ -276,7 +276,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) as **Power**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -330,7 +330,7 @@ To render a power trendline, use trendline [`Type`](https://help.syncfusion.com/
 
 }
 
-{% endhighlight %}
+```
 
 ## Moving Average
 
@@ -340,7 +340,7 @@ To render a moving average trendline, use trendline [`Type`](https://help.syncfu
 
 [`Period`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Period) property defines the period to find the moving average.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -394,7 +394,7 @@ To render a moving average trendline, use trendline [`Type`](https://help.syncfu
 
 }
 
-{% endhighlight %}
+```
 
 **Customization of Trendlines**
 
@@ -414,7 +414,7 @@ Forward Forecasting and Backward Forecasting
 
 The value set for [`ForwardForecast`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_ForwardForecast) is used to determine the distance moving towards the future trend.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -468,13 +468,13 @@ The value set for [`ForwardForecast`](https://help.syncfusion.com/cr/blazor/Sync
 
 }
 
-{% endhighlight %}
+```
 
 **Backward Forecasting**
 
 The value set for the [`BackwardForecast`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_BackwardForecast) is used to determine the past trends.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -529,7 +529,7 @@ The value set for the [`BackwardForecast`](https://help.syncfusion.com/cr/blazor
 }
 
 
-{% endhighlight %}
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

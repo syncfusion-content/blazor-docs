@@ -14,7 +14,7 @@ documentation: ug
 Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numeric values in
 both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -48,7 +48,7 @@ both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnit
 }
 
 
-{% endhighlight %}
+```
 
 ![Logarithmic Axis](images/logarithmic-axis/log.png)
 
@@ -58,7 +58,7 @@ Range of the axis, will be calculated automatically based on the provided data, 
 of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Minimum),
 [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Maximum) and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_Interval) property of the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -90,7 +90,7 @@ of the axis using [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.
         };
 }
 
-{% endhighlight %}
+```
 
 ## Logarithmic Base
 
@@ -98,7 +98,7 @@ Logarithmic base can be customized by using the [`LogBase`](https://help.syncfu
 For example when the LogBase is 5, the axis values follows 5<sup>-2</sup>, 5<sup>-1</sup>, 5<sup>0</sup>,
 5<sup>1</sup>, 5<sup>2</sup> etc.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -130,7 +130,7 @@ For example when the LogBase is 5, the axis values follows 5<sup>-2</sup>, 5<su
         };
 }
 
-{% endhighlight %}
+```
 
 ![Logarithmic Base](images/logarithmic-axis/base.png)
 
@@ -140,7 +140,7 @@ Logarithmic axis Interval can be customized by using the [`Interval`](https://he
 property of the axis. When the logarithmic base is 10 and logarithmic Interval is 2, then the axis labels are
 placed at an Interval of 10<sup>2</sup>. The default value of the Interval is 1.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -172,7 +172,7 @@ placed at an Interval of 10<sup>2</sup>. The default value of the Interval is 1.
         };
 }
 
-{% endhighlight %}
+```
 
 ## Label Format
 
@@ -181,7 +181,7 @@ placed at an Interval of 10<sup>2</sup>. The default value of the Interval is 1.
 Logarithmic labels can be formatted by using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_LabelFormat) property.
 Logarithmic labels supports all globalize format.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -213,7 +213,7 @@ Logarithmic labels supports all globalize format.
         };
 }
 
-{% endhighlight %}
+```
 
 The following table describes the result of applying some commonly used label formats on logarithmic values.
 
@@ -281,7 +281,7 @@ The following table describes the result of applying some commonly used label fo
 Axis also supports custom label format using placeholder like {value}°C, in which the value represent the axis
 label e.g 20°C.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -312,7 +312,7 @@ label e.g 20°C.
     };
 }
 
-{% endhighlight %}
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

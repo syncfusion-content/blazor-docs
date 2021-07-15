@@ -22,7 +22,7 @@ Chart can be zoomed in three ways.
 
  >Pinch zooming is supported only in browsers that support multi-touch gestures. Currently IE11, Chrome and Opera browsers support multi-touch in desktop devices.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -57,7 +57,7 @@ Chart can be zoomed in three ways.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Enable Zooming](images/zoom/default-razor.png)
 
@@ -75,7 +75,7 @@ There are three types of mode.
 * Y - Allows us to zoom the chart vertically.
 * XY - Allows us to zoom the chart both vertically and horizontally.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -110,14 +110,14 @@ There are three types of mode.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Toolbar
 
 By default, zoomin, zoomout, pan and reset buttons will be displayed for zoomed chart. You can customize to show your desire tools in the toolbar using [`ToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_ToolbarItems)
 property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -155,14 +155,14 @@ property.
 
 
 
-{% endhighlight %}
+```
 
 ## Enable pan
 
 Using [`EnablePan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan)
 property you can able to pan the zoomed chart without help of toolbar items.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -197,13 +197,13 @@ property you can able to pan the zoomed chart without help of toolbar items.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Enable Scrollbar
 
 Using [`EnableScrollbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableScrollbar) property, you can able to add scrollbar for zoomed chart. Using this scrollbar, you can pan or zoom the chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -284,7 +284,7 @@ Using [`EnableScrollbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </style>
 
 
-{% endhighlight %}
+```
 
 ![Enable Scrollbar](images/zoom/scrollbar-razor.png)
 
@@ -293,7 +293,7 @@ Using [`EnableScrollbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 By using [`EnableAutoIntervalOnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_EnableAutoIntervalOnZooming) property,
 the axis interval will get calculated automatically with respect to the zoomed range.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -328,7 +328,7 @@ the axis interval will get calculated automatically with respect to the zoomed r
     };
 }
 
-{% endhighlight %}
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

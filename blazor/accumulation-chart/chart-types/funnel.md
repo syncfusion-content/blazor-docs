@@ -12,7 +12,7 @@ documentation: ug
 To render a funnel series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)
 as `Funnel`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -44,7 +44,7 @@ as `Funnel`.
 }
 
 
-{% endhighlight %}
+```
 
 ![Funnel Chart](../images/funnel/default-razor.png)
 
@@ -52,7 +52,7 @@ as `Funnel`.
 
 The size of the funnel chart can be customized by using the  [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -83,7 +83,7 @@ The size of the funnel chart can be customized by using the  [`Width`](https://h
     };
 }
 
-{% endhighlight %}
+```
 
 ![Size](../images/funnel/size-razor.png)
 
@@ -93,7 +93,7 @@ The size of the funnel chart can be customized by using the  [`Width`](https://h
 
 The neck size can be customized by using the [`NeckWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [`NeckHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -124,7 +124,7 @@ The neck size can be customized by using the [`NeckWidth`](https://help.syncfusi
     };
 }
 
-{% endhighlight %}
+```
 
 ![Neck Size](../images/funnel/neck-size-razor.png)
 
@@ -133,7 +133,7 @@ The neck size can be customized by using the [`NeckWidth`](https://help.syncfusi
 [`Funnel chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) provides options to customize the space between the segments by using the [`GapRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the
 series. It takes values from 0 to 1.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -164,7 +164,7 @@ series. It takes values from 0 to 1.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Gap Between the Segments](../images/funnel/gap-razor.png)
 
@@ -173,7 +173,7 @@ series. It takes values from 0 to 1.
 Points can be exploded on mouse click by setting the [`Explode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. You can also explode the point
 on load using [`ExplodeIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [`ExplodeOffset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -204,7 +204,7 @@ on load using [`ExplodeIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Explode](../images/funnel/explode-razor.png)
 
@@ -212,7 +212,7 @@ on load using [`ExplodeIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 Arrange the data label smartly on left side of the funnel and pyramid chart, when they overlaps with each other.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart EnableAnimation="false">
@@ -257,7 +257,7 @@ Arrange the data label smartly on left side of the funnel and pyramid chart, whe
     };
 }
 
-{% endhighlight %}
+```
 
 ![Smart Data Label](../images/funnel/smart-data-label-razor.png)
 

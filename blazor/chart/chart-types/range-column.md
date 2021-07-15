@@ -13,7 +13,7 @@ documentation: ug
 
 [`Range Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) visualizes the variations in the data values for a given time using vertical bars. To render a [`Range Column Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeColumn), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeColumn).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -58,7 +58,7 @@ documentation: ug
     };
 }
 
-{% endhighlight %}
+```
 
 ![Range Column](../images/chart-types-images/rangecolumn.png)
 
@@ -74,7 +74,7 @@ The following properties can be used to customize the [`Range Column`](https://h
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 * [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) – Specifies the space between the series segments.
 
-{% highlight csharp %}
+```csharp
 
 @using  Syncfusion.Blazor.Charts
 
@@ -124,7 +124,7 @@ The following properties can be used to customize the [`Range Column`](https://h
     }; 
 }
 
-{% endhighlight %}
+```
 
 ![Custom Range Column](../images/chart-types-images/custom-range-column.png)
 

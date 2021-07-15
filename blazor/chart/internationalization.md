@@ -26,6 +26,8 @@ chart component using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Sync
 
 In the below example, axis, point  and tooltip labels are globalized to EUR.
 
+```csharp
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Average Sales Comparison">
@@ -69,6 +71,7 @@ In the below example, axis, point  and tooltip labels are globalized to EUR.
          new ChartData{ X= 2000, Y= 3.9, Y1= 3 }
     };
 }
+
 
 ```
 

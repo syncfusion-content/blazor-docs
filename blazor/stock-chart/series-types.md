@@ -17,7 +17,7 @@ Stock Chart supports 6 major types of series namely `Line`, `Spline`, `Hilo`, `H
 
 To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Line`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -49,7 +49,7 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
    };
 }
 
-{% endhighlight %}
+```
 
 ![Line](images/series-types/line.png)
 
@@ -57,7 +57,7 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Spline`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -89,7 +89,7 @@ To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/bl
    };
 }
 
-{% endhighlight %}
+```
 
 ![Spline](images/series-types/spline.png)
 
@@ -101,7 +101,7 @@ To render a hollowcandle series, use series [`Type`](https://help.syncfusion.com
 
 To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Hilo`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -137,7 +137,7 @@ To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blaz
      };
 }
 
-{% endhighlight %}
+```
 
 ![Hilo](images/series-types/hilo.png)
 
@@ -145,7 +145,7 @@ To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -181,7 +181,7 @@ To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.co
     };
 }
 
-{% endhighlight %}
+```
 
 ![Hilo Open Close](images/series-types/hiloopenclose.png)
 
@@ -189,7 +189,7 @@ To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.co
 
 To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -219,6 +219,6 @@ To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/bl
    };
 }
 
-{% endhighlight %}
+```
 
 ![Candle](images/common/candle.png)

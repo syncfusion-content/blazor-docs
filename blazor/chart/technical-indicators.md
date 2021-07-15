@@ -23,7 +23,7 @@ To render a Accumulation Distribution Indicator,
 use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html) as `AccumulationDistribution`.
 To calculate the signal line [`Volume`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Volume) field is additionally added with [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DataSource).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -123,7 +123,7 @@ To calculate the signal line [`Volume`](https://help.syncfusion.com/cr/blazor/Sy
     };
 }
 
-{% endhighlight %}
+```
 
 ![Accumulation Distribution](images/technical-indicator/ad-razor.png)
 
@@ -132,7 +132,7 @@ To calculate the signal line [`Volume`](https://help.syncfusion.com/cr/blazor/Sy
 ATR measures the stock volatility by comparing the current value with the
 previous value. To render a Average True Range (ATR) Indicator,
 use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as `Atr`.
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -231,7 +231,7 @@ use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     };
 }
 
-{% endhighlight %}
+```
 
 ## Bollinger Band
 
@@ -241,7 +241,7 @@ Bollinger band will be represented by three lines (upperLine, lowerLine, signalL
 default values of the [`Period`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Period) is 14 and
 [`StandardDeviations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_StandardDeviation) is 2.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -338,14 +338,14 @@ default values of the [`Period`](https://help.syncfusion.com/cr/blazor/Syncfusio
     };
 }
 
-{% endhighlight %}
+```
 
 **Customization of BollingerBand**
 
 `Stroke`, `StrokeWidth`, and `Color` of upperLine can be customized by using,[`UpperLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~UpperLine.html),
 and the lowerLine can be customized by using [`LowerLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~LowerLine.html) properties of indicator.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -442,13 +442,13 @@ and the lowerLine can be customized by using [`LowerLine`](https://help.syncfusi
     };
 }
 
-{% endhighlight %}
+```
 
 ## Exponential Moving Average (EMA)
 
 Moving average Indicators are used to define the direction of the trend. To render a EMA Indicator,
 use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as `Ema`.
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -545,7 +545,7 @@ use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     };
 }
 
-{% endhighlight %}
+```
 
 ## Momentum
 
@@ -553,7 +553,7 @@ Momentum shows the speed at which the price of the stock is changing. To render 
 [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~Type.html) as `Momentum`. Momentum indicator will be represented by two lines (upperLine,
 signalLine).In momentum indicator the upperBand value is always render at the value 100.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -668,14 +668,14 @@ signalLine).In momentum indicator the upperBand value is always render at the va
     };
 }
 
-{% endhighlight %}
+```
 
 **Customization of MomentumIndicator**
 
 `Stroke`, `StrokeWidth`, and `Color` of upperLine can be customized by using,[`UpperLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_UpperLine),
 property of indicator.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -792,7 +792,7 @@ property of indicator.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Moving Average Convergence Divergence (MACD)
 
@@ -800,7 +800,7 @@ MACD is based on the difference between two EMA's. To render a MACD Indicator, u
 `Macd`. MACD indicator will be represented
 by MACD line,signal line, MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -914,7 +914,7 @@ by MACD line,signal line, MACD histogram. MACD histogram is used to differentiat
     };
 }
 
-{% endhighlight %}
+```
 
 **Customization of MACD**
 
@@ -925,7 +925,7 @@ The [`MacdType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 MACD indicator. To customize the MACD period using [`SlowPeriod`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_SlowPeriod) and [`FastPeriod`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_FastPeriod)
 properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1042,7 +1042,7 @@ properties.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Relative Strength Index (RSI)
 
@@ -1053,7 +1053,7 @@ by three lines (upperBand, lowerBand, signalLine). The upperBand and lowerBand v
 and [`OverSold`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_OverSold)
 properties and the signalLine is calculated by RSI formula.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1174,7 +1174,7 @@ properties and the signalLine is calculated by RSI formula.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Simple Moving Average (SMA)
 
@@ -1182,7 +1182,7 @@ Moving average Indicators are used to define the direction of the trend. To rend
 use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as
 `Sma`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1279,7 +1279,7 @@ use indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     };
 }
 
-{% endhighlight %}
+```
 
 ## Stochastic
 
@@ -1300,7 +1300,7 @@ using [`KPeriod`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 and [`DPeriod`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DPeriod)
 properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1422,7 +1422,7 @@ properties.
     };
 }
 
-{% endhighlight %}
+```
 
 ## Triangular Moving Average (TMA)
 
@@ -1441,7 +1441,7 @@ value is used to the compare the current price with previous price. It is applic
 averages. The [`ShowZones`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_ShowZones)
 property is used to shows/Hides the overBought and overSold regions. It is applicable for RSI and stochastic indicators.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1537,7 +1537,7 @@ property is used to shows/Hides the overBought and overSold regions. It is appli
     };
 }
 
-{% endhighlight %}
+```
 
 **Data Source**
 
@@ -1546,7 +1546,7 @@ represents the series, the data of which has to be analysed through indicators.
 
 Technical indicators can also be added without series using [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_DataSource) property of indicator.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1644,7 +1644,7 @@ Technical indicators can also be added without series using [`DataSource`](https
     };
 }
 
-{% endhighlight %}
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

@@ -13,7 +13,7 @@ documentation: ug
 
 [`Scatter Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) plots data with two numeric parameters. To render a [`Scatter Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Scatter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -48,7 +48,7 @@ documentation: ug
     };
 }
 
-{% endhighlight %}
+```
 
 ![Scatter Charts](../images/chart-types-images/scatter.png)
 
@@ -62,7 +62,7 @@ The following properties can be used to customize the [`Scatter`](https://help.s
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
 * [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartShape.html) - Specifies the shape of the scatter series.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -100,7 +100,7 @@ The following properties can be used to customize the [`Scatter`](https://help.s
     };
 }
 
-{% endhighlight %}
+```
 
 ![Custom Scatter Charts](../images/chart-types-images/custom-scatter.png)
 

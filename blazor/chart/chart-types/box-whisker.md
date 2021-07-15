@@ -13,7 +13,7 @@ documentation: ug
 
 To render a [`Box and Whisker Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property to [`BoxAndWhisker`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_BoxAndWhisker). The property [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) requires  **n** number of data or it should contains minimum of five values.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -48,7 +48,7 @@ To render a [`Box and Whisker Chart`](https://www.syncfusion.com/blazor-componen
     };
 }
 
-{% endhighlight %}
+```
 
 ![Box and Whisker Charts](../images/othertypes/box.png)
 
@@ -58,7 +58,7 @@ To render a [`Box and Whisker Chart`](https://www.syncfusion.com/blazor-componen
 
 To change the rendering mode of the Box and Whisker series, use the [`BoxPlotMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BoxPlotMode.html) property. The default [`BoxPlotMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BoxPlotMode.html) is [`Exclusive`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BoxPlotMode.html#Syncfusion_Blazor_Charts_BoxPlotMode_Exclusive).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -93,7 +93,7 @@ To change the rendering mode of the Box and Whisker series, use the [`BoxPlotMod
     };
 }
 
-{% endhighlight %}
+```
 
 ![Box and Whisker Charts with BoxPlotMode](../images/othertypes/box-plot.png)
 
@@ -101,7 +101,7 @@ To change the rendering mode of the Box and Whisker series, use the [`BoxPlotMod
 
 In Box and Whisker series, [`ShowMean`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowMean) property is used to show the box and whisker average value. The default value of [`ShowMean`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ShowMean) is **false**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -136,7 +136,7 @@ In Box and Whisker series, [`ShowMean`](https://help.syncfusion.com/cr/blazor/Sy
     };
 }
 
-{% endhighlight %}
+```
 
 ![Box and Whisker Charts with ShowMean](../images/chart-types-images/box-mean.png)
 

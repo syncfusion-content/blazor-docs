@@ -14,7 +14,7 @@ documentation: ug
 [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle) series are similar to Hilo Open Close series, are used to represent the **Low**, **High**, **Open and Closing** price over time. To render a candle series, use series
 [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Candle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Candle).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -49,7 +49,7 @@ documentation: ug
     };
 }
 
-{% endhighlight %}
+```
 
 ![Candle](../images/financial-types/candles.png)
 
@@ -80,7 +80,7 @@ The color of the candle will be defined by comparing with previous values. [`Bea
 [`EnableSolidCandles`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~EnableSolidCandles.html) is used to enable/disable the solid candles. By default it is set as **false**. The fill color of the candle will be defined by its opening and closing values. [`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~BearFillColor.html) will be applied when the opening value is less than the closing value. [`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~BullFillColor.html)
 will be applied when the opening value is greater than closing value.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -115,7 +115,7 @@ will be applied when the opening value is greater than closing value.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Solid Candles](../images/financial-types/solid-candles.png)
 

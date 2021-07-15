@@ -13,7 +13,7 @@ documentation: ug
 
 An axis can be positioned in the chart area using [`CrossesAt`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) and [`CrossesInAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) properties. The [`CrossesAt`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesAt) property specifies the values (datetime, numeric, or logarithmic) at which the axis line has to be intersected with the vertical axis or vice-versa, and the [`CrossesInAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_CrossesInAxis) property specifies the axis name with which the axis line has to be crossed.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -46,7 +46,7 @@ An axis can be positioned in the chart area using [`CrossesAt`](https://help.syn
       };
 }
 
-{% endhighlight %}
+```
 
 ![Axis Crossing](images/axis-customization/axis-cross.png)
 
@@ -54,7 +54,7 @@ An axis can be positioned in the chart area using [`CrossesAt`](https://help.syn
 
 A title can be added to the axis using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Title) property to provide quick information to the user about the data plotted in the axis. Title text can be customized using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_TitleStyle) property of the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -87,13 +87,13 @@ A title can be added to the axis using [`Title`](https://help.syncfusion.com/cr/
       };
 }
 
-{% endhighlight %}
+```
 
 ## Tick Lines Customization
 
 The width, color and size of the minor and major tick lines can be customized using [`MajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorTickLines) and [`MinorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorTickLines) properties in the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -128,7 +128,7 @@ The width, color and size of the minor and major tick lines can be customiz
     };
 }
 
-{% endhighlight %}
+```
 
 ![Tick Lines Customization](images/axis-customization/tick.png)
 
@@ -136,7 +136,7 @@ The width, color and size of the minor and major tick lines can be customiz
 
 The width, color and dash-array of the minor and major grid lines can be customized using [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorGridLines) and [`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorGridLines) properties in the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -172,7 +172,7 @@ The width, color and dash-array of the minor and major grid lines can be cu
 
 
 
-{% endhighlight %}
+```
 
 ![Grid Lines Customization](images/axis-customization/gridline.png)
 
@@ -185,7 +185,7 @@ The [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 * [Mixed Chart](./chart-series)
 * [Multiple Panes](./multiple-panes)
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -223,7 +223,7 @@ The [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 }
 
 
-{% endhighlight %}
+```
 
 ![Multiple Axis](images/axis-customization/multiple.png)
 
@@ -233,7 +233,7 @@ The [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
  When an axis is inversed, the axis' greatest value moves closer to the origin, and vice versa. Set this property [`IsInversed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsInversed) to **true** to invert the axis.
 
- {% highlight csharp %}
+ ```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -267,7 +267,7 @@ The [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 
 
-{% endhighlight %}
+```
 
 ![Inversed Axis](images/axis-customization/inversed.png)
 
@@ -275,7 +275,7 @@ The [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 Set the  [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_OpposedPosition) property of an axis to **true** to place it in the opposite position of its original position.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -308,7 +308,7 @@ Set the  [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     };
 }
 
-{% endhighlight %}
+```
 
 ![Opposed Position](images/axis-customization/opposed.png)
 

@@ -14,7 +14,7 @@ documentation: ug
 Stock Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information
 about the data plotted.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -49,7 +49,7 @@ about the data plotted.
 }
 
 
-{% endhighlight %}
+```
 
 ![Title](images/appearance/title-razor.png)
 
@@ -59,7 +59,7 @@ about the data plotted.
 
 The `TextStyle` property of chart title provides options to customize the `Size`, `Color`, `FontFamily`, `FontWeight`, `FontStyle`, `Opacity`, `TextAlignment` and `TextOverflow`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -94,7 +94,7 @@ The `TextStyle` property of chart title provides options to customize the `Size`
     };
 }
 
-{% endhighlight %}
+```
 
 ![Title Wrap](images/appearance/titlewrap-razor.png)
 
@@ -104,7 +104,7 @@ Changing theme will affect background color, gridlines, tooltip colors and appea
 
 Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -138,7 +138,7 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
     };
 }
 
-{% endhighlight %}
+```
 
 ![Theme](images/appearance/theme-razor.png)
 

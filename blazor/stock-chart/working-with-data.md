@@ -19,7 +19,7 @@ To bind list binding to the stock chart, you can assign a IEnumerable object to 
 [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_High), [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Low), [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Open) and [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Close)
 properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -56,7 +56,7 @@ properties.
 }
 
 
-{% endhighlight %}
+```
 
 ![Local Data](images/common/local-data.png)
 
@@ -64,7 +64,7 @@ properties.
 
 To bind remote data to stock chart component, assign service data as an instance of `SfDataManager` to the `DataSource` property or by using EjsDataManager component. To interact with remote data source, provide the endpoint `Url`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Data
@@ -86,7 +86,7 @@ To bind remote data to stock chart component, assign service data as an instance
     public List<ExportType> ExportType = new List<ExportType>();
 }
 
-{% endhighlight %}
+```
 
 ![Remote Data](images/common/remote.png)
 

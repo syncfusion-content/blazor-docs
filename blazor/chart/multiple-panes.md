@@ -22,7 +22,7 @@ property. The value can be either in percentage or in pixel.
 [`RowIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RowIndex) property of the axis.
 * To customize each row bottom line, use [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Border) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -75,13 +75,13 @@ property. The value can be either in percentage or in pixel.
 }
 
 
-{% endhighlight %}
+```
 
 ![Rows](images/multiple-panes/row.png)
 
 For spanning the vertical axis along multiple row, you can use [`Span`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Span) property of the axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -134,7 +134,7 @@ For spanning the vertical axis along multiple row, you can use [`Span`](https://
 }
 
 
-{% endhighlight %}
+```
 
 ![Rows](images/multiple-panes/row-span.png)
 
@@ -148,7 +148,7 @@ property. The given width can be either in percentage or in pixel.
 [`ColumnIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_ColumnIndex) property of the axis.
 * To customize each column bottom line, use [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Border) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -199,13 +199,13 @@ property. The given width can be either in percentage or in pixel.
    };
 }
 
-{% endhighlight %}
+```
 
 ![Columns](images/multiple-panes/Column.png)
 
 For spanning the horizontal axis along multiple column, you can use [`Span`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_Span) property of an axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -256,7 +256,7 @@ For spanning the horizontal axis along multiple column, you can use [`Span`](htt
    };
 }
 
-{% endhighlight %}
+```
 
 ![Columns](images/multiple-panes/Column-span.png)
 

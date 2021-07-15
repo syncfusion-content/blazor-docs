@@ -13,7 +13,7 @@ documentation: ug
 
 Stock Chart can render to its container size. You can set the size via inline or CSS as demonstrated below.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -51,7 +51,7 @@ Stock Chart can render to its container size. You can set the size via inline o
    };
 }
 
-{% endhighlight %}
+```
 
 ![Size](images/size/size.png)
 
@@ -66,7 +66,7 @@ You can also set size for stock chart directly through [`Width`](https://help.sy
 
 You can set the size of chart in pixel as demonstrated below.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -102,7 +102,7 @@ You can set the size of chart in pixel as demonstrated below.
    };
 }
 
-{% endhighlight %}
+```
 
 ![Size](images/size/size-pixel.png)
 
@@ -111,7 +111,7 @@ You can set the size of chart in pixel as demonstrated below.
 By setting value in percentage, stock chart gets its dimension with respect to its container. For example,
 when the height is ‘50%’, chart renders to half of the container height.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -147,7 +147,7 @@ when the height is ‘50%’, chart renders to half of the container height.
    };
 }
 
-{% endhighlight %}
+```
 
 ![Size](images/size/size-percentage.png)
 

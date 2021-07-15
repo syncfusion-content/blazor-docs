@@ -16,7 +16,7 @@ Legend provides information about the series rendered in the chart.
 You can use legend for the chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible)
 property to **true** in [`ChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -50,7 +50,7 @@ property to **true** in [`ChartLegendSettings`](https://help.syncfusion.com/cr/b
 
 
 
-{% endhighlight %}
+```
 
 ![Enable Legend](images/legend/legend-razor.png)
 
@@ -59,7 +59,7 @@ property to **true** in [`ChartLegendSettings`](https://help.syncfusion.com/cr/b
 By using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Position) property, you can position the legend
 at left, right, top or bottom of the chart. The legend is positioned at the bottom of the chart, by default.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -98,11 +98,11 @@ at left, right, top or bottom of the chart. The legend is positioned at the bot
         };
 }
 
-{% endhighlight %}
+```
 
 Custom position helps you to position the legend anywhere in the chart using x, y coordinates.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -140,7 +140,7 @@ Custom position helps you to position the legend anywhere in the chart using x, 
 }
 
 
-{% endhighlight %}
+```
 
 <!-- markdownlint-disable MD036 -->
 
@@ -151,7 +151,7 @@ Custom position helps you to position the legend anywhere in the chart using x, 
 You can align the legend at `Center`, `Far` or `Near` to the chart using
 [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Alignment) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -195,7 +195,7 @@ You can align the legend at `Center`, `Far` or `Near` to the chart using
 }
 
 
-{% endhighlight %}
+```
 
 ![Legend Alignment](images/legend/alignment-razor.png)
 
@@ -203,7 +203,7 @@ You can align the legend at `Center`, `Far` or `Near` to the chart using
 
 To change the legend icon shape, you can use [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_LegendShape) property in the Series. By default legend icon shape is **SeriesType**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -249,7 +249,7 @@ To change the legend icon shape, you can use [`LegendShape`](https://help.syncf
 }
 
 
-{% endhighlight %}
+```
 
 **Legend Size**
 
@@ -257,7 +257,7 @@ By default, legend takes 20% - 25% of the chart's height, when it is placed on t
 chart's width, when placed on left or right position of the chart. You can change this default legend size by using the
 [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Height) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -303,14 +303,14 @@ chart's width, when placed on left or right position of the chart. You can chang
 
 }
 
-{% endhighlight %}
+```
 
 **Legend Item Size**
 
 You can customize the size of the legend items by using the [`ShapeHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapeHeight)
 and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ShapeWidth) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -356,7 +356,7 @@ and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 }
 
-{% endhighlight %}
+```
 
 ![Legend Alignment](images/legend/item-size-razor.png)
 
@@ -364,7 +364,7 @@ and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 Paging will be enabled by default, when the legend items exceeds the legend bounds. You can view each legend items by navigating between the pages using navigation buttons.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -409,14 +409,14 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
 
 }
 
-{% endhighlight %}
+```
 
 ## Series Selection on Legend
 
 By default, legend click enables you to collapse the series visibility. On other hand, if you need to select a series through legend click, disable the
 [`ToggleVisibility`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -456,13 +456,13 @@ By default, legend click enables you to collapse the series visibility. On other
         };
 }
 
-{% endhighlight %}
+```
 
 ## Collapsing Legend Item
 
 By default, series name will be displayed as legend. To skip the legend for a particular series, you can give empty string to the series name.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -504,7 +504,7 @@ By default, series name will be displayed as legend. To skip the legend for a pa
         };
 }
 
-{% endhighlight %}
+```
 
 ![Collapsing Legend Item](images/legend/collapse-razor.png)
 

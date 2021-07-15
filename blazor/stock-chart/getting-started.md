@@ -142,7 +142,7 @@ On successful compilation of your application, the Syncfusion Blazor Stock Chart
 
 You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property in the Stock Chart, to provide quick information to the user about the data plotted in the component.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -177,7 +177,7 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
    };
 }
 
-{% endhighlight %}
+```
 
 ![StockChart Title](images/title.png)
 
@@ -185,7 +185,7 @@ You can add a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 The crosshair is a vertical and horizontal line on the view that shows the value of an axis when the mouse or touch is in a certain position. The crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [`StockChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html). Likewise tooltip label for an axis can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property in the [`StockChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -217,7 +217,7 @@ The crosshair is a vertical and horizontal line on the view that shows the value
    };
 }
 
-{% endhighlight %}
+```
 
 ![Crosshair](images/crosshair.png)
 
@@ -225,7 +225,7 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 
 The trackball is used to track a closest data point  to the mouse or touch position. The trackball marker indicates the closest point and trackball tooltip displays the information about the point. It can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [`StockChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html) to **true** and [`Shared`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) property in the [`StockChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html) to **true** in component.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -260,7 +260,7 @@ The trackball is used to track a closest data point  to the mouse or touch posit
    };
 }
 
-{% endhighlight %}
+```
 
 ![Trackball](images/trackball.png)
 

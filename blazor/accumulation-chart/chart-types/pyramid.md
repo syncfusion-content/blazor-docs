@@ -12,7 +12,7 @@ documentation: ug
 To render a pyramid series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)
 as `Pyramid`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -46,7 +46,7 @@ as `Pyramid`.
 }
 
 
-{% endhighlight %}
+```
 
 ![Pyramid Chart](../images/pyramid/default-razor.png)
 
@@ -57,7 +57,7 @@ as `Pyramid`.
 The Pyramid chart supports linear and surface modes of rendering. The default type of the
 [`PyramidMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PyramidMode) is `Linear`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -90,7 +90,7 @@ The Pyramid chart supports linear and surface modes of rendering. The default ty
     };
 }
 
-{% endhighlight %}
+```
 
 ![Mode](../images/pyramid/mode-razor.png)
 
@@ -98,7 +98,7 @@ The Pyramid chart supports linear and surface modes of rendering. The default ty
 
 The size of the pyramid chart can be customized by using the  [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -131,7 +131,7 @@ The size of the pyramid chart can be customized by using the  [`Width`](https://
      };
 }
 
-{% endhighlight %}
+```
 
 ![Size](../images/pyramid/size-razor.png)
 
@@ -140,7 +140,7 @@ The size of the pyramid chart can be customized by using the  [`Width`](https://
 Pyramid chart provides options to customize the space between the segments by using the [`GapRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the
 series. It takes values from 0 to 1.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -173,7 +173,7 @@ series. It takes values from 0 to 1.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Gap Between the Segments](../images/pyramid/gap-razor.png)
 
@@ -182,7 +182,7 @@ series. It takes values from 0 to 1.
 Points can be exploded on mouse click by setting the [`Explode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. You can also explode the point
 on load using [`ExplodeIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [`ExplodeOffset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -216,7 +216,7 @@ on load using [`ExplodeIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Explode](../images/pyramid/explode-razor.png)
 

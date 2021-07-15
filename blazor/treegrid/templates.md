@@ -22,6 +22,8 @@ The available template options in tree grid are as follows,
 
 To use templates, the tree grid must be bound with named model. This can be done by specifying the model type using the `ModelType` property of the tree grid component as follows.
 
+{% tabs %}
+
 {% highlight csharp %}
 
 @using TreeGridComponent.Data
@@ -59,6 +61,43 @@ To use templates, the tree grid must be bound with named model. This can be done
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class Employee
+    {
+        public string Name { get; set; }
+        public string FullName { get; set; }
+        public DateTime? DOB { get; set; }
+        public string Designation { get; set; }
+        public string EmpID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string Country { get; set; }
+        public string Address { get; set; }
+        public string Contact { get; set; }
+        public int? ParentId { get; set; }
+        public TreeData Treedata { get; set; }
+
+        public static List<Employee> GetTemplateData()
+        {
+            List<Employee> DataCollection = new List<Employee>();
+
+            DataCollection.Add(new Employee { Name = "Robert King",FullName = "RobertKing",Designation = "Chief Executive Officer",EmployeeID = 1,EmpID = "EMP001",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
+            DataCollection.Add(new Employee { Name = "David william",FullName = "DavidWilliam",Designation = "Vice President",EmployeeID = 2,EmpID = "EMP004",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Nancy Davolio",FullName = "NancyDavolio",Designation = "Marketing Executive",EmployeeID = 3,EmpID = "EMP035",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Andrew Fuller",FullName = "AndrewFuller",Designation = "Sales Representative",EmployeeID = 4,EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Anne Dodsworth",FullName = "AnneDodsworth",Designation = "Sales Representative",EmployeeID = 5,EmpID = "EMP091",Country = "USA",ParentId = null,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Michael Suyama",FullName = "MichaelSuyama",Designation = "Sales Representative",EmployeeID = 6,EmpID = "EMP110",Country = "UK",ParentId = 5,Treedata = new TreeData() { ID = 21 }});
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Template ModelType](images/temptype.png)
@@ -68,6 +107,8 @@ The following output is displayed as a result of the above code example.
 Most of the templates used by tree grid are of type `RenderFragment<T>` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
 
 For example, you can access the data of the column template using `context` as follows.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -106,6 +147,41 @@ For example, you can access the data of the column template using `context` as f
 
 {% endhighlight %}
 
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class Employee
+    {
+        public string Name { get; set; }
+        public string FullName { get; set; }
+        public DateTime? DOB { get; set; }
+        public string Designation { get; set; }
+        public string EmpID { get; set; }
+        public int? EmployeeID { get; set; }
+        public string Country { get; set; }
+        public string Address { get; set; }
+        public string Contact { get; set; }
+        public int? ParentId { get; set; }
+        public TreeData Treedata { get; set; }
+
+        public static List<Employee> GetTemplateData()
+        {
+            List<Employee> DataCollection = new List<Employee>();
+
+            DataCollection.Add(new Employee { Name = "Robert King",FullName = "RobertKing",Designation = "Chief Executive Officer",EmployeeID = 1,EmpID = "EMP001",Address = "507 - 20th Ave. E.Apt. 2A, Seattle",Contact = "(206) 555-9857",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
+            DataCollection.Add(new Employee { Name = "David william",FullName = "DavidWilliam",Designation = "Vice President",EmployeeID = 2,EmpID = "EMP004",Address = "722 Moss Bay Blvd., Kirkland",Contact = "(206) 555-3412",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Nancy Davolio",FullName = "NancyDavolio",Designation = "Marketing Executive",EmployeeID = 3,EmpID = "EMP035",Address = "4110 Old Redmond Rd., Redmond",Contact = "(206) 555-8122",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Andrew Fuller",FullName = "AndrewFuller",Designation = "Sales Representative",EmployeeID = 4,EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
+
 The following output is displayed as a result of the above code example.
 
 ![Template Context](images/columntemp.png)
@@ -115,6 +191,8 @@ The following output is displayed as a result of the above code example.
 If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [`by design in Blazor`](https://github.com/aspnet/AspNetCore/issues/10836).
 
 This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendent of Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
+
+{% tabs %}
 
 {% highlight csharp %}
 
@@ -172,6 +250,36 @@ This prevents us from directly specifying templates such as `RowTemplate` and `D
 }
 
 {% endhighlight %}
+
+{% highlights cs %}
+
+namespace TreeGridComponent.Data {
+
+public class Employee
+    {
+        public string Name { get; set; }
+        public DateTime? DOB { get; set; }
+        public string Designation { get; set; }
+        public string EmpID { get; set; }
+        public string Country { get; set; }
+        public int? ParentId { get; set; }
+        public TreeData Treedata { get; set; }
+
+        public static List<Employee> GetTemplateData()
+        {
+            List<Employee> DataCollection = new List<Employee>();
+            DataCollection.Add(new Employee { Name = "Robert King",Designation = "Chief Executive Officer",EmpID = "EMP001",Country = "USA",DOB = new DateTime(1963, 2, 15),ParentId = null,Treedata = new TreeData() { ID = 21}});
+            DataCollection.Add(new Employee { Name = "David william",Designation = "Vice President",EmpID = "EMP004",Country = "USA",DOB = new DateTime(1971, 5, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Nancy Davolio",Designation = "Marketing Executive",EmpID = "EMP035",Country = "USA",DOB = new DateTime(1966, 3, 19),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            DataCollection.Add(new Employee { Name = "Andrew Fuller",Designation = "Sales Representative",EmpID = "EMP045",Country = "UK",DOB = new DateTime(1980, 9, 20),ParentId = 1,Treedata = new TreeData() { ID = 21 }});
+            return DataCollection;
+        }
+    }
+}
+
+{% endhighlights %}
+
+{% endtabs %}
 
 The following output is displayed as a result of the above code example.
 

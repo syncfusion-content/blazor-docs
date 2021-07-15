@@ -13,7 +13,7 @@ Annotations are texts, shapes, or images that are used to highlight a specific r
 
 The [`ChartAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart. Specify the id of the element that needs to be displayed in the chart area by using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of annotation.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -55,7 +55,7 @@ The [`ChartAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     };
 }
 
-{% endhighlight %}
+```
 
 ![Annotation](images/annotation/annotation-razor.png)
 
@@ -63,7 +63,7 @@ The [`ChartAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Region) property can be used to insert annotations in relation to a series or a chart. It is positioned with respect to [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Regions.html#Syncfusion_Blazor_Charts_Regions_Chart) by default.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -105,7 +105,7 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     };
 }
 
-{% endhighlight %}
+```
 
 ![Region](images/annotation/region-razor.png)
 
@@ -113,7 +113,7 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_CoordinateUnits) allows you to specify the annotation's coordinate units in either [`Pixel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -154,7 +154,7 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     };
 }
 
-{% endhighlight %}
+```
 
 ![Co-ordinate Unit](images/annotation/co-ordinate-razor.png)
 

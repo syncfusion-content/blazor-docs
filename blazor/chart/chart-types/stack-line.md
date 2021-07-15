@@ -13,7 +13,7 @@ documentation: ug
 
 [`100% Stacked Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) displays multiple series of data as stacked areas, ensuring that the cumulative proportion of each stacked element always totals 100%. The y-axis will hence always be rendered with the range 0–100%. To render a [`100% Stacked Line`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StackingLine100`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine100).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -70,7 +70,7 @@ documentation: ug
     };
 }
 
-{% endhighlight %}
+```
 
 ![100% Stacked Line](../images/chart-types-images/stacked-line-100.png)
 
@@ -85,7 +85,7 @@ The following properties can be used to customize the [`100% Stacked Line`](http
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -142,7 +142,7 @@ The following properties can be used to customize the [`100% Stacked Line`](http
     };
 }
 
-{% endhighlight %}
+```
 
 ![Custom 100% Stacked Line](../images/chart-types-images/custom-stacked-line-100.png)
 

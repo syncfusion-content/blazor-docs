@@ -13,7 +13,7 @@ documentation: ug
 
 [`Blazor Waterfall Chart`](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap4) helps to understand the cumulative effect of the sequentially introduced positive and negative values. To render a [`Waterfall`](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap4) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Waterfall`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Waterfall). [`IntermediateSumIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_IntermediateSumIndexes) property of waterfall is used to represent the in between sum values and [`SumIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_SumIndexes) property is used to represent the cumulative sum values.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -50,7 +50,7 @@ documentation: ug
     double[] sumIndex = new double[] { 8 };
 }
 
-{% endhighlight %}
+```
 
 ![Waterfall Chart](../images/othertypes/waterfall.png)
 
@@ -60,7 +60,7 @@ documentation: ug
 
 The negative changes of [`Waterfall Chart`](https://blazor.syncfusion.com/demos/chart/waterfall?theme=bootstrap4) is represented by using [`NegativeFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~NegativeFillColor.html) and the summary changes are represented by using [`SummaryFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~SummaryFillColor.html) properties. By default, the  [`NegativeFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~NegativeFillColor.html) is **#E94649** and the [`SummaryFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~SummaryFillColor.html) is **#4E81BC**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -97,7 +97,7 @@ The negative changes of [`Waterfall Chart`](https://blazor.syncfusion.com/demos/
     double[] sumIndexes = new double[] { 7 };
 }
 
-{% endhighlight %}
+```
 
 ![Waterfall with series customization](../images/othertypes/waterfall-custom.png)
 

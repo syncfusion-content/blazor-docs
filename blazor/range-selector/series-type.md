@@ -19,7 +19,7 @@ To render the data, the Range Selector supports three types of series.
 
 To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Line**. By default, the line series is rendered in the Range Selector.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -52,7 +52,7 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
     };
 }
 
-{% endhighlight %}
+```
 
 ![Line Chart](images/series-type/line.png)
 
@@ -60,7 +60,7 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 To render an area series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Area**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -93,7 +93,7 @@ To render an area series, use series [`Type`](https://help.syncfusion.com/cr/bla
     };
 }
 
-{% endhighlight %}
+```
 
 ![Area Chart](images/series-type/area.png)
 
@@ -101,7 +101,7 @@ To render an area series, use series [`Type`](https://help.syncfusion.com/cr/bla
 
 To render a Step line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_Type) as **Step Line**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -134,6 +134,6 @@ To render a Step line series, use series [`Type`](https://help.syncfusion.com/cr
     };
 }
 
-{% endhighlight %}
+```
 
 ![Step Line Chart](images/series-type/stepline.png)

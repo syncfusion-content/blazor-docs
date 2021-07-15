@@ -11,7 +11,7 @@ documentation: ug
 
 As like a chart, the legend is also available for accumulation charts, which gives information about the points. By default, the legend will be placed on the right, if the width of the chart is high or will be placed on the bottom, if the height of the chart is high. Here, the legend for a point can be collapsed by giving the empty string to the x value of the point.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -43,7 +43,7 @@ As like a chart, the legend is also available for accumulation charts, which giv
     };
 }
 
-{% endhighlight %}
+```
 
 ![Legend](images/legend/default-razor.png)
 
@@ -52,7 +52,7 @@ As like a chart, the legend is also available for accumulation charts, which giv
 By using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property, you can position the legend at the `Left`, `Right`, `Top` or `Bottom` of the chart.
 You can also align the legend to `Center`, `Far` or `Near` to the chart using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -84,7 +84,7 @@ You can also align the legend to `Center`, `Far` or `Near` to the chart usi
     };
 }
 
-{% endhighlight %}
+```
 
 ![Position and Alignment](images/legend/position-razor.png)
 
@@ -92,7 +92,7 @@ You can also align the legend to `Center`, `Far` or `Near` to the chart usi
 
 To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the `Series`. By default, legend icon is `SeriesType`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -125,7 +125,7 @@ To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/
     };
 }
 
-{% endhighlight %}
+```
 
 ![Legend Shape](images/legend/legend-shape-razor.png)
 
@@ -133,7 +133,7 @@ To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/
 
 The legend size can be changed by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of the `LegendSettings`.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -167,7 +167,7 @@ The legend size can be changed by using the [`Width`](https://help.syncfusion.co
     };
 }
 
-{% endhighlight %}
+```
 
 ![Legend Size](images/legend/size-razor.png)
 
@@ -175,7 +175,7 @@ The legend size can be changed by using the [`Width`](https://help.syncfusion.co
 
 You can customize the size of the legend items by using the [`ShapeHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight) and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -208,7 +208,7 @@ You can customize the size of the legend items by using the [`ShapeHeight`](http
     };
 }
 
-{% endhighlight %}
+```
 
 ![Legend Item Size](images/legend/item-size-razor.png)
 
@@ -216,7 +216,7 @@ You can customize the size of the legend items by using the [`ShapeHeight`](http
 
 Paging will be enabled by default, when the legend items exceeds the legend bounds. You can view the each legend item by navigating through the pages.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -249,7 +249,7 @@ Paging will be enabled by default, when the legend items exceeds the legend boun
     };
 }
 
-{% endhighlight %}
+```
 
 ![Paging for Legend](images/legend/paging-razor.png)
 

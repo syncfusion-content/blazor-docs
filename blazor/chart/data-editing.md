@@ -69,6 +69,7 @@ Data editing allows the rendered points to be dragged and dropped. We can now ad
     };
 }
 
+
 ```
 
 ![ Enable Data Editing](images/data-editing/data-editing-razor.png)

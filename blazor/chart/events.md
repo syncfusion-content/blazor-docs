@@ -64,7 +64,7 @@ PointMoved|
 
 After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -101,13 +101,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnZoomEnd
 
 [`OnZoomEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers, after the zoom selection is completed.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -144,13 +144,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnLegendItemRender
 
 [`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event triggers,before the legend is rendered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -188,13 +188,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnDataLabelRender
 
 [`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event triggers, before the data label for series is rendered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -233,13 +233,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnPointRender
 
 [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event triggers, before each points for the series is rendered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -277,13 +277,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnAxisLabelRender
 
 [`OnAxisLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event triggers, before each axis label is rendered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -319,13 +319,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnAxisLabelClick
 
 [`OnAxisLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event triggers, when x axis label is clicked.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -361,13 +361,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnAxisActualRangeCalculated
 
 [`OnAxisActualRangeCalculated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event triggers, before each axis range is calculated.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -405,13 +405,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnAxisMultiLevelLabelRender
 
 [`OnAxisMultiLevelLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers, while rendering multilevellabels.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -459,13 +459,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## SizeChanged
 
 [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event triggers after resizing of chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -501,13 +501,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnScrollChanged
 
 [`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event triggers while scrolling the chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -545,13 +545,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnExportComplete
 
 [`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event triggers after exporting the chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -594,13 +594,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnPrintComplete
 
 `OnPrintComplete` event triggers after printing the chart.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -643,13 +643,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnDataEdit
 
 [`OnDataEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event triggers, while dragging the data point.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -687,13 +687,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnDataEditCompleted
 
 [`OnDataEditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event triggers  when the point drag completed.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -731,13 +731,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnLegendClick
 
 [`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event triggers after legend click.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -775,13 +775,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnMultiLevelLabelClick
 
 [`OnMultiLevelLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after click on multilevellabelclick.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -829,13 +829,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnSelectionChanged
 
 [`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers after the selection is completed.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -873,13 +873,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## Loaded
 
 `Loaded` event triggers after chart load.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -915,13 +915,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnPointClick
 
 [`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers on point click.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -957,13 +957,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## TooltipRender
 
 [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event triggers, before the tooltip for series is rendered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1000,13 +1000,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## SharedTooltipRender
 
 [`SharedTooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers, before the sharedtooltip for series is rendered.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1045,13 +1045,13 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 ## OnZooming
 
 [`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers, after the zoom selection is completed.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -1088,6 +1088,6 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
     }
 }
 
-{% endhighlight %}
+```
 
 > Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.

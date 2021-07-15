@@ -13,6 +13,8 @@ You can assign dictionary values in the Tree Grid's data source by accessing the
 
 This is demonstrated in the below sample code where **Designation** is defined as Dictionary value and it is accessed inside the template property of the [`TreeGridColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) using **KeyValuePair** data type. The key value is compared with the **TaskId** column value and based on that the value is displayed,
 
+
+
 ```csharp
 
 @using TreeGridComponent.Data;

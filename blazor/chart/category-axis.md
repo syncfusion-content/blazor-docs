@@ -11,7 +11,7 @@ documentation: ug
 
 The category axis is used to represent string values instead of integers.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -46,13 +46,13 @@ The category axis is used to represent string values instead of integers.
 }
 
 
-{% endhighlight %}
+```
 
 ## Labels Placement
 
 The category labels are positioned between the ticks by default, but the [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPlacement) property allows them to be placed on the ticks as well with the [`BetweenTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) and [`OnTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks) options.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -85,7 +85,7 @@ The category labels are positioned between the ticks by default, but the [`Label
      };
 }
 
-{% endhighlight %}
+```
 
 ![Labels Placement](images/category-axis/placement.png)
 
@@ -93,7 +93,7 @@ The category labels are positioned between the ticks by default, but the [`Label
 
 The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties of the axis can be used to customize the range of the [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -126,7 +126,7 @@ The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
      };
 }
 
-{% endhighlight %}
+```
 
 ![Range](images/category-axis/range.png)
 
@@ -134,7 +134,7 @@ The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 The data source index values can also be used to render the category axis. This can be achieved by setting the [`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsIndexed) property in the axis to **true**.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -178,7 +178,7 @@ The data source index values can also be used to render the category axis. This 
 
 
 
-{% endhighlight %}
+```
 
 ![Indexed category axis](images/category-axis/index-category.png)
 

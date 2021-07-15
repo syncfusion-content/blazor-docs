@@ -29,7 +29,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 * Minutes
 * Seconds
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -85,7 +85,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 }
 
 
-{% endhighlight %}
+```
 
 ![Period Selector](images/common/period-razor.png)
 
@@ -93,7 +93,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 
 The [`EnablePeriodSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnablePeriodSelector) property allows users to toggle the visibility of period selector.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -129,6 +129,6 @@ The [`EnablePeriodSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     };
 }
 
-{% endhighlight %}
+```
 
 ![Period Selector Visibility](images/common/visibilityperiod-razor.png)

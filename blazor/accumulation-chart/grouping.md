@@ -16,7 +16,7 @@ You can club/group few points of the series based on
 property. For example, if the group to value is 11, then the points with value less than 11 is grouped together and will be showed as a single point with label `others`. The property also takes value in percentage
 (percentage of total data points value).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="RIO Olympics Gold" EnableSmartLabels="true">
@@ -56,7 +56,7 @@ property. For example, if the group to value is 11, then the points with value l
 }
 
 
-{% endhighlight %}
+```
 
 ![Grouping](images/grouping/group-razor.png)
 
@@ -66,7 +66,7 @@ property. For example, if the group to value is 11, then the points with value l
 
 You can visualize all points grouped together by clicking on the group. For example, if 5 points are grouped together it will be showed as a single slice with label `others` and when we click on `others` it will get explode and broken into 5 seperate slices.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
@@ -105,7 +105,7 @@ You can visualize all points grouped together by clicking on the group. For exam
 }
 
 
-{% endhighlight %}
+```
 
 ![Broken Slice](images/grouping/custom-razor.png)
 
@@ -114,7 +114,7 @@ You can visualize all points grouped together by clicking on the group. For exam
 Slice can also be grouped based on number of points by specifying the [`GroupMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupMode)
 to Point. For example, if the group to value is 11,  chart will show 1st 11 points and will group remaining entries from the collection as a single point.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
@@ -153,6 +153,6 @@ to Point. For example, if the group to value is 11,  chart will show 1st 11 poin
 
 
 
-{% endhighlight %}
+```
 
 ![Group Mode](images/grouping/groupmode-razor.png)

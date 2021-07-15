@@ -19,7 +19,7 @@ The tooltip is useful when you cannot display information by using the data labe
 You can enable tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property as **true**
 in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -55,7 +55,7 @@ in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
     };
 }
 
-{% endhighlight %}
+```
 
 ![Enable Tooltip](images/tooltip/default-razor.png)
 
@@ -67,7 +67,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 information in tooltip. For example the format '${series.name} ${point.x}' shows series name and point x
 value.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -103,7 +103,7 @@ value.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Format the Tooltip](images/tooltip/format-razor.png)
 
@@ -117,7 +117,7 @@ properties are used to customize the background color and border of the tooltip 
 The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_TextStyle)
 property in the tooltip is used to customize tooltip text.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -168,7 +168,7 @@ property in the tooltip is used to customize tooltip text.
     };
 }
 
-{% endhighlight %}
+```
 
 ![Customize the Appearance of Tooltip](images/tooltip/appearance-razor.png)
 

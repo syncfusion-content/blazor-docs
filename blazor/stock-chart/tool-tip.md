@@ -18,7 +18,7 @@ Stock Chart will display details about the points through tooltip, when the mous
 By default, tooltip is not visible. Enable the tooltip by setting
 [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property to true .
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -58,7 +58,7 @@ By default, tooltip is not visible. Enable the tooltip by setting
 }
 
 
-{% endhighlight %}
+```
 
 ![Tooltip](images/common/tooltip.png)
 
@@ -70,7 +70,7 @@ By default, tooltip is not visible. Enable the tooltip by setting
 
 By default, tooltip shows information of x and y value in points. In addition to that, you can show more information in tooltip. For example the format `${point.x} : ${point.high}` shows point x and high value.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -110,13 +110,13 @@ By default, tooltip shows information of x and y value in points. In addition to
 }
 
 
-{% endhighlight %}
+```
 
 ## Customize the Appearance of Tooltip
 
 The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Border) properties are used to customize the background color and border of the tooltip respectively. The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_TextStyle) property in the tooltip is used to customize the font of the tooltip text.
 
-{% highlight csharp %}
+```csharp
 
 @using Syncfusion.Blazor.Charts
 
@@ -156,6 +156,6 @@ The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
 }
 
 
-{% endhighlight %}
+```
 
 ![Tooltip Customization](images/common/custom-tooltip.png)
