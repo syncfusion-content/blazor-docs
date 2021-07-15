@@ -76,7 +76,7 @@ By default, Tree Grid will occupy the entire space of the parent element when Tr
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -579,7 +579,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

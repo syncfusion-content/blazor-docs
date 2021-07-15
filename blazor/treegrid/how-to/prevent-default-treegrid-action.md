@@ -58,7 +58,7 @@ This is demonstrated in the below sample code where the `Add` operation is preve
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -88,7 +88,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

@@ -41,7 +41,7 @@ Paging options can be configured through the [`TreeGridPageSettings`](https://he
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -74,7 +74,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -124,7 +124,7 @@ With [`PageSizeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sy
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -157,7 +157,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -205,7 +205,7 @@ The pager Dropdown allows you to change the number of records in the Tree Grid d
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -238,7 +238,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

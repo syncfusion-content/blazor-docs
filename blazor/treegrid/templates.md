@@ -61,7 +61,7 @@ To use templates, the tree grid must be bound with named model. This can be done
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -94,7 +94,7 @@ public class Employee
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -147,7 +147,7 @@ For example, you can access the data of the column template using `context` as f
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -178,7 +178,7 @@ public class Employee
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -251,7 +251,7 @@ This prevents us from directly specifying templates such as `RowTemplate` and `D
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -277,7 +277,7 @@ public class Employee
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

@@ -72,7 +72,7 @@ Add the custom CSS class to the specified column by using the [`CustomAttributes
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -102,7 +102,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

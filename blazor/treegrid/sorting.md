@@ -48,7 +48,7 @@ To enable sorting in the Tree Grid, set the [`AllowSorting`](https://help.syncfu
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -81,7 +81,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -125,7 +125,7 @@ To sort at initial rendering, set the **Field** and **Direction** in the [`Colum
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -158,7 +158,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -211,7 +211,7 @@ During the sort action, the tree grid component triggers two events. The [`Actio
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -242,7 +242,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

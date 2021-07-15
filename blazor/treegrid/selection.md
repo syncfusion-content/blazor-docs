@@ -46,7 +46,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -79,7 +79,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -122,7 +122,7 @@ the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -155,7 +155,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -202,7 +202,7 @@ the [`CellSelectionMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -235,7 +235,7 @@ public class TreeData
     }
 }   
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -280,7 +280,7 @@ To render the checkbox in each tree grid row, you need to use checkbox column wi
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -311,7 +311,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -362,7 +362,7 @@ and hold CTRL key and click the desired rows. To select range of rows, press and
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -393,7 +393,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -437,7 +437,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -468,7 +468,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -509,7 +509,7 @@ To select a row at initial rendering, set the [SelectedRowIndex](https://help.sy
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -542,7 +542,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -602,7 +602,7 @@ You can get the selected row indexes by using the GetSelectedRowIndexes method.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -633,7 +633,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

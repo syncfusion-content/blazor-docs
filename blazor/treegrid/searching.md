@@ -39,7 +39,7 @@ You can search records in a Tree Grid, by using the [`Search`](https://help.sync
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -69,7 +69,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -112,7 +112,7 @@ To apply search at initial rendering, set the Fields, Operator, Key, and IgnoreC
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -142,7 +142,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -208,7 +208,7 @@ To search tree grid records from an external button, invoke the [`Search`](https
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -238,7 +238,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -280,7 +280,7 @@ By default, tree grid searches all visible columns. You can search specific colu
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -310,7 +310,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

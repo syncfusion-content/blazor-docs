@@ -41,7 +41,7 @@ Filtering allows you to view specific or related records based on filter criteri
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -71,7 +71,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -142,7 +142,7 @@ To apply the filter at initial rendering, set the filter **PredicateModel** in
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -172,7 +172,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -251,7 +251,7 @@ N/A |N/A |**Equal** operator will always be used for Boolean filter. |Boolean
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -281,7 +281,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -352,7 +352,7 @@ In the following sample, the dropdown is used as a custom component in the Durat
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -382,7 +382,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -426,7 +426,7 @@ You can filter the records with different operators.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -456,7 +456,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -515,7 +515,7 @@ In the following sample, dropdown is used as custom component in the duration co
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -545,7 +545,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -591,7 +591,7 @@ In the following sample menu filter is enabled by default and excel filter is en
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -621,7 +621,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -663,7 +663,7 @@ You can enable Excel like filter by defining.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -693,7 +693,7 @@ namespace TreeGridComponent.Data {
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

@@ -68,7 +68,7 @@ The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -99,7 +99,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -151,7 +151,7 @@ Please refer to the following example.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -183,7 +183,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -223,7 +223,7 @@ In the below example, the **RowHeight** is set as *60px*.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -255,7 +255,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -329,7 +329,7 @@ the **template** string or HTML elements.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -360,7 +360,7 @@ public class Employee
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -435,7 +435,7 @@ If [`RowTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncf
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -466,7 +466,7 @@ public class Employee
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -536,7 +536,7 @@ The detail template provides additional information about a particular row. By e
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -567,7 +567,7 @@ public class Employee
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -661,7 +661,7 @@ The Tree Grid row drag and drop allows you to drag and drop Tree Grid rows on th
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -1141,7 +1141,7 @@ public class WrapData
 }
 
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -1198,7 +1198,7 @@ To drag and drop between two Tree Grid, enable the [`AllowRowDragAndDrop`](https
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -1678,7 +1678,7 @@ public class WrapData
 }
 
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

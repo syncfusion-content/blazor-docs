@@ -49,7 +49,7 @@ Expand and Collapse state of any child record will be persisted.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -186,7 +186,7 @@ public class VirtualData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

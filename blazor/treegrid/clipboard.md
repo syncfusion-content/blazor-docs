@@ -46,7 +46,7 @@ Interaction keys |Description
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -77,7 +77,7 @@ namespace TreeGridComponent.Data {
 
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -130,7 +130,7 @@ To copy selected rows or cells data into the clipboard with help of external but
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -161,7 +161,7 @@ namespace TreeGridComponent.Data {
 
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -254,7 +254,7 @@ The below are the type of filter mode available in Tree Grid.
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -285,7 +285,7 @@ namespace TreeGridComponent.Data {
 
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -324,7 +324,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -355,7 +355,7 @@ namespace TreeGridComponent.Data {
 
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -402,7 +402,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -433,7 +433,7 @@ namespace TreeGridComponent.Data {
 
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

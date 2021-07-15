@@ -56,7 +56,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -534,7 +534,7 @@ public class WrapData
         }
     }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

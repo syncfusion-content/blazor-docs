@@ -250,7 +250,7 @@ Pager_TotalItemsInfo |({0} Artikel)
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -281,7 +281,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -435,7 +435,7 @@ The following example demonstrates the Tree Grid in **Deutsch** culture. Here we
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -466,9 +466,9 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
-{% highlights json %}
+{% highlight json %}
 
 {
     "de-DE": {
@@ -514,7 +514,7 @@ public class TreeData
         }	
     }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -568,7 +568,7 @@ The **Internationalization** library is used to globalize number, date, and time
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -599,9 +599,9 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
-{% highlights json %}
+{% highlight json %}
 
 {
     "de-DE": {
@@ -648,9 +648,9 @@ public class TreeData
     }
     
 
-{% endhighlights %}
+{% endhighlight %}
 
-{% highlights json %}
+{% highlight json %}
 
 {
   "main": {
@@ -810,9 +810,9 @@ public class TreeData
 }
 
 
-{% endhighlights %}
+{% endhighlight %}
 
-{% highlights json %}
+{% highlight json %}
 
 {
   "main": {
@@ -2748,7 +2748,7 @@ public class TreeData
   }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
@@ -2804,7 +2804,7 @@ RTL provides an option to switch the text direction and layout of the Tree Grid 
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -2835,9 +2835,9 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
-{% highlights json %}
+{% highlight json %}
 
 {
     "ar-AE": {
@@ -2881,7 +2881,7 @@ public class TreeData
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 

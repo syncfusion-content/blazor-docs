@@ -446,7 +446,7 @@ The following code example describes the behavior of the `LoadChildOnDemand` fea
 
 {% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 namespace TreeGridComponent.Data {
 
@@ -503,9 +503,9 @@ public class SelfReferenceData
         }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
-{% highlights cs %}
+{% highlight cs %}
 
 using System;
 using System.Collections;
@@ -643,7 +643,7 @@ namespace WebAPI.Controller
     }
 }
 
-{% endhighlights %}
+{% endhighlight %}
 
 {% endtabs %}
 
