@@ -67,5 +67,3 @@ To display the text placing center of the doughnut, `ContentTemplate` should be 
 
 
 ```
-
-{% endaspTab %}

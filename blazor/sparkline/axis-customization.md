@@ -78,7 +78,7 @@ The category axis value can be provided by specifying the [`ValueType`](https://
 
 The DateTime axis value can be provide by specifying the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to the [`DateTime`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
 
-```csharpt
+```csharp
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline XName="Date" YName="Expense" TValue="ExpenditureDetail" DataSource="@ExpenditureReports" Type="SparklineType.Column" ValueType="SparklineValueType.DateTime" Height="250px" Width="450px">

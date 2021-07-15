@@ -462,7 +462,7 @@ The following screenshot shows filter menu using custom component
 
 The default filter operators for a GridColumn can be overridden by using the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the grid. In the below code, we have overridden the filter operators for the `CustomerID` column.
 
-```charp
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
