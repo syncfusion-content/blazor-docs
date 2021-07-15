@@ -21,7 +21,7 @@ Create a chart with multiple axes.
 
 Using the series name in `OnLegendClick` event, you can hide the axis associated with the series.
 
-```razor
+```
 <ChartEvents OnLegendClick="LegendClick"></ChartEvents>
  void LegendClick(LegendClickEventArgs args)
     {

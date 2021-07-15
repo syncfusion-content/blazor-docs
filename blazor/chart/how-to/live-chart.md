@@ -19,7 +19,7 @@ To update live data in a chart, follow the given steps:
 
  Render the series using Collection.
 
-```razor
+```
     <SfChart @ref="liveChart" Title="CPU Usage">
         <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime">
         </ChartPrimaryXAxis>
@@ -36,7 +36,7 @@ To update live data in a chart, follow the given steps:
 
 Update the data to series at a specified interval using timer.
 
- ```razor
+ ```
     protected override void OnInitialized()
     {
         // Starting live update in the chart.

@@ -15,7 +15,7 @@ By default, all the Blazor components are specific to the English culture ('en-U
 
 * Install the [`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) package using the following command (it installs the CLDR JSON data).
 
-```cmd
+```
 npm install cldr-data --save
 ```
 

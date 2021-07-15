@@ -15,7 +15,7 @@ By using the content option of annotation property, you can specify the Id of th
 
 To display the text placing center of the doughnut, `ContentTemplate` should be provided within the `AccumulationChartAnnotation` directive and create the div element inside `ContentTemplate`. we can access the div element attribute to text placing the center of the doughnut.
 
-```razor
+```
         <AccumulationChartAnnotation X="40%" Y="48%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
                 <ContentTemplate>
                    <div class="donut-text">Chart Annotation</div>

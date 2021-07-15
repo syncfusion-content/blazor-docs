@@ -19,7 +19,7 @@ To add or remove the series dynamically, follow the given steps:
 
  Render the series using Collection.
 
-```razor
+```
     <SfChart>
         <ChartSeriesCollection>
             @foreach (SeriesData series in SeriesCollection)
@@ -35,7 +35,7 @@ To add or remove the series dynamically, follow the given steps:
 
 To add the new series to the chart dynamically, follow the below code.
 
- ```razor
+ ```
     void ChartSeriesAdd()
     {
         SeriesCollection.Add(new SeriesData
@@ -51,7 +51,7 @@ To add the new series to the chart dynamically, follow the below code.
 
 To remove a series from the chart dynamically, follow the below code.
 
- ```razor
+ ```
     void ChartSeriesRemove()
     {
       SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);

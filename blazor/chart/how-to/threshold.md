@@ -20,7 +20,7 @@ To mark a threshold in chart, follow the given steps:
 By using the [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Start) and [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_End) properties of [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisModel.html#Syncfusion_Blazor_Charts_AxisModel_StripLines) in vertical axis, you can mark the threshold
 for y values of the data.
 
-```razor
+```
  <ChartPrimaryYAxis>
         <ChartStripLines>
             <ChartStripline Start="30" End="30.1" Color="red"></ChartStripline>
