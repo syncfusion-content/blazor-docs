@@ -670,7 +670,7 @@ The following screenshot represents Custom filter in Excel filter
 
 This **`FilterItemTemplate`** helps to you customize the each CheckBox list element/value for display purpose. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [`FilterItemTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
 
-```charp
+```csharp
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="375">
