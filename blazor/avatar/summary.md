@@ -1,1 +1,0 @@
-* [Getting Started](avatar/getting-started.md)
