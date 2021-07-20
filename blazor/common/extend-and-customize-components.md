@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Extend and Customize the Syncfusion Components in Blazor - Syncfusion
