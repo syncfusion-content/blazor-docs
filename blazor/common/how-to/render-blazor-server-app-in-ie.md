@@ -7,40 +7,42 @@ component: Common
 documentation: ug
 ---
 
-# How to Render the Blazor Server Application in IE Web Browser
+# How to Render the Blazor Server Application in IE11 Web Browser
 
-## Blazor WebAssembly App
+This section explains how to render the Blazor Server application in IE11 web browser.
 
-†Microsoft Internet Explorer doesn't support with `WebAssembly`. So, Blazor WebAssembly application does not support with Internet Explorer.
+## Blazor Client/WebAssembly App
+
+The Microsoft Internet Explorer doesn't support with `WebAssembly`. So, Blazor Client/WebAssembly application does not support with Internet Explorer web browser.
 
 ## Blazor Server App
 
-†Microsoft Internet Explorer supports `Blazor Server` app with additional polyfills. Find the following steps to add the polyfills in the Blazor server application.
+The Microsoft Internet Explorer supports `Blazor Server` app with additional polyfills in .NET Core 3.1 apps. However, it is not support with .NET 5.0 or later versions. Refer to [Blazor updated browser support](https://docs.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/blazor-browser-support-updated) for more information.
 
-## Create a Blazor Server Application
+Find the following steps to add the polyfills in the Blazor server application.
 
-1. Create a Blazor server Application using [Blazor Server](../../getting-started/server-side-blazor) documentation.
+1. Create a Blazor server application using [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation.
 
-2. Add the [`github.com/Daddoon/Blazor.Polyfill`](https://github.com/Daddoon/Blazor.Polyfill) in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the polyfill script reference in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
 
-    .....
-    .....
+        .....
+        .....
 
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.8/blazor.polyfill.min.js"></script>
     </head>
 
-{% endhighlight %}
+    ```
 
-{% endtabs %}
+    > This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.8/blazor.polyfill.min.js) is required to configure in Blazor server application for IE 11 support for .NET Core 3.1 app.
 
-    > This [polyfill](https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js) is required to configure in Blazor server application for IE 11 support.
+3. Run the application in the IE 11 web browser and the Syncfusion Blazor Component is now rendered on IE 11.
 
-3. Add the required configuration from [Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation and run the Application. The Syncfusion Blazor Component will render in the IE 11 web browser.
+    ![Syncfusion component rendering on IE11](images/rendering-component-on-ie11.png)
 
-    ![output](../../getting-started/images/browser-output.png)
+## See Also
+
+* [Blazor Updated Browser Support](https://docs.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/blazor-browser-support-updated)
+* [Blazor Browser Support on .NET 5.0](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-5.0)
