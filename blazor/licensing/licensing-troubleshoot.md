@@ -1,3 +1,12 @@
+---
+layout: post
+title: Download in Blazor - Syncfusion
+description: Check out the documentation for Download in Blazor
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Licensing FAQ
 
 ## How to upgrade from Trial version after purchasing a license
