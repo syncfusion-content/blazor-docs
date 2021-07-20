@@ -13,7 +13,7 @@ documentation: ug
 
 By using the chart’s `OnSelectionChanged` event, you can get the current data.
 
-```razor
+```
 
  <ChartEvents OnSelectionChanged="@ShowSelectedData"></ChartEvents>
 
@@ -37,7 +37,7 @@ By using the chart’s `OnSelectionChanged` event, you can get the current data.
 
 By using the grid’s 'DataSource' property, you can update the  chart’s datasource to grid current page records and visualize the chart selected data in grid.
 
-```razor
+```
 
 <SfGrid DataSource="@SelectedData2">
             <GridColumns>

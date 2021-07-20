@@ -136,8 +136,6 @@ To render a [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 }
 
 ```
-
-{% endaspTab %}
   
 ![Polar Chart with Area Draw Type](../images/polar-radar/polar-area-razor.png)
 

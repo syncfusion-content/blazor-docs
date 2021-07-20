@@ -19,7 +19,7 @@ You can also change this implicit parameter name using Context attribute.
 
 For example, you can access the data label template using context as follows.
 
-```razor
+```
         <ChartDataLabel Visible="true">
                     <Template>
                         @{

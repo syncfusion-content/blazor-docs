@@ -123,7 +123,6 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 ![Code 128 Special characters in Barcode](images/BarcodeGenerator8.png)
 
-{% tab template= "barcode/BarcodeGenerator", es5Template="es5code128" %}
 
 ## Customizing the Barcode color
 

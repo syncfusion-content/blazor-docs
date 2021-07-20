@@ -630,5 +630,3 @@ public class SelfReferenceData
 {% endhighlight %}
 
 {% endtabs %}
-
-{% endaspTab %}

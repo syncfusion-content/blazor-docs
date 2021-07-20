@@ -15,7 +15,7 @@ You can show the tooltip as table by using [`Template`](https://help.syncfusion.
 
 To access the aggregate values inside the Template, you can use the implicit named parameter context. You can type cast the context as [`ChartTooltipInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html) to get aggregate values inside template
 
-```razor
+```
             <ChartTooltipSettings Enable="true">
                 <Template>
                     @{

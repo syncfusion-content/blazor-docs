@@ -15,7 +15,7 @@ To place the icon on a list box, set the [`iconCss`](https://help.syncfusion.com
 
 In the following sample, icon classes are mapped with `iconCss` field.
 
-```razor
+```
 <EjsListBox ID="listbox" DataSource="@data" Fields="@fieldSettings"></EjsListBox>
 
 @code {

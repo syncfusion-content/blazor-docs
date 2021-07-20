@@ -114,5 +114,3 @@ The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` for
 }
 
 ```
-
-{% endaspTab %}

@@ -99,5 +99,3 @@ border for an empty point can be set by using the [`Border`](https://help.syncfu
 }
 
 ```
-
-{% endaspTab %}

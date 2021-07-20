@@ -13,7 +13,7 @@ documentation: ug
 
 Lazy loading allows you to load data for chart on demand. Chart will fire the [`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event, in that we can get the minimum and maximum range of the axis, based on this, we can upload the data to chart.
 
-```razor
+```
    <ChartEvents OnScrollChanged="@ScrollChange"></ChartEvents>
 
   void ScrollChange(ScrollEventArgs e)

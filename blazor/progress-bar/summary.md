@@ -1,8 +1,0 @@
-* [Getting Started](progress-bar/getting-started.md)
-* [Types](progress-bar/types.md)
-* [States](progress-bar/states.md)
-* [Customization](progress-bar/customization.md)
-* [Annotations and Label](progress-bar/progress-annotation.md)
-* [Animation](progress-bar/animation.md)
-* [Range](progress-bar/range.md)
-* [Events](progress-bar/events.md)
