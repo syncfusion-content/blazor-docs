@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Resource Generator
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, the CRG online tool is no longer needed for your production environment and it is deprecated now. That is, the Syncfusion Blazor library itself handles the Syncfusion interop scripts and it is no longer needs to be added manually in the layout page (_Host.cshtml/index.html) for production. You can still use the [ThemeStudio](http://ej2.syncfusion.com/themestudio/) online web application to customize and generate the Syncfusion Blazor themes for a specific set of components.
+W> Starting with version 18.3.0.35 (Volume 3, 2020), the Syncfusion Blazor library is integrated with the JavaScript Isolation feature of Blazor. So, the CRG online tool is no longer needed for your production environment and it is deprecated now. That is, the Syncfusion Blazor library itself handles the Syncfusion interop scripts and it is no longer needs to be added manually in the layout page (_Host.cshtml/index.html) for production. You can still use the [ThemeStudio](http://ej2.syncfusion.com/themestudio/) online web application to customize and generate the Syncfusion Blazor themes for a specific set of components.
 
 Syncfusion provides an option to generate a selective component's interop script and styles using the [`Custom Resource Generator`](https://blazor.syncfusion.com/crg) (CRG) web tool.
 
@@ -63,7 +63,7 @@ Refer to the following steps to download the custom resources in CRG:
 
 ## How to use custom resources in the Blazor application
 
-> Warning: Starting with version 18.3.0.35 (Volume 3, 2020), the following configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
+W> Starting with version 18.3.0.35 (Volume 3, 2020), the following configuration is no longer needed for the production environment. You can use the default [getting started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/#importing-syncfusion-blazor-component-in-the-application) configuration in production mode.
 
 1. Copy or paste the downloaded custom resources in the Blazor application `~/wwwroot` folder.
 

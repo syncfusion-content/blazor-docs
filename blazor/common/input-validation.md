@@ -146,7 +146,7 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
     }
     ```
 
-    > Warning: You shouldn't use the `OnSubmit` handler along with `OnValidSubmit` and `OnInvalidSubmit` event handlers in the `EditForm` component. It will throw a runtime error.
+    W> You shouldn't use the `OnSubmit` handler along with `OnValidSubmit` and `OnInvalidSubmit` event handlers in the `EditForm` component. It will throw a runtime error.
 
 ## Blazor Form Validation Supported Components
 
