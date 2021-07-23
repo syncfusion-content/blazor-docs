@@ -57,9 +57,10 @@ To enable the field list in pivot table UI, set the [`ShowFieldList`](https://he
 ```
 
 <!-- markdownlint-disable MD012 -->
-![output](images/gs_fieldlist_icon.png "Field list icon at the top left of the pivot table component")
-<br/>
-![output](images/gs_fieldlist_dialog.png "Field list dialog for user interaction")
+![output](images/gs_fieldlist_icon.png)("Field list icon at the top left of the pivot table component")
+
+
+![output](images/gs_fieldlist_dialog.png)"Field list dialog for user interaction")
 
 
 ## Stand-alone Field List (Fixed)
