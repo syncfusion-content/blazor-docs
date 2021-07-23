@@ -46,7 +46,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
  ![select framework](../images/blazor-select-template.png)
 
-> Note: ASP.NET Core 3.1 available in Visual Studio 2019 version.
+> ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -56,7 +56,7 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 1. Install `Syncfusion.Blazor.RichTextEditor` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Note: Please ensure to check the Include prerelease option for our Beta release.
+> Please ensure to check the Include prerelease option for our Beta release.
 
 1. You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the ~/Pages/_Host.cshtml page.
 
@@ -65,7 +65,7 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
-> Note: For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
 <head>

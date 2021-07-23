@@ -11,7 +11,7 @@ documentation: ug
 
 State persistence allows user to maintain the current state of the component along with its report bounded in the browser local storage (cookie). Even if the browser is refreshed or if you move to the next page within the browser, components state will be persisted. State persistence stores the Pivot Table object in the local storage when [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_EnablePersistence) property in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class is set to **true**.
 
-> Note: The state of the pivot table is retained during page refresh and navigation based on its ID set. Make sure to set **unique ID** for each pivot table to store its state in browser. On duplication of ID, the state maintained will be overridden.
+> The state of the pivot table is retained during page refresh and navigation based on its ID set. Make sure to set **unique ID** for each pivot table to store its state in browser. On duplication of ID, the state maintained will be overridden.
 
 ```csharp
     @using Syncfusion.Blazor.PivotView

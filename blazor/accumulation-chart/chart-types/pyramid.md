@@ -50,7 +50,7 @@ as `Pyramid`.
 
 ![Pyramid Chart](../images/pyramid/default-razor.png)
 
-> Note: You can refer to our [`Blazor Pyramid Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pyramid Chart Example`](https://blazor.syncfusion.com/demos/chart/pyramid) to know how to render a pyramid series.
+> You can refer to our [`Blazor Pyramid Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pyramid Chart Example`](https://blazor.syncfusion.com/demos/chart/pyramid) to know how to render a pyramid series.
 
 ## Mode
 

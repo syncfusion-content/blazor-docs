@@ -87,7 +87,7 @@ The size of the funnel chart can be customized by using the  [`Width`](https://h
 
 ![Size](../images/funnel/size-razor.png)
 
-> Note: You can also explore our [`Blazor Funnel Chart`](https://blazor.syncfusion.com/demos/chart/funnel) example to knows how to render and configure the funnel chart.
+> You can also explore our [`Blazor Funnel Chart`](https://blazor.syncfusion.com/demos/chart/funnel) example to knows how to render and configure the funnel chart.
 
 ## Neck Size
 

@@ -1157,7 +1157,7 @@ SfPdfViewerServer
 </tr>
 </table>
 
-> Note: If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+> If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
