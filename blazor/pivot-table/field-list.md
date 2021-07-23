@@ -57,9 +57,10 @@ To enable the field list in pivot table UI, set the [`ShowFieldList`](https://he
 ```
 
 <!-- markdownlint-disable MD012 -->
-![output](images/gs_fieldlist_icon.png "Field list icon at the top left of the pivot table component")
-<br/>
-![output](images/gs_fieldlist_dialog.png "Field list dialog for user interaction")
+![output](images/gs_fieldlist_icon.png)("Field list icon at the top left of the pivot table component")
+
+
+![output](images/gs_fieldlist_dialog.png)"Field list dialog for user interaction")
 
 
 ## Stand-alone Field List (Fixed)
@@ -278,7 +279,7 @@ The [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The event [`EnginePopulated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotFieldListEvents-1.html#Syncfusion_Blazor_PivotView_PivotFieldListEvents_1_EnginePopulated) is triggered after engine is populated. It has following parameters - [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatedEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatedEventArgs_DataSourceSettings), [`PivotFieldList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatedEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatedEventArgs_PivotFieldList) and [`PivotValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.EnginePopulatedEventArgs.html#Syncfusion_Blazor_PivotView_EnginePopulatedEventArgs_PivotValues).
 
-> Note: This event is not required for Popup field list since it is a in built one.
+> This event is not required for Popup field list since it is a in built one.
 
 ```csharp
         <SfPivotView TValue="ProductDetails" ID="pivotview"  @ref="pivotView" Height="530">

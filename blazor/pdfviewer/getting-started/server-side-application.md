@@ -31,7 +31,7 @@ This section briefly explains how to include a PDF Viewer in your  Blazor server
 
   ![select Nuget](../images/select-nuget.png)
 
-  > Note: If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+  > If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 

@@ -20,7 +20,7 @@ This section briefly explains how to include a `HeatMap Chart` in your Blazor Se
 2. Search Syncfusion.Blazor.HeatMap keyword in the Browse tab and install Syncfusion.Blazor.HeatMap NuGet package in the application.
 ![nuget-heatmapchart](images/nuget-heatmapchart.png)
 3. Once the installation process is completed, the Syncfusion Blazor HeatMap package will be installed in the project.
-> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
 ```html
@@ -31,7 +31,7 @@ This section briefly explains how to include a `HeatMap Chart` in your Blazor Se
     </head>
 ```
 
-> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 

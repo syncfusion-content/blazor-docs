@@ -51,7 +51,7 @@ as `Pie`.
 
 ![Pie Chart](../images/pie-dough-nut/pie-razor.png)
 
-> Note: You can refer to our [`Blazor Pie Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pie Chart example`](https://blazor.syncfusion.com/demos/chart/pie) to knows how to render and configure the pie chart.
+> You can refer to our [`Blazor Pie Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pie-chart) feature tour page to know about its other groundbreaking feature representations. You can also explore our [`Blazor Pie Chart example`](https://blazor.syncfusion.com/demos/chart/pie) to knows how to render and configure the pie chart.
 
 ## Radius Customization
 
@@ -222,7 +222,7 @@ The InnerRadius property takes value from 0 to 100% of the pie radius.
 
 ![Doughnut Chart](../images/pie-dough-nut/doughnut-razor.png)
 
-> Note: You can also explore our [`Blazor Doughnut Chart`](https://blazor.syncfusion.com/demos/chart/donut) example to knows how to render and configure the doughnut charts.
+> You can also explore our [`Blazor Doughnut Chart`](https://blazor.syncfusion.com/demos/chart/donut) example to knows how to render and configure the doughnut charts.
 
 ## Start and End angles
 

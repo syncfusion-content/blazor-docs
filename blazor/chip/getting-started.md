@@ -21,7 +21,7 @@ Refer to the Individual NuGet Packages section for the available NuGet packages.
 2. Search Syncfusion.Blazor.Buttons keyword in the Browse tab and install Syncfusion.Blazor.Buttons NuGet package in the application.
 ![nuget-chip](images/nuget-chip.png)
 3. Once the installation process is completed, the Syncfusion Blazor Buttons package will be installed in the project.
-> Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
@@ -33,7 +33,7 @@ Refer to the Individual NuGet Packages section for the available NuGet packages.
     </head>
 ```
 
-> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 

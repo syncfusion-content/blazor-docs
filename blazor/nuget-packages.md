@@ -13,7 +13,7 @@ documentation: ug
 
 * The complete NuGet package `Syncfusion.Blazor` will also be available along with individual NuGet packages. That is, we have not deprecated its support yet.
 
-> Warning: Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
+W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 ## Benefits of using individual NuGet packages
 
@@ -1157,7 +1157,7 @@ SfPdfViewerServer
 </tr>
 </table>
 
-> Note: If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+> If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
