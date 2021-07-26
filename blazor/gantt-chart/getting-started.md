@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Getting Started in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Getting Started with Blazor Gantt Chart Component | Syncfusion 
+description: Learn about Getting Started with Blazor Gantt Chart component of Syncfusion, and more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

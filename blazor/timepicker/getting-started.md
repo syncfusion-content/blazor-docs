@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor TimePicker Component | Syncfusion 
-description: Learn about Getting Started in Blazor TimePicker component of Syncfusion, and more details.
+title: Getting Started with Blazor TimePicker Component | Syncfusion 
+description: Learn about Getting Started with Blazor TimePicker component of Syncfusion, and more details.
 platform: Blazor
 control: TimePicker
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Listview Component | Syncfusion 
-description: Learn about Getting Started in Blazor Listview component of Syncfusion, and more details.
+title: Getting Started with Blazor Listview Component | Syncfusion 
+description: Learn about Getting Started with Blazor Listview component of Syncfusion, and more details.
 platform: Blazor
 control: Listview
 documentation: ug

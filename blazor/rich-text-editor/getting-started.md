@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Getting Started in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Getting Started with Blazor RichTextEditor Component | Syncfusion 
+description: Learn about Getting Started with Blazor RichTextEditor component of Syncfusion, and more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

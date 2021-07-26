@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor DateRangePicker Component | Syncfusion 
-description: Learn about Getting Started in Blazor DateRangePicker component of Syncfusion, and more details.
+title: Getting Started with Blazor DateRangePicker Component | Syncfusion 
+description: Learn about Getting Started with Blazor DateRangePicker component of Syncfusion, and more details.
 platform: Blazor
 control: DateRangePicker
 documentation: ug

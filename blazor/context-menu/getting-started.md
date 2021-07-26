@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Context Menu Component | Syncfusion 
-description: Learn about Getting Started in Blazor Context Menu component of Syncfusion, and more details.
+title: Getting Started with Blazor Context Menu Component | Syncfusion 
+description: Learn about Getting Started with Blazor Context Menu component of Syncfusion, and more details.
 platform: Blazor
 control: Context Menu
 documentation: ug

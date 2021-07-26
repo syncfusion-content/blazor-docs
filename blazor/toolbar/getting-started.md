@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Toolbar Component | Syncfusion 
-description: Learn about Getting Started in Blazor Toolbar component of Syncfusion, and more details.
+title: Getting Started with Blazor Toolbar Component | Syncfusion 
+description: Learn about Getting Started with Blazor Toolbar component of Syncfusion, and more details.
 platform: Blazor
 control: Toolbar
 documentation: ug

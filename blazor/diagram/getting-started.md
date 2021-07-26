@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Diagram Component | Syncfusion 
-description: Learn about Getting Started in Blazor Diagram component of Syncfusion, and more details.
+title: Getting Started with Blazor Diagram Component | Syncfusion 
+description: Learn about Getting Started with Blazor Diagram component of Syncfusion, and more details.
 platform: Blazor
 control: Diagram
 documentation: ug

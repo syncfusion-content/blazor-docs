@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor HeatMap Chart Component | Syncfusion 
-description: Learn about Getting Started in Blazor HeatMap Chart component of Syncfusion, and more details.
+title: Getting Started with Blazor HeatMap Chart Component | Syncfusion 
+description: Learn about Getting Started with Blazor HeatMap Chart component of Syncfusion, and more details.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug

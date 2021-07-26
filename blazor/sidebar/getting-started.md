@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Sidebar Component | Syncfusion 
-description: Learn about Getting Started in Blazor Sidebar component of Syncfusion, and more details.
+title: Getting Started with Blazor Sidebar Component | Syncfusion 
+description: Learn about Getting Started with Blazor Sidebar component of Syncfusion, and more details.
 platform: Blazor
 control: Sidebar
 documentation: ug

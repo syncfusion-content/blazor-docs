@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Range Slider Component | Syncfusion 
-description: Learn about Getting Started in Blazor Range Slider component of Syncfusion, and more details.
+title: Getting Started with Blazor Range Slider Component | Syncfusion 
+description: Learn about Getting Started with Blazor Range Slider component of Syncfusion, and more details.
 platform: Blazor
 control: Range Slider
 documentation: ug

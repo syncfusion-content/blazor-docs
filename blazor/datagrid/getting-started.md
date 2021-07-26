@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor DataGrid Component | Syncfusion 
-description: Learn about Getting Started in Blazor DataGrid component of Syncfusion, and more details.
+title: Getting Started with Blazor DataGrid Component | Syncfusion 
+description: Learn about Getting Started with Blazor DataGrid component of Syncfusion, and more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

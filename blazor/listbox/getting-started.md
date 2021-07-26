@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor List Box Component | Syncfusion 
-description: Learn about Getting Started in Blazor List Box component of Syncfusion, and more details.
+title: Getting Started with Blazor List Box Component | Syncfusion 
+description: Learn about Getting Started with Blazor List Box component of Syncfusion, and more details.
 platform: Blazor
 control: List Box
 documentation: ug

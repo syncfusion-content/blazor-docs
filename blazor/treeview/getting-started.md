@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor TreeView Component | Syncfusion 
-description: Learn about Getting Started in Blazor TreeView component of Syncfusion, and more details.
+title: Getting Started with Blazor TreeView Component | Syncfusion 
+description: Learn about Getting Started with Blazor TreeView component of Syncfusion, and more details.
 platform: Blazor
 control: TreeView
 documentation: ug

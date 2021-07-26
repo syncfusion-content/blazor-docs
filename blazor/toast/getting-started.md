@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Toast Component | Syncfusion 
-description: Learn about Getting Started in Blazor Toast component of Syncfusion, and more details.
+title: Getting Started with Blazor Toast Component | Syncfusion 
+description: Learn about Getting Started with Blazor Toast component of Syncfusion, and more details.
 platform: Blazor
 control: Toast
 documentation: ug

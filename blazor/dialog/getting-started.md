@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Dialog Component | Syncfusion 
-description: Learn about Getting Started in Blazor Dialog component of Syncfusion, and more details.
+title: Getting Started with Blazor Dialog Component | Syncfusion 
+description: Learn about Getting Started with Blazor Dialog component of Syncfusion, and more details.
 platform: Blazor
 control: Dialog
 documentation: ug

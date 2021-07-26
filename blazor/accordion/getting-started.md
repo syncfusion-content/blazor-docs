@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Accordion Component | Syncfusion 
-description: Learn about Getting Started in Blazor Accordion component of Syncfusion, and more details.
+title: Getting Started with Blazor Accordion Component | Syncfusion 
+description: Learn about Getting Started with Blazor Accordion component of Syncfusion, and more details.
 platform: Blazor
 control: Accordion
 documentation: ug

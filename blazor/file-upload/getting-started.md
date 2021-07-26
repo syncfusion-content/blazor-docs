@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor File Upload Component | Syncfusion 
-description: Learn about Getting Started in Blazor File Upload component of Syncfusion, and more details.
+title: Getting Started with Blazor File Upload Component | Syncfusion 
+description: Learn about Getting Started with Blazor File Upload component of Syncfusion, and more details.
 platform: Blazor
 control: File Upload
 documentation: ug
