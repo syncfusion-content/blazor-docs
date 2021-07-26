@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Dashboard Layout Component | Syncfusion 
-description: Learn about Getting Started in Blazor Dashboard Layout component of Syncfusion, and more details.
+title: Getting Started with Blazor Dashboard Layout Component | Syncfusion 
+description: Learn about Getting Started with Blazor Dashboard Layout component of Syncfusion, and more details.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug

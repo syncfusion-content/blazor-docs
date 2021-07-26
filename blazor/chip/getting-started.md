@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Chip Component | Syncfusion 
-description: Learn about Getting Started in Blazor Chip component of Syncfusion, and more details.
+title: Getting Started with Blazor Chip Component | Syncfusion 
+description: Learn about Getting Started with Blazor Chip component of Syncfusion, and more details.
 platform: Blazor
 control: Chip
 documentation: ug

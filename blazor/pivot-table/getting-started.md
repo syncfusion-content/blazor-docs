@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Getting Started in Blazor Pivot Table component of Syncfusion, and more details.
+title: Getting Started with Blazor Pivot Table Component | Syncfusion 
+description: Learn about Getting Started with Blazor Pivot Table component of Syncfusion, and more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug

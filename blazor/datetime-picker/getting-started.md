@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Datetime Picker  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Datetime Picker  component of Syncfusion, and more details.
+title: Getting Started with Blazor Datetime Picker  Component | Syncfusion 
+description: Learn about Getting Started with Blazor Datetime Picker  component of Syncfusion, and more details.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug

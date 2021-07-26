@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Avatar Component | Syncfusion 
-description: Learn about Getting Started in Blazor Avatar component of Syncfusion, and more details.
+title: Getting Started with Blazor Avatar Component | Syncfusion 
+description: Learn about Getting Started with Blazor Avatar component of Syncfusion, and more details.
 platform: Blazor
 control: Avatar
 documentation: ug

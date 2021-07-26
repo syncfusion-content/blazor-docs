@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Scheduler Component | Syncfusion 
-description: Learn about Getting Started in Blazor Scheduler component of Syncfusion, and more details.
+title: Getting Started with Blazor Scheduler Component | Syncfusion 
+description: Learn about Getting Started with Blazor Scheduler component of Syncfusion, and more details.
 platform: Blazor
 control: Scheduler
 documentation: ug

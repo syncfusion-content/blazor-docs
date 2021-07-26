@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Getting Started in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Getting Started with Blazor MultiSelect Dropdown Component | Syncfusion 
+description: Learn about Getting Started with Blazor MultiSelect Dropdown component of Syncfusion, and more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

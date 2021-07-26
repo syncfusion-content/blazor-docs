@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor DatePicker Component | Syncfusion 
-description: Learn about Getting Started in Blazor DatePicker component of Syncfusion, and more details.
+title: Getting Started with Blazor DatePicker Component | Syncfusion 
+description: Learn about Getting Started with Blazor DatePicker component of Syncfusion, and more details.
 platform: Blazor
 control: DatePicker
 documentation: ug

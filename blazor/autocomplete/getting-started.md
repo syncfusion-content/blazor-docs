@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Getting Started in Blazor AutoComplete component of Syncfusion, and more details.
+title: Getting Started with Blazor AutoComplete Component | Syncfusion 
+description: Learn about Getting Started with Blazor AutoComplete component of Syncfusion, and more details.
 platform: Blazor
 control: AutoComplete
 documentation: ug

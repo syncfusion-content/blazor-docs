@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Checkbox Component | Syncfusion 
-description: Learn about Getting Started in Blazor Checkbox component of Syncfusion, and more details.
+title: Getting Started with Blazor Checkbox Component | Syncfusion 
+description: Learn about Getting Started with Blazor Checkbox component of Syncfusion, and more details.
 platform: Blazor
 control: Checkbox
 documentation: ug

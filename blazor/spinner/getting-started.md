@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Spinner Component | Syncfusion 
-description: Learn about Getting Started in Blazor Spinner component of Syncfusion, and more details.
+title: Getting Started with Blazor Spinner Component | Syncfusion 
+description: Learn about Getting Started with Blazor Spinner component of Syncfusion, and more details.
 platform: Blazor
 control: Spinner
 documentation: ug

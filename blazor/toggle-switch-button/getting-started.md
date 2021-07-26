@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Toggle Switch Button  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Toggle Switch Button  component of Syncfusion, and more details.
+title: Getting Started with Blazor Toggle Switch Button  Component | Syncfusion 
+description: Learn about Getting Started with Blazor Toggle Switch Button  component of Syncfusion, and more details.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

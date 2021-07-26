@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor DropDown List Component | Syncfusion 
-description: Learn about Getting Started in Blazor DropDown List component of Syncfusion, and more details.
+title: Getting Started with Blazor DropDown List Component | Syncfusion 
+description: Learn about Getting Started with Blazor DropDown List component of Syncfusion, and more details.
 platform: Blazor
 control: DropDown List
 documentation: ug

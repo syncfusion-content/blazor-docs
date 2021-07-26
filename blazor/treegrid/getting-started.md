@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Getting Started in Blazor Tree Grid component of Syncfusion, and more details.
+title: Getting Started with Blazor Tree Grid Component | Syncfusion 
+description: Learn about Getting Started with Blazor Tree Grid component of Syncfusion, and more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

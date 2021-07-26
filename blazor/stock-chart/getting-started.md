@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Getting Started with Blazor Stock Chart  Component | Syncfusion 
+description: Learn about Getting Started with Blazor Stock Chart  component of Syncfusion, and more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Getting Started in Blazor Stock Chart
+# Getting Started with Blazor Stock Chart
 
 This section briefly explains how to include a Stock Chart component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 

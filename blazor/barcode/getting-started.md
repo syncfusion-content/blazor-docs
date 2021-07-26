@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Barcode Component | Syncfusion 
-description: Learn about Getting Started in Blazor Barcode component of Syncfusion, and more details.
+title: Getting Started with Blazor Barcode Component | Syncfusion 
+description: Learn about Getting Started with Blazor Barcode component of Syncfusion, and more details.
 platform: Blazor
 control: Barcode
 documentation: ug

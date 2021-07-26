@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Numeric TextBox Component | Syncfusion 
-description: Learn about Getting Started in Blazor Numeric TextBox component of Syncfusion, and more details.
+title: Getting Started with Blazor Numeric TextBox Component | Syncfusion 
+description: Learn about Getting Started with Blazor Numeric TextBox component of Syncfusion, and more details.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor ComboBox Component | Syncfusion 
-description: Learn about Getting Started in Blazor ComboBox component of Syncfusion, and more details.
+title: Getting Started with Blazor ComboBox Component | Syncfusion 
+description: Learn about Getting Started with Blazor ComboBox component of Syncfusion, and more details.
 platform: Blazor
 control: ComboBox
 documentation: ug

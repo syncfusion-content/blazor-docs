@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Getting Started in Blazor In Place Editor  component of Syncfusion, and more details.
+title: Getting Started with Blazor In Place Editor  Component | Syncfusion 
+description: Learn about Getting Started with Blazor In Place Editor  component of Syncfusion, and more details.
 platform: Blazor
 control: In Place Editor 
 documentation: ug

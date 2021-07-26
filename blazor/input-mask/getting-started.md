@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Input Mask Component | Syncfusion 
-description: Learn about Getting Started in Blazor Input Mask component of Syncfusion, and more details.
+title: Getting Started with Blazor Input Mask Component | Syncfusion 
+description: Learn about Getting Started with Blazor Input Mask component of Syncfusion, and more details.
 platform: Blazor
 control: Input Mask
 documentation: ug
