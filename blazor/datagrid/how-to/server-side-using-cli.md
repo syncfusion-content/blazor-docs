@@ -13,7 +13,7 @@ documentation: ug
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Data Grid in Blazor Server side application using [`.NET Core CLI`](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
-> **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [`help topic`](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [`help topic`](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
@@ -75,7 +75,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
     </head>
     ```
 
-> **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+> The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
 > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Startup.cs** file by using true parameter as mentioned below.
 
 ```csharp

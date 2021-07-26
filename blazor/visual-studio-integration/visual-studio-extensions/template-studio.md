@@ -49,7 +49,7 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
    ![ProjectTypeWizard](../images/ProjectTypeWizard.png)
 
-   > **Note:** The Progressive Web Application will be enabled if .NET Core version 3.1.200 or higher is installed.
+   > The Progressive Web Application will be enabled if .NET Core version 3.1.200 or higher is installed.
 
 5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
 
@@ -67,13 +67,13 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
    ![Selected ControlsList](../images/ControlsList.png)
 
-   > **Note:** Choose at least one control to enable the Features and Configuration tab.
+   > Choose at least one control to enable the Features and Configuration tab.
 
 6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
 
 7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 5.0 and ASP NET Core 3.1), themes, https configuration, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly project types (ASP.NET Core hosted and Progressive Web Application).
 
-   > **Note:** ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App project type.
+   > ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App project type.
 
    ![Choose required Project Configuration](../images/Configuration.png)
 
@@ -367,4 +367,4 @@ You can select a culture language in combobox at top right on the page to apply 
 
     ![Accept permission](../images/MicrosoftAuthentication.PNG)
 
-> **Note:** Above combobox will be enabled in sample output only if localization option is selected in configuration window from Blazor Template Studio wizard.
+> Above combobox will be enabled in sample output only if localization option is selected in configuration window from Blazor Template Studio wizard.

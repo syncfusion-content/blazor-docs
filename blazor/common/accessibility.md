@@ -17,7 +17,7 @@ Section 508 is part of the U.S. Rehabilitation Act of 1973 introduced in 1998, r
 This law defines the need for both members of the public and Federal employees in all Federal agencies to have access to, develop, maintain, procure, or use electronic and information technology.
 Under Section 508, Federal agencies must develop a website that can be used by people with disabilities.
 
-> **Note:** All our Syncfusion Blazor components comply with the standard of Section 508 accessibility by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
+> All our Syncfusion Blazor components comply with the standard of Section 508 accessibility by default. This enables you to build accessible web applications, which are fully navigable by users with disabilities.
 
 ## Keyboard navigation
 

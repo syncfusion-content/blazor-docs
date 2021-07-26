@@ -15,7 +15,7 @@ The generated license key is just a string that needs to be registered before an
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 ```
 
-> **Note:** <br />
+> <br />
 Place the license key between double quotes. Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
 
 ## Blazor

@@ -21,7 +21,7 @@ The Tab component allows you to drag and drop any item by setting `AllowDragAndD
 
 In the following sample, the `AllowDragAndDrop` property is enabled.
 
-> **Note:** External drag and drop is not possible in blazor Tabs.
+> External drag and drop is not possible in blazor Tabs.
 
 ```csharp
 @using Syncfusion.Blazor.Navigations

@@ -17,7 +17,7 @@ You can get more information about deploying Blazor applications [Here](https://
 
 * Create the Blazor application with [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/).
 
-> **Note:** You have to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for more details.
+> You have to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for more details.
 
 * Right-click on the project in the `Solution Explorer` and select `Publish`.
 

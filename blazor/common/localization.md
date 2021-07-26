@@ -41,7 +41,7 @@ The culture can be set using one of the following approaches:
 
 1. Add the Localization service configuration in the `~/Startup.cs` file.
 
-    > **Note:** The Syncfusion locale service should be added after the Syncfusion default service. so that the application level Syncfusion locale service injection will override the default Syncfusion locale service. Map the folder path to the `ResourcesPath` in the default localization service.
+    > The Syncfusion locale service should be added after the Syncfusion default service. so that the application level Syncfusion locale service injection will override the default Syncfusion locale service. Map the folder path to the `ResourcesPath` in the default localization service.
 
     ```csharp
     using Syncfusion.Blazor;
@@ -109,7 +109,7 @@ The culture can be set using one of the following approaches:
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
-    > **Note:** Map the `SfResources.ResourceManager` to this interface `Manager`.
+    > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
     ```csharp
     using Syncfusion.Blazor;
@@ -297,7 +297,7 @@ The culture can be set using one of the following approaches:
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
-    > **Note:** Map the `SfResources.ResourceManager` to this interface `Manager`.
+    > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
     ```csharp
     using Syncfusion.Blazor;

@@ -147,7 +147,7 @@ public class OrdersService : BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBas
     }
 ```
 
-> **Note:** The **OrdersService** class is inherited from **BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase**, which is generated automatically from the `.proto` file.
+> The **OrdersService** class is inherited from **BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase**, which is generated automatically from the `.proto` file.
 
 ## Configure gRPC and gRPC-Web in the Server
 
@@ -201,7 +201,7 @@ public static async Task Main(string[] args)
         }
 ```
 
-> **Note:** The **OrdersService.OrdersServiceClient** class is also generated automatically from the `.proto` file.
+> The **OrdersService.OrdersServiceClient** class is also generated automatically from the `.proto` file.
 
 ## Add Syncfusion Blazor DataGrid package
 
@@ -213,7 +213,7 @@ In the **Browse** tab, search and install the `Syncfusion.Blazor.Grid` NuGet pac
 
 ![Manage NuGet packages](../images/browse-nuget.png)
 
-> **Note:** For this demo, we have used `Syncfusion.Blazor`(19.1.0.66) NuGet package.  We will release a new `Syncfusion.Blazor` NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
+> For this demo, we have used `Syncfusion.Blazor`(19.1.0.66) NuGet package.  We will release a new `Syncfusion.Blazor` NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 ## Adding Syncfusion Blazor DataGrid component
 

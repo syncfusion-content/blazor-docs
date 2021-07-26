@@ -54,7 +54,7 @@ In Blazor WebAssembly application, ensure if you have configured **Linker.xml** 
 
 Refer to this [KB article](https://www.syncfusion.com/kb/10761/syncfusion-components-doesnt-render-in-blazor-webassembly-application) for more information on Linker.xml file usage.
 
-> **Note:** Linker.xml configuration is applicable only for the Blazor WebAssembly application.
+> Linker.xml configuration is applicable only for the Blazor WebAssembly application.
 
 ## See Also
 

@@ -80,7 +80,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
     ```
 
-    > **Note:** Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application for the production environment. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for further details.
+    > Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application for the production environment. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for further details.
 
 7. Run the application. The styles are applied in our Blazor component.
 

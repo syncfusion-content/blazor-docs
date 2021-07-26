@@ -37,7 +37,7 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 ![Add Syncfusion Blazor DataGrid package](../images/SQLServer-BrowserGrid.png)
 
-> **Note:** For this demo, use Syncfusion.Blazor.Grid(19.1.0.66) NuGet package. A new Syncfusion.Blazor.Grid NuGet package with new enhancement will be released in our every-week release and main release. So, check and update to the [`latest versions`](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
+> For this demo, use Syncfusion.Blazor.Grid(19.1.0.66) NuGet package. A new Syncfusion.Blazor.Grid NuGet package with new enhancement will be released in our every-week release and main release. So, check and update to the [`latest versions`](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
 
 ## Adding Syncfusion Blazor DataGrid Component into the application
 
@@ -231,7 +231,7 @@ Here, inline edit mode and [`Toolbar`](https://blazor.syncfusion.com/documentati
 
 ```
 
-> **Note:** Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
+> Normal editing is the default edit mode for the DataGrid component. Also, to perform CRUD operations, set IsPrimaryKey property as True for a particular GridColumn, whose value is a unique.
 
 The CRUD operations can be performed and customized on our own by overriding the following CRUD methods of the DataAdaptor abstract class.
 
