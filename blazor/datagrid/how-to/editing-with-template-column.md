@@ -13,7 +13,7 @@ You can edit a template column value by defining the [`Field`](https://help.sync
 
 In the below demo, the **CustomerID** column is rendered with the template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">

@@ -21,7 +21,7 @@ is necessary to map the data source values in Tree Grid columns.
 
 You can achieve the complex data binding in the Tree Grid by using the dot(.) operator in the column.field. In the below examples **Task.TaskName** and **Task.Duration** are complex data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid
 
 <SfTreeGrid DataSource="@TreeData" AllowPaging="true" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1">
@@ -70,7 +70,7 @@ The following image represents complex data binding
 
 Tree Grid supports Complex Data Binding with ExpandoObject. In the below examples **Task.TaskName** and **Task.Duration** are complex data with ExpandoObject
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 @using System.Dynamic;
 

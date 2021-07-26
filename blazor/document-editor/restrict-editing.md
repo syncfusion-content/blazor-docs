@@ -17,7 +17,7 @@ This [`Blazor Word Processor control`](https://www.syncfusion.com/blazor-compone
 
 The following code example shows how to restrict or protect editing for the entire content (show as read-only).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="ReadOnly">Read Only</button>

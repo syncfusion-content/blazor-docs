@@ -31,7 +31,7 @@ We have provided the following native event support to the Radio Button componen
 
 The `onclick` attribute is used to bind the click event for Radio Button. Here, we have explained about the sample code snippets of Radio Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" @onclick="onClick" @bind-Checked="stringChecked"></SfRadioButton><br />

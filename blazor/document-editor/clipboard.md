@@ -21,7 +21,7 @@ Let’s see how to invoke each clipboard operations using code.
 
 You can copy the selected contents using the `Copy` method as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="CopyClick">Copy</button>
@@ -41,7 +41,7 @@ You can copy the selected contents using the `Copy` method as shown in the follo
 
 You can cut the selected content using the “Cut” method as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="CutClick">Cut</button>
@@ -65,7 +65,7 @@ You can cut the selected content using the “Cut” method as shown in the foll
 
 The following code example shows how to perform the paste operation from the local clipboard.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="PasteClick">Paste</button>

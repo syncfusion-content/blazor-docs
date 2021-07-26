@@ -11,7 +11,7 @@ documentation: ug
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string type. If component value has been changed, it will affect the all places where you bind the variable for the **bind-Value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <p>MaskedTextBox value is: @MaskValue</p>
@@ -27,7 +27,7 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
 You can bind the value to the MaskedTextBox component dynamically for `bind-Value`  attribute as mentioned in the following code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="00000" @bind-Value="@MaskValue"></SfMaskedTextBox>

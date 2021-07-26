@@ -75,7 +75,7 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
 
 > To focusout the DatePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="DateObj"></SfDatePicker>

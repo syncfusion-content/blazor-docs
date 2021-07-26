@@ -13,7 +13,7 @@ If you zoom the map using the [`ZoomFactor`](https://help.syncfusion.com/cr/blaz
 
  The center position is used to configure the geo location, where the maps should be zoomed, and zoom factor is used to specify zoom level of the maps.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

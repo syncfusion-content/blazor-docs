@@ -24,7 +24,7 @@ You can use the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The following example demonstrates how to create a DatePicker with `Decade` as initial rendering view.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Placeholder='Select a date' Start='CalendarView.Decade'></SfDatePicker>
@@ -47,7 +47,7 @@ will be not restricted.
 
 The following example demonstrates how to create a DatePicker that allows users to select a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Placeholder='choose a date' Start='CalendarView.Decade' Depth='CalendarView.Year'></SfDatePicker>

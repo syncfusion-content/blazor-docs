@@ -16,7 +16,7 @@ You can `create` or `delete` conditions by interacting through the user interfac
 * Use the [`AddRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddRules_System_Object_System_String_), and [`DeleteRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteRules_System_Object_) methods to create/delete conditions.
 * Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddGroups_System_Object_System_String_), and [`DeleteGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteGroups_System_Object_) methods to create/delete groups.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Buttons
 

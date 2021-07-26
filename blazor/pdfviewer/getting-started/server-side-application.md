@@ -37,7 +37,7 @@ This section briefly explains how to include a PDF Viewer in your  Blazor server
 
 **Step 5:** Open the **~/_Imports.razor** file and import the following namespaces
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
@@ -64,7 +64,7 @@ For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentatio
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the ConfigureServices function as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 namespace BlazorApplication

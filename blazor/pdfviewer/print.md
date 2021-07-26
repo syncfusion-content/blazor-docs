@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer supports printing the loaded PDF file by default. You can enable or disable printing by setting the `EnablePrint` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnablePrint="true"/>
@@ -25,7 +25,7 @@ The PDF Viewer supports printing the loaded PDF file by default. You can enable 
 
 You can programmatically invoke print action as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

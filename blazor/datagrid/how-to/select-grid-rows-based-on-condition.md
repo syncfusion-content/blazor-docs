@@ -13,7 +13,7 @@ You can select specific rows in the datagrid based on some conditions by using t
 
 This is demonstrated in the below sample code where the index value of datagrid rows with **Freight** column value greater than 10 are stored in the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event and then selected in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true">

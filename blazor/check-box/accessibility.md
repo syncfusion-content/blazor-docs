@@ -33,7 +33,7 @@ technology in the screen readers. Checkbox component contains the `checkbox` rol
 When the Checkbox has focus, pressing the Space key changes the state of the Checkbox.</td></tr>
 </table>
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox @bind-Checked="isChecked" Label="Checked State"></SfCheckBox><br />

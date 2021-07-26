@@ -19,7 +19,7 @@ Now, let's see how it works on those applicable views with examples.
 
 When the feature `EnableAutoRowHeight` is enabled, the row height gets auto-adjusted based on the number of overlapping events occupied on the same time range, which is demonstrated in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" EnableAutoRowHeight="true">
@@ -56,7 +56,7 @@ The following images depict how the row height gets auto-adjusted for Month and 
 
 The following example shows how the auto row adjustment feature works on timeline views with multiple resources.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" EnableAutoRowHeight="true">

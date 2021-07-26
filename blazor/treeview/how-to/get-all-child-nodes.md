@@ -11,7 +11,7 @@ documentation: ug
 
 This section demonstrates how to get the child nodes from corresponding Parent ID. Using the `GetTreeData` method, you can get the node details of TreeView. Please refer to the following sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Newtonsoft.Json;

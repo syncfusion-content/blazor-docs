@@ -16,7 +16,7 @@ When it is set to true, [SelectedItem](https://help.syncfusion.com/cr/blazor/Syn
 
 The following sample demonstrates how to set state persistence of the Tab component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab ID="Tab" Width="600px" EnablePersistence="true" >

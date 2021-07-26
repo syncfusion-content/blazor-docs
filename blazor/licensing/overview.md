@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview in Blazor - Syncfusion
-description: Check out the documentation for Overview in Blazor
+title: About Syncfusion Blazor Licensing | Syncfusion
+description: Learn here about Syncfusion Blazor licensing, how to generate the license key, how to register the license key, and more details.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Overview
+# Syncfusion Licensing in Blazor
 
 We have introduced a new licensing system starting with version 16.2.0.x release of Essential Studio. These modifications apply to all evaluators and only to paid customers who use NuGet packages from [nuget.org](https://www.nuget.org/packages?q=syncfusion). Starting with v16.2.0.x, if you use the evaluation installer or the NuGet feed to reference Syncfusion assemblies, you must also include the corresponding platform and version license key in your projects.
 

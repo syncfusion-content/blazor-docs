@@ -13,7 +13,7 @@ Dropdown Menu component can be dynamically add or remove items using  `AddItems`
 
 The following example illustrates how to add and remove items in Dropdown Menu component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Buttons
 

@@ -64,7 +64,7 @@ namespace BlazorApplication
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.TreeGrid** packages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid
 ```
 

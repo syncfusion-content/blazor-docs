@@ -28,7 +28,7 @@ You can use custom spinner by specifying the [`SpinTemplate`](https://help.syncf
 
 The following sample demonstrates the above functionalities of the spinner.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton Content="Submit">
@@ -81,7 +81,7 @@ Output be like
 The [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_Content) of the Progress Button can be animated during progress using the [`Effect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Effect) property
 of [`AnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_AnimationSettings). You can also set custom duration and timing function using the [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Duration) and [`Easing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonAnimationSettings.html#Syncfusion_Blazor_SplitButtons_ProgressButtonAnimationSettings_Easing) properties. The possible `Effect` values are `None`, [`SlideLeft`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideLeft), [`SlideRight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideRight), [`SlideUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideUp), [`SlideDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_SlideDown), [`ZoomIn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_ZoomIn), and [`ZoomOut`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.AnimationEffect.html#Syncfusion_Blazor_SplitButtons_AnimationEffect_ZoomOut).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton Content="Slide Right">

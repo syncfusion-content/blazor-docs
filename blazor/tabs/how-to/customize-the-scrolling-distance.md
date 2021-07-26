@@ -13,7 +13,7 @@ The [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigat
 
 Refer to the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab Width="400px" OverflowMode="OverflowMode.Scrollable" ScrollStep="150">

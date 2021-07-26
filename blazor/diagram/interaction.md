@@ -147,7 +147,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 | Middle | When the mouse wheel is clicked, middle is notified |
 | Right | When the right mouse button is clicked, right is notified |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Navigations
 @using System.Collections.ObjectModel

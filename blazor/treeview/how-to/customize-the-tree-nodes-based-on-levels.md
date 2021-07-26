@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the tree nodes level wise by adding custom CssClass to the component and enabling styles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" CssClass="mytree">
     <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>

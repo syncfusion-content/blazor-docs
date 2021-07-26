@@ -27,7 +27,7 @@ The Diagram control provides event support, which triggers while interacting wit
 
 The native events can be defined as mentioned below. For example, the onmousedown event in diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @onmousedown="@OnMouseDown" Height="600px"/>
 

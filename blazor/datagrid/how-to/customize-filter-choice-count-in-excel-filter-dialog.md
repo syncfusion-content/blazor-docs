@@ -15,7 +15,7 @@ To overcome this default behavior, you can customize the count of filter choice 
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="GridInstance" AllowFiltering="true" AllowPaging="true" DataSource="@Orders">

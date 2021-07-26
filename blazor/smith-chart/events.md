@@ -28,7 +28,7 @@ The Smith Chart component supports the following events.
 
 The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_Loaded) event triggers after the Smith Chart is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -65,7 +65,7 @@ The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sm
 
 The `OnPrintComplete` event triggers after the Smith Chart is printed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button id="print" @onclick="Print">Print</button>
@@ -108,7 +108,7 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
 
 The [`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_OnExportComplete) event triggers after the Smith Chart is exported.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button id="export" @onclick="Export">Export</button>
@@ -158,7 +158,7 @@ Before rendering each axis label, the [`AxisLabelRendering`](https://help.syncfu
 * `X` - Specifies the current axis label X position.
 * `Y` - Specifies the current axis label Y position.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -199,7 +199,7 @@ Before rendering each legend, the [`LegendRendering`](https://help.syncfusion.co
 * `Shape` - Customize the shape of the legend.
 * `Fill` - Specifies the legend shape color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -241,7 +241,7 @@ Before rendering each series, the [`SeriesRender`](https://help.syncfusion.com/c
 * `Index` - Specifies the current series index.
 * `Fill` - Specifies the current series color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -282,7 +282,7 @@ The [`TitleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 * `X` - Specifies the current title X position.
 * `Y` - Specifies the current title Y position.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -325,7 +325,7 @@ The [`SubtitleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 * `X` - Specifies the current subtitle X position.
 * `Y` - Specifies the current subtitle Y position.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -373,7 +373,7 @@ The [`TextRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 * `Border` - Specifies the current datalabel border.
 * `Color` - Specifies the current datalabel color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -416,7 +416,7 @@ The [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 * `CurrentSize` - Specifies the current size of the Chart.
 * `PreviousSize` - Specifies the previous size of the Chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>

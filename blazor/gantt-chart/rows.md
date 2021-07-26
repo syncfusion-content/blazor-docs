@@ -15,7 +15,7 @@ Row represents a task information from the data source, and it is possible to pe
 
 It is possible to change the height of the row in Gantt Chart by setting row height in pixels to the `RowHeight` property. The following code example explains how to change the row height in Gantt Chart at load time.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" RowHeight=60 Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -118,7 +118,7 @@ In Gantt Chart parent tasks are expanded/collapsed by using expand/collapse icon
 
 All tasks available in Gantt Chart was rendered in collapsed state by setting `CollapseAllParentTasks` property as `true`. The following code example shows how to use this property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" CollapseAllParentTasks="true" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -219,7 +219,7 @@ All tasks available in Gantt Chart was rendered in collapsed state by setting `C
 
 In Gantt Chart, we can render some tasks in collapsed state and some tasks in expanded state, this can done by defining expand status of the task in data source. This value was mapped to Gantt Chart component by using `GanttTaskFields.ExpandState` property. The following code example shows how to use this property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -321,7 +321,7 @@ In Gantt Chart, we can render some tasks in collapsed state and some tasks in ex
 
 On expand action `Expanding` and `Expanded` event will be triggered with current expanding row’s information. Similarly on collapse action `Collapsing` and `Collapsed` event will be triggered. Using this events and it’s arguments we can customize the expand/collapse action. The following code example shows how to prevent the particular row from expand/collapse action using `Expanding` and `Collapsing` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -432,7 +432,7 @@ On expand action `Expanding` and `Expanded` event will be triggered with current
 
 You can dynamically rearrange the rows in the Gantt Chart component by using the `AllowRowDragAndDrop` property. Using this property, row drag and drop can be enabled or disabled in Gantt. Using this feature, rows can be dropped at above and below as a sibling or child to the existing rows
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -528,7 +528,7 @@ You can dynamically rearrange the rows in the Gantt Chart component by using the
 
 Gantt also supports dragging multiple rows at a time and drop them on any rows above, below, or at child positions. In Gantt, you can enable the multiple drag and drop by setting the `GanttSelectionSettings.Type` to `Multiple` and you should enable the `AllowRowDragAndDrop` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -638,7 +638,7 @@ In Gantt, the `OnRowDragStart` and `RowDropped` events are triggered on row drag
 
 You can prevent drag action of the particular record by setting the `Cancel` property to `true`, which is available in the `OnRowDragStart` event argument based on our requirement. In the following sample, drag action was restricted for first parent record and its child records.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -747,7 +747,7 @@ The following arguments are used to specify the positions to drag and drop a row
 
 The following code example shows how to drag and drop a row on button click action.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="drag">Dynamic drag and drop</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1" AllowRowDragAndDrop="true">
@@ -848,7 +848,7 @@ The following code example shows how to drag and drop a row on button click acti
 
 You can customize the appearance of a row in grid side, by using the `RowDataBound` event and in chart side by using `QueryChartRowInfo` event
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -967,7 +967,7 @@ You can customize the appearance of a row in grid side, by using the `RowDataBou
 }
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" TreeColumnIndex="1">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"

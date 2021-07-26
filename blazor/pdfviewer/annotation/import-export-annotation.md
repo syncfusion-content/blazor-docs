@@ -44,7 +44,7 @@ The PDF Viewer control provides the support to import and export annotations usi
 
 You can import annotations using JSON file or JSON object in code behind like the below code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 
@@ -81,7 +81,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 
 You can export annotations as JSON file in code behind like the following code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

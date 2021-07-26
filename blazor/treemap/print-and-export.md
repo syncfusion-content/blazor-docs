@@ -15,7 +15,7 @@ Print functionality can be enabled by setting the [`AllowPrint`](https://help.sy
 
 The following code example shows the print method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="PrintMap">Print Treemap</button>
@@ -59,7 +59,7 @@ The TreeMap can be exported as an image in the following formats.
 
 The following code example shows how to export the TreeMap in [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG) format.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="ExportMap">Export Treemap</button>
@@ -83,7 +83,7 @@ The following code example shows how to export the TreeMap in [`PNG`](https://he
 
 [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) export functionality can be enabled by setting the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. The rendered TreeMap can be exported as [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) and the export method requires two parameters: file type and file name. The orientation setting is optional.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="ExportMap">Export Treemap</button>

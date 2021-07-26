@@ -363,7 +363,7 @@ You can refer [Set Blazor Tooltip to the commands](https://blazor.syncfusion.com
 
 The `Separator` type adds a vertical separation between the Toolbar's Single/Multiple commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar>
@@ -433,7 +433,7 @@ The `Input` type is only applicable for adding `Template` elements when the  `Te
 
 The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioButton` and `CheckBox` components to the Toolbar.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.DropDowns

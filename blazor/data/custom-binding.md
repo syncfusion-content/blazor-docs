@@ -86,7 +86,7 @@ For implementing the CRUD operations for the custom bounded data override the fo
 
 The following sample code demonstrates implementing custom adaptor of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding and editing operations in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

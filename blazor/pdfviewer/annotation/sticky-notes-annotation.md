@@ -58,7 +58,7 @@ The properties of the sticky note annotation can be set before creating the cont
 
 After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values. Refer to the following code snippet to set the default sticky note annotation settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" StickyNotesSettings="@StickyNotesSettings" >
@@ -74,7 +74,7 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 
 The PDF Viewer control provides an option to disable the sticky note annotations feature. The code snippet for disabling the feature is as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 

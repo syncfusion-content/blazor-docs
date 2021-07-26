@@ -13,7 +13,7 @@ State persistence allows the querybuilder to retain the current querybuilder sta
 
 >The state will be persisted based on ID property. So, it is recommended to explicitly set the ID property for Querybuilder.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder ID="querybuilder" DataSource="@EmployeeData" EnablePersistence="true">

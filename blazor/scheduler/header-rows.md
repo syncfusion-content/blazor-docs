@@ -21,7 +21,7 @@ The Timeline views can have additional header rows other than its default date a
 
 The following example shows the Scheduler displaying all the available header rows on timeline views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -58,7 +58,7 @@ The following example shows the Scheduler displaying all the available header ro
 
 To display the timeline Scheduler simply with year and month names alone, define the option `Year` and `Month` within the `ScheduleHeaderRow` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -91,7 +91,7 @@ To display the timeline Scheduler simply with year and month names alone, define
 
 The week number can be displayed in a separate header row of the timeline Scheduler by setting `Week` option within `ScheduleHeaderRow` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -126,7 +126,7 @@ The week number can be displayed in a separate header row of the timeline Schedu
 
 It is possible to display a complete year in a timeline view by setting `Interval` value as 12 and defining **TimelineMonth** view option within the `ScheduleView` tag helper.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -159,7 +159,7 @@ It is possible to display a complete year in a timeline view by setting `Interva
 
 You can customize the text of the header rows and display any images or formatted text on each individual header rows using the built-in `Template` option available within the `ScheduleHeaderRow`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using System.Globalization
 <p>Timeline header rows</p>

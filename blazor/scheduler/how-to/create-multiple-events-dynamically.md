@@ -11,7 +11,7 @@ documentation: ug
 
 In Blazor Scheduler, we can able to select the different time slots(10:00 - 10:30, 8:00 - 8:30) by holding CTRL key and click on cells using `OnCellClick` event. In the following code example, events are created on selected timeslots when clicking the **Add Appointments** button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons

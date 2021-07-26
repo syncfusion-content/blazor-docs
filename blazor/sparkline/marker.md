@@ -24,7 +24,7 @@ To add marker to the Sparkline Charts, specify the [`Visible`](https://help.sync
 
 The following code example shows enabling markers for all points.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }"
@@ -42,7 +42,7 @@ The following code example shows enabling markers for all points.
 
 In Sparkline Charts, markers can be enabled for particular points such as the start, end, low, high, or negative. The following code examples shows enabling markers for the high and low points.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }"
@@ -69,7 +69,7 @@ Sparkline Charts marker can be customized using the following properties:
 
 The following code example shows customizing marker's fill color, border style and size.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }"

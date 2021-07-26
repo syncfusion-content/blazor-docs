@@ -229,7 +229,7 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 The following sample code demonstrates injecting service into Custom Adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor

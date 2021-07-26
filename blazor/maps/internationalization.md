@@ -24,7 +24,7 @@ Maps component using `LoadCldrData` method.
 
 In the below example tooltip is globalized to Deutsch culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

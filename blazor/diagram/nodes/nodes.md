@@ -21,7 +21,7 @@ A node can be created and added to the diagram, either programmatically or inter
 
 To create a node, define the [`DiagramNode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html) object and add that to the nodes collection of the diagram model. The following code example shows how to add a node to the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -59,7 +59,7 @@ To create a node, define the [`DiagramNode`](https://help.syncfusion.com/cr/blaz
 
 The following code shows how to add a node at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -132,7 +132,7 @@ about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://
 
 For more information about adding nodes from symbol palette, refer to the [`Symbol Palette`](../symbol-palette).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @using DiagramShapes = Syncfusion.Blazor.Diagrams.Shapes
@@ -205,7 +205,7 @@ these nodes are fetched from default settings.
 
 The following code shows how to remove a node at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

@@ -14,7 +14,7 @@ We can prevent the expand and collapse of accordion item for specific condition,
 * DropDownList - Prevented the expand and collapse of accordion item when open the DropDownList by using the `OnOpen` event of DropDownList. Also, prevented the expand or collapse of accordion item when close or select the DropDownList by using the `OnClose` and `ValueChange` event of DropDownList.
 * Button - Prevented the expand or collapse of accordion item when clicking the button by using the `onclick` event of Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons

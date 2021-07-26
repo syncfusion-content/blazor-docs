@@ -11,7 +11,7 @@ documentation: ug
 
 The ListView component supports Nested list. For that, the child property should be defined for the nested list in the array of JSON.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@ListData" ShowHeader="true" HeaderTitle="Continent">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" Child="Child"></ListViewFieldSettings>

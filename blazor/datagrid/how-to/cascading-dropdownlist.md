@@ -13,7 +13,7 @@ You can achieve the Cascading DropDownList with grid editing by using the [`Edit
 
 This is demonstrated in the below sample code where cascading dropdownlist is rendered for the **ShipCountry** and **ShipState** column when editing is enabled in the grid,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Newtonsoft.Json

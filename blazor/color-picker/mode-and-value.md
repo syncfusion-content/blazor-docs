@@ -15,7 +15,7 @@ By default, the `Picker` area will be rendered at initial load. To render the Pa
 
 In the following sample, it will render the `Palette` at initial load.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>
@@ -31,7 +31,7 @@ The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfC
 
 In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

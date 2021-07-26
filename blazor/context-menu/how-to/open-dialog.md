@@ -13,7 +13,7 @@ This section explains about how to open a dialog on Context Menu item click. Thi
 
 In the following sample, Dialog will open while clicking `Save As...` item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Popups
 

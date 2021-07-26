@@ -19,7 +19,7 @@ The Blazor TreeView component allows you to check more than one node in TreeView
 
 By default, the checkbox state of parent and child nodes are dependent on each other. If you need independent checked state, you can achieve it using the `AutoCheck` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MusicAlbum" ShowCheckBox="true" AutoCheck="true">
     <TreeViewFieldsSettings TValue="MusicAlbum" Id="Id" DataSource="@Albums" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" IsChecked="IsChecked"></TreeViewFieldsSettings>

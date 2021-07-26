@@ -30,7 +30,7 @@ The UML class diagram shapes are explained as follows.
 
 * The following code example illustrates how to create a class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -93,7 +93,7 @@ The UML class diagram shapes are explained as follows.
 
 * The following code example illustrates how to create an interface.
 
-```csharp
+```cshtml
 @* Initializes diagram control *@
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -154,7 +154,7 @@ The UML class diagram shapes are explained as follows.
 
 * The following code example illustrates how to create an enumeration.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -237,7 +237,7 @@ Association is basically a set of links that connects elements of an UML model. 
 
 The association property allows you to define the type of association. The default value of association is [`Directional`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html). The following code example illustrates how to create an association.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -281,7 +281,7 @@ Aggregation is decorated with a hollow diamond. To create an aggregation shape, 
 
 The following code example illustrates how to create an aggregation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -323,7 +323,7 @@ Composition is a “strong” form of “aggregation”. Composition is decorate
 
 The following code example illustrates how to create a composition.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -366,7 +366,7 @@ To create a dependency, define the relationship property of connector as “depe
 
 The following code example illustrates how to create an dependency.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -410,7 +410,7 @@ To create an inheritance, define the relationship as “inheritance”.
 
 The following code example illustrates how to create an inheritance.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -467,7 +467,7 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
 
 * The following code example illustrates how to customize the multiplicity.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -553,7 +553,7 @@ To create a UmlActivity, define type as "UmlActivity" and the list of built-in s
 
 The following code illustrates how to create a UmlActivity shapes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -597,7 +597,7 @@ To create an UmlActivity connector, define the type as "UmlActivity" and flow as
 
 The following code illustrates how to create a UmlActivity connector.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

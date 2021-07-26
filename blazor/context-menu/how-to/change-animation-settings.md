@@ -21,7 +21,7 @@ The supported effects for Context Menu are,
 
 The following sample illustrates how to open Context Menu with `FadeIn` effect with the `Duration` of `800ms`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the Context Menu</div>

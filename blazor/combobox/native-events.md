@@ -17,7 +17,7 @@ You can access any native event by using on `<event>` attribute with a component
 
 In the following example, the keyPressed method is called every time the key is pressed on input.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 
 <SfComboBox TValue="string" TItem="Countries" @onkeypress="@KeyPressed" DataSource="@Country">

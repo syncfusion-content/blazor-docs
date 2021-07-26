@@ -13,7 +13,7 @@ Split Button component has RTL support. This can be achieved by setting [`Enable
 
 The following example illustrates how to enable right-to-left support in Split Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" EnableRtl="true">

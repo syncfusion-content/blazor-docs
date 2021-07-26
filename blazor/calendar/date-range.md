@@ -18,7 +18,7 @@ If the value is out of specified date range and less than Min date, the `Value`
 
 The following code allows you to select a date within the range of 7th to 27th days in a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Min='@MinDate' Max='@MaxDate' Value='@DateValue'></SfCalendar>

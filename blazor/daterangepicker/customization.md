@@ -17,7 +17,7 @@ Start day in a week will differ based on the culture, but you can also customize
 For this, use the [FirstDayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_FirstDayOfWeek) property.
 By default, first day of a week in en-US is Sunday. In the following example, it is customized to Wednesday with the help of this property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" FirstDayOfWeek=3></SfDateRangePicker>

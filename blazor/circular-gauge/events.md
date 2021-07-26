@@ -13,7 +13,7 @@ documentation: ug
 
 In the following example, the event [`OnDragMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeEvents.html#Syncfusion_Blazor_CircularGauge_CircularGaugeEvents_OnDragMove) binds to the circular gauge component, so the event handler `UpdatePointerValue` will be called when you drag the pointer and update the pointer value in the div element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <div style="width:250px">

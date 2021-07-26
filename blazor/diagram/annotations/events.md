@@ -15,7 +15,7 @@ The TextEdit event will notify the annotation content changes after editing. The
 
 The following code example shows how to register and get the notification from the TextEdit event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px"  Nodes="@NodeCollection">
@@ -60,7 +60,7 @@ The DoubleClick event will notify the annotation start editing. The [`IDoubleCli
 
 The following code example shows how to register and get the notification from the [`OnDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDoubleClickEventArgs.html) event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -110,7 +110,7 @@ The keyup event occurs when a keyboard key is released and updated the respectiv
 
 The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px"  Nodes="@NodeCollection" >

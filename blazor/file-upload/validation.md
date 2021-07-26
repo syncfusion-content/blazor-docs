@@ -19,7 +19,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx">
@@ -38,7 +38,7 @@ The uploader component allows you to validate the files based on its size. The v
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx"  MinFileSize=10000 MaxFileSize=1000000>

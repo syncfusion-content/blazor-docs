@@ -13,7 +13,7 @@ The following code demonstrates how to set `Placeholder` in the DateTimePicker c
 
 Using [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Placeholder), you can display a short hint in the input element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Placeholder="Choose a datetime"></SfDateTimePicker>

@@ -13,7 +13,7 @@ The MultiSelect allows the users to add a new non-present option to the componen
 
 The following sample demonstrates configuration of custom value support with the MultiSelect component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" Placeholder="Favorite Sports" AllowCustomValue=true DataSource="@LocalData">

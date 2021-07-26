@@ -219,7 +219,7 @@ In the **Browse** tab, search and install the `Syncfusion.Blazor.Grid` NuGet pac
 
 Open `_Import.razor` file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 ```
@@ -271,7 +271,7 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 * `Format` property helps to format number, currencies, and date in a particular culture. Here, we have formatted the **OrderDate** column.
 * `HeaderText` property specifies the column header name.
 
-```csharp
+```cshtml
 @inject OrdersService.OrdersServiceClient OrdersServiceClient
 @using BlazorAPPgRPC.Shared
 @using Google.Protobuf.WellKnownTypes

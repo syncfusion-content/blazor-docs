@@ -51,7 +51,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 
 > In the following sample, disable the ComboBox component using <kbd>t</kbd> keys.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Countries" @ref="ComboObj" Enabled="@enable" Placeholder="Select a country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">

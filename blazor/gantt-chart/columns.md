@@ -19,7 +19,7 @@ The `TreeColumnIndex` property is used to define the expander column in the Gant
 
 Using the `GanttColumns` property, you can define the columns in Gantt Chart. If the columns are not defined, then the default columns will be rendered based on the mapped data source fields in the `GanttTaskFields` property. Refer to the following code example for defining the columns in Gantt Chart along with their widths.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -122,7 +122,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 The column header text can be defined using the `HeaderText` property, and you can customize the column headers using the `HeaderTemplate` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @inject NavigationManager UriHelper
 
@@ -260,7 +260,7 @@ The column header text can be defined using the `HeaderText` property, and you c
 
 To format the cell values based on a specific culture, use the `GanttColumn.Format` property. The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component uses the `Internationalization` library to format `number` and `date` values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -389,7 +389,7 @@ Format | Formatted value
 { type: 'dateTime', format: 'dd/MM/yyyy hh:mm tt' } | 04/07/2019 12:00 AM
 { type: 'dateTime', format: 'MM/dd/yyyy hh:mm:ss tt' } | 07/04/2019 12:00:00 AM
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -496,7 +496,7 @@ Format | Formatted value
 
 The column reordering can be done by dragging a column header from one index to another index within the Tree Grid. To enable reordering, set the `AllowReordering` property to true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowReordering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -598,7 +598,7 @@ The column reordering can be done by dragging a column header from one index to 
 
 Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="ReorderColumn">Reorder TaskName and StartDate to last</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowReordering="true">
@@ -712,7 +712,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
 
 The column width can be resized by clicking and dragging the right edge of the column header. While dragging, the width of the column will be resized immediately. Each column can be auto resized by double-clicking the right edge of the column header to fit the width of that column based on the widest cell content. To resize the column, set the `AllowResizing` property to true. The following code example shows how to enable the column resize feature in the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowResizing="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -816,7 +816,7 @@ The column resizing can be restricted between minimum and maximum widths by defi
 
 In the following example, the minimum and maximum widths are defined for the `Duration`, and `Task Name` columns.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowResizing="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -920,7 +920,7 @@ In the following example, the minimum and maximum widths are defined for the `Du
 
 A column template is used to customize the column’s look. The following code example explains how to define the custom template in Gantt Chart using the `Template` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Buttons
 
@@ -1050,7 +1050,7 @@ The default items are displayed in the following table:
 | `ColumnChooser` | Choose the column visibility. |
 | `Filter` | Shows the filter menu based on column type. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowResizing="true" ShowColumnMenu="true" AllowFiltering="true" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -1151,7 +1151,7 @@ The default items are displayed in the following table:
 
 You can toggle the column visibility based on media queries, which are defined in the `HideAtMedia`. The `HideAtMedia` accepts valid [Media Queries]( http://cssmediaqueries.com/what-are-css-media-queries.html ).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -1253,7 +1253,7 @@ You can toggle the column visibility based on media queries, which are defined i
 
 The tree/expander column is a column in the Gantt Chart component, that has icons to expand or collapse the parent records. You can define the tree column index in the Gantt Chart component by using the `TreeColumnIndex` property and the default value of this property is `0`. The following code example shows how to use this property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
     <SfGantt DataSource="@TaskCollection" TreeColumnIndex="2" Height="450px" Width="700px">
         <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -1351,7 +1351,7 @@ The tree/expander column is a column in the Gantt Chart component, that has icon
 
 You can show or hide gantt component columns dynamically using external buttons by invoking the `ShowColumnsAsync` or `HideColumnsAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="show">Show columns</button>
 <button @onclick="hide">Hide columns</button>
@@ -1463,7 +1463,7 @@ You can show or hide gantt component columns dynamically using external buttons 
 
 You can enable or disable gantt component action for a particular column by setting the `AllowFiltering`, `AllowSorting`, `AllowReordering`, and `AllowEditing` properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" AllowSorting="true" AllowFiltering="true" AllowReordering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -1592,7 +1592,7 @@ Gantt column supports the following types:
 
 Using the `GanttColumns` property, you can define the Custom Columns in Gantt Chart. If custom columns are required, then you can generate columns that was not defined in the `GanttTaskFields` property. Refer to the following code example for defining the custom columns in Gantt Chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -1722,7 +1722,7 @@ The gantt has option to span the adjacent cells. You need to define the `ColSpan
 
 In the following demo, **Work 1**  cells have been spanned.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"

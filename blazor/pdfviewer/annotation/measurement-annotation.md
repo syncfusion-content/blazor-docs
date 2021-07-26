@@ -34,7 +34,7 @@ In the pan mode, if the measurement annotation mode is entered, the PDF Viewer c
 
 Refer to the following code snippet to switch to distance annotation mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -93,7 +93,7 @@ The properties of the line shapes such as distance and perimeter annotations can
 The properties of the shape annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings and volumeSettings.
 Refer to the following code snippet to set the default annotation settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" DistanceSettings="@DistanceSettings" PerimeterSettings="@PerimeterSettings" AreaSettings="@AreaSettings" RadiusSettings="@RadiusSettings" VolumeSettings="@VolumeSettings">
@@ -130,7 +130,7 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 
 The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" MeasurementSettings="@MeasurementSettings" >

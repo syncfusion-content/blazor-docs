@@ -11,7 +11,7 @@ documentation: ug
 
 You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
     <div class="e-float-input @(TextClass) e-success">

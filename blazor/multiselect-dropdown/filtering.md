@@ -60,7 +60,7 @@ The output will be as follows.
 
 The MultiSelect component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

@@ -17,7 +17,7 @@ You can convert the default textbox into the multiline textbox by setting the [M
 
 > The multiline text box allows you to resize it in vertical direction alone.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <div class="multiline">
@@ -39,7 +39,7 @@ The output will be as follows.
 
 You can achieve the floating label behavior in the multiline text box by setting [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) to 'Auto'. The Placeholder text act as floating label to the multiline textbox. You can provide the Placeholder text to the multiline textbox either by using the [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Placeholder) property or Placeholder attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <label>Float label type as Auto</label>
@@ -84,7 +84,7 @@ By default, the multiline text box is rendered with resizable. You can disable t
 
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Multiline=true FloatLabelType="@FloatLabelType.Auto" Placeholder="Enter your address"></SfTextBox>

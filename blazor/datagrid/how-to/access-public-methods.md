@@ -13,7 +13,7 @@ You can access the public methods available in the DataGrid component by using i
 
 This is demonstrated in the below sample code where the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Print) method of the datagrid component is invoked on button click using the datagrid reference,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 

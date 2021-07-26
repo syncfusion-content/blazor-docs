@@ -51,7 +51,7 @@ The `Clicked` event is triggered
 when clicking a list item in the ListView. The selected items can be transferred between two lists. These buttons will be
 enabled when selecting an item in lists.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Lists
 

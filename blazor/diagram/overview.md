@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in Blazor Diagram Component | Syncfusion 
-description: Learn about Overview in Blazor Diagram component of Syncfusion, and more details.
+title: About Blazor Diagram Component | Syncfusion 
+description: Learn here all about introduction of Syncfusion Blazor Diagram Component, its features, and more. 
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -23,7 +23,7 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.S
 
 The following code illustrates how to create overview.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
     <SfDiagram id="diagram" Height="600px" Layout="@LayoutValue" ConnectorDefaults="@ConnectorDefault" NodeDefaults="@NodeDefaults">
@@ -137,7 +137,7 @@ In overview, the view port of the diagram is highlighted with a red color rectan
 
 The following image shows how the diagram is zoomed/panned with overview.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

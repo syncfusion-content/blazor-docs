@@ -13,7 +13,7 @@ documentation: ug
 
 The size of the Sparkline is determined based on the container size, and the size can be changed inline or via CSS as shown in the following.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
@@ -52,7 +52,7 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfB
 
 The size of Sparkline Charts can be specified in pixels, as shown in the following code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <div style="width:650px; height:350px;">
@@ -69,7 +69,7 @@ The size of Sparkline Charts can be specified in pixels, as shown in the followi
 
 If the value is expressed as a percentage, the dimension of the Sparkline is determined from its container.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <div style="width:700px; height:300px;">

@@ -13,7 +13,7 @@ You can customize the appearance and contents of delete confirmation dialog by r
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
 

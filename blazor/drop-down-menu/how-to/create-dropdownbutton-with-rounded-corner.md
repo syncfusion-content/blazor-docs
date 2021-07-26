@@ -15,7 +15,7 @@ In the following example, `e-round-corner` class is defined with `5px` `border-r
 property and added that class to button element using
 [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton CssClass="e-round-corner" Content="Clipboard">

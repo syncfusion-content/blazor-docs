@@ -16,7 +16,7 @@ You can access model properties on that view. You can use data associated with m
 In this sample, first click the submit button to post the selected value in the MaskedTextBox. When posting the null value,
 validation error message will be shown below the MaskedTextBox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using System.ComponentModel.DataAnnotations
 

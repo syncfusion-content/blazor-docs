@@ -15,7 +15,7 @@ After composing or editing the document, you will need to save the document to t
 
 You might need to save the document back to the server. The following code example shows how to save the composed document to server.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using  System.IO
 
@@ -56,7 +56,7 @@ You might need to save the document back to the server. The following code examp
 
 If you have plenty of documents stored in database and you want to save the composed or updated document back to the database, use the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using System.Data.SqlClient
 
@@ -97,7 +97,7 @@ If you have plenty of documents stored in database and you want to save the comp
 
 You can also save or download the document in local file system.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="OnDownload">Download</button>

@@ -13,7 +13,7 @@ You can include Action buttons within the Card and customize them. Action button
 
 * For adding action buttons you can create a  `CardFooterContent` component within the card action element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
@@ -28,7 +28,7 @@ You can include Action buttons within the Card and customize them. Action button
 
 By default, action buttons positioned in horizontal alignment , and also it can be aligned to show in vertical alignment by adding `Orientation` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 @using Syncfusion.Blazor.Buttons
 

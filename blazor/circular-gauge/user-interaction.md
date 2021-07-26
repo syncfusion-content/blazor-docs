@@ -34,7 +34,7 @@ You can use following properties to customize the tooltip.
     * [`Opacity`](https://help.syncfusion.com/cr/blazor/) -  Specifies opacity for tooltip text
     * [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) - Specifies size for tooltip text
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -68,7 +68,7 @@ You can use following properties to customize the tooltip.
 
 By default tooltip will be shown on the axis, you can show the tooltip at the cursor position using [`ShowAtMousePosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_ShowAtMousePosition) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -120,7 +120,7 @@ To customize the annotation tooltip, use the `CircularGaugeAnnotationTooltipSett
 
 The following code example shows the tooltip for the pointers, ranges and annotations.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true">
@@ -179,7 +179,7 @@ public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
 The pointers can be dragged over the axis values by clicking and dragging the pointer. To enable or disable the pointer drag, use the
 [`EnablePointerDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true">
@@ -200,7 +200,7 @@ The pointers can be dragged over the axis values by clicking and dragging the po
 
 The ranges can be dragged over the axis values by clicking and dragging the range. To enable or disable the range drag, use the [`EnableRangeDrag`] property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnableRangeDrag="true">

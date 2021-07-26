@@ -15,7 +15,7 @@ You can find the specified text content in the PDF document using the built-in o
 
 You can enable or disable the text search by setting the `EnableTextSearch` API.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableTextSearch="true"/>
@@ -27,7 +27,7 @@ You can enable or disable the text search by setting the `EnableTextSearch` API.
 
 Also, you can programmatically perform search operation as given in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

@@ -11,7 +11,7 @@ documentation: ug
 
 The rounded corner can be achieved by using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~CssClass.html) property. Add a custom class to the menu bar component and customize it using the `border-radius` CSS property. For more information, refer to the `styles` specified in the below sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu TValue="MenuItem" CssClass="e-rounded-menu">

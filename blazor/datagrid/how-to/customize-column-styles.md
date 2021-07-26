@@ -30,7 +30,7 @@ Create a CSS class with custom style to override the default style for rowcell a
 
 Add the custom CSS class to the specified column by using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 

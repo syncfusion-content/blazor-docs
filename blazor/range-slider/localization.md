@@ -118,7 +118,7 @@ namespace BlazorApplication
 
 * Finally, Specify the culture for Slider using `Locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30" ShowButtons="true" Step="10" Locale="de"></SfSlider>
@@ -186,7 +186,7 @@ namespace WebAssemblyLocale
 
 * Now, Specify the culture for Slider using `Locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30" ShowButtons="true" Step="10" Locale="de"></SfSlider>

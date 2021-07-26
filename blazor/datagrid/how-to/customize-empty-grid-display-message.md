@@ -13,7 +13,7 @@ You can customize the message shown when rendering an empty grid by using the `E
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">

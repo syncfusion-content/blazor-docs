@@ -13,7 +13,7 @@ documentation: ug
 
 The width and height of the Maps can be set using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Height) properties in [`SfMaps`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html). Percentage or pixel values can be used for the height and width values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps Height="600px" Width="300px">
@@ -37,7 +37,7 @@ The title for the Maps can be set using the [`MapsTitleSettings`](https://help.s
 * [`MapsTitleTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTitleTextStyle.html) - To customize the style of the font in Maps.
 * [`MapsSubtitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSubtitleSettings.html) - To customize the subtitle for the Maps.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps Height="300px">
@@ -76,7 +76,7 @@ The Maps control supports following themes.
 
 By default, the Maps are rendered by the **"Material"** theme. The theme of the Maps component is changed using the [`Theme`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Theme) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Maps
 
@@ -99,7 +99,7 @@ The following properties and classes are available to customize the container in
 * [`MapsBorderSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBorderSettings.html) - To customize the color and width of the border of the Maps.
 * [`MapsMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMargin.html) - To customize the margins of the Maps.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps Height="300px" Width="400px" Background="#CCD1D1">
@@ -119,7 +119,7 @@ The following properties and classes are available to customize the container in
 
 By default, the background color of the shape maps is set as "**white**". To modify the background color of the Maps area, the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAreaSettings.html#Syncfusion_Blazor_Maps_MapsAreaSettings_Background) property in the [`MapsAreaSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAreaSettings.html) class is used. The border of the Maps area can be customized using the [`MapsAreaBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAreaBorder.html) class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -148,7 +148,7 @@ The following properties and class are available in [`MapsShapeSettings`](https:
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_DashArray) - To define the pattern of dashes and gaps that is applied to the outline of the shapes.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_Opacity) - To customize the transparency for the shapes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -169,7 +169,7 @@ The following properties and class are available in [`MapsShapeSettings`](https:
 
 The color for each shape in the Maps can be set using the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property of [`MapsShapeSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) class. The value for the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) property is the field name from the data source of the [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class which contains the color values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -214,7 +214,7 @@ The Maps control supports the following projection types:
 
 By default, the Maps are rendered by the **"Mercator"** projection type in which the Maps are rendered based on the coordinates. So, the Maps is not stretched. To change the type of projection in the Maps, the [`ProjectionType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ProjectionType) property is used.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 @* To change Maps projection *@

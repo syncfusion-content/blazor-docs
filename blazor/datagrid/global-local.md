@@ -218,7 +218,7 @@ namespace BlazorServer
 
 * Finally, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Locale="de" AllowGrouping="true" Height="400">
@@ -322,7 +322,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 * Now, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Locale="de" AllowGrouping="true" Height="400">
@@ -372,7 +372,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 RTL provides an option to switch the text direction and layout of the DataGrid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** property is used to enable RTL in the DataGrid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSorting="true" EnableRtl="true" AllowPaging="true">

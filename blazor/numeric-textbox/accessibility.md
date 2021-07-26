@@ -39,7 +39,7 @@ The following table shows shortcut keys and its corresponding usage.
 | <kbd>Arrow Down</kbd> | Increments the value. |
 | <kbd>Arrow Up</kbd> | Decrements the value. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" Value=10></SfNumericTextBox>

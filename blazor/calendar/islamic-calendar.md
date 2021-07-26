@@ -17,7 +17,7 @@ By default, the calendar mode is in **Gregorian**. You can enable the Islamic mo
 
 The following code demonstrates how to display the Islamic Calendar (Hijri Calendar).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' CalendarMode="CalendarType.Islamic"></SfCalendar>

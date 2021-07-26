@@ -11,7 +11,7 @@ documentation: ug
 
 By default, Scheduler allows the user to perform all the CRUD actions. We can prevent a particular action by setting `false` to the respective property. In the following code example, only edit actions are allowed as `AllowAdding` and `AllowDeleting` properties are set to `false`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">

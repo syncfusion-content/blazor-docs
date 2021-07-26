@@ -53,7 +53,7 @@ this.Diagram.LoadDiagram(this.Data);
 The diagram provides supports to simplifying the saved JSON object without adding the default properties that are presented in the diagram.
 The following code illustrates how to simplify the JSON object.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 @* Initialize diagram *@

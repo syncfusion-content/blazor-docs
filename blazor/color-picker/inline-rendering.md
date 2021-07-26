@@ -13,7 +13,7 @@ By default, the ColorPicker will be rendered using SplitButton and open the pop-
 
 The following sample shows the inline type rendering of ColorPicker.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

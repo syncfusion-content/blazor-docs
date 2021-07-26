@@ -17,7 +17,7 @@ One of the most important features in Blazor Maps component is the built-in onli
 
 You can enable this feature by setting [`LayerType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) to “ShapeLayerType.Bing”.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -42,7 +42,7 @@ You can enable this feature by setting [`LayerType`](https://help.syncfusion.com
 
 To render the light version of the road maps, set the [`BingMapType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_BingMapType) to [`CanvasLight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.BingMapType.html) as demonstrated in the following code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -64,7 +64,7 @@ To render the light version of the road maps, set the [`BingMapType`](https://he
 
 You can zoom and pan the Bing maps layer. Zooming helps you get a closer look at a particular area on a map for in-depth analysis. Panning helps you to move a map around to focus the targeted area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -86,7 +86,7 @@ You can zoom and pan the Bing maps layer. Zooming helps you get a closer look at
 
 Markers can be added to the layers of Bing maps by setting the corresponding location's coordinates of latitude and longitude using `MapsMarker` property. You can add navigation lines on top of an Bing maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the `MapsNavigationLine` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

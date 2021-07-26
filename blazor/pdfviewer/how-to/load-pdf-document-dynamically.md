@@ -13,7 +13,7 @@ At times, you might need to switch or load the PDF documents dynamically after t
 
 The following code example shows how to load a bas64 string dynamically.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 
@@ -35,7 +35,7 @@ The following code example shows how to load a bas64 string dynamically.
 
 The following code example shows how to load the PDF dynamically by specifying file path.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

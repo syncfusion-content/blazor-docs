@@ -18,7 +18,7 @@ Calculated field can also be included in the pivot table through code behind usi
 
 > The calculated field is applicable only for value fields. Also, calculated field created through code behind will be automatically listed in the UI dialog as well.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true">
@@ -253,7 +253,7 @@ Syntax: Min(number1, number2)
 Syntax: Max(number1, number2)
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true">

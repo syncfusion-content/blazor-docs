@@ -145,7 +145,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 > The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid
 @using System.Dynamic
 
@@ -852,7 +852,7 @@ namespace TreeGridWebApiEFSample.Controllers
 
 Now you can configure the Tree Grid using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Buttons

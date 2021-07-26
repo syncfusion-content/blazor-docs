@@ -15,7 +15,7 @@ This section describes the Progress Bar component's events that will be triggere
 
 The [`ValueChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ValueChanged) event triggers when the progress value is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -34,7 +34,7 @@ The [`ValueChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pro
 
 The [`ProgressCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_ProgressCompleted) event triggers when the progress attains the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Maximum) value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -53,7 +53,7 @@ The [`ProgressCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The [`AnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when an animation is enabled and the progress value is reached.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -72,7 +72,7 @@ The [`AnimationComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The [`AnnotationRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnnotationRender) event triggers before each annotation is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -91,7 +91,7 @@ The [`AnnotationRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [`TextRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event triggers before the text is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -110,7 +110,7 @@ The [`TextRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Progr
 
 The `Loaded` event triggers after the component is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">

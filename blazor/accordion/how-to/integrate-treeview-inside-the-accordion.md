@@ -19,7 +19,7 @@ Accordion supports to render other blazor Components by using `ContentTemplate` 
 
 The following example shows how to render a TreeView within the Accordion,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>

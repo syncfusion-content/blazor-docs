@@ -15,7 +15,7 @@ documentation: ug
 
 Date time axis uses date time scale and displays the date time values as axis labels in the specified format and set the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of axis to DateTime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -57,7 +57,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in
 both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>) and set the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of axis to `Lograthmic`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>

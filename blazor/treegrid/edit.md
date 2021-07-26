@@ -1024,7 +1024,7 @@ The custom command buttons can be added in a column by using the [`Commands`](ht
 
 The following sample code demonstrates adding custom command in the **Manage Records** column and the `CommandClicked` event which triggers when the command is clicked,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Grids;
 
@@ -1476,7 +1476,7 @@ namespace TreeGridWebApiEFSample.Controllers
 
 ### Configure the Tree Grid to perform CRUD operations
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Buttons

@@ -166,7 +166,7 @@ Also, it is easy to interact with the panels by dragging, floating, and resizing
 
 A dashboard layout panel is rendered with simple data. The header of a panel is defined by `HeaderTemplate` and content of a panel is defined by `ContentTemplate`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Layouts
 
 <SfDashboardLayout>
@@ -201,7 +201,7 @@ A dashboard layout can be rendered with the components like the chart, grids, ma
 
 These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Grids

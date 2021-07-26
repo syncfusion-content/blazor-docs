@@ -13,7 +13,7 @@ By default, a newly added row will be saved at the top of the datagrid. You can 
 
 The following sample code demonstrates changing the save index of the new row that gets added in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Action = Syncfusion.Blazor.Grids.Action
 

@@ -137,7 +137,7 @@ namespace blazorInputs
 
 * Finally, Specify the culture for Uploader using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
     <SfUploader ID="UploadFiles" Locale="de">
@@ -225,7 +225,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @inject HttpClient Http
 

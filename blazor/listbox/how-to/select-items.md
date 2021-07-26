@@ -11,7 +11,7 @@ documentation: ug
 
 In the following example, `Bugatti Chiron` is selected using [`SelectItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItems_System_Object_System_Boolean_) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" TItem="VehicleData" DataSource="@Vehicles" @ref="ListBoxObj">

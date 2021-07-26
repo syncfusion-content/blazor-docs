@@ -15,7 +15,7 @@ While setting new data source for DropDownList using [`Edit`](https://help.syncf
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 

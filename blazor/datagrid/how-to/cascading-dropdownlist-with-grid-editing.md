@@ -13,7 +13,7 @@ You can achieve the Cascading DropDownList with datagrid editing by using the [`
 
 This is demonstrated in the below sample code where cascading dropdownlist is rendered for the **ShipCountry** and **ShipState** column when perform editing in datagrid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 

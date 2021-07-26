@@ -14,7 +14,7 @@ documentation: ug
 Diagram allows you set size for annotations by using the Height and Width properties. The default value of the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Width), and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Height) properties are 0, and it takes the node or connector size as default.
 The following code example shows how the annotation size is customized.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
@@ -52,7 +52,7 @@ The following code example shows how the annotation size is customized.
 
 Diagram provides support to add a [`Hyperlink`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Hyperlink) to the nodes or connectors annotation. It can also be customized.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
     <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -91,7 +91,7 @@ Diagram provides support to add a [`Hyperlink`](https://help.syncfusion.com/cr/b
 
 ### Hyperlink with content
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -132,7 +132,7 @@ Diagram provides support to add a [`Hyperlink`](https://help.syncfusion.com/cr/b
 
 When text overflows node boundaries, you can control it by using the [`TextWrapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_TextWrapping). So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. The following code explains how to wrap a text in a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -183,7 +183,7 @@ The [`TextOverflow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 The following code sample shows how the different types of overflow property working for the different types of text wrapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -244,7 +244,7 @@ The following code sample shows how the different types of overflow property wor
 
 The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize Background, Opacity, and Border of the annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -284,7 +284,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 
 * You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="Update Style" @onclick="@UpdateStyle" />
@@ -350,7 +350,7 @@ Double-clicking any annotation will enable the editing and the node enables firs
 
 Diagram allows to create read-only annotations. You have to set the read-only property of annotation to enable or disable the read-only [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Constraints). The following code explains how to enable read-only mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -388,7 +388,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 
 You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. Different labels by position is same or different point of the shapes of connector depends upon the offset values specified.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">

@@ -61,7 +61,7 @@ Opens the popup.</td></tr>
 Closes the popup.</td></tr>
 </table>
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste">

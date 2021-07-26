@@ -42,7 +42,7 @@ The data for resources can bind with Scheduler either as list of object collecti
 
 The following code example depicts how to bind the list of object collection to the `DataSource` of Resource collection.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -96,7 +96,7 @@ The appointments belonging to the different resources will be displayed altogeth
 
 **Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the `ScheduleResource` with all its internal options.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -159,7 +159,7 @@ Scheduler supports both single and multiple levels of resource grouping that can
 
 The following code example displays how the multiple resources are grouped and its events are portrayed in the default calendar views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -226,7 +226,7 @@ The following code example displays how the multiple resources are grouped and i
 
 The following code example depicts how to group the multiple resources on Timeline Scheduler views and its relevant events are displayed accordingly under those resources.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -293,7 +293,7 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 
 **Example:** To display the Scheduler with single level resource grouping,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -352,7 +352,7 @@ This kind of grouping allows the Scheduler to display all the resources at a sin
 
 It is possible to group the resources of Scheduler in multiple levels, by mapping the child resources to each parent resource. In the following example, there are 2 levels of resources, on which the second level resources are defined with `GroupIDField` mapping to the first level resource's ID so as to establish the parent-child relationship between them.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -431,7 +431,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 
 In multi-level grouping, Scheduler usually groups the resources on the child level based on the `GroupIDField` that maps with the `IdField` field of parent level resources (as `ByGroupID` set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the `ByGroupID` option within the `Group` property. In the following code example, there are two levels of resources, on which all the resources at the child level is mapped one to one with each resource on the first level.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -503,7 +503,7 @@ It groups the number of resources under each date and is applicable only on the 
 
 **Example:** To display the Scheduler with resources grouped by date,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -571,7 +571,7 @@ Multiple resources can share the same events, thus allowing the CRUD action made
 
 **Example:** To edit all the resource events simultaneously,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -632,7 +632,7 @@ It is possible to customize the resource header cells using built-in template op
 
 **Example:** To customize the resource header and display it along with designation and image, refer the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -746,7 +746,7 @@ The output of the above code example in desktop mode will be as in the following
 
 It is possible to customize the resource headers to display with multiple columns such as Room, Type and Capacity. The following code example depicts the way to achieve it and is applicable only on timeline views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
@@ -967,7 +967,7 @@ The output of the above code example in desktop mode will be as in the following
 
 It is possible to expand and collapse the resource field. By default, resource fields are expanded with their child fields. We can customize this behavior using `ExpandedField` property. When set `ExpandedField` property in resources dataSource to `false`, It restricts the resource fields from expanding. By default, `ExpandedField` value set to `true`
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1033,7 +1033,7 @@ It is possible to expand and collapse the resource field. By default, resource f
 
 It is possible to display tooltip over the resource headers showing the resource information. By default, there won't be any tooltip displayed on the resource headers, and to enable it, you need to assign the customized template design to the `HeaderTooltipTemplate` option within the `ScheduleGroup`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1107,7 +1107,7 @@ By default, the colors defined on the top level resources collection will be app
 
 In the following example, the colors mentioned in the second level will get applied over the events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -1200,7 +1200,7 @@ Each resource in the Scheduler can have different working hours as well as diffe
 
 Different working days can be set for the resources of Scheduler using the `WorkDaysField` property which maps the working days field from the resource dataSource. This field accepts the collection of day indexes (from 0 to 6) of a week. By default, it is set to [1, 2, 3, 4, 5] and in the following example, each resource has been set with different values and therefore each of them will render only those working days. This option is applicable only on the calendar views and is not applicable on timeline views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
@@ -1263,7 +1263,7 @@ Working hours indicates the work hour duration of a day, which is highlighted vi
 * `StartHourField` - Denotes the start time of the working/business hour in a day.
 * `EndHourField` - Denotes the end time limit of the working/business hour in a day.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1335,7 +1335,7 @@ Some of the default changes made for compact Scheduler to render in desktop devi
 * Today icon is added to the header instead of the Today button.
 * With Multiple resources – only one resource has been shown to enhance the view experience of resource events details clearly. To switch to other resources, there is a TreeView on the left that lists all other available resources, clicking on which will display that particular resource and its related events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView" EnableAdaptiveUI="true">

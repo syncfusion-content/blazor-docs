@@ -19,7 +19,7 @@ Tasks can be dynamically added to the Gantt Chart project by enabling the `Gantt
 
 A row can be added to the Gantt Chart component from the toolbar while the `GanttEditSettings.AllowAdding` property is set to `true`. After clicking the toolbar add icon, you should provide the task information in the add dialog.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add" })" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -120,7 +120,7 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
 
 A row can also be added above, below or child of the selected row by using context menu support. For this, we need to enable the property `EnableContextMenu`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" EnableContextMenu="true" Width="900px" HighlightWeekends="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -227,7 +227,7 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecordAs
 * Below the selected row.
 * As child to the selected row.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="AddRow">Add Row</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
@@ -347,7 +347,7 @@ By setting the edit mode to auto using the `GanttEditSettings.Mode` property, th
 
 The following code example shows you how to enable the cell editing in Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -454,7 +454,7 @@ double click action on chart side
 
 Modify the task details through the edit dialog by setting the `GanttEditSettings.Mode` as `Dialog`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -555,7 +555,7 @@ Modify the task details through the edit dialog by setting the `GanttEditSetting
 
 In the Gantt Chart dialog, you can define the required tabs or editing sections using the `GanttAddDialogFields` and `GanttEditDialogFields` properties. Every tab is defined using the `GanttAddDialogField.Type` or `GanttEditDialogField.Type` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Edit" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -725,7 +725,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
 
 `Note:` You can also define the custom fields in the add/edit dialog General tab using the `Fields` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Edit" })" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -894,7 +894,7 @@ The following screenshot show the output of above code example.
 
 Modify the task details through user interaction, such as resizing and dragging the taskbar, by enabling the `GanttEditSettings.AllowTaskbarEditing` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -999,7 +999,7 @@ You can update the task dependencies using the following ways:
 
 The following code example demonstrates how to enable task dependency editing in the Gantt chart using the `EditSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
@@ -1112,7 +1112,7 @@ Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` met
 
 >NOTE: Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="UpdateRecord">Update Task 3</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px">
@@ -1243,7 +1243,7 @@ Component |Example
 [`DateTimePicker`](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
 [`Checkbox`](../check-box/getting-started) | @(new { @params = new { checked = true} })
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -1359,7 +1359,7 @@ The cell edit template is used to add a custom component for a particular column
 
 The following code example describes, how to define the Edit template for a particular column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns;
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Add", "Cancel", "Edit", "Update", })">
@@ -1490,7 +1490,7 @@ You can disable editing for particular columns, by using the `GanttColumn.AllowE
 
 In the following demo, editing is disabled for the `TaskName` column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" Toolbar="@(new List<string>() { "Edit" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -1593,7 +1593,7 @@ In the following demo, editing is disabled for the `TaskName` column.
 
 A task delete option in the Gantt Chart component can be enabled by enabling the `GanttEditSettings.AllowDeleting` property. Tasks can be deleted by clicking the delete toolbar item or using the `DeleteRecordAsync` method. You can call this method dynamically on any custom actions like button click. The following code example shows how to enable the delete option in the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="DeleteRow">Delete task 2</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -1702,7 +1702,7 @@ Delete confirmation message is used to get confirmation from users before deleti
 
 The following code snippet explains how to enable the delete confirmation message in Gantt Chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Delete" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -1933,7 +1933,7 @@ remote data, we are using `CustomAdaptor` of DataManager property to call the se
 know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/).
 We can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Please Check the below code snippet to assign the data source to Gantt.
 
-```csharp
+```cshtml
 @using GanttEF.Models
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Data
@@ -1992,7 +1992,7 @@ handle each operation separately inside this method with corresponding data rece
 
 The following sample code explains you about, how to implement CRUD operations for the custom bounded data.
 
-```csharp
+```cshtml
 @using GanttEF.Models
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Data
@@ -2086,7 +2086,7 @@ remote data, we are using `CustomAdaptor` of DataManager property to call the se
 know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/).
 We can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the below code snippet to assign the data source to Gantt.
 
-```csharp
+```cshtml
 @using MyBlazorApp.Shared.DataAccess
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Data
@@ -2211,7 +2211,7 @@ Indent and Outdent of a task are used to update the level of task in the hierarc
 
 `Outdent` - Selected task can be outdented to the level of task from the hierarchical order. It can be performed by using in-built context menu or toolbar items. It can also be invoked by using the `outdent` method dynamically on any action like external button click. The following code example shows how to enable outdent option in the Gantt chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Indent", "Outdent" })" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"

@@ -51,7 +51,7 @@ Create an icon element as a span with the class `e-input-group-icon`, and the us
 
 For the floating label enabled TextBox add the icon element as first or last element inside the TextBox wrapper, and based on the element position, it will act as prefix or suffix icon.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <label> Input with icons </label>
@@ -131,7 +131,7 @@ It is shown only when the input field has a value, otherwise not shown.
 
 You can add the clear button to the TextBox by enabling the `ShowClearButton` API.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <label> TextBox with clear button </label>
@@ -148,7 +148,7 @@ The output will be as follows.
 
 The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with float label structure.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder="Enter text" Multiline=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>

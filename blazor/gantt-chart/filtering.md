@@ -15,7 +15,7 @@ Filtering allows you to view specific or related records based on filter criteri
 
 The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component provides menu-filtering support for each column. You can enable the filter menu by setting the `AllowFiltering` to `true`. The filter menu UI will be rendered based on its column type, which allows you to filter data. You can filter the records with different operators.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -124,7 +124,7 @@ The Gantt Chart supports a set of filtering modes with the `GanttFilterSettings.
 
 * `None`: Displays only the filtered records.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -221,7 +221,7 @@ The Gantt Chart supports a set of filtering modes with the `GanttFilterSettings.
 
 To apply the filter at initial rendering, set the filter `Predicate` collections in the `GanttFilterSettings.Columns` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
@@ -349,7 +349,7 @@ By default, the Gantt Chart component ignores the diacritic characters while fil
 
 In the following sample, type **Perform** in the **TaskName** column to filter diacritic characters.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -448,7 +448,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 
 You can filter the columns dynamically by using the `FilterByColumnAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="Filter">Filter Column</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
@@ -553,7 +553,7 @@ You can filter the columns dynamically by using the `FilterByColumnAsync` method
 You can clear all the filtering condition done in the Gantt Chart component by using the `ClearFilteringAsync` method.
 The following code snippet explains the above behaviour.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 <button @onclick="ClearFilter">Clear Filter</button>
@@ -665,7 +665,7 @@ The following code snippet explains the above behaviour.
 
 You can search for records in the Gantt Chart component by using the `SearchAsync` method with search key as a parameter. The Gantt Chart component provides an option to integrate the search text box in the toolbar by adding the search item to the `Toolbar` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Search" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -766,7 +766,7 @@ The following screenshot shows the output of searching for string in Gantt Chart
 In the Gantt Chart component, you can load a task with some search criteria by using the `GanttSearchSettings` property.
 To apply a search at initial rendering, set the value for `Fields`, `Operator`, `Key`, and `IgnoreCase` in the `GanttSearchSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Search" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -882,7 +882,7 @@ notEqual |Checks for the values that are not equal to the specified value.
 
 To search the Gantt Chart records from an external button, invoke the `SearchAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="Search">Search</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
@@ -988,7 +988,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 
 By default, the Gantt Chart component searches all the columns. You can search specific columns by defining the specific columns' field names in the `GanttSearchSettings.Fields` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Search" })">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -1088,7 +1088,7 @@ By default, the Gantt Chart component searches all the columns. You can search s
 
 You can pass the `empty` string to `SearchAsync` method, to clear the searched Gantt records from external button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="Clear">Clear Search</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" Toolbar="@(new List<string>() { "Search" })">

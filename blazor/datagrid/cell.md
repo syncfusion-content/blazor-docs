@@ -13,7 +13,7 @@ documentation: ug
 
 The HTML tags can be displayed in the DataGrid header and content by enabling the [`DisableHtmlEncode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_DisableHtmlEncode) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -59,7 +59,7 @@ The appearance of cells can be customized by using the [`QueryCellInfo`](https:/
 The [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) event triggers for every cell. In that event handler, you can get
 [`QueryCellInfoEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html) that contains the details of the cell.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" Height="315">
@@ -152,7 +152,7 @@ There are three types of [`WrapMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 In the following example, the [`TextWrapSettings.WrapMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) is set to **Content**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" GridLines="GridLine.Default" AllowTextWrap="true" Height="315">
@@ -202,7 +202,7 @@ You can customize the datagrid cells by adding a CSS class to the [`CustomAttrib
 
 In the below example, we have customized the cells of **OrderID** and **ShipCity** columns.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315">
@@ -259,7 +259,7 @@ The available modes of datagrid lines are:
 | Vertical | Displays the vertical datagrid lines only.|
 | Default | Displays datagrid lines based on the theme.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" GridLines="GridLine.Both" Height="315">
@@ -309,7 +309,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 >By default, [`Columns.ClipMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">

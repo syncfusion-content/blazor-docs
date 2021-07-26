@@ -21,7 +21,7 @@ The [`SourcePoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 The following code example illustrates how to add a connector through connector collection,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -195,7 +195,7 @@ For more information about drawing connectors, refer to [`Draw Connectors`](http
 
 The following code shows how to remove a connector at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

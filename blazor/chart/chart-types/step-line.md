@@ -63,7 +63,7 @@ The following properties can be used to customize the [`Step Line`](https://help
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" Width="60%">

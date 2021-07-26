@@ -16,7 +16,7 @@ property.
 The following example demonstrates the TextBox in
 a disabled state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' Enabled=false></SfTextBox>

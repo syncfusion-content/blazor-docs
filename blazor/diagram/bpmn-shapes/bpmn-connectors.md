@@ -26,7 +26,7 @@ The [`BPMN Association`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The association property allows you to define the type of association. The following code example explains how to create an association.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -77,7 +77,7 @@ A [`Sequence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
 
 The sequence property allows you to define the type of sequence. The following code example explains how to create a sequence flow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -128,7 +128,7 @@ A [`Message`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.B
 
 The message property allows you to define the type of message. The following code example explains how to define a message flow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

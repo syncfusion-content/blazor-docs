@@ -19,7 +19,7 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBui
 
 > When columns are auto-generated, the column type will be determined from the first record of the data source.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder DataSource="@EmployeeData"></SfQueryBuilder>
@@ -83,7 +83,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 > By default the Step value is 1.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails">
@@ -119,7 +119,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 In the following sample, the date field is formatted as MM/yyyy/dd and number field is formatted as currency type.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails">
@@ -164,7 +164,7 @@ Validation allows you to validate the conditions and it display errors for inval
 
 > You can set `Min` and `Max` values for number values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails" AllowValidation="true">

@@ -13,7 +13,7 @@ You can achieve this behavior by using tooltip component. When the mouse is hove
 
 The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Popups;
 

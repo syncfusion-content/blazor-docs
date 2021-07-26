@@ -19,7 +19,7 @@ The Scheduler dimensions refers to both height and width of the entire layout an
 
 When height and width of the Scheduler are set to `auto`, it will try as hard as possible to keep an element the same width as its parent container. In other words, the parent container that holds Scheduler, it's width/height will be the sum of its children. By default, Scheduler is assigned with `auto` values for both height and width properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="auto" Width="auto">
@@ -52,7 +52,7 @@ When height and width of the Scheduler are set to `auto`, it will try as hard as
 
 The Scheduler height and width will be rendered exactly as per the given pixel values. It accepts both string and number values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" Width="550px">
@@ -85,7 +85,7 @@ The Scheduler height and width will be rendered exactly as per the given pixel v
 
 When height and width of the Scheduler are given as percentage, it will make the Scheduler as wide as the parent container.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="100%" Width="100%">

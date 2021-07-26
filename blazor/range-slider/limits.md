@@ -28,7 +28,7 @@ There is only one handle in the Default and MinRange Slider, so ``MinStart``, ``
 When the limits are enabled in the Slider, the limited area becomes darken. So you can differentiate the allowed and restricted area.
 Refer to the following snippet to enable the limits in the Slider.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30" Type="SliderType.MinRange">
@@ -43,7 +43,7 @@ Refer to the following snippet to enable the limits in the Slider.
 In the range slider, both handles can be restricted and locked from the limit's object. In this sample, the first handle is limited between
 10 and 40, and the second handle is limited between 60 and 90.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="@Value" Type="SliderType.Range">
@@ -62,7 +62,7 @@ In the range slider, both handles can be restricted and locked from the limit's 
 The movement of slider handles can be locked by enabling the ``StartHandleFixed`` and ``EndHandleFixed`` properties in the limit's object.
 In this sample, the movement of both slider handles has been locked.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="@Value" Type="SliderType.Range">

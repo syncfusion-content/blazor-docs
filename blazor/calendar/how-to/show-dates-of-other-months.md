@@ -13,7 +13,7 @@ The following code demonstrates how to show dates of other months.
 
 Using the styles below, you can bring the dates of other months to visibility from its hidden state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?"></SfCalendar>

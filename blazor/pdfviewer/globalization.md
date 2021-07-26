@@ -15,7 +15,7 @@ Also, this component provides support to render the user interface suitable for 
 
 The following code snippet shows how to localize the component for Arabic language by setting the Locale and EnableRtl properties and providing the localized text.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 

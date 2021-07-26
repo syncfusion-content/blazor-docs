@@ -16,7 +16,7 @@ property. Generally, the day of the week starts from 0 (Sunday) and ends with 6 
 
 The following code shows the Calendar with `Tuesday` as the first day of the week.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" FirstDayOfWeek=2></SfCalendar>

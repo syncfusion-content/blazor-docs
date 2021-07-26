@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) component can be rendered on the page by defining the `SfSchedule` tag helper. And also, define the required Scheduler views in the `ScheduleView` tag helper. Add the following code example to your `index.razor` page which is available within the `~/Pages/` folder, to initialize the Scheduler component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue=AppointmentData>
@@ -138,7 +138,7 @@ The output of the above code will display the empty scheduler as shown in the fo
 
 * To populate the Scheduler with appointments, bind the event data to it by assigning the `DataSource` property under `ScheduleEventSettings`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -183,7 +183,7 @@ The scheduler with the appointments will be rendered as shown in the following i
 
 The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) usually displays the system date as its current date. To change the current date of Scheduler with specific date, define the two-way binding for `SelectedDate` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -230,7 +230,7 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 * TimelineYear
 * Year
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-CurrentView="@CurrentView">
@@ -264,7 +264,7 @@ The Scheduler displays `Week` view by default. To change the current view, defin
 
 Each individual Scheduler views can be customized with its own options such as setting different start and end hour on Week and Work Week views, whereas hiding the weekend days on Month view alone which can be achieved by defining the `ScheduleView`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">

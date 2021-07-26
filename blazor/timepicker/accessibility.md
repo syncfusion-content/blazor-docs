@@ -60,7 +60,7 @@ The TimePicker component has built-in keyboard accessibility support by followin
 
 > To focusout the TimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="TimeObj"></SfTimePicker>

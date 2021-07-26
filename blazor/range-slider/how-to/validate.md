@@ -23,7 +23,7 @@ In Blazor Slider component, the DataAnnotation Validator is used here.
     }
 ```
 
-```csharp
+```cshtml
 @using System.ComponentModel.DataAnnotations;
 @using Syncfusion.Blazor.Inputs;
 

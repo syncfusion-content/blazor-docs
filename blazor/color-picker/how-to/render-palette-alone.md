@@ -13,7 +13,7 @@ To render the `Palette` alone in Color Picker, specify the [`Mode`](https://help
 
 In the following sample, the [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons) property is set to `false` to hide the control buttons and it renders only the `Palette` area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

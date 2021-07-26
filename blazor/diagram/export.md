@@ -14,7 +14,7 @@ The server-side method [`ExportDiagram`](https://help.syncfusion.com/cr/blazor/S
 
 <!-- markdownlint-disable MD033 -->
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -53,7 +53,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 * BMP
 * SVG
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -82,7 +82,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 <!-- markdownlint-disable MD033 -->
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -120,7 +120,7 @@ For more information about the exporting modes, refer to Exporting Modes.
 
 The following code example illustrates how to export the diagram as raw data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -157,7 +157,7 @@ For more information about region, refer to Regions.
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -191,7 +191,7 @@ Diagram provides support to export any specific region of the diagram by using [
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -235,7 +235,7 @@ Diagram provides support to export the diagram as image for [`Stretch`](https://
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -277,7 +277,7 @@ The server-side method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 The following code example illustrates how to export the region occupied by the diagram elements.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Print" @onclick="@OnPrint" />

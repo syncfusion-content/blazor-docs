@@ -89,7 +89,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 
 > To focusout the DateTimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="DateTimeObj"></SfDateTimePicker>

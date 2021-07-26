@@ -11,7 +11,7 @@ documentation: ug
 
 The Ticks in Slider supports you to easily identify the current value/values of the Slider. It contains `SmallStep` and `LargeStep`. The value of the major ticks alone will be displayed in the slider. In order to enable/disable the small ticks, use the `ShowSmallTicks` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider @bind-Value="@value">
@@ -30,7 +30,7 @@ The Ticks in Slider supports you to easily identify the current value/values of 
 
 When the Slider is moved, it increases/decreases the value based on the step value. By default, the value is increased/decreased by 1. Use the `Step` property to change the increment step value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Step="10" @bind-Value="@value">
@@ -48,7 +48,7 @@ When the Slider is moved, it increases/decreases the value based on the step val
 
 Enables the minimum/starting and maximum/ending value of the Slider, by using the `Min` and `Max` property. By default, the minimum value is 1 and maximum value is 100. In the following sample the slider is rendered with the min value as 100 and max value as 1100.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider @bind-Value ="@value" Min="100" Max="1100">

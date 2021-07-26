@@ -54,7 +54,7 @@ We have provided the following native event support to the Toggle Switch Button 
 
 The `onfocus` attribute is used to bind the focus event for Toggle Switch Button. Here, we have explained about the sample code snippets of Toggle Switch Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <label>onfocus</label>

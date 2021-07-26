@@ -156,7 +156,7 @@ DataGrid have an option to use both built-in and custom tool bar items at same t
 
 In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in toolbar items and `Click` is custom toolbar item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 

@@ -27,7 +27,7 @@ On initializing the Tooltip, you can set the position property with any one of
 
 > By default, Tooltip is placed at the `TopCenter` of the target element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -49,7 +49,7 @@ Output be like the below.
 
 Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the `MouseTrail` property. By default, it is set to `false`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -90,7 +90,7 @@ Offset values are set to specify the distance between the target and tooltip ele
 
 The following code example illustrates how to set offset values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 

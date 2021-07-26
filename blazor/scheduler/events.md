@@ -30,7 +30,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 | `ResourceExpand` | Triggers once resource is expanded in timeline views.|
 | `ResourceCollapse` | Triggers once resource is collapsed in timeline views.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <p style="color:green; font-size:20px">@Status</p>
@@ -80,7 +80,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `Created` event triggers after the Scheduler component is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -125,7 +125,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `DataBinding` event triggers before the data binds to the Scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -170,7 +170,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `DataBound` event triggers once the event data is bound to the Scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -216,7 +216,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `Destroyed` event triggers when the Scheduler component is destroyed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -261,7 +261,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `Dragged` event triggers when the dragging of appointment is stopped.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleObj" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -307,7 +307,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `EventRendered` event triggers before each of the event getting rendered on the Scheduler user interface.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -361,7 +361,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `MoreEventsClicked` event triggers when the more events indicator are clicked.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@CurrentView">
@@ -409,7 +409,7 @@ The action type that can be checked within the `ActionCompleted` event are as fo
 
 `Navigating` event triggers before the date or view navigation takes place on Scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -468,7 +468,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 | `ResourceExpand` | Triggers while expanding resource on timeline views.|
 | `ViewNavigate` | Triggers while collapsing resource on timeline views.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -516,7 +516,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 `OnActionFailure` event triggers when a Scheduler action gets failed or interrupted.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -561,7 +561,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 `OnCellClick` event triggers when the Scheduler cells are single clicked or on single tap on the same cells in mobile devices.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -608,7 +608,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 `OnCellDoubleClick` event triggers when the Scheduler cells are double clicked.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -653,7 +653,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 `OnDragStart` event triggers when an appointment is started to drag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -698,7 +698,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 `OnEventClick` event triggers when the events are single clicked or on single tapping the events on the mobile devices.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -745,7 +745,7 @@ The request type that can be checked within the `OnActionBegin` event are as fol
 
 `OnEventDoubleClick` event triggers when the events are double clicked.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="@ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -807,7 +807,7 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 | `ValidationAlert` | For validation alert popup.|
 | `RecurrenceValidationAlert` | For recurrence validation alert popup.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -869,7 +869,7 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 | `ValidationAlert` | For validation alert popup.|
 | `RecurrenceValidationAlert` | For recurrence validation alert popup.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -932,7 +932,7 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 | `ResourceHeader` | Triggers on resource header cell rendering.|
 | `WorkCells` | Triggers on work cell rendering.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -986,7 +986,7 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 
 `OnResizeStart` event triggers when an appointment is started to resize.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1032,7 +1032,7 @@ The ElementType that can be checked within the `OnRenderCell` event are as follo
 
 `Resized` event triggers when the resizing of appointment is stopped.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">

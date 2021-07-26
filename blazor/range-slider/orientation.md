@@ -11,7 +11,7 @@ documentation: ug
 
 The Slider can be displayed, either in horizontal or vertical orientation. By default, the Slider renders in horizontal orientation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider ID="default" Value="40" Orientation="SliderOrientation.Vertical"></SfSlider>

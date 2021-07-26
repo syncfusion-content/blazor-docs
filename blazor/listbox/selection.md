@@ -18,7 +18,7 @@ The ListBox provides support to select an item or a group of item by mouse or ke
 
 To enable single selection in the ListBox, [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_Mode) should be set as `Single` in [`SelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
@@ -58,7 +58,7 @@ To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections
 
 > By default, the selection mode is set as `Multiple`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">

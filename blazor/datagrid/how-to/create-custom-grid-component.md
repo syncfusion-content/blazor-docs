@@ -15,7 +15,7 @@ This is demonstrated in below example by create a custom Grid component called C
 
 CustomGrid.razor
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @typeparam TValue
 @inherits SfGrid<TValue>

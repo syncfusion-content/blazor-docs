@@ -37,7 +37,7 @@ Local data can be represented in Array of JSON data:
 
 ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
@@ -82,7 +82,7 @@ The ListView supports to retrieve the data from remote data services with the he
 
 In the following sample, first 6 products from the Product table of NorthWind data service are displayed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
 
@@ -221,7 +221,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 * `AddItem` - Add a new list item into the ListView.
 * `RemoveItem` - Delete a selected list item in the ListView.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Lists

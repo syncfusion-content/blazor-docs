@@ -30,7 +30,7 @@ The following table shows how pivot relates offset values with node boundaries.
 
 The following code shows how to change the `Pivot` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -88,7 +88,7 @@ The flip types are as follows:
 
 The following code shows how to provide the mirror image of the original element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

@@ -12,7 +12,7 @@ documentation: ug
 The different Toggle Switch Button sizes available are default and small. To reduce the size of default Toggle Switch Button to small,
 set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property to `e-small`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <label for='switch1'>Checked</label>

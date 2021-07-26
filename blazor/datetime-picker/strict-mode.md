@@ -28,7 +28,7 @@ to enter the invalid date, then the Value will stay with the previous value.
 
 The following code demonstrates the DateTimePicker with StrictMode `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' StrictMode=true Value='@DateValue'></SfDateTimePicker>
@@ -56,7 +56,7 @@ If you are entering the out-of-range or invalid datetime value, then the model v
 set to `out of range` datetime value or `null` respectively with highlighted `error` class to
 indicates the datetime is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' StrictMode=false Value='@DateValue'></SfDateTimePicker>

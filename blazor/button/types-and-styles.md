@@ -68,7 +68,7 @@ set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.But
 A round Button is shaped like a circle. Usually, it contains an icon representing its action. To create a round Button,
 set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-round`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton CssClass="e-flat">Flat</SfButton>
@@ -91,7 +91,7 @@ Output be like
 The primary button is styled with background color and it is used to represent a primary action. To create a Primary Button,
 set the [`IsPrimary`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsPrimary) property to `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton IsPrimary="true">Primary</SfButton>
@@ -156,7 +156,7 @@ The Button can have an icon to provide the visual representation of the action. 
 property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Button.
 You can customize the icon's position by using the [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton IconCss="e-icons e-play-icon" IconPosition="IconPosition.Right">PLAY</SfButton>
@@ -182,7 +182,7 @@ Output be like
 The two types of Button sizes are default and small. To change the size of the default Button to small Button,
 set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton CssClass="e-small">SMALL</SfButton>

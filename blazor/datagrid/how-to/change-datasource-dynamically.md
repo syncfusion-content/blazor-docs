@@ -13,7 +13,7 @@ You can change the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 This is demonstrated in the below sample code where the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) is dynamically modified using the bounded property,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 

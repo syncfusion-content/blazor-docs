@@ -31,7 +31,7 @@ state by using the `e-custom-style` class. Following is the list of available cl
 | e-hover | Applied to LI element hovering time. |
 | e-active | Applied to active LI element. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" CssClass="e-custom-style" Placeholder="Select a Time"></SfTimePicker>

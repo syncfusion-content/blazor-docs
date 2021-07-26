@@ -15,7 +15,7 @@ You might need to open and view the PDF files from various location. In this sec
 
 If you have your PDF files in the web, you can open it in the viewer using URL. The following code example explains how to open PDF file from URL.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer DocumentPath="@DocumentPath" Width="1060px" Height="500px" />
@@ -38,7 +38,7 @@ You can open the PDF file from Cloud storage.
 
 The following code example shows how to open and load the PDF file stored in Azure Blob Storage.
 
-```csharp
+```cshtml
 @using Microsoft.Azure.Storage;
 @using Microsoft.Azure.Storage.Blob;
 @using System.IO;
@@ -71,7 +71,7 @@ The following code example shows how to open and load the PDF file stored in Azu
 
 You can open the PDF file from Azure File Storage using the following code example.
 
-```csharp
+```cshtml
 @using Microsoft.Azure.Storage;
 @using Microsoft.Azure.Storage.File;
 @using System.IO;
@@ -112,7 +112,7 @@ You can open the PDF file from Azure File Storage using the following code examp
 
 The following code example shows how to open the PDF file in viewer from SQL Server database.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer DocumentPath="@DocumentPath" Width="1060px" Height="500px" />
@@ -143,7 +143,7 @@ The following code example shows how to open the PDF file in viewer from SQL Ser
 
 There is an UI option in built-in toolbar to open the PDF file from local file system. If you want to achieve the same functionality when design your own toolbar, you can use the following code example to load and open the PDF file. In this sample, the Syncfusion’s Uploader control is used for Blazor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.PdfViewerServer
 
@@ -166,7 +166,7 @@ There is an UI option in built-in toolbar to open the PDF file from local file s
 
 The following code snippet explains how the PDF file can be loaded in PDF Viewer as base64 string.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer ID="pdfviewer" DocumentPath="@DocumentPath" Width="1060px" Height="500px"/>

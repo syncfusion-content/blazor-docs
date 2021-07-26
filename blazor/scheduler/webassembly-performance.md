@@ -24,7 +24,7 @@ In the following example:
 * **PreventRender** method is called in the **IncrementCount** method which is a click callback.
 * Now Scheduler component will not be a part of the rendering which happens as result of the click event and **currentCount** alone will get updated.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <p>Current count: @currentCount</p>
@@ -79,7 +79,7 @@ In the following example:
 
 * **OnCellClick** event is bound with a callback method, so once cell click event is completed the **StateHasChanged** will be invoked for the parent component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <p style="color:green; font-size:20px">@Status</p>

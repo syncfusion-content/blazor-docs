@@ -15,7 +15,7 @@ Custom headers can be added to the [`SfDataManager`](https://help.syncfusion.com
 
 The following sample code demonstrates adding custom headers to the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) request which is bound with the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

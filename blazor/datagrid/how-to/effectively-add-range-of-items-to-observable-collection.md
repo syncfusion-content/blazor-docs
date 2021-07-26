@@ -15,7 +15,7 @@ So, to effectively add a range of items into ObservableCollection bind to Grid, 
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 @using System.Collections.ObjectModel

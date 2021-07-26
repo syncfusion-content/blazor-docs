@@ -16,7 +16,7 @@ item, set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 In the following sample, the icons for Cut, Copy, Paste menu items are added using the IconCss property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste">

@@ -15,7 +15,7 @@ Usually, the Bing Maps displays the maps in satellite view, in which you cannot 
 
 To render Bing Maps in the Maps component, set `LayerType` as Bing and provide the Bing Maps key.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -35,7 +35,7 @@ To render Bing Maps in the Maps component, set `LayerType` as Bing and provide t
 
 Add geometry shape in the Bing Maps using sublayer concept. To add geometry shape, import shape data, set type as subLayer, and assign your shape data to the ShapeData API.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

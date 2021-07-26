@@ -46,7 +46,7 @@ This section briefly explains about how to include a `Accumulation Chart` in you
 
 Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 ```
@@ -121,7 +121,7 @@ namespace BlazorApplication
 
 To initialize the accumulation chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart>
@@ -159,7 +159,7 @@ On successful compilation of your application, the Syncfusion Blazor Accumulatio
 
 Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, you can add a title to the accumulation chart to provide the user with quick information about the data plotted in the chart.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -195,7 +195,7 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 You can add data labels to improve the readability of the accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to **true** in the [`AccumulationDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -233,7 +233,7 @@ You can add data labels to improve the readability of the accumulation chart. Th
 
 When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [`AccumulationChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to **true**.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 

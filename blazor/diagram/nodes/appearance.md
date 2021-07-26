@@ -15,7 +15,7 @@ documentation: ug
 
 The following code shows how to customize the appearance of the shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -65,7 +65,7 @@ There are two types of gradients as follows:
 
 * A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -114,7 +114,7 @@ There are two types of gradients as follows:
 
 * A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -168,7 +168,7 @@ There are two types of gradients as follows:
 Diagram provides support to add [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow) effect to a node that is disabled, by default. It can be enabled with the
 constraints property of the node. The following code shows how to draw shadow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -205,7 +205,7 @@ constraints property of the node. The following code shows how to draw shadow.
 The [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Angle), [`Distance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Distance), and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Opacity) of the shadow can be customized with the shadow property of the node. The following code
 example illustrates how to customize shadow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -255,7 +255,7 @@ Diagram provides support to describe the state of the node. i.e., the node is ex
 
 The following code example shows how to create an icon of various shapes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -342,7 +342,7 @@ The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams
 
 The following code shows how to set the `AddInfo` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -442,7 +442,7 @@ The following code illustrates how to render a node based on the stack order.
 
 You can find the flow in the diagram by using the [`GetEdges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetEdges_System_String_System_Boolean_) method. In this method, you can find what are all the connectors that are connected to the node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="UpdateEdges" @onclick="@UpdateEdges" />

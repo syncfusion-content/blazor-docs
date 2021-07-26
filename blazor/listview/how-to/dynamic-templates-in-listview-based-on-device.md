@@ -20,7 +20,7 @@ across all devices, but the template contents are dynamically changed with unspe
 customization is also needed in sample-side to align template content responsively in both mobile and desktop modes. Here,
 two templates have been loaded for mobile and desktop modes. To check the device mode, we can use the Microsoft.AspNetCore.Http package and check for the UserAgent to detect mobile or desktop.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor httpContextAccessor

@@ -14,7 +14,7 @@ Define own CSS rules according to your requirement and assign the class name to 
 
 The background and border color of the Radio Button is customized through the custom classes to create the primary, success, info, warning, and danger type of Radio Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Primary" Name="custom" CssClass="e-primary" Value="Primary" @bind-Checked="stringChecked"></SfRadioButton><br />

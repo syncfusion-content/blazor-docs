@@ -172,7 +172,7 @@ You can use [Razor Template Syntax](https://docs.microsoft.com/en-us/aspnet/core
 
 The following code demonstrates the RenderFragment that renders the `SfButton` component.
 
-```csharp
+```cshtml
 @{
     RenderFragment<string> ButtonFragment = content =>
     @<SfButton>@content</SfButton>;
@@ -183,7 +183,7 @@ The following code demonstrates the RenderFragment that renders the `SfButton` c
 
 The following code demonstrates the RenderFragment that renders the `SfGrid` component.
 
-```csharp
+```cshtml
 @{
     RenderFragment<List<Order>> GridFragment = dataModel =>
     @<SfGrid DataSource="@dataModel"></SfGrid>;
@@ -216,7 +216,7 @@ You can define the RenderFragment delegate with [RenderTreeBuilder](https://docs
 
 > Refer to [Manual RenderTreeBuilder logic](https://docs.microsoft.com/en-us/aspnet/core/blazor/advanced-scenarios?view=aspnetcore-5.0#manual-rendertreebuilder-logic) to know more about RenderTreeBuilder.
 
-```csharp
+```cshtml
 @RenderSfButton()
 
 @code {

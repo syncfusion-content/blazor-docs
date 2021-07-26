@@ -86,7 +86,7 @@ By default, the input area will be rendered in Color Picker. To hide the input a
 
 In the following sample, the Color Picker is rendered without input area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

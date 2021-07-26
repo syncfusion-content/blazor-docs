@@ -253,7 +253,7 @@ Row virtualization allows you to virtualize the vertical data with cell placehol
 
 To setup the frozen right/left columns, you need to define Column property of **Freeze** as Right/Left along with enabling the column property of [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" Height="400" Width="500"  EnableHover="false" RowHeight="38" EnableVirtualization="true" EnableColumnVirtualization="true" EnableVirtualMaskRow="true">

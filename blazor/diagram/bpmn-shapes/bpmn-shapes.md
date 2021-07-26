@@ -13,7 +13,7 @@ BPMN(Business Process Model and Notation) shapes are used to represent the inter
 
 The following code example explains how to create a simple business process.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

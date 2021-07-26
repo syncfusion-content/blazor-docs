@@ -29,7 +29,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 To add a connection port, define the port object and add it to node’s ports collection. The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Offset) property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -72,7 +72,7 @@ Add ports at runtime by using the server-side method [`Add`] in the port collect
 The port’s [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Id) property is used to define the unique ID for the port and it is further used to find the port at runtime.
 If **Id** is not set, then default **Id** is automatically set.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
@@ -113,7 +113,7 @@ If **Id** is not set, then default **Id** is automatically set.
 
 A collection of ports can be removed from the node by using the native[`RemoveAt`] method. Refer to the following example that shows how to remove ports at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="RemovePorts" @onclick="@RemovePorts" />
@@ -161,7 +161,7 @@ You can change any port properties at runtime.
 
 The following code example explains how to change the port properties at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

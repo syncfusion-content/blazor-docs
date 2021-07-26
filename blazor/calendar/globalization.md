@@ -118,7 +118,7 @@ namespace blazorCalendars
 
 * Finally, Specify the culture for Calendar using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime" Locale="de"> </SfCalendar>
@@ -180,7 +180,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 
@@ -230,7 +230,7 @@ property to set the RTL direction.
 
 The following code example initializes the Calendar component in `Arabic` culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 

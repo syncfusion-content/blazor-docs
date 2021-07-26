@@ -13,7 +13,7 @@ The ListView supports to wrap the nested element into a group based on the categ
 
 In the following sample, The cars are grouped based on its category by using the GroupBy field in ListViewFieldSettings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@DataSource">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" GroupBy="Type"></ListViewFieldSettings>

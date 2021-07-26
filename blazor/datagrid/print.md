@@ -15,7 +15,7 @@ To print the DataGrid, call the [`Print`](https://help.syncfusion.com/cr/blazor/
 
 The below sample code demonstrates DataGrid with print option added in the toolbar,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" AllowPaging="true">
@@ -71,7 +71,7 @@ To print the datagrid from an external button, invoke the print method using the
 
 The below sample code demonstrates invoking print using an external button,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -126,7 +126,7 @@ By default, the datagrid prints all the pages. To print the current page alone, 
 
 The below sample code demonstrates this,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<object>() { "Print" })" PrintMode=PrintMode.CurrentPage AllowPaging="true">
@@ -176,7 +176,7 @@ None |Prints the master datagrid alone.
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -266,7 +266,7 @@ Then in the PrintComplete event, we can reverse the state back to the previous s
 
 In the below example, we have **CustomerID** as a hidden column in the datagrid. While printing, we have changed **CustomerID** to visible column and **Freight** as hidden column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 

@@ -20,7 +20,7 @@ property.
 
 The following code demonstrates the DatePicker with the custom format (`yyyy-MM-dd`).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Format='yyyy-MM-dd'></SfDatePicker>

@@ -19,7 +19,7 @@ You can customize the column menu icon by overriding the default icon class `.e-
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" ShowColumnMenu="true">

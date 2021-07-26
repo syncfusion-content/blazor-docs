@@ -13,7 +13,7 @@ documentation: ug
 
 The Code 39 character set includes the digits 0-9, the letters A-Z (upper case only), and the symbols: space, minus (-), plus (+), period (.), dollar sign ($), slash (/), and percent (%). A special start / stop character is placed at the beginning and ending of each barcode. The barcode can be of any length; even more than 25 characters begin to push the bounds. Code 39 is the only type of barcode that does not require a checksum for common use.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code39" Value="SYNCFUSION"></SfBarcodeGenerator>
@@ -26,7 +26,7 @@ The Code 39 character set includes the digits 0-9, the letters A-Z (upper case o
 
 Code 39 Extended is an extended version of Code 39 that supports ASCII character set. In Code 39 Extended, you can also code 26 lower letters (a-z) and the special characters in the keyboard.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code39Extension" Value="SYNCFUSION"></SfBarcodeGenerator>
@@ -39,7 +39,7 @@ Code 39 Extended is an extended version of Code 39 that supports ASCII character
 
 Code 11 is used primarily for labeling the telecommunication equipment’s. The character set includes the digits 0 to 9, a dash (-), and a start / stop code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code11" Value="112"></SfBarcodeGenerator>
@@ -56,7 +56,7 @@ Codabar is a variable length symbol that encodes the following 20 characters:
 
 The characters, A, B, C and D are used as start and stop characters. Codabar is used in libraries, blood banks, the package delivery industry and a variety of other information processing applications.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Codabar" Value="123456789"></SfBarcodeGenerator>
@@ -74,7 +74,7 @@ Code 32 is mainly used for coding pharmaceuticals, cosmetics and dietetics. It i
 
 The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if necessary) and the 9th digit (the checksum) is automatically calculated by barcode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code32" Value="01234567"></SfBarcodeGenerator>
@@ -87,7 +87,7 @@ The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if n
 
 Code 93 is designed to complement and improve upon Code 39. It can represent the entire ASCII character set by using combinations of 2 characters. Code 93 is a continuous, variable-length symbology and produces denser code. The Standard Mode (default implementation) can encode uppercase letters (A-Z), digits (0-9), and special characters like *, -, $, %, (Space), ., /, and +.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code93" Value="01234567"></SfBarcodeGenerator>
@@ -114,7 +114,7 @@ Code 128 is a variable length, high density, alphanumeric, linear bar code symbo
 
 The last seven characters of Code Sets A and B (character values 96 - 102) and the last three characters of Code Set C (character values 100 - 102) are special non-data characters with no ASCII character equivalents that have a particular significance to the Barcode reading device.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128" Value="SYNCFUSION"></SfBarcodeGenerator>
@@ -128,7 +128,7 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using for [`Forecolor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property .
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128" foreColor="red" Value="SYNCFUSION"></SfBarcodeGenerator>
@@ -141,7 +141,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 The dimension of the barcode can be changed using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Width) property of the barcodegenerator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="300px" Height="300px" Type="@BarcodeType.Code128" Value="SYNCFUSION"></SfBarcodeGenerator>
@@ -154,7 +154,7 @@ The dimension of the barcode can be changed using the [`Height`](https://help.sy
 
 In barcode generators you can customize the barcode text by using display [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.BarcodeGeneratorDisplayText.html#Syncfusion_Blazor_BarcodeGenerator_BarcodeGeneratorDisplayText_Text) property .
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfBarcodeGenerator Width="300px" Height="300px" Type="@BarcodeType.Code128"Value="SYNCFUSION">
@@ -169,7 +169,7 @@ In barcode generators you can customize the barcode text by using display [`Text
 
 `OnValidationFailed` event in the `SfBarcodeGenerator` is used to trigger when the input is an invalid string.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128"Value="SYNCFUSION" OnValidationFailed="@OnValidationFailed"></SfBarcodeGenerator>
 

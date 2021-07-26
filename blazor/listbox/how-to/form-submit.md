@@ -11,7 +11,7 @@ documentation: ug
 
 In the following code snippet, the value that is in selected state will be sent on form submit.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
 

@@ -13,7 +13,7 @@ The Excel export allows Pivot Table data to be exported as Excel document. To en
 
 > The pivot table component can be exported to Excel format using options available in the toolbar. For more details [`refer`](./tool-bar) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Buttons
 
@@ -61,7 +61,7 @@ The Excel export provides an option to change colors for headers, caption and re
 
 > By default, material theme will be applied to the pivot table during Excel exporting.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Buttons
 
@@ -118,7 +118,7 @@ The Excel export provides an option to change colors for headers, caption and re
 
 The Excel export provides an option to change file name of the document before exporting. In-order to change the file name, define **fileName** property in **excelExportProperties** object and pass it as a parameter to the [`ExportToExcelAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ExcelExport_System_Object_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Buttons
 
@@ -171,7 +171,7 @@ The Excel export allows pivot table data to be exported in **CSV** file format a
 
 > The pivot table component can be exported to CSV format using options available in the toolbar. For more details [`refer`](./tool-bar) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.Buttons
 

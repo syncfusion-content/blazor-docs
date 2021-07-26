@@ -40,7 +40,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 
 Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.BarcodeGenerator** packages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.BarcodeGenerator
 ```
@@ -49,7 +49,7 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.BarcodeGenera
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor;
 
 namespace BlazorApplication

@@ -18,7 +18,7 @@ The following shortcut keys are used to access the Chip control without any inte
 | <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
 | <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip ID="chip-avatar" EnableDelete="true" CssClass="e-chip-avatar" Selection="SelectionType.Single">
     <ChipItems>

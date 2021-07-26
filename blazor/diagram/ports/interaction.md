@@ -17,7 +17,7 @@ Diagram provides the support to drag the port interactively, it can be dragged o
 
 The following code explains how to drag the port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -64,7 +64,7 @@ Diagram provides the support to draw the connector in the port.
 
 The following code explains how to draw the connector by using the port constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

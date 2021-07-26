@@ -13,7 +13,7 @@ Split Button component can be dynamically add or remove items using  `AddItems`,
 
 The following example illustrates how to add and remove items in Split Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Buttons
 

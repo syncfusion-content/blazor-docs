@@ -13,7 +13,7 @@ Accordion provides a support to Enable/Disable the specified accordion item usin
 
 In the following demo, specified accordion item are Enable/Disable dynamically when you click **Enable/Disable First Item** button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 

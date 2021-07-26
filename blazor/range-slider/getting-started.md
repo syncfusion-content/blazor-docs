@@ -126,7 +126,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Inputs` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Inputs
 ```
@@ -135,7 +135,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Inputs` package.
 
 Now, add the Syncfusion Blazor Slider component in any web page `razor` in the `Pages` folder. For example, the Slider component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30"></SfSlider>

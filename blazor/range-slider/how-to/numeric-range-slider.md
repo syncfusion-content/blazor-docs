@@ -34,7 +34,7 @@ And in the third example, the formatting involves the placement of zeros before 
 
 The complete code for the above Numeric Range Slider can be found below.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs;
 
 <div class="control-section">

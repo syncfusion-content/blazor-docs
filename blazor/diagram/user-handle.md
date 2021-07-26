@@ -15,7 +15,7 @@ User handles are customizable handles that can be used to perform custom actions
 
 The user handle can enables for the selected nodes/connectors by setting a [`SelectorConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SelectorConstraints.html) as `UserHandle` and then use the [`DiagramUserHandle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html) class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -84,7 +84,7 @@ The user handle can enables for the selected nodes/connectors by setting a [`Sel
 
 If set `false` to the [`DisableConnectors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableConnectors) property in userhandle, the userhandle prevents to rendering for the connectors. The following code example is used to show userhandle for the nodes alone.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -248,7 +248,7 @@ The Diagram control provides following list of events for the userhandle.
 
 The following code explains how to use the `OnUserHandleMouseUp` event for an userhandle.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -411,7 +411,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 The following code explains how to customize the appearance of the fixed user handles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
@@ -482,7 +482,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following code explains how to customize the node fixed user handle.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -548,7 +548,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following code explains how to customize the connector fixed user handle.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -584,7 +584,7 @@ The Diagram control provides following event for the fixed user handle.
 | -------- | -------- | -------- |
 | FixedUserHandleClick | FixedUserHandleClickEventArgs | Triggered when the mouse pointer is over the userhandle and mouse button is up. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

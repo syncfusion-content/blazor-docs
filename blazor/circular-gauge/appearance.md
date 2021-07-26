@@ -13,7 +13,7 @@ documentation: ug
 
 You can add a title to the Circular Gauge using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property. The title can be customized using the [`CircularGaugeTitleStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Title="Speedometer">
@@ -33,7 +33,7 @@ The default value of the [`CenterX`](https://help.syncfusion.com/cr/blazor/Syncf
 
 You can set the mid point of the Circular Gauge in pixel as demonstrated as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge CenterX="20px" CenterY="20px">
@@ -49,7 +49,7 @@ You can set the mid point of the Circular Gauge in pixel as demonstrated as foll
 
 By setting the value in percentage, Circular Gauge gets its mid point with respect to its plot area. For example, when setting the value of [`CenterX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) to '1%' and the value of [`CenterY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) to ‘50%’, the gauge will be positioned at the top-left corner of the plot area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge CenterX="1%" CenterY="50%">
@@ -65,7 +65,7 @@ By setting the value in percentage, Circular Gauge gets its mid point with respe
 
 Using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Background) and [`CircularGaugeBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeBorder.html) properties, you can change the background color and border of the Circular Gauge.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Background="skyblue">
@@ -100,7 +100,7 @@ Using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 You can render semi or quarter Circular Gauge by modifying the start and end angles. By enabling the radius based on angle option, the radius of circular gauge will be calculated based on the start and end angles to avoid excess white space.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>

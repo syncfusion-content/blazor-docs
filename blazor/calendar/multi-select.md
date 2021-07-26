@@ -13,7 +13,7 @@ A calendar provides an option to select **single** or **multiple dates** by usin
 
 The following code demonstrates the functionality of IsMultiSelection and Values properties in the Calendar component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" IsMultiSelection=true Values="@MultipleValues"></SfCalendar>

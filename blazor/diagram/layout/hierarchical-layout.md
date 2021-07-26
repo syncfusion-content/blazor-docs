@@ -11,7 +11,7 @@ documentation: ug
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) as `HierarchicalTree`. The following example shows how to arrange the nodes in a hierarchical structure.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -125,7 +125,7 @@ public void UpdateMargin()
 
 Diagram allows to expand or collapse the subtrees of a layout. The node’s isExpanded property allows you to expand or collapse its children. The following code example shows how to expand or collapse the children of a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -237,7 +237,7 @@ Complex hierarchical tree layout is the extended version of the hierarchical tre
 
 The following code example shows how to create a complex hierarchical tree.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

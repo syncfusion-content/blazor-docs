@@ -33,7 +33,7 @@ We have provided the following native event support to the Progress Button compo
 
 The `onclick` attribute is used to bind the click event for Progress Button. Here, we have explained about the sample code snippets of Progress Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton IsPrimary="true" @onclick="onClick" Content="Spin Left"></SfProgressButton>

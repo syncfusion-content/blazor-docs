@@ -17,7 +17,7 @@ Template allows you to define your own widgets for column values. Use the [`Valu
 
 In the following sample, SFDropdownlist is used as value template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.DropDowns
 

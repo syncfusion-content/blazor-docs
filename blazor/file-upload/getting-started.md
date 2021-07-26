@@ -39,7 +39,7 @@ This section briefly explains about how to include a [Blazor File Upload](https:
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Inputs` packages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 ```
 
@@ -98,7 +98,7 @@ You can upload the files and files of folders in the Blazor application without 
 
 You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
 
-```csharp
+```cshtml
 @using System.IO
 
 <SfUploader AutoUpload="false">

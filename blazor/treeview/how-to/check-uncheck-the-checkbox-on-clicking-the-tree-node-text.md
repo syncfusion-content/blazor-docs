@@ -11,7 +11,7 @@ documentation: ug
 
 You can check and uncheck the checkboxes of tree view by clicking the tree node using the `NodeClicked` event of TreeView.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MusicAlbum" @ref="tree" ShowCheckBox="true" AutoCheck="true" CheckedNodes="@CheckedNodes.ToArray()">
     <TreeViewEvents TValue="MusicAlbum" OnKeyPress="TreeNodeClick" NodeClicked="NodeClick" NodeChecking="BeforeCheck" NodeExpanding="ExpandCollapse" NodeCollapsing="ExpandCollapse"></TreeViewEvents>

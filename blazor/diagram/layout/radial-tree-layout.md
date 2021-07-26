@@ -13,7 +13,7 @@ The radial tree layout arranges nodes on a virtual concentric circle around a ro
 
 To arrange nodes in a radial tree structure, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of the layout as `RadialTree`. The following code illustrates how to arrange the nodes in a radial tree structure.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

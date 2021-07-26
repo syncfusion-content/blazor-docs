@@ -20,7 +20,7 @@ It supports the following kinds of data binding method:
 
 To bind list binding to the datagrid, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -69,7 +69,7 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 
 **ExpandoObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -112,7 +112,7 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 
 You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -173,7 +173,7 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
 
 > The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -230,7 +230,7 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
 
 You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.Dynamic
 
@@ -304,7 +304,7 @@ To bind remote data to datagrid component, assign service data as an instance of
 
 [OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote Data binding using **OData** service.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -335,7 +335,7 @@ To bind remote data to datagrid component, assign service data as an instance of
 
 The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -365,7 +365,7 @@ The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`]
 
 You can use **WebApiAdaptor** to bind datagrid with Web API created using **OData** endpoint.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -408,7 +408,7 @@ It is possible to render the datasource in DataGrid after initial rendering. Thi
 
 The following sample code demonstrates enabling data manager condition in the DataGrid on button click,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Data
@@ -457,7 +457,7 @@ To add a custom parameter to the data request, use the addParams method of Query
 
 The following sample code demonstrates sending additional paramaters using the Query property,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -511,7 +511,7 @@ The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/bl
 
 The following sample code demonstrates notifying user when server-side exception has occurred,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -590,7 +590,7 @@ To add a custom headers to the data request, use the [`Headers`](https://help.sy
 
 The following sample code demonstrates adding custom headers to the `SfDataManager` request,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -625,7 +625,7 @@ It is possible to dynamically modify datagrid's [`Query`](https://help.syncfusio
 
 The following sample code demonstrates achieving this,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Data
@@ -672,7 +672,7 @@ Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** 
 
 Based on the DataManagerRequest, you can form SQL query string (to perform paging) and execute the SQL query and retrieve the data from database using **SqlDataAdapter**. The Fill method of the **DataAdapter** is used to populate a **DataSet** with the results of the **SelectCommand** of the DataAdapter, then converted the DataSet into List and return **Result** and **Count** pair object in **Read** method to bind the data to Grid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
@@ -700,7 +700,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 }
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Data;
 @using Newtonsoft.Json
@@ -888,7 +888,7 @@ namespace WebApplication1.Server.Controllers
 
 Now you can configure the datagrid using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
@@ -920,7 +920,7 @@ It is possible to call web api from the blazor WebAssembly(client-side) app. Thi
 
 This can be achieved by initially injecting the `HttpClient` instance in the app.
 
-```csharp
+```cshtml
 @using System.Net.Http
 @inject HttpClient Http
 ```
@@ -960,7 +960,7 @@ public class Employee
 
 Then using the `GetJsonAsync` method request is sent to the api controller for fetching data which is bounded to the DataGrid's data source
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @inject HttpClient Http
@@ -1150,7 +1150,7 @@ The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/bl
 
 The following sample code demonstrates notifying user when server-side exception has occurred during data operation,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

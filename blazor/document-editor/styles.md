@@ -75,7 +75,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 The following example shows how to programmatically create a character style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -96,7 +96,7 @@ The following example shows how to programmatically create a character style.
 
 The following example shows how to programmatically create a paragraph style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -117,7 +117,7 @@ The following example shows how to programmatically create a paragraph style.
 
 The following example shows how to programmatically create linked style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>

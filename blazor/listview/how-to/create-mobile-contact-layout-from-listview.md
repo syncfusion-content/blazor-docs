@@ -48,7 +48,7 @@ ListDataModel item = context as ListDataModel;
 
 * Enable the `ShowHeader` property, and set the `HeaderTitle` as `Contacts`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <div class="flex flex__center">

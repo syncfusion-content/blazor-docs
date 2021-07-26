@@ -35,7 +35,7 @@ the appropriate columns should be mapped to the [Fields](https://help.syncfusion
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
@@ -87,7 +87,7 @@ the appropriate columns should be mapped to the [Fields](https://help.syncfusion
 
 In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" DataSource="@LocalData" TValue="string" TItem="Complex" Placeholder="e.g. Select a Country">
@@ -137,7 +137,7 @@ data from the database and bind it to the ComboBox.
 
 In the following sample, displayed first 6 contacts from the **Customers** table of `Northwind` Data Service.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -174,7 +174,7 @@ The output will be as follows.
 
 Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -286,7 +286,7 @@ To avoid post back for every action, set the ComboBox to load all data on initia
 
 The following example for remote data binding and enabled offline mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -430,7 +430,7 @@ namespace EFDropDown.Controllers
 
 Now you can configure the ComboBox using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

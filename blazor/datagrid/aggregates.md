@@ -38,7 +38,7 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
 To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the **context** as **AggregateTemplateContext** to get aggregate values inside template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -116,7 +116,7 @@ You can format the aggregate value result by using the [`Format`](https://help.s
 
 To access the aggregate values inside the **FooterTemplate**, you can use the implicit named parameter **context**. You can type cast the ***context** as **AggregateTemplateContext** to get aggregate values inside template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -192,7 +192,7 @@ Both **GroupCaptionTemplate** and **GroupFooterTemplate** should be provided wit
 
 To access the aggregate values inside the **GroupFooterTemplate** and **GroupCaptionTemplate**, you can use the implicit named parameter **context**. You can type cast the **context** as **AggregateTemplateContext** to get aggregate values inside template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Products" AllowGrouping="true" AllowPaging="true">
@@ -277,7 +277,7 @@ To calculate the aggregate value with your own aggregate functions, use the cust
 
 To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAggregateColumn** directive and provide custom aggregate function inside the **FooterTemplate** as follows,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="Grid" DataSource="@Products" AllowPaging="true">
@@ -343,7 +343,7 @@ When using Custom Adaptor, the aggregates has to be handled in the Read/ReadAsyn
 
 The following sample code demonstrates implementing the aggregates for the custom bounded data,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor
@@ -462,7 +462,7 @@ When using batch editing, the aggregate values will be refreshed on every cell s
 
 > Adding a new record to the grouped datagrid will not refresh the aggregate values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add","Delete","Update","Cancel" })">

@@ -34,7 +34,7 @@ The web accessibility makes web content and web applications more accessible for
 Starts the progress</td></tr>
 </table>
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton Content="Spin Left"></SfProgressButton>

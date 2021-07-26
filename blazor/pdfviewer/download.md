@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer supports downloading the loaded PDF file from the toolbar by default. You can enable or disable the download option by setting the `EnableDownload` API.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableDownload="true"/>
@@ -25,7 +25,7 @@ The PDF Viewer supports downloading the loaded PDF file from the toolbar by defa
 
 And, you can programmatically invoke download action as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

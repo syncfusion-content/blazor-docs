@@ -26,7 +26,7 @@ We have provided the following event support to the DropDownButton component. Th
 
 Above defined events are bind the Dropdown Menu component. Here, we have explained about the sample code snippets of Dropdown Menu.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Profile">

@@ -12,7 +12,7 @@ documentation: ug
 The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are
 enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the input parent element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <label>Success</label>

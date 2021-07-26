@@ -28,7 +28,7 @@ The Work week and Timeline Work week views displays exactly the defined working 
 
 The following example code depicts how to set the Scheduler to display Monday, Wednesday and Friday as working days of a week.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" ShowWeekend="false" WorkDays="@WorkingDays">
@@ -64,7 +64,7 @@ The `ShowWeekend` property is used to either show or hide the weekend days of a 
 
 Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore the remaining days (0, 2, 6 – Sunday, Tuesday and Saturday) are considered as non-working or weekend days and will be hidden from all the views when `ShowWeekend` property is set to `false`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" ShowWeekend=false WorkDays="@WorkingDays">
@@ -100,7 +100,7 @@ It is possible to show the week number count of a week in the header bar of the 
 
 > The `ShowWeekNumber` property is not applicable on Timeline views, as it has the equivalent [`HeaderRows`](./header-rows/#display-week-numbers-in-timeline-views) property to handle such requirement with additional customization.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" ShowWeekNumber=true>
@@ -139,7 +139,7 @@ By default, week numbers are shown in the Scheduler based on the first day of th
 
 For more details refer to [this link](https://docs.microsoft.com/en-us/dotnet/api/system.globalization.calendarweekrule?view=net-5.0#remarks)
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate" ShowWeekNumber=true WeekRule="System.Globalization.CalendarWeekRule.FirstFourDayWeek">
@@ -175,7 +175,7 @@ Working hours indicates the work hour limit within the Scheduler, which is visua
 * `Start` - sets the start time of the working/business hour of a day.
 * `End` - sets the end time limit of the working/business hour of a day.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -208,7 +208,7 @@ It is possible to display the event Scheduler layout with specific time duration
 
 The following code example displays the Scheduler starting from the time range 7.00 AM to 6.00 PM and the remaining hours are hidden on the UI.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" StartHour="07:00" EndHour="18:00">
@@ -240,7 +240,7 @@ By default, Scheduler defaults to `Sunday` as its first day of a week. To change
 
 > Here, Sunday is always denoted as 0, Monday as 1 and so on.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" FirstDayOfWeek=3>
@@ -271,7 +271,7 @@ By default, Scheduler defaults to `Sunday` as its first day of a week. To change
 
 You can manually scroll to a specific time on Scheduler by making use of the `ScrollToAsync` method as depicted in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Calendars
 

@@ -31,7 +31,7 @@ We have provided the following native event support to the Checkbox component:
 
 The `onchange` attribute is used to bind the onchange event for Checkbox. Here, we have explained about the sample code snippets of Checkbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox @bind-Checked="isChecked" Label="Change" @onchange="onChange"></SfCheckBox>

@@ -18,7 +18,7 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 
 * If you need to validate or prevent editing, the `NodeEditing` event can be used which is triggered before the TreeView node is renamed. On successfully renaming a node the `NodeEdited` event will be triggered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" AllowEditing="true">
     <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>

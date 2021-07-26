@@ -38,7 +38,7 @@ This section briefly explains how to include a Smith Chart component in the Blaz
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 To initialize the Smith Chart component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfSmithchart>

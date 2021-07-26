@@ -15,7 +15,7 @@ Dropdown Menu can have an icon to provide the visual representation of the actio
 
 In the following example, the Dropdown Menu with default iconPosition and iconPosition as `Top` is showcased:
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Items="@DropItems" IconCss="e-icons e-message" content="Message"></SfDropDownButton>
@@ -49,7 +49,7 @@ You can also use third party icons on the Dropdown Menu using the [`IconCss`](ht
 
 Vertical button in Dropdown Menu can be achieved by adding `e-vertical` class using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton IconCss="e-icons e-message" CssClass="e-vertical" Content="Message">

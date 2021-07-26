@@ -15,7 +15,7 @@ Dropdown arrow can be customized on popup open and close. It can be handled in
 
 In the following example, the up arrow is updated on popup close and down arrow is updated on popup open using `OnOpen` and `OnClose` event by adding and removing `e-caret-up` class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton CssClass="@IconCss" Content="Clipboard">

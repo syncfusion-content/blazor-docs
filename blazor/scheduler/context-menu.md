@@ -17,7 +17,7 @@ The deletion of appointments can be done by using the `DeleteEventAsync` public 
 
 > You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Navigations
 
