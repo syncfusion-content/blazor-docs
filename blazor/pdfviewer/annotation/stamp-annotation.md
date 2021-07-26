@@ -54,7 +54,7 @@ The properties of the stamp annotation can be set before creating the control us
 After editing the default opacity using the Edit Opacity tool, they will be changed to the selected values.
 Refer to the following code snippet to set the default sticky note annotation settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" StampSettings="@StampSettings" >

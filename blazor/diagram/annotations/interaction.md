@@ -18,7 +18,7 @@ Selection of annotation can be enabled by using the [`Constraints`](https://help
 
 The following code snippet explains how the select constraints are enabled for annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -61,7 +61,7 @@ The dragging process can be applied over an annotation and dragging can be contr
 
 Dragging of annotation can be enabled by using the Constraints property of annotation and setting its value to `AnnotationConstraints.Drag`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -104,7 +104,7 @@ Resizing of the annotation can be enabled by using the Constraints property of `
 
 The following code snippet explains how the Resize constraints are enabled for annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -147,7 +147,7 @@ Resizing of the annotation can be enabled by using the Constraints property of `
 
 The following code snippet explains how the Resize constraints are enabled for annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
@@ -192,7 +192,7 @@ You can set the value to dragLimit left, right, top, and bottom properties that 
 
 The following code explains how to set a dragLimit for connector annotations.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">

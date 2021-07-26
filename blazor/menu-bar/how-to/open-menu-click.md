@@ -13,7 +13,7 @@ This section explains about how to open a sub menu on Menu item click. This can 
 
 In the following sample, Sub Menu will open while clicking `File` menu.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu TValue="MenuItem" ShowItemOnClick="true">

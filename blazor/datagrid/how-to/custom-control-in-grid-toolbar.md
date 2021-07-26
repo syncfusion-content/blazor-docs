@@ -13,7 +13,7 @@ You can render custom controls inside the datagrid's toolbar area. This can be a
 
 This is demonstrated in the below sample code where Autocomplete component is rendered inside the DataGrid's toolbar and is used for performing search operation on the datagrid,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns

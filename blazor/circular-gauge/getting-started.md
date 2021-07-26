@@ -38,7 +38,7 @@ This section briefly explains how to include a Circular Gauge component in your 
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.CircularGauge** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfCircularGauge>

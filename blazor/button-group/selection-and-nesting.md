@@ -41,7 +41,7 @@ ButtonGroup supports multiple selection type in which multiple button can be sel
 
 The following example illustrates the multiple selection behavior in ButtonGroup.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup Mode="SelectionMode.Multiple">
@@ -71,7 +71,7 @@ Nesting with other components can be possible in ButtonGroup. The following comp
 
 In the following example, the DropDownButton component can be added in ButtonGroup tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
   <SfButtonGroup>
@@ -97,7 +97,7 @@ Output be like
 
 In the following example, SplitButton component can be added in ButtonGroup tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
   <SfButtonGroup>

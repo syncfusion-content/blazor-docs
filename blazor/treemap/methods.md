@@ -15,7 +15,7 @@ Create an object for the TreeMap component using `@ref` property and call the de
 
 To print the rendered TreeMap component by setting the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="PrintMap">Print Treemap</button>
@@ -58,7 +58,7 @@ The [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 > Export method returns the **Base64** string, if **allowDownload** argument is set to **false**. To download the file, paste the returned **Base64** string in the browser URL bar and press the enter button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="ExportMap">Export Treemap</button>
@@ -90,7 +90,7 @@ The [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The TreeMap component is rendered again.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="RefreshCall">Refresh</button>
@@ -125,7 +125,7 @@ The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
 | levelOrder | Defines the level order name for the treemap item. |
 | isSelected | Defines whether it has to select or unselect. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="SelectCall">Select</button>

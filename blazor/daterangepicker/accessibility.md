@@ -66,7 +66,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 
 > To focusout the DateRangePicker component use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="RangeObj"></SfDateRangePicker>

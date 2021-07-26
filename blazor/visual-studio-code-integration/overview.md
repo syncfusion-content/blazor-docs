@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Overview in Blazor - Syncfusion
-description: Check out the documentation for Overview in Blazor
+title: Overview of Syncfusion Essential Studio for Blazor extensions for Visual Studio Code | Syncfusion
+description: Learn here all about introduction of Syncfusion Essential Studio for Blazor extensions for Visual Studio Code.
 platform: Blazor
 component: Common
 documentation: ug

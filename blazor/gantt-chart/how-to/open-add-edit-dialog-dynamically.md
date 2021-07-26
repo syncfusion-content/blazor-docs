@@ -11,7 +11,7 @@ documentation: ug
 
 Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDialog` and `OpenEditDialog` methods. The following code example shows how to open add and edit dialog on separate button click actions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="AddDialog">Add Dialog</button>
 <button @onclick="EditDialog">Open Edit dialog task 3</button>

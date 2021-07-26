@@ -49,7 +49,7 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 > In the following sample, disable the AutoComplete component using <kbd>t</kbd> keys.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Countries" @ref="AutoObj" Placeholder="Select a country" Enabled="@enable" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">

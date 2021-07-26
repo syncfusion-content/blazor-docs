@@ -38,7 +38,7 @@ Following is the list of classes that provides flexible way to customize the Dat
 | e-selected | Applied to Calendar selected dates.|
 | e-disabled | Applied to Calendar disabled dates.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" Placeholder="Select a range" CssClass="CustomCSS" ></SfDateRangePicker>

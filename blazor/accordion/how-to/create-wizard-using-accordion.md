@@ -13,7 +13,7 @@ Accordion items can be disabled and expanded dynamically using accordion item **
 
 In the below demo, designed for simple payment module that Enable/Disable Accordion based on sequential validation of each Accordion content.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons

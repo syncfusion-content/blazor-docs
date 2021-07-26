@@ -13,7 +13,7 @@ Tooltip Template property can be used to customize the tooltip layout or to add 
 
 Refer to the following code example to add and display a HTML page to the Tooltip.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons;
 @using Syncfusion.Blazor.Popups;
 

@@ -13,7 +13,7 @@ You can display custom tooltip in Grid column using [`Column Template`](https://
 
 This is demonstrated in the below sample code we have render the tooltip for **FirstName** column using [`Column Template`](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Popups
 

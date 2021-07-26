@@ -12,7 +12,7 @@ documentation: ug
 An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) of layout should be set as an `OrganizationalChart`.
 The following code example illustrates how to create an organizational chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -114,7 +114,7 @@ Assistants are child item that have a different relationship with the parent nod
 
 The following code example illustrates how to add assistants to layout.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -241,7 +241,7 @@ The following table illustrates the different chart orientations and chart types
 
 The following code example illustrates how to set the vertical right arrangement to the leaf level trees.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -371,7 +371,7 @@ DiagramLayout LayoutValue = new DiagramLayout()
 
 Diagram allows to expand/collapse the subtrees of a layout. The node’s isExpanded property allows you to expand/collapse its children. The following code example shows how to expand/collapse the children of a node.
 
-```csharp
+```cshtml
 @code{
     DiagramNode NodeDefaults = new DiagramNode()
     {

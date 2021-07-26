@@ -22,7 +22,7 @@ Data markers can be defined using the following properties:
 
 The following code example demonstrates how to implement data markers in the Gantt chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration"

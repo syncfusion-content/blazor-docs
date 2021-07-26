@@ -13,7 +13,7 @@ Button component has RTL support. This can be achieved by setting [`EnableRtl`](
 
 The following example illustrates how to enable right-to-left support in Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton IconCss="e-icons e-setting-icon" EnableRtl="true">Settings</SfButton>

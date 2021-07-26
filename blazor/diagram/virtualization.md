@@ -17,7 +17,7 @@ This feature gives an optimized performance while loading and dragging items to 
 
 The following code illustrates how to enable [`Virtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html) mode in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 @* Initialize Diagram *@

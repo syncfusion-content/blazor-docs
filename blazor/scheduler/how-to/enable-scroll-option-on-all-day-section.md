@@ -13,7 +13,7 @@ When you have larger number of appointments in all-day row, it is difficult to v
 
 > This property is not applicable for Scheduler with height `auto`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" EnableAllDayScroll="true" @bind-SelectedDate="@CurrentDate">

@@ -38,7 +38,7 @@ This section briefly explains how to include a Linear Gauge component in your Bl
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.LinearGauge** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 The Syncfusion Linear Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Linear Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfLinearGauge>
@@ -95,7 +95,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 
 > In Linear Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>

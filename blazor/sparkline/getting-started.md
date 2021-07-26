@@ -37,7 +37,7 @@ This section briefly explains how to include a Sparkline component in the Blazor
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 ```
 
@@ -70,7 +70,7 @@ namespace BlazorApplication
 
 To initialize the Sparkline component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and the following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfSparkline>
@@ -82,7 +82,7 @@ To initialize the Sparkline component, add the below code to the **Index.razor*
 
 To bind data for the Sparkline component, assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```csharp
+```cshtml
 @code {
     public class WeatherReport
     {

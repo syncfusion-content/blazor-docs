@@ -674,7 +674,7 @@ In this demo, the revenue cost for each year is represented with trend icons.
 >We need to specify the model type for datasource from which the context will be generated and accessed in the CellTemplate. Using the context we can define the conditions based on that templates will be appended to the cell element
 
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="TemplateData" Height="300" Width="800">

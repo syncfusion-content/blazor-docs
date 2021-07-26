@@ -636,7 +636,7 @@ The main purpose of these mapping options is to configure each field that is not
 > This option is applicable only for relational data source.
 In the below code sample, visibility of the field button icons are configured.
 
- ```csharp
+ ```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true">
@@ -863,7 +863,7 @@ For instance, to bind data directly from the data access layer class **OrderData
 
 On the other hand, to configure the pivot table using Web API, provide the appropriate endpoint [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/) type under [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) class. Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the Entity Framework appropriately.
 
-```csharp
+```cshtml
 @using EFPivot.Data
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PivotView

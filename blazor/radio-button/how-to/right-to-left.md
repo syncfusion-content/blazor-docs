@@ -13,7 +13,7 @@ Radio Button component has RTL support. This can be achieved by setting [`Enable
 
 The following example illustrates how to enable right-to-left support in Radio Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Default" EnableRtl="true" Value="Default" @bind-Checked="stringChecked"></SfRadioButton>

@@ -13,7 +13,7 @@ By default, DataGrid will occupy the entire space of the parent element when Dat
 
 To overcome this behavior we suggest you to render a container element enclosing the DataGrid with specific height and set the DataGrid height as 100%.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids

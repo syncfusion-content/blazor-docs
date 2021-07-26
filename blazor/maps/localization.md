@@ -46,7 +46,7 @@ The localization library allows to localize the default text content of the Maps
 
 To load data related to toolbar items, use the `LoadLocaleData` method, and set culture using the `SetCulture` method. To customize other properties such as data label and tooltip text, provide value in corresponding culture format as demonstrated in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Maps
 

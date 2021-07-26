@@ -13,7 +13,7 @@ documentation: ug
 
 To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeModel~AllowPrint.html) property to **true**. The rendered linear gauge can be printed directly from the browser by calling the method [`print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.SfLinearGauge~Print.html). You can get the Linear Gauge component object using `@ref="Gauge"`
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <button @onclick="PrintGauge">Print</button>
@@ -41,7 +41,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 * PNG
 * SVG
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 <button @onclick="ExportGauge">Export</button>
 <SfLinearGauge @ref="Gauge" AllowImageExport="true">
@@ -62,7 +62,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 
 To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeModel~AllowPdfExport.html) property to **true**. The rendered linear gauge can be exported as PDF using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.SfLinearGauge~Export.html) method. The [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.SfLinearGauge~Export.html) method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 <button @onclick="ExportGauge">Export</button>
 <SfLinearGauge @ref="Gauge" AllowPdfExport="true">

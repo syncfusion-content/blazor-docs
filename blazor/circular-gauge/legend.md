@@ -83,7 +83,7 @@ The `Font` of the legend item text can be customized using the following propert
 
 The following code example shows how to add legend in the gauge.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -121,7 +121,7 @@ The following code example shows how to add legend in the gauge.
 
 The toggle option has been provided for legend. So, if you toggle the legend, the given color will be changed to the corresponding circular gauge range. You can enable the toggle option using `ToggleVisibility` in the `CircularGaugeLegendSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -157,7 +157,7 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 
 By default, paging will be enabled if the legend items exceed the legend bounds. You can view each legend item by navigating between the pages using navigation buttons.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -193,7 +193,7 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 
 You can customize the legend text using `LegendText` property in `CircularGaugeRange`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>

@@ -35,7 +35,7 @@ the appropriate columns should be mapped to the [Fields](https://help.syncfusion
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
@@ -87,7 +87,7 @@ the appropriate columns should be mapped to the [Fields](https://help.syncfusion
 
 In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData">
@@ -138,7 +138,7 @@ data from the database and bind it to the DropDownList.
 
 The following sample displays the first 6 contacts from **Customers** table of the `Northwind` Data Service.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -175,7 +175,7 @@ The output will be as follows.
 
 Use the `WebApiAdaptor` to bind DropDownList with Web API created using OData.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -462,7 +462,7 @@ namespace EFDropDown.Controllers
 
 Now you can configure the DropDownList using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

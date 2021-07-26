@@ -95,7 +95,7 @@ namespace TabLocalization
 
 * Finally, specify add the Tabs in razor page as in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab ShowCloseButton="true">
@@ -225,7 +225,7 @@ The following steps explain you to set `de-DE` culture for Tabs in web assembly 
 
 5. Finally, add the Tabs in razor page as in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab ShowCloseButton="true">

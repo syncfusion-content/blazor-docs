@@ -22,7 +22,7 @@ then the Value will be set to the Max date of 25th May since the value 28th is g
 
 If you are trying to enter the invalid date, then the Value will stay with the previous value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' StrictMode=true Value='@DateValue'></SfDatePicker>
@@ -50,7 +50,7 @@ If you are entering out-of-range or invalid date value, then the model value wil
 `out of range` date value or `null` respectively with highlighted  `error` class to indicate
 the date is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' StrictMode=false Value='@DateValue'></SfDatePicker>

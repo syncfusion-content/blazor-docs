@@ -27,7 +27,7 @@ The form fields displayed in the PDF Viewer are:
 
 The PDF Viewer control provides an option to disable the form fields feature . The code snippet for disabling the feature is as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" EnableFormFields=false />
@@ -66,7 +66,7 @@ The PDF Viewer control provides the support to import and export formfields usin
 
 You can import the formfields using JSON file or JSON object in code behind like the below code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 
@@ -88,7 +88,7 @@ public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf
 
 You can export the formfields as JSON file in code behind as the following code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

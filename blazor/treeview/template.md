@@ -15,7 +15,7 @@ The NodeTemplate tag is nested inside the TreeViewTemplates tag, where you can d
 
 In the following sample, employee information such as employee photo, name, and designation have been included using the `NodeTemplate` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
 

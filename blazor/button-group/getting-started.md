@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 Open `/_Imports.razor file` and import the Syncfusion.Blazor.SplitButtons packages otherwise import these packages in the individual `razor` pages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SplitButtons
 ```

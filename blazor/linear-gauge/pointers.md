@@ -11,7 +11,7 @@ documentation: ug
 
 Pointers are used to indicate values on an axis. The value of the pointer can be modified using the [`Value`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~Value.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -54,7 +54,7 @@ The following marker types are available in linear gauge. You can change the mar
 
 You can also use an image instead of rendering a shape as pointer. It can be achieved by setting the [`MarkerType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.MarkerType.html) property to `Image` and setting image path to [`ImageUrl`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~ImageUrl.html) in [`LinearGaugePointer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer_members.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -85,7 +85,7 @@ The marker pointer can be customized using following properties.
 * [`AnimationDuration`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~AnimationDuration.html) - Specifies pointer animation duration
 * [`LinearGaugePointerBorder`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~Border.html) - Specifies pointer border color and width
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -111,7 +111,7 @@ The marker pointer can be customized using following properties.
 
 The bar pointer is used to track the axis value, and it is rendered depending upon the container type. The bar pointer starts from the beginning of the gauge and ends at the pointer value. To enable bar pointer set 'Point.Bar' value in [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.Point.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -140,7 +140,7 @@ The bar pointer can be customized using following properties.
 * [`LinearGaugePointerBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~Border.html) - Specifies bar pointer border width and color
 * [`AnimationDuration`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~AnimationDuration.html) - Specifies animation duration for bar pointer
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -169,7 +169,7 @@ You can placement the marker pointer in any of the following locations using [`P
 * Center
 * None
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -193,7 +193,7 @@ You can placement the marker pointer in any of the following locations using [`P
 
 In addition to the default pointer, you can add n number of pointers to an axis.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -218,7 +218,7 @@ In addition to the default pointer, you can add n number of pointers to an axis.
 
 Pointer is animated on loading the gauge. This can be handled using the [`AnimationDuration`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~AnimationDuration.html) property. You need to specify the duration of the animation in milliseconds.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -239,7 +239,7 @@ Pointer is animated on loading the gauge. This can be handled using the [`Animat
 
 You can drag either marker or bar pointer to the desired axis value using the [`EnableDrag`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer~EnableDrag.html) property in the [`LinearGaugePointer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugePointer_members.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -269,7 +269,7 @@ Using linear gradient, colors will be applied in a linear progression. The start
 
 The linear gradient can be applied to all pointer types like marker and range bar. To do so, follow the below code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Orientation="Orientation.Horizontal">
@@ -314,7 +314,7 @@ Using radial gradient, colors will be applied in circular progression. The inner
 
 The radial gradient can be applied to all pointer types like marker and range bar. To do so, follow the below code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Orientation="Orientation.Horizontal">

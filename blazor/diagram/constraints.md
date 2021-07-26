@@ -45,7 +45,7 @@ The following list of diagram constraints are used to Enables or Disables certai
 
 The following example shows how to disable page editing using the diagram constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -141,7 +141,7 @@ The following list of node constraints are used to Enables or Disables certain f
 
 The following example shows how to disable rotation using the node constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -229,7 +229,7 @@ The following list of connector constraints are used to Enables or Disables cert
 
 The following code shows how to disable selection by using the connector constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -300,7 +300,7 @@ The following list of port constraints are used to Enables or Disables certain f
 
 The following code shows how to disable creating connections with a port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -374,7 +374,7 @@ The following list of annotation constraints are used to Enables or Disables cer
 
 The following code shows how to enable read-only mode for the annotations.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -456,7 +456,7 @@ The following list of selector constraints are used to Enables or Disables certa
 
 The following code shows how to hide rotator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -528,7 +528,7 @@ The following list of snapping constraints are used to Enables or Disables certa
 
 The following code shows how to show only horizontal gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -581,7 +581,7 @@ The following list of constraints are used to Enables or Disables certain featur
 
 The following code shows how to limit the interaction done inside a diagram within a page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -622,7 +622,7 @@ Some of the behaviors can be defined through both the specific object (node or c
 
 The following code example shows how to inherit the line bridging behavior from the diagram model.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -667,7 +667,7 @@ You can add or enable multiple values at a time by using the Bitwise ‘|’ (OR
 
 The following code shows to add line routing constraints into the default diagram constraints to enable line routing functionality into the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -687,7 +687,7 @@ You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
 The following code shows to remove zoom and pan constraints from the default constraints to disable zoom and panning functionality in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

@@ -117,7 +117,7 @@ namespace blazorInputs
 
 * Finally, Specify the culture for Numeric TextBox using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" Value=10 Locale="de"></SfNumericTextBox>
@@ -180,7 +180,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @inject HttpClient Http
 
@@ -229,7 +229,7 @@ RTL provides an option to switch the text direction and layout of the NumericTex
 
 The following code example initializes the NumericTextBox component in `Chinese` culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @inject HttpClient Http
 

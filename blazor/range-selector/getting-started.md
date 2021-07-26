@@ -38,7 +38,7 @@ This section briefly explains how to include a Range Navigator component in the 
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 To initialize the Range Navigator component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfRangeNavigator>
@@ -83,7 +83,7 @@ To initialize the Range Navigator component, add the below code to the **Index.
 
 To bind the data for the Range Navigator component, assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```csharp
+```cshtml
 @code {
     public class StockPrice
     {

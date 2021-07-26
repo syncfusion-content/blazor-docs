@@ -66,7 +66,7 @@ Chart is a generic component which is strongly bound to a model type. There are 
 
 **ExpandoObject** can be bound to chart by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 @using System.Dynamic
 
@@ -131,7 +131,7 @@ ODataV4 is an enhanced version of OData protocols, and [`SfDataManager`](https:/
 
 You can use the [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind chart with the Web API created using the [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
 
@@ -155,7 +155,7 @@ To add a custom parameter to the data request. Assign the Query object with addi
 
 The following sample code demonstrates sending parameters using the Query property in the series,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
 
@@ -378,7 +378,7 @@ For instance, to bind data directly from the data access layer class **OrderData
 
 On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Data
 

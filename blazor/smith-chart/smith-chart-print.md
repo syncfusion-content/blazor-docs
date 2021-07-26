@@ -13,7 +13,7 @@ documentation: ug
 
 The rendered Smith Chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Print).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button id="print" @onclick="Print">Print</button>
@@ -58,7 +58,7 @@ The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF
 * **File name** - To specify the file name to export.
 * **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button id="export" @onclick="Export">Export</button>

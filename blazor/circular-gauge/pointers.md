@@ -11,7 +11,7 @@ documentation: ug
 
 Pointers are used to indicate values on an axis. The value of a pointer can be modified using the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -34,7 +34,7 @@ The Circular Gauge supports three types of pointers such as [`Needle`](https://h
 
 The circular gauge's default pointer type will be needle. A needle point contains three parts, a needle, a cap / knob, and a tail.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -69,7 +69,7 @@ The needle, tail and cap of the pointer can be customized with the following pro
     * [`CircularGaugeCapBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeCap.html#Syncfusion_Blazor_CircularGauge_CircularGaugeCap_Border) - sets pointer's cap border
     * [`Position`] - specifies the position of the Pointer. Its possible values are 'PointerRangePosition.Inside', 'PointerRangePosition.Outside' and 'PointerRangePosition.Cross'.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Height="250px" Width="250px">
@@ -103,7 +103,7 @@ The needle, tail and cap of the pointer can be customized with the following pro
 
 The appearance of the needle pointer can be customized by using [`NeedleStartWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleStartWidth) and [`NeedleEndWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_NeedleEndWidth).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -155,7 +155,7 @@ The appearance of the needle pointer can be customized by using [`NeedleStartWid
 The range bar pointer is like a range in an axis that can be placed on gauge to mark the pointer value. The
 range bar starts from the beginning of the gauge and ends at the pointer value. You can set the pointer type using `Type` property in `CircularGaugePointer`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -183,7 +183,7 @@ You can customize the range bar using the following properties.
 * [`RoundedCornerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_RoundedCornerRadius) - Specifies the rounded corner of the range bar
 * [`CircularGaugePointerBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - Specifies the border of the range bar
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -211,7 +211,7 @@ You can customize the range bar using the following properties.
 
 The start and end pointers of a range bar in the Circular Gauge are rounded to form arc using `RoundedCornerRadius` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -239,7 +239,7 @@ The different types of marker shapes can be used to mark the pointer value in an
 * InvertedTriangle
 * Diamond
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -270,7 +270,7 @@ You can customize the marker pointer using the following properties.
 * [`Radius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Radius) - specifies marker pointer radius
 * [`CircularGaugePointerBorder`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerBorder.html) - specifies marker pointer's border color and width.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -298,7 +298,7 @@ You can customize the marker pointer using the following properties.
 
 You can use image instead of rendering marker shape to denote the pointer value. It can be achieved by setting [`MarkerShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_MarkerShape) to 'GaugeShape.Image' and assigning image path to [`ImageUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_ImageUrl) as shown in following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -328,7 +328,7 @@ You can use image instead of rendering marker shape to denote the pointer value.
 The pointers can be dragged over the axis values by clicking and dragging the same. To enable or disable the pointer drag, use the
 [`EnablePointerDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge EnablePointerDrag="true" Height="250px" Width="250px">
@@ -349,7 +349,7 @@ The pointers can be dragged over the axis values by clicking and dragging the sa
 
 In addition to the default pointer, you can add n number of pointers to an axis using the [`CircularGaugePointers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html) tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -395,7 +395,7 @@ The pointers are animated on loading the gauge using the [`CircularGaugePointerA
 The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Enable) property in animation allows you to enable or disable the animation.
 The [`Duration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointerAnimation.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointerAnimation_Duration) property specifies the duration of the animation in milliseconds.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Height="250" Width="250">
@@ -427,7 +427,7 @@ Using linear gradient, colors will be applied in a linear progression. The start
 
 The linear gradient can be applied to all pointer types like marker, range bar and needle. To do so, follow the below code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>
@@ -492,7 +492,7 @@ Using radial gradient, colors will be applied in circular progression. The inner
 
 The radial gradient can be applied to all pointer types like marker, range bar and needle. To do so, follow the below code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge>

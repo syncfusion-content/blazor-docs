@@ -39,7 +39,7 @@ This section briefly explains about how to include a **MultiSelect** Component i
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.DropDowns` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 ```
 

@@ -14,7 +14,7 @@ documentation: ug
 The excel export allows exporting DataGrid data to Excel document. You need to use the
  **ExcelExport** method for exporting. To enable Excel export in the datagrid, set the [`AllowExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property as true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
@@ -69,7 +69,7 @@ The excel export provides an option to customize mapping of the datagrid to exce
 
 The excel export provides an option to export the current page into excel. To export current page, define **exportType** to **CurrentPage**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
@@ -122,7 +122,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 The excel export provides an option to export hidden columns of datagrid by defining **includeHiddenColumn** as **true**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
@@ -177,7 +177,7 @@ You can show a hidden column or hide a visible column while exporting the datagr
 
 This is demonstrated in the below sample code where initially the **CustomerID** is hidden. While exporting, we have changed CustomerID to visible column and Freight as hidden column. Then in the `ExcelExportComplete` event, we have reversed the column's visibility state back to the previous state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -240,7 +240,7 @@ The excel export provides an option to include theme for exported excel document
 
 To apply theme in exported Excel, define the **theme** in export properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
@@ -307,7 +307,7 @@ The excel export provides an option to include header and footer content for exp
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -463,7 +463,7 @@ This is demonstrated in the below sample code,
 
 You can assign the file name for the exported document by defining **fileName** property in excel export properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowSorting="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
@@ -517,7 +517,7 @@ You can assign the file name for the exported document by defining **fileName** 
 The excel export provides outline option for grouped records which hides the detailed data for better viewing.
 In datagrid, we have provided the outline option for the exported document when the data's are grouped.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowGrouping="true" Toolbar="@(new List<string>() { "ExcelExport" })" AllowExcelExport="true" AllowPaging="true">
@@ -573,7 +573,7 @@ Microsoft Excel permits up to seven nested levels in outlines. So that in the da
 
 You can export the Excel grid with specific columns instead of all columns which are defined in the Grid definition. To achieve this scenario by using [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html#Syncfusion_Blazor_Grids_ExcelExportProperties_Columns) property of the [`ExcelExportProperties`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ExcelExportProperties.html) class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowExcelExport="true" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -639,7 +639,7 @@ The excel export provides support to export multiple grids in the same sheet. To
 
 This is demonstrated in the below sample code block,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -723,7 +723,7 @@ The excel export provides support to export multiple grids in new sheet. To expo
 
 This is demonstrated in the below sample code block,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -804,7 +804,7 @@ Excel export provides an option to define the datasource dynamically before expo
 
 The following sample code demonstrates dynamically modifying the data source before exporting it,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowExcelExport="true" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -860,7 +860,7 @@ Excel export provides an option to define the columns dynamically before exporti
 
 The following sample code demonstrates dynamically adding `ShipCountry` column in the exported excel file,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" AllowExcelExport="true" AllowPaging="true" Toolbar="@(new List<string>() { "ExcelExport" })">
@@ -928,7 +928,7 @@ The available options are,
 
 The following sample code demonstrates modifying the export options for hierarchy datagrid,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 

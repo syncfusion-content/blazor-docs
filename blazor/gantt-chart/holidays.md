@@ -18,7 +18,7 @@ Non-working days in a project can be displayed in the Gantt Chart component usin
 
 The following code example shows how to display the non-working days in the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"

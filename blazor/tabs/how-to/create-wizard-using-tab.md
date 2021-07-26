@@ -28,7 +28,7 @@ Create the following contents for each tab in the wizard.
 
 You can go back on each tab using buttons available in it and tabs are disabled to navigate through tab header click actions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Calendars

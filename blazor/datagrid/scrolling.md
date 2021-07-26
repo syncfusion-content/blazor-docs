@@ -21,7 +21,7 @@ documentation: ug
 
 To specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) of the scroller in the pixel, set the pixel value to a number.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" Width="400">
@@ -65,7 +65,7 @@ To specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 Specify the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) as **100%** to make the datagrid element fill its parent container.
 Setting the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) to **100%** requires the datagrid parent element to have explicit height or you can use calc function to set explicit height based on the browser layout.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <div style="width:calc(100vw - 20rem); height:calc(100vh - 7rem);">
@@ -113,7 +113,7 @@ Frozen rows and columns provides an option to make rows and columns always visib
 In this demo, the [`FrozenColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenColumns) is set as '2' and the [`FrozenRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FrozenRows)
 is set as '3'. Hence, the left two columns and top three rows are frozen.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" Height="400" >
@@ -170,7 +170,7 @@ To freeze particular column in the datagrid, the [`IsFrozen`](https://help.syncf
 In this demo, the columns with field name **OrderID** and **EmployeeID** is frozen using
 the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen) property of **GridColumn**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenRows="3" Width="100%" Height="400" >
@@ -227,7 +227,7 @@ the [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 
 The following demo shows how to change the default frozen line color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSelection="false" EnableHover="false" FrozenColumns="2" FrozenRows="3" Width="100%" Height="400">

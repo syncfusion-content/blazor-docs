@@ -17,7 +17,7 @@ The Tooltip can either be assigned auto height and width values or specific pixe
 
 The following sample explains how to set dimensions for the Tooltip.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -39,7 +39,7 @@ Output be like the below.
 
 When `Height` is specified with a certain pixel value and the Tooltip content overflows, the scrolling mode gets enabled.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 
 <SfTooltip ID="tooltip" Height="60px" Width="200px" IsSticky="true" Target="#target" Content="@Content">

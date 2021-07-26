@@ -43,7 +43,7 @@ You cannot finish a task until the dependent task is completed.
 
 Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the `GanttTaskFields.Dependency` property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
@@ -155,7 +155,7 @@ In the Gantt Chart component, the predecessor offset can be defined with the fol
 
 You can define an offset with various offset duration units for predecessors by using the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks">
@@ -267,7 +267,7 @@ By default, the `PreserveLinkWithEditing` validation mode will be enabled, so th
 
 The following sample explains enabling the `RespectLink` validation mode while editing the linked tasks in the `OnActionBegin` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"

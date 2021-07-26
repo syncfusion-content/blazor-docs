@@ -13,7 +13,7 @@ Split Button component can be enabled or disabled by disabled property. To disab
 
 The following example illustrates how to set the disable state in Split Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" Disabled="true">

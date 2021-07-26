@@ -27,7 +27,7 @@ The following table explains the usage of indicator icons.
 
 > In the **OnNodeDragged** event currently there is no option to cancel the event. However you can access the other event arguments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="TeamDetails" AllowDragAndDrop="true">
     <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Child="Children" DataSource="@Team" Expanded="Expanded"></TreeViewFieldsSettings>
@@ -125,7 +125,7 @@ To perform multi-selection, press and hold **CTRL** key and click the desired no
 
 In the following sample,  the `AllowMultiSelection` property is  enabled along with the `AllowDragAndDrop` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="TeamDetails" AllowDragAndDrop="true" AllowMultiSelection="true">
     <TreeViewFieldsSettings TValue="TeamDetails" Id="Id" Text="Name" Selected="Selected" Child="Children" DataSource="@Team" Expanded="Expanded"></TreeViewFieldsSettings>

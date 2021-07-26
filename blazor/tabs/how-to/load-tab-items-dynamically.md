@@ -13,7 +13,7 @@ Tabs can be added dynamically by list of items and index value to the `AddTab` m
 
 In the following code example, the tab item has been added in which content is passed as `ContentTemplate` using `RenderFragment`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Grids

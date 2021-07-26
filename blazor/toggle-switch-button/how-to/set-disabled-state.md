@@ -13,7 +13,7 @@ Toggle Switch Button can be disabled by setting the [`Disabled`](https://help.sy
 
 The following example illustrates how to disable support in Toggle Switch Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfSwitch Disabled="true" @bind-Checked="isChecked"></SfSwitch>

@@ -44,7 +44,7 @@ To get start quickly with Blazor Calendar component, you can check on this video
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Calendars` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 ```
 

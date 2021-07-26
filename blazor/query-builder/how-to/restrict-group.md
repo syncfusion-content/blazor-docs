@@ -13,7 +13,7 @@ The Querybuilder allows you to restrict the groups from creation based on group 
 
 > By default, MaxGroupCount is set as 5.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder DataSource="@EmployeeData" MaxGroupCount="2">

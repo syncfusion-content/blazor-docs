@@ -11,7 +11,7 @@ documentation: ug
 
 Render the TextBox with `rounded corner` by adding the `e-corner` class to the input parent element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' CssClass="e-corner"></SfTextBox>

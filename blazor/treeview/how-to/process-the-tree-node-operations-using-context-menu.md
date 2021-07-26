@@ -13,7 +13,7 @@ You can integrate the context menu with `TreeView` component in order to perform
 
 Following is an example which demonstrates the above cases which are used to manipulate TreeView operations in the `ItemSelected` event of context menu.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div id="treeview">

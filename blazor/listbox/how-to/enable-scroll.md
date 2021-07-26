@@ -13,7 +13,7 @@ The ListBox supports scrolling and it can be achieved by restricting the height 
 
 In the following sample, `Height` of the listbox is restricted to `290px`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" Height="290px" TItem="VehicleData">

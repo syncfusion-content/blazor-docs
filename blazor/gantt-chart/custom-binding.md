@@ -75,7 +75,7 @@ The custom data binding can be performed in the Gantt component by providing the
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
@@ -198,7 +198,7 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 The following sample code demonstrates injecting service into Custom Adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
@@ -316,7 +316,7 @@ The CRUD operations for the custom bounded data in the Gantt component can be im
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;

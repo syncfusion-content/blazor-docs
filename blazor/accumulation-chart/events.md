@@ -45,7 +45,7 @@ PointMoved|
 
 [`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnDataLabelRender) event is triggers, before datalabel for series is render.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -85,7 +85,7 @@ PointMoved|
 
 [`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnLegendItemRender) event is triggers, before legend getting rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -126,7 +126,7 @@ PointMoved|
 
 [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointRender) event is triggers, before the point rendering.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -165,7 +165,7 @@ PointMoved|
 
 [`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnExportComplete) after the export completed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="Export" class="btn-success">Export</button>
@@ -211,7 +211,7 @@ PointMoved|
 
 `OnPrintComplete` event is triggers, after the print completed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="Print" class="btn-success">Print</button>
@@ -257,7 +257,7 @@ PointMoved|
 
 [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_SizeChanged) event is triggers, after resizing of chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -296,7 +296,7 @@ PointMoved|
 
 `Loaded` event is triggers after accumulation chart loaded.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -335,7 +335,7 @@ PointMoved|
 
 [`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_OnPointClick) event is triggers, when the point click.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
@@ -374,7 +374,7 @@ PointMoved|
 
 [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html#Syncfusion_Blazor_Charts_AccumulationChartEvents_TooltipRender) event is triggers, before the tooltip for series is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">

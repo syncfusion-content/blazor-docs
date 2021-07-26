@@ -11,7 +11,7 @@ documentation: ug
 
 The time formatting can be achieved same as the date formatting using `TicksRendering` and `TooltipChange` events. The process of time formatting is explained in the below sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider TValue="int[]" Min="MinValue()" Max="@MaxValue()" Type="SliderType.Range" @bind-Value="@SliderValues">

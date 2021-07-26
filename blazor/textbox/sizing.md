@@ -16,7 +16,7 @@ Property   | Description
   Normal     | By default, the TextBox is rendered with normal size.
   Small      | You need to add `e-small` class to the input element, or else add to the input container.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <label>Normal</label>

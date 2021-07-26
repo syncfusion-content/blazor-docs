@@ -23,7 +23,7 @@ You can check out the following video to bind the appointments in the Blazor Sch
 
 To bind local data to the Scheduler, you can simply assign a List of datasource collections to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. The local data source can also be provided as an instance of the `DataManager`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@(new DateTime(2020, 2, 12))">
@@ -66,7 +66,7 @@ Any kind of remote data services can be bound to the Scheduler. To do so, provid
 
 [ODataV4](https://www.odata.org/documentation/) is a standardized protocol for creating and consuming data. Refer to the following code example to retrieve the data from ODataV4 service using the DataManager. To connect with ODataV4 service end points, it is necessary to make use of `ODataV4Adaptor` within `DataManager`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
@@ -86,7 +86,7 @@ Any kind of remote data services can be bound to the Scheduler. To do so, provid
 
 It is possible to create your own `CustomAdaptor` by extending the built-in available adaptors. The following example demonstrates the custom adaptor usage and how to bind the data with custom service and the CRUD operations for custom bounded data is performed using the methods of [DataAdaptor](https://blazor.syncfusion.com/documentation/data/custom-binding/) abstract class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
@@ -399,7 +399,7 @@ namespace Restful_Services.Controllers
 
 Now you can configure the Scheduler using the `SfDataManager` to interact with the created Odata service and consume the data appropriately. To interact with Odata, you need to use `ODataV4Adaptor`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
@@ -420,7 +420,7 @@ Now you can configure the Scheduler using the `SfDataManager` to interact with t
 
 To send an additional custom parameter to the server-side post, you need to make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
@@ -446,7 +446,7 @@ The value passed to the additional parameter is shown in the following image.
 
 The CRUD (Create, Read, Update and Delete) actions can be performed easily on Scheduler appointments using the various adaptors available within the `DataManager`. Most preferably, we will be using `ODataV4Adaptor` for performing CRUD actions on scheduler appointments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Schedule

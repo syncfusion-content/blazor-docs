@@ -36,7 +36,7 @@ documentation: ug
 
  **Step 5:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewer
 ```
@@ -62,7 +62,7 @@ For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentatio
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the ConfigureServices function as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 namespace BlazorApplication

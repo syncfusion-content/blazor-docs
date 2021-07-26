@@ -30,7 +30,7 @@ Circular Gauge provides internationalization support for below elements.
 
 In the below example axis labels are `globalized` to EUR.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.CircularGauge
 @using Microsoft.JSInterop;

@@ -11,7 +11,7 @@ documentation: ug
 
 TreeView control allows you to set tooltip option to tree nodes using the `Tooltip` property. The following code example demonstrates how to set tooltip for TreeView nodes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTreeView TValue="DriveData">

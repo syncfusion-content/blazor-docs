@@ -15,7 +15,7 @@ To place the icon on a listbox, set the [`IconCss`](https://help.syncfusion.com/
 
 In the following sample, icon classes are mapped with `IconCss` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@SettingsData" TItem="SettingItems">
@@ -74,7 +74,7 @@ Output will be shown as
 
 ListBox items can be customized according to the requirement using [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Data" TItem="ListData">

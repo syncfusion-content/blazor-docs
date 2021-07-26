@@ -13,7 +13,7 @@ documentation: ug
 
 The Context Menu item have an icon/image in it to provide visual representation of the action. To place the icon on a menu item, set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_IconCss) property to e-icons with the required icon CSS. By default, the icon is positioned to the left side of the menu item. In the following sample, the icons for Cut, Copy and Paste menu items are added using the `IconCss` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the Context Menu </div>
@@ -59,7 +59,7 @@ You can also use third party icons on the Context Menu using the `IconCss`proper
 
 Navigation in Context Menu is usage to navigate to the other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property. In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal menu items are added using the `Url` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>

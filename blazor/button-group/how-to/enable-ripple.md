@@ -13,7 +13,7 @@ The following example illustrates how to enable ripple for ButtonGroup.
 
 `Index.razor`
 
-```csharp
+```cshtml
 @using Syncfusion.EJ2.RazorComponents;
 @using Microsoft.JSInterop;
 

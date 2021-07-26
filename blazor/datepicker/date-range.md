@@ -23,7 +23,7 @@ The following code allows selecting a
 date within the range from 7th to 27th in
 a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' Value='@DateValue'></SfDatePicker>
@@ -43,7 +43,7 @@ When the Min and Max properties are configured and the selected date value is ou
 invalid, then the model value will be set to `out of range` date value or `null` respectively
 with highlighted `error` class to indicate the date is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' Value='@DateValue'></SfDatePicker>

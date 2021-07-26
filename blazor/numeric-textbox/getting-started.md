@@ -44,7 +44,7 @@ To get start quickly with Blazor NumericTextBox component, you can check on this
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Inputs` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 ```
 

@@ -14,7 +14,7 @@ classes of those buttons.
 
 You can override the default icons of `e-spin-up` and `e-spin-down` classes using the following CSS code snippets.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" Value=10 CssClass="e-custom"></SfNumericTextBox>

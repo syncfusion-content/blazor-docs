@@ -12,7 +12,7 @@ documentation: ug
 The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
 Refer to the following example to change the appearance of the MaskedTextBox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="00000" Value="34523" CssClass="e-style" Placeholder="Enter user ID" FloatLabelType="@FloatLabelType.Always"> </SfMaskedTextBox>

@@ -13,7 +13,7 @@ The Syncfusion's Blazor PDF Viewer component allows to import annotations from o
 
 The following code example shows how to import annotations as objects, that are exported using the [ExportAnnotationsAsObject()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_ExportAnnotationsAsObject) method.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer

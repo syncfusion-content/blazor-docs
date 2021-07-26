@@ -21,7 +21,7 @@ list items. This is called as the `GetCheckedItemsAsync` method.
 | ParentId | Returns the currently selected item's Parent Id (applicable only in Nested List) |
 | Text | Returns array of text of selected item lists |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <div style="display: flex">

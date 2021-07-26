@@ -26,7 +26,7 @@ We have provided the following event support to the SplitButton component. The d
 
 Above defined events are bind the Split Button component. Here, we have explained about the sample code snippets of SplitButton.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
     <SfSplitButton Content="Profile">

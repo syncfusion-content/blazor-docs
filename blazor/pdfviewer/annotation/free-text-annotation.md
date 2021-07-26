@@ -25,7 +25,7 @@ In the pan mode, if the free text annotation mode is entered, the PDF Viewer con
 
 Refer to the following code snippet to switch to Free Text annotation mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -110,7 +110,7 @@ The properties of the free text annotation can be set before creating the contro
 After editing the default values, they will be changed to the selected values.
 Refer to the following code snippet to set the default free text annotation settings
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 

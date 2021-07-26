@@ -25,7 +25,7 @@ The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 The following examples shows data filtering is done with the `StartsWith` type.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -64,7 +64,7 @@ You can specify the filter suggestion item count using the
 
 Refer to the following example to restrict the suggestion list item counts as 3.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 
 <SfAutoComplete TValue="string" TItem="OrderDetails"  Placeholder="Select a customerID" SuggestionCount=3 Query="@RemoteDataQuery" FilterType="Syncfusion.Blazor.DropDowns.FilterType.StartsWith">
@@ -103,7 +103,7 @@ setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 In the following example, the remote request doesn't fetch the search data until the search key contains three characters.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -142,7 +142,7 @@ This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blaz
 
 The following sample depicts how to filter the data with case-sensitive.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -177,7 +177,7 @@ The following sample depicts how to filter the data with case-sensitive.
 
 The AutoComplete component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 
 <SfAutoComplete TValue="string" @ref="autoObj" TItem="Countries" Placeholder="e.g. Australia" AllowFiltering="true">

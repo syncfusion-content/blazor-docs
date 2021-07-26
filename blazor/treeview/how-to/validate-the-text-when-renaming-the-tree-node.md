@@ -11,7 +11,7 @@ documentation: ug
 
 You can validate the tree node text while editing using `NodeEdited` event of the TreeView. Following is an example that shows how to validate and prevent empty values in tree node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
     <SfTreeView TValue="MusicAlbum" AllowEditing="true" @ref="tree">
         <TreeViewEvents TValue="MusicAlbum" NodeEdited="AfterEdit"></TreeViewEvents>

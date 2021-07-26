@@ -15,7 +15,7 @@ The Scheduler supports exporting all its appointments both to an Excel or ICS ex
 
 The Scheduler allows you to export all its events into an Excel format file by using the `ExportToExcelAsync` method. By default, it exports all the default fields of Scheduler mapped through `<ScheduleEventSettings>` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -66,7 +66,7 @@ Exported Excel file be like below
 
 By default, Scheduler exports all the default event fields that are mapped to it through the `<ScheduleEventSettings>` property. To limit the number of fields on the exported excel file, it provides an option to export only the custom fields of the event data. To export such custom fields alone, define the required `Fields` and pass it as argument to the `ExportToExcelAsync` method as shown in the following example. In the following code example, only 'Id', 'Subject', 'StartTime', 'EndTime' fields were exported.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -113,7 +113,7 @@ Exported Excel file with custom fields be like below
 
 By default, the Scheduler exports recurring events as a single data by exporting only its parent record into the excel file. If you want to export each individual occurrences of a recurring series appointment as separate records in an Excel file, define the `IncludeOccurrences` option as `true` and pass it as argument to the `ExportToExcelAsync` method. By default, the `IncludeOccurrences` option is set to `false`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -158,7 +158,7 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 
 > By default, the event data are taken from Scheduler dataSource.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -225,7 +225,7 @@ By default, the whole event collection bound to the Scheduler gets exported as a
 
 By default, the Scheduler allows you to download the exported Excel file with a name `Schedule.xlsx`. It also provides an option to export the excel file with a custom file name, define the desired `FileName` and passing it as an argument to the `ExportToExcelAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -273,7 +273,7 @@ By default, the Scheduler allows you to download the exported Excel file with a 
 
 By default, the Scheduler exports event data to an excel file in the `.xlsx` format. You can also export the Scheduler data in either of the file type such as `.xlsx` or `csv` formats, by defining the `ExportType` option as either `csv` or `xlsx`. By default, the `ExportType` is set to `xlsx`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -321,7 +321,7 @@ By default, the Scheduler exports event data to an excel file in the `.xlsx` for
 
 You can export the Scheduler data with specific date format, by defining the `DateFormat` option which accepts the MSDN date format in string type. In the following code example, the scheduler appointments are exported in 24 hour date format.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -375,7 +375,7 @@ You can export the Scheduler events to a calendar (.ics) file format, and open i
 
 The following code example shows how the Scheduler events are exported to a calendar (.ics) file by making use of the `ExportToICalendarAsync` public method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -424,7 +424,7 @@ By default, the calendar is exported with a file name `Calendar.ics`. To change 
 
 The following example downloads the iCal file with a name `ScheduleEvents.ics`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -471,7 +471,7 @@ The following example downloads the iCal file with a name `ScheduleEvents.ics`.
 
 The events from external calendars (ICS files) can be imported into Scheduler by using the `ImportICalendarAsync` method. In the following code example events has been imported from an ICS file into Scheduler with the help of Uploader. In `ImportICalendarAsync` public method, ics file is passed as string format.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Inputs
 @using System.IO
@@ -551,7 +551,7 @@ The Scheduler allows you to print the Scheduler element by using the `PrintAsync
 
 You can print the Schedule element with the current view by using the `PrintAsync` method without passing the `PrintOptions` options. The following example shows how to print the Scheduler using the `PrintAsync` method without passing the `PrintOptions` options.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -603,7 +603,7 @@ You can print the Schedule element with the current view by using the `PrintAsyn
 
 You can print the Schedule element with customized Width and Height using the `PrintAsync` method by passing the `PrintOptions` Height and Width options. The following example shows how to print the Scheduler using the `PrintAsync` method by passing the `PrintOptions` options.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 

@@ -18,7 +18,7 @@ In the following example, the `AllowMultiSelection` property is enabled.
 
 > Multi selection is not applicable through touch interactions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="Country" AllowMultiSelection=true>
     <TreeViewFieldsSettings  TValue="Country" Id="Id" DataSource="@Countries" Text="Name" ParentID="ParentId" HasChildren="HasChild" Expanded="Expanded" Selected="IsSelected"></TreeViewFieldsSettings>

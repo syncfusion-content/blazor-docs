@@ -89,7 +89,7 @@ namespace BlazorApplication
 
 To initialize the ListBox component add the below code to your `Index.razor` view page which is present under ~/Pages folder. For example, the ListBox component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 <SfListBox TValue="string[]"></SfListBox>
@@ -102,7 +102,7 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 
 The following example illustrates the output in your browser.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">

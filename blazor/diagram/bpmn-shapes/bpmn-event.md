@@ -17,7 +17,7 @@ An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
 
 The event property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example explains how to create a BPMN event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -54,7 +54,7 @@ The event property of the node allows you to define the type of the event. The d
 
 Event triggers are notated as icons inside the circle and they represent the specific details of the process. The Trigger property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

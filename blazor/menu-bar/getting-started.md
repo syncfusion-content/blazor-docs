@@ -87,7 +87,7 @@ namespace BlazorApplication
 
 Now, add the Blazor Menu Bar component in `razor` page in the `Pages` folder. For example, the Menu Bar component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu TValue="MenuItem">

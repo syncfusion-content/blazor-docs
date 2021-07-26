@@ -15,7 +15,7 @@ Using the `@ref` property, create an object for the Sparkline component and call
 
 The refresh method helps to render the Sparkline component again.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="RefreshCall">Refresh</button>

@@ -18,7 +18,7 @@ Globalization is the process of designing and developing a component that works 
 
 In the following code example, tooltip and Data Label is globalized to currency format in deutsch culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="GDP" DataSource="GrowthReports" Format="C">

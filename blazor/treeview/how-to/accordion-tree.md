@@ -11,7 +11,7 @@ documentation: ug
 
 Accordion is an interface where a list of items can be collapsed or expanded, but only one list can be collapsed or expanded at a time. You can customize the TreeView to make it behave as an accordion. Refer to the following code sample to create an accordion tree.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div class="tree-container">

@@ -20,7 +20,7 @@ The following key shortcuts are used to access the ListView control without any 
 | <kbd>Select</kbd> | Select the targeted list from the whole list. |
 | <kbd>Back</kbd> | Get back to the previous lists if it is in nested list. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
 

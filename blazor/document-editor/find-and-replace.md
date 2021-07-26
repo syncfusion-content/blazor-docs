@@ -19,7 +19,7 @@ You can open the navigation pane using the `Ctrl+F` shortcut key and close using
 
 You can programmatically toggle the visibility of navigation pane using the `ShowOptionsPane()` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="OpenOptionsPane">OpenOptionsPane</button>
@@ -38,7 +38,7 @@ You can programmatically toggle the visibility of navigation pane using the `Sho
 
 You can invoke the search or find text functionality programmatically using the `FindAll()` method. Also, you can customize the search operation with options such as “**match case**” and “**whole words only**”. The following code example explains how to perform text search without any search options.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="FindAll">Find All</button>

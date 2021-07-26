@@ -25,7 +25,7 @@ The following operations can be performed in dual ListBox,
 
 The following example illustrates how to move items from `Group A` to `Group B` listbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <div id="listbox1">

@@ -13,7 +13,7 @@ Toggle Switch Button component has RTL support. This can be achieved by setting 
 
 The following example illustrates how to enable right-to-left support in Toggle Switch Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfSwitch EnableRtl="true" @bind-Checked="isCheked"></SfSwitch>

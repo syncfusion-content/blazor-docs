@@ -35,7 +35,7 @@ Initialize the template for your custom component. Using the following code add 
 To render the DropDownList component, use the [`DropDownListEvents`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-1.html)
 You can select the datagrid row index based on the selected data in the DropDownList. The output will appear as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations

@@ -72,7 +72,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.Gantt` packages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 ```
 
@@ -103,7 +103,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion [`Blazor Gantt Chart component`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in any web page (razor) in the `Pages` folder. For example, the Gantt Chart component is added in the **~/Pages/Index.razor** page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt TValue="TaskData">
 </SfGantt>
@@ -126,7 +126,7 @@ Now, add the Syncfusion [`Blazor Gantt Chart component`](https://www.syncfusion.
 
 Bind data with the Gantt Chart component by using the `DataSource` property. It accepts an list objects or the DataManager instance.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
 </SfGantt>
@@ -183,7 +183,7 @@ public static List <TaskData> GetTaskCollection() {
 
 The data source fields that are required to render the tasks are mapped to the Gantt Chart component using the `GanttTaskFields` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -248,7 +248,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 * `TextAlign`: Changes the alignment of columns. By default, columns will be left aligned. To change the columns to right align, set `TextAlign` to right.
 * `Format`: Formats the number and date values to standard or custom formats. Here, it is defined for the conversion of numeric values to currency.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Grids
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
@@ -319,7 +319,7 @@ For further details regarding Columns, Please refer [here](/columns/)
 
 The editing feature enables you to edit the tasks in the Gantt Chart component. It can be enabled by using the `EditSettings.AllowEditing` and `EditSettings.AllowTaskbarEditing` properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -384,7 +384,7 @@ You can find the full information regarding Editing from [here](/managing-tasks/
 
 The filtering feature enables you to view the reduced amount of records based on filter criteria. Gantt Chart provides the menu filtering support for each column. It can be enabled by setting the `AllowFiltering` property to `true`. Filtering feature can also be customized using the `FilterSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowFiltering="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -447,7 +447,7 @@ You can find the full information regarding Filtering from [here](/filtering/)
 
 The sorting feature enables you to order the records. It can be enabled by setting the `AllowSorting` property to `true`. The sorting feature can be customized using the `SortSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -515,7 +515,7 @@ Predecessor or task dependency in the Gantt Chart component is used to depict th
 * Finish to Finish (FF): You cannot finish a task until the dependent task completes.
 You can show the relationship in tasks by using the `Dependency` property as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">

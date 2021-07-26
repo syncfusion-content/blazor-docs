@@ -19,7 +19,7 @@ From the standard numeric format, you can use the numeric related format specifi
 
 The following example demonstrates percentage and currency formats.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox Value=0.5 Min=0 Max=1 Step=0.01 Format="p2" Placeholder="Percentage format" FloatLabelType="@FloatLabelType.Auto"></SfNumericTextBox>
@@ -37,7 +37,7 @@ combining one or more custom specifiers.
 
 The following examples demonstrate format the value by using currency format string `#` and `0`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" Value=10 Format="###.##" Placeholder="Custom format string #" FloatLabelType="@FloatLabelType.Always"></SfNumericTextBox>

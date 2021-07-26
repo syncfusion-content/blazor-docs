@@ -11,7 +11,7 @@ documentation: ug
 
 Data binding can be achieved by using the `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 @foreach (var SelectedValue in MultiVal)

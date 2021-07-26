@@ -13,7 +13,7 @@ The Querybuilder has options to sort the column fields by `ascending` or `descen
 
 In the following sample columns are sorted in ascending order.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder DataSource="@EmployeeData" SortDirection="SortDirection.Ascending">

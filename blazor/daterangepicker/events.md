@@ -28,7 +28,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `Blur` event triggers when the input loses the focus.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -47,7 +47,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `ValueChange` event triggers when the Calendar value is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -66,7 +66,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `OnClose` event triggers when the DateRangePicker is closed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -85,7 +85,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `Created` event triggers when the component is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -104,7 +104,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `Destroyed` event triggers when the component is destroyed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -123,7 +123,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `Focus` event triggers when the input gets focus.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -143,7 +143,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `Navigated` event triggers when the Calendar is navigated to another level or within the same level of view
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -163,7 +163,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `OnOpen` event triggers when the DateRangePicker is opened.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -183,7 +183,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `OnRenderDayCell` event triggers when each day cell of the Calendar is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">
@@ -203,7 +203,7 @@ select |[RangeSelected](events/#rangeselected)
 
 `RangeSelected` event triggers on selecting the start and end date.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?">

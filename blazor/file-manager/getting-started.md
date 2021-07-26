@@ -129,7 +129,7 @@ The File Manager can be rendered with local service, which sends ajax request. T
 
 To render the File Manager with local service, refer to the following code snippet.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.FileManager
 
     <SfFileManager TValue="FileManagerDirectoryContent">

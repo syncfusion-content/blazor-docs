@@ -21,7 +21,7 @@ It has two types of scrollers as follows:
 
 **Container scroll**: This scroller is used, when the height property of the ListView is set.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@ListData" EnableVirtualization="true">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>

@@ -123,7 +123,7 @@ We can also set sorting after control initialization.
 
 In the below sample, we have sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Lists

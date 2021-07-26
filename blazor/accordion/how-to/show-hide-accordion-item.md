@@ -20,7 +20,7 @@ Accordion provides support to Show/Hide the specified accordion item dynamically
 
 In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
@@ -83,7 +83,7 @@ Accordion provides support to Show/Hide the specified accordion item dynamically
 
 In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 

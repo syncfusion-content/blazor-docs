@@ -29,7 +29,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ![Touch scroll](images/touchscroll.gif)
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab OverflowMode="OverflowMode.Scrollable" Width="500px">
@@ -92,7 +92,7 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 
 ![Tab with popup](images/popup.gif)
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab OverflowMode="OverflowMode.Popup" Width="500px">

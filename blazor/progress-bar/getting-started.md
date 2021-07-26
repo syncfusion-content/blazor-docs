@@ -38,7 +38,7 @@ This section briefly explains how to include a Progress Bar component in the Bla
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.ProgressBar** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 To initialize the Progress Bar component, add the following code to the **Index.razor** view page under the **~/Pages** folder. In a new application, if the **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfProgressBar Value="50" Minimum="0" Maximum="100" TrackThickness="12" ProgressThickness="12">

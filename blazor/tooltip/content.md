@@ -20,7 +20,7 @@ Any text or image can be added to the Tooltip, by default. To customize the Tool
 
 Refer to the following code example to add formatted HTML content to the Tooltip.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 
 <SfTooltip ID="tooltip" IsSticky="true" Target="#target" Content="@Content">

@@ -17,7 +17,7 @@ Toggle Switch Button bar and handle can be customized as per requirement using C
 
 > For this customization you need to refer the `fabric.css` file. You can find this from our [`CDN`](https://cdn.syncfusion.com/ej2/fabric.css) link.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfSwitch CssClass="square" @bind-Checked="isSquareChecked"></SfSwitch><br />
@@ -138,7 +138,7 @@ Toggle Switch Button colors can be customized as per the requirement using CSS r
 
 > For this customization you need to refer the `bootstrap.css` file. You can find this from our [`CDN`](https://cdn.syncfusion.com/ej2/bootstrap.css) link.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfSwitch CssClass="bar-color"  @bind-Checked="isBarCheked"></SfSwitch><br />

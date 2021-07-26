@@ -13,7 +13,7 @@ You can open the DatePicker popup on input focus by calling the `show` method in
 
 The following example demonstrates how to open the DatePicker popup when the input is focused.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" @ref="@DateObj">

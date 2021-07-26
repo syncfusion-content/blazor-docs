@@ -17,7 +17,7 @@ You can set size for the Circular Gauge directly using the [`Width`](https://hel
 
 You can set the size of the Circular Gauge in pixel as demonstrated below.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <SfCircularGauge Width= "200px" Height= "200px"></SfCircularGauge>
@@ -30,7 +30,7 @@ You can set the size of the Circular Gauge in pixel as demonstrated below.
 By setting value in percentage, gauge gets its dimension with respect to its container. For example, when
 the height is ‘50%’, gauge is rendered to half of the container height.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <div style="height:450px; width:450px">

@@ -16,7 +16,7 @@ The Checkbox will be useful in the scenario where we need to select multiple opt
 In Shipping cart we can be able to select or unselect the desired items before checkout and also
 it will be useful in selecting multiple items that belongs to same category using the group list.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data" ShowCheckBox="true">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" IsChecked="IsChecked"></ListViewFieldSettings>
@@ -56,7 +56,7 @@ private DataModel[] Data = {
 In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text.
 This can be achieved by `CheckBoxPosition` property. By default, checkbox will be positioned to `Left` of list-item text.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data" ShowCheckBox="true" CheckBoxPosition="CheckBoxPosition.Right">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>

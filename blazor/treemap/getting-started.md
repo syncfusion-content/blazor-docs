@@ -38,7 +38,7 @@ This section briefly explains how to include a TreeMap component in the Blazor s
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.TreeMap** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 ```
 

@@ -13,7 +13,7 @@ The default datagrid actions can be prevented by cancelling them in the [`OnActi
 
 This is demonstrated in the below sample code where the `Add` operation is prevented by setting `Cancel` argument value of the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) event to **false**,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Add", "Delete", "Edit","Update", "Cancel" })" AllowPaging="true">

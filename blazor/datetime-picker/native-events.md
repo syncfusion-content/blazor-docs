@@ -17,7 +17,7 @@ You can access any native event by using on `<event>` attribute with a component
 
 In the following example, the KeyPressed method is called every time the key is pressed on input.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" @onkeypress='@KeyPressed'></SfDateTimePicker>
@@ -31,7 +31,7 @@ In the following example, the KeyPressed method is called every time the key is 
 
 Also, you can rewrite the previous example code as follows using Lambda expressions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfDateTimePicker>
@@ -50,7 +50,7 @@ Blazor provides set of argument types for map to native events. The following is
 
 In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "5" key.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" @onkeypress='@(e => KeyPressed(e))'></SfDateTimePicker>

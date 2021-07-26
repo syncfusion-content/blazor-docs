@@ -13,7 +13,7 @@ By default in Blazor Scheduler field validation is available for built-in fields
 
 The Data Annotation can be enabled by referencing the `System.ComponentModel.DataAnnotations` namespace which maps the data annotations to the corresponding appointment fields. In the following code example, Syncfusion Blazor Dialog is used to render the custom editor and save/update the appointments using public methods.
 
-```csharp
+```cshtml
 @using Newtonsoft.Json
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Calendars

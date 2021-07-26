@@ -119,7 +119,7 @@ namespace blazorCalendars
 
 * Finally, Specify the culture for DateTimePicker using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Locale="de"></SfDateTimePicker>
@@ -181,7 +181,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 
@@ -232,7 +232,7 @@ property to set the RTL direction.
 
 The following code example initialize the DateTimePicker component in `Arabic` culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 

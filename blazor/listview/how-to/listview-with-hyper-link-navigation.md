@@ -13,7 +13,7 @@ We can use `anchor` tag along with `href` attribute in our ListView `Template` p
 
 In the below sample, we have rendered `ListView` with search engines URL.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <div id="container">

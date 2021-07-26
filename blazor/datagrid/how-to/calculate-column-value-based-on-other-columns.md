@@ -13,7 +13,7 @@ You can calculate the values for a datagrid column based on other column values 
 
 This is demonstrated in the below sample code where the value for **FinalCost** column is calculated based on the values of **ManfCost** and **LabCost** columns,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">

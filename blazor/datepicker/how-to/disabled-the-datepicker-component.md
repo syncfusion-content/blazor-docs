@@ -16,7 +16,7 @@ property.
 The following code demonstrates the DatePicker in
 disabled state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Enabled=false Value="@DateValue"></SfDatePicker>

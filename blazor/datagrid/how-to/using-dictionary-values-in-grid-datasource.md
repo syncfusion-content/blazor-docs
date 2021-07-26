@@ -13,7 +13,7 @@ You can assign dictionary values in the datagrid's data source by accessing them
 
 This is demonstrated in the below sample code where **ShipName** is defined as Dictionary value and it is accessed inside the template property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) using **KeyValuePair** data type. The key value is compared with the **OrderID** column value and based on that the value is displayed,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" AllowPaging="true">

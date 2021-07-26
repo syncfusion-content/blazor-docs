@@ -15,7 +15,7 @@ This section describes the Sparkline component's events that will be triggered w
 
 The `Loaded` event triggers after the Sparkline component has been loaded.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="450px">
@@ -41,7 +41,7 @@ The [`OnPointRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 |   Border               |   Specifies the color and the width of the point border. |
 |   Cancel               |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Column" Height="200px" Width="450px">
@@ -66,7 +66,7 @@ The [`OnPointRegionMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion
 |   PointerIndex     |    Specifies the Sparkline point index region.      |
 |   Cancel             |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Column" Height="200px" Width="450px">
@@ -92,7 +92,7 @@ The [`OnResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 |   PreviousSize       |   Specifies the size of the previous Sparkline. |
 |   Cancel             |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="450px">
@@ -118,7 +118,7 @@ The [`OnSeriesRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 |   LineWidth          |   Specifies the series line width. |
 |   Cancel             |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="450px">
@@ -147,7 +147,7 @@ The [`OnMarkerRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 |   Size          |   Specifies the size of the marker. |
 |   Cancel             |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="450px">
@@ -178,7 +178,7 @@ The [`OnDataLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 |   Color          |   Specifies the content color. |
 |   Cancel             |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="450px">

@@ -24,7 +24,7 @@ You can start the edit action either by double-clicking the particular row or by
 
 Deletion of the record is possible by selecting the required row and click on **Delete** button in the toolbar.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height ="315">
@@ -85,7 +85,7 @@ The datagrid toolbar has the  following built-in items to execute editing action
 
 You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
@@ -138,7 +138,7 @@ In Normal edit mode, when you start editing the currently selected record is cha
 You can change the cell values and save edited data to the data source.
 To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
@@ -189,7 +189,7 @@ In dialog edit mode, when you start editing the currently selected row data will
 You can change the cell values and save edited data to the data source.
 To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Dialog**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
@@ -239,7 +239,7 @@ In batch edit mode, when you double-click on the datagrid cell, then the target 
 You can bulk save (added, changed, and deleted data in the single request) to the data source by click on the toolbar's **Update** button or by externally calling the **EndEdit** method.
 To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
@@ -289,7 +289,7 @@ by enabling [`EditSettings.AllowNextRowEdit`](https://help.syncfusion.com/cr/bla
 
 Pressing TAB from the last cell of the current row allows editing the next row and Pressing SHIFT + TAB from the first cell of the current row allows editing the previous row.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Delete", "Update", "Cancel" })" Height="315">
@@ -371,7 +371,7 @@ You can customize the behavior of the editor component through the [`EditorSetti
 
 The following sample code demonstrates the customization applied to TextBox component set for the DataGrid columns,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Grids
 
@@ -436,7 +436,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 
 The following sample code demonstrates the customization applied to NumericTextBox component set for the DataGrid columns,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs
 
@@ -508,7 +508,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 
 The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
@@ -571,7 +571,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
 The following sample code demonstrates the customization applied to Checkbox component set for the DataGrid columns,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -632,7 +632,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
 The following sample code demonstrates the customization applied to DatePicker component set for the DataGrid columns,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.Grids
 
@@ -696,7 +696,7 @@ The cell edit template is used to add a custom component for a particular column
 
 You can able to render SfAutoComplete component in EditTemplate. In the below sample we have rendered  **SfAutoComplete** component in **EditTemplate** for Customer ID column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
@@ -748,7 +748,7 @@ In the following image, **Autocomplete** component is rendered with **EditTempla
 
 You can able to render SfDropDownList component in EditTemplate. In the below sample we have rendered  **SfDropDownList** component in **EditTemplate** for ShipCountry column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -813,7 +813,7 @@ In the following image, **SfDropDownList** component is rendered with **EditTemp
 
 You can able to render SfTimePicker component in EditTemplate. In the below sample we have rendered  **SfTimePicker** component in **EditTemplate** for OrderDate column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 
@@ -867,7 +867,7 @@ In the following image, **SfTimePicker** component is rendered with **EditTempla
 
 You can able to render SfMultiSelect component in EditTemplate. In the below sample we have rendered  **SfMultiSelect** component in **EditTemplate** for ChosenItems column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Grids
 
@@ -945,7 +945,7 @@ The available built-in command buttons are:
 | Save | Update the edited row.|
 | Cancel | Cancel the edited state. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -1001,7 +1001,7 @@ The custom command buttons can be added in a column by using the [`Commands`](ht
 
 The following sample code demonstrates adding custom command in the **Manage Records** column and the `CommandClicked` event which triggers when the command is clicked,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
@@ -1062,7 +1062,7 @@ You can set validation rules by defining the [`ValidationRules`](https://help.sy
 
 > Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Please refer the [Microsoft Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -1120,7 +1120,7 @@ Custom Validation can be used by overriding the IsValid method inside the class 
 
 The following sample code demonstrates custom validations implemented in the fields EmployeeID and Freight.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids;
 @using System.ComponentModel.DataAnnotations;
 @using System.Text.RegularExpressions;
@@ -1691,7 +1691,7 @@ namespace WebApplication1.Server.Controllers
 
 ### Configure the datagrid to perform CRUD operations
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 
@@ -1828,7 +1828,7 @@ Since data is bound to Grid using DataSource property, perform CRUD actions will
 **OnActionBegin** – This event will be triggered when the action gets initiated. So, while inserting/updating a record, **RequestType Save** will be sent in the event arguments to save the changes in the database. Similarly, while deleting a record, RequestType as Delete will be initiated to perform actions externally.  Since for both Update and Insert action, RequestType will be Save, we can differentiate them by using the **Args.Action** property, which will indicate the current action.
 **OnActionComplete** – It will be triggered when certain actions are completed. Here, we can refresh the Grid component with an updated datasource to reflect the changes.
 
-```csharp
+```cshtml
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
 
@@ -1890,7 +1890,7 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
 * **UpdateRow** - Update a existing record in a datagrid.
 * **DeleteRow** - Delete a selected row in the datagrid
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
@@ -2087,7 +2087,7 @@ In some cases, you would need to add new field editors in the dialog which are n
 
 The following sample code demonstrates DataGrid enabled with dialog template editing,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2206,7 +2206,7 @@ It is possible to disable particular components rendered inside the dialog templ
 
 This is demonstrated in the below sample code where if the `RequestType` argument value of the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event is **BeginEdit** then the `Enabled` property of the **OrderID** Textbox is set to false.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2339,7 +2339,7 @@ By default, the first input element in the dialog will be focused while opening 
 
 This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [`FocusIn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-1.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_1_DataBound) event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2467,7 +2467,7 @@ In some cases, you would need to add new field editors in the Inline editing whi
 
 The following sample code demonstrates DataGrid enabled with Inline template editing,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -2582,7 +2582,7 @@ By default, a new row will be added at the top of the datagrid. You can change i
 
 The following sample code demonstrates changing the position of the new row that gets added in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2633,7 +2633,7 @@ The delete confirms dialog can be shown on deleting a record by setting the [`Sh
 
 The following sample code demonstrates enabling delete confirmation dialog in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2681,7 +2681,7 @@ The confirmation dialog can be enabled for all the batch operations by setting t
 
 The following sample code demonstrates enabling confirmation dialog for batch operations in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" AllowSorting="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2730,7 +2730,7 @@ The datagrid provides an option to set the default value for the columns when ad
 
 The following sample code demonstrates setting default value as **ANTON** to the **CustomerID** column,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2776,7 +2776,7 @@ You can disable editing for particular columns by setting value as **false** to 
 
 The following sample code demonstrates editing disabled for the **CustomerID** column,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="315" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
@@ -2843,7 +2843,7 @@ The **RequestType** values for the editing operations are listed in the below ta
 
 The following sample code demonstrates the different **RequestType** parameters returned while performing editing operations in the OnActionBegin and OnActionComplete event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
@@ -2935,7 +2935,7 @@ You can use [`HeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 In the below example we have changed the dialog's header text and footer button content for editing and adding records.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -3026,7 +3026,7 @@ For focus and Column Validation to work properly, you have to define the **ID** 
 
 The following sample code demonstrates the CRUD operation for complex objects with EditTemplate.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs

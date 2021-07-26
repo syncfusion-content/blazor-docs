@@ -52,7 +52,7 @@ To get start quickly with Blazor Card component, you can check on this video.
 
 Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**`
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 ```
 
@@ -93,7 +93,7 @@ To initialize the Card component, add the below code to your **Index.razor** vie
 
 2. Also content will be added by using `CardContent` tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <div class="control-section">

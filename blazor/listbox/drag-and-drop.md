@@ -26,7 +26,7 @@ To drag and drop an item or group of item within the listbox can achieved by set
 
 The following sample illustrates how to drag and drop an item within the same listbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@GroupA" TItem="CountryCode" AllowDragAndDrop="true">
@@ -65,7 +65,7 @@ To drag and drop an item or group of item between two listbox can achieved by se
 
 The following sample illustrates how to drag and drop an item between two listbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <div id="listbox1">

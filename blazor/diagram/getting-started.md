@@ -39,7 +39,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
 
 Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagrams** packages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagrams
 ```
@@ -48,7 +48,7 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagrams** pa
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor;
 
 namespace BlazorApplication
@@ -94,7 +94,7 @@ The following example shows a basic Diagram component.
 Let us create and add a `nodes` with specific position, size, label and shape. Connect two or more nodes by using a
 `connectors`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @using DiagramShapes = Syncfusion.Blazor.Diagrams.Shapes

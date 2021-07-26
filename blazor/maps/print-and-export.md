@@ -13,7 +13,7 @@ documentation: ug
 
 To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_AllowPrint) property to **true**. The rendered map can be printed directly from the browser by calling the method [`print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Print_System_Object_). You can get the Maps component object using `@ref="maps"`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="PrintMap">Print</button>
@@ -50,7 +50,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 * PNG
 * SVG
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="ExportMap">Export</button>
@@ -76,7 +76,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 
 To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_AllowPdfExport) property to **true**. The rendered map can be exported as PDF using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. The [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="ExportMap">Export</button>
@@ -106,7 +106,7 @@ The rendered map with providers such as OSM, Bing and Google static maps can be 
 * PNG
 * PDF
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="ExportMap">Export</button>

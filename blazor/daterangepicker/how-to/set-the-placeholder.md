@@ -13,7 +13,7 @@ The following code demonstrates how to set [Placeholder](https://help.syncfusion
 
 Using `Placeholder`, you can display a short hint in the input element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a date range"></SfDateRangePicker>

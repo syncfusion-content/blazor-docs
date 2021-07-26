@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Toolbar component in any web page (razor) in the `Pages` folder. For example, the Toolbar component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar>

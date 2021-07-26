@@ -13,7 +13,7 @@ To achieve disabled state in Color Picker, set the [`Disabled`](https://help.syn
 
 The following example shows the `Disabled` state of Color Picker component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

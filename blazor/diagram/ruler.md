@@ -21,7 +21,7 @@ The Ruler provides a horizontal and vertical guide for measuring in the Diagram 
 
 The following code shows how to add a ruler to the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Width="600px" Height="600px">
@@ -45,7 +45,7 @@ By default, the ruler segments are arranged based on pixel values.
 
 The following code shows how the diagram ruler can be customized.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Width="600px" Height="600px">

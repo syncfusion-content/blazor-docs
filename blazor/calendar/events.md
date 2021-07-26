@@ -23,7 +23,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `onRenderDayCellHandler` event triggers when each day cell of the Calendar is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -43,7 +43,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `ValueChange` event triggers when the Calendar value is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -63,7 +63,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Created` event triggers when Calendar is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -83,7 +83,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `OnOpen` event triggers when Calendar is destroyed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -103,7 +103,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">

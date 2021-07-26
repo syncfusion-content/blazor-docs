@@ -81,7 +81,7 @@ documentEditor.Selection.TableFormat.SetTableAlignment(TableAlignment.Center);
 
 Set the desired width of table cells that will be considered when the table is layouted. Refer to the following sample code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -102,7 +102,7 @@ Set the desired width of table cells that will be considered when the table is l
 
 You can set the desired width of a table in `Point` or `Percent` type. Refer to the following sample code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -127,7 +127,7 @@ Document editor allows various row formatting such as height and repeat header.
 
 You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. Refer to the following sample code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditorHistory=true EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>

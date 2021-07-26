@@ -15,7 +15,7 @@ Set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="GridInstance" AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Cancel", "Update" })">

@@ -582,7 +582,7 @@ Internationalization library is used to globalize number, date, and time values 
 
 Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). In the below code sample `EnableRtl` property is used to enable RTL in the pivot table.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
    <SfPivotView TValue="ProductDetails" ShowFieldList="true" EnableRtl="true">

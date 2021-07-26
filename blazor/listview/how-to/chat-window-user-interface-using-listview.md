@@ -63,7 +63,7 @@ void OnSend()
 }
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using System.Collections.ObjectModel
 

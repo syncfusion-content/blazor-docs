@@ -13,7 +13,7 @@ The `Format` feature used to customize the units of Slider values to desired for
 
 >Use the `Format` API of slider which utilizes our Internationalization to format values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider @bind-Value="@CurrencyValue">
@@ -32,7 +32,7 @@ The `Format` feature used to customize the units of Slider values to desired for
 
 Slider provides different predefined formatting styles like Numeric (N), Percentage (P), Currency (C) and # specifiers. In this below example we have formatted the ticks and tooltip values into percentage.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Min="1" Max="10" @bind-Value="@PercentageValue">

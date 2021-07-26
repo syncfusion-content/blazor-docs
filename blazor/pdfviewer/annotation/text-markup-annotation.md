@@ -37,7 +37,7 @@ In the pan mode, if the highlight mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to highlight mode
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -77,7 +77,7 @@ In the pan mode, if the underline mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to underline mode
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -117,7 +117,7 @@ In the pan mode, if the strikethrough mode is entered, the PDF Viewer control wi
 
 Refer to the following code snippet to switch to strikethrough mode
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -161,7 +161,7 @@ The properties of the text markup annotation can be set before creating the cont
 
 Refer to the following code snippet to set the default annotation settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" HighlightSettings="@HighlightSettings" UnderlineSettings="@UnderlineSettings" StrikethroughSettings="@StrikethroughSettings">

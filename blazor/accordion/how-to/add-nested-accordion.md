@@ -11,7 +11,7 @@ documentation: ug
 
 Accordion supports to render the nested level of Accordion by using `ContentTemplate` property. To render the nested Accordion, you can define nested Accordion elements within the `ContentTemplate` property of the parent Accordion.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>

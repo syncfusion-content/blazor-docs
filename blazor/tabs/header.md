@@ -21,7 +21,7 @@ You can customize header styles by adding predefined classes in the Tab root ele
 
 > If the above custom style classes are not included in the root element, the default style is applied to the Tab items.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 
@@ -118,7 +118,7 @@ You can customize the position of the Tab header icons using the [IconPosition](
 * **Top**: Icon is placed on the top of the Tab header item.
 * **Bottom**: Icon is placed on the bottom of the Tab header item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 

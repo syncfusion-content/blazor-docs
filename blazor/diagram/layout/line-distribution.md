@@ -13,7 +13,7 @@ Line distribution is used to arrange the connectors without overlapping in autom
 
 The following code example illustrates how to create a complex hierarchical tree with line distribution.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

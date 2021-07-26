@@ -15,7 +15,7 @@ property to `false`.
 
 The following code demonstrates the disabled component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Enabled=false Value='@DateTimeValue'></SfDateTimePicker>

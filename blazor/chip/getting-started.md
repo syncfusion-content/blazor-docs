@@ -124,7 +124,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Buttons` package.
 
- ```csharp
+ ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 ```

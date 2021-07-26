@@ -23,7 +23,7 @@ Default animation is given as `SlideLeftIn` for previous tab animation and `Slid
 
 The sample demonstrates some types of animation that suits our Tabs. You can check all the animation effects here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns

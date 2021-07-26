@@ -13,7 +13,7 @@ The DataGrid has options to group records by dragging and dropping the column he
 
 To enable grouping in the datagrid, set the [`AllowGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) as true. Grouping options can be configured through the [`GridGroupSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowGrouping="true" Height="400">
@@ -61,7 +61,7 @@ The following GIF image represents a DataGrid Grouping.
 
 To apply group at initial rendering, set the column field name in the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_Columns) property of **GridGroupSettings** component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -109,7 +109,7 @@ The following screenshot represents a DataGrid with initial grouping.
 To avoid ungrouping or further grouping of a column after initial column
 grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) of **GridGroupSettings** as false.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -165,7 +165,7 @@ or datetime column based on the mentioned format, you have to enable the
 [`EnableGroupByFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) property of the corresponding
 datagrid columns.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -209,7 +209,7 @@ datagrid columns.
 During the group action, the datagrid component triggers two events. The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event
 triggers before the group action starts and the [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the group action is completed. Using these events you can perform any action.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowGrouping="true">
@@ -259,7 +259,7 @@ You can customize the group caption by using the [`CaptionTemplate`](https://hel
 
 The following sample code demonstrates the above,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -323,7 +323,7 @@ To enable lazy load grouping in the datagrid, set the **EnableLazyLoading** as t
 
 The following sample code demonstrates the above,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" AllowGrouping="true">
@@ -371,7 +371,7 @@ When you enable lazy load grouping with virtualization feature, the Grid will re
 
 The following sample code demonstrates the above,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 

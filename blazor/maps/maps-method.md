@@ -13,7 +13,7 @@ documentation: ug
 
 You can create an object for the maps component using `@ref` and call the `Print` method as demonstrated in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <button @onclick="PrintMap">Print</button>

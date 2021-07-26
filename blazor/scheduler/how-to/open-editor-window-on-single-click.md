@@ -11,7 +11,7 @@ documentation: ug
 
 By default, the editor window will open on double clicking the cell or appointment. In the following code example, we have opened the editor window on single click using `OpenEditorAsync` public method within `OnCellClick` and `OnEventClick` Scheduler events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" ShowQuickInfo="false" Height="550px" @bind-SelectedDate="@CurrentDate">

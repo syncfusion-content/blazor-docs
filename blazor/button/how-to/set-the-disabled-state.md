@@ -14,7 +14,7 @@ property. To disable Button component, the `Disabled` property can be set as `tr
 
 The following example demonstrates Button in `Disabled` state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton Disabled="true">Disabled</SfButton>

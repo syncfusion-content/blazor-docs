@@ -13,7 +13,7 @@ Apart from the OpenStreetMap and Bing Maps, you can also render the maps from ot
 
 Refer to [Google maps licensing](https://developers.google.com/maps/terms#10-license-restrictions).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -30,7 +30,7 @@ Refer to [Google maps licensing](https://developers.google.com/maps/terms#10-lic
 
 You can zoom and pan the Google maps layer. Zooming helps you get a closer look at a particular area on a map for in-depth analysis. Panning helps you to move a map around to focus the targeted area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -51,7 +51,7 @@ You can zoom and pan the Google maps layer. Zooming helps you get a closer look 
 
 Markers can be added to the layers of Google maps by setting the corresponding location's coordinates of latitude and longitude using `MapsMarker` property. You can add navigation lines on top of an Google maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the `MapsNavigationLine` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -100,7 +100,7 @@ Markers can be added to the layers of Google maps by setting the corresponding l
 
 You can render any GeoJSON shape as a sublayer on top of an Google maps layer for highlighting a particular continent or country in Google maps by adding another layer and specifying the type to SubLayer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

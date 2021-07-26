@@ -209,7 +209,7 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 
 <!-- markdownlint-disable MD036 -->
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Format="c">

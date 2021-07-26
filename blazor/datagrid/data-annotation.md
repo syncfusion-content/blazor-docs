@@ -27,7 +27,7 @@ The list of data annotation attributes that are supported in DataGrid component 
 
 The following sample code demonstrates data annotations implemented in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using System.ComponentModel.DataAnnotations;
 

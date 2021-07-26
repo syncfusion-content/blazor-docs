@@ -145,7 +145,7 @@ The following example shows a basic Diagram component.
 Adding Nodes and Connectors
 Let us create and add a `Nodes` with specific position, size, label and shape. Connect two or more Nodes by using a `Connectors`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @using DiagramShapes = Syncfusion.Blazor.Diagrams.Shapes

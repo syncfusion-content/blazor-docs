@@ -135,7 +135,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Popups` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Popups
@@ -145,7 +145,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Popups` package.
 
 Now, add the Syncfusion Blazor Tooltip component in any web page `razor` in the `Pages` folder. For example, the Tooltip component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 

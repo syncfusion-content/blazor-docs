@@ -25,7 +25,7 @@ property of the Calendar, it allows you to set the initial view on rendering.
 
 The following example demonstrates how to set the `Year` as the start view of the Calendar.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' Start="CalendarView.Year"></SfCalendar>
@@ -48,7 +48,7 @@ The following example displays the Calendar in `Decade` view, and allows you to 
 
 > Depth view should always be smaller than the Start view. If the `Depth` and `Start` views are the same, then the Calendar view remains unchanged.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' Start="CalendarView.Decade" Depth="CalendarView.Year"></SfCalendar>

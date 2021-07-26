@@ -13,7 +13,7 @@ Checkbox component has RTL support. This can be achieved by setting [`EnableRtl`
 
 The following example illustrates how to enable right-to-left support in Checkbox component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox Label="Default" @bind-Checked="isChecked" EnableRtl="true"></SfCheckBox>

@@ -17,7 +17,7 @@ positioned to the left side of the popup action item.
 In the following sample, the icons for edit, delete, mark as read  and like message menu items are
 added using the `IconCss` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Message" IconCss="e-icons e-message">

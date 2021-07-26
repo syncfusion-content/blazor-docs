@@ -13,7 +13,7 @@ The PDF Viewer component will automatically unload and clear the resources occup
 
 If you want to unload and clear the resources occupied by the PDF file programmatically, invoke the Unload() method as shown below.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewerServer
 

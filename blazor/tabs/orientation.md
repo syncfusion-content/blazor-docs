@@ -23,7 +23,7 @@ It is also adaptable to the available space when the tab items exceed the view s
 * Scrollable
 * Popup
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 

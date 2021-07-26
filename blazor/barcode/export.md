@@ -13,7 +13,7 @@ documentation: ug
 
 Barcode provides support to export its content as an image in the specified image type and downloads it in the browser.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <input type="button" value="Export" @onclick="@OnExport" />
@@ -33,7 +33,7 @@ Barcode provides support to export its content as an image in the specified imag
 
 Barcode provides support to export as an image in the specified image type and returns it as base64 string.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <input type="button" value="Export" @onclick="@OnExport" />

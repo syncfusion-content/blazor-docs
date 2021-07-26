@@ -11,7 +11,7 @@ documentation: ug
 
 To achieve better performance in the Scheduler when loading a large number of resources and events, we have added virtual scrolling support in the timeline views to load a large set of resources and events instantly as you scroll. You can dynamically load large number of resources and events in timeline view of the Scheduler by setting `true` to the `AllowVirtualScrolling` property within the timeline view-specific settings. The virtual loading of events is possible in Agenda view, by setting `AllowVirtualScrolling` property to `true` within the agenda view specific settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="EventData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -110,7 +110,7 @@ To achieve better performance in the Scheduler when loading a large number of re
 
 In Blazor Scheduler, templates can be applied when `AllowVirtualScrolling` property is enabled. In the following code, templates were applied to resources and appointments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="EventData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">

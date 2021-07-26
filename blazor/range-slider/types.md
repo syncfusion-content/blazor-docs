@@ -21,7 +21,7 @@ The types of Slider are as follows:
 In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider
 contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30"></SfSlider>

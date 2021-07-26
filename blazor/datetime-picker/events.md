@@ -23,7 +23,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Blur` event triggers when the input loses the focus.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -43,7 +43,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `ValueChange` event triggers when the Calendar value is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -63,7 +63,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `OnClose` event triggers when popup is closed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -83,7 +83,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Created` event triggers when DateTimePicker is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -103,7 +103,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Destroyed` event triggers when DateTimePicker is destroyed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -123,7 +123,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Focus` event triggers when the input gets focus.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -144,7 +144,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Navigated` event triggers when the Calendar is navigated to another level or within the same level of view
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -165,7 +165,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `OnOpen` event triggers when popup is opened.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >
@@ -186,7 +186,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `OnRenderDayCell` event triggers when each day cell of the Calendar is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" >

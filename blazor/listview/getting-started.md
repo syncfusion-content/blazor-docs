@@ -143,7 +143,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Lists` package.
 
 Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pages` folder. For example, the ListView component is added in the **~/Pages/Index.razor** page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Data">

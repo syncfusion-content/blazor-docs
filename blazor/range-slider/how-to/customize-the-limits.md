@@ -19,7 +19,7 @@ Slider appearance can be customized via CSS. By overriding the slider CSS classe
 
 And on implementing the above code snippet in the below slider control's Blazor code, the overview would be like the one found below.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs;
 @using Syncfusion.Blazor.Buttons;
 

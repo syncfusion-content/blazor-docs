@@ -14,7 +14,7 @@ documentation: ug
 
 In the following example, the event ValueChange binds to the linear gauge component, so the event handler UpdatePointerValue will be called when you drag the pointer and update the pointer value in the div element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <div style="width:250px">

@@ -63,7 +63,7 @@ and its behavior through the [CustomCharacters](https://help.syncfusion.com/cr/b
 
 In the following example, non-mask element `P` accepts the values `P, A, p, a`, and `M` accepts the values `M, m`  as mentioned in the custom characters collection.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="00:00 >PM" Placeholder="Time (ex: 10:00 PM, 10:00 AM)" CustomCharacters="@CustomMask"></SfMaskedTextBox>
@@ -88,7 +88,7 @@ The regular expressions should be wrapped by the square brackets (e.g., [`Regex`
 
 In the following example, regular expression has been set for each input places.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Placeholder="Enter value" Mask="[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9].[0-2][0-9][0-9]" FloatLabelType="@FloatLabelType.Auto"></SfMaskedTextBox>
@@ -105,7 +105,7 @@ by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The following example demonstrates the MaskedTextBox with customized prompt character as `#`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="999-999-9999" PromptChar="@PromptCharacter"></SfMaskedTextBox>

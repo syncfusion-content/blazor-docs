@@ -36,7 +36,7 @@ tableOfContentsSettings.RightAlign = true;
 documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditorHistory=true EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>

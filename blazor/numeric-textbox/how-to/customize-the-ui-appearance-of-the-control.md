@@ -11,7 +11,7 @@ documentation: ug
 
 You can change the appearance of the NumericTextBox by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfNumericTextBox-1.html#Syncfusion_Blazor_Inputs_SfNumericTextBox_1_CssClass) to the component and enabling styles. Refer to the following example to change the appearance of the NumericTextBox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" Value=10 CssClass="e-style" Placeholder="Enter value" FloatLabelType="@FloatLabelType.Always"></SfNumericTextBox>

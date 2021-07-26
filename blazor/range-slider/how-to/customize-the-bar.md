@@ -33,7 +33,7 @@ In this code snippet, it can be seen that the dynamic color of the slider is bei
 
 Color bar can be customized in quite a number of ways.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs;
 @using Syncfusion.Blazor.Buttons;
 <div class="col-lg-12 control-section">

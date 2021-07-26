@@ -143,7 +143,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the `Pages` folder. For example, the Blazor TreeView component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>

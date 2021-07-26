@@ -14,7 +14,7 @@ documentation: ug
 PDF export allows exporting DataGrid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) as true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -65,7 +65,7 @@ PDF export provides an option for exporting multiple grids to same file. In this
 
 This is demonstrated in the below sample code block,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -140,7 +140,7 @@ PDF export provides an option to customize mapping of datagrid to exported PDF d
 
 You can assign the file name for the exported document by defining **fileName** property in **PdfExportProperties**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -201,7 +201,7 @@ The available fonts are,
 
 The following sample code demonstrates changing the default font value on exported document,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -277,7 +277,7 @@ You can change the default font of Grid header, content and caption cells in the
 
 The following sample code demonstrates changing the default font value to custom font on exported document,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -357,7 +357,7 @@ You can add text and customize it's styles either in Header or Footer of exporte
 
 The following sample code demonstrates adding text and customizing it's styles in the Header section of the exported document,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -430,7 +430,7 @@ Supported line styles are,
 
 The following sample code demonstrates adding line in the Header section of the exported document,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -493,7 +493,7 @@ The following sample code demonstrates adding line in the Header section of the 
 
 You can add headers for every page of PDF exported document by enabling [`IsRepeatHeader`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_IsRepeatHeader) property of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -544,7 +544,7 @@ You can add headers for every page of PDF exported document by enabling [`IsRepe
 
 You can export the PDF grid with specific columns instead of all columns which are defined in the Grid definition. To achieve this scenario by using [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html#Syncfusion_Blazor_Grids_PdfExportProperties_Columns) property of the [`PdfExportProperties`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.PdfExportProperties.html) class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -612,7 +612,7 @@ Supported page number types are,
 
 The following sample code demonstrates adding page number in the Header section of the exported document,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -677,7 +677,7 @@ Image (Base64 string) can be added in header/footer area of the exported PDF doc
 
 The following sample code demonstrates inserting image in the Header section of the exported document,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -740,7 +740,7 @@ The following sample code demonstrates inserting image in the Header section of 
 
 Page orientation can be changed Landscape(Default Portrait) for the exported document using the export properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -821,7 +821,7 @@ Supported page sizes are:
 * Letter11x17
 * Ledger
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -872,7 +872,7 @@ Supported page sizes are:
 
 PDF export provides an option to export the current page into PDF. To export current page, define the **exportType** to **CurrentPage**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -923,7 +923,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 PDF export provides an option to export hidden columns of DataGrid by defining the **includeHiddenColumn** as **true**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -976,7 +976,7 @@ PDF export provides an option to include theme for exported PDF document.
 
 To apply theme in exported PDF, define the **theme** in export properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">
@@ -1065,7 +1065,7 @@ You can show a hidden column or hide a visible column while exporting the datagr
 
 This is demonstrated in the below sample code where initially the **CustomerID** is hidden. While exporting, we have changed CustomerID to visible column and Freight as hidden column. Then in the `PdfExportComplete` event, we have reversed the column's visibility state back to the previous state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -1127,7 +1127,7 @@ PDF export provides an option to define the datasource dynamically before export
 
 The following sample code demonstrates dynamically modifying the data source before exporting it,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid ID="Grid" @ref="DefaultGrid" DataSource="@Orders" Toolbar="@(new List<string>() { "PdfExport" })" AllowPdfExport="true" AllowPaging="true">

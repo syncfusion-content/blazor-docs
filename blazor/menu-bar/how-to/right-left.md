@@ -13,7 +13,7 @@ Menu Bar component has RTL support. This can be achieved by setting [`EnableRtl`
 
 The following example illustrates how to enable right-to-left support in Menu Bar component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu TValue="MenuItem" EnableRtl="true">

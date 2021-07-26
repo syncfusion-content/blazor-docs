@@ -31,7 +31,7 @@ The built-in toolbar of PDF Viewer contains the following page navigation tools:
 
 You can enable or disable the page navigation option in PDF Viewer default toolbar by setting the `EnableNavigation` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableNavigation="false" />
@@ -43,7 +43,7 @@ You can enable or disable the page navigation option in PDF Viewer default toolb
 
 Also, you can programmatically perform page navigation as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Inputs
@@ -110,7 +110,7 @@ The bookmarks saved in PDF files are loaded and listed in the bookmark pane (in 
 
 You can enable or disable the bookmark navigation pane by setting the `EnableBookmark` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableBookmarkPanel="true"/>
@@ -129,7 +129,7 @@ Page thumbnails is the miniature representation of actual pages in the PDF files
 
 You can enable or disable the thumbnail navigation pane by setting the `EnableThumbnail` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableThumbnailPanel="true"/>
@@ -153,7 +153,7 @@ Table of contents navigation allows users to navigate to different parts of a PD
 
 You can enable or disable both hyperlink and table of content navigation by setting the `EnableHyperlink` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableHyperlink="true"/>
@@ -165,7 +165,7 @@ You can enable or disable both hyperlink and table of content navigation by sett
 
 You can set the target attribute for a hyperlink in PDF Viewer using the `HyperlinkOpenState` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewer
 @using Syncfusion.Blazor.PdfViewerServer
 

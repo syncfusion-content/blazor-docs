@@ -13,7 +13,7 @@ documentation: ug
 
 You can create object for the linear gauge component using `@ref` and call the `ChangePoinerValue` method as shown in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value</button>

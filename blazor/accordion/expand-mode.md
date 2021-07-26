@@ -66,7 +66,7 @@ Output be like the below.
 
 By default, accordion items were in collapsed state on initial load. To expand particular item(s) on initial load, you can use either `ExpandedIndices` property or `Expanded` option within `AccordionItem` tag helper. In the following code example, `ExpandedIndices` is used to expand the second and third item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion @bind-ExpandedIndices=ExpandItems>

@@ -11,7 +11,7 @@ documentation: ug
 
 The date formatting can be achieved using `TicksRendering` and `TooltipChange` events. The process of date formatting is explained in the below sample.
 
-```csharp
+```cshtml
 @using System.Globalization;
 @using Syncfusion.Blazor.Inputs
 

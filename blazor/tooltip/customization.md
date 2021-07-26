@@ -16,7 +16,7 @@ The Tooltip can be customized by using the `CssClass` property, which accepts cu
 
 Styling the tip pointer's size, background, and border color's can be done using the `CssClass` property, as given below.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -100,7 +100,7 @@ Output be like the below.
 The complete look and feel of the Tooltip can be customized by changing it's background color, opacity, content font, etc.
  The following code example shows the way to achieve it.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 

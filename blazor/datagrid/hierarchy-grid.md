@@ -12,7 +12,7 @@ documentation: ug
 The DataGrid allows display of table data in a hierarchical structure to visualize relations between parent and child records. This feature is enabled by defining the [`ChildGrid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) and
 `ChildGrid.QueryString`. The [`ChildGrid`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) describes the options of datagrid and the `ChildGrid.QueryString` describes the relation between parent and child grids.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -88,7 +88,7 @@ The DataGrid allows display of table data in a hierarchical structure to visuali
 
 By default, datagrid renders in collapsed state. You can expand all child datagrid rows by invoking the **ExpandAll** method, and collapse all datagrid rows by invoking the **CollapseAll** through an external button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -184,7 +184,7 @@ By default, datagrid renders in collapsed state. You can expand all child datagr
 
 You can expand a particular child datagrid at initial rendering by invoking the **Expand** method in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -269,7 +269,7 @@ To maintain this relation in newly added record, You need to set value for `Quer
 In the below demo, `EmployeeID` field relates the parent and child grids. To add a new record in child datagrid, We have to set the `EmployeeID` field
 with parent record's `QueryString` field value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{

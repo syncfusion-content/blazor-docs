@@ -215,7 +215,7 @@ It also has the following options.
 
 In the following code block, when switching drop-down item, the selected value assigned to the `ActionOnBlur` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs

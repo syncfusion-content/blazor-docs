@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Accordion component in any web page (razor) in the `Pages` folder. For example, the Accordion component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>
@@ -123,7 +123,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 The following code explains how to initialize accordion using `Template`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>

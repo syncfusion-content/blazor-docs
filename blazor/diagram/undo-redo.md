@@ -61,7 +61,7 @@ The history list [`CanLog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 The following code example illustrates how to save the existing property values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -129,7 +129,7 @@ The following code example illustrates how to save the existing property values.
 
 The [`GetHistoryStack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetHistoryStack_System_Boolean_) method is used to get the collection of undo and redo actions which should be performed in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -151,7 +151,7 @@ The [`GetHistoryStack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The [`HistoryChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event triggers, whenever the interaction of the node and connector is take place.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

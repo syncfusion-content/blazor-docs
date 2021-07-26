@@ -23,7 +23,7 @@ The Chip control has the following predefined styles that can be defined using t
 | e-warning | Represents a chip with caution. |
 | e-danger | Represents a negative chip. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip>
     <ChipItems>
@@ -46,7 +46,7 @@ Output be like the below.
 
 You can add and customize the leading icon of chip using the `LeadingIconCss` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip ID="chip-avatar" EnableDelete="true">
     <ChipItems>
@@ -124,7 +124,7 @@ Output be like the below.
 
 You can add and customize the avatar content of chip using the `LeadingText` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip EnableDelete="true" CssClass="e-leading-avatar">
     <ChipItems>
@@ -145,7 +145,7 @@ Output be like the below.
 
 You can add and customize the trailing icon of chip using the `TrailingIconCss` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip>
     <ChipItems>
@@ -166,7 +166,7 @@ Output be like the below.
 
 Outline chip has the border with the background transparent. It can be set using the `CssClass` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip EnableDelete="true">
     <ChipItems>

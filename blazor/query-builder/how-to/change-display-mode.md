@@ -12,7 +12,7 @@ documentation: ug
 The Querybuilder allows you to view Vertically or Horizontally. To enable this feature, you can set the [`DisplayMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DisplayMode) property.
 In the following sample the display option is set as vertical.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder DataSource="@EmployeeData" Width="400px" DisplayMode="DisplayMode.Vertical">

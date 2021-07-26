@@ -11,7 +11,7 @@ documentation: ug
 
 The baseline feature enables users to view the deviation between the planned dates and actual dates of the tasks in a project. Baseline dates or planned dates of a task may or may not be same as the actual task dates. The baseline can be enabled by setting the `RenderBaseline` property to `true` and the baseline color can be changed using the `BaselineColor` property. To render the baseline, you should map the baseline start and end date values from the data source. This can be done using the `GanttTaskFields.BaselineStartDate` and `GanttTaskFields.BaselineEndDate` properties. The following code example shows how to enable a baseline in the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" RenderBaseline="true"
         ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" Height="450px" Width="700px">

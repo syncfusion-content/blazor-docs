@@ -13,7 +13,7 @@ This section explains about how to open a sub menu on Context Menu item click. T
 
 In the following sample, Sub Menu will open while clicking `Save` item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>

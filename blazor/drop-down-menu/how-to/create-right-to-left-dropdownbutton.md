@@ -13,7 +13,7 @@ Dropdown Menu component has RTL support. This can be achieved by setting [`Enabl
 
 The following example illustrates how to enable right-to-left support in Dropdown Menu component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Message" IconCss="e-icons e-message" EnableRtl="true">

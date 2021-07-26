@@ -16,7 +16,7 @@ is updated dynamically on scrolling the popup list with its category value.
 
 In the following sample, vegetables are grouped according on its category using `GroupBy` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Vegetables" Placeholder="e.g. Select a vegetable" DataSource="@LocalData">

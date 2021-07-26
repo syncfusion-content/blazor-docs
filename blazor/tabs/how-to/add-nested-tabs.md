@@ -11,7 +11,7 @@ documentation: ug
 
 The Tabs control supports to render the nested level of Tabs by using `ContentTemplate` property. To render the nested Tabs, you can define nested tab elements within the `ContentTemplate` property of the parent tab.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab>

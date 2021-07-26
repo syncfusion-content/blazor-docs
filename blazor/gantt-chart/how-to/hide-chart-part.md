@@ -11,7 +11,7 @@ documentation: ug
 
 In the Gantt Chart component, you can hide chart part and display Tree Grid part alone by setting the value of `GanttSplitterSettings.View` property as `Grid`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
     <SfGantt DataSource="@TaskCollection" Height="230px" Width="700px">
         <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">

@@ -35,7 +35,7 @@ Items |Description
 
 The following sample code demonstrates enabling context menu with its default items,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" AllowSorting="true" ParentIdMapping="ParentId" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})" TreeColumnIndex="1">
@@ -89,7 +89,7 @@ The custom context menu items can be added by defining the [`ContextMenuItems`](
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~ContextMenuClick.html) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid;
 

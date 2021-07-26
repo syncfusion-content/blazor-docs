@@ -12,7 +12,7 @@ documentation: ug
 You can show hidden columns or hide visible column’s editor in the dialog while editing the datagrid record. This can be achieved by **Template**.
 In the below example, we have rendered the datagrid columns [`OrderDate`] as hidden column and [`Freight`] as visible column. In the edit mode, we have changed the [`Freight`] column to visible state and [`OrderDate`] column to hidden state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs
