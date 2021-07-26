@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor - Syncfusion
-description: Check out the documentation for Localization in Blazor
-platform: Blazor
-component: Common
+title: "Localization (Multi-Language) in Blazor components | Syncfusion"
+description: "The Syncfusion Blazor UI components support localization and globalization (RTL, number, and date formats) in Blazor Server and WebAssembly (WASM) apps."
+platform: "Blazor"
+component: "Common"
 documentation: ug
 ---
 
-# Localization
+# Localization (Multi-Language) support in Syncfusion Blazor components
 
 Localization (L10N) is the process of adapting application components and content to the desired language with its corresponding region. This page shows you how to use the Localization feature in your application.
 
@@ -29,15 +29,9 @@ The culture can be set using one of the following approaches:
 
 * The Syncfusion Blazor UI components can translate its UI element content based on the user-defined language or culture. The Localization support is processed by using Resource `.resx` files. These resource files contain the key-value pair of locale content in the following format.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
 <Component_Name>_<Feature_Name>_<Locale_Key>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 * The Syncfusion Blazor UI components are using `en-Us` culture for default rendering.
 
@@ -49,10 +43,7 @@ The culture can be set using one of the following approaches:
 
     > **Note:** The Syncfusion locale service should be added after the Syncfusion default service. so that the application level Syncfusion locale service injection will override the default Syncfusion locale service. Map the folder path to the `ResourcesPath` in the default localization service.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
     using System.Globalization;
     using ApplicationNamespace.Shared;
@@ -112,21 +103,15 @@ The culture can be set using one of the following approaches:
             });
         }
     }
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-> **Note** Here, the `ApplicationNamespace` is your application name.
+    > **Note** Here, the `ApplicationNamespace` is your application name.
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
     > **Note:** Map the `SfResources.ResourceManager` to this interface `Manager`.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
 
     public class SyncfusionLocalizer : ISyncfusionStringLocalizer
@@ -147,10 +132,7 @@ The culture can be set using one of the following approaches:
             }
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 3. Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application.
 
@@ -158,10 +140,7 @@ The culture can be set using one of the following approaches:
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <ItemGroup>
         <EmbeddedResource Update="Resources\SfResources.en-US.resx">
             <Generator>PublicResXFileCodeGenerator</Generator>
@@ -171,17 +150,11 @@ The culture can be set using one of the following approaches:
             <LastGenOutput>SfResources.Designer.cs</LastGenOutput>
         </EmbeddedResource>
     </ItemGroup>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 4. Create `~/Pages/_Host.cshtml.cs` file and use cookies to store the user-selected culture.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Localization;
     using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -199,17 +172,11 @@ The culture can be set using one of the following approaches:
                         CultureInfo.CurrentUICulture)));
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 5. Create `~/Controllers/CultureController.cs` file and configure the controller to switch the culture using UI.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Localization;
@@ -230,17 +197,11 @@ The culture can be set using one of the following approaches:
             return LocalRedirect(redirectUri);
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 6. Create a Blazor component `CultureSwitcher.razor` in the `~/Shared/` folder.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @inject NavigationManager NavigationManager
 
     <h3>Select your language</h3>
@@ -263,17 +224,11 @@ The culture can be set using one of the following approaches:
             NavigationManager.NavigateTo("/Culture/SetCulture" + query, forceLoad:  true);
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 7. Add `CultureSwitcher` component to `~/Shared/MainLayout.razor` file to enable the culture switcher in all pages.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <div class="main">
         <div class="top-row px-4">
             <CultureSwitcher />
@@ -284,10 +239,7 @@ The culture can be set using one of the following approaches:
             @Body
         </div>
     </div>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 8. Add Syncfusion Blazor UI components in `~/Pages/*.razor` and run the application. The following screenshot illustrates the output of the German `de-DE` culture.
 
@@ -299,10 +251,7 @@ The culture can be set using one of the following approaches:
 
 1. Add the Localization service configuration in the `~/Program.cs` file.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
     using Microsoft.JSInterop;
     using System.Globalization;
@@ -342,21 +291,15 @@ The culture can be set using one of the following approaches:
             await builder.Build().RunAsync();
         }
     }
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-> **Note** Here, the `ApplicationNamespace` is your application name.
+    > **Note** Here, the `ApplicationNamespace` is your application name.
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
     > **Note:** Map the `SfResources.ResourceManager` to this interface `Manager`.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
 
     public class SyncfusionLocalizer : ISyncfusionStringLocalizer
@@ -377,24 +320,13 @@ The culture can be set using one of the following approaches:
             }
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
     > **Note**: For .NET 5.0 Blazor Webassembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes.
-
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <PropertyGroup>
     <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     </PropertyGroup>
-
-{% endhighlight %}
-
-{% endtabs %}
-
+    ```
     Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-5.0#blazor-webassembly) for more details.
 
 3. Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application.
@@ -403,10 +335,7 @@ The culture can be set using one of the following approaches:
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <ItemGroup>
       <Compile Update="Resources\SfResources.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -421,17 +350,11 @@ The culture can be set using one of the following approaches:
         <LastGenOutput>SfResources.Designer.cs</LastGenOutput>
       </EmbeddedResource>
     </ItemGroup>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 4. Add the custom JavaScript interop function to get or set the culture in `~/wwwrooot/index.html`.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <body>
         .....
         .....
@@ -445,17 +368,11 @@ The culture can be set using one of the following approaches:
             };
         </script>
     </body>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 5. Create a Blazor component `CultureSwitcher.razor` in the `~/Shared/` folder.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using  System.Globalization
     @inject IJSRuntime JSRuntime
     @inject NavigationManager NavigationManager
@@ -489,16 +406,10 @@ The culture can be set using one of the following approaches:
             }
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 6. Add `CultureSwitcher` component to `~/Shared/MainLayout.razor` file to enable the culture switcher in all pages.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <div class="main">
         <div class="top-row px-4">
             <CultureSwitcher />
@@ -509,10 +420,7 @@ The culture can be set using one of the following approaches:
             @Body
         </div>
     </div>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 7. Add Syncfusion Blazor UI components in `~/Pages/*.razor` and run the application. The following screenshot illustrates the output of the German `de-DE` culture.
 

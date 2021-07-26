@@ -40,18 +40,12 @@ This section provides information about creating Razor Class Library with the Sy
 
     > **Note:** If exist netstandard version is 2.0 in `RazorClassLibrary.csproj`, then change it to **netstandard2.1**
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         ....
     </PropertyGroup>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 ### Importing Syncfusion Blazor component in Razor Class Library
 
@@ -75,24 +69,18 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
 
     <div class="my-component">
     This Blazor component is defined in the <strong>RazorClassLibrary</strong> package.
     </div><br />
 
     <SfCalendar TValue="DateTime"></SfCalendar>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 #### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created RLC by using the `NuGet Package Manager`. Right-click the project and select Manage NuGet Packages.
 
@@ -106,22 +94,13 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor`.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using Syncfusion.Blazor
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using Syncfusion.Blazor.Calendars
 
     <div class="my-component">
@@ -129,10 +108,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     </div><br />
 
     <SfCalendar TValue="DateTime"></SfCalendar>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 ## Create a Blazor Server project in Visual Studio 2019 with Razor Class Library (RCL)
 
@@ -180,22 +156,13 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file in Blazor App and import the `RazorClassLibrary`.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using RazorClassLibrary
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service from RCL.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     ....
     using Syncfusion.Blazor;
     namespace BlazorApp
@@ -213,17 +180,11 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
         ....
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 3. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page in Blazor App.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
@@ -235,27 +196,18 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
         // Using overall NuGet package
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-    W> `Syncfusion.Blazor` package should not to be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). If you are using individual NuGet packages, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) reference in the application. Or else, you have to add the above `Syncfusion.Blazor` styles reference for overall NuGet package.
+    > Warning: `Syncfusion.Blazor` package should not to be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). If you are using individual NuGet packages, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) reference in the application. Or else, you have to add the above `Syncfusion.Blazor` styles reference for overall NuGet package.
 
     > **Note:** Also, we can referred the themes through the CDN version by using below link instead of package theme reference. 
     [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css).
 
 4. Now, add the created custom component that is imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <Component></Component>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
@@ -307,22 +259,13 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file in Blazor WebAssembly App and import the `RazorClassLibrary`.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using RazorClassLibrary
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service from RCL.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
 
     namespace BlazorApp
@@ -338,17 +281,11 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
             }
         }
     }
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 3. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
@@ -360,27 +297,18 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
         // Using overall NuGet package
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-    W> `Syncfusion.Blazor` package should not to be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). If you are using individual NuGet packages, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) reference in the application. Or else, you have to add the above `Syncfusion.Blazor` styles reference for overall NuGet package.
+    > Warning: `Syncfusion.Blazor` package should not to be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). If you are using individual NuGet packages, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) reference in the application. Or else, you have to add the above `Syncfusion.Blazor` styles reference for overall NuGet package.
 
     > **Note:** Also, we can referred the themes through the CDN version by using below link instead of package theme reference. 
     [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css).
 
 4. Now, add the created custom component that is imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <Component></Component>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 5. Run the application, The Syncfusion Blazor Calendar component will be rendered in the default web browser.
 

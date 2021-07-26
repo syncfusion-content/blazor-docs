@@ -11,7 +11,7 @@ documentation: ug
 
 ## Install Web Compiler
 
-Install the Web Compiler to compile the `scss` files in the Blazor Applications.
+Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 ## Steps to install the Web Compiler in Visual Studio 2019**
 
@@ -29,21 +29,15 @@ Install the Web Compiler to compile the `scss` files in the Blazor Applications.
 
 2. Install the Syncfusion `node_modules` in this application using this command.
 
-{% tabs %}
-
-{% highlight bash %}
+    ```cmd
 
     npm install @syncfusion/ej2
 
-{% endhighlight %}
+    ```
 
-{% endtabs %}
+3. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
-3. Create a `scss` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
-
-{% tabs %}
-
-{% highlight scss %}
+    ``` scss
 
     $calendar-normal-max-width: 362px !default;
     $calendar-normal-min-width: 256px !default;
@@ -53,20 +47,15 @@ Install the Web Compiler to compile the `scss` files in the Blazor Applications.
     @import 'ej2-buttons/styles/bootstrap4.scss';
     @import 'ej2-calendars/styles/bootstrap4.scss';
 
-{% endhighlight %}
+    ```
 
-{% endtabs %}
-
-4. Right-click the `scss` file and click the Web Compiler to compile the file.
+4. Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
     ![compile](../images/compile.png)
 
 5. The **compilerconfig.json** file is created. Then provide the location of the compiled CSS file and include path like the following code snippet.
 
-{% tabs %}
-
-{% highlight JSON %}
-
+    ```json
         [
             {
                 "outputFile": "wwwroot/styles/custom.css",
@@ -76,17 +65,11 @@ Install the Web Compiler to compile the `scss` files in the Blazor Applications.
                 }
             }
         ]
+    ```
 
-{% endhighlight %}
+6. The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-{% endtabs %}
-
-6. The `scss` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.
-
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
 
     .....
@@ -95,9 +78,7 @@ Install the Web Compiler to compile the `scss` files in the Blazor Applications.
     <link href="~/styles/custom.css" rel="stylesheet" />
     <head>
 
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     > **Note:** Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application for the production environment. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for further details.
 

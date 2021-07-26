@@ -17,7 +17,7 @@ documentation: ug
 
     You may see the below runtime exception while running the application for the first time.
 
-    E> **InvalidOperationException:** Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Namespace.Component'. There is no registered service of type 'Syncfusion.Blazor.SyncfusionBlazorService'.
+    > Error: **InvalidOperationException:** Cannot provide a value for property 'SyncfusionService' on type 'Syncfusion.Blazor.Namespace.Component'. There is no registered service of type 'Syncfusion.Blazor.SyncfusionBlazorService'.
 
     **Cause:**
 
@@ -50,7 +50,7 @@ documentation: ug
 
     You may see the below exception while running the application in your production/server machine.
 
-    E> **System.NullReferenceException:** Object reference not set to an instance of an object.
+    > Error: **System.NullReferenceException:** Object reference not set to an instance of an object.
     >
     > at `Syncfusion.Blazor.SyncfusionBlazorService.GetContext()`
     >
@@ -75,7 +75,7 @@ documentation: ug
    You may see the below exception while running the Syncfusion blazor
    application.
 
-    E> The type name 'Shared' does not exist in the type 'SyncfusionBlazor' SyncfusionBlazor `\SyncfusionBlazor\SyncfusionBlazor\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs`
+    > Error: The type name 'Shared' does not exist in the type 'SyncfusionBlazor' SyncfusionBlazor `\SyncfusionBlazor\SyncfusionBlazor\obj\Debug\netcoreapp3.1\Razor\Shared\MainLayout.razor.g.cs`
 
    **Cause:**
 
@@ -89,7 +89,7 @@ documentation: ug
 
     You may get the below exception while running the Syncfusion blazor application.
 
-    E> System.IO.FileLoadException: Could not load file or assembly 'System.Text.Json, Version=4.0.1.1, Culture=neutral PublicKeyToken=cc7b13ffcd2ddd51'. The located assembly's manifest definition does not match the assembly reference.
+    > Error: System.IO.FileLoadException: Could not load file or assembly 'System.Text.Json, Version=4.0.1.1, Culture=neutral PublicKeyToken=cc7b13ffcd2ddd51'. The located assembly's manifest definition does not match the assembly reference.
 
     **Cause:**
 
@@ -105,7 +105,7 @@ documentation: ug
 
     You may see the below compile-time exception while running the application.
 
-    E> The call is ambiguous between the following methods or properties 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)'
+    > Error: The call is ambiguous between the following methods or properties 'Syncfusion.Blazor.SyncfusionBlazor.AddSyncfusionBlazor(Microsoft.Extensions.DependencyInjection.IServiceCollection, bool)'
 
     **Cause:**
 
@@ -121,7 +121,7 @@ documentation: ug
 
     You may see the below compile-time exception while running the application.
 
-    E> The type or namespace name 'EJ2' does not exist in the namespace 'Syncfusion' (are you missing an assembly reference?)
+    > Error: The type or namespace name 'EJ2' does not exist in the namespace 'Syncfusion' (are you missing an assembly reference?)
 
     **Cause:**
 
@@ -135,7 +135,7 @@ documentation: ug
 
     You may see the below compile-time exception while running the application.
 
-    E> Found markup element with unexpected name 'Ejs'. If this is intended to be a component, add a @using directive for its namespace
+    > Error: Found markup element with unexpected name 'Ejs'. If this is intended to be a component, add a @using directive for its namespace
 
     **Cause:**
 
@@ -151,7 +151,7 @@ documentation: ug
 
     You may see the below exception in the web browser dev tool console.
 
-    E> GET ./_content/Syncfusion.Blazor/styles/bootstrap4.css net::ERR_ABORTED 404
+    > Error: GET ./_content/Syncfusion.Blazor/styles/bootstrap4.css net::ERR_ABORTED 404
 
     **Cause:**
 
@@ -169,13 +169,13 @@ documentation: ug
         </head>
     ```
 
-    > Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
+    > Note: Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 * **An unhandled exception has occurred. See browser dev tools for details**
 
     You may see the below exception at the bottom of the page.
 
-    E> An unhandled exception has occurred. See browser dev tools for details
+    > Error: An unhandled exception has occurred. See browser dev tools for details
 
     **Cause:**
 
@@ -191,7 +191,7 @@ documentation: ug
 
     You may see the below exception in the web browser dev tool console.
 
-    E> Could not find 'loadScripts' in 'window.sfBlazor'.
+    > Error: Could not find 'loadScripts' in 'window.sfBlazor'.
 
     **Cause:**
 
@@ -205,7 +205,7 @@ documentation: ug
 
    You may face the below exception when deploying the blazor application as Sub application.
 
-    E> GET `./<SUB-PATH>/<SUB-PATH>_content/Syncfusion.Blazor/<Scripts and CSSs references>` net::ERR_ABORTED 404
+    > Error: GET `./<SUB-PATH>/<SUB-PATH>_content/Syncfusion.Blazor/<Scripts and CSSs references>` net::ERR_ABORTED 404
 
     For this, we need to configure the Base path configuration in the root application's `startup.cs` and `_Host.cshtml`.
 

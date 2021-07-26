@@ -1,7 +1,6 @@
 ---
 layout: post
 title: SQL server data binding and performing CRUD operations using Syncfusion Blazor component | Syncfusion
-platform: Blazor
 description: Learn about consuming data from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations
 platform: Blazor
 component: DataGrid component and DataManager

@@ -104,7 +104,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 When the index page has injected with the `HttpClient` and tried to prerender on the server, the client will not establish its connection on that time. So, it will throws the runtime exceptions.
 
-E> InvalidOperationException: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
+> Error: InvalidOperationException: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
 
 The Syncfusion Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, the it tried to get the WebAPI with its absolute URI or BaseAddress.
 
@@ -117,7 +117,7 @@ protected override async Task OnInitializedAsync()
 }
 ```
 
-E> SocketException: An existing connection was forcibly closed by the remote host.
+> Error: SocketException: An existing connection was forcibly closed by the remote host.
 >
 > IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host
 >

@@ -58,11 +58,11 @@ You can use any one of the following standards to install the Syncfusion Blazor 
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    > Warning: `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+> Warning: If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Now, install the **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click on the **`Client`[BlazorWasmHosted.Client]** project and then select Manage NuGet Packages.
 
