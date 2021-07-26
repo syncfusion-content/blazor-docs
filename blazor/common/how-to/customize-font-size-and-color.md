@@ -29,11 +29,11 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 2. Install the Syncfusion `node_modules` in this application using this command.
 
-    ```cmd
+```bash
 
     npm install @syncfusion/ej2
 
-    ```
+```
 
 3. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
