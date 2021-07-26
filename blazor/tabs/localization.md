@@ -160,7 +160,7 @@ The following steps explain you to set `de-DE` culture for Tabs in web assembly 
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
-    > **Note:** Map the `SfResources.ResourceManager` to this interface `ResourceManager`.
+    > Map the `SfResources.ResourceManager` to this interface `ResourceManager`.
 
     ```csharp
     using Syncfusion.Blazor;

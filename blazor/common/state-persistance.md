@@ -9,27 +9,24 @@ documentation: ug
 
 # State Persistence
 
-Syncfusion Blazor platform supports for persisting a component's state across page refreshes or navigation. To enable this feature, set the `EnablePersistence` property to true to the required component. This will store the component's state in the browser’s `localStorage` object on-page `unload` event. For example, persistence has been enabled to grid component in the following code.
+The Syncfusion Blazor library supports persisting a component's state across page refreshes or navigation. To enable this feature, set the `EnablePersistence` property to `true` to the required component. This will store the component's state in the browser’s `localStorage` object on-page `unload` event. For example, persistence has been enabled to the grid component in the following code.
 
-{% tabs %}
+> The state of a component will be retained during navigation or refreshment based on the ID. Make sure to set an ID for the component to store the component's state in the browser.
 
-{% highlight c# %}
-
-
+```csharp
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" ID="grid" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true" EnablePersistence="true">
+<SfGrid  ID="grid" EnablePersistence="true" AllowPaging="true" DataSource="@Orders">
     <GridPageSettings PageSize="8"></GridPageSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" Width="100"></GridColumn>
         <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) Format="C2" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
 @code {
-
     public List<Order> Orders { get; set; }
 
     protected override async Task OnInitializedAsync()
@@ -52,11 +49,29 @@ Syncfusion Blazor platform supports for persisting a component's state across pa
         public double? Freight { get; set; }
     }
 }
+```
 
+## State Persistance Supported Components and Properties
 
+The following table demonstrates the list of Syncfusion Blazor components that are supported with state persistence and describes the list of properties stored in the `localStorage`.
 
-{% endhighlight %}
-
-{% endtabs %}
-
-> **Note:** The state of the component is retained during navigation or refreshment based on ID. Make sure to set an ID for the component to store the component's state in the browser.
+<!-- markdownlint-disable MD033 -->
+<table>
+<tr>
+<td><b>Component Name</b></td>
+<td><b>Properties<b></td>
+</tr>
+<tr>
+<td>SfGrid</td>
+<td>
+<ul>
+<li>Columns</li>
+<li>GridFilterSettings</li>
+<li>GridSortSettings</li>
+<li>GridGroupSettings</li>
+<li>GridPageSettings</li>
+</ul>
+</td>
+</tr>
+</table>
+<!-- markdownlint-enable MD033 -->

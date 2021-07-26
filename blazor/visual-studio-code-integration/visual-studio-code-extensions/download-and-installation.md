@@ -23,7 +23,7 @@ The following prerequisites software need to be installed for the Syncfusion Bla
 
 * [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later.
 
-* [c# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
 
 ## Install through the Visual Studio Code Extensions
 

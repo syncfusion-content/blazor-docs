@@ -15,7 +15,7 @@ You can use `HeaderTemplate` and `ContentTemplate` properties to render accordio
 
 The below sample explains how to initialize accordion items through `templates`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>
@@ -77,4 +77,4 @@ The below sample explains how to initialize accordion items through `templates`.
 
 Output be like the below.
 
-![Load Accordion items using datasource](./images/acrdnDatabinding.png)
+![Blazor Accordion Data Binding](./images/acrdnDatabinding.png)

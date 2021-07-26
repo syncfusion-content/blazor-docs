@@ -240,4 +240,4 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 </tr>
 </table>
 
-> **Note:** To downgrade the project from 18.1.0.36 version, you need to do the reverse process of the previous steps.
+> To downgrade the project from 18.1.0.36 version, you need to do the reverse process of the previous steps.

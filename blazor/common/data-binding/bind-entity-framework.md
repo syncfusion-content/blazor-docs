@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bind data from SQL server to Syncfusion Blazor components using Entity Framework and perform CRUD operations.
+title: Bind data from SQL server to Syncfusion Blazor components using Entity Framework and perform CRUD operations
 description: Learn how to retrieve data from SQL server, bind it to Syncfusion DataGrid component using Entity Framework, and perform CRUD operations.
 platform: Blazor
 component: Common

@@ -1,24 +1,15 @@
----
-layout: post
-title: Getting started with Syncfusion Blazor - Blazor Server Side App in Visual Studio 2019
-description: Check out the documentation for Getting started with Syncfusion Blazor
-platform: Blazor
-component: Common
-documentation: ug
----
-
 <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Blazor Components in Blazor Server Side App in Visual Studio 2019
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup,and also to build and run a simple Blazor Server Side application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
-> **Note:** Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
+> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 > **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
 >
@@ -66,21 +57,15 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 4. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
@@ -98,43 +83,28 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
-
-> **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.4.30/styles/bootstrap4.css).
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/19.2.46/styles/bootstrap4.css).
 
 ## Adding Syncfusion Blazor component and running the application
 
 1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -149,22 +119,15 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
             }
         }
     }
+    ```
 
-{% endhighlight %}
-
-{% endtabs %}
+    > We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
     <SfCalendar TValue="DateTime"></SfCalendar>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 4. Run the application. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 

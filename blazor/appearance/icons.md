@@ -13,54 +13,33 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 ## Steps to use Icon
 
-1. Add a class `e-icons` to the html element that shows the icon. This class contains the font-family and common property of the font icons.
+1. Add a class `e-icons` to the HTML element that shows the icon. This class contains the font-family and common property of the font icons.
 
 2. Add the icon class with corresponding icon content from the [available icons](#available-icons). For example, the below code snippet represents the search icon class.
 
-{% tabs %}
-
-{% highlight CSS %}
-
+    ```css
     .e-search:before{
         content:'\e993';
     }
+    ```
 
-{% endhighlight %}
+3. Add `e-icons` and `e-search` class to the HTML element.
 
-{% endtabs %}
-
-3. Add `e-icons` and `e-search` class to the html element.
-
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <span class="e-icons e-search"></span>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 4. You can add client-side resources through CDN in the `<head>` element of the `~/wwwroot/index.html` in Blazor WebAssembly app or `~/Pages/_Host.cshtml` in Blazor server app.
 
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         <link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     The below code snippet represents the complete example of icon usage in `~/Pages/Index.razor`.
 
-{% tabs %}
-
-{% highlight c# %}
-
+    ```csharp
         <div class="icons">
             <ul>
                 <li><span class="e-icons e-search"></span></li>
@@ -79,19 +58,13 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
                 content: '\e34c';
             }
         </style>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
 ## Customize Icon
 
 The Syncfusion Blazor icon library can customize its color, size by overriding the `e-icons` class.
 
-{% tabs %}
-
-{% highlight c# %}
-
+```csharp
     <style>
         .e-icons{
             color: #00ffff;
@@ -114,10 +87,7 @@ The Syncfusion Blazor icon library can customize its color, size by overriding t
             <li><span class="e-icons e-font"></span></li>
             </ul>
     </div>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Available Icons
 
@@ -144,3 +114,7 @@ The complete pack of Syncfusion Blazor icons is listed in the below table. The c
 ### High Contrast
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/highcontrast/demo.html" style="height:1000px;"></iframe>
+
+### Tailwind CSS
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;"></iframe>

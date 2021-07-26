@@ -17,7 +17,7 @@ You can get more information about deploying Blazor applications [Here](https://
 
 * Create the Blazor application with [Syncfusion Blazor Components](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/).
 
-> **Note:** You have to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for more details.
+> You have to change the base path of the application. Refer to the [MSDN](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/blazor/?view=aspnetcore-3.1&tabs=visual-studio#app-base-path) for more details.
 
 * Right-click on the project in the `Solution Explorer` and select `Publish`.
 
@@ -46,27 +46,15 @@ Packing the application and its dependencies into a folder for deployment to a h
 
 For CLI deployment, run the following command from your root directory.
 
-{% tabs %}
-
-{% highlight bash %}
-
+```bash
     dotnet publish -c Release
-
-{% endhighlight %}
-
-{% endtabs %}
+````
 
 For Blazor Server CLI deployment.
 
-{% tabs %}
-
-{% highlight bash %}
-
+```bash
     dotnet publish -c Release --self-contained true -r win-x86
-
-{% endhighlight %}
-
-{% endtabs %}
+````
 
 Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments).
 
@@ -74,15 +62,9 @@ Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/e
 
 Use the following command to specify the path for the output directory.
 
-{% tabs %}
-
-{% highlight bash %}
-
+```bash
     dotnet publish -c Release -o <output directory>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 > If the output directory not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 

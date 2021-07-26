@@ -1157,7 +1157,7 @@ SfPdfViewerServer
 </tr>
 </table>
 
-> If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+> Note: If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
@@ -1381,7 +1381,7 @@ SfRangeNavigator
 
 ### Syncfusion.Blazor.RichTextEditor
 
-The Rich Text Editor component is the html and markdown editor that provides the best user experience for creating, updating, and formatting the content.
+The Rich Text Editor component is the HTML and markdown editor that provides the best user experience for creating, updating, and formatting the content.
 
 <table>
 <tr>

@@ -55,22 +55,22 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     </head>
     ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
- ```html
-    <head>
-        ...
-            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-        ...
-    </head>
-```
+    ```html
+        <head>
+            ...
+                <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+                <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+            ...
+        </head>
+    ```
 
 ## Adding component package to the application
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` package.
 
-```csharp
+```cshtml
     @using Syncfusion.Blazor.Navigations
 ```
 
@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Accordion component in any web page (razor) in the `Pages` folder. For example, the Accordion component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>
@@ -117,13 +117,13 @@ Now, add the Syncfusion Blazor Accordion component in any web page (razor) in th
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![Default Accordion](./images/browser-output.png)
+![Blazor Accordion](./images/browser-output.png)
 
 ## Initialize Accordion using Template
 
 The following code explains how to initialize accordion using `Template`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>
@@ -174,9 +174,7 @@ The following code explains how to initialize accordion using `Template`.
 </style>
 ```
 
-Output be like the below.
-
-![Accordion with template](./images/template.png)
+![Blazor Accordion with template](./images/template.png)
 
 ## See Also
 

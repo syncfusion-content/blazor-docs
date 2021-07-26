@@ -169,7 +169,7 @@ documentation: ug
         </head>
     ```
 
-    > Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
+    > Note: Do not use both Syncfusion.Blazor and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 * **An unhandled exception has occurred. See browser dev tools for details**
 

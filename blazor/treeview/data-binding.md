@@ -519,7 +519,7 @@ namespace WebApplication1.Server.Controllers
 
 Now, you can configure the Blazor TreeView using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, you need to use web Api adaptor.
 
-> **Note:** We have performed the CRUD operation in the TreeView component using the context menu.
+> We have performed the CRUD operation in the TreeView component using the context menu.
 
 ```csharp
 

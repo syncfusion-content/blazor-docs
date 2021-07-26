@@ -160,7 +160,7 @@ Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet 
 
 ![Install Syncfusion Blazor Grid NuGet](../images/install-blazor-grid-nuget.png)
 
-> **Note:** For this demo, we have used `Syncfusion.Blazor`(19.1.0.65) NuGet package.  We will release a new `Syncfusion.Blazor` NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
+> For this demo, we have used `Syncfusion.Blazor`(19.1.0.65) NuGet package.  We will release a new `Syncfusion.Blazor` NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 ## Adding Syncfusion Blazor DataGrid component
 
@@ -304,7 +304,7 @@ We can enable editing in the grid component using the [GridEditSettings](https:/
 
 [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
-> **Note:** Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
+> Normal editing is the default edit mode for the DataGrid component. You need to set the IsPrimaryKey property of Column as True for a particular column, whose value is a unique value for editing purposes.
 
 Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property to show toolbar items for editing.
 

@@ -16,6 +16,7 @@ The Syncfusion Blazor components library provides the following list of built-in
 3. Google’s Material
 4. Microsoft Office’s Fabric
 5. High Contrast
+6. Tailwind CSS
 
 > The Syncfusion Blazor Bootstrap theme is designed based on `Bootstrap v3`, whereas the Bootstrap 4 theme is designed based on `Bootstrap v4`.
 
@@ -25,36 +26,23 @@ The Syncfusion Blazor components library provides the following list of built-in
 
 * Add the below link reference inside the `<head>` element of the `~/Pages/_Host.cshtml` file for Blazor server app or `~/wwwroot/index.html` file for Blazor WebAssembly app.
 
-    If you are using [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link. 
-
-{% tabs %}
-
-{% highlight html %}
-
+    If you are using [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
+    ```html
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
-{% tabs %}
-
-{% highlight html %}
-
+    ```html
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+    ```
 
     > The below theme file names can be replaced with the above links.
     > * bootstrap4.css
@@ -65,24 +53,19 @@ The Syncfusion Blazor components library provides the following list of built-in
     > * highcontrast.css
     > * material.css
     > * material-dark.css
+    > * tailwind.css
 
 ## CDN reference
 
 The Syncfusion Blazor themes also available in the CDN.
 
-{% tabs %}
-
-{% highlight html %}
-
+```html
 <head>
     ....
     ....
     <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
 </head>
-
-{% endhighlight %}
-
-{% endtabs %}
+```
 
 ## Common Variables
 
@@ -276,3 +259,69 @@ The following list of common variables is used in the Syncfusion Blazor library 
 | `$alert-alt` | ![#ff7d1a](https://ej2.syncfusion.com/download/documentation/svg/ff7d1a.svg) `#ff7d1a` |
 | `$info-alt` | ![#66b0ff](https://ej2.syncfusion.com/download/documentation/svg/66b0ff.svg) `#66b0ff` |
 | `$disable` | ![#757575](https://ej2.syncfusion.com/download/documentation/svg/757575.svg) `#757575` |
+
+### Syncfusion Blazor Tailwind CSS Theme
+
+| Name | Value (Default Theme) | Value (Dark Theme) |
+| ------------- | ------------- | ------------- |
+| `$black` | ![#000](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#000` | ![#000](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#000` |
+| `$white` | ![#fff](https://ej2.syncfusion.com/download/documentation/svg/fff.svg) `#fff` | ![#fff](https://ej2.syncfusion.com/download/documentation/svg/fff.svg) `#fff` |
+| `$cool-gray-50` | ![#f9fafb](https://ej2.syncfusion.com/download/documentation/svg/f9fafb.svg) `#f9fafb` | ![#f9fafb](https://ej2.syncfusion.com/download/documentation/svg/f9fafb.svg) `#f9fafb` |
+| `$cool-gray-100` | ![#f3f4f6](https://ej2.syncfusion.com/download/documentation/svg/f3f4f6.svg) `#f3f4f6` | ![#f3f4f6](https://ej2.syncfusion.com/download/documentation/svg/f3f4f6.svg) `#f3f4f6` |
+| `$cool-gray-200` | ![#e5e7eb](https://ej2.syncfusion.com/download/documentation/svg/e5e7eb.svg) `#e5e7eb` | ![#e5e7eb](https://ej2.syncfusion.com/download/documentation/svg/e5e7eb.svg) `#e5e7eb` |
+| `$cool-gray-300` | ![#d1d5db](https://ej2.syncfusion.com/download/documentation/svg/d1d5db.svg) `#d1d5db` | ![#d1d5db](https://ej2.syncfusion.com/download/documentation/svg/d1d5db.svg) `#d1d5db` |
+| `$cool-gray-400` | ![#9ca3af](https://ej2.syncfusion.com/download/documentation/svg/9ca3af.svg) `#9ca3af` | ![#9ca3af](https://ej2.syncfusion.com/download/documentation/svg/9ca3af.svg) `#9ca3af` |
+| `$cool-gray-500` | ![#6b7280](https://ej2.syncfusion.com/download/documentation/svg/6b7280.svg) `#6b7280` | ![#6b7280](https://ej2.syncfusion.com/download/documentation/svg/6b7280.svg) `#6b7280` |
+| `$cool-gray-600` | ![#4b5563](https://ej2.syncfusion.com/download/documentation/svg/4b5563.svg) `#4b5563` | ![#4b5563](https://ej2.syncfusion.com/download/documentation/svg/4b5563.svg) `#4b5563` |
+| `$cool-gray-700` | ![#374151](https://ej2.syncfusion.com/download/documentation/svg/374151.svg) `#374151` | ![#374151](https://ej2.syncfusion.com/download/documentation/svg/374151.svg) `#374151` |
+| `$cool-gray-800` | ![#1f2937](https://ej2.syncfusion.com/download/documentation/svg/1f2937.svg) `#1f2937` | ![#1f2937](https://ej2.syncfusion.com/download/documentation/svg/1f2937.svg) `#1f2937` |
+| `$cool-gray-900` | ![#111827](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#111827` | ![#111827](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#111827` |
+| `$red-50` | ![#fef2f2](https://ej2.syncfusion.com/download/documentation/svg/fef2f2.svg) `#fef2f2` | ![#fef2f2](https://ej2.syncfusion.com/download/documentation/svg/fef2f2.svg) `#fef2f2` |
+| `$red-100` | ![#fee2e2](https://ej2.syncfusion.com/download/documentation/svg/fee2e2.svg) `#fee2e2` | ![#fee2e2](https://ej2.syncfusion.com/download/documentation/svg/fee2e2.svg) `#fee2e2` |
+| `$red-200` | ![#fecaca](https://ej2.syncfusion.com/download/documentation/svg/fecaca.svg) `#fecaca` | ![#fecaca](https://ej2.syncfusion.com/download/documentation/svg/fecaca.svg) `#fecaca` |
+| `$red-300` | ![#fca5a5](https://ej2.syncfusion.com/download/documentation/svg/fca5a5.svg) `#fca5a5` | ![#fca5a5](https://ej2.syncfusion.com/download/documentation/svg/fca5a5.svg) `#fca5a5` |
+| `$red-400` | ![#f87171](https://ej2.syncfusion.com/download/documentation/svg/f87171.svg) `#f87171` | ![#f87171](https://ej2.syncfusion.com/download/documentation/svg/f87171.svg) `#f87171` |
+| `$red-500` | ![#ef4444](https://ej2.syncfusion.com/download/documentation/svg/ef4444.svg) `#ef4444` | ![#ef4444](https://ej2.syncfusion.com/download/documentation/svg/ef4444.svg) `#ef4444` |
+| `$red-600` | ![#dc2626](https://ej2.syncfusion.com/download/documentation/svg/dc2626.svg) `#dc2626` | ![#dc2626](https://ej2.syncfusion.com/download/documentation/svg/dc2626.svg) `#dc2626` |
+| `$red-700` | ![#b91c1c](https://ej2.syncfusion.com/download/documentation/svg/b91c1c.svg) `#b91c1c` | ![#b91c1c](https://ej2.syncfusion.com/download/documentation/svg/b91c1c.svg) `#b91c1c` |
+| `$red-800` | ![#991b1b](https://ej2.syncfusion.com/download/documentation/svg/991b1b.svg) `#991b1b` | ![#991b1b](https://ej2.syncfusion.com/download/documentation/svg/991b1b.svg) `#991b1b` |
+| `$red-900` | ![#7f1d1d](https://ej2.syncfusion.com/download/documentation/svg/7f1d1d.svg) `#7f1d1d` | ![#7f1d1d](https://ej2.syncfusion.com/download/documentation/svg/7f1d1d.svg) `#7f1d1d` |
+| `$green-50` | ![#f0fdf4](https://ej2.syncfusion.com/download/documentation/svg/f0fdf4.svg) `#f0fdf4` | ![#f0fdf4](https://ej2.syncfusion.com/download/documentation/svg/f0fdf4.svg) `#f0fdf4` |
+| `$green-100` | ![#dcfce7](https://ej2.syncfusion.com/download/documentation/svg/dcfce7.svg) `#dcfce7` | ![#dcfce7](https://ej2.syncfusion.com/download/documentation/svg/dcfce7.svg) `#dcfce7` |
+| `$green-200` | ![#bbf7d0](https://ej2.syncfusion.com/download/documentation/svg/bbf7d0.svg) `#bbf7d0` | ![#bbf7d0](https://ej2.syncfusion.com/download/documentation/svg/bbf7d0.svg) `#bbf7d0` |
+| `$green-300` | ![#86efac](https://ej2.syncfusion.com/download/documentation/svg/86efac.svg) `#86efac` | ![#86efac](https://ej2.syncfusion.com/download/documentation/svg/86efac.svg) `#86efac` |
+| `$green-500` | ![#22c55e](https://ej2.syncfusion.com/download/documentation/svg/22c55e.svg) `#22c55e` | ![#22c55e](https://ej2.syncfusion.com/download/documentation/svg/22c55e.svg) `#22c55e` |
+| `$green-600` | ![#16a34a](https://ej2.syncfusion.com/download/documentation/svg/16a34a.svg) `#16a34a` | ![#16a34a](https://ej2.syncfusion.com/download/documentation/svg/16a34a.svg) `#16a34a` |
+| `$green-700` | ![#15803d](https://ej2.syncfusion.com/download/documentation/svg/15803d.svg) `#15803d` | ![#15803d](https://ej2.syncfusion.com/download/documentation/svg/15803d.svg) `#15803d` |
+| `$green-800` | ![#166534](https://ej2.syncfusion.com/download/documentation/svg/166534.svg) `#166534` | ![#166534](https://ej2.syncfusion.com/download/documentation/svg/166534.svg) `#166534` |
+| `$green-900` | ![#14532d](https://ej2.syncfusion.com/download/documentation/svg/14532d.svg) `#14532d` | ![#14532d](https://ej2.syncfusion.com/download/documentation/svg/14532d.svg) `#14532d` |
+| `$orange-50` | ![#fff7ed](https://ej2.syncfusion.com/download/documentation/svg/fff7ed.svg) `#fff7ed` | ![#fff7ed](https://ej2.syncfusion.com/download/documentation/svg/fff7ed.svg) `#fff7ed` |
+| `$orange-100` | ![#ffedd5](https://ej2.syncfusion.com/download/documentation/svg/ffedd5.svg) `#ffedd5` | ![#ffedd5](https://ej2.syncfusion.com/download/documentation/svg/ffedd5.svg) `#ffedd5` |
+| `$orange-200` | ![#fed7aa](https://ej2.syncfusion.com/download/documentation/svg/fed7aa.svg) `#fed7aa` | ![#fed7aa](https://ej2.syncfusion.com/download/documentation/svg/fed7aa.svg) `#fed7aa` |
+| `$orange-300` | ![#fdba74](https://ej2.syncfusion.com/download/documentation/svg/fdba74.svg) `#fdba74` | ![#fdba74](https://ej2.syncfusion.com/download/documentation/svg/fdba74.svg) `#fdba74` |
+| `$orange-400` | ![#fb923c](https://ej2.syncfusion.com/download/documentation/svg/fb923c.svg) `#fb923c` | ![#fb923c](https://ej2.syncfusion.com/download/documentation/svg/fb923c.svg) `#fb923c` |
+| `$orange-500` | ![#f97316](https://ej2.syncfusion.com/download/documentation/svg/f97316.svg) `#f97316` | ![#f97316](https://ej2.syncfusion.com/download/documentation/svg/f97316.svg) `#f97316` |
+| `$orange-600` | ![#ea580c](https://ej2.syncfusion.com/download/documentation/svg/ea580c.svg) `#ea580c` | ![#ea580c](https://ej2.syncfusion.com/download/documentation/svg/ea580c.svg) `#ea580c` |
+| `$orange-700` | ![#c2410c](https://ej2.syncfusion.com/download/documentation/svg/c2410c.svg) `#c2410c` | ![#c2410c](https://ej2.syncfusion.com/download/documentation/svg/c2410c.svg) `#c2410c` |
+| `$orange-800` | ![#9a3412](https://ej2.syncfusion.com/download/documentation/svg/9a3412.svg) `#9a3412` | ![#9a3412](https://ej2.syncfusion.com/download/documentation/svg/9a3412.svg) `#9a3412` |
+| `$orange-900` | ![#7c2d12](https://ej2.syncfusion.com/download/documentation/svg/7c2d12.svg) `#7c2d12` | ![#7c2d12](https://ej2.syncfusion.com/download/documentation/svg/7c2d12.svg) `#7c2d12` |
+| `$cyan-50` | ![#ecfeff](https://ej2.syncfusion.com/download/documentation/svg/ecfeff.svg) `#ecfeff` | ![#ecfeff](https://ej2.syncfusion.com/download/documentation/svg/ecfeff.svg) `#ecfeff` |
+| `$cyan-100` | ![#cffafe](https://ej2.syncfusion.com/download/documentation/svg/cffafe.svg) `#cffafe` | ![#cffafe](https://ej2.syncfusion.com/download/documentation/svg/cffafe.svg) `#cffafe` |
+| `$cyan-200` | ![#a5f3fc](https://ej2.syncfusion.com/download/documentation/svg/a5f3fc.svg) `#a5f3fc` | ![#a5f3fc](https://ej2.syncfusion.com/download/documentation/svg/a5f3fc.svg) `#a5f3fc` |
+| `$cyan-300` | ![#67e8f9](https://ej2.syncfusion.com/download/documentation/svg/67e8f9.svg) `#67e8f9` | ![#67e8f9](https://ej2.syncfusion.com/download/documentation/svg/67e8f9.svg) `#67e8f9` |
+| `$cyan-400` | ![#22d3ee](https://ej2.syncfusion.com/download/documentation/svg/22d3ee.svg) `#22d3ee` | ![#22d3ee](https://ej2.syncfusion.com/download/documentation/svg/22d3ee.svg) `#22d3ee` |
+| `$cyan-500` | ![#06b6d4](https://ej2.syncfusion.com/download/documentation/svg/06b6d4.svg) `#06b6d4` | ![#06b6d4](https://ej2.syncfusion.com/download/documentation/svg/06b6d4.svg) `#06b6d4` |
+| `$cyan-600` | ![#0891b2](https://ej2.syncfusion.com/download/documentation/svg/0891b2.svg) `#0891b2` | ![#0891b2](https://ej2.syncfusion.com/download/documentation/svg/0891b2.svg) `#0891b2` |
+| `$cyan-700` | ![#0e7490](https://ej2.syncfusion.com/download/documentation/svg/0e7490.svg) `#0e7490` | ![#0e7490](https://ej2.syncfusion.com/download/documentation/svg/0e7490.svg) `#0e7490` |
+| `$cyan-800` | ![#155e75](https://ej2.syncfusion.com/download/documentation/svg/155e75.svg) `#155e75` | ![#155e75](https://ej2.syncfusion.com/download/documentation/svg/155e75.svg) `#155e75` |
+| `$cyan-900` | ![#164e63](https://ej2.syncfusion.com/download/documentation/svg/164e63.svg) `#164e63` | ![#164e63](https://ej2.syncfusion.com/download/documentation/svg/164e63.svg) `#164e63` |
+| `$indigo-50` | ![#eef2ff](https://ej2.syncfusion.com/download/documentation/svg/eef2ff.svg) `#eef2ff` | ![#eef2ff](https://ej2.syncfusion.com/download/documentation/svg/eef2ff.svg) `#eef2ff` |
+| `$indigo-100` | ![#e0e7ff](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#e0e7ff` | ![#e0e7ff](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#e0e7ff` |
+| `$indigo-200` | ![#c7d2fe](https://ej2.syncfusion.com/download/documentation/svg/c7d2fe.svg) `#c7d2fe` | ![#c7d2fe](https://ej2.syncfusion.com/download/documentation/svg/c7d2fe.svg) `#c7d2fe` |
+| `$indigo-300` | ![#a5b4fc](https://ej2.syncfusion.com/download/documentation/svg/a5b4fc.svg) `#a5b4fc` | ![#a5b4fc](https://ej2.syncfusion.com/download/documentation/svg/a5b4fc.svg) `#a5b4fc` |
+| `$indigo-400` | ![#818cf8](https://ej2.syncfusion.com/download/documentation/svg/818cf8.svg) `#818cf8` | ![#818cf8](https://ej2.syncfusion.com/download/documentation/svg/818cf8.svg) `#818cf8` |
+| `$indigo-500` | ![#6366f1](https://ej2.syncfusion.com/download/documentation/svg/6366f1.svg) `#6366f1` | ![#6366f1](https://ej2.syncfusion.com/download/documentation/svg/6366f1.svg) `#6366f1` |
+| `$indigo-600` | ![#4f46e5](https://ej2.syncfusion.com/download/documentation/svg/4f46e5.svg) `#4f46e5` | ![#4f46e5](https://ej2.syncfusion.com/download/documentation/svg/4f46e5.svg) `#4f46e5` |
+| `$indigo-700` | ![#4338ca](https://ej2.syncfusion.com/download/documentation/svg/4338ca.svg) `#4338ca` | ![#4338ca](https://ej2.syncfusion.com/download/documentation/svg/4338ca.svg) `#4338ca` |
+| `$indigo-800` | ![#3730a3](https://ej2.syncfusion.com/download/documentation/svg/3730a3.svg) `#3730a3` | ![#3730a3](https://ej2.syncfusion.com/download/documentation/svg/3730a3.svg) `#3730a3` |
+| `$indigo-900` | ![#312e81](https://ej2.syncfusion.com/download/documentation/svg/312e81.svg) `#312e81` | ![#312e81](https://ej2.syncfusion.com/download/documentation/svg/312e81.svg) `#312e81` |
