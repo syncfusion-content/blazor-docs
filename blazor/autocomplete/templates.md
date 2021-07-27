@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Templates in Blazor AutoComplete component of Syncfusion, and more details.
+title: Templates in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Templates in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Templates
+# Templates in Blazor AutoComplete Component
 
 The AutoComplete has been provided with several options to customize each list items, group title, header,
 and footer elements.

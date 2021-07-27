@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Numeric TextBox Component | Syncfusion 
-description: Learn about Accessibility in Blazor Numeric TextBox component of Syncfusion, and more details.
+title: Accessibility in Blazor Numeric TextBox Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Numeric TextBox Component
 
 The NumericTextBox characterized with complete ARIA Accessibility support that helps to accessible
 by on-screen readers and other assistive technology devices. This component designed with the

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor DatePicker Component | Syncfusion 
-description: Learn about Events in Blazor DatePicker component of Syncfusion, and more details.
+title: Events in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Events
+# Events in Blazor DatePicker Component
 
 This section explains the list of events of the DatePicker component which will be
 triggered for appropriate DatePicker actions.

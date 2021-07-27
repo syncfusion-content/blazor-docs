@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns in Blazor DataGrid Component | Syncfusion 
-description: Learn about Columns in Blazor DataGrid component of Syncfusion, and more details.
+title: Columns in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Columns in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Columns
+# Columns in Blazor DataGrid Component
 
 The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format.
 The datagrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of **GridColumn**,

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the axis customization of Syncfusion Sparkline (SfSparkline) component and more.
+title: Axis Customization in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Axis Customization in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Axis Customization in the Blazor Sparkline (SfSparkline)
+# Axis Customization in Blazor Sparkline Component
 
 ## Change the value type of the Sparkline Chart
 
@@ -163,4 +163,4 @@ The axis line can be customized using the following properties.
 
 > Refer to the [code block](#numeric) to know about the property value of **ExpenditureReport**.
 
-![Sparkline with axis line customization](images/Axis/LineCustomization.png)
+![Sparkline with axis line customization](images/Axis/LineCustomization.png)/LineCustomization.png)

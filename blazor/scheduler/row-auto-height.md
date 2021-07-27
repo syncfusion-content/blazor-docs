@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row Auto Height in Blazor Scheduler Component | Syncfusion 
-description: Learn about Row Auto Height in Blazor Scheduler component of Syncfusion, and more details.
+title: Row Auto Height in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Row Auto Height in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Row Auto Height
+# Row Auto Height in Blazor Scheduler Component
 
 By default, the height of the Scheduler rows in Timeline views are static and therefore, when the same time range holds multiple overlapping appointments, a `+n more` text indicator will be displayed. With this feature enabled, you can now view all the overlapping appointments present in those specific time range by auto-adjusting the row height based on the presence of the appointments count, instead of displaying the `+n more` text indicators.
 

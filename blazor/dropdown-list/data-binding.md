@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DropDown List Component | Syncfusion 
-description: Learn about Data Binding in Blazor DropDown List component of Syncfusion, and more details.
+title: Data Binding in Blazor DropDown List Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor DropDown List Component
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect the all places where you bind the variable for the **bind-value** attribute.
 

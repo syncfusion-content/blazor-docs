@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Enable Disable Accordion Item in Blazor Accordion Component | Syncfusion
-description: Checkout and learn about Enable Disable Accordion Item in Blazor Accordion component of Syncfusion, and more details.
+title: Enable or Disable item in Blazor Accordion Component | Syncfusion
+description: Learn here all about Enable or Disable item in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Enable/Disable Accordion Items
+# Enable or Disable item in Blazor Accordion Component
 
 Accordion provides a support to Enable/Disable the specified accordion item using accordion item **Disabled** property.
 
@@ -39,4 +39,4 @@ In the following demo, specified accordion item are Enable/Disable dynamically w
 
 Output be like the below.
 
-![Enable or Disable the Accordion item](../images/enableDisableItem.gif)
+![Enable or Disable the Accordion item](../images/enableDisableItem.gif)isableItem.gif)

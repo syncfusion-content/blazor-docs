@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn here all about the Legend of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Legend in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Legend in the Blazor Bullet Chart (SfBulletChart)
+# Legend in Blazor Bullet Chart Component
 
 Legend is used to provide a valuable information for interpreting what the Bullet Chart displays. The legends can be represented in various colors, positions, shapes or other identifiers based on the data and it can be enabled by the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendSettings.html#Syncfusion_Blazor_Charts_BulletChartLegendSettings_Visible) property to **true** in the [`BulletChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendSettings.html).
 
@@ -220,4 +220,4 @@ Legend can be customized by the following properties:
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend with customization](images/custom-legend.png)
+![Legend with customization](images/custom-legend.png)images/custom-legend.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interactions in Blazor Maps Component | Syncfusion 
-description: Learn about User Interactions in Blazor Maps component of Syncfusion, and more details.
+title: User Interactions in Blazor Maps Component | Syncfusion
+description: Learn here all about User Interactions in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# User Interactions
+# User Interactions in Blazor Maps Component
 
 The options such as zoom, pan, single-click, double-click, highlight, and map selection provide effective interaction on the maps elements.
 

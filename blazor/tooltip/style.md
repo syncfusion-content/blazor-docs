@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Tooltip Component | Syncfusion 
-description: Learn about Style in Blazor Tooltip component of Syncfusion, and more details.
+title: Styles and Appearance in Blazor Tooltip Component | Syncfusion
+description: Learn here all about Styles and Appearance in Syncfusion Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Styles and Appearance
+# Styles and Appearance in Blazor Tooltip Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

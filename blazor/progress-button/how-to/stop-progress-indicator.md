@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Stop Progress Indicator in Blazor Progress Button Component | Syncfusion
-description: Checkout and learn about Stop Progress Indicator in Blazor Progress Button component of Syncfusion, and more details.
+title: Stop Progress Indicator in Blazor ProgressButton Component | Syncfusion
+description: Learn here all about Stop Progress Indicator in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Stop Progress Indicator
+# Stop Progress Indicator in Blazor ProgressButton Component
 
 You can stop the progress indicator using [`ProgressComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_ProgressComplete) method. In the following sample, the progress is stopped by clicking the `STOP` button.
 

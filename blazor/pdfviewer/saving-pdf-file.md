@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Saving Pdf File in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Saving Pdf File in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Saving PDF file in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Saving PDF file in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Saving PDF file
+# Saving PDF file in Blazor PDF Viewer Component
 
 After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
 

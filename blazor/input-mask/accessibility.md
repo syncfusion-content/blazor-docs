@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Input Mask Component | Syncfusion 
-description: Learn about Accessibility in Blazor Input Mask component of Syncfusion, and more details.
+title: Accessibility in Blazor Input Mask Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Input Mask Component
 
 The MaskedTextBox is characterized with complete ARIA Accessibility support that helps to access
 using on-screen readers and other assistive technology devices. This component is designed with the

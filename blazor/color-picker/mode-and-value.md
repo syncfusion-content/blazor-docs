@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mode And Value in Blazor Color Picker Component | Syncfusion 
-description: Learn about Mode And Value in Blazor Color Picker component of Syncfusion, and more details.
+title: Mode and Value in Blazor Color Picker Component | Syncfusion
+description: Learn here all about Mode and Value in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Mode and Value
+# Mode and Value in Blazor Color Picker Component
 
 ## Rendering palette at initial load
 

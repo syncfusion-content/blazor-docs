@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Maps component | Syncfusion 
-description: Learn here about the events in Syncfusion Blazor Maps (SfMaps) component and more.
+title: Events in Blazor Maps Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Events in the Blazor Maps
+# Events in Blazor Maps Component
 
 This section explains list of events that will be triggered for appropriate actions in Maps. The events should be provided to the [`Maps`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) using the [`MapsEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html) class.
 
@@ -989,5 +989,7 @@ The [`TooltipRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     {
         // Here you can customize your code.
     }
+}
+```
 }
 ```

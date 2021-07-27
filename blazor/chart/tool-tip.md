@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tool Tip in Blazor Chart Component | Syncfusion 
-description: Learn about Tool Tip in Blazor Chart component of Syncfusion, and more details.
+title: Tooltip in Blazor Charts Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor Charts Component
 
 <!-- markdownlint-disable MD036 -->
 

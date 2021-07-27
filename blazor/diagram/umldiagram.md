@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Umldiagram in Blazor Diagram Component | Syncfusion 
-description: Learn about Umldiagram in Blazor Diagram component of Syncfusion, and more details.
+title: UML Diagram Shapes in Blazor Diagram Component | Syncfusion
+description: Learn here all about UML Diagram Shapes in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# UML Diagram Shapes
+# UML Diagram Shapes in Blazor Diagram Component
 
 ## Uml Class Diagram Shapes
 

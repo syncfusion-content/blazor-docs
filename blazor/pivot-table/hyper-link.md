@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hyper Link in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Hyper Link in Blazor Pivot Table component of Syncfusion, and more details.
+title: Hyperlink in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Hyperlink in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Hyperlink
+# Hyperlink in Blazor Pivot Table Component
 
 The pivot table supports to show hyperlink option to link data for individual cells that are displayed in the component. Also, the hyperlink can be enabled separately for row headers, column headers, value cells, and summary cells using the [`PivotViewHyperlinkSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewHyperlinkSettings.html) class. It can be configured through code behind, during initial rendering and the settings available to show hyperlink are:
 

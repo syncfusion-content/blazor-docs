@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Docking Sidebar in Blazor Sidebar Component | Syncfusion 
-description: Learn about Docking Sidebar in Blazor Sidebar component of Syncfusion, and more details.
+title: Dock in Blazor Sidebar Component | Syncfusion
+description: Learn here all about Dock in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Dock
+# Dock in Blazor Sidebar Component
 
 Dock state of the Sidebar reserves some space on the page that always remains in a visible state when the Sidebar is collapsed. It is used to show the short term of a content like icons alone instead of lengthy text.
 

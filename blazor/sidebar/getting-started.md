@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Sidebar Component | Syncfusion 
-description: Learn about Getting Started with Blazor Sidebar component of Syncfusion, and more details.
+title: Getting Started with Blazor Sidebar Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Sidebar component of Syncfusion, and more details.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Getting Started
+# Getting Started with Blazor Sidebar Component
 
 This section briefly explains about how to include a `Sidebar` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

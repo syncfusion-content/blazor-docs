@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Blazor Bullet Chart component | Syncfusion 
-description: Learn here about getting started with Syncfusion Blazor Bullet Chart (SfBulletChart) component, its elements, and more.
+title: Getting Started with Blazor Bullet Chart Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Bullet Chart component of Syncfusion, and more details.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Getting Started with the Blazor Bullet Chart (SfBulletChart)
+# Getting Started with Blazor Bullet Chart Component
 
 This section briefly explains how to include a Bullet Chart component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -178,4 +178,4 @@ Use the tooltip to show the measured values by setting the [`Enable`](https://he
 }
 ```
 
-![Bullet Chart](images/tool-tip.png)
+![Bullet Chart](images/tool-tip.png)hart](images/tool-tip.png)

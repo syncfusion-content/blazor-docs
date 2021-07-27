@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Filtering in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Filtering in Blazor Pivot Table component of Syncfusion, and more details.
+title: Filtering in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD012 -->
 
-# Filtering
+# Filtering in Blazor Pivot Table Component
 
 Filtering allows to view the pivot table with selective records based on members that can be either included or excluded through UI and code-behind.
 

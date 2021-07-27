@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Context Menu in Blazor Tree Grid component of Syncfusion, and more details.
+title: Context Menu in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Context Menu in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Context menu
+# Context Menu in Blazor TreeGrid Component
 
 The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`ContextMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~ContextMenuItems.html) property.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble Heatmap in Blazor HeatMap Chart Component | Syncfusion 
-description: Learn about Bubble Heatmap in Blazor HeatMap Chart component of Syncfusion, and more details.
+title: Bubble heat map in Blazor HeatMap Chart Component | Syncfusion
+description: Learn here all about Bubble heat map in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Bubble heat map
+# Bubble heat map in Blazor HeatMap Chart Component
 
 Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map.
 You can customize the appearance of these data points by changing the `Color` and `Shape` attributes.

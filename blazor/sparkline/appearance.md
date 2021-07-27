@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the appearance of Syncfusion Sparkline (SfSparkline) component and more.
+title: Appearance in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Appearance in the Blazor Sparkline (SfSparkline)
+# Appearance in Blazor Sparkline Component
 
 The rendering direction, padding, border, and the background appearance of the Sparkline can all be customized.
 
@@ -78,4 +78,4 @@ The background color of the Sparkline area can be changed using the [`Background
 </SfSparkline>
 ```
 
-![Sparkline with background customization](images/Appearance/ContainerBackground.png)
+![Sparkline with background customization](images/Appearance/ContainerBackground.png)ontainerBackground.png)

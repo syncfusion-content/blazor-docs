@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor DatePicker Component | Syncfusion 
-description: Learn about Globalization in Blazor DatePicker component of Syncfusion, and more details.
+title: Globalization in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor DatePicker Component
 
 Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 

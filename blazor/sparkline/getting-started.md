@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Blazor Sparkline component | Syncfusion
-description: Learn here about getting started with Syncfusion Blazor Sparkline (SfSparkline) component, its elements, and more.
+title: Getting Started with Blazor Sparkline Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Sparkline component of Syncfusion, and more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Getting Started with the Blazor Sparkline (SfSparkline)
+# Getting Started with Blazor Sparkline Component
 
 This section briefly explains how to include a Sparkline component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -201,4 +201,4 @@ When space constraints prevent from displaying information using Data Labels, th
 
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)t-cli-blazor-server/)

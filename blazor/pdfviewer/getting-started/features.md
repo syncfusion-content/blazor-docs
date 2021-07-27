@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Features in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Features in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Features in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Features in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Key features of PDF Viewer for Blazor
+# Features in Blazor PDF Viewer Component
 
 The PDF Viewer control for Blazor allows you to view, print, and annotate the PDF files in your Blazor applications and its key features are
 * Accurate and reliable rendering of PDF pages.
@@ -39,4 +39,4 @@ The PDF Viewer control for Blazor allows you to view, print, and annotate the PD
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.0.103](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-* [Blazor VS Extension](https://marketplace.visualstudio.com/items?itemName=aspnet.blazor)
+* [Blazor VS Extension](https://marketplace.visualstudio.com/items?itemName=aspnet.blazor)r)

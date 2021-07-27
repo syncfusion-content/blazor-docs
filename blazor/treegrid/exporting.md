@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exporting in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Exporting in Blazor Tree Grid component of Syncfusion, and more details.
+title: Pdf Export in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Pdf Export in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# PDF Export
+# Pdf Export in Blazor TreeGrid Component
 
 PDF export allows exporting Tree Grid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the Tree Grid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.

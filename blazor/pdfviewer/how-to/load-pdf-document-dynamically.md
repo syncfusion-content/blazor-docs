@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Load Pdf Document Dynamically in Blazor PDF Viewer Component | Syncfusion
-description: Checkout and learn about Load Pdf Document Dynamically in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Load PDF documents dynamically in Blazor PDF Viewer in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Load PDF documents dynamically in Blazor PDF Viewer in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# How to load PDF documents dynamically in Blazor PDF Viewer
+# Load PDF documents dynamically in Blazor PDF Viewer in Blazor PDF Viewer Component
 
 At times, you might need to switch or load the PDF documents dynamically after the initial load operation. To achieve this, load the PDF document as a base64 string or file path in PDF Viewer control using the `Load()` method dynamically.
 

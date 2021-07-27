@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Box and Whisker Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Box and Whisker Chart of Syncfusion Charts (SfCharts) component and more.
+title: Box and Whisker in Blazor Charts Component | Syncfusion
+description: Learn here all about Box and Whisker in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Box and Whisker Chart in Blazor Charts (SfCharts)
+# Box and Whisker in Blazor Charts Component
 
 ## Box and Whisker
 
@@ -145,4 +145,4 @@ In Box and Whisker series, [`ShowMean`](https://help.syncfusion.com/cr/blazor/Sy
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

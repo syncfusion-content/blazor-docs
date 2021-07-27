@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor Diagram Component | Syncfusion 
-description: Learn about Context Menu in Blazor Diagram component of Syncfusion, and more details.
+title: Context Menu in Blazor Diagram Component | Syncfusion
+description: Learn here all about Context Menu in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in Blazor Diagram Component
 
 <!-- markdownlint-disable MD010 -->
 

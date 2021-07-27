@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in Blazor Sparkline Charts Component | Syncfusion 
-description: Dimensions in the Blazor Sparkline component | Syncfusion
+title: Dimensions in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Dimensions in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Dimensions in the Blazor Sparkline (SfSparkline)
+# Dimensions in Blazor Sparkline Component
 
 ## Size for the container
 

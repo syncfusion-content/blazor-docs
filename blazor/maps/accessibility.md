@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Maps Component | Syncfusion 
-description: Learn about Accessibility in Blazor Maps component of Syncfusion, and more details.
+title: Accessibility in Blazor Maps Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Maps Component
 
 The Maps component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved through the attributes like `aria-label`. It helps to provide information about elements in a document for assistive technology.
 

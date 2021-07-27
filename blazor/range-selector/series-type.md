@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series types in the Blazor Range Selector component | Syncfusion 
-description: Learn here all about the series types feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Series Type in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Series Type in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Series Types in the Blazor Range Selector (SfRangeNavigator)
+# Series Type in Blazor Range Selector Component
 
 To render the data, the Range Selector supports three types of series.
 
@@ -136,4 +136,5 @@ To render a Step line series, use series [`Type`](https://help.syncfusion.com/cr
 
 ```
 
+![Step Line Chart](images/series-type/stepline.png)
 ![Step Line Chart](images/series-type/stepline.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print & Export in Blazor Charts component | Syncfusion"
-description: Learn here all about Print & Export of Syncfusion Charts (SfCharts) component and more.
+title: Print and Export in Blazor Charts Component | Syncfusion
+description: Learn here all about Print and Export in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Print & Export in Blazor Charts (SfCharts)
+# Print and Export in Blazor Charts Component
 
 ## Print
 

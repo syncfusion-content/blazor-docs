@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Print in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Print and Export in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Print and Export in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Print and Export in Blazor Circular Gauge
+# Print and Export in Blazor Circular Gauge Component
 
 ## Print
 

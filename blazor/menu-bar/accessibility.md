@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Menu Bar  Component | Syncfusion 
-description: Learn about Accessibility in Blazor Menu Bar  component of Syncfusion, and more details.
+title: Accessibility in Blazor Menu Bar Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Menu Bar Component
 
 ## ARIA attributes
 

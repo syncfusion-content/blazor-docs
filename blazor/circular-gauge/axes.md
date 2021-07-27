@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axes in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Axes in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Axes in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Axes in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Axes
+# Axes in Blazor Circular Gauge Component
 
 By default, the Circular Gauge will be displayed with an axis. Each axis contains its own ranges, pointers, and annotations.
 

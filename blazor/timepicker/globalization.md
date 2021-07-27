@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor TimePicker Component | Syncfusion 
-description: Learn about Globalization in Blazor TimePicker component of Syncfusion, and more details.
+title: Globalization in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor TimePicker Component
 
 Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 

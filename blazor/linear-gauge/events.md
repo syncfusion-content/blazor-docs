@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Events in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Events in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Events in Blazor Linear Gauge (SfLinearGauge)
+# Events in Blazor Linear Gauge Component (SfLinearGauge)
 
 This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed. The events should be provided to the Linear Gauge by using the [`LinearGaugeEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html) class.
 

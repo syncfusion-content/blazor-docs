@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Holidays in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Holidays in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Holidays in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Holidays in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Holidays
+# Holidays in Blazor Gantt Chart Component
 
 Non-working days in a project can be displayed in the Gantt Chart component using the `GanttHolidays` property. Each holiday can be defined with the following properties:
 

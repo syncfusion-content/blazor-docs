@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about the dimensions in Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Dimensions in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Dimensions in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Dimensions in the Blazor Smith Chart
+# Dimensions in Blazor Smith Chart Component
 
 The dimensions of the Smith Chart can be modified in the following ways.
 
@@ -124,4 +124,4 @@ The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-![Setting dimensions in percentage](./images/Dimension/smith-chart.png)
+![Setting dimensions in percentage](./images/Dimension/smith-chart.png)ith-chart.png)

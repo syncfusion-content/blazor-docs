@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Symmetric Layout in Blazor Diagram Component | Syncfusion 
-description: Learn about Symmetric Layout in Blazor Diagram component of Syncfusion, and more details.
+title: Symmetric layout in Blazor Diagram Component | Syncfusion
+description: Learn here all about Symmetric layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Symmetric layout
+# Symmetric layout in Blazor Diagram Component
 
 The symmetric layout has been formed using nodes position by closer together or pushing them further apart. This is repeated iteratively until the system comes to an equilibrium state.
 

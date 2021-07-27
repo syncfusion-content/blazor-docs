@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Binding in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Custom Binding in Blazor Tree Grid component of Syncfusion, and more details.
+title: Custom Binding in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Custom Binding in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Custom Binding
+# Custom Binding in Blazor TreeGrid Component
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
 

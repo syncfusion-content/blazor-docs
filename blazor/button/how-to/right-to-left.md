@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Right To Left in Blazor Button Component | Syncfusion
-description: Checkout and learn about Right To Left in Blazor Button component of Syncfusion, and more details.
+title: Right-To-Left in Blazor Button Component | Syncfusion
+description: Learn here all about Right-To-Left in Syncfusion Blazor Button component and more.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Right-To-Left
+# Right-To-Left in Blazor Button Component
 
 Button component has RTL support. This can be achieved by setting [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_EnableRtl) as true.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Diagram Component | Syncfusion 
-description: Learn about Methods in Blazor Diagram component of Syncfusion, and more details.
+title: Diagram Methods in Blazor Diagram Component | Syncfusion
+description: Learn here all about Diagram Methods in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Methods
+# Diagram Methods in Blazor Diagram Component
 
 The following methods are used to perform the diagram functionalities.
 

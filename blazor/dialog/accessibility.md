@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dialog Component | Syncfusion 
-description: Learn about Accessibility in Blazor Dialog component of Syncfusion, and more details.
+title: Accessibility in Blazor Dialog Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Dialog Component
 
 The Dialog characterized with complete ARIA Accessibility support which helps to accessible
 by on-screen readers and other assistive technology devices. This component designed with the

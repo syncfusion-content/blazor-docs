@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Strict Mode in Blazor TimePicker Component | Syncfusion 
-description: Learn about Strict Mode in Blazor TimePicker component of Syncfusion, and more details.
+title: Strict Mode in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Strict Mode in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Strict Mode
+# Strict Mode in Blazor TimePicker Component
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~StrictMode.html)
 is an act that allows you to enter only valid time value within the specified Min/Max

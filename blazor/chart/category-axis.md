@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Category Axis  in Blazor Charts component | Syncfusion
-description: Learn here all about Category Axis of Syncfusion Charts (SfCharts) component and more.
+title: Category Axis in Blazor Charts Component | Syncfusion
+description: Learn here all about Category Axis in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Category Axis in Blazor Charts (SfCharts)
+# Category Axis in Blazor Charts Component
 
 The category axis is used to represent string values instead of integers.
 
@@ -188,4 +188,4 @@ The data source index values can also be used to render the category axis. This 
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)
+* [Marker](./data-markers)rkers)

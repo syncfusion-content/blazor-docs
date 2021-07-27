@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events with the Blazor Smith Chart component | Syncfusion 
-description: Learn here about the events with Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Events in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Events in the Blazor Smith Chart
+# Events in Blazor Smith Chart Component
 
 This section describes about the Smith Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Smith Chart through the **SmithChartEvents** component.
 
@@ -445,6 +445,9 @@ The [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     public void Resized(SmithChartResizeEventArgs args)
     {
         // Here you can customize your code.
+    }
+}
+```de.
     }
 }
 ```

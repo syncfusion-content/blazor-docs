@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TimePicker Component | Syncfusion 
-description: Learn about Events in Blazor TimePicker component of Syncfusion, and more details.
+title: Events in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Events
+# Events in Blazor TimePicker Component
 
 This section explains the list of events of the TimePicker component which will be
 triggered for appropriate TimePicker actions.

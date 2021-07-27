@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Crud Actions in Blazor Scheduler Component | Syncfusion 
-description: Learn about Crud Actions in Blazor Scheduler component of Syncfusion, and more details.
+title: CRUD actions in Blazor Scheduler Component | Syncfusion
+description: Learn here all about CRUD actions in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# CRUD Actions
+# CRUD actions in Blazor Scheduler Component
 
 Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. You can easily manipulate (add/edit/delete) the desired appointments as and when required either using the editor window or through the drag and resize action.
 

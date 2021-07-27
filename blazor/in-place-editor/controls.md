@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Controls in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Controls in Blazor In Place Editor  component of Syncfusion, and more details.
+title: List of Components in Blazor In-place Editor Component | Syncfusion
+description: Learn here all about List of Components in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug
 ---
 
-# List of components
+# List of Components in Blazor In-place Editor Component
 
 In-place Editor renders various components based on the `Type` property and the Editor components should be rendered inside the In-place Editor. Also, need to configure the two-way binding between the In-place Editor and its EditorComponent. It is used to update the EditorComponent value into the In-place Editor component.
 

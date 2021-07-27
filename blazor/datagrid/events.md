@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor DataGrid Component | Syncfusion 
-description: Learn about Events in Blazor DataGrid component of Syncfusion, and more details.
+title: Events in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Events
+# Events in Blazor DataGrid Component
 
 In this section, we have provided the list of events of the datagrid component which will be
 triggered for appropriate datagrid actions.

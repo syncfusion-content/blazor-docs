@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Groups in Blazor TextBox Component | Syncfusion 
-description: Learn about Groups in Blazor TextBox component of Syncfusion, and more details.
+title: Groups in Blazor TextBox Component | Syncfusion
+description: Learn here all about Groups in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Groups
+# Groups in Blazor TextBox Component
 
 The following section explains you the steps required to create TextBox with `icon` and `floating label`.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Set Command Customization in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn about Set Command Customization in Blazor Toolbar component of Syncfusion, and more details.
+title: Set command customization in Blazor Toolbar Component | Syncfusion
+description: Learn here all about Set command customization in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Set command customization
+# Set command customization in Blazor Toolbar Component
 
 The `HtmlAttributes` property of the Toolbar item is used to set the HTML attributes ('ID', 'class', 'style' ,'role') for the commands.
 

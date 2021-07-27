@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtual in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Virtual in Blazor Tree Grid component of Syncfusion, and more details.
+title: Virtualization in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Virtualization
+# Virtualization in Blazor TreeGrid Component
 
 Tree Grid allows you to load large amount of data without performance degradation.
 

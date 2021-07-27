@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in the Blazor Range Selector component | Syncfusion 
-description: Learn here all about the tooltip feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Tooltip in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Tooltip in the Blazor Range Selector (SfRangeNavigator)
+# Tooltip in Blazor Range Selector Component
 
 <!-- markdownlint-disable MD036 -->
 
@@ -192,5 +192,7 @@ The following table shows the results of applying some common date and time form
 <td>hms</td>
 <td>12:00:00 AM</td>
 <td>The label is displayed in hours:minutes:seconds format.</td>
+</tr>
+</table>urs:minutes:seconds format.</td>
 </tr>
 </table>

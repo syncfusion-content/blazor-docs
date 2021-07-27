@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in Blazor DataGrid Component | Syncfusion 
-description: Learn about Clipboard in Blazor DataGrid component of Syncfusion, and more details.
+title: Clipboard in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Clipboard in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Clipboard
+# Clipboard in Blazor DataGrid Component
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.
 

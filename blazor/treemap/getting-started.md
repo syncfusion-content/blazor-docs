@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Blazor TreeMap component | Syncfusion
-description: Learn here about getting started with Syncfusion Blazor TreeMap (SfTreeMap) component, its elements, and more.
+title: Getting Started with Blazor TreeMap Component | Syncfusion
+description: Checkout and learn about getting started with Blazor TreeMap component of Syncfusion, and more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Getting Started with the Blazor TreeMap (SfTreeMap)
+# Getting Started with Blazor TreeMap Component
 
 This section briefly explains how to include a TreeMap component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -215,4 +215,4 @@ When space constraints prevents from displaying information using data labels, t
 
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)i-blazor-server/)

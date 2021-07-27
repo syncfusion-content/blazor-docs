@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DatePicker Component | Syncfusion 
-description: Learn about Data Binding in Blazor DatePicker component of Syncfusion, and more details.
+title: Data Binding in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor DatePicker Component
 
 This section briefly explains how to bind the value to the DatePicker component in the below different ways.
 

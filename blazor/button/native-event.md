@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Button Component | Syncfusion 
-description: Learn about Native Event in Blazor Button component of Syncfusion, and more details.
+title: Native Events in Blazor Button Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor Button component and more.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor Button Component
 
 You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 

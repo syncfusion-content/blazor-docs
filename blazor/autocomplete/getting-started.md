@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor AutoComplete Component | Syncfusion 
-description: Learn about Getting Started with Blazor AutoComplete component of Syncfusion, and more details.
+title: Getting Started with Blazor AutoComplete Component | Syncfusion
+description: Checkout and learn about getting started with Blazor AutoComplete component of Syncfusion, and more details.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor AutoComplete Component
 
 This section briefly explains how to include a **AutoComplete** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Position Popup in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn about Position Popup in Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Position popup open in Blazor Dropdown Menu Component | Syncfusion
+description: Learn here all about Position popup open in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Position Popup Open
+# Position popup open in Blazor Dropdown Menu Component
 
 Popup open position can be changed according to the requirement.  We have set the Popup open position using `CssClass` property as `custom` in `Top` and `Left` for the popup element.
 

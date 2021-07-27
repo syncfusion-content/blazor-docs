@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Selection in Blazor Chart Component | Syncfusion 
-description: Learn about Selection in Blazor Chart component of Syncfusion, and more details.
+title: Selection in Blazor Charts Component | Syncfusion
+description: Learn here all about Selection in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Selection
+# Selection in Blazor Charts Component
 
 Chart provides selection support for the series and its data points on mouse click.
 

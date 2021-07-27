@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Series in Blazor Charts component | Syncfusion
-description: Learn here all about Chart Series of Syncfusion Charts (SfCharts) component and more.
+title: Mixed Chart in Blazor Charts Component | Syncfusion
+description: Learn here all about Mixed Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Chart Series in Blazor Charts (SfCharts)
+# Mixed Chart in Blazor Charts Component
 
 ## Multiple Series
 
@@ -120,4 +120,4 @@ A chart can be created by combining several types such as line, column, and so o
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Legend](./legend)
+* [Legend](./legend)/legend)

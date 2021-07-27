@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag And Drop in Blazor Tabs Component | Syncfusion 
-description: Learn about Drag And Drop in Blazor Tabs component of Syncfusion, and more details.
+title: Drag and Drop in Blazor Tabs Component | Syncfusion
+description: Learn here all about Drag and Drop in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Drag and Drop
+# Drag and Drop in Blazor Tabs Component
 
 The Tab component allows you to drag and drop any item by setting `AllowDragAndDrop` &nbsp;to **true**. Items can be reordered to any place by dragging and dropping them onto the desired location.
 

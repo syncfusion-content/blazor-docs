@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Legend of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Legend in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Legend in the Blazor TreeMap (SfTreeMap)
+# Legend in Blazor TreeMap Component
 
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 
@@ -507,4 +507,4 @@ In the following sample, the legend with RTL is shown.
 }
 ```
 
-![TreeMap with RTL](images/Internationalization/LegendRTL.png)
+![TreeMap with RTL](images/Internationalization/LegendRTL.png)/LegendRTL.png)

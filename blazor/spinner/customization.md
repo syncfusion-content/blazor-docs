@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Spinner Component | Syncfusion 
-description: Learn about Customization in Blazor Spinner component of Syncfusion, and more details.
+title: Customize the Spinner in Blazor Spinner Component | Syncfusion
+description: Learn here all about Customize the Spinner in Syncfusion Blazor Spinner component and more.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# Customize the Spinner Component
+# Customize the Spinner in Blazor Spinner Component
 
 You can customize the Spinner component when initializing or after rendering it.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances
-description: This section explains the details of the styles and appearances of the ColorPicker
+title: Styles and Appearances in Blazor Color Picker Component | Syncfusion
+description: Learn here all about Styles and Appearances in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Styles and Appearances
+# Styles and Appearances in Blazor Color Picker Component
 
 To modify the ColorPicker appearance, you need to override the default CSS of ColorPicker component. Please find the list of CSS classes and its corresponding section in ColorPicker component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

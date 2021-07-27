@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Add Different Types Of Markers in Blazor Maps Component | Syncfusion
-description: Checkout and learn about Add Different Types Of Markers in Blazor Maps component of Syncfusion, and more details.
+title: Add different types of markers in Blazor Maps Component | Syncfusion
+description: Learn here all about Add different types of markers in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Add different types of markers
+# Add different types of markers in Blazor Maps Component
 
 You can add different types of markers in the Maps component using the [`MapsMarkerSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) property.
 

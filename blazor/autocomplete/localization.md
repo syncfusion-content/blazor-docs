@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Localization in Blazor AutoComplete component of Syncfusion, and more details.
+title: Localization in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor AutoComplete Component
 
 ## Blazor server side
 

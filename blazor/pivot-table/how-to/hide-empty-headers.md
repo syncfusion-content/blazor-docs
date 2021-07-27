@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Hide Empty Headers in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn about Hide Empty Headers in Blazor Pivot Table component of Syncfusion, and more details.
+title: Hide empty headers in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Hide empty headers in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Hide empty headers
+# Hide empty headers in Blazor Pivot Table Component
 
 If the raw data for a particular field is not defined, it will be shown as 'Undefined' in the pivot table headers. You can hide those headers by setting the [`ShowHeaderWhenEmpty`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_ShowHeaderWhenEmpty) property to **false** in the pivot table.
 

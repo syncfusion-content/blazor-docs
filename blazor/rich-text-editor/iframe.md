@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Iframe in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Iframe in Blazor RichTextEditor component of Syncfusion, and more details.
+title: IFrame Rendering in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about IFrame Rendering in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Iframe
+# IFrame Rendering in Blazor RichTextEditor Component
 
 When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.
 

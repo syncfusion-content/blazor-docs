@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Spline Chart of Syncfusion Charts (SfCharts) component and more.
+title: Spline in Blazor Charts Component | Syncfusion
+description: Learn here all about Spline in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Spline Chart in Blazor Charts (SfCharts)
+# Spline in Blazor Charts Component
 
 ## Spline
 
@@ -151,4 +151,4 @@ The following properties can be used to customize the [`Spline`](https://help.sy
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

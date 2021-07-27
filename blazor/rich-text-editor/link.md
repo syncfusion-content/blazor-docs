@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Link in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Link in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Link in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Link in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Link
+# Link in Blazor RichTextEditor Component
 
 A hyperlink can be inserted into the editor for quick access to the related information. The hyperlink itself can be a text or an image.
 

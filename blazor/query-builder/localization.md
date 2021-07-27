@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor QueryBuilder Component | Syncfusion 
-description: Learn about Localization in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Localization in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor QueryBuilder Component
 
 The `Localization` library allows you to localize default text content of the Query Builder. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.). In the following sample the text is changed to `German` culture.
 

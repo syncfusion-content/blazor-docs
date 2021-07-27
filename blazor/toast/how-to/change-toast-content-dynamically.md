@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Change Toast Content Dynamically in Blazor Toast Component | Syncfusion
-description: Checkout and learn about Change Toast Content Dynamically in Blazor Toast component of Syncfusion, and more details.
+title: Show toast content dynamically in Blazor Toast Component | Syncfusion
+description: Learn here all about Show toast content dynamically in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Change toast content dynamically
+# Show toast content dynamically in Blazor Toast Component
 
 The Toast component supports to change its content dynamically while displaying in newest toasts. You can change the toast content by updating property value, before calling in the `show` method.
 
@@ -49,4 +49,4 @@ The Toast component supports to change its content dynamically while displaying 
     }
 }
 
-```
+``````

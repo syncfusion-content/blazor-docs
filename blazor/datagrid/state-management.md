@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Management in Blazor DataGrid Component | Syncfusion 
-description: Learn about State Management in Blazor DataGrid component of Syncfusion, and more details.
+title: State Management in Blazor DataGrid Component | Syncfusion
+description: Learn here all about State Management in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# State Management
+# State Management in Blazor DataGrid Component
 
 State management allows users to save and load grid state. The grid will use user-provided state to render instead of its properties provided declaratively.
 

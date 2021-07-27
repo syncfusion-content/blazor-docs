@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Diagram Component | Syncfusion 
-description: Learn about Native Events in Blazor Diagram component of Syncfusion, and more details.
+title: Native Events in Blazor Diagram Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Native events
+# Native Events in Blazor Diagram Component
 
 The Diagram control provides event support, which triggers while interacting with the diagram. Also, Syncfusion provides native event support in blazor for the following events
 

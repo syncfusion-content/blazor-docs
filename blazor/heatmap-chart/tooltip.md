@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor HeatMap Chart Component | Syncfusion 
-description: Learn about Tooltip in Blazor HeatMap Chart component of Syncfusion, and more details.
+title: Tooltip in Blazor HeatMap Chart Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor HeatMap Chart Component
 
 Tooltip is used to provide the details of the heatmap cell, and this can be displayed, while hovering the cursor over the cell or performing tap action in touch devices.
 

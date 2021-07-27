@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Label Template in Blazor Chart Component | Syncfusion 
-description: Learn about Data Label Template in Blazor Chart component of Syncfusion, and more details.
+title: Datalabel Template in Blazor Charts Component | Syncfusion
+description: Learn here all about Datalabel Template in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# DataLabel Template
+# Datalabel Template in Blazor Charts Component
 
 You can bind text and interior information for a point from datasource other than x and y value.
 

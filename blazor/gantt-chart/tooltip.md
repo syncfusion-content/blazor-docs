@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tooltip in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Tooltip in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Tooltip in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor Gantt Chart Component
 
 The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has a support to display a tooltip for various UI elements like taskbar, timeline cells, and grid cells
 

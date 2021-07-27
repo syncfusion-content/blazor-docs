@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import Export in Blazor QueryBuilder Component | Syncfusion 
-description: Learn about Import Export in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Importing and Exporting in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Importing and Exporting in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Importing
+# Importing and Exporting in Blazor QueryBuilder Component
 
 Importing allows you to view or edit the predefined conditions which is available in List rules or SQL rules. You can import the conditions either initial rendering or post rendering.
 

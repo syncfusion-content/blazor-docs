@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Sidebar With List View in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn about Sidebar With List View in Blazor Sidebar component of Syncfusion, and more details.
+title: Initialize the Sidebar with ListView in Blazor Sidebar Component | Syncfusion
+description: Learn here all about Initialize the Sidebar with ListView in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Initialize the Sidebar with ListView
+# Initialize the Sidebar with ListView in Blazor Sidebar Component
 
 Any HTML element can be placed in the Sidebar content area. Sidebar supports all types of HTML structures like `TreeView`, `ListView`, etc.
 

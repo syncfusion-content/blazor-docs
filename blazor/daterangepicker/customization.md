@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor DateRangePicker Component | Syncfusion 
-description: Learn about Customization in Blazor DateRangePicker component of Syncfusion, and more details.
+title: Customization in Blazor DateRangePicker Component | Syncfusion
+description: Learn here all about Customization in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Customization
+# Customization in Blazor DateRangePicker Component
 
 The DateRangePicker is available for UI customization that can be achieved by using the available properties and events in the component.
 

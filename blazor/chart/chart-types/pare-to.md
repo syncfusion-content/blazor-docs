@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pareto Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Pareto Chart of Syncfusion Charts (SfCharts) component and more.
+title: Pareto in Blazor Charts Component | Syncfusion
+description: Learn here all about Pareto in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Pareto Chart in Blazor Charts (SfCharts)
+# Pareto in Blazor Charts Component
 
 ## Pareto
 
@@ -71,4 +71,4 @@ The initial values are represented by column chart and the cumulative values are
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

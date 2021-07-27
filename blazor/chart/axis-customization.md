@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor Charts component | Syncfusion
-description: Learn here all about Axis Customization of Syncfusion Charts (SfCharts) component and more.
+title: Axis Customization in Blazor Charts Component | Syncfusion
+description: Learn here all about Axis Customization in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Axis Customization in Blazor Charts (SfCharts)
+# Axis Customization in Blazor Charts Component
 
 ## Axis Crossing
 
@@ -318,4 +318,4 @@ Set the  [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)
+* [Marker](./data-markers)kers)

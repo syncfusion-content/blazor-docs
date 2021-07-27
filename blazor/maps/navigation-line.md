@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Navigation Line in Blazor Maps Component | Syncfusion 
-description: Learn about Navigation Line in Blazor Maps component of Syncfusion, and more details.
+title: Navigation Lines in Blazor Maps Component | Syncfusion
+description: Learn here all about Navigation Lines in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Navigation Lines
+# Navigation Lines in Blazor Maps Component
 
 Navigation lines are used to denote the path between the two locations. We can use this feature as flight or train or sea routes.
 

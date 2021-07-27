@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bpmn Data Source in Blazor Diagram Component | Syncfusion 
-description: Learn about Bpmn Data Source in Blazor Diagram component of Syncfusion, and more details.
+title: BPMN Datasource in Blazor Diagram Component | Syncfusion
+description: Learn here all about BPMN Datasource in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# BPMN Datasource
+# BPMN Datasource in Blazor Diagram Component
 
 Datasource is used to store or access data associated with a business process. To create a datasource, set the shape to **DataSource**. The following code example explains how to create a datasource.
 

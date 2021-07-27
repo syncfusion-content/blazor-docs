@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Dimensions in the Blazor Bullet Chart component | Syncfusion
-description: Learn here all about the dimensions of the Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Bullet Chart Dimensions in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Bullet Chart Dimensions in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 
 
-# Dimensions in the Blazor Bullet Chart (SfBulletChart)
+# Bullet Chart Dimensions in Blazor Bullet Chart Component
 
 ## Size for Container
 

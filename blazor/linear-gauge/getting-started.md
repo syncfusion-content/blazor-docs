@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Getting Started with Blazor Linear Gauge component of Syncfusion, and more details.
+title: Getting Started with Blazor Linear Gauge Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Linear Gauge component of Syncfusion, and more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Getting Started with Blazor Linear Gauge (SfLinearGauge)
+# Getting Started with Blazor Linear Gauge Component (SfLinearGauge)
 
 The Blazor Linear Gauge is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 

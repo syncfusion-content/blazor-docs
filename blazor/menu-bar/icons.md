@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in Blazor Menu Bar  Component | Syncfusion 
-description: Learn about Icons in Blazor Menu Bar  component of Syncfusion, and more details.
+title: Icons and submenu Items in Blazor Menu Bar Component | Syncfusion
+description: Learn here all about Icons and submenu Items in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Icons and Sub Menu items
+# Icons and submenu Items in Blazor Menu Bar Component
 
 ## Icons
 

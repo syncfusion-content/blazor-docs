@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Server Side Application in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Server Side Application in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Server-side application in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Server-side application in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create a PDF Viewer in Blazor server-side application
+# Server-side application in Blazor PDF Viewer Component
 
 This section briefly explains how to include a PDF Viewer in your  Blazor server-side application.
 
@@ -113,4 +113,4 @@ public void ConfigureServices(IServiceCollection services)
 
 >Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
->* The `SfPdfViewer` control is for Blazor client-side application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
+>* The `SfPdfViewer` control is for Blazor client-side application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.ge.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Diagram Component | Syncfusion 
-description: Learn about Appearance in Blazor Diagram component of Syncfusion, and more details.
+title: Appearance in Blazor Diagram Component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Appearance
+# Appearance in Blazor Diagram Component
 
 ## Customize the size for an annotation
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize The Expand And Collapse Icons in Blazor TreeView Component | Syncfusion
-description: Checkout and learn about Customize The Expand And Collapse Icons in Blazor TreeView component of Syncfusion, and more details.
+title: Customize the expand and collapse icons in Blazor TreeView Component | Syncfusion
+description: Learn here all about Customize the expand and collapse icons in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Customize the expand and collapse icons
+# Customize the expand and collapse icons in Blazor TreeView Component
 
 You can customize TreeView expand and collapse icons by using the `CssClass` &nbsp;property of TreeView.
 Refer to the sample to customize expand/collapse icons.

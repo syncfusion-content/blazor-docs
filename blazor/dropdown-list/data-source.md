@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor DropDown List Component | Syncfusion 
-description: Learn about Data Source in Blazor DropDown List component of Syncfusion, and more details.
+title: Data Source in Blazor DropDown List Component | Syncfusion
+description: Learn here all about Data Source in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Data Source
+# Data Source in Blazor DropDown List Component
 
 The DropDownList loads the data either from local data sources or
 remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports

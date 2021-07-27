@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Events of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Events in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Events in the Blazor TreeMap (SfTreeMap)
+# Events in Blazor TreeMap Component
 
 ## ItemHighlighted
 
@@ -163,4 +163,4 @@ Triggers, before rendering the TreeMap tooltip.
 |   Text               |   Specifies the text of the tooltip.         |
 |   TextStyle          |   Specifies the text style of the tooltip.   |
 |   Data               |   Specifies the TreeMap item data, where the tooltip is to be rendered.       |
-|   Cancel             |   Specifies the event cancel status.  |
+|   Cancel             |   Specifies the event cancel status.  |t cancel status.  |

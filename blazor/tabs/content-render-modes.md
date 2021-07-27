@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Render Modes in Blazor Tabs Component | Syncfusion 
-description: Learn about Content Render Modes in Blazor Tabs component of Syncfusion, and more details.
+title: Content Render Modes in Blazor Tabs Component | Syncfusion
+description: Learn here all about Content Render Modes in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Content Render Modes
+# Content Render Modes in Blazor Tabs Component
 
 In Blazor Tabs, you can render the content of the Tabs based on the scenario. The content rendering of tabs can be done by the following three different ways.
 

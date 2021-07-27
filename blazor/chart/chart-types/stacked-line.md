@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Line Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Stacked Line Chart of Syncfusion Charts (SfCharts) component and more.
+title: Stacked Line in Blazor Charts Component | Syncfusion
+description: Learn here all about Stacked Line in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Stacked Line Chart in Blazor Charts (SfCharts)
+# Stacked Line in Blazor Charts Component
 
 ## Stacked Line
 
@@ -166,4 +166,4 @@ The following properties can be used to customize the [`Stacked Line`](https://h
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Numeric Range Slider in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn about Numeric Range Slider in Blazor Range Slider component of Syncfusion, and more details.
+title: Numeric Range Slider in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Numeric Range Slider in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Numeric Range Slider in Blazor Slider control
+# Numeric Range Slider in Blazor Range Slider Component
 
 The numeric values can be formatted into different decimal digits or fixed number of whole numbers or to represent the units. The Numeric processing is demonstrated below.
 
@@ -98,4 +98,4 @@ The complete code for the above Numeric Range Slider can be found below.
 </style>
 ```
 
-![Blazor- Slider - NumericSlider](./../images/numeric.gif)
+![Blazor- Slider - NumericSlider](./../images/numeric.gif)es/numeric.gif)

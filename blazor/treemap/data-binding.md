@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Data Binding of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Data Binding in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Data Binding in the Blazor TreeMap (SfTreeMap)
+# Data Binding in Blazor TreeMap Component
 
 ## Populate data
 
@@ -590,5 +590,7 @@ On the other hand, to configure the TreeMap using Web API, provide the appropria
 
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
+}
+```#1D2671" };
 }
 ```

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Technical Indicators in Blazor Chart Component | Syncfusion 
-description: Learn about Technical Indicators in Blazor Chart component of Syncfusion, and more details.
+title: Technical Indicators in Blazor Charts Component | Syncfusion
+description: Learn here all about Technical Indicators in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Technical Indicators
+# Technical Indicators in Blazor Charts Component
 
 A technical indicator is a mathematical calculation based on historic price, volume or open interest information
 that aims to forecast financial market direction.

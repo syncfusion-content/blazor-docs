@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Chart Component | Syncfusion 
-description: Learn about Events in Blazor Chart component of Syncfusion, and more details.
+title: Events in Blazor Charts Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Charts Component
 
 In this section, we have provided a list of chart component events that will be triggered for appropriate chart actions.
 

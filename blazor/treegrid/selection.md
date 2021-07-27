@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Selection in Blazor Tree Grid component of Syncfusion, and more details.
+title: Selection in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Selection in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Selection
+# Selection in Blazor TreeGrid Component
 
 Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the Tree Grid, set the [`AllowSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSelection.html) to false.
 

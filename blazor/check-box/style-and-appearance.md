@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances
-description: This section explains the details of the styles and appearances of the CheckBox
+title: Styles and Appearances in Blazor CheckBox Component | Syncfusion
+description: Learn here all about Styles and Appearances in Syncfusion Blazor CheckBox component and more.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Styles and Appearances
+# Styles and Appearances in Blazor CheckBox Component
 
 To modify the CheckBox appearance, you need to override the default CSS of CheckBox component. Please find the list of CSS classes and its corresponding section in CheckBox. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

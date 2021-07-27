@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize Column Styles in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn about Customize Column Styles in Blazor Tree Grid component of Syncfusion, and more details.
+title: Customize Column Styles in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Customize Column Styles in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Customize Column Styles
+# Customize Column Styles in Blazor TreeGrid Component
 
 You can customise the appearance of the header and content of a particular column using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 

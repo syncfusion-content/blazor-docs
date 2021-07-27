@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Prevent Closing Of Modal Dialog in Blazor Dialog Component | Syncfusion
-description: Checkout and learn about Prevent Closing Of Modal Dialog in Blazor Dialog component of Syncfusion, and more details.
+title: Prevent closing of modal Dialog in Blazor Dialog Component | Syncfusion
+description: Learn here all about Prevent closing of modal Dialog in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Prevent closing of modal dialog
+# Prevent closing of modal Dialog in Blazor Dialog Component
 
 You can prevent closing of modal dialog by setting the `OnClose` event argument cancel value to true.
 In the following sample, the dialog is closed when you enter the username value with minimum 4 characters. Otherwise, it will not be closed.

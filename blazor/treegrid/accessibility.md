@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Accessibility in Blazor Tree Grid component of Syncfusion, and more details.
+title: Accessibility in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor TreeGrid Component
 
 Accessibility is achieved in the Tree Grid component through WAI-ARIA standard and keyboard navigations.  The Tree Grid features can be effectively accessed through assistive technologies such as screen readers.
 

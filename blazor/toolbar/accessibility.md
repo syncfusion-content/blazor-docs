@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Toolbar Component | Syncfusion 
-description: Learn about Accessibility in Blazor Toolbar component of Syncfusion, and more details.
+title: Accessibility in Blazor Toolbar Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Toolbar Component
 
 The Toolbar component has been designed,  keeping in mind the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications, and applying the WAI-ARIA roles, states and properties along with keyboard support for people who use assistive devices. WAI-ARIA accessibility support is achieved through attributes like `aria-orientation`, `aria-disabled` and `aria-haspopup`. It provides
   information about elements in a document for assistive technology.  The component implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/), and has been tested in major screen readers.
