@@ -1,257 +1,73 @@
 ---
-layout: post
-title: Legend in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor Accumulation Chart component and more.
-platform: Blazor
-control: Accumulation Chart
-documentation: ug
+title: "Legend in Blazor Accumulation Charts component | Syncfusion"
+
+component: "Accumulation Charts"
+
+description: "Learn here all about Legend of Syncfusion Accumulation Charts (SfAccumulationChart) component and more."
 ---
 
-# Legend in Blazor Accumulation Chart Component
+# Legend
 
-As like a chart, the legend is also available for accumulation charts, which gives information about the points. By default, the legend will be placed on the right, if the width of the chart is high or will be placed on the bottom, if the height of the chart is high. Here, the legend for a point can be collapsed by giving the empty string to the x value of the point.
+The legend is available for accumulation charts, just like it is for charts, and it provides information about the points. If the chart's width is large, the legend will be placed on the right, and if the chart's height is large, the legend will be placed on the bottom. The legend for a point can be collapsed by assigning an empty string to the point's x value.
 
-```csharp
+{% aspTab template="chart/accumulation-charts/legend/default", sourceFiles="default.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Legend](images/legend/default-razor.png)
 
 ## Position and Alignment
 
-By using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property, you can position the legend at the `Left`, `Right`, `Top` or `Bottom` of the chart.
-You can also align the legend to `Center`, `Far` or `Near` to the chart using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property.
+The legend can be placed at [`Left`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Left), [`Right`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Right), [`Top`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Top) or [`Bottom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom)  [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position of the chart using the [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Position) property. The [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Alignment) property can also be used to align the legend to the chart's [`Center`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Center), [`Far`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Far) or [`Near`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Alignment.html#Syncfusion_Blazor_Charts_Alignment_Near).
 
-```csharp
+{% aspTab template="chart/accumulation-charts/legend/position", sourceFiles="position.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true" Position="LegendPosition.Top"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Position and Alignment](images/legend/position-razor.png)
 
 ## Legend Shape
 
-To change the legend icon, use the [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the `Series`. By default, legend icon is `SeriesType`.
+The [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_LegendShape) property in the [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#properties) can be used to change the shape of the legend icon. The default icon shape for legends is [`SeriesType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendShape.html#Syncfusion_Blazor_Charts_LegendShape_SeriesType).
 
-```csharp
+{% aspTab template="chart/accumulation-charts/legend/legend-shape", sourceFiles="legend-shape.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries LegendShape="LegendShape.Rectangle" DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true"></AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Legend Shape](images/legend/legend-shape-razor.png)
 
 ## Legend Size
 
-The legend size can be changed by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of the `LegendSettings`.
+The legend size can be customized by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Height) properties of the [`AccumulationChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
-```csharp
+{% aspTab template="chart/accumulation-charts/legend/size", sourceFiles="size.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true" Height="28%" Width="44%">
-        <AccumulationChartLegendBorder Color="Pink" Width="1"></AccumulationChartLegendBorder>
-    </AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Legend Size](images/legend/size-razor.png)
 
-## Legend Item Size
+## Legend Shape Size
 
-You can customize the size of the legend items by using the [`ShapeHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight) and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties.
+The [`ShapeHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeHeight)
+and [`ShapeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_ShapeWidth) properties can be used to adjust the dimensions of the legend shape.
 
-```csharp
+{% aspTab template="chart/accumulation-charts/legend/item-size", sourceFiles="item-size.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true" ShapeHeight="15" ShapeWidth="15">
-    </AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser { get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Legend Item Size](images/legend/item-size-razor.png)
 
 ## Paging for Legend
 
-Paging will be enabled by default, when the legend items exceeds the legend bounds. You can view the each legend item by navigating through the pages.
+When the legend items exceed legend bounds, paging will be enabled by default. End user can view each legend item using the navigation buttons to navigate between pages.
 
-```csharp
+{% aspTab template="chart/accumulation-charts/legend/paging", sourceFiles="paging.razor" %}
 
-@using Syncfusion.Blazor.Charts
-
-<SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartSeriesCollection>
-        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
-                                 Name="Browser">
-        </AccumulationChartSeries>
-    </AccumulationChartSeriesCollection>
-
-    <AccumulationChartLegendSettings Visible="true" Height="150" Width="80">
-    </AccumulationChartLegendSettings>
-</SfAccumulationChart>
-
-@code{
-    public class Statistics
-    {
-        public string Browser{ get; set; }
-        public double Users { get; set; }
-    }
-
-    public List<Statistics> StatisticsDetails = new List<Statistics>
-{
-        new Statistics { Browser = "Chrome", Users = 37 },
-        new Statistics { Browser = "UC Browser", Users = 17 },
-        new Statistics { Browser = "iPhone", Users = 19 },
-        new Statistics { Browser = "Others", Users = 4  },
-        new Statistics { Browser = "Opera", Users = 11 },
-        new Statistics { Browser = "Android", Users = 12 },
-    };
-}
-
-```
+{% endaspTab %}
 
 ![Paging for Legend](images/legend/paging-razor.png)
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping/)
 * [Datalabel](./data-label/)
