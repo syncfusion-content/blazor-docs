@@ -1,9 +1,10 @@
 ---
-title: "Getting started with Blazor Linear Gauge control | Syncfusion"
-
-component: "Linear Gauge"
-
-description: "Learn here about getting started with Syncfusion Blazor Linear Gauge (SfLinearGauge) control, its element and more."
+layout: post
+title: Getting Started with Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Getting Started with Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
 ---
 
 # Getting Started with Blazor Linear Gauge (SfLinearGauge)

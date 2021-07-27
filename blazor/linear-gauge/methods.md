@@ -1,9 +1,10 @@
 ---
-title: " Methods in Blazor Linear Gauge component | Syncfusion "
-
-component: "Linear Gauge"
-
-description: "Learn here all about the Methods of Syncfusion Blazor Linear Gauge (SfLinearGauge) component and more."
+layout: post
+title: Methods in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Methods in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
 ---
 
 # Methods in Blazor Linear Gauge (SfLinearGauge)

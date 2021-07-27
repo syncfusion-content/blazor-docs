@@ -1,9 +1,10 @@
 ---
-title: " User Interaction in Blazor Linear Gauge component | Syncfusion "
-
-component: "Linear Gauge"
-
-description: "Learn here all about the User Interaction feature of Syncfusion Blazor Linear Gauge (SfLinearGauge) component and more."
+layout: post
+title: User Interaction in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about User Interaction in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
 ---
 
 # User Interaction in Blazor Linear Gauge (SfLinearGauge)

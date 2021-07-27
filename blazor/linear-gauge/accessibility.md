@@ -1,9 +1,10 @@
 ---
-title: " Accessibility in Blazor Linear Gauge component | Syncfusion "
-
-component: "Linear Gauge"
-
-description: "Learn here all about Accessibility feature of Syncfusion Blazor Linear Gauge (SfLinearGauge) component and more."
+layout: post
+title: Accessibility in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Accessibility in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
 ---
 
 # Accessibility in Blazor Linear Gauge (SfLinearGauge)

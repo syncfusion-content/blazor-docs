@@ -1,9 +1,10 @@
 ---
-title: " Annotations in Blazor Linear Gauge component | Syncfusion "
-
-component: "Linear Gauge"
-
-description: "Learn here all about Annotations feature of Syncfusion Blazor Linear Gauge (SfLinearGauge) component and more."
+layout: post
+title: Annotations in Blazor Linear Gauge Component | Syncfusion 
+description: Learn about Annotations in Blazor Linear Gauge component of Syncfusion, and more details.
+platform: Blazor
+control: Linear Gauge
+documentation: ug
 ---
 
 # Annotations in Blazor Linear Gauge (SfLinearGauge)
