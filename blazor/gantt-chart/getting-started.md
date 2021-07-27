@@ -22,7 +22,7 @@ This section briefly explains about how to include a **Gantt Chart** Component i
     </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the poly fills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
     <head>

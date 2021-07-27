@@ -219,7 +219,7 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 
 ## Custom
 
-If we want to use some specific taskmode for specific tasks, then we can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
+If we want to use some specific task mode for specific tasks, then we can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
