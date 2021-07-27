@@ -17,6 +17,10 @@ The Timeline views can have additional header rows other than its default date a
 * `Date`
 * `Hour`
 
+To get start quickly on customizing the header rows of timeline views on scheduler, you can check on this video:
+
+`youtube:2eYGFgwqK6U`
+
 > The `Hour` row is not applicable for Timeline month view.
 
 The following example shows the Scheduler displaying all the available header rows on timeline views.

@@ -16,6 +16,10 @@ Appointments can be anything that are scheduled for a specific time period. It c
 * All-day events
 * Recurring events
 
+To get start quickly about appointments and how to customize it, you can check on this video:
+
+`youtube:Vtl1Wyuwt-0`
+
 ## Normal events
 
 Represents an appointment that is created for any specific time interval within a day.
@@ -520,6 +524,10 @@ Appointments can be rescheduled to any time by dragging and dropping them onto t
 
 > By default, drag and drop action is applicable on all Scheduler views, except Agenda and Month-Agenda view.
 
+To get start quickly about drag options available in our Scheduler, you can check on this video:
+
+`youtube:Vtl1Wyuwt-0`
+
 ### Drag and drop multiple appointments
 
 We can drag and drop multiple appointments by enabling the `AllowMultiDrag` property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
@@ -836,6 +844,10 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through `AddEventAsync` method of Scheduler.
 
+To get start quickly about dropping items from external source to our Scheduler, you can check on this video:
+
+`youtube:QxBBZYef6cg`
+
 In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEventAsync` method.
 
 ```cshtml
@@ -1057,6 +1069,10 @@ There are scenarios where you want to open the editor filled with data on newly 
 
 Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality make sure that `AllowResizing` property is set to **true**.
 
+To get start quickly about resize options available in our Scheduler, you can check on this video:
+
+`youtube:Vtl1Wyuwt-0`
+
 ### Disable the resize action
 
 By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the `AllowResizing` property.
@@ -1242,7 +1258,13 @@ The look and feel of the Scheduler events can be customized using any one of the
 
 ### Using template
 
-Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `Template` option available within the `ScheduleEventsettings` tag helper. The following code example customizes the appointment.
+Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `Template` option available within the `ScheduleEventsettings` tag helper. 
+
+To get start quickly on customizing events using template, you can check on this video:
+
+`youtube:8kBXcBjL12A`
+
+The following code example customizes the appointment.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

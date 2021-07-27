@@ -94,6 +94,10 @@ It is possible to display the Scheduler in default mode without visually showcas
 
 The appointments belonging to the different resources will be displayed altogether on the default Scheduler, which will be differentiated based on the resource color assigned in the **Resources** (depicting to which resource that particular appointment belongs) collection.
 
+To get start quickly about multiple resource on scheduler, you can check on this video:
+
+`youtube:ZJU73bqeoC0`
+
 **Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the `ScheduleResource` with all its internal options.
 
 ```cshtml
@@ -152,6 +156,10 @@ The appointments belonging to the different resources will be displayed altogeth
 ## Resource grouping
 
 Resource grouping support allows the Scheduler to group the resources in a hierarchical structure both as an expandable groups (Timeline views) and as vertical hierarchy displaying resources one after the other (Resources view).
+
+To get start quickly about grouping multiple resource on scheduler, you can check on this video:
+
+`youtube:XD3IYl9lkms`
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 
