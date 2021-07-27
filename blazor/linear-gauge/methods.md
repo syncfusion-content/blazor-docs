@@ -1,64 +1,108 @@
 ---
-layout: post
-title: Methods in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Methods in Blazor Linear Gauge component of Syncfusion, and more details.
-platform: Blazor
-control: Linear Gauge
-documentation: ug
+title: " Methods in Blazor Linear Gauge component | Syncfusion "
+
+component: "Linear Gauge"
+
+description: "Learn here all about the Methods of Syncfusion Blazor Linear Gauge (SfLinearGauge) component and more."
 ---
 
-# Methods
+# Methods in Blazor Linear Gauge (SfLinearGauge)
 
-## Using methods in Linear Gauge component
+The following methods are available in the Linear Gauge component.
 
-You can create object for the linear gauge component using `@ref` and call the `ChangePoinerValue` method as shown in the following example.
+## SetPointerValue
 
-```cshtml
+To change the pointer value dynamically, use the [`SetPointerValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetPointerValue_System_Int32_System_Int32_System_Double_) method in the Linear Gauge component. The following are the arguments for this method.
+
+|   Argument name      |   Description                            |
+|----------------------| -----------------------------------------|
+|     axisIndex        |    Specifies the index of the axis in which the pointer value is to be updated.|
+|     pointerIndex     |    Specifies the index of the pointer to be updated.           |
+|     pointerValue            |    Specifies the value of the pointer to be updated.           |
+
+```csharp
 @using Syncfusion.Blazor.LinearGauge
 
 <button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value</button>
 <SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+            <LinearGaugePointers>
+                <LinearGaugePointer Value="10"></LinearGaugePointer>
+            </LinearGaugePointers>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
 </SfLinearGauge>
 
 @code {
     SfLinearGauge lineargauge;
-    void ChangePoinerValue()
+    public void ChangePoinerValue()
     {
         lineargauge.SetPointerValue(0, 0, 30);
     }
 }
 ```
 
-![Calling methods in linear gauge](./images/l-gauge-methods.png)
+![Calling methods in linear gauge](./images/gauge-method.png)
 
-## Available methods
+## SetAnnotationValue
 
-### SetAnnotationValue
-
-Description: Dynamically set the annotation content to the linear gauge.
-
-Return: void
+To change the annotation content dynamically, use the [`SetAnnotationValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetAnnotationValue_System_Int32_System_String_System_Int32_) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
-|     annotationIndex  |    Specifies the annotation index        |
-|     content          |    Specifies the annotation text         |
-|     axisValue        |    Specifies the axis value              |
+|     annotationIndex  |    Specifies the index number of the annotation to be updated. |
+|     content          |    Specifies the text for the annotation to be updated.        |
+|     axisValue        |    Specifies the value of the axis where the annotation is to be placed.|
 
-### SetPointerValue
+> Note: This method will not be applicable for the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) class in [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html).
 
-Description: Dynamically set the pointer value to the linear gauge.
+```csharp
+@using Syncfusion.Blazor.LinearGauge
 
-Return: void
+<button style="margin-left:34px" @onclick="ChangeAnnotationValue">Update annotation value</button>
+<SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
+    <LinearGaugeAnnotations>
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1" Content="10"></LinearGaugeAnnotation>
+    </LinearGaugeAnnotations>
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
+</SfLinearGauge>
 
-|   Argument name      |   Description                            |
-|----------------------| -----------------------------------------|
-|     axis index       |    Specifies the axis index              |
-|     pointerIndex     |    Specifies the pointer index           |
-|     value            |    Specifies the pointer value           |
+@code {
+    SfLinearGauge lineargauge;
+    public void ChangeAnnotationValue()
+    {
+        lineargauge.SetAnnotationValue(0, "50", 50);
+    }
+}
+```
 
-### Refresh
+## RefreshAsync
 
-Description: The component is rendered again. Whenever you make changes with the gauge properties.
+The [`RefreshAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again. In the following example, the gauge is rendered again using the [`RefreshAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
 
-Return: void
+```csharp
+@using Syncfusion.Blazor.LinearGauge
+
+<button style="margin-left:34px" @onclick="RefreshAsync">Refresh Gauge</button>
+<SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
+    <LinearGaugeAxes>
+        <LinearGaugeAxis>
+            <LinearGaugePointers>
+                <LinearGaugePointer Value="10"></LinearGaugePointer>
+            </LinearGaugePointers>
+        </LinearGaugeAxis>
+    </LinearGaugeAxes>
+</SfLinearGauge>
+
+@code {
+    SfLinearGauge lineargauge;
+    public async Task RefreshAsync()
+    {
+        await lineargauge.RefreshAsync();
+    }
+}
+```
