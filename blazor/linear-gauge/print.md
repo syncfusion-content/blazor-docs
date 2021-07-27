@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print And Export in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Print And Export in Syncfusion Blazor Linear Gauge component and more.
+description: Learn here all about Print And Export in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
