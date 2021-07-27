@@ -578,4 +578,4 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](/task-dependencies/)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-![Gantt Features](../images/enableDependency.png)leDependency.png)
+![Gantt Features](../images/enableDependency.png)
