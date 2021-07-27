@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: Appearance in Blazor Diagram Component | Syncfusion
