@@ -1,3 +1,11 @@
+---
+layout: post
+title: Getting started with Syncfusion Blazor - Blazor Server Side App in Visual Studio 2019
+description: Check out the documentation for Getting started with Syncfusion Blazor
+platform: Blazor
+component: Common
+documentation: ug
+---
 <!-- markdownlint-disable MD024 -->
 
 # Getting started with Syncfusion Blazor Components in Blazor Server Side App in Visual Studio 2019
