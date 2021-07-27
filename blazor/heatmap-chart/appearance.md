@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor HeatMap Chart Component | Syncfusion 
-description: Learn about Appearance in Blazor HeatMap Chart component of Syncfusion, and more details.
+title: Appearance in Blazor HeatMap Chart Component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Appearance
+# Appearance in Blazor HeatMap Chart Component
 
 ## Cell customizations
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Customization in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Axis Customization in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Axis Customization in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Axis Customization in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Axis Customization
+# Axis Customization in Blazor Stock Chart Component
 
 <!-- markdownlint-disable MD034 -->
 

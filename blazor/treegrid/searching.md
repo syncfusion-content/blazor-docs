@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Searching in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Searching in Blazor Tree Grid component of Syncfusion, and more details.
+title: Searching in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Searching in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Search
+# Searching in Blazor TreeGrid Component
 
 You can search records in a Tree Grid, by using the [`Search`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Search.html) method with search key as a parameter. This also provides an option to integrate search text box in tree grid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html).
 

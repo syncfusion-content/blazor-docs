@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Change The Text Content And Styles Of The Progressbutton During Progress in Blazor Progress Button Component | Syncfusion
-description: Checkout and learn about Change The Text Content And Styles Of The Progressbutton During Progress in Blazor Progress Button component of Syncfusion, and more details.
+title: Change the text content and styles of the Progress Button during progress in Blazor ProgressButton Component | Syncfusion
+description: Learn here all about Change the text content and styles of the Progress Button during progress in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Change the text content and styles of the Progress Button during progress
+# Change the text content and styles of the Progress Button during progress in Blazor ProgressButton Component
 
 You can change the text content and styles of the Progress Button during progress state by changing the text content and the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_CssClass) property at
 the [`OnBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnBegin) and [`OnEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ProgressButtonEvents.html#Syncfusion_Blazor_SplitButtons_ProgressButtonEvents_OnEnd) events.

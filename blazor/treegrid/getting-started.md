@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Tree Grid Component | Syncfusion 
-description: Learn about Getting Started with Blazor Tree Grid component of Syncfusion, and more details.
+title: Getting Started with Blazor TreeGrid Component | Syncfusion
+description: Checkout and learn about getting started with Blazor TreeGrid component of Syncfusion, and more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started
+# Getting Started with Blazor TreeGrid Component
 
 This section briefly explains about how to include a **Tree Grid** Component in your Blazor server-side application. It also includes initializing Tree Grid Blazor component and usage of features such as paging and sorting using the [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/). You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://ej2.syncfusion.com/aspnet-core-blazor/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.
 

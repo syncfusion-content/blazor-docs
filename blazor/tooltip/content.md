@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content in Blazor Tooltip Component | Syncfusion 
-description: Learn about Content in Blazor Tooltip component of Syncfusion, and more details.
+title: Content in Blazor Tooltip Component | Syncfusion
+description: Learn here all about Content in Syncfusion Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Content
+# Content in Blazor Tooltip Component
 
 A text or a piece of information assigned to the Tooltip's `Content` property will be displayed as the main text stream of the Tooltip.
  It can be a string or a template content. If the `Content` property is not provided with any specific value, then it takes the value

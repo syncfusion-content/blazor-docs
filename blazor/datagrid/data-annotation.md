@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Annotation in Blazor DataGrid Component | Syncfusion 
-description: Learn about Data Annotation in Blazor DataGrid component of Syncfusion, and more details.
+title: Data Annotation in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Data Annotation in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Data Annotation
+# Data Annotation in Blazor DataGrid Component
 
 Data Annotations helps us to define rules to the model classes or properties to perform data validation and display suitable messages to end users.
 

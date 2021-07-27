@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Input Mask Component | Syncfusion 
-description: Learn about Data Binding in Blazor Input Mask component of Syncfusion, and more details.
+title: Data Binding in Blazor Input Mask Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor Input Mask Component
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string type. If component value has been changed, it will affect the all places where you bind the variable for the **bind-Value** attribute.
 

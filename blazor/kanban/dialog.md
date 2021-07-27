@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dialog in Blazor Kanban Component | Syncfusion 
-description: Learn about Dialog in Blazor Kanban component of Syncfusion, and more details.
+title: Card Editing in Blazor Kanban Component | Syncfusion
+description: Learn here all about Card Editing in Syncfusion Blazor Kanban component and more.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Card Editing
+# Card Editing in Blazor Kanban Component
 
 The Kanban provides built-in support to add, edit and delete a card using dialog module. User can edit a card using the following ways.
 

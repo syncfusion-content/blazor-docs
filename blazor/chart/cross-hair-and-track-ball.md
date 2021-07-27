@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Crosshair in Blazor Charts component | Syncfusion
-description: Learn here all about Crosshair of Syncfusion Charts (SfCharts) component and more.
+title: Crosshair and Trackball in Blazor Charts Component | Syncfusion
+description: Learn here all about Crosshair and Trackball in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Crosshair in Blazor Charts (SfCharts)
+# Crosshair and Trackball in Blazor Charts Component
 
 Inspect or target any data point on mouse move or touch position with the help of crosshair. A thin horizontal line and a vertical line indicate the data point with the information displayed in an interactive tooltip. Crosshair lines can be enabled by using [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Enable) property in the [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html).
 

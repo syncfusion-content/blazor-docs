@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Restrict Editing
-description: Learn how to find a text in Blazor Word processor and replace it with another text.
+title: Restrict editing in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Restrict editing in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Restrict editing
+# Restrict editing in Blazor DocumentEditor Component
 
 This [`Blazor Word Processor control`](https://www.syncfusion.com/blazor-components/blazor-word-processor) (DocumentEditor) provides 2 types of restriction for editing:
 * Read-only: Allows all the users to view the document contents but not make changes to it.

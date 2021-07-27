@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor Chart Component | Syncfusion 
-description: Learn about Localization in Blazor Chart component of Syncfusion, and more details.
+title: Localization in Blazor Charts Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor Charts Component
 
 We have used Resource file (**.resx**) to translate the static text of the Chart.
 

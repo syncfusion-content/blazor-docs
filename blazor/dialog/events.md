@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Dialog Component | Syncfusion 
-description: Learn about Events in Blazor Dialog component of Syncfusion, and more details.
+title: Events in Blazor Dialog Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Dialog Component
 
 This section explains the list of events of the Dialog component which will be triggered for appropriate Dialog actions.
 

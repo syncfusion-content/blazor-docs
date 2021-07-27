@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Custom Control In Grid Toolbar in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Custom Control In Grid Toolbar in Blazor DataGrid component of Syncfusion, and more details.
+title: Custom control in datagrid toolbar in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Custom control in datagrid toolbar in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Custom control in datagrid toolbar
+# Custom control in datagrid toolbar in Blazor DataGrid Component
 
 You can render custom controls inside the datagrid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the Toolbar component. This toolbar component is defined inside the datagrid component.
 

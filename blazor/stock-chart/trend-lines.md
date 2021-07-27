@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Trend Lines in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Trend Lines in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Trendlines in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Trendlines in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Trendlines
+# Trendlines in Blazor Stock Chart Component
 
 Trendlines are used to show the direction and speed of price.
 

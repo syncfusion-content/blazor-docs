@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hilo Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Hilo Chart of Syncfusion Charts (SfCharts) component and more.
+title: Hilo in Blazor Charts Component | Syncfusion
+description: Learn here all about Hilo in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Hilo Chart in Blazor Charts (SfCharts)
+# Hilo in Blazor Charts Component
 
 ## Hilo
 
@@ -108,4 +108,4 @@ The following properties can be used to customize the [`Hilo`](https://help.sync
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Accessibility in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Accessibility in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
 
-# Accessibility
+# Accessibility in Blazor Circular Gauge Component
 
 The Circular Gauge provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The
 WAI-ARIA accessibility supports are achieved through the attributes such as `aria-label`. It helps to provide information about elements

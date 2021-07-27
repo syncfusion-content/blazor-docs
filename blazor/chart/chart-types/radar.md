@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Radar Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Radar Chart of Syncfusion Charts (SfCharts) component and more.
+title: Radar in Blazor Charts Component | Syncfusion
+description: Learn here all about Radar in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Radar Chart in Blazor Charts (SfCharts)
+# Radar in Blazor Charts Component
 
 ## Radar
 
@@ -146,4 +146,4 @@ Customize the radius of the [`Radar Chart`](https://help.syncfusion.com/cr/blazo
 
 * [Data Label](../data-labels)
 
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

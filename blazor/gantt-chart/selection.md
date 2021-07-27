@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Selection in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Selection in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Selection in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Selection
+# Selection in Blazor Gantt Chart Component
 
 Selection provides an option to highlight a row or a cell. It can be done using arrow keys or by scrolling down the mouse. To disable selection in the Gantt Chart component, set the `AllowSelection` to false.
 

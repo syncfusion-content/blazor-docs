@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotations in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Annotations in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Annotations in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Annotations in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Annotations
+# Annotations in Blazor Circular Gauge Component
 
 Annotations are used to mark a specific area of interest in the Circular Gauge with texts, shapes, or images.
 

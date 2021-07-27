@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grouping Bar in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Grouping Bar in Blazor Pivot Table component of Syncfusion, and more details.
+title: Grouping Bar in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Grouping Bar in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Grouping Bar
+# Grouping Bar in Blazor Pivot Table Component
 
 The Grouping Bar option in pivot table automatically populates fields from the bound data source and allows end users to drag fields between different axes such as columns, rows, values, and filters, and create pivot table at runtime. It can be enabled by setting the [`ShowGroupingBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**.
 

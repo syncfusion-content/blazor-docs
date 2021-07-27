@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Custom Toolbar Items With Text Name Same As Default Toolbar Items in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Custom Toolbar Items With Text Name Same As Default Toolbar Items in Blazor DataGrid component of Syncfusion, and more details.
+title: Custom toolbar items with text name same as default toolbar items in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Custom toolbar items with text name same as default toolbar items in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Custom toolbar items with text name same as default toolbar items
+# Custom toolbar items with text name same as default toolbar items in Blazor DataGrid Component
 
 You can create the Custom toolbar items with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, we suggest you to define the **Id** property for custom toolbar items.
 

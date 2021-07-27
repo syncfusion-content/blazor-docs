@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning in Blazor Dialog Component | Syncfusion 
-description: Learn about Positioning in Blazor Dialog component of Syncfusion, and more details.
+title: Positioning in Blazor Dialog Component | Syncfusion
+description: Learn here all about Positioning in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Positioning
+# Positioning in Blazor Dialog Component
 
 The Dialog can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Live Chart in Blazor Chart Component | Syncfusion
-description: Checkout and learn about Live Chart in Blazor Chart component of Syncfusion, and more details.
+title: Live Chart in Blazor Charts Component | Syncfusion
+description: Learn here all about Live Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Live Data Update
+# Live Chart in Blazor Charts Component
 
 You can update a chart with live data by using the Timer.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Area Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Stacked Area Chart of Syncfusion Charts (SfCharts) component and more.
+title: Stacked Area in Blazor Charts Component | Syncfusion
+description: Learn here all about Stacked Area in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Stacked Area Chart in Blazor Charts (SfCharts)
+# Stacked Area in Blazor Charts Component
 
 ## Stacked Area
 
@@ -116,4 +116,4 @@ The following properties can be used to customize the [`Stacked Area`](https://h
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

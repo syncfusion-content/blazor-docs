@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Views in Blazor Scheduler Component | Syncfusion 
-description: Learn about Views in Blazor Scheduler component of Syncfusion, and more details.
+title: Views in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Views in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Views
+# Views in Blazor Scheduler Component
 
 The Scheduler includes wide variety of view modes with unique configuration options for each view. The available view modes are Day, Week, Work Week, Month, Agenda, Month Agenda, Timeline Day, Timeline Week, Timeline Work Week and Timeline Month, out of which the `Week` view is set as active.
 

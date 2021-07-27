@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header Content in Blazor Card Component | Syncfusion 
-description: Learn about Header Content in Blazor Card component of Syncfusion, and more details.
+title: Header and Content in Blazor Card Component | Syncfusion
+description: Learn here all about Header and Content in Syncfusion Blazor Card component and more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Header and Content
+# Header and Content in Blazor Card Component
 
 ## Header
 

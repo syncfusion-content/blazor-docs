@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Responsive Mode in Blazor Kanban Component | Syncfusion 
-description: Learn about Responsive Mode in Blazor Kanban component of Syncfusion, and more details.
+title: Responsive Mode in Blazor Kanban Component | Syncfusion
+description: Learn here all about Responsive Mode in Syncfusion Blazor Kanban component and more.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Responsive mode
+# Responsive Mode in Blazor Kanban Component
 
 The Kanban component has support for responsive behavior based on the client browser's width and height.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: BarcodeGenerator in Blazor Barcode Component | Syncfusion 
-description: Learn about BarcodeGenerator in Blazor Barcode component of Syncfusion, and more details.
+title: Barcode Generator in Blazor Barcode Component | Syncfusion
+description: Learn here all about Barcode Generator in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug
 ---
 
-# BarcodeGenerator
+# Barcode Generator in Blazor Barcode Component
 
 ## Code39
 

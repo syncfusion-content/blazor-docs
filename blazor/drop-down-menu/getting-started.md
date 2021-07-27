@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Dropdown Menu Component | Syncfusion 
-description: Learn about Getting Started with Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Getting Started with Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Dropdown Menu component of Syncfusion, and more details.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

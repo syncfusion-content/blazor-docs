@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Settings in Blazor Diagram Component | Syncfusion 
-description: Learn about Page Settings in Blazor Diagram component of Syncfusion, and more details.
+title: Page Settings in Blazor Diagram Component | Syncfusion
+description: Learn here all about Page Settings in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Page Settings
+# Page Settings in Blazor Diagram Component
 
 Page settings enable to customize the appearance, width, and height of the diagram page.
 

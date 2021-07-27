@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Templates in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Templates in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about Templates in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Templates
+# Templates in Blazor MultiSelect Dropdown Component
 
 The MultiSelect has been provided with several options to customize each list item, group title,
 selected value, header, and footer elements.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tool Tip in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Tool Tip in Blazor Pivot Table component of Syncfusion, and more details.
+title: Tooltip in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor Pivot Table Component
 
 The tooltip can be enabled or disabled by setting the [`ShowTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowTooltip) property in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.html) class to **true**. By default, tooltip is enabled in the pivot table.
 

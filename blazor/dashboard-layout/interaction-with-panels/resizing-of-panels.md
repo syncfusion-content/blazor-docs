@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resizing Of Panels in Blazor Dashboard Layout Component | Syncfusion 
-description: Learn about Resizing Of Panels in Blazor Dashboard Layout component of Syncfusion, and more details.
+title: Resizing Panels in Blazor Dashboard Layout Component | Syncfusion
+description: Learn here all about Resizing Panels in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Resizing panels
+# Resizing Panels in Blazor Dashboard Layout Component
 
 The DashboardLayout component is also provided with the panel resizing functionality, which can be enabled or disabled using the `AllowResizing` property. This functionality allows you to resize the panels dynamically through UI interactions using the resizing handlers, which controls the panel resizing in various directions.
 

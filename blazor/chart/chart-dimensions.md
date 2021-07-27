@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Dimensions in Blazor Charts component | Syncfusion
-description: Learn here all about Chart Dimensions of Syncfusion Charts (SfCharts) component and more.
+title: Chart Dimensions in Blazor Charts Component | Syncfusion
+description: Learn here all about Chart Dimensions in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Chart Dimensions in Blazor Charts (SfCharts)
+# Chart Dimensions in Blazor Charts Component
 
 > * When no size is specified, the default height and width are 450px and 600px, respectively.
 >
@@ -153,4 +153,4 @@ By setting the values of [`Width`](https://help.syncfusion.com/cr/blazor/Syncfus
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)
+* [Marker](./data-markers)kers)

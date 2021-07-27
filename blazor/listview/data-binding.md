@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Listview Component | Syncfusion 
-description: Learn about Data Binding in Blazor Listview component of Syncfusion, and more details.
+title: Data Binding in Blazor ListView Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Data binding
+# Data Binding in Blazor ListView Component
 
 ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager.
 

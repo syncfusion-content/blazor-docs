@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Export in Blazor Barcode Component | Syncfusion 
-description: Learn about Export in Blazor Barcode component of Syncfusion, and more details.
+title: Export in Blazor Barcode Component | Syncfusion
+description: Learn here all about Export in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug
 ---
 
-# Export
+# Export in Blazor Barcode Component
 
 ## Export
 

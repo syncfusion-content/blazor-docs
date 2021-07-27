@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row in Blazor DataGrid Component | Syncfusion 
-description: Learn about Row in Blazor DataGrid component of Syncfusion, and more details.
+title: Row in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Row in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row
+# Row in Blazor DataGrid Component
 
 The row represents record details fetched from data source.
 

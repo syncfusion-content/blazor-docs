@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Aggregates in Blazor DataGrid Component | Syncfusion 
-description: Learn about Aggregates in Blazor DataGrid component of Syncfusion, and more details.
+title: Aggregates in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Aggregates in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Aggregates
+# Aggregates in Blazor DataGrid Component
 
 Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`GridAggregates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Aggregates) component.
  [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and

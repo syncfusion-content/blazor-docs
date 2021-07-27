@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Create Custom Grid Component in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Create Custom Grid Component in Blazor DataGrid component of Syncfusion, and more details.
+title: Create custom Grid component in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Create custom Grid component in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Create Custom Grid component
+# Create custom Grid component in Blazor DataGrid Component
 
 You can create a custom Grid component by rendering the SfGrid as a new razor component. It helps to create your own custom component when you might want to create multiple grids with same configuration or with default configuration through out your application.
 

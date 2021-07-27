@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Split Panes in Blazor Splitter Component | Syncfusion 
-description: Learn about Split Panes in Blazor Splitter component of Syncfusion, and more details.
+title: Split Panes in Blazor Splitter Component | Syncfusion
+description: Learn here all about Split Panes in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Split Panes
+# Split Panes in Blazor Splitter Component
 
 This section explain split-panes behaviours.
 

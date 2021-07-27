@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Split Button Component | Syncfusion 
-description: Learn about Getting Started with Blazor Split Button component of Syncfusion, and more details.
+title: Getting Started with Blazor SplitButton Component | Syncfusion
+description: Checkout and learn about getting started with Blazor SplitButton component of Syncfusion, and more details.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor Split Button Component
+# Getting Started with Blazor SplitButton Component
 
 This section briefly explains about how to include Split Button Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

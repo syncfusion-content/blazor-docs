@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Period selector in the Blazor Range Selector component | Syncfusion "
-description: Learn here all about period selector feature of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Period Selector in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Period Selector in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Period selector in the Blazor Range Selector (SfRangeNavigator)
+# Period Selector in Blazor Range Selector Component
 
 The period selector allows to choose a time range with specific periods.
 
@@ -224,5 +224,7 @@ The [`DisableRangeSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 
 ## See Also
+
+* [Disable Range Selector](./light-weight/)
 
 * [Disable Range Selector](./light-weight/)

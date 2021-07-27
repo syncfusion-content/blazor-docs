@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances
-description: This section explains the details of the styles and appearances of the ButtonGroup.
+title: Styles and Appearances in Blazor ButtonGroup Component | Syncfusion
+description: Learn here all about Styles and Appearances in Syncfusion Blazor ButtonGroup component and more.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
 ---
 
-# Styles and Appearances
+# Styles and Appearances in Blazor ButtonGroup Component
 
 To modify the ButtonGroup appearance, you need to override the default CSS of ButtonGroup component. Please find the list of CSS classes and its corresponding section in ButtonGroup. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

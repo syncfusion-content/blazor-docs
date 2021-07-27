@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize Number And Date Format in Blazor Pivot Table Component | Syncfusion
-description: Checkout and learn about Customize Number And Date Format in Blazor Pivot Table component of Syncfusion, and more details.
+title: Customize number and date format in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Customize number and date format in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Customize number and date formatting
+# Customize number and date format in Blazor Pivot Table Component
 
 User can format the number, date, and time values for each field using [`PivotViewFormatSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilterSettings.html) option under [`PivotViewDataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html). It can be configured through code behind, during initial rendering.
 

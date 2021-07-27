@@ -1,13 +1,13 @@
 ---
 layout: post
-title: About Blazor Diagram Component | Syncfusion 
-description: Learn here all about introduction of Syncfusion Blazor Diagram Component, its features, and more. 
+title: Overview Control in Blazor Diagram Component | Syncfusion
+description: Learn here all about Overview Control in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Overview Control
+# Overview Control in Blazor Diagram Component
 
 Overview control allows you to see a preview or an overall view of the entire content of a diagram. This helps you to look at the overall picture of a large diagram and to navigate, pan, or zoom, on a particular position of the page.
 

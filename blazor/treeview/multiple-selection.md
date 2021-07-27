@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple Selection in Blazor TreeView Component | Syncfusion 
-description: Learn about Multiple Selection in Blazor TreeView component of Syncfusion, and more details.
+title: MultiSelection in Blazor TreeView Component | Syncfusion
+description: Learn here all about MultiSelection in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Multi Selection
+# MultiSelection in Blazor TreeView Component
 
 Selection provides an interactive support and highlights the node that you select. Selection can be done through simple mouse down or keyboard interaction.
 

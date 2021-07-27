@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layers in Blazor Diagram Component | Syncfusion 
-description: Learn about Layers in Blazor Diagram component of Syncfusion, and more details.
+title: Layers in Blazor Diagram Component | Syncfusion
+description: Learn here all about Layers in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Layers
+# Layers in Blazor Diagram Component
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.
 

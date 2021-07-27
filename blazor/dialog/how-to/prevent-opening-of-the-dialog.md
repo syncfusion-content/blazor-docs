@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Prevent Opening Of The Dialog in Blazor Dialog Component | Syncfusion
-description: Checkout and learn about Prevent Opening Of The Dialog in Blazor Dialog component of Syncfusion, and more details.
+title: Open a Dialog on condition in Blazor Dialog Component | Syncfusion
+description: Learn here all about Open a Dialog on condition in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Prevent opening of the dialog
+# Open a Dialog on condition in Blazor Dialog Component
 
 You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true.
 In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
@@ -159,4 +159,5 @@ In the following sample, the success dialog is opened when you enter the usernam
     }
 }
 
+```
 ```

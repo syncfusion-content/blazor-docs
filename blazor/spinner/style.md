@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Spinner Component | Syncfusion 
-description: Learn about Style in Blazor Spinner component of Syncfusion, and more details.
+title: Style and appearance in Blazor Spinner Component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Blazor Spinner component and more.
 platform: Blazor
 control: Spinner
 documentation: ug
 ---
 
-# CSS structures
+# Style and appearance in Blazor Spinner Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

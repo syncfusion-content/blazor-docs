@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor DataGrid Component | Syncfusion 
-description: Learn about Filtering in Blazor DataGrid component of Syncfusion, and more details.
+title: Filtering in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filtering
+# Filtering in Blazor DataGrid Component
 
 Filtering allows you to view particular records based on filter criteria. To enable filtering in the DataGrid, set the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true. Filtering options can be configured through [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 

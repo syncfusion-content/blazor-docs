@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in the Blazor Range Selector component | Syncfusion 
-description: Learn here all about the labels in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Labels in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Labels in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Labels in the Blazor Range Selector (SfRangeNavigator)
+# Labels in Blazor Range Selector Component
 
 ## Multi-level labels
 
@@ -214,4 +214,4 @@ The font size, color, family, etc. can be customized using the [`RangeNavigatorL
 
 ```
 
-![Labels Customization](images/labels/custom.png)
+![Labels Customization](images/labels/custom.png) Customization](images/labels/custom.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Duration Unit in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Duration Unit in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Duration Unit in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Duration Unit in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Duration Units
+# Duration Unit in Blazor Gantt Chart Component
 
 In Gantt Chart, the tasks’ duration value can be measured by the following duration units,
 

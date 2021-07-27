@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Checkbox in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Checkbox in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: CheckBox in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about CheckBox in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# CheckBox
+# CheckBox in Blazor MultiSelect Dropdown Component
 
 The MultiSelect has built-in support to select multiple values through checkbox,
 when the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_Mode) property is set to `CheckBox`.

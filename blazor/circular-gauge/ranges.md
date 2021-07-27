@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ranges in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Ranges in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Ranges in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Ranges in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Ranges
+# Ranges in Blazor Circular Gauge Component
 
 You can categorizes certain interval on Circular Gauge axis using the [`CircularGaugeRanges`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeRanges.html) tag.
 

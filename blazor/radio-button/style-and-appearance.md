@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances
-description: This section explains the details of the styles and appearances of the RadioButton
+title: Styles and Appearances in Blazor RadioButton Component | Syncfusion
+description: Learn here all about Styles and Appearances in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Styles and Appearances
+# Styles and Appearances in Blazor RadioButton Component
 
 To modify the RadioButton appearance, you need to override the default CSS of RadioButton component. Please find the list of CSS classes and its corresponding section in RadioButton. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

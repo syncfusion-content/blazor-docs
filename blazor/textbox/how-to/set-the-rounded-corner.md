@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Set The Rounded Corner in Blazor TextBox Component | Syncfusion
-description: Checkout and learn about Set The Rounded Corner in Blazor TextBox component of Syncfusion, and more details.
+title: Set the Rounded Corner in Blazor TextBox Component | Syncfusion
+description: Learn here all about Set the Rounded Corner in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Set the rounded corner
+# Set the Rounded Corner in Blazor TextBox Component
 
 Render the TextBox with `rounded corner` by adding the `e-corner` class to the input parent element.
 

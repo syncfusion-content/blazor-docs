@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Selected Data in Blazor Chart Component | Syncfusion
-description: Checkout and learn about Selected Data in Blazor Chart component of Syncfusion, and more details.
+title: Visualize grid data in chart in Blazor Charts Component | Syncfusion
+description: Learn here all about Visualize grid data in chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Chart selected data in grid
+# Visualize grid data in chart in Blazor Charts Component
 
 By using the chart’s `OnSelectionChanged` event, you can get the current data.
 

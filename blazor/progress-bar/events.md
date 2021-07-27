@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Progress Bar component | Syncfusion
-description: Learn here all about the events of Syncfusion Progress Bar (SfProgressBar) component and more.
+title: Events in Blazor ProgressBar Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Events in the Blazor Progress Bar (SfProgressBar)
+# Events in Blazor ProgressBar Component
 
 This section describes the Progress Bar component's events that will be triggered when appropriate actions are performed. The events should be provided to the Progress Bar through the [`ProgressBarEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html).
 
@@ -121,6 +121,9 @@ The `Loaded` event triggers after the component is rendered.
     public void LoadedHandler(System.EventArgs args)
     {
         // Here you can customize the code.
+    }
+}
+```omize the code.
     }
 }
 ```

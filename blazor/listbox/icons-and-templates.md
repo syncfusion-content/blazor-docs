@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons And Templates in Blazor List Box Component | Syncfusion 
-description: Learn about Icons And Templates in Blazor List Box component of Syncfusion, and more details.
+title: Icons and Templates in Blazor ListBox Component | Syncfusion
+description: Learn here all about Icons and Templates in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Icons and Customization
+# Icons and Templates in Blazor ListBox Component
 
 ## Icons
 

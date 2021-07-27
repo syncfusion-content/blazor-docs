@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Internationalization in Blazor Chart Component | Syncfusion 
-description: Learn about Internationalization in Blazor Chart component of Syncfusion, and more details.
+title: Internationalization in Blazor Charts Component | Syncfusion
+description: Learn here all about Internationalization in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Internationalization
+# Internationalization in Blazor Charts Component
 
 Chart provide supports for internationalization for below chart elements.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Calendar Component | Syncfusion 
-description: Learn about Globalization in Blazor Calendar component of Syncfusion, and more details.
+title: Globalization in Blazor Calendar Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor Calendar Component
 
 Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 

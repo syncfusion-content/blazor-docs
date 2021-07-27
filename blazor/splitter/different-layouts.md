@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Different Layouts in Blazor Splitter Component | Syncfusion 
-description: Learn about Different Layouts in Blazor Splitter component of Syncfusion, and more details.
+title: Different Layouts in Blazor Splitter Component | Syncfusion
+description: Learn here all about Different Layouts in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Different layouts
+# Different Layouts in Blazor Splitter Component
 
 By using splitter control, you can create the different layouts with multiple and nested panes.
 

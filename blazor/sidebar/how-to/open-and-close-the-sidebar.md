@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Open And Close The Sidebar in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn about Open And Close The Sidebar in Blazor Sidebar component of Syncfusion, and more details.
+title: Open and close the Sidebar in Blazor Sidebar Component | Syncfusion
+description: Learn here all about Open and close the Sidebar in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Open and close the Sidebar
+# Open and close the Sidebar in Blazor Sidebar Component
 
 Opening and closing the Sidebar can be achieved with `IsOpen` property.
 

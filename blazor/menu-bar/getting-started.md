@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Menu Bar  Component | Syncfusion 
-description: Learn about Getting Started with Blazor Menu Bar  component of Syncfusion, and more details.
+title: Getting Started with Blazor Menu Bar Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Menu Bar component of Syncfusion, and more details.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

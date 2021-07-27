@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print And Export in Blazor Maps Component | Syncfusion 
-description: Learn about Print And Export in Blazor Maps component of Syncfusion, and more details.
+title: Print and export in Blazor Maps Component | Syncfusion
+description: Learn here all about Print and export in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Print and export
+# Print and export in Blazor Maps Component
 
 ## Print
 

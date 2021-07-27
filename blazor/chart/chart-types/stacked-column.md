@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Column Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Stacked Column Chart of Syncfusion Charts (SfCharts) component and more.
+title: Stacked Column in Blazor Charts Component | Syncfusion
+description: Learn here all about Stacked Column in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Stacked Column Chart in Blazor Charts (SfCharts)
+# Stacked Column in Blazor Charts Component
 
 ## Stacked Column
 
@@ -155,4 +155,4 @@ The following properties can be used to customize the [`Stacked Column`](https:/
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cross Hair in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Cross Hair in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Crosshair in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Crosshair in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Add Crosshair
+# Crosshair in Blazor Stock Chart Component
 
 Crosshair has a vertical and horizontal line to view the value of the axis at mouse or touch position.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Enable Or Disable Context Menu Items in Blazor Context Menu Component | Syncfusion
-description: Checkout and learn about Enable Or Disable Context Menu Items in Blazor Context Menu component of Syncfusion, and more details.
+title: Enable/Disable Context Menu items in Blazor ContextMenu Component | Syncfusion
+description: Learn here all about Enable/Disable Context Menu items in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Enable or disable context menu items
+# Enable/Disable Context Menu items in Blazor ContextMenu Component
 
 You can enable and disable the menu items using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html). To disable menuItems, set the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in each item to `true` and vice-versa.
 
@@ -67,4 +67,4 @@ Output be like
 
 ![Context Menu Sample](./../images/cm-disable.png)
 
-> To disable sub menu items, use the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~OnOpen.html) event.
+> To disable sub menu items, use the [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~OnOpen.html) event.t.

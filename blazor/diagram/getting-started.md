@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Diagram Component | Syncfusion 
-description: Learn about Getting Started with Blazor Diagram component of Syncfusion, and more details.
+title: Getting Started with Blazor Diagram Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Diagram component of Syncfusion, and more details.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Diagram Component
 
 This section briefly explains about how to include a Diagram in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

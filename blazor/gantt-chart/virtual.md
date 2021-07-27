@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtual in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Virtual in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Virtualization in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Virtualization
+# Virtualization in Blazor Gantt Chart Component
 
 Gantt Chart allows you to load a large amount of data without performance degradation.
 

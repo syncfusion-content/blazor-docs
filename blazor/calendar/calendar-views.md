@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calendar Views in Blazor Calendar Component | Syncfusion 
-description: Learn about Calendar Views in Blazor Calendar component of Syncfusion, and more details.
+title: Calendar Views in Blazor Calendar Component | Syncfusion
+description: Learn here all about Calendar Views in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Calendar Views
+# Calendar Views in Blazor Calendar Component
 
 A Calendar has the following predefined views
 that provide a flexible way to navigate back and forth when selecting dates.

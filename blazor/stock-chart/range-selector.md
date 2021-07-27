@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Range Selector in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Range Selector in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Range Selector in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Range Selector in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Range selector
+# Range Selector in Blazor Stock Chart Component
 
 The range selector allows to select a range with specified periods. By default the range selector is enabled in stock chart.
 

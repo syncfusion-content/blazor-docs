@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Excel Exporting in Blazor DataGrid Component | Syncfusion 
-description: Learn about Excel Exporting in Blazor DataGrid component of Syncfusion, and more details.
+title: Excel Export in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Excel Export in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-# Excel export
+# Excel Export in Blazor DataGrid Component
 
 The excel export allows exporting DataGrid data to Excel document. You need to use the
  **ExcelExport** method for exporting. To enable Excel export in the datagrid, set the [`AllowExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowExcelExport) property as true.

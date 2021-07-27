@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Period Selector in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Period Selector in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Period Selector in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Period Selector in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Period selector
+# Period Selector in Blazor Stock Chart Component
 
 The period selector allows to select a range with specified periods. By default the period selector is enabled in stock chart.
 

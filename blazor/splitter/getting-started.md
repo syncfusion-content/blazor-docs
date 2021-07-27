@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Splitter Component | Syncfusion 
-description: Learn about Getting Started with Blazor Splitter component of Syncfusion, and more details.
+title: Getting Started with Blazor Splitter Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Splitter component of Syncfusion, and more details.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started
+# Getting Started with Blazor Splitter Component
 
 This section briefly explains how to include a Splitter component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 

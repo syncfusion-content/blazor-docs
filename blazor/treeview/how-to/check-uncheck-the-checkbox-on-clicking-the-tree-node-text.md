@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Check Uncheck The Checkbox On Clicking The Tree Node Text in Blazor TreeView Component | Syncfusion
-description: Checkout and learn about Check Uncheck The Checkbox On Clicking The Tree Node Text in Blazor TreeView component of Syncfusion, and more details.
+title: Check/uncheck the checkbox on clicking the tree node text in Blazor TreeView Component | Syncfusion
+description: Learn here all about Check/uncheck the checkbox on clicking the tree node text in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Check/uncheck the checkbox on clicking the tree node text
+# Check/uncheck the checkbox on clicking the tree node text in Blazor TreeView Component
 
 You can check and uncheck the checkboxes of tree view by clicking the tree node using the `NodeClicked` event of TreeView.
 

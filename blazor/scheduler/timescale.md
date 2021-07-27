@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Timescale in Blazor Scheduler Component | Syncfusion 
-description: Learn about Timescale in Blazor Scheduler component of Syncfusion, and more details.
+title: Timescale Customization in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Timescale Customization in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# TimeScale Customization
+# Timescale Customization in Blazor Scheduler Component
 
 The time slots are usually the time cells that are displayed on the Day, Week and Work Week views of both the calendar (to the left most position) and timeline views (at the top position). The `ScheduleTimeScale` allows you to control and set the required time slot duration for the work cells displayed on Scheduler. It includes the following sub-options such as,
 

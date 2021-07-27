@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Style in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Custom Style in Blazor Tree Grid component of Syncfusion, and more details.
+title: Styling and Appearance in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Styling and Appearance in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Styling
+# Styling and Appearance in Blazor TreeGrid Component
 
 To modify the Tree Grid appearance, you need to override the default CSS of Tree Grid. Please find the list of CSS classes and its corresponding section in Tree Grid.
 

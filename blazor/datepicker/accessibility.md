@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DatePicker Component | Syncfusion 
-description: Learn about Accessibility in Blazor DatePicker component of Syncfusion, and more details.
+title: Accessibility in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor DatePicker Component
 
 The web accessibility defines a way to make web content and web applications
 more accessible to disabled people. It especially helps the dynamic content change

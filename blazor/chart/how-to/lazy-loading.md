@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Lazy Loading in Blazor Chart Component | Syncfusion
-description: Checkout and learn about Lazy Loading in Blazor Chart component of Syncfusion, and more details.
+title: Lazy Loading in Blazor Charts Component | Syncfusion
+description: Learn here all about Lazy Loading in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Lazy loading
+# Lazy Loading in Blazor Charts Component
 
 Lazy loading allows you to load data for chart on demand. Chart will fire the [`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event, in that we can get the minimum and maximum range of the axis, based on this, we can upload the data to chart.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Levels in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Levels of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Levels in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Levels in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Levels in the Blazor TreeMap (SfTreeMap)
+# Levels in Blazor TreeMap Component
 
 TreeMap supports **n** number of levels and each level is separated by using the [`GroupPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_GroupPath) property.
 
@@ -156,4 +156,4 @@ The following properties are available to customize the header content in the [`
 
 > Refer to the [code block](#group-path) to know about the property value of `Employees`.
 
-![TreeMap with customized header](images/Levels/headeralignment.png)
+![TreeMap with customized header](images/Levels/headeralignment.png)ralignment.png)

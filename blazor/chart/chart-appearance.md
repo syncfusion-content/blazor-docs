@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Charts component | Syncfusion
-description: Learn here all about Appearance of Syncfusion Charts (SfCharts) component and more.
+title: Appearance in Blazor Charts Component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Appearance in Blazor Charts (SfCharts)
+# Appearance in Blazor Charts Component
 
 ## Custom Color Palette
 
@@ -332,4 +332,4 @@ The [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ## See Also
 
 * [Data Label](./data-labels)
-* [Tooltip](./tool-tip)
+* [Tooltip](./tool-tip)-tip)

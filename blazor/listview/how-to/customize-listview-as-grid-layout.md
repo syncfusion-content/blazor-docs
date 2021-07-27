@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize Listview As Grid Layout in Blazor Listview Component | Syncfusion
-description: Checkout and learn about Customize Listview As Grid Layout in Blazor Listview component of Syncfusion, and more details.
+title: Customize listview as grid layout in Blazor ListView Component | Syncfusion
+description: Learn here all about Customize listview as grid layout in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# How to customize listview as grid layout
+# Customize listview as grid layout in Blazor ListView Component
 
 In Listview, list items can be rendered in grid layout with following data manipulations.
 
@@ -413,4 +413,4 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
 </style>
 ```
 
-![ListView - Grid layout](../images/list/customize-listview-as-grid-layout.png)
+![ListView - Grid layout](../images/list/customize-listview-as-grid-layout.png))

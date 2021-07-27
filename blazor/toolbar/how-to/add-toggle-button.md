@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Add Toggle Button in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn about Add Toggle Button in Blazor Toolbar component of Syncfusion, and more details.
+title: Add Toggle Button in Blazor Toolbar Component | Syncfusion
+description: Learn here all about Add Toggle Button in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Add Toggle Button
+# Add Toggle Button in Blazor Toolbar Component
 
 Toolbar supports to add a toggle Button by using the `Template` property. Refer below steps
 

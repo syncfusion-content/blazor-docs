@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Async in Blazor File Upload Component | Syncfusion 
-description: Learn about Async in Blazor File Upload component of Syncfusion, and more details.
+title: Asynchronous Upload in Blazor File Upload Component | Syncfusion
+description: Learn here all about Asynchronous Upload in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Asynchronous upload
+# Asynchronous Upload in Blazor File Upload Component
 
 The uploader component allows you to upload the files asynchronously.
 The upload process requires save and remove action URL to manage the upload process in the server.

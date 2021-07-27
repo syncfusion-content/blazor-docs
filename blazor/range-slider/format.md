@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Format in Blazor Range Slider Component | Syncfusion 
-description: Learn about Format in Blazor Range Slider component of Syncfusion, and more details.
+title: Formatting in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Formatting in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Formatting
+# Formatting in Blazor Range Slider Component
 
 The `Format` feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
 

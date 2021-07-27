@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Web Assembly in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn about Web Assembly in Blazor Gantt Chart component of Syncfusion, and more details.
+title: WebAssembly Gantt Chart in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about WebAssembly Gantt Chart in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Getting Started with Blazor WebAssembly Gantt Chart Using Visual Studio
+# WebAssembly Gantt Chart in Blazor Gantt Chart Component
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -578,4 +578,4 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](/task-dependencies/)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-![Gantt Features](../images/enableDependency.png)
+![Gantt Features](../images/enableDependency.png)leDependency.png)

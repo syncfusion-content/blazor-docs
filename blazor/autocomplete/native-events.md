@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Native Events in Blazor AutoComplete component of Syncfusion, and more details.
+title: Native Events in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor AutoComplete Component
 
 The following section explains the steps to include native events and pass data to event handler in the AutoComplete component.
 

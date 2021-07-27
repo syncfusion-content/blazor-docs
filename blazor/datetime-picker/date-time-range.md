@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Time Range in Blazor Datetime Picker  Component | Syncfusion 
-description: Learn about Date Time Range in Blazor Datetime Picker  component of Syncfusion, and more details.
+title: DateTime Range in Blazor Datetime Picker Component | Syncfusion
+description: Learn here all about DateTime Range in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
 ---
 
-# DateTime Range
+# DateTime Range in Blazor Datetime Picker Component
 
 DateTimePicker provides an option to select a date and time value within a specified range
 by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min)

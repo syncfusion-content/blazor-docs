@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Getting Started with Blazor RichTextEditor component of Syncfusion, and more details.
+title: Getting Started with Blazor RichTextEditor Component | Syncfusion
+description: Checkout and learn about getting started with Blazor RichTextEditor component of Syncfusion, and more details.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started
+# Getting Started with Blazor RichTextEditor Component
 
 This section briefly explains how to include a Rich Text Editor component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 

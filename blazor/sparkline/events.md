@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the events of Syncfusion Sparkline (SfSparkline) component and more.
+title: Events in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Events in the Blazor Sparkline (SfSparkline)
+# Events in Blazor Sparkline Component
 
 This section describes the Sparkline component's events that will be triggered when appropriate actions are performed. The events should be provided to the Sparkline through the [`SparklineEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html).
 
@@ -191,6 +191,9 @@ The [`OnDataLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     public void DataLabelRenderingHandler(DataLabelRenderingEventArgs args)
     {
         // Here you can customize the code.
+    }
+}
+```he code.
     }
 }
 ```

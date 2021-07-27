@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Legend in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Legend in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Legend in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
 
-# Legend
+# Legend in Blazor Circular Gauge Component
 
 Legend provides valuable information for interpreting what the circular gauge axis range displays, and they can be represented in various colors, shapes, and other identifiers based on the data. It gives a breakdown of what each symbol represents in the axis range of circular gauge.
 

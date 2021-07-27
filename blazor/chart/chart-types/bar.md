@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Bar Chart of Syncfusion Charts (SfCharts) component and more.
+title: Bar Charts in Blazor Charts Component | Syncfusion
+description: Learn here all about Bar Charts in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Bar Chart in Blazor Charts (SfCharts)
+# Bar Charts in Blazor Charts Component
 
 ## Bar
 
@@ -136,4 +136,4 @@ The following properties can be used to customize the [`Bar`](https://help.syncf
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)p)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bing Maps in Blazor Maps Component | Syncfusion 
-description: Learn about Bing Maps in Blazor Maps component of Syncfusion, and more details.
+title: Bing Maps in Blazor Maps Component | Syncfusion
+description: Learn here all about Bing Maps in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Bing Maps
+# Bing Maps in Blazor Maps Component
 
 Bing maps is a map of the entire World owned by Microsoft. As like OSM, it provides map tile images based on our requests and combines those images into a single one to display the map area.
 

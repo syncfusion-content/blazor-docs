@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Bubble Chart of Syncfusion Charts (SfCharts) component and more.
+title: Bubble in Blazor Charts Component | Syncfusion
+description: Learn here all about Bubble in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Bubble Chart in Blazor Charts (SfCharts)
+# Bubble in Blazor Charts Component
 
 ## Bubble
 
@@ -167,4 +167,4 @@ The following properties can be used to customize the [`Bubble`](https://help.sy
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

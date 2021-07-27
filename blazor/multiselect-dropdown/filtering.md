@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Filtering in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Filtering in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Filtering
+# Filtering in Blazor MultiSelect Dropdown Component
 
 The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter
 operation starts as soon as you start typing characters in the MultiSelect input.

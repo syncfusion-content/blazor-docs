@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Pdf Export in Blazor DataGrid Component | Syncfusion 
-description: Learn about Pdf Export in Blazor DataGrid component of Syncfusion, and more details.
+title: Pdf Export in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Pdf Export in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD033 -->
 
-# PDF Export
+# Pdf Export in Blazor DataGrid Component
 
 PDF export allows exporting DataGrid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the datagrid, set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPdfExport) as true.

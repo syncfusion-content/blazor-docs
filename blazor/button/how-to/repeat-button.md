@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Repeat Button in Blazor Button Component | Syncfusion
-description: Checkout and learn about Repeat Button in Blazor Button component of Syncfusion, and more details.
+title: Repeat Button in Blazor Button Component | Syncfusion
+description: Learn here all about Repeat Button in Syncfusion Blazor Button component and more.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Repeat Button
+# Repeat Button in Blazor Button Component
 
 The Repeat button is a type of Button in that the click event is triggered at regular time interval from the pressed state till the released state.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Title and SubTitle in Blazor Bullet Chart component | Syncfusion
-description: Learn here all about Title and SubTitle of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Title and Subtitle in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Title and Subtitle in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Title and SubTitle in Blazor Bullet Chart (SfBulletChart)
+# Title and Subtitle in Blazor Bullet Chart Component
 
 ## Title
 
@@ -123,4 +123,4 @@ The title and the subtitle - color, opacity, font size, font family, font weight
 
 > Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
-![Title and Subtitle Customization](images/title-custom.png)
+![Title and Subtitle Customization](images/title-custom.png)tle-custom.png)

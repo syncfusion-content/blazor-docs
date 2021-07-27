@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Globalization in Blazor Pivot Table component of Syncfusion, and more details.
+title: Globalization in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor Pivot Table Component
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 

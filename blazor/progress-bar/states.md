@@ -1,13 +1,13 @@
 ---
 layout: post
-title: States in the Blazor Progress Bar component | Syncfusion
-description: Learn here all about states of Syncfusion Progress Bar (SfProgressBar) component and more.
+title: States in Blazor ProgressBar Component | Syncfusion
+description: Learn here all about States in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# States in the Blazor Progress Bar (SfProgressBar)
+# States in Blazor ProgressBar Component
 
 In this section, the progress can be visualized in different states.
 
@@ -77,4 +77,4 @@ The striped visual indicator for the estimated progress can be enabled by settin
 </SfProgressBar>
 ```
 
-![Striped - Progress Bar](images/striped.png)
+![Striped - Progress Bar](images/striped.png)s Bar](images/striped.png)

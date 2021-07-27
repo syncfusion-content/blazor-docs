@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tool Bar in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Tool Bar in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Toolbar in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Toolbar in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Toolbar
+# Toolbar in Blazor Gantt Chart Component
 
 The Gantt Chart component provides the toolbar support to handle Gantt Chart actions. The `Toolbar` property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
 

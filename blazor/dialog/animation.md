@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor Dialog Component | Syncfusion 
-description: Learn about Animation in Blazor Dialog component of Syncfusion, and more details.
+title: Animation in Blazor Dialog Component | Syncfusion
+description: Learn here all about Animation in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Animation
+# Animation in Blazor Dialog Component
 
 The Dialog can be animated during the open and close actions. Also, users can
 customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.

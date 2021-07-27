@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Task Dependencies in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Task Dependencies in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Task Dependencies in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Task Dependencies in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Task Dependencies
+# Task Dependencies in Blazor Gantt Chart Component
 
 Task dependency or task relationship can be established between two tasks in Gantt Chart. This dependency affects the project schedule. If you change the predecessor of a task, it will affect the successor task, which will affect the next task, and so on.
 

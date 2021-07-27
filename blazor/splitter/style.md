@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Splitter Component | Syncfusion 
-description: Learn about Style in Blazor Splitter component of Syncfusion, and more details.
+title: Style and appearance in Blazor Splitter Component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# CSS structures
+# Style and appearance in Blazor Splitter Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

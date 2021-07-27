@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor DataManager Component | Syncfusion 
-description: Learn about Getting Started with Blazor DataManager component of Syncfusion, and more details.
+title: Getting Started with Blazor DataManager Component | Syncfusion
+description: Checkout and learn about getting started with Blazor DataManager component of Syncfusion, and more details.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started
+# Getting Started with Blazor DataManager Component
 
 This section explains about how to connect the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to a data source and perform queries on it in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/blazor/documentation/getting-started/vs-blazor-server/) for the introduction and configuring the common specifications.
 

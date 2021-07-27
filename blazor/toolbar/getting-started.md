@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Toolbar Component | Syncfusion 
-description: Learn about Getting Started with Blazor Toolbar component of Syncfusion, and more details.
+title: Getting Started with Blazor Toolbar Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Toolbar component of Syncfusion, and more details.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Toolbar Component
 
 This section briefly explains about how to include a `Toolbar` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

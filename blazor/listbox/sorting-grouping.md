@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting Grouping in Blazor List Box Component | Syncfusion 
-description: Learn about Sorting Grouping in Blazor List Box component of Syncfusion, and more details.
+title: Sorting and Grouping in Blazor ListBox Component | Syncfusion
+description: Learn here all about Sorting and Grouping in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# sorting and grouping
+# Sorting and Grouping in Blazor ListBox Component
 
 ## Sorting
 

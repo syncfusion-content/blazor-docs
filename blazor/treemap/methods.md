@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Methods of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Methods in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Methods in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Methods in the Blazor TreeMap (SfTreeMap)
+# Methods in Blazor TreeMap Component
 
 Create an object for the TreeMap component using `@ref` property and call the desired TreeMap method.
 
@@ -151,6 +151,9 @@ The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
         new Country  {Name="United States", GDP=17946 },
         new Country  {Name="China", GDP=10866 },
         new Country  {Name="Japan", GDP=4123 },
+    };
+}
+``` },
     };
 }
 ```

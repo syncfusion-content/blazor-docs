@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Diagram Component | Syncfusion 
-description: Learn about Data Binding in Blazor Diagram component of Syncfusion, and more details.
+title: Data Binding in Blazor Diagram Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor Diagram Component
 
 * Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populate Data in Blazor Maps Component | Syncfusion 
-description: Learn about Populate Data in Blazor Maps component of Syncfusion, and more details.
+title: Populate Data in Blazor Maps Component | Syncfusion
+description: Learn here all about Populate Data in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Populate Data
+# Populate Data in Blazor Maps Component
 
 This section explains how to populate data inputs and provide it to the Maps component.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Color Mapping in Blazor Maps Component | Syncfusion 
-description: Learn about Color Mapping in Blazor Maps component of Syncfusion, and more details.
+title: Color Mapping in Blazor Maps Component | Syncfusion
+description: Learn here all about Color Mapping in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Color Mapping
+# Color Mapping in Blazor Maps Component
 
 Color mapping is used to customize the shape colors based on given values. It has three types: range color mapping, equal color mapping, and desaturation color mapping.
 

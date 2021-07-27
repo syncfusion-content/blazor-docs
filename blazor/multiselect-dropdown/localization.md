@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Localization in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Localization in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor MultiSelect Dropdown Component
 
 ## Blazor server side
 

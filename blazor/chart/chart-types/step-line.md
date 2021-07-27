@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Line Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Step Line Chart of Syncfusion Charts (SfCharts) component and more.
+title: Step Line in Blazor Charts Component | Syncfusion
+description: Learn here all about Step Line in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Step Line Chart in Blazor Charts (SfCharts)
+# Step Line in Blazor Charts Component
 
 ## Step Line
 
@@ -107,4 +107,4 @@ The following properties can be used to customize the [`Step Line`](https://help
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

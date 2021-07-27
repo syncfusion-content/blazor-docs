@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Numeric TextBox Component | Syncfusion 
-description: Learn about Getting Started with Blazor Numeric TextBox component of Syncfusion, and more details.
+title: Getting Started with Blazor Numeric TextBox Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Numeric TextBox component of Syncfusion, and more details.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Numeric TextBox Component
 
 This section briefly explains about how to include a [Blazor NumericTextBox](https://www.syncfusion.com/blazor-components/blazor-numeric-textbox) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side NumericTextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly NumericTextBox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Color Picker Component | Syncfusion 
-description: Learn about Getting Started with Blazor Color Picker component of Syncfusion, and more details.
+title: Getting Started with Blazor Color Picker Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Color Picker component of Syncfusion, and more details.
 platform: Blazor
 control: Color Picker
 documentation: ug

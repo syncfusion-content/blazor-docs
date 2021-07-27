@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Blazor Web Assembly in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn about Blazor Web Assembly in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Getting Started with Blazor WebAssembly RichTextEditor using Visual Studio in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Getting Started with Blazor WebAssembly RichTextEditor using Visual Studio in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor WebAssembly RichTextEditor using Visual Studio
+# Getting Started with Blazor WebAssembly RichTextEditor using Visual Studio in Blazor RichTextEditor Component
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 

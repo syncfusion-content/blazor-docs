@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Range Selector component | Syncfusion 
-description: Learn here all about the events of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Events in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Events in the Blazor Range Selector (SfRangeNavigator)
+# Events in Blazor Range Selector Component
 
 This section describes about the Range Selector component's events, that is triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
 
@@ -329,6 +329,9 @@ The [`SelectorRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     public void SelectorCustomization(RangeSelectorRenderEventArgs args)
     {
         // Here you can customize your code.
+    }
+}
+```u can customize your code.
     }
 }
 ```

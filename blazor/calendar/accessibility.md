@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Calendar Component | Syncfusion 
-description: Learn about Accessibility in Blazor Calendar component of Syncfusion, and more details.
+title: Accessibility in Blazor Calendar Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Calendar Component
 
 The web accessibility makes web content and web applications more accessible for disabled people. It especially helps in dynamic content change and development of advanced user interface components with AJAX, HTML, JavaScript, and related technologies.
 
