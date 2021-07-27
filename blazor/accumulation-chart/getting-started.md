@@ -1,6 +1,15 @@
+---
+layout: post
+title: Getting Started with Blazor Accumulation Chart Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Accumulation Chart component of Syncfusion, and more details.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
+---
+
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started
+# Getting Started with Blazor Accumulation Chart Component
 
 This section briefly explains about how to include a `Accumulation Chart` in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -37,7 +46,7 @@ This section briefly explains about how to include a `Accumulation Chart` in you
 
 Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 ```
@@ -112,7 +121,7 @@ namespace BlazorApplication
 
 To initialize the accumulation chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 <SfAccumulationChart>
@@ -128,9 +137,8 @@ To initialize the accumulation chart component add the below code to your **Ind
         public string Country { get; set;}
         public double Medals { get; set;}
     }
-
     public List<ChartData> MedalDetails = new List<ChartData>
-    {
+   {
         new ChartData { Country= "United States of America", Medals= 46 },
         new ChartData { Country= "Great Britain", Medals= 27 },
         new ChartData { Country= "China", Medals= 26 },
@@ -151,7 +159,7 @@ On successful compilation of your application, the Syncfusion Blazor Accumulatio
 
 Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, you can add a title to the accumulation chart to provide the user with quick information about the data plotted in the chart.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -167,7 +175,6 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public string Country { get; set; }
         public double Medals { get; set; }
     }
-
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { Country= "United States of America", Medals= 46 },
@@ -188,7 +195,7 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 You can add data labels to improve the readability of the accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to **true** in the [`AccumulationDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -206,7 +213,6 @@ You can add data labels to improve the readability of the accumulation chart. Th
         public string Country { get; set; }
         public double Medals { get; set; }
     }
-
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { Country= "United States of America", Medals= 46 },
@@ -227,7 +233,7 @@ You can add data labels to improve the readability of the accumulation chart. Th
 
 When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [`AccumulationChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to **true**.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -245,7 +251,6 @@ When space constraints prevent you from displaying information using data labels
         public string Country { get; set;}
         public double Medals {get; set;}
     }
-
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { Country= "United States of America", Medals= 46 },
@@ -286,7 +291,6 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
         public string Country { get; set;}
         public double Medals { get; set;}
     }
-    
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { Country= "United States of America", Medals= 46 },

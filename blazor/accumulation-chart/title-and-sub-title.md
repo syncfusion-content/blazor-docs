@@ -1,54 +1,173 @@
 ---
-title: "Title in Blazor Accumulation Charts component | Syncfusion"
-
-component: "Accumulation Charts"
-
-description: "Learn here all about Title of Syncfusion Accumulation Charts (SfAccumulationChart) component and more."
+layout: post
+title: Title and Subtitle in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Title and Subtitle in Syncfusion Blazor Accumulation Chart component and more.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
 ---
 
-# Title
+<!-- markdownlint-disable MD036 -->
 
-The [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property can be used to give the accumulation chart a title in-order to provide information about the data displayed.
+# Title and Subtitle in Blazor Accumulation Chart Component
 
-{% aspTab template="chart/accumulation-charts/pie_doughnut/title", sourceFiles="title.razor" %}
+Accumulation chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Title) property, to show the information
+about the data plotted.
 
-{% endaspTab %}
+```csharp
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
 
 ![Title](images/title/title-razor.png)
 
 ## Title Customization
 
-The [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) can be customized by using the [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTitleStyle.html) property.
+Title can be customized by using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_TitleStyle) property.
 
-{% aspTab template="chart/accumulation-charts/pie_doughnut/title-cus", sourceFiles="title-cus.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
 
-![Customized Title](images/title/custom_title.png)
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartTitleStyle FontFamily="Arial" FontStyle="Italic" FontWeight="regular" Color="#E27F2D" Size="23px"></AccumulationChartTitleStyle>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
 
 ## Subtitle
 
-The [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) property can be used to give the accumulation chart a subtitle in-order to provide additional information about the data displayed.
+Accumulation Chart can be given a subtitle using [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_SubTitle) property, to show the information
+about the data plotted.
 
-{% aspTab template="chart/accumulation-charts/pie_doughnut/sub-title", sourceFiles="sub-title.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+
+```
 
 ![Subtitle](images/title/sub-title-razor.png)
 
 ## Subtitle Customization
 
-The [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_SubTitle) can be customized using [`SubTitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSubTitleStyle.html) property.
+Subtitle in accumulation chart can be customized using [`SubTitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_SubTitleStyle) property.
 
-{% aspTab template="chart/accumulation-charts/pie_doughnut/sub-title-cus", sourceFiles="sub-title-cus.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart Title="Mobile Browser Statistics" SubTitle="In the year 2014 - 2015">
+    <AccumulationChartSubTitleStyle FontFamily="Arial" FontStyle="Italic" FontWeight="regular" Color="#E27F2D" Size="13px"></AccumulationChartSubTitleStyle>
 
-![Customized Subtitle](images/title/custom_subtitle.png)
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
 
-## See Also
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
 
 * [Grouping](./grouping/)
 * [Datalabel](./data-label/)

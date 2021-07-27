@@ -1,64 +1,226 @@
 ---
-title: "Tooltip in Blazor Accumulation Charts component | Syncfusion"
-
-component: "Accumulation Charts"
-
-description: "Learn here all about Tooltip of Syncfusion Accumulation Charts (SfAccumulationChart) component and more."
+layout: post
+title: Tooltip in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Accumulation Chart component and more.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor Accumulation Chart Component
 
-The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [`AccumulationChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) can be set to **true** to enable the tooltip.
+Tooltip for the accumulation chart can be enabled by using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property.
 
-{% aspTab template="chart/accumulation-charts/tooltip/default", sourceFiles="default.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
 
 ![Tooltip](images/tool-tip/default-razor.png)
 
 ## Header
 
-The [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Header) property in [`AccumulationChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) can be used to specify the tooltip's header.
+We can specify header for the tooltip using [`Header`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Header) property.
 
-{% aspTab template="chart/accumulation-charts/tooltip/header", sourceFiles="header.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartTooltipSettings Enable="true" Header="Pie Chart"></AccumulationChartTooltipSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
 
 ![Header](images/tool-tip/header-razor.png)
 
-## Tooltip Format
+## Format
 
-By default, tooltip shows information about x and y value in points. In addition, further customization can be done in the tooltip. For example the format `${point.x} : <b>${point.y}%</b>` shows point x value and customized point y value.
+By default, tooltip shows information about x and y value in points. In addition to that, you can show more
+information in tooltip. For example the format `${point.x} : <b>${point.y}%</b>` shows series name and point x value.
 
-{% aspTab template="chart/accumulation-charts/tooltip/format", sourceFiles="format.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
 
-![Tooltip Format](images/tool-tip/format-razor.png)
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+    <AccumulationChartTooltipSettings Enable="true" Format="${point.x} : <b>${point.y}%</b>"></AccumulationChartTooltipSettings>
+</SfAccumulationChart>
 
-## Tooltip Customization 
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Border) properties are used to customize the background color and the border of the tooltip respectively. The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_TextStyle) property in the tooltip is used to customize the font size of the tooltip text.
+    }
 
-{% aspTab template="chart/accumulation-charts/tooltip/custom", sourceFiles="custom.razor" %}
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
 
-{% endaspTab %}
+```
 
-![Tooltip Customization](images/tool-tip/custom-razor.png)
+![Format](images/tool-tip/format-razor.png)
+
+## Customization
+
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Fill) and
+[`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Border)
+properties are used to customize the background color and border of the tooltip respectively.
+The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_TextStyle)
+property in the tooltip is used to customize the font of the tooltip text.
+
+```csharp
+
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartTooltipSettings Enable="true" Format="${point.x} : <b>${point.y}</b>" Fill="#7bb4eb"></AccumulationChartTooltipSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+       public string Browser { get; set; }
+       public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+    {
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
+![Customization](images/tool-tip/custom-razor.png)
 
 ## Tooltip Text Mapping
 
-By default, tooltip shows information of x and y value in points. In addition, by using the [`TooltipMappingName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_TooltipMappingName), more information from the datasource can be displayed in the tooltip. To display the specified tooltip content, **$point.tooltip** can be used as a placeholder.
+By default, tooltip shows information of x and y value in points. You can show more information from datasource in tooltip by using the [`TooltipMappingName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_TooltipMappingName) . You can use the `${point.tooltip}` as place holders to display the specified tooltip content.
 
-{% aspTab template="chart/accumulation-charts/tooltip/mapping", sourceFiles="mapping.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" TooltipMappingName="Browser">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartTooltipSettings Enable="true" Format="${point.tooltip}"></AccumulationChartTooltipSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+        new Statistics { Browser = "Chrome", Users = 37 },
+        new Statistics { Browser = "UC Browser", Users = 17 },
+        new Statistics { Browser = "iPhone", Users = 19 },
+        new Statistics { Browser = "Others", Users = 4  },
+        new Statistics { Browser = "Opera", Users = 11 },
+        new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
 
 ![mapping](images/tool-tip/mapping-razor.png)
-
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
-
-## See Also
 
 * [Grouping](./grouping/)
 * [Datalabel](./data-label/)

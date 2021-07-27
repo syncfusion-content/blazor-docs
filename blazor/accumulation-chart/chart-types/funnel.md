@@ -1,77 +1,265 @@
 ---
-title: "Funnel Chart in Blazor Accumulation Charts component | Syncfusion"
-
-component: "Accumulation Charts"
-
-description: "Learn here all about Funnel Chart of Syncfusion Accumulation Charts (SfAccumulationChart) component and more."
+layout: post
+title: Funnel in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Funnel in Syncfusion Blazor Accumulation Chart component and more.
+platform: Blazor
+control: Accumulation Chart
+documentation: ug
 ---
 
-# Funnel Chart
+# Funnel in Blazor Accumulation Chart Component
 
-[`Funnel Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) is often used to represent stages in a sales process and show the amount of potential revenue for each stage. To render the [`Funnel Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart), set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)
-as [`Funnel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel).
+To render a funnel series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)
+as `Funnel`.
 
-{% aspTab template="chart/accumulation-charts/funnel/default", sourceFiles="default.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" Type="AccumulationType.Funnel">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+       new Statistics { Browser = "Chrome", Users = 37 },
+       new Statistics { Browser = "UC Browser", Users = 17 },
+       new Statistics { Browser = "iPhone", Users = 19 },
+       new Statistics { Browser = "Others", Users = 4  },
+       new Statistics { Browser = "Opera", Users = 11 },
+       new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+
+```
 
 ![Funnel Chart](../images/funnel/default-razor.png)
 
-## Funnel Size
+## Size
 
-The size of the funnel chart can be customized by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
+The size of the funnel chart can be customized by using the  [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Height) properties.
 
-{% aspTab template="chart/accumulation-charts/funnel/size", sourceFiles="size.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
-![Funnel Size](../images/funnel/size-razor.png)
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" Type="AccumulationType.Funnel" Width="60%" Height="80%">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
 
-> Note: You can also explore our [`Blazor Funnel Chart`](https://blazor.syncfusion.com/demos/chart/funnel) example to knows how to render and configure the funnel chart.
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
 
-## Funnel Neck Size
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+       new Statistics { Browser = "Chrome", Users = 37 },
+       new Statistics { Browser = "UC Browser", Users = 17 },
+       new Statistics { Browser = "iPhone", Users = 19 },
+       new Statistics { Browser = "Others", Users = 4  },
+       new Statistics { Browser = "Opera", Users = 11 },
+       new Statistics { Browser = "Android", Users = 12 },
+    };
+}
 
-The neck size of the funnel chart can be customized by using the [`NeckWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [`NeckHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
+```
 
-{% aspTab template="chart/accumulation-charts/funnel/neck-size", sourceFiles="neck-size.razor" %}
+![Size](../images/funnel/size-razor.png)
 
-{% endaspTab %}
+> You can also explore our [`Blazor Funnel Chart`](https://blazor.syncfusion.com/demos/chart/funnel) example to knows how to render and configure the funnel chart.
 
-![Funnel Neck Size](../images/funnel/neck-size-razor.png)
+## Neck Size
 
-## Gap Between Funnel Segments
+The neck size can be customized by using the [`NeckWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckWidth) and [`NeckHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_NeckHeight) properties.
 
-[`Funnel chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Funnel) provides options to customize the space between the segments by using the [`GapRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the
-series. It accepts values ranging from 0 to 1.
+```csharp
 
-{% aspTab template="chart/accumulation-charts/funnel/gap", sourceFiles="gap.razor" %}
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" Type="AccumulationType.Funnel" NeckWidth="15%" NeckHeight="18%">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
 
-{% endaspTab %}
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
 
-![Gap Between Funnel Segments](../images/funnel/gap-razor.png)
+@code{
+    public class Statistics
+    {
+        public string Browser  { get; set; }
+        public double Users { get; set; }
+    }
 
-## Funnel Explode
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+       new Statistics { Browser = "Chrome", Users = 37 },
+       new Statistics { Browser = "UC Browser", Users = 17 },
+       new Statistics { Browser = "iPhone", Users = 19 },
+       new Statistics { Browser = "Others", Users = 4  },
+       new Statistics { Browser = "Opera", Users = 11 },
+       new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
+![Neck Size](../images/funnel/neck-size-razor.png)
+
+## Gap Between the Segments
+
+[`Funnel chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/funnel-chart) provides options to customize the space between the segments by using the [`GapRatio`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GapRatio) property of the
+series. It takes values from 0 to 1.
+
+```csharp
+
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" Type=" AccumulationType.Funnel" GapRatio="0.08">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+       new Statistics { Browser = "Chrome", Users = 37 },
+       new Statistics { Browser = "UC Browser", Users = 17 },
+       new Statistics { Browser = "iPhone", Users = 19 },
+       new Statistics { Browser = "Others", Users = 4  },
+       new Statistics { Browser = "Opera", Users = 11 },
+       new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
+![Gap Between the Segments](../images/funnel/gap-razor.png)
+
+## Explode
 
 Points can be exploded on mouse click by setting the [`Explode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Explode) property to **true**. You can also explode the point
 on load using [`ExplodeIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeIndex). Explode distance can be set by using [`ExplodeOffset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_ExplodeOffset) property.
 
-{% aspTab template="chart/accumulation-charts/funnel/explode", sourceFiles="explode.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart Title="Mobile Browser Statistics">
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users"
+                                 Name="Browser" Type=" AccumulationType.Funnel" ExplodeIndex="3" Explode="true" ExplodeOffset="10%">
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
 
-![Funnel Explode](../images/funnel/explode-razor.png)
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Browser { get; set; }
+        public double Users { get; set; }
+    }
+
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+{
+       new Statistics { Browser = "Chrome", Users = 37 },
+       new Statistics { Browser = "UC Browser", Users = 17 },
+       new Statistics { Browser = "iPhone", Users = 19 },
+       new Statistics { Browser = "Others", Users = 4  },
+       new Statistics { Browser = "Opera", Users = 11 },
+       new Statistics { Browser = "Android", Users = 12 },
+    };
+}
+
+```
+
+![Explode](../images/funnel/explode-razor.png)
 
 ## Smart Data Label
 
-Labels will be arranged smartly automatically on left side of the funnel and pyramid chart, when they overlaps with each other.
+Arrange the data label smartly on left side of the funnel and pyramid chart, when they overlaps with each other.
 
-{% aspTab template="chart/accumulation-charts/funnel/smart-data-label", sourceFiles="smart-data-label.razor" %}
+```csharp
 
-{% endaspTab %}
+@using Syncfusion.Blazor.Charts
+<SfAccumulationChart EnableAnimation="false">
+    <AccumulationChartTooltipSettings Enable="true"></AccumulationChartTooltipSettings>
+
+    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
+
+    <AccumulationChartSeriesCollection>
+        <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Country" YName="Users"
+                                 Type="AccumulationType.Funnel" Explode="false" NeckWidth="18%" NeckHeight="15%">
+            <AccumulationDataLabelSettings Visible="true" Name="Country" Position="AccumulationLabelPosition.Outside">
+                <AccumulationChartConnector Length="6%"></AccumulationChartConnector>
+            </AccumulationDataLabelSettings>
+        </AccumulationChartSeries>
+    </AccumulationChartSeriesCollection>
+</SfAccumulationChart>
+
+@code{
+    public class Statistics
+    {
+        public string Country { get; set; }
+        public double Users { get; set; }
+    }
+    public List<Statistics> StatisticsDetails = new List<Statistics>
+  {
+            new Statistics { Country = "China", Users = 1409517397 },
+            new Statistics { Country = "India", Users = 1339180127 },
+            new Statistics { Country = "United States", Users = 324459463 },
+            new Statistics { Country = "Indonesia", Users = 263991379  },
+            new Statistics { Country = "Brazil", Users = 209288278 },
+            new Statistics { Country = "Pakistan", Users = 197015955 },
+            new Statistics { Country = "Nigeria", Users = 190886311 },
+            new Statistics { Country = "Bangladesh", Users = 164669751 },
+            new Statistics { Country = "Russia", Users = 143989754 },
+            new Statistics { Country = "Mexico", Users = 129163276 },
+            new Statistics { Country = "Japan", Users = 127484450 },
+            new Statistics { Country = "Ethiopia", Users = 104957438 },
+            new Statistics { Country = "Philippines", Users = 104918090 },
+            new Statistics { Country = "Egypt", Users = 97553151 },
+            new Statistics { Country = "Vietnam", Users = 95540800 },
+            new Statistics { Country = "Germany", Users = 82114224 },
+    };
+}
+
+```
 
 ![Smart Data Label](../images/funnel/smart-data-label-razor.png)
-
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See Also
 
