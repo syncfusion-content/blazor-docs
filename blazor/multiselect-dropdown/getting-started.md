@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Getting Started with Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Getting Started with Blazor MultiSelect Dropdown Component | Syncfusion
+description: Checkout and learn about getting started with Blazor MultiSelect Dropdown component of Syncfusion, and more details.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor MultiSelect Dropdown Component
 
 This section briefly explains about how to include a **MultiSelect** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 

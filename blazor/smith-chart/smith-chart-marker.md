@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Marker & Datalabels in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about the marker & datalabels of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Marker and Data labels in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Marker and Data labels in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Marker and Datalabels in the Blazor Smith Chart
+# Marker and Data labels in Blazor Smith Chart Component
 
 Markers and datalabels are used to provide information about the data points in the series. Both the marker and the datalabel are disabled by default in the Smith Chart. Both can be enabled by making the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property in the marker and the datalabel settings to **true**.
 
@@ -254,4 +254,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)
+![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)te.png)

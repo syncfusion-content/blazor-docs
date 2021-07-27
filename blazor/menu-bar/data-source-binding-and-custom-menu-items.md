@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source Binding And Custom Menu Items in Blazor Menu Bar  Component | Syncfusion 
-description: Learn about Data Source Binding And Custom Menu Items in Blazor Menu Bar  component of Syncfusion, and more details.
+title: DataSource Binding and Custom Menu Bar items in Blazor Menu Bar Component | Syncfusion
+description: Learn here all about DataSource Binding and Custom Menu Bar items in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
 ---
 
-# Data binding
+# DataSource Binding and Custom Menu Bar items in Blazor Menu Bar Component
 
 The Menu Bar supports data source bindings such as data source that can be structured as `Self-referential` data.
 

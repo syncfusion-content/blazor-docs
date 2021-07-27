@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Toggle Switch Button  Component | Syncfusion 
-description: Learn about Native Event in Blazor Toggle Switch Button  component of Syncfusion, and more details.
+title: Events in Blazor Toggle Switch Button Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Overview
+# Events in Blazor Toggle Switch Button Component
 
 ## ValueChange Event
 

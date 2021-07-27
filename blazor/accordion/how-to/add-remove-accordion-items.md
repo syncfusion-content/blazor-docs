@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Add Remove Accordion Items in Blazor Accordion Component | Syncfusion
-description: Checkout and learn about Add Remove Accordion Items in Blazor Accordion component of Syncfusion, and more details.
+title: Add/Remove Accordion items in Blazor Accordion Component | Syncfusion
+description: Learn here all about Add/Remove Accordion items in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Add/Remove Accordion Items
+# Add/Remove Accordion items in Blazor Accordion Component
 
 Accordion can be added/removed dynamically by iteration of Accordion Items using conditional **foreach** loop.
 

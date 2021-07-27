@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cards in Blazor Kanban Component | Syncfusion 
-description: Learn about Cards in Blazor Kanban component of Syncfusion, and more details.
+title: Cards in Blazor Kanban Component | Syncfusion
+description: Learn here all about Cards in Syncfusion Blazor Kanban component and more.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Cards
+# Cards in Blazor Kanban Component
 
 The cards are main elements in Kanban board, which represent the task information with header and content. The header and content of a card is fetched from the corresponding mapping fields. The card layout can be customized with template also.
 

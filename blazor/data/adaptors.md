@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adaptors in Blazor DataManager Component | Syncfusion 
-description: Learn about Adaptors in Blazor DataManager component of Syncfusion, and more details.
+title: Adaptors in Blazor DataManager Component | Syncfusion
+description: Learn here all about Adaptors in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Data Adaptors
+# Adaptors in Blazor DataManager Component
 
 Each data source or remote service uses different way for accepting request and sending back the response. The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) cannot anticipate every way a data source works. To tackle this problem the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses adaptor concept to communicate with particular data source.
 

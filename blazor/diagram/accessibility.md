@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Diagram Component | Syncfusion 
-description: Learn about Accessibility in Blazor Diagram component of Syncfusion, and more details.
+title: Accessibility in Blazor Diagram Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Diagram Component
 
 Diagram provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. WAI-ARIA Accessibility supports are achieved through the attributes like `aria-label`. It helps to provides information about elements
 in a document for assistive technology.

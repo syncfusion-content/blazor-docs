@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn here all about the customization of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Customization in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Customization in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Customization in the Blazor Bullet Chart (SfBulletChart)
+# Customization in Blazor Bullet Chart Component
 
 ## Orientation
 
@@ -116,4 +116,4 @@ The Bullet Chart border color can be enabled by setting the [`Color`](https://he
 
 > Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
-![Bullet Chart with Border](images/border.png)
+![Bullet Chart with Border](images/border.png)order](images/border.png)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Create Wizard Using Tab in Blazor Tabs Component | Syncfusion
-description: Checkout and learn about Create Wizard Using Tab in Blazor Tabs component of Syncfusion, and more details.
+title: Create wizard in Blazor Tabs Component | Syncfusion
+description: Learn here all about Create wizard in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Create wizard
+# Create wizard in Blazor Tabs Component
 
 Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the [`EnableTab`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
 
@@ -521,4 +521,4 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 
 Output be like the below.
 
-![Tab Wizard](../images/wizard.png)
+![Tab Wizard](../images/wizard.png)images/wizard.png)

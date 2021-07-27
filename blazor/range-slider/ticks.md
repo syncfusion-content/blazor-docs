@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ticks in Blazor Range Slider Component | Syncfusion 
-description: Learn about Ticks in Blazor Range Slider component of Syncfusion, and more details.
+title: Ticks in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Ticks in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Ticks
+# Ticks in Blazor Range Slider Component
 
 The Ticks in Slider supports you to easily identify the current value/values of the Slider. It contains `SmallStep` and `LargeStep`. The value of the major ticks alone will be displayed in the slider. In order to enable/disable the small ticks, use the `ShowSmallTicks` property.
 

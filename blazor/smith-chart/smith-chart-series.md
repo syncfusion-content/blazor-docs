@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series customization in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about series customization of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Series in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Series in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Series customization in Blazor Smith Chart
+# Series in Blazor Smith Chart Component
 
 The [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties) is the visual representation of the data.
 Using the following options in the [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties), each series can be customized in the Smith Chart.
@@ -84,6 +84,9 @@ Animation for the Smith Chart series can be enabled by using the [`EnableAnimati
         new SmithChartData { Resistance= 2, Reactance= 1.2 },
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
+    };
+}
+``` Resistance= 0, Reactance= 0.2 }
     };
 }
 ```

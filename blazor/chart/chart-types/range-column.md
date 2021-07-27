@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Column Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Range Column Chart of Syncfusion Charts (SfCharts) component and more.
+title: Range Column in Blazor Charts Component | Syncfusion
+description: Learn here all about Range Column in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Range Column Chart in Blazor Charts (SfCharts)
+# Range Column in Blazor Charts Component
 
 ## Range Column
 
@@ -134,4 +134,4 @@ The following properties can be used to customize the [`Range Column`](https://h
 
 * [Data Label](../data-labels)
 
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

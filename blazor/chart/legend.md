@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Chart Component | Syncfusion 
-description: Learn about Legend in Blazor Chart component of Syncfusion, and more details.
+title: Legend in Blazor Charts Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Legend
+# Legend in Blazor Charts Component
 
 Legend provides information about the series rendered in the chart.
 

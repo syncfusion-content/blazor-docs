@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Change The Color Of The Textbox Based On Its Value in Blazor TextBox Component | Syncfusion
-description: Checkout and learn about Change The Color Of The Textbox Based On Its Value in Blazor TextBox component of Syncfusion, and more details.
+title: Change the Color of the TextBox Based on its Value in Blazor TextBox Component | Syncfusion
+description: Learn here all about Change the Color of the TextBox Based on its Value in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Change the color of the TextBox based on its value
+# Change the Color of the TextBox Based on its Value in Blazor TextBox Component
 
 You can change the color of the TextBox by validating its value using regular expression in the `Input` event for predicting the numeric values as demonstrated in the following code sample.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Setting Header Of Panels in Blazor Dashboard Layout Component | Syncfusion 
-description: Learn about Setting Header Of Panels in Blazor Dashboard Layout component of Syncfusion, and more details.
+title: Header and Content in Blazor Dashboard Layout Component | Syncfusion
+description: Learn here all about Header and Content in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Header and content of panels
+# Header and Content in Blazor Dashboard Layout Component
 
 Basically, Dashboard layout Component have two templates to render the data in panels.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Diagram Component | Syncfusion 
-description: Learn about Style in Blazor Diagram component of Syncfusion, and more details.
+title: Styling And Appearance in Blazor Diagram Component | Syncfusion
+description: Learn here all about Styling And Appearance in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Styling and Appearance
+# Styling And Appearance in Blazor Diagram Component
 
 To modify the Diagram appearance, you need to override the default CSS of the Diagram. Please find the list of CSS classes in the Diagram.
 

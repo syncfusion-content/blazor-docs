@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Show Dates Of Other Months in Blazor Calendar Component | Syncfusion
-description: Checkout and learn about Show Dates Of Other Months in Blazor Calendar component of Syncfusion, and more details.
+title: Show Dates of Other Months in Blazor Calendar Component | Syncfusion
+description: Learn here all about Show Dates of Other Months in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Show Dates of Other Months
+# Show Dates of Other Months in Blazor Calendar Component
 
 The following code demonstrates how to show dates of other months.
 

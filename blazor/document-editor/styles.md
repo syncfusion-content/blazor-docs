@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Styles
-description: Learn the types of styles supported in Blazor Word processor and how to create a style for the document, and apply it for selected contents.
+title: Working with Styles in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Styles
+# Working with Styles in Blazor DocumentEditor Component
 
 Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 

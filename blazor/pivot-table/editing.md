@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editing in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Editing in Blazor Pivot Table component of Syncfusion, and more details.
+title: Editing in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Editing in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Editing
+# Editing in Blazor Pivot Table Component
 
 > This feature is applicable only for relational data source.
 

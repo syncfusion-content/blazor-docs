@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Time Range in Blazor TimePicker Component | Syncfusion 
-description: Learn about Time Range in Blazor TimePicker component of Syncfusion, and more details.
+title: Time Range in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Time Range in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Time Range
+# Time Range in Blazor TimePicker Component
 
 TimePicker provides an option to select a time value within a specified range by using the
 [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Min)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Style in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Style and appearance in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# CSS structures
+# Style and appearance in Blazor RichTextEditor Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

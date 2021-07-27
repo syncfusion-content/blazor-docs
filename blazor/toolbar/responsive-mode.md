@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Responsive Mode in Blazor Toolbar Component | Syncfusion 
-description: Learn about Responsive Mode in Blazor Toolbar component of Syncfusion, and more details.
+title: Responsive Mode in Blazor Toolbar Component | Syncfusion
+description: Learn here all about Responsive Mode in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Responsive Mode
+# Responsive Mode in Blazor Toolbar Component
 
 This section explains the supported display modes of the Toolbar when the content exceeds the viewing area. Possible modes are:
 

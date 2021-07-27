@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Axis Hide in Blazor Chart Component | Syncfusion
-description: Checkout and learn about Axis Hide in Blazor Chart component of Syncfusion, and more details.
+title: Hiding Axis in Blazor Charts Component | Syncfusion
+description: Learn here all about Hiding Axis in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Hide axis line when clicking the legend
+# Hiding Axis in Blazor Charts Component
 
 By using the [`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event, you can hide the axis in the chart.
 
@@ -117,4 +117,4 @@ Using the series name in `OnLegendClick` event, you can hide the axis associated
 
 ```
 
-> You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.t equal intervals.

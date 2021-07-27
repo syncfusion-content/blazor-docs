@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Calendar Component | Syncfusion 
-description: Learn about Data Binding in Blazor Calendar component of Syncfusion, and more details.
+title: Data Binding in Blazor Calendar Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor Calendar Component
 
 This section briefly explains how to bind the value to the Calendar component in the below different ways.
 

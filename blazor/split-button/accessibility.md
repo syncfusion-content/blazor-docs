@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Split Button Component | Syncfusion 
-description: Learn about Accessibility in Blazor Split Button component of Syncfusion, and more details.
+title: Accessibility in Blazor SplitButton Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor SplitButton Component
 
 ## ARIA attributes
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Column Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Column Chart of Syncfusion Charts (SfCharts) component and more.
+title: Column in Blazor Charts Component | Syncfusion
+description: Learn here all about Column in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Column Chart in Blazor Charts (SfCharts)
+# Column in Blazor Charts Component
 
 ## Column
 
@@ -147,4 +147,4 @@ The following properties can be used to customize the [`Column`](https://help.sy
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

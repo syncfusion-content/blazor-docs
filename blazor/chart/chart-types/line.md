@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Line Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Line Chart of Syncfusion Charts (SfCharts) component and more.
+title: Line in Blazor Charts Component | Syncfusion
+description: Learn here all about Line in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Line Chart in Blazor Charts (SfCharts)
+# Line in Blazor Charts Component
 
 ## Line
 
@@ -146,4 +146,4 @@ The following properties can be used to customize the [`Line`](https://help.sync
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

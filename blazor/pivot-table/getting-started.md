@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor Pivot Table Component | Syncfusion 
-description: Learn about Getting Started with Blazor Pivot Table component of Syncfusion, and more details.
+title: Getting Started with Blazor Pivot Table Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Pivot Table component of Syncfusion, and more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 <!-- markdownlint-disable MD029 -->
 <!-- markdownlint-disable MD009 -->
 
-# Getting Started with Blazor Pivot Table component
+# Getting Started with Blazor Pivot Table Component
 
 This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

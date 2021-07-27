@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Qrcodegenerator in Blazor Barcode Component | Syncfusion 
-description: Learn about Qrcodegenerator in Blazor Barcode component of Syncfusion, and more details.
+title: QR Code generator in Blazor Barcode Component | Syncfusion
+description: Learn here all about QR Code generator in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug
 ---
 
-# QR Code generator
+# QR Code generator in Blazor Barcode Component
 
 ## QR Code
 

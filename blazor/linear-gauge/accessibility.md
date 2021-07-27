@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Accessibility in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Accessibility in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Accessibility in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
 
-# Accessibility
+# Accessibility in Blazor Linear Gauge Component
 
 Linear Gauge provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The
 WAI-ARIA accessibility supports are achieved through the attributes like `aria-label`. It helps to provide information about elements in a document for assistive technologies.

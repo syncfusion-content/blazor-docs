@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor Maps Component | Syncfusion 
-description: Learn about Legend in Blazor Maps component of Syncfusion, and more details.
+title: Legend in Blazor Maps Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Legend
+# Legend in Blazor Maps Component
 
 A legend is a key used on a map that contains swatches of symbols with descriptions. Legends provide valuable information for interpreting what the map displays, and they can be represented in various colors, shapes, or other identifiers based on the data. It gives a breakdown of what each symbol represents throughout the maps.
 

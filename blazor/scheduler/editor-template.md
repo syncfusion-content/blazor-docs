@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editor Template in Blazor Scheduler Component | Syncfusion 
-description: Learn about Editor Template in Blazor Scheduler component of Syncfusion, and more details.
+title: Editor Window Customization in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Editor Window Customization in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Editor window and quick popups
+# Editor Window Customization in Blazor Scheduler Component
 
 Scheduler makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.
 

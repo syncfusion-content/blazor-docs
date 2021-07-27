@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pointers in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Pointers in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Pointers in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Pointers in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Pointers
+# Pointers in Blazor Circular Gauge Component
 
 Pointers are used to indicate values on an axis. The value of a pointer can be modified using the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointer.html#Syncfusion_Blazor_CircularGauge_CircularGaugePointer_Value) property.
 

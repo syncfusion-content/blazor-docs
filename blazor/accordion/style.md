@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Accordion Component | Syncfusion 
-description: Learn about Style in Blazor Accordion component of Syncfusion, and more details.
+title: Style and Appearance in Blazor Accordion Component | Syncfusion
+description: Learn here all about Style and Appearance in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# CSS Structure
+# Style and Appearance in Blazor Accordion Component
 
 The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
 

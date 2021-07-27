@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bpmn Connectors in Blazor Diagram Component | Syncfusion 
-description: Learn about Bpmn Connectors in Blazor Diagram component of Syncfusion, and more details.
+title: BPMN Connectors in Blazor Diagram Component | Syncfusion
+description: Learn here all about BPMN Connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# BPMN Connectors
+# BPMN Connectors in Blazor Diagram Component
 
 The `BPMN Connectors` are lines that used to connection between BPMN flow objects.
 

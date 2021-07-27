@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Check Image Size in Blazor RichTextEditor Component | Syncfusion
-description: Checkout and learn about Check Image Size in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Check image size in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Check image size in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Restrict the image uploading while uploading with large size
+# Check image size in Blazor RichTextEditor Component
 
 By using the Rich text editor's `OnImageUploading` event, you can get the image size before uploading and restrict the image to upload, when the given image size is greater than the allowed size.
 
@@ -29,6 +29,11 @@ In the following, we have validated the image size before uploading and determin
         var imgSize = 500000;
         if (imgSize < sizeInBytes) {
             args.Cancel = true;
+        }
+    }
+}
+
+```rue;
         }
     }
 }

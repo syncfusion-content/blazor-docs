@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor List Box Component | Syncfusion 
-description: Learn about Selection in Blazor List Box component of Syncfusion, and more details.
+title: Selection in Blazor ListBox Component | Syncfusion
+description: Learn here all about Selection in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Selection
+# Selection in Blazor ListBox Component
 
 The ListBox provides support to select an item or a group of item by mouse or keyboard action. There are two selection modes available in ListBox,
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Segments in Blazor Diagram Component | Syncfusion 
-description: Learn about Segments in Blazor Diagram component of Syncfusion, and more details.
+title: Segments in Blazor Diagram Component | Syncfusion
+description: Learn here all about Segments in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Segments
+# Segments in Blazor Diagram Component
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 

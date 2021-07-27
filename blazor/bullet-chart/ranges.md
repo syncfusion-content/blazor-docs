@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Ranges in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn here all about the ranges of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Ranges in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Ranges in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Ranges in the Blazor Bullet Chart (SfBulletChart)
+# Ranges in Blazor Bullet Chart Component
 
 Ranges represent the quality of a specific range such as **Good**, **Bad** and **Satisfactory** in the Bullet Chart scale. The ending point of a qualitative range is specified in the [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRange.html#Syncfusion_Blazor_Charts_BulletChartRange_End) property. The minimum value of a quantitative scale is considered the starting point of the first range or the previous range end point.
 
@@ -70,4 +70,4 @@ Enhance the readability of ranges with color and opacity. It can be applied usin
 }
 ```
 
-![Ranges with color customization](images/range-custom.png)
+![Ranges with color customization](images/range-custom.png)(images/range-custom.png)

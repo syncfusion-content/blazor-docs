@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Data Source in Blazor AutoComplete component of Syncfusion, and more details.
+title: Data Source in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Data Source in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Source
+# Data Source in Blazor AutoComplete Component
 
 The AutoComplete loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of array or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 

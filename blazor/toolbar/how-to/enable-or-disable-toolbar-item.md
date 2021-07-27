@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Enable Or Disable Toolbar Item in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn about Enable Or Disable Toolbar Item in Blazor Toolbar component of Syncfusion, and more details.
+title: Enable/Disable Toolbar item in Blazor Toolbar Component | Syncfusion
+description: Learn here all about Enable/Disable Toolbar item in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Enable/Disable Toolbar Items
+# Enable/Disable Toolbar item in Blazor Toolbar Component
 
 The `Disabled` property of the Toolbar item is used to enable/disable the item by setting false/true value to the property. In the following code example initially paste action will be disabled. On clicking the cut button, the paste button will be enabled.
 
@@ -186,4 +186,4 @@ The `Disabled` property of the Toolbar item is used to enable/disable the item b
 
 Output be like the below.
 
-![Enable/Disable item](../images/disable_item.gif)
+![Enable/Disable item](../images/disable_item.gif)f)

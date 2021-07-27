@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Defer Layout Update in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Defer Layout Update in Blazor Pivot Table component of Syncfusion, and more details.
+title: Defer Layout Update in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Defer Layout Update in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Defer Layout Update
+# Defer Layout Update in Blazor Pivot Table Component
 
 Defer layout update support allows to update the [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component only on demand. On enabling this feature, end user can drag-and-drop fields between row, column, value and filter axes, apply sorting and filtering inside the Field List, resulting in change of pivot report alone but not the pivot table values. Once all operations are performed and on clicking the "Apply" button in the Field List, pivot table will start to update with the last modified report. This also helps in bringing better performance in pivot table component rendering.
 

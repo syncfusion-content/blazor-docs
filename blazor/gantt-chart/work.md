@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Work in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Work in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Work in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Work in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Work
+# Work in Blazor Gantt Chart Component
 
 The work is the total hours required to complete a task. Work can be mapped from the data source field using the property `GanttTaskFields.Work`. Work can be measured in `Hour`, `Day`, `Minute`. By default, work is measured in `Hour` and it can be changed, by using the property `WorkUnit`.
 

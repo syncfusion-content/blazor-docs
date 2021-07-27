@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to Multiple Sidebar in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn about Multiple Sidebar in Blazor Sidebar component of Syncfusion, and more details.
+title: Multiple Sidebar in Blazor Sidebar Component | Syncfusion
+description: Learn here all about Multiple Sidebar in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Multiple Sidebar
+# Multiple Sidebar in Blazor Sidebar Component
 
 Two Sidebars can be initialized in a web page with same main content.
 Sidebars can be initialized on right side or left side of the main content using `Position` property.

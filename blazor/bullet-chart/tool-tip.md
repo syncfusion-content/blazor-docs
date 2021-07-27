@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tool Tip in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn here all about the tooltip of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Tooltip in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Tooltip in the Blazor Bullet Chart (SfBulletChart)
+# Tooltip in Blazor Bullet Chart Component
 
 When the mouse is hovered over a bar in the Bullet Chart, the tooltip displays important summary about the actual and the target bar values.
 
@@ -111,4 +111,4 @@ The tooltip can be rendered as a custom component using the [`Template`](https:/
 
 > Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
-![Tooltip with Template](images/tooltip-template.png)
+![Tooltip with Template](images/tooltip-template.png)ages/tooltip-template.png)

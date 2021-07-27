@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Events in Blazor In Place Editor  component of Syncfusion, and more details.
+title: Events in Blazor In-place Editor Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug
 ---
 
-# Events
+# Events in Blazor In-place Editor Component
 
 This section explains the list of events of the In-place Editor's component which will be triggered for appropriate In-place Editor's actions.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Find and Replace
-description: Learn how to find a text in Blazor Word processor and replace it with another text.
+title: Find and Replace in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Find and Replace in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Find and Replace
+# Find and Replace in Blazor DocumentEditor Component
 
 Documents can be long, and you might need to search through the text to find and select specific words, text sequences, sentences, or paragraphs and then replace them with the desired content. This Word processor (DocumentEditor) provides a built-in navigation pane like Microsoft Word on the left of the editor.
 

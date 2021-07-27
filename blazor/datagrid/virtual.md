@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtual in Blazor DataGrid Component | Syncfusion 
-description: Learn about Virtual in Blazor DataGrid component of Syncfusion, and more details.
+title: Virtualization in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Virtualization
+# Virtualization in Blazor DataGrid Component
 
 DataGrid allows you to load large amount of data without [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation.
 

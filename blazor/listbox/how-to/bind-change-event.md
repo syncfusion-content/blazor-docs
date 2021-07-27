@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Bind Change Event in Blazor List Box Component | Syncfusion
-description: Checkout and learn about Bind Change Event in Blazor List Box component of Syncfusion, and more details.
+title: Bind Change Events in Blazor ListBox Component | Syncfusion
+description: Learn here all about Bind Change Events in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Binding Change Event
+# Bind Change Events in Blazor ListBox Component
 
 To bind the change event in the listbox [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) event is used and the event is triggered when the value in the listbox changes.
 

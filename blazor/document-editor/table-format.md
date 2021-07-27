@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Table Formatting
-description: Learn table, cell, and row formatting supported in Blazor Word processor and how to apply it for selected contents.
+title: Working with Table Formatting in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Working with Table Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Working with Table Formatting
+# Working with Table Formatting in Blazor DocumentEditor Component
 
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
 

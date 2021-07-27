@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Customization in Blazor Scheduler Component | Syncfusion 
-description: Learn about Cell Customization in Blazor Scheduler component of Syncfusion, and more details.
+title: Cell Customizations in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Cell Customizations in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Cell Customization
+# Cell Customizations in Blazor Scheduler Component
 
 The cells of the Scheduler can be easily customized using the cell template.
 

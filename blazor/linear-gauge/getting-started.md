@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Getting Started with Blazor Linear Gauge component of Syncfusion, and more details.
+title: Getting Started with Blazor Linear Gauge Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Linear Gauge component of Syncfusion, and more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Getting Started with Blazor Linear Gauge
+# Getting Started with Blazor Linear Gauge Component
 
 This section briefly explains how to include a Linear Gauge component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Labels of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Labels in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Labels in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Labels in the Blazor TreeMap (SfTreeMap)
+# Labels in Blazor TreeMap Component
 
 Data Labels are used to identify the name of items or groups in the TreeMap component. Data Labels will be shown by specifying the data source properties in the [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelPath) of the [`TreeMapLeafItemSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html).
 
@@ -105,4 +105,4 @@ When the label size in each item exceeds the actual size, use the [`InterSectAct
 }
 ```
 
-![TreeMap label with intersect options](images/datalabel/IntersectAction.png)
+![TreeMap label with intersect options](images/datalabel/IntersectAction.png)sectAction.png)

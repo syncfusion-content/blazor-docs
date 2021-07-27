@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Dialog Component | Syncfusion 
-description: Learn about Style in Blazor Dialog component of Syncfusion, and more details.
+title: Style and appearance in Blazor Dialog Component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# CSS structures
+# Style and appearance in Blazor Dialog Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

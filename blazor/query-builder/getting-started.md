@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor QueryBuilder Component | Syncfusion 
-description: Learn about Getting Started with Blazor QueryBuilder component of Syncfusion, and more details.
+title: Getting Started with Blazor QueryBuilder Component | Syncfusion
+description: Checkout and learn about getting started with Blazor QueryBuilder component of Syncfusion, and more details.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Getting Started with Blazor Query Builder Component
+# Getting Started with Blazor QueryBuilder Component
 
 This section briefly explains about how to include Query Builder Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

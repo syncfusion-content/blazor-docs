@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in Blazor Maps Component | Syncfusion 
-description: Learn about Markers in Blazor Maps component of Syncfusion, and more details.
+title: Markers in Blazor Maps Component | Syncfusion
+description: Learn here all about Markers in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Markers
+# Markers in Blazor Maps Component
 
 Markers are notes that are used to leave a message on the Maps component. It indicates or marks a specific location with desired symbols on the maps.
 

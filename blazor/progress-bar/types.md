@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types in the Blazor Progress Bar component | Syncfusion
-description: Learn here all about the types of Syncfusion Progress Bar (SfProgressBar) component and more.
+title: Types in Blazor ProgressBar Component | Syncfusion
+description: Learn here all about Types in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Types in the Blazor Progress Bar (SfProgressBar)
+# Types in Blazor ProgressBar Component
 
 In this section, the progress can be visualized in different shapes, such as a rectangle, circle, or semi-circle to give it a unique look.
 
@@ -58,4 +58,4 @@ To get the circular progress bar, set the [`Type`](https://help.syncfusion.com/c
 </SfProgressBar>
 ```
 
-![Progress Bar with circular type](images/circularType.png)
+![Progress Bar with circular type](images/circularType.png)type](images/circularType.png)

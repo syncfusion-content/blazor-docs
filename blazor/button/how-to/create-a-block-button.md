@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Create A Block Button in Blazor Button Component | Syncfusion
-description: Checkout and learn about Create A Block Button in Blazor Button component of Syncfusion, and more details.
+title: Create a Block Button in Blazor Button Component | Syncfusion
+description: Learn here all about Create a Block Button in Syncfusion Blazor Button component and more.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Create a Block Button
+# Create a Block Button in Blazor Button Component
 
 You can customize a Button into a Block Button that will span the entire width of its parent element. To create a Block Button, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass)
 property to `e-block`.

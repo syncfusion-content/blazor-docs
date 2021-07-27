@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in Blazor Dropdown Menu Component | Syncfusion 
-description: Learn about Icons in Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Icons in Blazor Dropdown Menu Component | Syncfusion
+description: Learn here all about Icons in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Icons and Styles
+# Icons in Blazor Dropdown Menu Component
 
 ## Dropdown Menu icons
 

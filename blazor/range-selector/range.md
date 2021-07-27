@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selecting range in Blazor Range Selector component | Syncfusion 
-description: Learn here all about selecting range in Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Range in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Range in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Selecting range in the Blazor Range Selector (SfRangeNavigator)
+# Range in Blazor Range Selector Component
 
 The Range Selector's left and right thumbs are used to indicate the selected range in the large collection of data. A range can be selected in the following ways:
 
@@ -108,4 +108,4 @@ The **@bind-Value** code-behind attribute in the Range Selector can be used to a
 
 ```
 
-![Selecting range via two way binding](images/common/range.png)
+![Selecting range via two way binding](images/common/range.png)![Selecting range via two way binding](images/common/range.png)

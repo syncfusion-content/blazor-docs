@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Display A Dialog With Custom Position in Blazor Dialog Component | Syncfusion
-description: Checkout and learn about Display A Dialog With Custom Position in Blazor Dialog component of Syncfusion, and more details.
+title: Display a Dialog with custom position in Blazor Dialog Component | Syncfusion
+description: Learn here all about Display a Dialog with custom position in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Display a dialog with custom position
+# Display a Dialog with custom position in Blazor Dialog Component
 
 By default, the dialog is displayed in the center of the target container. The dialog position can be set using the `DialogPositionData` property by providing custom `X` and `Y` coordinates.
 The dialog can be positioned inside the target based on the given X and Y values.

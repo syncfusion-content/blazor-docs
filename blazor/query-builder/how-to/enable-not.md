@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Enable Not in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn about Enable Not in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Show Not Operator in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Show Not Operator in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Not Operator
+# Show Not Operator in Blazor QueryBuilder Component
 
 The Querybuilder provides `Not` operator along with AND, OR operators to filter records based on more than one condition. You can enable this feature by setting the [`EnableNotCondition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_EnableNotCondition) property to `true`.
 

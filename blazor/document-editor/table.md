@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tables
-description: Learn how to insert, select, or delete table, row(s), and column(s) in Blazor Word processor.
+title: Tables in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Tables in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Tables
+# Tables in Blazor DocumentEditor Component
 
 Tables are an efficient way to present information. Document editor can display and edit the tables. You can select and edit tables through keyboard, mouse, or touch interactions. [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes a rich set of APIs to perform these operations programmatically.
 

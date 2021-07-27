@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize The Thumb in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn about Customize The Thumb in Blazor Range Slider component of Syncfusion, and more details.
+title: Customize the thumb in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Customize the thumb in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Customize the thumb
+# Customize the thumb in Blazor Range Slider Component
 
 Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the thumb. By default, slider has unique class `e-handle` for slider thumb. You can override the following class as per your requirement. Here, in the sample, the slider thumb has been customized to square, circle, oval shapes, and background image has also been customized.
 

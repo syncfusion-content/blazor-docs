@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DataGrid Component | Syncfusion 
-description: Learn about Data Binding in Blazor DataGrid component of Syncfusion, and more details.
+title: Data Binding in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor DataGrid Component
 
 The DataGrid uses [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
 It supports the following kinds of data binding method:

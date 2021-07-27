@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Do Nut in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn about Do Nut in Blazor Accumulation Chart component of Syncfusion, and more details.
+title: Text placing center of the doughnut in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Text placing center of the doughnut
+# Text placing center of the doughnut in Blazor Accumulation Chart Component
 
 The annotations are used to mark the specific area of interest in the chart area with texts, shapes or images.
 

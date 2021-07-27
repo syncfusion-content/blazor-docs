@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Markers in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Data Markers in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Data Markers in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Data Markers in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Data Markers
+# Data Markers in Blazor Gantt Chart Component
 
 Data markers are a set of events used to represent the schedule events for a task. Data markers are defined in data source as array of objects, and this value is mapped to the Gantt Chart component using the `GanttTaskFields.Indicators` property. You can represent more than one data marker in a task.
 

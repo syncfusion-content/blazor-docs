@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Globalization in Blazor Tree Grid component of Syncfusion, and more details.
+title: Globalization in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor TreeGrid Component
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 

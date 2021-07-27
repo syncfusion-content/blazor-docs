@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Markers in Blazor Chart Component | Syncfusion 
-description: Learn about Data Markers in Blazor Chart component of Syncfusion, and more details.
+title: Markers in Blazor Charts Component | Syncfusion
+description: Learn here all about Markers in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Data Markers
+# Markers in Blazor Charts Component
 
 Data markers are used to provide information about the data points in the series. You can add a shape to adorn each data point.
 

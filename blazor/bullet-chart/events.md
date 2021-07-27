@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Bullet Chart component | Syncfusion
-description: Learn here all about the Events of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Events in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Events in the Blazor Bullet Chart (SfBulletChart)
+# Events in Blazor Bullet Chart Component
 
 This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [`BulletChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
@@ -138,6 +138,9 @@ The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
     public void LegendRenderHandler(BulletChartLegendRenderEventArgs args)
     {
         // Here you can customize the code.
+    }
+}
+```ze the code.
     }
 }
 ```

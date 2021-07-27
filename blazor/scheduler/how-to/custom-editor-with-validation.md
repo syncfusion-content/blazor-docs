@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Custom Editor With Validation in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn about Custom Editor With Validation in Blazor Scheduler component of Syncfusion, and more details.
+title: Custom Editor With Validation in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Custom Editor With Validation in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Custom Editor With Validation
+# Custom Editor With Validation in Blazor Scheduler Component
 
 By default in Blazor Scheduler field validation is available for built-in fields, if in case you want to validate a custom field you can go with custom editor and achieve validation using Data Annotations. Data Annotations helps you to define rules to the model classes or properties to perform data validation and display suitable messages to end users.
 

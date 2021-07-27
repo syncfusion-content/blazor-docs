@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Text Formatting
-description: Learn text formatting supported in Blazor Word processor and how to apply it for selected contents.
+title: Working with Text Formatting in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Working with Text Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Working with Text Formatting
+# Working with Text Formatting in Blazor DocumentEditor Component
 
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports several formatting options for text like bold, italic, font color, highlight color, and more. This section describes how to modify the formatting for selected text in detail.
 

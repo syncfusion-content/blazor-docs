@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Selection in Blazor HeatMap Chart Component | Syncfusion 
-description: Learn about Selection in Blazor HeatMap Chart component of Syncfusion, and more details.
+title: Selection in Blazor HeatMap Chart Component | Syncfusion
+description: Learn here all about Selection in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Selection
+# Selection in Blazor HeatMap Chart Component
 
 In the HeatMap, the cell selection is used to select the single or multiple heat map cells at runtime and get the selected cell details using the `CellSelected`  event. You can enable this cell selection using the `AllowSelection` property.
 

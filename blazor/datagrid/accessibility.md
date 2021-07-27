@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DataGrid Component | Syncfusion 
-description: Learn about Accessibility in Blazor DataGrid component of Syncfusion, and more details.
+title: Accessibility in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor DataGrid Component
 
 Accessibility is achieved in the DataGrid component through WAI-ARIA standard and keyboard navigations. The DataGrid features can be effectively accessed through assistive technologies such as screen readers.
 

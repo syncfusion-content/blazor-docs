@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Inline Mode in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Inline Mode in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Inline Mode in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Inline Mode in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Inline Mode
+# Inline Mode in Blazor RichTextEditor Component
 
 This is the inline example for the Rich Text Editor. For this, you must set the `RichTextEditorInlineMode` property.
 

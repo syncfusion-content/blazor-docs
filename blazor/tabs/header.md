@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in Blazor Tabs Component | Syncfusion 
-description: Learn about Header in Blazor Tabs component of Syncfusion, and more details.
+title: Header in Blazor Tabs Component | Syncfusion
+description: Learn here all about Header in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Header
+# Header in Blazor Tabs Component
 
 This section explains about modifying the style of Tab header.
 

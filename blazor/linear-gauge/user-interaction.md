@@ -1,13 +1,13 @@
 ---
 layout: post
-title: User Interaction in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about User Interaction in Blazor Linear Gauge component of Syncfusion, and more details.
+title: User Interaction in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about User Interaction in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# User Interaction
+# User Interaction in Blazor Linear Gauge Component
 
 ## Tooltip
 

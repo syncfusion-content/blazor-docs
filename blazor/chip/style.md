@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Chip Component | Syncfusion 
-description: Learn about Style in Blazor Chip component of Syncfusion, and more details.
+title: CSS Structure in Blazor Chip Component | Syncfusion
+description: Learn here all about CSS Structure in Syncfusion Blazor Chip component and more.
 platform: Blazor
 control: Chip
 documentation: ug
 ---
 
-# CSS structures
+# CSS Structure in Blazor Chip Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor Diagram Component | Syncfusion 
-description: Learn about Virtualization in Blazor Diagram component of Syncfusion, and more details.
+title: Virtualization in Blazor Diagram Component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Virtualization
+# Virtualization in Blazor Diagram Component
 
 ## Virtualization in Diagram
 

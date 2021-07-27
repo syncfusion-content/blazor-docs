@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Funnel in Blazor Accumulation Chart Component | Syncfusion 
-description: Learn about Funnel in Blazor Accumulation Chart component of Syncfusion, and more details.
+title: Funnel in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Funnel in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Funnel Chart
+# Funnel in Blazor Accumulation Chart Component
 
 To render a funnel series, use the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type)
 as `Funnel`.

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resizing in Blazor Splitter Component | Syncfusion 
-description: Learn about Resizing in Blazor Splitter component of Syncfusion, and more details.
+title: Resize in Blazor Splitter Component | Syncfusion
+description: Learn here all about Resize in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Resize
+# Resize in Blazor Splitter Component
 
 By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to makes the resize easy.
 

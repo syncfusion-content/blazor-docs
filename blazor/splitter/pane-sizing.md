@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pane Sizing in Blazor Splitter Component | Syncfusion 
-description: Learn about Pane Sizing in Blazor Splitter component of Syncfusion, and more details.
+title: Pane Sizing in Blazor Splitter Component | Syncfusion
+description: Learn here all about Pane Sizing in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Pane Sizing
+# Pane Sizing in Blazor Splitter Component
 
 Splitter allows you to provide pane sizes either in `Pixel` or `Percentage` formats.
 

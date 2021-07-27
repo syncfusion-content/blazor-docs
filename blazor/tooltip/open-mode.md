@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open Mode in Blazor Tooltip Component | Syncfusion 
-description: Learn about Open Mode in Blazor Tooltip component of Syncfusion, and more details.
+title: Open Mode in Blazor Tooltip Component | Syncfusion
+description: Learn here all about Open Mode in Syncfusion Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Open Mode
+# Open Mode in Blazor Tooltip Component
 
 You can decide the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements.
 

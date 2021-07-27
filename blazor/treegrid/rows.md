@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Rows in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Rows in Blazor Tree Grid component of Syncfusion, and more details.
+title: Rows in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Rows in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Row
+# Rows in Blazor TreeGrid Component
 
 The row represents record details fetched from data source.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Listview Component | Syncfusion 
-description: Learn about Style in Blazor Listview component of Syncfusion, and more details.
+title: CSS Structure in Blazor ListView Component | Syncfusion
+description: Learn here all about CSS Structure in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# CSS Structure
+# CSS Structure in Blazor ListView Component
 
 The following content provides the exact CSS structure that can be used to modify the component’s appearance based on  user preference.
 

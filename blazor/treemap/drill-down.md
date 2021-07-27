@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drill-down in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Drill-down of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Drill-down in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Drill-down in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Drill-down in the Blazor TreeMap (SfTreeMap)
+# Drill-down in Blazor TreeMap Component
 
 The TreeMap component supports drill-down to expose the hierarchy, achieved by clicking a node. If an item is clicked in the TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
 
@@ -154,4 +154,4 @@ The initial drill-down concepts are shown in the following code example.
 
 > Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
-![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)
+![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)drill-down.png)

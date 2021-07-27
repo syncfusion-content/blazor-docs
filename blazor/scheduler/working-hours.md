@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working Hours in Blazor Scheduler Component | Syncfusion 
-description: Learn about Working Hours in Blazor Scheduler component of Syncfusion, and more details.
+title: Working Days and Hours in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Working Days and Hours in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Setting working days and hours
+# Working Days and Hours in Blazor Scheduler Component
 
 The Scheduler can be customized on various aspects as well as it inherits almost all the calendar-specific features such as options,
 

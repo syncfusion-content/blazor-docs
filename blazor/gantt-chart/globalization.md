@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Globalization in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Globalization in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor Gantt Chart Component
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 

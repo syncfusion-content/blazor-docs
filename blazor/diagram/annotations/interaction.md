@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion 
-description: Learn about Interaction in Blazor Diagram component of Syncfusion, and more details.
+title: Interaction in Blazor Diagram Component | Syncfusion
+description: Learn here all about Interaction in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Interaction
+# Interaction in Blazor Diagram Component
 
 Basic interactions of selecting and resizing can be applied over an annotation. These interactions can be controlled by annotation and its parent node or connector.
 To learn about annotation constraints, refer to the [`Annotation Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Constraints).

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customization in the Blazor Progress Bar component | Syncfusion
-description: Learn here all about the customization of Syncfusion Progress Bar (SfProgressBar) component and more.
+title: Customization in Blazor ProgressBar Component | Syncfusion
+description: Learn here all about Customization in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Customization in the Blazor Progress Bar (SfProgressBar)
+# Customization in Blazor ProgressBar Component
 
 ## Segments
 
@@ -115,4 +115,4 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 </SfProgressBar>
 ```
 
-![Progress Bar - Right-to-Left - RTL](images/rtl.png)
+![Progress Bar - Right-to-Left - RTL](images/rtl.png)to-Left - RTL](images/rtl.png)

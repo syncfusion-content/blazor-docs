@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Blazor Progress Bar component | Syncfusion
-description: Learn here about getting started with Syncfusion Blazor Progress Bar (SfProgressBar) component, its elements, and more.
+title: Getting Started with Blazor ProgressBar Component | Syncfusion
+description: Checkout and learn about getting started with Blazor ProgressBar component of Syncfusion, and more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Getting Started with the Blazor Progress Bar (SfProgressBar)
+# Getting Started with Blazor ProgressBar Component
 
 This section briefly explains how to include a Progress Bar component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -91,4 +91,4 @@ Change the type of the Progress Bar by using the [`Type`](https://help.syncfusio
 </SfProgressBar>
 ```
 
-![progress bar](images/circular.png)
+![progress bar](images/circular.png)ss bar](images/circular.png)

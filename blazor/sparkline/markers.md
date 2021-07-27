@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markers in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the Markers of Syncfusion Sparkline (SfSparkline) component and more.
+title: Markers in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Markers in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Markers in the Blazor Sparkline (SfSparkline)
+# Markers in Blazor Sparkline Component
 
 Data markers are used to provide information about the data points in the Sparkline series.
 
@@ -72,4 +72,4 @@ The following properties can be used to customize markers:
 </SfSparkline>
 ```
 
-![Sparkline Chart - Markers Customization](./images/marker/MarkerCustomization.png)
+![Sparkline Chart - Markers Customization](./images/marker/MarkerCustomization.png)arkerCustomization.png)

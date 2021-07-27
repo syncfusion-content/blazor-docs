@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Grouping in Blazor Accumulation Chart Component | Syncfusion 
-description: Learn about Grouping in Blazor Accumulation Chart component of Syncfusion, and more details.
+title: Grouping in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Grouping in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Grouping
+# Grouping in Blazor Accumulation Chart Component
 
 You can club/group few points of the series based on
 [`GroupTo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Color Mapping in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Color Mapping of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Color Mapping in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Color Mapping in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Color Mapping in the Blazor TreeMap (SfTreeMap)
+# Color Mapping in Blazor TreeMap Component
 
 Color mapping is used to customize the color for each group or item based on the specified types. The following options are available to customize the group and leaf items in the TreeMap component.
 
@@ -211,4 +211,4 @@ The following code example shows, how to set the color for the TreeMap items.
 }
 ```
 
-![Bind the colors to TreeMap from datasource](images/Colormapping/ColorDS.png)
+![Bind the colors to TreeMap from datasource](images/Colormapping/ColorDS.png)apping/ColorDS.png)

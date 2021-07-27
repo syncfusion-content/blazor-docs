@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appointments in Blazor Scheduler Component | Syncfusion 
-description: Learn about Appointments in Blazor Scheduler component of Syncfusion, and more details.
+title: Appointments in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Appointments in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Appointments
+# Appointments in Blazor Scheduler Component
 
 Appointments can be anything that are scheduled for a specific time period. It can be created on varied time range and each appointments are categorized based on this range. The Scheduler events can be categorized as,
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Two Way Binding in Blazor Splitter Component | Syncfusion 
-description: Learn about Two Way Binding in Blazor Splitter component of Syncfusion, and more details.
+title: Two way Binding in Blazor Splitter Component | Syncfusion
+description: Learn here all about Two way Binding in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Two way Binding
+# Two way Binding in Blazor Splitter Component
 
 The splitter `SplitterPane` `Collapsed` property supports the two-way binding and it can be achieved by using the `bind-Collapsed` attribute. If the component value has been changed, it will affect all the places where we bind the variable for the bind-value attribute.
 

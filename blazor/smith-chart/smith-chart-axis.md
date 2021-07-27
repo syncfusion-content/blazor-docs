@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Axis in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about the axis feature of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Axis in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Axis in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Axis in the Blazor Smith Chart
+# Axis in Blazor Smith Chart Component
 
 Smith Chart supports two different types of axes. They are:
 * **Horizontal Axis** - The axis is drawn as a straight line in the horizontal direction of the Smith Chart.
@@ -166,4 +166,4 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 }
 ```
 
-![Smith Chart with axis line customization](./images/Axis/Axisline.png)
+![Smith Chart with axis line customization](./images/Axis/Axisline.png)ages/Axis/Axisline.png)

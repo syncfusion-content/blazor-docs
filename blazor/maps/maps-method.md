@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Maps Method in Blazor Maps Component | Syncfusion 
-description: Learn about Maps Method in Blazor Maps component of Syncfusion, and more details.
+title: Methods in Blazor Maps Component | Syncfusion
+description: Learn here all about Methods in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Methods
+# Methods in Blazor Maps Component
 
 ## Using methods in Maps component
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Headers and Footers
-description: Learn header footer support in Blazor Word processor and how to work with it.
+title: Headers and Footers in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Headers and Footers in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Headers and Footers
+# Headers and Footers in Blazor DocumentEditor Component
 
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
