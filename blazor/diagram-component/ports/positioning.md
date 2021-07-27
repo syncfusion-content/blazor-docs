@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# How to position node’s port
+# Positioning in Blazor Diagram Component
 
 Diagram allows you to customize the position and appearance of the port efficiently.
 Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class.

@@ -8,7 +8,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Port appearance and positioning
+# Appearance in Blazor Diagram Component
 
 ## Appearance
 
