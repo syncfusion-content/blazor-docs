@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Grid Lines in Blazor Diagram Component | Syncfusion 
-description: Learn about Grid Lines in Blazor Diagram component of Syncfusion, and more details.
+title: Gridlines in Blazor Diagram Component | Syncfusion
+description: Learn here all about Gridlines in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Gridlines
+# Gridlines in Blazor Diagram Component
 
 Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface.
 
@@ -17,7 +17,7 @@ The model’s [`SnapSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 The [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html) enables you to show/hide the gridlines. The following code example illustrates how to show or hide gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">
@@ -49,7 +49,7 @@ The appearance of the gridlines can be customized by using a set of predefined p
 
 The following code example illustrates how to customize the appearance of gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">
@@ -70,7 +70,7 @@ Thickness and the space between gridlines can be customized by using horizontal 
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">
@@ -101,7 +101,7 @@ This feature allows the diagram objects to snap to the nearest intersection of g
 
 Snapping to gridlines can be enabled/disabled with the [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_Constraints). The following code example illustrates how to enable/disable the snapping to gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -135,7 +135,7 @@ Snapping to gridlines can be enabled/disabled with the [`SnapConstraints`](https
 
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s [`SnapInterval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html) and the vertical gridline’s [`SnapInterval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsGridLines.html) properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -184,7 +184,7 @@ The [`SnapAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 The [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramSnapSettings.html#Syncfusion_Blazor_Diagrams_DiagramSnapSettings_Constraints) property allows you to enable or disable the certain features of the snapping, refer to [`SnapConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SnapConstraints.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

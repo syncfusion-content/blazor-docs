@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Range in Blazor DatePicker Component | Syncfusion 
-description: Learn about Date Range in Blazor DatePicker component of Syncfusion, and more details.
+title: Date Range in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Date Range in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Date Range
+# Date Range in Blazor DatePicker Component
 
 The DatePicker provides an option to select a date value within a specified range by using the
 [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min)
@@ -23,7 +23,7 @@ The following code allows selecting a
 date within the range from 7th to 27th in
 a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' Value='@DateValue'></SfDatePicker>
@@ -43,7 +43,7 @@ When the Min and Max properties are configured and the selected date value is ou
 invalid, then the model value will be set to `out of range` date value or `null` respectively
 with highlighted `error` class to indicate the date is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' Value='@DateValue'></SfDatePicker>

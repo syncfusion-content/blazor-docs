@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Tooltip Component | Syncfusion 
-description: Learn about Getting Started in Blazor Tooltip component of Syncfusion, and more details.
+title: Getting Started with Blazor Tooltip Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Tooltip component of Syncfusion, and more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Tooltip Component
 
 This section briefly explains how to include a `Tooltip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
@@ -135,7 +135,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Popups` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Popups
@@ -145,7 +145,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Popups` package.
 
 Now, add the Syncfusion Blazor Tooltip component in any web page `razor` in the `Pages` folder. For example, the Tooltip component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 

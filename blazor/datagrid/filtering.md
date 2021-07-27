@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Filtering in Blazor DataGrid Component | Syncfusion 
-description: Learn about Filtering in Blazor DataGrid component of Syncfusion, and more details.
+title: Filtering in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Filtering
+# Filtering in Blazor DataGrid Component
 
 Filtering allows you to view particular records based on filter criteria. To enable filtering in the DataGrid, set the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true. Filtering options can be configured through [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
@@ -59,7 +59,7 @@ The following screenshot shows filtering using FilterBar
 To apply the filter at initial rendering, set the filter **Predicate** object in
 [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true">
@@ -145,7 +145,7 @@ Expression |Example |Description |Column Type
 N/A |N/A | `equal` operator will always be used for date filter. |Date
 N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
@@ -269,7 +269,7 @@ The following screenshot shows filtering using custom component
 You can change the default filter operator by extending `FilterSettings` property in the column.
 In the following sample, we have changed the default operator for CustomerID column as **contains** from **startswith**
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 <SfGrid @ref="@Grid" ID="Egrid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -318,7 +318,7 @@ You can also perform filtering operation without pressing Enter key in the filte
 
 The [`ImmediateModeDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_ImmediateModeDelay) property of [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) is used to define the time Grid has to wait for performing filter operation after completion of user typing word.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true">
@@ -361,7 +361,7 @@ The [`ImmediateModeDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 You can enable filter menu by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of **GridFilterSettings** as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data.
 You can filter the records with different operators.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -410,7 +410,7 @@ You can use **Menu** type filter in the datagrid. To do so, set the [`Type`](htt
 In the following sample the [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column.
 To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 
@@ -462,7 +462,7 @@ The following screenshot shows filter menu using custom component
 
 The default filter operators for a GridColumn can be overridden by using the [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionBegin) event of the grid. In the below code, we have overridden the filter operators for the `CustomerID` column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -530,7 +530,7 @@ You can use different filter types such as **Menu**,**CheckBox** and **Excel** f
 
 In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`Filter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">
@@ -578,7 +578,7 @@ To enable the checkbox list filtering in the DataGrid component by setting the [
 
 CheckBox filter contains an option such as searching and Clear filter.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="375">
@@ -623,7 +623,7 @@ The following screenshot represents Checkbox filter
 
 You can enable Excel like filter by defining [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Excel**.The excel menu contains an option such as Sorting, Clear filter, Sub menu for advanced filtering.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true">
@@ -670,7 +670,7 @@ The following screenshot represents Custom filter in Excel filter
 
 This **`FilterItemTemplate`** helps to you customize the each CheckBox list element/value for display purpose. To access the checkbox list values inside the `FilterItemTemplate`, you can use the implicit named parameter context. You can type cast the context as [`FilterItemTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.FilterItemTemplateContext.html) to get list values inside template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="375">
@@ -725,7 +725,7 @@ The following screenshot represents Filter Item template
 By default, datagrid ignores diacritic characters while filtering. To include diacritic characters, set the [`GridFilterSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_FilterSettings) [`IgnoreAccent`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html) property to be true.
 In the following sample, type aero in [`CustomerID`] column to filter diacritic characters.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 <SfGrid @ref="@Grid" DataSource="@Orders" AllowFiltering="true" AllowPaging="true" Height="315">

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor TreeView Component | Syncfusion 
-description: Learn about Getting Started in Blazor TreeView component of Syncfusion, and more details.
+title: Getting Started with Blazor TreeView Component | Syncfusion
+description: Checkout and learn about getting started with Blazor TreeView component of Syncfusion, and more details.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started
+# Getting Started with Blazor TreeView Component
 
 This section briefly explains about how to include a `TreeView` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -143,7 +143,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the `Pages` folder. For example, the Blazor TreeView component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="MailItem">
     <TreeViewFieldsSettings TValue="MailItem" Id="Id" DataSource="@MyFolder" Text="FolderName" ParentID="ParentId" HasChildren="HasSubFolders" Expanded="Expanded"></TreeViewFieldsSettings>

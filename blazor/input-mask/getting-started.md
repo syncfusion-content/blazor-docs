@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Input Mask Component | Syncfusion 
-description: Learn about Getting Started in Blazor Input Mask component of Syncfusion, and more details.
+title: Getting Started with Blazor Input Mask Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Input Mask component of Syncfusion, and more details.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Input Mask Component
 
 This section briefly explains about how to include a [Blazor MaskedTextBox](https://www.syncfusion.com/blazor-components/blazor-input-mask) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side MaskedTextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly MaskedTextbox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
@@ -44,7 +44,7 @@ To get start quickly with Blazor MaskedTextBox component, you can check on this 
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Inputs` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 ```
 

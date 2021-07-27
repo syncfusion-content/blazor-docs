@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header in Blazor Tabs Component | Syncfusion 
-description: Learn about Header in Blazor Tabs component of Syncfusion, and more details.
+title: Header in Blazor Tabs Component | Syncfusion
+description: Learn here all about Header in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Header
+# Header in Blazor Tabs Component
 
 This section explains about modifying the style of Tab header.
 
@@ -21,7 +21,7 @@ You can customize header styles by adding predefined classes in the Tab root ele
 
 > If the above custom style classes are not included in the root element, the default style is applied to the Tab items.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 
@@ -118,7 +118,7 @@ You can customize the position of the Tab header icons using the [IconPosition](
 * **Top**: Icon is placed on the top of the Tab header item.
 * **Bottom**: Icon is placed on the bottom of the Tab header item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns
 

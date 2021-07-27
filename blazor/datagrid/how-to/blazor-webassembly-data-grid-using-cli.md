@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started with Blazor WebAssembly DataGrid Using CLI – Syncfusion
-description: Checkout and learn more about getting started with blazor webassembly datagrid using CLI of Syncfusion, and more details.
+title: Getting Started-Client side using CLI in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Getting Started-Client side using CLI in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started with Blazor WebAssembly DataGrid Using CLI
+# Getting Started-Client side using CLI in Blazor DataGrid Component
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, build and run a simple Blazor WebAssembly application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 

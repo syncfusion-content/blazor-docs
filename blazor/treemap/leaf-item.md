@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Leaf Item in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Leaf Item of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Leaf Item in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Leaf Item in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Leaf Item in the Blazor TreeMap (SfTreeMap)
+# Leaf Item in Blazor TreeMap Component
 
 A leaf item defines a visualized data element and does not contain child nodes but contains parent node if the levels are specified in the TreeMap.
 
@@ -25,7 +25,7 @@ The following properties are available to customize the leaf item in the [`TreeM
 
 In the following example, the name of the property **CountryName** from data source is mapped to [`LabelPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) property, so corresponding country name will be displayed in the label.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP">
@@ -64,7 +64,7 @@ In the following example, the name of the property **CountryName** from data sou
 
 Positioning the leaf item label using the [`LabelPosition`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LabelPosition.html) property and the text format can be customized by specifying data source properties name in the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelFormat) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP">
@@ -83,7 +83,7 @@ Positioning the leaf item label using the [`LabelPosition`](https://help.syncfus
 
 The [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_Gap) property is used to separate an item from another item. Each item rectangle is split into equal space with specified gap.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP">
@@ -94,4 +94,4 @@ The [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Tree
 
 > Refer to the [code block](#customization) to know about the property value of **GrowthReports**.
 
-![Gap in TreeMap item](images/LeafItem/itemgap.png)
+![Gap in TreeMap item](images/LeafItem/itemgap.png)em/itemgap.png)

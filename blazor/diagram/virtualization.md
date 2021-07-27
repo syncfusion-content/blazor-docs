@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtualization in Blazor Diagram Component | Syncfusion 
-description: Learn about Virtualization in Blazor Diagram component of Syncfusion, and more details.
+title: Virtualization in Blazor Diagram Component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Virtualization
+# Virtualization in Blazor Diagram Component
 
 ## Virtualization in Diagram
 
@@ -17,7 +17,7 @@ This feature gives an optimized performance while loading and dragging items to 
 
 The following code illustrates how to enable [`Virtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html) mode in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 @* Initialize Diagram *@

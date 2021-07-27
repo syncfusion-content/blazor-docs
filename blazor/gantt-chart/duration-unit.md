@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Duration Unit in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Duration Unit in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Duration Unit in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Duration Unit in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Duration Units
+# Duration Unit in Blazor Gantt Chart Component
 
 In Gantt Chart, the tasks’ duration value can be measured by the following duration units,
 
@@ -25,7 +25,7 @@ And each task in the project can be defined with different duration units and th
 
 The below code snippet explains the mapping of duration unit data source field to the Gantt Chart component using the `GanttTaskFields.DurationUnit` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -126,7 +126,7 @@ The default value of the `DurationUnit` property is `day`.
 
 Duration units for the tasks can also be defined along with the duration values, the below code snippet explains the duration unit for a task along with duration value,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"

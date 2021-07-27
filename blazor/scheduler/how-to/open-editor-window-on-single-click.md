@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Open Editor Window On Single Click in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn about Open Editor Window On Single Click in Blazor Scheduler component of Syncfusion, and more details.
+title: Open Editor Window on Single Click in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Open Editor Window on Single Click in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Open Editor Window on Single Click
+# Open Editor Window on Single Click in Blazor Scheduler Component
 
 By default, the editor window will open on double clicking the cell or appointment. In the following code example, we have opened the editor window on single click using `OpenEditorAsync` public method within `OnCellClick` and `OnEventClick` Scheduler events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule @ref="ScheduleRef" TValue="AppointmentData" ShowQuickInfo="false" Height="550px" @bind-SelectedDate="@CurrentDate">

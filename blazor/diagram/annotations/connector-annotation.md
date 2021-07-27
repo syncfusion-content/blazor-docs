@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connector Annotation in Blazor Diagram Component | Syncfusion 
-description: Learn about Connector Annotation in Blazor Diagram component of Syncfusion, and more details.
+title: Annotation for connector in Blazor Diagram Component | Syncfusion
+description: Learn here all about Annotation for connector in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# How to position connector’s annotation
+# Annotation for connector in Blazor Diagram Component
 
 Annotations of a connector can be positioned using the following properties of AnnotationEditorViewModel class.
 
@@ -20,7 +20,7 @@ Annotations of a connector can be positioned using the following properties of A
 
 The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Offset) property of annotation is used to align the annotations based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
@@ -64,7 +64,7 @@ The following image shows the relationship between the annotation position and o
 
 The connector’s annotation can be aligned over its segment path using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Alignment) property of annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
@@ -107,7 +107,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 The [`Displacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Displacement) property is used to dislocate the annotation by the value given. By default, annotation will be in center of the connector path. When you assign value to the Displacement property, annotation will be displaced from its position by displacment value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
@@ -155,7 +155,7 @@ The [`SegmentAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 The following code example shows how the connector annotation rotated in its path direction.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">

@@ -13,7 +13,7 @@ The Syncfusion Blazor library supports persisting a component's state across pag
 
 > The state of a component will be retained during navigation or refreshment based on the ID. Make sure to set an ID for the component to store the component's state in the browser.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid  ID="grid" EnablePersistence="true" AllowPaging="true" DataSource="@Orders">

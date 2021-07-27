@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bar Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Bar Chart of Syncfusion Charts (SfCharts) component and more.
+title: Bar Charts in Blazor Charts Component | Syncfusion
+description: Learn here all about Bar Charts in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Bar Chart in Blazor Charts (SfCharts)
+# Bar Charts in Blazor Charts Component
 
 ## Bar
 
@@ -54,7 +54,7 @@ documentation: ug
 
 [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) and [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnWidth) properties are used to customize the space between the bars.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
@@ -97,7 +97,7 @@ The following properties can be used to customize the [`Bar`](https://help.syncf
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
@@ -136,4 +136,4 @@ The following properties can be used to customize the [`Bar`](https://help.syncf
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)p)

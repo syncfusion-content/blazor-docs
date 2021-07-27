@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tools in Blazor Diagram Component | Syncfusion 
-description: Learn about Tools in Blazor Diagram component of Syncfusion, and more details.
+title: Tools in Blazor Diagram Component | Syncfusion
+description: Learn here all about Tools in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Tools
+# Tools in Blazor Diagram Component
 
 ## Drawing tools
 
@@ -17,7 +17,7 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 
 To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [`Tool`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Tool) property. The following code example illustrates how to draw a rectangle at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -76,7 +76,7 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
 
 To draw connectors, set the JSON of the connector to the drawType property. The drawing [`Tool`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDiagram.html) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -142,7 +142,7 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
 
 Diagram allows you to create a textNode, when you click on the diagram page. The following code illustrates how to draw a text.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -209,7 +209,7 @@ Diagram allows to create the polygon shape by clicking and moving the mouse at r
 
 The following code illustrates how to draw a polygon shape.
 
-```csharp
+```cshtml
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Diagrams
 <input Type="button" value="Polygon" @onclick="Polygon" />
@@ -291,7 +291,7 @@ Set the desired [`Tool`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The following code illustrates how to enable single tools,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -310,7 +310,7 @@ The following code illustrates how to enable single tools,
 
 The following code illustrates how to enable multiple tools,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

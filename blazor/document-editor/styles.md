@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Styles
-description: Learn the types of styles supported in Blazor Word processor and how to create a style for the document, and apply it for selected contents.
+title: Working with Styles in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Styles
+# Working with Styles in Blazor DocumentEditor Component
 
 Styles are useful for applying a set of formatting consistently throughout the document. In document editor, styles are created and added to a document programmatically or via the built-in Styles dialog.
 
@@ -75,7 +75,7 @@ New Styles are defined and added to the style collection of the document. In thi
 
 The following example shows how to programmatically create a character style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -96,7 +96,7 @@ The following example shows how to programmatically create a character style.
 
 The following example shows how to programmatically create a paragraph style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>
@@ -117,7 +117,7 @@ The following example shows how to programmatically create a paragraph style.
 
 The following example shows how to programmatically create linked style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>

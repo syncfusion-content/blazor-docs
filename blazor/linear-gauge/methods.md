@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Methods in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Methods in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Methods in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about Methods in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Methods
+# Methods in Blazor Linear Gauge Component
 
 ## Using methods in Linear Gauge component
 
 You can create object for the linear gauge component using `@ref` and call the `ChangePoinerValue` method as shown in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value</button>

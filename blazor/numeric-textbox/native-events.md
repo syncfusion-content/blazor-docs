@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Numeric TextBox Component | Syncfusion 
-description: Learn about Native Events in Blazor Numeric TextBox component of Syncfusion, and more details.
+title: Native Events in Blazor Numeric TextBox Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor Numeric TextBox Component
 
 This section explains the steps to include native events and pass data to event handler in the NumericTextBox component.
 
@@ -17,7 +17,7 @@ You can access any native event by using on `<event>` attribute with a component
 
 In the following example, the KeyPressed method is called every time the key is pressed on input.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" @onkeypress='@KeyPressed'></SfNumericTextBox>
@@ -31,7 +31,7 @@ In the following example, the KeyPressed method is called every time the key is 
 
 Also, you can rewrite the previous example code as follows using Lambda expressions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfNumericTextBox>
@@ -50,7 +50,7 @@ Blazor provides set of argument types to map to native events. The list of event
 
 In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "n" key.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" @onkeypress='@(e => KeyPressed(e))'></SfNumericTextBox>

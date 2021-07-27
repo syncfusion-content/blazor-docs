@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Import annotations as objects
-description: This page explains how to import the annotations as objects using the ExportAnnotationsAsObject() method in the Blazor PDF Viewer component.
+title: Import annotations as objects in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Import annotations as objects in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import annotations as objects
+# Import annotations as objects in Blazor PDF Viewer Component
 
 The Syncfusion's Blazor PDF Viewer component allows to import annotations from objects or streams instead of loading it as a file. To import such annotation objects, the PDF Viewer control must export the PDF annotations as objects using the [ExportAnnotationsAsObject()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_ExportAnnotationsAsObject) method. Only the annotations objects that are exported from the PDF Viewer can be imported.
 
 The following code example shows how to import annotations as objects, that are exported using the [ExportAnnotationsAsObject()](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PdfViewer.PdfViewerBase.html#Syncfusion_Blazor_PdfViewer_PdfViewerBase_ExportAnnotationsAsObject) method.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer

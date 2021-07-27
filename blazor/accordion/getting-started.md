@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Accordion Component | Syncfusion 
-description: Learn about Getting Started in Blazor Accordion component of Syncfusion, and more details.
+title: Getting Started with Blazor Accordion Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Accordion component of Syncfusion, and more details.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Accordion Component
 
 This section briefly explains about how to include a `Accordion` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 

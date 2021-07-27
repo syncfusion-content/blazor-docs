@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Tool Bar in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Tool Bar in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Toolbar in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Toolbar in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Toolbar
+# Toolbar in Blazor Gantt Chart Component
 
 The Gantt Chart component provides the toolbar support to handle Gantt Chart actions. The `Toolbar` property accepts the collection of built-in toolbar items and `ItemModel` objects for custom toolbar items.
 
@@ -32,7 +32,7 @@ The following table shows built-in toolbar items and its actions.
 | Search | Searches the records by the given key. |
 | Update | Updates the edited record. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Toolbar="@(new List<string>() { "Add", "Cancel", "CollapseAll", "Delete", "Edit", "ExpandAll", "NextTimeSpan", "PrevTimeSpan", "Search", "Update", "Indent", "Outdent" })" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -140,7 +140,7 @@ Actions for this customized toolbar items are defined in the `OnToolbarClick` ev
 
 By default, the custom toolbar items are at left position. You can change the position by using the `Align` property. In the following sample, the `Quick Filter` toolbar item is positioned at right.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 
@@ -257,7 +257,7 @@ The Gantt Chart component has an option to use both built-in and custom toolbar 
 
 In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar items and `Test` is the custom toolbar item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 
@@ -367,7 +367,7 @@ In the following example, the `ExpandAll` and `CollapseAll` are built-in toolbar
 
 You can enable or disable the toolbar items by using the `EnableItems` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Navigations
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Data Binding in Blazor Tree Grid component of Syncfusion, and more details.
+title: Data Binding in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Data binding
+# Data Binding in Blazor TreeGrid Component
 
 The Tree Grid uses **SfDataManager**, which supports both RESTful Web Services binding and List binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DataSource.html) property can be assigned either using the **SfDataManager** as child component of the Tree Grid Blazor component or list of business objects.
 It supports two kinds of data binding method:
@@ -145,7 +145,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 > The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid
 @using System.Dynamic
 
@@ -852,7 +852,7 @@ namespace TreeGridWebApiEFSample.Controllers
 
 Now you can configure the Tree Grid using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Buttons

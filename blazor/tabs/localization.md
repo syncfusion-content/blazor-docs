@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor Tabs Component | Syncfusion 
-description: Learn about Localization in Blazor Tabs component of Syncfusion, and more details.
+title: Localization in Blazor Tabs Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor Tabs Component
 
 Localization library allows to localize the default text content of
 Tab. In Tab, the close button's tooltip text alone will be localize based on culture.
@@ -95,7 +95,7 @@ namespace TabLocalization
 
 * Finally, specify add the Tabs in razor page as in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab ShowCloseButton="true">
@@ -225,7 +225,7 @@ The following steps explain you to set `de-DE` culture for Tabs in web assembly 
 
 5. Finally, add the Tabs in razor page as in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab ShowCloseButton="true">

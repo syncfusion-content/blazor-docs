@@ -1,13 +1,13 @@
 ---
 layout: post
-title: File Source in Blazor File Upload Component | Syncfusion 
-description: Learn about File Source in Blazor File Upload component of Syncfusion, and more details.
+title: File Source in Blazor File Upload Component | Syncfusion
+description: Learn here all about File Source in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# File source
+# File Source in Blazor File Upload Component
 
 ## Directory upload
 
@@ -16,7 +16,7 @@ the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.In
 the uploader component processes the files by iterating through the files and sub-directories in a directory.
 It allows you to select only folders instead of files to upload.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AutoUpload=false DirectoryUpload=true>
@@ -153,7 +153,7 @@ The uploader component allows you to set external target element as drop area us
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <div ID="DropArea">

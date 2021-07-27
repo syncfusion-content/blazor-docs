@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning in Blazor Diagram Component | Syncfusion 
-description: Learn about Positioning in Blazor Diagram component of Syncfusion, and more details.
+title: Positioning in Blazor Diagram Component | Syncfusion
+description: Learn here all about Positioning in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Position
+# Positioning in Blazor Diagram Component
 
 ## Arrange the nodes
 
@@ -30,7 +30,7 @@ The following table shows how pivot relates offset values with node boundaries.
 
 The following code shows how to change the `Pivot` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -88,7 +88,7 @@ The flip types are as follows:
 
 The following code shows how to provide the mirror image of the original element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

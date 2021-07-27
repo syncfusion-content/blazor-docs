@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dimensions in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about the dimensions in Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Dimensions in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Dimensions in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Dimensions in the Blazor Smith Chart
+# Dimensions in Blazor Smith Chart Component
 
 The dimensions of the Smith Chart can be modified in the following ways.
 
@@ -18,7 +18,7 @@ The dimensions of the Smith Chart can be modified in the following ways.
 
 To set the size using CSS, add an [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_ID) to the `SfSmithChart` tag, and set the width and the height of the Smith Chart in the style tag as following.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart ID="smChart">
@@ -62,7 +62,7 @@ The width and the height of the Smith Chart can also be set directly using the [
 
 The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Width) and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Height) properties in the Smith Chart can be directly given in pixels, as following.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart Height="300px" Width="300px">
@@ -95,7 +95,7 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfS
 
 The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Height) properties can be directly given in percentage, as shown in the following. The component will be rendered as a percentage of its container size.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <div style="height:600px; width:600px">
@@ -124,4 +124,4 @@ The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-![Setting dimensions in percentage](./images/Dimension/smith-chart.png)
+![Setting dimensions in percentage](./images/Dimension/smith-chart.png)ith-chart.png)

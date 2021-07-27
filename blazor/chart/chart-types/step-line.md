@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Step Line Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Step Line Chart of Syncfusion Charts (SfCharts) component and more.
+title: Step Line in Blazor Charts Component | Syncfusion
+description: Learn here all about Step Line in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Step Line Chart in Blazor Charts (SfCharts)
+# Step Line in Blazor Charts Component
 
 ## Step Line
 
@@ -63,7 +63,7 @@ The following properties can be used to customize the [`Step Line`](https://help
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals" Width="60%">
@@ -107,4 +107,4 @@ The following properties can be used to customize the [`Step Line`](https://help
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

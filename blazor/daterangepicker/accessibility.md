@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DateRangePicker Component | Syncfusion 
-description: Learn about Accessibility in Blazor DateRangePicker component of Syncfusion, and more details.
+title: Accessibility in Blazor DateRangePicker Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor DateRangePicker Component
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
 DateRangePicker provides built-in compliance with [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA
@@ -66,7 +66,7 @@ Use the following list of keys to navigate the currently focused Calendar after 
 
 > To focusout the DateRangePicker component use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="RangeObj"></SfDateRangePicker>

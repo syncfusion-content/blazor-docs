@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Search in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Text Search in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Text Search in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Text Search in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Text search
+# Text Search in Blazor PDF Viewer Component
 
 You can find the specified text content in the PDF document using the built-in options provided with the toolbar. On initiating the search operation, the control searches for the specified text and highlights all the occurrences in the pages.
 
@@ -15,7 +15,7 @@ You can find the specified text content in the PDF document using the built-in o
 
 You can enable or disable the text search by setting the `EnableTextSearch` API.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableTextSearch="true"/>
@@ -27,7 +27,7 @@ You can enable or disable the text search by setting the `EnableTextSearch` API.
 
 Also, you can programmatically perform search operation as given in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

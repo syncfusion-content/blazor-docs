@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor TextBox Component | Syncfusion 
-description: Learn about Native Events in Blazor TextBox component of Syncfusion, and more details.
+title: Native Events in Blazor TextBox Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor TextBox Component
 
 The following section explains the steps to include native events and pass data to event handler in textbox component.
 
@@ -17,7 +17,7 @@ You can access any native event by using on `<event>` attribute with a component
 
 In the following example, the KeyPressed method is called every time the key is pressed on textbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' @onkeypress='@KeyPressed'></SfTextBox>
@@ -31,7 +31,7 @@ In the following example, the KeyPressed method is called every time the key is 
 
 Also, you can rewrite the above example code as follows using Lambda expressions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' @onkeypress="@(() => Console.WriteLine("Key Pressed!"))">
@@ -51,7 +51,7 @@ Blazor provides set of argument types for map to native events. The list of even
 
 In the following example, the KeyPressed method is called every time any key is pressed inside textbox. But the message will be printed when you press "s" key.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder='First Name' @onkeypress='@(e => KeyPressed(e))' ></SfTextBox>

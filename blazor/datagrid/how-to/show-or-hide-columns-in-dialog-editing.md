@@ -1,18 +1,18 @@
 ---
 layout: post
-title: How to Show Or Hide Columns In Dialog Editing in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Show Or Hide Columns In Dialog Editing in Blazor DataGrid component of Syncfusion, and more details.
+title: Show or Hide columns in Dialog editing in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Show or Hide columns in Dialog editing in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Show or Hide columns in dialog editing
+# Show or Hide columns in Dialog editing in Blazor DataGrid Component
 
 You can show hidden columns or hide visible column’s editor in the dialog while editing the datagrid record. This can be achieved by **Template**.
 In the below example, we have rendered the datagrid columns [`OrderDate`] as hidden column and [`Freight`] as visible column. In the edit mode, we have changed the [`Freight`] column to visible state and [`OrderDate`] column to hidden state.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs

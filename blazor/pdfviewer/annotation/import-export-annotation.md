@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Import Export Annotation in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Import Export Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Import and Export annotations in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Import and Export annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Import and export annotation
+# Import and Export annotations in Blazor PDF Viewer Component
 
 The PDF Viewer control provides the support to import and export annotations using JSON object in the PDF document.
 
@@ -44,7 +44,7 @@ The PDF Viewer control provides the support to import and export annotations usi
 
 You can import annotations using JSON file or JSON object in code behind like the below code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 
@@ -81,7 +81,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 
 You can export annotations as JSON file in code behind like the following code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

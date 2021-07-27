@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Datetime Picker  Component | Syncfusion 
-description: Learn about Globalization in Blazor Datetime Picker  component of Syncfusion, and more details.
+title: Globalization in Blazor Datetime Picker Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor Datetime Picker Component
 
 Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 
@@ -119,7 +119,7 @@ namespace blazorCalendars
 
 * Finally, Specify the culture for DateTimePicker using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Locale="de"></SfDateTimePicker>
@@ -181,7 +181,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 
@@ -232,7 +232,7 @@ property to set the RTL direction.
 
 The following code example initialize the DateTimePicker component in `Arabic` culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @inject HttpClient Http;
 

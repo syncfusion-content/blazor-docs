@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the Data Labels of Syncfusion Sparkline (SfSparkline) component and more.
+title: Data Labels in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Data Labels in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Data Labels in the Blazor Sparkline (SfSparkline)
+# Data Labels in Blazor Sparkline Component
 
 To improve readability, the Data Labels are used to display the value of data points.
 
@@ -25,7 +25,7 @@ The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.S
 
 The following code examples shows how to enable Data Label for all points.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="350px">
@@ -47,7 +47,7 @@ The following properties can be used to customize the Sparkline Data Label:
 * [`SparklineDataLabelBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelBorder.html) - Specifies the color and the width for the Data Label border.
 * [`SparklineDataLabelOffset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineDataLabelOffset.html) - Specifies the label offset position from its default position.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{ 0, 6, 4, 1, 3, 2, 5 }" Type="SparklineType.Line" Height="200px" Width="350px">
@@ -67,7 +67,7 @@ The following properties can be used to customize the Sparkline Data Label:
 
 The Data Label text can be formatted by specifying the property name from the datasource to the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html#Syncfusion_Blazor_Charts_SparklineDataLabelSettings_Format) property in the [`SparklineDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineDataLabelSettings.html). By default, Data Label text will be based on [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_YName) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="ClimateData" TValue="WeatherReport" XName="Month" YName="Celsius" ValueType="SparklineValueType.Category" Height="200px" Width="500px">
@@ -99,4 +99,4 @@ The Data Label text can be formatted by specifying the property name from the da
 }
 ```
 
-![Sparkline with custom data label](images/Datalabels/LabelFormat.png)
+![Sparkline with custom data label](images/Datalabels/LabelFormat.png)labels/LabelFormat.png)

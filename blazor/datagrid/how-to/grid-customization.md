@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Grid Customization in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Grid Customization in Blazor DataGrid component of Syncfusion, and more details.
+title: DataGrid customization in Blazor DataGrid Component | Syncfusion
+description: Learn here all about DataGrid customization in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# DataGrid customization
+# DataGrid customization in Blazor DataGrid Component
 
 It is possible to customize the default styles of the DataGrid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) event. Then the required styles are added to this class.
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">
@@ -83,7 +83,7 @@ This is demonstrated in the below sample code,
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animations in Blazor Accordion Component | Syncfusion 
-description: Learn about Animations in Blazor Accordion component of Syncfusion, and more details.
+title: Animations in Blazor Accordion Component | Syncfusion
+description: Learn here all about Animations in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Getting Started
+# Animations in Blazor Accordion Component
 
 This section briefly explains about how to include a `Accordion` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Accordion component in any web page (razor) in the `Pages` folder. For example, the Accordion component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>
@@ -123,7 +123,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 The following code explains how to initialize accordion using `Template`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion>

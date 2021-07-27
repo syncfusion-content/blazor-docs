@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Bar Chart in Blazor Charts component | Syncfusion
-description: Learn here all about 100% Stacked Bar Chart of Syncfusion Charts (SfCharts) component and more.
+title: 100% Stacked Bar in Blazor Charts Component | Syncfusion
+description: Learn here all about 100% Stacked Bar in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# 100% Stacked Bar Chart in Blazor Charts (SfCharts)
+# 100% Stacked Bar in Blazor Charts Component
 
 ## 100% Stacked Bar
 
@@ -108,4 +108,4 @@ The following properties can be used to customize the [`100% Stacked Bar`](https
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

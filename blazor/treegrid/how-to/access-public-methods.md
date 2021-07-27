@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Access Public Methods in Blazor Tree Grid Component | Syncfusion
-description: Checkout and learn about Access Public Methods in Blazor Tree Grid component of Syncfusion, and more details.
+title: Access public methods in Tree Grid in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Access public methods in Tree Grid in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Access public method in Tree Grid
+# Access public methods in Tree Grid in Blazor TreeGrid Component
 
 You can access the public methods available in the Tree Grid component by using its reference defined in the component initialization.
 

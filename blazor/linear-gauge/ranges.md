@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Ranges in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Ranges in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Ranges in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about Ranges in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Ranges
+# Ranges in Blazor Linear Gauge Component
 
 You can categorize the axis values using the [`Start`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~Start.html) and [`End`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~End.html) properties in the [`LinearGaugeRange`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange_members.html). You can add any number of ranges for an axis using array of range objects.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -40,7 +40,7 @@ Ranges can be customized using the following properties.
     * [`Offset`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRange~Offset.html) - Specifies offset value from its default position
     * [`LinearGaugeRangeBorder`](https://help.syncfusion.com/cr/cref_files/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeRangeBorder.html) - Specifies range bar border color and width.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -68,7 +68,7 @@ Ranges can be customized using the following properties.
 
 You can add multiple ranges to an axis as demonstrated in the following code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -114,7 +114,7 @@ Using linear gradient, colors will be applied in a linear progression. The start
 
 To apply linear gradient to the range, follow the below code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Orientation="Orientation.Horizontal">
@@ -158,7 +158,7 @@ Using radial gradient, colors will be applied in circular progression. The inner
 
 To apply radial gradient to the range, follow the below code sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Orientation="Orientation.Horizontal">

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor TimePicker Component | Syncfusion 
-description: Learn about Native Events in Blazor TimePicker component of Syncfusion, and more details.
+title: Native Events in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor TimePicker Component
 
 The following section explains steps to include native events and pass data to event handler in TimePicker component.
 
@@ -17,7 +17,7 @@ You can access any native event by using on `<event>` attribute with a component
 
 In the following example, the KeyPressed method is called every time the key is pressed on input.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" @onkeypress='@KeyPressed'></SfTimePicker>
@@ -31,7 +31,7 @@ In the following example, the KeyPressed method is called every time the key is 
 
 Also, you can rewrite the above example code as follows using Lambda expressions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" @onkeypress="@(() => Console.WriteLine("Key Pressed!"))"></SfTimePicker>
@@ -50,7 +50,7 @@ Blazor provides set of argument types for map to native events. The list of even
 
 In the following example, the KeyPressed method is called every time any key is pressed inside input. But the message will be printed when you press "5" key.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" @onkeypress='@(e => KeyPressed(e))'></SfTimePicker>

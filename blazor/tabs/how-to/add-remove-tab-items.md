@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Add Remove Tab Items in Blazor Tabs Component | Syncfusion
-description: Checkout and learn about Add Remove Tab Items in Blazor Tabs component of Syncfusion, and more details.
+title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion
+description: Learn here all about Add/Remove Tab items in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Add/Remove Tab Items
+# Add/Remove Tab items in Blazor Tabs Component
 
 Tabs provides a support to Add/Remove the specified tab item using following ways.
 
@@ -20,7 +20,7 @@ Tab items can be added/removed dynamically by iteration of Tab Items using condi
 
 In the following demo, initially we have three tabs as the **TabItems** has three items. On `Add Item` button click, new item is added to **TabItems** results in adding fourth tab to the Tabs component. On clicking the `Remove Item`, the first item of **TabItems** has been removed which results in removing first tab of our Tabs component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
@@ -98,7 +98,7 @@ Tabs can be added dynamically by passing list of items and index value to the `A
 
 In the following demo, you can add a tab item as first tab and remove the last tab item by clicking the **Add Tab** and **Remove Last Tab** buttons respectively.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 

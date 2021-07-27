@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Events in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Events in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Stock Chart Component
 
 In this section, we have provided the list of events of Stock Chart component which will be
 triggered for appropriate stock chart actions.
@@ -30,7 +30,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Loaded) event triggers after stock chart is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -73,7 +73,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnPointClick) event triggers when data point is clicked.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -116,7 +116,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_PointMoved) event triggers when moving mouse over the data point.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -159,7 +159,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`RangeChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_RangeChange) event triggers when range is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -202,7 +202,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`OnStockChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseClick) event triggers when clicking the stock chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -245,7 +245,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`OnStockChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseDown) event triggers when mouse down over the stock chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -288,7 +288,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`OnStockChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseLeave) event triggers when cursor leaves the stock chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -331,7 +331,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`OnStockChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseMove) event triggers when hovering the stock chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>
@@ -374,7 +374,7 @@ The following are the number of events supported for Stock Chart component.
 
 [`OnStockChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseUp) event triggers when mouse is up.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfStockChart>

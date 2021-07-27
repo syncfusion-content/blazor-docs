@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor File Upload Component | Syncfusion 
-description: Learn about Localization in Blazor File Upload component of Syncfusion, and more details.
+title: Localization in Blazor File Upload Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor File Upload Component
 
 ## Blazor server side
 
@@ -137,7 +137,7 @@ namespace blazorInputs
 
 * Finally, Specify the culture for Uploader using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
     <SfUploader ID="UploadFiles" Locale="de">
@@ -225,7 +225,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @inject HttpClient Http
 

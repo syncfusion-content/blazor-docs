@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Row in Blazor DataGrid Component | Syncfusion 
-description: Learn about Row in Blazor DataGrid component of Syncfusion, and more details.
+title: Row in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Row in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Row
+# Row in Blazor DataGrid Component
 
 The row represents record details fetched from data source.
 
@@ -22,7 +22,7 @@ To know about **Row Template** in Blazor DataGrid Component, you can check this 
 
 The **RowTemplate** has an option to customize the look and behavior of the datagrid rows. The **RowTemplate** should be wrapped around a component named [`GridTemplates`](./templates/#gridtemplates-component) as follows. The **RowTemplate** content must be **TD** elements and the number of **TD** elements must match the number of datagrid columns.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" Height="335px">
@@ -160,7 +160,7 @@ The output will be as follows.
 If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, C# custom formats can be used.
 Here [`Custom DateTime`](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees" Height="335px">
@@ -326,7 +326,7 @@ To know about **Detail Template** in Blazor DataGrid Component, you can check th
 
 The detail template provides additional information about a particular row by expanding or collapsing detail content. The **DetailTemplate** should be wrapped around a component named [`GridTemplates`](./templates/#gridtemplates-component) as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Employees">
@@ -441,7 +441,7 @@ custom component in any of the detail row element.
 
 In the below sample, a datagrid component is rendered as custom component using detailed row details.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 
@@ -524,7 +524,7 @@ The output will be as follows.
 
 By default, detail rows render in collapsed state. You can expand a detail row by invoking the `Expand` method using the external button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -649,7 +649,7 @@ In the following demo, **Davolio** cell is spanned to two rows in the **Employee
 
 Also DataGrid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to two rows and three columns in the **1:00** column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@columnSpanData" GridLines="Syncfusion.Blazor.Grids.GridLine.Both">
@@ -834,7 +834,7 @@ You can customize the appearance of a row by using the [`RowDataBound`](https://
 The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers for every row. In the event handler, you can get the
 **RowDataBoundEventArgs** that contains details of the row.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" EnableHover=false AllowSelection=false Height="280">
@@ -921,7 +921,7 @@ You can change the datagrid's alternative rows background color by overriding th
 
 Please refer to the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="280">
@@ -978,7 +978,7 @@ is used to change the row height of entire datagrid rows.
 
 In the below example, the `RowHeight` is set as '60'.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="280" RowHeight="60">
@@ -1029,7 +1029,7 @@ event by setting the height by adding `row-height` class in required row element
 
 In the below example, the row height for the row with OrderID as '1003' is set as '90px' using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Height="280">

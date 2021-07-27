@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Positioning in Blazor Diagram Component | Syncfusion 
-description: Learn about Positioning in Blazor Diagram component of Syncfusion, and more details.
+title: Positioning in Blazor Diagram Component | Syncfusion
+description: Learn here all about Positioning in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# How to position node’s port
+# Positioning in Blazor Diagram Component
 
 Diagram allows you to customize the position and appearance of the port efficiently.
 Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [`DiagramPort`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html) class.
@@ -22,7 +22,7 @@ Ports of a node can be positioned using the following properties of `DiagramPort
 
 The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Offset) property is used to align the Ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -99,7 +99,7 @@ The following table shows all the possible alignments visually with `offset (0, 
 
 The following code explains how to align ports.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -149,7 +149,7 @@ The following code explains how to align ports.
 
 [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Margin) is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align an port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

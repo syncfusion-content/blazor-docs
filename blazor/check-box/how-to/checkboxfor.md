@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Checkboxfor in Blazor Checkbox Component | Syncfusion
-description: Checkout and learn about Checkboxfor in Blazor Checkbox component of Syncfusion, and more details.
+title: CheckboxFor and Model Binding in Blazor CheckBox Component | Syncfusion
+description: Learn here all about CheckboxFor and Model Binding in Syncfusion Blazor CheckBox component and more.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# CheckboxFor and Model Binding
+# CheckboxFor and Model Binding in Blazor CheckBox Component
 
 This section demonstrates the Strongly typed extension support in Checkbox. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.
 

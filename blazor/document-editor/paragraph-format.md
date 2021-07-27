@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Paragraph Formatting
-description: Learn paragraph formatting supported in Blazor Word processor and how to apply it for selected contents.
+title: Working with Paragraph Formatting in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Working with Paragraph Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Working with Paragraph Formatting
+# Working with Paragraph Formatting in Blazor DocumentEditor Component
 
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports various paragraph formatting options such as text alignment, indentation, paragraph spacing, and more.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Editing in Blazor Charts component | Syncfusion
-description: Learn here all about Data Editing of Syncfusion Charts (SfCharts) component and more.
+title: Data Editing in Blazor Charts Component | Syncfusion
+description: Learn here all about Data Editing in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Data Editing in Blazor Charts (SfCharts)
+# Data Editing in Blazor Charts Component
 
 ## Enable Data Editing
 
@@ -80,4 +80,4 @@ Data editing allows the rendered points to be dragged and dropped. We can now ad
 
 * [Tooltip](./tool-tip)
 * [Legend](./legend)
-* [Marker](./data-markers)
+* [Marker](./data-markers)kers)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Segments in Blazor Diagram Component | Syncfusion 
-description: Learn about Segments in Blazor Diagram component of Syncfusion, and more details.
+title: Segments in Blazor Diagram Component | Syncfusion
+description: Learn here all about Segments in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Segments
+# Segments in Blazor Diagram Component
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 
@@ -15,7 +15,7 @@ The path of the connector is defined with a collection of segments. There are th
 
 To create a straight line, specify the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Type) of the segment as **straight** and add a straight segment to [`Segments`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Segments) collection and need to specify [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Type) for the connector. The following code example illustrates how to create a default straight segment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

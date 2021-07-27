@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DatePicker Component | Syncfusion 
-description: Learn about Accessibility in Blazor DatePicker component of Syncfusion, and more details.
+title: Accessibility in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor DatePicker Component
 
 The web accessibility defines a way to make web content and web applications
 more accessible to disabled people. It especially helps the dynamic content change
@@ -75,7 +75,7 @@ Use the following list of keys to navigate the Calendar after the pop-up has bee
 
 > To focusout the DatePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="DateObj"></SfDatePicker>

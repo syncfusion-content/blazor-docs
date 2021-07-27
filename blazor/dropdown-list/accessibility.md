@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DropDown List Component | Syncfusion 
-description: Learn about Accessibility in Blazor DropDown List component of Syncfusion, and more details.
+title: Accessibility in Blazor DropDown List Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor DropDown List Component
 
 The DropDownList component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies
 the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized

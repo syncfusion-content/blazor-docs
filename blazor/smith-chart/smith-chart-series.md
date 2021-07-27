@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series customization in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about series customization of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Series in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Series in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Series customization in Blazor Smith Chart
+# Series in Blazor Smith Chart Component
 
 The [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties) is the visual representation of the data.
 Using the following options in the [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties), each series can be customized in the Smith Chart.
@@ -17,7 +17,7 @@ Using the following options in the [`SmithChartSeries`](https://help.syncfusion.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Opacity) - Used to control the opacity of the series line.
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Width) - Used to customize the width of the series line.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -57,7 +57,7 @@ Using the following options in the [`SmithChartSeries`](https://help.syncfusion.
 
 Animation for the Smith Chart series can be enabled by using the [`EnableAnimation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_EnableAnimation) property in the [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties). By default, the value is **false**. The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_AnimationDuration) property. By default, the value of the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_AnimationDuration) property is **2000** milliseconds.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -84,6 +84,9 @@ Animation for the Smith Chart series can be enabled by using the [`EnableAnimati
         new SmithChartData { Resistance= 2, Reactance= 1.2 },
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
+    };
+}
+``` Resistance= 0, Reactance= 0.2 }
     };
 }
 ```

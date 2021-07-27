@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Globalization in Blazor Pivot Table component of Syncfusion, and more details.
+title: Globalization in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Globalization
+# Globalization in Blazor Pivot Table Component
 
 Add **UseRequestLocalization** middle-ware in Configure method in **Startup.cs** file to get browser Culture Info.
 
@@ -582,7 +582,7 @@ Internationalization library is used to globalize number, date, and time values 
 
 Right-to-left (RTL) provides an option to switch the text direction and layout of the pivot table component from right to left. It improves user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc...). In the below code sample `EnableRtl` property is used to enable RTL in the pivot table.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
    <SfPivotView TValue="ProductDetails" ShowFieldList="true" EnableRtl="true">

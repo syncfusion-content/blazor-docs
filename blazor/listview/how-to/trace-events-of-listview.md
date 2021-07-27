@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Trace Events Of Listview in Blazor Listview Component | Syncfusion
-description: Checkout and learn about Trace Events Of Listview in Blazor Listview component of Syncfusion, and more details.
+title: Trace events of listview in Blazor ListView Component | Syncfusion
+description: Learn here all about Trace events of listview in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# How to trace events of listview
+# Trace events of listview in Blazor ListView Component
 
 The ListView control triggers events based on its actions. The events can be used as extension points to perform
 custom operations. Refer to the following steps to trace the ListView events:
@@ -118,4 +118,4 @@ select event, and display the selected list item text in the event trace panel w
 </style>
 ```
 
-![ListView - Events](../images/list/trace-events-of-listview.png)
+![ListView - Events](../images/list/trace-events-of-listview.png))

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Text Markup Annotation in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Text Markup Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Text markup annotations in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Text markup annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Text Markup annotation
+# Text markup annotations in Blazor PDF Viewer Component
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.
 
@@ -37,7 +37,7 @@ In the pan mode, if the highlight mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to highlight mode
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -77,7 +77,7 @@ In the pan mode, if the underline mode is entered, the PDF Viewer control will s
 
 Refer to the following code snippet to switch to underline mode
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -117,7 +117,7 @@ In the pan mode, if the strikethrough mode is entered, the PDF Viewer control wi
 
 Refer to the following code snippet to switch to strikethrough mode
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -161,7 +161,7 @@ The properties of the text markup annotation can be set before creating the cont
 
 Refer to the following code snippet to set the default annotation settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" HighlightSettings="@HighlightSettings" UnderlineSettings="@UnderlineSettings" StrikethroughSettings="@StrikethroughSettings">

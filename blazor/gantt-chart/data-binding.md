@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Data Binding in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Data Binding in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor Gantt Chart Component
 
 The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) uses [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The `DataSource` value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
 It supports the following kinds of data binding method:
@@ -27,7 +27,7 @@ The `Child` property is used to map the child records in hierarchical data.
 
 The following code example shows how to bind the hierarchical list data into the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -126,7 +126,7 @@ The Gantt Chart component can be bound with self-referential data by mapping the
 * ID field: This field contains unique values used to identify each individual task and it is mapped to the `Id` property.
 * Parent ID field: This field contains values that indicate parent tasks and it is mapped to the `ParentID` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
@@ -228,7 +228,7 @@ Gantt Chart is a generic component which is strongly bound to a model type. Ther
 
 > The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to render and perform data operations, editing etc., while using DynamicObject.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using System.Dynamic
 
@@ -431,7 +431,7 @@ To bind remote data to Gantt component, assign service data as an instance of [`
 
 You can use **WebApiAdaptor** to bind datagrid with Web API created using **OData** endpoint.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.Data
@@ -463,7 +463,7 @@ To add a custom parameter to the data request, use the addParams method of Query
 
 The following sample code demonstrates sending additional paramaters using the Query property,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Gantt
@@ -505,7 +505,7 @@ The argument passed to the `OnActionFailure` event contains the error details re
 
 The following sample code demonstrates notifying user when server-side exception has occurred,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Gantt

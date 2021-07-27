@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Open Mode in Blazor Tooltip Component | Syncfusion 
-description: Learn about Open Mode in Blazor Tooltip component of Syncfusion, and more details.
+title: Open Mode in Blazor Tooltip Component | Syncfusion
+description: Learn here all about Open Mode in Syncfusion Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Open Mode
+# Open Mode in Blazor Tooltip Component
 
 You can decide the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements.
 
@@ -34,7 +34,7 @@ To open the Tooltip for multiple actions, say while hovering over or clicking on
 
 The following code example shows how to set the open mode for Tooltips.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 
 <SfTooltip ID="tooltiphover" Target=".blocks" Content="@Content" OpensOn="Click">
@@ -104,7 +104,7 @@ Output be like the below.
 With this mode set to `true`, Tooltips can be made to show up on the screen as long as the close icon is pressed. In this mode, close
  icon is attached to the Tooltip located at the top right corner. This mode can be enabled or disabled using the `IsSticky` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -138,7 +138,7 @@ Output be like the below.
 
 The Tooltips can be opened or closed after some delay by using the `OpenDelay` and `CloseDelay` properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 

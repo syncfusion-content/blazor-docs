@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Checkbox Component | Syncfusion 
-description: Learn about Native Event in Blazor Checkbox component of Syncfusion, and more details.
+title: Native Events in Blazor CheckBox Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor CheckBox component and more.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor CheckBox Component
 
 You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
@@ -31,7 +31,7 @@ We have provided the following native event support to the Checkbox component:
 
 The `onchange` attribute is used to bind the onchange event for Checkbox. Here, we have explained about the sample code snippets of Checkbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox @bind-Checked="isChecked" Label="Change" @onchange="onChange"></SfCheckBox>

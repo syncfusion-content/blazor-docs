@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Group in Blazor Diagram Component | Syncfusion 
-description: Learn about Group in Blazor Diagram component of Syncfusion, and more details.
+title: Group in Blazor Diagram Component | Syncfusion
+description: Learn here all about Group in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Group
+# Group in Blazor Diagram Component
 
 Group is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, groups, and connectors). Every change made to the group also affects the children. Child elements can be edited individually.
 
@@ -25,7 +25,7 @@ A group can be added to the diagram model through `Nodes` collection. To define 
 
 * A group can be added into a child of another group.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -91,7 +91,7 @@ A group can be added to the diagram model through `Nodes` collection. To define 
 
 The following code illustrates how a ungroup  at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -159,7 +159,7 @@ A group node can be added at runtime by using Nodes collection of diagram.
 
 The following code illustrates how a group node is added at runtime
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -220,7 +220,7 @@ Group Nodes can be predefined and added to SymbolPalette. You can drop those Gro
 
 The following code illustrates how to add group into SymbolPalette.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -333,7 +333,7 @@ The following code illustrates how to add group into SymbolPalette.
 
 You can change the position of the group similar to node. For more information about node positioning, refer to [`Positioning`](./nodes/positioning).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

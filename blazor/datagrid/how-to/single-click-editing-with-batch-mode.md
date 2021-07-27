@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Single Click Editing With Batch Mode in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Single Click Editing With Batch Mode in Blazor DataGrid component of Syncfusion, and more details.
+title: Single click editing with Batch mode in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Single click editing with Batch mode in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Single click editing with Batch mode
+# Single click editing with Batch mode in Blazor DataGrid Component
 
 You can make a cell editable on a single click with a [`Batch`](https://blazor.syncfusion.com/blazor/documentation/datagrid/editing/#batch) mode of editing in DataGrid, by using the [`EditCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditCell_System_Double_System_String_) method.
 
@@ -15,7 +15,7 @@ Set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.G
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="GridInstance" AllowPaging="true" DataSource="@Orders" Toolbar="@(new List<string>() { "Cancel", "Update" })">

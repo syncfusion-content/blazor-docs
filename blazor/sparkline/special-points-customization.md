@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Special Points Customization in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the special points customization of Syncfusion Sparkline (SfSparkline) component and more.
+title: Special Points Customization in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Special Points Customization in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Special Points Customization in Blazor Sparkline (SfSparkline)
+# Special Points Customization in Blazor Sparkline Component
 
 ## Add custom color for special points
 
@@ -19,7 +19,7 @@ The color of special points can be changed by specifying the corresponding prope
 * [`LowPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_LowPointColor)
 * [`HighPointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_HighPointColor)
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline XName="CarName" YName="Rating" Width="130px" Height="150px" TValue="CarRating" DataSource="CarRatings" Type="SparklineType.Column" ValueType="SparklineValueType.Category"
@@ -55,11 +55,11 @@ The color of special points can be changed by specifying the corresponding prope
 
 To highlight the tie area of the Y-axis value, use the [`TiePointColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_TiePointColor) property that is only applicable to the [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) type.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline Width="130px" Height="150px" Type="SparklineType.WinLoss" TiePointColor="blue" DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}">
 </SfSparkline>
 ```
 
-![Sparkline with tie point color](images/SpecialPoints/TiePoint.png)
+![Sparkline with tie point color](images/SpecialPoints/TiePoint.png)oints/TiePoint.png)

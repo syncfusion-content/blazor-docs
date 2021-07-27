@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in Blazor DataGrid Component | Syncfusion 
-description: Learn about Clipboard in Blazor DataGrid component of Syncfusion, and more details.
+title: Clipboard in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Clipboard in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Clipboard
+# Clipboard in Blazor DataGrid Component
 
 The clipboard provides an option to copy selected rows or cells data into the clipboard.
 
@@ -18,7 +18,7 @@ Interaction keys |Description
 <kbd>Ctrl + C</kbd> |Copy selected rows or cells data into clipboard.
 <kbd>Ctrl + Shift + H</kbd> |Copy selected rows or cells data with header into clipboard.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders">
@@ -58,7 +58,7 @@ Interaction keys |Description
 
 To copy selected rows or cells data into the clipboard with help of toolbar buttons, you need to  invoke the **Copy** method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -115,7 +115,7 @@ To copy selected rows or cells data into the clipboard with help of toolbar butt
 
 AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining [`EnableAutoFill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) property as true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" EnableAutoFill="true" AllowSelection="true" Toolbar="@(new List<string>() { "Add", "Update","Cancel" })" AllowPaging="true">
@@ -168,7 +168,7 @@ The following represents Autofill in datagrid
 
 You can able to copy the content of a cell or a group of cells by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key and paste it to another set of cells by selecting the cells and pressing <kbd>Ctrl + V</kbd> shortcut key.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" EnableAutoFill="true" AllowSelection="true" Toolbar="@(new List<string>() { "Add", "Update","Cancel" })">

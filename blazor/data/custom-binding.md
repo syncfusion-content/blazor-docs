@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Binding in Blazor DataManager Component | Syncfusion 
-description: Learn about Custom Binding in Blazor DataManager component of Syncfusion, and more details.
+title: Custom Binding in Blazor DataManager Component | Syncfusion
+description: Learn here all about Custom Binding in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Custom Binding
+# Custom Binding in Blazor DataManager Component
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This is demonstrated below by implementing custom data binding and editing operations in the DataGrid component.
 
@@ -86,7 +86,7 @@ For implementing the CRUD operations for the custom bounded data override the fo
 
 The following sample code demonstrates implementing custom adaptor of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding and editing operations in the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

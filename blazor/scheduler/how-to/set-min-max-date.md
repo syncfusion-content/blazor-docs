@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Set Min Max Date in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn about Set Min Max Date in Blazor Scheduler component of Syncfusion, and more details.
+title: Setting Minimum and Maximum Date in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Setting Minimum and Maximum Date in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Setting Minimum and Maximum Date
+# Setting Minimum and Maximum Date in Blazor Scheduler Component
 
 In Scheduler, by default all the date ranges are available. We can render particular date range alone in the Scheduler by setting the date range within `MinDate` and `MaxDate` properties. In the following code example, the Scheduler has been rendered from 2020 to 2023 alone.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" MinDate="new DateTime(2020, 1, 1)" MaxDate="new DateTime(2023, 12, 31)" @bind-SelectedDate="@CurrentDate">

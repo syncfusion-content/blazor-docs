@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Localization in Blazor AutoComplete component of Syncfusion, and more details.
+title: Localization in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor AutoComplete Component
 
 ## Blazor server side
 
@@ -117,7 +117,7 @@ namespace blazorDropdowns
 
 * Finally, Specify the culture for AutoComplete using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" Locale="de" DataSource="@LocalData">
@@ -205,7 +205,7 @@ In the following sample, French culture is set to the AutoComplete and no data i
 [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially and if the sample
 is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @inject HttpClient Http;

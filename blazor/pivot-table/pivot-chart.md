@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pivot Chart in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Pivot Chart in Blazor Pivot Table component of Syncfusion, and more details.
+title: Pivot Chart in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Pivot Chart in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Pivot Chart
+# Pivot Chart in Blazor Pivot Table Component
 
 In [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component, pivot chart would act as an additional visualization component with its basic and important characteristic like drill down and drill up, 15+ chart types, series customization, axis customization, legend customization, export, print and tooltip. Its main purpose is to show the pivot data in graphical format.
 
@@ -140,7 +140,7 @@ As like other chart types it can be changed using the property [`Type`](https://
 
 In the below code sample, the **Pie** chart is rendered, and the other accumulation charts can be switched using the drop-down list.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 @using Syncfusion.Blazor.DropDowns
 
@@ -232,7 +232,7 @@ In the accumulation charts, drill down and drill up operations can be performed 
 
 > The drill operation in accumulation charts can be performed only for row headers.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -281,7 +281,7 @@ Unlike other chart types, the accumulation charts consider the values of a singl
 
 If the column has more than one header, then need to mention all the headers separated by the delimiter **-**, for example,**Germany-Road Bikes**. Using the property `ColumnDelimiter` in [`PivotChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class, one can set the desired delimiter to separate the column headers.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -335,7 +335,7 @@ The `position` property in `dataLabel` allows to specify the position of the dat
 
 In the following code sample, the data labels are placed inside.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -381,7 +381,7 @@ In the following code sample, the data labels are placed inside.
 
 The **Connector Line** will be visible when the data label is placed outside the chart. It can be customized using the `ConnectorStyle` property in `PivotChartDataLabel` class for its color, length, width etc. In the following code sample, the connector line is customized.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -431,7 +431,7 @@ The **Connector Line** will be visible when the data label is placed outside the
 
 User can draw pie and doughnut charts within the specified range using the `StartAngle` and `EndAngle` properties in [`PivotChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. The default value of the `StartAngle` property is **0**, and the `EndAngle` property is **360**. By customizing these properties, user can draw semi pie and semi doughnut charts.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -475,7 +475,7 @@ User can draw pie and doughnut charts within the specified range using the `Star
 Users can get doughnut chart from pie chart and vice-versa using the `InnerRadius` property in [`PivotChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
 > It takes the value only in percentage.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -521,7 +521,7 @@ Users can get doughnut chart from pie chart and vice-versa using the `InnerRadiu
 
 Exploding can be enabled by setting the `Explode` property in [`PivotChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class to **true**. The series points will be exploded either on mouse click or touch.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails">
@@ -656,7 +656,7 @@ User can enable the grouping bar by setting the property [`ShowGroupingBar`](htt
 
 For accumulation charts alone, a drop-down list will be placed in the column axis instead of the buttons. The drop-down list shows the column headers available in the pivot table. Users can dynamically switch column headers with the help of the drop-down list, and the accumulation chart will be updated accordingly.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
 <SfPivotView TValue="ProductDetails" ShowGroupingBar="true">

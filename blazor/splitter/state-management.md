@@ -1,13 +1,13 @@
 ---
 layout: post
-title: State Management in Blazor Splitter Component | Syncfusion 
-description: Learn about State Management in Blazor Splitter component of Syncfusion, and more details.
+title: State Management in Blazor Splitter Component | Syncfusion
+description: Learn here all about State Management in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# State Management
+# State Management in Blazor Splitter Component
 
 State management allows users to save and load Splitter state. The splitter will use user-provided state to render instead of its properties provided declaratively.
 

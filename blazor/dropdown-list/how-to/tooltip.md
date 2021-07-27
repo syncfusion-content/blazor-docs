@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Tooltip in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn about Tooltip in Blazor DropDown List component of Syncfusion, and more details.
+title: DropDownList options with tooltip in Blazor DropDown List Component | Syncfusion
+description: Learn here all about DropDownList options with tooltip in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# DropDownList options with tooltip
+# DropDownList options with tooltip in Blazor DropDown List Component
 
 You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 
 The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns;
 @using Syncfusion.Blazor.Popups;
 

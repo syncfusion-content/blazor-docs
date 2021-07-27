@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance And Customization in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Appearance And Customization in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Appearance And Customization in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Appearance And Customization in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Appearance And Customization
+# Appearance And Customization in Blazor Gantt Chart Component
 
 ## Taskbar customization
 
@@ -15,7 +15,7 @@ documentation: ug
 
 Height of child taskbars and parent taskbars can be customized by using `TaskbarHeight` property. The following code example shows how to use the property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px" RowHeight=60 TaskbarHeight=50>
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -116,7 +116,7 @@ The `TaskbarHeight` property accepts only pixel value.
 
 The default taskbar UI can be replaced with custom styles. The following code example shows customizing the taskbar UI in the Gantt Chart component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -222,7 +222,7 @@ The default taskbar UI can be replaced with custom styles. The following code ex
 
 You can design your own taskbars to view the tasks in Gantt Chart Chart by using `GanttTemplates.TaskbarTemplate` property. It is also possible to customize the parent taskbars and milestones with custom templates by using `GanttTemplates.ParentTaskbarTemplate` and `GanttTemplates.MilestoneTemplate` properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt RowHeight="75" TaskbarHeight="50"
             ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd" DurationUnit="DurationUnit.Minute"
@@ -463,7 +463,7 @@ You can design your own taskbars to view the tasks in Gantt Chart Chart by using
 
 The Gantt Chart component maps any data source fields to task labels using the `GanttLabelSettings.LeftLabel`, `GanttLabelSettings.RightLabel`, and `GanttLabelSettings.TaskLabel` properties. You can customize the task labels with templates using `GanttLabelSettings.LeftLabelTemplate`, `GanttLabelSettings.RightLabelTemplate` and `GanttLabelSettings.TaskLabelTemplate`
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -578,7 +578,7 @@ The Gantt Chart component maps any data source fields to task labels using the `
 
 The width and background color of connector lines in Gantt Chart can be customized using the `ConnectorLineWidth` and `ConnectorLineBackground` properties. The following code example shows how to use these properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" ConnectorLineWidth="3" ConnectorLineBackground="red">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks" Dependency="Predecessor">
@@ -682,7 +682,7 @@ The width and background color of connector lines in Gantt Chart can be customiz
 
 While rendering the Tree Grid part in Gantt Chart, the `RowDataBound` and `QueryCellInfo` events trigger for every row and cell. Using these events, you can customize the rows and cells. The following code example shows how to customize the cell and row elements using these events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
@@ -829,7 +829,7 @@ The following options are available in the Gantt Chart component for rendering t
 
 > By default, the `GridLines` property is set to `Horizontal` type.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="800px" GridLines="Syncfusion.Blazor.Gantt.GridLine.Both">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -933,7 +933,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 | `GanttSplitterSettings.ColumnIndex` | This property defines the splitter position as column index value |
 | `GanttSplitterSettings.View` | * `Default`: Shows Grid side and Gantt Chart side. <br /> * `Grid`: Shows Grid side alone in Gantt Chart. <br /> * `Chart`: Shows chart side alone in Gantt Chart. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="800px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -1032,7 +1032,7 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPositionAsync` method. We can change the splitter position by passing value and type parameter to `SetSplitterPositionAsync` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. The following code example shows how to use this method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 @using Syncfusion.Blazor.DropDowns
 <button @onclick="UpdateSplitterByPosition">Update splitter by position</button>

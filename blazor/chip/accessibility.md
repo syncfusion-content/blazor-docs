@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Chip Component | Syncfusion 
-description: Learn about Accessibility in Blazor Chip component of Syncfusion, and more details.
+title: Accessibility in Blazor Chip Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Chip component and more.
 platform: Blazor
 control: Chip
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Chip Component
 
 ## Keyboard Interaction
 
@@ -18,7 +18,7 @@ The following shortcut keys are used to access the Chip control without any inte
 | <kbd>Enter</kbd> | Selects the targeted chip from the Chip/ChipItems. |
 | <kbd>Delete</kbd> | Deletes the targeted chip from the Chip/ChipItems. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip ID="chip-avatar" EnableDelete="true" CssClass="e-chip-avatar" Selection="SelectionType.Single">
     <ChipItems>

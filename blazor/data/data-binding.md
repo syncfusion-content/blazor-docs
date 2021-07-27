@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Data Binding in Blazor DataManager Component | Syncfusion 
-description: Learn about Data Binding in Blazor DataManager component of Syncfusion, and more details.
+title: Data Binding in Blazor DataManager Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Data Binding
+# Data Binding in Blazor DataManager Component
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) acts as a gateway for both local and remote data source which uses the query to interact with the data source. It supports both local object binding and RESTful JSON data services binding.
 
@@ -19,7 +19,7 @@ Local data can be bound to the DataGrid component by assigning the array of obje
 
 The following sample code demonstrates binding local data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 
@@ -65,7 +65,7 @@ Remote data can be bound to the Grid component by binding the [`SfDataManager`](
 
 The following sample code demonstrates binding remote data through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the DataGrid component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

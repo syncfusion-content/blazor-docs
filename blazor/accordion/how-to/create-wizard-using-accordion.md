@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Create Wizard Using Accordion in Blazor Accordion Component | Syncfusion
-description: Checkout and learn about Create Wizard Using Accordion in Blazor Accordion component of Syncfusion, and more details.
+title: Create Wizard in Blazor Accordion Component | Syncfusion
+description: Learn here all about Create Wizard in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Create wizard
+# Create Wizard in Blazor Accordion Component
 
 Accordion items can be disabled and expanded dynamically using accordion item **Disabled** and **Expanded** property.
 
 In the below demo, designed for simple payment module that Enable/Disable Accordion based on sequential validation of each Accordion content.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -225,4 +225,4 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
 
 Output be like the below.
 
-![Accordion wizard](../images/wizard.png)
+![Accordion wizard](../images/wizard.png)rd](../images/wizard.png)

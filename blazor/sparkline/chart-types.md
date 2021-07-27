@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chart Types in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the chart types of Syncfusion Sparkline (SfSparkline) component and more.
+title: Chart Types in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Chart Types in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Chart Types in Blazor Sparkline (SfSparkline)
+# Chart Types in Blazor Sparkline Component
 
 The different type of shapes can be used to represent the Sparkline Chart, and the type of Sparkline Chart can be changed by specifying the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Type) property.
 
@@ -15,7 +15,7 @@ The different type of shapes can be used to represent the Sparkline Chart, and t
 
 The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Line) chart type is used to render the Sparkline series as line.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="200px" Height="150px" Type="SparklineType.Line">
@@ -48,7 +48,7 @@ The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 
 The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Column) chart type is used to render the Sparkline series as column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="150px" Type="SparklineType.Column">
@@ -63,7 +63,7 @@ The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sp
 
 The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Pie) chart type is used to render the Sparkline series as pie.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="250px" Type="SparklineType.Pie">
@@ -78,7 +78,7 @@ The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spark
 
 The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type is used to render the Sparkline series as WinLoss.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}" Width="500px" Height="200px" Type="SparklineType.WinLoss">
@@ -91,7 +91,7 @@ The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.S
 
 The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_Area) chart type is used to render the Sparkline series as area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData" TValue="PopulationReport" XName="Year" YName="Population" Width="500px" Height="100px" Type="SparklineType.Area">
@@ -100,4 +100,4 @@ The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 
 > Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
-![Sparkline with Area type](images/SparklineTypes/Area.png)
+![Sparkline with Area type](images/SparklineTypes/Area.png)lineTypes/Area.png)

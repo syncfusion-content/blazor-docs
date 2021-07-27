@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Dashboard Layout Component | Syncfusion 
-description: Learn about Getting Started in Blazor Dashboard Layout component of Syncfusion, and more details.
+title: Getting Started with Blazor Dashboard Layout Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Dashboard Layout component of Syncfusion, and more details.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Dashboard Layout Component
 
 This section briefly explains about how to include a `Dashboard Layout` component in your `Blazor server-side application`. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring the common specifications.
 
@@ -166,7 +166,7 @@ Also, it is easy to interact with the panels by dragging, floating, and resizing
 
 A dashboard layout panel is rendered with simple data. The header of a panel is defined by `HeaderTemplate` and content of a panel is defined by `ContentTemplate`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Layouts
 
 <SfDashboardLayout>
@@ -201,7 +201,7 @@ A dashboard layout can be rendered with the components like the chart, grids, ma
 
 These complex data (components) are placed as the panel content by assigning the corresponding component element as the `ContentTemplate` of the panel.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Grids

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Dropdown Menu Component | Syncfusion 
-description: Learn about Accessibility in Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Accessibility in Blazor Dropdown Menu Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Dropdown Menu Component
 
 ## ARIA attributes
 
@@ -62,7 +62,7 @@ Closes the popup.</td></tr>
 Opens the popup</td></tr>
 </table>
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Edit">

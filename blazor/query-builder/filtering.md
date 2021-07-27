@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Filtering in Blazor QueryBuilder Component | Syncfusion 
-description: Learn about Filtering in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Filtering in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Filtering
+# Filtering in Blazor QueryBuilder Component
 
 The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to create or delete conditions and groups. You can use [`ShowButtons`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_ShowButtons) to enable/disable these buttons.
 
@@ -16,7 +16,7 @@ You can `create` or `delete` conditions by interacting through the user interfac
 * Use the [`AddRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddRules_System_Object_System_String_), and [`DeleteRule`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteRules_System_Object_) methods to create/delete conditions.
 * Use [`AddGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AddGroups_System_Object_System_String_), and [`DeleteGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DeleteGroups_System_Object_) methods to create/delete groups.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Buttons
 

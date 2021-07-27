@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calculated Field in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Calculated Field in Blazor Pivot Table component of Syncfusion, and more details.
+title: Calculated Field in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Calculated Field in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
 ---
 
-# Calculated Field
+# Calculated Field in Blazor Pivot Table Component
 
 Allows end user to create a new calculated field in the pivot table, based on available fields from the bound data source or using simple formula with basic arithmetic operators. It can be added at runtime through the built-in dialog, invoked from Field List UI. To do so, set the [`AllowCalculatedField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true** in the pivot table. End user can now see a "CALCULATED FIELD" button enabled in Field List UI automatically, which on clicking will invoke the calculated field dialog and perform necessary operation.
 
@@ -18,7 +18,7 @@ Calculated field can also be included in the pivot table through code behind usi
 
 > The calculated field is applicable only for value fields. Also, calculated field created through code behind will be automatically listed in the UI dialog as well.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true">
@@ -253,7 +253,7 @@ Syntax: Min(number1, number2)
 Syntax: Max(number1, number2)
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true">

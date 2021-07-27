@@ -13,7 +13,7 @@ documentation: ug
 
 Triggered when the diagram is rendered completely.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents Created="Created"></DiagramEvents>
@@ -40,7 +40,7 @@ Triggers when a node, connector, or diagram is clicked.
 | ActualObject | Returns the actual object that is clicked or id of the diagram. |
 | Button | Returns the button clicked. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -67,7 +67,7 @@ Triggers when a context menu item is clicked.
 | Name | Returns the name of the object that is clicked. |
 | Cancel | Returns whether to cancel the change or not. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -94,7 +94,7 @@ Triggers before opening the context menu.
 | HiddenItems | Defines the hidden items of the diagram context menu. |
 | Items |  Defines the items of the diagram context menu. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -118,7 +118,7 @@ Triggers after the diagram is are populated from the external data source
 | -------- | -------- |
 | Diagram | Returns the diagram. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -144,7 +144,7 @@ Triggers when a node, connector, or diagram is clicked.
 | Position | Returns the object position that is actually clicked. |
 | Element | Returns the object that is clicked or id of the diagram. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -171,7 +171,7 @@ Triggers when a symbol is dragged into a diagram from the symbol palette.
 | Element | Returns the node or connector that is dragged into a diagram. |
 | Source | Returns the node or connector that is to be dragged into a diagram. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -196,7 +196,7 @@ Triggers when a symbol is dragged outside of the diagram.
 | DiagramId | Returns the id of the diagram. |
 | Element | Returns the node or connector that is dragged outside of the diagram. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -224,7 +224,7 @@ Triggers when a symbol is dragged and dropped from the symbol palette to the dra
 | Source | Returns the object from where the element is dragged. |
 | Target | Returns the object over which the object will be dropped. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -251,7 +251,7 @@ Triggers when a change is reverted or restored(undo/redo).
 | Source | Returns a collection of objects that are changed in the last undo/redo. |
 | Action | Returns the event action. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -277,7 +277,7 @@ Triggered when the mouse enters a node/connector.
 | Element | Returns a parent node of the target node or connector. |
 | Target | Returns the target object over which the selected object is dragged. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -303,7 +303,7 @@ Triggered when the mouse leaves node/connector.
 | Element | Returns a parent node of the target node or connector. |
 | Target | Returns the target object over which the selected object is dragged. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -334,7 +334,7 @@ Triggers while dragging the elements in a diagram.
 | AllowDrop | Returns whether the object that can be dropped over the element. |
 | Cancel | Returns whether to cancel the change or not. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -361,7 +361,7 @@ Triggers once the node or connector property changed.
 | NewValue | Returns the new value of the property that is being changed. |
 | OldValue | Returns the old value of the node property that is being changed. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -389,7 +389,7 @@ Triggers when the diagram elements are rotated.
 | OldValue | Returns the previous rotation angle. |
 | Cancel | Returns whether to cancel the change or not. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -418,7 +418,7 @@ Triggers when the selection is changed in the diagram.
 | Type | Returns whether the item is added or removed from the selection list. |
 | Cancel | Returns whether or not to cancel the selection change event or not. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -446,7 +446,7 @@ Triggers when a node is resized.
 | OldValue | Returns the previous width, height, offsetX, and offsetY values of the element that is being resized. |
 | Cancel | Returns whether or not to cancel the size change event or not. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -474,7 +474,7 @@ Triggers when editor got focus at the time of node’s label or text node editin
 | OldValue | Returns the old text value of the element. |
 | Cancel | Returns whether or not to cancel the event or not. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Width="1000px" Height="600px">
@@ -510,7 +510,7 @@ The Diagram control provides event support, which triggers while interacting wit
 
 The native events can be defined as mentioned below. For example, the onmousedown event in diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @onmousedown="@OnMouseDown" Height="600px"/>
 

@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Excel Export in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Excel Export in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Excel Export in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Excel Export in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Excel Export
+# Excel Export in Blazor Gantt Chart Component
 
 The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the
  **ExcelExportAsync** and **CsvExportAsync** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
@@ -127,7 +127,7 @@ The excel export provides an option to customize mapping of the gantt chart to e
 
 The excel export provides an option to export hidden columns of gantt chart by defining **IncludeHiddenColumn** as **true**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"></GanttTaskFields>
@@ -248,7 +248,7 @@ The Excel export also provides an option to include custom theme for exported Ex
 
 To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>
@@ -370,7 +370,7 @@ To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
 You can assign the file name for the exported document by defining **FileName** property in excel export properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt ID="GanttContainer" @ref="Gantt" AllowExcelExport="true" Toolbar="@(new List<string>() { "ExcelExport", "CsvExport" })" DataSource="@TaskCollection" Height="450px" Width="700px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Dependency="Predecessor" Child="SubTasks"></GanttTaskFields>

@@ -23,7 +23,7 @@ The following code sample shows the different types of Sparkline Charts.
 
 The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as line.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData"
@@ -62,7 +62,7 @@ The [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.
 
 The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as column.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData"
@@ -83,7 +83,7 @@ The [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusio
 
 The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as pie.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData"
@@ -104,7 +104,7 @@ The [`Pie`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.B
 
 The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as WinLoss.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="new int[]{12, 15, -10, 13, 15, 6, -12, 17, 13, 0, 8, -10}"
@@ -120,7 +120,7 @@ The [`WinLoss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusi
 
 The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SfSparkline%601~Type.html) type is used to render the Sparkline Charts series as area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSparkline DataSource="PopulationData"

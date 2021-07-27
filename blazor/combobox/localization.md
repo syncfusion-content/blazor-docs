@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor ComboBox Component | Syncfusion 
-description: Learn about Localization in Blazor ComboBox component of Syncfusion, and more details.
+title: Localization in Blazor ComboBox Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor ComboBox Component
 
 ## Blazor server side
 
@@ -117,7 +117,7 @@ namespace blazorDropdowns
 
 * Finally, Specify the culture for ComboBox using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" Locale="de" AllowFiltering="true" DataSource="@LocalData">
@@ -203,7 +203,7 @@ namespace WebAssemblyLocale
 
 In the following sample, French culture is set to the ComboBox and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially, and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @inject HttpClient Http;

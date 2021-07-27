@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Table of contents
-description: Learn how to insert, edit, or update table of contents in Blazor Word processor.
+title: Table of contents in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Table of contents in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Table of contents
+# Table of contents in Blazor DocumentEditor Component
 
 The table of contents in a document is same as the list of chapters at the beginning of a book. It lists each heading in the document and the page number, where that heading starts with various options to customize the appearance.
 
@@ -36,7 +36,7 @@ tableOfContentsSettings.RightAlign = true;
 documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor;
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditorHistory=true EnableEditor=true EnableSelection=true>
     <DocumentEditorContainerEvents Created="OnLoad"></DocumentEditorContainerEvents>

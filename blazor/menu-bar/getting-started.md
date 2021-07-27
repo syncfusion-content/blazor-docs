@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Menu Bar  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Menu Bar  component of Syncfusion, and more details.
+title: Getting Started with Blazor Menu Bar Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Menu Bar component of Syncfusion, and more details.
 platform: Blazor
 control: Menu Bar 
 documentation: ug
@@ -87,7 +87,7 @@ namespace BlazorApplication
 
 Now, add the Blazor Menu Bar component in `razor` page in the `Pages` folder. For example, the Menu Bar component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfMenu TValue="MenuItem">

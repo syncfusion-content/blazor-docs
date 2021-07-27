@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Create Dropdownbutton With Rounded Corner in Blazor Dropdown Menu Component | Syncfusion
-description: Checkout and learn about Create Dropdownbutton With Rounded Corner in Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Create Dropdown Menu with rounded corner in Blazor Dropdown Menu Component | Syncfusion
+description: Learn here all about Create Dropdown Menu with rounded corner in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Create Dropdown Menu with rounded corner
+# Create Dropdown Menu with rounded corner in Blazor Dropdown Menu Component
 
 Dropdown Menu with rounded corner can be achieved by adding `border-radius` CSS property to button element.
 
@@ -15,7 +15,7 @@ In the following example, `e-round-corner` class is defined with `5px` `border-r
 property and added that class to button element using
 [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton CssClass="e-round-corner" Content="Clipboard">

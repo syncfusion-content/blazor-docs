@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Radio Button Component | Syncfusion 
-description: Learn about Native Event in Blazor Radio Button component of Syncfusion, and more details.
+title: Native Events in Blazor RadioButton Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor RadioButton Component
 
 You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
@@ -31,7 +31,7 @@ We have provided the following native event support to the Radio Button componen
 
 The `onclick` attribute is used to bind the click event for Radio Button. Here, we have explained about the sample code snippets of Radio Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Credit/Debit Card" Name="payment" Value="credit/debit" @onclick="onClick" @bind-Checked="stringChecked"></SfRadioButton><br />

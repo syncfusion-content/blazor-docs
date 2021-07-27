@@ -1,13 +1,13 @@
 ---
 layout: post
-title: High Low Open Close Chart in Blazor Charts component | Syncfusion
-description: Learn here all about High Low Open Close Chart of Syncfusion Charts (SfCharts) component and more.
+title: High Low Open Close in Blazor Charts Component | Syncfusion
+description: Learn here all about High Low Open Close in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# High Low Open Close Chart in Blazor Charts (SfCharts)
+# High Low Open Close in Blazor Charts Component
 
 ## High Low Open Close
 
@@ -99,4 +99,4 @@ value is less than the close value. By default, [`BullFillColor`](https://help.s
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

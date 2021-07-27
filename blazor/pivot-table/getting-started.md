@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Getting Started in Blazor Pivot Table component of Syncfusion, and more details.
+title: Getting Started with Blazor Pivot Table Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Pivot Table component of Syncfusion, and more details.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 <!-- markdownlint-disable MD029 -->
 <!-- markdownlint-disable MD009 -->
 
-# Getting Started with Blazor Pivot Table component
+# Getting Started with Blazor Pivot Table Component
 
 This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -464,7 +464,7 @@ The filter axis contains collection of fields that would act as master filter ov
 
 The calculated field feature allows user to insert or add a new calculated field based on the available fields from the bound data source using basic arithmetic operators. The calculated field can be included in pivot table using the [`PivotViewCalculatedFieldSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewCalculatedFieldSetting.html) class from code behind. Or else, calculated fields can be added at run time through the built-in dialog by just setting the [`AllowCalculatedField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowCalculatedField) property to **true** in pivot table. You will see a button enabled in the Field List UI automatically to invoke the calculated field dialog and perform necessary operation. To know more about calculated field, [`refer`](./calculated-field) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Height="300">

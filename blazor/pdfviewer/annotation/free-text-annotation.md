@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Free Text Annotation in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Free Text Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Free text annotations in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Free text annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Free text annotation
+# Free text annotations in Blazor PDF Viewer Component
 
 The PDF Viewer control provides the options to add, edit and delete the free text annotations.
 
@@ -25,7 +25,7 @@ In the pan mode, if the free text annotation mode is entered, the PDF Viewer con
 
 Refer to the following code snippet to switch to Free Text annotation mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -110,7 +110,7 @@ The properties of the free text annotation can be set before creating the contro
 After editing the default values, they will be changed to the selected values.
 Refer to the following code snippet to set the default free text annotation settings
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 

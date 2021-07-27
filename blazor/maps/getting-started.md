@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Maps Component | Syncfusion 
-description: Learn about Getting Started in Blazor Maps component of Syncfusion, and more details.
+title: Getting Started with Blazor Maps Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Maps component of Syncfusion, and more details.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Getting Started in Blazor Maps
+# Getting Started with Blazor Maps Component
 
 This section briefly explains how to include a Maps component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -38,7 +38,7 @@ This section briefly explains how to include a Maps component in your Blazor ser
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Maps** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 The Syncfusion Maps component can be initialized in any razor page inside the **~/Pages** folder. For example, the Maps component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfMaps>
@@ -105,7 +105,7 @@ You can use the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property is used to represent statistical data in the Maps component. We can define a list of objects as a data source to the Maps component. This data source will be further used to color the map, display data labels, display tooltips, and more. Assign the below list **SecurityCouncilDetails** to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property in [`MapsLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
-```csharp
+```cshtml
 @code {
     public List<UNCouncilCountry> SecurityCouncilDetails = new List<UNCouncilCountry>{
          new UNCouncilCountry { Name= "China", Membership= "Permanent"},

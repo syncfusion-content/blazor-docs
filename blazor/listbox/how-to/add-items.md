@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Add Items in Blazor List Box Component | Syncfusion
-description: Checkout and learn about Add Items in Blazor List Box component of Syncfusion, and more details.
+title: Add/Remove Items in Blazor ListBox Component | Syncfusion
+description: Learn here all about Add/Remove Items in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Add items to the listbox
+# Add/Remove Items in Blazor ListBox Component
 
 To add an item or multiple items, `AddItem` method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be added while clicking `Add Items` button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
 
@@ -57,7 +57,7 @@ Output will be shown as
 
 To remove an item or multiple items, [`RemoveItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_RemoveItem_System_Collections_Generic_IEnumerable__1__System_Nullable_System_Int32__) method can be used. In the following example, the `Ferrari LaFerrari` and `McLaren P1` items will be removed while clicking `Remove Items` button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Buttons
 

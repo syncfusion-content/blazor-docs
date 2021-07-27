@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Listview Component | Syncfusion 
-description: Learn about Getting Started in Blazor Listview component of Syncfusion, and more details.
+title: Getting Started with Blazor ListView Component | Syncfusion
+description: Checkout and learn about getting started with Blazor ListView component of Syncfusion, and more details.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started
+# Getting Started with Blazor ListView Component
 
 This section briefly explains about how to include a `ListView` in your Blazor server-side application. You can refer
 [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
@@ -143,7 +143,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Lists` package.
 
 Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pages` folder. For example, the ListView component is added in the **~/Pages/Index.razor** page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <SfListView DataSource="@Data">

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Header Bar in Blazor Scheduler Component | Syncfusion 
-description: Learn about Header Bar in Blazor Scheduler component of Syncfusion, and more details.
+title: Header Customization in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Header Customization in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Header customization
+# Header Customization in Blazor Scheduler Component
 
 The header part of Scheduler can be customized easily with the built-in options available.
 
@@ -15,7 +15,7 @@ The header part of Scheduler can be customized easily with the built-in options 
 
 By default, the header bar holds the date and view navigation options, through which the user can switch between the dates and various views. This header bar can be hidden from the UI by setting `false` to the `ShowHeaderBar` property. It's default value is `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" ShowHeaderBar="false" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -50,7 +50,7 @@ By default, the header bar holds the date and view navigation options, through w
 
 By default, the header bar holds the view navigation options, through which the user can switch between various views. You can move this view options to the header bar popup by setting `true` to the `EnableAdaptiveUI` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" EnableAdaptiveUI="true" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -96,7 +96,7 @@ The Scheduler with view options within the header bar popup will be rendered as 
 
 The Scheduler UI that displays the date text on all views are considered as the date header cells. You can customize the date header cells of Scheduler using `DateHeaderTemplate`. The `DateHeaderTemplate` option is used to customize the date header cells of day, week and work-week views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using System.Globalization
 
@@ -191,7 +191,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 
 We can also customize the date header by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `DateHeader` when the date header is rendering. In the following example, we customized the date header's background color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -246,7 +246,7 @@ We can also customize the date header by using `OnRenderCell` event. In the `OnR
 
 We can customize the day header cells and month header cells in the TimelineYear view of the Scheduler using `DayHeaderTemplate` and `MonthHeaderTemplate`. The `DayHeaderTemplate` option is used to customize the day header cells of the TimelineYear view in both Vertical and Horizontal orientations. The `MonthHeaderTemplate` option is used to customize the month header cells of the TimelineYear view in both Vertical and Horizontal orientations.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using System.Globalization
 

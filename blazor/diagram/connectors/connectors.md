@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Connectors in Blazor Diagram Component | Syncfusion 
-description: Learn about Connectors in Blazor Diagram component of Syncfusion, and more details.
+title: Actions of connectors in Blazor Diagram Component | Syncfusion
+description: Learn here all about Actions of connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Connector
+# Actions of connectors in Blazor Diagram Component
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
 
@@ -21,7 +21,7 @@ The [`SourcePoint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 The following code example illustrates how to add a connector through connector collection,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -195,7 +195,7 @@ For more information about drawing connectors, refer to [`Draw Connectors`](http
 
 The following code shows how to remove a connector at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

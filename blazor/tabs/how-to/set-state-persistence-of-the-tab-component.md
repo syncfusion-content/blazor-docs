@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Set State Persistence Of The Tab Component in Blazor Tabs Component | Syncfusion
-description: Checkout and learn about Set State Persistence Of The Tab Component in Blazor Tabs component of Syncfusion, and more details.
+title: Set state persistence in Blazor Tabs Component | Syncfusion
+description: Learn here all about Set state persistence in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Set state persistence
+# Set state persistence in Blazor Tabs Component
 
 State persistence allows the Tab to retain the current [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value in the browser cookies for state maintenance. This action is handled through the [EnablePersistence](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnablePersistence) property which is set to false by default.
 When it is set to true, [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) property value of the Tab component will be retained even after refreshing the page.
@@ -16,7 +16,7 @@ When it is set to true, [SelectedItem](https://help.syncfusion.com/cr/blazor/Syn
 
 The following sample demonstrates how to set state persistence of the Tab component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab ID="Tab" Width="600px" EnablePersistence="true" >
@@ -57,5 +57,7 @@ The following sample demonstrates how to set state persistence of the Tab compon
             "audio media messages to other users using standard cellular mobile numbers. As of February 2016, WhatsApp had a user  " +
             "base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in " +
             "Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.";
+}
+```approximately US$19.3 billion.";
 }
 ```

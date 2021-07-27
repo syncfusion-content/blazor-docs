@@ -166,7 +166,7 @@ Now, in the `Browse` tab, search and install the `Syncfusion.Blazor.Grid` NuGet 
 
 Open `_Import.razor` file and add the following namespaces which are required to use the Syncfusion Blazor DataGrid Component in this application.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data

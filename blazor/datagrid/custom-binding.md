@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Binding in Blazor DataGrid Component | Syncfusion 
-description: Learn about Custom Binding in Blazor DataGrid component of Syncfusion, and more details.
+title: Custom Binding in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Custom Binding in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Custom Binding
+# Custom Binding in Blazor DataGrid Component
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the DataGrid component.
 
@@ -75,7 +75,7 @@ The custom data binding can be performed in the DataGrid component by providing 
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -182,7 +182,7 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 The following sample code demonstrates injecting service into Custom Adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor
@@ -258,7 +258,7 @@ Ensure to register your service in **Startup.cs** file.
 
 The following sample code demonstrates creating Custom Adaptor as a component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -419,7 +419,7 @@ The CRUD operations for the custom bounded data in the DataGrid component can be
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -564,7 +564,7 @@ When using Custom Adaptor, the aggregates has to be handled in the Read/ReadAsyn
 
 The following sample code demonstrates implementing the aggregates for the custom bounded data,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor

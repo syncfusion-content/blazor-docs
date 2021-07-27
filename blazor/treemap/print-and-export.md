@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Print and Export in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Print and Export of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Print and Export in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Print and Export in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Print and Export in the Blazor TreeMap (SfTreeMap)
+# Print and Export in Blazor TreeMap Component
 
 ## Print
 
@@ -15,7 +15,7 @@ Print functionality can be enabled by setting the [`AllowPrint`](https://help.sy
 
 The following code example shows the print method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="PrintMap">Print Treemap</button>
@@ -59,7 +59,7 @@ The TreeMap can be exported as an image in the following formats.
 
 The following code example shows how to export the TreeMap in [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG) format.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="ExportMap">Export Treemap</button>
@@ -83,7 +83,7 @@ The following code example shows how to export the TreeMap in [`PNG`](https://he
 
 [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) export functionality can be enabled by setting the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property to **true**. The rendered TreeMap can be exported as [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF) and the export method requires two parameters: file type and file name. The orientation setting is optional.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
 <button @onclick="ExportMap">Export Treemap</button>
@@ -101,4 +101,4 @@ The following code example shows how to export the TreeMap in [`PNG`](https://he
 }
 ```
 
-> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.
+> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.GrowthReport**.

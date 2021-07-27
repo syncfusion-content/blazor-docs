@@ -13,7 +13,7 @@ Accordion provides support to add/remove items dynamically by iteration of Accor
 
 In the following demo, new items are added dynamically when you click **Add Item**  button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 

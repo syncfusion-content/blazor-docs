@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor DropDown List Component | Syncfusion 
-description: Learn about Localization in Blazor DropDown List component of Syncfusion, and more details.
+title: Localization in Blazor DropDown List Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor DropDown List Component
 
 ## Blazor server side
 
@@ -117,7 +117,7 @@ namespace blazorDropdowns
 
 * Finally, Specify the culture for DropDownList using `locale` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" Locale="de" AllowFiltering="true" DataSource="@LocalData">
@@ -203,7 +203,7 @@ namespace WebAssemblyLocale
 
 In the following sample, French culture is set to the DropDownList and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~NoRecordsTemplate.html) property displays its text in French culture initially, and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~ActionFailureTemplate.html) property displays its text appropriately.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @inject HttpClient Http;

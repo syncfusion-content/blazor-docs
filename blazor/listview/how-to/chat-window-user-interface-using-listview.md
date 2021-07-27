@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Chat Window User Interface Using Listview in Blazor Listview Component | Syncfusion
-description: Checkout and learn about Chat Window User Interface Using Listview in Blazor Listview component of Syncfusion, and more details.
+title: Chat window user interface using listview in Blazor ListView Component | Syncfusion
+description: Learn here all about Chat window user interface using listview in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# How to chat window user interface using listview
+# Chat window user interface using listview in Blazor ListView Component
 
 ListView can be customized as chat window. To achieve that, use the ListView `Template` .
 
@@ -63,7 +63,7 @@ void OnSend()
 }
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using System.Collections.ObjectModel
 
@@ -345,4 +345,4 @@ void OnSend()
 
 ```
 
-![ListView - chat window](../images/list/chat-window-user-interface-using-listview.png)
+![ListView - chat window](../images/list/chat-window-user-interface-using-listview.png))

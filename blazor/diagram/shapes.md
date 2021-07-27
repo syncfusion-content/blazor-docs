@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shapes in Blazor Diagram Component | Syncfusion 
-description: Learn about Shapes in Blazor Diagram component of Syncfusion, and more details.
+title: Shapes in Blazor Diagram Component | Syncfusion
+description: Learn here all about Shapes in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Shapes
+# Shapes in Blazor Diagram Component
 
 Diagram provides support to add different kind of nodes. They are as follows:
 
@@ -25,7 +25,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 Texts can be added to the diagram as [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shape) nodes. The shape property of the node allows you to set the type of node and for text nodes, it should be set as **text**. In addition, define the content object that is used to define the text to be added and style is used to customize the appearance of that text. The following code illustrates how to create a text node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -63,7 +63,7 @@ Diagram allows to add images as [`Image`](https://help.syncfusion.com/cr/blazor/
 
 The following code illustrates how an image node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -97,7 +97,7 @@ The following code illustrates how an image node is created.
 
 The following code illustrates how add Base64 image into image node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -139,7 +139,7 @@ Stretch and align the image content anywhere but within the node boundary.
 
 The scale property of the node allows to stretch the image as you desired (either to maintain proportion or to stretch). By default, the [`Scale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShape.html#Syncfusion_Blazor_Diagrams_DiagramShape_Scale) property of the node is set as meet. The following code illustrates how to scale or stretch the content of the image node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -179,7 +179,7 @@ The following table illustrates all the possible scale options for the image nod
 
 Html elements can be embedded in the diagram through `Html` type node. The shape property of node allows you to set the type of node and to create a HTML node it should be set as `HTML`. The following code illustrates how an Html node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -239,7 +239,7 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
 
 The following code example illustrates how to create a basic shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -281,7 +281,7 @@ The list of basic shapes are as follows.
 
 The [`Path`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shape) node is a commonly used basic shape that allows visually to represent the geometrical information. To create a path node, specify the shape as **path**. The path property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -316,7 +316,7 @@ The [`Path`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
 
 The [`Flow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shape) shapes are used to represent the process flow. It is used for analyzing, designing and managing for documentation process. To create a flow shape, specify the shape type as **flow**. Flow shapes and by default, it is considered as **process**. The following code example illustrates how to create a flow shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  Axis in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about the axis feature of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Axis in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Axis in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Axis in the Blazor Smith Chart
+# Axis in Blazor Smith Chart Component
 
 Smith Chart supports two different types of axes. They are:
 * **Horizontal Axis** - The axis is drawn as a straight line in the horizontal direction of the Smith Chart.
@@ -22,7 +22,7 @@ Axis labels are used to indicate what type of data is bound for the Smith Chart.
 * [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxis.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxis_LabelIntersectAction) - Used to hide labels when intersecting.
 * [`SmithChartRadialAxisLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartRadialAxisLabelStyle.html#properties) and [`SmithChartHorizontalAxisLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLabelStyle.html#properties) - Used to customize properties such as [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [`FontWeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [`FontStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color), and [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Size).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -81,7 +81,7 @@ The following properties can be customized in both the major and minor gridlines
 * [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartMajorGridLines.html#Syncfusion_Blazor_Charts_SmithChartMajorGridLines_Color) - Used to customize the color of the major gridlines.
 * [`Count`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalMinorGridLines.html#Syncfusion_Blazor_Charts_SmithChartHorizontalMinorGridLines_Count) - Used to customize the count of the minor gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -131,7 +131,7 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 * [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartHorizontalAxisLine.html#Syncfusion_Blazor_Charts_SmithChartHorizontalAxisLine_Visible) - Used to enable or disable the visibility of the axis line.
 * [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartAxisLine.html#Syncfusion_Blazor_Charts_SmithChartAxisLine_Color) - Used to customize the axis line color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -166,4 +166,4 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 }
 ```
 
-![Smith Chart with axis line customization](./images/Axis/Axisline.png)
+![Smith Chart with axis line customization](./images/Axis/Axisline.png)ages/Axis/Axisline.png)

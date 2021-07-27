@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Datetime Picker  Component | Syncfusion 
-description: Learn about Accessibility in Blazor Datetime Picker  component of Syncfusion, and more details.
+title: Accessibility in Blazor Datetime Picker Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor Datetime Picker Component
 
 The web accessibility defines a way to make web content and web applications
 more accessible to disabled people. It especially helps the dynamic content change
@@ -89,7 +89,7 @@ Use the following shortcut keys to interact with the TimePicker after the TimePi
 
 > To focusout the DateTimePicker component, use the `t` keys. For additional information about native event, [click](./native-events/) here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" @onkeypress="@(e => KeyPressed(e))" @ref="DateTimeObj"></SfDateTimePicker>

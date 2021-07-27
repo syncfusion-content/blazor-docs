@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Title and Subtitle with the Blazor Smith Chart component | Syncfusion 
-description: Learn here about title and subtitle of Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Title and Subtitle in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Title and Subtitle in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Title and Subtitle in the Blazor Smith Chart
+# Title and Subtitle in Blazor Smith Chart Component
 
 ## Enable Title
 
 The information about the data plotted in the Smith Chart is depicted using the titles and the subtitles. Using the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#Syncfusion_Blazor_Charts_SmithChartTitle_Text) property in the [`SmithChartTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#properties) and the [`SmithChartSubtitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSubtitle.html#properties), the Smith Chart's title and subtitle can be changed. By default, the title and the subtitles are visible. As shown in the following example, use the simple text for the title and the subtitles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -49,7 +49,7 @@ The information about the data plotted in the Smith Chart is depicted using the 
 
 Both the title and the subtitle of the Smith Chart can be trimmed if it exceeds certain length. This length can be changed using the [`MaximumWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#Syncfusion_Blazor_Charts_SmithChartTitle_MaximumWidth) property. Trimming is enabled by setting the [`EnableTrim`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#Syncfusion_Blazor_Charts_SmithChartTitle_EnableTrim) property to **true**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -93,7 +93,7 @@ Title and subtitle can be customized using the following properties.
 * [`TextAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitle.html#Syncfusion_Blazor_Charts_SmithChartTitle_TextAlignment) - It can align the Smith Chart's title text in near, centre, and far positions. By default, it is aligned in the **Center** position.
 * [`SmithChartTitleTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitleTextStyle.html#properties) - Used to customize the properties such as [`FontFamily`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [`FontWeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [`FontStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitleTextStyle.html#Syncfusion_Blazor_Charts_SmithChartTitleTextStyle_Color), and [`Size`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartTitleTextStyle.html#Syncfusion_Blazor_Charts_SmithChartTitleTextStyle_Size) for title text.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfSmithChart>
@@ -126,4 +126,4 @@ Title and subtitle can be customized using the following properties.
 }
 ```
 
-![Smith Chart with title customization](./images/Title/TitleCustomization.png)
+![Smith Chart with title customization](./images/Title/TitleCustomization.png)ization.png)

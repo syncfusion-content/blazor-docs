@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Working with Lists
-description: Learn the types of lists supported in Blazor document editor and how to apply or clear it for selected contents.
+title: Working with Lists in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Working with Lists in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Working with Lists
+# Working with Lists in Blazor DocumentEditor Component
 
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports both the single-level and multilevel lists. Lists are used to organize data as step-by-step instructions in documents for easy understanding of key points. You can apply list to the paragraph either using supported APIs.
 

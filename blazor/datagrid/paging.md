@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Paging in Blazor DataGrid Component | Syncfusion 
-description: Learn about Paging in Blazor DataGrid component of Syncfusion, and more details.
+title: Paging in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Paging in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Paging
+# Paging in Blazor DataGrid Component
 
 [Paging](https://www.syncfusion.com/blazor-components/blazor-datagrid/paging) provides an option to display DataGrid data in page segments. To enable paging, set the [`AllowPaging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) to true. When paging is enabled, pager component renders at the bottom of the datagrid.
 Paging options can be configured through the [`GridPageSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
 In the below sample, [`PageSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html#Syncfusion_Blazor_Grids_GridPageSettings_PageSize) is calculated based on the datagrid height by using the [`OnLoad`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" Height="200">
@@ -74,7 +74,7 @@ The pager dropdown allows you to change the number of records in the DataGrid dy
 
 > By default, dropdown list will show values as **new int[]{ 5, 10, 12, 20 }**. You can customize the dropdown values using the **PageSizes** property itself.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">

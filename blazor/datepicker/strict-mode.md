@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Strict Mode in Blazor DatePicker Component | Syncfusion 
-description: Learn about Strict Mode in Blazor DatePicker component of Syncfusion, and more details.
+title: Strict Mode in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Strict Mode in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Strict Mode
+# Strict Mode in Blazor DatePicker Component
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html#Syncfusion_Blazor_Calendars_SfDatePicker_1_StrictMode)
 is an act that allows the users to enter only the valid date within the specified `Min/Max` range in text box.
@@ -22,7 +22,7 @@ then the Value will be set to the Max date of 25th May since the value 28th is g
 
 If you are trying to enter the invalid date, then the Value will stay with the previous value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' StrictMode=true Value='@DateValue'></SfDatePicker>
@@ -50,7 +50,7 @@ If you are entering out-of-range or invalid date value, then the model value wil
 `out of range` date value or `null` respectively with highlighted  `error` class to indicate
 the date is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate' StrictMode=false Value='@DateValue'></SfDatePicker>

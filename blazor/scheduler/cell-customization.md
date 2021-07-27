@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Cell Customization in Blazor Scheduler Component | Syncfusion 
-description: Learn about Cell Customization in Blazor Scheduler component of Syncfusion, and more details.
+title: Cell Customizations in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Cell Customizations in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Cell Customization
+# Cell Customizations in Blazor Scheduler Component
 
 The cells of the Scheduler can be easily customized using the cell template.
 
@@ -15,7 +15,7 @@ The cells of the Scheduler can be easily customized using the cell template.
 
 The height and width of the Scheduler cells can be customized either to increase or reduce its size through the `CssClass` property, which overrides the default CSS applied on cells of vertical views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" CssClass="schedule-cell-dimension" Height="550px">
@@ -69,7 +69,7 @@ The height and width of the Scheduler cells can be customized either to increase
 
 The height and width of the Scheduler cells can be customized either to increase or reduce its size through the `CssClass` property, which overrides the default CSS applied on cells of timeline views.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" CssClass="schedule-cell-dimension" Height="550px">
@@ -111,7 +111,7 @@ The height and width of the Scheduler cells can be customized either to increase
 
 The `CellTemplate` is used to customize the cell background with specific images or appropriate text on the given date values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -199,7 +199,7 @@ The `CellTemplate` is used to customize the cell background with specific images
 
 We can also customize the cells by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `WorkCells` and `AllDayCells` when the cell is rendering. In the following example, we customized the cell's background color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -254,7 +254,7 @@ We can also customize the cells by using `OnRenderCell` event. In the `OnRenderC
 
 Providing the `MinDate` and `MaxDate` property with some date values, allows the Scheduler to set the minimum and maximum date range. The Scheduler date that lies beyond this minimum and maximum date range will be in a disabled state so that the date navigation will be blocked beyond the specified date range.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <p>Setting date</p>

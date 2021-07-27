@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drill-down in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Drill-down of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Drill-down in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Drill-down in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Drill-down in the Blazor TreeMap (SfTreeMap)
+# Drill-down in Blazor TreeMap Component
 
 The TreeMap component supports drill-down to expose the hierarchy, achieved by clicking a node. If an item is clicked in the TreeMap, it will be moved to the next level or sub level hierarchy and returned back to the previous level by clicking the node.
 
@@ -17,7 +17,7 @@ The TreeMap items can be drilled by setting the [`EnableDrillDown`](https://help
 
 The drill-down concepts are shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees" EnableDrillDown=true Palette='new string[] {"#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"}'>
@@ -68,7 +68,7 @@ All the child items are rendered during the normal drill-down process, and visib
 
 The on-demand loading concepts are shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees" EnableDrillDown=true DrillDownView ="true" Palette='new string[] {"#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"}'>
@@ -99,7 +99,7 @@ TreeMap items are drilled, up to any level of parent using breadcrumb navigation
 
 The breadcrumb concepts are shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees" EnableDrillDown=true EnableBreadcrumb="true" BreadcrumbConnector=" -> " Palette='new string[] {"#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"}'>
@@ -130,7 +130,7 @@ TreeMap items can be drilled on initial rendering and it can be enabled by speci
 
 The initial drill-down concepts are shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="EmployeeCount" TValue="Employee" DataSource="Employees" EnableDrillDown=true Palette='new string[] {"#f44336", "#29b6f6", "#ab47bc", "#ffc107", "#5c6bc0", "#009688"}'>
@@ -154,4 +154,4 @@ The initial drill-down concepts are shown in the following code example.
 
 > Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
-![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)
+![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)drill-down.png)

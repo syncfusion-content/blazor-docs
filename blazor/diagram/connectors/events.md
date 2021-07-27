@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Diagram Component | Syncfusion 
-description: Learn about Events in Blazor Diagram component of Syncfusion, and more details.
+title: Events in Blazor Diagram Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Diagram Component
 
 ## Selection change
 
@@ -15,7 +15,7 @@ The [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The following code example explains how to get the selection change event in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -56,7 +56,7 @@ The following code example explains how to get the selection change event in the
 
 The [`OnPositionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) events is triggered when drag the node or connector in interaction. The [`IBlazorDraggingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDraggingEventArgs.html) interface is used to get position change event arguments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

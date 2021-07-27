@@ -1,18 +1,18 @@
 ---
 layout: post
-title: How to Customize The Ui Appearance Of The Control in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn about Customize The Ui Appearance Of The Control in Blazor Input Mask component of Syncfusion, and more details.
+title: Native Events in Blazor Input Mask Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Customize the UI appearance of the component
+# Native Events in Blazor Input Mask Component
 
 The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
 Refer to the following example to change the appearance of the MaskedTextBox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="00000" Value="34523" CssClass="e-style" Placeholder="Enter user ID" FloatLabelType="@FloatLabelType.Always"> </SfMaskedTextBox>
@@ -42,5 +42,7 @@ Refer to the following example to change the appearance of the MaskedTextBox.
 ```
 
 The output will be as follows.
+
+![MaskedTextBox Sample](../images/customCss.png)he output will be as follows.
 
 ![MaskedTextBox Sample](../images/customCss.png)

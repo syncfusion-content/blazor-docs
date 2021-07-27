@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Data Binding in Blazor In Place Editor  component of Syncfusion, and more details.
+title: Data Binding in Blazor In-place Editor Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor In-place Editor Component
 
 The Razor components load the data either from local data sources or remote data services using the `DataSource` property and it supports the data type of an array or `DataManager`. Also supports different kind of data services such as OData, OData V4, Web API, and data formats such as XML, JSON, JSONP with the help of `DataManager` adaptors.
 

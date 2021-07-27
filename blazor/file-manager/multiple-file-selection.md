@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Multiple File Selection in Blazor File Manager Component | Syncfusion 
-description: Learn about Multiple File Selection in Blazor File Manager component of Syncfusion, and more details.
+title: Multiple File Selection in Blazor FileManager Component | Syncfusion
+description: Learn here all about Multiple File Selection in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
 documentation: ug
 ---
 
-# Multiple File Selection
+# Multiple File Selection in Blazor FileManager Component
 
 The file manager allows you to select multiple files by enabling the `AllowMultiSelection` property (enabled by default). The multiple selection can be done by pressing the `Ctrl` key or `Shift` key and selecting the files. The check box can also be used to do multiple selection. `Ctrl + A` can be used to select all files in the current directory. The `FileSelected` event will be triggered when the items of file manager control is selected or unselected.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor Kanban Component | Syncfusion 
-description: Learn about Localization in Blazor Kanban component of Syncfusion, and more details.
+title: Localization in Blazor Kanban Component | Syncfusion
+description: Learn here all about Localization in Syncfusion Blazor Kanban component and more.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Globalization
+# Localization in Blazor Kanban Component
 
 The localization library allows you to localize the default text content of the Kanban to different cultures using the `Locale` property.
 

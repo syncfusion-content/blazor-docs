@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Saving Pdf File in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Saving Pdf File in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Saving PDF file in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Saving PDF file in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Saving PDF file
+# Saving PDF file in Blazor PDF Viewer Component
 
 After editing the PDF file with various annotation tools, you will need to save the updated PDF to the server, database, or local file system.
 
@@ -15,7 +15,7 @@ After editing the PDF file with various annotation tools, you will need to save 
 
 You might need to save the PDF file back to the server. The following code example shows how to save the updated PDF file to server.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using System.IO
@@ -46,7 +46,7 @@ You might need to save the PDF file back to the server. The following code examp
 
 If you have plenty of PDF files stored in database and you want to save the updated PDF file back to the database, use the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using System.Data.SqlClient
@@ -87,7 +87,7 @@ In the built-in toolbar, you have an option to download the updated PDF to the l
 
 If you want to achieve the same behavior through your custom UI, use the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewerServer
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Item Configuration in Blazor Toolbar Component | Syncfusion 
-description: Learn about Item Configuration in Blazor Toolbar component of Syncfusion, and more details.
+title: Item Configuration in Blazor Toolbar Component | Syncfusion
+description: Learn here all about Item Configuration in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
 ---
 
-# Item Configuration
+# Item Configuration in Blazor Toolbar Component
 
 The Toolbar can be rendered by defining a list of items. Items can be constructed with the following built-in command types or item template.
 
@@ -363,7 +363,7 @@ You can refer [Set Blazor Tooltip to the commands](https://blazor.syncfusion.com
 
 The `Separator` type adds a vertical separation between the Toolbar's Single/Multiple commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfToolbar>
@@ -433,7 +433,7 @@ The `Input` type is only applicable for adding `Template` elements when the  `Te
 
 The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioButton` and `CheckBox` components to the Toolbar.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.DropDowns

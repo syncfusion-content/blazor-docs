@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Resize in Blazor Dialog Component | Syncfusion 
-description: Learn about Resize in Blazor Dialog component of Syncfusion, and more details.
+title: Resizing in Blazor Dialog Component | Syncfusion
+description: Learn here all about Resizing in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Resizing
+# Resizing in Blazor Dialog Component
 
 The Dialog supports resizing feature. To resize the dialog, we have to select and resize it by using its handle (grip) or hovering on any of the edges or borders of the dialog within the sample container.
 

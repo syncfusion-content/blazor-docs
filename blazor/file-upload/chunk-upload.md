@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Chunk Upload in Blazor File Upload Component | Syncfusion 
-description: Learn about Chunk Upload in Blazor File Upload component of Syncfusion, and more details.
+title: Chunk Upload in Blazor File Upload Component | Syncfusion
+description: Learn here all about Chunk Upload in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Chunk Upload
+# Chunk Upload in Blazor File Upload Component
 
 The Uploader sends the large file split into small chunks and transmits to the server using AJAX. You can also pause, resume, and retry the failed chunk file.
 
@@ -90,7 +90,7 @@ The Uploader sends the large file split into small chunks and transmits to the s
     }
 ```
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles">
@@ -164,7 +164,7 @@ The following sample specifies the chunk upload delay with 3000 milliseconds and
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles">
@@ -181,7 +181,7 @@ and UI interaction. The pause icon is enabled after the upload begins.
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles">
@@ -204,7 +204,7 @@ The following example explains about chunk upload with cancel support.
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles">

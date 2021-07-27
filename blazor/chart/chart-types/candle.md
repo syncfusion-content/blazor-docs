@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Candle Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Candle Chart of Syncfusion Charts (SfCharts) component and more.
+title: Candle in Blazor Charts Component | Syncfusion
+description: Learn here all about Candle in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Candle Chart in Blazor Charts (SfCharts)
+# Candle in Blazor Charts Component
 
 ## Candle
 
@@ -124,4 +124,4 @@ will be applied when the opening value is greater than closing value.
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

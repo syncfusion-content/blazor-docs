@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animation in Blazor Toast Component | Syncfusion 
-description: Learn about Animation in Blazor Toast component of Syncfusion, and more details.
+title: Animation in Blazor Toast Component | Syncfusion
+description: Learn here all about Animation in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# Animations
+# Animation in Blazor Toast Component
 
 The toast component supports custom animations for both show and hide actions from the provided `ToastHideAnimationSettings` and  `ToastShowAnimationSettings` option of the `Animation` library.
 

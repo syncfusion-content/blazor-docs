@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Radiobuttonfor in Blazor Radio Button Component | Syncfusion
-description: Checkout and learn about Radiobuttonfor in Blazor Radio Button component of Syncfusion, and more details.
+title: Radio Button For and Model Binding in Blazor RadioButton Component | Syncfusion
+description: Learn here all about Radio Button For and Model Binding in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Radio ButtonFor and Model Binding
+# Radio Button For and Model Binding in Blazor RadioButton Component
 
 This section demonstrates the Strongly typed extension support in Radio Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.
 

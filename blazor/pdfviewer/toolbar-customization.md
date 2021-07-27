@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Toolbar Customization in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Toolbar Customization in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Toolbar Customization in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Toolbar Customization in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Toolbar customization of Blazor PDF Viewer
+# Toolbar Customization in Blazor PDF Viewer Component
 
 The PDF Viewer comes with a powerful built-in toolbar with the following important options:,
 * Open PDF file
@@ -33,7 +33,7 @@ At times, you might need to create your own toolbar. In that case, you need to h
 
 The following code snippet explains how to show or hide toolbar using the EnableToolbar property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer EnableToolbar="false" Width="1060px" Height="500px">
@@ -42,7 +42,7 @@ The following code snippet explains how to show or hide toolbar using the Enable
 
 The following code snippet explains how to show or hide toolbar using the ShowToolbar method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewerServer
 
@@ -68,7 +68,7 @@ Navigation toolbar is the side bar, which contains the options to expand and col
 
 The following code snippet explains how to show or hide navigation toolbar using the EnableNavigationToolbar property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer EnableNavigationToolbar="false" Width="1060px" Height="500px">
@@ -77,7 +77,7 @@ The following code snippet explains how to show or hide navigation toolbar using
 
 The following code snippet explains how to show or hide navigation toolbar using the ShowNavigationToolbar method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewerServer
 
@@ -101,7 +101,7 @@ The following code snippet explains how to show or hide navigation toolbar using
 
 You can show or hide the toolbar items using the “PdfViewerToolbarSettings” class. The following code snippet explains how to show only the desired options in the toolbar. The resultant PDF Viewer’s toolbar will have these options - Open file, magnification tools, comment tool, and download option.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 

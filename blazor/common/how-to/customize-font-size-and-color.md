@@ -29,7 +29,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 2. Install the Syncfusion `node_modules` in this application using this command.
 
-    ```cmd
+    ```
 
     npm install @syncfusion/ej2
 

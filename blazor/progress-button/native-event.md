@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Progress Button Component | Syncfusion 
-description: Learn about Native Event in Blazor Progress Button component of Syncfusion, and more details.
+title: Native Events in Blazor ProgressButton Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor ProgressButton Component
 
 You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
@@ -33,7 +33,7 @@ We have provided the following native event support to the Progress Button compo
 
 The `onclick` attribute is used to bind the click event for Progress Button. Here, we have explained about the sample code snippets of Progress Button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton IsPrimary="true" @onclick="onClick" Content="Spin Left"></SfProgressButton>

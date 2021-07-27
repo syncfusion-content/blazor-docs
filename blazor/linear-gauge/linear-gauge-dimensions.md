@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Linear Gauge Dimensions in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Linear Gauge Dimensions in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Dimensions in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about Dimensions in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Linear Gauge Dimensions
+# Dimensions in Blazor Linear Gauge Component
 
 ## Size for Linear Gauge
 
@@ -35,4 +35,4 @@ By setting value in percentage, Linear Gauge gets its dimension with respect to 
 
 ![Linear Gauge with Size in Percentage](images/percentage.png)
 
->Note: When you do not specify the size, it takes `450px` as the height and window size as its width.
+>Note: When you do not specify the size, it takes `450px` as the height and window size as its width.its width.

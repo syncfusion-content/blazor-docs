@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Grid Styling in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Grid Styling in Blazor DataGrid component of Syncfusion, and more details.
+title: Styling and appearance in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Styling and appearance in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Styling
+# Styling and appearance in Blazor DataGrid Component
 
 To modify the Grid appearance, you need to override the default CSS of grid. Please find the list of CSS classes and its corresponding section in grid. Also, you have an option to create your own custom theme for all the Syncfusion Blazor components using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

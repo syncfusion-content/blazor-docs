@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion 
-description: Learn about Interaction in Blazor Diagram component of Syncfusion, and more details.
+title: Interaction in Blazor Diagram Component | Syncfusion
+description: Learn here all about Interaction in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Interaction
+# Interaction in Blazor Diagram Component
 
 ## Selection
 
@@ -147,7 +147,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 | Middle | When the mouse wheel is clicked, middle is notified |
 | Right | When the right mouse button is clicked, right is notified |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Navigations
 @using System.Collections.ObjectModel

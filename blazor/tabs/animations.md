@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Animations in Blazor Tabs Component | Syncfusion 
-description: Learn about Animations in Blazor Tabs component of Syncfusion, and more details.
+title: Animations in Blazor Tabs Component | Syncfusion
+description: Learn here all about Animations in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Animations
+# Animations in Blazor Tabs Component
 
 The Tabs component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows you to set `Easing`, `Duration` and various other effects.
 
@@ -23,7 +23,7 @@ Default animation is given as `SlideLeftIn` for previous tab animation and `Slid
 
 The sample demonstrates some types of animation that suits our Tabs. You can check all the animation effects here.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.DropDowns

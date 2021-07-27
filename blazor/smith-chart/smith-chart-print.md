@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Print and Export in the Blazor Smith Chart component | Syncfusion 
-description: Learn here about Print and Export in Syncfusion Blazor Smith Chart (SfSmithChart) component and more.
+title: Print and Export in Blazor Smith Chart Component | Syncfusion
+description: Learn here all about Print and Export in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
 ---
 
-# Print and Export in Blazor Smith Chart
+# Print and Export in Blazor Smith Chart Component
 
 ## Print
 
 The rendered Smith Chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Print).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button id="print" @onclick="Print">Print</button>
@@ -58,7 +58,7 @@ The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF
 * **File name** - To specify the file name to export.
 * **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button id="export" @onclick="Export">Export</button>
@@ -93,4 +93,5 @@ The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF
         smithChart.Export(ExportType.PDF, "SmithChart", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
     }
 }
+```}
 ```

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor QueryBuilder Component | Syncfusion 
-description: Learn about Templates in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Templates in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Templates in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Templates
+# Templates in Blazor QueryBuilder Component
 
 This section explains the list of templates available in the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder).
 
@@ -17,7 +17,7 @@ Template allows you to define your own widgets for column values. Use the [`Valu
 
 In the following sample, SFDropdownlist is used as value template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.DropDowns
 

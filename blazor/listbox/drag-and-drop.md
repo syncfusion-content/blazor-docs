@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Drag And Drop in Blazor List Box Component | Syncfusion 
-description: Learn about Drag And Drop in Blazor List Box component of Syncfusion, and more details.
+title: Drag And Drop in Blazor ListBox Component | Syncfusion
+description: Learn here all about Drag And Drop in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Drag and drop
+# Drag And Drop in Blazor ListBox Component
 
 The ListBox has support to drag an item or a group of selected items and drop it within the same listbox or into another listbox.
 
@@ -26,7 +26,7 @@ To drag and drop an item or group of item within the listbox can achieved by set
 
 The following sample illustrates how to drag and drop an item within the same listbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@GroupA" TItem="CountryCode" AllowDragAndDrop="true">
@@ -65,7 +65,7 @@ To drag and drop an item or group of item between two listbox can achieved by se
 
 The following sample illustrates how to drag and drop an item between two listbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <div id="listbox1">

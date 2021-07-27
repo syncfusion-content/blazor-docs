@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Popup Items in Blazor Split Button Component | Syncfusion 
-description: Learn about Popup Items in Blazor Split Button component of Syncfusion, and more details.
+title: Popup Items in Blazor SplitButton Component | Syncfusion
+description: Learn here all about Popup Items in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Popup Items
+# Popup Items in Blazor SplitButton Component
 
 ## Icons
 
@@ -16,7 +16,7 @@ item, set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 In the following sample, the icons for Cut, Copy, Paste menu items are added using the IconCss property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste">

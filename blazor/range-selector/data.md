@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Types of data in the Blazor Range Selector component | Syncfusion
-description: Learn here all about different types of data for Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Type of Data in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Type of Data in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Types of data in the Range Selector (SfRangeNavigator)
+# Type of Data in Blazor Range Selector Component
 
 ## Numeric
 
@@ -576,5 +576,7 @@ The following table shows the results of applying some common DateTime formats t
 <td>hms</td>
 <td>12:00:00 AM</td>
 <td>The label is displayed in hours:minutes:seconds format.</td>
+</tr>
+</table>nutes:seconds format.</td>
 </tr>
 </table>

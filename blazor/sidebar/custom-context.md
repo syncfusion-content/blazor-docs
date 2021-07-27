@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Custom Context in Blazor Sidebar Component | Syncfusion 
-description: Learn about Custom Context in Blazor Sidebar component of Syncfusion, and more details.
+title: Sidebar for specific content in Blazor Sidebar Component | Syncfusion
+description: Learn here all about Sidebar for specific content in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD009 -->
 
-# Sidebar for specific content
+# Sidebar for specific content in Blazor Sidebar Component
 
 By default, Sidebar initializes context to the body element. Using the `Target` property, set context element to initialize Sidebar inside any HTML element apart from the body element.
 

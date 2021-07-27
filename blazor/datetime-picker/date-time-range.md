@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Time Range in Blazor Datetime Picker  Component | Syncfusion 
-description: Learn about Date Time Range in Blazor Datetime Picker  component of Syncfusion, and more details.
+title: DateTime Range in Blazor Datetime Picker Component | Syncfusion
+description: Learn here all about DateTime Range in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
 ---
 
-# DateTime Range
+# DateTime Range in Blazor Datetime Picker Component
 
 DateTimePicker provides an option to select a date and time value within a specified range
 by using the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_Min)
@@ -21,7 +21,7 @@ The following code allows selecting a
 date within the range from 7th to 27th day in
 a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Min='@MinDateTime' Max='@MaxDateTime' Value='@DateTimeValue'></SfDateTimePicker>
@@ -41,7 +41,7 @@ When the Min and Max properties are configured and the selected datetime value i
 or invalid, then the model value will be set to `out of range` datetime value or `null`
 respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateTimePicker TValue="DateTime?" Min='@MinDateTime' Max='@MaxDateTime' Value='@DateTimeValue'></SfDateTimePicker>

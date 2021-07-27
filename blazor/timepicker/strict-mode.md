@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Strict Mode in Blazor TimePicker Component | Syncfusion 
-description: Learn about Strict Mode in Blazor TimePicker component of Syncfusion, and more details.
+title: Strict Mode in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Strict Mode in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Strict Mode
+# Strict Mode in Blazor TimePicker Component
 
 The [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfTimePicker%601~StrictMode.html)
 is an act that allows you to enter only valid time value within the specified Min/Max
@@ -26,7 +26,7 @@ of `4:00 PM`.
 
 If you enter invalid time value like `9:00 tt`, the value sets to the previous value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" Value='@TimeValue' StrictMode=true Min='@MinVal' Max='@MaxVal'></SfTimePicker>
@@ -53,7 +53,7 @@ valid or invalid value in text box.
 If you are entering the out-of-range or invalid time value, then the model value will be set to
 `out of range` time Value or `null` respectively with highlighted `error` class to indicates the time is out of range or invalid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" Value='@TimeValue' StrictMode=false Min='@MinVal' Max='@MaxVal'></SfTimePicker>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Labels in Blazor Diagram Component | Syncfusion 
-description: Learn about Labels in Blazor Diagram component of Syncfusion, and more details.
+title: Actions of annotation in Blazor Diagram Component | Syncfusion
+description: Learn here all about Actions of annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Annotation
+# Actions of annotation in Blazor Diagram Component
 
 The [`Annotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 
@@ -17,7 +17,7 @@ The [`Annotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Content) property of annotation defines the text to be displayed. The following code explains how to create an annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
@@ -76,7 +76,7 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 Annotations can be added at runtime by using the [`AddLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLabels_System_Object_System_Object_) method. The following code explains how to add an annotation to a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
@@ -136,7 +136,7 @@ Also, the annotations can be added at runtime by using the `Add` method.
 
 A collection of annotations can be removed from the node by using the [`RemoveLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemoveLabels_System_Object_System_Object_) method. The following code explains how to remove an annotation to a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
@@ -208,7 +208,7 @@ You can get the annotation directly from the node’s annotations collection pro
 
 The following code sample shows how the annotation of the node changed at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input value="Updatelabel" type="button" @onclick="@UpdateLabel" name="Updatelabel" />

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor ComboBox Component | Syncfusion 
-description: Learn about Native Events in Blazor ComboBox component of Syncfusion, and more details.
+title: Native Events in Blazor ComboBox Component | Syncfusion
+description: Learn here all about Native Events in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Overview
+# Native Events in Blazor ComboBox Component
 
 The following section explains the steps to include native events and pass data to event handler in ComboBox component.
 
@@ -17,7 +17,7 @@ You can access any native event by using on `<event>` attribute with a component
 
 In the following example, the keyPressed method is called every time the key is pressed on input.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 
 <SfComboBox TValue="string" TItem="Countries" @onkeypress="@KeyPressed" DataSource="@Country">

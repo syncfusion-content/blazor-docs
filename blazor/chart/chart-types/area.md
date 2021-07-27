@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Area Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Area Chart of Syncfusion Charts (SfCharts) component and more.
+title: Area in Blazor Charts Component | Syncfusion
+description: Learn here all about Area in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Area Chart in Blazor Charts (SfCharts)
+# Area in Blazor Charts Component
 
 ## Area
 
@@ -101,7 +101,7 @@ The following properties can be used to customize the [`Area`](https://help.sync
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
@@ -137,4 +137,4 @@ The following properties can be used to customize the [`Area`](https://help.sync
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Workflow in Blazor Kanban Component | Syncfusion 
-description: Learn about Workflow in Blazor Kanban component of Syncfusion, and more details.
+title: Workflow in Blazor Kanban Component | Syncfusion
+description: Learn here all about Workflow in Syncfusion Blazor Kanban component and more.
 platform: Blazor
 control: Kanban
 documentation: ug
 ---
 
-# Workflow
+# Workflow in Blazor Kanban Component
 
 Kanban workflow allows to set the flow of cards between the columns. It provides restriction on columns when the card is moved from one column to another column. It provides support to prevent the drag and drop action on the column.
 

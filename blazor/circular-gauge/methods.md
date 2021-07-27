@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Methods in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Methods in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Methods in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Methods in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Methods
+# Methods in Blazor Circular Gauge Component
 
 ## Using methods in Circular Gauge component
 
 You can create object for the circular gauge component using `@ref` and call the [`SetPoinerValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetPointerValue_System_Double_System_Double_System_Double_) method as shown in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <button style="margin-left:34px" @onclick="ChangePoinerValue">Change pointer value</button>

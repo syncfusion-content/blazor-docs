@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Localization in Blazor Scheduler Component | Syncfusion 
-description: Learn about Localization in Blazor Scheduler component of Syncfusion, and more details.
+title: Globalization in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Globalization and Localization
+# Globalization in Blazor Scheduler Component
 
 The Scheduler integrates different date-time formats and cultures, which allows it to function globally, thus meeting the diverse needs of different regions.
 
@@ -93,7 +93,7 @@ namespace SchedulerLocalization
 
 * Finally, add the Scheduler component in razor page as in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" SelectedDate="@(new DateTime(2020, 2, 14))">
@@ -124,7 +124,7 @@ You can refer [here] (../../common/localization/#enable-localization-in-blazor-w
 
 Scheduler can be used with all valid date formats and by default it follows the universal date format "MM/dd/yyyy". If the `DateFormat` property is not specified particularly, then it will work based on the system's local culture. As the system's local culture is "en-US", this makes it to follow the "MM/dd/yyyy" pattern.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" DateFormat="yyyy/MM/dd">
@@ -157,7 +157,7 @@ Scheduler can be used with all valid date formats and by default it follows the 
 
 The time mode of the Scheduler can be either 12 or 24 hours format which is completely based on the system's local culture. And also the Scheduler supported to customize the time mode using the `TimeFormat` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" TimeFormat="T">
@@ -191,7 +191,7 @@ The time mode of the Scheduler can be either 12 or 24 hours format which is comp
 
 The Scheduler layout and its behavior can be changed as per the common RTL (Right to Left) conventions by setting `EnableRtl` to `true`. By doing so, the Scheduler will display its usual layout from right to left. It's default value is `false`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" EnableRtl="true">

@@ -23,7 +23,7 @@ Header was the primary element for swimlanes. The `Header` property of swimlane 
 
 The following code example illustrates how to define a swimlane header.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 @* initialize the diagram with swimlane nodes*@
@@ -80,7 +80,7 @@ The height and width of swimlane header can be customized with `Weight` and `Hei
 
 The following code example illustrates how to customize the swimlane header..
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="500px">
@@ -137,7 +137,7 @@ The number of `Lanes` can be added to swimlane. The lanes are automatically stac
 
 The following code example illustrates how to define a swimlane with lane.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="500px">
@@ -163,7 +163,7 @@ The following code example illustrates how to define a swimlane with lane.
 
 The following code example illustrates how to define a lane header.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="500px">
@@ -196,7 +196,7 @@ The following code example illustrates how to define a lane header.
 
 The following code example illustrates how to customize the lane header.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="500px">
@@ -228,7 +228,7 @@ The following code example illustrates how to customize the lane header.
  Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of `Phase` can be added to swimlane.
 The following code example illustrates how to add phase at swimlane.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="500px">
@@ -258,7 +258,7 @@ The following code example illustrates how to add phase at swimlane.
 
 The following code example illustrates how to customize the phase in swimlane.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="500px">

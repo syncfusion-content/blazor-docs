@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Draggable in Blazor Dialog Component | Syncfusion 
-description: Learn about Draggable in Blazor Dialog component of Syncfusion, and more details.
+title: Draggable in Blazor Dialog Component | Syncfusion
+description: Learn here all about Draggable in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Draggable
+# Draggable in Blazor Dialog Component
 
 The Dialog supports to `drag` within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically.
 

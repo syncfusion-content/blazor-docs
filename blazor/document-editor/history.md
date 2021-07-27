@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Undo and redo 
-description: Learn how undo and redo can be done in Blazor Word processor and how to customize its limit.
+title: Undo and redo in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Undo and redo in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# History
+# Undo and redo in Blazor DocumentEditor Component
 
 [`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) tracks the history of all editing actions done in the document, which allows undo and redo functionality.
 
@@ -15,7 +15,7 @@ documentation: ug
 
 Inject the `EditorHistory` module in your application to provide history preservation functionality for `DocumentEditor`. Refer to the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <SfDocumentEditor @ref="documentEditor" IsReadOnly=false EnableEditor=true EnableSelection=true>

@@ -209,7 +209,7 @@ Now, in the Browse tab, search and install the **Syncfusion.Blazor.Grid** NuGet 
 
 Open **_Import.razor** file and add the following namespaces which are required to use the Syncfusion Blazor components in this application.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
 ```
@@ -275,7 +275,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the database using **Entity Framework**, we need to inject the LibraryService into the razor page and assign it to the DataGrid’s datasource variable. Here, we have used the **DataSource** property of the DataGrid component to bind the SQL data using Entity Framework in the  Server-side application  
 
-```csharp
+```cshtml
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
 
@@ -301,7 +301,7 @@ Grid columns can be defined using the **GridColumn** component. We are going to 
 * **Format** property helps to format number, currencies, and date in a particular culture. Here, we have formatted the Price column.
 * **DisplayAsCheckBox** property renders checkbox in cells and sets check state based on the property value. Here, Available column is rendered as a checkbox column.
 
-```csharp
+```cshtml
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
   
@@ -344,7 +344,7 @@ While using the DataSource property of Grid, changes will be reflected only in t
 
 We have added the DataGrid editing, toolbar, and OnActionBegin and OnActionComplete event code with the previous Grid model.
 
-```csharp
+```cshtml
 @using LibraryManagement.Models
 @inject ILibraryService LibraryService
 

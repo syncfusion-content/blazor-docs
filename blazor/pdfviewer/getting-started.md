@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Getting Started in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Getting Started with Blazor PDF Viewer Component | Syncfusion 
+description: Learn about Getting Started with Blazor PDF Viewer component of Syncfusion, and more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

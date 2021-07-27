@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Sorting in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Sorting in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Sorting in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Sorting in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Sorting
+# Sorting in Blazor Gantt Chart Component
 
 Sorting enables you to sort data in the ascending or descending order. To sort a column, click the column header.
 
@@ -15,7 +15,7 @@ To sort multiple columns, press and hold the CTRL key and click the column heade
 
 To enable sorting in the Gantt Chart component, set the `AllowSorting` property to true. Sorting options can be configured through the `GanttSortSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -118,7 +118,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 
 The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -220,7 +220,7 @@ The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-g
 
 Columns in the Gantt Chart component can be sorted dynamically using the `SortByColumnAsync` method. The following code example demonstrates how to invoke the `SortByColumnAsync` method by clicking the custom button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="Sorting">Sort Taskname Column</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
@@ -324,7 +324,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortBy
 
 In the Gantt Chart component, you can clear all the sorted columns and return to previous position using the `ClearSortingAsync` public method. The following code snippet shows how to clear all the sorted columns by clicking the custom button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="ClearSorting">Clear Sorting</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
@@ -434,7 +434,7 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 
 During the sort action, the Gantt Chart component triggers two events. The `OnActionBegin` event triggers before the sort action starts, and the `OnActionComplete` event triggers after the sort action is completed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
@@ -543,7 +543,7 @@ In Gantt, you can sort custom columns of different types like string, numeric, e
 
 The following code snippets explains how to achieve this.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <button @onclick="Sorting">Sort Custom Column</button>
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px" AllowSorting="true">

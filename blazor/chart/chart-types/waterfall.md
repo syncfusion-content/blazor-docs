@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Waterfall Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Waterfall Chart of Syncfusion Charts (SfCharts) component and more.
+title: Waterfall in Blazor Charts Component | Syncfusion
+description: Learn here all about Waterfall in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Waterfall Chart in Blazor Charts (SfCharts)
+# Waterfall in Blazor Charts Component
 
 ## Waterfall
 
@@ -106,4 +106,4 @@ The negative changes of [`Waterfall Chart`](https://blazor.syncfusion.com/demos/
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

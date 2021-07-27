@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Columns Binding in Blazor QueryBuilder Component | Syncfusion 
-description: Learn about Columns Binding in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Columns in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Columns in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Columns
+# Columns in Blazor QueryBuilder Component
 
 The column definitions are used as the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) schema in the Query Builder. This plays a vital role in rendering column values. The Query Builder operations such as create or delete conditions and create or delete groups are performed based on the column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property of the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) is necessary to map the data source values in the query builder columns.
 
@@ -19,7 +19,7 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBui
 
 > When columns are auto-generated, the column type will be determined from the first record of the data source.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder DataSource="@EmployeeData"></SfQueryBuilder>
@@ -83,7 +83,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 > By default the Step value is 1.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails">
@@ -119,7 +119,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 In the following sample, the date field is formatted as MM/yyyy/dd and number field is formatted as currency type.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails">
@@ -164,7 +164,7 @@ Validation allows you to validate the conditions and it display errors for inval
 
 > You can set `Min` and `Max` values for number values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails" AllowValidation="true">

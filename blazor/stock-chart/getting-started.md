@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Getting Started in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Getting Started with Blazor Stock Chart Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Stock Chart component of Syncfusion, and more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Getting Started in Blazor Stock Chart
+# Getting Started with Blazor Stock Chart Component
 
 This section briefly explains how to include a Stock Chart component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -53,7 +53,7 @@ To get start quickly with Blazor Stock Chart component, you can check on this vi
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 ```
 
@@ -86,7 +86,7 @@ namespace BlazorApplication
 
 To initialize the Stock Chart component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfStockChart>
@@ -98,7 +98,7 @@ To initialize the Stock Chart component, add the below code to your **Index.raz
 
 To bind data for the Stock Chart component, you can assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```csharp
+```cshtml
 @code{
     public class StockChartData
     {

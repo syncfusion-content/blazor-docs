@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Navigation Line in Blazor Maps Component | Syncfusion 
-description: Learn about Navigation Line in Blazor Maps component of Syncfusion, and more details.
+title: Navigation Lines in Blazor Maps Component | Syncfusion
+description: Learn here all about Navigation Lines in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Navigation Lines
+# Navigation Lines in Blazor Maps Component
 
 Navigation lines are used to denote the path between the two locations. We can use this feature as flight or train or sea routes.
 
@@ -18,7 +18,7 @@ Yon can customize the navigation line color, dashArray, width and angle by modif
 
 Refer the below code snippet to navigate line between two cities in World map.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -50,7 +50,7 @@ You can enable arrows in the navigation lines using the [`ShowArrow`](https://he
 * Position - Specifies the arrow position to the [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_Position) or [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_Position) of line.
 * Size - Specifies the arrow size in pixels.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

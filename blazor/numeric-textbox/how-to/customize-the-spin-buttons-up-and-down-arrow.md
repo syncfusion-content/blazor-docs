@@ -1,20 +1,20 @@
 ---
 layout: post
-title: How to Customize The Spin Buttons Up And Down Arrow in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn about Customize The Spin Buttons Up And Down Arrow in Blazor Numeric TextBox component of Syncfusion, and more details.
+title: Customize the spin button’s up and down arrow in Blazor Numeric TextBox Component | Syncfusion
+description: Learn here all about Customize the spin button’s up and down arrow in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Customize the spin button’s up and down arrow
+# Customize the spin button’s up and down arrow in Blazor Numeric TextBox Component
 
 This section explains how to change or customize spin up and down icons. You can customize spin button icons using `e-spin-up` and `e-spin-down`
 classes of those buttons.
 
 You can override the default icons of `e-spin-up` and `e-spin-down` classes using the following CSS code snippets.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfNumericTextBox TValue="int?" Value=10 CssClass="e-custom"></SfNumericTextBox>

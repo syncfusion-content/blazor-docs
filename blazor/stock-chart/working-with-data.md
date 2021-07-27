@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Working With Data in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Working With Data in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Working with Data in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Working with Data in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Working with Data
+# Working with Data in Blazor Stock Chart Component
 
 Stock Chart can visualise data bound from local or remote data.
 
@@ -288,7 +288,7 @@ For instance, to bind data directly from the data access layer class **OrderData
 
 On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Data
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor List Box Component | Syncfusion 
-description: Learn about Getting Started in Blazor List Box component of Syncfusion, and more details.
+title: Getting Started with Blazor ListBox Component | Syncfusion
+description: Checkout and learn about getting started with Blazor ListBox component of Syncfusion, and more details.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -89,7 +89,7 @@ namespace BlazorApplication
 
 To initialize the ListBox component add the below code to your `Index.razor` view page which is present under ~/Pages folder. For example, the ListBox component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 <SfListBox TValue="string[]"></SfListBox>
@@ -102,7 +102,7 @@ After initializing, populate the ListBox with data using the `DataSource` proper
 
 The following example illustrates the output in your browser.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">

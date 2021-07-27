@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Measurement Annotation in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Measurement Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Measurement annotations in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Measurement annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Measurement annotation
+# Measurement annotations in Blazor PDF Viewer Component
 
 The PDF Viewer provides the options to add measurement annotations. You can measure the page annotations with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:
 
@@ -34,7 +34,7 @@ In the pan mode, if the measurement annotation mode is entered, the PDF Viewer c
 
 Refer to the following code snippet to switch to distance annotation mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -93,7 +93,7 @@ The properties of the line shapes such as distance and perimeter annotations can
 The properties of the shape annotations can be set before creating the control using distanceSettings, perimeterSettings, areaSettings, radiusSettings and volumeSettings.
 Refer to the following code snippet to set the default annotation settings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" DistanceSettings="@DistanceSettings" PerimeterSettings="@PerimeterSettings" AreaSettings="@AreaSettings" RadiusSettings="@RadiusSettings" VolumeSettings="@VolumeSettings">
@@ -130,7 +130,7 @@ The Units of measurements support for the measurement annotations in the PDF Vie
 
 The properties of scale ratio for measurement annotation can be set before creating the control using ScaleRatioSettings as shown in the following code snippet,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" MeasurementSettings="@MeasurementSettings" >

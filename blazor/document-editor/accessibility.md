@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about Accessibility in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Accessibility in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor DocumentEditor Component
 
 ## Keyboard Shortcuts
 

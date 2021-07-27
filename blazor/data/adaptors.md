@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Adaptors in Blazor DataManager Component | Syncfusion 
-description: Learn about Adaptors in Blazor DataManager component of Syncfusion, and more details.
+title: Adaptors in Blazor DataManager Component | Syncfusion
+description: Learn here all about Adaptors in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Data Adaptors
+# Adaptors in Blazor DataManager Component
 
 Each data source or remote service uses different way for accepting request and sending back the response. The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) cannot anticipate every way a data source works. To tackle this problem the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses adaptor concept to communicate with particular data source.
 
@@ -25,7 +25,7 @@ The `JsonAdaptor` is used to query and manipulate object array.
 
 The following sample code demonstrates binding data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `JsonAdaptor`,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -69,7 +69,7 @@ The `UrlAdaptor` acts as the base adaptor for interacting with remote data servi
 
 The following sample code demonstrates binding data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `UrlAdaptor`,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -112,7 +112,7 @@ The sample response object should be as follows,
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using OData service,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -144,7 +144,7 @@ The ODataV4 is an improved version of OData protocols and the [`SfDataManager`](
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using ODataV4 service,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -176,7 +176,7 @@ To enable OData query option for Web API, please refer to this [`documentation`]
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web API service,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
@@ -221,7 +221,7 @@ To enable OData query option for Web API, please refer to this [`documentation`]
 
 The following sample code demonstrates binding remote data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using Web method service,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids

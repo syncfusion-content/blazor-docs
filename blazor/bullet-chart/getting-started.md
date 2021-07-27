@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Blazor Bullet Chart component | Syncfusion 
-description: Learn here about getting started with Syncfusion Blazor Bullet Chart (SfBulletChart) component, its elements, and more.
+title: Getting Started with Blazor Bullet Chart Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Bullet Chart component of Syncfusion, and more details.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Getting Started with the Blazor Bullet Chart (SfBulletChart)
+# Getting Started with Blazor Bullet Chart Component
 
 This section briefly explains how to include a Bullet Chart component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -38,7 +38,7 @@ This section briefly explains how to include a Bullet Chart component in the Bla
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 To initialize the Bullet Chart component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed, and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
@@ -98,7 +98,7 @@ On successful compilation of the application, the Syncfusion Blazor Bullet Chart
 
 Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
@@ -123,7 +123,7 @@ Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfus
 
 Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
@@ -153,7 +153,7 @@ Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.c
 
 Use the tooltip to show the measured values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
 
-```csharp
+```cshtml
 @page "/"
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50" Title="Revenue">
@@ -178,4 +178,4 @@ Use the tooltip to show the measured values by setting the [`Enable`](https://he
 }
 ```
 
-![Bullet Chart](images/tool-tip.png)
+![Bullet Chart](images/tool-tip.png)hart](images/tool-tip.png)

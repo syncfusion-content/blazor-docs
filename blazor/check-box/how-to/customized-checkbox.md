@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customized Checkbox in Blazor Checkbox Component | Syncfusion
-description: Checkout and learn about Customized Checkbox in Blazor Checkbox component of Syncfusion, and more details.
+title: Customized Checkbox in Blazor CheckBox Component | Syncfusion
+description: Learn here all about Customized Checkbox in Syncfusion Blazor CheckBox component and more.
 platform: Blazor
 control: Checkbox
 documentation: ug
 ---
 
-# Customized Checkbox
+# Customized Checkbox in Blazor CheckBox Component
 
 ## Customize Checkbox Appearance
 
@@ -17,7 +17,7 @@ Define own CSS rules according to your requirement and assign the class name to 
 
 The background and border color of the Checkbox is customized through the custom classes to create primary, success, warning, and danger info type of checkbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox @bind-Checked="isPrimaryChecked" Label="Primary" CssClass="e-primary"></SfCheckBox><br />
@@ -88,7 +88,7 @@ The height and width of the Checkbox component can be customized by setting `hei
 
 The following section explains about how to customize the height and width of the Checkbox component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox CssClass="e-customsize" Label="Default" @bind-Checked="isChecked"></SfCheckBox>
@@ -132,7 +132,7 @@ Checkbox frame can be customized as per the requirement by adding CSS rules.
 In the following example, to-do list is displayed with round checkbox by changing
 `border-radius` as `100%` by adding `e-custom` class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox Label="Buy Groceries" @bind-Checked="isChecked" CssClass="e-custom"></SfCheckBox><br />
@@ -193,7 +193,7 @@ Checkbox check icon can be customized as per the requirement by adding CSS rules
 In the following example, the check icon can be customized by changing check icon content, background and
 border color in focus and hovered states by adding `e-checkicon` class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfCheckBox Label="Buy Groceries" @bind-Checked="isChecked" CssClass="e-checkicon"></SfCheckBox><br />

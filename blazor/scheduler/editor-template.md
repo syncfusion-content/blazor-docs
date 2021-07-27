@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Editor Template in Blazor Scheduler Component | Syncfusion 
-description: Learn about Editor Template in Blazor Scheduler component of Syncfusion, and more details.
+title: Editor Window Customization in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Editor Window Customization in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Editor window and quick popups
+# Editor Window Customization in Blazor Scheduler Component
 
 Scheduler makes use of popups and dialog to display the required notifications, as well as includes an editor window with event fields for making the appointment creation and editing process easier. You can also easily customize the editor window and the fields present in it, and can also apply validations on those fields.
 
@@ -33,7 +33,7 @@ The editor window opening for creating new event will be displayed as in the fol
 
 To change the default labels such as Title, Location and other field names in the editor window, make use of the `Title` property available within the field option of `ScheduleEventSettings`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -86,7 +86,7 @@ The following screenshot represents the editor window with custom label.
 
 It is possible to validate the required fields of the editor window before submitting it, by adding appropriate validation rules to each field. In the following code example, validation are applied to Subject, Location and Description fields.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -141,7 +141,7 @@ The following image shows the validation error message while saving the appointm
 
 In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the `Duration` option within the `OnPopupOpen` event as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -188,7 +188,7 @@ In default event editor window, start and end time duration are processed based 
 
 It is possible to prevent the display of editor and quick popup windows by passing the value `true` to `cancel` option within the `OnPopupOpen` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -255,7 +255,7 @@ It is possible to open the editor window by manually for on specific time or cer
 
 The event editor window can be customized by making use of the `EditorTemplate` option. Each field defined within template must use two way binding for the `Value` property of the components used within the template to perform CRUD actions.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -345,7 +345,7 @@ The event editor window can be customized by making use of the `EditorTemplate` 
 
 The resource field can be added within editor template with the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -443,7 +443,7 @@ The resource field can be added within editor template with the following code e
 
 The following code example shows how to add recurrence options within the editor template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -543,7 +543,7 @@ The following code example shows how to add recurrence options within the editor
 
 In the following code example, validation has been added to the `EventType` field by importing `DataAnnotations` namespace and that field is set as `Required` and displays the validation message for this field by using the `ValidationMessage` tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns
@@ -651,7 +651,7 @@ The quick info popups are the ones that gets opened, when a cell or appointment 
 
 By default, these popups are displayed over cells and appointments of Scheduler and to disable this action, set `false` to `ShowQuickInfo` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate" ShowQuickInfo="false">
@@ -706,7 +706,7 @@ The quick popup accepts the template that customizes both the cell click quick p
 
 The quick popup accepts the template that customizes quick popup only on cell by giving `TemplateType.Cell` to the `TemplateType` option in `ScheduleQuickInfoTemplates`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -901,7 +901,7 @@ The quick popup accepts the template that customizes quick popup only on cell by
 
 The quick popup accepts the template that customizes quick popup only on event by giving `TemplateType.Event` to the `TemplateType` option in `ScheduleQuickInfoTemplates`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 @using System.Globalization
@@ -1089,7 +1089,7 @@ You can also do different customization for quick popup on cell and event by che
 | cell | customizes cell popup.|
 | event | customized event popup.|
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -1378,7 +1378,7 @@ The following images shows how the quick popup on cell and event looks when we u
 
 By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent the quick popup at the end of multiple cell selection. The quick popup will be shown at the selection end by setting `true` value to this property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" QuickInfoOnSelectionEnd="true" @bind-SelectedDate="@CurrentDate">
@@ -1419,7 +1419,7 @@ By default, the `QuickInfoOnSelectionEnd` property is set to `false` to prevent 
 
 By default, the Scheduler allows the user to select multiple days. We can prevent this action by setting `false` to `AllowMultiRowSelection` property whereas its default value is `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowMultiRowSelection="false" @bind-SelectedDate="@CurrentDate">
@@ -1460,7 +1460,7 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 
 You can close the quick info popup in scheduler by using the `CloseQuickInfoPopupAsync` public method. The following code example demonstrates the how to close quick info popup manually.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -1515,7 +1515,7 @@ The same indicator is displayed on all-day row in calendar views such as day, we
 
 The following code example shows how to disable the display of such popups while clicking on the more text indicator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1560,7 +1560,7 @@ The following code example shows how to disable the display of such popups while
 
 It is possible to prevent the display of popup window by passing the value `true` to `Cancel` option within the `MoreEventsClicked` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleObj" Width="100%" Height="750px" @bind-SelectedDate="@SelectedDate">

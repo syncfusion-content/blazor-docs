@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Button Component | Syncfusion 
-description: Learn about Getting Started in Blazor Button component of Syncfusion, and more details.
+title: Getting Started with Blazor Button Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Button component of Syncfusion, and more details.
 platform: Blazor
 control: Button
 documentation: ug
@@ -89,7 +89,7 @@ namespace BlazorApplication
 
 Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages otherwise import these packages in the individual `razor` pages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 ```

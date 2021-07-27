@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Datamatrixgenerator in Blazor Barcode Component | Syncfusion 
-description: Learn about Datamatrixgenerator in Blazor Barcode component of Syncfusion, and more details.
+title: Data Matrix generator in Blazor Barcode Component | Syncfusion
+description: Learn here all about Data Matrix generator in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug
 ---
 
-# Data Matrix generator
+# Data Matrix generator in Blazor Barcode Component
 
 ## Data Matrix
 
 DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark and light dots or blocks forming square or rectangular symbol. The data encoded in the barcode can either be numbers or alphanumeric. They are widely used in printed media such as labels and letters. You can read it easily with the help of a barcode reader and mobile phones.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfDataMatrixGenerator Width="200" Height="150"  Value="SYNCFUSION"></SfDataMatrixGenerator>
@@ -26,7 +26,7 @@ DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark 
 
 A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using the [`Forecolor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property .
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfDataMatrixGenerator Width="200" ForeColor='red' Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
@@ -39,7 +39,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 The dimension of the barcode can be changed using the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_Width) property of the barcode generator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
@@ -50,7 +50,7 @@ The dimension of the barcode can be changed using the [`Height`](https://help.sy
 
 In barcode generators you can customize the barcode text by using the display [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.DataMatrixGeneratorDisplayText.html#Syncfusion_Blazor_BarcodeGenerator_DataMatrixGeneratorDisplayText_Text) property .
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION">
@@ -65,7 +65,7 @@ In barcode generators you can customize the barcode text by using the display [`
 
 `OnValidationFailed` event in the `SfDataMatrixGenerator` is used to trigger when the input is an invalid string.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfDataMatrixGenerator Width="200px" Height="150px" Value="SYNCFUSION" OnValidationFailed="@OnValidationFailed"></SfDataMatrixGenerator>

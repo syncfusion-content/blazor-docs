@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Work in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Work in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Work in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Work in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Work
+# Work in Blazor Gantt Chart Component
 
 The work is the total hours required to complete a task. Work can be mapped from the data source field using the property `GanttTaskFields.Work`. Work can be measured in `Hour`, `Day`, `Minute`. By default, work is measured in `Hour` and it can be changed, by using the property `WorkUnit`.
 
 >Note: When the work field is mapped from the data source, the default task type will be `FixedWork`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" WorkUnit="WorkUnit.Hour" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
@@ -155,7 +155,7 @@ The work, duration and resource unit fields of a task depends upon each other an
 * `FixedWork` - Work field will remain constant while updating resource unit or duration fields.
 * `FixedUnit` - Resource units will remain constant while updating duration or work field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt
 <SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="900px" HighlightWeekends="true" ProjectStartDate="@ProjectStart" ProjectEndDate="@ProjectEnd">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId"

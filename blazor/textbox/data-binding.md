@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TextBox Component | Syncfusion 
-description: Learn about Data Binding in Blazor TextBox component of Syncfusion, and more details.
+title: Data Binding in Blazor TextBox Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor TextBox Component
 
 This section briefly explains how to bind the value to the TextBox component in the following different ways.
 
@@ -19,7 +19,7 @@ This section briefly explains how to bind the value to the TextBox component in 
 
 You can bind the value to the TextBox component directly for `Value` property as mentioned in the following code example. In one-way binding, you have to pass property or variable name along with `@` (For Ex: "@Name").
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Value="@Name"></SfTextBox>
@@ -41,7 +41,7 @@ public string Name { get; set; } = "Hello, World!";
 
 Two-way binding can be achieved by using `bind-Value` attribute and its supports string, int, Enum, DateTime, and bool types. If component value has been changed, it will affect the all places where you bind the variable for the **bind-value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <p>TextBox value is: @Name</p>
@@ -61,7 +61,7 @@ You can change the property value dynamically by manually calling the `StateHasC
 
 There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Refer to the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder="Enter a Numeric Values" Input="OnInput" CssClass="@CssClass"></SfTextBox>

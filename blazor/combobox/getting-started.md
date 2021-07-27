@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor ComboBox Component | Syncfusion 
-description: Learn about Getting Started in Blazor ComboBox component of Syncfusion, and more details.
+title: Getting Started with Blazor ComboBox Component | Syncfusion
+description: Checkout and learn about getting started with Blazor ComboBox component of Syncfusion, and more details.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor ComboBox Component
 
 This section briefly explains how to include a **ComboBox** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
@@ -44,7 +44,7 @@ To get start quickly with Blazor ComboBox component, you can check on this video
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.DropDowns` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 ```
 

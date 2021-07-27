@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Async in Blazor File Upload Component | Syncfusion 
-description: Learn about Async in Blazor File Upload component of Syncfusion, and more details.
+title: Asynchronous Upload in Blazor File Upload Component | Syncfusion
+description: Learn here all about Asynchronous Upload in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Asynchronous upload
+# Asynchronous Upload in Blazor File Upload Component
 
 The uploader component allows you to upload the files asynchronously.
 The upload process requires save and remove action URL to manage the upload process in the server.
@@ -25,7 +25,7 @@ The following example explains about [AllowMultiple](https://help.syncfusion.com
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles">
@@ -44,7 +44,7 @@ The following example explains about single file upload settings.
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowMultiple=false>
@@ -59,7 +59,7 @@ By default, the uploader processes the files to upload once the files are select
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowMultiple=false AutoUpload=false>
@@ -82,7 +82,7 @@ By default, the uploader component process multiple files to upload simultaneous
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" SequentialUpload=true AutoUpload=false>
@@ -101,7 +101,7 @@ The uploader component allows you to preload the list of files that are uploaded
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AutoUpload=false>

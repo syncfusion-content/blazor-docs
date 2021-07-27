@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Responsive Modes in Blazor Tabs Component | Syncfusion 
-description: Learn about Responsive Modes in Blazor Tabs component of Syncfusion, and more details.
+title: Responsive Modes in Blazor Tabs Component | Syncfusion
+description: Learn here all about Responsive Modes in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Responsive Modes
+# Responsive Modes in Blazor Tabs Component
 
 The following section explains about rendering Tab when its width exceeds the viewable area or particularly in a given width. The available modes are as follows:
 
@@ -29,7 +29,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ![Touch scroll](images/touchscroll.gif)
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab OverflowMode="OverflowMode.Scrollable" Width="500px">
@@ -92,7 +92,7 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 
 ![Tab with popup](images/popup.gif)
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab OverflowMode="OverflowMode.Popup" Width="500px">

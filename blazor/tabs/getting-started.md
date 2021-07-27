@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Tabs Component | Syncfusion 
-description: Learn about Getting Started in Blazor Tabs component of Syncfusion, and more details.
+title: Getting Started with Blazor Tabs Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Tabs component of Syncfusion, and more details.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Tabs Component
 
 This section briefly explains about how to include a `Tabs` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Tabs component in any web page (razor) in the `Pages` folder. For example, the Tabs component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab>
@@ -139,7 +139,7 @@ Tab provides support to render content using `ContentTemplate` property. You can
 
 The following code explains how to initialize tab content using `ContentTemplate`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab>
@@ -185,7 +185,7 @@ Output be like the below.
 
 The property [SelectedItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_SelectedItem) supports two way property binding, in the following code example if either the value is changed in numeric text box or selected tab item is changed, it will reflect in both the value of numeric text box and selected tab item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Navigations
 

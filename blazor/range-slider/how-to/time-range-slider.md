@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Time Range Slider in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn about Time Range Slider in Blazor Range Slider component of Syncfusion, and more details.
+title: Time Range Slider in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Time Range Slider in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Time Range Slider
+# Time Range Slider in Blazor Range Slider Component
 
 The time formatting can be achieved same as the date formatting using `TicksRendering` and `TooltipChange` events. The process of time formatting is explained in the below sample.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider TValue="int[]" Min="MinValue()" Max="@MaxValue()" Type="SliderType.Range" @bind-Value="@SliderValues">

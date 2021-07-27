@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Sort The Columns in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn about Sort The Columns in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Sort the Columns in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Sort the Columns in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Sort the columns
+# Sort the Columns in Blazor QueryBuilder Component
 
 The Querybuilder has options to sort the column fields by `ascending` or `descending` order. To Sort the columns, you need to set [`SortDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SortDirection) property.
 
 In the following sample columns are sorted in ascending order.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder DataSource="@EmployeeData" SortDirection="SortDirection.Ascending">

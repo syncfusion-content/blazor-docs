@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Data Binding in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Data Binding in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor MultiSelect Dropdown Component
 
 Data binding can be achieved by using the `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 @foreach (var SelectedValue in MultiVal)

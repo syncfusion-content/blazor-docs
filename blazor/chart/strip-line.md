@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Strip Line in Blazor Chart Component | Syncfusion 
-description: Learn about Strip Line in Blazor Chart component of Syncfusion, and more details.
+title: Stripline in Blazor Charts Component | Syncfusion
+description: Learn here all about Stripline in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Striplines
+# Stripline in Blazor Charts Component
 
 <!-- markdownlint-disable MD036 -->
 

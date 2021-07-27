@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Globalization of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Globalization in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Globalization in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Globalization in the Blazor TreeMap (SfTreeMap)
+# Globalization in Blazor TreeMap Component
 
 The TreeMap component supports globalization for the following elements:
 
@@ -18,7 +18,7 @@ Globalization is the process of designing and developing a component that works 
 
 In the following code example, tooltip and Data Label is globalized to currency format in deutsch culture.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="GDP" DataSource="GrowthReports" Format="C">
@@ -53,4 +53,4 @@ In the following code example, tooltip and Data Label is globalized to currency 
 
 On successful configuration of localization the TreeMap will be rendered, as following.
 
-![TreeMap with internationalization](images/Internationalization/NumericFormat.png)
+![TreeMap with internationalization](images/Internationalization/NumericFormat.png)/NumericFormat.png)

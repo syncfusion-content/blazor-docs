@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Page Settings in Blazor Diagram Component | Syncfusion 
-description: Learn about Page Settings in Blazor Diagram component of Syncfusion, and more details.
+title: Page Settings in Blazor Diagram Component | Syncfusion
+description: Learn here all about Page Settings in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Page Settings
+# Page Settings in Blazor Diagram Component
 
 Page settings enable to customize the appearance, width, and height of the diagram page.
 
@@ -23,7 +23,7 @@ Page settings enable to customize the appearance, width, and height of the diagr
 
 * To explore those properties, refer to `Page Settings`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px" id="diagram">
@@ -79,7 +79,7 @@ The [`Scale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.D
 
 The following code illustrates how to stretch and align the background image.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Height="600px" id="diagram">
     @*Initialize the page settings with page orientation and break lines*@
@@ -103,7 +103,7 @@ When multiple page is enabled, the size of the page dynamically increases or dec
 The [`MultiplePage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_MultiplePage) and [`ShowPageBreak`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPageSettings.html#Syncfusion_Blazor_Diagrams_DiagramPageSettings_ShowPageBreaks) properties of page settings allow you to enable/disable multiple pages and page breaks respectively.
 The following code illustrates how to enable multiple page and page break lines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -161,7 +161,7 @@ To explore the boundary constraints, refer to [`Boundary Constraints`](https://h
 
 The following code example illustrates how to define boundary constraints with respect to the page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

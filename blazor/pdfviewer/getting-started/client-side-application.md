@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Client Side Application in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Client Side Application in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Client-side application in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Client-side application in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Create a PDF Viewer in Blazor client-side application
+# Client-side application in Blazor PDF Viewer Component
 
 >Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
@@ -36,7 +36,7 @@ documentation: ug
 
  **Step 5:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewer
 ```
@@ -62,7 +62,7 @@ For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentatio
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the ConfigureServices function as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 
 namespace BlazorApplication
@@ -93,4 +93,4 @@ namespace BlazorApplication
 
 **Step 9:**: Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
 
-![output image](../images/browser-output.png)
+![output image](../images/browser-output.png)ng)

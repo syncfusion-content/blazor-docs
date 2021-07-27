@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Range Restriction in Blazor DateRangePicker Component | Syncfusion 
-description: Learn about Range Restriction in Blazor DateRangePicker component of Syncfusion, and more details.
+title: Range Restriction in Blazor DateRangePicker Component | Syncfusion
+description: Learn here all about Range Restriction in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Range Restriction
+# Range Restriction in Blazor DateRangePicker Component
 
 Range selection in a DateRangePicker can be made-to-order with desired restrictions based on the application needs.
 
@@ -20,7 +20,7 @@ You can restrict the minimum and maximum date that can be allowed as Start and E
 
 In the following sample, you can select a range from 15th day of this month to 15th day of next month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
@@ -45,7 +45,7 @@ In this, minimum and maximum span allowed within the date range can be customize
 
 In the following sample, the range selection should be greater than 5 days and less than 10 days, else it will not set.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" MinDays=5 MaxDays=10 Placeholder='Select a range'>
@@ -60,7 +60,7 @@ The output will be as follows.
 
 DateRangePicker provides an option to limit the user towards entering the valid date. With `StrictMode`, you can set only the valid date. If any invalid range is specified, the date range value resets to previous value. This restriction can be availed by setting the [StrictMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_StartDate) property to true.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode=true Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>
@@ -94,7 +94,7 @@ value or `null` respectively with highlighted  `error` class to indicate the val
 The following code demonstrates the `StrictMode` as false. Here, it allows you to enter the
 valid or invalid value in text box.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" StartDate='@Start' EndDate='@End' StrictMode=false Min='@MinDate' Max='@MaxDate'></SfDateRangePicker>

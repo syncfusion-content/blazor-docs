@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Show Hide Accordion Item in Blazor Accordion Component | Syncfusion
-description: Checkout and learn about Show Hide Accordion Item in Blazor Accordion component of Syncfusion, and more details.
+title: Show/Hide Accordion item in Blazor Accordion Component | Syncfusion
+description: Learn here all about Show/Hide Accordion item in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Show/Hide Accordion Items
+# Show/Hide Accordion item in Blazor Accordion Component
 
 Accordion provides a support to Show/Hide the specified accordion item using following ways.
 
@@ -20,7 +20,7 @@ Accordion provides support to Show/Hide the specified accordion item dynamically
 
 In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 
@@ -83,7 +83,7 @@ Accordion provides support to Show/Hide the specified accordion item dynamically
 
 In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
 

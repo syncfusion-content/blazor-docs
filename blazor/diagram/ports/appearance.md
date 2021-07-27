@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Diagram Component | Syncfusion 
-description: Learn about Appearance in Blazor Diagram component of Syncfusion, and more details.
+title: Appearance in Blazor Diagram Component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Port appearance and positioning
+# Appearance in Blazor Diagram Component
 
 ## Appearance
 
@@ -21,7 +21,7 @@ documentation: ug
 
 The following code explains how to change the appearance of the port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -86,7 +86,7 @@ We have provided some basic built-in [`PortShapes`](https://help.syncfusion.com/
 
  We have provided custom shape support for port. you can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
 
- ```csharp
+ ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in Blazor Diagram Component | Syncfusion 
-description: Learn about Methods in Blazor Diagram component of Syncfusion, and more details.
+title: Diagram Methods in Blazor Diagram Component | Syncfusion
+description: Learn here all about Diagram Methods in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Methods
+# Diagram Methods in Blazor Diagram Component
 
 The following methods are used to perform the diagram functionalities.
 
@@ -17,7 +17,7 @@ The following methods are used to perform the diagram functionalities.
 
 You can add the node at runtime by using the [`AddNode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddNode_Syncfusion_Blazor_Diagrams_DiagramNode_System_Nullable_System_Boolean__) method. The following code snippet shows how to add the node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -65,7 +65,7 @@ You can remove the node at runtime by using the [`Remove`](https://help.syncfusi
 
 The following code shows how to remove a node at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -125,7 +125,7 @@ The following code shows how to remove a node at runtime.
 
 You can add the child to group node at runtime by using the [`AddChildToGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddChildToGroup_Syncfusion_Blazor_Diagrams_DiagramNode_System_Object_) method. The following code shows how to add child in a group.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -182,7 +182,7 @@ You can add the child to group node at runtime by using the [`AddChildToGroup`](
 
 You can find and get the node from the id property itself. The following code shows how to find the node in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -225,7 +225,7 @@ You can find and get the node from the id property itself. The following code sh
 
 You can find what are all the in and out connectors that are connected to the node by using the [`GetEdges`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetEdges_System_String_System_Boolean_) method. The following code snippet shows how to get the in and out connector list what are the connectors are connected to the node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="UpdateEdges" @onclick="@UpdateEdges" />
@@ -335,7 +335,7 @@ You can find what are all the in and out connectors that are connected to the no
 
 You can find the parent of the object by using the [`GetParentID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetParentId_System_String_) method. The following code shows how to get the parent information of the object.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -398,7 +398,7 @@ You can find the parent of the object by using the [`GetParentID`](https://help.
 
 You can add a connector at runtime by using the server-side method [`AddConnector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddConnector_Syncfusion_Blazor_Diagrams_DiagramConnector_) in the Diagram component.  The following code explains how to add connectors at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Add Connector" @onclick="@AddConnector">
@@ -439,7 +439,7 @@ You can add a connector at runtime by using the server-side method [`AddConnecto
 
 You can get the connector from property `Id` by using the [`GetConnector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetConnector_System_String_) method. The following code shows how to find the connector in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -488,7 +488,7 @@ You can get the connector from property `Id` by using the [`GetConnector`](https
 
 You can arrange the connector segments without overlapping the nodes by using the [`ResetSegments`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ResetSegments) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -556,7 +556,7 @@ You can arrange the connector segments without overlapping the nodes by using th
 
 Annotations can be added at runtime by using the [`AddLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLabels_System_Object_System_Object_) method. The following code explains how to add an annotation to a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
@@ -604,7 +604,7 @@ Annotations can be added at runtime by using the [`AddLabels`](https://help.sync
 
 A collection of annotations can be removed from the node by using the [`RemoveLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemoveLabels_System_Object_System_Object_) method. The following code explains how to remove an annotation to a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
@@ -654,7 +654,7 @@ A collection of annotations can be removed from the node by using the [`RemoveLa
 
 You can change the annotation content by using the [`StartTextEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_StartTextEdit_System_Object_System_String_) method. The following code shows how to edit the content of the annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input value="Annotation Editing" type="button" @onclick="@AnnotationEditing" />
@@ -748,7 +748,7 @@ You can add ports to a node at runtime by using the [`AddPorts`](https://help.sy
 
 You can remove the existing ports in a node by using the [`RemovePorts`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemovePorts_Syncfusion_Blazor_Diagrams_DiagramNode_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagrams_DiagramPort__) method. The following code shows how to remove the ports in a diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="RemovePorts" @onclick="@RemovePorts" />
@@ -799,7 +799,7 @@ You can remove the existing ports in a node by using the [`RemovePorts`](https:/
 
 You can print the diagram area by using the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Print_Syncfusion_Blazor_Diagrams_IPrintOptions_) method. The following code shows how to print the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <input type="button" value="Print Diagram" @onclick="@PrintDiagram" />
@@ -836,7 +836,7 @@ You can print the diagram area by using the [`Print`](https://help.syncfusion.co
 
 You can export the diagram area by using the [`ExportDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ExportDiagram_Syncfusion_Blazor_Diagrams_IExportOptions_) method. The following code shows how to export the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -875,7 +875,7 @@ You can export the diagram area by using the [`ExportDiagram`](https://help.sync
 
 * You can load the diagram from JSON data by using the [`LoadDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_LoadDiagram_System_String_) method. The following code is used how to load the diagram at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -925,7 +925,7 @@ You can export the diagram area by using the [`ExportDiagram`](https://help.sync
 
 You can add new layers in a diagram by using the `AddLayers` method. The following code shows how to add the layers to the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -993,7 +993,7 @@ You can add new layers in a diagram by using the `AddLayers` method. The followi
 
 You can remove the layers in a diagram by using the `RemoveLayers` method. The following code shows how to remove the layers to the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1053,7 +1053,7 @@ You can remove the layers in a diagram by using the `RemoveLayers` method. The f
 
 You can clone the layers in a diagram by using the `CloneLayer` method. The following code shows how to clone the layers to the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1116,7 +1116,7 @@ You can clone the layers in a diagram by using the `CloneLayer` method. The foll
 
 You can get the active layer in a diagram by using the `GetActiveLayer` method. The following code shows how to find the active layer of the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1185,7 +1185,7 @@ You can get the active layer in a diagram by using the `GetActiveLayer` method. 
 
 You can set the active layer in a diagram by using the `SetActiveLayer` method. The following code shows how to set the active layer of the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1258,7 +1258,7 @@ You can set the active layer in a diagram by using the `SetActiveLayer` method. 
 
 You can change the layer order, to get the layer forward by using the `BringLayerForward` method. The following code shows how to bring forward the particular layer in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1328,7 +1328,7 @@ You can change the layer order, to get the layer forward by using the `BringLaye
 
 You can change the layer order, to get the layer forward by using the `SendLayerBackward` method. The following code shows how to bring forward the particular layer in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1398,7 +1398,7 @@ You can change the layer order, to get the layer forward by using the `SendLayer
 
 You can move node or connector from one layer to another layer by using the [`MoveObjects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_MoveObjects_System_Collections_Generic_List_System_String__System_String_) method. The following code shows how to move an object from one layer to another.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1488,7 +1488,7 @@ A sizing commands enable to equally size the selected nodes with respect to the 
 
 The following code example shows how to execute the SameSize commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1580,7 +1580,7 @@ The following code example shows how to execute the SameSize commands.
 
 Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Refer to the Align commands that shows how to use align methods in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1649,7 +1649,7 @@ Alignment commands enable you to align the selected or defined objects such as n
 
 The Distribute commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1718,7 +1718,7 @@ The Distribute commands enable to place the selected objects on the page at equa
 
 A Clipboard commands are used to cut, copy, or paste the selected elements. Refer to the following link that shows how to use clipboard methods in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1799,7 +1799,7 @@ Grouping commands are used to group or ungroup the selected elements on the diag
 
 The following code shows how to execute the grouping commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1861,7 +1861,7 @@ The following code shows how to execute the grouping commands.
 
 Order commands enable you to visually arrange the selected objects such as nodes and connectors on the page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1987,7 +1987,7 @@ Diagram provides the support to interact the nodes, connectors, and so on.
 
 * You can clear the selected objects by using the [`ClearSelection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ClearSelection) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2078,7 +2078,7 @@ Diagram provides the support to interact the nodes, connectors, and so on.
 
 A object can be drag at runtime by using the [`Drag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Drag_System_Object_System_Double_System_Double_) method. The following code explains how to drag the node by using the drag method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2146,7 +2146,7 @@ A object can be drag at runtime by using the [`Drag`](https://help.syncfusion.co
 
 A node can be resize at runtime by using the [`Scale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Scale_System_Object_System_Double_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) method. The following code explains how to resize the node by using the scale method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2189,7 +2189,7 @@ A node can be resize at runtime by using the [`Scale`](https://help.syncfusion.c
 
 A node can be rotate at runtime by using the [`Rotate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Rotate_System_Object_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) method. The following code explains how to rotate the node by using method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2233,7 +2233,7 @@ A node can be rotate at runtime by using the [`Rotate`](https://help.syncfusion.
 
 You can drag the source point of the connector by using the [`DragSourceEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DragSourceEnd_Syncfusion_Blazor_Diagrams_DiagramConnector_System_Double_System_Double_) method. The following code is used to change the source end.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2278,7 +2278,7 @@ You can drag the source point of the connector by using the [`DragSourceEnd`](ht
 
 You can drag the target point of the connector by using the [`DragTargetEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DragTargetEnd_Syncfusion_Blazor_Diagrams_DiagramConnector_System_Double_System_Double_) method. The following code is used to change the target end.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2326,7 +2326,7 @@ You can move a single or some of the distance of the selected node by using the 
 * NudgeDirection - used to consider the direction to move the selected object.
 * X, Y - which distance to be moved. By default, X and Y value is set to be 1.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2423,7 +2423,7 @@ You can move a single or some of the distance of the selected node by using the 
 
 You can zoom in or zoom out the diagram. The following code how to zoom the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2483,7 +2483,7 @@ You can zoom in or zoom out the diagram. The following code how to zoom the diag
 
 You can move the diagram view port by using the [`Pan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Pan_System_Double_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) method. The following code hows how to pan the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2537,7 +2537,7 @@ You can move the diagram view port by using the [`Pan`](https://help.syncfusion.
 
 You can fit the diagram elements within the diagram bounds. The following code is used to how to fit all the elements in the diagram area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2591,7 +2591,7 @@ You can fit the diagram elements within the diagram bounds. The following code i
 
 You can change the size of the diagram area, after that you can update the view port by using the [`UpdateViewPort`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_UpdateViewPort) method. The following code shows how to update the view port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2647,7 +2647,7 @@ You can change the size of the diagram area, after that you can update the view 
 
 You can view the particular bounds to center of the view port by using the [`BringToCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToCenter_System_Object_) method. The following code shows how to use the method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2700,7 +2700,7 @@ You can view the particular bounds to center of the view port by using the [`Bri
 
 You can view the particular bounds to the view port by using the [`BringIntoView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringIntoView_System_Object_) method. The following code show how to use the method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2753,7 +2753,7 @@ You can view the particular bounds to the view port by using the [`BringIntoView
 
 You can get the diagram bounds by using the [`GetDiagramBounds`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetDiagramBounds) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2808,7 +2808,7 @@ You can get the diagram bounds by using the [`GetDiagramBounds`](https://help.sy
 
 You can clear all the elements in diagram by using the [`Clear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Clear) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -2956,7 +2956,7 @@ Diagram.AddCustomHistoryEntry(Entry);
 
 The following code shows how to manage and get the history list.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

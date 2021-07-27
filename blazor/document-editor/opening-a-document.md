@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Opening A Document in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about Opening A Document in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Opening a document in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Opening a document in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Open documents in Blazor Word processor from various storage location
+# Opening a document in Blazor DocumentEditor Component
 
 You might need to open and view Word documents from various location. In this section, you can find the information about how to open Word documents from URL, cloud, database, and local file system and also how to load a document during control initialization.
 
@@ -15,7 +15,7 @@ You might need to open and view Word documents from various location. In this se
 
 If you have your Word document file in the web, you can open it in [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) using URL. The following code example explains how to open a Word document file from URL.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using System.Net
@@ -66,7 +66,7 @@ If you have your Word document file in the web, you can open it in [`Blazor Word
 You can open the Word documents from Cloud storage.
 The following code example shows how to open and load the Word document file stored in Azure Blob Storage.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using Microsoft.Azure.Storage
@@ -120,7 +120,7 @@ The following code example shows how to open and load the Word document file sto
 
 You can open the Word documents from Azure File Storage using the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using System.IO
 @using Microsoft.Azure.Storage
@@ -191,7 +191,7 @@ You can open the Word documents from Azure File Storage using the following code
 
 The following code example shows how to open the Word document file in viewer from SQL Server database.
 
-```csharp
+```cshtml
 @using System.IO;
 @using Syncfusion.Blazor.DocumentEditor
 @using System.Data.SqlClient
@@ -244,7 +244,7 @@ The following code example shows how to open the Word document file in viewer fr
 
 There is an UI option in built-in toolbar to open the Word documents from local file system. If you want to achieve the same functionality when design your own toolbar, you can use the following code example to load and open the Word documents. In this sample, the Syncfusion’s Uploader control is used for Blazor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 @using Syncfusion.Blazor.Inputs
 @using System.IO
@@ -288,7 +288,7 @@ There is an UI option in built-in toolbar to open the Word documents from local 
 
 The Word document can be opened on control initialization, in this sample, the document is opened when the control is initialized.
 
-```csharp
+```cshtml
 @using System.IO
 @using Syncfusion.Blazor.DocumentEditor
 @using Newtonsoft.Json
@@ -320,4 +320,4 @@ The Word document can be opened on control initialization, in this sample, the d
 }
 ```
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.the document editor.

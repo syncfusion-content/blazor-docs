@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Custom Value in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Custom Value in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Custom Value in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about Custom Value in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# CustomValue
+# Custom Value in Blazor MultiSelect Dropdown Component
 
 The MultiSelect allows the users to add a new non-present option to the component value when [AllowCustomValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_AllowCustomValue) is enabled. while selecting the new custom value, the `CustomValueSelection` event will be triggered.
 
 The following sample demonstrates configuration of custom value support with the MultiSelect component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" Placeholder="Favorite Sports" AllowCustomValue=true DataSource="@LocalData">

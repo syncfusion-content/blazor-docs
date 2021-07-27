@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Crud Actions in Blazor Scheduler Component | Syncfusion 
-description: Learn about Crud Actions in Blazor Scheduler component of Syncfusion, and more details.
+title: CRUD actions in Blazor Scheduler Component | Syncfusion
+description: Learn here all about CRUD actions in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# CRUD Actions
+# CRUD actions in Blazor Scheduler Component
 
 Events, a.k.a. Appointments, play an important role in Scheduler with which the users mostly interact. You can easily manipulate (add/edit/delete) the desired appointments as and when required either using the editor window or through the drag and resize action.
 
@@ -28,7 +28,7 @@ In case, if you want to simply provide the Subject alone for appointments, just 
 
 The appointments can be created dynamically by using `AddEventAsync` method. The following code example let you know how to use the `AddEventAsync` method to create an appointment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -83,7 +83,7 @@ The appointments can be created dynamically by using `AddEventAsync` method. The
 
 Another easier way to create the appointments is enabling the `AllowInline` property. By single clicking on the scheduler cells or press `enter` key on selected cells, the appointment like textbox will be displayed in which you can enter the Subject of the appointment. Pressing enter key or clicking out of the text box will create the appointment in the scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowInline="true" @bind-SelectedDate="@CurrentDate">
@@ -156,7 +156,7 @@ In the following example, the specific fields of Scheduler editor window such as
 
 Additionally, the regex condition has been added to the Location field, so that if any special characters are typed into it, then the custom validation message will be displayed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -207,7 +207,7 @@ Additionally, the regex condition has been added to the Location field, so that 
 
 You can also dynamically prevent the creation of appointments on Scheduler. For example, say if you want to decline the creation of appointments on weekend days, you can check for its appropriate condition within the `OnActionBegin` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -277,7 +277,7 @@ The appointments can be edited and updated manually using the `SaveEventAsync` m
 
 Here, an event with ID `1` is edited and its subject is changed with a new text. When the modified data object is passed onto the `SaveEventAsync` method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -332,7 +332,7 @@ Here, an event with ID `1` is edited and its subject is changed with a new text.
 
 Another easier way to edit the appointments is enabling the `AllowInline` property. By single clicking on the appointments, you can edit the Subject of the appointment. Pressing enter key or clicking out of the appointment will edit the existing appointment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowInline="true" @bind-SelectedDate="@CurrentDate">
@@ -513,7 +513,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 You can also dynamically prevent the editing of appointments on Scheduler. For example, say if you want to decline the updating of appointments on non-working hours, you can check for its appropriate condition within the `OnActionBegin` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -600,7 +600,7 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
 
 **Normal event** - You can delete the normal appointments of Scheduler by simply passing its `Id` value or the entire event object collection to the `DeleteEventAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -646,7 +646,7 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
 
 **Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the `DeleteEventAsync` method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters. The following code example shows how to delete entire series.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Buttons
 
@@ -797,7 +797,7 @@ When you drag and drop a normal event on the Scheduler, the event editing action
 
 > By default, when you drag a recurring instance, only the occurrence of the event gets edited and not a whole series.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -838,7 +838,7 @@ When you resize a normal event on the Scheduler, the event editing action takes 
 
 > By default, when you resize a recurring instance, only the occurrence of the event gets edited and not a whole series.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">

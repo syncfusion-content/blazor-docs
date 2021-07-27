@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Symbol Palette in Blazor Diagram Component | Syncfusion 
-description: Learn about Symbol Palette in Blazor Diagram component of Syncfusion, and more details.
+title: Symbol Palette in Blazor Diagram Component | Syncfusion
+description: Learn here all about Symbol Palette in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Symbol Palette
+# Symbol Palette in Blazor Diagram Component
 
 The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
 
@@ -15,7 +15,7 @@ The **SymbolPalette** displays a collection of palettes. The palette shows a s
 
 The `Width` and `Height` properties of the symbol palette allows to define the size of the symbol palette.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 @* Initializes the symbol palette *@
@@ -34,7 +34,7 @@ To initialize a palette, define a JSON object with the property [`Id`](https://h
 
 The following code example illustrates how to define a palette and how its added to symbol palette.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Navigations
 @using System.Collections.ObjectModel
@@ -148,7 +148,7 @@ The [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams
 
 The [`Fit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolInfo.html#Syncfusion_Blazor_Diagrams_SymbolInfo_Fit) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @* Initialize Symbol palette with customize symbol size*@
@@ -192,7 +192,7 @@ The [`Fit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Sym
 
 The size of the individual symbol can be customized. The [`SymbolWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolWidth) and  [`SymbolHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolHeight) properties of node enables you to define the size of the symbols. The following code example illustrates how to change the size of a symbol.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @* Initialize Symbol palette with customize symbol size*@
@@ -244,7 +244,7 @@ The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
 
 The following code example illustrates how to change the preview size of a palette item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @* Initialize Symbol palette with customize symbol size*@
@@ -298,7 +298,7 @@ The following code example illustrates how to change the preview size of a palet
 
 While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [`NodeDefaults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_NodeDefaults) and the `ConnectorDefaults` properties of diagram allows to define the default settings for nodes and connectors.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Navigations;
@@ -359,7 +359,7 @@ The diagram provides support to add symbol description below each symbol of a pa
 * The property `getSymbolInfo`, can be used to add the symbol description at runtime.
  The following code is an example to set a symbol description for symbols in the palette.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Navigations
 @using System.Collections.ObjectModel

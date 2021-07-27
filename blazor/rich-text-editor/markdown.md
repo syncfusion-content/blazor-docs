@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Markdown in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Markdown in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Markdown in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Markdown in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Markdown
+# Markdown in Blazor RichTextEditor Component
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.
 

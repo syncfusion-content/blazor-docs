@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Position in Blazor Tooltip Component | Syncfusion 
-description: Learn about Position in Blazor Tooltip component of Syncfusion, and more details.
+title: Position in Blazor Tooltip Component | Syncfusion
+description: Learn here all about Position in Syncfusion Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
 ---
 
-# Tooltip Positioning
+# Position in Blazor Tooltip Component
 
 Tooltips can be attached to 12 static locations around the target.
 On initializing the Tooltip, you can set the position property with any one of the following values:
@@ -27,7 +27,7 @@ On initializing the Tooltip, you can set the position property with any one of
 
 > By default, Tooltip is placed at the `TopCenter` of the target element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -49,7 +49,7 @@ Output be like the below.
 
 Tooltips can be positioned relative to the mouse pointer. This behavior can be enabled or disabled by using the `MouseTrail` property. By default, it is set to `false`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 
@@ -90,7 +90,7 @@ Offset values are set to specify the distance between the target and tooltip ele
 
 The following code example illustrates how to set offset values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
 

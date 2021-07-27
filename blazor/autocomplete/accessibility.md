@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Accessibility in Blazor AutoComplete component of Syncfusion, and more details.
+title: Accessibility in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor AutoComplete Component
 
 The AutoComplete component has been designed, keeping in mind the `WAI-ARIA` specifications,
 and applies the `WAI-ARIA` roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
@@ -49,7 +49,7 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 > In the following sample, disable the AutoComplete component using <kbd>t</kbd> keys.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Countries" @ref="AutoObj" Placeholder="Select a country" Enabled="@enable" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">

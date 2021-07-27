@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Filtering in Blazor ComboBox Component | Syncfusion 
-description: Learn about Filtering in Blazor ComboBox component of Syncfusion, and more details.
+title: Filtering in Blazor ComboBox Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Filtering
+# Filtering in Blazor ComboBox Component
 
 The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter
 operation starts as soon as you start typing characters in the component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -42,7 +42,7 @@ The output will be as follows.
 
 The ComboBox component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 
 <SfComboBox TValue="string" @ref="comboObj" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country" AllowFiltering="true">

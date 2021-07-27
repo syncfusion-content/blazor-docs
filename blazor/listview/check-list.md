@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Check List in Blazor Listview Component | Syncfusion 
-description: Learn about Check List in Blazor Listview component of Syncfusion, and more details.
+title: Check list in Blazor ListView Component | Syncfusion
+description: Learn here all about Check list in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Checklist
+# Check list in Blazor ListView Component
 
 The ListView supports checkbox in default and group-lists which is used to select multiple items.
 The checkbox can be enabled by the `ShowCheckBox` property.
@@ -16,7 +16,7 @@ The Checkbox will be useful in the scenario where we need to select multiple opt
 In Shipping cart we can be able to select or unselect the desired items before checkout and also
 it will be useful in selecting multiple items that belongs to same category using the group list.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data" ShowCheckBox="true">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" IsChecked="IsChecked"></ListViewFieldSettings>
@@ -56,7 +56,7 @@ private DataModel[] Data = {
 In ListView the checkbox can be positioned into either `Left` or `Right` side of the list-item text.
 This can be achieved by `CheckBoxPosition` property. By default, checkbox will be positioned to `Left` of list-item text.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data" ShowCheckBox="true" CheckBoxPosition="CheckBoxPosition.Right">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Change Animation Settings in Blazor Context Menu Component | Syncfusion
-description: Checkout and learn about Change Animation Settings in Blazor Context Menu component of Syncfusion, and more details.
+title: Change animation settings in Blazor ContextMenu Component | Syncfusion
+description: Learn here all about Change animation settings in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
 ---
 
-# Change animation settings
+# Change animation settings in Blazor ContextMenu Component
 
 To change the animation of the Context Menu, [`MenuAnimationSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuAnimationSettings.html) component is used to initialize the animation properties.
 The supported effects for Context Menu are,
@@ -21,7 +21,7 @@ The supported effects for Context Menu are,
 
 The following sample illustrates how to open Context Menu with `FadeIn` effect with the `Duration` of `800ms`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <div id="target">Right click/Touch hold to open the Context Menu</div>

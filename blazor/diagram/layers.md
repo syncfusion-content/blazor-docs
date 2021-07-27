@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layers in Blazor Diagram Component | Syncfusion 
-description: Learn about Layers in Blazor Diagram component of Syncfusion, and more details.
+title: Layers in Blazor Diagram Component | Syncfusion
+description: Learn here all about Layers in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Layers
+# Layers in Blazor Diagram Component
 
 **Layer** is used to organize related shapes on a diagram control. A layer is a named category of shapes. By assigning shapes to different layers, you can selectively view, remove, and lock different categories of shapes.
 
@@ -22,7 +22,7 @@ In diagram, [`Layers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 The layer's [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Visible) property is used to control the visibility of the elements assigned to the layer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -89,7 +89,7 @@ The layer's [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The layer's [`Lock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Lock) property is used to prevent or allow changes to the elements dimension and position.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -158,7 +158,7 @@ The layer's [`Lock`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 The layer's [`Objects`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Objects) property defines the diagram elements to the layer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -228,7 +228,7 @@ The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams
 
 The following code illustrates how to add additional information to the layers.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -304,7 +304,7 @@ The layer's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 The following code illustrates how to add a layer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
  <input type="button" value="Addlayer" @onclick="@addLayer" />
 <SfDiagram Height="600px" @ref="@diagram">

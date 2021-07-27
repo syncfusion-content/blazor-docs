@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Virtual in Blazor DataGrid Component | Syncfusion 
-description: Learn about Virtual in Blazor DataGrid component of Syncfusion, and more details.
+title: Virtualization in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Virtualization in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Virtualization
+# Virtualization in Blazor DataGrid Component
 
 DataGrid allows you to load large amount of data without [performance](https://www.syncfusion.com/blazor-components/blazor-datagrid/performance) degradation.
 
@@ -253,7 +253,7 @@ Row virtualization allows you to virtualize the vertical data with cell placehol
 
 To setup the frozen right/left columns, you need to define Column property of **Freeze** as Right/Left along with enabling the column property of [`IsFrozen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsFrozen).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@GridData" Height="400" Width="500"  EnableHover="false" RowHeight="38" EnableVirtualization="true" EnableColumnVirtualization="true" EnableVirtualMaskRow="true">

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Layout in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Layout of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Layout in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Layout in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Layout in the Blazor TreeMap (SfTreeMap)
+# Layout in Blazor TreeMap Component
 
 Determine the visual representation of nodes belonging to all the TreeMap levels using the [`LayoutType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_LayoutType) property.
 
@@ -24,7 +24,7 @@ The available layout types are,
 
 The [`Squarified`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html#Syncfusion_Blazor_TreeMap_LayoutMode_Squarified) layout displays the nested rectangles based on aspect ratio in the TreeMap. The rectangles will be split based on the height and width of the parent. The default rendering type of layout is [`Squarified`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP">
@@ -180,4 +180,4 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 > Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![TreeMap custom rendering direction](images/Internationalization/BottomLeftTopRight.png)
+![TreeMap custom rendering direction](images/Internationalization/BottomLeftTopRight.png)ftTopRight.png)

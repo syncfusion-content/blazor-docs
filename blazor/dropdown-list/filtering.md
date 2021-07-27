@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Filtering in Blazor DropDown List Component | Syncfusion 
-description: Learn about Filtering in Blazor DropDown List component of Syncfusion, and more details.
+title: Filtering in Blazor DropDown List Component | Syncfusion
+description: Learn here all about Filtering in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Filtering
+# Filtering in Blazor DropDown List Component
 
 The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter
 operation starts as soon as you start typing characters in the search box.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
     <SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
@@ -58,7 +58,7 @@ The output will be as follows.
 
 The DropDownList component filter queries can be customized. You can also use your own filter libraries to filter data like Fuzzy search.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

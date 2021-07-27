@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types And Styles in Blazor ButtonGroup Component | Syncfusion 
-description: Learn about Types And Styles in Blazor ButtonGroup component of Syncfusion, and more details.
+title: Types and Styles in Blazor ButtonGroup Component | Syncfusion
+description: Learn here all about Types and Styles in Syncfusion Blazor ButtonGroup component and more.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
 ---
 
-# Types and Styles
+# Types and Styles in Blazor ButtonGroup Component
 
 This section explains about different types and styles of ButtonGroup.
 
@@ -71,7 +71,7 @@ set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Spl
 A round ButtonGroup is shaped like a circle. Usually, it contains an icon representing its action. To create a round ButtonGroup,
 set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-round`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup CssClass="e-flat">
@@ -104,7 +104,7 @@ To create ButtonGroup with icons, [`IconCss`](https://help.syncfusion.com/cr/bla
 property of the button component can be used.
 You can customize the icon's position by using the [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.ButtonGroupButton.html#Syncfusion_Blazor_SplitButtons_ButtonGroupButton_IconPosition) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup>
@@ -133,7 +133,7 @@ Output be like
 The two types of ButtonGroup sizes are default and small. To change the size of the default ButtonGroup to small ButtonGroup,
 set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html#Syncfusion_Blazor_SplitButtons_SfButtonGroup_CssClass) property to `e-small`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfButtonGroup CssClass="e-small">

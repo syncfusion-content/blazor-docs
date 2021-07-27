@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Bullet Chart component | Syncfusion
-description: Learn here all about the Events of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Events in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Events in the Blazor Bullet Chart (SfBulletChart)
+# Events in Blazor Bullet Chart Component
 
 This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [`BulletChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
@@ -15,7 +15,7 @@ This section describes about the Bullet Chart component's events that will be tr
 
 The `Loaded` event triggers after the Bullet Chart component has been loaded.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
@@ -47,7 +47,7 @@ The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 |--------------------| -------------------------------------------------------|
 |   Cancel               |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="PrintCall">OnPrint</button>
@@ -81,7 +81,7 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 |   Value               |   Specifies the Value Bar data. |
 |   Cancel               |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="300" Interval="50">
@@ -110,7 +110,7 @@ The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 |   Text     |    Specifies the text of the legend item.      |
 |   Cancel             |   Specifies the event cancel status. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@BulletChartData" Height="300px" Title="Sales Rate" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
@@ -138,6 +138,9 @@ The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
     public void LegendRenderHandler(BulletChartLegendRenderEventArgs args)
     {
         // Here you can customize the code.
+    }
+}
+```ze the code.
     }
 }
 ```

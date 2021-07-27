@@ -1,13 +1,13 @@
 ---
 layout: post
-title: View in Blazor DatePicker Component | Syncfusion 
-description: Learn about View in Blazor DatePicker component of Syncfusion, and more details.
+title: Start and Depth View in Blazor DatePicker Component | Syncfusion
+description: Learn here all about Start and Depth View in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug
 ---
 
-# Start and Depth View
+# Start and Depth View in Blazor DatePicker Component
 
 The DatePicker has the following predefined views
 that provides a flexible way to navigate back and forth to select the date:
@@ -24,7 +24,7 @@ You can use the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The following example demonstrates how to create a DatePicker with `Decade` as initial rendering view.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Placeholder='Select a date' Start='CalendarView.Decade'></SfDatePicker>
@@ -47,7 +47,7 @@ will be not restricted.
 
 The following example demonstrates how to create a DatePicker that allows users to select a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Placeholder='choose a date' Start='CalendarView.Decade' Depth='CalendarView.Year'></SfDatePicker>

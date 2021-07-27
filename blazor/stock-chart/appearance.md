@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Appearance in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Appearance in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Appearance in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Appearance
+# Appearance in Blazor Stock Chart Component
 
 ## Stock Chart Title
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Label And Size in Blazor Radio Button Component | Syncfusion 
-description: Learn about Label And Size in Blazor Radio Button component of Syncfusion, and more details.
+title: Label and Size in Blazor RadioButton Component | Syncfusion
+description: Learn here all about Label and Size in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
 ---
 
-# Label and Size
+# Label and Size in Blazor RadioButton Component
 
 This section explains the different sizes and labels.
 
@@ -17,7 +17,7 @@ Radio Button caption can be defined by using the [`Label`](https://help.syncfusi
 This reduces the manual addition of label for Radio Button. You can customize the label position before or after the
 Radio Button through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_LabelPosition) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Left Side Label" Name="position" LabelPosition="RadioLabelPosition.Before" Value="Left"  @bind-Checked="stringChecked"></SfRadioButton><br />
@@ -38,7 +38,7 @@ Output be like
 The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small,
 set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property to `e-small`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfRadioButton Label="Small" Name="size" CssClass="e-small" Value="Small" @bind-Checked="stringChecked"></SfRadioButton><br />

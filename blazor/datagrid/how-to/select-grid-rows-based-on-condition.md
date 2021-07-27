@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Select Grid Rows Based On Condition in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Select Grid Rows Based On Condition in Blazor DataGrid component of Syncfusion, and more details.
+title: Select datagrid rows based on certain condition in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Select datagrid rows based on certain condition in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Select datagrid rows based on certain condition
+# Select datagrid rows based on certain condition in Blazor DataGrid Component
 
 You can select specific rows in the datagrid based on some conditions by using the [`SelectRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid component.
 
 This is demonstrated in the below sample code where the index value of datagrid rows with **Freight** column value greater than 10 are stored in the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event and then selected in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true">

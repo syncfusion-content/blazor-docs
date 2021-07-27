@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types in Blazor Chip Component | Syncfusion 
-description: Learn about Types in Blazor Chip component of Syncfusion, and more details.
+title: Types in Blazor Chip Component | Syncfusion
+description: Learn here all about Types in Syncfusion Blazor Chip component and more.
 platform: Blazor
 control: Chip
 documentation: ug
 ---
 
-# Types
+# Types in Blazor Chip Component
 
 The Chip control has the following types.
 
@@ -20,7 +20,7 @@ The Chip control has the following types.
 
 Input Chip holds information in compact form. It converts user input into chips.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip>
     <ChipItems>
@@ -41,7 +41,7 @@ Output be like the below.
 
 Choice Chip allows you to select a single chip from the set of Chip/ChipItems. It can be enabled by setting the `Selection` property to `Single`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip Selection="SelectionType.Single">
     <ChipItems>
@@ -62,7 +62,7 @@ Output be like the below.
 
 Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems. It can be enabled by setting the `Selection` property to `Multiple`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip Selection="SelectionType.Multiple">
     <ChipItems>
@@ -83,7 +83,7 @@ Output be like the below.
 
 The Action Chip triggers the event like click or delete, which helps doing action based on the event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip>
     <ChipEvents OnClick="@OnClick"></ChipEvents>
@@ -117,7 +117,7 @@ Output be like the below.
 
 Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enabled by setting the `EnableDelete` property to `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 <SfChip EnableDelete="true">
     <ChipItems>

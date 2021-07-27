@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Axis in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Axes in Blazor Linear Gauge Component | Syncfusion
+description: Learn here all about Axes in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Axes
+# Axes in Blazor Linear Gauge Component
 
 Axes is a collection of linear axis which can be used to indicate the numeric values. Line, ticks, labels, ranges and pointers are the sub elements of an axis.
 
@@ -209,7 +209,7 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 
 <!-- markdownlint-disable MD036 -->
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Format="c">

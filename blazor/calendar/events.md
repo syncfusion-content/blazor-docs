@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor Calendar Component | Syncfusion 
-description: Learn about Events in Blazor Calendar component of Syncfusion, and more details.
+title: Events in Blazor Calendar Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Events
+# Events in Blazor Calendar Component
 
 This section explains the list of events of the Calendar component which will be
 triggered for appropriate Calendar actions.
@@ -23,7 +23,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `onRenderDayCellHandler` event triggers when each day cell of the Calendar is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -43,7 +43,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `ValueChange` event triggers when the Calendar value is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -63,7 +63,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Created` event triggers when Calendar is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -83,7 +83,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `OnOpen` event triggers when Calendar is destroyed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">
@@ -103,7 +103,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
 `Navigated` event triggers when the Calendar is navigated to another level or within the same level of view.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime">

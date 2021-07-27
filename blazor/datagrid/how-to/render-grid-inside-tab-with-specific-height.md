@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Render Grid Inside Tab With Specific Height in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Render Grid Inside Tab With Specific Height in Blazor DataGrid component of Syncfusion, and more details.
+title: Render DataGrid inside the Tab with specific height in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Render DataGrid inside the Tab with specific height in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Render DataGrid inside the Tab with specific height
+# Render DataGrid inside the Tab with specific height in Blazor DataGrid Component
 
 By default, DataGrid will occupy the entire space of the parent element when DataGrid [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) property is defined as 100%. But if you render the similar DataGrid inside the Tab control, it will consider the entire page and render the DataGrid without horizontal scroller.
 
 To overcome this behavior we suggest you to render a container element enclosing the DataGrid with specific height and set the DataGrid height as 100%.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids

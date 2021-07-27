@@ -1,19 +1,19 @@
 ---
 layout: post
-title: How to Rowcell Index in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn about Rowcell Index in Blazor DataGrid component of Syncfusion, and more details.
+title: Get index value of selected rowcell in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Get index value of selected rowcell in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Get the index value of selected rowcell
+# Get index value of selected rowcell in Blazor DataGrid Component
 
 You can get the index value of a selected rowcell or row by using the [`GetSelectedRowCellIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowCellIndexes) method of the DataGrid component.
 
 This is demonstrated in the below sample code where the [`GetSelectedRowCellIndexes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetSelectedRowCellIndexes) method is called on button click which returns the selected rowcell indexes,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 

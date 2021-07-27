@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in Blazor Split Button Component | Syncfusion 
-description: Learn about Icons in Blazor Split Button component of Syncfusion, and more details.
+title: Icons And Separator in Blazor SplitButton Component | Syncfusion
+description: Learn here all about Icons And Separator in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Icons
+# Icons And Separator in Blazor SplitButton Component
 
 ## Split Button Icons
 
@@ -16,7 +16,7 @@ Split Button,set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusio
 
 The following example illustrates how to place icon in Split Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Items="@SplitbtnItems" Content="Paste" IconCss="e-icons e-paste"></SfSplitButton>
@@ -51,7 +51,7 @@ Vertical Button in Split Button can be achieved by adding `e-vertical` class usi
 
 The following example illustrates how to vertical support in Split Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" CssClass="e-vertical">
@@ -80,7 +80,7 @@ The Separators are the horizontal lines that are used to separate the popup item
 
 The following example illustrates how to enable [`Separator`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownMenuItem.html#Syncfusion_Blazor_SplitButtons_DropDownMenuItem_Separator) support in Split Button component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfSplitButton Content="Paste" IconCss="e-icons e-paste" CssClass="e-vertical">

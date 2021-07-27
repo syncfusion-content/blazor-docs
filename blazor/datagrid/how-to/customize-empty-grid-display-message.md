@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Customize empty grid display message
-description: Learn how to customize empty grid display message in Blazor DataGrid component
+title: Customize empty grid display message in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Customize empty grid display message in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Customize empty grid display message
+# Customize empty grid display message in Blazor DataGrid Component
 
 You can customize the message shown when rendering an empty grid by using the `EmptyRecordTemplate` feature.
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true">

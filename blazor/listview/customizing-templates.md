@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customizing Templates in Blazor Listview Component | Syncfusion 
-description: Learn about Customizing Templates in Blazor Listview component of Syncfusion, and more details.
+title: Customizing Templates in Blazor ListView Component | Syncfusion
+description: Learn here all about Customizing Templates in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Customizing templates
+# Customizing Templates in Blazor ListView Component
 
 The ListView component is designed to customize each list items and group title. It uses Blazor `Template engine` to render the elements.
 
@@ -19,7 +19,7 @@ To customize header template in your application, set your customized template s
 
 In the following example, we have rendered Listview with customized header which contains search, add and sort buttons.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@FruitsData" ShowHeader="true">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
@@ -82,7 +82,7 @@ We provided the following built-in CSS classes to customize the list-items. Refe
 
 In the following example, we have customized list items with built-in CSS classes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView Id="List"
              DataSource="@ListData"
@@ -244,7 +244,7 @@ To customize the group template in your application, set your customized templat
 
 In the following example, we have grouped Listview based on the category. The category of each list item should be mapped with `GroupBy` field of the data. We have also displayed grouped list items count in the group list header.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView ID="list" DataSource="@ListData" CssClass="e-list-template">
     <ListViewFieldSettings Id="Id" Text="Name" TValue="DataModel" GroupBy="Category"></ListViewFieldSettings>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appointments in Blazor Scheduler Component | Syncfusion 
-description: Learn about Appointments in Blazor Scheduler component of Syncfusion, and more details.
+title: Appointments in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Appointments in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Appointments
+# Appointments in Blazor Scheduler Component
 
 Appointments can be anything that are scheduled for a specific time period. It can be created on varied time range and each appointments are categorized based on this range. The Scheduler events can be categorized as,
 
@@ -24,7 +24,7 @@ Represents an appointment that is created for any specific time interval within 
 
 The following example depicts how to define a normal event on the Scheduler, with event data being loaded from simple list of appointment collection.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -84,7 +84,7 @@ Represents an appointment that is created for a certain time interval and occurr
 
 The following example depicts how to create a recurring event on Scheduler with the specific recurrence rule. In the following example, an event is made to repeat on daily mode and ends after 5 occurrences.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -125,7 +125,7 @@ A few instance of the recurrence series can be excluded on specific dates, by ad
 
 For example, 7th January 2020 can be represented as 20200107. Also, the time part being represented in UTC format needs to add "Z" after the time portion with no space. "09:30 AM" is therefore represented as "040000Z".
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -166,7 +166,7 @@ To dynamically edit a particular occurrence from an event series and display it 
 
 In this example, a recurring instance that displays on the date 30th January 2020 is edited with different timings. Therefore, this particular date is excluded from the parent recurring event that repeats from 28th January 2020 to 1st February 2020. This can be done by adding the `RecurrenceException` field with the excluded date value on the parent event. Also, the edited occurrence event which is created as a new event should carry the `RecurrenceID` field pointing to the parent event's `Id` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -206,7 +206,7 @@ In this example, a recurring instance that displays on the date 30th January 202
 
 The Scheduler allows the user to edit the following recurrence events by setting true value to `AllowEditFollowingEvents` within the `ScheduleEventSettings` tag. Once we have edited/ deleted the recurrence events as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if we edit or delete any of the recurrence event with following events option, then the edit or delete action is applied to further recurrence events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -365,7 +365,7 @@ The built-in fields available on Scheduler event object are as follows.
 
 When the fields of event instances has the default mapping name, it is not mandatory to map them manually. If a Scheduler's dataSource holds the events collection with different field names, then it is necessary to map them with its equivalent field name within the `EventSettings` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -427,7 +427,7 @@ Each field of the Scheduler events are provided with additional settings such as
 
 In following example, the Subject field in event editor will display its appropriate label as **Summary**. When no subject value is provided while saving an event, then the appointment will be saved with the default subject value as **Add Summary**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -474,7 +474,7 @@ In following example, the Subject field in event editor will display its appropr
 
 Apart from the default Scheduler fields, the user can include 'n' number of custom fields for appointments. The following code example shows how to include two custom fields namely **Status** and **Priority** within event collection. It is not necessary to bind the custom fields within the `EventSettings`. However, those additional fields can be accessed easily, for internal processing as well as from application end.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -526,7 +526,7 @@ We can drag and drop multiple appointments by enabling the `AllowMultiDrag` prop
 
 We can also drag multiple events from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowMultiDrag="true" @bind-SelectedDate="@CurrentDate">
@@ -567,7 +567,7 @@ We can also drag multiple events from one resource to another resource. In this 
 
 By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set **false** to the `AllowDragAndDrop` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowDragAndDrop="false" @bind-SelectedDate="@CurrentDate">
@@ -607,7 +607,7 @@ By default, you can drag and drop the events within any of the applicable schedu
 
 It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `ExcludeSelectors` option within `OnDragStart` event. In this example, we have prevented the drag action on all-day row.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -652,7 +652,7 @@ It is possible to prevent the drag action on particular target, by passing the t
 
 By default, while dragging an appointment to the edges, either top/bottom in the vertical Scheduler or left/right in the timeline Scheduler, scrolling action takes place automatically. To prevent this scrolling, set `false` to the `Scroll` value within the `OnDragStart` event arguments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" SelectedDate="@CurrentDate">
@@ -697,7 +697,7 @@ By default, while dragging an appointment to the edges, either top/bottom in the
 
 The speed of the scrolling action while dragging an appointment to the Scheduler edges, can be controlled within the `OnDragStart` event by setting the desired value to the `ScrollBy` and `TimeDelay` option whereas its default value is 30 minutes and 100ms.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -745,7 +745,7 @@ When an event is dragged either to the left or right extreme edges of the Schedu
 
 By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the `TimeDelay` within the `OnDragStart` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -791,7 +791,7 @@ By default, the navigation delay is set to 2000ms. The navigation delay decides 
 
 By default, while dragging an appointment, it moves at an interval of 30 minutes. To change the dragging time interval, pass the appropriate values to the `Interval` option within the `OnDragStart` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -838,7 +838,7 @@ It is possible to drag and drop the unplanned items from any of the external sou
 
 In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEventAsync` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Navigations
 
@@ -941,7 +941,7 @@ In this example, we have used the tree view control as an external source and th
 
 You can drag and drop the events to external source by setting the target to the property `EventDragArea`. In the following code example, we have two Scheduler and events from the first scheduler can be dropped to second scheduler. In the `Dragged` event of the first scheduler, the dragged event has been deleted from the first scheduler and added to the second scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <div class="row">
@@ -1010,7 +1010,7 @@ You can drag and drop the events to external source by setting the target to the
 
 There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. On clicking the cancel button should revert these changes. This can be achieved using the `Dragged` event of Scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1061,7 +1061,7 @@ Another way of rescheduling an appointment can be done by resizing it through ei
 
 By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the `AllowResizing` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" AllowResizing="false" @bind-SelectedDate="@CurrentDate">
@@ -1101,7 +1101,7 @@ By default, resizing of events is allowed on all Scheduler views except Agenda a
 
 By default, while resizing an appointment, when its handler reaches the extreme edges of the Scheduler, scrolling action will takes place along with event resizing. To prevent this scrolling action, set false to `Scroll` value within the `OnResizeStart` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1146,7 +1146,7 @@ By default, while resizing an appointment, when its handler reaches the extreme 
 
 The speed of the scrolling action while resizing an appointment to the Scheduler edges, can be controlled within the `OnResizeStart` event by setting the desired value to the `ScrollBy` option.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1191,7 +1191,7 @@ The speed of the scrolling action while resizing an appointment to the Scheduler
 
 By default, while resizing an appointment, it extends or shrinks at an interval of 30 minutes. To change this default resize interval, set appropriate values to `Interval` option within the `OnResizeStart` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1244,7 +1244,7 @@ The look and feel of the Scheduler events can be customized using any one of the
 
 Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `Template` option available within the `ScheduleEventsettings` tag helper. The following code example customizes the appointment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -1294,7 +1294,7 @@ The `EventRendered` event triggers before the appointment renders on the Schedul
 
 In the following code example, the custom class has been added to events using `CssClasses` to apply color to the events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -1343,7 +1343,7 @@ In the following code example, the custom class has been added to events using `
 
 Also, we can customize the events by adding or modifying its element attribute using `Attributes`. In the following code example, event attributes have been modified through the `Attributes` to apply color to the events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
@@ -1389,7 +1389,7 @@ Also, we can customize the events by adding or modifying its element attribute u
 
 The customization of events can also be achieved using the built-in field `CssClass` in which you can pass the class name to be applied to specific appointments. In the following example, the background of appointments has been changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 @using Syncfusion.Blazor.Schedule
@@ -1441,7 +1441,7 @@ The customization of events can also be achieved using the built-in field `CssCl
 
 Also, the customization of events can be achieved using `CssClass` property of the Scheduler. In the following example, the background of appointments has been changed using the CssClass.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" CssClass="custom-class" @bind-SelectedDate="@CurrentDate">
@@ -1492,7 +1492,7 @@ Also, the customization of events can be achieved using `CssClass` property of t
 
 It is possible to block a set of dates or a particular time ranges on the Scheduler. To do so, define an appointment object within `EventSettings` along with the required time range to block and set the `IsBlock` field to **true**. Usually, the event objects defined with `IsBlock` field set to true will block the entire time cells lying within the appropriate time ranges specified through `StartTime` and `EndTime` fields.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1532,7 +1532,7 @@ It is possible to block a set of dates or a particular time ranges on the Schedu
 
 Block events can also be defined to repeat on several days as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1574,7 +1574,7 @@ Block events can also be defined to repeat on several days as shown in the follo
 
 An interaction with the appointments of Scheduler can be enabled/disabled using the `Readonly` property. With this property enabled, you can simply navigate between the Scheduler dates, views and can be able to view the appointment details in the quick info window. Most importantly, the users are not allowed to perform any CRUD actions on Scheduler, when this property is set to true. By default, it is set as **false**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" Readonly="true" @bind-SelectedDate="@CurrentDate">
@@ -1614,7 +1614,7 @@ An interaction with the appointments of Scheduler can be enabled/disabled using 
 
 There are scenarios where you need to restrict the CRUD action on specific appointments alone based on certain conditions. In the following example, the events that has occurred on the past hours from the current date of the Scheduler are made as read-only and the CRUD actions has been prevented only on those appointments. This can be achieved by setting `IsReadonly` field of read-only events to `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1661,7 +1661,7 @@ To differentiate the appearance of the appointments based on specific criteria s
 
 In the following code example, the appointments beyond current date of the scheduler were differentiated with chocolate brown color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@SelectedDate">
@@ -1711,7 +1711,7 @@ The Scheduler allows the event to occupies the full height of the cell without i
 
 We can show more indicator if more than one appointment is available in a same cell by setting `true` to `EnableIndicator` property whereas its default value is false.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020, 3, 11))" CurrentView="View.Month">
@@ -1756,7 +1756,7 @@ The tooltip shows the Scheduler appointment's information in a formatted style b
 
 The tooltip can be displayed for appointments by setting `true` to the `EnableTooltip` option within the `ScheduleEventSettings` tag helper.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1799,7 +1799,7 @@ The tooltip can be displayed for appointments by setting `true` to the `EnableTo
 
 After enabling the default tooltip, it is possible to customize the display of needed event information on tooltip by making use of the `TooltipTemplate` option within the `ScheduleEventSettings`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -1850,7 +1850,7 @@ After enabling the default tooltip, it is possible to customize the display of n
 
 The appointments can be filtered by passing the predicate value to `Query` option in `ScheduleEventSettings`. The following code example shows how to filter and render the selected appointments alone in the Scheduler.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Buttons
@@ -2077,7 +2077,7 @@ It is possible to access the information about the event fields of an appointmen
 
 To retrieve the appointments present in the current view of the Scheduler, you can make use of the `GetCurrentViewEvents` public method. In the following example, current view appointment collection rendered has been traced in `DataBound` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate">
@@ -2125,7 +2125,7 @@ To retrieve the appointments present in the current view of the Scheduler, you c
 
 The entire collection of appointments rendered on the Scheduler can be accessed using the `GetEventsAsync` public method. In the following example, entire appointment collection rendered on the Scheduler has been traced in `DataBound` event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" @ref="ScheduleRef" Width="100%" Height="550px" SelectedDate="@(new DateTime(2020,1,10))">

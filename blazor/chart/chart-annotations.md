@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation in Blazor Charts component | Syncfusion
-description: Learn here all about Annotation of Syncfusion Charts (SfCharts) component and more.
+title: Annotation in Blazor Charts Component | Syncfusion
+description: Learn here all about Annotation in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Annotation in Blazor Charts (SfCharts)
+# Annotation in Blazor Charts Component
 
 Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
 
@@ -163,4 +163,4 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 ## See Also
 
 * [Tooltip](./tool-tip)
-* [Legend](./legend)
+* [Legend](./legend)gend)

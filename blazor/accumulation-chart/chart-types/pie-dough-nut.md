@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pie Dough Nut in Blazor Accumulation Chart Component | Syncfusion 
-description: Learn about Pie Dough Nut in Blazor Accumulation Chart component of Syncfusion, and more details.
+title: Pie and Doughnut in Blazor Accumulation Chart Component | Syncfusion
+description: Learn here all about Pie and Doughnut in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
 
-# Pie & Doughnut
+# Pie and Doughnut in Blazor Accumulation Chart Component
 
 ## Pie Chart
 

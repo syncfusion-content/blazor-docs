@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hilo Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Hilo Chart of Syncfusion Charts (SfCharts) component and more.
+title: Hilo in Blazor Charts Component | Syncfusion
+description: Learn here all about Hilo in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Hilo Chart in Blazor Charts (SfCharts)
+# Hilo in Blazor Charts Component
 
 ## Hilo
 
@@ -65,7 +65,7 @@ The following properties can be used to customize the [`Hilo`](https://help.sync
 * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
@@ -108,4 +108,4 @@ The following properties can be used to customize the [`Hilo`](https://help.sync
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Validation in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Validation in Blazor In Place Editor  component of Syncfusion, and more details.
+title: Validation in Blazor In-place Editor Component | Syncfusion
+description: Learn here all about Validation in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug
 ---
 
-# Validation
+# Validation in Blazor In-place Editor Component
 
 Now, validation can be done by using the  EditForm validation on the server-side. We need to handle the validation from the application level and the custom validation can also be achieved by using this.
 

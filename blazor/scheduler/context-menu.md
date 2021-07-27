@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor Scheduler Component | Syncfusion 
-description: Learn about Context Menu in Blazor Scheduler component of Syncfusion, and more details.
+title: Context Menu in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Context Menu in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in Blazor Scheduler Component
 
 You can display context menu on work cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is get by using `GetTargetCellAsync` public method in Blazor.
 
@@ -17,7 +17,7 @@ The deletion of appointments can be done by using the `DeleteEventAsync` public 
 
 > You can also display custom menu options on Scheduler cells and appointments. Context menu will open on tap-hold in responsive mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using Syncfusion.Blazor.Navigations
 

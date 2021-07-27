@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Events in Blazor RichTextEditor component of Syncfusion, and more details.
+title: Events in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Events
+# Events in Blazor RichTextEditor Component
 
 This section explains the list of events of the RichTextEditor component which will be triggered for appropriate RichTextEditor actions.
 

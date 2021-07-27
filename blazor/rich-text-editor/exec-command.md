@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Exec Command in Blazor RichTextEditor Component | Syncfusion 
-description: Learn about Exec Command in Blazor RichTextEditor component of Syncfusion, and more details.
+title: ExecCommand in Rich Text Editor in Blazor RichTextEditor Component | Syncfusion
+description: Learn here all about ExecCommand in Rich Text Editor in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# ExecCommand in Rich Text Editor
+# ExecCommand in Rich Text Editor in Blazor RichTextEditor Component
 
 In Rich Text Editor, the ExecuteCommand is used to perform commands for the modification of content in editable area.
 The `ExecuteCommand` will perform the following commands.

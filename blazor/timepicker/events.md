@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in Blazor TimePicker Component | Syncfusion 
-description: Learn about Events in Blazor TimePicker component of Syncfusion, and more details.
+title: Events in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Events
+# Events in Blazor TimePicker Component
 
 This section explains the list of events of the TimePicker component which will be
 triggered for appropriate TimePicker actions.
@@ -23,7 +23,7 @@ open |[OnOpen](events/#onopen)
 
 `Blur` event triggers when the input loses the focus.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -43,7 +43,7 @@ open |[OnOpen](events/#onopen)
 
 `ValueChange` event triggers when the Calendar value is changed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -63,7 +63,7 @@ open |[OnOpen](events/#onopen)
 
 `OnClose` event triggers when popup is closed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -83,7 +83,7 @@ open |[OnOpen](events/#onopen)
 
 `Created` event triggers when the component is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -103,7 +103,7 @@ open |[OnOpen](events/#onopen)
 
 `Destroyed` event triggers when the component is destroyed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -122,7 +122,7 @@ open |[OnOpen](events/#onopen)
 
 `Focus` event triggers when the input gets focus.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -143,7 +143,7 @@ open |[OnOpen](events/#onopen)
 
 `OnItemRender` event triggers while rendering the each popup list item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">
@@ -162,7 +162,7 @@ open |[OnOpen](events/#onopen)
 
 `OnOpen` event triggers when popup is opened.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?">

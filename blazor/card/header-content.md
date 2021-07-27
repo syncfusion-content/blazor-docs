@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Header Content in Blazor Card Component | Syncfusion 
-description: Learn about Header Content in Blazor Card component of Syncfusion, and more details.
+title: Header and Content in Blazor Card Component | Syncfusion
+description: Learn here all about Header and Content in Syncfusion Blazor Card component and more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Header and Content
+# Header and Content in Blazor Card Component
 
 ## Header
 
@@ -44,7 +44,7 @@ Card header has an option for adding images in the header. It is aligned with ei
 
 **Note:** Property `ImageSrc` is deprecated as `ImageUrl`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">
@@ -62,7 +62,7 @@ Content in Card holds texts, images, links and all possible HTML elements. Its a
 * Create a `Content` component.
 * Place content `div` element in the Card root element or within any Card inner elements.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard ID="HugeImage">

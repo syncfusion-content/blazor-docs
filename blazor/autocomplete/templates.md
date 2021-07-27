@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Templates in Blazor AutoComplete component of Syncfusion, and more details.
+title: Templates in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Templates in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Templates
+# Templates in Blazor AutoComplete Component
 
 The AutoComplete has been provided with several options to customize each list items, group title, header,
 and footer elements.
@@ -19,7 +19,7 @@ The content of each list item within the AutoComplete can be customized with the
 
 In the following sample, each list item is split into two columns to display relevant data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -72,7 +72,7 @@ for both inline and floating group header templates.
 
 In the following sample, employees are grouped according to their country.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -123,7 +123,7 @@ within the AutoComplete, and any custom element can be placed as a header elemen
 
 In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -196,7 +196,7 @@ suggestion list. Here, you can place any custom element as a footer element usin
 
 In the following sample, footer element displays the total number of list items present in the AutoComplete.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -250,7 +250,7 @@ found and no matches found on search with the help of the
 
 In the following sample, suggestion list content displays the notification of no data available.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a customer" DataSource="@Country">
@@ -299,7 +299,7 @@ fails at the remote server. This can be achieved using the
 
 In the following sample, when the data fetch request fails, the AutoComplete displays the notification.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

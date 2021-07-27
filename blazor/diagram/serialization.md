@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Serialization in Blazor Diagram Component | Syncfusion 
-description: Learn about Serialization in Blazor Diagram component of Syncfusion, and more details.
+title: Serialization in Blazor Diagram Component | Syncfusion
+description: Learn here all about Serialization in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Serialization
+# Serialization in Blazor Diagram Component
 
 **Serialization** is the process of saving and loading for state persistence of the diagram.
 
@@ -53,7 +53,7 @@ this.Diagram.LoadDiagram(this.Data);
 The diagram provides supports to simplifying the saved JSON object without adding the default properties that are presented in the diagram.
 The following code illustrates how to simplify the JSON object.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 @* Initialize diagram *@

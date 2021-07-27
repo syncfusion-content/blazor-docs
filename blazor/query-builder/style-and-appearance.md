@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances
-description: This section explains the details of the styles and appearances of the QueryBuilder
+title: Styles and Appearances in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Styles and Appearances in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Styles and Appearances
+# Styles and Appearances in Blazor QueryBuilder Component
 
 To modify the QueryBuilder appearance, you need to override the default CSS of QueryBuilder component. Please find the list of CSS classes and its corresponding section in QueryBuilder component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

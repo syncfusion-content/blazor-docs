@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in Blazor HeatMap Chart Component | Syncfusion 
-description: Learn about Legend in Blazor HeatMap Chart component of Syncfusion, and more details.
+title: Legend in Blazor HeatMap Chart Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug
 ---
 
-# Legend
+# Legend in Blazor HeatMap Chart Component
 
 The legend is used to provide the information about the heat map cell. You can enable the legend by setting the `Visible` property to true.
 

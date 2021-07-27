@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Dynamic Templates In Listview Based On Device in Blazor Listview Component | Syncfusion
-description: Checkout and learn about Dynamic Templates In Listview Based On Device in Blazor Listview component of Syncfusion, and more details.
+title: Use dynamic templates in listview based on device in Blazor ListView Component | Syncfusion
+description: Learn here all about Use dynamic templates in listview based on device in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# How to use dynamic templates in listview based on device
+# Use dynamic templates in listview based on device in Blazor ListView Component
 
 The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in
 both modes. The control templates are not always fixed. Applications may need to load various templates depending
@@ -20,7 +20,7 @@ across all devices, but the template contents are dynamically changed with unspe
 customization is also needed in sample-side to align template content responsively in both mobile and desktop modes. Here,
 two templates have been loaded for mobile and desktop modes. To check the device mode, we can use the Microsoft.AspNetCore.Http package and check for the UserAgent to detect mobile or desktop.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 @using Microsoft.AspNetCore.Http
 @inject IHttpContextAccessor httpContextAccessor

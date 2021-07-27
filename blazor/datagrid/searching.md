@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Searching in Blazor DataGrid Component | Syncfusion 
-description: Learn about Searching in Blazor DataGrid component of Syncfusion, and more details.
+title: Searching in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Searching in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Search
+# Searching in Blazor DataGrid Component
 
 You can search records in a DataGrid, by using the **Search** method with search key as a parameter. This also provides an option to integrate search text box in datagrid's toolbar by adding **Search** item to the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -57,7 +57,7 @@ The following GIF image represents a DataGrid Searching.
 
 To apply search at initial rendering, set the **Fields**, **Operator**, **Key**, and **IgnoreCase** using [`GridSearchSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html) component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -123,7 +123,7 @@ NotEqual |Checks for values not equal to the specified value.
 
 To search datagrid records from an external button, invoke the **Search** method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
@@ -174,7 +174,7 @@ To search datagrid records from an external button, invoke the **Search** method
 
 By default, datagrid searches all visible columns. You can search specific columns by defining the specific column's field names in the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 @{
@@ -223,7 +223,7 @@ By default, DataGrid searches all visible columns. You can disable searching for
 
 In the below code example, the **Order ID** column search functionality is disabled.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" Toolbar="@(new List<string>() { "Search" })">
@@ -265,7 +265,7 @@ In the below code example, the **Order ID** column search functionality is disab
 
 By default, the datagrid will initiate searching operation after the Enter key is pressed. If you want to initiate the searching operation while typing the values in the search box, then you can invoke the Search method of the datagrid in the Input event of the SfTextBox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Inputs

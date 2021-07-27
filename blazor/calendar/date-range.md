@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Date Range in Blazor Calendar Component | Syncfusion 
-description: Learn about Date Range in Blazor Calendar component of Syncfusion, and more details.
+title: Data Range in Blazor Calendar Component | Syncfusion
+description: Learn here all about Data Range in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Date Range
+# Data Range in Blazor Calendar Component
 
 A calendar provides an option to select a date value within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. The Min date should always be lesser than the Max date.
 
@@ -18,7 +18,7 @@ If the value is out of specified date range and less than Min date, the `Value`
 
 The following code allows you to select a date within the range of 7th to 27th days in a month.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Min='@MinDate' Max='@MaxDate' Value='@DateValue'></SfCalendar>

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons And Templates in Blazor List Box Component | Syncfusion 
-description: Learn about Icons And Templates in Blazor List Box component of Syncfusion, and more details.
+title: Icons and Templates in Blazor ListBox Component | Syncfusion
+description: Learn here all about Icons and Templates in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Icons and Customization
+# Icons and Templates in Blazor ListBox Component
 
 ## Icons
 
@@ -15,7 +15,7 @@ To place the icon on a listbox, set the [`IconCss`](https://help.syncfusion.com/
 
 In the following sample, icon classes are mapped with `IconCss` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@SettingsData" TItem="SettingItems">
@@ -74,7 +74,7 @@ Output will be shown as
 
 ListBox items can be customized according to the requirement using [`ItemTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Data" TItem="ListData">

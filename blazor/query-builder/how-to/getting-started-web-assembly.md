@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Getting Started Web Assembly in Blazor QueryBuilder Component | Syncfusion
-description: Checkout and learn about Getting Started Web Assembly in Blazor QueryBuilder component of Syncfusion, and more details.
+title: Getting Started-Client side using Visual studio in Blazor QueryBuilder Component | Syncfusion
+description: Learn here all about Getting Started-Client side using Visual studio in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Getting Started with Blazor WebAssembly Query Builder Using Visual Studio
+# Getting Started-Client side using Visual studio in Blazor QueryBuilder Component
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -122,7 +122,7 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
 
 Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component in `razor` page in the `Pages` folder. For example, the Query Builder component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
 <SfQueryBuilder TValue="EmployeeDetails">

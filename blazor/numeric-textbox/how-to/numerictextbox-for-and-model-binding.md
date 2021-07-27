@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Numerictextbox For And Model Binding in Blazor Numeric TextBox Component | Syncfusion
-description: Checkout and learn about Numerictextbox For And Model Binding in Blazor Numeric TextBox component of Syncfusion, and more details.
+title: Numeric-textboxFor and Model Binding in Blazor Numeric TextBox Component | Syncfusion
+description: Learn here all about Numeric-textboxFor and Model Binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# NumericTextBox For and Model Binding
+# Numeric-textboxFor and Model Binding in Blazor Numeric TextBox Component
 
 This section demonstrates the Strongly typed extension support in NumericTextBox. The view which bind with any model is called as
 strongly typed view. You can bind any class as model to view.
@@ -16,7 +16,7 @@ You can access model properties on that view. You can use data associated with m
 In this sample, first click the submit button to post the selected value in the MaskedTextBox. When posting the null value,
 validation error message will be shown below the NumericTextBox.
 
-```csharp
+```cshtml
 @using System.ComponentModel.DataAnnotations
 @using Syncfusion.Blazor.Inputs
 

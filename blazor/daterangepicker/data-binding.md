@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor DateRangePicker Component | Syncfusion 
-description: Learn about Data Binding in Blazor DateRangePicker component of Syncfusion, and more details.
+title: Data Binding in Blazor DateRangePicker Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor DateRangePicker Component
 
 This section briefly explains how to bind the value to the DateRangePicker component in the below different ways.
 
@@ -19,7 +19,7 @@ This section briefly explains how to bind the value to the DateRangePicker compo
 
 We can bind the value to the DateRangePicker component directly for `StartDate` and `EndDate` property as mentioned in the following code example. In one-way binding, we need to pass property or variable name along with `@` (For Ex: "@StartValue").
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfDateRangePicker TValue="DateTime?" StartDate="@StartValue" EndDate="@EndValue"></SfDateRangePicker>
@@ -44,7 +44,7 @@ We can bind the value to the DateRangePicker component directly for `StartDate` 
 
 Two-way binding can be achieved by using `bind-StartDate` and `bind-EndDate` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-StartDate** and **bind-EndDate**attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <p>DateRangePickers StarteDate and EndDate is: <strong>@StartValue</strong> and <strong>@EndValue</strong></p>
@@ -65,7 +65,7 @@ We can change the property value dynamically by manually calling the `StateHasCh
 
 There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <p>DateRangePicker StarteDate and EndDate is: <strong> @StartValue </strong> and <strong> @EndValue </strong></p>

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor ButtonGroup Component | Syncfusion 
-description: Learn about Getting Started in Blazor ButtonGroup component of Syncfusion, and more details.
+title: Getting Started with Blazor ButtonGroup Component | Syncfusion
+description: Checkout and learn about getting started with Blazor ButtonGroup component of Syncfusion, and more details.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 Open `/_Imports.razor file` and import the Syncfusion.Blazor.SplitButtons packages otherwise import these packages in the individual `razor` pages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SplitButtons
 ```

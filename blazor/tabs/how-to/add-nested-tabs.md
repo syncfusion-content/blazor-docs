@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Add Nested Tabs in Blazor Tabs Component | Syncfusion
-description: Checkout and learn about Add Nested Tabs in Blazor Tabs component of Syncfusion, and more details.
+title: Add nested Tabs in Blazor Tabs Component | Syncfusion
+description: Learn here all about Add nested Tabs in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Add nested Tabs
+# Add nested Tabs in Blazor Tabs Component
 
 The Tabs control supports to render the nested level of Tabs by using `ContentTemplate` property. To render the nested Tabs, you can define nested tab elements within the `ContentTemplate` property of the parent tab.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfTab>

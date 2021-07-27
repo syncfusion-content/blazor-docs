@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with the Blazor Range Selector component | Syncfusion 
-description: Learn here about Getting Started with Syncfusion Blazor Range Selector (SfRangeNavigator) component, its elements, and more.
+title: Getting Started with Blazor Range Selector Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Range Selector component of Syncfusion, and more details.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Getting Started in the Blazor Range Selector (SfRangeNavigator)
+# Getting Started with Blazor Range Selector Component
 
 This section briefly explains how to include a Range Navigator component in the Blazor server-side application. Refer to the [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -38,7 +38,7 @@ This section briefly explains how to include a Range Navigator component in the 
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 To initialize the Range Navigator component, add the below code to the **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfRangeNavigator>
@@ -83,7 +83,7 @@ To initialize the Range Navigator component, add the below code to the **Index.
 
 To bind the data for the Range Navigator component, assign a `IEnumerable` object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html#Syncfusion_Blazor_Charts_RangeNavigatorSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```csharp
+```cshtml
 @code {
     public class StockPrice
     {
@@ -121,4 +121,4 @@ On successful compilation of the application, the Syncfusion Blazor Range Naviga
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/?no-cache=1)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)lazor-server-side-dotnet-cli/)

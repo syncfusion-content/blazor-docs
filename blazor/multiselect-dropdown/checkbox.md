@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Checkbox in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Checkbox in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: CheckBox in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about CheckBox in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# CheckBox
+# CheckBox in Blazor MultiSelect Dropdown Component
 
 The MultiSelect has built-in support to select multiple values through checkbox,
 when the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_Mode) property is set to `CheckBox`.
 
 To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" Mode="VisualMode.CheckBox" DataSource="@Country">
@@ -71,7 +71,7 @@ For the unSelect All option, by default unSelect All text will show.
 You can customize the name attribute of the unSelect All option by using
 [UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_UnSelectAllText).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" ShowSelectAll=true SelectAllText="Select All" UnSelectAllText="unSelect All" Mode="VisualMode.CheckBox" DataSource="@Country">

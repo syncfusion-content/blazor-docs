@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Maps component | Syncfusion 
-description: Learn here about the events in Syncfusion Blazor Maps (SfMaps) component and more.
+title: Events in Blazor Maps Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Events in the Blazor Maps
+# Events in Blazor Maps Component
 
 This section explains list of events that will be triggered for appropriate actions in Maps. The events should be provided to the [`Maps`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) using the [`MapsEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html) class.
 
@@ -15,7 +15,7 @@ This section explains list of events that will be triggered for appropriate acti
 
 Before each annotation is rendered, the [`AnnotationRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_AnnotationRendering) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnnotationRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -49,7 +49,7 @@ Before each annotation is rendered, the [`AnnotationRendering`](https://help.syn
 
 Before each bubble is rendered, the [`BubbleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_BubbleRendering) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -106,7 +106,7 @@ Before each bubble is rendered, the [`BubbleRendering`](https://help.syncfusion.
 
 Before each data label is rendered, the [`DataLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_DataLabelRendering) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LabelRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -132,7 +132,7 @@ Before each data label is rendered, the [`DataLabelRendering`](https://help.sync
 
 Before each layer is rendered, the [`LayerRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_LayerRendering) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LayerRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -155,7 +155,7 @@ Before each layer is rendered, the [`LayerRendering`](https://help.syncfusion.co
 
 Before rendering the legend, the [`LegendRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_LegendRendering) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -205,7 +205,7 @@ Before rendering the legend, the [`LegendRendering`](https://help.syncfusion.com
 
 After the Maps component has been loaded, the [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_Loaded) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LoadedEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -228,7 +228,7 @@ After the Maps component has been loaded, the [`Loaded`](https://help.syncfusion
 
 Before each marker is rendered, the [`MarkerRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_MarkerRendering) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -274,7 +274,7 @@ Before each marker is rendered, the [`MarkerRendering`](https://help.syncfusion.
 
 After clicking the marker cluster, the [`MarkerClusterClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_MarkerClusterClick) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerClusterClickEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -330,7 +330,7 @@ After clicking the marker cluster, the [`MarkerClusterClick`](https://help.syncf
 
 When the mouse moves over the marker cluster, the [`MarkerClusterMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_MarkerClusterMouseMove) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerClusterMoveEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -385,7 +385,7 @@ When the mouse moves over the marker cluster, the [`MarkerClusterMouseMove`](htt
 
 When you click on a bubble, the [`OnBubbleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnBubbleClick) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleClickEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -442,7 +442,7 @@ When you click on a bubble, the [`OnBubbleClick`](https://help.syncfusion.com/cr
 
 When the mouse moves over a bubble, the [`OnBubbleMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnBubbleMouseMove) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.BubbleMoveEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -499,7 +499,7 @@ When the mouse moves over a bubble, the [`OnBubbleMouseMove`](https://help.syncf
 
 After clicking the element in Maps, the [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnClick) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MouseEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -522,7 +522,7 @@ After clicking the element in Maps, the [`OnClick`](https://help.syncfusion.com/
 
 When performing the double click operation on an element in Maps, the [`OnDoubleClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnDoubleClick) will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MouseEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -545,7 +545,7 @@ When performing the double click operation on an element in Maps, the [`OnDouble
 
 When the cursor moves over the elements in Maps, the [`OnItemHighlight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnItemHighlight) event is triggered before an item in the Maps is highlighted. For this event, the highlight feature must be enabled for respective Maps elements such as shapes, bubbles, navigation lines and markers. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SelectionEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -571,7 +571,7 @@ When the cursor moves over the elements in Maps, the [`OnItemHighlight`](https:/
 
 When selecting the elements in Maps, the [`OnItemSelect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnItemSelect) event is triggered. For this event, the selection feature must be enabled for respective Maps elements such as shapes, bubbles, navigation lines and markers. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SelectionEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -597,7 +597,7 @@ When selecting the elements in Maps, the [`OnItemSelect`](https://help.syncfusio
 
 Before rendering the Maps, the [`OnLoad`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnLoad) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LoadEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -620,7 +620,7 @@ Before rendering the Maps, the [`OnLoad`](https://help.syncfusion.com/cr/blazor/
 
 By clicking the markers in the Maps, the [`OnMarkerClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerClick) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerClickEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -666,7 +666,7 @@ By clicking the markers in the Maps, the [`OnMarkerClick`](https://help.syncfusi
 
 When the cursor moves over the marker, the [`OnMarkerMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnMarkerMouseMove) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MarkerMoveEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -712,7 +712,7 @@ When the cursor moves over the marker, the [`OnMarkerMouseMove`](https://help.sy
 
 When panning the Maps, the [`OnPan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPan) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapPanEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -739,7 +739,7 @@ When panning the Maps, the [`OnPan`](https://help.syncfusion.com/cr/blazor/Syncf
 
 After panning the Maps, the [`OnPanComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPanComplete) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapPanEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -797,7 +797,7 @@ Before the print operation starts, the [`OnPrint`](https://help.syncfusion.com/c
 
 When you perform a right click on an element in Maps, the [`OnRightClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnRightClick) event is triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MouseEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -820,7 +820,7 @@ When you perform a right click on an element in Maps, the [`OnRightClick`](https
 
 Before zooming in or zooming out of the Maps, the [`OnZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnZoom) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapZoomEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -847,7 +847,7 @@ Before zooming in or zooming out of the Maps, the [`OnZoom`](https://help.syncfu
 
 After performing a zoom operation, the [`OnZoomComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnZoomComplete) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapZoomEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -874,7 +874,7 @@ After performing a zoom operation, the [`OnZoomComplete`](https://help.syncfusio
 
 When resizing the Maps, the [`Resizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_Resizing) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ResizeEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -897,7 +897,7 @@ When resizing the Maps, the [`Resizing`](https://help.syncfusion.com/cr/blazor/S
 
 When the mouse moves over a shape in Maps, the [`ShapeHighlighted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_ShapeHighlighted) event is triggered before the shape is highlighted. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ShapeSelectedEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -923,7 +923,7 @@ When the mouse moves over a shape in Maps, the [`ShapeHighlighted`](https://help
 
 Before rendering a Maps shape, the [`ShapeRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_ShapeRendering) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ShapeRenderingEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -946,7 +946,7 @@ Before rendering a Maps shape, the [`ShapeRendering`](https://help.syncfusion.co
 
 The [`ShapeSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_ShapeSelected) event is triggered when select a shape in Maps. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.ShapeSelectedEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -972,7 +972,7 @@ The [`ShapeSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ma
 
 The [`TooltipRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_TooltipRendering) event is triggered before the tooltip of shapes, markers, and bubbles is rendered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.TooltipRenderEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -989,5 +989,7 @@ The [`TooltipRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     {
         // Here you can customize your code.
     }
+}
+```
 }
 ```

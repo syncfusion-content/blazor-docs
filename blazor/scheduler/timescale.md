@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Timescale in Blazor Scheduler Component | Syncfusion 
-description: Learn about Timescale in Blazor Scheduler component of Syncfusion, and more details.
+title: Timescale Customization in Blazor Scheduler Component | Syncfusion
+description: Learn here all about Timescale Customization in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# TimeScale Customization
+# Timescale Customization in Blazor Scheduler Component
 
 The time slots are usually the time cells that are displayed on the Day, Week and Work Week views of both the calendar (to the left most position) and timeline views (at the top position). The `ScheduleTimeScale` allows you to control and set the required time slot duration for the work cells displayed on Scheduler. It includes the following sub-options such as,
 
@@ -19,7 +19,7 @@ The time slots are usually the time cells that are displayed on the Day, Week an
 
 The `Interval` and `SlotCount` properties can be used together on the Scheduler to set different time slot duration which is depicted in the following code example. Here, six time slots together represents an hour.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -55,7 +55,7 @@ The template option is available to allow customization of time slots which are 
 * `MajorSlotTemplate` - The template option to be applied for major time slots. Here, the template accepts HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
 * `MinorSlotTemplate` - The template option to be applied for minor time slots. Here, the template accepts HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 @using System.Globalization
 
@@ -104,7 +104,7 @@ The template option is available to allow customization of time slots which are 
 
 The grid lines which indicates the exact time duration can be enabled or disabled on the Scheduler, by setting `true` or `false` to the `Enable` option within the `ScheduleTimeScale` property. It's default value is `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px">
@@ -136,7 +136,7 @@ The grid lines which indicates the exact time duration can be enabled or disable
 
 By default, Scheduler indicates current date with a highlighted date header on all views, as well as marks accurately the system's current time on specific views such as Day, Week, Work Week, Timeline Day, Timeline Week and Timeline Work Week views. To stop highlighting the current time indicator on Scheduler views, set `false` to the `ShowTimeIndicator` property which defaults to `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" ShowTimeIndicator="false">

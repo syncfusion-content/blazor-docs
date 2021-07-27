@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor DataGrid Component | Syncfusion 
-description: Learn about Context Menu in Blazor DataGrid component of Syncfusion, and more details.
+title: Context Menu in Blazor DataGrid Component | Syncfusion
+description: Learn here all about Context Menu in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Context menu
+# Context Menu in Blazor DataGrid Component
 
 The DataGrid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`ContextMenuItems`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) property.
 
@@ -59,7 +59,7 @@ Pager     |   NextPage
 
 The following sample code demonstrates enabling context menu with its default items,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowSorting="true" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">
@@ -106,7 +106,7 @@ The custom context menu items can be added by defining the [`ContextMenuItems`](
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
@@ -163,7 +163,7 @@ DataGrid have an option to use both built-in and custom context menu items at sa
 
 The following sample code demonstrates defining built-in and custom context menu items and custom context menu item corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<Object>() { "Copy", new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
@@ -217,7 +217,7 @@ The sub context menu items can be added by defining the collection of **MenuItem
 
 The following sample code demonstrates defining sub context menu item and its corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Navigations
 
@@ -277,7 +277,7 @@ Context Menu can be prevented for specific columns using [`ContextMenuOpen`](htt
 
 The following sample code demonstrates the disabling the context for specific column using event arguments of [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid @ref="DefaultGrid" DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<ContextMenuItemModel>() { new ContextMenuItemModel { Text = "Copy with headers", Target = ".e-content", Id = "copywithheader" } })">
@@ -339,7 +339,7 @@ You can enable or disable context menu items using the **Disabled** property. He
 
 The following sample code demonstrates how to enable or disable context menu items dynamically in Grid using event arguments of [`ContextMenuOpen`](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 
 <SfGrid DataSource="@Orders" AllowPaging="true" ContextMenuItems="@(new List<object>() { "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})">

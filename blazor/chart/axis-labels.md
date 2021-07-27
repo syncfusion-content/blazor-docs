@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis Labels in Blazor Charts component | Syncfusion
-description: Learn here all about Axis Labels of Syncfusion Charts (SfCharts) component and more.
+title: Axis Labels in Blazor Charts Component | Syncfusion
+description: Learn here all about Axis Labels in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Axis Labels in Blazor Charts (SfCharts)
+# Axis Labels in Blazor Charts Component
 
 ## Smart Axis Labels
 
@@ -640,4 +640,4 @@ Learn more about axis label format in relation to axis types from the pages belo
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)
+* [Marker](./data-markers)kers)

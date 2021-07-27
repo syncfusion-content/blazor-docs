@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Split Button Component | Syncfusion 
-description: Learn about Native Event in Blazor Split Button component of Syncfusion, and more details.
+title: Events in Blazor SplitButton Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
 ---
 
-# Overview
+# Events in Blazor SplitButton Component
 
 You can define the split button event using on [`SplitButtonEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SplitButtonEvents.html) in component. The value of event is treated as an event handler. The event specific data will be available in event arguments.
 
@@ -26,7 +26,7 @@ We have provided the following event support to the SplitButton component. The d
 
 Above defined events are bind the Split Button component. Here, we have explained about the sample code snippets of SplitButton.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
     <SfSplitButton Content="Profile">

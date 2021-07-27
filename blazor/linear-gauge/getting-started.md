@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Linear Gauge Component | Syncfusion 
-description: Learn about Getting Started in Blazor Linear Gauge component of Syncfusion, and more details.
+title: Getting Started with Blazor Linear Gauge Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Linear Gauge component of Syncfusion, and more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Getting Started in Blazor Linear Gauge
+# Getting Started with Blazor Linear Gauge Component
 
 This section briefly explains how to include a Linear Gauge component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -38,7 +38,7 @@ This section briefly explains how to include a Linear Gauge component in your Bl
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.LinearGauge** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 ```
 
@@ -71,7 +71,7 @@ namespace BlazorApplication
 
 The Syncfusion Linear Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Linear Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfLinearGauge>
@@ -95,7 +95,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 
 > In Linear Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>

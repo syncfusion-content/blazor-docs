@@ -11,7 +11,7 @@ documentation: ug
 
 BPMN shapes are used to represent the internal business procedure in a graphical notation and enable you to communicate the procedures in a standard manner. To create a BPMN shape, in the node property shape, type should be set as “Bpmn” and its shape should be set as any one of the built-in shapes. The following code example illustrates how to create a simple business process.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -72,7 +72,7 @@ An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
     * Intermediate
 The event property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example illustrates how to create a BPMN event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -130,7 +130,7 @@ Event triggers are notated as icons inside the circle and they represent the spe
 
 Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set as “Gateway” and the [`Gateway`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnGateway.html) property can be set with any of the appropriate gateways. The following code example illustrates how to create a BPMN Gateway.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -194,7 +194,7 @@ There are two types of activities. They are listed as follows:
 
 To create a BPMN activity, set the `Shape` as **Activity**. You also need to set the type of the BPMN activity by using the `Activity` property of the node. By default, the type of the activity is set as **Task**. The following code example illustrates how to create an activity.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -237,7 +237,7 @@ The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
 BPMN tasks.
 The events property of tasks allows to represent these results as an event attached to the task.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -295,7 +295,7 @@ The various types of BPMN tasks are tabulated as follows.
 
 A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is a group of tasks, which is used to hide or reveal details of additional levels using the `Collapsed` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -344,7 +344,7 @@ The different types of subprocess are as follows:
 
 A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html) is defined as an event SubProcess, when it is triggered by an event. An event SubProcess is placed within another subprocess which part of the normal flow of its parent process is not. You can set event to a subprocess with the `Event` and `Trigger` property of the subprocess. The `Type` property of subprocess allows you to define the type of subprocess whether it should be event subprocess or transaction subprocess.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -410,7 +410,7 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 * You can also use define ports and labels to subprocess events by using event’s ports and labels properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -470,7 +470,7 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**.
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -527,7 +527,7 @@ The following table contains various types of BPMN loops.
 
 [`Compensation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Compensation) is triggered, when operation is partially failed and enabled it with the compensation property of the task and the subprocess.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -604,7 +604,7 @@ The following table contains various types of BPMN loops.
 
 A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html#Syncfusion_Blazor_Diagrams_DiagramBpmnTask_Call) activity is a global subprocess that is reused at various points of the business flow and set it with the call property of the task.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -653,7 +653,7 @@ A [`Call`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Diag
 
 An ad-hoc subprocess is a group of tasks that are executed in any order or skipped in order to fulfill the end condition and set it with the [`Ad-hoc`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Adhoc) property of subprocess.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -703,7 +703,7 @@ An ad-hoc subprocess is a group of tasks that are executed in any order or skipp
 
 Boundary represents the type of task that is being processed. The [`Boundary`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Boundary) property of subprocess allows you to define the type of boundary. By default, it is set as **Default**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -760,7 +760,7 @@ The following table contains various types of BPMN boundaries.
 
 A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a [`DataObject`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShape.html#Syncfusion_Blazor_Diagrams_DiagramShape_DataObject), set the shape as **DataObject** and the type property defines whether data is an input or an output. You can create multiple instances of data object with the collection property of data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -812,7 +812,7 @@ The following table contains various representation of BPMN data object.
 
 Datasource is used to store or access data associated with a business process. To create a datasource, set the shape as **DataSource**. The following code example illustrates how to create a datasource.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -869,7 +869,7 @@ Artifact is used to show additional information about a process in order to make
 
 * The annotation text property defines the additional information about the flow object in a BPMN process.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -923,7 +923,7 @@ Artifact is used to show additional information about a process in order to make
 
 A group is used to frame a part of the diagram, shows that elements included in it are logically belong together and does not have any other semantics other than organizing elements. To create a group, the shape property of the node should be set as **group**. The following code example illustrates how to create a BPMN group.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -971,7 +971,7 @@ A group is used to frame a part of the diagram, shows that elements included in 
 
 The association property allows you to define the type of association. The following code example illustrates how to create an association.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1023,7 +1023,7 @@ A [`Sequence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
 
 The sequence property allows you to define the type of sequence. The following code example illustrates how to create a sequence flow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -1075,7 +1075,7 @@ A [`Message`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.B
 
 The message property allows you to define the type of message. The following code example illustrates how to define a message flow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Form Filling in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Form Filling in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Form filling in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Form filling in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Form filling and signature fields
+# Form filling in Blazor PDF Viewer Component
 
 PDF Viewer component allows you to display the form fields available in the PDF document. By using this you can edit and download the form fields.
 
@@ -27,7 +27,7 @@ The form fields displayed in the PDF Viewer are:
 
 The PDF Viewer control provides an option to disable the form fields feature . The code snippet for disabling the feature is as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" EnableFormFields=false />
@@ -66,7 +66,7 @@ The PDF Viewer control provides the support to import and export formfields usin
 
 You can import the formfields using JSON file or JSON object in code behind like the below code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 
@@ -88,7 +88,7 @@ public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf
 
 You can export the formfields as JSON file in code behind as the following code snippet
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 

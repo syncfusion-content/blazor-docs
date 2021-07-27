@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor Listview Component | Syncfusion 
-description: Learn about Data Binding in Blazor Listview component of Syncfusion, and more details.
+title: Data Binding in Blazor ListView Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Data binding
+# Data Binding in Blazor ListView Component
 
 ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager.
 
@@ -37,7 +37,7 @@ Local data can be represented in Array of JSON data:
 
 ListView can generate its list items through an array of complex data. To get it work properly, you should map the appropriate columns to the field property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 <SfListView DataSource="@Data">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text"></ListViewFieldSettings>
@@ -82,7 +82,7 @@ The ListView supports to retrieve the data from remote data services with the he
 
 In the following sample, first 6 products from the Product table of NorthWind data service are displayed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
 
@@ -221,7 +221,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 * `AddItem` - Add a new list item into the ListView.
 * `RemoveItem` - Delete a selected list item in the ListView.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Lists

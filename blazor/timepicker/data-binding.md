@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in Blazor TimePicker Component | Syncfusion 
-description: Learn about Data Binding in Blazor TimePicker component of Syncfusion, and more details.
+title: Data Binding in Blazor TimePicker Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor TimePicker Component
 
 This section briefly explains how to bind the value to the TimePicker component in the below different ways.
 
@@ -19,7 +19,7 @@ This section briefly explains how to bind the value to the TimePicker component 
 
 We can bind the value to the TimePicker component directly for `Value` property as mentioned in the following code example. In one-way binding, we need to pass property or variable name along with `@` (For Ex: "@DateValue").
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfTimePicker TValue="DateTime?" Value="@DateValue"></SfTimePicker>
@@ -40,7 +40,7 @@ We can bind the value to the TimePicker component directly for `Value` property 
 
 Two-way binding can be achieved by using `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <p>TimePicker value is: @DateValue</p>
@@ -58,7 +58,7 @@ We can change the property value dynamically by manually calling the `StateHasCh
 
 There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <p>TimePicker value is: @TimeValue</p>

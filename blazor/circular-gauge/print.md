@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Print in Blazor Circular Gauge Component | Syncfusion 
-description: Learn about Print in Blazor Circular Gauge component of Syncfusion, and more details.
+title: Print and Export in Blazor Circular Gauge Component | Syncfusion
+description: Learn here all about Print and Export in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
 ---
 
-# Print and Export in Blazor Circular Gauge
+# Print and Export in Blazor Circular Gauge Component
 
 ## Print
 
 To use the print functionality, we should set the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeModel.html#Syncfusion_Blazor_CircularGauge_CircularGaugeModel_AllowPrint) property to **true**. The rendered circular gauge can be printed directly from the browser by calling the method [`print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Print_System_Object_). You can get the Circular Gauge component object using `@ref="Gauge"`
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <button @onclick="PrintGauge">Print</button>
@@ -41,7 +41,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 * PNG
 * SVG
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <button @onclick="ExportGauge">Export</button>
@@ -63,7 +63,7 @@ To use the image export functionality, we should set the [`AllowImageExport`](ht
 
 To use the PDF export functionality, we should set the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeModel.html#Syncfusion_Blazor_CircularGauge_CircularGaugeModel_AllowPdfExport) property to **true**. The rendered circular gauge can be exported as PDF using the [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Export_Syncfusion_Blazor_CircularGauge_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method. The [`export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Export_Syncfusion_Blazor_CircularGauge_ExportType_System_String_System_Object_System_Nullable_System_Boolean__) method requires three parameters: file type, file name and orientation of the PDF document. The orientation setting is optional and "0" indicates portrait and "1" indicates landscape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.CircularGauge
 
 <button @onclick="ExportGauge">Export</button>

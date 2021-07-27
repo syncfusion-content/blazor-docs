@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Tooltip in Blazor Range Slider Component | Syncfusion 
-description: Learn about Tooltip in Blazor Range Slider component of Syncfusion, and more details.
+title: Tooltip in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Tooltip in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Tooltip
+# Tooltip in Blazor Range Slider Component
 
 The Slider displays the tooltip to indicate the current value by clicking the Slider bar or drag
 the Slider handle. The Tooltip position can be customized by using the `Placement` property. Also decides the tooltip display mode on a page, i.e., on hovering, focusing, or clicking on the Slider handle and it always remains/displays on the page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Min="0" Max="100" @bind-Value="@value">
@@ -35,7 +35,7 @@ press the button to change the last focused handle value.
 > After enabling the slider buttons if the 'Tab' key is pressed, the focus goes to the handle
 and not to the button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider @bind-Value="@value" ShowButtons="true" >

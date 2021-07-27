@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Stacked Bar Chart in Blazor Charts component | Syncfusion
-description: Learn here all about Stacked Bar Chart of Syncfusion Charts (SfCharts) component and more.
+title: Stacked Bar in Blazor Charts Component | Syncfusion
+description: Learn here all about Stacked Bar in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Stacked Bar Chart in Blazor Charts (SfCharts)
+# Stacked Bar in Blazor Charts Component
 
 ## Stacked Bar
 
@@ -155,4 +155,4 @@ The following properties can be used to customize the [`Stacked Bar`](https://he
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

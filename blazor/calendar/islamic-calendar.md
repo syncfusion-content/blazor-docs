@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Islamic Calendar in Blazor Calendar Component | Syncfusion 
-description: Learn about Islamic Calendar in Blazor Calendar component of Syncfusion, and more details.
+title: Islamic Calendar in Blazor Calendar Component | Syncfusion
+description: Learn here all about Islamic Calendar in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Islamic-Calendar
+# Islamic Calendar in Blazor Calendar Component
 
 In addition to the Gregorian calendar, the Calendar component supports displaying the Islamic calendar (Hijri calendar). **Islamic calendar** or **Hijri calendar** is a `lunar calendar` consisting of 12 months in a year of 354 or 355 days. To know more about Islamic calendar, refer to this [wikipedia](https://en.wikipedia.org/wiki/Islamic_calendar).
 
@@ -17,7 +17,7 @@ By default, the calendar mode is in **Gregorian**. You can enable the Islamic mo
 
 The following code demonstrates how to display the Islamic Calendar (Hijri Calendar).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' CalendarMode="CalendarType.Islamic"></SfCalendar>

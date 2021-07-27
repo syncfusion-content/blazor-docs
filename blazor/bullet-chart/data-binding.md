@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor Bullet Chart  Component | Syncfusion 
-description: Learn here all about the Data Binding of Syncfusion Bullet Chart (SfBulletChart) component and more.
+title: Working with Data in Blazor Bullet Chart Component | Syncfusion
+description: Learn here all about Working with Data in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
 ---
 
-# Data Binding in the Blazor Bullet Chart (SfBulletChart)
+# Working with Data in Blazor Bullet Chart Component
 
 The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_DataSource) property accepts a collection of values as input that helps to display measures, and compares them to a target bar. To display the actual and the target bar, specify the property from the datasource into the [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) and the [`TargetField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_TargetField) respectively.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfBulletChart DataSource="@InputData" ValueField="FieldValue" TargetField="ComparativeMeasureValue" CategoryField="Category" Height="400" Minimum="0" Maximum="20" Interval="5" Title="Profit in %">
@@ -42,4 +42,4 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 ```
 
-![Data Binding in Bullet Chart](images/local-data.png)
+![Data Binding in Bullet Chart](images/local-data.png)-data.png)

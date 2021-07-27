@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Mode And Value in Blazor Color Picker Component | Syncfusion 
-description: Learn about Mode And Value in Blazor Color Picker component of Syncfusion, and more details.
+title: Mode and Value in Blazor Color Picker Component | Syncfusion
+description: Learn here all about Mode and Value in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Mode and Value
+# Mode and Value in Blazor Color Picker Component
 
 ## Rendering palette at initial load
 
@@ -15,7 +15,7 @@ By default, the `Picker` area will be rendered at initial load. To render the Pa
 
 In the following sample, it will render the `Palette` at initial load.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>
@@ -31,7 +31,7 @@ The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfC
 
 In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

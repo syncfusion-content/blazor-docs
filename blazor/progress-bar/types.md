@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types in the Blazor Progress Bar component | Syncfusion
-description: Learn here all about the types of Syncfusion Progress Bar (SfProgressBar) component and more.
+title: Types in Blazor ProgressBar Component | Syncfusion
+description: Learn here all about Types in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Types in the Blazor Progress Bar (SfProgressBar)
+# Types in Blazor ProgressBar Component
 
 In this section, the progress can be visualized in different shapes, such as a rectangle, circle, or semi-circle to give it a unique look.
 
@@ -15,7 +15,7 @@ In this section, the progress can be visualized in different shapes, such as a r
 
 To get a linear progress bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear). As shown in the following, it also supports secondary progress, indeterminate, segments, and different modes of progress.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -38,7 +38,7 @@ To get a linear progress bar, set the [`Type`](https://help.syncfusion.com/cr/bl
 
 To get the circular progress bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Circular`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular). As shown in the following, it also supports secondary progress, indeterminate, segments, pie progress, and different modes of progress.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Circular" Value="100" Height="60" Minimum="0" Maximum="100">
@@ -58,4 +58,4 @@ To get the circular progress bar, set the [`Type`](https://help.syncfusion.com/c
 </SfProgressBar>
 ```
 
-![Progress Bar with circular type](images/circularType.png)
+![Progress Bar with circular type](images/circularType.png)type](images/circularType.png)

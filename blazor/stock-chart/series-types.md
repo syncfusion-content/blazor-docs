@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Series Types in Blazor Stock Chart  Component | Syncfusion 
-description: Learn about Series Types in Blazor Stock Chart  component of Syncfusion, and more details.
+title: Series Types in Blazor Stock Chart Component | Syncfusion
+description: Learn here all about Series Types in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
 ---
 
-# Stock Chart Series Types
+# Series Types in Blazor Stock Chart Component
 
 Stock Chart supports 6 major types of series namely `Line`, `Spline`, `Hilo`, `HiloOpenClose`, `Hollow Candle` and `Candle`. By using the series dropdown button you can navigate between the above listed series types.
 

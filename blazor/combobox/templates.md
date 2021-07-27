@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor ComboBox Component | Syncfusion 
-description: Learn about Templates in Blazor ComboBox component of Syncfusion, and more details.
+title: Templates in Blazor ComboBox Component | Syncfusion
+description: Learn here all about Templates in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Templates
+# Templates in Blazor ComboBox Component
 
 The ComboBox has been provided with several options to customize each list item, group title,
 selected value, header, and footer elements.
@@ -20,7 +20,7 @@ property.
 
 In the following sample, each list item is split into two columns to display relevant data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -74,7 +74,7 @@ This template is common for both inline and floating group header template.
 
 In the following sample, employees are grouped according to their country.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -127,7 +127,7 @@ ComboBox, and any custom element can be placed as a header element using the
 In the following sample, the list items and its headers are designed and displayed as two columns
 similar to multiple columns of the grid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -200,7 +200,7 @@ Here, you can place any custom element as a footer element using the [FooterTemp
 
 In the following sample, footer element displays the total number of list items present in the ComboBox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -253,7 +253,7 @@ and no matches found on search with the help of
 
 In the following sample, popup list content displays the notification of no data available.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Countries" Placeholder="Select a customer" DataSource="@Country">
@@ -286,7 +286,7 @@ fails at the remote server. This can be achieved using the
 
 In the following sample, when the data fetch request fails, the ComboBox displays the notification.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

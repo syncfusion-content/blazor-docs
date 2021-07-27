@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Customize The Tree Nodes Based On Levels in Blazor TreeView Component | Syncfusion
-description: Checkout and learn about Customize The Tree Nodes Based On Levels in Blazor TreeView component of Syncfusion, and more details.
+title: Customize the tree nodes based on levels in Blazor TreeView Component | Syncfusion
+description: Learn here all about Customize the tree nodes based on levels in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Customize the tree nodes based on levels
+# Customize the tree nodes based on levels in Blazor TreeView Component
 
 You can customize the tree nodes level wise by adding custom CssClass to the component and enabling styles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" CssClass="mytree">
     <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>

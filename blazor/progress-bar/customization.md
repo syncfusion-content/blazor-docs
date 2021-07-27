@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Customization in the Blazor Progress Bar component | Syncfusion
-description: Learn here all about the customization of Syncfusion Progress Bar (SfProgressBar) component and more.
+title: Customization in Blazor ProgressBar Component | Syncfusion
+description: Learn here all about Customization in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Customization in the Blazor Progress Bar (SfProgressBar)
+# Customization in Blazor ProgressBar Component
 
 ## Segments
 
 Divide a progress bar into multiple segments by using the [`SegmentCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SegmentCount) property to visualize the progress for multiple sequential tasks, and the [`EnableProgressSegments`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_EnableProgressSegments) property to divide the progress  into multiple segments without the track. Meanwhile, the [`SegmentColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_SegmentColor) property represents the color of each segment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Circular" Value="100" Height="180" SegmentCount="8" SegmentColor='new string[] { "#00bdaf", "#2f7ecc", "#e9648e", "#fbb78a" }' Minimum="0" Maximum="100" TrackColor="#696969">
@@ -42,7 +42,7 @@ The thickness of the track can be customized using the [`TrackThickness`](https:
 
 The radius of the progress bar can be customized using the [`Radius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_Radius) property, and the progress edges can be customized using the [`CornerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_CornerRadius) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Circular" Value="60" Height="160px" Width="160px" EnableRtl="false" TrackColor="#FFD939" Radius="80%" InnerRadius="190%" ProgressColor="white" TrackThickness="80" ProgressThickness="10" CornerRadius="CornerType.Round" Minimum="0" Maximum="100">
@@ -55,7 +55,7 @@ The radius of the progress bar can be customized using the [`Radius`](https://he
 
 The inner radius of the progress bar can be customized using the [`InnerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_InnerRadius) property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Circular" Value="60" Height="160px" Width="160px" EnableRtl="false"
@@ -69,7 +69,7 @@ The inner radius of the progress bar can be customized using the [`InnerRadius`]
 
 The color of progress and track can be customized using the [`ProgressColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ProgressColor) and the [`TrackColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_TrackColor) properties respectively.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="50" Height="60" Width="90%" TrackColor="#F8C7D8"
@@ -86,7 +86,7 @@ Enhance the readability of progress by visualising a multiple ranges with differ
 
 The [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarRangeColor.html#Syncfusion_Blazor_ProgressBar_ProgressBarRangeColor_Color) property represents color to the specified range. The [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarRangeColor.html#Syncfusion_Blazor_ProgressBar_ProgressBarRangeColor_Start) and the [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarRangeColor.html#Syncfusion_Blazor_ProgressBar_ProgressBarRangeColor_End) properties represents start and end range of the color. The [`IsGradient`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_IsGradient) property represents whether the gradient effect is applied to the color.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Value="100" IsGradient="true">
@@ -105,7 +105,7 @@ The [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBa
 
 The progress bar supports right-to-left (RTL) rendering, which can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_EnableRtl) property to **true**.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar EnableRtl="true" Value="50" Type="ProgressType.Linear">
@@ -115,4 +115,4 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 </SfProgressBar>
 ```
 
-![Progress Bar - Right-to-Left - RTL](images/rtl.png)
+![Progress Bar - Right-to-Left - RTL](images/rtl.png)to-Left - RTL](images/rtl.png)

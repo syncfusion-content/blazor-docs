@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor ComboBox Component | Syncfusion 
-description: Learn about Accessibility in Blazor ComboBox component of Syncfusion, and more details.
+title: Accessibility in Blazor ComboBox Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor ComboBox Component
 
 The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies
 the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
@@ -51,7 +51,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 
 > In the following sample, disable the ComboBox component using <kbd>t</kbd> keys.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" TItem="Countries" @ref="ComboObj" Enabled="@enable" Placeholder="Select a country" @onkeypress="@(e => KeyPressed(e))" DataSource="@LocalData">

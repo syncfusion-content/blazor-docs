@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Templates in Blazor MultiSelect Dropdown Component | Syncfusion 
-description: Learn about Templates in Blazor MultiSelect Dropdown component of Syncfusion, and more details.
+title: Templates in Blazor MultiSelect Dropdown Component | Syncfusion
+description: Learn here all about Templates in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# Templates
+# Templates in Blazor MultiSelect Dropdown Component
 
 The MultiSelect has been provided with several options to customize each list item, group title,
 selected value, header, and footer elements.
@@ -19,7 +19,7 @@ help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 In the following sample, each list item is split into two columns to display relevant data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor
@@ -62,7 +62,7 @@ The currently selected value that is displayed by default on the MultiSelect inp
 In the following sample, the selected value is displayed as a combined text of both `FirstName` and `Designation`
 in the MultiSelect input, which is separated by a hyphen.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor
@@ -108,7 +108,7 @@ MultiSelect, and any custom element can be placed as a header element using the
 In the following sample, the list items and its headers are designed and displayed as two columns
 similar to multiple columns of the grid.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor
@@ -175,7 +175,7 @@ Here, you can place any custom element as a footer element using the [FooterTemp
 
 In the following sample, footer element displays the total number of list items present in the MultiSelect.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor
@@ -222,7 +222,7 @@ and no matches found on search with the help of
 
 In the following sample, popup list content displays the notification of no data available.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TValue="string[]" TItem="EmployeeData" Placeholder="Select a employee" CssClass="e-custom" DataSource="@employee">
@@ -253,7 +253,7 @@ fails at the remote server. This can be achieved using the
 
 In the following sample, when the data fetch request fails, the MultiSelect displays the notification.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor

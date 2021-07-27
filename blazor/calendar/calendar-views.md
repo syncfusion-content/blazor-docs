@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Calendar Views in Blazor Calendar Component | Syncfusion 
-description: Learn about Calendar Views in Blazor Calendar component of Syncfusion, and more details.
+title: Calendar Views in Blazor Calendar Component | Syncfusion
+description: Learn here all about Calendar Views in Syncfusion Blazor Calendar component and more.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Calendar Views
+# Calendar Views in Blazor Calendar Component
 
 A Calendar has the following predefined views
 that provide a flexible way to navigate back and forth when selecting dates.
@@ -25,7 +25,7 @@ property of the Calendar, it allows you to set the initial view on rendering.
 
 The following example demonstrates how to set the `Year` as the start view of the Calendar.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' Start="CalendarView.Year"></SfCalendar>
@@ -48,7 +48,7 @@ The following example displays the Calendar in `Decade` view, and allows you to 
 
 > Depth view should always be smaller than the Start view. If the `Depth` and `Start` views are the same, then the Calendar view remains unchanged.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' Start="CalendarView.Decade" Depth="CalendarView.Year"></SfCalendar>

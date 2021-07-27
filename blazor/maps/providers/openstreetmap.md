@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Openstreetmap in Blazor Maps Component | Syncfusion 
-description: Learn about Openstreetmap in Blazor Maps component of Syncfusion, and more details.
+title: OpenStreetMap in Blazor Maps Component | Syncfusion
+description: Learn here all about OpenStreetMap in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# OpenStreetMap
+# OpenStreetMap in Blazor Maps Component
 
 The OpenStreetMap (OSM) is the world map built by a community of developers; it is free to use under an open license. It allows you to view geographical data in a collaborative way from anywhere on the earth. The OSM map provides small tile images based on our requests and combines those images into a single image to display the map area in the Maps component.
 
@@ -17,7 +17,7 @@ One of the most important features in Blazor Maps component is the built-in onli
 
 You can enable this feature by setting the value of [`LayerType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) property to “ShapeLayerType.OSM”.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -33,7 +33,7 @@ You can enable this feature by setting the value of [`LayerType`](https://help.s
 
 You can zoom and pan the OSM maps layer. Zooming helps you get a closer look at a particular area on a map for in-depth analysis. Panning helps you to move a map around to focus the targeted area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -54,7 +54,7 @@ You can zoom and pan the OSM maps layer. Zooming helps you get a closer look at 
 
 Markers can be added to the layers of OSM maps by setting the corresponding location's coordinates of latitude and longitude using `MapsMarker` property. You can add navigation lines on top of an OSM maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the `MapsNavigationLine` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -103,7 +103,7 @@ Markers can be added to the layers of OSM maps by setting the corresponding loca
 
 You can render any GeoJSON shape as a sublayer on top of an OSM maps layer for highlighting a particular continent or country in OSM maps by adding another layer and specifying the type to SubLayer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

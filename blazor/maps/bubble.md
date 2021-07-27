@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Bubble in Blazor Maps Component | Syncfusion 
-description: Learn about Bubble in Blazor Maps component of Syncfusion, and more details.
+title: Bubble in Blazor Maps Component | Syncfusion
+description: Learn here all about Bubble in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Bubbles
+# Bubble in Blazor Maps Component
 
 Bubbles in the Maps component represent the underlying data values of the maps. Bubbles are scattered throughout the map shapes that contain bound values.
 
 To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleSettings.html), and set [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) as `Population`. The following code example demonstrates how to enable bubbles for the World map with data source.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -67,7 +67,7 @@ To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.sync
 
 Using the [`MinRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MinRadius) and [`MaxRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MaxRadius) properties in [`MapsBubble`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html), you can render the bubbles in different sizes based on the [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) and [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_DataSource) values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -131,7 +131,7 @@ You can specify multiple types of bubble groups using the [`MapsBubble`](https:/
 
 In the following code example, the gender-wise population ratio is demonstrated with two different bubble groups.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -214,7 +214,7 @@ To enable the legends for bubbles, set [`Visible`](https://help.syncfusion.com/c
 
 The following code example demonstrates how to enable the legends for bubbles with each bubble different colors rendering.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

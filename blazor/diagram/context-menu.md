@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor Diagram Component | Syncfusion 
-description: Learn about Context Menu in Blazor Diagram component of Syncfusion, and more details.
+title: Context Menu in Blazor Diagram Component | Syncfusion
+description: Learn here all about Context Menu in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Context Menu
+# Context Menu in Blazor Diagram Component
 
 <!-- markdownlint-disable MD010 -->
 
@@ -58,7 +58,7 @@ Custom context menu provides an option to add the new custom items to the contex
 
 The following code example shows how to add custom context menu items along with the default context menu. set  the [`ShowCustomMenuOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_ShowCustomMenuOnly) property to false to render both custom context menu and default context menu.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 <SfDiagram Height="600px"
@@ -163,7 +163,7 @@ The following code example shows how to add custom context menu items along with
 To display the custom context menu items alone, set  the [`ShowCustomMenuOnly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_ShowCustomMenuOnly) property to true.
 The following code example shows how to add custom context menu items alone.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
     <SfDiagram Height="600px">
         // Defines context menu and set the ShowCustomMenuOnly to true to render the custom context menu alone
@@ -182,7 +182,7 @@ The Diagram control provides event support for context menu that triggers when r
 
 The Diagram control triggers the event [`OnContextMenuOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnContextMenuOpen) when performing right click on the diagram or the diagram object.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram Height="600px">
     // Defines OnContextMenuOpen event
@@ -204,7 +204,7 @@ The Diagram control triggers the event [`OnContextMenuOpen`](https://help.syncfu
 
 The Diagram control triggers the event [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_ContextMenuItemClicked) when clicking the context menu item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram Height="600px">

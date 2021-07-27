@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configuration in Blazor In Place Editor  Component | Syncfusion 
-description: Learn about Configuration in Blazor In Place Editor  component of Syncfusion, and more details.
+title: Configuration in Blazor In-place Editor Component | Syncfusion
+description: Learn here all about Configuration in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug
 ---
 
-# Configuration
+# Configuration in Blazor In-place Editor Component
 
 ## Rendering modes
 
@@ -215,7 +215,7 @@ It also has the following options.
 
 In the following code block, when switching drop-down item, the selected value assigned to the `ActionOnBlur` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Inputs

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Expand Mode in Blazor Accordion Component | Syncfusion 
-description: Learn about Expand Mode in Blazor Accordion component of Syncfusion, and more details.
+title: Expand Mode in Blazor Accordion Component | Syncfusion
+description: Learn here all about Expand Mode in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Expand Mode
+# Expand Mode in Blazor Accordion Component
 
  The Accordion supports the two listed types of expand modes while expanding or collapsing the item.
 
@@ -66,7 +66,7 @@ Output be like the below.
 
 By default, accordion items were in collapsed state on initial load. To expand particular item(s) on initial load, you can use either `ExpandedIndices` property or `Expanded` option within `AccordionItem` tag helper. In the following code example, `ExpandedIndices` is used to expand the second and third item.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfAccordion @bind-ExpandedIndices=ExpandItems>

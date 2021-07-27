@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Commands in Blazor Diagram Component | Syncfusion 
-description: Learn about Commands in Blazor Diagram component of Syncfusion, and more details.
+title: Commands in Blazor Diagram Component | Syncfusion
+description: Learn here all about Commands in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Commands
+# Commands in Blazor Diagram Component
 
 <!-- markdownlint-disable MD010 -->
 
@@ -39,7 +39,7 @@ Alignment commands enable you to align the selected or defined objects such as n
 
 The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 
 <SfDiagram @ref="@diagram" Height="600px"/>
@@ -105,7 +105,7 @@ Sizing [`SameSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 The following code example illustrates how to execute the size commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px"/>
 
@@ -135,7 +135,7 @@ Clipboard commands are used to cut, copy, or paste the selected elements. Refer 
 
 The following code illustrates how to execute the clipboard commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -175,7 +175,7 @@ The following code illustrates how to execute the clipboard commands.
 
 The following code illustrates how to execute the grouping commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -206,7 +206,7 @@ The following code illustrates how to execute the grouping commands.
 
 The [`BringToFront`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToFront) command visually brings the selected element to front over all the other overlapped elements. The following code illustrates how to execute the `BringToFront` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -228,7 +228,7 @@ The [`BringToFront`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 The [`SendToBack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendToBack) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `SendToBack` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -250,7 +250,7 @@ The [`SendToBack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 The [`MoveForward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_MoveForward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `MoveForward` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -272,7 +272,7 @@ The [`MoveForward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 The [`SendBackward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendBackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `SendBackward` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -296,7 +296,7 @@ The [`Zoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Sf
 
 The following code illustrates how to zoom-in/zoom out the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -331,7 +331,7 @@ The accepted values of the argument "direction" are as follows:
 
 The following code illustrates how to execute nudge command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -363,7 +363,7 @@ The [`BringIntoView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 The following code illustrates how to execute the `BringIntoView` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -388,7 +388,7 @@ The [`BringToCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 The following code illustrates how to execute the `BringToCenter` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -423,7 +423,7 @@ The [`CustomBounds`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 The following code illustrates how to execute `FitToPage` command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -445,7 +445,7 @@ The following code illustrates how to execute `FitToPage` command.
 
 The [`Undo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Undo) and [`Redo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Redo) commands help you to revert/restore the changes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
@@ -489,7 +489,7 @@ To explore the properties of custom commands, refer to the [`Commands`](https://
 
 The following code example shows how to define a custom command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -579,7 +579,7 @@ When any one of the default commands is not desired, they can be disabled. To ch
 
 The following code example shows how to disable a command and how to modify the built-in commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

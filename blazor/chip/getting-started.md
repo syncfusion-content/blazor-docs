@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Chip Component | Syncfusion 
-description: Learn about Getting Started in Blazor Chip component of Syncfusion, and more details.
+title: Getting Started with Blazor Chip Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Chip component of Syncfusion, and more details.
 platform: Blazor
 control: Chip
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Chip Component
 
 This section briefly explains how to include a `Chip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
@@ -124,7 +124,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Buttons` package.
 
- ```csharp
+ ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Buttons
 ```

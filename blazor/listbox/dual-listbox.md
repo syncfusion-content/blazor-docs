@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Dual Listbox in Blazor List Box Component | Syncfusion 
-description: Learn about Dual Listbox in Blazor List Box component of Syncfusion, and more details.
+title: Dual ListBox in Blazor ListBox Component | Syncfusion
+description: Learn here all about Dual ListBox in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Dual ListBox
+# Dual ListBox in Blazor ListBox Component
 
 The dual ListBox allows the user to move items between two listbox by clicking the toolbar buttons. Dual ListBox can be created by listing items in the
 [`ToolbarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_ToolbarSettings) along with the [`Scope`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) property.
@@ -25,7 +25,7 @@ The following operations can be performed in dual ListBox,
 
 The following example illustrates how to move items from `Group A` to `Group B` listbox.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <div id="listbox1">

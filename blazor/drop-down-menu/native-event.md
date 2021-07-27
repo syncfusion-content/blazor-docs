@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Event in Blazor Dropdown Menu Component | Syncfusion 
-description: Learn about Native Event in Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Events in Blazor Dropdown Menu Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
 ---
 
-# Overview
+# Events in Blazor Dropdown Menu Component
 
 You can define the dropdown menu event using on [`DropDownButtonEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents) in component. The value of event is treated as an event handler. The event specific data will be available in event arguments.
 
@@ -26,7 +26,7 @@ We have provided the following event support to the DropDownButton component. Th
 
 Above defined events are bind the Dropdown Menu component. Here, we have explained about the sample code snippets of Dropdown Menu.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfDropDownButton Content="Profile">

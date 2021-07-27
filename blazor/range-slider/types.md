@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Types in Blazor Range Slider Component | Syncfusion 
-description: Learn about Types in Blazor Range Slider component of Syncfusion, and more details.
+title: Types in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Types in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Types
+# Types in Blazor Range Slider Component
 
 The types of Slider are as follows:
 
@@ -21,7 +21,7 @@ The types of Slider are as follows:
 In Min-Range Slider, a shadow is considered from the start value to current handle position. But the Range Slider
 contains two handles that is used to select a range of values and a shadow is considered in between the two handles.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfSlider Value="30"></SfSlider>

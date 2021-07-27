@@ -14,7 +14,7 @@ This can be achieved by initially defining [`ForeignKeyValue`](https://help.sync
 
 This is demonstrated in the below sample code,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.DropDowns

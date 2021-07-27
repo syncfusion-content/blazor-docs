@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Labels in Blazor Maps Component | Syncfusion 
-description: Learn about Data Labels in Blazor Maps component of Syncfusion, and more details.
+title: Data Labels in Blazor Maps Component | Syncfusion
+description: Learn here all about Data Labels in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Data labels
+# Data Labels in Blazor Maps Component
 
 Data labels provide information to users about the shapes of the Map component.
 
@@ -15,7 +15,7 @@ Data labels provide information to users about the shapes of the Map component.
 
 You can add label text to the shapes of the Maps component using `MapsDataLabelSettings`. The following sample demonstrates the names of all the states in the United States in data labels.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -43,7 +43,7 @@ The Maps component provides an option to specify the smart labels when the label
 * Hide
 * Trim
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -70,7 +70,7 @@ This specifies the intersect action when a label intersect with another label. I
 * Hide
 * Trim
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

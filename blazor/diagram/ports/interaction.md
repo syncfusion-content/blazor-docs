@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor Diagram Component | Syncfusion 
-description: Learn about Interaction in Blazor Diagram component of Syncfusion, and more details.
+title: Interaction in Blazor Diagram Component | Syncfusion
+description: Learn here all about Interaction in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Interaction
+# Interaction in Blazor Diagram Component
 
 The port can be dragged in the diagram area and create the connector over the port by using the [`port constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html).
 
@@ -17,7 +17,7 @@ Diagram provides the support to drag the port interactively, it can be dragged o
 
 The following code explains how to drag the port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -64,7 +64,7 @@ Diagram provides the support to draw the connector in the port.
 
 The following code explains how to draw the connector by using the port constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

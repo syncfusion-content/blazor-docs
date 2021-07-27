@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Node Editing in Blazor TreeView Component | Syncfusion 
-description: Learn about Node Editing in Blazor TreeView component of Syncfusion, and more details.
+title: Node Editing in Blazor TreeView Component | Syncfusion
+description: Learn here all about Node Editing in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Node Editing
+# Node Editing in Blazor TreeView Component
 
 The Blazor TreeView allows you to edit nodes by setting the `AllowEditing` property to **true**.
 To directly edit the nodes in place, **double click** the TreeView node or **select** the node and press **F2** key.
@@ -18,7 +18,7 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 
 * If you need to validate or prevent editing, the `NodeEditing` event can be used which is triggered before the TreeView node is renamed. On successfully renaming a node the `NodeEdited` event will be triggered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
 <SfTreeView TValue="DriveData" AllowEditing="true">
     <TreeViewFieldsSettings TValue="DriveData" Id="NodeId" Text="NodeText" Child="Children" DataSource="@Drive" Expanded="Expanded"></TreeViewFieldsSettings>

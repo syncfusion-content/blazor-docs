@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Source in Blazor AutoComplete Component | Syncfusion 
-description: Learn about Data Source in Blazor AutoComplete component of Syncfusion, and more details.
+title: Data Source in Blazor AutoComplete Component | Syncfusion
+description: Learn here all about Data Source in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
 ---
 
-# Data Source
+# Data Source in Blazor AutoComplete Component
 
 The AutoComplete loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of array or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
@@ -33,7 +33,7 @@ the appropriate columns should be mapped to the [Fields](https://help.syncfusio
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@Country">
@@ -85,7 +85,7 @@ the appropriate columns should be mapped to the [Fields](https://help.syncfusio
 
 In the following example, `Country.CountryID` column from complex data have been mapped to the `Value` field.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" TItem="Complex" Placeholder="e.g. Select a country" DataSource="@LocalData">
@@ -137,7 +137,7 @@ property is used to fetch data from the database and bind it to the AutoComplete
 
 The following sample displays the first 6 contacts from the **Customers** table of the `Northwind` data service.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
@@ -178,7 +178,7 @@ The output will be as follows.
 
 Use the `WebApiAdaptor` to bind autocomplete with Web API created using OData.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -296,7 +296,7 @@ To avoid post back for every action, set the autocomplete to load all data on in
 
 Refer to the following example for remote data binding and enabled offline mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 
@@ -439,7 +439,7 @@ namespace EFDropDown.Controllers
 
 Now you can configure the AutoComplete using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.DropDowns
 

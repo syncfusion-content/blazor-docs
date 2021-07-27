@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Populate Data in Blazor Maps Component | Syncfusion 
-description: Learn about Populate Data in Blazor Maps component of Syncfusion, and more details.
+title: Populate Data in Blazor Maps Component | Syncfusion
+description: Learn here all about Populate Data in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Populate Data
+# Populate Data in Blazor Maps Component
 
 This section explains how to populate data inputs and provide it to the Maps component.
 
@@ -19,7 +19,7 @@ The shape data collection describes geographical shape information that can be o
 
 The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, you can provide a list of objects as input. This data source will be further used to color the map, display data labels, display tooltips, and more.
 
-```csharp
+```cshtml
 @code{
     public class PopulationDetail
     {
@@ -66,7 +66,7 @@ The following properties in the [`MapsLayer`](https://help.syncfusion.com/cr/asp
 
 The [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property is used to refer the field name in the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) property of shape layers to identify the shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -100,7 +100,7 @@ The [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 The [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property is similar to the [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property, but it refers the field name in `DataSource` property value.
 For example, following population data contains field 'Name', 'Population' and 'Density'. Here the 'Name' field is set to the `ShapeDataPath` to map the corresponding name field value of shape data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -136,7 +136,7 @@ When values of the [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncf
 
 Refer both shape data and data source as demonstrated in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -198,7 +198,7 @@ Refer to the following code sample for fetching  data from JSON file.
 
 The `Http.GetJsonAsync` is used in the 'OnInitAsync' lifecycle method to load JSON file data. As this will be executed asynchronously, check whether 'populationDensity' is available, render the Maps component, or display the loading statement.
 
-```csharp
+```cshtml
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
 
@@ -281,7 +281,7 @@ You can bind the data field from data source to the maps in two different ways.
 
 The complex data source binding can be done as illustrated in the following code example.
 
-```csharp
+```cshtml
 @inject HttpClient Http;
 @using Syncfusion.Blazor.Maps
 

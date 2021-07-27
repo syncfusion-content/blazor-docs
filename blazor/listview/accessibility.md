@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Listview Component | Syncfusion 
-description: Learn about Accessibility in Blazor Listview component of Syncfusion, and more details.
+title: Accessibility in Blazor ListView Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor ListView Component
 
 ## Keyboard interaction
 
@@ -20,7 +20,7 @@ The following key shortcuts are used to access the ListView control without any 
 | <kbd>Select</kbd> | Select the targeted list from the whole list. |
 | <kbd>Back</kbd> | Get back to the previous lists if it is in nested list. |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Data
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Responsive Adaptive in Blazor Dashboard Layout Component | Syncfusion 
-description: Learn about Responsive Adaptive in Blazor Dashboard Layout component of Syncfusion, and more details.
+title: Responsive and Adaptive Layout in Blazor Dashboard Layout Component | Syncfusion
+description: Learn here all about Responsive and Adaptive Layout in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
 ---
 
-# Responsive and adaptive layout
+# Responsive and Adaptive Layout in Blazor Dashboard Layout Component
 
 The control is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution, which relieves the burden of building responsive dashboards.
 

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor ComboBox Component | Syncfusion 
-description: Learn about Data Binding in Blazor ComboBox component of Syncfusion, and more details.
+title: Data Binding in Blazor ComboBox Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor ComboBox component and more.
 platform: Blazor
 control: ComboBox
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor ComboBox Component
 
 Data binding can be achieved by using the `bind-Value` attribute and its supports string, int, Enum, and bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <p>ComboBox value is:<strong>@ComboVal</strong></p>
@@ -45,7 +45,7 @@ Data binding can be achieved by using the `bind-Value` attribute and its support
 
 Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfComboBox TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Index="@ddlIndex" DataSource="@Country">

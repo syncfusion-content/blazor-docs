@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Events in the Blazor Range Selector component | Syncfusion 
-description: Learn here all about the events of Syncfusion Blazor Range Selector (SfRangeNavigator) component and more.
+title: Events in Blazor Range Selector Component | Syncfusion
+description: Learn here all about Events in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
 ---
 
-# Events in the Blazor Range Selector (SfRangeNavigator)
+# Events in Blazor Range Selector Component
 
 This section describes about the Range Selector component's events, that is triggered when appropriate actions are performed. The events should be provided to the Range Selector through the **RangeNavigatorEvents** component.
 
@@ -25,7 +25,7 @@ The Range Selector component supports the following events.
 
 The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -65,7 +65,7 @@ The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ra
 
 The [`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers, after the Range Selector is printed.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -111,7 +111,7 @@ The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.R
 * [`ZoomPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_ZoomPosition) - Specifies the zoom position.
 * [`SelectedData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_SelectedData) - The selected data collection can be accessed in this argument.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -154,7 +154,7 @@ The [`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.R
 * [`CurrentSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_CurrentSize) - Specifies the current size for the Range Selector.
 * [`PreviousSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_PreviousSize) - Specifies the previous size for the Range Selector.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -199,7 +199,7 @@ Before rendering each axis label, the [`LabelRender`](https://help.syncfusion.co
 * [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Region) - Specifies the current axis label position.
 * [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_LabelStyle) - Specifies the current axis label style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -242,7 +242,7 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 * [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_Text) - Specifies the current tooltip text.
 * [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_TextStyle) - Specifies the current tooltip text style.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -286,7 +286,7 @@ The [`SelectorRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 * [`EnableCustomFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_EnableCustomFormat) - Enables to show the content for the calendar in the period selector. By default it is true.
 * [`Selector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Selector) - Specifies the period selector collection.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
@@ -329,6 +329,9 @@ The [`SelectorRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     public void SelectorCustomization(RangeSelectorRenderEventArgs args)
     {
         // Here you can customize your code.
+    }
+}
+```u can customize your code.
     }
 }
 ```

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Style in Blazor Toast Component | Syncfusion 
-description: Learn about Style in Blazor Toast component of Syncfusion, and more details.
+title: Style and appearance in Blazor Toast Component | Syncfusion
+description: Learn here all about Style and appearance in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
 ---
 
-# CSS structures
+# Style and appearance in Blazor Toast Component
 
 The following content provides the exact CSS structure that can be used to modify the control's appearance based on the user preference.
 

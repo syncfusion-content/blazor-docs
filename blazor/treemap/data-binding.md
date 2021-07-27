@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Data Binding in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Data Binding of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Data Binding in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Data Binding in the Blazor TreeMap (SfTreeMap)
+# Data Binding in Blazor TreeMap Component
 
 ## Populate data
 
@@ -17,7 +17,7 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
 
 The following code example shows, how to bind a flat collection as data source to the TreeMap component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="GDP" TValue="GDPReport" DataSource="GrowthReports">
@@ -54,7 +54,7 @@ The following code example shows, how to bind a flat collection as data source t
 
 The following code example shows, how to bind a hierarchical collection as data source to the TreeMap component.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Population" DataSource="PopulationReport">
@@ -188,7 +188,7 @@ The following code example shows, how to bind a hierarchical collection as data 
 
 The following code example shows, how to bind a `IEnumerable` object to the TreeMap component as a data source.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" Palette="@Palette" WeightValuePath="GDP">
@@ -229,7 +229,7 @@ Read the JSON file data and it can be convert to the C# object, and assign it to
 
 The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load the JSON file data.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 @inject HttpClient Http;
 
@@ -275,7 +275,7 @@ To interact with the remote data source, provide the endpoint [`Url`](https://he
 
 Refer to the following code example for remote data binding using OData service.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 @using Syncfusion.Blazor.Data
 
@@ -313,7 +313,7 @@ The [`OData V4`](https://blazor.syncfusion.com/documentation/data/adaptors/#odat
 
 > For more details on OData V4 services, refer to the [`OData documentation`](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) to bind [`OData V4`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) service using the [`OData V4 Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 @using Syncfusion.Blazor.Data
 
@@ -347,7 +347,7 @@ The [`OData V4`](https://blazor.syncfusion.com/documentation/data/adaptors/#odat
 
 Using [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 @using Syncfusion.Blazor.Data
 
@@ -572,7 +572,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
 
 On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 @using Syncfusion.Blazor.Data
 
@@ -590,5 +590,7 @@ On the other hand, to configure the TreeMap using Web API, provide the appropria
 
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
+}
+```#1D2671" };
 }
 ```

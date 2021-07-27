@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Validation in Blazor TextBox Component | Syncfusion 
-description: Learn about Validation in Blazor TextBox component of Syncfusion, and more details.
+title: Validation in Blazor TextBox Component | Syncfusion
+description: Learn here all about Validation in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Validation
+# Validation in Blazor TextBox Component
 
 The TextBox supports three types of validation styles namely `error`, `warning`, and `success`. These states are
 enabled by adding corresponding classes `.e-error`, `.e-warning`, or `.e-success` to the input parent element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <label>Success</label>

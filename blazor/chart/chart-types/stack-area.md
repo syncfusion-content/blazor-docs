@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Area Chart in Blazor Charts component | Syncfusion
-description: Learn here all about 100% Stacked Area Chart of Syncfusion Charts (SfCharts) component and more.
+title: 100% Stacked Area in Blazor Charts Component | Syncfusion
+description: Learn here all about 100% Stacked Area in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# 100% Stacked Area Chart in Blazor Charts (SfCharts)
+# 100% Stacked Area in Blazor Charts Component
 
 ## 100% Stacked Area
 
@@ -115,4 +115,4 @@ The following properties can be used to customize the [`100% Stacked Area`](http
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip) [Tooltip](../tool-tip)

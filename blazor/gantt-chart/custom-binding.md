@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Custom Binding in Blazor Gantt Chart Component | Syncfusion 
-description: Learn about Custom Binding in Blazor Gantt Chart component of Syncfusion, and more details.
+title: Custom Binding in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about Custom Binding in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Custom Binding
+# Custom Binding in Blazor Gantt Chart Component
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
 
@@ -75,7 +75,7 @@ The custom data binding can be performed in the Gantt component by providing the
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
@@ -198,7 +198,7 @@ Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 The following sample code demonstrates injecting service into Custom Adaptor,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;
@@ -316,7 +316,7 @@ The CRUD operations for the custom bounded data in the Gantt component can be im
 
 The following sample code demonstrates implementing CRUD operations for the custom bounded data,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Gantt;
 @using Syncfusion.Blazor.Data;
 @using Syncfusion.Blazor;

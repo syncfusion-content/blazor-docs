@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize Color Picker in Blazor Color Picker Component | Syncfusion
-description: Checkout and learn about Customize Color Picker in Blazor Color Picker component of Syncfusion, and more details.
+title: Customize Color Picker in Blazor Color Picker Component | Syncfusion
+description: Learn here all about Customize Color Picker in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
 ---
 
-# Customize Color Picker
+# Customize Color Picker in Blazor Color Picker Component
 
 ## Custom Palette
 
@@ -86,7 +86,7 @@ By default, the input area will be rendered in Color Picker. To hide the input a
 
 In the following sample, the Color Picker is rendered without input area.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <h4>Choose a color</h4>

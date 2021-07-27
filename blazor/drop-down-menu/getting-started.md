@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started in Blazor Dropdown Menu Component | Syncfusion 
-description: Learn about Getting Started in Blazor Dropdown Menu component of Syncfusion, and more details.
+title: Getting Started with Blazor Dropdown Menu Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Dropdown Menu component of Syncfusion, and more details.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 Open `/_Imports.razor file` and import the Syncfusion.Blazor.SplitButtons packages otherwise import these packages in the individual `razor` pages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.SplitButtons
 ```

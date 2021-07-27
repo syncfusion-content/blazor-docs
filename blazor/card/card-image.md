@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Card Image in Blazor Card Component | Syncfusion 
-description: Learn about Card Image in Blazor Card component of Syncfusion, and more details.
+title: Image and Divider in Blazor Card Component | Syncfusion
+description: Learn here all about Image and Divider in Syncfusion Blazor Card component and more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Images and Divider
+# Image and Divider in Blazor Card Component
 
 ## Images
 
@@ -17,7 +17,7 @@ The Card supports to include images within the elements, you can add image as di
 
 > By default, card images occupies full width of its parent element.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard>
@@ -29,7 +29,7 @@ The Card supports to include images within the elements, you can add image as di
 
 Card image is supported to include a `Title` property for the image. By default, Title is placed over the image on left-bottom position with overlay.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard>
@@ -48,7 +48,7 @@ Divider used to separate the elements inside the card. You can add divider insid
 
 * Set `EnableSeperator` property to `true` in card content for adding a divider.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard>

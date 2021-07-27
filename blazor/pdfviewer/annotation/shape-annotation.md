@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Shape Annotation in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Shape Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Shape annotations in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Shape annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Shape annotation
+# Shape annotations in Blazor PDF Viewer Component
 
 The PDF Viewer control provides the options to add, edit and delete the shape annotations. The shape annotation types supported in the PDF Viewer control are:
 
@@ -34,7 +34,7 @@ In the pan mode, if the shape annotation mode is entered, the PDF Viewer control
 
 Refer to the following code snippet to switch to circle annotation mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.PdfViewer
@@ -94,7 +94,7 @@ Refer to the following code snippet to set the default annotation settings.
 
 The properties of the shape annotations can be set before creating the control using LineSettings, ArrowSettings, RectangleSettings, CircleSettings, and PolygonSettings.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" LineSettings="@LineSettings" ArrowSettings="@ArrowSettings" RectangleSettings="@RectangleSettings" CircleSettings="@CircleSettings" PolygonSettings="@PolygonSettings">

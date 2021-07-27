@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Styles and Appearances
-description: Learn about Style And Appearance in Blazor List Box component of Syncfusion, and more details.
+title: Styles and Appearances in Blazor ListBox Component | Syncfusion
+description: Learn here all about Styles and Appearances in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug
 ---
 
-# Styles and Appearances
+# Styles and Appearances in Blazor ListBox Component
 
 To modify the ListBox appearance, you need to override the default CSS of ListBox component. Please find the list of CSS classes and its corresponding section in ListBox component. Also, you have an option to create your own custom theme for the controls using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material).
 

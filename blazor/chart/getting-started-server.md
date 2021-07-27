@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started Server in Blazor Chart Component | Syncfusion 
-description: Learn about Getting Started Server in Blazor Chart component of Syncfusion, and more details.
+title: Getting Started for Server in Blazor Charts Component | Syncfusion
+description: Learn here all about Getting Started for Server in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started in Blazor Charts
+# Getting Started for Server in Blazor Charts Component
 
 This section briefly explains about how to include a `Chart` in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -46,7 +46,7 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
 
 Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 ```
@@ -121,7 +121,7 @@ namespace BlazorApplication
 
 To initialize the chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 <SfChart>
@@ -157,7 +157,7 @@ public List<SalesInfo> Sales = new List<SalesInfo>
 
 Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -194,7 +194,7 @@ Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://he
 
 Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Title) property, you can add a title to the chart and the axes to provide the user with quick information about the data plotted in the chart.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -231,7 +231,7 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 You can add data labels to improve the readability of the chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [`ChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -271,7 +271,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 
 When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 
@@ -309,7 +309,7 @@ When space constraints prevent you from displaying information using data labels
 
 You can use legend for the chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to **true** in [`ChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html). The legend name can be changed by using the [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Name) property in the series.
 
-```csharp
+```cshtml
 @page "/"
 @using Syncfusion.Blazor.Charts
 

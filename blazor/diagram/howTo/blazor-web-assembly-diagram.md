@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor Web Assembly Diagram in Blazor Diagram Component | Syncfusion 
-description: Learn about Blazor Web Assembly Diagram in Blazor Diagram component of Syncfusion, and more details.
+title: Blazor WebAssembly Diagram in Blazor Diagram Component | Syncfusion
+description: Learn here all about Blazor WebAssembly Diagram in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# Getting Started with Blazor WebAssembly Diagram Using Visual Studio
+# Blazor WebAssembly Diagram in Blazor Diagram Component
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Diagram in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -145,7 +145,7 @@ The following example shows a basic Diagram component.
 Adding Nodes and Connectors
 Let us create and add a `Nodes` with specific position, size, label and shape. Connect two or more Nodes by using a `Connectors`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 @using DiagramShapes = Syncfusion.Blazor.Diagrams.Shapes
@@ -292,4 +292,4 @@ private void CreateNode(string id, double y, FlowShapes shape, string label, boo
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)r-side-dotnet-cli/)

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Context Menu in Blazor Tree Grid Component | Syncfusion 
-description: Learn about Context Menu in Blazor Tree Grid component of Syncfusion, and more details.
+title: Context Menu in Blazor TreeGrid Component | Syncfusion
+description: Learn here all about Context Menu in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Context menu
+# Context Menu in Blazor TreeGrid Component
 
 The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [`ContextMenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~ContextMenuItems.html) property.
 
@@ -35,7 +35,7 @@ Items |Description
 
 The following sample code demonstrates enabling context menu with its default items,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeGrid;
 
 <SfTreeGrid DataSource="@TreeData" IdMapping="TaskId" AllowPaging="true" AllowExcelExport="true" AllowPdfExport="true" AllowSorting="true" ParentIdMapping="ParentId" ContextMenuItems="@(new List<object>() { "AutoFit", "AutoFitAll", "SortAscending", "SortDescending","Copy", "Edit", "Delete", "Save", "Cancel","PdfExport", "ExcelExport", "CsvExport", "FirstPage", "PrevPage","LastPage", "NextPage"})" TreeColumnIndex="1">
@@ -89,7 +89,7 @@ The custom context menu items can be added by defining the [`ContextMenuItems`](
 
 The following sample code demonstrates defining custom context menu item and its corresponding action in the [`ContextMenuItemClicked`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~ContextMenuClick.html) event,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.TreeGrid;
 

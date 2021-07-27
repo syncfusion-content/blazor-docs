@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Clipboard in Blazor DocumentEditor Component | Syncfusion 
-description: Learn about Clipboard in Blazor DocumentEditor component of Syncfusion, and more details.
+title: Clipboard in Blazor DocumentEditor Component | Syncfusion
+description: Learn here all about Clipboard in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Clipboard
+# Clipboard in Blazor DocumentEditor Component
 
 [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) component (a.k.a Document Editor) provides built-in support for clipboard operations such as cut, copy, and paste. You can perform the clipboard operations using keyboard shortcuts, touch, and keyboard interactions. Also, the same functionalities can be invoked programmatically.
 
@@ -21,7 +21,7 @@ Let’s see how to invoke each clipboard operations using code.
 
 You can copy the selected contents using the `Copy` method as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="CopyClick">Copy</button>
@@ -41,7 +41,7 @@ You can copy the selected contents using the `Copy` method as shown in the follo
 
 You can cut the selected content using the “Cut” method as shown in the following code example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="CutClick">Cut</button>
@@ -65,7 +65,7 @@ You can cut the selected content using the “Cut” method as shown in the foll
 
 The following code example shows how to perform the paste operation from the local clipboard.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DocumentEditor
 
 <button @onclick="PasteClick">Paste</button>

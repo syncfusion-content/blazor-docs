@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Interaction in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Interaction mode in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Interaction mode in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Interaction mode
+# Interaction mode in Blazor PDF Viewer Component
 
 The built-in toolbar of PDF Viewer contains the following two interaction options:
 
@@ -22,7 +22,7 @@ In this mode, the text selection can be performed in the PDF document loaded in 
 
 You can enable or disable text selection by setting the `EnableTextSelection` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer Width="1060px" Height="500px" DocumentPath="@DocumentPath" EnableTextSelection="true"/>
@@ -38,7 +38,7 @@ In this mode, the panning and scrolling of the pages can be performed in the PDF
 
 You can change the interaction mode of PDF Viewer using the `InteractionMode` property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PdfViewer
 @using Syncfusion.Blazor.PdfViewerServer
 

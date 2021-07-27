@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Validation in Blazor File Upload Component | Syncfusion 
-description: Learn about Validation in Blazor File Upload component of Syncfusion, and more details.
+title: Validation in Blazor File Upload Component | Syncfusion
+description: Learn here all about Validation in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Validation
+# Validation in Blazor File Upload Component
 
 The uploader component validate the selected files size and extension using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. The files can be validated before uploading to the server and can be ignored on uploading.
 Also, you can validate the files by setting the HTML attributes to the original input element.
@@ -19,7 +19,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx">
@@ -38,7 +38,7 @@ The uploader component allows you to validate the files based on its size. The v
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx"  MinFileSize=10000 MaxFileSize=1000000>

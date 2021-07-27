@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Accessibility in Blazor Progress Button Component | Syncfusion 
-description: Learn about Accessibility in Blazor Progress Button component of Syncfusion, and more details.
+title: Accessibility in Blazor ProgressButton Component | Syncfusion
+description: Learn here all about Accessibility in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor ProgressButton Component
 
 ## ARIA attributes
 
@@ -34,7 +34,7 @@ The web accessibility makes web content and web applications more accessible for
 Starts the progress</td></tr>
 </table>
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
 <SfProgressButton Content="Spin Left"></SfProgressButton>

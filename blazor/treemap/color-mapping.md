@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Color Mapping in the Blazor TreeMap component | Syncfusion
-description: Learn here all about the Color Mapping of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Color Mapping in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Color Mapping in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Color Mapping in the Blazor TreeMap (SfTreeMap)
+# Color Mapping in Blazor TreeMap Component
 
 Color mapping is used to customize the color for each group or item based on the specified types. The following options are available to customize the group and leaf items in the TreeMap component.
 
@@ -17,7 +17,7 @@ Range color mapping is used to apply color to the items by giving specific range
 
 The following code example shows, how to apply range color mapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
@@ -55,7 +55,7 @@ Equal color mapping is used to fill colors to each item by specifying equal valu
 
 The following code example shows, how to apply equal color mapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Car" DataSource="Cars" EqualColorValuePath="Brand">
@@ -95,7 +95,7 @@ Desaturation color mapping is used to apply colors to the items based on the [`M
 
 The following code example shows, how to apply desaturation color mapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
@@ -118,7 +118,7 @@ Multiple colors are used to provide gradient effect to the TreeMap items based o
 
 The following code example shows, how to use multiple colors.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
@@ -141,7 +141,7 @@ The palette color mapping is used to fill the color to each group or leaf item b
 
 The following code example shows, how to apply palette color mapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Car" DataSource="Cars" Palette='new string[] { "red", "green" }'>
@@ -160,7 +160,7 @@ Get the excluded ranges from data source using the color mapping and apply the s
 
 The following code example shows, how to set the color for the items excluded from the color mapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count">
@@ -184,7 +184,7 @@ To set the color for each item from the data source, bind the data source proper
 
 The following code example shows, how to set the color for the TreeMap items.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap WeightValuePath="Count" TValue="Fruit" DataSource="Fruits" RangeColorValuePath="Count" ColorValuePath="Color">
@@ -211,4 +211,4 @@ The following code example shows, how to set the color for the TreeMap items.
 }
 ```
 
-![Bind the colors to TreeMap from datasource](images/Colormapping/ColorDS.png)
+![Bind the colors to TreeMap from datasource](images/Colormapping/ColorDS.png)apping/ColorDS.png)

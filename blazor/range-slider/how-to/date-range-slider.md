@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Date Range Slider in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn about Date Range Slider in Blazor Range Slider component of Syncfusion, and more details.
+title: Date Range Slider in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Date Range Slider in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Date Range Slider
+# Date Range Slider in Blazor Range Slider Component
 
 The date formatting can be achieved using `TicksRendering` and `TooltipChange` events. The process of date formatting is explained in the below sample.
 
-```csharp
+```cshtml
 @using System.Globalization;
 @using Syncfusion.Blazor.Inputs
 

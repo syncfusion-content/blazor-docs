@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Color Mapping in Blazor Maps Component | Syncfusion 
-description: Learn about Color Mapping in Blazor Maps component of Syncfusion, and more details.
+title: Color Mapping in Blazor Maps Component | Syncfusion
+description: Learn here all about Color Mapping in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Color Mapping
+# Color Mapping in Blazor Maps Component
 
 Color mapping is used to customize the shape colors based on given values. It has three types: range color mapping, equal color mapping, and desaturation color mapping.
 
@@ -17,7 +17,7 @@ Range color mapping is applied by the mapped value, which is a numeric value. Wi
 
 Bind the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) value and specify the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) to 'Density' to map the range value for shapes. Refer to the following code snippets.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -88,7 +88,7 @@ Equal color mapping is used to apply color mapping if the mapped value is string
 
 Bind the `councilMemberdetails` data to the layer [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property, set [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) to 'Membership' in the [`MapsShapeSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html), and set the color mapping values to [`MapsShapeColorMapping`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -130,7 +130,7 @@ Desaturation color mapping is used to apply colors to shapes with opacity based 
 
 Bind the `populationDetails` value to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property, and then specify the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) as 'Density' to map the range value for shapes. Refer to the following code examples to apply desaturation color mapping to shapes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -156,7 +156,7 @@ Multiple colors are used to provide gradient effect to specific shapes based on 
 
 Bind the `populationDetails` value to layer [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) and specify the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) as 'Density' to map the range value for shapes. Refer to the following the example for more details.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -186,7 +186,7 @@ You will map the colors to the shapes based on the ranges or values in the data 
 
 In following code example, You have added color mapping for the ranges from 0.00001 to 300. If we have any records in the data source beyond this range, color mapping will not be applied. To apply the color for these excluded items, set `Color` value in the `MapsShapeColorMapping` with out range or value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>

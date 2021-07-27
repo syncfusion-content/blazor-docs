@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Horizontal in Blazor Card Component | Syncfusion 
-description: Learn about Horizontal in Blazor Card component of Syncfusion, and more details.
+title: Horizontal Card in Blazor Card Component | Syncfusion
+description: Learn here all about Horizontal Card in Syncfusion Blazor Card component and more.
 platform: Blazor
 control: Card
 documentation: ug
 ---
 
-# Horizontal Card
+# Horizontal Card in Blazor Card Component
 
 By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using Orientation property..
 
@@ -15,7 +15,7 @@ By default, all the card elements are aligned vertically one after the other as 
 
 * An horizontally aligned card can push a specific column to align vertical using `CardStacked` component. This will align the stacked section vertically aligned differentiating from horizontal layout.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Cards
 
 <SfCard Orientation="CardOrientation.Horizontal" ID="Trimmer">

@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Data Binding in Blazor DropDown List Component | Syncfusion 
-description: Learn about Data Binding in Blazor DropDown List component of Syncfusion, and more details.
+title: Data Binding in Blazor DropDown List Component | Syncfusion
+description: Learn here all about Data Binding in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor DropDown List Component
 
 Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum and bool types. If component value has been changed, it will affect the all places where you bind the variable for the **bind-value** attribute.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <p>DropDownList value is:<strong>@DropVal</strong></p>
@@ -45,7 +45,7 @@ Data binding can be achieved by using the `bind-Value` attribute and it supports
 
 Index value binding can be achieved by using `bind-Index` attribute and it supports int and int nullable types. By using this attribute you can bind the values respective to its index.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfAutoComplete TValue="string" Placeholder="e.g. Australia" TItem="Countries" @bind-Index="@ddlIndex" DataSource="@Country">

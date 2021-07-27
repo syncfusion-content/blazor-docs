@@ -1,13 +1,13 @@
 ---
 layout: post
-title: How to Customize The Bar in Blazor Range Slider Component | Syncfusion
-description: Checkout and learn about Customize The Bar in Blazor Range Slider component of Syncfusion, and more details.
+title: Customize the bar in Blazor Range Slider Component | Syncfusion
+description: Learn here all about Customize the bar in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Customize the bar
+# Customize the bar in Blazor Range Slider Component
 
 Slider appearance can be customized through CSS. By overriding the slider CSS classes, you can customize the slider bar. The slider bar can be customized with different themes. By default, slider have class name `e-slider-track` for bar. The class can be overridden with our own color values like the following code snippet.
 
@@ -33,7 +33,7 @@ In this code snippet, it can be seen that the dynamic color of the slider is bei
 
 Color bar can be customized in quite a number of ways.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs;
 @using Syncfusion.Blazor.Buttons;
 <div class="col-lg-12 control-section">

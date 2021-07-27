@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Markers in Blazor Maps Component | Syncfusion 
-description: Learn about Markers in Blazor Maps component of Syncfusion, and more details.
+title: Markers in Blazor Maps Component | Syncfusion
+description: Learn here all about Markers in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps
 documentation: ug
 ---
 
-# Markers
+# Markers in Blazor Maps Component
 
 Markers are notes that are used to leave a message on the Maps component. It indicates or marks a specific location with desired symbols on the maps.
 
 The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_DataSource) property has a list of objects that contains data for markers. By default, it displays the bound data at the specified latitude and longitude. Using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Visible) API, you can enable or disable the markers.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -56,7 +56,7 @@ The n number of markers can be added to shape layers using the [`DataSource`](ht
 * Latitude - Determines the y-axis position of annotation.
 * Longitude - Determines the x-axis position of annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -109,7 +109,7 @@ The Maps component contains the following marker shapes. You can select any shap
 
 You can specify multiple marker groups and customize each group of markers separately as demonstrated in the following example.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -170,7 +170,7 @@ The following shapes are used for the marker object.
 * VerticalLine
 * pentagon
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -206,7 +206,7 @@ The following shapes are used for the marker object.
 
 The map is initially scaled to the center value based on the marker distance. This can be achieved by setting `shouldZoomInitially` property in `zoomSettings` as `true`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -241,7 +241,7 @@ The map is initially scaled to the center value based on the marker distance. Th
 
 The cluster is formed by grouping an identical and non-identical marker from the surrounding area. By clicking on the cluster and setting `allowClusterExpand` property in `markerClusterSettings` as `true` to expand the identical markers. If you zoom in any of the locations of the cluster, the number on the cluster will decrease and the overlapping marker will be split into an individual marker on the map. When you zoom out, it will increase the marker count and then cluster it again.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -287,7 +287,7 @@ The legend can be enabled for markers using [`Type`](https://help.syncfusion.com
 
 The following code snippet demonstrates how to enable legend for markers.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -335,7 +335,7 @@ The number on a cluster indicates how many overlapped markers it contains. If yo
 
 Using the [`AllowClustering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) API in [`MapsMarkerClusterSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) option, you can enable or disable the cluster support. The [`MapsMarkerClusterSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) also helps to customize clusters.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
@@ -390,7 +390,7 @@ Allows the user to dynamically add a marker to the Maps component dynamically. T
 
 In the code below, click the user-defined button and the marker is added to the location that is specified in the `Add` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Maps;
 @using System.Collections.ObjectModel;
 @inject IJSRuntime JSRuntime;

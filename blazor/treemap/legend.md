@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Legend in the Blazor TreeMap component | Syncfusion
-description: Learn here all about Legend of Syncfusion TreeMap (SfTreeMap) component and more.
+title: Legend in Blazor TreeMap Component | Syncfusion
+description: Learn here all about Legend in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Legend in the Blazor TreeMap (SfTreeMap)
+# Legend in Blazor TreeMap Component
 
 Legend is used to provide valuable information for interpreting what the TreeMap displays. The legends can be represented in various colors, shapes or other identifiers based on the data.
 
@@ -24,7 +24,7 @@ In the default mode, the legends have symbols with legend labels that are used t
 
 The following code example shows the default mode of the legends.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Cars" TValue="Car" WeightValuePath="Count" EqualColorValuePath="Brand">
@@ -65,7 +65,7 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 
 The following code example shows the interactive mode of the legends.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Cars" TValue="Car" WeightValuePath="Count" EqualColorValuePath="Brand">
@@ -100,7 +100,7 @@ The following options are available to customize the legend position:
 
 The following code example shows the legend position.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
@@ -141,7 +141,7 @@ The legend alignment is used to align the legend items in a specific location. T
 
 The following code example shows the legend alignment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
@@ -166,7 +166,7 @@ Customize the legend size by modifying the [`Height`](https://help.syncfusion.co
 
 The following code example shows how to set the legend size.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Cars" WeightValuePath="Count" EqualColorValuePath="Brand">
@@ -208,7 +208,7 @@ TreeMap support legend paging, if the legend items cannot be placed within the p
 
 The following code example shows, how to enable the legend paging.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Cars" TValue="Car" WeightValuePath="Count" EqualColorValuePath="Brand">
@@ -251,7 +251,7 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 
 The following code example demonstrates, how to set the color for the items excluded from the color mapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
@@ -292,7 +292,7 @@ To enable or disable the desired legend item for each color mapping, set the [`S
 
 The following code example demonstrates to hide the desired legend.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" RangeColorValuePath="Count">
@@ -333,7 +333,7 @@ To enable or disable the legend visibility for each item through the data source
 
 The following code example shows how to hide the legend items based on the data source value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" ColorValuePath="Color">
@@ -369,7 +369,7 @@ The following code example shows how to hide the legend items based on the data 
 
 To show the legend item text from the data source, bind the property name from data source to the [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_ValuePath) property in the [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" ColorValuePath="Color">
@@ -404,7 +404,7 @@ To show the legend item text from the data source, bind the property name from d
 
 To enable or disable the duplicate legend items, set the [`RemoveDuplicateLegend`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLegendSettings_RemoveDuplicateLegend) property to **true** in the [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" ColorValuePath="Color">
@@ -442,7 +442,7 @@ Use a responsive legend that switches positions between the right and the bottom
 
 In the following sample, the responsive legend is shown.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Width="700px" Height="500px" Palette='new string[] { "#71B081", "#5A9A77", "#498770", "#39776C", "#266665", "#124F5E" }'>
@@ -478,7 +478,7 @@ Set the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tr
 
 In the following sample, the legend with RTL is shown.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.TreeMap
 
 <SfTreeMap DataSource="Cars" WeightValuePath="Count" ColorValuePath="Color" EnableRtl="true">
@@ -507,4 +507,4 @@ In the following sample, the legend with RTL is shown.
 }
 ```
 
-![TreeMap with RTL](images/Internationalization/LegendRTL.png)
+![TreeMap with RTL](images/Internationalization/LegendRTL.png)/LegendRTL.png)

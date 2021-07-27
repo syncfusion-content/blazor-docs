@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started in Blazor Barcode Component | Syncfusion 
-description: Learn about Getting Started in Blazor Barcode component of Syncfusion, and more details.
+title: Getting Started with Blazor Barcode Component | Syncfusion
+description: Checkout and learn about getting started with Blazor Barcode component of Syncfusion, and more details.
 platform: Blazor
 control: Barcode
 documentation: ug
 ---
 
-# Getting Started
+# Getting Started with Blazor Barcode Component
 
 This section briefly explains about how to include a BarcodeGenerator in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -40,7 +40,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 
 Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.BarcodeGenerator** packages.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.BarcodeGenerator
 ```
@@ -49,7 +49,7 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.BarcodeGenera
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor;
 
 namespace BlazorApplication

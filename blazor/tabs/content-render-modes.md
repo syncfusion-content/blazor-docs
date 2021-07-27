@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Content Render Modes in Blazor Tabs Component | Syncfusion 
-description: Learn about Content Render Modes in Blazor Tabs component of Syncfusion, and more details.
+title: Content Render Modes in Blazor Tabs Component | Syncfusion
+description: Learn here all about Content Render Modes in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
 ---
 
-# Content Render Modes
+# Content Render Modes in Blazor Tabs Component
 
 In Blazor Tabs, you can render the content of the Tabs based on the scenario. The content rendering of tabs can be done by the following three different ways.
 
@@ -21,7 +21,7 @@ This mode is the default one in which the content of the selected tab alone will
 
 In the following code example, there are two tabs. The first tab have a login page and second tab have Grid component. The second tab Grid component will be rendered in the DOM only when login is completed. The second tab will be replaced the first tab in the DOM.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Grids
@@ -135,7 +135,7 @@ You can set this mode to our Tabs by setting `ContentLoad.Demand` to the propert
 
 In the following code example, Calendar and Scheduler have been rendered in first and second tab respectively. Initially, Scheduler is not available once the second tab is selected, scheduler will be rendered. Both calendar and scheduler will be maintained in DOM, changing the date either in calendar or scheduler will change the date in other.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Calendars
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Schedule
@@ -179,7 +179,7 @@ In the following code example, Calendar and Scheduler have been rendered in firs
 
  In the following example, all the three tabs are rendered in initial load itself and the data entered in the first tab will be maintained even when second or third tab is in active state.
 
- ```csharp
+ ```cshtml
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons

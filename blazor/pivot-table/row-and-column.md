@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Row And Column in Blazor Pivot Table Component | Syncfusion 
-description: Learn about Row And Column in Blazor Pivot Table component of Syncfusion, and more details.
+title: Row and Column in Blazor Pivot Table Component | Syncfusion
+description: Learn here all about Row and Column in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD012 -->
 
-# Row and Column
+# Row and Column in Blazor Pivot Table Component
 
 ## Width and Height
 
@@ -674,7 +674,7 @@ In this demo, the revenue cost for each year is represented with trend icons.
 >We need to specify the model type for datasource from which the context will be generated and accessed in the CellTemplate. Using the context we can define the conditions based on that templates will be appended to the cell element
 
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="TemplateData" Height="300" Width="800">

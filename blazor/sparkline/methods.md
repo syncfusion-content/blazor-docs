@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Methods in the Blazor Sparkline component | Syncfusion
-description: Learn here all about the methods of Syncfusion Sparkline (SfSparkline) component and more.
+title: Methods in Blazor Sparkline Component | Syncfusion
+description: Learn here all about Methods in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Methods in the Blazor Sparkline (SfSparkline)
+# Methods in Blazor Sparkline Component
 
 Using the `@ref` property, create an object for the Sparkline component and call the desired method.
 
@@ -15,7 +15,7 @@ Using the `@ref` property, create an object for the Sparkline component and call
 
 The refresh method helps to render the Sparkline component again.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <button @onclick="RefreshCall">Refresh</button>
@@ -28,6 +28,9 @@ The refresh method helps to render the Sparkline component again.
     public async Task RefreshCall()
     {
         await Sparkline.Refresh();
+    }
+}
+```fresh();
     }
 }
 ```

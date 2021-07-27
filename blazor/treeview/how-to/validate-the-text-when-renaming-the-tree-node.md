@@ -1,17 +1,17 @@
 ---
 layout: post
-title: How to Validate The Text When Renaming The Tree Node in Blazor TreeView Component | Syncfusion
-description: Checkout and learn about Validate The Text When Renaming The Tree Node in Blazor TreeView component of Syncfusion, and more details.
+title: Validate the text when renaming the tree node in Blazor TreeView Component | Syncfusion
+description: Learn here all about Validate the text when renaming the tree node in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Validate the text when renaming the tree node
+# Validate the text when renaming the tree node in Blazor TreeView Component
 
 You can validate the tree node text while editing using `NodeEdited` event of the TreeView. Following is an example that shows how to validate and prevent empty values in tree node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Navigations
     <SfTreeView TValue="MusicAlbum" AllowEditing="true" @ref="tree">
         <TreeViewEvents TValue="MusicAlbum" NodeEdited="AfterEdit"></TreeViewEvents>
