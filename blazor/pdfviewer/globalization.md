@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Globalization in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Globalization in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Globalization and RTL in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Globalization and RTL in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Globalization and RTL
+# Globalization and RTL in Blazor PDF Viewer Component
 
 The PDF Viewer component allows you to localize the static text on formatting pane, toolbar, dialog and more. It can be achieved by setting the `Locale` property and providing the localized text through the `LoadLocaleData()` method.
 

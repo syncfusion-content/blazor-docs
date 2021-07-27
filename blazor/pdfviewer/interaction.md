@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Interaction in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Interaction in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Interaction mode in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Interaction mode in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Interaction mode
+# Interaction mode in Blazor PDF Viewer Component
 
 The built-in toolbar of PDF Viewer contains the following two interaction options:
 

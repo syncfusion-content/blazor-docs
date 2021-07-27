@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Measurement Annotation in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Measurement Annotation in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Measurement annotations in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Measurement annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Measurement annotation
+# Measurement annotations in Blazor PDF Viewer Component
 
 The PDF Viewer provides the options to add measurement annotations. You can measure the page annotations with the help of measurement annotation. The supported measurement annotations in the PDF Viewer control are:
 

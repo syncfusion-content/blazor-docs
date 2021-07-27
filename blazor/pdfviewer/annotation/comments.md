@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Comments in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Comments in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Comments in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Comments in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Comments
+# Comments in Blazor PDF Viewer Component
 
 The PDF Viewer control provides options to add, edit, and delete the comments to the following annotation in the PDF documents:
 

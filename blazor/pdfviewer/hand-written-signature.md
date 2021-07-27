@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Hand Written Signature in Blazor PDF Viewer Component | Syncfusion 
-description: Learn about Hand Written Signature in Blazor PDF Viewer component of Syncfusion, and more details.
+title: Handwritten Signature in Blazor PDF Viewer Component | Syncfusion
+description: Learn here all about Handwritten Signature in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
 ---
 
-# Handwritten Signature
+# Handwritten Signature in Blazor PDF Viewer Component
 
 The PDF Viewer control supports adding handwritten signatures to a PDF document. The handwritten signature reduces the paper work of reviewing the content and verifies it digitally.
 
