@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header Customization in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Header Customization in Syncfusion Blazor Scheduler component and more.
+description: This section explains how to show or hide the header bar and customize it in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug

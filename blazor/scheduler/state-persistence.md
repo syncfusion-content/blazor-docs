@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Scheduler Component | Syncfusion
-description: Learn here all about State Persistence in Syncfusion Blazor Scheduler component and more.
+description: This section shows the way to maintain and retain the Syncfusion Blazor scheduler component states even after refreshing the page.
 platform: Blazor
 control: Scheduler
 documentation: ug

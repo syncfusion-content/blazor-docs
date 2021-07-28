@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timeline Header Rows in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Timeline Header Rows in Syncfusion Blazor Scheduler component and more.
+description: This topic helps you to add additional header rows and explain how to customize them in timeline views of Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug

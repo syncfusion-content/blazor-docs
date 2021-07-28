@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Scheduler component and more.
+description: Describes how the Syncfusion Blazor Scheduler control has been built keeping web accessibility in mind, thus allowing to interact with assistive technologies.
 platform: Blazor
 control: Scheduler
 documentation: ug

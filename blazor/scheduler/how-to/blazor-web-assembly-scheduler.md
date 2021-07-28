@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor WebAssembly Scheduler in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Blazor WebAssembly Scheduler in Syncfusion Blazor Scheduler component and more.
+description: Helps you to get started of Syncfusion Blazor Scheduler component in Web Assembly project. Also helps to bind appointments and set current view and date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug

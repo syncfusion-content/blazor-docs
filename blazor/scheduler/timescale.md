@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Timescale Customization in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Timescale Customization in Syncfusion Blazor Scheduler component and more.
+description: Learn how to set different time slot duration on Syncfusion Blazor Scheduler and to customize the major and minor time slots using templates.
 platform: Blazor
 control: Scheduler
 documentation: ug

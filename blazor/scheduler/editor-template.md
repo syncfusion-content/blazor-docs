@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editor Window Customization in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Editor Window Customization in Syncfusion Blazor Scheduler component and more.
+description: This topic demonstrates how to customize the editor and quick pop-up using templates and how to prevent popups in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug

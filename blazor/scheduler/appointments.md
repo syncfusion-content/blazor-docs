@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointments in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Appointments in Syncfusion Blazor Scheduler component and more.
+description: Learn here all about the types of events, recurring events, customizing events, and also drag and resize options in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug

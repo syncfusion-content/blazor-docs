@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtual Scrolling in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Virtual Scrolling in Syncfusion Blazor Scheduler component and more.
+description: This section demonstrates how to dynamically load the resources and events to the DOM as you scroll through the Syncfusion Blazor scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
