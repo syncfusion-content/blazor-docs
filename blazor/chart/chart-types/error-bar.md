@@ -13,13 +13,14 @@ documentation: ug
 
 Error bars are graphical representations of the variability of data and used on graphs to indicate the error or uncertainty in a reported measurement. To render the error bar for the series, set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Visible) property to **true** in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartErrorBarSettings Visible="true">
@@ -36,7 +37,7 @@ Error bars are graphical representations of the variability of data and used on 
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
+	{
         new ChartData{ X= 2005, Y= 28 },
         new ChartData{ X= 2006, Y= 25 },
         new ChartData{ X= 2007, Y= 26 },
@@ -47,22 +48,23 @@ Error bars are graphical representations of the variability of data and used on 
     };
 }
 
-```
+``` 
 
 ![Error Bar](../images/othertypes/errorbar.png)
 
 ## Error Bar Type
 
-To change the error bar rendering type, use [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Type)
+To change the error bar rendering type, set [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Type)
 property in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html) and to change the error bar line length, use [`VerticalError`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_VerticalError) property in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartErrorBarSettings Visible="true" Type="ErrorBarType.Percentage" VerticalError="4">
@@ -79,7 +81,7 @@ property in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Sync
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
+	{
         new ChartData{ X= 2005, Y= 28 },
         new ChartData{ X= 2006, Y= 25 },
         new ChartData{ X= 2007, Y= 26 },
@@ -90,18 +92,18 @@ property in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Sync
     };
 }
 
-```
+``` 
 
 ## Customizing Error Bar Type
 
-To customize the error bar type by specifying the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Type) property to [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ErrorBarType.html#Syncfusion_Blazor_Charts_ErrorBarType_Custom) and
+To customize the error bar type, specify the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Type) property to [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ErrorBarType.html#Syncfusion_Blazor_Charts_ErrorBarType_Custom) and
 then change the [`HorizontalNegativeError`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_HorizontalNegativeError) and [`HorizontalPositiveError`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_HorizontalPositiveError) properties in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -122,7 +124,7 @@ then change the [`HorizontalNegativeError`](https://help.syncfusion.com/cr/blazo
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
+	{
         new ChartData{ X= 2005, Y= 28 },
         new ChartData{ X= 2006, Y= 25 },
         new ChartData{ X= 2007, Y= 26 },
@@ -133,7 +135,7 @@ then change the [`HorizontalNegativeError`](https://help.syncfusion.com/cr/blazo
     };
 }
 
-```
+``` 
 
 ![Customizing Error Bar](../images/chart-types-images/custom-error-bar.png)
 
@@ -141,13 +143,14 @@ then change the [`HorizontalNegativeError`](https://help.syncfusion.com/cr/blazo
 
 Error bar mode is used to define whether the error bar line has to be drawn horizontally, vertically or in both side and to change the error bar mode, use [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Mode) property in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartErrorBarSettings Visible="true" Mode="ErrorBarMode.Horizontal">
@@ -164,7 +167,7 @@ Error bar mode is used to define whether the error bar line has to be drawn hori
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
+	{
         new ChartData{ X= 2005, Y= 28 },
         new ChartData{ X= 2006, Y= 25 },
         new ChartData{ X= 2007, Y= 26 },
@@ -175,19 +178,20 @@ Error bar mode is used to define whether the error bar line has to be drawn hori
     };
 }
 
-```
+``` 
 
 ## Error Bar Direction
 
 To change the error bar direction to plus, minus or both side, use [`Direction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarSettings_Direction) property in [`ChartErrorBarSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarSettings.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartErrorBarSettings Visible="true" Mode="ErrorBarMode.Both" Direction="ErrorBarDirection.Minus">
@@ -204,7 +208,7 @@ To change the error bar direction to plus, minus or both side, use [`Direction`]
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
+	{
         new ChartData{ X= 2005, Y= 28 },
         new ChartData{ X= 2006, Y= 25 },
         new ChartData{ X= 2007, Y= 26 },
@@ -215,19 +219,20 @@ To change the error bar direction to plus, minus or both side, use [`Direction`]
     };
 }
 
-```
+``` 
 
 ## Customizing Error Bar Cap
 
 To customize the error bar cap [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarCapSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarCapSettings_Length), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarCapSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarCapSettings_Width) and [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarCapSettings.html#Syncfusion_Blazor_Charts_ChartErrorBarCapSettings_Color) properties in [`ChartErrorBarCapSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartErrorBarCapSettings.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="X" YName="Y" Type="ChartSeriesType.Line">
             <ChartErrorBarSettings Visible="true">
@@ -245,7 +250,7 @@ To customize the error bar cap [`Length`](https://help.syncfusion.com/cr/blazor/
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
+	{
         new ChartData{ X= 2005, Y= 28 },
         new ChartData{ X= 2006, Y= 25 },
         new ChartData{ X= 2007, Y= 26 },
@@ -256,13 +261,13 @@ To customize the error bar cap [`Length`](https://help.syncfusion.com/cr/blazor/
     };
 }
 
-```
+``` 
 
-![Customizing Error Bar](../images/othertypes/errorbarcap-custom.png)
+![Customizing Error Bar Cap](../images/othertypes/errorbarcap-custom.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

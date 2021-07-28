@@ -1,29 +1,31 @@
 ---
 layout: post
-title: Step Area in Blazor Charts Component | Syncfusion
+title: Step Area Chart in Blazor Charts Component | Syncfusion
 description: Learn here all about Step Area in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Step Area in Blazor Charts Component
+# Step Area Chart in Blazor Charts Component
 
 ## Step Area
 
-[`Blazor Step Area chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) is like a step line chart except that the area connected through vertical and horizontal lines are shaded with color. To render a [`Step Area`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StepArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepArea).
+[`Step Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) is similar to a step line chart, but with the areas connected with lines shaded. To render a step area series, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StepArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StepArea).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReports" XName="X" YName="Low" Type="ChartSeriesType.StepArea">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code{
     public class ChartData
     {
@@ -33,7 +35,7 @@ documentation: ug
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
-{
+	{
          new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
          new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
          new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
@@ -44,11 +46,11 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Step Area](../images/chart-types-images/steparea.png)
 
-> Refer to our [`Blazor Step Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Step Area Chart`](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap4) Example to know how to render and configure the Step Area type chart.
+> Refer to our [`Blazor Step Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/step-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Step Area Chart Example`](https://blazor.syncfusion.com/demos/chart/step-area?theme=bootstrap4) to know how to render and configure the Step Area type chart.
 
 ## Series Customization
 
@@ -60,6 +62,7 @@ The following properties can be used to customize the [`Step Area`](https://help
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
@@ -70,6 +73,7 @@ The following properties can be used to customize the [`Step Area`](https://help
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code{
     public class ChartData
     {
@@ -79,7 +83,7 @@ The following properties can be used to customize the [`Step Area`](https://help
     }
 
     public List<ChartData> WeatherReports = new List<ChartData>
-{
+    {
          new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
          new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
          new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
@@ -89,13 +93,14 @@ The following properties can be used to customize the [`Step Area`](https://help
          new ChartData { X= "Sat", Low= 1.2, High= 7.9 }
     };
 }
+
 ```
 
 ![Step Area with series customization](../images/chart-types-images/custom-step-area.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

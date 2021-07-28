@@ -79,7 +79,7 @@ Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces
 
 Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-```csharp
+```cshtml
 using Syncfusion.Blazor;
 
 namespace WebApplication1
@@ -117,7 +117,7 @@ On successful compilation of your application, the Syncfusion Blazor Chart compo
 
 To bind data for the chart component, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. It can also be provided as an instance of the [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-```csharp
+```cshtml
 public class SalesInfo
     {
         public string Month { get; set; }
@@ -155,6 +155,7 @@ Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://he
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -166,6 +167,7 @@ Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://he
         new SalesInfo { Month = "Jul", SalesValue = 35 }
     };
 }
+
 ```
 
 ![chart](../images/getting-started/column.png)
@@ -180,18 +182,22 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
     <SfChart Title="Sales Analysis">
         <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
         <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+
         <ChartSeriesCollection>
             <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -203,6 +209,7 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         new SalesInfo { Month = "Jul", SalesValue = 35 }
     };
 }
+
 ```
 
 ![chart](../images/getting-started/columntitle.png)
@@ -212,12 +219,15 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 You can add data labels to improve the readability of the chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Visible) property to **true** in the [`ChartDataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html).
 
 ```cshtml
+
 @page "/"
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
     <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartMarker>
@@ -232,6 +242,7 @@ You can add data labels to improve the readability of the chart. This can be ach
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -243,6 +254,7 @@ You can add data labels to improve the readability of the chart. This can be ach
         new SalesInfo { Month = "Jul", SalesValue = 35 }
     };
 }
+
 ```
 
 ![chart](../images/getting-started/data-label.png)
@@ -252,24 +264,29 @@ You can add data labels to improve the readability of the chart. This can be ach
 When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) to **true**.
 
 ```cshtml
+
 @page "/"
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Sales Analysis">
     <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
     <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+
     <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -281,6 +298,7 @@ When space constraints prevent you from displaying information using data labels
         new SalesInfo { Month = "Jul", SalesValue = 35 }
     };
 }
+
 ```
 
 ![chart](../images/getting-started/tooltip.png)
@@ -295,7 +313,9 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 
     <SfChart Title="Sales Analysis">
         <ChartPrimaryXAxis Title="Month" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+
         <ChartPrimaryYAxis Title="Sales in Dollar"></ChartPrimaryYAxis>
+        
         <ChartLegendSettings Visible="true"></ChartLegendSettings>
         <ChartSeriesCollection>
             <ChartSeries DataSource="@Sales" Name="Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
@@ -308,6 +328,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -319,6 +340,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
         new SalesInfo { Month = "Jul", SalesValue = 35 }
     };
 }
+
 ```
 
 ![Legend](../images/getting-started/legend.png)

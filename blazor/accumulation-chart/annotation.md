@@ -9,22 +9,21 @@ documentation: ug
 
 # Annotation in Blazor Accumulation Chart Component
 
-Annotations are used to mark the specific area of interest in the chart with texts, shapes or images. By using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Content) option of annotation property, you can specify the Id of the HTML element that needs to be displayed in the chart.
+Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart. The [`AccumulationChartAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html) property allows to add annotations to the chart. Specify the element that needs to be displayed in the accumulation chart area by using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Content) property of the annotation.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
+            <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
     <AccumulationChartAnnotations>
-        <AccumulationChartAnnotation X="iPhone" Y=19 CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Point" Region="@Syncfusion.Blazor.Charts.Regions.Series">
+        <AccumulationChartAnnotation X="Opera" Y="11" CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Point" Region="@Syncfusion.Blazor.Charts.Regions.Series">
             <ContentTemplate>
                 <div style='border: 1px solid black;background-color:red;padding: 5px 5px 5px 5px'>19</div>
             </ContentTemplate>
@@ -40,7 +39,7 @@ Annotations are used to mark the specific area of interest in the chart with tex
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
@@ -56,24 +55,23 @@ Annotations are used to mark the specific area of interest in the chart with tex
 
 ## Region
 
-The annotation can be placed with respect to `Series` or `Chart`.
+The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property can be used to insert annotations in relation to a series or a chart. By default, it is positioned with respect to a [`Accumulation Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Regions.html#Syncfusion_Blazor_Charts_Regions_Chart).
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
+            <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
     <AccumulationChartAnnotations>
-        <AccumulationChartAnnotation X=350 Y=180 CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Pixel" Region="@Syncfusion.Blazor.Charts.Regions.Chart">
+        <AccumulationChartAnnotation X=130 Y=180 CoordinateUnits="@Syncfusion.Blazor.Charts.Units.Pixel" Region="@Syncfusion.Blazor.Charts.Regions.Chart">
             <ContentTemplate>
-                <div style='border: 1px solid black;background-color:red;padding: 5px 5px 5px 5px'>19</div>
+                <div style='border: 1px solid black;background-color:lightblue;padding: 5px 5px 5px 5px'>Opera</div>
             </ContentTemplate>
         </AccumulationChartAnnotation>
     </AccumulationChartAnnotations>
@@ -87,7 +85,7 @@ The annotation can be placed with respect to `Series` or `Chart`.
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
@@ -103,17 +101,16 @@ The annotation can be placed with respect to `Series` or `Chart`.
 
 ## Co-ordinate Units
 
-Specifies the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) of an annotation either in `Pixel` or `Point`.
+The [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) property allows to specify the annotation's coordinate units either in [`Pixel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
 <SfAccumulationChart Title="Mobile Browser Statistics">
-    <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
-
     <AccumulationChartSeriesCollection>
         <AccumulationChartSeries DataSource="@StatisticsDetails" XName="Browser" YName="Users" Name="Browser">
+            <AccumulationDataLabelSettings Visible="true" Name="Text" Position="AccumulationLabelPosition.Outside"></AccumulationDataLabelSettings>
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 
@@ -134,7 +131,7 @@ Specifies the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusi
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
@@ -147,3 +144,11 @@ Specifies the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusi
 ```
 
 ![Co-ordinate Units](images/annotation/co-ordinate-razor.png)
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+
+## See Also
+
+* [Data Label](./data-labels)
+* [Tooltip](./tool-tip)
+* [Legend](./legend)

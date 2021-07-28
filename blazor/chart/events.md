@@ -64,17 +64,26 @@ PointMoved|
 
 After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggered.
 
-```csharp
+### Arguments
+
+Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
+
+* [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnZoomStart="OnZoomingEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
+	
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
@@ -84,6 +93,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -107,17 +117,28 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnZoomEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers, after the zoom selection is completed.
 
-```csharp
+### Arguments
+
+Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
+
+* [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
+
+{% aspTab template="chart/events", sourceFiles="zoomend.razor" %}
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnZoomEnd="OnZoomingEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
+	
     <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
 </SfChart>
 
@@ -127,6 +148,60 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
+    public List<SalesInfo> Sales = new List<SalesInfo>
+    {
+        new SalesInfo { Month = "Jan", SalesValue = 35 },
+        new SalesInfo { Month = "Feb", SalesValue = 28 },
+        new SalesInfo { Month = "Mar", SalesValue = 34 },
+        new SalesInfo { Month = "Apr", SalesValue = 32 },
+        new SalesInfo { Month = "May", SalesValue = 40 },
+        new SalesInfo { Month = "Jun", SalesValue = 32 },
+        new SalesInfo { Month = "Jul", SalesValue = 35 }
+    };
+
+    public void OnZoomingEvent(ZoomingEventArgs args)
+    {
+        // Here you can customize your code
+    }
+}
+
+```
+
+## OnZooming
+
+[`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers, after the zoom selection is completed.
+
+### Arguments
+
+Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
+
+* [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartEvents OnZooming="OnZoomingEvent"></ChartEvents>
+	
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
+        </ChartSeries>
+    </ChartSeriesCollection>
+	
+    <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
+</SfChart>
+
+@code{
+    public class SalesInfo
+    {
+        public string Month { get; set; }
+        public double SalesValue { get; set; }
+    }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -150,13 +225,24 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event triggers,before the legend is rendered.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`LegendRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html).
+
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Fill) – Specifies the fill color of the legend item's icon.
+* [`MarkerShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_MarkerShape) – Specifies the shape of the marker.
+* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Shape) – Specifies the shape of the legend item's icon.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Text) – Specifies the text to be displayed in the legend item.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnLegendItemRender="LegendEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" Name="Column" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -171,6 +257,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -194,13 +281,25 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event triggers, before the data label for series is rendered.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`TextRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender).
+
+* [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Border) – Specifies the color and the width of the data label border.
+* [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Color) – Specifies the text color of the data label.
+* [`Font`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Font) – Specifies the font information of the data label.
+* [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Template) – Provides the information about the data point to be used in the data label template.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Text) – Specifies the text to be displayed in the data label.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnDataLabelRender="DataLabelEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartMarker>
@@ -216,6 +315,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -239,13 +339,25 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event triggers, before each points for the series is rendered.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`PointRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html).
+
+* [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Border) – Specifies the color and the width of the point border.
+* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Fill) – Specifies the fill color of the point.
+* [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Height) – Specifies the current point's height.
+* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Shape) – Specifies the marker shape of the point.
+* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Width) – Specifies the current point's width.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnPointRender="PointRenderEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartMarker Visible="true">
@@ -260,6 +372,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -283,13 +396,23 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnAxisLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event triggers, before each axis label is rendered.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`AxisLabelRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html).
+
+* [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
+* [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnAxisLabelRender="AxisLabelEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -302,6 +425,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -325,13 +449,27 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnAxisLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event triggers, when x axis label is clicked.
 
-```csharp
+### Arguments
+
+Below fields are available in the the [`AxisLabelClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html).
+
+* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the current axis.
+* [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Chart) – Specifies the chart instance.
+* [`Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Index) – Specifies the index of the axis label.
+* [`LabelID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_LabelID) – Specifies the current axis label's element id.
+* [`Location`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Location) – Specifies the location of the axis label.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Text) – Specifies the text of the axis label.
+* [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Value) – Specifies the value of the axis label.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnAxisLabelClick="AxisLabelClickEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -344,6 +482,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -367,13 +506,25 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnAxisActualRangeCalculated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event triggers, before each axis range is calculated.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`AxisRangeCalculatedEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html).
+
+* [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Interval) – Specifies the current interval of the axis.
+* [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Maximum) – Specifies the current maximum value of the axis.
+* [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Minimum) – Specifies current minimum value of the axis.
+
+{% aspTab template="chart/events", sourceFiles="axisactualrange.razor" %}
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnAxisActualRangeCalculated="AxisActualRangeEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartMarker Visible="true">
@@ -388,6 +539,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -411,12 +563,21 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnAxisMultiLevelLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers, while rendering multilevellabels.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`AxisMultiLabelRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html).
+
+* [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_Alignment) – Specifies the alignment of the axis label.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
+* [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_TextStyle) – Specifies the text style of the axis label.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnAxisMultiLevelLabelRender="AxisMultiLevelLabelEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
         <ChartMultiLevelLabels>
             <ChartMultiLevelLabel>
@@ -427,6 +588,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
             </ChartMultiLevelLabel>
         </ChartMultiLevelLabels>
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartMarker Visible="true">
@@ -442,6 +604,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -463,15 +626,24 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 ## SizeChanged
 
-[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event triggers after resizing of chart.
+[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event triggers after resizing of the chart.
 
-```csharp
+### Arguments
+
+Below fields are available in the the [`ResizeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html).
+
+* [`CurrentSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_CurrentSize) – Specifies the current size of the chart.
+* [`PreviousSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_PreviousSize) – Specifies the previous size of the chart.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents SizeChanged="@SizeChangedEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -484,8 +656,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -507,15 +680,31 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event triggers while scrolling the chart.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`ScrollEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html).
+
+* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Axis) – Specifies the current axis that is scrolled.
+* [`CurrentRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_CurrentRange) – Specifies the current range of the axis.
+* [`PreviousAxisRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousAxisRange) – Specifies the current axis.
+* [`PreviousRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousRange) – Specifies the previous range of the axis.
+* [`PreviousZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomFactor) – Specifies the previous zoom factor value.
+* [`PreviousZoomPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomPosition) – Specifies the previous zoom position value.
+* [`Range`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Range) – Specifies the range of the axis.
+* [`ZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_ZoomFactor) – Specifies the current zoom factor value.
+* [`ZoomPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_ZoomPosition) – Specifies the current zoom position value.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnScrollChanged="ScrollChangeEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" ZoomFactor="0.5" ZoomPosition="0.2">
         <ChartAxisScrollbarSettings Enable="true"></ChartAxisScrollbarSettings>
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -528,8 +717,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -551,15 +741,23 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event triggers after exporting the chart.
 
-```csharp
+### Arguments
+
+Below field is available in the the [`ExportEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html).
+
+* [`DataUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html#Syncfusion_Blazor_Charts_ExportEventArgs_DataUrl) – Specifies the DataUrl of the exported file.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <button class="btn-success" @onclick="Export">Export</button>
 <SfChart @ref="chart">
     <ChartEvents OnExportComplete="ExportCompleteEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -573,8 +771,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -596,67 +795,31 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 ```
 
-## OnPrintComplete
-
-`OnPrintComplete` event triggers after printing the chart.
-
-```csharp
-
-@using Syncfusion.Blazor.Charts
-
-<button class="btn-success" @onclick="Print">Print</button>
-<SfChart @ref="chart">
-    <ChartEvents OnPrintComplete="PrintCompleteEvent"></ChartEvents>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code{
-    SfChart chart;
-    public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double SalesValue { get; set; }
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-   {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void Print()
-    {
-        chart.Print();
-    }
-    public void PrintCompleteEvent()
-    {
-        // Here you can customize your code
-    }
-}
-
-```
-
 ## OnDataEdit
 
 [`OnDataEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event triggers, while dragging the data point.
 
-```csharp
+### Arguments
+
+Below fields are available in the the [`DataEditingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html).
+
+* [`NewValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_NewValue) – Specifies the new value of the current point.
+* [`OldValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_OldValue) – Specifies the previous value of the current point.
+* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Point) – Specifies the current point which is being edited.
+* [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_PointIndex) – Specifies the index of the current point.
+* [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Series) – Specifies the current chart series whose point is being edited.
+* [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_SeriesIndex) – Specifies the index of the current series.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnDataEdit="DataEditEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartDataEditSettings Enable="true"></ChartDataEditSettings>
@@ -670,8 +833,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -693,14 +857,27 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnDataEditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event triggers  when the point drag completed.
 
-```csharp
+### Arguments
+
+Below fields are available in the the [`DataEditingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html).
+
+* [`NewValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_NewValue) – Specifies the new value of the current point.
+* [`OldValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_OldValue) – Specifies the previous value of the current point.
+* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Point) – Specifies the current point which is being edited.
+* [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_PointIndex) – Specifies the index of the current point.
+* [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Series) – Specifies the current chart series whose point is being edited.
+* [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_SeriesIndex) – Specifies the index of the current series.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnDataEditCompleted="DataEditEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartDataEditSettings Enable="true"></ChartDataEditSettings>
@@ -714,8 +891,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -737,13 +915,21 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event triggers after legend click.
 
-```csharp
+### Arguments
+
+Below properties are available in the the [`LegendClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html).
+
+* [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendShape) – Specifies the shape of the legend item.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnLegendClick="LegendClickEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" Name="Column" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -758,8 +944,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -781,12 +968,26 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnMultiLevelLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after click on multilevellabelclick.
 
-```csharp
+### Arguments
+
+Below fields are available in the the [`MultiLevelLabelClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html).
+
+* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Axis) – Specifies the axis of the clicked label.
+* [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_CustomAttributes) – Specifies the custom objects for multi level labels.
+* [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_End) – Specifies the end value of the multi level labels.
+* [`Level`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Level) – Specifies the current level of the label.
+* [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Start) – Specifies the start value of the multi level labels
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Text) – Specifies the text of the current label.
+
+{% aspTab template="chart/events", sourceFiles="multilabelclick.razor" %}
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnMultiLevelLabelClick="MultiLabelClickEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
         <ChartMultiLevelLabels>
             <ChartMultiLevelLabel>
@@ -797,6 +998,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
             </ChartMultiLevelLabel>
         </ChartMultiLevelLabels>
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
             <ChartMarker Visible="true">
@@ -812,8 +1014,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -835,14 +1038,22 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers after the selection is completed.
 
-```csharp
+### Arguments
+
+Below property available in the the [`SelectionCompleteEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SelectionCompleteEventArgs.html).
+
+* [`SelectedDataValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SelectionCompleteEventArgs.html#Syncfusion_Blazor_Charts_SelectionCompleteEventArgs_SelectedDataValues) – Specifies the selected Data X, Y values.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart SelectionMode="SelectionMode.Point">
     <ChartEvents OnSelectionChanged="SelectionChangedEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -856,8 +1067,9 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
-{
+	{
         new SalesInfo { Month = "Jan", SalesValue = 35 },
         new SalesInfo { Month = "Feb", SalesValue = 28 },
         new SalesInfo { Month = "Mar", SalesValue = 34 },
@@ -879,13 +1091,15 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 `Loaded` event triggers after chart load.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents Loaded="LoadedEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -898,6 +1112,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -921,13 +1136,29 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers on point click.
 
-```csharp
+### Arguments
+
+Below fields are available in the the [`PointEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html).
+
+* [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Chart) – Specifies the current chart instance.
+* [`PageX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageX) – Specifies the current window page x location.
+* [`PageY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageY) – Specifies the current window page y location.
+* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Point) – Specifies the current point which is clicked.
+* [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PointIndex) – Specifies the index of the current point.
+* [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Series) – Specifies the current series.
+* [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_SeriesIndex) – Specifies the current series index.
+* [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_X) – Specifies the x coordinate of the current mouse click.
+* [`Y`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Y) – Specifies the y coordinate of the current mouse click.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents OnPointClick="PointClickEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
@@ -940,6 +1171,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -963,17 +1195,27 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event triggers, before the tooltip for series is rendered.
 
-```csharp
+### Arguments
+
+Below property available in the the [`TooltipRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html).
+
+* [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_Text) – Specifies the text for the tooltip.  
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents TooltipRender="TooltipEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
+	
     <ChartTooltipSettings Enable="true"></ChartTooltipSettings>
 </SfChart>
 
@@ -983,6 +1225,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -1006,19 +1249,29 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 [`SharedTooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers, before the sharedtooltip for series is rendered.
 
-```csharp
+### Arguments
+
+Below property available in the the [`SharedTooltipRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html).
+
+* [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_SharedTooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
+* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_SharedTooltipRenderEventArgs_Text) – Specifies the text for the tooltip.  
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartEvents SharedTooltipRender="SharedTooltipEvent"></ChartEvents>
+	
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
         <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
+	
     <ChartTooltipSettings Enable="true" Shared="true"></ChartTooltipSettings>
 </SfChart>
 
@@ -1028,6 +1281,7 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+	
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -1047,47 +1301,4 @@ After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.co
 
 ```
 
-## OnZooming
-
-[`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers, after the zoom selection is completed.
-
-```csharp
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart>
-    <ChartEvents OnZooming="OnZoomingEvent"></ChartEvents>
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@Sales" XName="Month" YName="SalesValue" Type="ChartSeriesType.Column">
-        </ChartSeries>
-    </ChartSeriesCollection>
-    <ChartZoomSettings EnableSelectionZooming="true"></ChartZoomSettings>
-</SfChart>
-
-@code{
-    public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double SalesValue { get; set; }
-    }
-    public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
-
-    public void OnZoomingEvent(ZoomingEventArgs args)
-    {
-        // Here you can customize your code
-    }
-}
-
-```
-
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

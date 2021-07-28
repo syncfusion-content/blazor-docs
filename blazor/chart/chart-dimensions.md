@@ -25,13 +25,13 @@ documentation: ug
 
 ## Size for Container
 
-The chart can be scaled to fit the container. As shown below, the size can be changed using inline or CSS.
+The chart can be scaled to fit the container. As shown below, the size can be set using CSS.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<div style="width:650px; height:350px;">
+<div style="width:350px; height:350px; background-color:red">
     <SfChart Title="Inflation - Consumer Price">
         <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
@@ -48,35 +48,37 @@ The chart can be scaled to fit the container. As shown below, the size can be c
         public string X { get; set; }
         public double YValue { get; set; }
     }
+	
     public List<ChartData> ConsumerDetails = new List<ChartData>
-{
+    {
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
-     };
+        new ChartData { X= "UK", YValue= 36 },
+        new ChartData { X= "AUS", YValue= 15 },
+        new ChartData { X= "IND", YValue= 55 },
+        new ChartData { X= "DEN", YValue= 40 },
+        new ChartData { X= "MEX", YValue= 30 }
+    };
 }
-
 
 ```
 
+![Chart fit to container](images/chart-dimensions/size.png)
+
 ## Size for Chart
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties can be used to set the chart's size directly.
+The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties specify the size of the chart in pixels or percentages directly.
 
 ### In Pixel
 
 The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties can be set in pixel as shown below.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Inflation - Consumer Price" Width="650px" Height="350px">
+<SfChart Title="Inflation - Consumer Price" Width="650px" Height="250px">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
@@ -91,39 +93,39 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfC
         public string X { get; set; }
         public double YValue { get; set; }
     }
+	
     public List<ChartData> ConsumerDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
-     };
+        new ChartData { X= "UK", YValue= 36 },
+        new ChartData { X= "AUS", YValue= 15 },
+        new ChartData { X= "IND", YValue= 55 },
+        new ChartData { X= "DEN", YValue= 40 },
+        new ChartData { X= "MEX", YValue= 30 }
+    };
 }
 
 ```
 
-![Size for Chart](images/chart-dimensions/pixel.png)
+![Chart size in pixel](images/chart-dimensions/pixel.png)
 
 ### In Percentage
 
-By setting the values of [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties in percentage, the chart has its dimension with respect to its container. For example, when the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) is set to **50%**, the chart is half the height of the container.
+By setting the values of [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) properties in percentage, the chart gets its dimension with respect to its container. For example, when the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Height) is set to **50%**, the chart is half the height of its container.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Title="Inflation - Consumer Price" Width="80%" height="90%">
+<SfChart Title="Inflation - Consumer Price" Width="60%" height="90%">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerDetails" XName="X" YName="YValue" Type="ChartSeriesType.Column">
         </ChartSeries>
     </ChartSeriesCollection>
-
 </SfChart>
 
 @code{
@@ -132,25 +134,28 @@ By setting the values of [`Width`](https://help.syncfusion.com/cr/blazor/Syncfus
         public string X { get; set; }
         public double YValue { get; set; }
     }
+	
     public List<ChartData> ConsumerDetails = new List<ChartData>
-{
+	{		
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
-        new ChartData { X= "UK", YValue= 26 },
-        new ChartData { X= "AUS", YValue= 26 },
-        new ChartData { X= "IND", YValue= 26 },
-        new ChartData { X= "DEN", YValue= 26 },
-        new ChartData { X= "MEX", YValue= 26 },
-     };
+        new ChartData { X= "UK", YValue= 36 },
+        new ChartData { X= "AUS", YValue= 15 },
+        new ChartData { X= "IND", YValue= 55 },
+        new ChartData { X= "DEN", YValue= 40 },
+        new ChartData { X= "MEX", YValue= 30 }
+    };
 }
 
 ```
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+![Chart size in percentage](images/chart-dimensions/percentage.png)
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)kers)
+* [Marker](./data-markers)

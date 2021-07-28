@@ -11,11 +11,9 @@ documentation: ug
 
 ## Print
 
-The rendered chart can be printed directly from the browser by calling the public method print.
+The [`Print`] method can be used to print a rendered chart directly from the browser.
 
-```csharp
-
-
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
@@ -30,7 +28,6 @@ The rendered chart can be printed directly from the browser by calling the publi
         </AccumulationChartSeries>
     </AccumulationChartSeriesCollection>
 </SfAccumulationChart>
-
 
 <SfButton ID="button" Content="Print" @onclick="@Click" IsPrimary="true" CssClass="e-flat"></SfButton>
 
@@ -49,7 +46,7 @@ The rendered chart can be printed directly from the browser by calling the publi
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37 },
         new Statistics { Browser = "UC Browser", Users = 17 },
         new Statistics { Browser = "iPhone", Users = 19 },
@@ -57,18 +54,21 @@ The rendered chart can be printed directly from the browser by calling the publi
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
-
 }
 
 ```
 
+![Printing the chart](images/print/print.png)
+
 ## Export
 
-The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` format by using the export method. Input parameters for this method are `Export` Type for `format` and `FileName` of result.
+Using the [`Export`] method, the rendered chart can be exported to [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [`Export Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and [`FileName`] specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
-```csharp
+The optional parameters for this method are,
+* [`Orientation`] - Specifies the portrait or landscape orientation in the PDF document.
+* [`AllowDownload`] - Specifies whether to download or not. If not, base64 string will be returned.
 
-@page "/"
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
@@ -110,7 +110,14 @@ The rendered chart can be exported to `Image`(jpeg or png) or `SVG` or `PDF` for
         new Statistics { Browser = "Opera", Users = 11 },
         new Statistics { Browser = "Android", Users = 12 },
     };
-
 }
 
 ```
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+
+## See Also
+
+* [Data Label](./data-labels)
+* [Tooltip](./tool-tip)
+* [Legend](./legend)

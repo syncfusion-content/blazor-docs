@@ -46,7 +46,7 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
 
 Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Charts
 ```
@@ -121,7 +121,7 @@ namespace BlazorApplication
 
 To initialize the chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```cshtml
+```csharp
 @page "/"
 
 <SfChart>
@@ -175,6 +175,7 @@ Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://he
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+    
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -206,12 +207,14 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -246,12 +249,14 @@ You can add data labels to improve the readability of the chart. This can be ach
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -284,12 +289,14 @@ When space constraints prevent you from displaying information using data labels
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -322,12 +329,14 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+    
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -343,7 +352,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 
 ![chart](images/getting-started/legend.png)
 
-> You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip). And also you can refer to our [`Blazor Chart`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Note: You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip). And also you can refer to our [`Blazor Chart`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See also
 

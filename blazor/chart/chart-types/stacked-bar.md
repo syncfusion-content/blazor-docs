@@ -7,13 +7,13 @@ control: Chart
 documentation: ug
 ---
 
-# Stacked Bar in Blazor Charts Component
+# Stacked Bar Chart in Blazor Charts Component
 
 ## Stacked Bar
 
-[`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is a chart with Y values stacked over one another in the series order. Shows the relation between individual values to the total sum of the points. To render a [`Stacked Bar`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StackingBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingBar).
+[`Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points. To render a [`Stacked Bar`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) series, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingBar).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -35,6 +35,7 @@ documentation: ug
         public double YValue { get; set; }
         public double YValue1 { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
@@ -48,17 +49,19 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Stacked Bar](../images/chart-types-images/stackedbar.png)
 
-> Refer to our [`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Stacked Bar Chart Example`](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap4) to know how to to render and configure the Stacked Bar type charts
+> Refer to our [`Blazor Stacked Bar Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Stacked Bar Chart Example`](https://blazor.syncfusion.com/demos/chart/stacked-bar?theme=bootstrap4) to know how to to render and configure the Stacked Bar type chart.
 
 ## Stacking Group
 
-[`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group the stacked bar and 100% stacked bar. Columns with same group name are stacked on top of each other.
+The [`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group stacked bar and 100% stacked bar. Bars with same group name are stacked on top of each other.
 
-```csharp
+{% aspTab template="chart/series/bar-charts/group", sourceFiles="group.razor" %}
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -74,6 +77,7 @@ documentation: ug
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code{
     public class ChartData
     {
@@ -84,7 +88,7 @@ documentation: ug
     }
 
     public List<ChartData> DataSource = new List<ChartData>
-{
+	{
         new ChartData { X= "USA", YValue= 46, YValue1=56, YValue2=26},
         new ChartData { X= "GBR", YValue= 27, YValue1=17, YValue2=37},
         new ChartData { X= "CHN", YValue= 26, YValue1=36, YValue2=56},
@@ -96,7 +100,7 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Stacking Group](../images/chart-types-images/groupbar.png)
 
@@ -109,7 +113,7 @@ The following properties can be used to customize the [`Stacked Bar`](https://he
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -133,6 +137,7 @@ The following properties can be used to customize the [`Stacked Bar`](https://he
         public double YValue { get; set; }
         public double YValue1 { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
     {
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
@@ -146,13 +151,13 @@ The following properties can be used to customize the [`Stacked Bar`](https://he
     };
 }
 
-```
+``` 
 
-![Custom Stacked bar](../images/chart-types-images/custom-stacked-bar.png)
+![Stacked Bar  with series customization](../images/chart-types-images/custom-stacked-bar.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

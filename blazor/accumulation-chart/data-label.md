@@ -9,12 +9,12 @@ documentation: ug
 
 # Data Label in Blazor Accumulation Chart Component
 
-Data label can be added to a point by enabling the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible)
-option in the DataLabel property.
+The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) option in the [`DataLabel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_DataLabel) settings can be used to add a data label to a series point.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
+
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
@@ -36,7 +36,7 @@ option in the DataLabel property.
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37, Text= "37%", Fill="#498fff"},
         new Statistics { Browser = "UC Browser", Users = 17, Text= "17%", Fill="#ffa060"},
         new Statistics { Browser = "iPhone", Users = 19, Text= "19%", Fill="#ff68b6"},
@@ -44,18 +44,18 @@ option in the DataLabel property.
     };
 }
 
-
 ```
 
 ![Data Label](images/data-label/default-razor.png)
 
 ## Position
 
-Accumulation chart provides support for placing the data label either `Inside` or `Outside` of the chart by using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Position) property.
+The [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Position) property of an accumulation chart allows the data label to be placed either [`Inside`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLabelPosition.html#Syncfusion_Blazor_Charts_AccumulationLabelPosition_Inside) or [`Outside`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLabelPosition.html#Syncfusion_Blazor_Charts_AccumulationLabelPosition_Outside) of the chart.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
+
 <SfAccumulationChart Title="Mobile Browser Statistics">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
@@ -77,7 +77,7 @@ Accumulation chart provides support for placing the data label either `Inside` o
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37, Text= "37%", Fill="#498fff"},
         new Statistics { Browser = "UC Browser", Users = 17, Text= "17%", Fill="#ffa060"},
         new Statistics { Browser = "iPhone", Users = 19, Text= "19%", Fill="#ff68b6"},
@@ -91,13 +91,12 @@ Accumulation chart provides support for placing the data label either `Inside` o
 
 ## Smart Labels
 
-Datalabels will be arranged smartly without overlapping with each other. You can enable or disable this feature using
-the [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableSmartLabels)
-property.
+Data labels will be arranged smartly without overlapping with each other. The [`EnableSmartLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_EnableSmartLabels) property can be used to enable or disable this feature.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
+
 <SfAccumulationChart EnableSmartLabels="true">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
@@ -116,6 +115,7 @@ property.
         public string Country { get; set; }
         public double Users { get; set; }
     }
+	
     public List<Statistics> StatisticsDetails = new List<Statistics>
     {
         new Statistics { Country = "China", Users = 1409517397 },
@@ -143,12 +143,12 @@ property.
 
 ## Connector Line
 
-Connector line will be visible when the data label is placed `Outside` the chart.
-The connector line can be customized using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Type), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Color), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Width), [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Length) and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_DashArray) properties
+When the data label is placed [`Outside`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLabelPosition.html#Syncfusion_Blazor_Charts_AccumulationLabelPosition_Outside) the chart, the connector line will be visible. The [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Type), [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Color), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Width), [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_Length) and [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartConnector.html#Syncfusion_Blazor_Charts_AccumulationChartConnector_DashArray) properties can be used to customise the connector line.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
+
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
@@ -172,7 +172,7 @@ The connector line can be customized using the [`Type`](https://help.syncfusion.
     }
 
     public List<Statistics> StatisticsDetails = new List<Statistics>
-{
+	{
         new Statistics { Browser = "Chrome", Users = 37, Text= "37%", Fill="#498fff"},
         new Statistics { Browser = "UC Browser", Users = 17, Text= "17%", Fill="#ffa060"},
         new Statistics { Browser = "iPhone", Users = 19, Text= "19%", Fill="#ff68b6"},
@@ -186,11 +186,12 @@ The connector line can be customized using the [`Type`](https://help.syncfusion.
 
 ## Text Mapping
 
-Text from the data source can be mapped to data label using [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) property.
+The [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) property can be used to map text from a data source to a data label.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
+
 <SfAccumulationChart Title="Mobile Browser Statistics" EnableSmartLabels="true">
     <AccumulationChartLegendSettings Visible="false"></AccumulationChartLegendSettings>
 
@@ -223,6 +224,8 @@ Text from the data source can be mapped to data label using [`Name`](https://he
 ```
 
 ![Text Mapping](images/data-label/map-razor.png)
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See Also
 
