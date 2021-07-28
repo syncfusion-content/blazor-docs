@@ -1,51 +1,41 @@
 ---
 layout: post
 title: Globalization in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Linear Gauge component and more.
+description: Learn here all about Globalization in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Globalization in Blazor Linear Gauge Component
+# Internationalization in Blazor Linear Gauge Component (SfLinearGauge)
 
-Linear gauge provide supports for internationalization for below gauge elements.
+The localization allows to localize the default text content in the Blazor component. For more information about localization, refer [here](https://blazor.syncfusion.com/documentation/common/localization/).
+
+## Globalization
+
+Globalization is the process of designing and developing a component that works in different cultures. Internationalization is used to globalize the number content in Linear Gauge component using [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Format) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html). It has static text on some features such as
 
 * Axis label
 * Tooltip
 
-For more information about number and date formatter you can refer `internationalization`.
-
-## Globalization
-
-Globalization is the process of designing and developing an component that works in different cultures/locales. Internationalization library is used to globalize number in Linear Gauge component using `LoadCldrData`, `SetCulture` and `SetCurrencyCode` methods.
+The static text on above features can be changed to any culture such as Arabic, Deutsch and French.
 
 ### Numeric Format
 
-In the below example axis labels are `globalized` to EUR.
+The text in axis labels and tooltip can be displayed in the numeric format such as currency, percentage and so on. To know more about the numeric formats in axis labels, refer [here](axis/#displaying-numeric-format-in-labels). In the below example, the axis label is displayed in the currency format.
 
 ```csharp
-<SfLinearGauge Width ="650px" Height ="300px" >
+@using Syncfusion.Blazor.LinearGauge
+
+<SfLinearGauge Format="c">
     <LinearGaugeAxes>
         <LinearGaugeAxis>
-            <LinearGaugeLabel Format="c">
-                <LinearGaugeFontSettings>
-                    <LinearGaugeFont Color="red"></LinearGaugeFont>
-                </LinearGaugeFontSettings>
-            </LinearGaugeLabel>
+            <LinearGaugePointers>
+                <LinearGaugePointer></LinearGaugePointer>
+            </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
-
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-    protected override void OnAfterRender()
-    {
-        this.JsRuntime.Sf().LoadCldrData(new string[]{"ca-gregorian.json",
-        "currencies.json","numbers.json","timeZoneNames.json"}).SetCulture("de").SetCurrencyCode("EUR");
-    }
-}
 ```
 
-![Linear Gauge with Internationalization Sample](images/numeric-format.png)
+![Linear Gauge with Internationalization Sample](images/locale.png)

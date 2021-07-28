@@ -299,6 +299,8 @@ The tooltip can be used when you cannot display information using the data label
 
 ![Map with tooltip](./images/tooltip.png)
 
+> You can refer to our [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Maps example](https://blazor.syncfusion.com/demos/maps/default-functionalities?theme=bootstrap4) to knows how to render and configure the maps.
+
 ## See also
 
 * [Getting Started with Syncfusion Blazor for client-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
