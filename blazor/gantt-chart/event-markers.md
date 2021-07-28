@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Event Markers in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Event Markers in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here all about Event Markers in the Syncfusion Blazor Gantt Chart component and its properties for customization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

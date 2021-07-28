@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Rows in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here all about Rows support in the Syncfusion Blazor Gantt Chart component and its properties for customization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

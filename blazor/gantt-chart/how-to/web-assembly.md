@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Gantt Chart in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about WebAssembly Gantt Chart in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here all about Webassembly  in the Syncfusion Blazor Gantt Chart component and its properties for customization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
