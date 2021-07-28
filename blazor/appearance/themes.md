@@ -22,38 +22,40 @@ The Syncfusion Blazor components library provides the following list of built-in
 
 ## Theme file syntax and references
 
-* The Syncfusion Blazor themes are available as static web assets in the `Syncfusion.Blazor` and `Syncfusion.Blazor.Themes` NuGet packages.
+The Syncfusion Blazor themes are available as static web assets in the `Syncfusion.Blazor` and `Syncfusion.Blazor.Themes` NuGet packages.
 
-* Add the below link reference inside the `<head>` element of the `~/Pages/_Host.cshtml` file for Blazor server app or `~/wwwroot/index.html` file for Blazor WebAssembly app.
+Add the below link reference inside the `<head>` element of the `~/Pages/_Host.cshtml` file for Blazor server app or `~/wwwroot/index.html` file for Blazor WebAssembly app.
 
-    If you are using [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+If you are using [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) in your application, then use the below reference link.
 
-    If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
-    ```html
-    <head>
-        ....
-        ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+```html
+<head>
+    ....
+    ....
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+</head>
+```
 
-    > The below theme file names can be replaced with the above links.
-    > * bootstrap4.css
-    > * bootstrap.css
-    > * bootstrap-dark.css
-    > * fabric.css
-    > * fabric-dark.css
-    > * highcontrast.css
-    > * material.css
-    > * material-dark.css
-    > * tailwind.css
+If you are using `Syncfusion.Blazor` NuGet package in your application, then use the below reference link.
+
+```html
+<head>
+    ....
+    ....
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+</head>
+```
+
+> The below theme file names can be replaced with the above links.
+> * bootstrap4.css
+> * bootstrap.css
+> * bootstrap-dark.css
+> * fabric.css
+> * fabric-dark.css
+> * highcontrast.css
+> * material.css
+> * material-dark.css
+> * tailwind.css
 
 ## CDN reference
 
