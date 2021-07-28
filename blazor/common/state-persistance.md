@@ -59,7 +59,7 @@ The following table demonstrates the list of Syncfusion Blazor components that a
 <table>
 <tr>
 <td><b>Component Name</b></td>
-<td><b>Properties<b></td>
+<td><b>Properties</b></td>
 </tr>
 <tr>
 <td>SfGrid</td>
