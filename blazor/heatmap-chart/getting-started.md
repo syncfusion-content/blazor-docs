@@ -41,7 +41,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 ![select-nuget](images/select-nuget1.png)
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
->Note: You can also add the client-side style resources through CDN.
+> You can also add the client-side style resources through CDN.
 
 ```html
     <head>
@@ -111,7 +111,7 @@ namespace BlazorApplication
 }
 ```
 
->Note: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app.  
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app.  
 
 ```csharp
     <head>

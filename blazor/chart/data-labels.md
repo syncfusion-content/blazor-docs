@@ -84,7 +84,7 @@ Using [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ![Position](images/data-label/position-razor.png)
 
->Note: The position `Outer` is applicable for column and bar type series.
+> The position `Outer` is applicable for column and bar type series.
 
 ## Data label template
 

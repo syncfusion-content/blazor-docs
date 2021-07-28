@@ -31,7 +31,7 @@ You can get more information about deploying Blazor applications [Here](https://
 
 ![Release Configuration](./images/config.png)
 
->Note: For `Blazor Server side application`, Deployment Mode is set to
+> For `Blazor Server side application`, Deployment Mode is set to
 `Self-Contained`.
 ![Deploy Mode](./images/deploy.png)
 Because some dependencies are not loaded properly when we host the published folder.

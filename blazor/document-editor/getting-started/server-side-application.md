@@ -104,6 +104,6 @@ Steps to get started with Word processor component for Blazor:
     }
     ```
 
->Note: As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
+> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ![DocumentEditor Sample](../images/browser-output-open-document.png)

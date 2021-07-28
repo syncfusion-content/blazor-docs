@@ -982,7 +982,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 
 ![Alt text](images/search.gif)
 
->Note: You should set the `AllowFiltering` property to `true` for searching the content externally.
+> You should set the `AllowFiltering` property to `true` for searching the content externally.
 
 ### Search Specific Columns
 
