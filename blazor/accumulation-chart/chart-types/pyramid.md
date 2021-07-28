@@ -1,12 +1,11 @@
 ---
 layout: post
 title: Pyramid in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Pyramid in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Pyramid Series in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
 ---
-
 
 # Pyramid in Blazor Accumulation Chart Component
 

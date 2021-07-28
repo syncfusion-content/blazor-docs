@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for Server in Blazor Charts Component | Syncfusion
-description: Learn here all about Getting Started for Server in Syncfusion Blazor Charts component and more.
+title: Getting Started for Server in Blazor Chart Component | Syncfusion
+description: Learn about Getting Started with Server Application in the Blazor Chart component of Syncfusion, and more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -17,7 +17,7 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
 
 1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
         <head>
@@ -96,7 +96,7 @@ namespace BlazorApplication
 }
 ```
 
-**Note:** Use the following configuration to host your blazor server application on **Azure SignalR**.
+**Note:** Use the following configuration to host your Blazor server application on **Azure SignalR**.
 
 ```csharp
 using Syncfusion.Blazor;

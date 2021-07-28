@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range Column Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Range Column in Syncfusion Blazor Charts component and more.
+description: Learn here all about Range Column Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug

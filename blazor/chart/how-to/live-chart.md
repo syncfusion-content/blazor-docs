@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Live Update in Blazor Chart Component | Syncfusion
-description: Learn here all about live update in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about how to achieve a live update chart in the Syncfusion Blazor Accumulation Chart component step by step.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -36,7 +36,7 @@ Render a chart with the required series using [`ChartSeriesCollection`](https://
 
 **Step 2:**
 
-Labels of the axes can be formated based on our need using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property of the [`ChartAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html). Since the chart will be updated in seconds, the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) has been set as **mm:ss** for the [`ChartPrimaryXAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html) to display minutes and second in the axis labels. Similarly [`ChartPrimaryYAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html) lables can also be formated as shown below using its [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property.
+Labels of the axes can be formated based on our need using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property of the [`ChartAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html). Since the chart will be updated in seconds, the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) has been set as **mm:ss** for the [`ChartPrimaryXAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryXAxis.html) to display minutes and second in the axis labels. Similarly [`ChartPrimaryYAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html) labels can also be formated as shown below using its [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Format) property.
 
 ```razor
     <SfChart @ref="liveChart" Title="CPU Usage" Width="100%" >

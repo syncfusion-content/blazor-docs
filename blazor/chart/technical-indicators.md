@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Technical Indicators in Blazor Charts Component | Syncfusion
-description: Learn here all about Technical Indicators in Syncfusion Blazor Charts component and more.
+description: Learn here all about Technical Indicators support in the Syncfusion Blazor Charts component and its types in detail.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -552,7 +552,7 @@ Moving Average Indicators are used to define the direction of the trend. To rend
 
 ## Momentum
 
-Momentum shows the speed at which the price of the stock is changing. To render a Momentum Indicator, set the indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~Type.html) as [`Momentum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Momentum). Momentum Indicator will be represented by two lines - upper line and signal line. In momentum indicator, the upper band is always render at the value **100**.
+Momentum shows the speed at which the price of the stock is changing. To render a Momentum Indicator, set the indicator [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartIndicator.html#Syncfusion_Blazor_Charts_ChartIndicator_Type) as [`Momentum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TechnicalIndicators.html#Syncfusion_Blazor_Charts_TechnicalIndicators_Momentum). Momentum Indicator will be represented by two lines - upper line and signal line. In momentum indicator, the upper band is always render at the value **100**.
 
 ```cshtml
 

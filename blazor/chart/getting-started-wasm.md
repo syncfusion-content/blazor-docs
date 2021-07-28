@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for WebAssembly in Blazor Charts Component | Syncfusion
-description: Learn here all about Getting Started for WebAssembly in Syncfusion Blazor Charts component and more.
+title: Getting Started for Wasm in Blazor Chart Component | Syncfusion
+description: Learn here all about Getting Started with WebAssembly in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

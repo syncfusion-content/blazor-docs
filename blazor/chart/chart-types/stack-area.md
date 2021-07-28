@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Area Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about 100% Stacked Area in Syncfusion Blazor Charts component and more.
+description: Learn here all about 100% Stacked Area Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -54,7 +54,7 @@ documentation: ug
 
 ``` 
 
-![100% Stacked Area Chart](../images/chart-types-images/stackedarea100.png)
+![The 100% Stacked Area Chart](../images/chart-types-images/stackedarea100.png)
 
 > Refer to our [`Blazor 100% Stacked Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor 100% Stacked Area Chart Example`](https://blazor.syncfusion.com/demos/chart/percent-stacked-area?theme=bootstrap4) to know how to render and configure the 100% Stacked Area type chart.
 
@@ -113,7 +113,7 @@ The following properties can be used to customize the [`100% Stacked Area`](http
 
 ``` 
 
-![100% Stacked Area with series customization](../images/chart-types-images/custom-stacked-area-100.png)
+![The 100% Stacked Area with series customization](../images/chart-types-images/custom-stacked-area-100.png)
 
 > Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Grouping support in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -113,7 +113,7 @@ The points that have been grouped together will appear as a single slice with th
 
 **Group Mode**
 
- When the [`GroupMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupMode) property is set to [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.GroupMode.html#Syncfusion_Blazor_Charts_GroupMode_Point) the points are displayed as seperate slices accoding to the [`GroupTo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) value. The remaining points will be grouped into a single slice and displayed.
+ When the [`GroupMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupMode) property is set to [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.GroupMode.html#Syncfusion_Blazor_Charts_GroupMode_Point) the points are displayed as separate slices according to the [`GroupTo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_GroupTo) value. The remaining points will be grouped into a single slice and displayed.
 
 ```cshtml 
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hiding axis when clicking the legend in Blazor Chart Component | Syncfusion
+title: Hiding axis at run time in Blazor Chart Component  | Syncfusion
 description: Learn here all about hiding axis when clicking the legend in Syncfusion Blazor Chart component and more.
 platform: Blazor
 control: Chart
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Hiding axis when clicking the legend in Blazor Chart Component
+# Hiding axis at run time in Blazor Chart Component 
 
 The axis associated with the series can be hidden by toggling the legend item of the relevant series. Follow the steps below to hide the measure axis associated with the series.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pie and Doughnut in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Pie and Doughnut in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Pie and Doughnut Series in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -91,7 +91,7 @@ The radius of the pie series will be set to 80% of its size (minimum of chart wi
 
 ## Pie Center
 
-The center x and center y can be used to change the pie's center position. The pie series' center x and center y are set to 50% by default. The [`AccumulationChartCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartModel.html#Syncfusion_Blazor_Charts_AccumulationChartModel_Center) property of the series can be used to customize this.
+The center x and center y can be used to change the pie's center position. The pie series' center x and center y are set to 50% by default. The [`AccumulationChartCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartCenter.html) property of the series can be used to customize this.
 
 ```cshtml 
 
@@ -215,7 +215,7 @@ The doughnut chart can be created by setting the [`InnerRadius`](https://help.sy
 ## Start and End angles
 
 The [`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_StartAngle) and
-[`EndAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_EndAngle) properties can be used to customise the start and end angles of the pie series. StartAngle is set to 0 degrees by default, and EndAngle is set to 360 degrees by default. Semi-pie series can be achieved by customising these properties.
+[`EndAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_EndAngle) properties can be used to customize the start and end angles of the pie series. StartAngle is set to 0 degrees by default, and EndAngle is set to 360 degrees by default. Semi-pie series can be achieved by customizing these properties.
 
 ```cshtml 
 
@@ -256,7 +256,7 @@ The [`StartAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## Color and Text Mapping
 
-[`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PointColorMapping) in series and [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) in datalabel can be used to map the fill colour and text from the data source to the chart.
+[`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PointColorMapping) in series and [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Name) in datalabel can be used to map the fill color and text from the data source to the chart.
 
 ```cshtml 
 

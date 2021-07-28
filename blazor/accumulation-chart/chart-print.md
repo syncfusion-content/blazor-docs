@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Print and Export in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Print and Export feature in the Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

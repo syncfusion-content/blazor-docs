@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Legend support in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -256,4 +256,4 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 > Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Accumulation Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping/)
-* [Datalabel](./data-label/)
+* [Data label](./data-label/)

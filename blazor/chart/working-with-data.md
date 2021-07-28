@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Charts Component | Syncfusion
-description: Learn here all about Working with Data in Syncfusion Blazor Charts component and more.
+description: Learn here all about Working with Data in the Syncfusion Blazor Charts component and different data binding methods.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -375,7 +375,7 @@ For instance, to bind data directly from the data access layer class **OrderData
     </SfChart>
 ```
 
-On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/). In order to interact with the Web API and consume data from the entity framework effectively, [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) must be used.
+On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/). In order to interact with the Web API and consume data from the Entity Framework effectively, [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) must be used.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -444,7 +444,7 @@ Empty points are defined as data points having NaN values. Empty points can be c
 
 **Customizing empty point**
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) properties in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) can be used to specify a specific colour and border for an empty point.
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) properties in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) can be used to specify a specific color and border for an empty point.
 
 ```cshtml
 

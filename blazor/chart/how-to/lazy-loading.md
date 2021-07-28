@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lazy loading in Blazor Chart Component | Syncfusion
-description: Learn here all about Text placing center of the doughnut in Syncfusion Blazor Chart component and more.
+description: Learn here all about how to achieve lazy loading in the Syncfusion Blazor Chart component step by step.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stripline in Blazor Charts Component | Syncfusion
-description: Learn here all about Stripline in Syncfusion Blazor Charts component and more.
+description: Learn here all about Stripline support in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug

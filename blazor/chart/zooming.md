@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Zooming in Blazor Charts Component | Syncfusion
-description: Learn here all about Zooming in Syncfusion Blazor Charts component and more.
+description: Learn here all about Zooming support in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -17,7 +17,7 @@ The chart can be zoomed in three different ways.
 * Mouse Wheel - By setting [`EnableMouseWheelZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnableMouseWheelZooming) property to **true** in [`ChartZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed-in and zoomed-out by scrolling the mouse wheel.
 * Pinch - By setting [`EnablePinchZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePinchZooming) property to **true** in [`ChartZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html), the chart can be zoomed through pinch gesture in touch enabled devices.
 
- > Pinch zooming is only useable in browsers that support multi-touch gestures.
+ > Pinch zooming is only usable in browsers that support multi-touch gestures.
 
 ```cshtml
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor Charts Component | Syncfusion
-description: Learn here all about Print and Export in Syncfusion Blazor Charts component and more.
+description: Learn here all about Print and Export support in the Syncfusion Blazor Chart component and its parameters for customization.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bar Charts in Blazor Charts Component | Syncfusion
-description: Learn here all about Bar Charts in Syncfusion Blazor Charts component and more.
+description: Learn here all about Bar Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug

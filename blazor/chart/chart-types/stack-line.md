@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 100% Stacked Line Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about 100% Stacked Line in Syncfusion Blazor Charts component and more.
+description: Learn here all about 100% Stacked Line Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -74,7 +74,7 @@ documentation: ug
 
 ``` 
 
-![100% Stacked Line](../images/chart-types-images/stacked-line-100.png)
+![The 100% Stacked Line](../images/chart-types-images/stacked-line-100.png)
 
 > Refer to our [`Blazor 100% Stacked Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor 100% Stacked Line Chart Example`](https://blazor.syncfusion.com/demos/chart/percent-stacked-line?theme=bootstrap4) to know how to render and configure the 100% Stacked Line type chart.
 
@@ -84,7 +84,7 @@ The following properties can be used to customize the [`100% Stacked Line`](http
 
 * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) – Specifies the color of the series.
 * [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Opacity) – Specifies the opacity of [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill).
-* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Width.html) – Specifies the width of the line stroke.
+* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) – Specifies the width of the line stroke.
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of line stroke.
 
 ```cshtml
@@ -148,7 +148,7 @@ The following properties can be used to customize the [`100% Stacked Line`](http
 
 ``` 
 
-![100% Stacked Line with series customization](../images/chart-types-images/custom-stacked-line-100.png)
+![The 100% Stacked Line with series customization](../images/chart-types-images/custom-stacked-line-100.png)
 
 > Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

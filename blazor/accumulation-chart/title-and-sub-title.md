@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Title and Subtitle in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Title and Subtitle in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Title and Subtitle support in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -176,4 +176,4 @@ The [`SubTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 ## See Also
 
 * [Grouping](./grouping/)
-* [Datalabel](./data-label/)
+* [Data label](./data-label/)

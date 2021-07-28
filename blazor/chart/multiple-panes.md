@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple Panes in Blazor Charts Component | Syncfusion
-description: Learn here all about Multiple Panes in Syncfusion Blazor Charts component and more.
+description: Learn here all about Multiple Panes support in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug

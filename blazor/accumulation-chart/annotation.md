@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Annotation in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Annotation support in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

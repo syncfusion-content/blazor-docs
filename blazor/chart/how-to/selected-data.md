@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Loading Chart's selected data in Grid Component | Syncfusion
-description: Learn here all about Loading Chart's selected data in Grid component and more.
+description: Learn here all about how to display the Chart's selected data in the Grid component using the Syncfusion Blazor Chart and Grid components.
 platform: Blazor
 control: Chart
 documentation: ug

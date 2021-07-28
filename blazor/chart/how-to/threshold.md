@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Threshold marking in Blazor Chart Component | Syncfusion
-description: Learn here all about threshold marking in Syncfusion Blazor Chart component and more.
+description: Learn here all about how to place threshold marking in the Syncfusion Blazor Chart component step by step.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Labels in Blazor Charts Component | Syncfusion
-description: Learn here all about Data Labels in Syncfusion Blazor Charts component and more.
+description: Learn here all about Data Labels support in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug

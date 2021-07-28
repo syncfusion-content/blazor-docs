@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Charts Component | Syncfusion
-description: Learn here all about Axis Customization in Syncfusion Blazor Charts component and more.
+description: Learn here all about Axis Customization support in the Syncfusion Blazor Charts component and its properties.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -139,7 +139,7 @@ The width, color and size of the minor and major tick lines can be customiz
 
 ## Grid Lines Customization
 
-The width, color and dasharray of the minor and major grid lines can be customized using [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorGridLines) and [`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorGridLines) properties in the axis.
+The width, color and dash array of the minor and major grid lines can be customized using [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MajorGridLines) and [`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_MinorGridLines) properties in the axis.
 
 ```cshtml
 

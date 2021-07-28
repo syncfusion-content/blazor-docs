@@ -1,14 +1,15 @@
 ---
-title: "Data Label Template in Blazor Charts component | Syncfusion"
-
-component: "Charts"
-
-description: "Learn here all about Data Label Template of Syncfusion Charts (SfCharts) component and more."
+layout: post
+title: Datalabel Template in Blazor Charts Component | Syncfusion
+description: Learn here all about Datalabel Template support in the Syncfusion Blazor Chart component and how it is achieved.
+platform: Blazor
+control: Chart
+documentation: ug
 ---
 
 <!-- markdownlint-disable MD036 -->
 
-# Data Label Template
+# Datalabel Template in Blazor Charts Component
 
 Text and interior information for a point can be bound from a datasource other than the x and y values. The implicit named parameter context can be used to access the aggregate values within the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html#Syncfusion_Blazor_Charts_ChartDataLabel_Template). To retrieve aggregate values inside the template, type cast the context as [`ChartDataPointInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataPointInfo.html). The context attribute can also be used to modify the name of this implicit parameter. For example, the data label information can be accessed using context in the template as shown below.
 
