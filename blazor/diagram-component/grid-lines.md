@@ -1,26 +1,17 @@
----
-layout: post
-title: Gridlines in Blazor Diagram Component | Syncfusion
-description: Learn here all about Gridlines in Syncfusion Blazor Diagram component and more.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
-# Gridlines in Blazor Diagram Component
+# Gridlines
 
 Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface.
 
-The model’s `SnapSettings` property is used to customize the gridlines and control the snapping behavior in the diagram.
+The `SnapSettings` property is used to customize the gridlines and control the snapping behavior in the diagram.
 
 ## Customize the Gridlines visibility
 
 The `SnapConstraints` enables you to show/hide the gridlines. The following code example illustrates how to show or hide gridlines.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 @* Initialize the diagram snapping the custom interval *@
 <SnapSettings Constraints="SnapConstraints.All">
     <HorizontalGridLines SnapIntervals="@SnapInterval">
@@ -36,10 +27,10 @@ public double[] SnapInterval { get; set; } = new double[]
 {
     10
     };
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
     Node diagramNode = new Node();
     diagramNode.OffsetX = 100;
     diagramNode.OffsetY = 100;
@@ -47,12 +38,14 @@ protected override void OnInitialized()
     diagramNode.Height = 100;
     diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
     diagramNode.ID = "node1";
-    NodeCollection.Add(diagramNode);
+    nodes.Add(diagramNode);
 }
 }
 ```
 
-To show only horizontal/vertical gridlines or to hide gridlines, refer to `Constraints`.
+![Gridlinesdefault](images/Gridlinesdefault.png)
+
+To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](./constraints).
 
 ## Appearance
 
@@ -66,7 +59,7 @@ The appearance of the gridlines can be customized by using a set of predefined p
 
 The following code example illustrates how to customize the appearance of gridlines.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px">
@@ -81,13 +74,38 @@ The following code example illustrates how to customize the appearance of gridli
 </SfDiagramComponent>
 ```
 
+## How to create dot grid patterns
+
+The appearance of the grid lines can be changed into dots by using the `GridType` as Dots. The following code illustrates how to render grid patterns as Dots.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px">
+    <SnapSettings GridType="GridType.Dots">
+        <HorizontalGridLines LineColor="Blue" @bind-LineIntervals="@HInterval" @bind-DotIntervals="@HDotInterval"></HorizontalGridLines>
+        <VerticalGridLines LineColor="Blue" @bind-LineIntervals="@VInterval" @bind-DotIntervals="@VDotInterval"></VerticalGridLines>
+    </SnapSettings>
+</SfDiagramComponent>
+
+@code{
+    public double[] HDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20 };
+    public double[] VDotInterval { get; set; } = new double[] { 3, 20, 1, 20, 1, 20, 1, 20, 1, 20 };
+    public double[] HInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
+    public double[] VInterval { get; set; } = new double[] { 1.25, 18.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75, 0.25, 19.75 };
+}
+
+```
+
+![Dotgrid](images/Dotgrid.png)
+
 ## Line intervals
 
 Thickness and the space between gridlines can be customized by using horizontal gridline’s `LinesIntervals` and vertical gridline’s `LinesIntervals` properties. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px">
@@ -118,20 +136,20 @@ This feature allows the diagram objects to snap to the nearest intersection of g
 
 Snapping to gridlines can be enabled/disabled with the `SnapConstraints`. The following code example illustrates how to enable/disable the snapping to gridlines.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
 
 @code{
 //Sets the snap constraints
 public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
     Node diagramNode = new Node();
     diagramNode.OffsetX = 100;
     diagramNode.OffsetY = 100;
@@ -139,19 +157,21 @@ protected override void OnInitialized()
     diagramNode.Height = 100;
     diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
     diagramNode.ID = "node1";
-    NodeCollection.Add(diagramNode);
+    nodes.Add(diagramNode);
 }
 }
 ```
+
+![Snaptogrid](images/snaptogrid.gif)
 
 ### Customization of snap intervals
 
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s `SnapIntervals` and the vertical gridline’s `SnapIntervals` properties.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 @* Initialize the diagram snapping the custom interval *@
 <SnapSettings Constraints="SnapConstraints.All">
     <HorizontalGridLines SnapIntervals="@SnapInterval">
@@ -167,10 +187,10 @@ public double[] SnapInterval { get; set; } = new double[]
 {
     10
     };
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
     Node diagramNode = new Node();
     diagramNode.OffsetX = 100;
     diagramNode.OffsetY = 100;
@@ -178,7 +198,7 @@ protected override void OnInitialized()
     diagramNode.Height = 100;
     diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
     diagramNode.ID = "node1";
-    NodeCollection.Add(diagramNode);
+    nodes.Add(diagramNode);
 }
 }
 ```
@@ -193,10 +213,10 @@ The `SnapAngle` property allows you to define the snap angle by which the object
 
 The `SnapConstraints` property allows you to enable or disable the certain features of the snapping, refer to `SnapConstraints`.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapObjectDistance="10">
 </SnapSettings>
 </SfDiagramComponent>
@@ -204,11 +224,11 @@ The `SnapConstraints` property allows you to enable or disable the certain featu
 @code{
 //Sets the Snap to objects constraints...
 public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
     Node diagramNode = new Node();
     diagramNode.OffsetX = 100;
     diagramNode.OffsetY = 100;
@@ -216,7 +236,7 @@ protected override void OnInitialized()
     diagramNode.Height = 100;
     diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
     diagramNode.ID = "node1";
-    NodeCollection.Add(diagramNode);
+    nodes.Add(diagramNode);
 
     diagramNode = new Node();
     diagramNode.OffsetX = 300;
@@ -225,8 +245,10 @@ protected override void OnInitialized()
     diagramNode.Height = 100;
     diagramNode.Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" };
     diagramNode.ID = "node2";
-    NodeCollection.Add(diagramNode);
+    nodes.Add(diagramNode);
 }
 }
 
 ```
+
+![Guidelines](images/guidelines.gif)

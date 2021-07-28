@@ -1,12 +1,3 @@
----
-layout: post
-title: Index in Blazor Diagram Component | Syncfusion 
-description: Learn about Index in Blazor Diagram component of Syncfusion, and more details.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
 # Overview
 
 The diagram component visually represents information. It is also used to create diagrams like flow charts, organizational charts, mind maps, and BPMN either through code or a visual interface.

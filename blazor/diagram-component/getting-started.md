@@ -1,13 +1,4 @@
----
-layout: post
-title: Getting Started with Blazor Diagram Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Diagram component of Syncfusion, and more details.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
-# Getting Started with Blazor Diagram Component
+# Getting Started
 
 This section briefly explains about how to include a Diagram in your Blazor WebAssembly application. You can refer [Getting Started with Syncfusion Blazor for Blazor WebAssembly in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -39,7 +30,7 @@ This section briefly explains about how to include a Diagram in your Blazor WebA
 
 Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagram** packages.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagram
 ```
@@ -48,7 +39,7 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagram** pac
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor;
 
 namespace BlazorApplication
@@ -84,13 +75,13 @@ The following example shows a basic Diagram component.
 Let us create and add a `Nodes` with specific position, size, label and shape. Connect two or more nodes by using a
 `Connectors`.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@DInstance" Connectors="@connectors" Height="700px" Nodes="@nodes">
+<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes">
                 </SfDiagramComponent>
 @code{
 
-    SfDiagramComponent DInstance;
+    SfDiagramComponent diagram;
     int connectorCount = 0;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 

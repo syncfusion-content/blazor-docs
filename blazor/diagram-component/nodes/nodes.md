@@ -1,13 +1,4 @@
----
-layout: post
-title: Action of Nodes in Blazor Diagram Component | Syncfusion
-description: Learn here all about Action of Nodes in Syncfusion Blazor Diagram component and more.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
-# Action of Nodes in Blazor Diagram Component
+# Node
 
 Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system in regards to how it interacts with external entities.
 
@@ -21,14 +12,14 @@ A node can be created and added to the diagram, either programmatically or inter
 
 To create a node, define the `Node` object and add that to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code{
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in the nodes collection.
@@ -45,7 +36,7 @@ To create a node, define the `Node` object and add that to the nodes collection 
 
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -56,7 +47,7 @@ To create a node, define the `Node` object and add that to the nodes collection 
 
 You can add a Node at runtime by adding node to the nodes collection in the Diagram component.  The following code explains how to add nodes at runtime.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Add Node" @onclick="@AddNode">
@@ -111,18 +102,18 @@ about adding nodes from symbol palette, refer to the `Symbol Palette`.
 
 ![Node](../images/node-add-palette.gif)
 
-## Draw Node using drawing object
+## Draw node using drawing object
 
 Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the `DrawingObject`.
 
-For more information about drawing Node, refer to the `Draw Nodes`.
+For more information about drawing node, refer to the `Draw Nodes`.
 
 ![Drawing Node](../images/node-drawing.gif)
 
 ## Create node through data source
 
 Nodes can be generated automatically with the information provided through data source. The default properties for
-these nodes are fetched from default settings. For more information about datasource, refer to the `DataSource`.
+these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../layout/hierarchical-layout).
 
 ## Remove nodes at runtime
 
@@ -130,7 +121,7 @@ these nodes are fetched from default settings. For more information about dataso
 
 The following code shows how to remove a node at runtime.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Remove Node" @onclick="@RemoveNodes">
@@ -181,7 +172,7 @@ You can change any node's properties at runtime.
 
 The following code example explains how to change the node properties.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Node" @onclick="@UpdateNodes">
@@ -219,8 +210,7 @@ The following code example explains how to change the node properties.
 }
 ```
 
->**Note:**
->* BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+>**Note:** BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
 
 ## See Also
 

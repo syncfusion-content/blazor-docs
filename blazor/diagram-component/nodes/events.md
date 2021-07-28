@@ -1,13 +1,4 @@
----
-layout: post
-title: Events in Blazor Diagram Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Diagram component and more.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
-# Events in Blazor Diagram Component
+# Events and Constraints
 
 ## Events
 
@@ -19,15 +10,15 @@ The `SelectionChange` event is triggered when select/unselect the node or connec
 
 The following code example explains how to get the selection change event in the diagram.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" SelectionChange="@OnSelectionChange">
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionChange="@OnSelectionChange">
 </SfDiagramComponent>
 
 @code{
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -41,7 +32,7 @@ The following code example explains how to get the selection change event in the
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 
     // SelectionChange event for diagram
@@ -56,15 +47,15 @@ The following code example explains how to get the selection change event in the
 
 The `PositionChange` event is triggered when drag the node or connector through interaction. The `DraggingEventArgs` is used to get position change event arguments.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" PositionChange="@OnPositionChange">
+<SfDiagramComponent Height="600px" Nodes="@nodes" PositionChange="@OnPositionChange">
 </SfDiagramComponent>
 
 @code{
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -77,7 +68,7 @@ The `PositionChange` event is triggered when drag the node or connector through 
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 
     // Position change event for diagram
@@ -92,15 +83,15 @@ The `PositionChange` event is triggered when drag the node or connector through 
 
 The `SizeChange` event is triggered when resizing the node during the interaction. The `SizeChangeEventArgs` is used to get size change event arguments.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" SizeChange="@OnSizeChange">  
+<SfDiagramComponent Height="600px" Nodes="@nodes" SizeChange="@OnSizeChange">  
 </SfDiagramComponent>
 
 @code{
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -113,7 +104,7 @@ The `SizeChange` event is triggered when resizing the node during the interactio
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 
     // Size change event for diagram
@@ -128,15 +119,15 @@ The `SizeChange` event is triggered when resizing the node during the interactio
 
 The `RotateChange` event is triggered when rotate the node during the interaction. The `RotationEventArgs` is used to get angle value change event arguments.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" RotateChange="@OnRotateChange">  
+<SfDiagramComponent Height="600px" Nodes="@nodes" RotateChange="@OnRotateChange">  
 </SfDiagramComponent>
 
 @code{
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -149,7 +140,7 @@ The `RotateChange` event is triggered when rotate the node during the interactio
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 
     // Rotate change event for diagram

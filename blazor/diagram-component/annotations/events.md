@@ -1,13 +1,4 @@
----
-layout: post
-title: Events in Blazor Diagram Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Diagram component and more.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
-# Events in Blazor Diagram Component
+# Events
 
 ## Text edit
 
@@ -15,16 +6,16 @@ The TextEdit event will notify the annotation content changes after editing. The
 
 The following code example shows how to register and get the notification from the TextEdit event.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" TextEdit="textedit"  Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" TextEdit="textedit"  Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
 {
    //Defines diagram's nodes collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
    //Triggered this event when complete the editing for Annotation and update the old text and new text values.
    private void textedit(TextEditEventArgs args)
@@ -34,7 +25,7 @@ The following code example shows how to register and get the notification from t
     }
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -47,7 +38,7 @@ The following code example shows how to register and get the notification from t
         {
             new ShapeAnnotation {Content = "Annotation" }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 
@@ -63,16 +54,16 @@ The keyup event occurs when a keyboard key is released and updated the respectiv
 
 The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" KeyDown ="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@NodeCollection" >
+<SfDiagramComponent Height="600px" KeyDown ="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@nodes" >
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's nodes collection
-   DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+   DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
    //Occurs when  click the annotation and enter the character in key down state
     private void OnKeyDown(KeyEventArgs args)
@@ -86,7 +77,7 @@ The following code example shows how to register and get the notification from t
     }
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -99,7 +90,7 @@ The following code example shows how to register and get the notification from t
         {
             new ShapeAnnotation {Content = "Annotation" }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }}
 

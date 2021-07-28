@@ -1,13 +1,4 @@
----
-layout: post
-title: Segments in Blazor Diagram Component | Syncfusion
-description: Learn here all about Segments in Syncfusion Blazor Diagram component and more.
-platform: Blazor
-control: Diagram
-documentation: ug
----
-
-# Segments in Blazor Diagram Component
+# Segments
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 
@@ -15,7 +6,7 @@ The path of the connector is defined with a collection of segments. There are th
 
 To create a straight line, specify the `Type` of the segment as **Straight** and add a straight segment to `Segments` collection and need to specify `Type` for the connector. The following code example illustrates how to create a default straight segment.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -62,9 +53,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
 
 Set the segment `Type` as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
 
-Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to `connector.Segments` collection. The following code example illustrates how to create a connector with multiple segments.
-
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -105,7 +94,7 @@ Multiple segments can be defined one after another. To create a connector with m
 
 The `Length` and `Direction` properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -165,7 +154,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 To create a bezier segment, the `Type` of the segment is set as bezier and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -206,6 +195,7 @@ To create a bezier segment, the `Type` of the segment is set as bezier and need 
 ```
 
 ![Connector Bezier Segment](../images/connector-bezier.png)
+
 We have properties called `Point1` and `Point2` which is used to control the points of the bezier connector . And also we have properties called `vector1` and `vector2` which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
 
 ```csharp
@@ -236,6 +226,85 @@ Connector Connector1 = new Connector()
                     Vector2 = new Vector(){Distance = 45 ,Angle = 45 } } }
         };
 ```
+
+![Bezier](../images/bezieredit.gif)
+
+## How to create multiple segments
+
+Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to `connector.Segments` collection. The following code example illustrates how to create a connector with multiple segments.
+
+```csharp
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
+    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
+</SfDiagramComponent>
+
+@code
+{
+    //Defines diagram's connector collection
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+
+        Connector connector = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new Point()
+            {
+                X = 100,
+                Y = 100
+            },
+            Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            TargetPoint = new Point() { X = 200, Y = 200 },
+            Type = Segments.Bezier,
+
+            TargetDecorator = new Decorator()
+            {
+                Shape = DecoratorShapes.Arrow,
+                Style = new ShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
+            }
+
+        };
+        //Add the connector into connectors's collection.
+        connectors.Add(connector);
+
+        Connector connector1 = new Connector()
+        {
+            ID = "Connector1",
+            Type = Segments.Orthogonal,
+            SourcePoint = new Point()
+            {
+                X = 100,
+                Y = 100
+            },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            Segments = new DiagramObjectCollection<ConnectorSegment>(){
+                    new OrthogonalSegment {
+                    Length = 100,
+                    Type = Segments.Orthogonal,
+                    Direction = Direction.Right, },
+                new OrthogonalSegment {
+                    Length = 100,
+                    Type = Segments.Orthogonal,
+                    Direction = Direction.Bottom, } },
+        };
+
+        //Add the connector into connectors's collection.
+        connectors.Add(connector1);
+    }
+}
+
+```
+
+![MultipleSegment](../images/Multiplesegment.png)
+
+* Similarly, you can create multiple segments for all the connector type.
 
 ## See also
 
