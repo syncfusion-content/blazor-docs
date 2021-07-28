@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Range Column in Blazor Charts Component | Syncfusion
-description: Learn here all about Range Column in Syncfusion Blazor Charts component and more.
+title: Range Column Chart in Blazor Charts Component | Syncfusion
+description: Learn here all about Range Column Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Range Column in Blazor Charts Component
+# Range Column Chart in Blazor Charts Component
 
 ## Range Column
 
-[`Range Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) visualizes the variations in the data values for a given time using vertical bars. To render a [`Range Column Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeColumn), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeColumn).
+[`Range Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) shows variation in the data values for a given time using vertical bars. To render a [`Range Column Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeColumn), set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`RangeColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_RangeColumn).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -35,8 +35,9 @@ documentation: ug
         public double Low { get; set; }
         public double High { get; set; }
     }
+
     public List<ChartData> WeatherReport1 = new List<ChartData>
-{
+	{
         new ChartData { X= "Sun", Low= 3.1, High= 10.8 },
         new ChartData { X= "Mon", Low= 5.7, High= 14.4 },
         new ChartData { X= "Tue", Low= 8.4, High= 16.9 },
@@ -47,7 +48,7 @@ documentation: ug
     };
 
     public List<ChartData> WeatherReport2 = new List<ChartData>
-{
+	{
         new ChartData { X= "Sun", Low= 2.5, High= 9.8 },
         new ChartData { X= "Mon", Low= 4.7, High= 11.4 },
         new ChartData { X= "Tue", Low= 6.4, High= 14.4 },
@@ -58,7 +59,7 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Range Column](../images/chart-types-images/rangecolumn.png)
 
@@ -74,12 +75,13 @@ The following properties can be used to customize the [`Range Column`](https://h
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 * [`ColumnSpacing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_ColumnSpacing) – Specifies the space between the series segments.
 
-```csharp
+```cshtml
 
 @using  Syncfusion.Blazor.Charts
 
 <SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@WeatherReport1" XName="X" High="High" Low="Low" Width="2" Type="ChartSeriesType.RangeColumn" Fill="green" ColumnSpacing="0.4" DashArray="5,5" Opacity="0.7">
             <ChartSeriesBorder Width="2" Color="green"></ChartSeriesBorder>
@@ -89,8 +91,6 @@ The following properties can be used to customize the [`Range Column`](https://h
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
-
-
 
 @code{ 
     public class ChartData
@@ -124,14 +124,13 @@ The following properties can be used to customize the [`Range Column`](https://h
     }; 
 }
 
-```
+``` 
 
-![Custom Range Column](../images/chart-types-images/custom-range-column.png)
+![Range Column with series customization](../images/chart-types-images/custom-range-column.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

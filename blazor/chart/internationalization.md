@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Internationalization in Blazor Charts Component | Syncfusion
-description: Learn here all about Internationalization in Syncfusion Blazor Charts component and more.
+description: Learn here all about how internationalization is achieved in the Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,24 +9,20 @@ documentation: ug
 
 # Internationalization in Blazor Charts Component
 
-Chart provide supports for internationalization for below chart elements.
+Internationalization is the process of designing and developing an component that can be easily adapted for, users from any culture, region, or language. Below elements in the [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
 
-* Datalabel.
+* Data label.
 * Axis label.
 * Tooltip.
 
 <!-- markdownlint-disable MD036 -->
 **Globalization**
 
-Globalization is the process of designing and developing an component that works in different
-cultures/locales.  Internationalization  library is used to globalize number, date, time values in
-chart component using [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property in axis.
+[`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property in axis is used to globalize the number, date and time value of the elements such as [`Axis label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html), [`Data label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
 
-**Numeric Format**
+In the below example, axis, point and tooltip labels are globalized to EUR.
 
-In the below example, axis, point  and tooltip labels are globalized to EUR.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -62,13 +58,13 @@ In the below example, axis, point  and tooltip labels are globalized to EUR.
     }
 
     public List<ChartData> SalesReports = new List<ChartData>
-{
-         new ChartData {X= 1900, Y= 4, Y1= 2.6 },
-         new ChartData{ X= 1920, Y= 3.0, Y1= 2.8 },
-         new ChartData{ X= 1940, Y= 3.8, Y1= 2.6},
-         new ChartData{ X= 1960, Y= 3.4, Y1= 3 },
-         new ChartData{ X= 1980, Y= 3.2, Y1= 3.6 },
-         new ChartData{ X= 2000, Y= 3.9, Y1= 3 }
+	{
+        new ChartData {X= 1900, Y= 4, Y1= 2.6 },
+        new ChartData{ X= 1920, Y= 3.0, Y1= 2.8 },
+        new ChartData{ X= 1940, Y= 3.8, Y1= 2.6},
+        new ChartData{ X= 1960, Y= 3.4, Y1= 3 },
+        new ChartData{ X= 1980, Y= 3.2, Y1= 3.6 },
+        new ChartData{ X= 2000, Y= 3.9, Y1= 3 }
     };
 }
 
@@ -77,7 +73,16 @@ In the below example, axis, point  and tooltip labels are globalized to EUR.
 
 ![Globalization](images/internationalization.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+## Label Format
+
+Learn more about axis label format in-relation to axis types from the pages below.
+
+* [Numeric Label Format](./numeric-axis#label-format)
+* [DateTime Label Format](./date-time-axis#label-format)
+* [Logarithmic Label Format](./logarithmic-axis#label-format)
+* [Custom Label Format](./numeric-axis#custom-label-format)
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Histogram in Blazor Charts Component | Syncfusion
-description: Learn here all about Histogram in Syncfusion Blazor Charts component and more.
+description: Learn here all about Histogram Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 ## Histogram
 
-[`Histogram charts`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/histogram-chart) can provide a visual display of large amounts of data that are difficult to understand in a tabular or spreadsheet form and it can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) to [`Histogram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Histogram).
+[`Histogram Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/histogram-chart) can provide a visual display of large amounts of data that are difficult to understand in a tabular or spreadsheet form and it can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Histogram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Histogram).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -49,7 +49,7 @@ documentation: ug
     }
 
     public List<Data> ExamScores = new List<Data>
-{
+	{
        new Data { Y=5.250},
        new Data { Y=7.750},
        new Data { Y=8.275},
@@ -61,16 +61,16 @@ documentation: ug
        new Data { Y=76.625},
        new Data { Y=80.000},
        new Data { Y=97.750}
-  };
+    };
 }
 
-```
+``` 
 
 ![Histogram Charts](../images/othertypes/histogram.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)
