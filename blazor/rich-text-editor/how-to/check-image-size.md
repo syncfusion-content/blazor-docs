@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Check image size in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Check image size in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Check image size in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

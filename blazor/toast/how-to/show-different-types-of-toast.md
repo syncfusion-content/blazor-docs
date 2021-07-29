@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show different types of toast in Blazor Toast Component | Syncfusion
-description: Learn here all about Show different types of toast in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Show different types of toast in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

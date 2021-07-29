@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IFrame Rendering in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about IFrame Rendering in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about IFrame Rendering in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

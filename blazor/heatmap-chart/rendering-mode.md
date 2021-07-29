@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rendering mode in Blazor HeatMap Chart Component | Syncfusion
-description: Learn here all about Rendering mode in Syncfusion Blazor HeatMap Chart component and more.
+description: Checkout and learn here all about Rendering mode in Syncfusion Blazor HeatMap Chart component and more.
 platform: Blazor
 control: HeatMap Chart
 documentation: ug

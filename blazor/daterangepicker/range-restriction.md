@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range Restriction in Blazor DateRangePicker Component | Syncfusion
-description: Learn here all about Range Restriction in Syncfusion Blazor DateRangePicker component and more.
+description: Checkout and learn here all about Range Restriction in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker
 documentation: ug

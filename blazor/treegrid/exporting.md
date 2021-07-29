@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pdf Export in Blazor TreeGrid Component | Syncfusion
-description: Learn here all about Pdf Export in Syncfusion Blazor TreeGrid component and more.
+description: Checkout and learn here all about Pdf Export in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

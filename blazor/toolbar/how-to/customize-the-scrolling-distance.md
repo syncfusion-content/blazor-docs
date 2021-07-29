@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize the Scrolling distance in Blazor Toolbar Component | Syncfusion
+title: Customize the Scrolling distance in Blazor Toolbar | Syncfusion
 description: Learn here all about Customize the Scrolling distance in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar

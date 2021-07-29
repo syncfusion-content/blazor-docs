@@ -1,13 +1,13 @@
 ---
 layout: post
-title: 100% Stacked Column Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about 100% Stacked Column Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: 100% Stacked Column in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about 100% Stacked Column Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# 100% Stacked Column Chart in Blazor Charts Component
+# 100% Stacked Column in Blazor Charts Component
 
 ## 100% Stacked Column
 

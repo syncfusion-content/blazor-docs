@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Styles and Appearances in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

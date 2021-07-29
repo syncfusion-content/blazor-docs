@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor WebAssembly in Blazor File Upload Component | Syncfusion
-description: Learn here all about Getting Started with Blazor WebAssembly in Syncfusion Blazor File Upload component and more.
+title: Getting Stared with Blazor File Upload in WebAssembly | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor File Upload in Blazor WebAssembly (Client Side) App using Visual Studio and more.
 platform: Blazor
 control: File Upload
 documentation: ug
 ---
 
-# Getting Started with Blazor WebAssembly in Blazor File Upload Component
+# Blazor File Upload Component in WebAssembly App using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor File Upload in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 

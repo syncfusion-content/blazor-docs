@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize number and date format in Blazor Pivot Table Component | Syncfusion
+title: Customize number and date format in Blazor Pivot Table | Syncfusion
 description: Learn here all about Customize number and date format in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table

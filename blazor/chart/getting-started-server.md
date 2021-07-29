@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for Server in Blazor Chart Component | Syncfusion
-description: Learn about Getting Started with Server Application in the Blazor Chart component of Syncfusion, and more details.
+title: Getting Started for Server in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Getting Started for Server in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

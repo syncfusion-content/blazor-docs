@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Blazor Sparkline Component | Syncfusion
-description: Learn here all about Markers in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Markers in Syncfusion Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -72,4 +72,4 @@ The following properties can be used to customize markers:
 </SfSparkline>
 ```
 
-![Sparkline Chart - Markers Customization](./images/marker/MarkerCustomization.png)arkerCustomization.png)
+![Sparkline Chart - Markers Customization](./images/marker/MarkerCustomization.png)

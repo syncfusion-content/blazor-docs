@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Add and remove list items from listview in Blazor ListView Component | Syncfusion
-description: Learn here all about Add and remove list items from listview in Syncfusion Blazor ListView component and more.
+title: Add and remove list items in Blazor ListView Component | Syncfusion
+description: Learn here all about adding and removing list items in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Add and remove list items from listview in Blazor ListView Component
+# Add and remove list items in Blazor ListView Component
 
 You can add or remove list items from the ListView control using the `ObservableCollection`.
 
@@ -106,4 +106,4 @@ delete icon list item to `OnDelete` method.
 </style>
 ```
 
-![ListView - Add or remove](../images/list/add-and-remove-list-items-from-listview.png))
+![ListView - Add or remove](../images/list/add-and-remove-list-items-from-listview.png)

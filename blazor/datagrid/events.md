@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

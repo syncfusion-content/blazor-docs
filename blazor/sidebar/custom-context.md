@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sidebar for specific content in Blazor Sidebar Component | Syncfusion
-description: Learn here all about Sidebar for specific content in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about Sidebar for specific content in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug

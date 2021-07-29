@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Filtering in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

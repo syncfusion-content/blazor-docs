@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Circular Gauge Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor Circular Gauge component and more.
+description: Checkout and learn here all about Legend in Syncfusion Blazor Circular Gauge component and much more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

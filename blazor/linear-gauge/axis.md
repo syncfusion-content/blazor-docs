@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Axis in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Axis feature in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
+title: Axes in Blazor Linear Gauge Component | Syncfusion
+description: Checkout and learn here all about Axes in Syncfusion Blazor Linear Gauge component and much more details.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Axis in Blazor Linear Gauge Component (SfLinearGauge)
+# Axes in Blazor Linear Gauge Component
 
 Axis is used to indicate the numeric values in the linear scale. The Linear Gauge component can have any number of axes. The sub-elements of an axis are line, ticks, labels, ranges, and pointers.
 

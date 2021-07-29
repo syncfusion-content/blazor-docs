@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started-Client side using Visual Studio in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Getting Started-Client side using Visual Studio in Syncfusion Blazor DataGrid component and more.
+title: Getting Stared with Blazor DataGrid in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor DataGrid in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
  <!-- markdownlint-disable MD024 -->
 
-# Getting Started-Client side using Visual Studio in Blazor DataGrid Component
+# Blazor DataGrid Component in Server Side App using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor DataGrid in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Action Buttons in Blazor Card Component | Syncfusion
-description: Learn here all about Action Buttons in Syncfusion Blazor Card component and more.
+description: Checkout and learn here all about Action Buttons in the Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
 documentation: ug

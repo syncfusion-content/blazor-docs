@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Diagram Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug

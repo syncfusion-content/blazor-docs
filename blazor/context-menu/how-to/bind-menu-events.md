@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind Context Menu Events in Blazor ContextMenu Component | Syncfusion
-description: Learn here all about Bind Context Menu Events in Syncfusion Blazor ContextMenu component and more.
+description: Checkout and learn here all about Bind Context Menu Events in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug

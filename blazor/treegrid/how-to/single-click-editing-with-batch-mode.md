@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Single click editing with Batch mode in Blazor TreeGrid Component | Syncfusion
+title: Single click editing with Batch mode in Blazor TreeGrid | Syncfusion
 description: Learn here all about Single click editing with Batch mode in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid

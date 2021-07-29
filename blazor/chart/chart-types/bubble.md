@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Bubble Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Bubble Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: Bubble in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Bubble Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Bubble Chart in Blazor Charts Component
+# Bubble in Blazor Charts Component
 
 ## Bubble
 

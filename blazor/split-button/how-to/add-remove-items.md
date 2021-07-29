@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add and Remove Items in Blazor SplitButton Component | Syncfusion
-description: Learn here all about Add and Remove Items in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about Add and Remove Items in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug

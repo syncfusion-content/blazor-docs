@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Numeric TextBox Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor Numeric TextBox component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug

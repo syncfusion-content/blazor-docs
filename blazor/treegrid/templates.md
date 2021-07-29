@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor TreeGrid Component | Syncfusion
-description: Learn here all about Templates in Syncfusion Blazor TreeGrid component and more.
+description: Checkout and learn here all about Templates in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug

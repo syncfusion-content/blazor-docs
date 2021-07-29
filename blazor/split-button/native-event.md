@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor SplitButton Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor SplitButton component and much more details.
 platform: Blazor
 control: Split Button
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Splitter Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Splitter component and much more details.
 platform: Blazor
 control: Splitter
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: RTL in Blazor Range Selector Component | Syncfusion
-description: Learn here all about RTL in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about RTL in Syncfusion Blazor Range Selector component and much more details.
 platform: Blazor
 control: Range Selector
 documentation: ug

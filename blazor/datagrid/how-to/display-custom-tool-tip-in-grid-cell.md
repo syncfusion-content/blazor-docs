@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Display Custom Tooltip in DataGrid cell in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Display Custom Tooltip in DataGrid cell in Syncfusion Blazor DataGrid component and more.
+title: Display Custom Tooltip in Blazor DataGrid Cell | Syncfusion
+description: Checkout and learn here all about displaying custom tooltip in Syncfusion Blazor DataGrid cell and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Display Custom Tooltip in DataGrid cell in Blazor DataGrid Component
+# Display Custom Tooltip in Blazor DataGrid Cell
 
 You can display custom tooltip in Grid column using [`Column Template`](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the [`SfTooltip`](https://blazor.syncfusion.com/documentation/tooltip/getting-started/) components inside the template.
 

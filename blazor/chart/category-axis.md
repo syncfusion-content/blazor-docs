@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Category Axis in Blazor Charts Component | Syncfusion
-description: Learn here all about Category Axis support in the Syncfusion Blazor Chart component and its properties for customization.
+description: Checkout and learn here all about Category Axis in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

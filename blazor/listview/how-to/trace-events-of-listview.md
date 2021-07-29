@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trace events of listview in Blazor ListView Component | Syncfusion
-description: Learn here all about Trace events of listview in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about Trace events of listview in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -118,4 +118,4 @@ select event, and display the selected list item text in the event trace panel w
 </style>
 ```
 
-![ListView - Events](../images/list/trace-events-of-listview.png))
+![ListView - Events](../images/list/trace-events-of-listview.png)

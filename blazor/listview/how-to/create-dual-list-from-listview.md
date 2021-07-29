@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Create dual list from listview in Blazor ListView Component | Syncfusion
-description: Learn here all about Create dual list from listview in Syncfusion Blazor ListView component and more.
+title: Create dual list using Blazor ListView Component | Syncfusion
+description: Check out and learn here all about creating dual list using Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Create dual list from listview in Blazor ListView Component
+# Create dual list using Blazor ListView Component
 
 The dual list contains two ListView. This allows you to move list items from one list to another using the client-side
 events. This section explains how to integrate the ListView control to achieve dual list.
@@ -324,4 +324,4 @@ enabled when selecting an item in lists.
 </style>
 ```
 
-![ListView - dual list](../images/list/create-dual-list-from-listview.png))
+![ListView - dual list](../images/list/create-dual-list-from-listview.png)

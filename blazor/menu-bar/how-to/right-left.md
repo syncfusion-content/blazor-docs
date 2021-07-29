@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right to Left in Blazor Menu Bar Component | Syncfusion
-description: Learn here all about Right to Left in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about Right to Left in Syncfusion Blazor Menu Bar component and much more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

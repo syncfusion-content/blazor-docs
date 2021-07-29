@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Pointers in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Pointers feature in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
+description: Checkout and learn here all about Pointers in Syncfusion Blazor Linear Gauge component and much more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Pointers in Blazor Linear Gauge Component (SfLinearGauge)
+# Pointers in Blazor Linear Gauge Component
 
 Pointers are used to indicate values on an axis. The value of the pointer can be modified using the [`PointerValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_PointerValue) property in [`LinearGaugePointer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html) class.
 

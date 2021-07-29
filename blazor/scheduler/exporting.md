@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Exporting in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Exporting in Syncfusion Blazor Scheduler component and more.
+description: Checkout and learn here all about Exporting in Syncfusion Blazor Scheduler component and much more details.
 platform: Blazor
 control: Scheduler
 documentation: ug

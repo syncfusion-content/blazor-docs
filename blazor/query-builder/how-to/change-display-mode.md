@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Display Mode in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Change Display Mode in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Change Display Mode in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Task Dependencies in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Task Dependencies in the Syncfusion Blazor Gantt Chart component and its properties for customization.
+description: Checkout and learn here all about Task Dependencies in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

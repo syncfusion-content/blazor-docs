@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Views in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Views in Syncfusion Blazor Scheduler component and more.
+description: Checkout and learn here all about Views in Syncfusion Blazor Scheduler component and much more details.
 platform: Blazor
 control: Scheduler
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Calendar Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Calendar component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug

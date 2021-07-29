@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Access public methods in datagrid in Blazor DataGrid Component | Syncfusion
+title: Access public methods in Blazor DataGrid Component | Syncfusion
 description: Learn here all about Access public methods in datagrid in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Access public methods in datagrid in Blazor DataGrid Component
+# Access public methods in Blazor DataGrid Component
 
 You can access the public methods available in the DataGrid component by using its reference defined in the component initialization.
 

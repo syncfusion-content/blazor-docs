@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove checkbox of the parent node in Blazor TreeView Component | Syncfusion
+title: Remove checkbox of the parent node in Blazor TreeView | Syncfusion
 description: Learn here all about Remove checkbox of the parent node in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView

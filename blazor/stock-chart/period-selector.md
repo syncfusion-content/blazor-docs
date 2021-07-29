@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Period Selector in Blazor Stock Chart Component | Syncfusion
-description: Learn here all about Period Selector in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Period Selector in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

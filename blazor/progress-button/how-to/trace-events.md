@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Trace Events of Progress Button in Blazor ProgressButton Component | Syncfusion
+title: Trace Events in Blazor ProgressButton Component | Syncfusion
 description: Learn here all about Trace Events of Progress Button in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
 ---
 
-# Trace Events of Progress Button in Blazor ProgressButton Component
+# Trace Events in Blazor ProgressButton Component
 
 The Progress Button component triggers events based on its actions. The events can be used as extension points to perform custom operations.
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Position the Dialog in center of the page on scrolling in Blazor Dialog Component | Syncfusion
-description: Learn here all about Position the Dialog in center of the page on scrolling in Syncfusion Blazor Dialog component and more.
+title: Position the Blazor Dialog in center of the page | Syncfusion
+description: Learn here all about positioning  the Blazor Dialog in center of the page on scrolling and much more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Position the Dialog in center of the page on scrolling in Blazor Dialog Component
+# Position the Blazor Dialog in center of the page on scrolling
 
 By default, when you scroll the page/container, Dialog will also scroll along with the page/container.
 To display the Dialog in the same position without scrolling, refer to the following code sample. Here added `e-fixed` class to Dialog element by using `CssClass` property and prevent the scrolling.

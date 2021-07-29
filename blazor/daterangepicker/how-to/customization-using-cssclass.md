@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customization using CssClass in Blazor DateRangePicker Component | Syncfusion
+title: Customization using CssClass in Blazor DateRangePicker | Syncfusion
 description: Learn here all about Customization using CssClass in Syncfusion Blazor DateRangePicker component and more.
 platform: Blazor
 control: DateRangePicker

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Setting Minimum and Maximum Date in Blazor Scheduler Component | Syncfusion
+title: Setting Minimum and Maximum Date in Blazor Scheduler | Syncfusion
 description: Learn here all about Setting Minimum and Maximum Date in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler

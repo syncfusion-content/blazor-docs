@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor TreeView Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor TreeView component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug

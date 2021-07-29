@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Persistence in Blazor Maps Component | Syncfusion
-description: Learn here all about State Persistence in Syncfusion Blazor Maps component and more.
+description: Checkout and learn here all about State Persistence in Syncfusion Blazor Maps component and much more.
 platform: Blazor
 control: Maps
 documentation: ug

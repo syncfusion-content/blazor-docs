@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range in Blazor ProgressBar Component | Syncfusion
-description: Learn here all about Range in Syncfusion Blazor ProgressBar component and more.
+description: Checkout and learn here all about Range in Syncfusion Blazor ProgressBar component and much more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
@@ -18,4 +18,4 @@ The range represents the entire span of the Progress Bar and it can be defined u
 </SfProgressBar>
 ```
 
-![Range in Progress Bar](images/determinate.png)s Bar](images/determinate.png)
+![Range in Progress Bar](images/determinate.png)

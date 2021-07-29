@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customizing loading indicator in Blazor Pivot Table Component | Syncfusion
+title: Customizing loading indicator in Blazor Pivot Table | Syncfusion
 description: Learn here all about Customizing loading indicator in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table

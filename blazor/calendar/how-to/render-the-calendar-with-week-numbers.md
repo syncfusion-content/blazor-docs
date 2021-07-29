@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Render the Calendar with Week Numbers in Blazor Calendar Component | Syncfusion
-description: Learn here all about Render the Calendar with Week Numbers in Syncfusion Blazor Calendar component and more.
+title: Render Week Numbers in Blazor Calendar Component | Syncfusion
+description: Checkout and learn here all about rendering week numbers in Syncfusion Blazor Calendar component and muchmore.
 platform: Blazor
 control: Calendar
 documentation: ug
 ---
 
-# Render the Calendar with Week Numbers in Blazor Calendar Component
+# Render the Blazor Calendar Component with Week Numbers
 
 You can enable `WeekNumber` in the Calendar by using the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property.
 

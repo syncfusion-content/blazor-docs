@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Datalabel Template in Blazor Charts Component | Syncfusion
-description: Learn here all about Datalabel Template support in the Syncfusion Blazor Chart component and how it is achieved.
+description: Checkout and learn here all about the Datalabel Template in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Table Formatting in Blazor DocumentEditor Component | Syncfusion
+title: Table Formatting in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about Working with Table Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor

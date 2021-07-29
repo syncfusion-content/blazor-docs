@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change caret icon in Blazor Dropdown Menu Component | Syncfusion
-description: Learn here all about Change caret icon in Syncfusion Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about Change caret icon in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug

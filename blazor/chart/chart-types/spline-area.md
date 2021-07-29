@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Area Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Spline Area Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: Spline Area in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Spline Area Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Spline Area Chart in Blazor Charts Component
+# Spline Area in Blazor Charts Component
 
 ## Spline Area
 

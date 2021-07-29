@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types and Icons in Blazor ProgressButton Component | Syncfusion
-description: Learn here all about Types and Icons in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about Types and Icons in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug

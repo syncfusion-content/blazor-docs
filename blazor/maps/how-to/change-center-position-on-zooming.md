@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change center position on zooming in Blazor Maps Component | Syncfusion
+title: Change center position on zooming in Blazor Maps | Syncfusion
 description: Learn here all about Change center position on zooming in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps

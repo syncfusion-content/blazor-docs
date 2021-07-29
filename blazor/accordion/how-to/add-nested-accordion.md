@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Nested Accordion in Blazor Accordion Component | Syncfusion
-description: Learn here all about Add Nested Accordion in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about Add Nested Accordion in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug

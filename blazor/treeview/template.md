@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor TreeView Component | Syncfusion
-description: Learn here all about Template in Syncfusion Blazor TreeView component and more.
+description: Checkout and learn here all about Template in Syncfusion Blazor TreeView component and much more details.
 platform: Blazor
 control: TreeView
 documentation: ug

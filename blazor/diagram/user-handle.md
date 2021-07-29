@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Handles in Blazor Diagram Component | Syncfusion
-description: Learn here all about User Handles in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about User Handles in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug

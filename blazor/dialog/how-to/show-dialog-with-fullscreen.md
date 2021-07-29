@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show Dialog with fullscreen in Blazor Dialog Component | Syncfusion
-description: Learn here all about Show Dialog with fullscreen in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Show Dialog with fullscreen in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug

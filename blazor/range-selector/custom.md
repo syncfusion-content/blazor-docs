@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Customization in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Customization in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug

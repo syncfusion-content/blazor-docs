@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bing Maps in Blazor Maps Component | Syncfusion
-description: Learn here all about Bing Maps in Syncfusion Blazor Maps component and more.
+description: Checkout and learn here all about Bing Maps in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

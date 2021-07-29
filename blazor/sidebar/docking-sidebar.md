@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dock in Blazor Sidebar Component | Syncfusion
-description: Learn here all about Dock in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about Dock in Syncfusion Blazor Sidebar component and much more details.
 platform: Blazor
 control: Sidebar
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor DropDown List Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor DropDown List component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug

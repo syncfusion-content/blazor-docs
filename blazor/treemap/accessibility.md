@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -39,4 +39,4 @@ This attribute provides text label with some default description for the followi
 </tr>
 </table>
 
-Change this default description using the `Description` property available in the [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html), [`TreeMapTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html), [`TreeMapSubTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSubtitleSettings.html), and [`SfTreeMap`](https://help.syncfusion.com/cr/blazor). It helps screen readers to read for assistive purpose. assistive purpose.
+Change this default description using the `Description` property available in the [`TreeMapLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html), [`TreeMapTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html), [`TreeMapSubTitleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSubtitleSettings.html), and [`SfTreeMap`](https://help.syncfusion.com/cr/blazor). It helps screen readers to read for assistive purpose.

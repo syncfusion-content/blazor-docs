@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Blazor WebAssembly Scheduler in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Blazor WebAssembly Scheduler in Syncfusion Blazor Scheduler component and more.
+title: Getting Stared with Blazor Scheduler in Client Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor Scheduler Component in Blazor WebAssembly (Client Side) App and more.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Blazor WebAssembly Scheduler in Blazor Scheduler Component
+# Blazor Scheduler Component in Client Side (WebAssembly) App
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Scheduler in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -175,4 +175,4 @@ The scheduler with the appointments will be rendered as shown in the following i
 
 ![Scheduler with appointments](../images/appointments.png)
 
-> You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.ppointments with multiple resources.
+> You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.

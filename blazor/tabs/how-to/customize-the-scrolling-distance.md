@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Scrolling distance in Blazor Tabs Component | Syncfusion
-description: Learn here all about Customize the Scrolling distance in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about Customize the Scrolling distance in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug

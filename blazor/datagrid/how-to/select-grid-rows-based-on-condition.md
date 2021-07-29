@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Select datagrid rows based on certain condition in Blazor DataGrid Component | Syncfusion
+title: Select rows based on certain condition in Blazor DataGrid | Syncfusion
 description: Learn here all about Select datagrid rows based on certain condition in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Select datagrid rows based on certain condition in Blazor DataGrid Component
+# Select rows based on certain condition in Blazor DataGrid Component
 
 You can select specific rows in the datagrid based on some conditions by using the [`SelectRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method in the [`DataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid component.
 

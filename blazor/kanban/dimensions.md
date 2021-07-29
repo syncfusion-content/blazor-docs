@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Kanban Component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion Blazor Kanban component and more.
+description: Checkout and learn here all about Dimensions in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add an icons to Dialog buttons in Blazor Dialog Component | Syncfusion
-description: Learn here all about Add an icons to Dialog buttons in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Add an icons to Dialog buttons in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug

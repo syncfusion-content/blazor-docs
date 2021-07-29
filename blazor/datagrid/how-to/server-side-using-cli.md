@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started-Server side using CLI in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Getting Started-Server side using CLI in Syncfusion Blazor DataGrid component and more.
+title: Getting Stared with Blazor DataGrid in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor DataGrid in Blazor Server Side App using CLI and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting Started-Server side using CLI in Blazor DataGrid Component
+# Blazor DataGrid Component in Server Side App using CLI
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Data Grid in Blazor Server side application using [`.NET Core CLI`](https://dotnet.microsoft.com/download/dotnet-core/3.1).
 
@@ -279,4 +279,4 @@ Output be like the below.
 
 * [Getting started with Syncfusion Data Grid in Blazor WebAssembly App using .NET Core CLI](./blazor-webassembly-data-grid-using-cli)
 
-* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2019](./blazor-webassembly-datagrid-using-visual-studio)sual-studio)
+* [Getting Started with Syncfusion DataGrid in Blazor WebAssembly using Visual Studio 2019](./blazor-webassembly-datagrid-using-visual-studio)

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Prevent default datagrid action in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Prevent default datagrid action in Syncfusion Blazor DataGrid component and more.
+title: Prevent default action in Blazor DataGrid Component | Syncfusion
+description: Learn here all about preventing the default datagrid action in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

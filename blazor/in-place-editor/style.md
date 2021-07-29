@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor In-place Editor Component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Blazor In-place Editor component and more.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug

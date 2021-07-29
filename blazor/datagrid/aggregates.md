@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregates in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Aggregates in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Aggregates in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

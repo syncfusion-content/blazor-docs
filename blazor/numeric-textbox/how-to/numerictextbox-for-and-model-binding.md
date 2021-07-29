@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Numeric-textboxFor and Model Binding in Blazor Numeric TextBox Component | Syncfusion
-description: Learn here all about Numeric-textboxFor and Model Binding in Syncfusion Blazor Numeric TextBox component and more.
+title: Model Binding in Blazor Numeric TextBox Component | Syncfusion
+description: Checkout and learn here all about Model Binding in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
 ---
 
-# Numeric-textboxFor and Model Binding in Blazor Numeric TextBox Component
+# Model Binding in Blazor Numeric TextBox Component
 
 This section demonstrates the Strongly typed extension support in NumericTextBox. The view which bind with any model is called as
 strongly typed view. You can bind any class as model to view.

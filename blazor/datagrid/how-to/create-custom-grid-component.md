@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create custom Grid component in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Create custom Grid component in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Create custom Grid component in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

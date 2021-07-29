@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor TreeView Component | Syncfusion
-description: Learn here all about Drag and Drop in Syncfusion Blazor TreeView component and more.
+description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor TreeView component and much more.
 platform: Blazor
 control: TreeView
 documentation: ug

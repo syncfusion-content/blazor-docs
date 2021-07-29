@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Toolbar Component | Syncfusion
-description: Learn here all about Style and Appearance in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug

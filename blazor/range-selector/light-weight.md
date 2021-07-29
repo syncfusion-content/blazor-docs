@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lightweight in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Lightweight in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Lightweight in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug

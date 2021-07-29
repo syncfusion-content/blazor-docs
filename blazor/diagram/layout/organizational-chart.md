@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Organizational chart in Blazor Diagram Component | Syncfusion
-description: Learn here all about Organizational chart in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Organizational chart in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug

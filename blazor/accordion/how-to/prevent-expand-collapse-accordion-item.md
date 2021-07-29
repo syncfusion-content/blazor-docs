@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent Expand or Collapse item in Blazor Accordion Component | Syncfusion
+title: Prevent Expand or Collapse item in Blazor Accordion | Syncfusion
 description: Learn here all about Prevent Expand or Collapse item in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Stop Progress Indicator in Blazor ProgressButton Component | Syncfusion
+title: Stop Progress Indicator in Blazor ProgressButton | Syncfusion
 description: Learn here all about Stop Progress Indicator in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button

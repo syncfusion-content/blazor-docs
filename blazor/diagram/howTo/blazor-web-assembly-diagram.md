@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor WebAssembly Diagram in Blazor Diagram Component | Syncfusion
-description: Learn here all about Blazor WebAssembly Diagram in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Blazor WebAssembly Diagram in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -292,4 +292,4 @@ private void CreateNode(string id, double y, FlowShapes shape, string label, boo
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)r-side-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chunk Upload in Blazor File Upload Component | Syncfusion
-description: Learn here all about Chunk Upload in Syncfusion Blazor File Upload component and more.
+description: Checkout and learn here all about Chunk Upload in Syncfusion Blazor File Upload component and much more.
 platform: Blazor
 control: File Upload
 documentation: ug

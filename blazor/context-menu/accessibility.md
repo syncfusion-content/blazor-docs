@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ContextMenu Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adaptors in Blazor DataManager Component | Syncfusion
-description: Learn here all about Adaptors in Syncfusion Blazor DataManager component and more.
+description: Checkout and learn here all about Adaptors in Syncfusion Blazor DataManager component and much more.
 platform: Blazor
 control: DataManager
 documentation: ug

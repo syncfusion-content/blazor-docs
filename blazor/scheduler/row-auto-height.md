@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Auto Height in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Row Auto Height in Syncfusion Blazor Scheduler component and more.
+description: Checkout and learn here all about Row Auto Height in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler
 documentation: ug

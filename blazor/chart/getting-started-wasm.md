@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for Wasm in Blazor Chart Component | Syncfusion
-description: Learn here all about Getting Started with WebAssembly in Syncfusion Blazor Charts component and more.
+title: Getting Stared with Blazor Chart in Client Side App | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor Chart Component in Blazor WebAssembly (Client Side) App and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started for WebAssembly in Blazor Charts Component
+# Blazor Chart Component in Client Side (WebAssembly) App
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Chart in a simple Blazor WebAssembly application using Visual Studio 2019.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layout in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Layout in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Layout in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -180,4 +180,4 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 > Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![TreeMap custom rendering direction](images/Internationalization/BottomLeftTopRight.png)ftTopRight.png)
+![TreeMap custom rendering direction](images/Internationalization/BottomLeftTopRight.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide spinner in Blazor ProgressButton Component | Syncfusion
-description: Learn here all about Hide spinner in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about Hide spinner in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug

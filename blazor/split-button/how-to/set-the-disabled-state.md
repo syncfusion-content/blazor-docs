@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the disabled state in Blazor SplitButton Component | Syncfusion
-description: Learn here all about Set the disabled state in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about Set the disabled state in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom delete confirmation dialog in Blazor DataGrid Component | Syncfusion
+title: Custom delete confirmation dialog in Blazor DataGrid | Syncfusion
 description: Learn here all about Custom delete confirmation dialog in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

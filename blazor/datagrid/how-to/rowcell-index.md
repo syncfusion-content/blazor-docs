@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get index value of selected rowcell in Blazor DataGrid Component | Syncfusion
+title: Get index value of selected cell in Blazor DataGrid | Syncfusion
 description: Learn here all about Get index value of selected rowcell in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

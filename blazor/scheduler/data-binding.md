@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor Scheduler component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor Scheduler component and much more.
 platform: Blazor
 control: Scheduler
 documentation: ug

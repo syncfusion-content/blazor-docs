@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Radio Button For and Model Binding in Blazor RadioButton Component | Syncfusion
+title: Model Binding in Blazor RadioButton Component | Syncfusion
 description: Learn here all about Radio Button For and Model Binding in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button

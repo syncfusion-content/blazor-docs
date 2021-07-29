@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types in Blazor Chip Component | Syncfusion
-description: Learn here all about Types in Syncfusion Blazor Chip component and more.
+description: Checkout and learn here all about Chip Types in Syncfusion Blazor Chip component and much more details.
 platform: Blazor
 control: Chip
 documentation: ug

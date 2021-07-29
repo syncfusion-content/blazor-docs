@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the tick label in Blazor Range Slider Component | Syncfusion
-description: Learn here all about Customize the tick label in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about Customize the tick label in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug

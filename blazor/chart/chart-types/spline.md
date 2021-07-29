@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Spline Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Spline Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: Spline in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Spline Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Spline Chart in Blazor Charts Component
+# Spline in Blazor Charts Component
 
 ## Spline
 

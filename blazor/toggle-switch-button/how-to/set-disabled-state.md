@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Set disabled state in Blazor Toggle Switch Button Component | Syncfusion
+title: Set disabled state in Blazor Toggle Switch Button | Syncfusion
 description: Learn here all about Set disabled state in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 

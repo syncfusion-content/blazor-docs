@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent default Tree Grid action in Blazor TreeGrid Component | Syncfusion
+title: Prevent default Grid action in Blazor TreeGrid Component | Syncfusion
 description: Learn here all about Prevent default Tree Grid action in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid

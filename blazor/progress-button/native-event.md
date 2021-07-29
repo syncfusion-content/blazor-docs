@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor ProgressButton Component | Syncfusion
-description: Learn here all about Native Events in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about Native Events in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug

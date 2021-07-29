@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Effectively add a range of items into ObservableCollection in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Effectively add a range of items into ObservableCollection in Syncfusion Blazor DataGrid component and more.
+title: Add Items into ObservableCollection in Blazor Grid | Syncfusion
+description: Learn here all about effectively adding a range of items into ObservableCollection in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Effectively add a range of items into ObservableCollection in Blazor DataGrid Component
+# Add a range of items into ObservableCollection in Blazor DataGrid
 
 By default, you can use `Add` method to add a single item into `ObservableCollection`. To add a range of items you can call the Add method multiple times using `foreach` statement. For every single add action into ObservableCollection, Grid will be refreshed to display the DataSource changes. So calling Add repeatedly inside foreach might have performance impact in Grid.
 

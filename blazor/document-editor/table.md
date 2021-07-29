@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tables in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Tables in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Tables in Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug

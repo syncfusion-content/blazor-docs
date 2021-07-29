@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Check list in Blazor ListView Component | Syncfusion
-description: Learn here all about Check list in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about Check list in Syncfusion Blazor ListView component and much more details.
 platform: Blazor
 control: Listview
 documentation: ug

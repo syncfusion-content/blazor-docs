@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuration in Blazor In-place Editor Component | Syncfusion
-description: Learn here all about Configuration in Syncfusion Blazor In-place Editor component and more.
+description: Checkout and learn here all about Configuration in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 
 documentation: ug

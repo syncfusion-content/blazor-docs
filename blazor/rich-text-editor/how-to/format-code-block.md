@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Format code block using toolbar button in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Format code block using toolbar button in Syncfusion Blazor RichTextEditor component and more.
+title: Format code block using toolbar in Blazor RichTextEditor | Syncfusion
+description: Learn here all about formatting code block using toolbar button in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
 ---
 
-# Format code block using toolbar button in Blazor RichTextEditor Component
+# Format code block using toolbar in Blazor RichTextEditor Component
 
 You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the `RichTextEditorToolbarSettings` - `Items` property.
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show or Hide columns in Dialog editing in Blazor DataGrid Component | Syncfusion
+title: Show or Hide columns in Dialog editing in Blazor DataGrid | Syncfusion
 description: Learn here all about Show or Hide columns in Dialog editing in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

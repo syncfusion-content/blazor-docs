@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open Editor Window on Single Click in Blazor Scheduler Component | Syncfusion
+title: Open Editor Window on Single Click in Blazor Scheduler | Syncfusion
 description: Learn here all about Open Editor Window on Single Click in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler

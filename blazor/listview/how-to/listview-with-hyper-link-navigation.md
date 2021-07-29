@@ -1,13 +1,13 @@
 ---
 layout: post
-title: ListView with hyper-link navigation in Blazor ListView Component | Syncfusion
-description: Learn here all about ListView with hyper-link navigation in Syncfusion Blazor ListView component and more.
+title: Blazor ListView Component with hyper-link navigation | Syncfusion
+description: Checkout and learn here all about Blazor ListView Component with hyper-link navigation and much more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# ListView with hyper-link navigation in Blazor ListView Component
+# Blazor ListView Component with hyper-link navigation
 
 We can use `anchor` tag along with `href` attribute in our ListView `Template` property for navigation.
 
@@ -96,4 +96,4 @@ In the below sample, we have rendered `ListView` with search engines URL.
 </style>
 ```
 
-![ListView - Hyperlink](../images/list/listview-with-hyper-link-navigation.png))
+![ListView - Hyperlink](../images/list/listview-with-hyper-link-navigation.png)

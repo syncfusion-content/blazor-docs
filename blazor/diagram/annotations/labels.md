@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Actions of annotation in Blazor Diagram Component | Syncfusion
-description: Learn here all about Actions of annotation in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Actions of annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug

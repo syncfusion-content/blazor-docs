@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about the Legend in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Sorting in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Sorting in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug

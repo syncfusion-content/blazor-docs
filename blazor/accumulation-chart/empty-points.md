@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Empty Points in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Empty Points support in the Syncfusion Blazor Accumulation Chart component and its properties for customization.
+description: Checkout and learn here all about Empty Points in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

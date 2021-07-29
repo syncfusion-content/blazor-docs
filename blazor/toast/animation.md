@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Toast Component | Syncfusion
-description: Learn here all about Animation in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Animation in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
