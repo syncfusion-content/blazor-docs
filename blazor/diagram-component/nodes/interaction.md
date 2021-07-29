@@ -64,7 +64,7 @@ And also the selection enable during the interaction.
 * An element can be selected by clicking that element.
 * When you select the elements in the diagram, the `SelectionChange` event gets triggered and to do customization in this event.
 
-![Select](../images/node-select.gif)
+![Select](../images/node-select.png)
 
 ## Drag
 
