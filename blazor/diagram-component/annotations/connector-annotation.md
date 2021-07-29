@@ -3,11 +3,11 @@ layout: post
 title: Annotation for Connector in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Annotation for Connector in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Annotation for Connector in Blazor Diagram Component
+# How to position connector’s annotation
 
 Annotations of a connector can be positioned using the following properties of AnnotationEditorViewModel class.
 
@@ -20,21 +20,21 @@ Annotations of a connector can be positioned using the following properties of A
 
 The `Offset` property of annotation is used to align the annotations based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@ConnectorCollection">
+<SfDiagramComponent Height="600px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's connector collection
-DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
 protected override void OnInitialized()
 {
 
-    ConnectorCollection = new DiagramObjectCollection<Connector>();
+    connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
     {
       SourcePoint = new Point() { X = 300, Y = 40 },
@@ -49,7 +49,7 @@ protected override void OnInitialized()
         }
     };
 
-    ConnectorCollection.Add(connector);
+    connectors.Add(connector);
 }
 }
 ```
@@ -64,21 +64,21 @@ The following image shows the relationship between the annotation position and o
 
 The connector’s annotation can be aligned over its segment path using the `Alignment` property of annotation.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@ConnectorCollection">
+<SfDiagramComponent Height="600px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's connector collection
-DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
 protected override void OnInitialized()
 {
 
-    ConnectorCollection = new DiagramObjectCollection<Connector>();
+    connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
     {
       SourcePoint = new Point() { X = 300, Y = 40 },
@@ -92,7 +92,7 @@ protected override void OnInitialized()
         }
     };
 
-    ConnectorCollection.Add(connector);
+    connectors.Add(connector);
 }
 }
 ```
@@ -103,73 +103,27 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 >**Note:** By default, Alignment value of the connector annotation is `Center`.
 
-## Displacement
-
-The `Displacement` property is used to dislocate the annotation by the value given. By default, annotation will be in center of the connector path. When you assign value to the Displacement property, annotation will be displaced from its position by Displacment value.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" Connectors="@ConnectorCollection">
-</SfDiagramComponent>
-
-@code
-{
-//Defines diagram's connector collection
-DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
-
-protected override void OnInitialized()
-{
-
-    ConnectorCollection = new DiagramObjectCollection<Connector>();
-        Connector connector = new Connector()
-    {
-      SourcePoint = new Point() { X = 300, Y = 40 },
-        TargetPoint = new Point() { X = 400, Y = 160 },
-        Type = Segments.Orthogonal,
-        Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
-      Annotations = new DiagramObjectCollection<PathAnnotation>()
-        {
-          new PathAnnotation { Content = "After", Displacement=new Point(){X=50,Y=50}, Alignment=AnnotationAlignment.After },
-        }
-    };
-
-    ConnectorCollection.Add(connector);
-}
-}
-```
-
-The following sample shows how the annotation of the displacement happens from its path.
-
-| Property| Value | Output |
-|---|---|---|
-| Displacement | (50,50) | ![Source](../images/DispalcementAfter50.png) |
-| | (20,20) | ![Center](../images/DispalcementAfter20.png) |
-| | (0,0) | ![Target](../images/DispalcementAfter0.png) |
-
->**Note:** By default, Offset value of the connector annotation is { 0.5, 0.5}.
-
 ## Segment angle
 
 The `SegmentAngle` property is used to rotate the annotation based on the connectors segment direction. By default, annotation will be in rotated in the connector path. When you assign value to the SegmentPath property, annotation will be rotated from its position based on the annotation direction.
 
 The following code example shows how the connector annotation rotated in its path direction.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@ConnectorCollection">
+<SfDiagramComponent Height="600px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's connector collection
-DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
 protected override void OnInitialized()
 {
 
-    ConnectorCollection = new DiagramObjectCollection<Connector>();
+    connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
     {
       SourcePoint = new Point() { X = 300, Y = 40 },
@@ -182,7 +136,7 @@ protected override void OnInitialized()
         }
     };
 
-    ConnectorCollection.Add(connector);
+    connectors.Add(connector);
 }
 }
 ```

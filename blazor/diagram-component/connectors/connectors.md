@@ -3,11 +3,11 @@ layout: post
 title: Actions of connectors in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Actions of connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Actions of connectors in Blazor Diagram Component
+# Connector in Blazor Diagram Component
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
 
@@ -21,7 +21,7 @@ The `SourcePoint` and `TargetPoint` properties of connector allow you to define 
 
 The following code example illustrates how to add a connector through connector collection,
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
@@ -51,7 +51,7 @@ The following code example illustrates how to add a connector through connector 
 
 You can add a connector at runtime by adding connector to the connectors collection in the Diagram component.  The following code explains how to add connectors at runtime.
 
-```cshtml
+```csharp
 @page "/ConnectorDocument2"
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="Add Connector" @onclick="@AddConnector">
@@ -78,7 +78,7 @@ You can add a connector at runtime by adding connector to the connectors collect
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram when required.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.SymbolPalette
 <div style="width: 200px; float: left">
@@ -241,8 +241,7 @@ The following code example explains how to change the connector properties.
 }
 ```
 
->**Note:**
->* BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+>**Note:** BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
 
 ## Connections
 
@@ -254,7 +253,7 @@ The following code example explains how to change the connector properties.
 
 * The following code example illustrates how to connect two nodes.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 
@@ -325,7 +324,7 @@ The `SourcePortID` and `TargetPortID` properties allow to create connections bet
 
 The following code example illustrates how to create port to port connections.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 

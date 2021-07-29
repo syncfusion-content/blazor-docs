@@ -3,7 +3,7 @@ layout: post
 title: Events in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ The `SelectionChange` event is triggered when select or unselect the node or con
 
 The following code example explains how to get the selection change event in the diagram.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChange="@SelectionChange"Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -68,7 +68,7 @@ The following code example explains how to get the selection change event in the
 
 The `PositionChange` events is triggered when drag the node or connector in interaction. The `DraggingEventArgs` interface is used to get position change event arguments.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" PositionChange="@OnPositionChange" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -121,7 +121,7 @@ The `PositionChange` events is triggered when drag the node or connector in inte
 
 The `ConnectionChange` event will notify when the connection is changed. The `ConnectionChangeEventArgs` interface is used to get event arguments.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChange="@OnConnectionChange" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>

@@ -3,32 +3,32 @@ layout: post
 title: Appearance in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Appearance in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
 # Appearance in Blazor Diagram Component
 
-## Customize the size for an Annotation
+## Size for an annotation
 
 Diagram allows you set size for annotations by using the Height and Width properties. The default value of the `Width`, and `Height` properties are 0, and it takes the node or connector size as default.
 The following code example shows how the annotation size is customized.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@ConnectorCollection">
+<SfDiagramComponent Height="600px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's connector collection
-    DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
 
-        ConnectorCollection = new DiagramObjectCollection<Connector>();
+        connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
           SourcePoint = new Point() { X = 300, Y = 40 },
@@ -41,7 +41,7 @@ The following code example shows how the annotation size is customized.
             }
         };
 
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```
@@ -52,23 +52,23 @@ The following code example shows how the annotation size is customized.
 
 Diagram provides support to add a `Hyperlink` to the nodes or connectors annotation. It can also be customized.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-    <SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+    <SfDiagramComponent Height="600px" Nodes="@nodes">
     </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            ID = "node1",
+            ID = "node",
             Width = 100,
             Height = 100,
             OffsetX = 100,
@@ -81,7 +81,7 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
             Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
-        NodeCollection.Add(node1);
+        nodes.Add(node);
 
     }
 }
@@ -91,21 +91,21 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
 ### Hyperlink with content
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
             ID = "node1",
             Width = 100,
@@ -120,7 +120,7 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        NodeCollection.Add(node1);
+        nodes.Add(node);
 
     }
 }
@@ -132,20 +132,20 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
 When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. The following code explains how to wrap a text in a node.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node() {
             ID = "node1",
             Width = 100,
@@ -159,7 +159,7 @@ When text overflows node boundaries, you can control it by using the `TextWrappi
 
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
 
     }
 }
@@ -182,20 +182,20 @@ The `TextOverflow` property specifies how the overflowed content that is not dis
 
 The following code sample shows how the different types of overflow property working for the different types of text wrapping.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's node collection
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
         Node node = new Node() {
         ID = "node1",
         Width = 100,
@@ -209,7 +209,7 @@ protected override void OnInitialized()
 
         Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 
 }
 }
@@ -230,7 +230,7 @@ protected override void OnInitialized()
 
 >**Note :** All the customization over the overflow is also applicable to connector’s annotation.
 
-## Change the appearance of Annotation
+## Customize the appearance of an annotation
 
 * You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
 
@@ -242,20 +242,20 @@ protected override void OnInitialized()
 
 The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize Background, Opacity, and Border of the annotation.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's node collection
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
     {
         ID = "node1",
@@ -270,7 +270,7 @@ protected override void OnInitialized()
 
         Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 
 }
 }
@@ -282,11 +282,11 @@ protected override void OnInitialized()
 
 * You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Style" @onclick="@UpdateStyle" />
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
@@ -294,10 +294,10 @@ protected override void OnInitialized()
 // Reference of the diagram
 SfDiagramComponent Diagram;
 //Defines diagram's node collection
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {  ID = "node1",
         Width = 100,
@@ -317,7 +317,7 @@ protected override void OnInitialized()
         },
         Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 
 public void UpdateStyle()
@@ -347,20 +347,20 @@ Double-clicking any annotation will enable the editing and the node enables firs
 
 Diagram allows to create read-only annotations. You have to set the read-only property of annotation to enable or disable the read-only `Constraints`. The following code explains how to enable read-only mode.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's node collection
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
+    nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
     {
         ID = "node1",
@@ -374,7 +374,7 @@ protected override void OnInitialized()
 
         Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 
 }
 }
@@ -384,24 +384,24 @@ protected override void OnInitialized()
 
 You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. Different labels by position is same or different point of the shapes of connector depends upon the offset values specified.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
 //Defines diagram's node collection
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
 //Defines diagram's connector collection
-DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
 protected override void OnInitialized()
 {
-    NodeCollection = new DiagramObjectCollection<Node>();
-        Node node1 = new Node()
+    nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
     {
         ID = "node1",
         Width = 100,
@@ -418,8 +418,8 @@ protected override void OnInitialized()
 
 
     };
-    NodeCollection.Add(node1);
-          ConnectorCollection = new DiagramObjectCollection<Connector>();
+    nodes.Add(node);
+          connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
     {
       SourcePoint = new Point() { X = 300, Y = 40 },
@@ -434,7 +434,7 @@ protected override void OnInitialized()
         }
     };
 
-    ConnectorCollection.Add(connector);
+    connectors.Add(connector);
 
 }
 }}
