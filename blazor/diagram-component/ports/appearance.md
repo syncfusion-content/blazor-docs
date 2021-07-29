@@ -3,11 +3,11 @@ layout: post
 title: Appearance in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Appearance in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Appearance in Blazor Diagram Component
+# Port appearance and positioning
 
 ## Appearance
 
@@ -21,18 +21,18 @@ documentation: ug
 
 The following code explains how to change the appearance of the port.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
- <SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+ <SfDiagramComponent Height="600px" Nodes="@nodes">
  </SfDiagramComponent>
 @code{
 
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes array.
-    Node node1 = new Node()
+    Node node = new Node()
     {
         // Position of the node
         OffsetX = 250,
@@ -53,7 +53,7 @@ protected override void OnInitialized()
             Width= 12, Height=12, Shape= PortShapes.Circle
         }},
     };
-    NodeCollection.Add(node1);
+    nodes.Add(node);
 }
 }
 ```
@@ -84,18 +84,18 @@ We have provided some basic built-in `PortShapes` for the port. Please find the 
 
  We have provided custom shape support for port. you can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
 
- ```cshtml
+ ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
 
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
    // A node is created and stored in nodes array.
-  Node node1 = new Node()
+  Node node = new Node()
    {
        // Position of the node
        OffsetX = 250,
@@ -117,7 +117,7 @@ protected override void OnInitialized()
           PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
       }},
    };
-   NodeCollection.Add(node1);
+   nodes.Add(node);
 }
 }
 ```

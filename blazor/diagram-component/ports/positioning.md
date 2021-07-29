@@ -3,11 +3,11 @@ layout: post
 title: Positioning in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Positioning in Blazor Diagram Component
+# How to position node’s port
 
 Diagram allows you to customize the position and appearance of the port efficiently.
 Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class.
@@ -22,13 +22,13 @@ Ports of a node can be positioned using the following properties of `PointPort`.
 
 The `Offset` property is used to align the Ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes collection.
@@ -53,12 +53,12 @@ protected override void OnInitialized()
             Width= 12, Height=12, Shape= PortShapes.Square,
         }},
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 }
 ```
 
-![`Offset`](../images/port_offset.png)
+![Offset](../images/port_offset.png)
 
 The following code shows the relationship between the shape port position and path port offset (fraction values).
 
@@ -98,14 +98,14 @@ The following table shows all the possible alignments visually with `offset (0, 
 
 The following code explains how to align ports.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
 
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes array.
@@ -132,7 +132,7 @@ protected override void OnInitialized()
             VerticalAlignment = VerticalAlignment.Center
         }},
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 }
 
@@ -149,14 +149,14 @@ protected override void OnInitialized()
 
 `Margin` is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align an port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
 
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes array.
@@ -184,7 +184,7 @@ protected override void OnInitialized()
             Margin=new Margin(){Top=10}
         }},
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 }
 

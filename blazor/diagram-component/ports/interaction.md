@@ -3,7 +3,7 @@ layout: post
 title: Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -17,18 +17,18 @@ Diagram provides the support to draw the connector in the port.
 
 The following code explains how to draw the connector by using the port constraints.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
 
-   DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+   DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
-        Node node1 = new Node()
+        Node node = new Node()
         {
             // Position of the node
             OffsetX = 250, OffsetY = 250,
@@ -49,7 +49,7 @@ The following code explains how to draw the connector by using the port constrai
                 Constraints = PortConstraints.Default|PortConstraints.Draw
             }},
         };
-        NodeCollection.Add(node1);
+        nodes.Add(node);
     }
 }
 ```

@@ -3,7 +3,7 @@ layout: post
 title: Interaction in Blazor Diagram Component | Syncfusion
 description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -15,7 +15,7 @@ Connectors can be selected, dragged, and routed over the diagram page.
 
 A connector can be selected at runtime by using the `Select` method and clear the selection in the diagram using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 <input type="button" value="Select" @onclick="OnSelect">
@@ -86,7 +86,7 @@ And also the selection can be enabled during the interaction.
 
 A connector can be dragged at runtime by using the `Drag` method. The following code explains how to drag the connector by using the drag method.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="Drag" @onclick="OnDrag">
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
@@ -150,7 +150,7 @@ And also drag the connector during the interaction.
 
 The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -198,63 +198,6 @@ The connector can be selected by clicking it. When the connector is selected, ci
 ```
 
 ![End point dragging](../images/connector-end-point.gif)
-
-## Segment Editing
-
-### Straight segment editing
-
-* End point of each straight segment is represented by a thumb that enables to edit the segment.
-* Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
-
-* Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    protected override void OnInitialized()
-    {
-        Connector Connector = new Connector()
-        // Enable the segment editing
-        { ID = "Connector1", Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb, SourcePoint = new Point { X = 200, Y = 100 }, TargetPoint = new Point { X = 340, Y = 150 }, Segments = new DiagramObjectCollection<ConnectorSegment> { new StraightSegment() { Type = Segments.Straight, Point = new Point { X = 300, Y = 200 } } } };
-        connectors.Add(Connector);
-    }
-
-}
-```
-
-![Straight Segment Editing Addition](../images/straight-segment-add.gif)
-
-### Orthogonal Segment Editing
-
-* Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
-* When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
-</SfDiagramComponent>
-@code{
-    SfDiagramComponent Diagram;
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    protected override void OnInitialized()
-    {
-        Connector Connector = new Connector()
-        // Enable the segment editing
-        { ID = "Connector2", Constraints = ConnectorConstraints.Default | ConnectorConstraints.DragSegmentThumb, Type = Segments.Orthogonal, SourcePoint = new Point { X = 400, Y = 100 }, TargetPoint = new Point { X = 500, Y = 200 } };
-        connectors.Add(Connector);
-    }
-}
-```
-
-![Orthogonal Segment Edit](../images/orthogonal-segment-edit.gif)
-
-### Bezier Segment Editing
-
-* A segment control point of the Bezier connector is used to change the bezier vectors, points of the connector.
 
 ## See also
 
