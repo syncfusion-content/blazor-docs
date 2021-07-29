@@ -157,7 +157,7 @@ And also you can resize the node during interaction.
 
 ![Resize](../images/resize.gif)
 
->Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
+>  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
 
 ## Rotate
 

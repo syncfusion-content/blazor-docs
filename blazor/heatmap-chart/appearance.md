@@ -63,7 +63,7 @@ Change the width, color, and radius of the heat map cells by using the `HeatMapC
 
 Enable or disable the cell highlighting while hover over the heat map cells by using the  `EnableCellHighlighting` property.
 
->Note: The cell highlighting only works in a SVG rendering mode.
+> The cell highlighting only works in a SVG rendering mode.
 
 ```csharp
 

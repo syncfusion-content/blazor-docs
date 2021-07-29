@@ -17,7 +17,7 @@ The Gantt Chart component supports three types of modes. They are:
 * `Manual`: All the tasks will be manually validated by the user.
 * `Custom`: Tasks will be validated as Auto or Manual based on the value mapped in the data source.
 
->Note: The default value of `TaskMode` is `Auto`.
+> The default value of `TaskMode` is `Auto`.
 
 ## Automatically Scheduled Tasks
 

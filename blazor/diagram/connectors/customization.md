@@ -150,7 +150,7 @@ The diagram provides support to flip the connector. The [`Flip`](https://help.sy
 
 * The Flip is also applicable for nodes.
 
->Note: The flip is not applicable when the connectors connect in nodes
+> The flip is not applicable when the connectors connect in nodes
 
 The flip types are as follows:
 

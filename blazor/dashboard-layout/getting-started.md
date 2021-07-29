@@ -17,7 +17,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
->Note: You can also add the client-side style resources through CDN.
+> You can also add the client-side style resources through CDN.
 
 ```html
     <head>
@@ -108,7 +108,7 @@ namespace BlazorApplication
 
 ```
 
->Note: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app.
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app.
 
 ```csharp
     <head>
@@ -144,7 +144,7 @@ It is easy to initialize a dashboard layout component with panel. To render a da
 
 ```
 
->Note: There is no need to assign default  value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
+> There is no need to assign default  value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
 
 ## Run the application
 

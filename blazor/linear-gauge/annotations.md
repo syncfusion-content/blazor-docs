@@ -1,26 +1,26 @@
 ---
 layout: post
 title: Annotations in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Annotations in Syncfusion Blazor Linear Gauge component and more.
+description: Learn here all about Annotations in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Annotations in Blazor Linear Gauge Component
+# Annotations in Blazor Linear Gauge Component (SfLinearGauge)
 
-Annotations are used to mark the specific area of interest in the Linear Gauge area with text, shapes, or images. You can add any number of annotations to the Linear Gauge.
+Annotations are used to mark the specific area of interest in the Linear Gauge with text, HTML elements, or images. Any number of annotations can be added to the Linear Gauge component.
 
-## Add annotation to linear gauge
+## Adding annotation
 
-By using the [`ContentTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~ContentTemplate.html) tag of the [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation_members.html) tag, you can specify the code to create a new element that needs to be displayed in the Linear Gauge area.
+To render the custom HTML elements in the Linear Gauge component, use the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) property in the [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) class. The [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_Content) property in [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) can be used to render the text as an annotation in the Linear Gauge.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
     <LinearGaugeAnnotations>
-        <LinearGaugeAnnotation ZIndex="1">
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1">
             <ContentTemplate>
                 <div class="custom-annotation">40</div>
             </ContentTemplate>
@@ -29,11 +29,12 @@ By using the [`ContentTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazo
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
+
 <style type="text/css">
     .custom-annotation {
         color: white;
@@ -49,28 +50,29 @@ By using the [`ContentTemplate`](https://help.syncfusion.com/cr/aspnetcore-blazo
 
 ![Linear Gauge with Annotation](images/annotation.png)
 
-## Annotation customization
+## Customization
 
-You can customize the annotation using following properties.
+The following properties are used to customize the annotation.
 
-* [`ZIndex`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~ZIndex.html) - When annotation overlaps with another element, you can use this property to bring annotation to the front or back.
-* [`AxisValue`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~AxisValue.html) - To move the annotation to the specified axis value
-* [`AxisIndex`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~AxisIndex.html) - To move the annotation to the specified axis index
-* [`HorizontalAlignment`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~HorizontalAlignment.html) - To move annotation horizontally. Possible values are "Placement.Center", "Placement.Far", "Placement.Near", "Placement.None"
-* [`VerticalAlignment`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~VerticalAlignment.html) - To move annotation vertically. Possible values are "Placement.Center", "Placement.Far", "Placement.Near", "Placement.None"
-* [`X`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~X.html), [`Y`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~Y.html) - To move annotation to the specified location.
+* [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ZIndex) - This property is used to bring the annotation to the front or back, when annotation overlaps with another element.
+* [`AxisValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_AxisValue) - This property is used to place the annotation in the specified axis value with respect to the provided axis index.
+* [`AxisIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_AxisIndex) - This property is used to place the annotation in the specified axis with respect to the provided axis value.
+* [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_HorizontalAlignment) - This property is used to place the annotation horizontally.
+* [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_VerticalAlignment) - This property is used to place the annotation vertically.
+* [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_X), [`Y`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_Y) - This property is used to place the annotation in the specified location.
 
 <!-- markdownlint-disable MD036 -->
-**Changing the z-order**
 
-You can change the z-order of an annotation element using the [`ZIndex`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~_zIndex.html) property.
+### Changing the z-index
 
-```cshtml
+To change the stack order of an annotation element, the [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ZIndex) property of the [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) class can be used.
+
+```csharp
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
     <LinearGaugeAnnotations>
-        <LinearGaugeAnnotation ZIndex="1">
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1">
             <ContentTemplate>
                 <div class="custom-annotation">40</div>
             </ContentTemplate>
@@ -79,11 +81,12 @@ You can change the z-order of an annotation element using the [`ZIndex`](https:
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
+
 <style type="text/css">
     .custom-annotation {
         color: white;
@@ -97,18 +100,19 @@ You can change the z-order of an annotation element using the [`ZIndex`](https:
 </style>
 ```
 
-![Linear Gauge with Annotation in Z-Order Sample](images/annotation.png)
+![Linear Gauge with Annotation in ZIndex](images/annotation.png)
 <!-- markdownlint-disable MD036 -->
-**Positioning an annotation**
 
-You can place an annotation anywhere in gauge area by specifying pixel values to the [`X`](https://elp.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~_x.html) and [`Y`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~_y.html) properties.
+### Positioning an annotation
 
-```cshtml
+The annotation can be placed anywhere in the Linear Gauge by setting the pixel value to the [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_X) and [`Y`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_Y) properties in the [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) class.
+
+```csharp
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
     <LinearGaugeAnnotations>
-        <LinearGaugeAnnotation ZIndex="1" X="50" Y="-100">
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1" X="50" Y="-100">
             <ContentTemplate>
                 <div class="custom-annotation">40</div>
             </ContentTemplate>
@@ -117,11 +121,12 @@ You can place an annotation anywhere in gauge area by specifying pixel values to
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
+
 <style type="text/css">
     .custom-annotation {
         color: white;
@@ -135,13 +140,13 @@ You can place an annotation anywhere in gauge area by specifying pixel values to
 </style>
 ```
 
-![Linear Gauge annotation in custom position](images/annotation-position.png)
+![Linear Gauge with Annotation in customer position](images/annotation-position.png)
 
-**Alignment of annotation**
+### Alignment of annotation
 
-You can align an annotation using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~_horizontalAlignment.html) and [`VerticalAlignment`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation~_verticalAlignment.html) properties.
+The annotation can be aligned horizontally and vertically by using the [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_VerticalAlignment) properties respectively. The possible values can be "[**Center**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Placement.html#Syncfusion_Blazor_LinearGauge_Placement_Center)", "[**Far**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Placement.html#Syncfusion_Blazor_LinearGauge_Placement_Far)", "[**Near**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Placement.html#Syncfusion_Blazor_LinearGauge_Placement_Near)", and "[**None**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Placement.html#Syncfusion_Blazor_LinearGauge_Placement_None)". The [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_HorizontalAlignment) and [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_VerticalAlignment)  properties are not applicable when the [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_X) and [`Y`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_Y) properties are set in the [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) class.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -157,11 +162,12 @@ You can align an annotation using the [`HorizontalAlignment`](https://help.syncf
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
+
 <style type="text/css">
     .custom-annotation {
         color: white;
@@ -175,13 +181,13 @@ You can align an annotation using the [`HorizontalAlignment`](https://help.syncf
 </style>
 ```
 
-![Linear Gauge with Annotation Alignment](images/annotation-alignment.png)
+![Linear Gauge with Annotation alignment](images/annotation-alignment.png)
 
 ## Multiple annotations
 
-You can add multiple annotations to the Linear Gauge using [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation_members.html) tag. Each annotation can be customized separately as shown in the following example.
+Multiple annotations can be added to the Linear Gauge component by adding the multiple [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) classes in the [`LinearGaugeAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotations.html) class and customization for the annotation can be done with the [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html) class.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -194,7 +200,7 @@ You can add multiple annotations to the Linear Gauge using [`LinearGaugeAnnotati
                 <div class="custom-annotation">Speed to get higher milage</div>
             </ContentTemplate>
         </LinearGaugeAnnotation>
-        <LinearGaugeAnnotation ZIndex="1">
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1">
             <ContentTemplate>
                 <div class="speed">40</div>
             </ContentTemplate>
@@ -203,11 +209,12 @@ You can add multiple annotations to the Linear Gauge using [`LinearGaugeAnnotati
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer Value="40"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="40"></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
+
 <style type="text/css">
     .speed {
         color: white;
@@ -227,4 +234,4 @@ You can add multiple annotations to the Linear Gauge using [`LinearGaugeAnnotati
 </style>
 ```
 
-![Linear Gauge with multiple annotations](images/multiple-annotation.png)
+![Linear Gauge with multiple Annotations](images/multiple-annotation.png)

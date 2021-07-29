@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Annotation for node in Blazor Diagram Component | Syncfusion
-description: Learn here all about Annotation for node in Syncfusion Blazor Diagram component and more.
+title: Annotation for Node in Blazor Diagram Component | Syncfusion
+description: Learn here all about Annotation for Node in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
 ---
 
-# How to position node’s annotation
+# Annotation for Node in Blazor Diagram Component
 
 Diagram allows you to customize the position and appearance of the annotation efficiently.
 Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `ShapeAnnotation` class.

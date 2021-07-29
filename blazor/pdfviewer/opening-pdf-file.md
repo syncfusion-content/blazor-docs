@@ -67,7 +67,7 @@ The following code example shows how to open and load the PDF file stored in Azu
 }
 ```
 
->Note: The **Microsoft.Azure.Storage.Blob** NuGet package must be installed in your application to use the previous code example.
+> The **Microsoft.Azure.Storage.Blob** NuGet package must be installed in your application to use the previous code example.
 
 You can open the PDF file from Azure File Storage using the following code example.
 
@@ -106,7 +106,7 @@ You can open the PDF file from Azure File Storage using the following code examp
 }
 ```
 
->Note: The **Microsoft.Azure.Storage.File** NuGet package must be installed in your application to use the previous code example.
+> The **Microsoft.Azure.Storage.File** NuGet package must be installed in your application to use the previous code example.
 
 ## Opening a PDF from database
 
@@ -137,7 +137,7 @@ The following code example shows how to open the PDF file in viewer from SQL Ser
 }
 ```
 
->Note: The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
+> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString variable in the previous code example as per the connection string of your database.
 
 ## Opening a PDF from file system
 

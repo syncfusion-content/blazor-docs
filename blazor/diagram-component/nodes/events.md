@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Events and Constraints
+# Events in Blazor Diagram Component
 
 ## Events
 

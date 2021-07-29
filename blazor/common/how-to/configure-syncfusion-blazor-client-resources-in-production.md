@@ -37,7 +37,7 @@ documentation: ug
     ```csharp
     public static async Task Main(string[] args)
     {
-        var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
+        var builder = WebAssemblyHostBuilder.CreateDefault(args);
         ....
         ....
 
@@ -60,12 +60,12 @@ documentation: ug
         <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
-***How to use CDN resources in the Blazor application***
 
-    * The same theme and script files can be referred through the CDN version by set `IgnoreScriptIsolation`
-    as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
+### How to use CDN resources in the Blazor application
 
-    * After that add the CDN interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
+* The same theme and script files can be referred through the CDN version by set `IgnoreScriptIsolation` as `true` in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
+
+* After that add the CDN interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
 
     ```html
     <head>

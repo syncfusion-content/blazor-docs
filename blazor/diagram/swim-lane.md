@@ -76,7 +76,7 @@ The following code example illustrates how to define a swimlane header.
 
 The height and width of swimlane header can be customized with `Weight` and `Height` properties of swimlane header. set fill color of header by using the `Style` property. The orientation of swimlane can be customized with the `Orientation` property of the header.
 
->Note: By default the swimlane orientation has Horizontal.
+> By default the swimlane orientation has Horizontal.
 
 The following code example illustrates how to customize the swimlane header..
 
