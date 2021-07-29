@@ -15,7 +15,7 @@ The steps below help you to convert the **Blazor application** to the **Syncfusi
 
 > Before use the Syncfusion Blazor Project Conversion, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
 
-1. Open your existing Blazor application or create a new Blazor application
+1. Open your existing Blazor application or create a new Blazor application.
 
 2. To open the Syncfusion Project Conversion Wizard, follow either one of the options below:
 

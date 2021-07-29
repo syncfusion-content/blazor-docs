@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here all about Globalization support in the Syncfusion Blazor Gantt Chart component and its properties for customization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -40,7 +40,7 @@ The **Localization** library allows you to localize default text content of the 
 
 We have used Resource file (**.resx**) to translate the static text of the Gantt.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Add **.resx** file to [`Resources`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
@@ -477,7 +477,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 * Suppose, if you want to change any specific culture, then add the corresponding culture resource (`.resx`) file by using the below reference.
 
-[Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/gantt/globalization/#localization)
+[Changing culture and Adding Resx file in the application](https://blazor.syncfusion.com/documentation/gantt-chart/globalization/#localization)
 
 ## Right to Left (RTL)
 
@@ -579,4 +579,4 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 ```
 
 > * Gantt chart doesn't have RTL support when predecessors enabled.
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

@@ -39,7 +39,7 @@ The steps below will assist you to upgrade the Syncfusion version in the Syncfus
 
 4. Check the **“Enable a backup before migrating”** checkbox if you want to take the project backup and choose the location.
 
-5. Once the migration process is completed, you will get a successful message window
+5. Once the migration process is completed, you will get a successful message window.
 
     ![MigrationSuccessMessage](../images/MigrationSuccess.png)
 

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Licensing FAQ in Blazor - Syncfusion
-description: Check out the documentation for Licensing FAQ in Blazor
+title: Licensing Errors and Solution for Syncfusion Blazor Components | Syncfusion
+description: Checkout and learn here all about licensing errors and solution for Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Licensing Errors
+# Licensing Errors and Solution for Syncfusion Blazor Components
 
 Licensing error popup is displayed with various messages under different circumstances. Here are some ways to resolve different issues.
 

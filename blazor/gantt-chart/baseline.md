@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Baseline in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Baseline in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here all about Baseline support in the Syncfusion Blazor Gantt Chart component and its properties for customization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -117,4 +117,4 @@ The following screenshot shows the baselines in Gantt Chart component.
 
 ![Alt text](images/baseline.png)
 
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

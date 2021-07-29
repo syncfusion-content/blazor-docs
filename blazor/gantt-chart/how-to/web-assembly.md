@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Gantt Chart in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about WebAssembly Gantt Chart in Syncfusion Blazor Gantt Chart component and more.
+description: Learn here all about Webassembly  in the Syncfusion Blazor Gantt Chart component and its properties for customization.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -59,7 +59,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
     </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the poly fills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
     <head>
@@ -578,4 +578,4 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](/task-dependencies/)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-![Gantt Features](../images/enableDependency.png)leDependency.png)
+![Gantt Features](../images/enableDependency.png)

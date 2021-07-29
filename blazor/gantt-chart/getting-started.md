@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Gantt Chart Component
 
-This section briefly explains about how to include a **Gantt Chart** Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
+This section briefly explains about how to include a **Gantt Chart** Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/web-assembly/) documentation pages for configuration specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -22,7 +22,7 @@ This section briefly explains about how to include a **Gantt Chart** Component i
     </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the poly fills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
     <head>
