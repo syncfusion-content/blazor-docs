@@ -577,6 +577,4 @@ The following table shows the results of applying some common DateTime formats t
 <td>12:00:00 AM</td>
 <td>The label is displayed in hours:minutes:seconds format.</td>
 </tr>
-</table>nutes:seconds format.</td>
-</tr>
 </table>
