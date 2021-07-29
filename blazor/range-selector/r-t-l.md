@@ -43,12 +43,6 @@ The Range Selector supports right-to-left (RTL), which can be enabled with the [
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70,   }
     };
 }
-
-```
-
-![RTL](images/common/rtl.png)};
-}
-
 ```
 
 ![RTL](images/common/rtl.png)

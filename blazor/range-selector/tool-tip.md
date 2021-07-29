@@ -193,6 +193,4 @@ The following table shows the results of applying some common date and time form
 <td>12:00:00 AM</td>
 <td>The label is displayed in hours:minutes:seconds format.</td>
 </tr>
-</table>urs:minutes:seconds format.</td>
-</tr>
 </table>

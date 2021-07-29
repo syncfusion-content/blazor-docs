@@ -137,4 +137,3 @@ To render a Step line series, use series [`Type`](https://help.syncfusion.com/cr
 ```
 
 ![Step Line Chart](images/series-type/stepline.png)
-![Step Line Chart](images/series-type/stepline.png)

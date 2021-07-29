@@ -48,8 +48,4 @@ By default, when the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## See Also
 
-* [Period Selector](./period-selector/)common/light-weight.png)
-
-## See Also
-
 * [Period Selector](./period-selector/)
