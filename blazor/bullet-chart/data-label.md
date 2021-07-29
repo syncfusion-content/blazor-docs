@@ -65,4 +65,4 @@ The Data Labels color, opacity, font size, font family, font weight, and font st
 
 > Refer to the [code block](#data-label) to know about the property value of the **BulletChartData**.
 
-![Bullet Chart with Data Labels](images/data-label.png)(images/data-label.png)
+![Bullet Chart with Data Labels](images/data-label.png)

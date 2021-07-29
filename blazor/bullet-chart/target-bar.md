@@ -77,4 +77,4 @@ The following properties can be used to customize the Target Bar.
 
 > Refer to the [code block](#target-bar) to know about the property value of the **BulletChartData**.
 
-![Target Bar with customization](images/target-custom.png)images/target-custom.png)
+![Target Bar with customization](images/target-custom.png)

@@ -254,4 +254,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)te.png)
+![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)

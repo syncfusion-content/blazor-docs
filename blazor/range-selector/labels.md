@@ -214,4 +214,4 @@ The font size, color, family, etc. can be customized using the [`RangeNavigatorL
 
 ```
 
-![Labels Customization](images/labels/custom.png) Customization](images/labels/custom.png)
+![Labels Customization](images/labels/custom.png)

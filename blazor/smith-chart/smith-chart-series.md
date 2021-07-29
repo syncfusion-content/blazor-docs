@@ -86,7 +86,4 @@ Animation for the Smith Chart series can be enabled by using the [`EnableAnimati
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
 }
-``` Resistance= 0, Reactance= 0.2 }
-    };
-}
 ```

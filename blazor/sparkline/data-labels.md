@@ -99,4 +99,4 @@ The Data Label text can be formatted by specifying the property name from the da
 }
 ```
 
-![Sparkline with custom data label](images/Datalabels/LabelFormat.png)labels/LabelFormat.png)
+![Sparkline with custom data label](images/Datalabels/LabelFormat.png)

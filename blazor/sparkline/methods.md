@@ -30,7 +30,4 @@ The refresh method helps to render the Sparkline component again.
         await Sparkline.Refresh();
     }
 }
-```fresh();
-    }
-}
 ```

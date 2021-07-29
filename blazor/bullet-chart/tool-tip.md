@@ -111,4 +111,4 @@ The tooltip can be rendered as a custom component using the [`Template`](https:/
 
 > Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
-![Tooltip with Template](images/tooltip-template.png)ages/tooltip-template.png)
+![Tooltip with Template](images/tooltip-template.png)

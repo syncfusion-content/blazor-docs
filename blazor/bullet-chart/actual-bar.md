@@ -79,4 +79,4 @@ The following properties will be used to customize the actual bar.
 
 > Refer to the [code block](#feature-bar) to know more about  the property value of the **BulletChartData**.
 
-![Actual Bar - Customization](images/valuebar-custom.png)ges/valuebar-custom.png)
+![Actual Bar - Customization](images/valuebar-custom.png)

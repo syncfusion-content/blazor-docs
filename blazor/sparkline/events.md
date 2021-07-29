@@ -193,7 +193,4 @@ The [`OnDataLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
         // Here you can customize the code.
     }
 }
-```he code.
-    }
-}
 ```

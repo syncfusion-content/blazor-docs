@@ -70,4 +70,4 @@ Enhance the readability of ranges with color and opacity. It can be applied usin
 }
 ```
 
-![Ranges with color customization](images/range-custom.png)(images/range-custom.png)
+![Ranges with color customization](images/range-custom.png)

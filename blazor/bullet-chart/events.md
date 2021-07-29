@@ -140,7 +140,4 @@ The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
         // Here you can customize the code.
     }
 }
-```ze the code.
-    }
-}
 ```

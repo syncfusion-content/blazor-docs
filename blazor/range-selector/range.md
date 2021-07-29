@@ -108,4 +108,4 @@ The **@bind-Value** code-behind attribute in the Range Selector can be used to a
 
 ```
 
-![Selecting range via two way binding](images/common/range.png)![Selecting range via two way binding](images/common/range.png)
+![Selecting range via two way binding](images/common/range.png)

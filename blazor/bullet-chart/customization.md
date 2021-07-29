@@ -116,4 +116,4 @@ The Bullet Chart border color can be enabled by setting the [`Color`](https://he
 
 > Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
-![Bullet Chart with Border](images/border.png)order](images/border.png)
+![Bullet Chart with Border](images/border.png)

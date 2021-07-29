@@ -93,5 +93,4 @@ The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF
         smithChart.Export(ExportType.PDF, "SmithChart", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
     }
 }
-```}
 ```

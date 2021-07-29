@@ -123,4 +123,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart with tooltip template](./images/Tooltip/TooltipTemplate.png)p/TooltipTemplate.png)
+![Smith Chart with tooltip template](./images/Tooltip/TooltipTemplate.png)

@@ -126,4 +126,4 @@ Title and subtitle can be customized using the following properties.
 }
 ```
 
-![Smith Chart with title customization](./images/Title/TitleCustomization.png)ization.png)
+![Smith Chart with title customization](./images/Title/TitleCustomization.png)

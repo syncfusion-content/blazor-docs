@@ -42,4 +42,4 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 }
 ```
 
-![Data Binding in Bullet Chart](images/local-data.png)-data.png)
+![Data Binding in Bullet Chart](images/local-data.png)

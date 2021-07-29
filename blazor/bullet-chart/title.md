@@ -123,4 +123,4 @@ The title and the subtitle - color, opacity, font size, font family, font weight
 
 > Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
-![Title and Subtitle Customization](images/title-custom.png)tle-custom.png)
+![Title and Subtitle Customization](images/title-custom.png)

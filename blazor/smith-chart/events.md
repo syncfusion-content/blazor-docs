@@ -447,7 +447,4 @@ The [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         // Here you can customize your code.
     }
 }
-```de.
-    }
-}
 ```

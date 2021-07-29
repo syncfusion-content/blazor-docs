@@ -124,4 +124,4 @@ The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-![Setting dimensions in percentage](./images/Dimension/smith-chart.png)ith-chart.png)
+![Setting dimensions in percentage](./images/Dimension/smith-chart.png)

@@ -220,4 +220,4 @@ Legend can be customized by the following properties:
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend with customization](images/custom-legend.png)images/custom-legend.png)
+![Legend with customization](images/custom-legend.png)

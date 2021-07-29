@@ -166,4 +166,4 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 }
 ```
 
-![Smith Chart with axis line customization](./images/Axis/Axisline.png)ages/Axis/Axisline.png)
+![Smith Chart with axis line customization](./images/Axis/Axisline.png)
