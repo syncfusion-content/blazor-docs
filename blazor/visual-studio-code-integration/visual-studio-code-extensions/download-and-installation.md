@@ -15,7 +15,7 @@ Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code mar
 
 The following prerequisites software need to be installed for the Syncfusion Blazor extension installation and for creating, converting and upgrading the Syncfusion Blazor applications.
 
-* [Visual Studio Code](https://code.visualstudio.com/download)
+* [Visual Studio Code](https://code.visualstudio.com/download).
 
  > The minimum version of the Visual Studio Code is 1.29.0 to use the Syncfusion Blazor Extension.
 
@@ -23,7 +23,7 @@ The following prerequisites software need to be installed for the Syncfusion Bla
 
 * [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1) or later.
 
-* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
+* [C# Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
 
 ## Install through the Visual Studio Code Extensions
 

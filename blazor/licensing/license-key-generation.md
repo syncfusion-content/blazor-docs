@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Registering license keys in Blazor - Syncfusion
-description: Check out the documentation for Registering license keys in Blazorr
+title: License Key Generation for Syncfusion Blazor Components | Syncfusion
+description: Checkout and learn here all about license key generation for Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# License Key Generation
+# License Key Generation for Syncfusion Blazor Components
 
 License keys can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trail & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section of the Syncfusion website.
 
