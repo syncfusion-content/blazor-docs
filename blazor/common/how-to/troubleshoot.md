@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+title: How to troubleshoot server and client exceptions in Blazor | Syncfusion
+description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to troubleshoot server and client exceptions
+# How to troubleshoot server and client exceptions in Blazor
 
 <!-- markdownlint-disable MD036 -->
 
@@ -50,15 +50,10 @@ documentation: ug
 
     You may see the below exception while running the application in your production/server machine.
 
-    E> **System.NullReferenceException:** Object reference not set to an instance of an object.
-    >
-    > at `Syncfusion.Blazor.SyncfusionBlazorService.GetContext()`
-    >
-    > at `Syncfusion.Blazor.BaseComponent.OnInitializedAsync()`
-    >
-    > at `Syncfusion.Blazor.Charts.SfChart.OnInitializedAsync()`
-    >
-    > at `Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()`
+    E> **System.NullReferenceException:** Object reference not set to an instance of an object. <br /> at `Syncfusion.Blazor.SyncfusionBlazorService.GetContext()`
+    <br /> at `Syncfusion.Blazor.BaseComponent.OnInitializedAsync()`
+    <br /> at `Syncfusion.Blazor.Charts.SfChart.OnInitializedAsync()`
+    <br /> at `Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()`
 
     **Cause:**
 
@@ -89,7 +84,7 @@ documentation: ug
 
     You may get the below exception while running the Syncfusion blazor application.
 
-    E> System.IO.FileLoadException: Could not load file or assembly 'System.Text.Json, Version=4.0.1.1, Culture=neutral PublicKeyToken=cc7b13ffcd2ddd51'. The located assembly's manifest definition does not match the assembly reference.
+    E> **System.IO.FileLoadException:** Could not load file or assembly 'System.Text.Json, Version=4.0.1.1, Culture=neutral PublicKeyToken=cc7b13ffcd2ddd51'. The located assembly's manifest definition does not match the assembly reference.
 
     **Cause:**
 
@@ -221,7 +216,7 @@ documentation: ug
     | ------------- | ------------- |
     | `<base href="/myblazorapp/" />`  | `app.UsePathBase("/myblazorapp");`|
 
-    > Note : The trailing slash is must for '_Host.cshtml' base path configuration.
+    > The trailing slash is must for '_Host.cshtml' base path configuration.
 
     For further details, please refer this [MSDN documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) for your reference.
 <!-- markdownlint-enable MD036 -->

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: BUnit Testing in Blazor - Syncfusion
-description: Check out the documentation for BUnit Testing in Blazor
+title: How to Configure Syncfusion Blazor Components in bUnit Testing | Syncfusion	
+description: Checkout and learn here all about configuring syncfusion Blazor Components in bUnit Testing and much more.
 platform: Blazor
 component: Common
 documentation: ug
