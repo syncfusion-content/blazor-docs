@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Stacked Column in Blazor Charts Component | Syncfusion
-description: Learn here all about Stacked Column in Syncfusion Blazor Charts component and more.
+title: Stacked Column Chart in Blazor Charts Component | Syncfusion
+description: Learn here all about Stacked Column Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Stacked Column in Blazor Charts Component
+# Stacked Column Chart in Blazor Charts Component
 
 ## Stacked Column
 
-[`Blazor Stacked Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. Shows the relation between individual values to the total sum of the points. To render a [`Stacked Column`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn).
+[`Stacked Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points. To render a [`Stacked Column`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-column-chart) series, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingColumn).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -35,6 +35,7 @@ documentation: ug
         public double YValue { get; set; }
         public double YValue1 { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
         new ChartData { X= "USA", YValue= 46, YValue1=56 },
@@ -48,7 +49,7 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Stacked Column](../images/chart-types-images/stacked-column.png)
 
@@ -56,9 +57,9 @@ documentation: ug
 
 ## Stacking Group
 
-[`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group the stacked columns and 100% stacked columns. Columns with same group name are stacked on top of each other.
+The [`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group stacked columns and 100% stacked columns. Columns with same group name are stacked on top of each other.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -74,6 +75,7 @@ documentation: ug
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code{
     public class ChartData
     {
@@ -96,7 +98,7 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Stacking Group](../images/chart-types-images/groupcolumn.png)
 
@@ -109,7 +111,7 @@ The following properties can be used to customize the [`Stacked Column`](https:/
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -125,6 +127,7 @@ The following properties can be used to customize the [`Stacked Column`](https:/
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code{
     public class ChartData
     {
@@ -146,13 +149,13 @@ The following properties can be used to customize the [`Stacked Column`](https:/
     };
 }
 
-```
+``` 
 
-![Custom Stacked Column](../images/chart-types-images/custom-stacked-column.png)
+![Stacked Column with series customization](../images/chart-types-images/custom-stacked-column.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

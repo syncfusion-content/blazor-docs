@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mixed Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Mixed Chart in Syncfusion Blazor Charts component and more.
+description: Learn here all about Mixed Chart support in the Syncfusion Blazor Charts component and how it is achieved.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Mixed Chart in Blazor Charts Component
 
-## Multiple Series
+## Multiple Chart Series
 
 The [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property allows to add multiple series to the chart. The series are rendered in the order they were added to the series array.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -38,8 +38,9 @@ The [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public double Silver { get; set; }
         public double Bronze { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData{ Country= "USA", Gold=50, Silver=70, Bronze=45 },
         new ChartData{ Country="China", Gold=40, Silver= 60, Bronze=55 },
         new ChartData{ Country= "Japan", Gold=70, Silver= 60, Bronze=50 },
@@ -51,18 +52,17 @@ The [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     };
 }
 
-
 ```
 
-![Multiple Series](images/multiple-series/multiple-series-razor.png)
+![Multiple Chart Series](images/multiple-series/multiple-series-razor.png)
 
-## Combination Series
+## Combination Chart Series
 
-A chart can be created by combining several types such as line, column, and so on.
+A chart can be created by combining several chart types such as line, column, and so on.
 
->Bar series cannot be combined with any other series as the axis orientation is different from other series.
+> Bar series cannot be combined with any other series as the axis orientation is different from other series.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -94,30 +94,31 @@ A chart can be created by combining several types such as line, column, and so o
         public double Y3 { get; set; }
         public double Y4 { get; set; }
     }
+	
     public List<ChartData> SalesReports = new List<ChartData>
-{
-         new ChartData { X= "2005", Y= 1.2, Y1= 0.5, Y2= 0.7, Y3= -0.8, Y4= 1.5 },
-         new ChartData { X= "2006", Y= 1, Y1= 0.5, Y2= 1.4, Y3= 0, Y4= 2.3 },
-         new ChartData { X= "2007", Y= 1, Y1= 0.5, Y2= 1.5, Y3= -1, Y4= 2 },
-         new ChartData { X= "2008", Y= 0.25, Y1= 0.35, Y2= 0.35, Y3= -.35, Y4= 0.1 },
-         new ChartData { X= "2009", Y= 0.1, Y1= 0.9, Y2= -2.7, Y3= -0.3, Y4= -2.7 },
-         new ChartData { X= "2010", Y= 1, Y1= 0.5, Y2= 0.5, Y3= -0.5, Y4= 1.8 },
-         new ChartData { X= "2011", Y= 0.1, Y1= 0.25, Y2= 0.25, Y3= 0, Y4= 2 },
-         new ChartData { X= "2012", Y= -0.25, Y1= -0.5, Y2= -0.1, Y3= -0.4, Y4= 0.4 },
-         new ChartData { X= "2013", Y= 0.25, Y1= 0.5, Y2= -0.3, Y3= 0, Y4= 0.9 },
-         new ChartData { X= "2014", Y= 0.6, Y1= 0.6, Y2= -0.6, Y3= -0.6, Y4= 0.4 },
-         new ChartData { X= "2015", Y= 0.9, Y1= 0.5, Y2= 0, Y3= -0.3, Y4= 1.3 }
+	{
+        new ChartData { X= "2005", Y= 1.2, Y1= 0.5, Y2= 0.7, Y3= -0.8, Y4= 1.5 },
+        new ChartData { X= "2006", Y= 1, Y1= 0.5, Y2= 1.4, Y3= 0, Y4= 2.3 },
+        new ChartData { X= "2007", Y= 1, Y1= 0.5, Y2= 1.5, Y3= -1, Y4= 2 },
+        new ChartData { X= "2008", Y= 0.25, Y1= 0.35, Y2= 0.35, Y3= -.35, Y4= 0.1 },
+        new ChartData { X= "2009", Y= 0.1, Y1= 0.9, Y2= -2.7, Y3= -0.3, Y4= -2.7 },
+        new ChartData { X= "2010", Y= 1, Y1= 0.5, Y2= 0.5, Y3= -0.5, Y4= 1.8 },
+        new ChartData { X= "2011", Y= 0.1, Y1= 0.25, Y2= 0.25, Y3= 0, Y4= 2 },
+        new ChartData { X= "2012", Y= -0.25, Y1= -0.5, Y2= -0.1, Y3= -0.4, Y4= 0.4 },
+        new ChartData { X= "2013", Y= 0.25, Y1= 0.5, Y2= -0.3, Y3= 0, Y4= 0.9 },
+        new ChartData { X= "2014", Y= 0.6, Y1= 0.6, Y2= -0.6, Y3= -0.6, Y4= 0.4 },
+        new ChartData { X= "2015", Y= 0.9, Y1= 0.5, Y2= 0, Y3= -0.3, Y4= 1.3 }
     };
 }
 
 ```
 
-![Combination Series](images/multiple-series/combination-razor.png)
+![Combination Chart](images/multiple-series/combination-razor.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Legend](./legend)/legend)
+* [Legend](./legend)

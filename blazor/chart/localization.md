@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Charts Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor Charts component and more.
+description: Learn here all about how localization is achieved in the Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,17 +9,17 @@ documentation: ug
 
 # Localization in Blazor Charts Component
 
-We have used Resource file (**.resx**) to translate the static text of the Chart.
+The static text of the Chart was translated using a Resource file (**.resx**).
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file that contains the strings (key and value pairs) that you want to translate. For further information on how to configure and use localization in the ASP.NET Core application framework, see the [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link.
 
-* Add **.resx** file to [`Resources`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value**.
+* Add the **.resx** file to the [`Resources`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and fill in the **Name** column with the key value (Locale Keywords) and the translated string in the **Value** column.
 
 ## Blazor Server Side
 
-Following examples demonstrate how to enable **Localization** for chart in server side Blazor samples.
+In the server side Blazor samples, the following examples show how to activate **Localization** for charts.
 
-* Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
+* Open the **Startup.cs** file and, in the **ConfigureServices** function, add the following configuration.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -89,7 +89,7 @@ namespace BlazorServer
 
 ## Blazor WebAssembly
 
-Following examples demonstrate how to enable **Localization** for chart in Client side Blazor samples.
+In Client side Blazor samples, the following examples show how to activate **Localization** for charts.
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
@@ -151,8 +151,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 You can refer more details about localization [`here`](https://blazor.syncfusion.com/documentation/common/localization/).
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
-
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 ## See Also
 
 * [Data label](./data-labels)

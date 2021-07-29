@@ -1,94 +1,29 @@
 ---
 layout: post
-title: Lazy Loading in Blazor Charts Component | Syncfusion
-description: Learn here all about Lazy Loading in Syncfusion Blazor Charts component and more.
+title: Lazy loading in Blazor Chart Component | Syncfusion
+description: Learn here all about how to achieve lazy loading in the Syncfusion Blazor Chart component step by step.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD036 -->
+# Lazy loading in Blazor Chart Component
 
-# Lazy Loading in Blazor Charts Component
+The lazy loading loads data for the chart on demand. The  [`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event will be fired by the chart, allowing us to get the minimum and maximum ranges of the axes and then upload the data to the chart.
 
-Lazy loading allows you to load data for chart on demand. Chart will fire the [`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event, in that we can get the minimum and maximum range of the axis, based on this, we can upload the data to chart.
+```razor
+<ChartEvents OnScrollChanged="@ScrollChange"></ChartEvents>
 
-```
-   <ChartEvents OnScrollChanged="@ScrollChange"></ChartEvents>
-
-  void ScrollChange(ScrollEventArgs e)
-    {
-        this.dataSource = GetRangeData(Convert.ToInt32(e.CurrentRange.Minimum), Convert.ToInt32(e.CurrentRange.Maximum));
-        this.StateHasChanged();
-    }
-
-```
-
-```csharp
-
-@using Syncfusion.Blazor.Charts
-@using System.Collections.ObjectModel
-
-@if (dataSource != null)
+private void ScrollChange(ScrollEventArgs e)
 {
-    <SfChart Title="Lazy Loading Chart" @ref="chartObj">
-        <ChartEvents OnScrollChanged="@ScrollChange"></ChartEvents>
-        <ChartPrimaryXAxis>
-            <ChartAxisScrollbarSettings Enable="true" PointsLength="1000"></ChartAxisScrollbarSettings>
-        </ChartPrimaryXAxis>
-        <ChartSeriesCollection>
-            <ChartSeries DataSource="@dataSource" Fill="@color" XName="x" YName="y" Type="ChartSeriesType.Line">
-            </ChartSeries>
-        </ChartSeriesCollection>
-    </SfChart>
+    this.dataSource = GetRangeData(Convert.ToInt32(e.CurrentRange.Minimum), Convert.ToInt32(e.CurrentRange.Maximum));
+    this.StateHasChanged();
 }
-else
-{
-    <p>Chart Loading</p>
-}
-
-@code {
-
-    public SfChart chartObj;
-    int count = 1;
-    public string color = "blue";
-    Random random = new Random();
-    ObservableCollection<ColumnChartData> dataSource;
-    protected override void OnInitialized()
-    {
-        dataSource = this.GetData();
-    }
-    void ScrollChange(ScrollEventArgs e)
-    {
-        this.dataSource = GetRangeData(Convert.ToInt32(e.CurrentRange.Minimum), Convert.ToInt32(e.CurrentRange.Maximum));
-    }
-    ObservableCollection<ColumnChartData>
-    GetRangeData(int min, int max)
-    {
-        ObservableCollection<ColumnChartData> data = new ObservableCollection<ColumnChartData>();
-        for (; min <= max; min++)
-        {
-            data.Add(new ColumnChartData { x = min, y = random.Next(10, 100) });
-        }
-        return data;
-    }
-    public class ColumnChartData
-    {
-        public double x { get; set; }
-        public double y { get; set; }
-    }
-    ObservableCollection<ColumnChartData> GetData()
-    {
-        ObservableCollection<ColumnChartData> data = new ObservableCollection<ColumnChartData>();
-        for (; count <= 100; count++)
-        {
-            data.Add(new ColumnChartData { x = count++, y = random.Next(10, 100) });
-        }
-        return data;
-    }
-}
-
 
 ```
 
-> You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+{% aspTab template="chart/how-to/lazy-loading", sourceFiles="lazy-loading.razor" %}
+
+{% endaspTab %}
+
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

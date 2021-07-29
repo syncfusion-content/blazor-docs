@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotation in Blazor Charts Component | Syncfusion
-description: Learn here all about Annotation in Syncfusion Blazor Charts component and more.
+description: Learn here all about Annotation support in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,22 +9,20 @@ documentation: ug
 
 # Annotation in Blazor Charts Component
 
-Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart.
+Annotations are texts, shapes, or images that are used to highlight a specific region of interest in a chart. The [`ChartAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart. Specify the ID of the element that needs to be displayed in the chart area by using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of the annotation.
 
-The [`ChartAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotations.html) property allows to add annotations to the chart. Specify the id of the element that needs to be displayed in the chart area by using the [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Content) property of annotation.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
-
+	
     <ChartAnnotations>
-        <ChartAnnotation X="@data" Y="60" CoordinateUnits="Units.Point">
+        <ChartAnnotation X="@data" Y="65" CoordinateUnits="Units.Point">
             <ContentTemplate>
-                <div style="color: firebrick; font-size:medium; font-style:italic">Medal count</div>
+                <div style="color: firebrick; font-size: medium; font-style: italic">Highest Medal Count</div>
             </ContentTemplate>
         </ChartAnnotation>
     </ChartAnnotations>
@@ -37,33 +35,35 @@ The [`ChartAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 @code{
     string data = "France";
+	
     public class ChartData
     {
         public string Country { get; set; }
         public double Gold { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
-    new ChartData{ Country= "USA", Gold=50  },
-    new ChartData{ Country="China", Gold=40 },
-    new ChartData{ Country= "Japan", Gold=70 },
-    new ChartData{ Country= "Australia", Gold=60},
-    new ChartData{ Country= "France", Gold=50 },
-    new ChartData{ Country= "Germany", Gold=40 },
-    new ChartData{ Country= "Italy", Gold=40 },
-    new ChartData{ Country= "Sweden", Gold=30 }
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country= "China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
 
 ```
 
-![Annotation](images/annotation/annotation-razor.png)
+![Annotation in chart](images/annotation/annotation-razor.png)
 
 ## Region
 
-The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Region) property can be used to insert annotations in relation to a series or a chart. It is positioned with respect to [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Regions.html#Syncfusion_Blazor_Charts_Regions_Chart) by default.
+The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_Region) property can be used to insert annotations in relation to a series or a chart. By default, it is positioned with respect to a [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Regions.html#Syncfusion_Blazor_Charts_Regions_Chart).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -72,7 +72,7 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
     </ChartPrimaryXAxis>
 
     <ChartAnnotations>
-        <ChartAnnotation X="@Country" Y="70" Region="Regions.Series" CoordinateUnits="Units.Point">
+        <ChartAnnotation X="@Country" Y="65" Region="Regions.Series" CoordinateUnits="Units.Point">
             <ContentTemplate>
                 <div>Highest Medal Count</div>
             </ContentTemplate>
@@ -86,34 +86,36 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 </SfChart>
 
 @code{
-    string Country = "Japan";
+    string Country = "Australia";
+	
     public class ChartData
     {
         public string Country { get; set; }
         public double Gold { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
-    new ChartData{ Country= "USA", Gold=50  },
-    new ChartData{ Country="China", Gold=40 },
-    new ChartData{ Country= "Japan", Gold=70 },
-    new ChartData{ Country= "Australia", Gold=60},
-    new ChartData{ Country= "France", Gold=50 },
-    new ChartData{ Country= "Germany", Gold=40 },
-    new ChartData{ Country= "Italy", Gold=40 },
-    new ChartData{ Country= "Sweden", Gold=30 }
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country= "China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
 
 ```
 
-![Region](images/annotation/region-razor.png)
+![Insert annotations using region](images/annotation/region-razor.png)
 
 ## Co-ordinate Units
 
-[`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_CoordinateUnits) allows you to specify the annotation's coordinate units in either [`Pixel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
+The [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAnnotation.html#Syncfusion_Blazor_Charts_ChartAnnotation_CoordinateUnits) property allows to specify the annotation's coordinate units either in [`Pixel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) or [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Point).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -141,26 +143,27 @@ The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
         public string Country { get; set; }
         public double Gold { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
-    new ChartData{ Country= "USA", Gold=50  },
-    new ChartData{ Country="China", Gold=40 },
-    new ChartData{ Country= "Japan", Gold=70 },
-    new ChartData{ Country= "Australia", Gold=60},
-    new ChartData{ Country= "France", Gold=50 },
-    new ChartData{ Country= "Germany", Gold=40 },
-    new ChartData{ Country= "Italy", Gold=40 },
-    new ChartData{ Country= "Sweden", Gold=30 }
+	{
+		new ChartData{ Country= "USA", Gold=50  },
+		new ChartData{ Country= "China", Gold=40 },
+		new ChartData{ Country= "Japan", Gold=70 },
+		new ChartData{ Country= "Australia", Gold=60},
+		new ChartData{ Country= "France", Gold=50 },
+		new ChartData{ Country= "Germany", Gold=40 },
+		new ChartData{ Country= "Italy", Gold=40 },
+		new ChartData{ Country= "Sweden", Gold=30 }
     };
 }
 
 ```
 
-![Co-ordinate Unit](images/annotation/co-ordinate-razor.png)
+![Insert annotations using coordinate](images/annotation/co-ordinate-razor.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Tooltip](./tool-tip)
-* [Legend](./legend)gend)
+* [Legend](./legend)
