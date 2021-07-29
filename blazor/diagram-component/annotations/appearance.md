@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Annotation in Blazor Diagram Component | Syncfusion
-description: Learn here all about annotation customization in Syncfusion Blazor Diagram component and more.
+description: Learn here all about the annotation customization such as size, wrapping etc in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Appearance
+# Appearance in Blazor Diagram Component
 
 ## Size for an annotation
 

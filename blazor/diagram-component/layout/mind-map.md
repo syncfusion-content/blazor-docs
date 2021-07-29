@@ -1,13 +1,13 @@
 ---
 layout: post
 title: MindMap Layout in Blazor Diagram Component | Syncfusion
-description: Learn here all about MindMap layout in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to create the MindMap layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Mind map Layout
+# Mind map Layout in Blazor Diagram Component
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the `Type` of layout should be set as `MindMap`.
 The following code example illustrates how to create a mind map layout.

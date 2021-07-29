@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Node customization in Blazor Diagram Component | Syncfusion
-description: Learn here all about node customization in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to customize the node appearance in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Appearance
+# Appearance in Blazor Diagram Component
 
 * The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties.
 

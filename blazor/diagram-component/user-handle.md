@@ -1,13 +1,13 @@
 ---
 layout: post
 title: User Handle in Blazor Diagram Component | Syncfusion
-description: Learn here all about user handles in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to create the user handles in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# User Handles
+# User Handles in Blazor Diagram Component
 
 User handles are customizable handles that can be used to perform custom actions and default clipboard actions.
 

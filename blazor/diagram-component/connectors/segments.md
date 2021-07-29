@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Connector in Blazor Diagram Component | Syncfusion
-description: Learn here all about Connector segments in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to create Connector segments in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Segments
+# Segments in Blazor Diagram Component
 
 The path of the connector is defined with a collection of segments. There are three types of segments.
 

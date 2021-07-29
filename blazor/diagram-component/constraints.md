@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Constraints in Blazor Diagram Component | Syncfusion
-description: Learn here all about constraints in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to enable and disable constraints in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Constraints
+# Constraints in Blazor Diagram Component
 
 Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators (&, |, ~, <<, etc.).
 

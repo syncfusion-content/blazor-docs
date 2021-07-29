@@ -1,13 +1,13 @@
 ---
 layout: post
 title: BPMN text annotation in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN text annotation in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to create BPMN text annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# BPMN text annotation
+# BPMN text annotation in Blazor Diagram Component
 
 * A BPMN object can be associated with a text annotation that does not affect the flow but gives details about objects within a flow. The annotation property of the node is used to connect an annotation element to the BPMN node.
 
