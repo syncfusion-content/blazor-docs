@@ -47,4 +47,4 @@ In the following example, `Bugatti Chiron` is selected using [`SelectItems`](htt
 
 Output will be shown as
 
-![ListBox](./../images/select.png)/select.png)
+![ListBox](./../images/select.png)

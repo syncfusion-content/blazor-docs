@@ -26,4 +26,4 @@ If you zoom the map using the [`ZoomFactor`](https://help.syncfusion.com/cr/blaz
 </SfMaps>
 ```
 
-![Maps with zoom Factor](../images/ZoomFactor.PNG)G)
+![Maps with zoom Factor](../images/ZoomFactor.PNG)

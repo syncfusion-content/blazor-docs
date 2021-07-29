@@ -39,4 +39,4 @@ In the following demo, specified accordion item are Enable/Disable dynamically w
 
 Output be like the below.
 
-![Enable or Disable the Accordion item](../images/enableDisableItem.gif)isableItem.gif)
+![Enable or Disable the Accordion item](../images/enableDisableItem.gif)

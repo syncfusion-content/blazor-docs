@@ -197,4 +197,4 @@ You can add the icon custom css class to the Accordion header using `IconCss` pr
 
 Output be like the below.
 
-![Accordion Component with header icon](../images/icon.png)ges/icon.png)
+![Accordion Component with header icon](../images/icon.png)

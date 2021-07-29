@@ -181,4 +181,4 @@ The following example shows how to render a TreeView within the Accordion,
 
 Output be like the below.
 
-![Treeview inside Accordion](../images/treeview.png)ordion](../images/treeview.png)
+![Treeview inside Accordion](../images/treeview.png)

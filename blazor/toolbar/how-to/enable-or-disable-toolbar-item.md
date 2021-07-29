@@ -186,4 +186,4 @@ The `Disabled` property of the Toolbar item is used to enable/disable the item b
 
 Output be like the below.
 
-![Enable/Disable item](../images/disable_item.gif)f)
+![Enable/Disable item](../images/disable_item.gif)

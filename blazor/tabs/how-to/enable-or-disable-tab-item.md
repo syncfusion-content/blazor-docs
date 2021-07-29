@@ -52,4 +52,4 @@ The [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigat
 
 Output be like the below.
 
-![Dynamic Enable/Disable tab item](../images/enableDisableItem.gif).gif)
+![Dynamic Enable/Disable tab item](../images/enableDisableItem.gif)

@@ -124,4 +124,4 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
 </style>
 ```
 
-![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)istview-template-sample.png)
+![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)

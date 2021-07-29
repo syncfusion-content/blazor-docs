@@ -521,4 +521,4 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 
 Output be like the below.
 
-![Tab Wizard](../images/wizard.png)images/wizard.png)
+![Tab Wizard](../images/wizard.png)

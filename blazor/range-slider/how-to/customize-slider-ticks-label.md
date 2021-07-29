@@ -153,4 +153,4 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 </style>
 ```
 
-![Blazor- Slider - TicksLabel](./../images/ticks-label.gif)f)
+![Blazor- Slider - TicksLabel](./../images/ticks-label.gif)
