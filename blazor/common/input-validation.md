@@ -212,7 +212,7 @@ The following section provides the details about the Syncfusion Blazor UI compon
 <li>EndDate</li>
 </ul>
 </td>
-<tr>
+</tr>
 <tr>
 <td>
 <a href="http://nuget.org/packages/Syncfusion.Blazor.DropDowns/">Syncfusion.Blazor.DropDowns</a>

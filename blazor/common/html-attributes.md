@@ -46,7 +46,7 @@ The following table illustrates the HTML attributes and their equivalent Syncfus
 <td>ID</td>
 <td>
 <ul>
-<li><a href="#using-html-attributes-and-dom-events-to-the-input-element">all</a></li>
+<li>All Components</li>
 </ul>
 </td>
 </tr>
