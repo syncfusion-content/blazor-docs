@@ -127,7 +127,7 @@ The following code illustrates how add Base64 image into image node.
 
 ![Image node](images/base64.jpg)
 
->Note: Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
+> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
 
 Link 1: [`http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/`](http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/)
 
@@ -229,7 +229,7 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
 
 ![HTML node](images/Htmlnode.png)
 
->Note: HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation.
+> HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation.
 
 ## Basic shapes
 
@@ -267,11 +267,11 @@ The following code example illustrates how to create a basic shape.
      }
 ```
 
->Note: By default, the `Shape` property of the node is set as **basic**.
+> By default, the `Shape` property of the node is set as **basic**.
 
 Default property for shape is Rectangle.
 
->Note: When the `Shape` is not set for a basic shape, it is considered as a **rectangle**.
+> When the `Shape` is not set for a basic shape, it is considered as a **rectangle**.
 
 The list of basic shapes are as follows.
 

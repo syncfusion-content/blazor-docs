@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 ```
 
->Note: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the ~/Pages/_Host.cshtml page.
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the ~/Pages/_Host.cshtml page.
 
 **Step 8:** Add the Syncfusion PDF Viewer component to the **~/Pages/Index.razor** page by using the `SfPdfViewerServer` tag. Also,you can load the PDF Viewer with a document from **wwwroot/Data** location. while initial rendering itself by specifying it in the  **DocumentPath** property of the PDF Viewer component.
 
@@ -96,7 +96,7 @@ namespace BlazorApplication
 }
 ```
 
->Note: If the DocumentPath property value is not provided, the PDF Viewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
+> If the DocumentPath property value is not provided, the PDF Viewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
 **Step:9**: The Blazor application uses SignalR connection to manage communication between the server and client. By default, SignalR limits the [buffer size](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-2.1#buffer-management) to 32 KB. So,increase the buffer size of the blazor application to upload large documents from client to server.  To increase the connection buffer size, set  `MaximumReceiveMessageSize` property shown below in the **startup.cs**  file with in  **(ConfigureServices)** method.
 
@@ -111,6 +111,6 @@ public void ConfigureServices(IServiceCollection services)
 
 ![output image](../images/browser-output.png)
 
->Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
+> There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor client-side application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.ge.

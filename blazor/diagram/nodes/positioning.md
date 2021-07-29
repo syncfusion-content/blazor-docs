@@ -126,7 +126,7 @@ The following code shows how to provide the mirror image of the original element
 
 ![Node Flip](../images/Vertical_Flip.png)
 
->Note: The flip is also applicable for group and BPMN shapes.
+> The flip is also applicable for group and BPMN shapes.
 
 ## See also
 

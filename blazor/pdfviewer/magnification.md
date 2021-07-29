@@ -92,4 +92,4 @@ Also, you can programmatically perform zooming operations as follows.
 }
 ```
 
->Note: PDF Viewer can support zoom value ranges from 50% to 400%.
+> PDF Viewer can support zoom value ranges from 50% to 400%.

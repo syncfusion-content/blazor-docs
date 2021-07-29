@@ -3,7 +3,7 @@
 Diagram provides support to add different kind of nodes. They are as follows:
 
 * Image node
-* HTML node
+* HTML template shape
 * Path node
 * Basic shapes
 * Flow shapes
@@ -11,7 +11,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 ## Image
 
-Diagram allows to add images as `Image` nodes. The shape property of node allows you to set the type of node and for image nodes, it should be set as **image**. In addition, the source property of shape enables you to set the image source.
+Diagram allows to add images as `Image` nodes. The shape property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the source property of shape enables you to set the image source.
 
 The following code illustrates how an image node is created.
 
@@ -75,7 +75,7 @@ The following code illustrates how add Base64 image into image node.
 
 ![Image node](images/base64.png)
 
->Note: Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
+> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
 
 Link 1: [`http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/`](http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/)
 
@@ -254,13 +254,9 @@ The following code example illustrates how to create a basic shape.
 }
 ```
 
->Note: By default, the `Shape` property of the node is set as **Basic**.
-
-Default property for shape is Rectangle.
-
->Note:
-When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
-The `CornerRadius` property is applicable only for basic shape.
+> By default, the `Shape` property of the node is set as **Basic**.Default property for shape is Rectangle.
+> When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
+> The `CornerRadius` property is applicable only for basic shape.
 
 The list of basic shapes are as follows.
 
@@ -398,4 +394,4 @@ Diagram provides support to embed SVG element into a node. The shape property of
 
 ![Native](images/svgnode.png)
 
->* Note: Like HTML node, the SVG node also cannot be exported to image format. Fill color of svg node can be overridden by the inline style or fill of the SVG element specified in the template.
+> Like HTML node, the SVG node also cannot be exported to image format. Fill color of svg node can be overridden by the inline style or fill of the SVG element specified in the template.

@@ -46,7 +46,7 @@ string Data = await this.Diagram.SaveDiagram();
 this.Diagram.LoadDiagram(this.Data);
 ```
 
->Note: Before loading a new diagram, existing diagram is cleared.
+> Before loading a new diagram, existing diagram is cleared.
 
 ## Prevent Default Values
 

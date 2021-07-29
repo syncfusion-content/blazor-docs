@@ -63,7 +63,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
 4. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-    >Note: You can also add the client-side style resources through CDN.
+    > You can also add the client-side style resources through CDN.
 
 ```csharp
 <head>
@@ -206,7 +206,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 ![TreeView Sample](./images/list-data.png)
 
->Note: You can refer to our [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor TreeView example](https://blazor.syncfusion.com/demos/treeview/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to our [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor TreeView example](https://blazor.syncfusion.com/demos/treeview/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## See Also
 

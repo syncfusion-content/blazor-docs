@@ -167,4 +167,4 @@ The following table contains various representation of message flows.
 | InitiatingMessage | ![InitiatingMessage Message BPMN Shape](../images/IMessage.png) |
 | NonInitiatingMessage | ![NonInitiatingMessage Message BPMN Shape](../images/NIMessage.png) |
 
->Note: The default value for the property `Message` is **Default**.
+> The default value for the property `Message` is **Default**.

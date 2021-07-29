@@ -1110,7 +1110,7 @@ Updating with Dialog
 
 Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` method. You can call this method on any custom action. The following code example shows how to use this method to update a task.
 
->NOTE: Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
+> Using the `UpdateRecordByIDAsync` method, you cannot update the task ID value.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

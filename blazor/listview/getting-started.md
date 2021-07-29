@@ -25,7 +25,7 @@ This section briefly explains about how to include a `ListView` in your Blazor s
 3. Once the installation process is completed, the Syncfusion Blazor Lists package will be installed in the project.
 
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
->Note: You can also add the client-side style resources through CDN.
+> You can also add the client-side style resources through CDN.
 
 ```html
 <head>
@@ -123,7 +123,7 @@ namespace BlazorApplication
 
 ```
 
->Note: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app. You can generate scripts for required components alone using CRG. Refer [here](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/) for more details on CRG.
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app. You can generate scripts for required components alone using CRG. Refer [here](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/) for more details on CRG.
 
 ```csharp
 <head>

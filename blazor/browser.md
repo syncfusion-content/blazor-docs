@@ -9,24 +9,32 @@ documentation: ug
 
 # Browser Support
 
-Syncfusion Blazor UI components support all modern web browsers.
+Syncfusion Blazor UI components supported by all modern web browsers on Windows, Linux, MacOS and below are the list,
 
 ## Blazor WebAssembly
 
-|    Chrome    |    Firefox    |    Opera     |    Edge    |    Safari    |    IOS    |    Android    |    Microsoft Internet Explorer    |
-|--------------|---------------|--------------|------------|------------|--------------|-----------|-----------|
-|    Latest    |    Latest     |    Latest    |    Latest    |    Latest       |    Latest    |    Latest      |    Not Supported†    |
+|    Browser    |    Versions    |
+|--------------|---------------|
+|    Google Chrome, including Android & iOS    |    Latest Version  |
+|    Mozilla Firefox    |    Latest Version  |
+|    Microsoft Edge    |    Latest Version  |
+|    Apple Safari, including iOS    |    Latest Version  |
+|    Opera    |    Latest Version  |
+|    Microsoft Internet Explorer    |    Not Supported  |
 
-> †Microsoft Internet Explorer doesn't support `WebAssembly`. So, Blazor WebAssembly applications don't support Internet Explorer.
+## Blazor Server Side
 
-## Blazor Server
+|    Browser    |    Versions    |
+|--------------|---------------|
+|    Google Chrome, including Android & iOS    |    Latest Version  |
+|    Mozilla Firefox    |    Latest Version  |
+|    Microsoft Edge    |    Latest Version  |
+|    Apple Safari, including iOS    |    Latest Version  |
+|    Opera    |    Latest Version  |
+|    Microsoft Internet Explorer    |    11  |
 
-|    Chrome    |    Firefox    |    Opera     |    Edge    |    Safari    |    IOS    |    Android    |    Microsoft Internet Explorer    |
-|--------------|---------------|--------------|------------|------------|--------------|-----------|-----------|
-|    Latest    |    Latest     |    Latest    |    Latest    |    Latest       |    Latest    |    Latest      |    11+    |
-
-> †Additional polyfills are required for [.NET Core 3.1 / lower versions](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-3.1) with IE11 browser. Refer this [documentation](common/how-to/render-blazor-server-app-in-ie) to add the polyfills in Blazor server application.
+> Microsoft Internet Explorer requires additional polyfills for [.NET Core 3.1 / lower versions](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-3.1). Refer this [documentation](common/how-to/render-blazor-server-app-in-ie) to add the polyfills in Blazor server application.
 
 ## See Also
 
-* [Blazor browser requirements](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-5.0)
+* [ASP.NET Core Blazor supported platforms](https://docs.microsoft.com/en-us/aspnet/core/blazor/supported-platforms?view=aspnetcore-5.0)

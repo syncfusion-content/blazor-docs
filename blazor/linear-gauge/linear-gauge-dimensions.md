@@ -53,8 +53,4 @@ By setting value in percentage, Linear Gauge receives its dimension matching to 
 
 ![Linear Gauge with Size in Percentage](images/percentage.png)
 
-<<<<<<< HEAD
->Note: When the component's size is not specified, the height will be "**450px**" and the width will be the same as the parent element's width.
-=======
->Note: When you do not specify the size, it takes `450px` as the height and window size as its width.its width.
->>>>>>> 7b1cb970402cca446f06288cbec2bdd27bf8c246
+> When the component's size is not specified, the height will be "**450px**" and the width will be the same as the parent element's width.
