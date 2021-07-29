@@ -1,24 +1,25 @@
 ---
 layout: post
-title: Line in Blazor Charts Component | Syncfusion
-description: Learn here all about Line in Syncfusion Blazor Charts component and more.
+title: Line Chart in Blazor Charts Component | Syncfusion
+description: Learn here all about Line Series in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Line in Blazor Charts Component
+# Line Chart in Blazor Charts Component
 
 ## Line
 
 [`Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) represents and visualizes the time-dependent data to show the trends at equal intervals. It can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Line).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.Line">
         </ChartSeries>
@@ -31,8 +32,9 @@ documentation: ug
         public string X { get; set;}
         public double Y {get; set;}
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "South Korea", Y= 39.4 },
         new ChartData { X= "India", Y= 61.3 },
         new ChartData { X= "Pakistan", Y= 20.4 },
@@ -48,22 +50,23 @@ documentation: ug
     };
 }
 
-```
+``` 
 
-![Line Charts](../images/chart-types-images/line.png)
+![Line Chart](../images/chart-types-images/line.png)
 
 > Refer to our [`Blazor Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/line-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [`Blazor Line Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know how to represent time-dependent data, showing trends at equal intervals.
 
 ## Multicolored Line
 
-To render a multicolored area series, by specifying the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property as [`MultiColoredArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_MultiColoredArea) in [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html). Here, the individual colors of the segment can be mapped by using [`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_PointColorMapping) property in [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
+To render a multicolored line series, specify the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property as [`MultiColoredLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_MultiColoredLine) in [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html). Here, the individual colors of the segment can be mapped by using [`PointColorMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_PointColorMapping) property in [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" PointColorMapping="Color" Type="ChartSeriesType.MultiColoredLine">
         </ChartSeries>
@@ -77,8 +80,9 @@ To render a multicolored area series, by specifying the [`Type`](https://help.sy
         public double Y { get; set; }
         public string Color { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "South Korea", Y= 39.4, Color="red" },
         new ChartData { X= "India", Y= 61.3, Color="green" },
         new ChartData { X= "Pakistan", Y= 20.4, Color="#ff0097" },
@@ -88,7 +92,7 @@ To render a multicolored area series, by specifying the [`Type`](https://help.sy
     };
 }
 
-```
+``` 
 
 ![Multicolored Line Chart](../images/chart-types-images/multi-line.png)
 
@@ -101,12 +105,13 @@ The following properties can be used to customize the [`Line`](https://help.sync
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes for series.
 * [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Width) – Specifies the width for series.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Width="3" Opacity="0.5"
                      DashArray="5,5" Fill="blue" Type="ChartSeriesType.Line">
@@ -120,8 +125,9 @@ The following properties can be used to customize the [`Line`](https://help.sync
         public string X { get; set; }
         public double Y { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "South Korea", Y= 39.4 },
         new ChartData { X= "India", Y= 61.3 },
         new ChartData { X= "Pakistan", Y= 20.4 },
@@ -137,13 +143,13 @@ The following properties can be used to customize the [`Line`](https://help.sync
     };
 }
 
-```
+``` 
 
-![Line Chart with Series Customization](../images/chart-types-images/line-cus.png)
+![Line Chart with series customization](../images/chart-types-images/line-cus.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

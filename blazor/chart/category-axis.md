@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Category Axis in Blazor Charts Component | Syncfusion
-description: Learn here all about Category Axis in Syncfusion Blazor Charts component and more.
+description: Learn here all about Category Axis support in the Syncfusion Blazor Chart component and its properties for customization.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,11 +11,11 @@ documentation: ug
 
 The category axis is used to represent string values instead of integers.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -33,7 +33,7 @@ The category axis is used to represent string values instead of integers.
     }
 
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
@@ -42,21 +42,22 @@ The category axis is used to represent string values instead of integers.
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
         new ChartData { X= "MEX", YValue= 20 },
-     };
+    };
 }
-
 
 ```
 
+![Category Axis - Default Rendering](images/category-axis/default.png)
+
 ## Labels Placement
 
-The category labels are positioned between the ticks by default, but the [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPlacement) property allows them to be placed on the ticks as well with the [`BetweenTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) and [`OnTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks) options.
+The category labels are positioned between ticks by default, but the [`LabelPlacement`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPlacement) property allows them to be placed on the ticks as well. The available options are [`BetweenTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_BetweenTicks) (default) and [`OnTicks`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LabelPlacement.html#Syncfusion_Blazor_Charts_LabelPlacement_OnTicks).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis LabelPlacement="LabelPlacement.OnTicks" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -72,8 +73,9 @@ The category labels are positioned between the ticks by default, but the [`Label
         public string X { get; set; }
         public double YValue { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
@@ -82,22 +84,22 @@ The category labels are positioned between the ticks by default, but the [`Label
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
         new ChartData { X= "MEX", YValue= 20 },
-     };
+    };
 }
 
 ```
 
-![Labels Placement](images/category-axis/placement.png)
+![Category Axis - Labels Placement](images/category-axis/placement.png)
 
 ## Range and Interval
 
-The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties of the axis can be used to customize the range of the [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
+The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Minimum), [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Maximum), and [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Interval) properties can be used to customize the range of the [`Category`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ValueType.html#Syncfusion_Blazor_Charts_ValueType_Category) axis.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis Maximum="5" Minimum="1" Interval="2" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -113,8 +115,9 @@ The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
         public string X { get; set; }
         public double YValue { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-{
+	{
         new ChartData { X= "USA", YValue= 46 },
         new ChartData { X= "GBR", YValue= 27 },
         new ChartData { X= "CHN", YValue= 26 },
@@ -123,22 +126,24 @@ The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
         new ChartData { X= "IND", YValue= 36 },
         new ChartData { X= "DEN", YValue= 12 },
         new ChartData { X= "MEX", YValue= 20 },
-     };
+    };
 }
 
 ```
 
-![Range](images/category-axis/range.png)
+![Category Axis - Range and Interval](images/category-axis/range.png)
 
-## Indexed category axis
+## Indexed Category Axis
 
-The data source index values can also be used to render the category axis. This can be achieved by setting the [`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsIndexed) property in the axis to **true**.
+The category axis can also be rendered using the data source index values. This can be achieved by setting the [`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsIndexed) property in the axis to **true**.
 
-```csharp
+{% aspTab template="chart/axis/category/index", sourceFiles="index.razor" %}
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<SfChart Width="60%">
+<SfChart>
     <ChartPrimaryXAxis IsIndexed="true" ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
     </ChartPrimaryXAxis>
 
@@ -158,34 +163,32 @@ The data source index values can also be used to render the category axis. This 
     }
 
     public List<WeatherData> WeatherReports1 = new List<WeatherData>
-  {
-         new WeatherData{ X= "Myanmar", Y= 7.3 },
-         new WeatherData{ X= "India", Y= 7.9 },
-         new WeatherData{ X= "Bangladesh", Y= 6.8 },
-         new WeatherData{ X= "Cambodia", Y=7.0 },
-         new WeatherData{ X= "China", Y= 6.9 }
-      };
+	{
+        new WeatherData{ X= "Myanmar", Y= 7.3 },
+        new WeatherData{ X= "India", Y= 7.9 },
+        new WeatherData{ X= "Bangladesh", Y= 6.8 },
+        new WeatherData{ X= "Cambodia", Y=7.0 },
+        new WeatherData{ X= "China", Y= 6.9 }
+    };
 
     public List<WeatherData> WeatherReports2 = new List<WeatherData>
-{
-         new WeatherData{ X= "Poland", Y=2.7 },
-         new WeatherData{ X= "Australia", Y=2.5 },
-         new WeatherData{ X= "Singapore", Y=2.0 },
-         new WeatherData{ X= "Canada", Y=1.4 },
-         new WeatherData{ X= "Germany", Y=1.8 }
-     };
+	{
+        new WeatherData{ X= "Poland", Y=2.7 },
+        new WeatherData{ X= "Australia", Y=2.5 },
+        new WeatherData{ X= "Singapore", Y=2.0 },
+        new WeatherData{ X= "Canada", Y=1.4 },
+        new WeatherData{ X= "Germany", Y=1.8 }
+    };
 }
-
-
 
 ```
 
-![Indexed category axis](images/category-axis/index-category.png)
+![Indexed Category Axis](images/category-axis/index-category.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See Also
 
 * [Data Label](./data-labels)
 * [Tooltip](./tool-tip)
-* [Marker](./data-markers)rkers)
+* [Marker](./data-markers)
