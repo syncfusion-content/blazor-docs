@@ -9,10 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor MultiSelect Dropdown Component
 
-The MultiSelect component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies
-the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
-by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who
-use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The MultiSelect component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 
