@@ -17,7 +17,7 @@ The axis associated with the series can be hidden by toggling the legend item of
 
 Render a chart with three series and three axis using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) and [`ChartAxes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxes.html) properties of the chart. Map each series to a measure axis using [`YAxisName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YAxisName) property of the [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html).
 
-```razor
+```cshtml
 <SfChart>
     <ChartAxes>
         <ChartAxis Name="yAxis1" />
@@ -40,7 +40,7 @@ Render a chart with three series and three axis using [`ChartSeriesCollection`](
 
 In the [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html), configure the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_Visible) property to display the legend and the [ToggleVisibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartLegendSettings.html#Syncfusion_Blazor_Charts_ChartLegendSettings_ToggleVisibility) property to enable legend item toggling to control the visibility of the associated series.
 
-```razor
+```cshtml
 <SfChart>
     ...
     <ChartLegendSettings Visible="true" ToggleVisibility="true" />
@@ -52,7 +52,7 @@ In the [ChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 By clicking the legend items, one can now toggle the visibility of the associated series. Once the series has been removed, the associated axis will be removed from the chart. If the legend item is toggled again to show the series, the associated axis with the series will be added to the chart. The complete code snippet for the preceding steps is available below.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart>

@@ -11,7 +11,7 @@ documentation: ug
 
 Use the chart's [`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event to get the list of selected data from the chart.
 
-```razor
+```cshtml
 
 <ChartEvents OnSelectionChanged="@ShowSelectedData"></ChartEvents>
 
@@ -35,7 +35,7 @@ public void ShowSelectedData(IDragCompleteEventArgs args)
 
 By using the grid's [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html?&_ga=2.74923985.277089489.1621702797-1228991885.1619258362#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property, chart's selected data can be listed in the grid.
 
-```razor
+```cshtml
 
 <SfGrid DataSource="@SelectedData2">
     <GridColumns>

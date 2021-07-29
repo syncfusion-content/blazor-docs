@@ -15,7 +15,7 @@ A table type tooltip can be created using the [`Template`](https://help.syncfusi
 
 Render a chart with the required series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
-```razor
+```cshtml
 <SfChart Title="Weather condition JPN vs DEU">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
@@ -28,7 +28,7 @@ Render a chart with the required series using [`ChartSeriesCollection`](https://
 
 The tooltip can be enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property as **true** in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
 
-```razor
+```cshtml
     ...
     <ChartTooltipSettings Enable="true">
     ...
@@ -38,7 +38,7 @@ The tooltip can be enabled using the [`Enable`](https://help.syncfusion.com/cr/b
 
 Construct a HTML table as per the requirement and place the implicit named parameter context to access the aggregate values within the template. To retrieve aggregate values inside the template, type cast the context as [`ChartTooltipInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html).
 
-```razor
+```cshtml
     ...
     <ChartTooltipSettings Enable="true">
         <Template>
@@ -64,7 +64,7 @@ Construct a HTML table as per the requirement and place the implicit named param
 
 When the mouse is moved over the chart series points, the tooltip is displayed in table format. The complete code snippet for the preceding steps is available below.
 
-```razor
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

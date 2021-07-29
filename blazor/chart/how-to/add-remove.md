@@ -17,7 +17,7 @@ The chart series can be dynamically added or removed by adding and removing a se
 
 Render a series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) class of the chart.
 
-```razor
+```cshtml
     <SfChart>
         <ChartSeriesCollection>
             @foreach (SeriesData series in SeriesCollection)
@@ -33,7 +33,7 @@ Render a series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/b
 
 Create buttons to call add and remove methods, which will add and remove a series from the chart respectively.
 
-```razor
+```cshtml
 <SfButton @onclick="AddChartSeries">Add Chart Series</SfButton>
 <SfButton @onclick="RemoveChartSeries">Remove Chart Series</SfButton>
 ```
@@ -42,7 +42,7 @@ Create buttons to call add and remove methods, which will add and remove a serie
 
 To add a new series to the chart dynamically use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
 
-```razor
+```cshtml
     public void AddChartSeries()
     {
         SeriesCollection.Add(new SeriesData
@@ -58,7 +58,7 @@ To add a new series to the chart dynamically use the code below in the **AddChar
 
 To remove a series from the chart dynamically use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
-```razor
+```cshtml
     public void RemoveChartSeries()
     {
         if (SeriesCollection.Count > 0)
@@ -72,7 +72,7 @@ To remove a series from the chart dynamically use the code below in the **Remove
 
 By clicking the **Add Chart Series** button a new series will be added to the chart and similarly by clicking the **Remove Chart Series** button the last series in the chart series collection will be removed from the chart. The complete code snippet for the preceding steps is available below.
 
-```razor
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons

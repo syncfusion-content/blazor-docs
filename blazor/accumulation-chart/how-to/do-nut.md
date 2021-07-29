@@ -17,7 +17,7 @@ The [`AccumulationChartAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 Render a doughnut chart with the required series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
-```razor
+```cshtml
         <AccumulationChartSeriesCollection>
                 <AccumulationChartSeries InnerRadius="60%" Name="@nameof(MyDataModel.XValue)" DataSource="@chartData" 
                                         YName="@nameof(MyDataModel.YValue)" XName="@nameof(MyDataModel.XValue)">
@@ -29,7 +29,7 @@ Render a doughnut chart with the required series using [`ChartSeriesCollection`]
 
 Create a div element inside the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) to display the text placing centre of the doughnut.
 
-```razor
+```cshtml
         <AccumulationChartAnnotation>
                 <ContentTemplate>
                    <div class="donut-text">Chart Annotation</div>
@@ -42,7 +42,7 @@ Create a div element inside the [`ContentTemplate`](https://help.syncfusion.com/
 
 Since the text need to be placed in the center of the doughnut chart the [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property need to be set to **Regions.Chart**. Specify the [`CoordinateUnits`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) in [`Pixel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) and set the X and Y coordinate values in percentage as shown below.
 
-```razor
+```cshtml
         <AccumulationChartAnnotations>
                 <AccumulationChartAnnotation X="50%" Y="50%" CoordinateUnits="Units.Pixel" Region="Regions.Chart">
                 <ContentTemplate>

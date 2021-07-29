@@ -17,7 +17,7 @@ The threshold level can be indicated in the chart using the [`ChartStripline`](h
 
 Render a chart with the required series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
-```razor
+```cshtml
 <SfChart Title="Weather condition JPN vs DEU">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
     <ChartSeriesCollection>
@@ -31,7 +31,7 @@ Render a chart with the required series using [`ChartSeriesCollection`](https://
 Since this threshold must be added to the measure axis, the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html) setting will be set to [`ChartPrimaryYAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartPrimaryYAxis.html#properties).
 Using the [`ChartStriplines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplines.html) collection property of the axis, multiple thresholds can be added to a chart.
 
-```razor
+```cshtml
     ...
     <ChartPrimaryYAxis>
         <ChartStriplines>
@@ -45,7 +45,7 @@ Using the [`ChartStriplines`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 To represent the severity of the threshold, a color can be set to the stripline using the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Color) property of the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). 
 
-```razor
+```cshtml
     ...
     <ChartPrimaryYAxis>
         <ChartStriplines>
@@ -59,7 +59,7 @@ To represent the severity of the threshold, a color can be set to the stripline 
 
 The stripline's order, which determines whether it is rendered behind or above the series elements, can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_ZIndex) property of the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). 
 
-```razor
+```cshtml
     ...
     <ChartPrimaryYAxis>
         <ChartStriplines>
@@ -71,7 +71,7 @@ The stripline's order, which determines whether it is rendered behind or above t
 
 The complete code snippet for the preceding steps is available below.
 
-```razor
+```cshtml
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Weather condition JPN vs DEU">
