@@ -1,3 +1,12 @@
+---
+layout: post
+title: Summary in Blazor Diagram Component | Syncfusion 
+description: Learn about the how to arrange the topics in Blazor Diagram component of Syncfusion and more details.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 * [Getting Started](diagram-component/getting-started.md)
 * [Action of Nodes](diagram-component/nodes/nodes.md)
 * [Customization](diagram-component/nodes/customization.md)

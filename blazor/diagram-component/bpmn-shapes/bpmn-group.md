@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN group in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create the BPMN group in Syncfusion Blazor Diagram component and more.
+description: Learn here all about how to create and update the BPMN group in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

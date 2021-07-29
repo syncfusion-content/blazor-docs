@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Port appearance and positioning in Blazor Diagram Component | Syncfusion
+title: Port appearance in Blazor Diagram Component | Syncfusion
 description: Learn here all about port appearance and positioning in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
