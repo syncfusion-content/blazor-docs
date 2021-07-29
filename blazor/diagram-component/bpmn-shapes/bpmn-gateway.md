@@ -1,3 +1,12 @@
+---
+layout: post
+title: BPMN gateway in Blazor Diagram Component | Syncfusion
+description: Learn here all about BPMN gateway in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # BPMN gateway
 
 Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the `Gateway` property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.

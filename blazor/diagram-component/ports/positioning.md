@@ -1,3 +1,12 @@
+---
+layout: post
+title: Port in Blazor Diagram Component | Syncfusion
+description: Learn here all about node’s port in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # How to position node’s port
 
 Diagram allows you to customize the position and appearance of the port efficiently.
@@ -49,7 +58,7 @@ protected override void OnInitialized()
 }
 ```
 
-![`Offset`](../images/port_offset.png)
+![Offset](../images/port_offset.png)
 
 The following code shows the relationship between the shape port position and path port offset (fraction values).
 

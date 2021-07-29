@@ -1,8 +1,17 @@
+---
+layout: post
+title: User Handle in Blazor Diagram Component | Syncfusion
+description: Learn here all about user handles in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # User Handles
 
 User handles are customizable handles that can be used to perform custom actions and default clipboard actions.
 
-## Initialization an userhandle
+## Initialization an user handle
 
 The user handle can enables for the selected nodes/connectors by setting a `SelectorConstraints` as `UserHandles` and then use the `UserHandle` class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
@@ -73,11 +82,11 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
 
 ### Position
 
-The `Offset` property of userhandle is used to align the userhandles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height.
+The `Offset` property of user handle is used to align the user handles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height.
 
-The `Side` property is used to set how the userhandle is aligned based on the given `Offset`.
+The `Side` property is used to set how the user handle is aligned based on the given `Offset`.
 
-The following table shows all the possible alignments visually shows the userhandle positions.
+The following table shows all the possible alignments visually shows the user handle positions.
 
 | Offset | Side | Output |
 | -------- | -------- | -------- |
@@ -92,19 +101,19 @@ The following table shows all the possible alignments visually shows the userhan
 
 ### Size
 
-Diagram allows you set size for userhandles by using the `Size` property. The default value of the `Size` property is 25.
+Diagram allows you set size for user handles by using the `Size` property. The default value of the `Size` property is 25.
 
 ### Style
 
-* You can change the style of the userhandles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the userhandles.
+* You can change the style of the user handles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the user handles.
 
-* The userhandle's `PathColor` property used to change the color of the given `PathData` of the userhandle.
+* The user handle's `PathColor` property used to change the color of the given `PathData` of the user handle.
 
-* The userhandle `BorderColor`, `BackgroundColor` properties are used to define the background color and border color of the userhandle and the `BorderWidth` property is used to define the border width of the userhandles.
+* The user handle `BorderColor`, `BackgroundColor` properties are used to define the background color and border color of the user handle and the `BorderWidth` property is used to define the border width of the user handles.
 
-*The `Visible` property of the userhandle enables or disables the visibility of userhandle.
+*The `Visible` property of the user handle enables or disables the visibility of user handle.
 
-The following code explains how to customize the appearance of the userhandle.
+The following code explains how to customize the appearance of the user handle.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -242,7 +251,7 @@ protected override void OnInitialized()
 
 * The fixed user handle's `iconStrokeColor` and `iconStrokeWidth` property used to change the stroke color and stroke width of the given `pathData`.
 
-* The fixed user handle `handleStrokeColor` and `fill` properties are used to define the background color and border color of the userhandle and the `handleStrokeWidth` property is used to define the border width of the fixed user handle.
+* The fixed user handle `handleStrokeColor` and `fill` properties are used to define the background color and border color of the user handle and the `handleStrokeWidth` property is used to define the border width of the fixed user handle.
 
 * The `visible` property of the fixed user handle enables or disables the visibility of fixed user handle.
 
@@ -296,7 +305,7 @@ protected override void OnInitialized()
 
 ## Customizing the node fixed user handle
 
-* The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed userhandle and used together and gives you more control over the node fixed user handle positioning.
+* The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
 
 ### Margin for the node fixed user handle
 
@@ -378,9 +387,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![fixed user handle for node](images/0before.png)|
-| 0.5 | Center |![fixed user handle for node](images/0.5center.png)|
-| 1 | After |![fixed user handle for node](images/1after.png)|
+| 0 | Before |![fixed user handle for node](images/before.png)|
+| 0.5 | Center |![fixed user handle for node](images/center.png)|
+| 1 | After |![fixed user handle for node](images/after.png)|
 
 ### Displacement
 
@@ -441,7 +450,7 @@ The Diagram control provides following event for the fixed user handle.
 
 | Event Name | Event Type | Description |
 | -------- | -------- | -------- |
-| FixedUserHandleClick | FixedUserHandleClickEventArgs | Triggered when the mouse pointer is over the userhandle and mouse button is up. |
+| FixedUserHandleClick | FixedUserHandleClickEventArgs | Triggered when the mouse pointer is over the user handle and mouse button is up. |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

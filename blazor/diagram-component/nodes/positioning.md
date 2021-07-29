@@ -1,3 +1,12 @@
+---
+layout: post
+title: Node arrangement in Blazor Diagram Component | Syncfusion
+description: Learn here all about node arrangement in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Position
 
 ## Arrange the nodes
@@ -136,7 +145,7 @@ the `MaxWidth` and `MaxHeight` properties of node allows you to control the mini
 }
 ```
 
-![MaxMinSize]()
+![MaxMinSize](../images/Maxminsize.gif)
 
 ## See also
 

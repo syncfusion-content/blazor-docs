@@ -1,3 +1,12 @@
+---
+layout: post
+title: Port interaction in Blazor Diagram Component | Syncfusion
+description: Learn here all about port interaction in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Interaction
 
 The port can be dragged in the diagram area and create the connector over the port by using the `port constraints`.

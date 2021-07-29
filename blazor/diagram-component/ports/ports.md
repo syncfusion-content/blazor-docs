@@ -1,3 +1,12 @@
+---
+layout: post
+title: Port in Blazor Diagram Component | Syncfusion
+description: Learn here all about port in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Ports
 
 Port is a special connection point in a Node that you can glue the connectors. When you glue a connector to a node or port, they stay connected, even if one of the node is moved.

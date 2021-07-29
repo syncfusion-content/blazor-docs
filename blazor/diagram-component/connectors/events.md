@@ -1,3 +1,12 @@
+---
+layout: post
+title: Connector in Blazor Diagram Component | Syncfusion
+description: Learn here all about Connector events in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Events
 
 ## Selection change

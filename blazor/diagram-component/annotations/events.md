@@ -1,3 +1,12 @@
+---
+layout: post
+title: Annotation in Blazor Diagram Component | Syncfusion
+description: Learn here all about annotation events in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Events
 
 ## Text edit

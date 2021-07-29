@@ -1,3 +1,12 @@
+---
+layout: post
+title: BPMN data object in Blazor Diagram Component | Syncfusion
+description: Learn here all about BPMN data object in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # BPMN data object
 
 A data object represents information flowing through the process, such as data placed into the process, data resulting from the process, data that needs to be collected, or data that must be stored. To define a `DataObject`, set the shape to **DataObject** and the type property defines whether data is an input or output. You can create multiple instances of data object with the collection property of data.

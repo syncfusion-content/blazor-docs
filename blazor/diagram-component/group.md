@@ -1,3 +1,12 @@
+---
+layout: post
+title: Group in Blazor Diagram Component | Syncfusion
+description: Learn here all about group in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Group
 
 Group is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, groups, and connectors). Every change made to the group also affects the children. Child elements can be edited individually.

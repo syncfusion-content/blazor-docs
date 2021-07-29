@@ -1,3 +1,12 @@
+---
+layout: post
+title: Gridlines in Blazor Diagram Component | Syncfusion
+description: Learn here all about Gridlines in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Gridlines
 
 Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface.

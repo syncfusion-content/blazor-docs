@@ -1,3 +1,12 @@
+---
+layout: post
+title: Getting Started in Blazor Diagram Component | Syncfusion
+description: Learn here all about Getting Started in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Getting Started
 
 This section briefly explains about how to include a Diagram in your Blazor WebAssembly application. You can refer [Getting Started with Syncfusion Blazor for Blazor WebAssembly in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.

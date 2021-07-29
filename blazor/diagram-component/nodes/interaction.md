@@ -1,3 +1,12 @@
+---
+layout: post
+title: Node interaction in Blazor Diagram Component | Syncfusion
+description: Learn here all about node interaction in Syncfusion Blazor Diagram component and more.
+platform: Blazor
+control: Diagram Component
+documentation: ug
+---
+
 # Interaction
 
 Diagram provides the support to drag, resize, or rotate the node interactively.
