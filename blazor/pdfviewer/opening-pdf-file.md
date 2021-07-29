@@ -176,6 +176,4 @@ The following code snippet explains how the PDF file can be loaded in PDF Viewer
     static string base64String = Convert.ToBase64String(byteArray);
     public string DocumentPath { get; set; } = "data:application/pdf;base64," + base64String;
 }
-```," + base64String;
-}
 ```

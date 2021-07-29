@@ -58,6 +58,4 @@ The following sample demonstrates how to set state persistence of the Tab compon
             "base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in " +
             "Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.";
 }
-```approximately US$19.3 billion.";
-}
 ```

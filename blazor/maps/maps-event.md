@@ -991,5 +991,3 @@ The [`TooltipRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     }
 }
 ```
-}
-```

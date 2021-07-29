@@ -123,7 +123,4 @@ The `Loaded` event triggers after the component is rendered.
         // Here you can customize the code.
     }
 }
-```omize the code.
-    }
-}
 ```

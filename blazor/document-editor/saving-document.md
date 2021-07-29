@@ -112,6 +112,4 @@ You can also save or download the document in local file system.
         editor.Save("sample", FormatType.Docx);
     }
 }
-``` }
-}
 ```

@@ -109,8 +109,4 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
     }
 }
 
-```Orientation.Landscape);
-    }
-}
-
 ```

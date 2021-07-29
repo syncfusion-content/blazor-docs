@@ -591,6 +591,4 @@ On the other hand, to configure the TreeMap using Web API, provide the appropria
 @code{
     public string[] Palette = new string[] { "#C33764", "#AB3566", "#993367", "#853169", "#742F6A", "#632D6C", "#532C6D", "#412A6F", "#312870", "#1D2671" };
 }
-```#1D2671" };
-}
 ```

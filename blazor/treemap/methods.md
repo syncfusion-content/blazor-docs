@@ -153,7 +153,4 @@ The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
         new Country  {Name="Japan", GDP=4123 },
     };
 }
-``` },
-    };
-}
 ```

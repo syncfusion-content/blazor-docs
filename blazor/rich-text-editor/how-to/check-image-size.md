@@ -33,9 +33,4 @@ In the following, we have validated the image size before uploading and determin
     }
 }
 
-```rue;
-        }
-    }
-}
-
 ```

@@ -29,7 +29,4 @@ public void RangeSelectionCompleted(ZoomingEventArgs args)
     Console.WriteLine(new DateTime(1970, 1, 1).AddMilliseconds(zoomData.AxisRange.Max));
 }
 
-```ge.Max));
-}
-
 ```

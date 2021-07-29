@@ -331,7 +331,4 @@ The [`SelectorRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         // Here you can customize your code.
     }
 }
-```u can customize your code.
-    }
-}
 ```

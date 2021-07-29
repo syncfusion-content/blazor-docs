@@ -40,5 +40,4 @@ For quick view, you might need to display the PDF file in a dialog window. The f
         public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
         public string Header { get; set; } = "PDF Viewer";
 }
-```}
 ```

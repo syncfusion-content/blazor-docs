@@ -29,7 +29,5 @@ If you want to unload and clear the resources occupied by the PDF file programma
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
-```cinctly.pdf";
-}
 
 ```
