@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Index in Blazor Diagram Component | Syncfusion 
-description: Learn about the key features in Blazor Diagram component of Syncfusion and more details.
+description: Learn about the key features such as node, connector in Blazor Diagram component of Syncfusion and more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

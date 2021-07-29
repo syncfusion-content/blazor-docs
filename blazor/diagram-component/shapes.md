@@ -84,11 +84,7 @@ The following code illustrates how add Base64 image into image node.
 
 ![Image node](images/base64.png)
 
-> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues. Refer to the following link.
-
-Link 1: [`http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/`](http://asked.online/draw-images-on-canvas-locally-using-chrome/2546077/)
-
-Link 2: [`http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome`](http://stackoverflow.com/questions/4761711/local-image-in-canvas-in-chrome)
+> Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
 ### Image alignment
 

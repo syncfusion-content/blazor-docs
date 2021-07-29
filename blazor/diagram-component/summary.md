@@ -7,6 +7,8 @@ control: Diagram Component
 documentation: ug
 ---
 
+# Summary in Blazor Diagram Component
+
 * [Getting Started](diagram-component/getting-started.md)
 * [Action of Nodes](diagram-component/nodes/nodes.md)
 * [Customization](diagram-component/nodes/customization.md)
