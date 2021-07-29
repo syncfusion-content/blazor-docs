@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Items in Blazor SplitButton Component | Syncfusion
-description: Learn here all about Popup Items in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about Popup Items in Syncfusion Blazor SplitButton component and much more.
 platform: Blazor
 control: Split Button
 documentation: ug

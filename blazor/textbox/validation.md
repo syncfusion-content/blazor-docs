@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validation in Blazor TextBox Component | Syncfusion
-description: Learn here all about Validation in Syncfusion Blazor TextBox component and more.
+description: Checkout and learn here all about Validation in Syncfusion Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug

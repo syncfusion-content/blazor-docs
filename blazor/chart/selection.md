@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor Charts Component | Syncfusion
-description: Learn here all about Selection support in the Syncfusion Blazor Chart component and its properties for customization.
+description: Checkout and learn here all about Selection feature in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

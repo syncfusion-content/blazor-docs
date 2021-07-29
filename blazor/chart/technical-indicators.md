@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Technical Indicators in Blazor Charts Component | Syncfusion
-description: Learn here all about Technical Indicators support in the Syncfusion Blazor Charts component and its types in detail.
+description: Checkout and learn here all about Technical Indicators in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

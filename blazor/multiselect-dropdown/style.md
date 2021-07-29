@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Style and appearance in Blazor MultiSelect Dropdown Component | Syncfusion
+title: Style and appearance in Blazor MultiSelect Dropdown | Syncfusion
 description: Learn here all about Style and appearance in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown

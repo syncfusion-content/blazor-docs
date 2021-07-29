@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resources in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Resources in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Resources in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

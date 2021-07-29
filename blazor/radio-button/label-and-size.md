@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Label and Size in Blazor RadioButton Component | Syncfusion
-description: Learn here all about Label and Size in Syncfusion Blazor RadioButton component and more.
+description: Checkout and learn here all about Label and Size in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug

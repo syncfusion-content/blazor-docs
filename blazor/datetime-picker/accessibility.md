@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Datetime Picker Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Waterfall Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Waterfall Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: Waterfall in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Waterfall Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Waterfall Chart in Blazor Charts Component
+# Waterfall in Blazor Charts Component
 
 ## Waterfall
 

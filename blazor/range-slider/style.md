@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Structure in Blazor Range Slider Component | Syncfusion
-description: Learn here all about CSS Structure in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about CSS Structure in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Header in Blazor Scheduler Component | Syncfusion
-description: Learn here all about Custom Header in Syncfusion Blazor Scheduler component and more.
+description: Checkout and learn here all about Custom Header in Syncfusion Blazor Scheduler component and much more.
 platform: Blazor
 control: Scheduler
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Chart Types in Blazor Sparkline Component | Syncfusion
-description: Learn here all about Chart Types in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Chart Types in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -100,4 +100,4 @@ The [`Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spar
 
 > Refer to the [code block](#line) to know about the property value of the **PopulationData**.
 
-![Sparkline with Area type](images/SparklineTypes/Area.png)lineTypes/Area.png)
+![Sparkline with Area type](images/SparklineTypes/Area.png)

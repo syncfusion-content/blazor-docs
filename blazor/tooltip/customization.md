@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Tooltip Component | Syncfusion
-description: Learn here all about Customization in Syncfusion Blazor Tooltip component and more.
+description: Checkout and learn here all about Customization in Syncfusion Blazor Tooltip component and much more.
 platform: Blazor
 control: Tooltip
 documentation: ug

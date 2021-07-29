@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Localization in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

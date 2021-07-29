@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change default font-family in Blazor RichTextEditor Component | Syncfusion
+title: Change default font-family in Blazor RichTextEditor | Syncfusion
 description: Learn here all about Change default font-family in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor

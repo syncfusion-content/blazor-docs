@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open and close Context Menu in Blazor ContextMenu Component | Syncfusion
+title: Open and close Context Menu in Blazor ContextMenu | Syncfusion
 description: Learn here all about Open and close Context Menu in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu

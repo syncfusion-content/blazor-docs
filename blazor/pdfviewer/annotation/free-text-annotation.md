@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Free text annotations in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Free text annotations in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Free text annotations in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

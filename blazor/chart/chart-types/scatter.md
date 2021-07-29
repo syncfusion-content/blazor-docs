@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scatter Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Scatter Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: Scatter in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Scatter Chart in Syncfusion Blazor Charts component and muchmore.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Scatter Chart in Blazor Charts Component
+# Scatter in Blazor Charts Component
 
 ## Scatter
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Restrict the Groups in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Restrict the Groups in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Restrict the Groups in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug

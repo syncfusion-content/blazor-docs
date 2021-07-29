@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom control in datagrid toolbar in Blazor DataGrid Component | Syncfusion
+title: Custom control in Blazor DataGrid Component Toolbar | Syncfusion
 description: Learn here all about Custom control in datagrid toolbar in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

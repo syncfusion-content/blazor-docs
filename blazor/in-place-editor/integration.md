@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Integrate HTML5 Components in Blazor In-place Editor Component | Syncfusion
+title: Integrate HTML5 Components in Blazor In-place Editor | Syncfusion
 description: Learn here all about Integrate HTML5 Components in Syncfusion Blazor In-place Editor component and more.
 platform: Blazor
 control: In Place Editor 

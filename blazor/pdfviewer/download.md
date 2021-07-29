@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Download in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Download in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Source in Blazor AutoComplete Component | Syncfusion
-description: Learn here all about Data Source in Syncfusion Blazor AutoComplete component and more.
+description: Checkout and learn here all about Data Source in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

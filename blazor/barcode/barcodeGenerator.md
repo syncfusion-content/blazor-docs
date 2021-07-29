@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Barcode Generator in Blazor Barcode Component | Syncfusion
-description: Learn here all about Barcode Generator in Syncfusion Blazor Barcode component and more.
+description: Checkout and learn here all about Barcode Generator in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug

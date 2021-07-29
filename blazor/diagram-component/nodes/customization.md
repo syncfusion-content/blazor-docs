@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node customization in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to customize the node appearance in Syncfusion Blazor Diagram component and more.
+title: Customization in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor ComboBox Component | Syncfusion
-description: Learn here all about Native Events in Syncfusion Blazor ComboBox component and more.
+description: Checkout and learn here all about Native Events in Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug

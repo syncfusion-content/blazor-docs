@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show/Hide Tab item in Blazor Tabs Component | Syncfusion
-description: Learn here all about Show/Hide Tab item in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about Show/Hide Tab item in Syncfusion Blazor Tabs component and much more.
 platform: Blazor
 control: Tabs
 documentation: ug

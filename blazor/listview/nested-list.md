@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Nested list in Blazor ListView Component | Syncfusion
-description: Learn here all about Nested list in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about Nested list in Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug

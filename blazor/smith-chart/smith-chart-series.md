@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Series in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Series in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -84,9 +84,6 @@ Animation for the Smith Chart series can be enabled by using the [`EnableAnimati
         new SmithChartData { Resistance= 2, Reactance= 1.2 },
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
-    };
-}
-``` Resistance= 0, Reactance= 0.2 }
     };
 }
 ```

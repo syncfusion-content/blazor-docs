@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Prevent content swipe selection in Blazor Tabs Component | Syncfusion
-description: Learn here all about Prevent content swipe selection in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about Prevent content swipe selection in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug

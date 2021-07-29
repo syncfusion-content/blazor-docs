@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Field List in Blazor Pivot Table Component | Syncfusion
-description: Learn here all about Field List in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about Field List in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug

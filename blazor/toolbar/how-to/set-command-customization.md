@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set command customization in Blazor Toolbar Component | Syncfusion
-description: Learn here all about Set command customization in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about Set command customization in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lightweight in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Lightweight in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Lightweight in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -45,10 +45,6 @@ By default, when the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfu
 ```
 
 ![Lightweight Range Selector](images/common/light-weight.png)
-
-## See Also
-
-* [Period Selector](./period-selector/)common/light-weight.png)
 
 ## See Also
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unload the PDF document from Viewer in Blazor PDF Viewer Component | Syncfusion
+title: Unload the PDF document from Viewer in Blazor PDF Viewer | Syncfusion
 description: Learn here all about Unload the PDF document from Viewer in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
@@ -29,7 +29,5 @@ If you want to unload and clear the resources occupied by the PDF file programma
     public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
 }
 
-```cinctly.pdf";
-}
 
 ```

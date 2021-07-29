@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the tick label in Blazor Range Slider Component | Syncfusion
-description: Learn here all about Customize the tick label in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about Customize the tick label in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -153,4 +153,4 @@ Here, the color for rendered ticks has been applied through nth-child(`child_num
 </style>
 ```
 
-![Blazor- Slider - TicksLabel](./../images/ticks-label.gif)f)
+![Blazor- Slider - TicksLabel](./../images/ticks-label.gif)

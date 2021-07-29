@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Numeric Range Slider in Blazor Range Slider Component | Syncfusion
-description: Learn here all about Numeric Range Slider in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about Numeric Range Slider in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -98,4 +98,4 @@ The complete code for the above Numeric Range Slider can be found below.
 </style>
 ```
 
-![Blazor- Slider - NumericSlider](./../images/numeric.gif)es/numeric.gif)
+![Blazor- Slider - NumericSlider](./../images/numeric.gif)

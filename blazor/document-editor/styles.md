@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Styles in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug

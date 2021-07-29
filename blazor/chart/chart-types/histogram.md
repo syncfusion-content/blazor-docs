@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Histogram in Blazor Charts Component | Syncfusion
-description: Learn here all about Histogram Series in the Syncfusion Blazor Chart component and its properties for customization.
+description: Checkout and learn here all about the Histogram Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

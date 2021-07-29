@@ -91,4 +91,4 @@ Change the type of the Progress Bar by using the [`Type`](https://help.syncfusio
 </SfProgressBar>
 ```
 
-![progress bar](images/circular.png)ss bar](images/circular.png)
+![progress bar](images/circular.png)

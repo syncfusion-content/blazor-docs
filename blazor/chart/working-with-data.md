@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Charts Component | Syncfusion
-description: Learn here all about Working with Data in the Syncfusion Blazor Charts component and different data binding methods.
+description: Checkout and learn here all about Working with Data in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

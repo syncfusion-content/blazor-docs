@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable/Disable ListBox in Blazor ListBox Component | Syncfusion
-description: Learn here all about Enable/Disable ListBox in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about Enable/Disable ListBox in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug

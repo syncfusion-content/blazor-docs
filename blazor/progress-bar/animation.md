@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor ProgressBar Component | Syncfusion
-description: Learn here all about Animation in Syncfusion Blazor ProgressBar component and more.
+description: Checkout and learn here all about Animation in Syncfusion Blazor ProgressBar component and much more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
@@ -21,4 +21,4 @@ The progress bar supports animation, which can be enabled by setting the [`Enabl
 </SfProgressBar>
 ```
 
-![Progress Bar with Animation](images/animation.png)nimation](images/animation.png)
+![Progress Bar with Animation](images/animation.png)

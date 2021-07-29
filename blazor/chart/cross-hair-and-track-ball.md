@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Crosshair and Trackball in Blazor Charts Component | Syncfusion
-description: Learn here all about Crosshair and Trackball support in the Syncfusion Blazor Chart component and its properties for customization.
+description: Checkout and learn here all about Crosshair and Trackball in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug

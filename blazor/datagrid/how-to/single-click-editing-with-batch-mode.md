@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Single click editing with Batch mode in Blazor DataGrid Component | Syncfusion
+title: Single click editing with Batch mode in Blazor DataGrid | Syncfusion
 description: Learn here all about Single click editing with Batch mode in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

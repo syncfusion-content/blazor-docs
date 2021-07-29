@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Dialog Component | Syncfusion
-description: Learn here all about Animation in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Animation in Syncfusion Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug

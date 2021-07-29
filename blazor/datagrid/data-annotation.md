@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Annotation in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Data Annotation in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Data Annotation in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug

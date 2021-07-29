@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Charts Component | Syncfusion
-description: Learn here all about how localization is achieved in the Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about the Localization in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

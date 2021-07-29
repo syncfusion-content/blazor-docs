@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize progress using cssClass in Blazor ProgressButton Component | Syncfusion
+title: Customize progress using cssClass in Syncfusion Blazor ProgressButton
 description: Learn here all about Customize progress using cssClass in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button

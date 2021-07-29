@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Defer Layout Update in Blazor Pivot Table Component | Syncfusion
-description: Learn here all about Defer Layout Update in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about Defer Layout Update in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug

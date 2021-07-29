@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Islamic Calendar in Blazor Calendar Component | Syncfusion
-description: Learn here all about Islamic Calendar in Syncfusion Blazor Calendar component and more.
+description: Checkout and learn here all about Islamic Calendar in Syncfusion Blazor Calendar component and much more.
 platform: Blazor
 control: Calendar
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set state persistence in Blazor Tabs Component | Syncfusion
-description: Learn here all about Set state persistence in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about Set state persistence in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -57,7 +57,5 @@ The following sample demonstrates how to set state persistence of the Tab compon
             "audio media messages to other users using standard cellular mobile numbers. As of February 2016, WhatsApp had a user  " +
             "base of up to one billion,[10] making it the most globally popular messaging application. WhatsApp Inc., based in " +
             "Mountain View, California, was acquired by Facebook Inc. on February 19, 2014, for approximately US$19.3 billion.";
-}
-```approximately US$19.3 billion.";
 }
 ```

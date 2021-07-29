@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create and update the node in Syncfusion Blazor Diagram component and more.
+title: Action of Nodes in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Action of Nodes in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

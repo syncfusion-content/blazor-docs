@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Port in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create and add port to node , group in Syncfusion Blazor Diagram component and more.
+title: Actions of Ports in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Actions of Ports in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

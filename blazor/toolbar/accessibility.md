@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Toolbar Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Toolbar component and much more.
 platform: Blazor
 control: Toolbar
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DropDownList options with tooltip in Blazor DropDown List Component | Syncfusion
+title: DropDownList options with tooltip in Blazor DropDown List | Syncfusion
 description: Learn here all about DropDownList options with tooltip in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List

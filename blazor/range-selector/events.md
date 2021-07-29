@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Range Selector component and much more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -329,9 +329,6 @@ The [`SelectorRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     public void SelectorCustomization(RangeSelectorRenderEventArgs args)
     {
         // Here you can customize your code.
-    }
-}
-```u can customize your code.
     }
 }
 ```

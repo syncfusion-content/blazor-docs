@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent toast close with mobile swipe in Blazor Toast Component | Syncfusion
+title: Prevent toast close with mobile swipe in Blazor Toast | Syncfusion
 description: Learn here all about Prevent toast close with mobile swipe in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast

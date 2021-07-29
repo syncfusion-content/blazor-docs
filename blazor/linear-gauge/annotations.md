@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Annotations in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Annotations in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
+description: Checkout and learn here all about Annotations in Syncfusion Blazor Linear Gauge component and much more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Annotations in Blazor Linear Gauge Component (SfLinearGauge)
+# Annotations in Blazor Linear Gauge Component
 
 Annotations are used to mark the specific area of interest in the Linear Gauge with text, HTML elements, or images. Any number of annotations can be added to the Linear Gauge component.
 

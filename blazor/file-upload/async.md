@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Asynchronous Upload in Blazor File Upload Component | Syncfusion
-description: Learn here all about Asynchronous Upload in Syncfusion Blazor File Upload component and more.
+description: Checkout and learn here all about Asynchronous Upload in Syncfusion Blazor File Upload component and more.
 platform: Blazor
 control: File Upload
 documentation: ug

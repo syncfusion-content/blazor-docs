@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get selected items from listview template in Blazor ListView Component | Syncfusion
+title: Get selected items in Blazor ListView Component | Syncfusion
 description: Learn here all about Get selected items from listview template in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
@@ -124,4 +124,4 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
 </style>
 ```
 
-![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)istview-template-sample.png)
+![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)

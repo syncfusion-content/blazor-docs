@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor AutoComplete Component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Blazor AutoComplete component and more.
+description: Checkout and learn here all about Filtering in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug

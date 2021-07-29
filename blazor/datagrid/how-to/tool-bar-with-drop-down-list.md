@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create custom toolbar with drop-down list in Blazor DataGrid Component | Syncfusion
+title: Custom toolbar with drop-down list in Blazor DataGrid | Syncfusion
 description: Learn here all about Create custom toolbar with drop-down list in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

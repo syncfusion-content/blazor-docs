@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Use dynamic templates in listview based on device in Blazor ListView Component | Syncfusion
-description: Learn here all about Use dynamic templates in listview based on device in Syncfusion Blazor ListView component and more.
+title: Use dynamic templates in Blazor ListView based on device | Syncfusion
+description: Learn here all about using dynamic templates in syncfusion blazor listview based on device and more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Use dynamic templates in listview based on device in Blazor ListView Component
+# Use dynamic templates in Blazor ListView based on device
 
 The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in
 both modes. The control templates are not always fixed. Applications may need to load various templates depending

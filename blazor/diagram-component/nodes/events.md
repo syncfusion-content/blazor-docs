@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node events in Blazor Diagram Component | Syncfusion
-description: Learn here all about node events such as selectionchange in Syncfusion Blazor Diagram component and more.
+title: Events in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Tooltip in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -123,4 +123,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart with tooltip template](./images/Tooltip/TooltipTemplate.png)p/TooltipTemplate.png)
+![Smith Chart with tooltip template](./images/Tooltip/TooltipTemplate.png)

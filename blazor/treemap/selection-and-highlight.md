@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection and Highlight in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Selection and Highlight in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Selection and Highlight in Syncfusion Blazor TreeMap component and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -88,4 +88,4 @@ The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Tre
 
 > Refer to the [code block](#selection) to know about the property value of **Employees**.
 
-![TreeMap item with highlight option](images/HighlightandSelection/Highlight.png)/Highlight.png)
+![TreeMap item with highlight option](images/HighlightandSelection/Highlight.png)

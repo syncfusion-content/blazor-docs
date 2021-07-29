@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Print and Export in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Print and Export in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -106,10 +106,6 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
     private void Click(MouseEventArgs args)
     {
         RangeObj.Export(ExportType.PDF, "pngImage", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
-    }
-}
-
-```Orientation.Landscape);
     }
 }
 

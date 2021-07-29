@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Filtering in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug

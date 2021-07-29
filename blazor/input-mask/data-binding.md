@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor Input Mask Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor Input Mask component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor Input Mask component and much more.
 platform: Blazor
 control: Input Mask
 documentation: ug

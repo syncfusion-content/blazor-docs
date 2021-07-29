@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor DropDown List Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor DropDown List component and more.
+description: Checkout and learn here all about Localization in Syncfusion Blazor DropDown List component and more.
 platform: Blazor
 control: DropDown List
 documentation: ug

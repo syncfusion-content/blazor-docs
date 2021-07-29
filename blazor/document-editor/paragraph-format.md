@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Paragraph Formatting in Blazor DocumentEditor Component | Syncfusion
+title: Paragraph Formatting in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about Working with Paragraph Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Repeat Button in Blazor Button Component | Syncfusion
-description: Learn here all about Repeat Button in Syncfusion Blazor Button component and more.
+description: Checkout and learn here all about Repeat Button in Syncfusion Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug

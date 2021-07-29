@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor TimePicker Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor TimePicker component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug

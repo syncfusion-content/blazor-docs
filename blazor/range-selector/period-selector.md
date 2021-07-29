@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Period Selector in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Period Selector in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Period Selector in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -224,7 +224,5 @@ The [`DisableRangeSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 
 ## See Also
-
-* [Disable Range Selector](./light-weight/)
 
 * [Disable Range Selector](./light-weight/)

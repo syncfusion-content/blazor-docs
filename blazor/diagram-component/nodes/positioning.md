@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Node arrangement in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to arrange and update the node in Syncfusion Blazor Diagram component and more.
+title: Positioning in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

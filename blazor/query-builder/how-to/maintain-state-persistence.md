@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Maintain the State Persistence in Blazor QueryBuilder Component | Syncfusion
+title: Maintain the State Persistence in Blazor QueryBuilder | Syncfusion
 description: Learn here all about Maintain the State Persistence in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder

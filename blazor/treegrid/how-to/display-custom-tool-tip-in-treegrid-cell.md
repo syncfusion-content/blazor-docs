@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display Custom Tooltip in Tree Grid cell in Blazor TreeGrid Component | Syncfusion
+title: Display Custom Tooltip in Blazor Tree Grid Cell | Syncfusion
 description: Learn here all about Display Custom Tooltip in Tree Grid cell in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Range Slider Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug

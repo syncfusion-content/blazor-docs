@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CSS Structure in Blazor ListView Component | Syncfusion
-description: Learn here all about CSS Structure in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about CSS Structure in Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug

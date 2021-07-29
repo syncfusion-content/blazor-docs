@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Disable the DateTimePicker Component in Blazor Datetime Picker Component | Syncfusion
-description: Learn here all about Disable the DateTimePicker Component in Syncfusion Blazor Datetime Picker component and more.
+title: Disable the Blazor DateTimePicker Component | Syncfusion
+description: Checkout and learn here all about disabling the Syncfusion Blazor DateTimePicker Component and much more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
 ---
 
-# Disable the DateTimePicker Component in Blazor Datetime Picker Component
+# Disable the Blazor DateTimePicker Component
 
 To disable the DateTimePicker, set its
 [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateTimePicker%601~Enabled.html)

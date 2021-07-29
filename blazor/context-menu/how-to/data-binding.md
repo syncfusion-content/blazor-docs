@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor ContextMenu Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor ContextMenu component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor ContextMenu component and much more.
 platform: Blazor
 control: Context Menu
 documentation: ug

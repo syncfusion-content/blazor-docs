@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle No Color Support in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Handle No Color Support in Syncfusion Blazor Color Picker component and more.
+description: Checkout and learn here all about Handle No Color Support in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug

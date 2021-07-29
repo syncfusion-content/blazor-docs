@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pareto Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Pareto Series in the Syncfusion Blazor Chart component and its properties for customization.
+title: Pareto in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about the Pareto chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-# Pareto Chart in Blazor Charts Component
+# Pareto in Blazor Charts Component
 
 ## Pareto
 

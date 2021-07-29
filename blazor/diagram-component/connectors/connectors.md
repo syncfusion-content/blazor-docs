@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Connector in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create and update Connector in Syncfusion Blazor Diagram component and more.
+title: Actions of connectors in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Actions of connectors in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

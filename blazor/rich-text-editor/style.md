@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ranges in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Ranges in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about the ranges in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -70,4 +70,4 @@ Enhance the readability of ranges with color and opacity. It can be applied usin
 }
 ```
 
-![Ranges with color customization](images/range-custom.png)(images/range-custom.png)
+![Ranges with color customization](images/range-custom.png)

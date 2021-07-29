@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vertical Chart in Blazor Charts Component | Syncfusion
-description: Learn here all about Vertical Chart support in Syncfusion Blazor Charts component and how it is achieved.
+description: Checkout and learn here all about the Vertical Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug

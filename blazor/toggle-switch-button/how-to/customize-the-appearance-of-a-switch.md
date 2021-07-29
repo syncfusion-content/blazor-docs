@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the appearance of a Toggle Switch Button in Blazor Toggle Switch Button Component | Syncfusion
-description: Learn here all about Customize the appearance of a Toggle Switch Button in Syncfusion Blazor Toggle Switch Button component and more.
+title: Customize the appearance of Blazor Toggle Switch Button | Syncfusion
+description: Learn here all about customizing the appearance of a Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
 ---
 
-# Customize the appearance of a Toggle Switch Button in Blazor Toggle Switch Button Component
+# Customize the appearance of a Blazor Toggle Switch Button Component
 
 You can customize the appearance of the Toggle Switch Button component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property.
 

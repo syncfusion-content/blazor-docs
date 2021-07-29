@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shapes in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create various shapessuch as image, html etc in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Shapes in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram Component
 documentation: ug

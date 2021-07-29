@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Maps Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor Maps component and more.
+description: Checkout and learn here all about Localization in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

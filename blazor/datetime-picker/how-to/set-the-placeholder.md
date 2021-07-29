@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the Placeholder in Blazor Datetime Picker Component | Syncfusion
-description: Learn here all about Set the Placeholder in Syncfusion Blazor Datetime Picker component and more.
+description: Checkout and learn here all about Set the Placeholder in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug

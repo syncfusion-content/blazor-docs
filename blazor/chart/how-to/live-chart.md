@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Live Update in Blazor Chart Component | Syncfusion
-description: Learn here all about how to achieve a live update chart in the Syncfusion Blazor Accumulation Chart component step by step.
+title: Live Chart in Blazor Charts Component | Syncfusion
+description: Checkout and learn here all about Live Chart in Syncfusion Blazor Charts component and much more details.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD036 -->
 
-# Live Update in Blazor Chart Component (Real-Time Update)
+# Live Chart in Blazor Charts Component
 
 Live update in a chart can be achieved using the timer to update the datasource with real-time data and refresh the chart. Follow the steps below to update a chart with real-time data.
 

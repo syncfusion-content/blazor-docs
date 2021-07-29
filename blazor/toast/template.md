@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor Toast Component | Syncfusion
-description: Learn here all about Template in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Template in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug

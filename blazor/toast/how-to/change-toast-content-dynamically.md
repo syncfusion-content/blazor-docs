@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show toast content dynamically in Blazor Toast Component | Syncfusion
-description: Learn here all about Show toast content dynamically in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Show toast content dynamically in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

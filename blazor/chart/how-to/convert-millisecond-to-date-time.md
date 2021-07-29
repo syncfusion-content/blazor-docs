@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Convert millisecond to date time in Blazor Charts Component | Syncfusion
+title: Convert millisecond to date time in Blazor Chart | Syncfusion
 description: Learn here all about Convert millisecond to date time in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
@@ -27,9 +27,6 @@ public void RangeSelectionCompleted(ZoomingEventArgs args)
     var zoomData = args?.AxisCollection?.FirstOrDefault();
     Console.WriteLine(new DateTime(1970, 1, 1).AddMilliseconds(zoomData.AxisRange.Min));
     Console.WriteLine(new DateTime(1970, 1, 1).AddMilliseconds(zoomData.AxisRange.Max));
-}
-
-```ge.Max));
 }
 
 ```

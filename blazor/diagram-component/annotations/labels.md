@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create and update annotation in Syncfusion Blazor Diagram component and more.
+title: Actions of Annotation in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Actions of Annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

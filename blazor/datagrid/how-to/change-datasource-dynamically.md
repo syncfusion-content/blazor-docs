@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Change datasource dynamically in Blazor DataGrid Component | Syncfusion
+title: Change datasource dynamically in Syncfusion Blazor DataGrid Component
 description: Learn here all about Change datasource dynamically in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
@@ -64,4 +64,4 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 ```
 
 The following GIF represents DataGrid data source modified dynamically on button click,
-![`Update datasource dynamically`](../images/grid-dynamic-datasource.gif)gif)
+![Update datasource dynamically](../images/grid-dynamic-datasource.gif)

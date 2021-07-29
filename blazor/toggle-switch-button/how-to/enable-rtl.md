@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable RTL in Blazor Toggle Switch Button Component | Syncfusion
-description: Learn here all about Enable RTL in Syncfusion Blazor Toggle Switch Button component and more.
+description: Checkout and learn here all about Enable RTL in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Actual Bar in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Actual Bar in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about Actual Bar in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -79,4 +79,4 @@ The following properties will be used to customize the actual bar.
 
 > Refer to the [code block](#feature-bar) to know more about  the property value of the **BulletChartData**.
 
-![Actual Bar - Customization](images/valuebar-custom.png)ges/valuebar-custom.png)
+![Actual Bar - Customization](images/valuebar-custom.png)

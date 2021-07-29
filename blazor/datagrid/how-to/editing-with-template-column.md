@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing with template column in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Editing with template column in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Editing with template column in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

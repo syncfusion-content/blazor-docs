@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Leaf Item in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Leaf Item in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Leaf Item in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -94,4 +94,4 @@ The [`Gap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.Tree
 
 > Refer to the [code block](#customization) to know about the property value of **GrowthReports**.
 
-![Gap in TreeMap item](images/LeafItem/itemgap.png)em/itemgap.png)
+![Gap in TreeMap item](images/LeafItem/itemgap.png)

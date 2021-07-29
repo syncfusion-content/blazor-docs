@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Prevent the focus on the first element in Blazor Dialog Component | Syncfusion
+title: Prevent the focus on the first element in Blazor Dialog | Syncfusion
 description: Learn here all about Prevent the focus on the first element in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog

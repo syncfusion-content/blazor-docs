@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Levels in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Levels in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Levels in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -156,4 +156,4 @@ The following properties are available to customize the header content in the [`
 
 > Refer to the [code block](#group-path) to know about the property value of `Employees`.
 
-![TreeMap with customized header](images/Levels/headeralignment.png)ralignment.png)
+![TreeMap with customized header](images/Levels/headeralignment.png)

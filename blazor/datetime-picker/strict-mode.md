@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Strict Mode in Blazor Datetime Picker Component | Syncfusion
-description: Learn here all about Strict Mode in Syncfusion Blazor Datetime Picker component and more.
+description: Checkout and learn here all about Strict Mode in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug

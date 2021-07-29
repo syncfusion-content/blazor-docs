@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Toolbar in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug

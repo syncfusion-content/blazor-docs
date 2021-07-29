@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Globalization in Blazor Linear Gauge Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Linear Gauge component (SfLinearGauge) and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor Linear Gauge component and more.
 platform: Blazor
 control: Linear Gauge
 documentation: ug
 ---
 
-# Internationalization in Blazor Linear Gauge Component (SfLinearGauge)
+# Globalization in Blazor Linear Gauge Component
 
 The localization allows to localize the default text content in the Blazor component. For more information about localization, refer [here](https://blazor.syncfusion.com/documentation/common/localization/).
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Performance in Blazor DataGrid Component | Syncfusion
-description: Learn here all about WebAssembly Performance in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about WebAssembly Performance in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

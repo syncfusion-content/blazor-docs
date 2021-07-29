@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor ComboBox Component | Syncfusion
-description: Learn here all about Templates in Syncfusion Blazor ComboBox component and more.
+description: Checkout and learn here all about Templates in Syncfusion Blazor ComboBox component and much more details.
 platform: Blazor
 control: ComboBox
 documentation: ug

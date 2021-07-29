@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create wizard in Blazor Tabs Component | Syncfusion
-description: Learn here all about Create wizard in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about Create wizard in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -521,4 +521,4 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 
 Output be like the below.
 
-![Tab Wizard](../images/wizard.png)images/wizard.png)
+![Tab Wizard](../images/wizard.png)

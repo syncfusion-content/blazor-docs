@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Value in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Learn here all about Custom Value in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about Custom Value in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series Type in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Series Type in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Series Type in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -136,5 +136,4 @@ To render a Step line series, use series [`Type`](https://help.syncfusion.com/cr
 
 ```
 
-![Step Line Chart](images/series-type/stepline.png)
 ![Step Line Chart](images/series-type/stepline.png)

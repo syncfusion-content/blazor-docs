@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Editor With Validation in Blazor Scheduler Component | Syncfusion
+title: Custom Editor With Validation in Blazor Scheduler | Syncfusion
 description: Learn here all about Custom Editor With Validation in Syncfusion Blazor Scheduler component and more.
 platform: Blazor
 control: Scheduler

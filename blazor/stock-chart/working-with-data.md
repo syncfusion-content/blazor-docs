@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Stock Chart Component | Syncfusion
-description: Learn here all about Working with Data in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Working with Data in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

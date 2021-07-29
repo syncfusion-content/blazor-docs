@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open Add Edit Dialog Dynamically in Blazor Gantt Chart Component | Syncfusion
+title: Open Add Edit Dialog in Blazor Gantt Chart Component | Syncfusion
 description: Learn here all about Open Add Edit Dialog Dynamically in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart

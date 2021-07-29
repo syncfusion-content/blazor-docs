@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display a Dialog with custom position in Blazor Dialog Component | Syncfusion
+title: Display a Blazor Dialog with custom position | Syncfusion
 description: Learn here all about Display a Dialog with custom position in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor Sparkline Component | Syncfusion
-description: Learn here all about Methods in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Methods in Syncfusion Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -28,9 +28,6 @@ The refresh method helps to render the Sparkline component again.
     public async Task RefreshCall()
     {
         await Sparkline.Refresh();
-    }
-}
-```fresh();
     }
 }
 ```

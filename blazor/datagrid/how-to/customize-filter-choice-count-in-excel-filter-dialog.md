@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize filter choice items count for Excel filter dialog in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Customize filter choice items count for Excel filter dialog in Syncfusion Blazor DataGrid component and more.
+title: Items count for Excel filter in Blazor DataGrid | Syncfusion
+description: Learn here all about customizing filter choice items count for Excel filter dialog in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Customize filter choice items count for Excel filter dialog in Blazor DataGrid Component
+# Filter choice items count for Excel filter in Blazor DataGrid
 
 For better performance, excel filter will take only the first 1000 records for filter choices item list. So, the distinct values of first thousand records will only be displayed in excel filter dialog as filter choices.
 

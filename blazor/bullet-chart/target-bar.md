@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Target Bar in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Target Bar in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about Target Bar in Syncfusion Blazor Bullet Chart component and muchmore.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -77,4 +77,4 @@ The following properties can be used to customize the Target Bar.
 
 > Refer to the [code block](#target-bar) to know about the property value of the **BulletChartData**.
 
-![Target Bar with customization](images/target-custom.png)images/target-custom.png)
+![Target Bar with customization](images/target-custom.png)

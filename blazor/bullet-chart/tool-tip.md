@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about Tooltip in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -111,4 +111,4 @@ The tooltip can be rendered as a custom component using the [`Template`](https:/
 
 > Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
-![Tooltip with Template](images/tooltip-template.png)ages/tooltip-template.png)
+![Tooltip with Template](images/tooltip-template.png)

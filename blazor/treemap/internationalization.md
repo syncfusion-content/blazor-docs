@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -53,4 +53,4 @@ In the following code example, tooltip and Data Label is globalized to currency 
 
 On successful configuration of localization the TreeMap will be rendered, as following.
 
-![TreeMap with internationalization](images/Internationalization/NumericFormat.png)/NumericFormat.png)
+![TreeMap with internationalization](images/Internationalization/NumericFormat.png)

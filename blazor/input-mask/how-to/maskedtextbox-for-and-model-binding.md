@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Customize the UI appearance of the component in Blazor Input Mask Component | Syncfusion
-description: Learn here all about Customize the UI appearance of the component in Syncfusion Blazor Input Mask component and more.
+title: Customize the Appearance of Blazor Input Mask Component | Syncfusion
+description: Learn here all about customizing the UI appearance of Syncfusion Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Customize the UI appearance of the component in Blazor Input Mask Component
+# Customize the UI appearance of the Blazor Input Mask Component
 
 This section demonstrates the Strongly typed extension support in MaskedTextBox. The view that can bind with any model is called as
 strongly typed view. You can bind any class as model to view.

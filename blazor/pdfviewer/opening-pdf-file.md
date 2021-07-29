@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Opening PDF file in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Opening PDF file in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Opening PDF file in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -175,7 +175,5 @@ The following code snippet explains how the PDF file can be loaded in PDF Viewer
     static byte[] byteArray = System.IO.File.ReadAllBytes("wwwroot/data/PDF_Succinctly.pdf");
     static string base64String = Convert.ToBase64String(byteArray);
     public string DocumentPath { get; set; } = "data:application/pdf;base64," + base64String;
-}
-```," + base64String;
 }
 ```

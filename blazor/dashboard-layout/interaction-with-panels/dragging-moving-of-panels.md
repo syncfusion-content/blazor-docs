@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor Dashboard Layout Component | Syncfusion
-description: Learn here all about Drag and Drop in Syncfusion Blazor Dashboard Layout component and more.
+description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug

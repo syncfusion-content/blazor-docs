@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Start and Depth View in Blazor DatePicker Component | Syncfusion
-description: Learn here all about Start and Depth View in Syncfusion Blazor DatePicker component and more.
+description: Checkout and learn here all about Start and Depth View in Syncfusion Blazor DatePicker component and more.
 platform: Blazor
 control: DatePicker
 documentation: ug

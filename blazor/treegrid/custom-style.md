@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styling and Appearance in Blazor TreeGrid Component | Syncfusion
-description: Learn here all about Styling and Appearance in Syncfusion Blazor TreeGrid component and more.
+description: Checkout and learn here all about Styling and Appearance in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug

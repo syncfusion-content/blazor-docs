@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Annotation in Blazor Diagram Component | Syncfusion
-description: Learn here all about connector annotation such as offset , alignment , segment angle etc in Syncfusion Blazor Diagram component and more.
+title: Annotation for Connector in Blazor Diagram Component | Syncfusion
+description: Checkout and learn here all about Annotation for Connector in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug

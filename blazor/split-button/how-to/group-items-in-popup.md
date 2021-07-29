@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Group items in popup in Blazor SplitButton Component | Syncfusion
-description: Learn here all about Group items in popup in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about Group items in popup in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug

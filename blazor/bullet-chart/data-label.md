@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Labels in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Data Labels in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about Data Labels in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -65,4 +65,4 @@ The Data Labels color, opacity, font size, font family, font weight, and font st
 
 > Refer to the [code block](#data-label) to know about the property value of the **BulletChartData**.
 
-![Bullet Chart with Data Labels](images/data-label.png)(images/data-label.png)
+![Bullet Chart with Data Labels](images/data-label.png)

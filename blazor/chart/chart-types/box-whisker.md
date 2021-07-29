@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Box and Whisker in Blazor Charts Component | Syncfusion
-description: Learn here all about Box and Whisker Series in the Syncfusion Blazor Chart component and its properties for customization.
+description: Checkout and learn here all about the Box and Whisker Chart in Syncfusion Blazor Charts component and muchmore.
 platform: Blazor
 control: Chart
 documentation: ug

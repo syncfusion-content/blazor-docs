@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Change the Floating Label Color of the TextBox in Blazor TextBox Component | Syncfusion
-description: Learn here all about Change the Floating Label Color of the TextBox in Syncfusion Blazor TextBox component and more.
+title: Floating Label Color of Blazor TextBox Component | Syncfusion
+description: Learn here all about changing the floating label color of the Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
 ---
 
-# Change the Floating Label Color of the TextBox in Blazor TextBox Component
+# Change the Floating Label Color of the Blazor TextBox Component
 
 You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.
 

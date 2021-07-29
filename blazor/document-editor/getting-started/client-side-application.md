@@ -1,13 +1,13 @@
 ---
 layout: post
-title: WebAssembly App in Visual Studio 2019 in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about WebAssembly App in Visual Studio 2019 in Syncfusion Blazor DocumentEditor component and more.
+title: Getting Stared with Blazor DocumentEditor in WebAssembly | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor DocumentEditor in Blazor WebAssembly (Client Side) App using Visual Studio and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# WebAssembly App in Visual Studio 2019 in Blazor DocumentEditor Component
+# Blazor DocumentEditor Component in WebAssembly App using Visual Studio
 
 This article provides the step-by-step instructions to integrate the [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 

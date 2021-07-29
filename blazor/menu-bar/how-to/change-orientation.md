@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Orientation in Blazor Menu Bar Component | Syncfusion
-description: Learn here all about Change Orientation in Syncfusion Blazor Menu Bar component and more.
+description: Checkout and learn here all about Change Orientation in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 
 documentation: ug

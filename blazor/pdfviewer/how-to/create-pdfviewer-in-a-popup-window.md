@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create PDF Viewer in a popup window in Blazor PDF Viewer Component | Syncfusion
+title: Create PDF Viewer in a popup window in Blazor PDF Viewer | Syncfusion
 description: Learn here all about Create PDF Viewer in a popup window in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
@@ -40,5 +40,4 @@ For quick view, you might need to display the PDF file in a dialog window. The f
         public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
         public string Header { get; set; } = "PDF Viewer";
 }
-```}
 ```

@@ -178,4 +178,4 @@ Use the tooltip to show the measured values by setting the [`Enable`](https://he
 }
 ```
 
-![Bullet Chart](images/tool-tip.png)hart](images/tool-tip.png)
+![Bullet Chart](images/tool-tip.png)

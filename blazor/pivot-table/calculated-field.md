@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Calculated Field in Blazor Pivot Table Component | Syncfusion
-description: Learn here all about Calculated Field in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about Calculated Field in Syncfusion Blazor Pivot Table component and more.
 platform: Blazor
 control: Pivot Table
 documentation: ug

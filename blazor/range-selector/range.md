@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Range in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Range in Syncfusion Blazor Range Selector component and much more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -108,4 +108,4 @@ The **@bind-Value** code-behind attribute in the Range Selector can be used to a
 
 ```
 
-![Selecting range via two way binding](images/common/range.png)![Selecting range via two way binding](images/common/range.png)
+![Selecting range via two way binding](images/common/range.png)

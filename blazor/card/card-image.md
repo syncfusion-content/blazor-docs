@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image and Divider in Blazor Card Component | Syncfusion
-description: Learn here all about Image and Divider in Syncfusion Blazor Card component and more.
+description: Checkout and learn here all about Image and Divider in Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
 documentation: ug
