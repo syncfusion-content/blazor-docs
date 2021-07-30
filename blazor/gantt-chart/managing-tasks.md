@@ -440,7 +440,7 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 }
 ```
 
-`Note:` When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes, the cells to editable mode. Double-clicking on the chart side opens, the edit dialog for editing the task details.
+> When the edit mode is set to `Auto`, double-clicking on the Tree Grid side changes, the cells to editable mode. Double-clicking on the chart side opens, the edit dialog for editing the task details.
 
 double click action on Tree Grid side
 
@@ -1215,8 +1215,7 @@ Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` met
 
 ## Cell Edit Type and its Params
 
-The `GanttColumn.EditType` is used to customize the edit type of the particular column.
-You can set the `GanttColumn.EditType` based on data type of the column.
+The `GanttColumn.EditType` is used to customize the edit type of the particular column. You can set the `GanttColumn.EditType` based on data type of the column.
 
 * [`NumericTextBox`](../numerictextbox/getting-started) component for integers, double, and decimal data types.
 
@@ -1927,11 +1926,7 @@ You need to follow the following steps when working with a server-side applicati
 
 #### Custom Adaptor
 
-In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update
-the changes on CRUD action to the server by using `DataManager` support. To communicate with the
-remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can
-know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/).
-We can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Please Check the below code snippet to assign the data source to Gantt.
+In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update the changes on CRUD action to the server by using `DataManager` support. To communicate with the remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). We can populate the datasource in Gantt from the SQL table using Entity Framework using **Read** method. Please Check the below code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using GanttEF.Models
@@ -1981,14 +1976,9 @@ We can populate the datasource in Gantt from the SQL table using Entity Framewor
 
 All the CRUD operations in the Gantt Chart are done through DataManager. The DataManager has an option to bind all the CRUD related data in server-side.
 
-We can  do CRUD operations over Gantt data and save the changes into the database. By using **BatchUpdate** method
-of DataManager, we can communicate with the controller method to update the data source by CRUD operation. In Gantt
-Chart, the CRUD actions on a task are dependent on other tasks. For example, if you edit the child record on the chart side,
-the corresponding parent item also will get affected and predecessor dependency task as well get affected. So, all
-the CRUD operations in Gantt Chart are considered to be batch editing, where you will get all the affected records as collection.
+We can  do CRUD operations over Gantt data and save the changes into the database. By using **BatchUpdate** method of DataManager, we can communicate with the controller method to update the data source by CRUD operation. In Gantt Chart, the CRUD actions on a task are dependent on other tasks. For example, if you edit the child record on the chart side, the corresponding parent item also will get affected and predecessor dependency task as well get affected. So, all the CRUD operations in Gantt Chart are considered to be batch editing, where you will get all the affected records as collection.
 
-This server method will be triggered for all the CRUD operations like adding, editing, and deleting actions. We can
-handle each operation separately inside this method with corresponding data received in this method argument.
+This server method will be triggered for all the CRUD operations like adding, editing, and deleting actions. We can handle each operation separately inside this method with corresponding data received in this method argument.
 
 The following sample code explains you about, how to implement CRUD operations for the custom bounded data.
 
@@ -2080,11 +2070,8 @@ You need to follow the following steps when working with a client-side applicati
 
 #### Custom Adaptor
 
-In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update
-the changes on CRUD action to the server by using `DataManager` support. To communicate with the
-remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can
-know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/).
-We can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the below code snippet to assign the data source to Gantt.
+In Gantt Chart, we can fetch data from the SQL database using `Entity Framework` Data Model and the update the changes on CRUD action to the server by using `DataManager` support. To communicate with the
+remote data, we are using `CustomAdaptor` of DataManager property to call the server method. You can know more about `CustomAdaptor` from [here](https://blazor.syncfusion.com/documentation/data/custom-binding/). We can populate the datasource in Gantt from the SQL table using Entity Framework using **ReadAsync** method. Please Check the below code snippet to assign the data source to Gantt.
 
 ```cshtml
 @using MyBlazorApp.Shared.DataAccess
@@ -2306,5 +2293,4 @@ Indent and Outdent of a task are used to update the level of task in the hierarc
 
 ## Troubleshoot: Editing works only when primary key column is defined
 
-Editing feature requires a primary key column for CRUD operations.
-While defining columns in Gantt using the `GanttColumns` property, it is mandatory that any one of the columns, must be a primary column. By default, the `Id` column will be the primary key column.  If `Id` column is not defined, we need to enable `IsPrimaryKey` for any one of the columns defined in the `GanttColumns` property.
+Editing feature requires a primary key column for CRUD operations. While defining columns in Gantt using the `GanttColumns` property, it is mandatory that any one of the columns, must be a primary column. By default, the `Id` column will be the primary key column.  If `Id` column is not defined, we need to enable `IsPrimaryKey` for any one of the columns defined in the `GanttColumns` property.

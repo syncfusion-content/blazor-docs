@@ -16,55 +16,58 @@ This section briefly explains how to include a `HeatMap Chart` in your Blazor Se
 ### Using Syncfusion.Blazor NuGet Package [New standard]
 
 1. Install **Syncfusion.Blazor.HeatMap** NuGet package to the application by using the `NuGet Package Manager`. Refer to the Individual NuGet Packages section for the available NuGet packages.
-![nuget explorer](images/nuget-explorer1.png)
+    ![nuget explorer](images/nuget-explorer1.png)
 2. Search Syncfusion.Blazor.HeatMap keyword in the Browse tab and install Syncfusion.Blazor.HeatMap NuGet package in the application.
-![nuget-heatmapchart](images/nuget-heatmapchart.png)
+    ![nuget-heatmapchart](images/nuget-heatmapchart.png)
 3. Once the installation process is completed, the Syncfusion Blazor HeatMap package will be installed in the project.
-W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
-```html
+    ```html
     <head>
         ....
         ....
-       <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
 
 W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.Right-click the project and then select Manage NuGet Packages.
-![nuget explorer](images/nuget-explorer1.png)
+    ![nuget explorer](images/nuget-explorer1.png)
 2. Search Syncfusion.Blazor keyword in the Browse tab and install Syncfusion.Blazor NuGet package in the application.
-![select-nuget](images/select-nuget1.png)
+    ![select-nuget](images/select-nuget1.png)
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-> You can also add the client-side style resources through CDN.
+    * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
-```html
+    > You can also add the client-side style resources through CDN.
+
+    ```html
     <head>
         ....
         ....
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
 
-```html
+    ```html
     <head>
         <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
     </head>
-```
+    ```
 
-* For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    * For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```csharp
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    ```csharp
+    <head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+    ```
 
 ## Add Syncfusion Blazor service in Startup.cs (Server-side application)
 
@@ -114,9 +117,9 @@ namespace BlazorApplication
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by  **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app.  
 
 ```csharp
-    <head>
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-    </head>
+<head>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+</head>
 ```
 
 ## Adding component package to the application

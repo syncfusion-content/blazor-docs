@@ -17,18 +17,18 @@ This section briefly explains about how to include a **Gantt Chart** Component i
 2. You can add the client-side style resources through CDN or from NuGet packages in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+</head>
 ```
 
 > For Internet Explorer 11 kindly refer the poly fills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
 ```
 
 ## Adding component package to the application
@@ -339,7 +339,7 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 }
 ```
 
-`Note:` When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
+> When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
 You can find the full information regarding Editing from [here](/managing-tasks/)
 

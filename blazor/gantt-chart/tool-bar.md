@@ -131,7 +131,7 @@ The following table shows built-in toolbar items and its actions.
 
 ![Default toolbar](images/default-toolbar.png)
 
-> * The `Toolbar` has options to define both built-in and custom toolbar items.
+> The `Toolbar` has options to define both built-in and custom toolbar items.
 
 ## Custom Toolbar Items
 

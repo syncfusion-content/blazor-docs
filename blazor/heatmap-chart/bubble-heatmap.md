@@ -9,11 +9,7 @@ documentation: ug
 
 # Bubble heat map in Blazor HeatMap Chart Component
 
-Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map.
-You can customize the appearance of these data points by changing the `Color` and `Shape` attributes.
-
-The data points can be represented in color fill or bubble shape by defining the `TileType` property.
-By default, the data points are color filled with `Gradient` or `Fixed` and this depiction of data points is defined as `Rect` in the `TileType` property.
+Data points represent the data source values with `Gradient` or `Fixed` colors in the heat map. You can customize the appearance of these data points by changing the `Color` and `Shape` attributes. The data points can be represented in color fill or bubble shape by defining the `TileType` property. By default, the data points are color filled with `Gradient` or `Fixed` and this depiction of data points is defined as `Rect` in the `TileType` property.
 
 The cell customizations and color mapping for `Rect` tile type is defined in `Appearance` and `Palette` sections in detail.
 
@@ -25,9 +21,7 @@ In bubble heat map, you can display the data points with bubble size, bubble col
 
 ### Bubble size
 
-In this bubble heat map type, the size factor of the bubble is used to denote the data variations. The radius of the bubble varies according to data values.
-
-By default, the bubble with small size denotes the data value with small magnitude and the larger bubble size denotes the data value with larger magnitude. This behavior can be inversed by using the `IsInversedBubbleSize` property.
+In this bubble heat map type, the size factor of the bubble is used to denote the data variations. The radius of the bubble varies according to data values. By default, the bubble with small size denotes the data value with small magnitude and the larger bubble size denotes the data value with larger magnitude. This behavior can be inversed by using the `IsInversedBubbleSize` property.
 
 To render a bubble heat map with size series, set the `BubbleType` property to `Size`.
 

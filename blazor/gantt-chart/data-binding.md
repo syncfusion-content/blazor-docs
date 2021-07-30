@@ -404,7 +404,7 @@ ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. G
 }
 ```
 
-> Herewith we have provided list of reserved properties and the purpose used in Gantt Chart. We recommend to avoid these reserved properties for Internal purpose(To get rid of conflicts).
+> Here, we have provided list of reserved properties and the purpose used in Gantt Chart. We recommend to avoid these reserved properties for Internal purpose(To get rid of conflicts).
 
 Reserved keywords | Purpose
 -----|-----

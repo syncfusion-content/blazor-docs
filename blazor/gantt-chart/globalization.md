@@ -365,7 +365,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 }
 ```
 
-> **Note** ClientApplication denotes the ApplicationNameSpace of your project.
+> ClientApplication denotes the ApplicationNameSpace of your project.
 
 * Now, Specify the culture for Gantt using `Locale` property.
 
@@ -578,5 +578,6 @@ RTL provides an option to switch the text direction and layout of the Gantt comp
 }
 ```
 
-> * Gantt chart doesn't have RTL support when predecessors enabled.
+> Gantt chart doesn't have RTL support when predecessors enabled.
+
 > You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

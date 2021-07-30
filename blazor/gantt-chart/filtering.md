@@ -109,8 +109,7 @@ The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-g
 
 ![Alt text](images/menuFilter.png)
 
-> The `AllowFiltering` property should be set to `true` to enable the filter menu.
-> Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
+> The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
 ### Filter Hierarchy Modes
 
@@ -551,6 +550,7 @@ You can filter the columns dynamically by using the `FilterByColumnAsync` method
 ### Clear Filtered Columns
 
 You can clear all the filtering condition done in the Gantt Chart component by using the `ClearFilteringAsync` method.
+
 The following code snippet explains the above behaviour.
 
 ```cshtml
@@ -763,8 +763,7 @@ The following screenshot shows the output of searching for string in Gantt Chart
 
 ### Initial Search
 
-In the Gantt Chart component, you can load a task with some search criteria by using the `GanttSearchSettings` property.
-To apply a search at initial rendering, set the value for `Fields`, `Operator`, `Key`, and `IgnoreCase` in the `GanttSearchSettings` property.
+In the Gantt Chart component, you can load a task with some search criteria by using the `GanttSearchSettings` property. To apply a search at initial rendering, set the value for `Fields`, `Operator`, `Key`, and `IgnoreCase` in the `GanttSearchSettings` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
