@@ -55,6 +55,7 @@ There are two types of activities. They are listed as follows:
 ## BPMN activity task
 
 The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks.
+
 The events property of tasks allows you to represent these results as an event attached to the task.
 
 ```cshtml
@@ -211,7 +212,7 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ### Transaction sub process
 
-* The [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
+The [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
 
 The execution result of a transaction is one of
 * Successful Completion

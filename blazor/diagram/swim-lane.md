@@ -225,7 +225,8 @@ The following code example illustrates how to customize the lane header.
 
 ## Phase
 
- Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of `Phase` can be added to swimlane.
+Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of `Phase` can be added to swimlane.
+
 The following code example illustrates how to add phase at swimlane.
 
 ```cshtml

@@ -229,7 +229,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
 
 ![Expand and Collapse Icon](../images/layout-expand-collapse-icon.png)
 
-**Note:** You can use the `EnableAnimation` property to enables or disables animation option when a node is expanded or collapsed.
+> You can use the `EnableAnimation` property to enables or disables animation option when a node is expanded or collapsed.
 
 ## Complex hierarchical tree
 

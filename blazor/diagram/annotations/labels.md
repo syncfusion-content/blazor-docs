@@ -67,7 +67,7 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 ![Annotation](../images/Annotation.png)
 
->**Note:**
+
 >* [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Id) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned center point of its path.

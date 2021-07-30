@@ -9,9 +9,7 @@ documentation: ug
 
 # Appearance in Blazor Diagram Component
 
-* The appearance of a node can be customized by changing its [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html) color, [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), and [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow).
-
-* The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Visible) property of the node enables or disables the visibility of the node.
+The appearance of a node can be customized by changing its [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html) color, [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html), and [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow). The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Visible) property of the node enables or disables the visibility of the node.
 
 The following code shows how to customize the appearance of the shape.
 
@@ -47,11 +45,7 @@ The following code shows how to customize the appearance of the shape.
 
 ## Gradient
 
-The [`Gradient`](https://help.syncfusion.com/cr/blazor) property of the node allows you to define and apply the gradient effect to the node.
-
-The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts.
-
-The gradient stop’s opacity property defines the transparency level of the region.
+The [`Gradient`](https://help.syncfusion.com/cr/blazor) property of the node allows you to define and apply the gradient effect to the node. The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
 
 There are two types of gradients as follows:
 
@@ -61,9 +55,7 @@ There are two types of gradients as follows:
 
 ### Linear gradient
 
-* [`LinearGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between a set of colors (so-called stops) in a line.
-
-* A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
+[`LinearGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -110,9 +102,7 @@ There are two types of gradients as follows:
 
 ### Radial gradient
 
-* [`RadialGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between stops on a circle.
-
-* A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
+[`RadialGradient`](https://help.syncfusion.com/cr/blazor) defines a smooth transition between stops on a circle. A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -165,8 +155,9 @@ There are two types of gradients as follows:
 
 ## Shadow
 
-Diagram provides support to add [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow) effect to a node that is disabled, by default. It can be enabled with the
-constraints property of the node. The following code shows how to draw shadow.
+Diagram provides support to add [`Shadow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Shadow) effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. 
+
+The following code shows how to draw shadow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -202,8 +193,9 @@ constraints property of the node. The following code shows how to draw shadow.
 
 ### Customizing shadow
 
-The [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Angle), [`Distance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Distance), and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Opacity) of the shadow can be customized with the shadow property of the node. The following code
-example illustrates how to customize shadow.
+The [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Angle), [`Distance`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Distance), and [`Opacity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramShadow.html#Syncfusion_Blazor_Diagrams_DiagramShadow_Opacity) of the shadow can be customized with the shadow property of the node. 
+
+The following code example illustrates how to customize shadow.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -548,4 +540,4 @@ You can find the flow in the diagram by using the [`GetEdges`](https://help.sync
 
 ## See also
 
-* [`How to get events when they interact the node`](./events)
+* [How to get events when they interact the node](./events)

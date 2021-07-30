@@ -162,6 +162,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 The connectors in the diagram can be overlapped with any neighboring nodes when the node is placed in contact with the connector.
 
 This will make less clarity about the connector path flow. This can be avoided using the Routing process. The routing is the process of updating the connector’s geometry to avoid the overlapping with any neighboring nodes in their path.
+
 This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum value to the Constraints property of the diagram.
 
 ```csharp
@@ -290,8 +291,8 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)

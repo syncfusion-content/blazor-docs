@@ -15,8 +15,7 @@ documentation: ug
 
 * You may expect this offset values to represent the distance between page origin and node’s top-left corner instead of center. The Pivot property helps to solve this problem. Default value of node’s [`Pivot`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Pivot) point is (0.5, 0.5) that means center of the node.
 
-* The size of the node can be controlled by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Width) and
-[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Height) properties.
+* The size of the node can be controlled by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Height) properties.
 
 * Rotation of a node is controlled by using the [`RotateAngle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_RotateAngle) property.
 
@@ -73,8 +72,7 @@ The following code shows how to change the `Pivot` value.
 
 ## Flip
 
-The diagram Provides support to flip the node. [`Flip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Flip) is performed to
-give the mirrored image of the original element.
+The diagram Provides support to flip the node. [`Flip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNode.html#Syncfusion_Blazor_Diagrams_DiagramNode_Flip) is performed to give the mirrored image of the original element.
 
 * [The Flip is also applicable for connectors](../connectors#flip)
 

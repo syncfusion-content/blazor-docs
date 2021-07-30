@@ -141,8 +141,8 @@ The [`OnConnectionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)

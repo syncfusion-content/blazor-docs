@@ -121,8 +121,7 @@ public void AddNode()
 
 ## Add node from palette
 
-Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information
-about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/blazor).
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/blazor).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
 * When a symbol is dragged into a diagram from symbol palette, the [`DragEnter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDragEnterEventArgs.html) event gets triggered.
@@ -196,8 +195,7 @@ For more information about drawing Node, refer to the [`Draw Nodes`](https://hel
 
 ## Create node through data source
 
-Nodes can be generated automatically with the information provided through data source. The default properties for
-these nodes are fetched from default settings.
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings.
 
 ## Remove node at runtime
 

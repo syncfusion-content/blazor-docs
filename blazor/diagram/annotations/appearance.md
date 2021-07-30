@@ -12,6 +12,7 @@ documentation: ug
 ## Customize the size for an annotation
 
 Diagram allows you set size for annotations by using the Height and Width properties. The default value of the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Width), and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Height) properties are 0, and it takes the node or connector size as default.
+
 The following code example shows how the annotation size is customized.
 
 ```cshtml
@@ -130,7 +131,9 @@ Diagram provides support to add a [`Hyperlink`](https://help.syncfusion.com/cr/b
 
 ## Wrapping
 
-When text overflows node boundaries, you can control it by using the [`TextWrapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_TextWrapping). So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. The following code explains how to wrap a text in a node.
+When text overflows node boundaries, you can control it by using the [`TextWrapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_TextWrapping). So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. 
+
+The following code explains how to wrap a text in a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -230,11 +233,11 @@ The following code sample shows how the different types of overflow property wor
 | Clip| Wrap | ![Label Wrap](../images/flowClip_wrap.png) |
 | Clip | WrapWithOverflow | ![Label WrapWith Overflow](../images/flowClip_wrapwithoverflow.png) |
 
->**Note :** All the customization over the overflow is also applicable to connector’s annotation.
+> All the customization over the overflow is also applicable to connector’s annotation.
 
 ## Change the appearance of annotation
 
-* You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
+You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
 
 * The label’s [`Bold`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_Bold), [`Italic`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_Italic), and [`TextDecoration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_TextDecoration) properties are used to style the label’s text.
 
@@ -282,7 +285,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 
 ## Update the annotation style at runtime
 
-* You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
+You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -447,7 +450,6 @@ You can add any number of annotations to a node or connector. The following code
 
 ![Multiple Annotations](../images/Annotations.png)
 
->**Note:**
 >* Type of the annotation’s property of the node or connector was ObservableCollection.
 >* Default value of the annotation will be null.
 >* All the same customization can be applicable for the annotations.
@@ -469,7 +471,6 @@ AnnotationConstraints may have multiple behaviors as follows:
 | Interaction | Enables or disables select, drag, resize and rotate behaviors. |
 | None | Disables all behaviors of Annotation. |
 
->**Note :**
 >The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
 
 Refer to [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationConstraints.html) to learn about how to enable or disable the annotation constraints.
@@ -583,7 +584,6 @@ The following code explains how to define a template in node’s annotation. sim
 
 ![Annotation Template](../images/Annotation_Template.png)
 
->**Note:**
 >* You need to specify the width value by default, if the annotation has template.
 >* The AnnotationTemplate property accepts the template string.
 

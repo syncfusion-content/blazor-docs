@@ -9,9 +9,7 @@ documentation: ug
 
 # Annotation for node in Blazor Diagram Component
 
-Diagram allows you to customize the position and appearance of the annotation efficiently.
-Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [`DiagramNodeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html) class.
-Annotations of a node can be positioned using the following properties of [`DiagramNodeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html).
+Diagram allows you to customize the position and appearance of the annotation efficiently. Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [`DiagramNodeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html) class. Annotations of a node can be positioned using the following properties of [`DiagramNodeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html).
 
 * [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Offset)
 * [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_HorizontalAlignment)
@@ -71,7 +69,6 @@ The following code shows the relationship between the shape annotation position 
 | (1,0.5) | ![Left](../images/Offset1,5.png) |
 | (1,1) | ![Left](../images/Offset1,1.png) |
 
->**Note:**
 >* Type of the offset property for node’s shape annotation is NodeAnnotationOffset.
 >* Type of the offset property for connector’s path annotation is double.
 
@@ -130,7 +127,6 @@ The following code explains how to align annotations.
 
 ```
 
->**Note:**
 >* The value of the `HorizontalAlignment` is `Center` by default.
 >* The value of the `VerticalAlignment` is `Center` by default.
 >* Alignment positioned based on the offset value.
@@ -216,10 +212,10 @@ The [`TextAlign`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ## See also
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)
 
-* [`How to interact the annotation at runtime`](./interaction)
+* [How to interact the annotation at runtime](./interaction)

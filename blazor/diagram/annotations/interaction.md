@@ -9,8 +9,7 @@ documentation: ug
 
 # Interaction in Blazor Diagram Component
 
-Basic interactions of selecting and resizing can be applied over an annotation. These interactions can be controlled by annotation and its parent node or connector.
-To learn about annotation constraints, refer to the [`Annotation Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Constraints).
+Basic interactions of selecting and resizing can be applied over an annotation. These interactions can be controlled by annotation and its parent node or connector. To learn about annotation constraints, refer to the [`Annotation Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Constraints).
 
 ## Selecting the annotation
 
@@ -226,16 +225,15 @@ The following code explains how to set a dragLimit for connector annotations.
 
 ![Annotation DragLimit](../images/Annotation_DragLimit.gif)
 
->**Note :**
 >* By default, the drag limit will be disabled for the connector. It can be enabled by setting connector constraints to drag.
 >* The drag limit is applicable only for the connector.
 
 ## See also
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)
 
-* [`How to add annotation for Node`](./node-annotation)
+* [How to add annotation for Node](./node-annotation)
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)

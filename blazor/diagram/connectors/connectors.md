@@ -191,7 +191,7 @@ For more information about drawing connectors, refer to [`Draw Connectors`](http
 
 ## Remove connectors at runtime
 
-* A connector can be removed from the diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
+A connector can be removed from the diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
 
 The following code shows how to remove a connector at runtime.
 
@@ -296,13 +296,13 @@ The following code example explains how to change the connector properties.
 
 ## Connections
 
-* A connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
+A connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
 
 ### Connections with nodes
 
-* The [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_SourceID) and [`TargetID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_TargetID) properties allow to define the nodes to be connected.
+The [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_SourceID) and [`TargetID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_TargetID) properties allow to define the nodes to be connected.
 
-* The following code example illustrates how to connect two nodes.
+The following code example illustrates how to connect two nodes.
 
 ```csharp
 
@@ -382,11 +382,9 @@ The following code example explains how to change the connector properties.
 
 ![Node to Node Connection](../images/NodeToNodeConnection.png)
 
-* When you remove [`NodeConstraints.InConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [`NodeConstraints.OutConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an incoming connection to dock in it.
+When you remove [`NodeConstraints.InConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [`NodeConstraints.OutConnect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from Default, the node accepts only an incoming connection to dock in it.
 
-* When you remove both InConnect and OutConnect [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from `Default`, the node restricts connector to establish connection in it.
-
-* The following code illustrates how to disable InConnect constraints.
+When you remove both InConnect and OutConnect [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from `Default`, the node restricts connector to establish connection in it. The following code illustrates how to disable InConnect constraints.
 
 ```csharp
 
@@ -535,8 +533,7 @@ The following code example illustrates how to create port to port connections.
 
 ![Port to Port Connection](../images/PortToPortConnection.png)
 
-* When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `OutConnect`, the port accepts only an outgoing connection to dock in it.
-* When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `None`, the port restricts connector to establish connection in it.
+When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `OutConnect`, the port accepts only an outgoing connection to dock in it. When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `None`, the port restricts connector to establish connection in it.
 
 ```csharp
 
@@ -589,12 +586,12 @@ The following code example illustrates how to create port to port connections.
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)
 
-* [`How to add annotations to the connectors`](../annotations/labels)
+* [How to add annotations to the connectors](../annotations/labels)

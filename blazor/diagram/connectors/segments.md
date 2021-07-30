@@ -54,9 +54,7 @@ To create a straight line, specify the [`Type`](https://help.syncfusion.com/cr/b
 
 ## Orthogonal
 
-Orthogonal segments are used to create segments that are perpendicular to each other.
-
-Set the segment [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Type) as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
+Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Type) as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
 
 Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [`connector.Segments`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Segments) collection. The following code example illustrates how to create a connector with multiple segments.
 

@@ -198,8 +198,9 @@ The flip types are as follows:
 
 ## Bridging
 
-Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [`BridgeDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BridgeDirection) is set to `Top`. Depending upon the direction given bridging direction appears.
-Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. The following code example illustrates how to enable line bridging.
+Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [`BridgeDirection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BridgeDirection) is set to `Top`. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. 
+
+The following code example illustrates how to enable line bridging.
 
 ```csharp
 
@@ -537,8 +538,8 @@ The following code illustrates how to render connector based on the stack order.
 
 ## See also
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)
