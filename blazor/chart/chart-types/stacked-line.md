@@ -13,8 +13,6 @@ documentation: ug
 
 [`Stacked Line Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) is a chart with Y values stacked over one another in the series order. It shows the relation between individual values to the total sum of the points. To render a [`Stacked Line`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/stacked-line-chart) series, set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`StackingLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_StackingLine).
 
-{% aspTab template="chart/series/line-charts/stacked-line", sourceFiles="stacked-line.razor" %}
-
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
