@@ -9,10 +9,8 @@ documentation: ug
 
 # Aggregates in Blazor DataGrid Component
 
-Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`GridAggregates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Aggregates) component.
- [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and
-  [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type)
- are the minimum properties required to represent an aggregate column.
+Aggregate values are displayed in the footer, group footer, or group caption of the Grid. It can be configured through [`GridAggregates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Aggregates) component. [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Field) and
+  [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) are the minimum properties required to represent an aggregate column.
 
 ## Built-in aggregate types
 
@@ -28,8 +26,7 @@ The built-in aggregates are,
 * TrueCount
 * FalseCount
 
-> * Multiple aggregates can be used for an aggregate column by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property
-with an array of aggregate types.
+> * Multiple aggregates can be used for an aggregate column by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) property with an array of aggregate types.
 > * Multiple types for a column is supported only when one of the aggregate templates is used.
 
 ## Footer aggregate
@@ -185,8 +182,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 ## Group and caption aggregate
 
-Group and caption aggregate values are calculated from the current group items.
-If **GroupFooterTemplate** is provided, the aggregate values are displayed in the group footer cells and if **GroupCaptionTemplate** is provided, aggregate values are displayed in the group caption cells.
+Group and caption aggregate values are calculated from the current group items. If **GroupFooterTemplate** is provided, the aggregate values are displayed in the group footer cells and if **GroupCaptionTemplate** is provided, aggregate values are displayed in the group caption cells.
 
 Both **GroupCaptionTemplate** and **GroupFooterTemplate** should be provided within the **GridAggregateColumn** directive.
 

@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor DatePicker Component
 
-This section explains the list of events of the DatePicker component which will be
-triggered for appropriate DatePicker actions.
+This section explains the list of events of the DatePicker component which will be triggered for appropriate DatePicker actions.
 
 > From `v17.2.*` added only the limited number of events for the DatePicker component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 

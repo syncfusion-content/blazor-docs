@@ -134,9 +134,7 @@ DataGrid supports the following types of edit modes, they are:
 
 ### Normal
 
-In Normal edit mode, when you start editing the currently selected record is changed to edit state.
-You can change the cell values and save edited data to the data source.
-To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
+In Normal edit mode, when you start editing the currently selected record is changed to edit state. You can change the cell values and save edited data to the data source. To enable the  Normal edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Normal**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -185,9 +183,7 @@ The following screenshot represents Editing in Normal Mode.
 
 ### Dialog
 
-In dialog edit mode, when you start editing the currently selected row data will be shown on a dialog.
-You can change the cell values and save edited data to the data source.
-To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Dialog**.
+In dialog edit mode, when you start editing the currently selected row data will be shown on a dialog. You can change the cell values and save edited data to the data source. To enable Dialog edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Dialog**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -235,9 +231,7 @@ The following screenshot represents Editing in Dialog Mode.
 
 ### Batch
 
-In batch edit mode, when you double-click on the datagrid cell, then the target cell changed to edit state.
-You can bulk save (added, changed, and deleted data in the single request) to the data source by click on the toolbar's **Update** button or by externally calling the **EndEdit** method.
-To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
+In batch edit mode, when you double-click on the datagrid cell, then the target cell changed to edit state. You can bulk save (added, changed, and deleted data in the single request) to the data source by click on the toolbar's **Update** button or by externally calling the **EndEdit** method. To enable Batch edit, set the [`EditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) as **Batch**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -284,10 +278,9 @@ The following screenshot represents Editing in Batch mode.
 
 ## Edit next row or previous row from the current row
 
-You can continue editing the next row or previous row from the current record in batch mode
-by enabling [`EditSettings.AllowNextRowEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowNextRowEdit) to **true**.
+You can continue editing the next row or previous row from the current record in batch mode by enabling [`EditSettings.AllowNextRowEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_AllowNextRowEdit) to **true**.
 
-Pressing TAB from the last cell of the current row allows editing the next row and Pressing SHIFT + TAB from the first cell of the current row allows editing the previous row.
+Pressing `TAB` from the last cell of the current row allows editing the next row and Pressing `SHIFT + TAB` from the first cell of the current row allows editing the previous row.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -352,14 +345,14 @@ The available default edit types are,
 
 ## Customizing the default editor controls
 
-You can customize the behavior of the editor component through the [`EditorSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
+You can customize the behavior of the editor component through the [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component.
 
-> We have limited the properties of editor components that can be customized using [`EditorSettings`] in Grid default editor components. Kindly find the list of properties that can be customized the below topics.
-> If you want to customize other properties, refer to our [`EditTemplate`](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
+> We have limited the properties of editor components that can be customized using [EditorSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) in Grid default editor components. Kindly find the list of properties that can be customized the below topics.
+> If you want to customize other properties, refer to our [EditTemplate](https://blazor.syncfusion.com/documentation/datagrid/editing/#cell-edit-template) documentation to render the custom components in EditForm along with your customization.
 
 ### DefaultEdit
 
-[`StringEditCellParams`] class helps us to customize the default TextBox component in Grid EditForm. The following table describes properties of TextBox control than can be customized using [`EditorSettings`] of GridColumn editor component.
+`StringEditCellParams` class helps us to customize the default TextBox component in Grid EditForm. The following table describes properties of TextBox control than can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Description |
 |--------|----------------|
@@ -421,7 +414,7 @@ The following sample code demonstrates the customization applied to TextBox comp
 
 ### NumericEdit
 
-[`NumericEditCellParams`] class helps us to customize the default NumericTextBox component in Grid EditForm. The following table describes properties of NumericTextBox control than can be customized using [`EditorSettings`] of GridColumn editor component.
+`NumericEditCellParams` class helps us to customize the default NumericTextBox component in Grid EditForm. The following table describes properties of NumericTextBox control than can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Description |
 |--------|----------------|
@@ -486,7 +479,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 
 ### DropDownEdit
 
-[`DropDownEditCellParams`] class helps us to customize the default DropDownList component in Grid EditForm. The following table describes properties of DropDownList control than can be customized using [`EditorSettings`] of GridColumn editor component.
+`DropDownEditCellParams` class helps us to customize the default DropDownList component in Grid EditForm. The following table describes properties of DropDownList control than can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Example |
 |--------|----------------|
@@ -504,7 +497,7 @@ The following sample code demonstrates the customization applied to NumericTextB
 | ActionFailureTemplate | Accepts the template and assigns it to the popup list content of the component when the data fetch request from the remote server fails |
 | DataSource | Accepts the list items either through local or remote service and binds it to the component. It can be an array of JSON Objects or an instance of `DataManager`. |
 
-> [`IEnumerable<TItem>`] is the type of [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [`DropDownListModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind [`string[]`] or [`List<string>`] type to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
+> `IEnumerable<TItem>` is the type of [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property in [`DropDownListModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html), so you should not bind `string[]` or `List<string>` type to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListModel-2.html#Syncfusion_Blazor_DropDowns_DropDownListModel_2_DataSource) property.
 
 The following sample code demonstrates the customization applied to DropDownList component set for the DataGrid columns,
 
@@ -558,7 +551,7 @@ The following sample code demonstrates the customization applied to DropDownList
 
 ### BooleanEdit
 
-[`BooleanEditCellParams`] class helps us to customize the default Checkbox component in Grid EditForm. The following table describes properties of CheckBox control than can be customized using [`EditorSettings`] of GridColumn editor component.
+`BooleanEditCellParams` class helps us to customize the default Checkbox component in Grid EditForm. The following table describes properties of CheckBox control than can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Description |
 |--------|----------------|
@@ -621,7 +614,7 @@ The following sample code demonstrates the customization applied to Checkbox com
 
 ### DatePickerEdit
 
-[`DateEditCellParams`] class helps us to customize the default DatePicker and DateTimePicker component in Grid EditForm. The following table describes properties of DatePicker control than can be customized using [`EditorSettings`] of GridColumn editor component.
+`DateEditCellParams` class helps us to customize the default DatePicker and DateTimePicker component in Grid EditForm. The following table describes properties of DatePicker control than can be customized using `EditorSettings` of GridColumn editor component.
 
 | Component | Example |
 |--------|----------------|
@@ -682,7 +675,7 @@ The following sample code demonstrates the customization applied to DatePicker c
 }
 ```
 
-> Similar way customization can be applied to default DateTimePicker Component using same [`DateEditCellParams`]
+> Similar way customization can be applied to default DateTimePicker Component using same `DateEditCellParams`
 
 ## Cell Edit Template
 
@@ -1056,9 +1049,7 @@ The following image represents the custom command added in the **Manage Records*
 
 ## Column validation
 
-Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
-DataGrid uses **Form Validator** library for column validation.
-You can set validation rules by defining the [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
+Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data. DataGrid uses **Form Validator** library for column validation. You can set validation rules by defining the [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules).
 
 > Validation in datagrid works based on the Microsoft Blazor EditForm behavior. So once the validation message is shown then it will be again validated only during the form submit or when you focus out from that particular field. Please refer the [Microsoft Validation](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#data-annotations-validator-component-and-custom-validation) for further reference.
 

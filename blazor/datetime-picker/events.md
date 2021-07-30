@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor Datetime Picker Component
 
-This section explains the list of events of the DateTimePicker component which will be
-triggered for appropriate DateTimePicker actions.
+This section explains the list of events of the DateTimePicker component which will be triggered for appropriate DateTimePicker actions.
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----

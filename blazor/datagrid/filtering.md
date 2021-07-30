@@ -51,13 +51,11 @@ The following screenshot shows filtering using FilterBar
 ![Default Filter](./images/default-filtering.png)
 
 > * You can apply and clear filtering by using **FilterByColumn** and **ClearFiltering** methods.
-> * To disable filtering for a particular column, set
-[`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false.
+> * To disable filtering for a particular column, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false.
 
 ## Initial filter
 
-To apply the filter at initial rendering, set the filter **Predicate** object in
-[`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
+To apply the filter at initial rendering, set the filter **Predicate** object in [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Columns) property of **GridFilterSettings** component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -128,9 +126,9 @@ LessThanOrEqual |Checks whether the value is less than or equal to the specified
 
 By setting the [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) to true, the filter bar row will render next to the header, which allows you to filter data. You can filter the records with different expressions depending upon the column type.
 
-**Filter bar expressions:**
+### Filter bar expressions
 
- You can enter the following filter expressions (operators) manually in the filter bar.
+You can enter the following filter expressions (operators) manually in the filter bar.
 
 Expression |Example |Description |Column Type
 -----|-----|-----|-----
@@ -187,6 +185,7 @@ The following screenshot shows filtering using FilterBar
 ### Filter bar template with custom component
 
 The [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column. The following sample shows the dropdown, used as a custom component in the Customer Name column.
+
 To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as PredicateModel to get filter values inside template.
 
 ```csharp
@@ -267,6 +266,7 @@ The following screenshot shows filtering using custom component
 ### Change default filter operator
 
 You can change the default filter operator by extending `FilterSettings` property in the column.
+
 In the following sample, we have changed the default operator for CustomerID column as **contains** from **startswith**
 
 ```cshtml
@@ -359,6 +359,7 @@ The [`ImmediateModeDelay`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 ## Filter menu
 
 You can enable filter menu by setting the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) of **GridFilterSettings** as **Menu**. The filter menu UI will be rendered based on its column type, which allows you to filter data.
+
 You can filter the records with different operators.
 
 ```cshtml
@@ -401,14 +402,14 @@ You can filter the records with different operators.
 The following screenshot represents Menu filter
 ![Menu Filter](./images/menu-filter.png)
 
-> * [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
-> * Setting [`AllowFiltering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
+> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
+> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
 
 ### Custom component in filter menu
 
 You can use **Menu** type filter in the datagrid. To do so, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Menu** in the **GridFilterSettings**.
-In the following sample the [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column.
-To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
+
+In the following sample the [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property is used to add custom components to a particular column. To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -525,8 +526,7 @@ The default filter operators for a GridColumn can be overridden by using the [`O
 
 ### Enable different filter for a column
 
-You can use different filter types such as **Menu**,**CheckBox** and **Excel** filter in a same DataGrid. To do so, set the
-[`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Menu** in **GridFilterSettings** and **CheckBox** in [`Filter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
+You can use different filter types such as **Menu**,**CheckBox** and **Excel** filter in a same DataGrid. To do so, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridFilterSettings.html#Syncfusion_Blazor_Grids_GridFilterSettings_Type) as **Menu** in **GridFilterSettings** and **CheckBox** in [`Filter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
 
 In the following sample menu filter is enabled by default and checkbox filter is enabled for the CustomerID column using the [`Filter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property of **GridColumn** component.
 

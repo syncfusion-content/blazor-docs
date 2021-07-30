@@ -9,23 +9,13 @@ documentation: ug
 
 # Accessibility in Blazor DatePicker Component
 
-The web accessibility defines a way to make web content and web applications
-more accessible to disabled people. It especially helps the dynamic content change
-and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
+The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
-The DatePicker provides built-in compliance with the
-[WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA
-supports can be achieved through the attributes
-like `aria-expanded`, `aria-disabled`, and `aria-activedescendant`
-applied to the input element.
+The DatePicker provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA supports can be achieved through the attributes like `aria-expanded`, `aria-disabled`, and `aria-activedescendant` applied to the input element.
 
-To learn more about the accessibility of Calendar, refer to the Calendar's
-[Accessibility](../calendar/accessibility/)
- section.
+To learn more about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
 
-It provides information about the widget
-for assistive technology to the disabled person in
-screen reader.
+It provides information about the widget for assistive technology to the disabled person in screen reader.
 
 * **aria-expanded**: Attribute indicates the state of a collapsible element.
 
@@ -35,15 +25,13 @@ screen reader.
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the DatePicker.
-The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the DatePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 It supports the following list of shortcut keys:
 
 ### Input navigation
 
-Before opening the pop-up, use the following list of keys to
-control the pop-up element:
+Before opening the pop-up, use the following list of keys to control the pop-up element:
 
 | **Keys** | **Description** |
 | --- | --- |

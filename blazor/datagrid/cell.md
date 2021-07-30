@@ -242,8 +242,7 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 ## DataGrid Lines
 
-The [`GridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) have option to display cell border and it can be defined by the
-[`GridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property.
+The [`GridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) have option to display cell border and it can be defined by the [`GridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property.
 
 The available modes of datagrid lines are:
 
@@ -303,7 +302,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 * **Ellipsis**: Displays ellipsis when the cell content overflows its area.
 * **EllipsisWithTooltip**: Displays ellipsis when the cell content overflows its area, also it will display the tooltip while hover on ellipsis is applied.
 
->By default, [`Columns.ClipMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
+> By default, [`Columns.ClipMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ClipMode) value is **Ellipsis**.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

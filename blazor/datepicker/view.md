@@ -9,8 +9,7 @@ documentation: ug
 
 # Start and Depth View in Blazor DatePicker Component
 
-The DatePicker has the following predefined views
-that provides a flexible way to navigate back and forth to select the date:
+The DatePicker has the following predefined views that provides a flexible way to navigate back and forth to select the date:
 
 | **View** | **Description** |
 | --- | --- |
@@ -42,8 +41,7 @@ The output will be as follows.
 
 Define the [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property to control the view navigation.
 
-> Always the Depth view has to be smaller than the Start view, otherwise the view restriction
-will be not restricted.
+> Always the Depth view has to be smaller than the Start view, otherwise the view restriction will be not restricted.
 
 The following example demonstrates how to create a DatePicker that allows users to select a month.
 
@@ -57,6 +55,4 @@ The following example demonstrates how to create a DatePicker that allows users 
 }
 ```
 
-> To learn more about Calendar views, refer to the Calendar's
-[Calendar Views](../calendar/calendar-views/)
-section.
+> To learn more about Calendar views, refer to the Calendar's [Calendar Views](../calendar/calendar-views/) section.

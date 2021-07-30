@@ -127,8 +127,7 @@ namespace blazorCalendars
 
 ## Blazor WebAssembly
 
-By default, the DateTimePicker week and month names are specific to the `American English` culture. It utilizes the
-`Blazor Internationalization` package to parse and format the date object based on the culture by using the official [UNICODE CLDR](http://cldr.unicode.org/) JSON data.
+By default, the DateTimePicker week and month names are specific to the `American English` culture. It utilizes the `Blazor Internationalization` package to parse and format the date object based on the culture by using the official [UNICODE CLDR](http://cldr.unicode.org/) JSON data.
 
 The following steps explain how to render the DateTimePicker in German culture (‘de-DE’) in Blazor Web Assembly application.
 
@@ -226,9 +225,7 @@ The output will be as follows.
 
 ## Right-To-Left
 
-The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays
-the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl)
-property to set the RTL direction.
+The DateTimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to displays the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateTimePicker-1.html#Syncfusion_Blazor_Calendars_SfDateTimePicker_1_EnableRtl) property to set the RTL direction.
 
 The following code example initialize the DateTimePicker component in `Arabic` culture.
 

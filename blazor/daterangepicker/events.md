@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor DateRangePicker Component
 
-This section explains the list of events of the DateRangePicker component which will be
-triggered for appropriate DateRangePicker actions.
+This section explains the list of events of the DateRangePicker component which will be triggered for appropriate DateRangePicker actions.
 
 The events should be provided to the DateRangePicker using **DateRangePickerEvents** component.
 
