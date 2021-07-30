@@ -144,8 +144,7 @@ namespace blazorDropdowns
 
 ## Blazor WebAssembly
 
-The Localization library allows you to localize static text content of the
-`NoRecordsTemplate` and `ActionFailureTemplate` properties according to the culture currently assigned to the AutoComplete.
+The Localization library allows you to localize static text content of the `NoRecordsTemplate` and `ActionFailureTemplate` properties according to the culture currently assigned to the AutoComplete.
 
 | Locale key | en-US (default)
 |------|------
@@ -201,9 +200,7 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-In the following sample, French culture is set to the AutoComplete and no data is loaded. Hence, the
-[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially and if the sample
-is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
+In the following sample, French culture is set to the AutoComplete and no data is loaded. Hence, the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) property displays its text in French culture initially and if the sample is run offline, the [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) property displays its text appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.Data

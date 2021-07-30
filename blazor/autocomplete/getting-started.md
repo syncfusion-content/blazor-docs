@@ -25,19 +25,19 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
-    <head>
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
-    </head>
+<head>
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
+</head>
 ```
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
 ```
 
 ## Adding component package to the application
@@ -165,9 +165,7 @@ The output will be as follows.
 
 ## Custom values
 
-The AutoComplete allows the users to give input as custom value, which is not required to present in
-predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowCustom) property.
-The custom value will be sent to post back handler when a form is about to be submitted.
+The AutoComplete allows the users to give input as custom value, which is not required to present in predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowCustom) property. The custom value will be sent to post back handler when a form is about to be submitted.
 
 ```csharp
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" AllowCustom=true DataSource="@LocalData">

@@ -9,13 +9,11 @@ documentation: ug
 
 # Filtering in Blazor AutoComplete Component
 
-The AutoComplete has built-in support to filter data items. The filter operation
-starts as soon as you start typing characters in the component.
+The AutoComplete has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the component.
 
 ## Change the filter type
 
-Determines on which filter type the component needs to be considered on search action.
-The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) and its supported data types are:
+Determines on which filter type the component needs to be considered on search action. The available [FilterType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_FilterType) and its supported data types are:
 
 | **Filter Type** | **Description**                                         | **Supported Types** |
 | --------------- | ------------------------------------------------------- | ------------------- |
@@ -59,8 +57,7 @@ The output will be as follows.
 
 ## Filter item count
 
-You can specify the filter suggestion item count using the
-[SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) property of AutoComplete.
+You can specify the filter suggestion item count using the [SuggestionCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_SuggestionCount) property of AutoComplete.
 
 Refer to the following example to restrict the suggestion list item counts as 3.
 
@@ -98,8 +95,7 @@ The output will be as follows.
 
 ## Limit the minimum filter character
 
-You can set the limit for the character count to filter the data on the AutoComplete. This can be done by
-setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete.
+You can set the limit for the character count to filter the data on the AutoComplete. This can be done by setting the [MinLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_MinLength) property to AutoComplete.
 
 In the following example, the remote request doesn't fetch the search data until the search key contains three characters.
 
@@ -137,8 +133,7 @@ The output will be as follows.
 
 ## Case sensitive filtering
 
-Data items can be filtered either with or without case sensitivity using the DataManager.
-This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property of AutoComplete.
+Data items can be filtered either with or without case sensitivity using the DataManager. This can be done by setting the [IgnoreCase](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_IgnoreCase) property of AutoComplete.
 
 The following sample depicts how to filter the data with case-sensitive.
 

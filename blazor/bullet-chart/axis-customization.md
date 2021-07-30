@@ -218,8 +218,7 @@ Label can be placed [`Inside`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Opposed Position
 
-To place an axis opposite to its original position,
-set the [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_OpposedPosition) property to **true**.
+To place an axis opposite to its original position, set the [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_OpposedPosition) property to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
