@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor Accumulation Chart Component
 
-In this section, we have provided the list of events of Accumulation Chart component which will be
-triggered for appropriate accumulation chart actions.
+In this section, we have provided the list of events of Accumulation Chart component which will be triggered for appropriate accumulation chart actions.
 
 The events should be provided to the Accumulation Chart using [`AccumulationChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html) component.
 
@@ -386,7 +385,7 @@ Below fields are available in the the [`AccumulationPointEventArgs`](https://hel
 
 * [`PageX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_PageX) – Specifies the current window page x location.
 * [`PageY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_PageY) – Specifies the current window page y location.
-* [`Point`]https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_Point) – Specifies the current point which is clicked.
+* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_Point) – Specifies the current point which is clicked.
 * [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_PointIndex) – Specifies the index of the current point.
 * [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_SeriesIndex) – Specifies the current series index.
 * [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_X) – Specifies the x coordinate of the current mouse click.

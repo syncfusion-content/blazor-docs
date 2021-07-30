@@ -173,8 +173,10 @@ In barcode generators you can customize the barcode text by using display [`Text
 @using Syncfusion.Blazor.BarcodeGenerator
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128"Value="SYNCFUSION" OnValidationFailed="@OnValidationFailed"></SfBarcodeGenerator>
 
-@code { public void OnValidationFailed(ValidationFailedEventArgs args)
-            {
-            } }
-
+@code 
+{ 
+     public void OnValidationFailed(ValidationFailedEventArgs args)
+     {
+     }
+}
 ```

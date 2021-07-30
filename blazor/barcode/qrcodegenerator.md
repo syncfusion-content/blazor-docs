@@ -70,9 +70,11 @@ In barcode generators You can customize the barcode text by using display [`Text
 
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion" OnValidationFailed="@OnValidationFailed"></SfQRCodeGenerator>
 
-@code { public void OnValidationFailed(ValidationFailedEventArgs args)
-            {
-            } }
-
+@code 
+{ 
+    public void OnValidationFailed(ValidationFailedEventArgs args)
+    {
+    }
+}
 
 ```
