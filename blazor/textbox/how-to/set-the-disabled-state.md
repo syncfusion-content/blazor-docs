@@ -9,12 +9,9 @@ documentation: ug
 
 # Set the Disabled State in Blazor TextBox Component
 
-To disable the TextBox, use its
-[Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Enabled)
-property.
+To disable the TextBox, use its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Enabled) property.
 
-The following example demonstrates the TextBox in
-a disabled state.
+The following example demonstrates the TextBox in a disabled state.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

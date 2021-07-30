@@ -9,9 +9,7 @@ documentation: ug
 
 # Number Formats in Blazor Numeric TextBox Component
 
-You can format the value of NumericTextBox using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
-The value will be displayed in the specified format when the component is in focused out state. The format string
-supports both the standard numeric format string and custom numeric format string.
+You can format the value of NumericTextBox using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property. The value will be displayed in the specified format when the component is in focused out state. The format string supports both the standard numeric format string and custom numeric format string.
 
 ## Standard formats
 
@@ -32,8 +30,7 @@ The output will be as follows.
 
 ## Custom formats
 
-From the custom numeric format string, you can provide any custom format by
-combining one or more custom specifiers.
+From the custom numeric format string, you can provide any custom format by combining one or more custom specifiers.
 
 The following examples demonstrate format the value by using currency format string `#` and `0`.
 

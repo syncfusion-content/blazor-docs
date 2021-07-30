@@ -23,15 +23,15 @@ There are two ways to highlight a text in the PDF document.
 1. Using the context menu.
     * Select a text in the PDF document and right-click it
     * Select **Highlight** option in the context menu that appears
+    ![HighlightContext](../../pdfviewer/images/highlight_context.png)
 
-![HighlightContext](../../pdfviewer/images/highlight_context.png)
 2. Using the annotation toolbar.
     * Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
     * Select the **Highlight** button in the annotation toolbar. It enables the highlight mode.
     * Select the text and the highlight annotation will be added.
     * You can also select the text and apply the highlight annotation using the **Highlight** button
 
-![HighlightText](../../pdfviewer/images/highlight_text.png)
+    ![HighlightText](../../pdfviewer/images/highlight_text.png)
 
 In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
 
@@ -64,14 +64,15 @@ There are two ways to underline a text in the PDF document:
     * Select a text in the PDF document and right-click it
     * Select **Underline** option in the context menu that appears.
 
-![UnderlineContext](../../pdfviewer/images/underline_context.png)
+    ![UnderlineContext](../../pdfviewer/images/underline_context.png)
+
 2. Using the annotation toolbar.
     * Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
     * Select the **Underline** button in the annotation toolbar. It enables the underline mode.
     * Select the text and the underline annotation will be added.
     * You can also select the text and apply the underline annotation using the **Underline** button
 
-![UnderlineText](../../pdfviewer/images/underline_text.png)
+    ![UnderlineText](../../pdfviewer/images/underline_text.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -104,14 +105,14 @@ There are two ways to strikethrough a text in the PDF document:
     * Select a text in the PDF document and right-click it
     * Select **strikethrough** option in the context menu that appears.
 
-![StrikeThrough](../../pdfviewer/images/strikethrough_context.png)
+    ![StrikeThrough](../../pdfviewer/images/strikethrough_context.png)
 2. Using the annotation toolbar.
     * Click the **Edit Annotation** button in the PDF Viewer toolbar.  A toolbar appears below it.
     * Select the **Strikethrough** button in the annotation toolbar. It enables the strikethrough mode.
     * Select the text and the strikethrough annotation will be added.
     * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button
 
-![StrikeThroughText](../../pdfviewer/images/strike_through.png)
+    ![StrikeThroughText](../../pdfviewer/images/strike_through.png)
 
 In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection to strike through the text.
 
@@ -157,7 +158,7 @@ The opacity of the annotation can be edited using the range slider provided in t
 
 The properties of the text markup annotation can be set before creating the control using highlightSettings, underlineSettings, and strikethroughSettings.
 
->After editing the default color and opacity using the Edit color tool and Edit opacity tool, they will be changed to the selected values.
+> After editing the default color and opacity using the Edit color tool and Edit opacity tool, they will be changed to the selected values.
 
 Refer to the following code snippet to set the default annotation settings.
 

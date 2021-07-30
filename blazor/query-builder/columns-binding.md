@@ -62,20 +62,20 @@ The operator for a column can be defined in the [`Columns`](https://help.syncfus
 | startswith  | Checks whether the value begins with the specified value. | String |
 | endswith  | Checks whether the value ends with the specified value. | String |
 | contains | Checks whether the value contains the specified value. | String |
-| equal | Checks whether the value is equal to the specified value. | String|Number/Date/Boolean |
-| notequal | Checks for values not equal to the specified value. | String/Number| Date| Boolean |
-| greaterthan | Checks whether the value is greater than the specified value. | Date/Number |
-| greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date/Number |
-| lessthan | Checks whether the value is less than the specified value.| Date/Number |
-| lessthanorequal | Checks whether the value is less than or equal to the specified value. | Date/Number |
-| between | Checks whether the value is between the two-specific value. | Date/Number |
-| notbetween | Checks whether the value is not between the two-specific value. | Date/Number |
-| in | Checks whether the value is one of the specific values. | String/Number |
-| notin | Checks whether the value is not in the specific values. | String/Number |
+| equal | Checks whether the value is equal to the specified value. | String, Number ,Date, Boolean |
+| notequal | Checks for values not equal to the specified value. | String, Number, Date, Boolean |
+| greaterthan | Checks whether the value is greater than the specified value. | Date, Number |
+| greaterthanorequal | Checks whether a value is greater than or equal to the specified value. | Date, Number |
+| lessthan | Checks whether the value is less than the specified value.| Date, Number |
+| lessthanorequal | Checks whether the value is less than or equal to the specified value. | Date, Number |
+| between | Checks whether the value is between the two-specific value. | Date, Number |
+| notbetween | Checks whether the value is not between the two-specific value. | Date, Number |
+| in | Checks whether the value is one of the specific values. | String, Number |
+| notin | Checks whether the value is not in the specific values. | String, Number |
 | isempty | Checks whether the value is empty. | String |
 | isnotempty | Checks whether the value is not empty. | String |
-| isnull | Checks whether the value is null. | String/Number |
-| isnotnull | Checks whether the value is not null. | String/Number |
+| isnull | Checks whether the value is null. | String, Number |
+| isnotnull | Checks whether the value is not null. | String, Number |
 
 ## Step
 
