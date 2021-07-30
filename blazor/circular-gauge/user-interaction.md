@@ -176,8 +176,7 @@ public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
 
 ## Dragging pointer
 
-The pointers can be dragged over the axis values by clicking and dragging the pointer. To enable or disable the pointer drag, use the
-[`EnablePointerDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
+The pointers can be dragged over the axis values by clicking and dragging the pointer. To enable or disable the pointer drag, use the [`EnablePointerDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnablePointerDrag) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

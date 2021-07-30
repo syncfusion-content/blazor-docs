@@ -51,8 +51,7 @@ You can place any custom element on the axis area using [`ContentTemplate`](http
 
 ## Positioning the annotation
 
-Annotations can be placed around an axis using the [`Radius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Radius) and [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Angle) properties.
-For example, if the angle is 90 degrees and the radius is 110%, then the annotation will be placed at the right of the axis.
+Annotations can be placed around an axis using the [`Radius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Radius) and [`Angle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotation.html#Syncfusion_Blazor_CircularGauge_CircularGaugeAnnotation_Angle) properties. For example, if the angle is 90 degrees and the radius is 110%, then the annotation will be placed at the right of the axis.
 
 The radius of an annotation takes values either in pixel or in percentage. By setting value in percentage, annotation gets its position with respect to its axis radius.
 

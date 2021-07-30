@@ -151,8 +151,7 @@ You can set a radius of the range in pixel as demonstrated as follows.
 
 ### In percentage
 
-By setting value in percentage, a range gets its dimension with respect to its axis radius.
-For example, when the radius is ‘50%’,the range is rendered to half of the axis radius.
+By setting value in percentage, a range gets its dimension with respect to its axis radius. For example, when the radius is ‘50%’,the range is rendered to half of the axis radius.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -175,8 +174,7 @@ For example, when the radius is ‘50%’,the range is rendered to half of the a
 
 ## Dragging ranges
 
-The ranges can be dragged over the axis line by clicking and dragging the same. To enable or disable the range drag, use the
-[`EnableRangeDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnableRangeDrag) property.
+The ranges can be dragged over the axis line by clicking and dragging the same. To enable or disable the range drag, use the [`EnableRangeDrag`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_EnableRangeDrag) property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

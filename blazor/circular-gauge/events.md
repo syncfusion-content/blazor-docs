@@ -49,8 +49,7 @@ Description: Triggers, after animation is completed.
 
 ### AnnotationRendering
 
-Description: Triggers, before rendering on each annotation. You can customize annotations using
-these arguments.
+Description: Triggers, before rendering on each annotation. You can customize annotations using these arguments.
 
 |   Argument name      |   Description                               |
 |----------------------| --------------------------------------------|

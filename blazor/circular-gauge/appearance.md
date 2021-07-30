@@ -11,7 +11,7 @@ documentation: ug
 
 ## Circular gauge title
 
-You can add a title to the Circular Gauge using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property. The title can be customized using the [`CircularGaugeTitleStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
+You can add a title to the Circular Gauge using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title)  property. The title can be customized using the [`CircularGaugeTitleStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

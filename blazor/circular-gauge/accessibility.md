@@ -10,11 +10,9 @@ documentation: ug
 
 # Accessibility in Blazor Circular Gauge Component
 
-The Circular Gauge provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The
-WAI-ARIA accessibility supports are achieved through the attributes such as `aria-label`. It helps to provide information about elements
-in a document for assistive technology.
+The Circular Gauge provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved through the attributes such as `aria-label`. It helps to provide information about elements in a document for assistive technology.
 
-**Aria-label:**   Provides the text label with some default description for the following elements in gauge.
+**Aria-label:** Provides the text label with some default description for the following elements in gauge.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -36,4 +34,4 @@ in a document for assistive technology.
 </tr>
 </table>
 
- You can change this default description, using the description property available in [`CircularGaugePointers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html), [`CircularGaugeAnnotations`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotations.html) and [`SfCircularGauge`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html) tags.  It helps the screen reader to read for assistive purpose.
+ You can change this default description, using the description property available in [`CircularGaugePointers`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugePointers.html), [`CircularGaugeAnnotations`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAnnotations.html) and [`SfCircularGauge`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html) tags. It helps the screen reader to read for assistive purpose.
