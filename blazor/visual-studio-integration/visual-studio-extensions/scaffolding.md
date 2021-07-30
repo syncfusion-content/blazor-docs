@@ -15,7 +15,7 @@ Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor plat
 
 <!-- markdownlint-disable MD026 -->
 
-    > The Syncfusion Blazor Scaffolder is available from `v17.4.0.39` for Blazor server-side application and provided the Scaffolding support to Blazor client-side application from `v18.4.0.39`.
+> The Syncfusion Blazor Scaffolder is available from `v17.4.0.39` for Blazor server-side application and provided the Scaffolding support to Blazor client-side application from `v18.4.0.39`.
 
 ## Add a scaffolded item
 

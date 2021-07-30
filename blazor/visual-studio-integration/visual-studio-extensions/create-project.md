@@ -39,9 +39,9 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
 5. The Syncfusion Blazor has three types of project and is listed below,
 
-    1. Syncfusion Blazor Server App
-    2. Syncfusion Blazor WebAssembly App
-    3. Syncfusion Blazor WebAssembly App (ASP.NET Core hosted)
+    1. Syncfusion Blazor Server App.
+    2. Syncfusion Blazor WebAssembly App.
+    3. Syncfusion Blazor WebAssembly App (ASP.NET Core hosted).
 
 6. Choose the desired Syncfusion Blazor application and Theme.
 7. Click the Create button to create the Blazor Syncfusion application.
