@@ -38,8 +38,7 @@ In the following sample, the color value sets as `four` digit hex code, the last
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
 
-Output be like
+Output be like below,
 ![color-picker](./images/color-value.png)
 
-> The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property
-supports hex code with or without `#` prefix.
+> The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.

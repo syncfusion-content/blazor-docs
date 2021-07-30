@@ -93,7 +93,7 @@ Now, add the Blazor Color Picker component in `razor` page in the `Pages` folder
 
 ## Run the application
 
-The Blazor Color Picker component will render in the web browser as shown below
+The Blazor Color Picker component will render in the web browser as shown below,
 
 ![ColorPicker Sample](./images/color-picker.png)
 

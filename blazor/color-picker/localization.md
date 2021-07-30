@@ -30,7 +30,8 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 
 ```
 
-Output be like
+Output be like below,
+
 ![color-picker](./images/cp-locale.png)
 
 ## RTL
@@ -47,5 +48,6 @@ In the following example Color Picker component is rendered in RTL mode with `ar
 
 ```
 
-Output be like
+Output be like below,
+
 ![color-picker](./images/cp-rtl.png)
