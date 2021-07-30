@@ -123,8 +123,6 @@ Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion
 
 * [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
 
-{% aspTab template="chart/events", sourceFiles="zoomend.razor" %}
-
 ```cshtml
 
 @using Syncfusion.Blazor.Charts
@@ -513,8 +511,6 @@ Below properties are available in the the [`AxisRangeCalculatedEventArgs`](https
 * [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Interval) – Specifies the current interval of the axis.
 * [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Maximum) – Specifies the current maximum value of the axis.
 * [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Minimum) – Specifies current minimum value of the axis.
-
-{% aspTab template="chart/events", sourceFiles="axisactualrange.razor" %}
 
 ```cshtml
 
@@ -978,8 +974,6 @@ Below fields are available in the the [`MultiLevelLabelClickEventArgs`](https://
 * [`Level`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Level) – Specifies the current level of the label.
 * [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Start) – Specifies the start value of the multi level labels
 * [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Text) – Specifies the text of the current label.
-
-{% aspTab template="chart/events", sourceFiles="multilabelclick.razor" %}
 
 ```cshtml
 

@@ -59,8 +59,6 @@ documentation: ug
 
 The [`StackingGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property is used to group stacked bar and 100% stacked bar. Bars with same group name are stacked on top of each other.
 
-{% aspTab template="chart/series/bar-charts/group", sourceFiles="group.razor" %}
-
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

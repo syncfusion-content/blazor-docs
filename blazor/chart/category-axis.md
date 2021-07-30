@@ -137,8 +137,6 @@ The [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 The category axis can also be rendered using the data source index values. This can be achieved by setting the [`IsIndexed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_IsIndexed) property in the axis to **true**.
 
-{% aspTab template="chart/axis/category/index", sourceFiles="index.razor" %}
-
 ```cshtml
 
 @using Syncfusion.Blazor.Charts

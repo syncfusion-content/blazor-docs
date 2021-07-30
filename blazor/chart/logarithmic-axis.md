@@ -281,8 +281,6 @@ The table below shows the results of applying some commonly used label formats t
 
 Axis also supports custom label format using placeholders such as {value}K, where the value represents the axis label, for example, 200K.
 
-{% aspTab template="chart/axis/double/custom", sourceFiles="custom.razor" %}
-
 ```cshtml
 
 <SfChart>
