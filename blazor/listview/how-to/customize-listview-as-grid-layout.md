@@ -12,11 +12,8 @@ documentation: ug
 In Listview, list items can be rendered in grid layout with following data manipulations.
 
 * Add Item
-
 * Remove Item
-
 * Sort Items
-
 * Filter Items
 
 ## Grid Layout
@@ -24,7 +21,6 @@ In Listview, list items can be rendered in grid layout with following data manip
 In this section, we will discuss about rendering of list items in grid layout.
 
 * Initialize and render ListView with dataSource which will render list items in list layout.
-
 * Now, add the below CSS to list item. This will make list items to render in grid layout
 
 ```css
@@ -117,9 +113,7 @@ In the below sample, you can remove by hovering the item which will show delete 
 
 ### Sort Items
 
-Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`.
-
-We can also set sorting after control initialization.
+Listview can be sorted either in Ascending or Descending order. To enable sorting in your ListView, set `SortOrder` as `Ascending` or `Descending`. You can also set sorting after control initialization.
 
 In the below sample, we have sorted in `Ascending` order. To sort it in descending, click on sort order icon and vice versa.
 

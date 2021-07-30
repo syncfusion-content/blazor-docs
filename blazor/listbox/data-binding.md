@@ -43,8 +43,7 @@ Output will be shown as
 
 ### Array of object
 
-The ListBox can generate its list items through an array of object data. For this,
-the appropriate columns should be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The ListBox can generate its list items through an array of object data. For this, the appropriate columns should be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
 In the following example, `id` and `sports` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
@@ -80,8 +79,7 @@ Output will be shown as
 
 ### Array of complex object
 
-The ListBox can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The ListBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
 In the following example, `sports.Name` column from complex data have been mapped to the `Text` field.
 

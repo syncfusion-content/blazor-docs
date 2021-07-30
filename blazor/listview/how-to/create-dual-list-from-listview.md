@@ -9,8 +9,7 @@ documentation: ug
 
 # Create dual list using Blazor ListView Component
 
-The dual list contains two ListView. This allows you to move list items from one list to another using the client-side
-events. This section explains how to integrate the ListView control to achieve dual list.
+The dual list contains two ListView. This allows you to move list items from one list to another using the client-side events. This section explains how to integrate the ListView control to achieve dual list.
 
 ## Use cases
 
@@ -19,8 +18,7 @@ events. This section explains how to integrate the ListView control to achieve d
 
 ## Integration of Dual List
 
-Here, two ListView controls have been used to display the list items. An Blazor Button is used to transfer data between
-the ListView, and a textbox is used to achieve the UI of filtering support.
+Here, two ListView controls have been used to display the list items. An Blazor Button is used to transfer data between the ListView, and a textbox is used to achieve the UI of filtering support.
 
 The dual list supports:
 
@@ -28,28 +26,21 @@ The dual list supports:
 * Moving selected data from one list to another.
 * Filtering the list by using a client-side typed character.
 
-In the ListView control, sorting is enabled using the
-`SortOrder` property, and the `Clicked` event is triggered
-while selecting an item. Here, the `Clicked` event is triggered to enable and disable button states.
+In the ListView control, sorting is enabled using the `SortOrder` property, and the `Clicked` event is triggered while selecting an item. Here, the `Clicked` event is triggered to enable and disable button states.
 
 ## Manipulating data
 
 ## Moving whole data from the first list to the second list(>>)
 
-Here, the whole data can be moved from the first ListView to the second by clicking the first button. When clicking the button,
-the whole list items are sliced, and `concat` with the second ListView. This button is enabled only when the data source
-of the first ListView is not empty.
+Here, the whole data can be moved from the first ListView to the second by clicking the first button. When clicking the button, the whole list items are sliced, and `concat` with the second ListView. This button is enabled only when the data source of the first ListView is not empty.
 
 ## Moving whole data from the second list to the first list(<<)**
 
-The functionality of the second button is the same as above, and data is transferred from the second list to the first
-list. This button is enabled only when the data source of the second ListView is not empty.
+The functionality of the second button is the same as above, and data is transferred from the second list to the first list. This button is enabled only when the data source of the second ListView is not empty.
 
 ## Moving selected item from one list to another list (>) and (<)**
 
-The `Clicked` event is triggered
-when clicking a list item in the ListView. The selected items can be transferred between two lists. These buttons will be
-enabled when selecting an item in lists.
+The `Clicked` event is triggered when clicking a list item in the ListView. The selected items can be transferred between two lists. These buttons will be enabled when selecting an item in lists.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

@@ -13,7 +13,7 @@ The Kanban provides built-in support to arrange the cards in their columns based
 
 ## SortBy
 
-Initially, users can change the arrangement of cards in the columns and position of the dropped card by using the `SortBy` property. The `SortBy` property contains three enumeration values as follows.
+Initially, users can change the arrangement of cards in the columns and position of the dropped card by using the `SortBy` property. The `SortBy` property contains three enumeration values as follows,
 
 * DataSourceOrder
 * Index
@@ -108,13 +108,10 @@ The following cases will dynamically change their `Field` value when dropping th
 * When the previous and next cards have continuous order or odd/even value, then the `Field` value of the dropped card and the cards followed by the dropped card will be changed based on the **previous** card value with continuous order.
 
 For Example,
-**Continuous Order** -
-Consider,  Column A has Card A with priority value `1`, Card B with priority value `2`, and Card C with priority value `3`.
-and Column B has Card D with priority value `5`, then the dropped Card D will be placed between Card A and Card B. Now, the Cards D, B, and C will be dynamically changed to the priority values as `2, 3, and 4` respectively.
 
-**Odd/Even order** -
-Consider, Column A has Card A with priority value `1`, Card B with priority value `3`, and Card C with priority value `5`.
-and Column B has Card D with priority value `5`, then the Dropped Card D will be placed between Card A and Card B. Now, the Cards D, B, and C will be dynamically changed to the priority values as `2, 3, and 5` respectively.
+**Continuous Order** - Consider,  Column A has Card A with priority value `1`, Card B with priority value `2`, and Card C with priority value `3`, and Column B has Card D with priority value `5`, then the dropped Card D will be placed between Card A and Card B. Now, the Cards D, B, and C will be dynamically changed to the priority values as `2, 3, and 4` respectively.
+
+**Odd/Even order** - Consider, Column A has Card A with priority value `1`, Card B with priority value `3`, and Card C with priority value `5`, and Column B has Card D with priority value `5`, then the Dropped Card D will be placed between Card A and Card B. Now, the Cards D, B, and C will be dynamically changed to the priority values as `2, 3, and 5` respectively.
 
 ```csharp
 

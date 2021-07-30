@@ -9,16 +9,11 @@ documentation: ug
 
 # Use dynamic templates in Blazor ListView based on device
 
-The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in
-both modes. The control templates are not always fixed. Applications may need to load various templates depending
-upon the device.
+The Syncfusion Essential Blazor controls are desktop and mobile-friendly. So, you can use Syncfusion controls in both modes. The control templates are not always fixed. Applications may need to load various templates depending upon the device.
 
 ## Integration
 
-In the ListView control, template support is being used. In some cases, the control wrapper is always responsive
-across all devices, but the template contents are dynamically changed with unspecified (sample side) dimensions. CSS
-customization is also needed in sample-side to align template content responsively in both mobile and desktop modes. Here,
-two templates have been loaded for mobile and desktop modes. To check the device mode, we can use the Microsoft.AspNetCore.Http package and check for the UserAgent to detect mobile or desktop.
+In the ListView control, template support is being used. In some cases, the control wrapper is always responsive across all devices, but the template contents are dynamically changed with unspecified (sample side) dimensions. CSS customization is also needed in sample-side to align template content responsively in both mobile and desktop modes. Here, two templates have been loaded for mobile and desktop modes. To check the device mode, we can use the Microsoft.AspNetCore.Http package and check for the UserAgent to detect mobile or desktop.
 
 ```cshtml
 @using Syncfusion.Blazor.Lists
@@ -78,7 +73,7 @@ two templates have been loaded for mobile and desktop modes. To check the device
 {
     bool IsMobile;
     List<ListDataModel> DataSource = new List<ListDataModel>()
-{
+    {
         new ListDataModel{ Name = "IBM Open-Sources Web Sphere Liberty Code", Content =  "In September, IBM announced that it would be open-sourcing the code for WebSphere...", Id =  "1", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/1.png", TimeStamp =  "Syncfusion Blog - October 19, 2017" },
         new ListDataModel{ Name =  "Must Reads: 5 Big Data E-books to upend your development", Content =  "Our first e-book was published in May 2012-jQuery Succinctly was the start of over...", Id =  "2", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/2.png", TimeStamp =  "Syncfusion Blog - October 18, 2017" },
         new ListDataModel{ Name =  "The Syncfusion Global License: Your Questions, Answered ", Content =  "Syncfusion recently hosted a webinar to cover the ins and outs of the Syncfusion global...", Id =  "4", Image =  "https://ej2.syncfusion.com/demos/src/listview/images/3.png", TimeStamp =  "Syncfusion Blog - October 18, 2017" },

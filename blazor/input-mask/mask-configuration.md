@@ -58,8 +58,7 @@ Other than the above standard mask elements, the mask can be configured with th
 
 ### Custom characters
 
-You can define any of the non-mask element as the mask element
-and its behavior through the [CustomCharacters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CustomCharacters) property.
+You can define any of the non-mask element as the mask element and its behavior through the [CustomCharacters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CustomCharacters) property.
 
 In the following example, non-mask element `P` accepts the values `P, A, p, a`, and `M` accepts the values `M, m`  as mentioned in the custom characters collection.
 
@@ -83,8 +82,7 @@ The output will be as follows.
 
 ### Regular expression
 
-Instead of the mask element, you can define your own regular expression to validate the input of a particular input place.
-The regular expressions should be wrapped by the square brackets (e.g., [`Regex`]).
+Instead of the mask element, you can define your own regular expression to validate the input of a particular input place. The regular expressions should be wrapped by the square brackets (e.g., [`Regex`]).
 
 In the following example, regular expression has been set for each input places.
 
@@ -115,6 +113,6 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 }
 ```
 
-The output will be as follows.
+The output will be as follows,
 
 ![MaskedTextBox Sample](./images/Prompt.png)

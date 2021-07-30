@@ -128,6 +128,6 @@ The following sample illustrates how to drag and drop an item between two listbo
 </style>
 ```
 
-Output will be shown as
+Output will be shown as,
 
 ![ListBox](./images/multiple-drag.png)

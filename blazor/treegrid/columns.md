@@ -1000,7 +1000,7 @@ When the right edge of the header cell is tapped, a floating handler will be vis
 The following screenshot represents the column resizing in touch device.
 
 <!-- markdownlint-disable MD033 -->
-<img src="../images/column-resizing.png" alt="Touch interaction" style="width:320px;height: 620px">
+<img src="./images/column-resizing.png" alt="Touch interaction" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
 ## Column template

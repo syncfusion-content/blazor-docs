@@ -10,6 +10,7 @@ documentation: ug
 # Native Events in Blazor Input Mask Component
 
 The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
+
 Refer to the following example to change the appearance of the MaskedTextBox.
 
 ```cshtml
@@ -41,8 +42,5 @@ Refer to the following example to change the appearance of the MaskedTextBox.
 </style>
 ```
 
-The output will be as follows.
-
-![MaskedTextBox Sample](../images/customCss.png)he output will be as follows.
-
+The output will be as follows,
 ![MaskedTextBox Sample](../images/customCss.png)

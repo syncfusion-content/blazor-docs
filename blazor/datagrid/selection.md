@@ -417,7 +417,7 @@ To select multiple rows or cells, tap the popup![Multi Row or Cells](images/msel
 
 The following screenshot represents a datagrid touch selection in the device.
 
-![Touch interaction](images/touch-selection.jpg)
+![Touch interaction](./images/touch-selection.jpg)
 
 ## Multiple selection based on condition
 

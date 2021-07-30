@@ -13,9 +13,7 @@ The ListView component is designed to customize each list items and group title.
 
 ## Header Template
 
-Listview header can be customized with the help of the `HeaderTemplate` property.
-
-To customize header template in your application, set your customized template string to `HeaderTemplate` property along with `ShowHeader` property as `true` to display the Listview header.
+Listview header can be customized with the help of the `HeaderTemplate` property. To customize header template in your application, set your customized template string to `HeaderTemplate` property along with `ShowHeader` property as `true` to display the Listview header.
 
 In the following example, we have rendered Listview with customized header which contains search, add and sort buttons.
 
@@ -64,11 +62,9 @@ In the following example, we have rendered Listview with customized header which
 
 ## Template
 
-ListView items can be customized with the help of the `Template` property.
+ListView items can be customized with the help of the `Template` property. To customize list items in your application, set your customized template string to `Template` property.
 
-To customize list items in your application, set your customized template string to `Template` property.
-
-We provided the following built-in CSS classes to customize the list-items. Refer to the following table.
+The following built-in CSS classes can be used to customize the list-items. 
 
 | CSS class        | Description           |
 | ------------- |-------------|
@@ -238,9 +234,7 @@ In the following example, we have customized list items with built-in CSS classe
 
 ## Group template
 
-ListView group header can be customized with the help of the [`GroupTemplate`] property.
-
-To customize the group template in your application, set your customized template string to `GroupTemplate` property.
+ListView group header can be customized with the help of the `GroupTemplate` property. To customize the group template in your application, set your customized template string to `GroupTemplate` property.
 
 In the following example, we have grouped Listview based on the category. The category of each list item should be mapped with `GroupBy` field of the data. We have also displayed grouped list items count in the group list header.
 
