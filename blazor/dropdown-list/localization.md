@@ -142,9 +142,7 @@ namespace blazorDropdowns
 
 ## Blazor WebAssembly
 
-The Localization library allows you to localize static text content of the
-[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~NoRecordsTemplate.html)
-and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~ActionFailureTemplate.html)
+The Localization library allows you to localize static text content of the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~NoRecordsTemplate.html) and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.DropDowns.DropDownListTemplates%601~ActionFailureTemplate.html)
 &nbsp;properties according to the culture currently assigned to the DropDownList.
 
 | Locale key | en-US (default)

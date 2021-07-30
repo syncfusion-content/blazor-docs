@@ -9,8 +9,7 @@ documentation: ug
 
 # Filtering in Blazor DropDown List Component
 
-The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter
-operation starts as soon as you start typing characters in the search box.
+The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -105,7 +104,5 @@ The DropDownList component filter queries can be customized. You can also use yo
 
         await ddlObj.FilterAsync(Country1, query);
     }
-
-
 }
 ```

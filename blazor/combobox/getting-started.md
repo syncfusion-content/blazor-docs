@@ -26,8 +26,8 @@ To get start quickly with Blazor ComboBox component, you can check on this video
 
   ```html
   <head>
-          <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-          @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
   </head>
   ```
 
@@ -35,8 +35,8 @@ To get start quickly with Blazor ComboBox component, you can check on this video
 
   ```html
   <head>
-      <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
   </head>
   ```
 
@@ -75,7 +75,7 @@ namespace BlazorApplication
 
  ```html
 <head>
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+  <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 
@@ -103,7 +103,7 @@ The following example illustrates the output in your browser.
 
 ```csharp
 <SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
-<ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
+    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
 
 @code {
@@ -138,7 +138,7 @@ set of values. By default, this support is enabled by [AllowCustom](https://help
 
 ```csharp
 <SfComboBox TValue="string"  TItem="Games" AllowCustom=true Placeholder="Select a game" DataSource="@LocalData">
-<ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
+    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
 
 @code {
@@ -177,7 +177,7 @@ In the following sample, popup list's width and height are configured.
 ```csharp
 
 <SfComboBox TValue="string" TItem="Games"PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
-<ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
+    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
 </SfComboBox>
 
 @code {
