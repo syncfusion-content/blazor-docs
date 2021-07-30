@@ -102,11 +102,7 @@ The output will be as follows.
 
 ![uploader](./images/uploader-chunk.png)
 
-The chunk upload functionality separates the selected files into blobs of the data or chunks. These chunks are transmitted to the server using an AJAX request.
-The chunks are sent in **sequential** order, and the next chunk can be sent to the server according to the success of the previous chunk. If any one
-of the chunk failed, then the remaining chunk cannot be sent to the server.
-The [ChunkSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkSuccess) or [ChunkFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkFailure) event will
-be triggered when the chunk is sent to the server successfully or failed. If all the chunks are sent to the server successfully, the uploader success event is triggered.
+The chunk upload functionality separates the selected files into blobs of the data or chunks. These chunks are transmitted to the server using an AJAX request. The chunks are sent in **sequential** order, and the next chunk can be sent to the server according to the success of the previous chunk. If any one of the chunk failed, then the remaining chunk cannot be sent to the server. The [ChunkSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkSuccess) or [ChunkFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkFailure) event will be triggered when the chunk is sent to the server successfully or failed. If all the chunks are sent to the server successfully, the uploader success event is triggered.
 
 > Chunk upload will work when the selected file size is greater than the specified chunk size. otherwise, it upload the files normally.
 
@@ -175,8 +171,8 @@ The following sample specifies the chunk upload delay with 3000 milliseconds and
 
 ## Resumable upload
 
-Allows you to resume an upload operation after a network failure or manually interrupts (pause) the upload. You can perform pause and resume upload actions using public methods (pause and resume)
-and UI interaction. The pause icon is enabled after the upload begins.
+Allows you to resume an upload operation after a network failure or manually interrupts (pause) the upload. You can perform pause and resume upload actions using public methods (pause and resume) and UI interaction. The pause icon is enabled after the upload begins. 
+
 > This pause and resume features available only when the chunk upload is enabled.
 
 `SaveUrl` and `RemoveUrl` action explained in this [link](./chunk-upload/#save-and-remove-action-for-blazor-aspnet-core-hosted-application).
@@ -218,6 +214,5 @@ The output will be as follows.
 ![uploader](./images/uploader-cancel.png)
 
 > The retry action has different working behavior for chunk upload and default upload.
-
-* Chunk upload: Retries to upload the failed request where it is failed previously.
-* Default upload: Retries to upload the failed file again from initial.
+> * Chunk upload: Retries to upload the failed request where it is failed previously.
+> * Default upload: Retries to upload the failed file again from initial.

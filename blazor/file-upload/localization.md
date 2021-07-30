@@ -140,9 +140,9 @@ namespace blazorInputs
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-    <SfUploader ID="UploadFiles" Locale="de">
-        <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
-    </SfUploader>
+<SfUploader ID="UploadFiles" Locale="de">
+    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
+</SfUploader>
 ```
 
 ## Blazor WebAssembly

@@ -20,19 +20,19 @@ This section briefly explains about how to include a [Blazor File Upload](https:
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
-    <head>
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-            <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
+</head>
 ```
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
 ```
 
 ## Adding component package to the application
@@ -69,9 +69,9 @@ namespace BlazorApplication
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
-    <head>
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-    </head>
+<head>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+</head>
 ```
 
 ## Adding uploader component to the application
@@ -96,7 +96,7 @@ You can upload the files and files of folders in the Blazor application without 
 
 ### Save and Remove actions
 
-You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
+You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange) event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
 
 ```cshtml
 @using System.IO
@@ -195,6 +195,7 @@ The remove action is optional. The remove action handler removes the files that 
             Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
         }
     }
+
     [HttpPost("[action]")]
     public void Remove(IList<IFormFile> UploadFiles)
     {
@@ -230,7 +231,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 <SfUploader AllowedExtensions=".doc, docx, .xls, xlsx"></SfUploader>
 ```
 
-The output will be as follows.
+The output will be as follows,
 
 ![Uploader AllowedExtensions](./images/uploader_file_not_allowed.png)
 
