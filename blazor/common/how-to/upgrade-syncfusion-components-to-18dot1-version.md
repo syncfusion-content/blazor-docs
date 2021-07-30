@@ -153,7 +153,7 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 <tr>
 <td>
 
-```cshtml
+{% highlight cshtml %}
 @using Syncfusion.EJ2.Blazor.Data
 
 @{ var chartQuery = $"new ej.data.Query().where('EmployeeID', 'equal', {employee.EmployeeID}, false)"; }
@@ -169,12 +169,12 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
     ....
 </EjsChart>
 
-```
+{% endhighlight %}
 
 </td>
 <td>
 
-```cshtml
+{% highlight cshtml %}
 @using Syncfusion.Blazor.Data
 
 @{ var chartQuery = $"new sf.data.Query().where('EmployeeID', 'equal', {employee.EmployeeID}, false)"; }
@@ -190,7 +190,7 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
     ....
 </SfChart>
 
-```
+{% endhighlight %}
 
 </td>
 </tr>
