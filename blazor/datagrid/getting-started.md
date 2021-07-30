@@ -25,13 +25,13 @@ To get start quickly with Blazor DataGrid component, you can check on this video
  2. You can add the client-side resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
-    <head>
-        <environment include="Development">
-        ....
-        ....
-           <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
-       </environment>
-    </head>
+<head>
+    <environment include="Development">
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
+    </environment>
+</head>
 ```
 
  For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
@@ -41,7 +41,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Grids** package.
 
 ```csharp
-        @using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Grids
 ```
 
 ## Add SyncfusionBlazor service in Startup.cs
@@ -74,7 +74,6 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 ```csharp
 
 <SfGrid>
-
 </SfGrid>
 
 ```

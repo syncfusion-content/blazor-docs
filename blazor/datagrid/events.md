@@ -14,7 +14,7 @@ triggered for appropriate datagrid actions.
 
 The events should be provided to the datagrid using **GridEvents** component. When using events of datagrid, **TValue** must be provided in the **GridEvents** component.
 
-> * All the events should be provided in a single **GridEvents** component.
+> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionBegin
 

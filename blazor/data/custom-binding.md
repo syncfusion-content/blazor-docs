@@ -77,10 +77,10 @@ For implementing the custom data binding alone in the DataGrid component provide
 
 For implementing the CRUD operations for the custom bounded data override the following CRUD methods of the **DataAdaptor** abstract class,
 
-* **Insert/InsertAsync**
-* **Remove/RemoveAsync**
-* **Update/UpdateAsync**
-* **BatchUpdate/BatchUpdateAsync**
+* Insert/InsertAsync
+* Remove/RemoveAsync
+* Update/UpdateAsync
+* BatchUpdate/BatchUpdateAsync
 
 > While using batch editing in datagrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
 

@@ -9,8 +9,7 @@ documentation: ug
 
 # Filtering in Blazor ComboBox Component
 
-The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter
-operation starts as soon as you start typing characters in the component.
+The ComboBox has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html) is enabled. The filter operation starts as soon as you start typing characters in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
