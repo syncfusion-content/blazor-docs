@@ -11,7 +11,7 @@ documentation: ug
 
 To modify the Scheduler appearance, you need to override the default CSS of Scheduler. Also, you have an option to create your own custom theme using our [`Theme Studio`](https://ej2.syncfusion.com/themestudio/?theme=material). Please find the list of CSS classes in Scheduler.
 
-| Css class | Purpose |
+| CSS class | Purpose |
 |-------|---------|
 | .e-schedule .e-vertical-view .e-work-cells | Work cells in vertical views of scheduler |
 | .e-schedule .e-month-view .e-work-cells | Work cells in month view of scheduler |

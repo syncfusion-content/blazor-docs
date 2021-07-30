@@ -280,9 +280,9 @@ namespace Restful_Services.Models
 }
 ```
 
-### Creating Odata Controller
+### Creating OData Controller
 
- A Odata Controller has to be created which allows Scheduler directly to consume data from the Entity framework. The following code example shows how to perform CRUD operations using Entity Framework.
+ A OData Controller has to be created which allows Scheduler directly to consume data from the Entity Framework. The following code example shows how to perform CRUD operations using Entity Framework.
 
 ```csharp
 using System;
@@ -397,7 +397,7 @@ namespace Restful_Services.Controllers
 
 ### Configure Scheduler component using ODataV4Adaptor
 
-Now you can configure the Scheduler using the `SfDataManager` to interact with the created Odata service and consume the data appropriately. To interact with Odata, you need to use `ODataV4Adaptor`.
+Now you can configure the Scheduler using the `SfDataManager` to interact with the created OData service and consume the data appropriately. To interact with OData, you need to use `ODataV4Adaptor`.
 
 ```cshtml
 @using Syncfusion.Blazor

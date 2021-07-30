@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Blazor WebAssembly Scheduler in Blazor Scheduler Component | Syncfusion
+title: Getting Started With Blazor Scheduler in Web Assembly | Syncfusion
 description: Helps you to get started of Syncfusion Blazor Scheduler component in Web Assembly project. Also helps to bind appointments and set current view and date to it.
 platform: Blazor
 control: Scheduler
@@ -175,4 +175,4 @@ The scheduler with the appointments will be rendered as shown in the following i
 
 ![Scheduler with appointments](../images/appointments.png)
 
-> You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.ppointments with multiple resources.
+> You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.

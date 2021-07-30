@@ -268,9 +268,9 @@ There are four repeat types available namely,
 
 ### Recurrence properties
 
- The properties based on which the recurrence appointments are created with its respective time period are depicted in the following table. Also, the valid rule string can be referred from [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications.
+ The properties based on which the recurrence appointments are created with its respective time period are depicted in the following table. Also, the valid rule string can be referred from [`iCalendar`](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications.
 
- > Refer [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
+ > Refer [`iCalendar`](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
 
 | Property | Purpose | Example |
 |-------|---------| --------- |

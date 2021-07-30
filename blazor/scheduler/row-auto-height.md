@@ -106,7 +106,7 @@ The following screenshot shows the auto-adjustment of row in timeline week view 
 
 ## Appointments occupying entire cell
 
-By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` taghelper whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
+By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` tag helper whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
 
 ```csharp
 
@@ -168,4 +168,4 @@ In following image the whitespace below the appointment has been ignored.
 
 ![IgnoreWhitespace](images/ignore-whitespace.png)
 
-> The property `IgnoreWhitspace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.
+> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.
