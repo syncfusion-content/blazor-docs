@@ -68,9 +68,9 @@ Content in Card holds texts, images, links and all possible HTML elements. Its a
 <SfCard ID="HugeImage">
     <CardHeader Title="Laura Callahan" SubTitle="Sales Coordinator and Representative" ImageUrl="images/cards/football.png" />
 </SfCard>
+
 <SfCard ID="SecondCard">
-<CardContent Content="Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French.
-"/>
+    <CardContent Content="Laura received a BA in psychology from the University of Washington. She has also completed a course in business French. She reads and writes French."/>
 </SfCard>
 
 ```

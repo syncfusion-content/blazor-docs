@@ -11,8 +11,7 @@ documentation: ug
 
 A calendar provides an option to select a date value within a specified range by defining the [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Min) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) properties. The Min date should always be lesser than the Max date.
 
-If the value of `Min` or `Max` properties are changed
-through code behind, then update the `Value` property to be set within the  specified range.
+If the value of `Min` or `Max` properties are changed through code behind, then update the `Value` property to be set within the  specified range.
 
 If the value is out of specified date range and less than Min date, the `Value` property will be updated with Min date or the value is higher than Max date, the `Value` property will be updated with Max date.
 

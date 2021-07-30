@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor Calendar Component
 
-This section explains the list of events of the Calendar component which will be
-triggered for appropriate Calendar actions.
+This section explains the list of events of the Calendar component which will be triggered for appropriate Calendar actions.
 
 > From `v17.2.*` added only the limited number of events for the Calendar component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 

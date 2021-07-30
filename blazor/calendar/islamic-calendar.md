@@ -22,7 +22,8 @@ The following code demonstrates how to display the Islamic Calendar (Hijri Calen
 
 <SfCalendar TValue="DateTime?" Value='@DateValue' CalendarMode="CalendarType.Islamic"></SfCalendar>
 
-@code {
+@code 
+{
     public DateTime DateValue {get;set;} = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 14);
 }
 ```

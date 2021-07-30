@@ -156,8 +156,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ## Enable Pan
 
-By using the [`EnablePan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan)
-property, one can pan the zoomed chart without the help of toolbar items.
+By using the [`EnablePan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartZoomSettings.html#Syncfusion_Blazor_Charts_ChartZoomSettings_EnablePan) property, one can pan the zoomed chart without the help of toolbar items.
 
 ```cshtml
 

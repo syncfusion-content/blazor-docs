@@ -15,8 +15,7 @@ Trendlines are used to show the price's direction and pace. Except for bar serie
 
 ## Linear
 
-A linear trendline is a best-fit straight line used with simpler data sets. To render a linear trendline,
-set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Linear).
+A linear trendline is a best-fit straight line used with simpler data sets. To render a linear trendline, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTrendline.html#Syncfusion_Blazor_Charts_ChartTrendline_Type) property to [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TrendlineTypes.html#Syncfusion_Blazor_Charts_TrendlineTypes_Linear).
 
 ```cshtml
 
