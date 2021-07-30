@@ -11,8 +11,7 @@ documentation: ug
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.
 
-Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other.
-Rich Text Editor supports markdown editing when the `EditorMode` set as `Markdown` and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
+Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the `EditorMode` set as `Markdown` and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
 
 ## Supported Commands
 
@@ -20,7 +19,7 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|
-| Bold | Sample content for `**`bold text`**`. | For bold, add `**` or `__` to front and back of the text. | For order list, precede each line with a number. |
+| Bold | Sample content for `**`bold text`**`. | For bold, add `**` or `__` to front and back of the text. For order list, precede each line with a number. |
 | Italic | Sample content for `*`Italic text`*`. | For Italic, add `*` or `_` to front and back of the text. |
 | Bold and Italics | Sample content for `***`bold and Italic text`***`. | For bold and Italics, add `***` to the front and back of the text. |
 | Heading 1 | `#` Heading 1 content | For heading 1, add `#` to start of the line. |

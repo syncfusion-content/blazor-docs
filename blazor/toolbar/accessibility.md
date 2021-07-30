@@ -19,19 +19,19 @@ The Toolbar element is assigned the role of `toolbar`.
 | **Property** | **Functionalities** |
 | --- | --- |
 | role="toolbar" | This attribute added to the ToolBar element describes the actual role of the element. |
-| aria-orientation     | Indicates the ToolBar orientation. Default value is `horizontal`. |
-| aria-haspopup       | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled,  attribute value has to be changed to `true`. | |
-| aria-disabled       | Indicates the disabled state of the ToolBar. |
+| aria-orientation | Indicates the ToolBar orientation. Default value is `horizontal`. |
+| aria-haspopup | Indicates the popup mode of the Toolbar. Default value is false. When popup mode is enabled, attribute value has to be changed to `true`. |
+| aria-disabled | Indicates the disabled state of the ToolBar. |
 
 ## Keyboard interaction
 
 Keyboard navigation is enabled, by default. Possible keys are:
 
-| Key           | Description                                                                         |
-|---------------|-------------------------------------------------------------------------------------|
-| <kbd>Left</kbd>    | Focuses the previous element.                                               |
-| <kbd>Right</kbd>   | Focuses the next element.                                                            |
-| <kbd>Enter</kbd>         | When focused on a ToolBar command, clicking the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |
-| <kbd>Esc(Escape)</kbd>           | Closes popup.                                                                     |
-| <kbd>Down</kbd>   | Focuses the next popup element.                                                  |
-| <kbd>Up</kbd>      | Focuses the previous popup element.                                                |
+| Key | Description |
+|-------- | ------|
+| <kbd>Left</kbd>    | Focuses the previous element. |
+| <kbd>Right</kbd>   | Focuses the next element. |
+| <kbd>Enter</kbd> | When focused on a ToolBar command, clicking the key triggers the click of Toolbar element. When popup drop-down icon is focused, the popup opens. |
+| <kbd>Esc(Escape)</kbd> | Closes popup. |
+| <kbd>Down</kbd> | Focuses the next popup element.  |
+| <kbd>Up</kbd> | Focuses the previous popup element. |
