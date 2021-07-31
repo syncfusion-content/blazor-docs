@@ -11,8 +11,7 @@ documentation: ug
 
 ## Size for an annotation
 
-Diagram allows you set size for annotations by using the Height and Width properties. The default value of the `Width`, and `Height` properties are 0, and it takes the node or connector size as default.
-The following code example shows how the annotation size is customized.
+Diagram allows you set size for annotations by using the Height and Width properties. The default value of the `Width`, and `Height` properties are 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -232,7 +231,7 @@ protected override void OnInitialized()
 
 ## Customize the appearance of an annotation
 
-* You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
+You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
 
 * The label’s `Bold`, `Italic`, and `TextDecoration` properties are used to style the label’s text.
 
@@ -443,7 +442,6 @@ protected override void OnInitialized()
 
 ![Multiple Annotations](../images/Annotations.png)
 
->**Note:**
 >* Type of the annotation’s property of the node or connector was ObservableCollection.
 >* Default value of the annotation will be null.
 >* All the same customization can be applicable for the annotations.
@@ -460,8 +458,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 | ReadOnly | Enables or disables whether the annotation to be read only or not. |
 | None | Disables all behaviors of Annotation. |
 
->**Note :**
->The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
+> The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
 
 Refer to `Constraints` to learn about how to enable or disable the annotation constraints.
 

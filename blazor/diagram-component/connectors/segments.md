@@ -58,9 +58,7 @@ To create a straight line, specify the `Type` of the segment as **Straight** and
 
 ## Orthogonal
 
-Orthogonal segments are used to create segments that are perpendicular to each other.
-
-Set the segment `Type` as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
+Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment `Type` as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -159,9 +157,7 @@ The `Length` and `Direction` properties allow to define the flow and length of s
 
 ## Bezier
 
-Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors.
-
-To create a bezier segment, the `Type` of the segment is set as bezier and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
+Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the `Type` of the segment is set as bezier and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -319,7 +315,6 @@ Multiple segments can be defined one after another. To create a connector with m
 
 * End point of each straight segment is represented by a thumb that enables to edit the segment.
 * Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
-
 * Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
 
 ```csharp

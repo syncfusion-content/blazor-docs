@@ -11,7 +11,7 @@ documentation: ug
 
 By default, the dialog is rendered without header. You can update its header dynamically using the `Header` property.
 
-> In the following code, the dialog header is rendered on a button click.
+In the following code, the dialog header is rendered on a button click.
 
 ```csharp
 

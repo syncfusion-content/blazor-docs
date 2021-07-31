@@ -27,7 +27,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
     ```bash
-      dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ```
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
@@ -91,8 +91,8 @@ For Internet Explorer 11 kindly refer the polyfills. Refer the documentation for
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Diagram** package.
 
 ```csharp
-  @using Syncfusion.Blazor
-  @using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Diagrams
 ```
 
 ## Add SyncfusionBlazor service in Startup.cs
@@ -286,7 +286,7 @@ private void CreateNode(string id, double y, FlowShapes shape, string label, boo
 
 ```
 
-![flowChart sample image](../images/flowChart.png)
+![flowChart sample image](../images/diagram.png)
 
 ## See Also
 

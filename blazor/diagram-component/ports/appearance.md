@@ -115,7 +115,7 @@ protected override void OnInitialized()
           // Sets the shape of the port as Circle
           Width= 12, Height=12, Shape= PortShapes.Custom,
           PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
-      }},
+        }},
    };
    nodes.Add(node);
 }

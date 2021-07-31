@@ -9,8 +9,7 @@ documentation: ug
 
 # Animation in Blazor Dialog Component
 
-The Dialog can be animated during the open and close actions. Also, users can
-customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.
+The Dialog can be animated during the open and close actions. Also, users can customize animation's `Delay`, `Duration` and `Effect` by using the `DialogAnimationSettings` property.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -37,8 +36,7 @@ If the user sets 'Fade' effect, then the Dialog will open with 'FadeIn' effect a
 </td></tr>
 </table>
 
-In the following sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn`
-and close with `ZoomOut` effects.
+In the following sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
 
 ```csharp
 

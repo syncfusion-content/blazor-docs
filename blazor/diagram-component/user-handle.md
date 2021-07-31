@@ -82,9 +82,7 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
 
 ### Position
 
-The `Offset` property of user handle is used to align the user handles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height.
-
-The `Side` property is used to set how the user handle is aligned based on the given `Offset`.
+The `Offset` property of user handle is used to align the user handles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height. The `Side` property is used to set how the user handle is aligned based on the given `Offset`.
 
 The following table shows all the possible alignments visually shows the user handle positions.
 
@@ -301,11 +299,11 @@ protected override void OnInitialized()
 }
 ```
 
->Note: The fixed user handle id need to be unique.
+> The fixed user handle id need to be unique.
 
 ## Customizing the node fixed user handle
 
-* The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
+The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
 
 ### Margin for the node fixed user handle
 

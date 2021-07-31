@@ -9,7 +9,7 @@ documentation: ug
 
 # Constraints in Blazor Diagram Component
 
-Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators (&, |, ~, <<, etc.).
+Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
 
 To know more about Bitwise operators, refer to the [`Bitwise Operations`](#bitwise-operations).
 
@@ -416,7 +416,7 @@ The following code shows how to hide rotator.
 
 ![Selectorconstraints](images/Nodeconstraints.png)
 
->* Note: Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
+> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 
 The following another code example shows how to disable the userhandle functionality for the selected item.
 
@@ -579,7 +579,7 @@ Bitwise operations are used to manipulate the flagged enumerations `enum`. In th
 
 ## Add operation
 
-You can add or enable multiple values at a time by using the Bitwise ‘|’ (OR) operator.
+You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
 The following code shows to add bridging constraints into the default diagram constraints to enable bridging functionality into the diagram.
 

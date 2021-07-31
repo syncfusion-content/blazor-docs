@@ -37,7 +37,7 @@ The following code shows how to add a ruler to the diagram.
 
 By default, the ruler segments are arranged based on pixel values.
 
-* The HorizontalRuler’s [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_Interval)property allows you to define the interval between ruler segments and the [`SegmentWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_SegmentWidth) property allows you to define the segment width of the ruler. Similarly, you can use the VerticalRuler’s [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_Interval) and [`SegmentWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_SegmentWidth) properties are used to define the interval and segment width of the vertical ruler
+* The HorizontalRuler’s [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_Interval)property allows you to define the interval between ruler segments and the [`SegmentWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_SegmentWidth) property allows you to define the segment width of the ruler. Similarly, you can use the VerticalRuler’s [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_Interval) and [`SegmentWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_SegmentWidth) properties are used to define the interval and segment width of the vertical ruler.
 
 * The HorizontalRuler’s [`TickAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_TickAlignment) property is used to align the ruler tick either left or right side of the ruler. The VerticalRuler’s [`TickAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsRuler.html#Syncfusion_Blazor_Diagrams_DiagramsRuler_TickAlignment) property is used to align the ruler tick either top or bottom side of the ruler.
 
@@ -61,6 +61,6 @@ The following code shows how the diagram ruler can be customized.
 }
 ```
 
->Note : The MarkerColor property can be customized using the [`Marker`](./style/#customizing-the-ruler) CSS style.
+> The MarkerColor property can be customized using the [`Marker`](./style/#customizing-the-ruler) CSS style.
 
 ![Customize](images/CustomRuler.png)

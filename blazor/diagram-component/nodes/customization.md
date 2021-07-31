@@ -9,9 +9,7 @@ documentation: ug
 
 # Appearance in Blazor Diagram Component
 
-* The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties.
-
-* The `Visible` property of the node enables or disables the visibility of the node.
+The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties. The `Visible` property of the node enables or disables the visibility of the node.
 
 The following code shows how to customize the appearance of the shape.
 
@@ -44,7 +42,7 @@ The following code shows how to customize the appearance of the shape.
 
 ![Node appearance](../images/node_appearance.png)
 
->**Note:** `ID` for each node should be unique and so it is further used to find the node at runtime and do any customization.
+> `ID` for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
 ## NodeDefaults
 
@@ -176,7 +174,7 @@ We can define node style using template in NodeTemplate at tag level. If we want
 
 ```
 
-> Note : In the above example , node's background color is updated using the click event of the button defined in the template.
+> In the above example , node's background color is updated using the click event of the button defined in the template.
 
 ![Node Template](../images/nodetemplate.gif)
 
@@ -283,8 +281,7 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
 
 ## Shadow
 
-Diagram provides support to add `Shadow` effect to a node that is disabled, by default. It can be enabled with the
-constraints property of the node. The following code shows how to draw shadow.
+Diagram provides support to add `Shadow` effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. The following code shows how to draw shadow.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -318,8 +315,7 @@ constraints property of the node. The following code shows how to draw shadow.
 
 ### Customizing shadow
 
-The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the shadow property of the node. The following code
-example illustrates how to customize shadow.
+The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -361,11 +357,7 @@ example illustrates how to customize shadow.
 
 ## Gradient
 
-The `Gradient` property of the node allows you to define and apply the gradient effect to the node.
-
-The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts.
-
-The gradient stop’s opacity property defines the transparency level of the region.
+The `Gradient` property of the node allows you to define and apply the gradient effect to the node. The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
 
 There are two types of gradients as follows:
 
@@ -375,9 +367,7 @@ There are two types of gradients as follows:
 
 ### Linear gradient
 
-* `LinearGradient` defines a smooth transition between a set of colors (so-called stops) in a line.
-
-* A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
+`LinearGradient` defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -427,9 +417,7 @@ There are two types of gradients as follows:
 
 ### Radial gradient
 
-* `RadialGradient` defines a smooth transition between stops on a circle.
-
-* A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
+`RadialGradient` defines a smooth transition between stops on a circle. A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

@@ -44,8 +44,8 @@ The following code example illustrates how to add a connector through connector 
 ```
 
 ![Connector default](../images/connector-default.png)
->**Note:**
->* `ID` for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+
+> `ID` for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
 
 ## Add connectors at runtime
 
@@ -154,7 +154,7 @@ Connectors can be interactively drawn by clicking and dragging on the diagram su
 
 ## Remove connectors at runtime
 
-* A connector can be removed from the diagram at runtime by using the `Remove` method.
+A connector can be removed from the diagram at runtime by using the `Remove` method.
 
 The following code shows how to remove a connector at runtime.
 
@@ -241,17 +241,17 @@ The following code example explains how to change the connector properties.
 }
 ```
 
->**Note:** BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+> BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
 
 ## Connections
 
-* A connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
+A connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
 
 ### Connections with nodes
 
-* The `SourceID` and `TargetID`properties allow to define the nodes to be connected.
+The `SourceID` and `TargetID`properties allow to define the nodes to be connected.
 
-* The following code example illustrates how to connect two nodes.
+The following code example illustrates how to connect two nodes.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -362,7 +362,7 @@ The following code example illustrates how to create port to port connections.
             Width = 100,
             ID = "node2",
             Ports = new DiagramObjectCollection<PointPort>()
-{
+            {
                         new PointPort()
                         {
                             ID="port2",

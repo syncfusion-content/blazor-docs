@@ -69,9 +69,7 @@ To add a connection port, define the port object and add it to node’s ports co
 
 You can add Ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
-The following code explains how to add ports to node at runtime by using `Add` method.
-
-The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime.
+The following code explains how to add ports to node at runtime by using `Add` method. The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime.
 If **ID** is not set, then default **ID** is automatically set.
 
 ```csharp
@@ -109,9 +107,7 @@ If **ID** is not set, then default **ID** is automatically set.
 
 ```
 
-Also, the Port can be added at runtime by using the `AddAsync` method.
-
-The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
+Also, the Port can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
 The following code explains how to add ports to node at runtime by using `AddAsync` method.
 
@@ -133,8 +129,7 @@ The following code explains how to add ports to node at runtime by using `AddAsy
 
 Add Multiple ports at runtime by using the server-side method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
 
-The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime.
-If **ID** is not set, then default **ID** is automatically set.
+The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime. If **ID** is not set, then default **ID** is automatically set.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

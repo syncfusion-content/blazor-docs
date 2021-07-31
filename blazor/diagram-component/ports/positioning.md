@@ -9,9 +9,7 @@ documentation: ug
 
 # How to position node’s port
 
-Diagram allows you to customize the position and appearance of the port efficiently.
-Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class.
-Ports of a node can be positioned using the following properties of `PointPort`.
+Diagram allows you to customize the position and appearance of the port efficiently. Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class. Ports of a node can be positioned using the following properties of `PointPort`.
 
 * `Offset`
 * `HorizontalAlignment`
@@ -74,13 +72,12 @@ The following code shows the relationship between the shape port position and pa
 | (1,0.5) | ![Left](../images/offset8.png) |
 | (1,1) | ![Left](../images/offset9.png) |
 
->**Note:**
->* Type of the offset property for node’s shape port is NodePortOffset.
+
+> Type of the offset property for node’s shape port is NodePortOffset.
 
 ## Horizontal and vertical alignment
 
-* The `HorizontalAlignment` property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values.
-* The `VerticalAlignment` property is used to set how the port is vertically aligned at the port position.
+The `HorizontalAlignment` property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The `VerticalAlignment` property is used to set how the port is vertically aligned at the port position.
 
 The following table shows all the possible alignments visually with `offset (0, 0)`.
 
@@ -140,10 +137,8 @@ protected override void OnInitialized()
 
 ![Horizontal and Vertical Alignment](../images/HorizontalVerticalaligment.png)
 
->**Note:**
->* The value of the `HorizontalAlignment` is `Center` by default.
->* The value of the `VerticalAlignment` is `Center` by default.
->* Alignment positioned based on the offset value.
+
+> The value of the `HorizontalAlignment` is `Center` by default. The value of the `VerticalAlignment` is `Center` by default. Alignment positioned based on the offset value.
 
 ## Margin
 

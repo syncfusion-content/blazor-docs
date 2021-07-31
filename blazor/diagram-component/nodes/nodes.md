@@ -100,8 +100,7 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
 
 ## Add node from palette
 
-Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information
-about adding nodes from symbol palette, refer to the `Symbol Palette`.
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the `Symbol Palette`.
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
 * When a symbol is dragged into a diagram from symbol palette, the `DragEnter` event gets triggered.
@@ -121,12 +120,11 @@ For more information about drawing node, refer to the `Draw Nodes`.
 
 ## Create node through data source
 
-Nodes can be generated automatically with the information provided through data source. The default properties for
-these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../layout/hierarchical-layout).
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../layout/hierarchical-layout).
 
 ## Remove nodes at runtime
 
-* A node can be removed from the diagram at runtime by using the `Remove` method.
+A node can be removed from the diagram at runtime by using the `Remove` method.
 
 The following code shows how to remove a node at runtime.
 
@@ -219,7 +217,7 @@ The following code example explains how to change the node properties.
 }
 ```
 
->**Note:** BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+> BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
 
 ## See Also
 

@@ -9,8 +9,7 @@ documentation: ug
 
 # Close Blazor Dialog Component when clicking outside of its region
 
-By default, dialog can be closed by pressing `Esc` key and clicking the close icon at the right of dialog header. It can also be closed by clicking outside of the dialog using `Visible` property.
-Set the `CloseOnEscape` property value to `false` to prevent closing of the dialog when pressing `Esc` key.
+By default, dialog can be closed by pressing `Esc` key and clicking the close icon at the right of dialog header. It can also be closed by clicking outside of the dialog using `Visible` property. Set the `CloseOnEscape` property value to `false` to prevent closing of the dialog when pressing `Esc` key.
 
 In the following code, dialog is closed when clicking outside the dialog area using `Visible` property.
 

@@ -9,8 +9,7 @@ documentation: ug
 
 # Mind map Layout in Blazor Diagram Component
 
-A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the `Type` of layout should be set as `MindMap`.
-The following code example illustrates how to create a mind map layout.
+A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the `Type` of layout should be set as `MindMap`. The following code example illustrates how to create a mind map layout.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

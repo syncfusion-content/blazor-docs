@@ -165,7 +165,7 @@ If set `false` to the [`DisableConnectors`](https://help.syncfusion.com/cr/blazo
 }
 ```
 
->**Note**: Also you can disable the [`DisableNodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableNodes) property in userhandle, the userhandle prevent to rendering for the nodes.
+> Also you can disable the [`DisableNodes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_DisableNodes) property in userhandle, the userhandle prevent to rendering for the nodes.
 
 ### Position
 
@@ -198,7 +198,7 @@ Diagram allows you set size for userhandles by using the [`Size`](https://help.s
 
 * The userhandle [`BorderColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderColor), [`BackgroundColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BackgroundColor) properties are used to define the background color and border color of the userhandle and the [`BorderWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_BorderWidth) property is used to define the border width of the userhandles.
 
-*The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Visible) property of the userhandle enables or disables the visibility of userhandle.
+* The [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Visible) property of the userhandle enables or disables the visibility of userhandle.
 
 The following code explains how to customize the appearance of the userhandle.
 

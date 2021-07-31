@@ -13,10 +13,7 @@ In Dialog, the template support is provided to the header and footer sections. S
 
 ## Header
 
-The Dialog header content can be provided through the
-`Header` property, and it will allow both text and any HTML content as a string.
-Also in header, close button is provided as built-in support, and this can be enabled through
-the `ShowCloseIcon` property.
+The Dialog header content can be provided through the `Header` property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the `ShowCloseIcon` property.
 
 ## Footer
 

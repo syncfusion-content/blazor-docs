@@ -58,7 +58,7 @@ The following image shows the relationship between the annotation position and o
 
 ![Annotation](../images/ConnectorAnnotation_Offset.png)
 
->**Note:** By default, offset value of the connector annotation is 0.5.
+> By default, offset value of the connector annotation is 0.5.
 
 ## Alignment
 
@@ -101,7 +101,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 ![Annotation](../images/ConnectorAnnotation_Alignment.png)
 
->**Note:** By default, Alignment value of the connector annotation is `Center`.
+> By default, Alignment value of the connector annotation is `Center`.
 
 ## Segment angle
 
@@ -146,7 +146,7 @@ protected override void OnInitialized()
 | True | ![Source](../images/SegmentAngle_True.png) |
 | False | ![Center](../images/SegmentAngle_False.png) |
 
->**Note:** By default, the SegmentAngle will be disabled.
+> By default, the SegmentAngle will be disabled.
 
 ## See also
 

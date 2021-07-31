@@ -51,8 +51,7 @@ There are two types of activities. They are listed as follows:
 
 ## BPMN activity task
 
-The `Task` property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks.
-The events property of tasks allows you to represent these results as an event attached to the task.
+The `Task` property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks. The events property of tasks allows you to represent these results as an event attached to the task.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -202,7 +201,7 @@ A `SubProcess` is defined as an event SubProcess when it is triggered by an even
 
 ### Transaction sub process
 
-* The `Transaction` is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
+The `Transaction` is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
 
 The execution result of a transaction is one of
 * Successful Completion
@@ -352,8 +351,7 @@ The `Processes` is an array collection that defines the children values for BPMN
 
 ### Loop
 
-`Loop` is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**.
-You can define the loop property in subprocess BPMN shape as shown in the following code.
+`Loop` is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for `Loop` is **None**. You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

@@ -114,7 +114,7 @@ The following table contains various representation of sequence flows.
 | Conditional | ![Conditional Sequence BPMN Shpae](../images/Conditional.png) |
 | Normal | ![Normal Sequence BPMN Shpae](../images/Normal.png) |
 
-> Note: The default value for the property `Sequence` is **Normal**.
+> The default value for the property `Sequence` is **Normal**.
 
 ## Message
 
@@ -164,4 +164,4 @@ The following table contains various representation of message flows.
 | InitiatingMessage | ![InitiatingMessage Message BPMN Shape](../images/IMessage.png) |
 | NonInitiatingMessage | ![NonInitiatingMessage Message BPMN Shape](../images/NIMessage.png) |
 
->Note: The default value for the property `Message` is **Default**.
+> The default value for the property `Message` is **Default**.

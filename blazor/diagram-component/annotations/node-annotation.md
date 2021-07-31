@@ -9,9 +9,7 @@ documentation: ug
 
 # How to position node’s annotation
 
-Diagram allows you to customize the position and appearance of the annotation efficiently.
-Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `ShapeAnnotation` class.
-Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
+Diagram allows you to customize the position and appearance of the annotation efficiently. Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `ShapeAnnotation` class. Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
 
 * `Offset`
 * `HorizontalAlignment`
@@ -72,8 +70,7 @@ protected override void OnInitialized()
 
 ## Horizontal and vertical alignment
 
-* The `HorizontalAlignment` property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values.
-* The `VerticalAlignment` property is used to set how the annotation is vertically aligned at the annotation position.
+The `HorizontalAlignment` property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The `VerticalAlignment` property is used to set how the annotation is vertically aligned at the annotation position.
 
 The following table shows all the possible alignments visually with 'offset (0, 0)'.
 
@@ -125,7 +122,6 @@ protected override void OnInitialized()
 
 ```
 
->**Note:**
 >* The value of the `HorizontalAlignment` is `Center` by default.
 >* The value of the `VerticalAlignment` is `Center` by default.
 >* Alignment positioned based on the offset value.

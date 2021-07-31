@@ -15,8 +15,7 @@ documentation: ug
 
 * You may expect this offset values to represent the distance between page origin and node’s top-left corner instead of center. The Pivot property helps to solve this problem. Default value of node’s `Pivot` point is (0.5, 0.5) that means center of the node.
 
-* The size of the node can be controlled by using the `Width` and
-`Height` properties.
+* The size of the node can be controlled by using the `Width` and `Height` properties.
 
 The following table shows how pivot relates offset values with node boundaries.
 
@@ -69,9 +68,7 @@ The following code shows how to change the `Pivot` value.
 
 ![Node Pivot](../images/node_pivot.png)
 
-* Rotation of a node is controlled by using the `RotateAngle` property.
-
-The following code shows how to change the `RotateAngle` value.
+Rotation of a node is controlled by using the `RotateAngle` property. The following code shows how to change the `RotateAngle` value.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -108,8 +105,7 @@ The following code shows how to change the `RotateAngle` value.
 
 ## Minimum Size and Maximum Size
 
-The `MinWidth` and `MinHeight` properties of node allows you to control the minimum size of the node while resizing. Similarly,
-the `MaxWidth` and `MaxHeight` properties of node allows you to control the minimum size of the node while resizing. The below gif explains how minimum and maximum size is controlled.
+The `MinWidth` and `MinHeight` properties of node allows you to control the minimum size of the node while resizing. Similarly, the `MaxWidth` and `MaxHeight` properties of node allows you to control the minimum size of the node while resizing. The below gif explains how minimum and maximum size is controlled.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
