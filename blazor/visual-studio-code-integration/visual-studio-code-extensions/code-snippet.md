@@ -23,9 +23,8 @@ The following steps help you to use the Syncfusion Blazor code snippet in your B
 
 3. You can find the Syncfusion Blazor component with the various features by typing the word in the following format.
 
-    ```bash
+    ```
     sf<Syncfusion component name>-<Syncfusion component feature>
-
     For Example, sfgrid-grouping
     ```
     Choose the Syncfusion component and click the **Enter or Tab** key, the Syncfusion Blazor component will be added in the razor file.

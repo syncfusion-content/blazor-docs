@@ -39,9 +39,7 @@ The following steps illustrate how to install the extensions for Syncfusion Blaz
 
 6. Click the Modify button.
 
-7. After the installation is complete, open Visual Studio 2019.
-
-8. Now, under the menu Extensions, you can use the Syncfusion extensions from the Visual Studio application.
+7. After the installation is complete, open Visual Studio 2019. Now, under the menu Extensions, you can use the Syncfusion extensions from the Visual Studio application.
 
     ![SyncfusionMenu](../images/SyncfusionMenu.png)
 
@@ -57,8 +55,6 @@ The following steps illustrate how to download and install the Syncfusion Blazor
 
     ![VSIX-Installation-Window](../images/VSIXinstallation.png)
 
-4. Click the Install button.
-
-5. After the installation is complete, open Visual Studio 2019. You can now use Syncfusion extensions from the Visual Studio under the Extensions menu.
+4. Click the Install button. After the installation is complete, open Visual Studio 2019. You can now use Syncfusion extensions from the Visual Studio under the Extensions menu.
 
      ![SyncfusionMenu](../images/SyncfusionMenu.png)
