@@ -13,7 +13,7 @@ We have render the `DropDownList` component in `DropDownMenu` popup using `Popup
 
 In the following example, render `DropDownList` component in popup.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.DropDowns

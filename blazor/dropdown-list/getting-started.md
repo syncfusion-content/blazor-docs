@@ -75,7 +75,7 @@ namespace BlazorApplication
 
  ```html
 <head>
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 
@@ -83,7 +83,7 @@ namespace BlazorApplication
 
 To initialize the DropDownList component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
-```csharp
+```cshtml
 <SfDropDownList TValue="string" TItem="string" Placeholder="Select a game"></SfDropDownList>
 ```
 
@@ -93,10 +93,9 @@ Output be like below
 
 ## Binding data source
 
-After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property.
-Here, an array of object values is passed to the DropDownList component. `TItem` specifies the type of the Datasource in DropDownList.
+After initialization, populate the DropDownList with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of object values is passed to the DropDownList component. `TItem` specifies the type of the Datasource in DropDownList.
 
-```csharp
+```cshtml
 <SfDropDownList TValue="string" TItem="Games" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>
@@ -128,13 +127,11 @@ The output will be as follows.
 
 ## Configure the popup list
 
-By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has `350px`.
-
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
+By default, the width of the popup list automatically adjusts according to the DropDownList input element's width, and the height of the popup list has `350px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) properties respectively.
 
 In the following sample, popup list's width and height are configured.
 
-```csharp
+```cshtml
 <SfDropDownList TValue="string" TItem="Games" PopupHeight="350px" PopupWidth="350px" Placeholder="Select a game" DataSource="@LocalData">
   <DropDownListFieldSettings Value="ID" Text="Text"></DropDownListFieldSettings>
 </SfDropDownList>

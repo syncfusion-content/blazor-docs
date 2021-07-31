@@ -19,6 +19,7 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 <SfTooltip @ref="TooltipObj" ID="Tooltip" Target=".e-list-item .name[title]">
 </SfTooltip>
+
 <SfDropDownList TItem="GameFields" TValue="string" Placeholder="Select a game" DataSource="@Games">
     <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
     <DropDownListTemplates TItem="GameFields">
@@ -29,14 +30,17 @@ The following code demonstrates how to display a tooltip when hovering over the 
     <DropDownListEvents TValue="string" TItem="GameFields" Opened="OnOpen" OnClose="OnClose"></DropDownListEvents>
 </SfDropDownList>
 
-@code {
+@code{
+
     SfTooltip TooltipObj;
     public Boolean isOpen { get; set; } = false;
+    
     public class GameFields
     {
         public string ID { get; set; }
         public string Text { get; set; }
     }
+    
     private List<GameFields> Games = new List<GameFields>() {
         new GameFields(){ ID= "Game1", Text= "American Football" },
         new GameFields(){ ID= "Game2", Text= "Badminton" },
@@ -49,14 +53,17 @@ The following code demonstrates how to display a tooltip when hovering over the 
         new GameFields(){ ID= "Game9", Text= "Snooker" },
         new GameFields(){ ID= "Game10", Text= "Tennis"},
     };
+
     public void OnOpen(PopupEventArgs args)
     {
         isOpen = true;
     }
+
     public void OnClose(PopupEventArgs args)
     {
         TooltipObj.CloseAsync();
     }
+    
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (isOpen)
