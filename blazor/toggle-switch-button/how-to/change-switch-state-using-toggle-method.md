@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains about how to toggle between the Toggle Switch Button states using [`Toggle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) method.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 

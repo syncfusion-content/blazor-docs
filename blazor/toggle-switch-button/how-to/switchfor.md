@@ -13,7 +13,7 @@ This section demonstrates the Strongly typed extension support in Toggle Switch 
 
 In this sample, first check the option and click the submit button to post the selected value in the Toggle Switch Button. When value is not checked, validation error message will be shown below the Toggle Switch Button.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using System.ComponentModel.DataAnnotations
