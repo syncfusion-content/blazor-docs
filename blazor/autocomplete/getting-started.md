@@ -20,25 +20,25 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 * Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
+    > Please ensure to check the `Include prerelease` option for our Beta release.
 
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
- ```html
-<head>
+    ```html
+    <head>
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
         @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
-</head>
-```
+    </head>
+    ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
- ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    ```html
+    <head>
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+    ```
 
 ## Adding component package to the application
 
@@ -74,9 +74,9 @@ namespace BlazorApplication
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
-    <head>
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-    </head>
+<head>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+</head>
 ```
 
 ## Adding AutoComplete component to the application
@@ -85,9 +85,10 @@ To initialize the AutoComplete component add the below code to your `Index.razor
 
 The following code shows a basic AutoComplete component.
 
-```csharp
+```cshtml
+
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="e.g. Australia" DataSource="@LocalData">
-<AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
@@ -122,9 +123,10 @@ After initialization, populate the AutoComplete with data using the [DataSource]
 
 The following example illustrates the output in your browser.
 
-```csharp
+```cshtml
+
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" DataSource="@LocalData">
-<AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
+    <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
 
 @code {
@@ -167,7 +169,8 @@ The output will be as follows.
 
 The AutoComplete allows the users to give input as custom value, which is not required to present in predefined set of values. By default, this support is enabled by the [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html#Syncfusion_Blazor_DropDowns_SfAutoComplete_2_AllowCustom) property. The custom value will be sent to post back handler when a form is about to be submitted.
 
-```csharp
+```cshtml
+
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" AllowCustom=true DataSource="@LocalData">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>
@@ -206,13 +209,12 @@ The AutoComplete allows the users to give input as custom value, which is not re
 
 ## Configure the suggestion list
 
-By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`.
-
-The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) property respectively.
+By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) property respectively.
 
 In the following sample, suggestion list's width and height are configured.
 
-```csharp
+```cshtml
+
 <SfAutoComplete TValue="string" TItem="Countries" Placeholder="Select a country" DataSource="@LocalData" PopupHeight="300px" PopupWidth="300px">
     <AutoCompleteFieldSettings Value="Name"></AutoCompleteFieldSettings>
 </SfAutoComplete>

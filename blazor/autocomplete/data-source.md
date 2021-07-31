@@ -19,8 +19,7 @@ The AutoComplete also supports different kinds of data services such as OData, O
 | GroupBy | `string`        | Specifies the category under which the list item has to be grouped.                          |
 | IconCss | `string`        | Specifies the icon class of each list item.                                                  |
 
-> While binding complex data to AutoComplete, fields should be mapped correctly. Otherwise, the selected
-> item remains undefined.
+> While binding complex data to AutoComplete, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Bind to local data
 
@@ -233,7 +232,7 @@ The custom data binding can be performed in the AutoComplete component by provid
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 <SfAutoComplete TValue="string" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>
