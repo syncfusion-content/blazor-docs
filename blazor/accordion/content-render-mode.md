@@ -13,7 +13,7 @@ Accordion provides support render the content of all `AccordionItem` at initial 
 
 > Default value of the property `LoadOnDemand` is true.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
