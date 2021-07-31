@@ -37,24 +37,24 @@ Steps to get started with Word processor component for Blazor:
 
 7. Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.DocumentEditor`.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor.DocumentEditor
     ```
 
 8. Add the Syncfusion Word processor component (a.k.a DocumentEditor) to any webpages (razor) in the `Pages` folder. For example, the DocumentEditorContainer component is added to the **~/Pages/Index.razor** page.
 
-    ```csharp
+    ```cshtml
     <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
     ```
 
 9. Add the SyncfusionBlazor service in `ConfigureServices` method of **Startup.cs** file.
 
     ```csharp
-     public void ConfigureServices(IServiceCollection services) {
-         .......
-         .......
-         services.AddSyncfusionBlazor();
-     }
+    public void ConfigureServices(IServiceCollection services) {
+        .......
+        .......
+        services.AddSyncfusionBlazor();
+    }
     ```
 
 10. Add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
@@ -82,7 +82,6 @@ Steps to get started with Word processor component for Blazor:
     </SfDocumentEditorContainer>
 
     @code {
-
         SfDocumentEditorContainer container;
 
         public void OnCreated(object args)
