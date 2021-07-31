@@ -16,7 +16,7 @@ In this topic, we are going to discuss how to consume data from [gRPC](https://g
 The following software are needed,
 
 * Visual Studio 2019 v16.9.0 or later.
-* dotnet SDK 5.0 or later.
+* .NET SDK 5.0 or later.
 
 ## Creating Blazor server-side application
 
@@ -111,40 +111,40 @@ Create **Services folder** in the **Server** project and add **OrdersService** f
 
 ```csharp
 public class OrdersService : BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase
+{
+    private static readonly string[] Countries = new[]
     {
-        private static readonly string[] Countries = new[]
-        {
-            "Berlin", "Tokyo", "Denmark", "Tokyo", "Olso"
-        };
-        private static readonly string[] Names = new[]
-        {
-            "VINET", "RIO", "RAJ", "MAH", "RAM"
-        };
-        private static readonly string[] Cities = new[]
-        {
-             "New York", "London", "Hue"
-        };
-        public override Task<OrdersResponse> GetOrders(Empty request, ServerCallContext context)
-        {
-            var response = new OrdersResponse();
+        "Berlin", "Tokyo", "Denmark", "Tokyo", "Olso"
+    };
+    private static readonly string[] Names = new[]
+    {
+        "VINET", "RIO", "RAJ", "MAH", "RAM"
+    };
+    private static readonly string[] Cities = new[]
+    {
+            "New York", "London", "Hue"
+    };
+    public override Task<OrdersResponse> GetOrders(Empty request, ServerCallContext context)
+    {
+        var response = new OrdersResponse();
 
-            response.Orders.AddRange(GetOrders());
+        response.Orders.AddRange(GetOrders());
 
-            return Task.FromResult<OrdersResponse>(response);
-        }
-        public IEnumerable<Orders> GetOrders()
-        {
-            var rng = new Random();
-            return Enumerable.Range(1, 365).Select(index => new Orders
-            {
-                OrderID = index,
-                OrderDate = DateTime.Now.AddDays(index),
-                ShipCountry = Countries[rng.Next(Countries.Length)],
-                CustomerName = Names[rng.Next(Names.Length)],
-                ShipCity = Cities[rng.Next(Cities.Length)]
-            });
-        }
+        return Task.FromResult<OrdersResponse>(response);
     }
+    public IEnumerable<Orders> GetOrders()
+    {
+        var rng = new Random();
+        return Enumerable.Range(1, 365).Select(index => new Orders
+        {
+            OrderID = index,
+            OrderDate = DateTime.Now.AddDays(index),
+            ShipCountry = Countries[rng.Next(Countries.Length)],
+            CustomerName = Names[rng.Next(Names.Length)],
+            ShipCity = Cities[rng.Next(Cities.Length)]
+        });
+    }
+}
 ```
 
 > The **OrdersService** class is inherited from **BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase**, which is generated automatically from the `.proto` file.
@@ -155,28 +155,27 @@ You need to register the **gRPC service** in your `Startup.cs` file. This enable
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddScoped<OrdersService>();
-            services.AddGrpc();
-            . . .
-        }
+{
+    services.AddScoped<OrdersService>();
+    services.AddGrpc();
+    . . .
+}
 ```
 
 Then, add the gRPC-Web middleware to the apps configuration and register the gRPC service. This must be added after UseRouting and before UseEndpoints in the `Configure` method.
 
 ```csharp
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            . . .
-
-            app.UseRouting();
-            app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapGrpcService<OrdersService>();
-                .  . .
-            });
-        }
+{
+    . . .
+    app.UseRouting();
+    app.UseGrpcWeb(new GrpcWebOptions { DefaultEnabled = true });
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapGrpcService<OrdersService>();
+        .  . .
+    });
+}
 ```
 
 In the **Client** project, add the **OrdersService** to the container, then create a gRPC-Web channel pointing to the back-end server and instantiate the gRPC clients for this channel. Refer to the following code to modify the `Program.cs` file.
@@ -187,18 +186,18 @@ using Grpc.Net.Client.Web;
 using Microsoft.AspNetCore.Components;
 . . .
 public static async Task Main(string[] args)
-        {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            . . .
-            builder.Services.AddSingleton(services =>
-            {
-                var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler()));
-                var backendUrl = services.GetRequiredService<NavigationManager>().BaseUri;
-                var channel = GrpcChannel.ForAddress(backendUrl, new GrpcChannelOptions { HttpClient = httpClient });
+{
+    var builder = WebAssemblyHostBuilder.CreateDefault(args);
+    . . .
+    builder.Services.AddSingleton(services =>
+    {
+        var httpClient = new HttpClient(new GrpcWebHandler(GrpcWebMode.GrpcWeb, new HttpClientHandler()));
+        var backendUrl = services.GetRequiredService<NavigationManager>().BaseUri;
+        var channel = GrpcChannel.ForAddress(backendUrl, new GrpcChannelOptions { HttpClient = httpClient });
 
-                return new OrdersService.OrdersServiceClient(channel);
-            });
-        }
+        return new OrdersService.OrdersServiceClient(channel);
+    });
+}
 ```
 
 > The **OrdersService.OrdersServiceClient** class is also generated automatically from the `.proto` file.
@@ -252,7 +251,7 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
 
-```csharp
+```cshtml
 <SfGrid>
 
 </SfGrid>

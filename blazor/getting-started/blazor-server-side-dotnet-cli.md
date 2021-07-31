@@ -23,7 +23,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 Run the following command line to create a new Blazor Server application.
 
-```bash
+```
 dotnet new blazorserver -o WebApplication1
 cd WebApplication1
 ```

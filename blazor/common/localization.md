@@ -140,7 +140,7 @@ The culture can be set using one of the following approaches:
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
-    ```csharp
+    ```xml
     <ItemGroup>
         <EmbeddedResource Update="Resources\SfResources.en-US.resx">
             <Generator>PublicResXFileCodeGenerator</Generator>
@@ -325,7 +325,7 @@ The culture can be set using one of the following approaches:
     
     ```xml
     <PropertyGroup>
-    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+        <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     </PropertyGroup>
     ```
 

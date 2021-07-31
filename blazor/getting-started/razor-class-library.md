@@ -16,9 +16,7 @@ This section provides information about creating Razor Class Library with the Sy
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
->
-> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
 
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2019
 
@@ -40,7 +38,7 @@ This section provides information about creating Razor Class Library with the Sy
 
     > If exist netstandard version is 2.0 in `RazorClassLibrary.csproj`, then change it to **netstandard2.1**
 
-    ```csharp
+    ```xml
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         ....

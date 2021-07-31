@@ -170,4 +170,4 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Uninstallation Summary](images/webinstaller-uninstall-8.png)
 
-   * To open the Syncfusion Control Panel, click **Launch Control Panel**.
+10. To open the Syncfusion Control Panel, click **Launch Control Panel**.

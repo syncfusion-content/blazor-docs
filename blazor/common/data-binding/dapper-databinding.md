@@ -15,7 +15,6 @@ In this topic, we are going to discuss how to consume data from a database using
 ## Prerequisite software
 
 * Visual Studio 2019.
-
 * MS SQL Server.
 
 ## Creating Blazor server-side application
@@ -54,15 +53,15 @@ Run the following commands in the Package Manager Console.
 
 * The following command enable us to use Dapper in our application.
 
-```bash
-Install-Package Dapper -Version 2.0.90
-```
+    ```
+    Install-Package Dapper -Version 2.0.90
+    ```
 
 * The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
 
-```bash
-Install-Package Microsoft.Data.SqlClient -Version 2.1.3
-```
+    ```
+    Install-Package Microsoft.Data.SqlClient -Version 2.1.3
+    ```
 
 Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, we need to create model class manually. Here, we are creating a class named `Bug.cs` in the `Data` folder as follows.
 
@@ -86,62 +85,62 @@ In the following example,
 
 ```csharp
 public class BugDataAccessLayer
+{
+    public IConfiguration Configuration;
+    private const string BUGTRACKER_DATABASE = "BugTrackerDatabase";
+    private const string SELECT_BUG = "select * from bugs";
+    public BugDataAccessLayer(IConfiguration configuration)
     {
-        public IConfiguration Configuration;
-        private const string BUGTRACKER_DATABASE = "BugTrackerDatabase";
-        private const string SELECT_BUG = "select * from bugs";
-        public BugDataAccessLayer(IConfiguration configuration)
-        {
-            Configuration = configuration; //Inject configuration to access Connection string from appsettings.json.
-        }
+        Configuration = configuration; //Inject configuration to access Connection string from appsettings.json.
+    }
 
-        public async Task<List<Bug>> GetBugsAsync()
+    public async Task<List<Bug>> GetBugsAsync()
+    {
+        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
         {
-            using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-            {
-                db.Open();
-                IEnumerable<Bug> result = await db.QueryAsync<Bug>(SELECT_BUG);
-                return result.ToList();
-            }
-        }
-
-        public async Task<int> GetBugCountAsync()
-        {
-            using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-            {
-                db.Open();
-                int result = await db.ExecuteScalarAsync<int>("select count(*) from bugs");
-                return result;
-            }
-        }
-
-        public async Task AddBugAsync(Bug bug)
-        {
-            using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-            {
-                db.Open();
-                await db.ExecuteAsync("insert into bugs (Summary, BugPriority, Assignee, BugStatus) values (@Summary, @BugPriority, @Assignee, @BugStatus)", bug);
-            }
-        }
-
-        public async Task UpdateBugAsync(Bug bug)
-        {
-            using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-            {
-                db.Open();
-                await db.ExecuteAsync("update bugs set Summary=@Summary, BugPriority=@BugPriority, Assignee=@Assignee, BugStatus=@BugStatus where id=@Id", bug);
-            }
-        }
-
-        public async Task RemoveBugAsync(int bugid)
-        {
-            using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
-            {
-                db.Open();
-                await db.ExecuteAsync("delete from bugs Where id=@BugId", new { BugId = bugid });
-            }
+            db.Open();
+            IEnumerable<Bug> result = await db.QueryAsync<Bug>(SELECT_BUG);
+            return result.ToList();
         }
     }
+
+    public async Task<int> GetBugCountAsync()
+    {
+        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
+        {
+            db.Open();
+            int result = await db.ExecuteScalarAsync<int>("select count(*) from bugs");
+            return result;
+        }
+    }
+
+    public async Task AddBugAsync(Bug bug)
+    {
+        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
+        {
+            db.Open();
+            await db.ExecuteAsync("insert into bugs (Summary, BugPriority, Assignee, BugStatus) values (@Summary, @BugPriority, @Assignee, @BugStatus)", bug);
+        }
+    }
+
+    public async Task UpdateBugAsync(Bug bug)
+    {
+        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
+        {
+            db.Open();
+            await db.ExecuteAsync("update bugs set Summary=@Summary, BugPriority=@BugPriority, Assignee=@Assignee, BugStatus=@BugStatus where id=@Id", bug);
+        }
+    }
+
+    public async Task RemoveBugAsync(int bugid)
+    {
+        using (IDbConnection db = new SqlConnection(Configuration.GetConnectionString(BUGTRACKER_DATABASE)))
+        {
+            db.Open();
+            await db.ExecuteAsync("delete from bugs Where id=@BugId", new { BugId = bugid });
+        }
+    }
+}
 ```
 
 Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` as follows.
@@ -210,7 +209,7 @@ In this demo application, the Bootstrap4 theme will be used. To add the theme, o
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the DataGrid Component to the `Index.razor`.
 
-```csharp
+```cshtml
 <SfGrid>
 </SfGrid>
 
@@ -234,27 +233,27 @@ In the following code example,
 * Injected `BugDataAccessLayer` instance to perform data operations.
 
 ```csharp
- public class BugDataAdaptor: DataAdaptor
+public class BugDataAdaptor: DataAdaptor
+{
+    private BugDataAccessLayer _dataLayer;
+    public BugDataAdaptor(BugDataAccessLayer bugDataAccessLayer)
     {
-        private BugDataAccessLayer _dataLayer;
-        public BugDataAdaptor(BugDataAccessLayer bugDataAccessLayer)
-        {
-            _dataLayer = bugDataAccessLayer;
-        }
-
-        public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
-        {
-            List<Bug> bugs = await _dataLayer.GetBugsAsync();
-            int count = await _dataLayer.GetBugCountAsync();
-            return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : count;
-        }
+        _dataLayer = bugDataAccessLayer;
     }
+
+    public override async Task<object> ReadAsync(DataManagerRequest dataManagerRequest, string key = null)
+    {
+        List<Bug> bugs = await _dataLayer.GetBugsAsync();
+        int count = await _dataLayer.GetBugCountAsync();
+        return dataManagerRequest.RequiresCounts ? new DataResult() { Result = bugs, Count = count } : count;
+    }
+}
 ```
 
 Now, Open the `Startup.cs` file and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
 
 ```csharp
- public void ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection services)
 {
    services.AddRazorPages();
    services.AddServerSideBlazor();
@@ -273,7 +272,7 @@ In the following code example,
 
 * `TValue` is specified as `Bug` class.
 
-```csharp
+```cshtml
 <SfGrid TValue="Bug">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
 </SfGrid>
@@ -308,7 +307,7 @@ We can enable editing in the grid component using the [GridEditSettings](https:/
 
 Here, we are using inline edit mode and the [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property to show toolbar items for editing.
 
-```csharp
+```cshtml
 <SfGrid TValue="Bug" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
@@ -329,11 +328,11 @@ We have already created CRUD operations method in the data access layer section 
 Add the following codes(`InsertAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform insert operation.
 
 ```csharp
- public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
-        {
-            await _dataLayer.AddBugAsync(data as Bug);
-            return data;
-        }
+public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
+{
+    await _dataLayer.AddBugAsync(data as Bug);
+    return data;
+}
 ```
 
 To insert a new row, click the `Add` toolbar button. The new record edit form will look like below.
@@ -349,11 +348,11 @@ Clicking the `Update` toolbar button will call the `InsertAsync` method of our `
 Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to  perform update operation.
 
 ```csharp
- public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
-        {
-            await _dataLayer.UpdateBugAsync(data as Bug);
-            return data;
-        }
+public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
+{
+    await _dataLayer.UpdateBugAsync(data as Bug);
+    return data;
+}
 ```
 
 To edit a row, select any row and click the `Edit` toolbar button. The edit form will look like below.
@@ -369,11 +368,11 @@ Here, we are changing the `Status` field value from `Not started` to `In progres
 Add the following codes(`RemoveAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
 
 ```csharp
- public override async Task<object> RemoveAsync(DataManager dataManager, object primaryKeyValue, string keyField, string key)
-        {
-            await _dataLayer.RemoveBugAsync(Convert.ToInt32(primaryKeyValue));
-            return primaryKeyValue;
-        }
+public override async Task<object> RemoveAsync(DataManager dataManager, object primaryKeyValue, string keyField, string key)
+{
+    await _dataLayer.RemoveBugAsync(Convert.ToInt32(primaryKeyValue));
+    return primaryKeyValue;
+}
 ```
 
 To delete a row, select any row and click the `Delete` toolbar button. Clicking the `Delete` toolbar button will call the `RemoveAsync` method of our `BugDataAdaptor` to update the record in the `Bug` table.

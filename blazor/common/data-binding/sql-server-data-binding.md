@@ -11,7 +11,7 @@ documentation: ug
 
 ## Introduction
 
-This topic gives a clear idea about how to consume data from [`SQL Server`](https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15) using Microsoft SQL Client, bind it to a Syncfusion Component, and perform CRUD operations.
+This topic gives a clear idea about how to consume data from [SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/?view=sql-server-ver15) using Microsoft SQL Client, bind it to a Syncfusion Component, and perform CRUD operations.
 
 ## Prerequisite software
 
@@ -19,11 +19,11 @@ The following software are needed:
 
 * Microsoft.EntityFrameworkCore.SqlServer
 * Visual Studio 2019 v16.9.0 or later
-* dotnet SDK 5.0 or later.
+* .NET SDK 5.0 or later.
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 and follow the steps in the [`documentation`](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) to create the Blazor Server Application.
+Open Visual Studio 2019 and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) to create the Blazor Server Application.
 
 ## Add Syncfusion Blazor DataGrid package
 
@@ -43,7 +43,7 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -77,7 +77,7 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```csharp
+```html
 
 <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 
@@ -85,7 +85,7 @@ To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS
 
 In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the **Index.razor**.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Order" AllowPaging="true">
 </SfGrid >
@@ -186,30 +186,29 @@ public static DataSet CreateCommand(string queryString, string connectionString)
 
 // Performs data Read operation
 // DataManagerRequest defines the members of the query
-
-    public override object Read(DataManagerRequest DataManagerReq, string Key = null)
-    {
-        string AppData = _env.ContentRootPath;
-        string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
+public override object Read(DataManagerRequest DataManagerReq, string Key = null)
+{
+    string AppData = _env.ContentRootPath;
+    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
 string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
 
-        // Here, we formed the SQL query string based on the skip and take count from the DataManagerRequest
+    // Here, we formed the SQL query string based on the skip and take count from the DataManagerRequest
 
-        string QueryStr = "SELECT OrderID, CustomerID FROM dbo.Orders ORDER BY OrderID OFFSET " + DataManagerReq.Skip + " ROWS FETCH NEXT " + DataManagerReq.Take + " ROWS ONLY;";
-        DataSet Data = CreateCommand(QueryStr, ConnectionStr);
-        Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
-        {
-            OrderID = r.Field<int>("OrderID"),
-            CustomerID = r.Field<string>("CustomerID")
-        }).ToList();  // Here, we convert dataset into list
-        IEnumerable<Order> DataSource = Orders;
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        Con.Open();
-        SqlCommand Cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.Orders", Con);
-        Int32 Count = (Int32)Cmd.ExecuteScalar();
-        return DataManagerReq.RequiresCounts ? new DataResult() { Result = DataSource, Count = Count } : (object)DataSource;
-    }
-    }
+    string QueryStr = "SELECT OrderID, CustomerID FROM dbo.Orders ORDER BY OrderID OFFSET " + DataManagerReq.Skip + " ROWS FETCH NEXT " + DataManagerReq.Take + " ROWS ONLY;";
+    DataSet Data = CreateCommand(QueryStr, ConnectionStr);
+    Orders = Data.Tables[0].AsEnumerable().Select(r => new Order
+    {
+        OrderID = r.Field<int>("OrderID"),
+        CustomerID = r.Field<string>("CustomerID")
+    }).ToList();  // Here, we convert dataset into list
+    IEnumerable<Order> DataSource = Orders;
+    SqlConnection Con = new SqlConnection(ConnectionStr);
+    Con.Open();
+    SqlCommand Cmd = new SqlCommand("SELECT COUNT(*) FROM dbo.Orders", Con);
+    Int32 Count = (Int32)Cmd.ExecuteScalar();
+    return DataManagerReq.RequiresCounts ? new DataResult() { Result = DataSource, Count = Count } : (object)DataSource;
+}
+}
 
 ```
 
@@ -223,7 +222,7 @@ Enable editing in the grid component using the [`GridEditSettings`](https://blaz
 
 Here, inline edit mode and [`Toolbar`](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property are used to show toolbar items for editing.
 
-```csharp
+```cshtml
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" Toolbar="@(new List<string>() { "Add","Edit","Delete","Update","Cancel"})">
     <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
@@ -251,33 +250,32 @@ To Perform the Insert operation, override the Insert/InsertAsync method of the c
 // Performs Insert operation
 //You will get the DataManager instance in the DataManager parameter
 //You will get the record in the Value parameter
-
-    public override object Insert(DataManager DataManager, object Value, string Key)
-    {
+public override object Insert(DataManager DataManager, object Value, string Key)
+{
 
 //Here, you can implement your own code to update the record from the grid.
 
-        string AppData = _env.ContentRootPath;
-        string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-        string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
-        string QueryStr = $"Insert into Orders(CustomerID) values('{(Value as Order).CustomerID}')";
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        try
-        {
-            Con.Open();
-            SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-            Cmd.ExecuteNonQuery();
-        }
-        catch (SqlException Exception)
-        {
-            Console.WriteLine(Exception.ToString());
-        }
-        finally
-        {
-            Con.Close();
-        }
-        return Value;
+    string AppData = _env.ContentRootPath;
+    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
+    string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string QueryStr = $"Insert into Orders(CustomerID) values('{(Value as Order).CustomerID}')";
+    SqlConnection Con = new SqlConnection(ConnectionStr);
+    try
+    {
+        Con.Open();
+        SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+        Cmd.ExecuteNonQuery();
     }
+    catch (SqlException Exception)
+    {
+        Console.WriteLine(Exception.ToString());
+    }
+    finally
+    {
+        Con.Close();
+    }
+    return Value;
+}
 
 ```
 
@@ -295,31 +293,30 @@ To Perform the Update operation, override the Update/UpdateAsync method of the c
 //You will get the DataManager instance in the DataManager parameter
 //You will get the edited record in the Value parameter
 //You will get the PrimaryKey field in the KeyField parameter
-
 public override object Update(DataManager DataManager, object Value, string KeyField, string Key)
-    {
+{
 //Here, you can implement your own code to update the record from the grid.
-        string AppData = _env.ContentRootPath;
-        string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-        string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
-        string QueryStr = $"Update Orders set CustomerID='{(Value as Order).CustomerID}' where OrderID={(Value as Order).OrderID}";
-        SqlConnection Con = new SqlConnection(ConnectionStr);
-        try
-        {
-            Con.Open();
-            SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-            Cmd.ExecuteNonQuery();
-        }
-        catch (SqlException Exception)
-        {
-            Console.WriteLine(Exception.ToString());
-        }
-        finally
-        {
-            Con.Close();
-        }
-        return Value;
+    string AppData = _env.ContentRootPath;
+    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
+    string ConnectionStr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string QueryStr = $"Update Orders set CustomerID='{(Value as Order).CustomerID}' where OrderID={(Value as Order).OrderID}";
+    SqlConnection Con = new SqlConnection(ConnectionStr);
+    try
+    {
+        Con.Open();
+        SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+        Cmd.ExecuteNonQuery();
     }
+    catch (SqlException Exception)
+    {
+        Console.WriteLine(Exception.ToString());
+    }
+    finally
+    {
+        Con.Close();
+    }
+    return Value;
+}
 
 ```
 
@@ -337,32 +334,31 @@ To Perform the Delete operation, override the Remove/RemoveAsync method of the c
 //You will get the DataManager instance in the DataManager parameter
 //You will get the record in the Value parameter
 //You will get the PrimaryKey field in the KeyField parameter
-
-    public override object Remove(DataManager DataManager, object Value, string KeyField, string Key)
-    {
+public override object Remove(DataManager DataManager, object Value, string KeyField, string Key)
+{
 //Here, you can implement your own code to delete the record from the grid.
 
-        string AppData = _env.ContentRootPath;
-        string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
-        string Connectionstr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
-        string QueryStr = $"Delete from Orders where OrderID={Value}";
-        SqlConnection Con = new SqlConnection(Connectionstr);
-        try
-        {
-            Con.Open();
-            SqlCommand Cmd = new SqlCommand(QueryStr, Con);
-            Cmd.ExecuteNonQuery();
-        }
-        catch (SqlException Exception)
-        {
-            Console.WriteLine(Exception.ToString());
-        }
-        finally
-        {
-            Con.Close();
-        }
-        return Value;
+    string AppData = _env.ContentRootPath;
+    string DatabasePath = Path.Combine(AppData, "App_Data\\NORTHWND.MDF");
+    string Connectionstr = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename='{DatabasePath}';Integrated Security=True;Connect Timeout=30";
+    string QueryStr = $"Delete from Orders where OrderID={Value}";
+    SqlConnection Con = new SqlConnection(Connectionstr);
+    try
+    {
+        Con.Open();
+        SqlCommand Cmd = new SqlCommand(QueryStr, Con);
+        Cmd.ExecuteNonQuery();
     }
+    catch (SqlException Exception)
+    {
+        Console.WriteLine(Exception.ToString());
+    }
+    finally
+    {
+        Con.Close();
+    }
+    return Value;
+}
 
 ```
 
@@ -370,4 +366,4 @@ The resultant grid will look like below.
 
 ![Delete Operation](../images/SQLDelete.png)
 
-You can find the sample in this [`GitHub location`](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding)
+You can find the sample in this [GitHub location](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding)
