@@ -119,9 +119,7 @@ Output be like the below.
 
 ## Multiple-node drag and drop
 
-To drag and drop more than one node, you should enable the `AllowMultiSelection` property along with the `AllowDragAndDrop` property.
-
-To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
+To drag and drop more than one node, you should enable the `AllowMultiSelection` property along with the `AllowDragAndDrop` property. To perform multi-selection, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 
 In the following sample,  the `AllowMultiSelection` property is  enabled along with the `AllowDragAndDrop` property.
 
