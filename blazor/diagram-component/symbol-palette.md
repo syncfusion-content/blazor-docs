@@ -51,7 +51,7 @@ The following code example illustrates how to define a palette.
 ```
 
 ### Add node to palette
-`SymbolWidth` and `SymbolHeight` properties of the SfSymbolPaletteComponent should be definied to render the symbol(node, connector or group) in the palette. The following code example illustrates how to add node to a palette.
+`SymbolWidth` and `SymbolHeight` properties of the SfSymbolPaletteComponent should be defined to render the symbol(node, connector or group) in the palette. The following code example illustrates how to add node to a palette.
 
 * To render a node in a palette , first create SymbolPalette and initialize palettes collection.
 ```csharp
@@ -805,7 +805,7 @@ symbolpalette.RemovePaletteItem("Flow Shapes", "Decision");
 
 ## Add/Remove palettes at runtime
 
-* Palettes can be added to the symbolpalette at runtime by using public method, `AddPalettes`. The following code sample illustrates how to add palette using AddPalettes method.
+* Palettes can be added to the symbol palette at runtime by using public method, `AddPalettes`. The following code sample illustrates how to add palette using AddPalettes method.
 
 ```csharp
 
@@ -822,7 +822,7 @@ symbolpalette.AddPalettes(newPalettes);
 
 ```
 
-Also, you can add palette to the symbolpalette at runtime by using `Add` method. The following code sample illustrates how to add palette using Add method.
+Also, you can add palette to the symbol palette at runtime by using `Add` method. The following code sample illustrates how to add palette using Add method.
 
 ```csharp
 DiagramObjectCollection<NodeBase> Newnodes = new DiagramObjectCollection<NodeBase>();
@@ -833,7 +833,7 @@ Palette newpalette = new Palette() { Symbols = Newnodes, Title = "Flow Shapes", 
 symbolpalette.Palettes.Add(newpalette);
 ```
 
-* Palettes can be removed from the symbolpalette at runtime by using public method, `RemovePalettes`. The following code sample illustrates how to remove palette using RemovePalettes method.
+* Palettes can be removed from the symbol palette at runtime by using public method, `RemovePalettes`. The following code sample illustrates how to remove palette using RemovePalettes method.
 
 ```csharp
 
@@ -843,7 +843,7 @@ symbolpalette.Palettes.Add(newpalette);
 
 ## Customize the size of symbols
 
-The size of the individual symbol can be customized. The `SymbolWidth` and `SymbolHeight` properties of symbolpalette enables you to define the size of the symbols.
+The size of the individual symbol can be customized. The `SymbolWidth` and `SymbolHeight` properties of symbol palette enables you to define the size of the symbols.
 
 * Also , you can update the size of the symbols at runtime.
 

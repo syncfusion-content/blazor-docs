@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Commands in Blazor Diagram Componenet
+# Commands in Blazor Diagram Component
 
 There are several commands available in the diagram as follows.
 
@@ -426,7 +426,7 @@ The following code illustrates how to execute the clipboard commands.
 
 ## Grouping
 
-**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using selectall command and ungroup the selected group.
+**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using select all command and ungroup the selected group.
 
 `Group` the selected nodes and connectors in the diagram.
 
