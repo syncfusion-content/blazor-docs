@@ -76,7 +76,6 @@ Above defined events are bind the Dropdown Menu component. Here, we have explain
     {
 
     }
-
 }
 
 ```

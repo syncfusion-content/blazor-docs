@@ -33,7 +33,7 @@ Inject the `EditorHistory` module in your application to provide history preserv
 
 You can enable or disable history preservation for a document editor instance any time using the `EnableEditorHistory` property. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.EnableEditorHistory = true;
 ```
 
@@ -42,13 +42,13 @@ documentEditor.EnableEditorHistory = true;
 You can perform undo and redo by `CTRL+Z` and `CTRL+Y` keyboard shortcuts. Document editor exposes API to do it programmatically.
 To undo the last editing operation in document editor, refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.EditorHistory.Undo();
 ```
 
 To redo the last undone action, refer to the following code example.
 
-```javascript
+```csharp
 documentEditor.EditorHistory.Redo();
 ```
 
@@ -56,7 +56,7 @@ documentEditor.EditorHistory.Redo();
 
 History of editing actions will be maintained in stack, so that the last item will be reverted first. By default, document editor limits the size of undo and redo stacks to 500 each respectively. However, you can customize this limit. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.EditorHistory.SetRedoLimit(400);
 documentEditor.EditorHistory.SetUndoLimit(400);
 ```

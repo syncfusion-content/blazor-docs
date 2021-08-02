@@ -30,9 +30,7 @@ Double click in header or footer region to move the selection into it. You can a
 
 ```csharp
 documentEditor.Selection.GoToHeader();
-```
 
-```csharp
 documentEditor.Selection.GoToFooter();
 ```
 

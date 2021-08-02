@@ -125,8 +125,7 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 
 ## Blazor WebAssembly
 
-Internationalization library provides support for formatting and parsing the number by using the
-official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The NumericTextBox comes with built-in internationalization support to adapt based on culture.
+Internationalization library provides support for formatting and parsing the number by using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The NumericTextBox comes with built-in internationalization support to adapt based on culture.
 
 The following steps explain how to render the NumericTextBox in German culture (‘de-DE’) in Blazor Web Assembly application.
 

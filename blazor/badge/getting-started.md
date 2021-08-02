@@ -21,33 +21,33 @@ This section briefly explains about how to include a `Badge` in your Blazor serv
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
     > You can also add the client-side style resources through CDN.
 
-```csharp
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+    ```html
+    <head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
 
-```csharp
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+    ```html
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
 
-* For `Internet Explorer` 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    * For `Internet Explorer` 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```csharp
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    ```html
+    <head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+    ```
 
 ## Adding Badge component to the application
 
 Now, add the Syncfusion Blazor Badge component in any web page `razor` in the `Pages` folder. For example, the Badge component is added in the `~/Pages/Index.razor` page.
 
-```csharp
-    <h1>Badge Component <span class="e-badge">New</span></h1>
+```cshtml
+<h1>Badge Component <span class="e-badge">New</span></h1>
 ```
 
 ## Run the application

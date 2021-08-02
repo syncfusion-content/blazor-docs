@@ -45,13 +45,13 @@ Packing the application and its dependencies into a folder for deployment to a h
 
 For CLI deployment, run the following command from your root directory.
 
-```bash
+```
 dotnet publish -c Release
 ````
 
 For Blazor Server CLI deployment.
 
-```bash
+```
 dotnet publish -c Release --self-contained true -r win-x86
 ````
 
@@ -61,7 +61,7 @@ Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/e
 
 Use the following command to specify the path for the output directory.
 
-```bash
+```
 dotnet publish -c Release -o <output directory>
 ```
 

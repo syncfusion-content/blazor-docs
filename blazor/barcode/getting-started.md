@@ -16,25 +16,25 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
  1. Install the **Syncfusion.Blazor.BarcodeGenerator**  NuGet package to the application by using the **NuGet Package Manager**.
  2. You can add the client-side resources through CDN or from Nuget package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
-<head>
-    <environment include="Development">
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    </environment>
-</head>
-```
+    ```cshtml
+    <head>
+        <environment include="Development">
+            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        </environment>
+    </head>
+    ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
-<head>
-    <environment include="Development">
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </environment>
-</head>
+    ```cshtml
+    <head>
+        <environment include="Development">
+            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+        </environment>
+    </head>
 
-```
+    ```
 
 ## Adding component package to the application
 
@@ -70,7 +70,7 @@ namespace BlazorApplication
 
 **Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
@@ -84,7 +84,7 @@ BarcodeGenerator component can be rendered by using the `SfBarcodeGenerator` tag
 
 The following example shows a basic BarcodeGenerator component.
 
-```csharp
+```cshtml
 <SfBarcodeGenerator Width="200px" Height="150px" Mode="@RenderingMode.SVG" Type="@BarcodeType.Codabar" Value="123456789"></SfBarcodeGenerator>
 
 ```
@@ -97,7 +97,7 @@ The following example shows a basic BarcodeGenerator component.
 
 You can add the QR code in our barcode generator component.
 
-```csharp
+```cshtml
 <SfQRCodeGenerator Width="200px" Height="150px"  Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
@@ -108,7 +108,7 @@ You can add the QR code in our barcode generator component.
 
 You can add the datamatrix code in our barcode generator component.
 
-```csharp
+```cshtml
  <SfDataMatrixGenerator Width="200" Height="150" Mode="@RenderingMode.SVG" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```

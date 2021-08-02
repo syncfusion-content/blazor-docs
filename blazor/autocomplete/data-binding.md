@@ -12,6 +12,7 @@ documentation: ug
 Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum, DateTime, and bool types. If component value has been changed, it will affect all places where you bind the variable for the **bind-value** attribute.
 
 ```cshtml
+
 @using Syncfusion.Blazor.DropDowns
 
 <p>AutoComplete value is: @AutoVal</p>

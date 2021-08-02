@@ -7,9 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Visual Studio Code Integration
-
-## Overview
+# Overview of Visual Studio Code Integration for Blazor
 
 The Syncfusion Essential Studio Blazor extension for Visual Studio Code allows you to use the Syncfusion Blazor components easily by configuring the Syncfusion NuGet packages and themes.
 

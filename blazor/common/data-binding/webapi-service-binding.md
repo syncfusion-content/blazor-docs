@@ -8,17 +8,17 @@ platform: Blazor
 
 # Bind data to the Syncfusion Blazor components using WebApiAdaptor of SfDataManager and perform CRUD operations
 
-In this topic, we are going to learn how to retrieve data from WebApi Controller, bind to Grid component using [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
+In this topic, we are going to learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
 You can use the WebApiAdaptor of SfDataManager to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence, to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with the request.
 
-To enable the OData query option for Web API, please refer to this [`documentation`](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
+To enable the OData query option for Web API, please refer to this [documentation](https://docs.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/supporting-odata-query-options).
 
 ## Prerequisite software
 
 The following software are needed
 * Visual Studio 2019 v16.8.0 Preview 3.0 or later
-* dotnet SDK 5.0 RC2 or later.
+* .NET SDK 5.0 RC2 or later.
 
 ## Create the database
 
@@ -56,7 +56,7 @@ Now, click on **Update Database**.
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[`Getting Started`](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
 ### Generate DbContext and model class from the database
 
@@ -69,7 +69,7 @@ Run the following commands in the **Package Manager Console**.
 
 Once the above packages are installed, we can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
-```csharp
+```
 
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
 
@@ -191,7 +191,7 @@ Now, in the **Browse** tab, search and install the Syncfusion.Blazor.Grid NuGet 
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Data
@@ -204,14 +204,14 @@ Open **Startup.cs** file and register the Syncfusion service in the **ConfigureS
 
 ```csharp
 
-    public void ConfigureServices(IServiceCollection services)
-    {
-        services.AddDbContext<OrdersDetailsContext>(option => option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
-        services.AddRazorPages();
-        services.AddServerSideBlazor();
-        services.AddSingleton<WeatherForecastService>();
-        services.AddSyncfusionBlazor();
-    }
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<OrdersDetailsContext>(option => option.UseSqlServer(Configuration.GetConnectionString("OrdersDetailsDatabase")));
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+    services.AddSyncfusionBlazor();
+}
 
 ```
 
@@ -225,7 +225,7 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```csharp
+```html
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
@@ -235,7 +235,7 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders"></SfGrid>
 
@@ -245,9 +245,9 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the WebApi Controller, we need to add the **SfDataManager** with **WebApiAdaptor**. Please refer to the following documentation for more details on WebApiAdaptor.
 
-[`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
+[WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor)
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
@@ -257,7 +257,7 @@ To consume data from the WebApi Controller, we need to add the **SfDataManager**
 
 Grid columns can be defined by using the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
@@ -271,7 +271,7 @@ Grid columns can be defined by using the [`GridColumn`](https://help.syncfusion.
 
 ```
 
-When you run the application, the **Get()** method will be called in your API controller.
+When you run the application, the `Get()` method will be called in your API controller.
 
 ```csharp
 
@@ -323,7 +323,7 @@ We can enable editing in the grid component using the [`GridEditSettings`](https
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <SfDataManager Url="api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>

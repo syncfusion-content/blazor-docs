@@ -37,4 +37,4 @@ The [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-compon
 * [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/)
 * [.NET Core SDK 3.1.2](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.ment editor.
+You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

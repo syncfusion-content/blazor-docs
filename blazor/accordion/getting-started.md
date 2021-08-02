@@ -71,7 +71,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` package.
 
 ```cshtml
-    @using Syncfusion.Blazor.Navigations
+@using Syncfusion.Blazor.Navigations
 ```
 
 ## Add SyncfusionBlazor service in Startup file

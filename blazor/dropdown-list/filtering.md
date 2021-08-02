@@ -14,9 +14,9 @@ The DropDownList has built-in support to filter data items when [AllowFiltering]
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-    <SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
-        <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-    </SfDropDownList>
+<SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
+    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
+</SfDropDownList>
 
 @code{
     public class Countries
@@ -24,8 +24,9 @@ The DropDownList has built-in support to filter data items when [AllowFiltering]
         public string Name { get; set; }
         public string Code { get; set; }
     }
+    
     private List<Countries> Country = new List<Countries>
-{
+    {
         new Countries() { Name = "Australia", Code = "AU" },
         new Countries() { Name = "Bermuda", Code = "BM" },
         new Countries() { Name = "Canada", Code = "CA" },

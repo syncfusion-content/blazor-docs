@@ -223,7 +223,7 @@ The custom data binding can be performed in the DropDownList component by provid
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 <SfDropDownList TValue="string" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <DropDownListFieldSettings Value="CustomerID"></DropDownListFieldSettings>
@@ -282,7 +282,7 @@ To avoid post back for every action, set the DropDownList to load all data on in
 
 The following example for remote data binding and enabled offline mode.
 
-```csharp
+```cshtml
 <SfDropDownList TValue="string" TItem="EmployeeData" Placeholder="Select a Employee" Query="@Query">
     <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Employees" Offline=true Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor" CrossDomain=true></SfDataManager>
     <DropDownListFieldSettings Text="FirstName" Value="EmployeeID"></DropDownListFieldSettings>
@@ -309,7 +309,7 @@ The output will be as follows.
 
 You can bind enum data to DropDownList component. The following code helps you get a string value from the enumeration data.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns;
 
