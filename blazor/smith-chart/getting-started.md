@@ -96,7 +96,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 * First series `Transmission1` shows `DataSource` bound series.
 * Second series `Transmission2` shows `Points` bound series.
 
-```csharp
+```cshtml
 <SfSmithChart>
     <SmithChartSeriesCollection>
         <SmithChartSeries Name="Transmission1"
@@ -155,7 +155,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 
 Title can be added to the Smith Chart to provide a quick information to the users about the context of the rendered component. Add a title by using the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartTitle~Text.html) property in the [`SmithChartTitle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartTitle.html).
 
-```csharp
+```cshtml
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
     </SmithChartTitle>
@@ -182,7 +182,7 @@ To display marker for particular series, set the [`Visible`](https://help.syncfu
 
 > In the following example, marker is enabled for first series only.
 
-```csharp
+```cshtml
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
     </SmithChartTitle>
@@ -210,7 +210,7 @@ To display data label for particular marker series, set the [`Visible`](https://
 
 > In the following example, data label is enabled for the first series only.
 
-```csharp
+```cshtml
 <SfSmithChart>
     <SmithChartTitle Text="Impedance Transmission">
     </SmithChartTitle>
@@ -238,7 +238,7 @@ To display data label for particular marker series, set the [`Visible`](https://
 
 Use legend for the Smith Chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartLegendSettingsModel~Visible.html) property to **true** in the [`SmithChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartLegendSettings.html). The legend name can be changed by using the [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html#Syncfusion_Blazor_Charts_SmithchartSeries_Name) property in the [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithchartSeries.html).
 
-```csharp
+```cshtml
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
     <SmithChartTitle Text="Impedance Transmission"></SmithChartTitle>
@@ -266,7 +266,7 @@ Use legend for the Smith Chart by setting the [`Visible`](https://help.syncfusio
 
 When space constraints prevents from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesTooltip~Visible.html) property to **true** in the [`SmithChartSeriesTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SmithchartSeriesTooltip.html).
 
-```csharp
+```cshtml
 <SfSmithChart>
     <SmithChartLegendSettings Visible="true"></SmithChartLegendSettings>
     <SmithChartTitle Text="Impedance Transmission"></SmithChartTitle>

@@ -17,30 +17,30 @@ This section briefly explains how to include a Spinner component in your Blazor 
 
 * You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+    ```cshtml
 
-<head>
+    <head>
+        <environment include="Development">
+        ....
+        ....
+            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+            <!---CDN--->
+            @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+    </environment>
+    </head>
+
+    ```
+
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+    ```cshtml
+
+    <head>
     <environment include="Development">
-    ....
-    ....
         <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-        <!---CDN--->
-        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
-   </environment>
-</head>
-
-```
-
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```html
-
-<head>
-   <environment include="Development">
-      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-  </environment>
-</head>
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </environment>
+    </head>
 
 ```
 
@@ -48,7 +48,7 @@ This section briefly explains how to include a Spinner component in your Blazor 
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Spinner** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Spinner
 
@@ -90,7 +90,7 @@ Import the `Syncufusion.Blazor.Spinner` NuGet package and initialize the Spinner
 
 The following code explains how to initialize a simple Spinner in the Blazor Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner

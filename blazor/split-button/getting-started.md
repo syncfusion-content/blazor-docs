@@ -19,29 +19,29 @@ This section briefly explains about how to include Split Button Component in you
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-> Please ensure to check the **Include prerelease** option.
+    > Please ensure to check the **Include prerelease** option.
 
-```csharp
-<head>
+    ```html
+    <head>
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
         @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
-</head>
-```
+    </head>
+    ```
 
-For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```csharp
-<head>
+    ```html
+    <head>
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    </head>
+    ```
 
 ## Adding component package to the application
 
 Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Buttons** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 
@@ -49,8 +49,7 @@ Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Buttons** package
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components.
-Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components. Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
 
 ```csharp
 namespace BlazorApplication
@@ -71,7 +70,7 @@ namespace BlazorApplication
 
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```cshtml
 <head>
     <environment include="Development">
         <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
@@ -84,7 +83,7 @@ namespace BlazorApplication
 
 Now, add the Syncfusion Blazor Split Button component in `razor` page in the `Pages` folder. For example, the Split Button component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 <SfSplitButton Content="Paste">
     <DropDownMenuItems>
         <DropDownMenuItem Text="Cut" ></DropDownMenuItem>

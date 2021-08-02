@@ -113,6 +113,7 @@ The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+    
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance= 10, Reactance= 25 },
         new SmithChartData { Resistance= 6, Reactance= 4.5 },

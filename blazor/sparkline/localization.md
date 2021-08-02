@@ -15,7 +15,7 @@ The Sparkline Charts component supports localization. The default culture for lo
 
 The Sparkline Charts tooltip supports localization. The following code sample shows the tooltip text with currency format based on culture.
 
-```csharp
+```cshtml
 <SfSparkline DataSource="@Numbers"
               Type="SparklineType.Line"
               Fill="#b2cfff"
@@ -52,7 +52,7 @@ The following example shows the Sparkline Charts render from "Right-to-left".
 
 @using Microsoft.JSInterop;
 
-```csharp
+```cshtml
 <SfSparkline DataSource="@Numbers"
               Type="SparklineType.Line"
                Height="150px" Width="150px">
