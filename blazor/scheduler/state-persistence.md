@@ -11,11 +11,11 @@ documentation: ug
 
 State persistence allowed Scheduler to retain the [`CurrentView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_CurrentView), [`SelectedDate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_SelectedDate) and Scroll position values in the [`localStorage`](https://www.w3schools.com/html/html5_webstorage.asp#) for state maintenance even if the browser is refreshed or if you move to the next page within the browser. This action is handled through the [`EnablePersistence`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_EnablePersistence) property which is set to false by default. When it is set to true, `CurrentView`, `SelectedDate` and Scroll position values of the scheduler component will be retained even after refreshing the page.
 
-> **Note**: Scheduler ID is essential to set state persistence.
+> Scheduler ID is essential to set state persistence.
 
 The following sample demonstrates how to set state persistence of the Scheduler component.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Schedule
 

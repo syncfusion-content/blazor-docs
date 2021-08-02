@@ -15,7 +15,7 @@ Opening and closing the Sidebar can be achieved with `IsOpen` property.
 
 In the following sample, `IsOpen` property has been used to show or hide the Sidebar on button click.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons

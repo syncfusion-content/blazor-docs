@@ -9,13 +9,11 @@ documentation: ug
 
 # Format code block using toolbar in Blazor RichTextEditor Component
 
-You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the `RichTextEditorToolbarSettings` - `Items` property.
-
-The InsertCode button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
+You can configure code block formatting as a separate toolbar button by adding the **InsertCode** Command within the `RichTextEditorToolbarSettings` - `Items` property. The InsertCode button has a toggle state to apply code block formatting to the editor and remove code block formatting from the editor.
 
 The following code will configure the InsertCode button in toolbar and set the background color to “pre” tag for highlighting the code block.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

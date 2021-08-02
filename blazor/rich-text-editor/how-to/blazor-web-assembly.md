@@ -78,7 +78,7 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.RichTextEditor` package.
 
-```html
+```cshtml
 @using Syncfusion.Blazor.RichTextEditor
 ```
 
@@ -86,7 +86,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.RichTextEditor`
 
 Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
 
-```html
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
@@ -111,7 +111,7 @@ To initialize the Rich Text Editor component, add the below code to your **Index
 
 The following code explains how to initialize a simple Rich Text Editor in Razor page.
 
-```html
+```cshtml
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>

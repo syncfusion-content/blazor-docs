@@ -72,7 +72,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Ordered list| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>O</kbd> |
 | Unordered list| <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>O</kbd> |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -101,7 +101,7 @@ Customize the key config for the keyboard interaction of Rich Text Editor, using
 
 In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

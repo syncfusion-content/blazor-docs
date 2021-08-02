@@ -9,10 +9,9 @@ documentation: ug
 
 # Capture ctrl+s to update the value
 
-To achieve this, we need to bind the `keydown` event to the Rich Text Editor content and capture the `ctrl + s` key press using its `keyCode`.
-In the `keydown` event handler, the `updateValue` method is called to update the `value` property and then we can save the content in the required database using the same.
+To achieve this, we need to bind the `keydown` event to the Rich Text Editor content and capture the `ctrl + s` key press using its `keyCode`. In the `keydown` event handler, the `updateValue` method is called to update the `value` property and then we can save the content in the required database using the same.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

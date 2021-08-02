@@ -87,7 +87,7 @@ For Example,
 
 In the following example, the paste cleanup related settings are explained with configuration.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

@@ -13,7 +13,7 @@ By using the Rich text editor's `OnImageUploading` event, you can get the image 
 
 In the following, we have validated the image size before uploading and determined whether the image has been uploaded or not.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

@@ -13,7 +13,7 @@ By using the `RichTextEditorImageSettings` property, we can specify the server h
 
 > The runnable Blazor Server app demo is available in this [Github](https://github.com/SyncfusionExamples/blazor-richtexteditor-rename-image) repository.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

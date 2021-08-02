@@ -11,7 +11,7 @@ documentation: ug
 
 The `Format` feature used to customize the units of Slider values to desired format. The formatted values will also be applied to the ARIA attributes of the slider. There are two ways of achieving formatting in slider.
 
->Use the `Format` API of slider which utilizes our Internationalization to format values.
+> Use the `Format` API of slider which utilizes our Internationalization to format values.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs

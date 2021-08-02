@@ -15,7 +15,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnActionBegin` event triggers before command execution using toolbar items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -36,7 +36,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnActionComplete` event triggers after command execution using toolbar items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -57,7 +57,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnDialogOpen` event triggers when the dialog is being opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -78,7 +78,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `DialogOpened` event triggers when a dialog is opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -99,7 +99,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnDialogClose` event triggers when the dialog is being closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -120,7 +120,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `DialogClosed` event triggers after the dialog has been closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -141,7 +141,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnQuickToolbarOpen` event triggers when the quick toolbar is being opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -163,7 +163,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `QuickToolbarOpened` event triggers when a quick toolbar is opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -185,7 +185,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `QuickToolbarClosed` event triggers after the quick toolbar has been closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -207,7 +207,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnImageSelected` event triggers when the image is selected or dragged into the insert image dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -229,7 +229,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `BeforeUploadImage` event triggers before the image upload process.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -251,7 +251,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnImageUploadSuccess` event triggers when the image is successfully uploaded to the server side.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -273,7 +273,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnImageUploadFailed` event triggers when there is an error in the image upload.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -295,7 +295,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnImageRemoving` event triggers when the selected image is cleared from the insert image dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -317,7 +317,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnImageDelete` event triggers when the selected image is cleared from the Rich Text Editor Content.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -339,7 +339,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `Created` event triggers when the Rich Text Editor is rendered.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -360,7 +360,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `Destroyed` event triggers when the Rich Text Editor is destroyed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -381,7 +381,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `Blur` event triggers when Rich Text Editor is focused out.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -402,7 +402,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnToolbarClick` event triggers when Rich Text Editor Toolbar items is clicked.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -423,7 +423,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `Focus` event triggers when Rich Text Editor is focused in
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -444,7 +444,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `ValueChange` event triggers only when Rich Text Editor is blurred and changes are done to the content.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -465,7 +465,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnResizeStart` event triggers only when start resizing the image.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -486,7 +486,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `OnResizeStop` event triggers only when stop resizing the image.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -507,7 +507,7 @@ This section explains the list of events of the RichTextEditor component which w
 
 `AfterPasteCleanup` event triggers after cleanup the copied content.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
