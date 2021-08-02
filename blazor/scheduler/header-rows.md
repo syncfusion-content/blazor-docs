@@ -185,11 +185,7 @@ You can customize the text of the header rows and display any images or formatte
                 <div class="date-text">Week: @(getWeekText((context as TemplateContext).Date))</div>
             </Template>
         </ScheduleHeaderRow>
-        <ScheduleHeaderRow Option="HeaderRowType.Date">
-            <Template>
-                <div class="date-text">@(getDateHeaderText((context as TemplateContext).Date))</div>
-            </Template>
-        </ScheduleHeaderRow>
+        <ScheduleHeaderRow Option="HeaderRowType.Date"></ScheduleHeaderRow>
     </ScheduleHeaderRows>
     <ScheduleViews>
         <ScheduleView Option="View.TimelineWeek" MaxEventsPerRow="10"></ScheduleView>
@@ -220,10 +216,6 @@ You can customize the text of the header rows and display any images or formatte
     public static string getWeekText(DateTime date)
     {
         return CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(date, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday).ToString();
-    }
-    public static string getDateHeaderText(DateTime date)
-    {
-        return date.ToString("dd ddd", CultureInfo.InvariantCulture);
     }
 }
 ```
