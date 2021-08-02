@@ -219,15 +219,15 @@ To access the above File Operations, you need some model class files that have f
 
 Add your required files and folders under the `wwwroot\Files` directory.
 
->For Server-side application, Add the following code in your **Startup.cs** file.
+> For Server-side application, Add the following code in your **Startup.cs** file.
 
 ```csharp
- app.UseEndpoints(endpoints =>
-            {
-               ....
-               ....
-                endpoints.MapControllers();
-            });
+app.UseEndpoints(endpoints =>
+        {
+            ....
+            ....
+            endpoints.MapControllers();
+        });
 ```
 
 ### Run the application
@@ -246,11 +246,11 @@ To perform the download operation, initialize the `DownloadUrl` property in a Fi
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                 DownloadUrl="/api/SampleData/Download">
-        </FileManagerAjaxSettings>
-    </SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                DownloadUrl="/api/SampleData/Download">
+    </FileManagerAjaxSettings>
+</SfFileManager>
 
 ```
 
@@ -287,11 +287,11 @@ To perform the upload operation, initialize the `UploadUrl` property in a FileMa
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                 UploadUrl="/api/SampleData/Upload">
-        </FileManagerAjaxSettings>
-    </SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                UploadUrl="/api/SampleData/Upload">
+    </FileManagerAjaxSettings>
+</SfFileManager>
 
 ```
 
@@ -336,11 +336,11 @@ To perform image preview support in the File Manager component,  initialize the 
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
-                                 GetImageUrl="/api/SampleData/GetImage">
-        </FileManagerAjaxSettings>
-    </SfFileManager>
+<SfFileManager TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings Url="/api/SampleData/FileOperations"
+                                GetImageUrl="/api/SampleData/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
 
 ```
 

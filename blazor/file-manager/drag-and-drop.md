@@ -17,17 +17,17 @@ The events which trigger when using drag and drop functionality are listed below
 * `OnFileDragStop` - Triggers when the file/folder is about to be dropped at the target.
 * `FileDropped` - Triggers when the file/folder is dropped.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.FileManager
 
-    <SfFileManager AllowDragAndDrop="true" TValue="FileManagerDirectoryContent">
-        <FileManagerAjaxSettings  Url="/api/SampleData/FileOperations"
-                                 UploadUrl="/api/SampleData/Upload"
-                                 DownloadUrl="/api/SampleData/Download"
-                                 GetImageUrl="/api/SampleData/GetImage">
-        </FileManagerAjaxSettings>
-    </SfFileManager>
+<SfFileManager AllowDragAndDrop="true" TValue="FileManagerDirectoryContent">
+    <FileManagerAjaxSettings  Url="/api/SampleData/FileOperations"
+                                UploadUrl="/api/SampleData/Upload"
+                                DownloadUrl="/api/SampleData/Download"
+                                GetImageUrl="/api/SampleData/GetImage">
+    </FileManagerAjaxSettings>
+</SfFileManager>
 
 ```
 
