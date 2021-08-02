@@ -96,7 +96,8 @@ The appointments belonging to the different resources will be displayed altogeth
 
 To get start quickly about multiple resource on scheduler, you can check on this video:
 
-`youtube:ZJU73bqeoC0`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=ZJU73bqeoC0"%}
 
 **Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the `ScheduleResource` with all its internal options.
 
@@ -159,7 +160,8 @@ Resource grouping support allows the Scheduler to group the resources in a hiera
 
 To get start quickly about grouping multiple resource on scheduler, you can check on this video:
 
-`youtube:XD3IYl9lkms`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=XD3IYl9lkms"%}
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 

@@ -36,7 +36,8 @@ It is possible to display only the desired views on the Scheduler using the `Vie
 
 To get start quickly on customizing individual views of scheduler, you can check on this video:
 
-`youtube:bBhn7YHje8k`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bBhn7YHje8k"%}
 
 In the following example, the Scheduler displays 2 views namely, Week and TimelineDay.
 

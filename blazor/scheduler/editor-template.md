@@ -257,7 +257,8 @@ The event editor window can be customized by making use of the `EditorTemplate` 
 
 To get start quickly on customizing editor window using template, you can check on this video:
 
-`youtube:t0v8rCEP7ps`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=t0v8rCEP7ps"%}
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

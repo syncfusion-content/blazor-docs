@@ -18,7 +18,8 @@ Appointments can be anything that are scheduled for a specific time period. It c
 
 To get start quickly about appointments and how to customize it, you can check on this video:
 
-`youtube:Vtl1Wyuwt-0`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
 
 ## Normal events
 
@@ -526,7 +527,8 @@ Appointments can be rescheduled to any time by dragging and dropping them onto t
 
 To get start quickly about drag options available in our Scheduler, you can check on this video:
 
-`youtube:Vtl1Wyuwt-0`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
 
 ### Drag and drop multiple appointments
 
@@ -846,7 +848,8 @@ It is possible to drag and drop the unplanned items from any of the external sou
 
 To get start quickly about dropping items from external source to our Scheduler, you can check on this video:
 
-`youtube:QxBBZYef6cg`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=QxBBZYef6cg"%}
 
 In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEventAsync` method.
 
@@ -1071,7 +1074,8 @@ Another way of rescheduling an appointment can be done by resizing it through ei
 
 To get start quickly about resize options available in our Scheduler, you can check on this video:
 
-`youtube:Vtl1Wyuwt-0`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
 
 ### Disable the resize action
 
@@ -1262,7 +1266,8 @@ Any kind of text, images and links can be added to customize the look of the eve
 
 To get start quickly on customizing events using template, you can check on this video:
 
-`youtube:8kBXcBjL12A`
+{% youtube
+"youtube:https://www.youtube.com/watch?v=8kBXcBjL12A"%}
 
 The following code example customizes the appointment.
 
