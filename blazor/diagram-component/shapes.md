@@ -24,7 +24,7 @@ Diagram allows to add images as `Image` nodes. The shape property of node allows
 
 The following code illustrates how an image node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -55,7 +55,7 @@ The following code illustrates how an image node is created.
 
 The following code illustrates how add Base64 image into image node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -90,7 +90,7 @@ The following code illustrates how add Base64 image into image node.
 
 Stretch and align the image content anywhere but within the node boundary. The scale property of the node allows to stretch the image as you desired (either to maintain proportion or to stretch). By default, the `Scale` property of the node is set as Meet. The following code illustrates how to scale or stretch the content of the image node.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagram
 
@@ -133,7 +133,7 @@ Stretch and align the image content anywhere but within the node boundary. The s
 
 Html elements can be embedded in the diagram through `Html` type node. The shape property of node allows you to set the type of node and to create a HTML node it should be set as `HTML`. The following code illustrates how an Html node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Add a Namespace for a syncfusion control used in Diagrm HTML node *@
@@ -228,7 +228,7 @@ The `Basic` shapes are common shapes that are used to represent the geometrical 
 
 The following code example illustrates how to create a basic shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -269,7 +269,7 @@ The `Path` node is a commonly used basic shape that allows visually to represent
 
 To create a path node, specify the shape as **Path**. The path property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -310,7 +310,7 @@ To create a path node, specify the shape as **Path**. The path property of node 
 
 The `Flow` shapes are used to represent the process flow. It is used for analyzing, designing and managing for documentation process. To create a flow shape, specify the shape type as **Flow**. Flow shapes and by default, it is considered as **Process**. The following code example illustrates how to create a flow shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -348,7 +348,7 @@ The list of flow shapes are as follows.
 
 Diagram provides support to embed SVG element into a node. The shape property of node allows you to set the type of node. To create a SVG node, it should be set as native. The following code illustrates how a SVG node is created.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@

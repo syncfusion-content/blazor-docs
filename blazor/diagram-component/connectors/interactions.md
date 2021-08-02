@@ -15,7 +15,7 @@ Connectors can be selected, dragged, and routed over the diagram page.
 
 A connector can be selected at runtime by using the `Select` method and clear the selection in the diagram using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 <input type="button" value="Select" @onclick="OnSelect">
@@ -86,7 +86,7 @@ And also the selection can be enabled during the interaction.
 
 A connector can be dragged at runtime by using the `Drag` method. The following code explains how to drag the connector by using the drag method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="Drag" @onclick="OnDrag">
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
@@ -150,7 +150,7 @@ And also drag the connector during the interaction.
 
 The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>

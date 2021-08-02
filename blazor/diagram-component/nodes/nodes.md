@@ -21,7 +21,7 @@ A node can be created and added to the diagram, either programmatically or inter
 
 To create a node, define the `Node` object and add that to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -56,7 +56,7 @@ To create a node, define the `Node` object and add that to the nodes collection 
 
 You can add a Node at runtime by adding node to the nodes collection in the Diagram component.  The following code explains how to add nodes at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Add Node" @onclick="@AddNode">
@@ -128,7 +128,7 @@ A node can be removed from the diagram at runtime by using the `Remove` method.
 
 The following code shows how to remove a node at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Remove Node" @onclick="@RemoveNodes">
@@ -179,7 +179,7 @@ You can change any node's properties at runtime.
 
 The following code example explains how to change the node properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Node" @onclick="@UpdateNodes">

@@ -11,7 +11,7 @@ documentation: ug
 
 Gateway is used to control the flow of a process and it is represented as a diamond shape. To create a gateway, the shape property of the node should be set to “Gateway” and the `Gateway` property can be set with any of the appropriate gateways. The following code example explains how to create a BPMN Gateway.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@

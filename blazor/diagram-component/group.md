@@ -25,7 +25,7 @@ A group can be added to the diagram model through `Nodes` collection. To define 
 
 * A group can be added into a child of another group.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with nodes *@
@@ -90,7 +90,7 @@ protected override async Task OnAfterRenderAsync(bool firstRender)
 
 The following code illustrates how a ungroup  at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with nodes *@
@@ -156,7 +156,7 @@ A group node can be added at runtime by using Nodes collection of diagram.
 
 The following code illustrates how a group node is added at runtime
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddGroup" @onclick="@AddGroup" />
@@ -211,7 +211,7 @@ private void AddGroup()
 
 * Also, you can add the child to the group through `AddChild` method. The following code illustrates how to add child to the existing group through AddChild method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddChildToGroup" @onclick="@AddChildToGroup" />
@@ -286,7 +286,7 @@ private void AddGroup()
 
 You can change the position of the group similar to node. For more information about node positioning, refer to [Positioning](../nodes/positioning).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="UpdatePosition" @onclick="@UpdatePosition" />

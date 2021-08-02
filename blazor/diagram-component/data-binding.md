@@ -34,7 +34,7 @@ Diagram can be populated based on the user defined JSON data (Local Data) by map
 
 To map the user defined JSON data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind local data with the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
 
@@ -127,7 +127,7 @@ Local JSON data can be bound to the Diagram component by assigning the array of 
 
 The following sample code demonstrates binding local data through the SfDataManager to the Diagram component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 @using System.Collections.ObjectModel
@@ -196,7 +196,7 @@ When using SfDataManager for data binding then the TValue must be provided expli
 
 The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the OData documentation. To bind OData v4 service, use the ODataV4Adaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 
