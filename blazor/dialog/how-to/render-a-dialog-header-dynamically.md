@@ -13,7 +13,7 @@ By default, the dialog is rendered without header. You can update its header dyn
 
 In the following code, the dialog header is rendered on a button click.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

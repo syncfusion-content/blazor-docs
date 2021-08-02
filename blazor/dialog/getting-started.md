@@ -21,7 +21,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 
 * You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 
 <head>
   <environment include="Development">
@@ -37,7 +37,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
+```cshtml
 
 <head>
    <environment include="Development">
@@ -52,7 +52,7 @@ To get start quickly with Blazor Dialog component, you can check on this video:
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Popups** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -88,7 +88,7 @@ To initialize the Dialog component, add the below code to your **Index.razor** v
 
 The following code explains how to initialize a simple Dialog in Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -125,7 +125,7 @@ A `modal` shows an overlay behind the Dialog. So, the users should interact the 
 
 While the user clicks the overlay, the action can be handled through the `OnOverlayClick` event. In the following code, it explains the Dialog close action performed while clicking the overlay.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -164,7 +164,7 @@ The output will be as follows.
 
 The Dialog header can be enabled by adding the header content as text or HTML content using the `Header` template of the dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -197,7 +197,7 @@ The output will be as follows.
 
 By adding the `DialogButtons` can render a Dialog with buttons in Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

@@ -11,7 +11,7 @@ documentation: ug
 
 The Dialog supports to `drag` within its target container by grabbing the Dialog header, which allows the user to reposition the Dialog dynamically.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

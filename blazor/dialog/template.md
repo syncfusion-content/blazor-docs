@@ -23,7 +23,7 @@ The Dialog footer can be enabled by adding built-in `DialogButton` or providing 
 
 The following example demonstrates the usage of header and footer template in the Dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Inputs

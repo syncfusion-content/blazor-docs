@@ -59,7 +59,7 @@ first focusable element in the Dialog, then press the shift + tab key, it will c
 to last focusable element</td></tr>
 </table>
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

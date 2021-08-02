@@ -38,7 +38,7 @@ If the user sets 'Fade' effect, then the Dialog will open with 'FadeIn' effect a
 
 In the following sample, `Zoom` effect is enabled. So, The Dialog will open with `ZoomIn` and close with `ZoomOut` effects.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

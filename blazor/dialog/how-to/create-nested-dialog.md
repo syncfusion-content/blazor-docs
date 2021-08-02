@@ -23,7 +23,7 @@ Initialize the Dialog as mentioned in the below sample.
 
 Set the inner Dialog target as `#dialog`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
