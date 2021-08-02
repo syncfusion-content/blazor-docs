@@ -9,9 +9,7 @@ documentation: ug
 
 # Show Dates of Other Months in Blazor Calendar Component
 
-The following code demonstrates how to show dates of other months.
-
-Using the styles below, you can bring the dates of other months to visibility from its hidden state.
+The following code demonstrates how to show dates of other months. Using the styles below, you can bring the dates of other months to visibility from its hidden state.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

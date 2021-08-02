@@ -32,6 +32,7 @@ To display the legend for the chart, set the [`Visible`](https://help.syncfusion
 </SfChart>
 
 @code{
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -84,6 +85,7 @@ The legend can be placed at [`Left`](https://help.syncfusion.com/cr/blazor/Sync
 </SfChart>
 
 @code{
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -133,6 +135,7 @@ The [`Custom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Le
 </SfChart>
 
 @code{
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -187,6 +190,7 @@ Using the [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfChart>
 
 @code{
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -236,6 +240,7 @@ The [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 </SfChart>
 
 @code{
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -440,6 +445,7 @@ By default, when click on the legend item, the appropriate series visibility is 
     <ChartLegendSettings Visible="true" ToggleVisibility="false"/>
 </SfChart>
 @code{
+
     public class ChartData
     {
         public string Country { get; set; }
@@ -490,6 +496,7 @@ The series [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     </ChartLegendSettings>
 </SfChart>
 @code{
+    
     public class ChartData
     {
         public string Country { get; set; }

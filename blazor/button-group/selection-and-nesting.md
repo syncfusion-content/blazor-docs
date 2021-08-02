@@ -15,7 +15,7 @@ ButtonGroup supports single selection type in which only one button can be selec
 
 The following example illustrates the single selection behavior in ButtonGroup.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 

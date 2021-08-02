@@ -26,8 +26,8 @@ To get start quickly with Blazor Calendar component, you can check on this video
 
  ```html
 <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
 </head>
 ```
 
@@ -84,7 +84,7 @@ To initialize the Calendar component add the below code to your `Index.razor` vi
 
 The following code shows a basic Calendar component.
 
-```csharp
+```cshtml
 <SfCalendar TValue="DateTime"></SfCalendar>
 ```
 
@@ -102,7 +102,7 @@ Calendar component provides an option to select a date value within a specified 
 
 Here, the Calendar allows you to select a date within the range from 5th to 27th of this month. `TValue` specifies the type of the DatePicker component.
 
-```csharp
+```cshtml
 <SfCalendar TValue="DateTime" Min='@MinDate' Value='@DateValue' Max='@MaxDate'></SfCalendar>
 
 @code{

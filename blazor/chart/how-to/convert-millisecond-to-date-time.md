@@ -19,7 +19,7 @@ To convert millisecond value to date time format, follow the given steps:
 
 Using `OnZoomEnd` event, you can get the axis range in milliseconds, by using below code, you can get the equivalent date value.
 
-```
+```cshtml
 <ChartEvents OnZoomEnd="RangeSelectionCompleted"></ChartEvents>
 
 public void RangeSelectionCompleted(ZoomingEventArgs args)

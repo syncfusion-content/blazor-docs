@@ -13,9 +13,7 @@ documentation: ug
 
 ## Header
 
-The Card can be created with header title, sub title and images. For adding header you need to add `CardHeader` Component.
-
-Card provides below elements and corresponding class definitions to include header.
+The Card can be created with header title, sub title and images. For adding header you need to add `CardHeader` Component. Card provides below elements and corresponding class definitions to include header.
 
 Elements   | Description
 ------------ | -------------
@@ -38,11 +36,7 @@ For adding header to the Card, Title Property.
 
 ### Image
 
-Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure.
-
-* The header image can be added by `ImageUrl` component  which can be placed before or after the header caption wrapper element.
-
-**Note:** Property `ImageSrc` is deprecated as `ImageUrl`.
+Card header has an option for adding images in the header. It is aligned with either before or after the header based on the HTML element positioned in the header structure. The header image can be added by `ImageUrl` component  which can be placed before or after the header caption wrapper element.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

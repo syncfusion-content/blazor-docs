@@ -18,15 +18,15 @@ The chart series can be dynamically added or removed by adding and removing a se
 Render a series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) class of the chart.
 
 ```cshtml
-    <SfChart>
-        <ChartSeriesCollection>
-            @foreach (SeriesData series in SeriesCollection)
-            {
-                <ChartSeries XName=@series.XName YName=@series.YName DataSource=@series.Data>
-                </ChartSeries>
-            }
-        </ChartSeriesCollection>
-    </SfChart>
+<SfChart>
+    <ChartSeriesCollection>
+        @foreach (SeriesData series in SeriesCollection)
+        {
+            <ChartSeries XName=@series.XName YName=@series.YName DataSource=@series.Data>
+            </ChartSeries>
+        }
+    </ChartSeriesCollection>
+</SfChart>
 ```
 
 **Step 2:**
@@ -42,30 +42,30 @@ Create buttons to call add and remove methods, which will add and remove a serie
 
 To add a new series to the chart dynamically use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
 
-```cshtml
-    public void AddChartSeries()
+```c#
+public void AddChartSeries()
+{
+    SeriesCollection.Add(new SeriesData
     {
-        SeriesCollection.Add(new SeriesData
-        {
-            XName = nameof(LineChartData.XValue),
-            YName = nameof(LineChartData.YValue),
-            Data = GetChartData()
-        });
-    }
+        XName = nameof(LineChartData.XValue),
+        YName = nameof(LineChartData.YValue),
+        Data = GetChartData()
+    });
+}
 ```
 
 **Step 4:**
 
 To remove a series from the chart dynamically use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
-```cshtml
-    public void RemoveChartSeries()
+```c#
+public void RemoveChartSeries()
+{
+    if (SeriesCollection.Count > 0)
     {
-        if (SeriesCollection.Count > 0)
-        {
-            SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
-        }
+        SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
     }
+}
 ```
 
 **Action:**

@@ -16,7 +16,7 @@ The Accordion component has been designed keeping in mind the [WAI-ARIA](http://
 <!-- markdownlint-disable MD033 -->
 | Property             | Functionality |
 |----------------------|---------------|
-| role                 | **presentation:** It indicates that the element is used to control presentation. This attribute is added to the Accordion element describing the actual role of the element. <br /> **heading:** It identifies the element as a heading that serves as an Accordion header. This attribute is added to all the Accordion header elements describing the actual role of the element. <br />  |
+| role                 | **presentation:** It indicates that the element is used to control presentation. This attribute is added to the Accordion element describing the actual role of the element. **heading:** It identifies the element as a heading that serves as an Accordion header. This attribute is added to all the Accordion header elements describing the actual role of the element.  |
 | aria-multiselectable | It indicates the expand mode in the Accordion. Default value of this attribute is true. If expand mode value is changed as ‘single’, the attribute value changes to `false`.  |
 | aria-disabled        | It indicates the disabled state of the Accordion and its items.  |
 | aria-expanded        | It indicates the expand state of the Accordion Item. Default value of this attribute is `false`. If an item is expanded, the attribute value changes to ‘true’. |

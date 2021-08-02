@@ -29,9 +29,9 @@ Render a chart with the required series using [`ChartSeriesCollection`](https://
 The tooltip can be enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property as **true** in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
 
 ```cshtml
-    ...
-    <ChartTooltipSettings Enable="true">
-    ...
+...
+<ChartTooltipSettings Enable="true">
+...
 ```
 
 **Step 3:**
@@ -39,25 +39,25 @@ The tooltip can be enabled using the [`Enable`](https://help.syncfusion.com/cr/b
 Construct a HTML table as per the requirement and place the implicit named parameter context to access the aggregate values within the template. To retrieve aggregate values inside the template, type cast the context as [`ChartTooltipInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html).
 
 ```cshtml
-    ...
-    <ChartTooltipSettings Enable="true">
-        <Template>
-            @{
-                var data = context as ChartTooltipInfo;
-                <table border="5" bgcolor="lightblue">
-                    <tr style="border: 1px solid black">
-                        <td style="border: 1px solid black">Month: </td>
-                        <td style="border: 1px solid black">@data.X</td>
-                    </tr>
-                    <tr style="border: 1px solid black">
-                        <td style="border: 1px solid black">Value: </td>
-                        <td style="border: 1px solid black">@data.Y</td>
-                    </tr>
-                </table>
-            }
-        </Template>
-    </ChartTooltipSettings>
-    ...
+...
+<ChartTooltipSettings Enable="true">
+    <Template>
+        @{
+            var data = context as ChartTooltipInfo;
+            <table border="5" bgcolor="lightblue">
+                <tr style="border: 1px solid black">
+                    <td style="border: 1px solid black">Month: </td>
+                    <td style="border: 1px solid black">@data.X</td>
+                </tr>
+                <tr style="border: 1px solid black">
+                    <td style="border: 1px solid black">Value: </td>
+                    <td style="border: 1px solid black">@data.Y</td>
+                </tr>
+            </table>
+        }
+    </Template>
+</ChartTooltipSettings>
+...
 ```
 
 **Action**

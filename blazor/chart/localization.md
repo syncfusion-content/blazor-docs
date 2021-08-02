@@ -152,6 +152,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 You can refer more details about localization [`here`](https://blazor.syncfusion.com/documentation/common/localization/).
 
 > Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+
 ## See Also
 
 * [Data label](./data-labels)

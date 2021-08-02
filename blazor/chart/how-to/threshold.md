@@ -32,13 +32,13 @@ Since this threshold must be added to the measure axis, the [`ChartStripline`](h
 Using the [`ChartStriplines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStriplines.html) collection property of the axis, multiple thresholds can be added to a chart.
 
 ```cshtml
-    ...
-    <ChartPrimaryYAxis>
-        <ChartStriplines>
-            <ChartStripline Start="30" Size="1" ></ChartStripline>
-        </ChartStriplines>
-    </ChartPrimaryYAxis>
-    ... 
+...
+<ChartPrimaryYAxis>
+    <ChartStriplines>
+        <ChartStripline Start="30" Size="1" ></ChartStripline>
+    </ChartStriplines>
+</ChartPrimaryYAxis>
+... 
 ```
 
 **Step 3:**
@@ -46,13 +46,13 @@ Using the [`ChartStriplines`](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 To represent the severity of the threshold, a color can be set to the stripline using the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_Color) property of the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). 
 
 ```cshtml
-    ...
-    <ChartPrimaryYAxis>
-        <ChartStriplines>
-            <ChartStripline Start="30" Size="1" Color="red" ></ChartStripline>
-        </ChartStriplines>
-    </ChartPrimaryYAxis>
-    ... 
+...
+<ChartPrimaryYAxis>
+    <ChartStriplines>
+        <ChartStripline Start="30" Size="1" Color="red" ></ChartStripline>
+    </ChartStriplines>
+</ChartPrimaryYAxis>
+... 
 ```
 
 **Step 4:**
@@ -60,13 +60,13 @@ To represent the severity of the threshold, a color can be set to the stripline 
 The stripline's order, which determines whether it is rendered behind or above the series elements, can be customized by [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonStripLines.html#Syncfusion_Blazor_Charts_ChartCommonStripLines_ZIndex) property of the [`ChartStripline`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartStripline.html). 
 
 ```cshtml
-    ...
-    <ChartPrimaryYAxis>
-        <ChartStriplines>
-            <ChartStripline Start="30" Size="1" Color="red" ZIndex="ZIndex.Over"></ChartStripline>
-        </ChartStriplines>
-    </ChartPrimaryYAxis>
-    ... 
+...
+<ChartPrimaryYAxis>
+    <ChartStriplines>
+        <ChartStripline Start="30" Size="1" Color="red" ZIndex="ZIndex.Over"></ChartStripline>
+    </ChartStriplines>
+</ChartPrimaryYAxis>
+... 
 ```
 
 The complete code snippet for the preceding steps is available below.
