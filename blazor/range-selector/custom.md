@@ -13,7 +13,7 @@ documentation: ug
 
 The Range Selector can be customized by using the [`RangeNavigatorStyleSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html). The [`SelectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_SelectedRegionColor) property is used to specify the color for the selected region, whereas the [`UnselectedRegionColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorStyleSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorStyleSettings_UnselectedRegionColor) property is used to specify the color for the unselected region.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -52,7 +52,7 @@ The Range Selector can be customized by using the [`RangeNavigatorStyleSettings`
 
 The [`RangeNavigatorThumbSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html) allows to customize the border, fill color, size, and type of thumb using the [`RangeNavigatorThumbBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbBorder.html), [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Fill), [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Height), [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Width), and [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorThumbSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorThumbSettings_Type) properties. Thumbs can be of two shapes: **Circle** and **Rectangle**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -98,7 +98,7 @@ The [`RangeNavigatorThumbSettings`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 Using the [`RangeNavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html), the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorBorder.html#Syncfusion_Blazor_Charts_RangeNavigatorBorder_Widthhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) and the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) of the Range Selector border can be customized.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -137,7 +137,7 @@ Using the [`RangeNavigatorBorder`](https://help.syncfusion.com/cr/blazor/Syncfus
 
 The [`AllowSnapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorModel.html#Syncfusion_Blazor_Charts_RangeNavigatorModel_AllowSnapping) property toggles the placement of the slider exactly to the left or right at the nearest interval.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -174,7 +174,7 @@ The [`AllowSnapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 Animation for the Range Selector is enabled by default. The speed of the animation can be controlled using the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property. The default value of the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_AnimationDuration) property is **500** milliseconds.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

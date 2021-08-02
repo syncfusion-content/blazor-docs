@@ -18,15 +18,13 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
->
-> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later. Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
-    ```bash
+    ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ````
 
@@ -97,7 +95,7 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
     </head>
     ```
 
-    > The same theme file can be referred through the CDN version by using [`https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css`](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
 
      ```csharp
@@ -138,17 +136,18 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
 </SfQueryBuilder>
 
 @code {
-private string[] Values = new string[] { "Mr.", "Mrs." };
-public class EmployeeDetails
-{
-    public int EmployeeID { get; set; }
-    public string FirstName { get; set; }
-    public bool TitleOfCourtesy { get; set; }
-    public string Title { get; set; }
-    public DateTime HireDate { get; set; }
-    public string Country { get; set; }
-    public string City { get; set; }
-}
+    private string[] Values = new string[] { "Mr.", "Mrs." };
+
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public bool TitleOfCourtesy { get; set; }
+        public string Title { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+    }
 }
 ```
 

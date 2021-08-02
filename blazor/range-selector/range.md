@@ -28,7 +28,7 @@ This section describes how to bind the value to the Range Selector component in 
 
 As shown in the following example, the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property can be used directly as an object or from code-behind for the Range Selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -71,7 +71,7 @@ As shown in the following example, the [`Value`](https://help.syncfusion.com/cr/
 
 The **@bind-Value** code-behind attribute in the Range Selector can be used to achieve two-way binding. The following example shows how to achieve two-way binding for the Range Selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

@@ -13,7 +13,7 @@ This section demonstrates the Strongly typed extension support in Radio Button. 
 
 In this sample, first check the male value and click the submit button to post the selected value in the Radio Button. When female value is checked, validation error message will be shown below the Radio Button.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using System.ComponentModel.DataAnnotations
