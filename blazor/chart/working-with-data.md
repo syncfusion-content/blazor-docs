@@ -122,7 +122,7 @@ Assign service data as an instance of [`SfDataManager`](https://help.syncfusion.
 
 [OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized data creation and consumption protocol. The [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve data from an [OData](http://www.odata.org/documentation/odata-version-3-0/) service. For remote data binding using the [OData](http://www.odata.org/documentation/odata-version-3-0/) service, see the code below.
 
- ### Binding with OData v4 services
+### Binding with OData v4 services
 
 The [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Please refer to the  [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
 
