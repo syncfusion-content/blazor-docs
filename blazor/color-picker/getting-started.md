@@ -24,7 +24,7 @@ To get start quickly with Color Picker Component using Blazor, you can check on 
 
 > Please ensure to check the **Include prerelease** option.
 
-```csharp
+```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
@@ -33,7 +33,7 @@ To get start quickly with Color Picker Component using Blazor, you can check on 
 
 For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```csharp
+```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
@@ -44,7 +44,7 @@ For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](h
 
 Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Inputs** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -74,7 +74,7 @@ namespace BlazorApplication
 
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```cshtml
 <head>
     <environment include="Development">
         <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
@@ -87,7 +87,7 @@ namespace BlazorApplication
 
 Now, add the Blazor Color Picker component in `razor` page in the `Pages` folder. For example, the Color Picker component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 <SfColorPicker></SfColorPicker>
 ```
 

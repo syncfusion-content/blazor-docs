@@ -15,9 +15,7 @@ The Circular Gauge displays the pointer details through [`CircularGaugeTooltipSe
 
 ### Formatting the tooltip
 
-By default, the tooltip is not visible. You can enable the tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Enable) property to true.
-
-You can use following properties to customize the tooltip.
+By default, the tooltip is not visible. You can enable the tooltip by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Enable) property to true. You can use following properties to customize the tooltip.
 
 * [`CircularGaugeTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html)
     * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTooltipSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeTooltipSettings_Fill) -  Specifies fill color for tooltip
@@ -197,7 +195,7 @@ The pointers can be dragged over the axis values by clicking and dragging the po
 
 ## Dragging Range
 
-The ranges can be dragged over the axis values by clicking and dragging the range. To enable or disable the range drag, use the [`EnableRangeDrag`] property.
+The ranges can be dragged over the axis values by clicking and dragging the range. To enable or disable the range drag, use the `EnableRangeDrag` property.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

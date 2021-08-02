@@ -17,7 +17,7 @@ Stock Chart supports 6 major types of series namely `Line`, `Spline`, `Hilo`, `H
 
 To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Line`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -35,8 +35,9 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
         public DateTime Date;
         public Double Y;
     }
+
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -57,7 +58,7 @@ To render a line series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Spline`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -75,8 +76,9 @@ To render a spline series, use series [`Type`](https://help.syncfusion.com/cr/bl
         public DateTime Date;
         public Double Y;
     }
+
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -101,7 +103,7 @@ To render a hollowcandle series, use series [`Type`](https://help.syncfusion.com
 
 To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Hilo`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -123,8 +125,9 @@ To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blaz
         public Double High;
         public Double Volume;
     }
+
     public List<StockChartData> StockDetails = new List<StockChartData>
- {
+    {
          new StockChartData { Date = new DateTime(2012, 04, 02), Open = 85.9757, High = 90.6657, Low = 85.7685, Close = 90.5257, Volume = 660187068},
          new StockChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92, Low = 86.2157, Close = 86.4614, Volume = 912634864},
          new StockChartData { Date = new DateTime(2012, 04, 16), Open = 87.1514, High = 88.6071, Low = 81.4885, Close = 81.8543, Volume = 1221746066},
@@ -145,7 +148,7 @@ To render a hilo series, use series [`Type`](https://help.syncfusion.com/cr/blaz
 
 To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -167,8 +170,9 @@ To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.co
         public Double High;
         public Double Volume;
     }
+
     public List<StockChartData> StockDetails = new List<StockChartData>
-{
+    {
         new StockChartData { Date = new DateTime(2012, 04, 02), Open = 85.9757, High = 90.6657, Low = 85.7685, Close = 90.5257, Volume = 660187068},
         new StockChartData { Date = new DateTime(2012, 04, 09), Open = 89.4471, High = 92, Low = 86.2157, Close = 86.4614, Volume = 912634864},
         new StockChartData { Date = new DateTime(2012, 04, 16), Open = 87.1514, High = 88.6071, Low = 81.4885, Close = 81.8543, Volume = 1221746066},
@@ -189,7 +193,7 @@ To render a HiloOpenClose series, use series [`Type`](https://help.syncfusion.co
 
 To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -198,6 +202,7 @@ To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/bl
         <StockChartSeries DataSource="@StockDetails" Type="ChartSeriesType.Candle" XName="Date" High="High" Low="Low" Open="Open" Close="Close" Volume="Volume" Name="Google"></StockChartSeries>
     </StockChartSeriesCollection>
 </SfStockChart>
+
 @code {
 
     public class ChartData
@@ -205,8 +210,9 @@ To render a candle series, use series [`Type`](https://help.syncfusion.com/cr/bl
         public DateTime Date;
         public Double Y;
     }
+
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},

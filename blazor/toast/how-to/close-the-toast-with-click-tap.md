@@ -13,7 +13,7 @@ By default, the toasts are expired based on the `Timeout` value. You can customi
 
 The following sample demonstrates the click/tap action in toast.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

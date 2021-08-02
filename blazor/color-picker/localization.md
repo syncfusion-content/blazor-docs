@@ -22,7 +22,7 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 | `ColorPicker_Cancel`  | `Cancel` | `Abbrechen` |
 | `ColorPicker_ModeSwitcher` | `Switch Mode` | `Modus wechseln` |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -40,7 +40,7 @@ Color Picker component has `RTL` support. It helps to render the Color Picker fr
 
 In the following example Color Picker component is rendered in RTL mode with `arabic` locale.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 

@@ -31,7 +31,7 @@ The [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) property specifies the content of the stock event tooltip that appears on the Chart when the mouse is moved over the stock event. The description will be displayed as the text of the tooltip. For instance, if [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) **Q1** contains a [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) as **Quarter 1**, the tooltip will show **Quarter 1**.
 
-```csharp
+```cshtml
 
 @page "/"
 
@@ -65,6 +65,7 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     </StockChartChartArea>
 </SfStockChart>
 @code{
+
     public class ChartData
     {
         public DateTime date { get; set; }
@@ -74,6 +75,7 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public double high { get; set; }
         public double volume { get; set; }
     }
+
     public class StockEventDetails
     {
         public DateTime Date { get; set; }
@@ -85,9 +87,11 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public string TextColor { get; set; } = "#FFFFFF";
         public bool ShowOnSeries { get; set; } = true;
     }
+
     public List<ChartSeriesType> SeriesValue = new List<ChartSeriesType>();
     private ChartData[] DataSource;
     private List<StockEventDetails> StockEvents;
+    
     protected override async Task OnInitializedAsync()
     {
         GetStockEventsDetails();
@@ -96,6 +100,7 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
             DataSource = JsonConvert.DeserializeObject<ChartData[]>(System.IO.File.ReadAllText("./wwwroot/data/chart-data.json"));
         });
     }
+
     private void GetStockEventsDetails()
     {
         StockEvents = new List<StockEventDetails>()

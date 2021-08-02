@@ -23,7 +23,7 @@ The left and right thumb of RangeNavigator are used to indicate the selected ran
 
 Following code example shows the [`EnableSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnableSelector) property allows users to toggle the visibility of enable selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

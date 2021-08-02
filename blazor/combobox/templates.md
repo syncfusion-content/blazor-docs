@@ -36,8 +36,9 @@ In the following sample, each list item is split into two columns to display rel
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
+
     List<EmployeeData> Data = new List<EmployeeData>
-{
+    {
         new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
         new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
         new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
@@ -87,8 +88,9 @@ In the following sample, employees are grouped according to their country.
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
+
     List<EmployeeData> Data = new List<EmployeeData>
-{
+    {
         new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
         new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
         new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
@@ -140,8 +142,9 @@ In the following sample, the list items and its headers are designed and display
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
+
     List<EmployeeData> Data = new List<EmployeeData>
-{
+    {
         new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
         new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
         new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
@@ -209,8 +212,9 @@ In the following sample, footer element displays the total number of list items 
         public string FirstName { get; set; }
         public string Country { get; set; }
     }
+
     List<EmployeeData> Data = new List<EmployeeData>
-{
+    {
        new EmployeeData() { FirstName = "Andrew Fuller",  Country = "England" },
         new EmployeeData() { FirstName = "Anne Dodsworth", Country = "USA" },
         new EmployeeData() { FirstName = "Janet Leverling", Country = "USA" },
@@ -253,6 +257,7 @@ In the following sample, popup list content displays the notification of no data
 </SfComboBox>
 
 @code {
+
     public class EmployeeData { }
     public EmployeeData Data = new EmployeeData();
 
@@ -287,10 +292,12 @@ In the following sample, when the data fetch request fails, the ComboBox display
 </SfComboBox>
 
 @code {
+
     public class EmployeeData
     {
         public string FirstName { get; set; }
     }
+
     public EmployeeData Data = new EmployeeData();
     public Query Query = new Query().Select(new List<string> {"FirstName", "Country"}).Take(6).RequiresCount();
 }

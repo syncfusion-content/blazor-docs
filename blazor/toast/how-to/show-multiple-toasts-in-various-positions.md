@@ -13,7 +13,7 @@ By default, the positions of the new toasts are only updated after the visible t
 
 The following sample demonstrates adding multiple toasts in different positions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

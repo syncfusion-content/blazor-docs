@@ -19,7 +19,7 @@ To bind list binding to the stock chart, you can assign a IEnumerable object to 
 [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_XName), [`High`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_High), [`Low`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Low), [`Open`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Open) and [`Close`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Close)
 properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -42,7 +42,7 @@ properties.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
          new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
          new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -64,7 +64,7 @@ properties.
 
 To bind remote data to stock chart component, assign service data as an instance of `SfDataManager` to the `DataSource` property or by using EjsDataManager component. To interact with remote data source, provide the endpoint `Url`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Data
@@ -99,40 +99,40 @@ Entity Framework acts as a modern object-database mapper for .NET. This section 
 The first step is to create a DBContext class called **OrderContext** for establishing connection to a Microsoft SQL Server database.
 
 ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.EntityFrameworkCore;
-    using System.ComponentModel.DataAnnotations;
-    using EFChart.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using EFChart.Data;
 
-    namespace EFChart.Data
+namespace EFChart.Data
+{
+    public class OrderContext : DbContext
     {
-        public class OrderContext : DbContext
-        {
-            public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
 
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
             {
-                if (!optionsBuilder.IsConfigured)
-                {
-                    // Configures the context to connect to a Microsoft SQL Serve database
-                    optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\blazor\EFTreeMap\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
-                }
+                // Configures the context to connect to a Microsoft SQL Serve database
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\blazor\EFTreeMap\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
             }
         }
-
-        public class Order
-        {
-            [Key]
-            public int? OrderID { get; set; }
-            [Required]
-            public string CustomerID { get; set; }
-            [Required]
-            public int EmployeeID { get; set; }
-        }
     }
+
+    public class Order
+    {
+        [Key]
+        public int? OrderID { get; set; }
+        [Required]
+        public string CustomerID { get; set; }
+        [Required]
+        public int EmployeeID { get; set; }
+    }
+}
 
 ```
 
@@ -141,34 +141,34 @@ The first step is to create a DBContext class called **OrderContext** for establ
 Now need to create a class called **OrderDataAccessLayer**, which acts as a data access layer to retrieve the records from the database table.
 
 ```csharp
-    using Microsoft.EntityFrameworkCore;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using static BlazorApp1.Data.OrderContext;
-    using EFChart.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using static BlazorApp1.Data.OrderContext;
+using EFChart.Data;
 
-    namespace EFChart.Data
+namespace EFChart.Data
+{
+    public class OrderDataAccessLayer
     {
-        public class OrderDataAccessLayer
-        {
-            OrderContext db = new OrderContext();
+        OrderContext db = new OrderContext();
 
-            //To Get all Orders details
-            public DbSet<Order> GetAllOrders()
+        //To Get all Orders details
+        public DbSet<Order> GetAllOrders()
+        {
+            try
             {
-                try
-                {
-                    return db.Orders;
-                }
-                catch
-                {
-                    throw;
-                }
+                return db.Orders;
+            }
+            catch
+            {
+                throw;
             }
         }
     }
+}
 
 ```
 
@@ -177,45 +177,45 @@ Now need to create a class called **OrderDataAccessLayer**, which acts as a data
 A Web API Controller must be created which allows the chart to directly consume data from the Entity framework.
 
 ```csharp
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Primitives;
-    using static BlazorApp1.Data.OrderContext;
-    using EFChart.Data;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using static BlazorApp1.Data.OrderContext;
+using EFChart.Data;
 
-    namespace EFChart.Controller
+namespace EFChart.Controller
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DefaultController : ControllerBase
     {
-        [Route("api/[controller]")]
-        [ApiController]
-        public class DefaultController : ControllerBase
+        OrderDataAccessLayer db = new OrderDataAccessLayer();
+        [HttpGet]
+        public object Get()
         {
-            OrderDataAccessLayer db = new OrderDataAccessLayer();
-            [HttpGet]
-            public object Get()
+            IQueryable<Order> data = db.GetAllOrders().AsQueryable();
+            var count = data.Count();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$inlinecount"))
             {
-                IQueryable<Order> data = db.GetAllOrders().AsQueryable();
-                var count = data.Count();
-                var queryString = Request.Query;
-                if (queryString.Keys.Contains("$inlinecount"))
-                {
-                    StringValues Skip;
-                    StringValues Take;
-                    int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                    int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                    return new { Items = data.Skip(skip).Take(top), Count = count };
-                }
-                else
-                {
-                    return data;
-                }
+                StringValues Skip;
+                StringValues Take;
+                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
+                return new { Items = data.Skip(skip).Take(top), Count = count };
+            }
+            else
+            {
+                return data;
             }
         }
     }
+}
 
 ```
 
@@ -268,22 +268,22 @@ Configure the chart to bind data using either [`DataSource`](https://help.syncfu
 
 For instance, to bind data directly from the data access layer class **OrderDataAccessLayer**, assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_DataSource) property to be **OrderData.GetAllOrders()**.
 
-```csharp
+```cshtml
 
-    @using EFChart.Data;
-    @inject OrderDataAccessLayer OrderData;
+@using EFChart.Data;
+@inject OrderDataAccessLayer OrderData;
 
-    @using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Charts
 
-    <SfStockChart EnableSelector="false"  DataSource="@OrderData.GetAllOrders()">
-        <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></StockChartPrimaryXAxis>
-        <StockChartSeriesCollection>
-            <StockChartSeries Type="ChartSeriesType.Column" XName="CustomerID" YName="OrderID"></StockChartSeries>
-        </StockChartSeriesCollection>
-    </SfStockChart>
-    @code{
+<SfStockChart EnableSelector="false"  DataSource="@OrderData.GetAllOrders()">
+    <StockChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></StockChartPrimaryXAxis>
+    <StockChartSeriesCollection>
+        <StockChartSeries Type="ChartSeriesType.Column" XName="CustomerID" YName="OrderID"></StockChartSeries>
+    </StockChartSeriesCollection>
+</SfStockChart>
+@code{
 
-    }
+}
 ```
 
 On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.

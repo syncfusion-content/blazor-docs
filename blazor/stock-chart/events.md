@@ -9,10 +9,7 @@ documentation: ug
 
 # Events in Blazor Stock Chart Component
 
-In this section, we have provided the list of events of Stock Chart component which will be
-triggered for appropriate stock chart actions.
-
-The events should be provided to the Stock Chart using **StockChartEvents** component.
+In this section, we have provided the list of events of Stock Chart component which will be triggered for appropriate stock chart actions. The events should be provided to the Stock Chart using **StockChartEvents** component.
 
 The following are the number of events supported for Stock Chart component.
 
@@ -55,7 +52,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -98,7 +95,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -141,7 +138,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -184,7 +181,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -227,7 +224,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -270,7 +267,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -313,7 +310,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -356,7 +353,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -399,7 +396,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},

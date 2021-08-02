@@ -9,13 +9,11 @@ documentation: ug
 
 # Template in Blazor Toast Component
 
-Configure templates to display within a header, content, and footer section of Toast.
-
-The header, content and footer templates can be defined as `HTML element` inside `ToastTemplates`.
+Configure templates to display within a header, content, and footer section of Toast. The header, content and footer templates can be defined as `HTML element` inside `ToastTemplates`.
 
 The following code explains how to initialize a Toast with `Template`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
@@ -127,7 +125,7 @@ The following code explains how to initialize a Toast with `Template`.
 
 The Template can be given as a RenderFragment type for the `ContentTemplate` property when updating the toast templates dynamically. The below code block explains the string template.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

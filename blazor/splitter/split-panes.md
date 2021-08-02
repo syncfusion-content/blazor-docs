@@ -15,7 +15,7 @@ This section explain split-panes behaviours.
 
 By default, splitter will be rendered in horizontal orientation. Splitter container will be splitted as panes in horizontal flow direction with vertical separator.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -70,7 +70,7 @@ The output will be as follows.
 
 By setting value to `Orientation` API as `Vertical`, splitter will be rendered in vertical orientation. Splitter container will be splitted as panes in vertical flow direction with horizontal separator.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -127,10 +127,9 @@ The output will be as follows.
 
 By default, pane separator will be render with `1px` width/height. You can customize the separator size by using `SeparatorSize` API.
 
-> For horizontal orientation, it will be considered as separator width.
-> For vertical orientation, it will be considered as separator height.
+> For horizontal orientation, it will be considered as separator width. For vertical orientation, it will be considered as separator height.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -187,7 +186,7 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 > Also you can render the nested splitter using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -267,7 +266,7 @@ You can add the panes programmatic but it will makes you complex. For this, you 
 
 You can add the panes dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons
@@ -328,7 +327,7 @@ You can add the panes dynamically in the splitter by passing `PaneProperties` al
 
 You can remove the split panes dynamically by passing the pane index to `RemovePane` method.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons

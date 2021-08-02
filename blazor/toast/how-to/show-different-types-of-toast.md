@@ -20,7 +20,7 @@ The Blazor toast has the following predefined styles that can be defined using t
 
 The following sample demonstrates the different types of toast.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

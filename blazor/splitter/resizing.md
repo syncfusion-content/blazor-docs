@@ -11,8 +11,7 @@ documentation: ug
 
 By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to makes the resize easy.
 
-> Horizontal splitter allows you to resize in horizontal directions.
-> Vertical splitter allows you to resize in vertical directions.
+> Horizontal splitter allows you to resize in horizontal directions. Vertical splitter allows you to resize in vertical directions.
 
 While resizing, previous and next panes will adjust its dimensions automatically.
 
@@ -20,7 +19,7 @@ While resizing, previous and next panes will adjust its dimensions automatically
 
 Splitter allows you to set the minimum and maximum sizes for each pane. Resizing will not be occurred over the minimum and maximum values.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -77,7 +76,7 @@ You can disable the resizing for the pane by setting `false` to the `Resizable` 
 
 > Splitter resizing will be enabled only when the target of the adjacent pane's `Resizable` api should also be in `true` state.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -136,7 +135,7 @@ While resizing the panes, you can refresh the pane contents by using either `OnR
 
 You can customize the resize gripper icon and cursor in css level.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

@@ -20,25 +20,25 @@ To get start quickly with Blazor TimePicker component, you can check on this vid
 
 * Install `Syncfusion.Blazor.Calendars` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
+    > Please ensure to check the `Include prerelease` option for our Beta release.
 
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
- ```html
+    ```html
     <head>
             <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
             <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
     </head>
-```
+    ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
- ```html
+    ```html
     <head>
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
     </head>
-```
+    ```
 
 ## Adding component package to the application
 
@@ -73,9 +73,9 @@ namespace BlazorApplication
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
-    <head>
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-    </head>
+<head>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+</head>
 ```
 
 ## Adding TimePicker component to the application
@@ -84,7 +84,7 @@ To initialize the TimePicker component add the below code to your `Index.razor` 
 
 The following code shows a basic TimePicker component.
 
-```csharp
+```cshtml
 <SfTimePicker TValue="DateTime?" PlaceHolder="Select a time"></SfTimePicker>
 ```
 
@@ -103,7 +103,7 @@ But you can customize the Format of the TimePicker using the [Format](https://he
 
 The below code demonstrates how to render TimePicker component in 24 hours Format with 60 minutes interval. The time interval is set to 60 minutes by using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Step) property.
 
-```csharp
+```cshtml
 <SfTimePicker TValue="DateTime?" Value="@TimeValue" Step=60 Format="HH:mm"></SfTimePicker>
 
 @code {

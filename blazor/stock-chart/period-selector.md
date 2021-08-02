@@ -29,7 +29,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 * Minutes
 * Seconds
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -60,6 +60,7 @@ Periods is an array of objects that allows users to specify the range of [Period
     public List<TrendlineTypes> TrendlineType = new List<TrendlineTypes>() { };
     public List<ExportType> ExportType = new List<ExportType>() { };
     public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>() { };
+
     public class ChartData
     {
         public DateTime Date;
@@ -71,7 +72,7 @@ Periods is an array of objects that allows users to specify the range of [Period
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -93,7 +94,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 
 The [`EnablePeriodSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnablePeriodSelector) property allows users to toggle the visibility of period selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -116,7 +117,7 @@ The [`EnablePeriodSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},

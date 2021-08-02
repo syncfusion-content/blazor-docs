@@ -368,7 +368,7 @@ If the maximum value does not enter the interval of major ticks, the last label 
 
 When the axis labels overlap with each other, you can hide the intersected labels by setting the `HideIntersectingLabel` property to true in the axis.
 
-```csharp
+```cshtml
 <SfCircularGauge>
     <CircularGaugeAxes>
         <CircularGaugeAxis Maximum="200" StartAngle="270" EndAngle="90" Minimum="0" HideIntersectingLabel="true">

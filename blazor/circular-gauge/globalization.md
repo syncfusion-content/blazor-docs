@@ -13,7 +13,7 @@ The internationalization library provides support for formatting and parsing the
 
 By default, all the Blazor components are specific to the English culture ('en-US'). If you need a different culture, follow the given steps:
 
-* Install the [`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) package using the following command (it installs the CLDR JSON data).
+Install the [`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) package using the following command (it installs the CLDR JSON data).
 
 ```
 npm install cldr-data --save
