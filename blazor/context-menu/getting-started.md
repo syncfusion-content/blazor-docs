@@ -24,7 +24,7 @@ To get start quickly with Context Menu Component using Blazor, you can check on 
 
     > Please ensure to check the **Include prerelease** option.
 
-    ```csharp
+    ```cshtml
     <head>
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
         @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />*@
@@ -33,7 +33,7 @@ To get start quickly with Context Menu Component using Blazor, you can check on 
 
     For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-    ```csharp
+    ```cshtml
     <head>
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
         <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
@@ -44,7 +44,7 @@ To get start quickly with Context Menu Component using Blazor, you can check on 
 
 Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Navigations** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -52,8 +52,7 @@ Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Navigations** pac
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components.
-Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components. Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
 
 ```csharp
 namespace BlazorApplication
@@ -74,7 +73,7 @@ namespace BlazorApplication
 
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```cshtml
 <head>
     <environment include="Development">
         <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
@@ -87,7 +86,7 @@ namespace BlazorApplication
 
 Now, add the Blazor Context Menu component in `razor` page in the `Pages` folder. For example, the Context Menu component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 
 <div id="target">Right click/Touch hold to open the ContextMenu </div>
 <SfContextMenu Target="#target" TValue="MenuItem">

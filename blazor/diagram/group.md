@@ -155,9 +155,7 @@ The following code illustrates how a ungroup  at runtime.
 
 ## Add group at runtime
 
-A group node can be added at runtime by using Nodes collection of diagram.
-
-The following code illustrates how a group node is added at runtime
+A group node can be added at runtime by using Nodes collection of diagram. The following code illustrates how a group node is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -216,9 +214,7 @@ The following code illustrates how a group node is added at runtime
 
 ## Group from SymbolPalette
 
-Group Nodes can be predefined and added to SymbolPalette. You can drop those Groups into Diagram, when required.
-
-The following code illustrates how to add group into SymbolPalette.
+Group Nodes can be predefined and added to SymbolPalette. You can drop those Groups into Diagram, when required. The following code illustrates how to add group into SymbolPalette.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

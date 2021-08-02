@@ -121,7 +121,7 @@ And also drag the connector during the interaction.
 
 The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -159,13 +159,11 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ## How to Route Connectors
 
-The connectors in the diagram can be overlapped with any neighboring nodes when the node is placed in contact with the connector.
-
-This will make less clarity about the connector path flow. This can be avoided using the Routing process. The routing is the process of updating the connector’s geometry to avoid the overlapping with any neighboring nodes in their path.
+The connectors in the diagram can be overlapped with any neighboring nodes when the node is placed in contact with the connector. This will make less clarity about the connector path flow. This can be avoided using the Routing process. The routing is the process of updating the connector’s geometry to avoid the overlapping with any neighboring nodes in their path.
 
 This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum value to the Constraints property of the diagram.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

@@ -14,7 +14,7 @@ Basically, Dashboard layout Component have two templates to render the data in p
 * ContentTemplate: To render data or any HTML template as the content.
 * HeaderTemplate: A word or phrase that summarize the panel’s content can be added as the header on the top of each panel.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

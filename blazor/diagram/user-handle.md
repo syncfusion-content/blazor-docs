@@ -169,9 +169,7 @@ If set `false` to the [`DisableConnectors`](https://help.syncfusion.com/cr/blazo
 
 ### Position
 
-The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset) property of userhandle is used to align the userhandles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height.
-
-The [`Side`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Side) property is used to set how the userhandle is aligned based on the given [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset).
+The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset) property of userhandle is used to align the userhandles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height. The [`Side`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Side) property is used to set how the userhandle is aligned based on the given [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_Offset).
 
 The following table shows all the possible alignments visually shows the userhandle positions.
 
@@ -192,7 +190,7 @@ Diagram allows you set size for userhandles by using the [`Size`](https://help.s
 
 ### Style
 
-* You can change the style of the userhandles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the userhandles.
+You can change the style of the userhandles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the userhandles.
 
 * The userhandle's [`PathColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathColor) property used to change the color of the given [`PathData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUserHandle.html#Syncfusion_Blazor_Diagrams_DiagramUserHandle_PathData) of the userhandle.
 
@@ -353,7 +351,7 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
 
 To create the fixed user handles, define and add them to the collection of nodes and connectors property. The following code example used to create an fixed user handles for the  nodes and connectors.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -457,7 +455,7 @@ The following code explains how to customize the appearance of the fixed user ha
 
 ## Customizing the node fixed user handle
 
-* The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed userhandle and used together and gives you more control over the node fixed user handle positioning.
+The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed userhandle and used together and gives you more control over the node fixed user handle positioning.
 
 ### Margin for the node fixed user handle
 
@@ -533,7 +531,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 ### Displacement
 
-* The `displacement` property allows you to specify the space to be left from the connector segment based on the x and y value provided.
+The `displacement` property allows you to specify the space to be left from the connector segment based on the x and y value provided.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 

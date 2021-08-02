@@ -17,19 +17,19 @@ The following code illustrates how to allow a linear arrangement in diagram layo
 
 ```csharp
   
-    protected override void OnInitialized()
+protected override void OnInitialized()
+{
+    LayoutValue = new DiagramLayout()
         {
-            LayoutValue = new DiagramLayout()
-                {
-                    Type = LayoutType.ComplexHierarchicalTree,
-                    HorizontalSpacing = 40,
-                    VerticalSpacing = 40,
-                    Orientation = LayoutOrientation.TopToBottom,
-                    //To arrange a child nodes in a linear manner
-                    Arrangement = ChildArrangement.Linear
-                };
-            }
-        }
+            Type = LayoutType.ComplexHierarchicalTree,
+            HorizontalSpacing = 40,
+            VerticalSpacing = 40,
+            Orientation = LayoutOrientation.TopToBottom,
+            //To arrange a child nodes in a linear manner
+            Arrangement = ChildArrangement.Linear
+        };
+    }
+}
 
 ```
 

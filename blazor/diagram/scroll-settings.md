@@ -9,8 +9,7 @@ documentation: ug
 
 # Scroll Settings in Blazor Diagram Component
 
-The diagram can be scrolled by using the vertical and horizontal ScrollBars. In addition to the ScrollBars, mousewheel can be used to scroll the diagram.
-Diagram’s [`ScrollSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ScrollSettings) enable you to read the current scroll status, view port size, current zoom and zoom factor. It also allows you to scroll the diagram programmatically.
+The diagram can be scrolled by using the vertical and horizontal ScrollBars. In addition to the ScrollBars, mousewheel can be used to scroll the diagram. Diagram’s [`ScrollSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ScrollSettings) enable you to read the current scroll status, view port size, current zoom and zoom factor. It also allows you to scroll the diagram programmatically.
 
 ## Get current scroll status
 
@@ -110,9 +109,7 @@ The following code example illustrates how to specify the scroll limit.
 
 ## Scroll Padding
 
-The scroll padding allows you to extend the scrollable region that is based on the scroll limit.
-
-The following code example illustrates how to set scroll padding to diagram region.
+The scroll padding allows you to extend the scrollable region that is based on the scroll limit. The following code example illustrates how to set scroll padding to diagram region.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

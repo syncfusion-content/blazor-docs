@@ -382,7 +382,7 @@ The node's `z-order` property specifies the stack order of the node. A node with
 
 The following code illustrates how to render a node based on the stack order.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

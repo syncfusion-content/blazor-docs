@@ -97,7 +97,7 @@ The [`OnPositionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [`OnConnectionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnConnectionChange) event will notify when the connection is changed. The [`IBlazorConnectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorConnectionChangeEventArgs.html) interface is used to get event arguments.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

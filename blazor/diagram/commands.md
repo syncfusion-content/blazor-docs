@@ -32,9 +32,9 @@ Alignment commands enable you to align the selected or defined objects such as n
 
 | Parameters | Description |
 |:------------| :------ |
-|[`Alignment Options`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, with respect to which the objects to be aligned. The accepted values of the argument "alignment options" are as follows. <br /> Left - Aligns all the selected objects at the left of the selection boundary. <br /> Right - Aligns all the selected objects at the right of the selection boundary. <br /> Center - Aligns all the selected objects at the center of the selection boundary. <br /> Top - Aligns all the selected objects at the top of the selection boundary. <br /> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br /> Middle - Aligns all the selected objects at the middle of the selection boundary.|
+|[`Alignment Options`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, with respect to which the objects to be aligned. The accepted values of the argument "alignment options" are as follows. <br> Left - Aligns all the selected objects at the left of the selection boundary. <br> Right - Aligns all the selected objects at the right of the selection boundary. <br> Center - Aligns all the selected objects at the center of the selection boundary. <br> Top - Aligns all the selected objects at the top of the selection boundary. <br> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br> Middle - Aligns all the selected objects at the middle of the selection boundary.|
 | Objects | Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned. |
-[`Alignment Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br /> The accepted values of the argument "alignment mode" are as follows. <br /> Object - Aligns the objects based on the first object in the selected list. <br /> Selector - Aligns the objects based on the selection boundary. | 
+[`Alignment Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br> The accepted values of the argument "alignment mode" are as follows. <br> Object - Aligns the objects based on the first object in the selected list. <br> Selector - Aligns the objects based on the selection boundary. | 
 <!-- markdownlint-enable MD033 -->
 
 The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
@@ -74,7 +74,7 @@ The factor to distribute the shapes `DistributeOptions` are listed as follows:
 
 The following code example illustrates how to execute the space commands.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 
