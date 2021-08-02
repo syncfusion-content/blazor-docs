@@ -28,7 +28,6 @@ There are several commands available in the diagram as follows.
 
 Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Refer to `Align` commands which shows how to use align methods in the diagram.
 
- <!-- markdownlint-disable MD033 -->
 
 | Parameters | Description |
 |:------------| :------ |
