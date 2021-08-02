@@ -1,7 +1,7 @@
 ---
 layout: post
 title: CRUD actions in Blazor Scheduler Component | Syncfusion
-description: Learn here all about all possible methods available on Syncfusion Blazor Scheduler component to perform CRUD actions on the events.
+description: Learn here all about possible methods available on Syncfusion Blazor Scheduler component to perform CRUD actions on the events.
 platform: Blazor
 control: Scheduler
 documentation: ug
