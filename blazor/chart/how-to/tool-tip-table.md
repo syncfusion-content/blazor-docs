@@ -1,97 +1,121 @@
 ---
 layout: post
 title: Table in Tooltip in Blazor Charts Component | Syncfusion
-description: Learn here all about Table in Tooltip in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Table in Tooltip in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
 ---
 
-<!-- markdownlint-disable MD036 -->
-
 # Table in Tooltip in Blazor Charts Component
 
-You can show the tooltip as table by using [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
+A table type tooltip can be created using the [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Template) property in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html). Follow the steps below to display a table inside the tooltip.
 
-To access the aggregate values inside the Template, you can use the implicit named parameter context. You can type cast the context as [`ChartTooltipInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html) to get aggregate values inside template
+**Step 1:**
 
-```
-            <ChartTooltipSettings Enable="true">
-                <Template>
-                    @{
-                        var data = context as ChartTooltipInfo;
-                        <table>
-                            <tr><td>Point Value: </td><td>@data.X : @data.Y</td></tr>
-                            <tr><td><div id="chart_cloud"><img src="https://ej2.syncfusion.com/demos/src/chart/images/cloud.png" style="width: 41px; height: 41px" /></div></td></tr>
-                        </table>
-                    }
-                </Template>
-            </ChartTooltipSettings>
+Render a chart with the required series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
+```cshtml
+<SfChart Title="Weather condition JPN vs DEU">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column" />
+    </ChartSeriesCollection>
+</SfChart>
 ```
 
-```csharp
+**Step 2:**
+
+The tooltip can be enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html#Syncfusion_Blazor_Charts_ChartTooltipSettings_Enable) property as **true** in [`ChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html).
+
+```cshtml
+...
+<ChartTooltipSettings Enable="true">
+...
+```
+
+**Step 3:**
+
+Construct a HTML table as per the requirement and place the implicit named parameter context to access the aggregate values within the template. To retrieve aggregate values inside the template, type cast the context as [`ChartTooltipInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipInfo.html).
+
+```cshtml
+...
+<ChartTooltipSettings Enable="true">
+    <Template>
+        @{
+            var data = context as ChartTooltipInfo;
+            <table border="5" bgcolor="lightblue">
+                <tr style="border: 1px solid black">
+                    <td style="border: 1px solid black">Month: </td>
+                    <td style="border: 1px solid black">@data.X</td>
+                </tr>
+                <tr style="border: 1px solid black">
+                    <td style="border: 1px solid black">Value: </td>
+                    <td style="border: 1px solid black">@data.Y</td>
+                </tr>
+            </table>
+        }
+    </Template>
+</ChartTooltipSettings>
+...
+```
+
+**Action**
+
+When the mouse is moved over the chart series points, the tooltip is displayed in table format. The complete code snippet for the preceding steps is available below.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
-<div class="row">
-    <div class="col-md-8">
-        <SfChart Title="Profit Comparison of A and B">
-            <ChartPrimaryXAxis>
-                <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
-            </ChartPrimaryXAxis>
-            <ChartPrimaryYAxis Minimum="0" Maximum="100" Interval="25" Title="Sales">
-                <ChartAxisMajorGridLines Width="0"></ChartAxisMajorGridLines>
-            </ChartPrimaryYAxis>
-            <ChartSeriesCollection>
-                <ChartSeries DataSource="@dataSource" Name="Product A" XName="x" Opacity="1" YName="y1" Type="ChartSeriesType.Column">
-                </ChartSeries>
-                <ChartSeries DataSource="@dataSource" Name="Product B" XName="x" Opacity="1" YName="y2" Type="ChartSeriesType.Column">
-                </ChartSeries>
-            </ChartSeriesCollection>
-            <ChartArea>
-                <ChartAreaBorder Width="0"></ChartAreaBorder>
-            </ChartArea>
-            <ChartTooltipSettings Enable="true">
-                <Template>
-                    @{
-                        var data = context as ChartTooltipInfo;
-                        <table style="border: 1px solid black">
-                            <tr style="border: 1px solid black"><td style="border: 1px solid black">Point Value: </td><td style="border: 1px solid black">@data.X : @data.Y</td></tr>
-                            <tr style="border: 1px solid black"><td style="border: 1px solid black"><div id="chart_cloud"><img src="https://ej2.syncfusion.com/demos/src/chart/images/cloud.png" style="width: 41px; height: 41px" /></div></td></tr>
-                        </table>
-                    }
-                </Template>
-            </ChartTooltipSettings>
-        </SfChart>
-    </div>
-</div>
-@code
-{
-    public class ChartTooltipData
+<SfChart Title="Weather condition JPN vs DEU">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category" />
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@WeatherReports" XName="X" YName="Y" Type="ChartSeriesType.Column" />
+    </ChartSeriesCollection>
+    <ChartTooltipSettings Enable="true">
+        <Template>
+            @{
+                var data = context as ChartTooltipInfo;
+                <table border="2" bgcolor="lightblue" cellpadding="5">
+                    <tr style="border: .1px solid black">
+                        <td style="border: 1px solid black">Month: </td>
+                        <td style="border: 1px solid black"> @data.X</td>
+                    </tr>
+                    <tr style="border: .1px solid black">
+                        <td style="border: 1px solid black">Value: </td>
+                        <td style="border: 1px solid black"> @data.Y</td>
+                    </tr>
+                </table>
+            }
+        </Template>
+    </ChartTooltipSettings>
+</SfChart>
+
+@code{
+    public class ChartData
     {
-        public double x { get; set; }
-        public double y1 { get; set; }
-        public double y2 { get; set; }
-    }
-    public class SelectionData
-    {
-        public double x { get; set; }
-        public double y { get; set; }
+        public string X { get; set; }
+        public double Y { get; set; }
     }
 
-    private Random rnd = new Random();
-    public List<ChartTooltipData> dataSource = new List<ChartTooltipData>();
-
-    protected override void OnInitialized()
+    public List<ChartData> WeatherReports = new List<ChartData>
     {
-        for (int i = 0; i < 5; i++)
-        {
-            dataSource.Add(new ChartTooltipData { x = 1971 + i, y1 = rnd.Next(10, 100), y2 = rnd.Next(10, 100) });
-        }
-    }
+         new ChartData{ X= "Jan", Y= 15 },
+         new ChartData{ X= "Feb", Y= 20 },
+         new ChartData{ X= "Mar", Y= 35 },
+         new ChartData{ X= "Apr", Y= 40 },
+         new ChartData{ X= "May", Y= 80 },
+         new ChartData{ X= "Jun", Y= 70 },
+         new ChartData{ X= "Jul", Y= 65 },
+         new ChartData{ X= "Aug", Y= 55 },
+         new ChartData{ X= "Sep", Y= 50 },
+         new ChartData{ X= "Oct", Y= 30 },
+         new ChartData{ X= "Nov", Y= 35 },
+         new ChartData{ X= "Dec", Y= 35 }
+    };
 }
 
 ```
 
-> You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

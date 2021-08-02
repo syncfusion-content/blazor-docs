@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding Custom Item To Context Menu in Blazor FileManager Component | Syncfusion
+title: Adding Custom Item To Context Menu in Blazor FileManager | Syncfusion
 description: Learn here all about Adding Custom Item To Context Menu in Syncfusion Blazor FileManager component and more.
 platform: Blazor
 control: File Manager
@@ -40,4 +40,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Custom Context Menu](../images/custom-context.png)g)
+![Custom Context Menu](../images/custom-context.png)

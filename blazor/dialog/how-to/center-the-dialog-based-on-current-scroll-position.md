@@ -13,7 +13,7 @@ The dialog is always centered based on the target container. If the target is no
 
 In the following sample, the model dialog is centered based on its current scroll position of the page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

@@ -7,9 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# Visual Studio Integration
-
-## Overview
+# Overview of Visual Studio Integration for Blazor
 
 The Syncfusion Essential Studio for Blazor extensions for Visual Studio that make it easier to use the Syncfusion component by creating Syncfusion Blazor application in Visual Studio and updating the Syncfusion version from the application.
 

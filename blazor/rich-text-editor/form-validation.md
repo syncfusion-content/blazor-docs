@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form validation in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Form validation in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Form validation in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -15,7 +15,7 @@ This following sample demonstrate how to get the Rich Text Editor validation err
 
 Render the Rich Text Editor in form as below.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;
@@ -84,7 +84,7 @@ The Rich Text Editor is a textarea control. The Rich Text Editor also provides t
 
 This sample is demonstrate form validation using the `DataAnnotationsValidator`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;
@@ -140,7 +140,7 @@ The output will be as follows.
 
 The default error message for a rule can be customizable by defining it along with concern rule object as follows.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;
@@ -193,7 +193,7 @@ The default error message for a rule can be customizable by defining it along wi
 
 The Form Validation error message can be placed from default position to desired custom location.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 @using System.ComponentModel.DataAnnotations;

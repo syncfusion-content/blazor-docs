@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create nested Dialog in Blazor Dialog Component | Syncfusion
-description: Learn here all about Create nested Dialog in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Create nested Dialog in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -23,7 +23,7 @@ Initialize the Dialog as mentioned in the below sample.
 
 Set the inner Dialog target as `#dialog`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

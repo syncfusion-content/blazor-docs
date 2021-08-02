@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor TimePicker Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor TimePicker component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor TimePicker component and much more details.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -9,15 +9,14 @@ documentation: ug
 
 # Events in Blazor TimePicker Component
 
-This section explains the list of events of the TimePicker component which will be
-triggered for appropriate TimePicker actions.
+This section explains the list of events of the TimePicker component which will be triggered for appropriate TimePicker actions.
 
-Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
------|-----
-change |[ValueChange](events/#valuechange)
-close |[OnClose](events/#onclose)
-itemRender |[OnItemRender](events/#onitemrender)
-open |[OnOpen](events/#onopen)
+| Event Name(`v17.1.*`) |Event Name(`v17.2.*`) |
+| ----- | ----- |
+| change | [ValueChange](events/#valuechange) |
+| close | [OnClose](events/#onclose) |
+| itemRender | [OnItemRender](events/#onitemrender) |
+| open | [OnOpen](events/#onopen) |
 
 ## Blur
 

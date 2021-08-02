@@ -13,14 +13,13 @@ documentation: ug
 In this topic, we are going to learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, we have fetched data from the ODataV4 service using [`ODataV4Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
 
 It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Please refer to the following documentation to know about the available Adaptors of SfDataManager.
-
-[`Adaptors`](https://blazor.syncfusion.com/documentation/data/adaptors/)
+ * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/)
 
 ## Prerequisite software
 
 The following software are needed
 * Visual Studio 2019 v16.8.0 Preview 3.0 or later.
-* dotnet SDK 5.0 RC2 or later.
+* .NET SDK 5.0 RC2 or later.
 
 ## Create the database
 
@@ -70,7 +69,7 @@ Run the following commands in the **Package Manager Console**.
 
 Once the above packages are installed, we can scaffold DbContext and Model classes. Run the following command in the **Package Manager Console**.
 
-```csharp
+```
 
 Scaffold-DbContext “Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=OrdersDetails;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 
@@ -250,7 +249,7 @@ namespace ODataServiceProject
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[`Getting Started`](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
 ### Add Syncfusion Blazor DataGrid package
 
@@ -266,7 +265,7 @@ Now, in the **Browse** tab, search and install the **Syncfusion.Blazor.Grid** Nu
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Grids
@@ -299,7 +298,7 @@ Themes provide life to components. Syncfusion Blazor has different themes. They 
 
 In this demo application, the **Bootstrap4** theme will be used. To add the theme, open **Pages/_Host.cshtml** file and add the following CSS reference code.
 
-```csharp
+```html
 
 <link href="_content/Syncfusion.Blazor.Themes/fabric.css" rel="stylesheet" />
 
@@ -309,7 +308,7 @@ In this demo application, the **Bootstrap4** theme will be used. To add the them
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders"></SfGrid>
 
@@ -321,7 +320,7 @@ To consume data from the OData Controller, we need to add the **SfDataManager** 
 
 [`ODataV4Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -333,7 +332,7 @@ To consume data from the OData Controller, we need to add the **SfDataManager** 
 
 Grid columns can be defined by using the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
@@ -351,22 +350,22 @@ When you run the application, the **Get()** method will be called in your OData 
 
 ```csharp
 
-    [Route("api/[controller]")]
-    public class OrdersController : ODataController
+[Route("api/[controller]")]
+public class OrdersController : ODataController
+{
+    private OrdersDetailsContext _db;
+    public OrdersController(OrdersDetailsContext context)
     {
-        private OrdersDetailsContext _db;
-        public OrdersController(OrdersDetailsContext context)
-        {
-            _db = context;
-        }
-        [HttpGet]
-        [EnableQuery]
-        public IActionResult Get()
-        {
-            return Ok(_db.Orders);
-        }
-        ...
+        _db = context;
     }
+    [HttpGet]
+    [EnableQuery]
+    public IActionResult Get()
+    {
+        return Ok(_db.Orders);
+    }
+    ...
+}
 
 ```
 
@@ -377,7 +376,7 @@ We can enable editing in the grid component using the [`GridEditSettings`](https
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
-```csharp
+```cshtml
 
 <SfGrid TValue="Orders" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })">
     <SfDataManager Url="https://localhost:44392/odata/orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>

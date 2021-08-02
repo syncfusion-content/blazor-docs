@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize column menu icon in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Customize column menu icon in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Customize column menu icon in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

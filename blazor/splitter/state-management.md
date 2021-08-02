@@ -1,7 +1,7 @@
 ---
 layout: post
 title: State Management in Blazor Splitter Component | Syncfusion
-description: Learn here all about State Management in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about State Management in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -26,7 +26,7 @@ State persistence allows the Splitter to retain the current splitter panes state
 
 > The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Splitter.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

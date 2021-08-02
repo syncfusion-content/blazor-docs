@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started for Server in Blazor Charts Component | Syncfusion
-description: Learn here all about Getting Started for Server in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Getting Started for Server in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -17,29 +17,29 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
 
 1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-    ```html
-        <head>
-            <environment include="Development">
-            ....
-            ....
-            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-            </environment>
-        </head>
+    ```cshtml
+    <head>
+        <environment include="Development">
+        ....
+        ....
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+        </environment>
+    </head>
     ```
 
 3. Now add the lodash script to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our [`chart interactive`]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
 
-    ```html
-      <head>
-        <environment include="Development">
-            ....
-            ....
-            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-        </environment>
-      </head>
+    ```cshtml
+    <head>
+    <environment include="Development">
+        ....
+        ....
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    </environment>
+    </head>
     ```
 
 ## Adding component package to the application
@@ -96,7 +96,7 @@ namespace BlazorApplication
 }
 ```
 
-**Note:** Use the following configuration to host your blazor server application on **Azure SignalR**.
+**Note:** Use the following configuration to host your Blazor server application on **Azure SignalR**.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -139,20 +139,21 @@ To bind data for the chart component, you can assign a IEnumerable object to the
 
 ```csharp
 public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double SalesValue { get; set; }
-    }
+{
+    public string Month { get; set; }
+    public double SalesValue { get; set; }
+}
+
 public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+{
+    new SalesInfo { Month = "Jan", SalesValue = 35 },
+    new SalesInfo { Month = "Feb", SalesValue = 28 },
+    new SalesInfo { Month = "Mar", SalesValue = 34 },
+    new SalesInfo { Month = "Apr", SalesValue = 32 },
+    new SalesInfo { Month = "May", SalesValue = 40 },
+    new SalesInfo { Month = "Jun", SalesValue = 32 },
+    new SalesInfo { Month = "Jul", SalesValue = 35 }
+};
 ```
 
 Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
@@ -175,6 +176,7 @@ Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://he
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+    
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -206,12 +208,14 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -246,12 +250,14 @@ You can add data labels to improve the readability of the chart. This can be ach
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -284,12 +290,14 @@ When space constraints prevent you from displaying information using data labels
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -322,12 +330,14 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+    
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -343,7 +353,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 
 ![chart](images/getting-started/legend.png)
 
-> You can find the fully working sample [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip). And also you can refer to our [`Blazor Chart`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can find the fully working sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip). And also you can refer to our [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See also
 

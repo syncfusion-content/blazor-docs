@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get index value of selected rowcell in Blazor TreeGrid Component | Syncfusion
+title: Get index value of selected rowcell in Blazor TreeGrid | Syncfusion
 description: Learn here all about Get index value of selected rowcell in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started-Client side using Visual studio in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Getting Started-Client side using Visual studio in Syncfusion Blazor QueryBuilder component and more.
+title: Blazor QueryBuilder in WebAssembly using Visual Studio | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor QueryBuilder Component in Blazor WebAssembly (Client Side) App using Visual Studio and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Getting Started-Client side using Visual studio in Blazor QueryBuilder Component
+# Blazor QueryBuilder Component in Client Side App using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -18,15 +18,13 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.3](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later.
->
-> Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
+> .NET Core SDK 3.1.3 requires Visual Studio 2019 16.6 or later. Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it requires Visual Studio 16.7 Preview 1 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
-    ```bash
+    ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ````
 
@@ -97,7 +95,7 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
     </head>
     ```
 
-    > The same theme file can be referred through the CDN version by using [`https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css`](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/18.2.44/styles/bootstrap4.css).
     > To use manual scripts other than the scripts from NuGet package, register the Blazor service in **~/Program.cs** file by using true parameter as mentioned below.
 
      ```csharp
@@ -138,17 +136,18 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
 </SfQueryBuilder>
 
 @code {
-private string[] Values = new string[] { "Mr.", "Mrs." };
-public class EmployeeDetails
-{
-    public int EmployeeID { get; set; }
-    public string FirstName { get; set; }
-    public bool TitleOfCourtesy { get; set; }
-    public string Title { get; set; }
-    public DateTime HireDate { get; set; }
-    public string Country { get; set; }
-    public string City { get; set; }
-}
+    private string[] Values = new string[] { "Mr.", "Mrs." };
+
+    public class EmployeeDetails
+    {
+        public int EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public bool TitleOfCourtesy { get; set; }
+        public string Title { get; set; }
+        public DateTime HireDate { get; set; }
+        public string Country { get; set; }
+        public string City { get; set; }
+    }
 }
 ```
 

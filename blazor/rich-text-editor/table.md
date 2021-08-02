@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Table in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Table in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -21,15 +21,11 @@ Rich Text Editor allows you to insert table of content in edit panel and provide
 
 ## Insert table
 
-Using the `CreateTable` toolbar option, select a number of rows and columns to be inserted over the table
-grid and insert table into Rich Text Editor content using the mouse.
-
-Tables can also be inserted through the `Insert Table` option in the pop-up where the number of rows
-and columns can be provided manually and this is the default way in devices.
+Using the `CreateTable` toolbar option, select a number of rows and columns to be inserted over the table grid and insert table into Rich Text Editor content using the mouse. Tables can also be inserted through the `Insert Table` option in the pop-up where the number of rows and columns can be provided manually and this is the default way in devices.
 
 In the following sample, the table has been inserted using `CreateTable` toolbar item.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -62,35 +58,30 @@ The output will be as follows.
 
 ## Quick Toolbar
 
-Quick toolbar is opened by clicking the table. It has different sets of commands to be performed on
-the table which increases the feasibility to edit the table easily.
+Quick toolbar is opened by clicking the table. It has different sets of commands to be performed on the table which increases the feasibility to edit the table easily.
 
 ## Table Header
 
-`Table Header` command is available with quick toolbar option through which the header row can be
-added or removed from the inserted table. The following image illustrates the table header.
+`Table Header` command is available with quick toolbar option through which the header row can be added or removed from the inserted table. The following image illustrates the table header.
 
 ![RTE table header](./images/table_header.png)
 
 ## Insert Rows
 
-`Rows` can be inserted above or below the required table cell through the quick toolbar. Also,
-focused row can be deleted. The following screenshot shows the available options of the row item.
+`Rows` can be inserted above or below the required table cell through the quick toolbar. Also, focused row can be deleted. The following screenshot shows the available options of the row item.
 
 ![RTE table row](./images/table_rows.png)
 
 ## Insert Columns
 
-`Columns` can be inserted to the left or right side of the required table cell through the quick
-toolbar. Also, the focused column can be deleted. The following screenshot shows the available
+`Columns` can be inserted to the left or right side of the required table cell through the quick toolbar. Also, the focused column can be deleted. The following screenshot shows the available
 options of the column item.
 
 ![RTE table column](./images/table_column.png)
 
 ## Set Color
 
-The Background Color can be set for each table cell through the `BackgroundColor` command available
-with quick toolbar.
+The Background Color can be set for each table cell through the `BackgroundColor` command available with quick toolbar.
 
 ![RTE table background color](./images/table_bg_color.png)
 
@@ -100,22 +91,19 @@ Using the delete item in the quick toolbar, users can delete the entire table.
 
 ## Vertical Align
 
-Text inside the table can be aligned to top, middle, or bottom using the `TableCellVerticalAlign`
-command of the quick toolbar.
+Text inside the table can be aligned to top, middle, or bottom using the `TableCellVerticalAlign` command of the quick toolbar.
 
 ![RTE table vertical alignment](./images/table_vertical.png)
 
 ## Horizontal Align
 
-Text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command
-of the quick toolbar.
+Text inside the table can be aligned left, right, or center using the `TableCellHorizontalAlign` command of the quick toolbar.
 
 ![RTE table horizontal alignment](./images/table_horizontal.png)
 
 ## Table Styles
 
-Table styles provided for class name should be appended to a table element. It helps to design the
-table in specific CSS styles when inserting in the editor.
+Table styles provided for class name should be appended to a table element. It helps to design the table in specific CSS styles when inserting in the editor.
 
 By default, provides `Dashed border` and `Alternate rows`.
 
@@ -129,7 +117,7 @@ By default, provides `Dashed border` and `Alternate rows`.
 
 Rich Text Editor provides support to custom styles for tables. If you want to add additional styles, pass the styles information as `List<DropDownItemModel>` data to the `Styles` field of `RichTextEditorTableSettings` tag.
 
-```csharp
+```cshtml
 
 <SfRichTextEditor>
     <RichTextEditorTableSettings Styles="@StyleItems" />
@@ -156,11 +144,9 @@ The output will be as follows.
 
 ## Table Properties
 
-Sets the default width of the table when it is inserted in the Rich Text Editor using the width of
-`RichTextEditorTableSettings`.
+Sets the default width of the table when it is inserted in the Rich Text Editor using the width of `RichTextEditorTableSettings`.
 
-Using the quick toolbar, users can change the width, cell padding, and cell spacing in the selected
-table using the `TableEditProperties` command dialog action.
+Using the quick toolbar, users can change the width, cell padding, and cell spacing in the selected table using the `TableEditProperties` command dialog action.
 
 ![RTE table settings](./images/table_properties.png)
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Data Binding in Blazor AutoComplete Component | Syncfusion
-description: Learn here all about  Data Binding in Syncfusion Blazor AutoComplete component and more.
+description: Checkout and learn here all about  Data Binding in Syncfusion Blazor AutoComplete component and more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -12,6 +12,7 @@ documentation: ug
 Data binding can be achieved by using the `bind-Value` attribute and it supports string, int, Enum, DateTime, and bool types. If component value has been changed, it will affect all places where you bind the variable for the **bind-value** attribute.
 
 ```cshtml
+
 @using Syncfusion.Blazor.DropDowns
 
 <p>AutoComplete value is: @AutoVal</p>

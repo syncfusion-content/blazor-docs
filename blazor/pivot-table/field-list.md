@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Field List in Blazor Pivot Table Component | Syncfusion
-description: Learn here all about Field List in Syncfusion Blazor Pivot Table component and more.
+description: Checkout and learn here all about Field List in Syncfusion Blazor Pivot Table component and much more.
 platform: Blazor
 control: Pivot Table
 documentation: ug
@@ -57,10 +57,10 @@ To enable the field list in pivot table UI, set the [`ShowFieldList`](https://he
 ```
 
 <!-- markdownlint-disable MD012 -->
-![output](images/gs_fieldlist_icon.png)("Field list icon at the top left of the pivot table component")
+![Field list icon at the top left of the pivot table component](images/gs_fieldlist_icon.png)
 
 
-![output](images/gs_fieldlist_dialog.png)"Field list dialog for user interaction")
+![Field list dialog for user interaction](images/gs_fieldlist_dialog.png)
 
 
 ## Stand-alone Field List (Fixed)

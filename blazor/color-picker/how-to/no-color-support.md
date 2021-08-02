@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Handle No Color Support in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Handle No Color Support in Syncfusion Blazor Color Picker component and more.
+description: Checkout and learn here all about Handle No Color Support in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
@@ -13,11 +13,9 @@ The Color Picker component supports no color functionality. By clicking the no c
 
 ## Default no color
 
-To achieve this, set [`NoColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property as true.
+To achieve this, set [`NoColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property as true. In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile you can achieve the above functionalities.
 
-In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile you can achieve the above functionalities.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -50,7 +48,7 @@ Output be like
 
 The following sample show the color palette with custom no color option.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.SplitButtons

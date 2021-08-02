@@ -13,7 +13,7 @@ Context Menu items can be added or removed using the [`InsertAfter`](https://hel
 
 In the following example, the **Display Settings** menu items are added before the **Personalize** item, the **Sort By** menu items are added after the **Refresh**, and the **Paste** item is removed from context menu.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

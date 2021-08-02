@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Templates in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Templates in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -95,7 +95,7 @@ Column Template allows you to define your own widgets for entire column. Use the
 
 In the following sample, the SFDropdownlist component is used as the custom components for field and value in the `PaymentMode` column.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.DropDowns
@@ -247,7 +247,7 @@ Header Template allows you to define your own widgets for group header. You can 
 
 In the following sample, the SFDropdownlist component is used as the custom components for AND/OR operators and customized SfButtons for add rules and add groups button.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.DropDowns
@@ -363,4 +363,5 @@ In the following sample, the SFDropdownlist component is used as the custom comp
 Output will be shown as
 
 ![Query Builder Header template Sample](./images/header-template.png)
+
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

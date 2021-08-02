@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trace events of listview in Blazor ListView Component | Syncfusion
-description: Learn here all about Trace events of listview in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about Trace events of listview in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -9,19 +9,15 @@ documentation: ug
 
 # Trace events of listview in Blazor ListView Component
 
-The ListView control triggers events based on its actions. The events can be used as extension points to perform
-custom operations. Refer to the following steps to trace the ListView events:
+The ListView control triggers events based on its actions. The events can be used as extension points to perform custom operations. Refer to the following steps to trace the ListView events:
 
-1. Render the ListView with `DataSource`, and bind the `OnActionBegin`, `OnActionComplete`,
-and `Selected` events.
+1. Render the ListView with `DataSource`, and bind the `OnActionBegin`, `OnActionComplete`, and `Selected` events.
 
 2. Perform custom operations in `OnActionBegin`, `OnActionComplete`, and `Selected` events.
 
-3. Provide event log details for `OnActionBegin` and `OnActionComplete` events, and they will be displayed in the event trace panel
-when the ListView action starts and the dataSource bound successfully.
+3. Provide event log details for `OnActionBegin` and `OnActionComplete` events, and they will be displayed in the event trace panel when the ListView action starts and the dataSource bound successfully.
 
-4. Get the selected item details from the `SelectEventArgs` in the
-select event, and display the selected list item text in the event trace panel while selecting list items.
+4. Get the selected item details from the `SelectEventArgs` in the select event, and display the selected list item text in the event trace panel while selecting list items.
 
 5. Use clear button to remove event trace information.
 
@@ -118,4 +114,4 @@ select event, and display the selected list item text in the event trace panel w
 </style>
 ```
 
-![ListView - Events](../images/list/trace-events-of-listview.png))
+![ListView - Events](../images/list/trace-events-of-listview.png)

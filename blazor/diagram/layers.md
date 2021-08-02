@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Layers in Blazor Diagram Component | Syncfusion
-description: Learn here all about Layers in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Layers in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -298,9 +298,7 @@ The following code illustrates how to add additional information to the layers.
 
 ### Add layer at runtime
 
-Layers can be added at runtime by using the [`AddLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLayer_Syncfusion_Blazor_Diagrams_DiagramLayer_System_Object_) public method.
-
-The layer's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Id) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
+Layers can be added at runtime by using the [`AddLayer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLayer_Syncfusion_Blazor_Diagrams_DiagramLayer_System_Object_) public method. The layer's [`ID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Id) property defines the ID of the layer, and its further used to find the layer at runtime and do any customization.
 
 The following code illustrates how to add a layer.
 
@@ -345,10 +343,10 @@ Layers can be removed at runtime by using the [`RemoveLayer`](https://help.syncf
 The following code illustrates how to remove a layer.
 
 ```csharp
-    SfDiagram diagram;
+SfDiagram diagram;
 
-    // remove the diagram layers
-    diagram.RemoveLayer("Layer1");
+// remove the diagram layers
+diagram.RemoveLayer("Layer1");
 
 ```
 
@@ -359,10 +357,10 @@ Objects of the layers can be moved by using the [`MoveObjects`](https://help.syn
 The following code illustrates how to move objects from one layer to another layer from the diagram.
 
 ```csharp
-  SfDiagram diagram;
-  // move the objects of diagram layers
-  string[] objects = new string[] { "node2" };
-  diagram.MoveObjects(objects,"Layer1");  
+SfDiagram diagram;
+// move the objects of diagram layers
+string[] objects = new string[] { "node2" };
+diagram.MoveObjects(objects,"Layer1");  
 ```
 
 ### BringLayerForward
@@ -372,10 +370,10 @@ Layers can be moved forward at runtime by using the [`BringLayerForward`](https:
 The following code illustrates how to bring forward to layer.
 
 ```csharp
-    SfDiagram diagram;
+SfDiagram diagram;
 
-    // move the layer forward
-    diagram.BringLayerForward("Layer1");
+// move the layer forward
+diagram.BringLayerForward("Layer1");
 ```
 
 ### SendLayerBackward
@@ -385,9 +383,9 @@ Layers can be moved backward at runtime by using the [`SendLayerBackward`](https
 The following code illustrates how to send backward to layer.
 
 ```csharp
-    SfDiagram diagram;
-    // move the layer backward
-    diagram.SendLayerBackward("Layer1");
+SfDiagram diagram;
+// move the layer backward
+diagram.SendLayerBackward("Layer1");
 
 ```
 
@@ -398,9 +396,9 @@ Layers can be cloned with its object by using the [`CloneLayer`](https://help.sy
 The following code illustrates how to bring forward to layer.
 
 ```csharp
-    SfDiagram diagram;
-    // clone a layer with its objec
-    diagram.CloneLayer("Layer1");
+SfDiagram diagram;
+// clone a layer with its objec
+diagram.CloneLayer("Layer1");
 ```
 
 ### GetActiveLayer
@@ -410,9 +408,9 @@ To get the active layers back in diagram, use the [`GetActiveLayer`](https://hel
 The following code illustrates how to bring forward to layer.
 
 ```csharp
-    SfDiagram diagram;
-    // gets the active layer back
-    diagram.GetActiveLayer();
+SfDiagram diagram;
+// gets the active layer back
+diagram.GetActiveLayer();
 ```
 
 ### SetActiveLayer
@@ -422,9 +420,9 @@ Set the active layer by using the [`SetActiveLayer`](https://help.syncfusion.com
 The following code illustrates how to bring forward to layer.
 
 ```csharp
-    SfDiagram diagram;
+SfDiagram diagram;
 
-    // set the active layer
-    //@param layerName defines the name of the layer which is to be active layer
-    diagram.SetActiveLayer("Layer1");
+// set the active layer
+//@param layerName defines the name of the layer which is to be active layer
+diagram.SetActiveLayer("Layer1");
 ```

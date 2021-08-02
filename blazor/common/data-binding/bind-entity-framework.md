@@ -17,7 +17,7 @@ Entity Framework is an open-source object-relational mapper (O/RM) from Microsof
 The following software is needed
 
 * Visual Studio 2019 v16.9.0 or later
-* dotnet SDK 5.0 or later.
+* .NET SDK 5.0 or later.
 * SQL Server 2019
 
 ## Create the database
@@ -68,7 +68,7 @@ Run the following commands in the Package Manager Console.
 
 Once the above packages are installed, we can scaffold DbContext and Model classes. Run the following command in the Package Manager Console under the LibraryManagement project.
 
-```csharp
+```
 Scaffold-DbContext “Server=localhost;Database=Library;Integrated Security=True” Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
 ```
 
@@ -97,6 +97,7 @@ Now, the **DbContext** must be configured using connection string and registered
 ## Creating a Data Access Layer
 
 The application is now configured to connect with the Library database using Entity Framework. Now, it’s time to consume data from the Library database. To do so, we need an interface to fetch data from DbContext to the Blazor application.
+
 To create an interface, right-click on the Models folder and create an interface called **ILibraryService.cs**  like below.
 
 ![Create an Interface](../images/interface.png)
@@ -266,7 +267,7 @@ In this demo application, the Fabric theme will be used. To add the theme, open 
 
 In previous steps, we have successfully configured the Syncfusion Blazor package in the application. Now, we can add the grid component to the **Index.razor** page.
 
-```csharp
+```cshtml
 <SfGrid TValue="Book">
 </SfGrid>
 ```
@@ -395,16 +396,16 @@ Clicking the **Update** toolbar button will initiate the insert action in Grid. 
 
 ```csharp
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
+{
+    if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
     {
-        if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
+        if (Args.Action == "Add")
         {
-            if (Args.Action == "Add")
-            {
-                // Insert the changes into your database here.
-                LibraryService.InsertBook(Args.Data);
-            }
+            // Insert the changes into your database here.
+            LibraryService.InsertBook(Args.Data);
         }
     }
+}
 ```
 
 ![After Inserting a record in Grid](../images/after-inserting.png)

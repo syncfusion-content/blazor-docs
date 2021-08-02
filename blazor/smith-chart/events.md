@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -445,9 +445,6 @@ The [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     public void Resized(SmithChartResizeEventArgs args)
     {
         // Here you can customize your code.
-    }
-}
-```de.
     }
 }
 ```

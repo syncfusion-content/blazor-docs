@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive Mode in Blazor Toolbar Component | Syncfusion
-description: Learn here all about Responsive Mode in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about Responsive Mode in Syncfusion Blazor Toolbar component and much more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -38,7 +38,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ![Long press scroll](images/scrolling_long_press.gif)
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -191,7 +191,7 @@ The commands placed in the popup can be viewed by opening the popup using the dr
 
 > If the popup content overflows the height of the page, then the rest of the commands will be hidden.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -318,7 +318,7 @@ Possible values are,
 
 In the following code sample, text is only visible in the popup container and not in the Toolbar container.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -417,7 +417,7 @@ Output be like the below.
 
 `MultiRow` is another type of `OverflowMode` in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area will be displayed as an in-line of a toolbar.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -517,7 +517,7 @@ Output be like the below.
 
 `Extended` is another type of `OverflowMode` in which the Toolbar container holds the commands that can be placed in the available space. The rest of the overflowing commands that do not fit within the viewing area will be displayed in the next row.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

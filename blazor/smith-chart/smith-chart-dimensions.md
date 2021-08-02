@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Dimensions in Syncfusion Blazor Smith Chart component and much more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -113,6 +113,7 @@ The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         public double? Resistance { get; set; }
         public double? Reactance { get; set; }
     };
+    
     public List<SmithChartData> FirstTransmissionData = new List<SmithChartData> {
         new SmithChartData { Resistance= 10, Reactance= 25 },
         new SmithChartData { Resistance= 6, Reactance= 4.5 },
@@ -124,4 +125,4 @@ The Smith Chart's [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 }
 ```
 
-![Setting dimensions in percentage](./images/Dimension/smith-chart.png)ith-chart.png)
+![Setting dimensions in percentage](./images/Dimension/smith-chart.png)

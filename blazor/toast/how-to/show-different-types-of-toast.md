@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show different types of toast in Blazor Toast Component | Syncfusion
-description: Learn here all about Show different types of toast in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Show different types of toast in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -20,7 +20,7 @@ The Blazor toast has the following predefined styles that can be defined using t
 
 The following sample demonstrates the different types of toast.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spinner Integration in Blazor Spinner Component | Syncfusion
-description: Learn here all about Spinner Integration in Syncfusion Blazor Spinner component and more.
+description: Checkout and learn here all about Spinner Integration in Syncfusion Blazor Spinner component and more.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -9,13 +9,11 @@ documentation: ug
 
 # Spinner Integration in Blazor Spinner Component
 
-The Spinner component rendered with other Blazor components.
-
-For example, rendered the Blazor Tab component with Spinner component.  To render the spinner inside the Tab component the Spinner is set as a child of the Tab component and show or hide the Spinner when Tab switching.
+The Spinner component rendered with other Blazor components. For example, rendered the Blazor Tab component with Spinner component.  To render the spinner inside the Tab component the Spinner is set as a child of the Tab component and show or hide the Spinner when Tab switching.
 
 The following code explains the above behavior.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Spinner
 @using Syncfusion.Blazor.Navigations

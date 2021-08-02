@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Features in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Features in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Features in Syncfusion Blazor PDF Viewer component and much more details.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -31,7 +31,7 @@ The PDF Viewer control for Blazor allows you to view, print, and annotate the PD
 * Formfilling
 * Handwritten Signature
 
->Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
+> There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor client-side application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
 
@@ -39,4 +39,4 @@ The PDF Viewer control for Blazor allows you to view, print, and annotate the PD
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.0.103](https://dotnet.microsoft.com/download/dotnet-core/3.0)
-* [Blazor VS Extension](https://marketplace.visualstudio.com/items?itemName=aspnet.blazor)r)
+* [Blazor VS Extension](https://marketplace.visualstudio.com/items?itemName=aspnet.blazor)

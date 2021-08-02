@@ -76,7 +76,7 @@ The following code example illustrates how to define a swimlane header.
 
 The height and width of swimlane header can be customized with `Weight` and `Height` properties of swimlane header. set fill color of header by using the `Style` property. The orientation of swimlane can be customized with the `Orientation` property of the header.
 
->Note: By default the swimlane orientation has Horizontal.
+> By default the swimlane orientation has Horizontal.
 
 The following code example illustrates how to customize the swimlane header..
 
@@ -133,7 +133,7 @@ The number of `Lanes` can be added to swimlane. The lanes are automatically stac
 
 ### Create an empty lane
 
-* The lanes `Id` is used to define the name of the lane and its further used to find the lane at runtime and do any customization.
+The lanes `Id` is used to define the name of the lane and its further used to find the lane at runtime and do any customization.
 
 The following code example illustrates how to define a swimlane with lane.
 
@@ -159,7 +159,7 @@ The following code example illustrates how to define a swimlane with lane.
 
 ### Create lane header
 
-* The `Header` property of lane allows you to textually describe the lane and to customize the appearance of the description.
+The `Header` property of lane allows you to textually describe the lane and to customize the appearance of the description.
 
 The following code example illustrates how to define a lane header.
 
@@ -191,8 +191,7 @@ The following code example illustrates how to define a lane header.
 
 ### Customizing Lane header
 
-* The size of lane can be controlled by using the `Width` and `Height` properties of the lane.
-* The appearance of the lane can be set by using the `Style` properties.
+The size of lane can be controlled by using the `Width` and `Height` properties of the lane. The appearance of the lane can be set by using the `Style` properties.
 
 The following code example illustrates how to customize the lane header.
 
@@ -225,7 +224,8 @@ The following code example illustrates how to customize the lane header.
 
 ## Phase
 
- Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of `Phase` can be added to swimlane.
+Phase are the subprocess which will split each lane as horizontally or vertically based on the swimlane orientation. The multiple number of `Phase` can be added to swimlane.
+
 The following code example illustrates how to add phase at swimlane.
 
 ```cshtml
@@ -252,9 +252,7 @@ The following code example illustrates how to add phase at swimlane.
 
 ### Customizing Phase
 
-* The length of region can be set by using the `Offset` property of the phase.
-* Every phase region can be textually described with the `Header` property of the phase
-* You can increase the width of phase by using `PhaseSize` property of swimlane.
+The length of region can be set by using the `Offset` property of the phase. Every phase region can be textually described with the `Header` property of the phase. You can increase the width of phase by using `PhaseSize` property of swimlane.
 
 The following code example illustrates how to customize the phase in swimlane.
 

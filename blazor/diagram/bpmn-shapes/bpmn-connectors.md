@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN Connectors in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN Connectors in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about BPMN Connectors in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -167,4 +167,4 @@ The following table contains various representation of message flows.
 | InitiatingMessage | ![InitiatingMessage Message BPMN Shape](../images/IMessage.png) |
 | NonInitiatingMessage | ![NonInitiatingMessage Message BPMN Shape](../images/NIMessage.png) |
 
->Note: The default value for the property `Message` is **Default**.
+> The default value for the property `Message` is **Default**.

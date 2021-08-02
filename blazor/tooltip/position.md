@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Position in Blazor Tooltip Component | Syncfusion
-description: Learn here all about Position in Syncfusion Blazor Tooltip component and more.
+description: Checkout and learn here all about Position in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Position in Blazor Tooltip Component
 
-Tooltips can be attached to 12 static locations around the target.
-On initializing the Tooltip, you can set the position property with any one of the following values:
+Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the position property with any one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -82,8 +81,7 @@ Output be like the below.
 
 ## Setting offset values
 
-Offset values are set to specify the distance between the target and tooltip element.
-`OffsetX` and `OffsetY` properties are used to specify the offset left and top values.
+Offset values are set to specify the distance between the target and tooltip element. `OffsetX` and `OffsetY` properties are used to specify the offset left and top values.
 
 * `OffsetX` specifies the distance between the target and Tooltip element in X axis.
 * `OffsetY` specifies the distance between the target and Tooltip element in Y axis.

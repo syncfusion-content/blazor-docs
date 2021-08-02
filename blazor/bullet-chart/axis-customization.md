@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Axis Customization in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about Axis Customization in Syncfusion Blazor Bullet Chart component and more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -218,8 +218,7 @@ Label can be placed [`Inside`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ## Opposed Position
 
-To place an axis opposite to its original position,
-set the [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_OpposedPosition) property to **true**.
+To place an axis opposite to its original position, set the [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_OpposedPosition) property to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -288,4 +287,4 @@ The label color, opacity, font size, font family, font weight, and font style ca
 
 > Refer to the [code block](#category-label) to know about the property value of **BulletChartData**.
 
-![Axis Label and Category Label Customization](images/label-custom.png)ion](images/label-custom.png)
+![Axis Label and Category Label Customization](images/label-custom.png)

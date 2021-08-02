@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Labels in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Labels in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -105,4 +105,4 @@ When the label size in each item exceeds the actual size, use the [`InterSectAct
 }
 ```
 
-![TreeMap label with intersect options](images/datalabel/IntersectAction.png)sectAction.png)
+![TreeMap label with intersect options](images/datalabel/IntersectAction.png)

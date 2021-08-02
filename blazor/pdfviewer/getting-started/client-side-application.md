@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Client-side application in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Client-side application in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Client-side application in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Client-side application in Blazor PDF Viewer Component
 
->Note: There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
+> There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor client-side application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
 
@@ -32,7 +32,7 @@ documentation: ug
  **Step 4:** Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) from NuGet.org
 
   ![select nuget](../images/select-nuget-client.png)
->Note: Please ensure to check the Include prerelease option for our Beta release.
+> Please ensure to check the Include prerelease option for our Beta release.
 
  **Step 5:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
@@ -81,7 +81,7 @@ namespace BlazorApplication
 }
 ```
 
->Note: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the ~/Pages/_Host.cshtml page.
+> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the ~/Pages/_Host.cshtml page.
 
 **Step 8:** Now, add the PDF Viewer (Client-side) component to the **~/Pages/Index.razor** page.
 
@@ -89,8 +89,8 @@ namespace BlazorApplication
 <SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" Height="500px" Width="1060px" ></SfPdfViewer>
 ```
 
->Note: Since Syncfusion PDF Viewer (Blazor client-side) control depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
+> Since Syncfusion PDF Viewer (Blazor client-side) control depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
 
 **Step 9:**: Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
 
-![output image](../images/browser-output.png)ng)
+![output image](../images/browser-output.png)

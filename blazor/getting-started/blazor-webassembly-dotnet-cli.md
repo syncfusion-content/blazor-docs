@@ -21,13 +21,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Create a Blazor WebAssembly project using .NET Core CLI
 
-1. Run the following command line to create a new Blazor WebAssembly application.
+Run the following command line to create a new Blazor WebAssembly application.
 
-    ```bash
-        dotnet new blazorwasm -o WebApplication1
-        cd WebApplication1
-    ```
-    > If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
+```
+dotnet new blazorwasm -o WebApplication1
+cd WebApplication1
+```
+
+> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-new#blazorwasm) for the available options.
 
 ## Installing Syncfusion Blazor packages in the application
 
@@ -39,9 +40,9 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the following command line. For more details about available NuGet packages, refer to the [individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
 
-    ```bash
-        dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
-        dotnet restore
+    ```
+    dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
+    dotnet restore
     ```
 
 2. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.
@@ -64,9 +65,9 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the following command line.
 
-    ```bash
-        dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
-        dotnet restore
+    ```
+    dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
+    dotnet restore
     ```
 
 2. The Syncfusion Blazor package will be included in the newly created project once the installation process is completed.

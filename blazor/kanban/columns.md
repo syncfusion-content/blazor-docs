@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor Kanban Component | Syncfusion
-description: Learn here all about Columns in Syncfusion Blazor Kanban component and more.
+description: Checkout and learn here all about Columns in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -13,7 +13,7 @@ The **Kanban** columns represent the each stage of the process. The column defin
 
 ## Single-key mapping
 
-Kanban columns are categorized by mapping the **key** from the datasource using the `KeyField` property. The corresponding **value** in the datasource is mapped inside the columns `KeyField`.  Based on this categorization, Kanban columns are split on this board.
+Kanban columns are categorized by mapping the **key** from the datasource using the `KeyField` property. The corresponding **value** in the datasource is mapped inside the columns `KeyField`. Based on this categorization, Kanban columns are split on this board.
 
 > The `KeyField` property is mandatory to render the columns in the Kanban board.
 
@@ -394,7 +394,7 @@ Output be like the below.
 
 By default, all columns are on expanded state when loading the Kanban board initially. But, you can render the columns with collapsed state using the `IsExpanded` property.
 
->The `IsExpanded` property only works when enabling the `AllowToggle` property on particular column.
+> The `IsExpanded` property only works when enabling the `AllowToggle` property on particular column.
 
 In the following example, the Backlog column is collapsed on initialization of Kanban board.
 
@@ -462,9 +462,7 @@ Output be like the below.
 
 ## Stacked headers
 
-Stacked headers are the additional headers to column header that will group the similar columns.
-
-Define the grouping of columns **Key** value to the `KeyField` property and provide the custom header text name to grouped columns using the `Text` property in `KanbanStackedHeaders`.
+Stacked headers are the additional headers to column header that will group the similar columns. Define the grouping of columns **Key** value to the `KeyField` property and provide the custom header text name to grouped columns using the `Text` property in `KanbanStackedHeaders`.
 
 In the following code, the kanban columns 'InProgress, Review' are grouped under 'Development Phase' category.
 

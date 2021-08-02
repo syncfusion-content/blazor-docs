@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Item Configuration in Blazor Toolbar Component | Syncfusion
-description: Learn here all about Item Configuration in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about Item Configuration in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -38,7 +38,7 @@ It specifies the location for aligning Toolbar items on the Toolbar. Each comman
 
 3. **Right**: To align commands to the right side of the Toolbar.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -73,7 +73,7 @@ It is used to add custom attributes to Toolbar command. Supports HTML attributes
 
 It specifies the unique ID to be used with button or input element of Toolbar items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -112,7 +112,7 @@ It defines single/multiple classes separated by space used to specify an icon fo
 
 It defines the priority of items to display it in popup always. It allows to maintain toolbar item on popup always but it does not work for toolbar priority items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -156,7 +156,7 @@ You can refer [Responsive Mode](https://blazor.syncfusion.com/documentation/tool
 
 It defines single/multiple classes separated by space used to specify an icon for the button. The icon will be positioned after the text content if text is available.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -310,7 +310,7 @@ It is used to specify the text to be displayed on the Toolbar button. You can re
 
 It is used to specify the text to be displayed on hovering the Toolbar button.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -494,7 +494,7 @@ Output be like the below.
 
 It specifies whether an item should be hidden or not.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -520,7 +520,7 @@ Output be like the below.
 
 It specifies the width of the Toolbar button commands.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

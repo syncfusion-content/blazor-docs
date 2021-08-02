@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdown in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Markdown in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Markdown in Syncfusion Blazor RichTextEditor component and much more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -11,8 +11,7 @@ documentation: ug
 
 In Rich Text Editor, click the toolbar buttons to format the words and the changes are visible immediately.
 
-Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other.
-Rich Text Editor supports markdown editing when the `EditorMode` set as `Markdown` and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
+Markdown is not like that. When you format the word in Markdown format, you need to add Markdown syntax to the word to indicate which words and phrases should look different from each other. Rich Text Editor supports markdown editing when the `EditorMode` set as `Markdown` and using both *keyboard interaction* and *toolbar action*, you can apply the formatting to text.
 
 ## Supported Commands
 
@@ -20,7 +19,7 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 
 |Commands|Syntax| Description |
 |--------|------------------------------------------|------------|
-| Bold | Sample content for `**`bold text`**`. | For bold, add `**` or `__` to front and back of the text. | For order list, precede each line with a number. |
+| Bold | Sample content for `**`bold text`**`. | For bold, add `**` or `__` to front and back of the text. For order list, precede each line with a number. |
 | Italic | Sample content for `*`Italic text`*`. | For Italic, add `*` or `_` to front and back of the text. |
 | Bold and Italics | Sample content for `***`bold and Italic text`***`. | For bold and Italics, add `***` to the front and back of the text. |
 | Heading 1 | `#` Heading 1 content | For heading 1, add `#` to start of the line. |
@@ -51,15 +50,13 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 
 ## Table
 
-Rich Text Editor allows you to insert Markdown table in edit panel with 2 X 2 rows and columns along with the heading.
-To use table tool, add the `CreateTable` item in toolbar items.
+Rich Text Editor allows you to insert Markdown table in edit panel with 2 X 2 rows and columns along with the heading. To use table tool, add the `CreateTable` item in toolbar items.
 
 ### Insert table
 
-To insert the table in Rich Text Editor, click the `Table` toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices.
-Refer to the following sample and code snippets to add the table in Markdown editor.
+To insert the table in Rich Text Editor, click the `Table` toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices. Refer to the following sample and code snippets to add the table in Markdown editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

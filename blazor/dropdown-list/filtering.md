@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor DropDown List Component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Blazor DropDown List component and more.
+description: Checkout and learn here all about Filtering in Syncfusion Blazor DropDown List component and much more.
 platform: Blazor
 control: DropDown List
 documentation: ug
@@ -9,15 +9,14 @@ documentation: ug
 
 # Filtering in Blazor DropDown List Component
 
-The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter
-operation starts as soon as you start typing characters in the search box.
+The DropDownList has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the search box.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-    <SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
-        <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-    </SfDropDownList>
+<SfDropDownList TValue="string" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
+    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
+</SfDropDownList>
 
 @code{
     public class Countries
@@ -25,8 +24,9 @@ operation starts as soon as you start typing characters in the search box.
         public string Name { get; set; }
         public string Code { get; set; }
     }
+    
     private List<Countries> Country = new List<Countries>
-{
+    {
         new Countries() { Name = "Australia", Code = "AU" },
         new Countries() { Name = "Bermuda", Code = "BM" },
         new Countries() { Name = "Canada", Code = "CA" },
@@ -105,7 +105,5 @@ The DropDownList component filter queries can be customized. You can also use yo
 
         await ddlObj.FilterAsync(Country1, query);
     }
-
-
 }
 ```

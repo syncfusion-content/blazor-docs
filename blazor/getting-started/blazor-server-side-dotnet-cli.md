@@ -21,12 +21,12 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Create a Blazor Server side project using .NET Core CLI
 
-1. Run the following command line to create a new Blazor Server application.
+Run the following command line to create a new Blazor Server application.
 
-    ```bash
-        dotnet new blazorserver -o WebApplication1
-        cd WebApplication1
-    ```
+```
+dotnet new blazorserver -o WebApplication1
+cd WebApplication1
+```
 
 ## Installing Syncfusion Blazor packages in the application
 
@@ -39,8 +39,8 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the following command line. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
     ```bash
-        dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
-        dotnet restore
+    dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
+    dotnet restore
     ```
 
 2. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.
@@ -64,8 +64,8 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the following command line.
 
     ```bash
-        dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
-        dotnet restore
+    dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
+    dotnet restore
     ```
 
 2. The Syncfusion Blazor package will be included in the newly created project once the installation process is completed.

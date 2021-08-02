@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide dropdown arrow in Blazor Dropdown Menu Component | Syncfusion
-description: Learn here all about Hide dropdown arrow in Syncfusion Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about Hide dropdown arrow in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Hide dropdown arrow in Blazor Dropdown Menu Component
 
-You can hide the dropdown arrow from the Dropdown Menu by adding class `e-caret-hide`
-to Dropdown Menu element using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass)
-property.
+You can hide the dropdown arrow from the Dropdown Menu by adding class `e-caret-hide` to Dropdown Menu element using [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_CssClass) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons

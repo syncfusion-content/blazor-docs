@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Constraints in Blazor Diagram Component | Syncfusion
-description: Learn here all about Constraints in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Constraints in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
 # Constraints in Blazor Diagram Component
 
-Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators (&, |, ~, <<, etc.).
+Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
 
 To know more about Bitwise operators, refer to the [`Bitwise Operations`](#bitwise-operations).
 
 ## Diagram constraints
 
-Diagram constraints allow you to enable or disable the following behaviors. By default, `UndoRedo` , `UserInteraction` , `ApiUpdate` , `PageEditable` , `Zoom` , `Pan` constraints are enabled for diagram.
+Diagram constraints allow you to enable or disable the following behaviors. By default, `UndoRedo`, `UserInteraction`, `ApiUpdate`, `PageEditable`, `Zoom`, `Pan` constraints are enabled for diagram.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -35,20 +35,20 @@ Diagram constraints allow you to enable or disable the following behaviors. By d
 
 The following example shows how to disable PageEditable constraint from default diagram constraints.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Constraints="@DiagramConstraints">
+<SfDiagramComponent Height="600px" Nodes="@nodes" Constraints="@DiagramConstraints">
 </SfDiagramComponent>
 @code{
     //sets the Diagram constraints...
     DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
     //Initialize the Nodes Collection.
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -57,7 +57,7 @@ The following example shows how to disable PageEditable constraint from default 
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -73,7 +73,7 @@ DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramCons
 The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations) in the diagram.
 
 ```csharp
- //Removing multiple constraints from default
+//Removing multiple constraints from default
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~(DiagramConstraints.PageEditable|DiagramConstraints.Zoom);
 
 ```
@@ -82,7 +82,7 @@ For more information about diagram constraints, refer to the `DiagramConstraints
 
 ## Node constraints
 
-Node constraints allows you to enable or disable the following behaviors of node.  By default, `Select` , `Drag` , `Resize` , `Rotate` , `Delete` ,`InConnect` ,`OutConnect` constraints are enabled for the node.
+Node constraints allows you to enable or disable the following behaviors of node.  By default, `Select`, `Drag`, `Resize`, `Rotate`, `Delete`,`InConnect`, `OutConnect` constraints are enabled for the node.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -116,16 +116,16 @@ The following example shows how to disable rotate constraint from the default no
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Initialize the diagram with NodeCollection *@
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+@* Initialize the diagram with nodes *@
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code{
 
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -136,10 +136,12 @@ The following example shows how to disable rotate constraint from the default no
             //sets the NodeConstraints constraints...
             Constraints = NodeConstraints.Default & ~NodeConstraints.Rotate
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
+
+![Nodeconstraints](images/Nodeconstraints.png)
 
 The following example shows how to add Shadow constraint to the default constraints of node.
 
@@ -161,8 +163,7 @@ For more information about node constraints, refer to the `NodeConstraints`.
 
 ## Connector constraints
 
-Connector constraints allow you to enable or disable the following behaviors of connectors. By default,
-`Select`, `Drag`, `DragSourceEnd`, `DragTargetEnd`, `Delete`, `InheritBridging`, `PointerEvents` constraints are enabled for the connector.
+Connector constraints allow you to enable or disable the following behaviors of connectors. By default, `Select`, `Drag`, `DragSourceEnd`, `DragTargetEnd`, `Delete`, `InheritBridging`, `PointerEvents` constraints are enabled for the connector.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -189,16 +190,16 @@ The following code shows how to disable select constraint from the default const
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Initialize the diagram with ConnectorCollection *@
- <SfDiagramComponent Height="600px" Connectors="@ConnectorCollection">
+@* Initialize the diagram with connectors *@
+ <SfDiagramComponent Height="600px" Connectors="@connectors">
  </SfDiagramComponent>
 
 @code{
 
-    DiagramObjectCollection<Connector> ConnectorCollection;
+    DiagramObjectCollection<Connector> connectors;
     protected override void OnInitialized()
     {
-        ConnectorCollection = new DiagramObjectCollection<Connector>();
+        connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             ID = "connector1",
@@ -208,7 +209,7 @@ The following code shows how to disable select constraint from the default const
             //sets the ConnectorConstraints...
             Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.Select
         };
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```
@@ -224,7 +225,7 @@ ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | Conne
 The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
 
 ```csharp
- //Removing multiple constraints from default
+//Removing multiple constraints from default
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
 
 ```
@@ -248,17 +249,17 @@ The following code shows how to disable creating connections with a port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Initialize the diagram with NodeCollection *@
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+@* Initialize the diagram with nodes *@
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code{
 
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     protected override void OnInitialized()
     {
-        //Initialize the NodeCollection.
-        NodeCollection = new DiagramObjectCollection<Node>();
+        //Initialize the nodes.
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -279,7 +280,7 @@ The following code shows how to disable creating connections with a port.
                 Constraints=PortConstraints.None
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -315,17 +316,17 @@ The following code shows how to enable read-only mode for the annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Initialize the diagram with NodeCollection *@
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+@* Initialize the diagram with nodes *@
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code{
 
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     protected override void OnInitialized()
     {
-        //Initialize the NodeCollection.
-        NodeCollection = new DiagramObjectCollection<Node>();
+        //Initialize the nodes.
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -353,7 +354,7 @@ The following code shows how to enable read-only mode for the annotations.
                 },
             }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -387,18 +388,18 @@ The following code shows how to hide rotator.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" SelectedItems="@selectedItems">
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectedItems="@selectedItems">
 </SfDiagramComponent>
 
 @code{
 
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     public Selector selectedItems = new Selector() { Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate };
 
     protected override void OnInitialized()
     {
-        //Initialize the NodeCollection.
-        NodeCollection = new DiagramObjectCollection<Node>();
+        //Initialize the nodes.
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -407,12 +408,14 @@ The following code shows how to hide rotator.
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
 
->* Note: Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
+![Selectorconstraints](images/Nodeconstraints.png)
+
+> Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 
 The following another code example shows how to disable the userhandle functionality for the selected item.
 
@@ -453,17 +456,17 @@ The following code shows how to show only horizontal gridlines.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
     @* Initialize the snapsettings with constraints *@
     <SnapSettings Constraints="@snapconstraints"></SnapSettings>
 </SfDiagramComponent>
 @code{
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     SnapConstraints snapconstraints;
     protected override void OnInitialized()
     {
-        //Initialize the NodeCollection.
-        NodeCollection = new DiagramObjectCollection<Node>();
+        //Initialize the nodes.
+        nodes = new DiagramObjectCollection<Node>();
         snapconstraints = SnapConstraints.ShowHorizontalLines;
         Node node = new Node()
         {
@@ -473,7 +476,7 @@ The following code shows how to show only horizontal gridlines.
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -503,17 +506,17 @@ The following code shows how to limit the interaction done inside a diagram with
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
     @* Initialize the pagesettings with boundary constraints *@
     <PageSettings Width="600" Height="500" BoundaryConstraints="BoundaryConstraints.Page"></PageSettings>
 </SfDiagramComponent>
 
 @code{
-    DiagramObjectCollection<Node> NodeCollection;
+    DiagramObjectCollection<Node> nodes;
     protected override void OnInitialized()
     {
-        //Initialize the NodeCollection.
-        NodeCollection = new DiagramObjectCollection<Node>();
+        //Initialize the nodes.
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -522,7 +525,7 @@ The following code shows how to limit the interaction done inside a diagram with
             OffsetX = 100,
             OffsetY = 100,
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -539,16 +542,16 @@ The following code example shows how to inherit the line bridging behavior from 
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagramComponent Height="600px" Connectors="@ConnectorCollection" Constraints="@DiagramConstraints">
+<SfDiagramComponent Height="600px" Connectors="@connectors" Constraints="@DiagramConstraints">
 </SfDiagramComponent>
 
 @code{
     //Sets the diagram constraints
     DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
-    DiagramObjectCollection<Connector> ConnectorCollection;
+    DiagramObjectCollection<Connector> connectors;
     protected override void OnInitialized()
     {
-        ConnectorCollection = new DiagramObjectCollection<Connector>();
+        connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
             ID = "connector1",
@@ -563,8 +566,8 @@ The following code example shows how to inherit the line bridging behavior from 
             SourcePoint = new Point() { X = 200, Y = 100 },
             TargetPoint = new Point() { X = 100, Y = 200 },
         };
-        ConnectorCollection.Add(connector);
-        ConnectorCollection.Add(connector1);
+        connectors.Add(connector);
+        connectors.Add(connector1);
     }
 }
 ```
@@ -575,7 +578,7 @@ Bitwise operations are used to manipulate the flagged enumerations `enum`. In th
 
 ## Add operation
 
-You can add or enable multiple values at a time by using the Bitwise ‘|’ (OR) operator.
+You can add or enable multiple values at a time by using the Bitwise `|` (OR) operator.
 
 The following code shows to add bridging constraints into the default diagram constraints to enable bridging functionality into the diagram.
 

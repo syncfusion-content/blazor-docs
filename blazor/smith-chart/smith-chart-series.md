@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Series in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Series in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Series in Blazor Smith Chart Component
 
-The [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties) is the visual representation of the data.
-Using the following options in the [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties), each series can be customized in the Smith Chart.
+The [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties) is the visual representation of the data. Using the following options in the [`SmithChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#properties), each series can be customized in the Smith Chart.
 
 * [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Fill) - Used to customize the fill color for the series.
 * [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_Visible) - Used to handle the visibility of the series.
@@ -84,9 +83,6 @@ Animation for the Smith Chart series can be enabled by using the [`EnableAnimati
         new SmithChartData { Resistance= 2, Reactance= 1.2 },
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
-    };
-}
-``` Resistance= 0, Reactance= 0.2 }
     };
 }
 ```

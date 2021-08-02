@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Actions of Annotation in Blazor Diagram Component | Syncfusion
-description: Learn here all about Actions of Annotation in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Actions of Annotation in Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Actions of Annotation in Blazor Diagram Component
+# Annotation in Blazor Diagram Component
 
 The `Annotation` is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 
@@ -20,19 +20,19 @@ An annotation can be added to a node or connector by defining the annotation obj
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
 {
     //Defines diagram's connector collection
-    DiagramObjectCollection<Connector> ConnectorCollection = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -44,9 +44,9 @@ An annotation can be added to a node or connector by defining the annotation obj
                 // A annotation is created and stored in Annotations collection of Node.
                  new ShapeAnnotation { Content = "Node" } }
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
 
-        ConnectorCollection = new DiagramObjectCollection<Connector>();
+        connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
           SourcePoint = new Point() { X = 300, Y = 40 },
@@ -60,14 +60,13 @@ An annotation can be added to a node or connector by defining the annotation obj
             }
         };
 
-        ConnectorCollection.Add(connector);
+        connectors.Add(connector);
     }
 }
 ```
 
 ![Annotation](../images/Annotation.png)
 
->**Note:**
 >* `Id` for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned center point of its path.
@@ -82,7 +81,7 @@ The following code explains how to add an annotation to a node at runtime by usi
 @using Syncfusion.Blazor.Diagram
 
 <input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
@@ -90,11 +89,11 @@ The following code explains how to add an annotation to a node at runtime by usi
     // Reference to diagram
     SfDiagramComponent diagram;
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -103,7 +102,7 @@ The following code explains how to add an annotation to a node at runtime by usi
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     //Method to add labels at runtime
     public void AddLabel()
@@ -114,19 +113,17 @@ The following code explains how to add an annotation to a node at runtime by usi
 }
 ```
 
-Also, the annotations can be added at runtime by using the `AddAsync` method.
-
-The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
+Also, the annotations can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
 The following code explains how to add an annotation to a node at runtime by using `AddAsync` method.
 
 ```csharp
-    //Method to add labels at runtime
-    public async void AddLabel()
-    {
+//Method to add labels at runtime
+public async void AddLabel()
+{
     ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
     await(diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(annotation);
-    }
+}
 ```
 
 ![Annotation](../images/Annotation_Add.png)
@@ -139,7 +136,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 @using Syncfusion.Blazor.Diagram
 
 <input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
@@ -147,11 +144,11 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
     //Reference to diagram
     SfDiagramComponent diagram;
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -164,7 +161,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
         {
           new ShapeAnnotation {ID="label", Content = "Annotation" },
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     //Method to remove labels at runtime
     public void RemoveLabel()
@@ -176,7 +173,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 
 Also, A collection of annotations can be removed from the node by using the `Remove` method.
 
-```csharp
+```cshtml
     //Method to remove labels at runtime using Remove method.
     public void RemoveLabel()
     {
@@ -185,7 +182,6 @@ Also, A collection of annotations can be removed from the node by using the `Rem
     }
 ```
 
->**Note:**
 >* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
 >* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
@@ -199,7 +195,7 @@ The following code sample shows how the annotation of the node changed at runtim
 @using Syncfusion.Blazor.Diagram
 
 <input value="Updatelabel" type="button" @onclick="@UpdateLabel" name="Updatelabel" />
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
@@ -208,11 +204,11 @@ The following code sample shows how the annotation of the node changed at runtim
     SfDiagramComponent diagram;
 
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
-        NodeCollection = new DiagramObjectCollection<Node>();
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             Width = 100,
@@ -222,7 +218,7 @@ The following code sample shows how the annotation of the node changed at runtim
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     public void UpdateLabel()
     {

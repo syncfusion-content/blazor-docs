@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Server App in Visual Studio 2019 in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Server App in Visual Studio 2019 in Syncfusion Blazor DocumentEditor component and more.
+title: Getting Stared with Blazor DocumentEditor in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor DocumentEditor in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# Server App in Visual Studio 2019 in Blazor DocumentEditor Component
+# Blazor DocumentEditor Component in Server Side App
 
 This article provides the step-by-step instructions to integrate the Word processor in Blazor server app using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -37,24 +37,24 @@ Steps to get started with Word processor component for Blazor:
 
 7. Open the **~/_Imports.razor** file and import the `Syncfusion.Blazor.DocumentEditor`.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor.DocumentEditor
     ```
 
 8. Add the Syncfusion Word processor component (a.k.a DocumentEditor) to any webpages (razor) in the `Pages` folder. For example, the DocumentEditorContainer component is added to the **~/Pages/Index.razor** page.
 
-    ```csharp
+    ```cshtml
     <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
     ```
 
 9. Add the SyncfusionBlazor service in `ConfigureServices` method of **Startup.cs** file.
 
     ```csharp
-     public void ConfigureServices(IServiceCollection services) {
-         .......
-         .......
-         services.AddSyncfusionBlazor();
-     }
+    public void ConfigureServices(IServiceCollection services) {
+        .......
+        .......
+        services.AddSyncfusionBlazor();
+    }
     ```
 
 10. Add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
@@ -82,7 +82,6 @@ Steps to get started with Word processor component for Blazor:
     </SfDocumentEditorContainer>
 
     @code {
-
         SfDocumentEditorContainer container;
 
         public void OnCreated(object args)
@@ -104,6 +103,6 @@ Steps to get started with Word processor component for Blazor:
     }
     ```
 
->Note: As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
+> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ![DocumentEditor Sample](../images/browser-output-open-document.png)

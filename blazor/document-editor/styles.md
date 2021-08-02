@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Styles in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Working with Styles in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -31,20 +31,15 @@ The default style for span and paragraph properties is normal. It internally inh
 
 ## Style hierarchy
 
-Each style initially checks its local value for the property that is being evaluated and turns to the style it is based on. If no local value is found, it turns to its default style.
-
-Style inheritance of different styles are listed as follows:
+Each style initially checks its local value for the property that is being evaluated and turns to the style it is based on. If no local value is found, it turns to its default style. Style inheritance of different styles are listed as follows,
 
 ### Character style
 
-Character styles are based only on other character styles.
-
-The inheritance is: Character properties are inherited from the base character style.
+Character styles are based only on other character styles. The inheritance is: Character properties are inherited from the base character style.
 
 ### Paragraph style
 
-Paragraph styles are based on other paragraph styles or on linked styles.
-When a paragraph style is based on another paragraph style, the inheritance of the properties is as follows:
+Paragraph styles are based on other paragraph styles or on linked styles. When a paragraph style is based on another paragraph style, the inheritance of the properties is as follows:
 * Paragraph properties are inherited from the base paragraph style.
 * Span properties are inherited from the base paragraph style.
 
@@ -54,8 +49,7 @@ When a paragraph style is based on a linked style, the inheritance of the proper
 
 ### Linked style
 
-Linked styles are composite styles and their components are paragraph and character styles with link between them. To apply paragraph properties, take the properties from the linked paragraph style. Similarly, to apply character properties, take the properties from linked character style.
-Linked styles are based on other linked styles or on paragraph styles.
+Linked styles are composite styles and their components are paragraph and character styles with link between them. To apply paragraph properties, take the properties from the linked paragraph style. Similarly, to apply character properties, take the properties from linked character style. Linked styles are based on other linked styles or on paragraph styles.
 
 When a linked style is based on a paragraph style, the hierarchy of the properties is as follows:
 
@@ -145,10 +139,10 @@ When there is no selection, styles of **Linked** type will change the values of 
 
 For example, the following line will apply the "New Linked" to the current paragraph.
 
-```javascript
+```csharp
 documentEditor.Editor.ApplyStyle("New Linked");
 //Clear direct formatting and apply the specified style
 documentEditor.Editor.ApplyStyle("New Linked", true);
 ```
 
-You can refer to our [`Blazor Word Processor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Word Processor example`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.
+You can refer to our [Blazor Word Processor](https://www.syncfusion.com/blazor-components/blazor-word-processor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Word Processor example](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) to know how to render and configure the document editor.

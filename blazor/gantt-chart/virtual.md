@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Virtualization in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Virtualization in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Virtualization in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -13,8 +13,7 @@ Gantt Chart allows you to load a large amount of data without performance degrad
 
 ## Row Virtualization
 
-Row virtualization allows you to render rows only in the content viewport on load time. It is an alternative way of paging in which the rows will be loaded while scrolling vertically. To set up the row virtualization, you need to define
-`EnableVirtualization` as true and content height by [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) property.
+Row virtualization allows you to render rows only in the content viewport on load time. It is an alternative way of paging in which the rows will be loaded while scrolling vertically. To set up the row virtualization, you need to define `EnableVirtualization` as true and content height by [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_Height) property.
 
 The number of records displayed in the Gantt Chart is determined implicitly by the height of the content area.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Selection in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Selection in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -417,7 +417,7 @@ To select multiple rows or cells, tap the popup![Multi Row or Cells](images/msel
 
 The following screenshot represents a datagrid touch selection in the device.
 
-![Touch interaction](images/touch-selection.jpg)
+![Touch interaction](./images/touch-selection.jpg)
 
 ## Multiple selection based on condition
 

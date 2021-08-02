@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Time Line in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Time Line in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Time Line in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -1133,9 +1133,7 @@ Gantt Chart have 25 predefined zooming timespan levels from year timespan to hou
 
 ### Zoom in
 
-This support is used to increase the timeline width and timeline unit from years to minutes
-timespan. When the `ZoomIn` icon was clicked, the timeline cell width is increased when the cell
-size exceeds the specified range and the timeline unit is changed based on the current zoom levels.
+This support is used to increase the timeline width and timeline unit from years to minutes timespan. When the `ZoomIn` icon was clicked, the timeline cell width is increased when the cell size exceeds the specified range and the timeline unit is changed based on the current zoom levels.
 
 ### Zoom out
 

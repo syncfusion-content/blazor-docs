@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Opening a document in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Opening a document in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Opening a document in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -59,7 +59,7 @@ If you have your Word document file in the web, you can open it in [`Blazor Word
 }
 ```
 
->Note: As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
+> As per the discussion thread [#30064](https://github.com/dotnet/aspnetcore/issues/30064), please null out the reference of streams and other instances when they are no longer required. Using this approach you'll observe the memory go down and become stable.
 
 ## Opening a document from Cloud
 
@@ -116,7 +116,7 @@ The following code example shows how to open and load the Word document file sto
 }
 ```
 
->Note: The **Microsoft.Azure.Storage.Blob** NuGet package must be installed in your application to use the previous code example.
+> The **Microsoft.Azure.Storage.Blob** NuGet package must be installed in your application to use the previous code example.
 
 You can open the Word documents from Azure File Storage using the following code example.
 
@@ -185,7 +185,7 @@ You can open the Word documents from Azure File Storage using the following code
 }
 ```
 
->Note: The **Microsoft.Azure.Storage.File** NuGet package must be installed in your application to use the previous code example.
+> The **Microsoft.Azure.Storage.File** NuGet package must be installed in your application to use the previous code example.
 
 ## Opening a document from database
 
@@ -238,7 +238,7 @@ The following code example shows how to open the Word document file in viewer fr
 
 ```
 
->Note: The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString and query variable in the previous code example as per the connection string of your database.
+> The **System.Data.SqlClient** package must be installed in your application to use the previous code example. You need to modify the connectionString and query variable in the previous code example as per the connection string of your database.
 
 ## Opening a document from file system
 

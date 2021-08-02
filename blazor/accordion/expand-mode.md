@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expand Mode in Blazor Accordion Component | Syncfusion
-description: Learn here all about Expand Mode in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about Expand Mode in Syncfusion Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -18,7 +18,7 @@ documentation: ug
 
 This property enables to expand only one Accordion item at a time. If you expand any new item, the previously expanded one is collapsed and new item changed to expanded state.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -40,7 +40,7 @@ Output be like the below.
 
 Default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) of the Accordion is `Multiple`. It enables you to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when you click on it again.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

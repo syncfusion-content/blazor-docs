@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize icon and width in Blazor Dropdown Menu Component | Syncfusion
+title: Customize icon & width in Blazor Dropdown Menu Component | Syncfusion
 description: Learn here all about Customize icon and width in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Show multiple toasts in various positions in Blazor Toast Component | Syncfusion
+title: Multiple toasts in various positions using Blazor Toast | Syncfusion
 description: Learn here all about Show multiple toasts in various positions in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
@@ -13,7 +13,7 @@ By default, the positions of the new toasts are only updated after the visible t
 
 The following sample demonstrates adding multiple toasts in different positions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

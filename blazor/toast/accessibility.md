@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Toast Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -23,7 +23,7 @@ The toast component implements the keyboard navigation support by using the foll
 | -------- | -------- |
 | role |  <b>alert:</b> Identifies the element as a container when alert content will be added or updated. |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Circular Gauge Component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion Blazor Circular Gauge component and more.
+description: Checkout and learn here all about Dimensions in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -40,4 +40,4 @@ the height is ‘50%’, gauge is rendered to half of the container height.
 
 ![Circular Gauge size in percentage](./images/percentage.png)
 
->Note: When you do not specify the size, it takes `450`  pixels as the height and takes window size as its width.
+> When you do not specify the size, it takes `450`  pixels as the height and takes window size as its width.

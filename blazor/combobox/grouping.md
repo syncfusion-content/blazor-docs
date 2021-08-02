@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor ComboBox Component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Blazor ComboBox component and more.
+description: Checkout and learn here all about Grouping in Syncfusion Blazor ComboBox component and much more details.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Grouping in Blazor ComboBox Component
 
-The ComboBox supports wrapping nested elements into a group based on different categories. The category
-of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field in
-the data table. The group header is displayed both as inline and fixed headers. The fixed group header content
+The ComboBox supports wrapping nested elements into a group based on different categories. The category of each list item can be mapped through the [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ComboBoxFieldSettings.html#Syncfusion_Blazor_DropDowns_ComboBoxFieldSettings_GroupBy) field in the data table. The group header is displayed both as inline and fixed headers. The fixed group header content
 is updated dynamically on scrolling the popup list with its category value.
 
 In the following sample, vegetables are grouped according on its category using `GroupBy` field.

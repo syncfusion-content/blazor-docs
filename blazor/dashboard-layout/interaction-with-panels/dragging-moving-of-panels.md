@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag and Drop in Blazor Dashboard Layout Component | Syncfusion
-description: Learn here all about Drag and Drop in Syncfusion Blazor Dashboard Layout component and more.
+description: Checkout and learn here all about Drag and Drop in Syncfusion Blazor Dashboard Layout component and more.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -13,9 +13,9 @@ The Dashboard Layout component is provided with dragging functionality to drag a
 
 If one or more panels collide while dragging, then the colliding panels will be pushed towards left, right, top, or bottom direction where an adaptive space for the collided panel is available. The position changes of these collided panels will be updated dynamically during dragging of a panel, so the users can conclude whether to place the panel in the current position or not.
 
->**Note** The complete panel will act as the handler for dragging the panel such that the dragging action occurs on clicking anywhere over a panel.
+> The complete panel will act as the handler for dragging the panel such that the dragging action occurs on clicking anywhere over a panel.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -55,7 +55,7 @@ The following output demonstrates the dragging functionality of dashboard compon
 
 The dragging handler for the panels can be customized using the `DraggableHandle` property to restrict the dragging action within a particular element in the panel.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

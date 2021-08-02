@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Saving document in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Saving document in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Saving document in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -111,7 +111,5 @@ You can also save or download the document in local file system.
         SfDocumentEditor editor = container.DocumentEditor;
         editor.Save("sample", FormatType.Docx);
     }
-}
-``` }
 }
 ```

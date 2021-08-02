@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Render TreeGrid inside the Tab with specific height in Blazor TreeGrid Component | Syncfusion
-description: Learn here all about Render TreeGrid inside the Tab with specific height in Syncfusion Blazor TreeGrid component and more.
+title: Blazor TreeGrid Component inside the Tab | Syncfusion
+description: Learn here all about rendering Blazor TreeGrid component inside the Tab with specific height and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Render TreeGrid inside the Tab with specific height in Blazor TreeGrid Component
+# Render Blazor TreeGrid Component inside the Tab with specific height
 
 By default, Tree Grid will occupy the entire space of the parent element when Tree Grid [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) property is defined as 100%. But if you render the similar Tree Grid inside the Tab control, it will consider the entire page and render the Tree Grid without horizontal scroller.
 

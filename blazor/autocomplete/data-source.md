@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Source in Blazor AutoComplete Component | Syncfusion
-description: Learn here all about Data Source in Syncfusion Blazor AutoComplete component and more.
+description: Checkout and learn here all about Data Source in Syncfusion Blazor AutoComplete component and much more.
 platform: Blazor
 control: AutoComplete
 documentation: ug
@@ -19,8 +19,7 @@ The AutoComplete also supports different kinds of data services such as OData, O
 | GroupBy | `string`        | Specifies the category under which the list item has to be grouped.                          |
 | IconCss | `string`        | Specifies the icon class of each list item.                                                  |
 
-> While binding complex data to AutoComplete, fields should be mapped correctly. Otherwise, the selected
-> item remains undefined.
+> While binding complex data to AutoComplete, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
 ## Bind to local data
 
@@ -28,8 +27,7 @@ Local data can be represented in two ways as described below.
 
 ### Array of object
 
-The AutoComplete can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
@@ -80,8 +78,7 @@ The output will be as follows.
 
 ### Array of complex object
 
-The AutoComplete can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+The AutoComplete can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Country.CountryID` column from complex data have been mapped to the `Value` field.
 
@@ -131,9 +128,7 @@ The output will be as follows.
 
 ## Bind to remote data
 
-The AutoComplete supports retrieval of data from remote data services with the help of
-[DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query)
-property is used to fetch data from the database and bind it to the AutoComplete.
+The AutoComplete supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the AutoComplete.
 
 The following sample displays the first 6 contacts from the **Customers** table of the `Northwind` data service.
 
@@ -237,7 +232,7 @@ The custom data binding can be performed in the AutoComplete component by provid
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 <SfAutoComplete TValue="string" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <AutoCompleteFieldSettings Value="CustomerID"></AutoCompleteFieldSettings>

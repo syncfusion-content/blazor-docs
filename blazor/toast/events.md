@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Toast Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -15,7 +15,7 @@ This section explains the list of events of the Toast component which will be tr
 
 `Created` event triggers after the Toast gets created.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 
@@ -36,7 +36,7 @@ This section explains the list of events of the Toast component which will be tr
 
 `Destroyed` event triggers after the Toast gets destroyed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 
@@ -57,7 +57,7 @@ This section explains the list of events of the Toast component which will be tr
 
 `Opened` event triggers after the Toast shown on the target container.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 
@@ -78,7 +78,7 @@ This section explains the list of events of the Toast component which will be tr
 
 `OnOpen` event triggers before the toast shown.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 
@@ -99,7 +99,7 @@ This section explains the list of events of the Toast component which will be tr
 
 `Closed` event triggers after the Toast hides.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 
@@ -120,7 +120,7 @@ This section explains the list of events of the Toast component which will be tr
 
 `OnClick` event triggers while clicking on the Toast.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Notifications
 

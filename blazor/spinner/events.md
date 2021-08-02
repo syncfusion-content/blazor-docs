@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Spinner Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Spinner component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Spinner component and much more details.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -15,7 +15,7 @@ This section explains the list of events of the Spinner component which will be 
 
 `Created` event triggers after the Spinner is created.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Spinner
 
@@ -36,7 +36,7 @@ This section explains the list of events of the Spinner component which will be 
 
 `OnBeforeOpen` event triggers before the Spinner is opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Spinner
 
@@ -57,7 +57,7 @@ This section explains the list of events of the Spinner component which will be 
 
 `OnBeforeClose` event triggers before the Spinner is closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Spinner
 
@@ -78,7 +78,7 @@ This section explains the list of events of the Spinner component which will be 
 
 `Destroyed` event triggers after the Spinner is destroyed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Spinner
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drill-down in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Drill-down in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Drill-down in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -154,4 +154,4 @@ The initial drill-down concepts are shown in the following code example.
 
 > Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
-![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)drill-down.png)
+![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)

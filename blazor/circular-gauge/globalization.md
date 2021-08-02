@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Circular Gauge Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Circular Gauge component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -13,7 +13,7 @@ The internationalization library provides support for formatting and parsing the
 
 By default, all the Blazor components are specific to the English culture ('en-US'). If you need a different culture, follow the given steps:
 
-* Install the [`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) package using the following command (it installs the CLDR JSON data).
+Install the [`CLDR-Data`](http://cldr.unicode.org/index/cldr-spec/json) package using the following command (it installs the CLDR JSON data).
 
 ```
 npm install cldr-data --save

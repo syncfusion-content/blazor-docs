@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Form filling in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Form filling in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Form filling in Syncfusion Blazor PDF Viewer component and much more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug

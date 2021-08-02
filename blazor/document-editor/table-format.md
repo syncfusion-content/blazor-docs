@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Table Formatting in Blazor DocumentEditor Component | Syncfusion
+title: Table Formatting in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about Working with Table Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
@@ -15,7 +15,7 @@ documentation: ug
 
 You can customize the cell margins by using the following sample code.
 
-```javascript
+```csharp
 //To change the left margin
 documentEditor.Selection.CellFormat.SetLeftMargin(5);
 //To change the right margin
@@ -28,7 +28,7 @@ documentEditor.Selection.CellFormat.SetBottomMargin(5);
 
 You can also define the default cell margins for a table. If the specific cell margin value is not defined explicitly in the cell formatting, the corresponding value will be retrieved from default cells margin of the table. Refer to the following sample code.
 
-```javascript
+```csharp
 //To change the left margin
 documentEditor.Selection.TableFormat.SetLeftMargin(5);
 //To change the right margin
@@ -43,13 +43,13 @@ documentEditor.Selection.TableFormat.SetBottomMargin(5);
 
 You can explicitly set the background color of selected cells using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.CellFormat.SetBackground("#E0E0E0");
 ```
 
 Refer to the following sample code to customize the background color of the table.
 
-```javascript
+```csharp
 documentEditor.Selection.TableFormat.SetBackground("#E0E0E0");
 ```
 
@@ -57,7 +57,7 @@ documentEditor.Selection.TableFormat.SetBackground("#E0E0E0");
 
 Refer to the following sample code to customize the spacing between each cell in a table.
 
-```javascript
+```csharp
 documentEditor.Selection.TableFormat.SetCellSpacing(2);
 ```
 
@@ -65,7 +65,7 @@ documentEditor.Selection.TableFormat.SetCellSpacing(2);
 
 The content is aligned within a table cell to `Top`, `Center`, or `Bottom`. You can customize this property of selected cells. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.CellFormat.SetVerticalAlignment(CellVerticalAlignment.Bottom);
 ```
 
@@ -73,7 +73,7 @@ documentEditor.Selection.CellFormat.SetVerticalAlignment(CellVerticalAlignment.B
 
 The tables are aligned in document editor to `Left`, `Right`, or `Center`. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.TableFormat.SetTableAlignment(TableAlignment.Center);
 ```
 
@@ -148,7 +148,7 @@ You can customize the height of a table row as `Auto`, `AtLeast`, or `Exactly`. 
 
 The header row describes the content of a table. A table can optionally have a header row. Only the first row of a table can be the header row. If the cursor position is at first row of the table, then you can define whether it as header row or not, using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.RowFormat.SetIsHeader(true);
 ```
 
@@ -156,7 +156,7 @@ documentEditor.Selection.RowFormat.SetIsHeader(true);
 
 This property is valid if a table row does not fit in the current page during table layout. It defines whether a table row can be allowed to break. If the value is false, the entire row will be moved to the start of next page. You can modify this property for selected rows using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.RowFormat.SetAllowBreakAcrossPages(false);
 ```
 

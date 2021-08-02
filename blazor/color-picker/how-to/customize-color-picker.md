@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Color Picker in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Customize Color Picker in Syncfusion Blazor Color Picker component and more.
+description: Checkout and learn here all about Customize Color Picker in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [`PresetColors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To customize the color palette, add a custom class to palette tiles using [`OnTileRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -102,7 +102,7 @@ Color Picker handle shape and UI can be customized. Here, we have customized the
 
 The following sample show the customized Color Picker handle.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 

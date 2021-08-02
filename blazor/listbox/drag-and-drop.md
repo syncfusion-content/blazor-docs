@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Drag And Drop in Blazor ListBox Component | Syncfusion
-description: Learn here all about Drag And Drop in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about Drag And Drop in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -128,6 +128,6 @@ The following sample illustrates how to drag and drop an item between two listbo
 </style>
 ```
 
-Output will be shown as
+Output will be shown as,
 
 ![ListBox](./images/multiple-drag.png)

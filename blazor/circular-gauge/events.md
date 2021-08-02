@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Circular Gauge Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Circular Gauge component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Circular Gauge component and much more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -49,8 +49,7 @@ Description: Triggers, after animation is completed.
 
 ### AnnotationRendering
 
-Description: Triggers, before rendering on each annotation. You can customize annotations using
-these arguments.
+Description: Triggers, before rendering on each annotation. You can customize annotations using these arguments.
 
 |   Argument name      |   Description                               |
 |----------------------| --------------------------------------------|

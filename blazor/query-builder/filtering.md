@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Filtering in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Filtering in Syncfusion Blazor QueryBuilder component and much more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -103,4 +103,5 @@ You can `create` or `delete` conditions by interacting through the user interfac
 Output will be shown as
 
 ![Query Builder Sample](./images/qb-filtering.png)
+
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

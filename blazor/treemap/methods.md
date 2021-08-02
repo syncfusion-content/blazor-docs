@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Methods in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Methods in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Methods in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -151,9 +151,6 @@ The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
         new Country  {Name="United States", GDP=17946 },
         new Country  {Name="China", GDP=10866 },
         new Country  {Name="Japan", GDP=4123 },
-    };
-}
-``` },
     };
 }
 ```

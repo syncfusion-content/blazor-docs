@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection and Nesting in Blazor ButtonGroup Component | Syncfusion
-description: Learn here all about Selection and Nesting in Syncfusion Blazor ButtonGroup component and more.
+description: Checkout and learn here all about Selection and Nesting in Syncfusion Blazor ButtonGroup component and more.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
@@ -15,7 +15,7 @@ ButtonGroup supports single selection type in which only one button can be selec
 
 The following example illustrates the single selection behavior in ButtonGroup.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 

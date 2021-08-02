@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Workflow in Blazor Kanban Component | Syncfusion
-description: Learn here all about Workflow in Syncfusion Blazor Kanban component and more.
+description: Checkout and learn here all about Workflow in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -13,9 +13,7 @@ Kanban workflow allows to set the flow of cards between the columns. It provides
 
 ## Prevent transition across columns
 
-Provides restriction on columns when performing drag and drop actions while providing the `KeyField` inside the `TransitionColumns` property.
-
-If a card is dragged, dotted border line will be shown on the possible drop columns and the not-allowed cursor point will be shown in the restricted dropped columns.
+Provides restriction on columns when performing drag and drop actions while providing the `KeyField` inside the `TransitionColumns` property. If a card is dragged, dotted border line will be shown on the possible drop columns and the not-allowed cursor point will be shown in the restricted dropped columns.
 
 ```csharp
 

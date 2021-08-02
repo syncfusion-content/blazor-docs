@@ -58,28 +58,29 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
 4. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-    >Note: You can also add the client-side style resources through CDN.
 
-```csharp
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+    > You can also add the client-side style resources through CDN.
 
-```csharp
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+    ```cshtml
+    <head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
 
-> For `Internet Explorer` 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    ```cshtml
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
 
-```csharp
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    > For `Internet Explorer` 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+    ```cshtml
+    <head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+    ```
 
 ## Add Syncfusion Blazor service in Startup.cs (Server-side application)
 
@@ -133,16 +134,16 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` namespace.
 
-```csharp
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Navigations
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
 ```
 
 ## Adding component to the Application
 
 Now, add the Syncfusion Blazor Sidebar component in any web page (razor) in the `Pages` folder. For example, the Sidebar component is added in the **~/Pages/Index.razor** page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -189,7 +190,7 @@ Here, the DOM elements will not get changed. It only closes the main content by 
 
 The following example shows a Sidebar component with enabled backdrop.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -248,7 +249,7 @@ Output be like the below.
 
 Animation transitions can be set while expanding or collapsing the Sidebar using the `Animate` property. By default, `Animate` property is set to true. `EnableRTL` will display the sidebar in the right-to-left direction.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -307,7 +308,7 @@ Any HTML element can be placed in the Sidebar content area. Sidebar supports all
 
 In the following example, the Sidebar is rendered with Accordion component in its content for navigation between the pages in a portal.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

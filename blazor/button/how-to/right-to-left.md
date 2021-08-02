@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Right-To-Left in Blazor Button Component | Syncfusion
-description: Learn here all about Right-To-Left in Syncfusion Blazor Button component and more.
+description: Checkout and learn here all about Right-To-Left in Syncfusion Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug

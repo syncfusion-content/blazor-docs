@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content in Blazor Tooltip Component | Syncfusion
-description: Learn here all about Content in Syncfusion Blazor Tooltip component and more.
+description: Checkout and learn here all about Content in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -9,14 +9,11 @@ documentation: ug
 
 # Content in Blazor Tooltip Component
 
-A text or a piece of information assigned to the Tooltip's `Content` property will be displayed as the main text stream of the Tooltip.
- It can be a string or a template content. If the `Content` property is not provided with any specific value, then it takes the value
-  assigned to the attribute of the target element on which the Tooltip was initialized. The content can also dynamically be assigned to the Tooltip via AJAX.
+A text or a piece of information assigned to the Tooltip's `Content` property will be displayed as the main text stream of the Tooltip. It can be a string or a template content. If the `Content` property is not provided with any specific value, then it takes the value assigned to the attribute of the target element on which the Tooltip was initialized. The content can also dynamically be assigned to the Tooltip via AJAX.
 
 ## Template content
 
-Any text or image can be added to the Tooltip, by default. To customize the Tooltip layout or to create your own visualized element on the
- Tooltip, template can be used.
+Any text or image can be added to the Tooltip, by default. To customize the Tooltip layout or to create your own visualized element on the Tooltip, template can be used.
 
 Refer to the following code example to add formatted HTML content to the Tooltip.
 

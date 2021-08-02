@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiline in Blazor TextBox Component | Syncfusion
-description: Learn here all about Multiline in Syncfusion Blazor TextBox component and more.
+description: Checkout and learn here all about Multiline in Syncfusion Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -74,13 +74,13 @@ The output will be as follows.
 By default, the multiline text box is rendered with resizable. You can disable the resize of the multiline text box by applying the following CSS styles.
 
 ```CSS
-    textarea.e-input,
-    .e-float-input textarea,
-    .e-float-input.e-control-wrapper textarea,
-    .e-input-group textarea,
-    .e-input-group.e-control-wrapper textarea {
-        resize: none;
-    }
+textarea.e-input,
+.e-float-input textarea,
+.e-float-input.e-control-wrapper textarea,
+.e-input-group textarea,
+.e-input-group.e-control-wrapper textarea {
+    resize: none;
+}
 
 ```
 

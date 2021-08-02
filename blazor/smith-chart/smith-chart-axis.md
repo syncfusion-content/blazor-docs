@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Axis in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Axis in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -166,4 +166,4 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 }
 ```
 
-![Smith Chart with axis line customization](./images/Axis/Axisline.png)ages/Axis/Axisline.png)
+![Smith Chart with axis line customization](./images/Axis/Axisline.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -14,7 +14,7 @@ triggered for appropriate datagrid actions.
 
 The events should be provided to the datagrid using **GridEvents** component. When using events of datagrid, **TValue** must be provided in the **GridEvents** component.
 
-> * All the events should be provided in a single **GridEvents** component.
+> All the events should be provided in a single **GridEvents** component.
 
 ## OnActionBegin
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Export in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Excel Export in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Excel Export in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Excel Export in Blazor Gantt Chart Component
 
-The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the
- **ExcelExportAsync** and **CsvExportAsync** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
+The excel export allows exporting GanttChart data to Excel and CSV formats. You need to use the  **ExcelExportAsync** and **CsvExportAsync** method for exporting. To enable Excel export in the Gantt chart, set the `AllowExcelExport` property as true.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -244,9 +243,7 @@ The excel export provides an option to export hidden columns of gantt chart by d
 
 ### Theme
 
-The Excel export also provides an option to include custom theme for exported Excel document.
-
-To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
+The Excel export also provides an option to include custom theme for exported Excel document. To apply theme in exported Excel, define the `Theme` in `ExcelExportProperties`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -481,4 +478,4 @@ You can assign the file name for the exported document by defining **FileName** 
 }
 ```
 
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

@@ -4,6 +4,58 @@ This section contains guidelines on naming files, sections, documents and other 
 
 > **NOTE**: Some of the items are marked as TODO which will be documented later.
 
+## FrontMatter / (Title and description):
+
+All the md files in the documentation must contain the frontmatter. Front matter must be given with following fields.
+
+```
+---
+layout: post
+title: Aggregates in Blazor DataGrid Component | Syncfusion
+description: Learn here all about aggregates in Syncfusion Blazor DataGrid component and more.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+```
+
+## General guidelines
+
+Refer the below guidelines for adding description, title and h1 tags.
+
+[Format+of+meta+elements+for+UG+pages](https://syncfusion.atlassian.net/wiki/spaces/SEO/pages/2878079677/Format+of+meta+elements+for+UG+pages)
+
+Also refer the below link for common validation errors and solution for this errors in below.
+
+[Front+Matter+validation+-+Guide](https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/412681710/Front+Matter+validation+-+Guide)
+
+## Youtube Video syntax:
+
+{% youtube "https://www.youtube.com/watch?9YF9HnFY5Ew" %}
+
+## Notes and Warning Syntax:
+
+For Notes, warning, information syntax refer the below table
+
+
+| Syntax name	| Syntax usage |
+|----------|:-------------:|
+| Notes	| > |
+| Warning	| W> |
+| Information or Notes | 	I> |
+|Errors	| E> |
+| Tips	| T> |
+	
+
+## Spelling and file naming conventions errors handling
+
+Refer the below guidelines to resolve spelling errors in the documentation.
+
+Spelling -  https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/689768804/Spell+Checker+Automation+-+Guide
+
+File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/963055005/File+Path+Validation-+Guidelines
+
+
 ## File naming Convention:
 * All files should have `.md` extension.
 * Separate words in file names should be hyphenated

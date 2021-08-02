@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scheduling Tasks in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Scheduling Tasks in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Scheduling Tasks in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -17,7 +17,7 @@ The Gantt Chart component supports three types of modes. They are:
 * `Manual`: All the tasks will be manually validated by the user.
 * `Custom`: Tasks will be validated as Auto or Manual based on the value mapped in the data source.
 
->Note: The default value of `TaskMode` is `Auto`.
+> The default value of `TaskMode` is `Auto`.
 
 ## Automatically Scheduled Tasks
 
@@ -118,8 +118,7 @@ When the `TaskMode` property is set as `Auto`, the start date and end date of al
 
 ## Manually Scheduled Tasks
 
-When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be the same as given in the data source. That is, dates will not be validated based on factors such as dependencies between tasks, holidays, weekends, working time.
-We can restrict this mode in predecessor validation alone. That is, we can automatically validate the dates based on predecessor values by enabling the `ValidateManualTasksOnLinking` property.
+When the `TaskMode` property is set as `Manual`, the start date and end date of all the tasks in the project will be the same as given in the data source. That is, dates will not be validated based on factors such as dependencies between tasks, holidays, weekends, working time. We can restrict this mode in predecessor validation alone. That is, we can automatically validate the dates based on predecessor values by enabling the `ValidateManualTasksOnLinking` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -219,7 +218,7 @@ We can restrict this mode in predecessor validation alone. That is, we can autom
 
 ## Custom
 
-If we want to use some specific taskmode for specific tasks, then we can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
+If we want to use some specific task mode for specific tasks, then we can set the `TaskMode` property  as `Custom`. So, the scheduling mode for each task will be mapped from the data source field. The `Boolean` property `GanttTaskFields.Manual` is used to map the manual scheduling mode field from the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -411,7 +410,6 @@ You can define the various types of unscheduled tasks in the data source as foll
 
 ![Alt text](images/unscheduledTasks.png)
 
-> NOTE
 > If the `AllowUnscheduledTasks` property is set to false, then the Gantt Chart component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
 ## Working Time Range
@@ -517,7 +515,6 @@ The following screen shot shows working time range in Gantt Chart component.
 
 ![Alt text](images/working-time-range.png)
 
-> NOTE
 >* Individual tasks can lie between any time within the defined working time range of the project.
 >* The `GanttDayWorkingTime` property is used to define the working time for the whole project.
 
@@ -623,4 +620,6 @@ Non-working days/weekends are used to represent the non-productive days in a pro
 
 > By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 > In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+
+
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

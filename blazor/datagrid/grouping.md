@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Grouping in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Grouping in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -52,10 +52,8 @@ The following GIF image represents a DataGrid Grouping.
 
 ![Grouping](images/grid-grouping.gif)
 
-> * You can group and ungroup columns by using the **GroupColumn** and
-**UngroupColumn** methods.
-> * To disable grouping for a particular column, set the
-[`AllowGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
+> * You can group and ungroup columns by using the **GroupColumn** and **UngroupColumn** methods.
+> * To disable grouping for a particular column, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
 
 ## Initial group
 
@@ -106,8 +104,7 @@ The following screenshot represents a DataGrid with initial grouping.
 
 ## Hide drop area
 
-To avoid ungrouping or further grouping of a column after initial column
-grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) of **GridGroupSettings** as false.
+To avoid ungrouping or further grouping of a column after initial column grouping, define the [`ShowDropArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridGroupSettings.html#Syncfusion_Blazor_Grids_GridGroupSettings_ShowDropArea) of **GridGroupSettings** as false.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -160,10 +157,7 @@ On grouping columns with paging feature, the aggregated information and total it
 
 ## Group by format
 
-By default, a column will be grouped by the data or value present for the particular row. To group the numeric
-or datetime column based on the mentioned format, you have to enable the
-[`EnableGroupByFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) property of the corresponding
-datagrid columns.
+By default, a column will be grouped by the data or value present for the particular row. To group the numeric or datetime column based on the mentioned format, you have to enable the [`EnableGroupByFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_EnableGroupByFormat) property of the corresponding datagrid columns.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -206,8 +200,7 @@ datagrid columns.
 
 ## Grouping events
 
-During the group action, the datagrid component triggers two events. The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event
-triggers before the group action starts and the [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the group action is completed. Using these events you can perform any action.
+During the group action, the datagrid component triggers two events. The [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers before the group action starts and the [`OnActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers after the group action is completed. Using these events you can perform any action.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

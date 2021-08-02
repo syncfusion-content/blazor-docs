@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Stock Chart Component | Syncfusion
-description: Learn here all about Axis Customization in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Axis Customization in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -13,10 +13,9 @@ documentation: ug
 
 ## Title
 
-You can add a title to the axis using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide quick
-information to the user about the data plotted in the axis. Title style can be customized using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_TitleStyle) property of the axis.
+You can add a title to the axis using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide quick information to the user about the data plotted in the axis. Title style can be customized using [`TitleStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_TitleStyle) property of the axis.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -35,7 +34,7 @@ information to the user about the data plotted in the axis. Title style can be c
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
           new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
           new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
           new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -55,11 +54,9 @@ information to the user about the data plotted in the axis. Title style can be c
 
 ## Tick Lines Customization
 
-You can customize the  `Width`, `Color` and `Size` of the minor and major tick lines, using
-[`MajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MajorTickLines) and
-[`MinorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MinorTickLines) properties in the axis.
+You can customize the  `Width`, `Color` and `Size` of the minor and major tick lines, using [`MajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MajorTickLines) and [`MinorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MinorTickLines) properties in the axis.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -83,7 +80,7 @@ You can customize the  `Width`, `Color` and `Size` of the minor and major 
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -102,11 +99,9 @@ You can customize the  `Width`, `Color` and `Size` of the minor and major 
 
 ## Grid Lines Customization
 
-You can customize the  `Width`, `Color` and `DashArray` of the minor and major grid lines, using
-[`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MajorGridLines.html) and
-[`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MinorGridLines.html) properties in the axis.
+You can customize the  `Width`, `Color` and `DashArray` of the minor and major grid lines, using [`MajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MajorGridLines.html) and [`MinorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MinorGridLines.html) properties in the axis.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -135,7 +130,7 @@ You can customize the  `Width`, `Color` and `DashArray` of the minor and m
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
         new ChartData { Date = new DateTime(2012, 04, 09), Y= 10},
         new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -154,10 +149,9 @@ You can customize the  `Width`, `Color` and `DashArray` of the minor and m
 
 ## Multiple Axis
 
-In addition to primary X and Y axis, we can add n number of axis to the chart. Series can be associated with
-this [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html), by mapping with axis's unique name.
+In addition to primary X and Y axis, we can add n number of axis to the chart. Series can be associated with this [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html), by mapping with axis's unique name.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -196,7 +190,7 @@ this [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stock
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -217,10 +211,9 @@ this [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stock
 
 <!-- markdownlint-disable MD033 -->
 
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property
- [`IsInversed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_IsInversed) to true.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property  [`IsInversed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_IsInversed) to `true`.
 
- ```csharp
+ ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -245,7 +238,7 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -265,10 +258,9 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
 ## Opposed Position
 
-To place an axis opposite from its original position, set
- [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_OpposedPosition) to true.
+To place an axis opposite from its original position, set [`OpposedPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_OpposedPosition) to true.
 
- ```csharp
+ ```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -293,7 +285,7 @@ To place an axis opposite from its original position, set
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},

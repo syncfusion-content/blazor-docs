@@ -1,7 +1,7 @@
 ---
 layout: post
 title: IFrame Rendering in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about IFrame Rendering in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about IFrame Rendering in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor creates the iframe element as the content area on component initialization, it is used to display and edit the content. In content area, the editor displays only the body tag of a `<iframe>` document.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -39,7 +39,7 @@ The output will be as follows.
 
 The editor allows you to pass an additional attribute to body tag of a `<iframe>` element using `Attributes` fields of `RichTextEditorIframeSettings` property. This property contains name/value pairs in string format. It is used to override the default appearance of the content area.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -71,7 +71,7 @@ The editor offers you to add external CSS file to style the `<iframe>` element. 
 
 Likewise, add the external script file to the `<iframe>` element using `Resources - Scripts` field of `RichTextEditorIframeSettings` to provide the additional functionalities to the Rich Text Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+title: How to Create a Blazor WebAssembly Application with Prerendering | Syncfusion
+description: Checkout and learn here all about creating a Blazor WebAssembly Application with Prerendering and much more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -104,7 +104,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 When the index page has injected with the `HttpClient` and tried to prerender on the server, the client will not establish its connection on that time. So, it will throws the runtime exceptions.
 
-E> InvalidOperationException: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
+E> ***InvalidOperationException***: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
 
 The Syncfusion Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, the it tried to get the WebAPI with its absolute URI or BaseAddress.
 
@@ -117,11 +117,9 @@ protected override async Task OnInitializedAsync()
 }
 ```
 
-E> SocketException: An existing connection was forcibly closed by the remote host.
->
-> IOException: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host
->
-> HttpRequestException: An error occurred while sending the request.
+E> ***SocketException***: An existing connection was forcibly closed by the remote host. <br />
+***IOException***: Unable to read data from the transport connection: An existing connection was forcibly closed by the remote host <br />
+***HttpRequestException***: An error occurred while sending the request.
 
 We are trying to use HTTP from Server to get the fetch data. But, it is also not possible in the prerender mode because of the client is not yet established.
 

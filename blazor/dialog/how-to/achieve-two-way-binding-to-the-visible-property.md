@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Achieve two-way binding using the visible property in Blazor Dialog Component | Syncfusion
-description: Learn here all about Achieve two-way binding using the visible property in Syncfusion Blazor Dialog component and more.
+title: Binding the visible property in Blazor Dialog Component | Syncfusion
+description: Learn here all about achieving two-way binding using the visible property in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Achieve two-way binding using the visible property in Blazor Dialog Component
+# Two-way binding using the visible property in Blazor Dialog Component
 
 ## Two-way binding
 
@@ -15,7 +15,7 @@ The `Visible` property is enabled by default and has two-way binding capabilitie
 
 Bind the `Visible` property as mentioned below to show/hide the dialog on CheckBox state change.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

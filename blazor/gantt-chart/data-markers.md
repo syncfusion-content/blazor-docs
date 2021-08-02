@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Markers in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Data Markers in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Data Markers in Syncfusion Blazor Gantt Chart component and much more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -18,7 +18,7 @@ Data markers can be defined using the following properties:
 * `Name` : Defines the name of indicator.
 * `Tooltip` : Defines the tooltip of indicator.
 
->Note: Data Marker `Tooltip` will be rendered only if tooltip property has value.
+> Data Marker `Tooltip` will be rendered only if tooltip property has value.
 
 The following code example demonstrates how to implement data markers in the Gantt chart.
 
@@ -154,4 +154,4 @@ The following code example demonstrates how to implement data markers in the Gan
 }
 ```
 
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

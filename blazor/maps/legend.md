@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Maps Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor Maps component and more.
+description: Checkout and learn here all about the Legend in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug

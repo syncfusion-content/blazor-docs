@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Sparkline Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -23,4 +23,4 @@ Globalization is the process of designing and developing a component that can wo
 
 On successful configuration, the Sparkline will be rendered as following.
 
-![Sparkline with globalization and localization](./images/localization/Localization.png)n/Localization.png)
+![Sparkline with globalization and localization](./images/localization/Localization.png)

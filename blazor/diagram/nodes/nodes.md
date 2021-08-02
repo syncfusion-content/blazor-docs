@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Actions of nodes in Blazor Diagram Component | Syncfusion
-description: Learn here all about Actions of nodes in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Actions of nodes in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -121,8 +121,7 @@ public void AddNode()
 
 ## Add node from palette
 
-Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information
-about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/blazor).
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/blazor).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
 * When a symbol is dragged into a diagram from symbol palette, the [`DragEnter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDragEnterEventArgs.html) event gets triggered.
@@ -196,12 +195,11 @@ For more information about drawing Node, refer to the [`Draw Nodes`](https://hel
 
 ## Create node through data source
 
-Nodes can be generated automatically with the information provided through data source. The default properties for
-these nodes are fetched from default settings.
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings.
 
 ## Remove node at runtime
 
-* A node can be removed from diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
+A node can be removed from diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
 
 The following code shows how to remove a node at runtime.
 
@@ -255,7 +253,7 @@ public void RemoveNode()
 
 You can change any node's properties at runtime. The following code sample shows how the annotation of the node changed at runtime.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

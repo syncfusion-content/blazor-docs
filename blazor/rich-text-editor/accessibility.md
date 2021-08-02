@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -31,7 +31,7 @@ The Rich Text Editor element is assigned the role of application.
 | role="application" | This attribute added to the Rich Text Editor element describes the actual role of the element. |
 | aria-disabled | Indicates the disabled state of the Rich Text Editor. |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content Render Mode in Blazor Accordion Component | Syncfusion
-description: Learn here all about Content Render Mode in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about Content Render Mode in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -13,7 +13,7 @@ Accordion provides support render the content of all `AccordionItem` at initial 
 
 > Default value of the property `LoadOnDemand` is true.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Label and Size in Blazor CheckBox Component | Syncfusion
-description: Learn here all about Label and Size in Syncfusion Blazor CheckBox component and more.
+description: Checkout and learn here all about Label and Size in Syncfusion Blazor CheckBox component and much more.
 platform: Blazor
 control: Checkbox
 documentation: ug
@@ -13,8 +13,7 @@ This section explains the different sizes and labels.
 
 ## Label
 
-The Checkbox caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_Label) property.
-This reduces the manual addition of label for Checkbox. You can customize the label position before or after the Checkbox through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_LabelPosition) property.
+The Checkbox caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_Label) property. This reduces the manual addition of label for Checkbox. You can customize the label position before or after the Checkbox through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html#Syncfusion_Blazor_Buttons_SfCheckBox_1_LabelPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

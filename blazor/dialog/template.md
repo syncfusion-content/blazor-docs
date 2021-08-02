@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor Dialog Component | Syncfusion
-description: Learn here all about Templates in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Templates in Syncfusion Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -13,10 +13,7 @@ In Dialog, the template support is provided to the header and footer sections. S
 
 ## Header
 
-The Dialog header content can be provided through the
-`Header` property, and it will allow both text and any HTML content as a string.
-Also in header, close button is provided as built-in support, and this can be enabled through
-the `ShowCloseIcon` property.
+The Dialog header content can be provided through the `Header` property, and it will allow both text and any HTML content as a string. Also in header, close button is provided as built-in support, and this can be enabled through the `ShowCloseIcon` property.
 
 ## Footer
 
@@ -26,7 +23,7 @@ The Dialog footer can be enabled by adding built-in `DialogButton` or providing 
 
 The following example demonstrates the usage of header and footer template in the Dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Inputs

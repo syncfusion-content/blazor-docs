@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor File Upload Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor File Upload component and more.
+description: Checkout and learn here all about Localization in Syncfusion Blazor File Upload component and much more.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -140,9 +140,9 @@ namespace blazorInputs
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-    <SfUploader ID="UploadFiles" Locale="de">
-        <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
-    </SfUploader>
+<SfUploader ID="UploadFiles" Locale="de">
+    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
+</SfUploader>
 ```
 
 ## Blazor WebAssembly

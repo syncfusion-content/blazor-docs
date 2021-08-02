@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Color Mapping in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Color Mapping in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Color Mapping in Syncfusion Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -211,4 +211,4 @@ The following code example shows, how to set the color for the TreeMap items.
 }
 ```
 
-![Bind the colors to TreeMap from datasource](images/Colormapping/ColorDS.png)apping/ColorDS.png)
+![Bind the colors to TreeMap from datasource](images/Colormapping/ColorDS.png)

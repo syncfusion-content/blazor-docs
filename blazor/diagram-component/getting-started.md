@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor Diagram Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Diagram component of Syncfusion, and more details.
+title: Getting Started in Blazor Diagram Component | Syncfusion
+description: Learn here all about how to deploy and get start with the Syncfusion Blazor Diagram component and more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Getting Started with Blazor Diagram Component
+# Getting Started in Blazor Diagram Component
 
 This section briefly explains about how to include a Diagram in your Blazor WebAssembly application. You can refer [Getting Started with Syncfusion Blazor for Blazor WebAssembly in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
@@ -16,7 +16,7 @@ This section briefly explains about how to include a Diagram in your Blazor WebA
  1. Install **Syncfusion.Blazor.Diagram** NuGet package to the application by using the **NuGet Package Manager**.
  2. You can add the  style resources through CDN or from NuGet package in the **HEAD** element of the **~/wwwroot/index.cshtml** page.
 
-```html
+```cshtml
 <head>
     ....
     ....
@@ -26,7 +26,7 @@ This section briefly explains about how to include a Diagram in your Blazor WebA
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/#blazor-webassembly-app/) for more information.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
@@ -73,7 +73,7 @@ Diagram component can be rendered by using the `SfDiagramComponent` tag helper i
 
 The following example shows a basic Diagram component.
 
-```csharp
+```cshtml
 <SfDiagramComponent Width="100%" Height="600px">
 </SfDiagramComponent>
 
@@ -81,16 +81,15 @@ The following example shows a basic Diagram component.
 
 ## Adding Nodes and Connectors
 
-Let us create and add a `Nodes` with specific position, size, label and shape. Connect two or more nodes by using a
-`Connectors`.
+Let us create and add a `Nodes` with specific position, size, label and shape. Connect two or more nodes by using a `Connectors`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@DInstance" Connectors="@connectors" Height="700px" Nodes="@nodes">
+<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes">
                 </SfDiagramComponent>
 @code{
 
-    SfDiagramComponent DInstance;
+    SfDiagramComponent diagram;
     int connectorCount = 0;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 

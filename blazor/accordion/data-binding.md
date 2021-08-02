@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data binding in Blazor Accordion Component | Syncfusion
-description: Learn here all about Data binding in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about Data binding in Syncfusion Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Data binding in Blazor Accordion Component
 
-Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding.
-
-You can use `HeaderTemplate` and `ContentTemplate` properties to render accordion header and content respectively.
+Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding. You can use `HeaderTemplate` and `ContentTemplate` properties to render accordion header and content respectively.
 
 The below sample explains how to initialize accordion items through `templates`.
 
@@ -75,6 +73,6 @@ The below sample explains how to initialize accordion items through `templates`.
 }
 ```
 
-Output be like the below.
+Output be like the below,
 
 ![Blazor Accordion Data Binding](./images/acrdnDatabinding.png)

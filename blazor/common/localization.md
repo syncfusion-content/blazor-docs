@@ -29,9 +29,9 @@ The culture can be set using one of the following approaches:
 
 * The Syncfusion Blazor UI components can translate its UI element content based on the user-defined language or culture. The Localization support is processed by using Resource `.resx` files. These resource files contain the key-value pair of locale content in the following format.
 
-```csharp
-<Component_Name>_<Feature_Name>_<Locale_Key>
-```
+    ```csharp
+    <Component_Name>_<Feature_Name>_<Locale_Key>
+    ```
 
 * The Syncfusion Blazor UI components are using `en-Us` culture for default rendering.
 
@@ -105,7 +105,7 @@ The culture can be set using one of the following approaches:
     }
     ```
 
-    > **Note** Here, the `ApplicationNamespace` is your application name.
+    > Here, the `ApplicationNamespace` is your application name.
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
@@ -140,7 +140,7 @@ The culture can be set using one of the following approaches:
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
-    ```csharp
+    ```xml
     <ItemGroup>
         <EmbeddedResource Update="Resources\SfResources.en-US.resx">
             <Generator>PublicResXFileCodeGenerator</Generator>
@@ -245,7 +245,7 @@ The culture can be set using one of the following approaches:
 
     ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
 
- > **Note**: The runnable Blazor Server app with Localization is available in this [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-server-app) repository.
+    > Download Blazor Server app App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-server-app).
 
 ## Enable Localization in Blazor WebAssembly application
 
@@ -293,7 +293,7 @@ The culture can be set using one of the following approaches:
     }
     ```
 
-    > **Note** Here, the `ApplicationNamespace` is your application name.
+    > Here, the `ApplicationNamespace` is your application name.
 
 2. Create `~/Shared/SyncfusionLocalizer.cs` file and implement `ISyncfusionStringLocalizer` to the class. This acts as a middleware to connect the Syncfusion Blazor UI components and resource files.
 
@@ -321,12 +321,14 @@ The culture can be set using one of the following approaches:
         }
     }
     ```
-    > **Note**: For .NET 5.0 Blazor Webassembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes.
-    ```csharp
+    > For .NET 5.0 Blazor Webassembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes. 
+    
+    ```xml
     <PropertyGroup>
-    <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+        <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
     </PropertyGroup>
     ```
+
     Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-5.0#blazor-webassembly) for more details.
 
 3. Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application.
@@ -335,7 +337,7 @@ The culture can be set using one of the following approaches:
 
     After adding the resource file in the application we need to generate the designer class for the resources. To generate the designer class, open the default `resx` file in Visual Studio, and set its `Access Modifier` to `Public`. This will create an entry in your `.csproj` file similar to the following.
 
-    ```csharp
+    ```xml
     <ItemGroup>
       <Compile Update="Resources\SfResources.Designer.cs">
         <DesignTime>True</DesignTime>
@@ -426,4 +428,4 @@ The culture can be set using one of the following approaches:
 
     ![Syncfusion Blazor UI Component's Localization in German culture](./images/de-culture.png)
 
- > **Note**: The runnable Blazor WebAssembly app with Localization is available in this [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-webassembly-app) repository.
+    > Download Blazor WebAssembly App from [Github](https://github.com/SyncfusionExamples/blazor-localization/tree/master/blazor-webassembly-app).

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Labels in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Labels in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Labels in Syncfusion Blazor Range Selector component and much more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 The multi-level labels for the Range Selector can be enabled by setting the [`EnableGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_EnableGrouping) property to **true**. This is restricted to the DateTime axis alone.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -61,7 +61,7 @@ The multi-level labels can be grouped using the [`GroupBy`](https://help.syncfus
 * Minutes
 * Seconds
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -100,7 +100,7 @@ The multi-level labels can be grouped using the [`GroupBy`](https://help.syncfus
 
 The [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property is used to avoid overlapping of labels. The following code sample shows the setting of [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelIntersectAction) property to **Hide**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -142,7 +142,7 @@ The [`LabelIntersectAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector
 using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelPosition) property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -182,7 +182,7 @@ using the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 The font size, color, family, etc. can be customized using the [`RangeNavigatorLabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorLabelStyle.html) setting.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -214,4 +214,4 @@ The font size, color, family, etc. can be customized using the [`RangeNavigatorL
 
 ```
 
-![Labels Customization](images/labels/custom.png) Customization](images/labels/custom.png)
+![Labels Customization](images/labels/custom.png)

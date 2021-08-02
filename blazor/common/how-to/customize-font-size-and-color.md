@@ -56,15 +56,15 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 5. The **compilerconfig.json** file is created. Then provide the location of the compiled CSS file and include path like the following code snippet.
 
     ```json
-        [
-            {
-                "outputFile": "wwwroot/styles/custom.css",
-                "inputFile": "wwwroot/styles/custom.scss",
-                "options": {
-                    "includePath": "node_modules/@syncfusion"
-                }
+    [
+        {
+            "outputFile": "wwwroot/styles/custom.css",
+            "inputFile": "wwwroot/styles/custom.scss",
+            "options": {
+                "includePath": "node_modules/@syncfusion"
             }
-        ]
+        }
+    ]
     ```
 
 6. The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the **~/Pages/_Host.cshtml** page.

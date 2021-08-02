@@ -1,7 +1,7 @@
 ---
 layout: post
 title: QR Code generator in Blazor Barcode Component | Syncfusion
-description: Learn here all about QR Code generator in Syncfusion Blazor Barcode component and more.
+description: Checkout and learn here all about QR Code generator in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug
@@ -70,9 +70,11 @@ In barcode generators You can customize the barcode text by using display [`Text
 
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion" OnValidationFailed="@OnValidationFailed"></SfQRCodeGenerator>
 
-@code { public void OnValidationFailed(ValidationFailedEventArgs args)
-            {
-            } }
-
+@code 
+{ 
+    public void OnValidationFailed(ValidationFailedEventArgs args)
+    {
+    }
+}
 
 ```

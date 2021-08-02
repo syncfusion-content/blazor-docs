@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Disable Color Picker in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Disable Color Picker in Syncfusion Blazor Color Picker component and more.
+description: Checkout and learn here all about Disable Color Picker in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug

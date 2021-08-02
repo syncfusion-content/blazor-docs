@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working with Data in Blazor Charts Component | Syncfusion
-description: Learn here all about Working with Data in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Working with Data in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,24 +11,24 @@ documentation: ug
 
 # Working with Data in Blazor Charts Component
 
-The Chart uses [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or list of business objects.
-It supports the following kinds of data binding method:
+The Chart uses [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) value can be set using either [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) property values or a list of business objects.
+
+It supports the following data binding methods:
 * List binding
 * Remote data
 
 ## List binding
 
- You can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The list data source can also be provided as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or by using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) component. Now map the data fields to
-[`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName)
-properties.
+An IEnumerable object can be assigned to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property. The list data source can alternatively be given as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or by using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or as a component of the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) or by using [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). The data fields should now be mapped to the [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Inflation - Consumer Price" Width="60%">
-    <ChartPrimaryXAxis IntervalType="IntervalType.Years" LabelFormat="y" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"></ChartPrimaryXAxis>
-    <ChartSeriesCollection>
+    <ChartPrimaryXAxis IntervalType="IntervalType.Years" LabelFormat="yyyy" ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime"></ChartPrimaryXAxis>
+    
+	<ChartSeriesCollection>
         <ChartSeries DataSource="@ConsumerReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Line">
         </ChartSeries>
     </ChartSeriesCollection>
@@ -43,16 +43,15 @@ properties.
 
     public List<ChartData> ConsumerReports = new List<ChartData>
     {
-            new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
-            new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
-            new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
-            new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
-            new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
-            new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
-            new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
-        };
+		new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
+		new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
+		new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
+		new ChartData { XValue = new DateTime(2008, 01, 01), YValue = 38 },
+		new ChartData { XValue = new DateTime(2009, 01, 01), YValue = 54 },
+		new ChartData { XValue = new DateTime(2010, 01, 01), YValue = 57 },
+		new ChartData { XValue = new DateTime(2011, 01, 01), YValue = 70 },
+	};
 }
-
 
 ```
 
@@ -62,9 +61,7 @@ properties.
 
 ### ExpandoObject binding
 
-Chart is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the chart as list of  **ExpandoObject**.
-
-**ExpandoObject** can be bound to chart by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
+Chart is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile time. In such circumstances data can be bound to the chart as a list of **ExpandoObjects**. The **ExpandoObject** can be bound to chart by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -95,11 +92,13 @@ Chart is a generic component which is strongly bound to a model type. There are 
 }
 ```
 
+![ExpandoObject Binding](images/working-data/expandoObject.png)
+
 ## Remote Data
 
-To bind remote data to chart component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to the `DataSource` property. To interact with remote data source, provide the endpoint Url.
+Assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property to bind remote data to the chart component. Provide the endpoint Url to communicate with a remote data source.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Data
 @using Syncfusion.Blazor.Charts
@@ -117,19 +116,19 @@ To bind remote data to chart component, assign service data as an instance of [`
 
 ```
 
+![Remote Data](images/working-data/remote-data.png)
+
 ### Binding with OData services
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html). Refer to the following code example for remote data binding using **OData** service.
+[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized data creation and consumption protocol. The [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can be used to retrieve data from an [OData](http://www.odata.org/documentation/odata-version-3-0/) service. For remote data binding using the [OData](http://www.odata.org/documentation/odata-version-3-0/) service, see the code below.
 
-### Binding with OData v4 services
+ ### Binding with OData v4 services
 
-ODataV4 is an enhanced version of OData protocols, and [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, please refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). Use the **ODataV4Adaptor** to bind OData v4 service.
-
-![Remote Data](images/working-data/remote-data.png)
+The [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) can retrieve and consume OData v4 services, which is an upgraded version of OData protocols. Please refer to the  [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197) for additional information on OData v4 services. To bind an OData v4 service, use the **ODataV4Adaptor**.
 
 ### Web API
 
-You can use the [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind chart with the Web API created using the [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
+The [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) can be used to bind a chart to a Web API created using an [OData](http://www.odata.org/documentation/odata-version-3-0/) endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -151,9 +150,9 @@ You can use the [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/da
 
 ### Sending additional parameters to the server
 
-To add a custom parameter to the data request. Assign the Query object with additional parameters to the chart [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) property.
+To create a data request with a custom parameter, add additional parameters to the [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Query) object and assign it to the chart's Query property.
 
-The following sample code demonstrates sending parameters using the Query property in the series,
+The following sample code shows how to send parameters using the Query property in the series.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -183,136 +182,136 @@ The following sample code demonstrates sending parameters using the Query proper
 
 ## Entity Framework
 
-Entity Framework acts as a modern object-database mapper for .NET. This section explains how to consume data from the **Microsoft SQL Server** database and bind it to the chart component.
+Entity Framework acts as a modern object-database mapper for .NET. This section explains how to bind data to the chart component from a **Microsoft SQL Server** database.
 
 ### Create DBContext class
 
-The first step is to create a DBContext class called **OrderContext** for establishing connection to a Microsoft SQL Server database.
+To connect to a Microsoft SQL Server database, the first step is to construct a DBContext class named **OrderContext**.
 
 ```csharp
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.EntityFrameworkCore;
-    using System.ComponentModel.DataAnnotations;
-    using EFChart.Data;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
+using EFChart.Data;
 
-    namespace EFChart.Data
+namespace EFChart.Data
+{
+    public class OrderContext : DbContext
     {
-        public class OrderContext : DbContext
-        {
-            public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
 
-            protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
             {
-                if (!optionsBuilder.IsConfigured)
-                {
-                    // Configures the context to connect to a Microsoft SQL Serve database
-                    optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\blazor\EFTreeMap\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
-                }
+                // Configures the context to connect to a Microsoft SQL Serve database
+                optionsBuilder.UseSqlServer(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\blazor\EFTreeMap\App_Data\NORTHWND.MDF';Integrated Security=True;Connect Timeout=30");
             }
         }
-
-        public class Order
-        {
-            [Key]
-            public int? OrderID { get; set; }
-            [Required]
-            public string CustomerID { get; set; }
-            [Required]
-            public int EmployeeID { get; set; }
-        }
     }
+
+    public class Order
+    {
+        [Key]
+        public int? OrderID { get; set; }
+        [Required]
+        public string CustomerID { get; set; }
+        [Required]
+        public int EmployeeID { get; set; }
+    }
+}
 
 ```
 
 ### Create data access layer to perform data operation
 
-Now need to create a class called **OrderDataAccessLayer**, which acts as a data access layer to retrieve the records from the database table.
+Then construct a class named **OrderDataAccessLayer** that will serve as a data access layer for retrieving records from the database table.
 
 ```csharp
-    using Microsoft.EntityFrameworkCore;
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using static BlazorApp1.Data.OrderContext;
-    using EFChart.Data;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using static BlazorApp1.Data.OrderContext;
+using EFChart.Data;
 
-    namespace EFChart.Data
+namespace EFChart.Data
+{
+    public class OrderDataAccessLayer
     {
-        public class OrderDataAccessLayer
-        {
-            OrderContext db = new OrderContext();
+        OrderContext db = new OrderContext();
 
-            //To Get all Orders details
-            public DbSet<Order> GetAllOrders()
+        //To Get all Orders details
+        public DbSet<Order> GetAllOrders()
+        {
+            try
             {
-                try
-                {
-                    return db.Orders;
-                }
-                catch
-                {
-                    throw;
-                }
+                return db.Orders;
+            }
+            catch
+            {
+                throw;
             }
         }
     }
+}
 
 ```
 
 ### Creating Web API Controller
 
-A Web API Controller must be created which allows the chart to directly consume data from the Entity framework.
+Need to create a Web API Controller that allows the chart to receive data directly from the Entity Framework.
 
 ```csharp
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Threading.Tasks;
-    using Microsoft.AspNetCore.Http;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Primitives;
-    using static BlazorApp1.Data.OrderContext;
-    using EFChart.Data;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Primitives;
+using static BlazorApp1.Data.OrderContext;
+using EFChart.Data;
 
-    namespace EFChart.Controller
+namespace EFChart.Controller
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class DefaultController : ControllerBase
     {
-        [Route("api/[controller]")]
-        [ApiController]
-        public class DefaultController : ControllerBase
+        OrderDataAccessLayer db = new OrderDataAccessLayer();
+        [HttpGet]
+        public object Get()
         {
-            OrderDataAccessLayer db = new OrderDataAccessLayer();
-            [HttpGet]
-            public object Get()
+            IQueryable<Order> data = db.GetAllOrders().AsQueryable();
+            var count = data.Count();
+            var queryString = Request.Query;
+            if (queryString.Keys.Contains("$inlinecount"))
             {
-                IQueryable<Order> data = db.GetAllOrders().AsQueryable();
-                var count = data.Count();
-                var queryString = Request.Query;
-                if (queryString.Keys.Contains("$inlinecount"))
-                {
-                    StringValues Skip;
-                    StringValues Take;
-                    int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
-                    int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
-                    return new { Items = data.Skip(skip).Take(top), Count = count };
-                }
-                else
-                {
-                    return data;
-                }
+                StringValues Skip;
+                StringValues Take;
+                int skip = (queryString.TryGetValue("$skip", out Skip)) ? Convert.ToInt32(Skip[0]) : 0;
+                int top = (queryString.TryGetValue("$top", out Take)) ? Convert.ToInt32(Take[0]) : data.Count();
+                return new { Items = data.Skip(skip).Take(top), Count = count };
+            }
+            else
+            {
+                return data;
             }
         }
     }
+}
 
 ```
 
 ### Add Web API Controller services in Startup.cs
 
-Open the **Startup.cs** file to add services and endpoints required for Web API Controller as follows.
+As shown below, open the **Startup.cs** file and add the services and endpoints necessary for Web API Controller.
 
 ```csharp
 using EFChart.Data;
@@ -355,92 +354,51 @@ namespace BlazorApplication
 
 ### Configure chart component
 
-Configure the chart to bind data using either [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_DataSource) property or [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+Use the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_DataSource) property or  [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) to bind data to the chart.
 
 For instance, to bind data directly from the data access layer class **OrderDataAccessLayer**, assign the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_DataSource) property to be **OrderData.GetAllOrders()**.
 
-```csharp
+```cshtml
 
-    @using EFChart.Data;
-    @inject OrderDataAccessLayer OrderData;
+@using EFChart.Data;
+@inject OrderDataAccessLayer OrderData;
 
-    @using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Charts
 
-    <SfChart DataSource="@OrderData.GetAllOrders()">
-      <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-      </ChartPrimaryXAxis>
-      <ChartSeriesCollection>
-        <ChartSeries XName="CustomerID" YName="OrderID" Type="ChartSeriesType.Column">
-        </ChartSeries>
-      </ChartSeriesCollection>
-    </SfChart>
+<SfChart DataSource="@OrderData.GetAllOrders()">
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+    <ChartSeriesCollection>
+    <ChartSeries XName="CustomerID" YName="OrderID" Type="ChartSeriesType.Column">
+    </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
 ```
 
-On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/). Here, need to use [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [`SfDataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [`Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/). In order to interact with the Web API and consume data from the Entity Framework effectively, [`WebApiAdaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) must be used.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Data
 
-    <SfChart>
-          <SfDataManager Url="api/Default" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
-          </SfDataManager>
-          <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-          </ChartPrimaryXAxis>
-          <ChartSeriesCollection>
-             <ChartSeries XName="CustomerID" YName="OrderID" Type="ChartSeriesType.Column">
-             </ChartSeries>
-          </ChartSeriesCollection>
-    </SfChart>
+<SfChart>
+        <SfDataManager Url="api/Default" Adaptor="Syncfusion.Blazor.Adaptors.WebApiAdaptor">
+        </SfDataManager>
+        <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+        </ChartPrimaryXAxis>
+        <ChartSeriesCollection>
+            <ChartSeries XName="CustomerID" YName="OrderID" Type="ChartSeriesType.Column">
+            </ChartSeries>
+        </ChartSeriesCollection>
+</SfChart>
 
 ```
 
 ## Empty points
 
-Data points with NaN values are regarded as empty points. By using [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) property in series, you can customize the empty point. Default Empty Point [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html) is `Gap`.
+Empty points are defined as data points having NaN values. Empty points can be customized using [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) property in series. Default Empty Point [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html) is [`Gap`](*https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.EmptyPointMode.html#Syncfusion_Blazor_Charts_EmptyPointMode_Gap).
 
-```csharp
-
-@using Syncfusion.Blazor.Charts
-
-<SfChart Title="Inflation - Consumer Price" Width="60%">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
-    </ChartPrimaryXAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@ConsumerReports" XName="XValue" YName="YValue" Type="ChartSeriesType.Column">
-            <ChartEmptyPointSettings Fill="blue" Mode="@mode"></ChartEmptyPointSettings>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
-
-@code{
-    public class ChartData
-    {
-        public String XValue { get; set; }
-        public double YValue { get; set; }
-    }
-    public EmptyPointMode mode = EmptyPointMode.Average;
-    public List<ChartData> ConsumerReports = new List<ChartData> {
-            new ChartData { XValue = "Rice", YValue = 80 },
-            new ChartData { XValue = "Wheat", YValue = Double.NaN },
-            new ChartData { XValue = "Oil", YValue = 70 },
-            new ChartData { XValue = "Corn", YValue = 60 },
-            new ChartData { XValue = "Gram", YValue = Double.NaN },
-            new ChartData { XValue = "Milk", YValue = 70 },
-            new ChartData { XValue = "Peas", YValue = 80 },
-            new ChartData { XValue = "Fruit", YValue = 60 },
-            new ChartData { XValue = "Butter", YValue = Double.NaN },
-        };
-}
-
-```
-
-**Customizing empty point**
-
-Specific color and border for empty point can be set by [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) properties in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings).
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -450,7 +408,8 @@ Specific color and border for empty point can be set by [`Fill`](https://help.sy
 
     <ChartSeriesCollection>
         <ChartSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="ChartSeriesType.Column">
-            <ChartEmptyPointSettings Fill="blue" Mode="@Mode"></ChartEmptyPointSettings>
+            <ChartEmptyPointSettings Fill="blue" Mode="@Mode">
+            </ChartEmptyPointSettings>
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -461,31 +420,80 @@ Specific color and border for empty point can be set by [`Fill`](https://help.sy
         public string Month { get; set; }
         public Nullable<double> Sales { get; set; }
     }
+
     public EmptyPointMode Mode = EmptyPointMode.Average;
 
     public List<ChartData> SalesReports = new List<ChartData>
     {
-    new ChartData{ Month="Jan", Sales= 35 },
-    new ChartData{ Month= "Feb", Sales= 28 },
-    new ChartData{ Month="Mar", Sales=null },
-    new ChartData{ Month="Apr", Sales=32 },
-    new ChartData{ Month="May", Sales=40 },
-    new ChartData{ Month= "Jun", Sales=32 },
-    new ChartData{ Month="Jul", Sales=35 },
-    new ChartData{ Month="Aug", Sales=null },
-    new ChartData{ Month="Sep", Sales=38 },
-    new ChartData{ Month="Oct", Sales=30 },
-    new ChartData{ Month="Nov", Sales=25 },
-    new ChartData{ Month= "Dec", Sales=32 }
+        new ChartData{ Month= "Jan", Sales= 35 },
+        new ChartData{ Month= "Feb", Sales= 28 },
+        new ChartData{ Month= "Mar", Sales= double.NaN },
+        new ChartData{ Month= "Apr", Sales= 32 },
+        new ChartData{ Month= "May", Sales= 40 },
+        new ChartData{ Month= "Jun", Sales= 32 },
+        new ChartData{ Month= "Jul", Sales= 35 },
+        new ChartData{ Month= "Aug", Sales= double.NaN },
+        new ChartData{ Month= "Sep", Sales= 38 },
+        new ChartData{ Month= "Oct", Sales= 30 },
+        new ChartData{ Month= "Nov", Sales= 25 },
+        new ChartData{ Month= "Dec", Sales= 32 }
     };
 }
 
+```
+
+**Customizing empty point**
+
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEmptyPointSettings.html#Syncfusion_Blazor_Charts_ChartEmptyPointSettings_Border) properties in [`EmptyPointSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_EmptyPointSettings) can be used to specify a specific color and border for an empty point.
+
+```cshtml
+
+@using Syncfusion.Blazor.Charts
+
+<SfChart>
+    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category">
+    </ChartPrimaryXAxis>
+
+    <ChartSeriesCollection>
+        <ChartSeries DataSource="@SalesReports" XName="Month" YName="Sales" Type="ChartSeriesType.Column">
+            <ChartEmptyPointSettings Fill="red"  Mode="@Mode">
+                <ChartEmptyPointBorder Color="black" Width="2"></ChartEmptyPointBorder>
+            </ChartEmptyPointSettings>
+        </ChartSeries>
+    </ChartSeriesCollection>
+</SfChart>
+
+@code{
+    public class ChartData
+    {
+        public string Month { get; set; }
+        public Nullable<double> Sales { get; set; }
+    }
+
+    public EmptyPointMode Mode = EmptyPointMode.Average;
+
+    public List<ChartData> SalesReports = new List<ChartData>
+    {
+        new ChartData{ Month= "Jan", Sales= 35 },
+        new ChartData{ Month= "Feb", Sales= 28 },
+        new ChartData{ Month= "Mar", Sales= double.NaN },
+        new ChartData{ Month= "Apr", Sales= 32 },
+        new ChartData{ Month= "May", Sales= 40 },
+        new ChartData{ Month= "Jun", Sales= 32 },
+        new ChartData{ Month= "Jul", Sales= 35 },
+        new ChartData{ Month= "Aug", Sales= double.NaN },
+        new ChartData{ Month= "Sep", Sales= 38 },
+        new ChartData{ Month= "Oct", Sales= 30 },
+        new ChartData{ Month= "Nov", Sales= 25 },
+        new ChartData{ Month= "Dec", Sales= 32 }
+    };
+}
 
 ```
 
 ![Empty points](images/working-data/custom-emptypoint.png)
 
-> Note: You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

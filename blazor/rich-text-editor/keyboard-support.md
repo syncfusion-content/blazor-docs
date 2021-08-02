@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keyboard support in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Keyboard support in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Keyboard support in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -17,34 +17,34 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 | Actions | Keyboard shortcuts |
 |----------------|---------|
-| Toolbar focus | <kbd>`alt`</kbd> + <kbd>`f10`</kbd> |
-| Insert link | <kbd>`ctrl`</kbd> + <kbd>`k`</kbd> |
-| Insert image | <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`i`</kbd> |
-| Insert table | <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`e`</kbd> |
-| Undo | <kbd>`ctrl`</kbd> + <kbd>`z`</kbd> |
-| Redo | <kbd>`ctrl`</kbd> + <kbd>`y`</kbd> |
-| Copy | <kbd>`ctrl`</kbd> + <kbd>`c`</kbd> |
-| Cut | <kbd>`ctrl`</kbd> + <kbd>`x`</kbd> |
-| Paste| <kbd>`ctrl`</kbd> + <kbd>`v`</kbd> |
-| Bold| <kbd>`ctrl`</kbd> + <kbd>`b`</kbd> |
-| Italic| <kbd>`ctrl`</kbd> + <kbd>`i`</kbd> |
-| Underline| <kbd>`ctrl`</kbd> + <kbd>`u`</kbd> |
-| Strikethrough| <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`s`</kbd> |
-| Uppercase| <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`u`</kbd> |
-| Lowercase| <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`l`</kbd> |
-| Superscript| <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`=`</kbd> |
-| Subscript| <kbd>`ctrl`</kbd> + <kbd>`=`</kbd> |
-| Indents| <kbd>`ctrl`</kbd> + <kbd>`]`</kbd> |
-| Outdents| <kbd>`ctrl`</kbd> + <kbd>`[`</kbd> |
-| HTML source | <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`h`</kbd> |
-| Fullscreen| <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`f`</kbd> |
-| Justify center| <kbd>`ctrl`</kbd> + <kbd>`e`</kbd> |
-| Justify full | <kbd>`ctrl`</kbd> + <kbd>`j`</kbd> |
-| Justify left | <kbd>`ctrl`</kbd> + <kbd>`l`</kbd> |
-| Justify right | <kbd>`ctrl`</kbd> + <kbd>`r`</kbd> |
-| Clear format | <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`r`</kbd> |
-| Ordered list | <kbd>`ctrl`</kbd> + <kbd>`shift`</kbd> + <kbd>`o`</kbd> |
-| Unordered list | <kbd>`ctrl`</kbd> + <kbd>`alt`</kbd> + <kbd>`o`</kbd> |
+| Toolbar focus | <kbd>ALT</kbd> + <kbd>F10</kbd> |
+| Insert link | <kbd>CTRL</kbd> + <kbd>K</kbd> |
+| Insert image | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>I</kbd> |
+| Insert table | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>E</kbd> |
+| Undo | <kbd>CTRL</kbd> + <kbd>Z</kbd> |
+| Redo | <kbd>CTRL</kbd> + <kbd>Y</kbd> |
+| Copy | <kbd>CTRL</kbd> + <kbd>C</kbd> |
+| Cut | <kbd>CTRL</kbd> + <kbd>X</kbd> |
+| Paste| <kbd>CTRL</kbd> + <kbd>V</kbd> |
+| Bold| <kbd>CTRL</kbd> + <kbd>B</kbd> |
+| Italic| <kbd>CTRL</kbd> + <kbd>I</kbd> |
+| Underline| <kbd>CTRL</kbd> + <kbd>U</kbd> |
+| Strikethrough| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>S</kbd> |
+| Uppercase| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>U</kbd> |
+| Lowercase| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>L</kbd> |
+| Superscript| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>=</kbd> |
+| Subscript| <kbd>CTRL</kbd> + <kbd>=</kbd> |
+| Indents| <kbd>CTRL</kbd> + <kbd>]</kbd> |
+| Outdents| <kbd>CTRL</kbd> + <kbd>[</kbd> |
+| HTML source | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>H</kbd> |
+| Fullscreen| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd> |
+| Justify center| <kbd>CTRL</kbd> + <kbd>E</kbd> |
+| Justify full | <kbd>CTRL</kbd> + <kbd>`J</kbd> |
+| Justify left | <kbd>CTRL</kbd> + <kbd>L</kbd> |
+| Justify right | <kbd>CTRL</kbd> + <kbd>R</kbd> |
+| Clear format | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>R</kbd> |
+| Ordered list | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>O</kbd> |
+| Unordered list | <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>O</kbd> |
 
 ## Markdown formation shortcut key
 
@@ -52,27 +52,27 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 | Actions | Keyboard shortcuts |
 |----------------|---------|
-| Toolbar focus| <kbd>alt</kbd> + <kbd>f10</kbd> |
-| Insert link| <kbd>ctrl</kbd> + <kbd>k</kbd> |
-| Insert image| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>i</kbd> |
-| Insert table| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>e</kbd> |
-| Undo| <kbd>ctrl</kbd> + <kbd>z</kbd> |
-| Redo| <kbd>ctrl</kbd> + <kbd>y</kbd> |
-| Copy| <kbd>ctrl</kbd> + <kbd>c</kbd> |
-| Cut| <kbd>ctrl</kbd> + <kbd>x</kbd> |
-| Paste| <kbd>ctrl</kbd> + <kbd>v</kbd> |
-| Bold| <kbd>ctrl</kbd> + <kbd>b</kbd> |
-| Italic| <kbd>ctrl</kbd> + <kbd>i</kbd> |
-| Strikethrough| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>s</kbd> |
-| Uppercase| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>u</kbd> |
-| Lowercase| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>l</kbd> |
-| Superscript| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>=</kbd> |
-| Subscript| <kbd>ctrl</kbd> + <kbd>=</kbd> |
-| Fullscreen| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>f</kbd> |
-| Ordered list| <kbd>ctrl</kbd> + <kbd>shift</kbd> + <kbd>o</kbd> |
-| Unordered list| <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>o</kbd> |
+| Toolbar focus| <kbd>ALT</kbd> + <kbd>F10</kbd> |
+| Insert link| <kbd>CTRL</kbd> + <kbd>K</kbd> |
+| Insert image| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>I</kbd> |
+| Insert table| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>E</kbd> |
+| Undo| <kbd>CTRL</kbd> + <kbd>Z</kbd> |
+| Redo| <kbd>CTRL</kbd> + <kbd>Y</kbd> |
+| Copy| <kbd>CTRL</kbd> + <kbd>C</kbd> |
+| Cut| <kbd>CTRL</kbd> + <kbd>X</kbd> |
+| Paste| <kbd>CTRL</kbd> + <kbd>V</kbd> |
+| Bold| <kbd>CTRL</kbd> + <kbd>B</kbd> |
+| Italic| <kbd>CTRL</kbd> + <kbd>i</kbd> |
+| Strikethrough| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>S</kbd> |
+| Uppercase| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>U</kbd> |
+| Lowercase| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>L</kbd> |
+| Superscript| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>=</kbd> |
+| Subscript| <kbd>CTRL</kbd> + <kbd>=</kbd> |
+| Fullscreen| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd> |
+| Ordered list| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>O</kbd> |
+| Unordered list| <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>O</kbd> |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -101,7 +101,7 @@ Customize the key config for the keyboard interaction of Rich Text Editor, using
 
 In the following code block, customize the bold and italic, toolbar actions with `ctrl+1`, `ctrl+2` respectively.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

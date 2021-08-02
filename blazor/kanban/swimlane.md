@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Swimlane in Blazor Kanban Component | Syncfusion
-description: Learn here all about Swimlane in Syncfusion Blazor Kanban component and more.
+description: Checkout and learn here all about Swimlane in Syncfusion Blazor Kanban component and much more details.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -82,8 +82,7 @@ Output be like the below.
 
 Customize the swimlane row header text by using the `TextField` property mapped from datasource.
 
-> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`.  It will automatically consider the `KeyField` to swimlane row header text.
-> If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
+> It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`.  It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
 
 ```csharp
 

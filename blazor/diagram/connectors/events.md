@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Diagram Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -97,7 +97,7 @@ The [`OnPositionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 The [`OnConnectionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnConnectionChange) event will notify when the connection is changed. The [`IBlazorConnectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorConnectionChangeEventArgs.html) interface is used to get event arguments.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -141,8 +141,8 @@ The [`OnConnectionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)

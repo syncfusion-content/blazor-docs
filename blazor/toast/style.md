@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor Toast Component | Syncfusion
-description: Learn here all about Style and appearance in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug

@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Appearance And Customization in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Appearance And Customization in Syncfusion Blazor Gantt Chart component and more.
+title: Appearance Customization in Blazor Gantt Chart Component | Syncfusion
+description: Learn here all about appearance and customization in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
 ---
 
-# Appearance And Customization in Blazor Gantt Chart Component
+# Appearance Customization in Blazor Gantt Chart Component
 
 ## Taskbar customization
 
@@ -109,8 +109,7 @@ Height of child taskbars and parent taskbars can be customized by using `Taskbar
 
 ![Alt text](images/taskbarHeight.png)
 
-> NOTE
-The `TaskbarHeight` property accepts only pixel value.
+> The `TaskbarHeight` property accepts only pixel value.
 
 ### Taskbar Background
 
@@ -1030,7 +1029,9 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
 ### Change splitter position dynamically
 
-In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPositionAsync` method. We can change the splitter position by passing value and type parameter to `SetSplitterPositionAsync` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. The following code example shows how to use this method.
+In Gantt Chart, we can change the splitter position dynamically by using `SetSplitterPositionAsync` method. We can change the splitter position by passing value and type parameter to `SetSplitterPositionAsync` method. Type parameter will accept one of the following values 'Position', 'ColumnIndex', 'ViewType'. 
+
+The following code example shows how to use this method.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -1163,4 +1164,4 @@ In Gantt Chart, we can change the splitter position dynamically by using `SetSpl
 
 ![Alt text](images/splitterMethods.gif)
 
-> `Note:` You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

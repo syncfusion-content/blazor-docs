@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adaptors in Blazor DataManager Component | Syncfusion
-description: Learn here all about Adaptors in Syncfusion Blazor DataManager component and more.
+description: Checkout and learn here all about Adaptors in Syncfusion Blazor DataManager component and much more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -13,15 +13,15 @@ documentation: ug
 
 Each data source or remote service uses different way for accepting request and sending back the response. The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) cannot anticipate every way a data source works. To tackle this problem the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses adaptor concept to communicate with particular data source.
 
-For local data sources, the role of the data adaptor is to query the object array based on the Query object and manipulate them.
+* For local data sources, the role of the data adaptor is to query the object array based on the Query object and manipulate them.
 
-For remote data source, the data adaptor is used to send the request that the server can understand which then processes the server response.
+* For remote data source, the data adaptor is used to send the request that the server can understand which then processes the server response.
 
 The adaptor can be assigned using the [`Adaptor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Adaptor) property of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 ## Json adaptor
 
-The `JsonAdaptor` is used to query and manipulate object array.
+The `JsonAdaptor` is used to query and manipulate object array. 
 
 The following sample code demonstrates binding data to the DataGrid component through the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) using `JsonAdaptor`,
 
@@ -99,7 +99,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 
 The sample response object should be as follows,
 
-```csharp
+```
 {
     "result": [{..}, {..}, {..}, ...],
     "count": 67

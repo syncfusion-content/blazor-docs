@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Action of Nodes in Blazor Diagram Component | Syncfusion
-description: Learn here all about Action of Nodes in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Action of Nodes in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Action of Nodes in Blazor Diagram Component
+# Node in Blazor Diagram Component
 
 Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system in regards to how it interacts with external entities.
 
@@ -24,11 +24,11 @@ To create a node, define the `Node` object and add that to the nodes collection 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code{
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in the nodes collection.
@@ -45,7 +45,7 @@ To create a node, define the `Node` object and add that to the nodes collection 
 
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
 }
 ```
@@ -100,8 +100,7 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
 
 ## Add node from palette
 
-Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information
-about adding nodes from symbol palette, refer to the `Symbol Palette`.
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the `Symbol Palette`.
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
 * When a symbol is dragged into a diagram from symbol palette, the `DragEnter` event gets triggered.
@@ -111,22 +110,21 @@ about adding nodes from symbol palette, refer to the `Symbol Palette`.
 
 ![Node](../images/node-add-palette.gif)
 
-## Draw Node using drawing object
+## Draw node using drawing object
 
 Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the `DrawingObject`.
 
-For more information about drawing Node, refer to the `Draw Nodes`.
+For more information about drawing node, refer to the `Draw Nodes`.
 
 ![Drawing Node](../images/node-drawing.gif)
 
 ## Create node through data source
 
-Nodes can be generated automatically with the information provided through data source. The default properties for
-these nodes are fetched from default settings. For more information about datasource, refer to the `DataSource`.
+Nodes can be generated automatically with the information provided through data source. The default properties for these nodes are fetched from default settings. For more information about datasource, refer to the [DataSource](../layout/hierarchical-layout).
 
 ## Remove nodes at runtime
 
-* A node can be removed from the diagram at runtime by using the `Remove` method.
+A node can be removed from the diagram at runtime by using the `Remove` method.
 
 The following code shows how to remove a node at runtime.
 
@@ -219,8 +217,7 @@ The following code example explains how to change the node properties.
 }
 ```
 
->**Note:**
->* BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+> BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
 
 ## See Also
 

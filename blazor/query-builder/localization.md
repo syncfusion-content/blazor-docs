@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Localization in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -51,7 +51,7 @@ The following list of properties and its values are used in the Query Builder.
 | QueryBuilder_IsNull | Is Null |
 | QueryBuilder_IsNotNull | Is Not Null |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 
@@ -91,4 +91,5 @@ The following list of properties and its values are used in the Query Builder.
 Output will be shown as
 
 ![Query Builder Sample](./images/qb-locale.png)
+
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

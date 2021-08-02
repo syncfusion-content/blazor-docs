@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Interaction in Blazor Diagram Component | Syncfusion
-description: Learn here all about Interaction in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -21,15 +21,15 @@ A node can be select at runtime by using the `Select` method and clear the selec
 
 <input type="button" value="Select" @onclick="OnSelect">
 <input type="button" value="UnSelect" @onclick="@UnSelect" />
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code {
     // reference of the diagram
-    SfDiagramComponent Diagram;
+    SfDiagramComponent diagram;
 
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -44,17 +44,17 @@ A node can be select at runtime by using the `Select` method and clear the selec
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     public void OnSelect()
     {
         // Select the node
-        Diagram.Select(new ObservableCollection<IDiagramObject> { Diagram.Nodes[0] });
+        diagram.Select(new ObservableCollection<IDiagramObject> { Diagram.Nodes[0] });
     }
     public void UnSelect()
     {
         // clear selection in the diagram
-        Diagram.ClearSelection();
+        diagram.ClearSelection();
     }
 }
 ```
@@ -64,7 +64,7 @@ And also the selection enable during the interaction.
 * An element can be selected by clicking that element.
 * When you select the elements in the diagram, the `SelectionChange` event gets triggered and to do customization in this event.
 
-![Select](../images/node-select.gif)
+![Select](../images/node-select.png)
 
 ## Drag
 
@@ -74,14 +74,14 @@ A node can be drag at runtime by using the `Drag` method. The following code exp
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Drag" @onclick="OnDrag">
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code {
     // reference of the diagram
-    SfDiagramComponent Diagram;
+    SfDiagramComponent diagram;
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -94,12 +94,12 @@ A node can be drag at runtime by using the `Drag` method. The following code exp
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     public void OnDrag()
     {
         // Drag the node
-        Diagram.Drag(Diagram.Nodes[0], 10, 10);
+        diagram.Drag(Diagram.Nodes[0], 10, 10);
     }
 }
 ```
@@ -119,14 +119,14 @@ A node can be resize at runtime by using the `Scale` method. The following code 
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Resize" @onclick="OnResize">
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code {
     // reference of the diagram
-    SfDiagramComponent Diagram;
+    SfDiagramComponent diagram;
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -139,12 +139,12 @@ A node can be resize at runtime by using the `Scale` method. The following code 
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     public void OnResize()
     {
         // Resize the node
-        Diagram.Scale(Diagram.Nodes[0], 0.5, 0.5, new Point() { X = 0, Y = 0 } );
+        diagram.Scale(Diagram.Nodes[0], 0.5, 0.5, new Point() { X = 0, Y = 0 } );
     }
 }
 ```
@@ -157,7 +157,7 @@ And also you can resize the node during interaction.
 
 ![Resize](../images/resize.gif)
 
->Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
+>  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
 
 ## Rotate
 
@@ -167,15 +167,15 @@ A node can be rotate at runtime by using the `Rotate` method. The following code
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Rotate" @onclick="OnRotate">
-<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code {
     // reference of the diagram
-    SfDiagramComponent Diagram;
+    SfDiagramComponent diagram;
 
     // To define node collection
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -188,12 +188,12 @@ A node can be rotate at runtime by using the `Rotate` method. The following code
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
-        NodeCollection.Add(node);
+        nodes.Add(node);
     }
     public void OnRotate()
     {
         // Rotate the node
-        Diagram.Rotate(Diagram.Nodes[0], Diagram.Nodes[0].RotateAngle+10);
+        diagram.Rotate(Diagram.Nodes[0], Diagram.Nodes[0].RotateAngle+10);
     }
 }
 ```

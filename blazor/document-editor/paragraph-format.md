@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Paragraph Formatting in Blazor DocumentEditor Component | Syncfusion
+title: Paragraph Formatting in Blazor DocumentEditor Component | Syncfusion
 description: Learn here all about Working with Paragraph Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
@@ -15,7 +15,7 @@ documentation: ug
 
 You can modify the left or right indentation of selected paragraphs using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.ParagraphFormat.SetLeftIndent(24);
 documentEditor.Selection.ParagraphFormat.SetRightIndent(24);
 ```
@@ -24,7 +24,7 @@ documentEditor.Selection.ParagraphFormat.SetRightIndent(24);
 
 You can define special indent for first line of the paragraph using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.ParagraphFormat.SetFirstLineIndent(24);
 ```
 
@@ -32,7 +32,7 @@ documentEditor.Selection.ParagraphFormat.SetFirstLineIndent(24);
 
 You can increase the left indent of selected paragraphs by a factor of 36 points using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.IncreaseIndent();
 ```
 
@@ -40,7 +40,7 @@ documentEditor.Editor.IncreaseIndent();
 
 You can decrease the left indent of selected paragraphs by a factor of 36 points using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.DecreaseIndent();
 ```
 
@@ -48,13 +48,13 @@ documentEditor.Editor.DecreaseIndent();
 
 You can get or set the text alignment of selected paragraphs using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.ParagraphFormat.SetTextAlignment(TextAlignment.Center);
 ```
 
 You can toggle the text alignment of selected paragraphs by specifying a value using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.ToggleTextAlignment(TextAlignment.Center);
 ```
 
@@ -62,7 +62,7 @@ documentEditor.Editor.ToggleTextAlignment(TextAlignment.Center);
 
 You can define the line spacing and its type for selected paragraphs using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.ParagraphFormat.SetLineSpacingType(LineSpacingType.AtLeast);
 documentEditor.Selection.ParagraphFormat.SetLineSpacing(6);
 ```
@@ -71,7 +71,7 @@ documentEditor.Selection.ParagraphFormat.SetLineSpacing(6);
 
 You can define the spacing before or after the paragraph by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.ParagraphFormat.SetBeforeSpacing(24);
 documentEditor.Selection.ParagraphFormat.SetAfterSpacing(24);
 ```

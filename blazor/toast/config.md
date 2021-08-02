@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring options in Blazor Toast Component | Syncfusion
-description: Learn here all about Configuring options in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about Configuring options in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -17,7 +17,7 @@ Toast can be created with the notification message. The message contains `Title`
 
 > The Title or `Content` property can be given as HTMLElement/element ID to a string that can be displayed as a toast.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
@@ -78,7 +78,7 @@ By default, the newly created toasts will append next with existing toasts. You 
 
 Here, The following sample demonstrates the combination of the `Target`, `ShowCloseButton`, `ShowProgressBar` and `NewestOnTop` properties in toast.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
@@ -173,12 +173,11 @@ The dimensions of the toast can be set using the `Width` and `Height` properties
 
 By default, the toast can be rendered with `300px` width with `auto` height.
 
-> In mobile devices, the default width of the toast gets '100%' width of the page.
-> When you set toast width as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
+> In mobile devices, the default width of the toast gets '100%' width of the page. When you set toast width as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
 
 Both the width and height properties allow setting pixels/numbers/percentage. The number value is considered as pixels.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

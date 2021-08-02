@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pareto in Blazor Charts Component | Syncfusion
-description: Learn here all about Pareto in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about the Pareto chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,10 +11,10 @@ documentation: ug
 
 ## Pareto
 
-[`Pareto`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Pareto) Chart is used to find the cumulative values of data in different categories. It is a combination of [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) and [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Pareto) series.
-The initial values are represented by column chart and the cumulative values are represented by line chart. To render a pareto chart, use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Pareto`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Pareto).
+[`Pareto Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Pareto) is used to find the cumulative values of data in different categories. It is a combination of [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column) and [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Pareto) series.
+The initial values are represented by column chart and the cumulative values are represented by line chart. To render a pareto chart, set series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to [`Pareto`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Pareto).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -52,23 +52,24 @@ The initial values are represented by column chart and the cumulative values are
         public string X { get; set; }
         public double Y { get; set; }
     }
+
     public List<ChartData> Data = new List<ChartData>
-{
-            new ChartData { X= "Traffic", Y= 56 },
-            new ChartData { X= "Child Care", Y= 44.8 },
-            new ChartData { X= "Transport", Y= 27.2 },
-            new ChartData { X= "Weather", Y= 19.6 },
-            new ChartData { X= "Emergency", Y= 6.6 }
-         };
+	{
+        new ChartData { X= "Traffic", Y= 56 },
+        new ChartData { X= "Child Care", Y= 44.8 },
+        new ChartData { X= "Transport", Y= 27.2 },
+        new ChartData { X= "Weather", Y= 19.6 },
+        new ChartData { X= "Emergency", Y= 6.6 }
+    };
 }
 
-```
+``` 
 
-![Pareto Charts](../images/othertypes/pareto.png)
+![Pareto Chart](../images/othertypes/pareto.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

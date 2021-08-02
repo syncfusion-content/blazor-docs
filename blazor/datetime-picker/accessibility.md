@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Datetime Picker Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Datetime Picker component and more.
 platform: Blazor
 control: Datetime Picker 
 documentation: ug
@@ -9,23 +9,13 @@ documentation: ug
 
 # Accessibility in Blazor Datetime Picker Component
 
-The web accessibility defines a way to make web content and web applications
-more accessible to disabled people. It especially helps the dynamic content change
-and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
+The web accessibility defines a way to make web content and web applications more accessible to disabled people. It especially helps the dynamic content change and advanced user interface components developed with Ajax, HTML, JavaScript, and related technologies.
 
-DateTimePicker provides built-in compliance with the
-[WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA
-supports is achieved through the attributes
-like `aria-expanded`, `aria-disabled`, `aria-activedescendant`
-applied to the input element.
+DateTimePicker provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA supports is achieved through the attributes like `aria-expanded`, `aria-disabled`, `aria-activedescendant` applied to the input element.
 
-To learn about the accessibility of Calendar, refer to the Calendar's
-[Accessibility](../calendar/accessibility/)
-section.
+To learn about the accessibility of Calendar, refer to the Calendar's [Accessibility](../calendar/accessibility/) section.
 
-It helps to provide information about the widget
-for assistive technology to the disabled person in
-screen reader.
+It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
 
 * **aria-expanded**: Attributes indicates the state of a collapsible element.
 
@@ -35,15 +25,13 @@ screen reader.
 
 ## Keyboard Interaction
 
-You can use the following keys to interact with the DateTimePicker.
-The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+You can use the following keys to interact with the DateTimePicker. The component implements the keyboard navigation support by following the  [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 DateTimePicker supports the below list of shortcut keys:
 
 ### Input Navigation
 
-Before opening the popup, use the following keys to control
-the popup element.
+Before opening the popup, use the following keys to control the popup element.
 
 | **Keys** | **Description** |
 | --- | --- |

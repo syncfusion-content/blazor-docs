@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor TextBox Component | Syncfusion
-description: Learn here all about Native Events in Syncfusion Blazor TextBox component and more.
+description: Checkout and learn here all about Native Events in Syncfusion Blazor TextBox component and much more.
 platform: Blazor
 control: TextBox
 documentation: ug

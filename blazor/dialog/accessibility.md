@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Dialog Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor Dialog Component
 
-The Dialog characterized with complete ARIA Accessibility support which helps to accessible
-by on-screen readers and other assistive technology devices. This component designed with the
-reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
+The Dialog characterized with complete ARIA Accessibility support which helps to accessible by on-screen readers and other assistive technology devices. This component designed with the reference of the guidelines document given in [WAI ARAI Accessibility Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal).
 
 The Dialog component uses the `Dialog` role and following ARIA properties to its element based on its state.
 
@@ -24,9 +22,7 @@ The Dialog component uses the `Dialog` role and following ARIA properties to its
 
 ## Keyboard interaction
 
-Keyboard interaction of Dialog component has designed based on
-[WAI-ARIA Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal) described for Dialog.
-User can use the following shortcut keys to interact with the Dialog.
+Keyboard interaction of Dialog component has designed based on [WAI-ARIA Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#dialog_modal) described for Dialog. User can use the following shortcut keys to interact with the Dialog.
 
 <!-- markdownlint-disable MD033 -->
 <table>
@@ -63,7 +59,7 @@ first focusable element in the Dialog, then press the shift + tab key, it will c
 to last focusable element</td></tr>
 </table>
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

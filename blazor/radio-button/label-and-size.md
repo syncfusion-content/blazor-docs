@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Label and Size in Blazor RadioButton Component | Syncfusion
-description: Learn here all about Label and Size in Syncfusion Blazor RadioButton component and more.
+description: Checkout and learn here all about Label and Size in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
 documentation: ug
@@ -13,9 +13,7 @@ This section explains the different sizes and labels.
 
 ## Label
 
-Radio Button caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_Label) property.
-This reduces the manual addition of label for Radio Button. You can customize the label position before or after the
-Radio Button through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_LabelPosition) property.
+Radio Button caption can be defined by using the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_Label) property. This reduces the manual addition of label for Radio Button. You can customize the label position before or after the Radio Button through the [`LabelPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html#Syncfusion_Blazor_Buttons_SfRadioButton_1_LabelPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -35,8 +33,7 @@ Output be like
 
 ## Size
 
-The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small,
-set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property to `e-small`.
+The different Radio Button sizes available are default and small. To reduce the size of the default Radio Button to small, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfRadioButton-1.html) property to `e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

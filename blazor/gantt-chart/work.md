@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Work in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Work in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Work in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The work is the total hours required to complete a task. Work can be mapped from the data source field using the property `GanttTaskFields.Work`. Work can be measured in `Hour`, `Day`, `Minute`. By default, work is measured in `Hour` and it can be changed, by using the property `WorkUnit`.
 
->Note: When the work field is mapped from the data source, the default task type will be `FixedWork`.
+> When the work field is mapped from the data source, the default task type will be `FixedWork`.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -148,8 +148,7 @@ The work is the total hours required to complete a task. Work can be mapped from
 
 ## Task type
 
-The work, duration and resource unit fields of a task depends upon each other and will change automatically on editing any one of these fields. But we can also set these field’s values as constant using the `TaskType` property. `FixedUnit` is the default `TaskType`. The following values can be set to the `TaskType`.
- property,
+The work, duration and resource unit fields of a task depends upon each other and will change automatically on editing any one of these fields. But we can also set these field’s values as constant using the `TaskType` property. `FixedUnit` is the default `TaskType`. The following values can be set to the `TaskType` property.
 
 * `FixedDuration` - Duration task field will remain constant while updating resource unit or work field.
 * `FixedWork` - Work field will remain constant while updating resource unit or duration fields.
@@ -310,6 +309,6 @@ Fixed Duration | Will updates work value | Will updates Resource unit | Will upd
 Fixed Work | Will updates Resource unit. Note: For manually scheduled task work will update.| Will updates Duration value. Note: For manually scheduled task resource unit updates. | Will updates Duration value. Note: For manually scheduled task work field updates.
 Fixed Unit | Will updates work value | Will updates Duration value. Note: For manually scheduled task resource unit updates.| Will updates Duration value. Note: For manually scheduled task work field updates.
 
-> Fixed Unit is the default TaskType in Gantt.
-> The above calculations are not applicable for Milestones.
->`Note:` You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> Fixed Unit is the default TaskType in Gantt. The above calculations are not applicable for Milestones.
+
+You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

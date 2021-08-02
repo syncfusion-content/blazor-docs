@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add and Remove Items in Blazor Dropdown Menu Component | Syncfusion
-description: Learn here all about Add and Remove Items in Syncfusion Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about Add and Remove Items in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -40,20 +40,20 @@ The following example illustrates how to add and remove items in Dropdown Menu c
     {
         DropDownbuttonRef.RemoveItems(removeItems);
     }
+    
     public List<DropDownMenuItem> dropdownbtnItems = new List<DropDownMenuItem>
-{
+    {
         new DropDownMenuItem{ Text="Paste Special" },
         new DropDownMenuItem{ Text="Paste as Formula" },
         new DropDownMenuItem{ Text="Paste as Hyperlink" }
     };
 
     public List<string> removeItems = new List<string>()
-{
+    {
        "Paste"
     };
 }
 
-  
 ```
 
 Output be like

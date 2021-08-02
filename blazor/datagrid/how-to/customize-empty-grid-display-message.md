@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Customize empty grid display message in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Customize empty grid display message in Syncfusion Blazor DataGrid component and more.
+title: Customize empty display message in Blazor DataGrid | Syncfusion
+description: Learn here all about customizing empty grid display message in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

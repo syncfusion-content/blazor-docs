@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dock in Blazor Sidebar Component | Syncfusion
-description: Learn here all about Dock in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about Dock in Syncfusion Blazor Sidebar component and much more details.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -15,7 +15,7 @@ Dock state of the Sidebar reserves some space on the page that always remains in
 
 In the following sample, the list item has icon with text representation. On dock state only the icon listed out to interact. It can be achieved by using `EnableDock` property
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

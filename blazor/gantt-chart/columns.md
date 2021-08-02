@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Columns in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Columns in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -375,9 +375,7 @@ P | Denotes percentage type | The percentage format expects the input value to b
 
 ### Date formatting
 
-You can format date values either using the built-in date format string or a custom format string.
-
-For the built-in date format, you can specify the `GanttColumn.Format` property as string (example: `yMd`).
+You can format date values either using the built-in date format string or a custom format string. For the built-in date format, you can specify the `GanttColumn.Format` property as string (example: `yMd`).
 
 You can also use the custom format string to format the date values. Some of the custom formats and the formatted date values are given in the following table.
 
@@ -1039,6 +1037,7 @@ A column template is used to customize the column’s look. The following code e
 ## Column Menu
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click the Multiple icon of the column. To enable the column menu, you should set the `ShowColumnMenu` property to true.
+
 The default items are displayed in the following table:
 
 | Item | Description |
@@ -1573,9 +1572,7 @@ You can enable or disable gantt component action for a particular column by sett
 
 ## Column Type
 
-Column type can be specified using the `GanttColumn.Type` property. It specifies the type of data the column binds.
-
-If the `GanttColumn.Format` is defined for a column, the column uses `GanttColumn.Type` to select the appropriate format option number or date.
+Column type can be specified using the `GanttColumn.Type` property. It specifies the type of data the column binds. If the `GanttColumn.Format` is defined for a column, the column uses `GanttColumn.Type` to select the appropriate format option number or date.
 
 Gantt column supports the following types:
 
@@ -1585,8 +1582,7 @@ Gantt column supports the following types:
 * Date
 * DateTime
 
-> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`.
-> In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
+> If the `GanttColumn.Type` is not defined, it will be determined from the first record of the `DataSource`. In case if the first record of the `DataSource` is null/blank value for a column then it is necessary to define the `GanttColumn.Type` for that column.
 
 ## Custom Columns
 

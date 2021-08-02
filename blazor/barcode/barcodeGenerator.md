@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Barcode Generator in Blazor Barcode Component | Syncfusion
-description: Learn here all about Barcode Generator in Syncfusion Blazor Barcode component and more.
+description: Checkout and learn here all about Barcode Generator in Syncfusion Blazor Barcode component and more.
 platform: Blazor
 control: Barcode
 documentation: ug
@@ -106,9 +106,9 @@ Code 128 is a variable length, high density, alphanumeric, linear bar code symbo
 
 ### Code 128 Code Sets
 
-     * Code Set A (or Chars Set A) includes all of the standard upper case U.S. alphanumeric keyboard characters and punctuation characters along with the control   characters, (namely, characters with ASCII values from 0 to 95 inclusive), and seven special characters.
-     * Code Set B (or Chars Set B) includes all of the standard upper case alphanumeric keyboard characters and punctuation characters along with the lower case     alphabetic characters (namely, characters with ASCII values from 32 to 127 inclusive), and seven special characters.
-     * Code Set C (or Chars Set C) includes the set of 100 digit pairs from 00 to 99 inclusive along with three special characters. This allows numeric data to be   encoded as two data digits per symbol character, at effectively twice the density of standard data.
+* Code Set A (or Chars Set A) includes all of the standard upper case U.S. alphanumeric keyboard characters and punctuation characters along with the control   characters, (namely, characters with ASCII values from 0 to 95 inclusive), and seven special characters.
+* Code Set B (or Chars Set B) includes all of the standard upper case alphanumeric keyboard characters and punctuation characters along with the lower case     alphabetic characters (namely, characters with ASCII values from 32 to 127 inclusive), and seven special characters.
+* Code Set C (or Chars Set C) includes the set of 100 digit pairs from 00 to 99 inclusive along with three special characters. This allows numeric data to be   encoded as two data digits per symbol character, at effectively twice the density of standard data.
 
 ### Code 128 Special characters
 
@@ -173,8 +173,10 @@ In barcode generators you can customize the barcode text by using display [`Text
 @using Syncfusion.Blazor.BarcodeGenerator
 <SfBarcodeGenerator Width="200px" Height="150px" Type="@BarcodeType.Code128"Value="SYNCFUSION" OnValidationFailed="@OnValidationFailed"></SfBarcodeGenerator>
 
-@code { public void OnValidationFailed(ValidationFailedEventArgs args)
-            {
-            } }
-
+@code 
+{ 
+     public void OnValidationFailed(ValidationFailedEventArgs args)
+     {
+     }
+}
 ```

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Groups in Blazor TextBox Component | Syncfusion
-description: Learn here all about Groups in Syncfusion Blazor TextBox component and more.
+description: Checkout and learn here all about Groups in Syncfusion Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -19,7 +19,7 @@ The following section explains you the steps required to create TextBox with `ic
 
 ```html
 <div class="e-input-group">
-<input class="e-input" name='input' type="text" Placeholder="Enter Date"/>
+    <input class="e-input" name='input' type="text" Placeholder="Enter Date"/>
 </div>
 ```
 
@@ -126,8 +126,7 @@ The output will be as follows.
 
 ## With clear button and floating label
 
-The clear button is added to the input for clearing the value given in the TextBox.
-It is shown only when the input field has a value, otherwise not shown.
+The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
 
 You can add the clear button to the TextBox by enabling the `ShowClearButton` API.
 

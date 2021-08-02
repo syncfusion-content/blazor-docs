@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in Blazor - Syncfusion
-description: Check out the documentation for Download in Blazor
+title: License Key Registration for Syncfusion Blazor Components | Syncfusion
+description: Checkout and learn here all about license key registration for Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# License Key Registration
+# License Key Registration for Syncfusion Blazor Components
 
 The generated license key is just a string that needs to be registered before any Syncfusion control is initiated. The following code is used to register the license.
 
@@ -15,8 +15,7 @@ The generated license key is just a string that needs to be registered before an
 Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY");
 ```
 
-> <br />
-Place the license key between double quotes. Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
+> Place the license key between double quotes. Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
 
 ## Blazor
 

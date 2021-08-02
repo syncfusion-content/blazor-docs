@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -66,13 +66,14 @@ To bind list datas to the [Blazor Query Builder](https://www.syncfusion.com/blaz
 ## Remote Data
 
 To bind remote data to [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component, assign service data as an instance of `SfDataManager` to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property or by using [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html?_ga=2.215796254.88815479.1615183078-1853720367.1601889760) component. To interact with remote data source, provide the endpoint `Url`.
+
 Refer to the following code example for remote Data binding using `OData` service.
 
 ### Binding with OData services
 
 [`OData`](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the SfDataManager. Refer to the following code example for remote Data binding using OData service.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Data
@@ -104,7 +105,7 @@ Refer to the following code example for remote Data binding using `OData` servic
 
 The ODataV4 is an improved version of OData protocols, and the `SfDataManager` can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [`OData documentation`](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the `ODataV4Adaptor`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Data
@@ -136,7 +137,7 @@ The ODataV4 is an improved version of OData protocols, and the `SfDataManager` c
 
 You can use WebApiAdaptor to bind querybuilder with Web API created using OData endpoint.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Data
@@ -167,4 +168,5 @@ You can use WebApiAdaptor to bind querybuilder with Web API created using OData 
 Output will be shown as
 
 ![Query Builder Sample](./images/qb-remotedata.png)
+
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

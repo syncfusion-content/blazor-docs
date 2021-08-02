@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Image and Divider in Blazor Card Component | Syncfusion
-description: Learn here all about Image and Divider in Syncfusion Blazor Card component and more.
+description: Checkout and learn here all about Image and Divider in Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -44,9 +44,7 @@ Card image is supported to include a `Title` property for the image. By default,
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it.
-
-* Set `EnableSeperator` property to `true` in card content for adding a divider.
+Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set `EnableSeperator` property to `true` in card content for adding a divider.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

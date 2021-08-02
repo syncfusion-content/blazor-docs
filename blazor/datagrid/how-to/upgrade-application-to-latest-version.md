@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Upgrade Application To Latest Version in Blazor DataGrid Component | Syncfusion
+title: Upgrade Application To Latest Version in Blazor DataGrid | Syncfusion
 description: Learn here all about Upgrade Application To Latest Version in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid

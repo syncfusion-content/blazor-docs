@@ -1,17 +1,15 @@
 ---
 layout: post
 title: Positioning in Blazor Diagram Component | Syncfusion
-description: Learn here all about Positioning in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
-# Positioning in Blazor Diagram Component
+# How to position node’s port
 
-Diagram allows you to customize the position and appearance of the port efficiently.
-Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class.
-Ports of a node can be positioned using the following properties of `PointPort`.
+Diagram allows you to customize the position and appearance of the port efficiently. Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class. Ports of a node can be positioned using the following properties of `PointPort`.
 
 * `Offset`
 * `HorizontalAlignment`
@@ -25,10 +23,10 @@ The `Offset` property is used to align the Ports based on fractions. 0 represent
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes collection.
@@ -53,12 +51,12 @@ protected override void OnInitialized()
             Width= 12, Height=12, Shape= PortShapes.Square,
         }},
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 }
 ```
 
-![`Offset`](../images/port_offset.png)
+![Offset](../images/port_offset.png)
 
 The following code shows the relationship between the shape port position and path port offset (fraction values).
 
@@ -74,13 +72,12 @@ The following code shows the relationship between the shape port position and pa
 | (1,0.5) | ![Left](../images/offset8.png) |
 | (1,1) | ![Left](../images/offset9.png) |
 
->**Note:**
->* Type of the offset property for node’s shape port is NodePortOffset.
+
+> Type of the offset property for node’s shape port is NodePortOffset.
 
 ## Horizontal and vertical alignment
 
-* The `HorizontalAlignment` property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values.
-* The `VerticalAlignment` property is used to set how the port is vertically aligned at the port position.
+The `HorizontalAlignment` property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The `VerticalAlignment` property is used to set how the port is vertically aligned at the port position.
 
 The following table shows all the possible alignments visually with `offset (0, 0)`.
 
@@ -101,11 +98,11 @@ The following code explains how to align ports.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
 
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes array.
@@ -132,7 +129,7 @@ protected override void OnInitialized()
             VerticalAlignment = VerticalAlignment.Center
         }},
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 }
 
@@ -140,10 +137,8 @@ protected override void OnInitialized()
 
 ![Horizontal and Vertical Alignment](../images/HorizontalVerticalaligment.png)
 
->**Note:**
->* The value of the `HorizontalAlignment` is `Center` by default.
->* The value of the `VerticalAlignment` is `Center` by default.
->* Alignment positioned based on the offset value.
+
+> The value of the `HorizontalAlignment` is `Center` by default. The value of the `VerticalAlignment` is `Center` by default. Alignment positioned based on the offset value.
 
 ## Margin
 
@@ -152,11 +147,11 @@ protected override void OnInitialized()
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
 </SfDiagramComponent>
 @code{
 
-DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 protected override void OnInitialized()
 {
     // A node is created and stored in nodes array.
@@ -184,7 +179,7 @@ protected override void OnInitialized()
             Margin=new Margin(){Top=10}
         }},
     };
-    NodeCollection.Add(node);
+    nodes.Add(node);
 }
 }
 

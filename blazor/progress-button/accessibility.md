@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ProgressButton Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor ProgressButton component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor ProgressButton component and more.
 platform: Blazor
 control: Progress Button
 documentation: ug
@@ -11,7 +11,9 @@ documentation: ug
 
 ## ARIA attributes
 
-The web accessibility makes web content and web applications more accessible for people with disabilities. Mostly, it helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. The Progress Button provides a built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the `aria-label`, `aria-valuemin`, `aria-valuemax`, and `aria-valuenow` attributes in the Progress Button. It helps by providing information about the widget for assistive technology in the screen readers.
+The web accessibility makes web content and web applications more accessible for people with disabilities. Mostly, it helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. 
+
+The Progress Button provides a built-in compliance with `WAI-ARIA` specifications. The `WAI-ARIA` support is achieved using the `aria-label`, `aria-valuemin`, `aria-valuemax`, and `aria-valuenow` attributes in the Progress Button. It helps by providing information about the widget for assistive technology in the screen readers.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Dropdown Menu Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -12,9 +12,9 @@ documentation: ug
 ## ARIA attributes
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. Mostly it helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
+
 Dropdown Menu provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded`, `aria-owns` and `aria-haspopup` applied for action item in
-Dropdown Menu. It helps by providing information about the widget for assistive
-technology in the screen readers. Dropdown Menu component contains the `Menu` role and `MenuItem` role.
+Dropdown Menu. It helps by providing information about the widget for assistive technology in the screen readers. Dropdown Menu component contains the `Menu` role and `MenuItem` role.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

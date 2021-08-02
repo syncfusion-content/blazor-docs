@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -214,7 +214,7 @@ namespace BlazorServer
 }
 ```
 
-> **Note** BlazorServer denotes the ApplicationNameSpace of your project.
+> BlazorServer denotes the ApplicationNameSpace of your project.
 
 * Finally, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
@@ -318,7 +318,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 }
 ```
 
-> **Note** ClientApplication denotes the ApplicationNameSpace of your project.
+> ClientApplication denotes the ApplicationNameSpace of your project.
 
 * Now, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 

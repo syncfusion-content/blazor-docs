@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working in offline mode in Blazor DataManager Component | Syncfusion
-description: Learn here all about Working in offline mode in Syncfusion Blazor DataManager component and more.
+description: Checkout and learn here all about Working in offline mode in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug

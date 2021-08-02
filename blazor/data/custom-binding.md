@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Binding in Blazor DataManager Component | Syncfusion
-description: Learn here all about Custom Binding in Syncfusion Blazor DataManager component and more.
+description: Checkout and learn here all about Custom Binding in Syncfusion Blazor DataManager component and more.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -77,10 +77,10 @@ For implementing the custom data binding alone in the DataGrid component provide
 
 For implementing the CRUD operations for the custom bounded data override the following CRUD methods of the **DataAdaptor** abstract class,
 
-* **Insert/InsertAsync**
-* **Remove/RemoveAsync**
-* **Update/UpdateAsync**
-* **BatchUpdate/BatchUpdateAsync**
+* Insert/InsertAsync
+* Remove/RemoveAsync
+* Update/UpdateAsync
+* BatchUpdate/BatchUpdateAsync
 
 > While using batch editing in datagrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
 

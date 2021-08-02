@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Numeric Range Slider in Blazor Range Slider Component | Syncfusion
-description: Learn here all about Numeric Range Slider in Syncfusion Blazor Range Slider component and more.
+description: Checkout and learn here all about Numeric Range Slider in Syncfusion Blazor Range Slider component and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
@@ -13,23 +13,23 @@ The numeric values can be formatted into different decimal digits or fixed numbe
 
 We have numeric range sliders, which can be formatted in any way of your choice. In the examples found below, the first one demonstrates the visualization of ticks in km.
 
-```csharp
- <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
-                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
+```cshtml
+<SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.##km"> </SliderTicks>
+            <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.##km"></SliderTooltip>
 ```
 
 The second example showcases the use of decimal point in the Slider's ticks and tooltip placement.
 
-```csharp
-  <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
-                    <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
+```cshtml
+<SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="##.#00"> </SliderTicks>
+                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="##.#00"></SliderTooltip>
 ```
 
 And in the third example, the formatting involves the placement of zeros before the required values.
 
-```csharp
- <SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
-                <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
+```cshtml
+<SliderTicks ShowSmallTicks="true" Placement="Placement.After" LargeStep="20" SmallStep="10" Format="0000#"> </SliderTicks>
+            <SliderTooltip IsVisible="true" Placement="TooltipPlacement.Before" Format="0000#"></SliderTooltip>
 ```
 
 The complete code for the above Numeric Range Slider can be found below.
@@ -98,4 +98,4 @@ The complete code for the above Numeric Range Slider can be found below.
 </style>
 ```
 
-![Blazor- Slider - NumericSlider](./../images/numeric.gif)es/numeric.gif)
+![Blazor- Slider - NumericSlider](./../images/numeric.gif)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Undo Redo in Blazor Diagram Component | Syncfusion
-description: Learn here all about Undo Redo in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Undo Redo in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -56,8 +56,7 @@ this.Diagram.EndGroupAction();
 Diagram provides options to track the changes that are made to custom properties. For example, in case of an employee relationship diagram, track the changes in the employee information. The `HistoryList` of the diagram enables you to track such changes.
 The following example illustrates how to track such custom property changes.
 
-Before changing the employee information, save the existing information to history list by using the server-side method push of `HistoryList`.
-The history list [`CanLog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_CanLog) method can be used which takes a history entry as argument and returns whether the specific entry can be added or not.
+Before changing the employee information, save the existing information to history list by using the server-side method push of `HistoryList`. The history list [`CanLog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_CanLog) method can be used which takes a history entry as argument and returns whether the specific entry can be added or not.
 
 The following code example illustrates how to save the existing property values.
 

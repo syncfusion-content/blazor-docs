@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Duration Unit in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Duration Unit in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Duration Unit in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -15,8 +15,7 @@ In Gantt Chart, the tasks’ duration value can be measured by the following dur
 * Hour
 * Minute
 
-In Gantt Chart, we can define duration unit for whole project by using `GanttTaskFields.DurationUnit` property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value.
-And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
+In Gantt Chart, we can define duration unit for whole project by using `GanttTaskFields.DurationUnit` property, when we defines the value for this property, this unit will be applied for all task which don't has duration unit value. And each task in the project can be defined with different duration units and the duration unit of a task can be defined by the following ways,
 
 * Using `GanttTaskFields.DurationUnit` property, to map the duration unit data source field.
 * Defining the duration unit value along with the duration field in the data source.
@@ -119,8 +118,7 @@ The below code snippet explains the mapping of duration unit data source field t
 
 ![Alt text](images/durationUnits.png)
 
-> NOTE
-The default value of the `DurationUnit` property is `day`.
+> The default value of the `DurationUnit` property is `day`.
 
 ## Defining Duration Unit along With Duration Field
 
@@ -214,6 +212,6 @@ Duration units for the tasks can also be defined along with the duration values,
 
 ![Alt text](images/durationUnitswithDuration.png)
 
->NOTE:
-The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
- >`Note:` You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> The edit type of the duration column in Gantt Chart is string, to support editing the duration field along with duration units.
+
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

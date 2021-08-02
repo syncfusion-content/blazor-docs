@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Legend in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -507,4 +507,4 @@ In the following sample, the legend with RTL is shown.
 }
 ```
 
-![TreeMap with RTL](images/Internationalization/LegendRTL.png)/LegendRTL.png)
+![TreeMap with RTL](images/Internationalization/LegendRTL.png)

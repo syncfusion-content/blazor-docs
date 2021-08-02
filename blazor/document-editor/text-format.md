@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Working with Text Formatting in Blazor DocumentEditor Component | Syncfusion
+title: Working with Text Formatting in Blazor DocumentEditor | Syncfusion
 description: Learn here all about Working with Text Formatting in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
@@ -15,7 +15,7 @@ documentation: ug
 
 The bold formatting for selected text can be get or set by using the following sample code.
 
-```javascript
+```csharp
 
 //Gets the value for bold formatting of selected text.
 bool bold = await documentEditor.Selection.CharacterFormat.GetBold();
@@ -26,7 +26,7 @@ documentEditor.Selection.CharacterFormat.SetBold(true);
 
 You can toggle the bold formatting based on existing value at selection. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.ToggleBold();
 ```
 
@@ -34,13 +34,13 @@ documentEditor.Editor.ToggleBold();
 
 The Italic formatting for selected text can be get or set by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetItalic(true);
 ```
 
 You can toggle the Italic formatting based on existing value at selection. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.ToggleItalic();
 ```
 
@@ -48,13 +48,13 @@ documentEditor.Editor.ToggleItalic();
 
 The underline style for selected text can be get or set by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.ToggleUnderline(Underline.Single);
 ```
 
 You can toggle the underline style of selected text based on existing value at selection by specifying a value. Refer to the following sample code.
 
-```javascript
+```csharp
 documenteditor.Editor.ToggleUnderline('Single');
 ```
 
@@ -62,7 +62,7 @@ documenteditor.Editor.ToggleUnderline('Single');
 
 The strikethrough style for selected text can be get or set by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
 ```
 
@@ -76,7 +76,7 @@ documentEditor.Editor.ToggleStrikethrough(Strikethrough.SingleStrike);
 
 The selected text can be made superscript by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Superscript);
 ```
 
@@ -90,19 +90,19 @@ documentEditor.Editor.ToggleSuperscript();
 
 The selected text can be made subscript by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Subscript);
 ```
 
 Toggle the selected text as subscript or normal using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.ToggleSubscript();
 ```
 
 You can make a subscript or superscript text as normal using the following code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.Normal);
 ```
 
@@ -110,7 +110,7 @@ documentEditor.Selection.CharacterFormat.SetBaselineAlignment(BaselineAlignment.
 
 The size of selected text can be get or set using the following code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetFontSize(32);
 ```
 
@@ -118,7 +118,7 @@ documentEditor.Selection.CharacterFormat.SetFontSize(32);
 
 The color of selected text can be get or set using the following code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetFontColor("Pink");
 documentEditor.Selection.CharacterFormat.SetFontColor("FFC0CB");
 ```
@@ -135,7 +135,7 @@ documentEditor.Selection.CharacterFormat.SetFontFamily("Arial");
 
 The highlight color of the selected text can be get or set using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.CharacterFormat.SetHighlightColor(HighlightColor.Pink);
 ```
 

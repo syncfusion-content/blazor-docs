@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Bind Change Events in Blazor ListBox Component | Syncfusion
-description: Learn here all about Bind Change Events in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about Bind Change Events in Syncfusion Blazor ListBox component and more.
 platform: Blazor
 control: List Box
 documentation: ug

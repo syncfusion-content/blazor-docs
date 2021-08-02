@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create wizard in Blazor Tabs Component | Syncfusion
-description: Learn here all about Create wizard in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about Create wizard in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -17,14 +17,11 @@ Create the following contents for each tab in the wizard.
 1. **Search tab:**
    Created with `DropDownList` to select the source, destination and type of ticket. A `DatePicker` for choosing the date of journey.
 2. **Train tab:**
-   Based on the selected start and end point, populated Grid with random list of available seats and train list. Initially define the columns
-    and row selected event for validating, after the source and destination chosen update the `DataSource` for the Grid.
+   Based on the selected start and end point, populated Grid with random list of available seats and train list. Initially define the columns and row selected event for validating, after the source and destination chosen update the `DataSource` for the Grid.
 3. **Passenger tab:**
-   A table with Textbox, Numeric, DropDownList for adding passenger name, age, gender and preferred berth/seat. Add validation on entering
-   passenger details to proceed.
+   A table with Textbox, Numeric, DropDownList for adding passenger name, age, gender and preferred berth/seat. Add validation on entering passenger details to proceed.
 4. **Payment tab:**
-   Calculate the ticket cost and generate data for Grid with passenger details, train number
-   and ticket cost summary.
+   Calculate the ticket cost and generate data for Grid with passenger details, train number and ticket cost summary.
 
 You can go back on each tab using buttons available in it and tabs are disabled to navigate through tab header click actions.
 
@@ -521,4 +518,4 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 
 Output be like the below.
 
-![Tab Wizard](../images/wizard.png)images/wizard.png)
+![Tab Wizard](../images/wizard.png)

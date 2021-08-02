@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add or Remove Series in Blazor Charts Component | Syncfusion
-description: Learn here all about Add or Remove Series in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Add or Remove Series in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,60 +11,74 @@ documentation: ug
 
 # Add or Remove Series in Blazor Charts Component
 
-You can add or remove the chart series dynamically.
+The chart series can be dynamically added or removed by adding and removing a series to the  [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). Follow the steps below to dynamically add or remove a series.
 
-To add or remove the series dynamically, follow the given steps:
+**Step 1:**
 
-**Step 1**:
+Render a series using [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html) class of the chart.
 
- Render the series using Collection.
-
-```
-    <SfChart>
-        <ChartSeriesCollection>
-            @foreach (SeriesData series in SeriesCollection)
-            {
-                <ChartSeries XName=@series.XName YName=@series.YName DataSource=@series.Data>
-                </ChartSeries>
-            }
-        </ChartSeriesCollection>
-    </SfChart>
-  ```
-
-**Step 2**:
-
-To add the new series to the chart dynamically, follow the below code.
-
- ```
-    void ChartSeriesAdd()
-    {
-        SeriesCollection.Add(new SeriesData
+```cshtml
+<SfChart>
+    <ChartSeriesCollection>
+        @foreach (SeriesData series in SeriesCollection)
         {
-          XName = nameof(LineChartData.XValue),
-          YName = nameof(LineChartData.YValue),
-          Data = GetChartData()
-        });
-    }
- ```
+            <ChartSeries XName=@series.XName YName=@series.YName DataSource=@series.Data>
+            </ChartSeries>
+        }
+    </ChartSeriesCollection>
+</SfChart>
+```
 
-**Step 3**:
+**Step 2:**
 
-To remove a series from the chart dynamically, follow the below code.
+Create buttons to call add and remove methods, which will add and remove a series from the chart respectively.
 
- ```
-    void ChartSeriesRemove()
+```cshtml
+<SfButton @onclick="AddChartSeries">Add Chart Series</SfButton>
+<SfButton @onclick="RemoveChartSeries">Remove Chart Series</SfButton>
+```
+
+**Step 3:**
+
+To add a new series to the chart dynamically use the code below in the **AddChartSeries** method. This code adds a new series data to the series list named **SeriesCollection** mapped to the [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html). 
+
+```c#
+public void AddChartSeries()
+{
+    SeriesCollection.Add(new SeriesData
     {
-      SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
-    }
- ```
+        XName = nameof(LineChartData.XValue),
+        YName = nameof(LineChartData.YValue),
+        Data = GetChartData()
+    });
+}
+```
 
-```csharp
+**Step 4:**
+
+To remove a series from the chart dynamically use the code below in the **RemoveChartSeries** method. This code removes a series data from the series list named **SeriesCollection** mapped to the [`ChartSeriesCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+
+```c#
+public void RemoveChartSeries()
+{
+    if (SeriesCollection.Count > 0)
+    {
+        SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
+    }
+}
+```
+
+**Action:**
+
+By clicking the **Add Chart Series** button a new series will be added to the chart and similarly by clicking the **Remove Chart Series** button the last series in the chart series collection will be removed from the chart. The complete code snippet for the preceding steps is available below.
+
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
 
-<SfButton @onclick="ChartSeriesAdd">Add Chart Series</SfButton>
-<SfButton @onclick="ChartSeriesRemove">Remove Chart Series</SfButton>
+<SfButton @onclick="AddChartSeries">Add Chart Series</SfButton>
+<SfButton @onclick="RemoveChartSeries">Remove Chart Series</SfButton>
 
 <div class="container">
     <SfChart>
@@ -80,42 +94,10 @@ To remove a series from the chart dynamically, follow the below code.
 
 @code{
 
-    public class SeriesData
-    {
-        public string XName { get; set; }
-        public string YName { get; set; }
-        public List<LineChartData> Data { get; set; }
-    }
-
-    public class LineChartData
-    {
-        public double XValue { get; set; }
-        public double YValue { get; set; }
-    }
-
     List<SeriesData> SeriesCollection;
-    SfChart ChartInstance;
-    public Random random = new Random();
-    List<LineChartData> DataChart;
-    int count = 20;
-    int index = 1;
-    double value = 0;
 
-    protected override void OnInitialized()
-    {
-        base.OnInitialized();
-        SeriesCollection = new List<SeriesData>()
-        {
-          new SeriesData {
-                XName=nameof(LineChartData.XValue),
-                YName=nameof(LineChartData.YValue),
-                Data=GetChartData()
-            }
-        };
-    }
-
-    // here we have added the chart series by adding series data to the SeriesCollection list.
-    void ChartSeriesAdd()
+    // Here we have added the chart series by adding series data to the "SeriesCollection" list.
+    public void AddChartSeries()
     {
         SeriesCollection.Add(new SeriesData
         {
@@ -125,33 +107,86 @@ To remove a series from the chart dynamically, follow the below code.
         });
     }
 
-    // here we have removed the chart series by removing the series data in the SeriesCollection list.
-    void ChartSeriesRemove()
+    // Here we have removed the chart series by removing the series data in the "SeriesCollection" list.
+    public void RemoveChartSeries()
     {
-        if(SeriesCollection.Count > 0)
-        SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
+        if (SeriesCollection.Count > 0)
+        {
+            SeriesCollection.Remove(SeriesCollection[SeriesCollection.Count - 1]);
+        }
     }
 
-    List<LineChartData> GetChartData()
+    protected override void OnInitialized()
     {
+        base.OnInitialized();
+        SeriesCollection = new List<SeriesData>() {
+            new SeriesData {
+                XName = nameof(LineChartData.XValue),
+                    YName = nameof(LineChartData.YValue),
+                    Data = GetChartData()
+            }
+        };
+    }
+
+    private List<LineChartData> GetChartData()
+    {
+        int count = 20;
+        double value = 0;
         List<LineChartData> data = new List<LineChartData>();
+        Random random = new Random();
         for (int i = 0; i < count; i++)
         {
             if (i % 3 == 0)
             {
-                this.value = this.value - (random.Next(0, 100) / 3) * 4;
+                value = value - (random.Next(0, 100) / 3) * 4;
             }
             else if (i % 2 == 0)
             {
-                this.value = this.value + (random.Next(0, 100) / 3) * 4;
+                value = value + (random.Next(0, 100) / 3) * 4;
             }
-            data.Add(new LineChartData() { XValue = i, YValue = this.value });
+            data.Add(new LineChartData()
+            {
+                XValue = i,
+                YValue = value
+            });
         }
         return data;
     }
 
-}
+    public class SeriesData
+    {
+        public string XName
+        {
+            get;
+            set;
+        }
+        public string YName
+        {
+            get;
+            set;
+        }
+        public List<LineChartData> Data
+        {
+            get;
+            set;
+        }
+    }
 
+    public class LineChartData
+    {
+        public double XValue
+        {
+            get;
+            set;
+        }
+        public double YValue
+        {
+            get;
+            set;
+        }
+    }
+
+}
 ```
 
-> You can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.ls.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.

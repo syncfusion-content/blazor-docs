@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Open a dialog on popup item click in Blazor Dropdown Menu Component | Syncfusion
+title: Open a dialog on popup item click in Blazor Dropdown Menu | Syncfusion
 description: Learn here all about Open a dialog on popup item click in Syncfusion Blazor Dropdown Menu component and more.
 platform: Blazor
 control: Dropdown Menu
@@ -9,12 +9,11 @@ documentation: ug
 
 # Open a dialog on popup item click in Blazor Dropdown Menu Component
 
-This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by
-handling dialog open in [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) event of the Dropdown Menu.
+This section explains about how to open a dialog on Dropdown Menu popup item click. This can be achieved by handling dialog open in [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents_ItemSelected) event of the Dropdown Menu.
 
 In the following example, Dialog will open while selecting `Other Folder...` item.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.SplitButtons
 @using Syncfusion.Blazor.Popups

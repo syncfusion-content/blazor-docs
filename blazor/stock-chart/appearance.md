@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Stock Chart Component | Syncfusion
-description: Learn here all about Appearance in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Appearance in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -11,10 +11,9 @@ documentation: ug
 
 ## Stock Chart Title
 
-Stock Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information
-about the data plotted.
+Stock Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information about the data plotted.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -37,7 +36,7 @@ about the data plotted.
     }
 
     public List<ChartData> DataSource = new List<ChartData>
-{
+    {
         new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
         new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
         new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
@@ -59,7 +58,7 @@ about the data plotted.
 
 The `TextStyle` property of chart title provides options to customize the `Size`, `Color`, `FontFamily`, `FontWeight`, `FontStyle`, `Opacity`, `TextAlignment` and `TextOverflow`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -83,7 +82,7 @@ The `TextStyle` property of chart title provides options to customize the `Size`
     }
 
     public List<ChartData> DataSource = new List<ChartData>
-{
+    {
         new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
         new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
         new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },
@@ -104,7 +103,7 @@ Changing theme will affect background color, gridlines, tooltip colors and appea
 
 Stock chart is shipped with several built-in themes such as `Material`, `Fabric`, `Bootstrap` , `HighContrastLight`, `MaterialDark`, `FabricDark`, `FabricDark`, `HighContrast` and `BootstrapDark`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -127,7 +126,7 @@ Stock chart is shipped with several built-in themes such as `Material`, `Fabric`
     }
 
     public List<ChartData> DataSource = new List<ChartData>
-{
+    {
         new ChartData { XValue = new DateTime(2005, 01, 01), YValue = 21 },
         new ChartData { XValue = new DateTime(2006, 01, 01), YValue = 24 },
         new ChartData { XValue = new DateTime(2007, 01, 01), YValue = 36 },

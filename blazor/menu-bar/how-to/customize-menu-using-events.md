@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize Menu Bar Using Events in Blazor Menu Bar Component | Syncfusion
+title: Customize Menu Bar Using Events in Blazor Menu Bar | Syncfusion
 description: Learn here all about Customize Menu Bar Using Events in Syncfusion Blazor Menu Bar component and more.
 platform: Blazor
 control: Menu Bar 

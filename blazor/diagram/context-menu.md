@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor Diagram Component | Syncfusion
-description: Learn here all about Context Menu in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Context Menu in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -18,7 +18,7 @@ Diagram provides some in-built context menu items and allows to define custom me
 
 The [`Show`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramContextMenuSettings.html#Syncfusion_Blazor_Diagrams_DiagramContextMenuSettings_Show) property helps you to enable or disable the context menu. Diagram provides some default context menu items such as copy, cut, select all, order,cut undo, redo, and group options. The following code shows how to enable the default context menu items.
 
-```csharp
+```cshtml
 <SfDiagram id="diagram" Height="600px">
     // Define context menu
     <DiagramContextMenuSettings Show="true">
@@ -30,7 +30,7 @@ The [`Show`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
 
 The following code shows how to disable the default context menu items.
 
-```csharp
+```cshtml
 <SfDiagram id="diagram" Height="600px">
 // Define context menu
     <DiagramContextMenuSettings Show="false">
@@ -225,7 +225,7 @@ The Diagram control triggers the event [`ContextMenuItemClicked`](https://help.s
 
 The following code example shows how to add separate custom context menu items for node and connector. In the following code, the node color context menu item only render for node and the connector color context menu item only render for connector.
 
-```csharp
+```cshtml
 <SfDiagram @ref="@diagram" Height="600px"
             Nodes="@NodeCollection"
             Connectors="@ConnectorCollection"

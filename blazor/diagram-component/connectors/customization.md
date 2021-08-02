@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Customization in Blazor Diagram Component | Syncfusion
-description: Learn here all about Customization in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Customization in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
-control: Diagram
+control: Diagram Component
 documentation: ug
 ---
 
@@ -65,6 +65,74 @@ Diagram allows you to customize the connector appearances . The following topics
     }
 }
 ```
+
+### Decorator appearance
+
+* The source decorator’s `StrokeColor`, `StrokeWidth` and `StrokeDashArray` properties are used to customize the color, width, and appearance of the decorator.
+
+* To set the border stroke color, stroke width, and stroke dash array for the target decorator, use `StrokeColor`, `StrokeWidth`, and `StrokeDashArray`.
+
+* To set the size for source and target decorator, use width and height property.
+
+The following code example illustrates how to customize the appearance of the decorator.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+<SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
+</SfDiagramComponent>
+@code{
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    protected override void OnInitialized()
+    {
+
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            Style = new ShapeStyle()
+            {
+                Fill = "#6495ED",
+                StrokeColor = "#6495ED",
+                StrokeWidth = 1
+            },
+            SourcePoint = new Point()
+            {
+                X = 100,
+                Y = 100
+            },
+            TargetPoint = new Point()
+            {
+                X = 200,
+                Y = 200
+            },
+            Type = Segments.Orthogonal,
+            SourceDecorator = new Decorator()
+            {
+                Shape = DecoratorShapes.Arrow,
+                Height = 15,
+                Width = 15,
+                Style = new ShapeStyle()
+                { StrokeColor = "blue", Fill = "yellow", StrokeWidth = 3 }
+            },
+            TargetDecorator = new Decorator()
+            {
+                Shape = DecoratorShapes.Arrow,
+                Height = 15,
+                Width = 15,
+                Style = new ShapeStyle()
+                {
+                    StrokeColor = "red",
+                    Fill = "yellow",
+                    StrokeWidth = 3
+                }
+            }
+
+        };
+        connectors.Add(Connector);
+    }
+}
+```
+
+![Decorator Appearance](../images/Decorator.png)
 
 ## Padding
 
@@ -139,8 +207,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 ## Bridging
 
-Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default,`BridgeDirection` is set to `Top`. Depending upon the direction given bridging direction appears.
-Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. The following code example illustrates how to enable line bridging.
+Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default,`BridgeDirection` is set to `Top`. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. The following code example illustrates how to enable line bridging.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

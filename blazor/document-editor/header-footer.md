@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Headers and Footers in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Headers and Footers in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Headers and Footers in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -30,9 +30,7 @@ Double click in header or footer region to move the selection into it. You can a
 
 ```csharp
 documentEditor.Selection.GoToHeader();
-```
 
-```csharp
 documentEditor.Selection.GoToFooter();
 ```
 

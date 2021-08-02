@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hierarchical layout in Blazor Diagram Component | Syncfusion
-description: Learn here all about Hierarchical layout in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Hierarchical layout in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -229,7 +229,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
 
 ![Expand and Collapse Icon](../images/layout-expand-collapse-icon.png)
 
-**Note:** You can use the `EnableAnimation` property to enables or disables animation option when a node is expanded or collapsed.
+> You can use the `EnableAnimation` property to enables or disables animation option when a node is expanded or collapsed.
 
 ## Complex hierarchical tree
 

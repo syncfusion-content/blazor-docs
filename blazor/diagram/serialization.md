@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Serialization in Blazor Diagram Component | Syncfusion
-description: Learn here all about Serialization in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Serialization in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -33,8 +33,7 @@ Diagram can also be saved as raster or vector image files. For more information 
 
 ## Load
 
-Diagram is loaded from the serialized string data by server-side method, [`LoadDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_LoadDiagram_System_String_).
-The following code illustrates how to load the diagram from serialized string data.
+Diagram is loaded from the serialized string data by server-side method, [`LoadDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_LoadDiagram_System_String_). The following code illustrates how to load the diagram from serialized string data.
 
 ```csharp
 SfDiagram Diagram;
@@ -46,12 +45,11 @@ string Data = await this.Diagram.SaveDiagram();
 this.Diagram.LoadDiagram(this.Data);
 ```
 
->Note: Before loading a new diagram, existing diagram is cleared.
+> Before loading a new diagram, existing diagram is cleared.
 
 ## Prevent Default Values
 
-The diagram provides supports to simplifying the saved JSON object without adding the default properties that are presented in the diagram.
-The following code illustrates how to simplify the JSON object.
+The diagram provides supports to simplifying the saved JSON object without adding the default properties that are presented in the diagram. The following code illustrates how to simplify the JSON object.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

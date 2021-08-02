@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Expand and Collapse in Blazor Splitter Component | Syncfusion
-description: Learn here all about Expand and Collapse in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about Expand and Collapse in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -15,7 +15,7 @@ The Splitter panes can be configured with built-in expand and collapse functiona
 
 The following code shows how to enable collapsible behavior.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -70,7 +70,7 @@ The output will be as follows.
 
 The Splitter provides public method to control the expand and collapse behavior programmatically using the `Expand` and `Collapse` methods. Refer to the following code example.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons
@@ -149,7 +149,7 @@ The output will be as follows.
 
 You can render specific panes with collapsed state on page load. Specify a Boolean value to the `Collapsed` property to control this behavior. The following code explains how to collapse panes on rendering (the second panes renders with collapsed state).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

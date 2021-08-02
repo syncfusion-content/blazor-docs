@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Legend in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Legend in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -238,8 +238,7 @@ By default, the legend takes 20% - 25% of the Smith Chart's height horizontally,
 
 ### Padding
 
-The space between two legend items can be customized using the [`ItemPadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ItemPadding) property
-and, the space between legend shape and text can be customized using the [`ShapePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ShapePadding) property.
+The space between two legend items can be customized using the [`ItemPadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ItemPadding) property and, the space between legend shape and text can be customized using the [`ShapePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_ShapePadding) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -474,4 +473,4 @@ The title depicts the information about the legend collection in the Smith Chart
 }
 ```
 
-![Smith Chart with legend title](./images/Legend/LegendTitle.png)title](./images/Legend/LegendTitle.png)
+![Smith Chart with legend title](./images/Legend/LegendTitle.png)

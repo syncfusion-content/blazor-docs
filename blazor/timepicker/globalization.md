@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor TimePicker Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor TimePicker component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -126,8 +126,7 @@ namespace blazorCalendars
 
 ## Blazor WebAssembly
 
-By default, the TimePicker week and month names are specific to the `American English` culture. It utilizes the
-`Blazor Internationalization` package to parse and format the date object based on the culture by using the official [UNICODE CLDR](http://cldr.unicode.org/) JSON data.
+By default, the TimePicker week and month names are specific to the `American English` culture. It utilizes the `Blazor Internationalization` package to parse and format the date object based on the culture by using the official [UNICODE CLDR](http://cldr.unicode.org/) JSON data.
 
 The following steps explain how to render the TimePicker in German culture (‘de-DE’) in Blazor Web Assembly application.
 
@@ -224,9 +223,7 @@ The output will be as follows.
 
 ## Right-To-Left
 
-The TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display
-the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_EnableRtl)
-property to set the RTL direction.
+The TimePicker supports RTL (right-to-left) functionality for languages like Arabic and Hebrew to display the text in the right-to-left direction. Use the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_EnableRtl) property to set the RTL direction.
 
 The following code example initializes the TimePicker component in `Arabic` culture.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Columns in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Columns in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Columns in Blazor DataGrid Component
 
-The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format.
-The datagrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of **GridColumn**,
-is necessary to map the datasource values in DataGrid columns.
+The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format. The datagrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of **GridColumn**, is necessary to map the datasource values in DataGrid columns.
 
 > 1. If the column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) is not specified in the dataSource, the column values will be empty.
 > 2. If the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) name contains “dot” operator, it is considered as complex binding.
@@ -19,8 +17,7 @@ is necessary to map the datasource values in DataGrid columns.
 
 ## Auto generation
 
-The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) are automatically generated when
-[`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
+The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) are automatically generated when [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -55,7 +52,7 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusi
 
 It is possible to dynamically build and customize each of the datagrid column using the type of the model.
 
-You can refer the following code example to achieve this
+You can refer the following code example to achieve this.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -87,7 +84,7 @@ You can refer the following code example to achieve this
 }
 ```
 
-The following image represents datagrid with dynamically build columns
+The following image represents datagrid with dynamically build columns,
 ![Dynamic Column](./images/dynamic-column-building.png)
 
 ## Complex data binding
@@ -1042,8 +1039,7 @@ The following screenshot represents the DataGrid with Freight column set to visi
 
 ## Width
 
-The column width can be set using the **Width** property of the **GridColumn**. The unit of the width value can be either in pixel (px) or percentage (%).
-By default, the grid tables use `table-layout:fixed` to speed up the table rendering.
+The column width can be set using the **Width** property of the **GridColumn**. The unit of the width value can be either in pixel (px) or percentage (%). By default, the grid tables use `table-layout:fixed` to speed up the table rendering.
 
 * Columns will respect the width value irrespective of its cell content width.
 * Columns with no width set will share the available space equally.
@@ -1435,7 +1431,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
 }
 ```
 
-The following GIF represents column resizing
+The following GIF represents column resizing, 
 ![Resizing](images/resizing.gif)
 
 > You can disable resizing for a particular column by setting the [`AllowResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.

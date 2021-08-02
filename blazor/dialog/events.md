@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Dialog Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -15,7 +15,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `Created` event triggers when the dialog is created.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -36,7 +36,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `Opened` event triggers when a dialog is opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -57,7 +57,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnOpen` event triggers when the dialog is being opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -78,7 +78,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `Closed` event triggers after the dialog has been closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -99,7 +99,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnClose` event triggers before the dialog is closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -120,7 +120,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnDragStart` event triggers when the user begins dragging the dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -141,7 +141,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnDragStop` event triggers when the user stop dragging the dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -162,7 +162,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnDrag` event triggers when the user drags the dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -183,7 +183,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnOverlayModalClick` event triggers when the overlay of dialog is clicked.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -204,7 +204,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnResizeStart` event triggers when the user begins to resize a dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -225,7 +225,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `Resizing` event triggers when the user resize the dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -246,7 +246,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `OnResizeStop` event triggers when the user stop to resize a dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 
@@ -267,7 +267,7 @@ This section explains the list of events of the Dialog component which will be t
 
 `Destroyed` event triggers when the dialog is destroyed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 

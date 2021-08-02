@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Table of contents in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Table of contents in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Table of contents in Syncfusion Blazor DocumentEditor component and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -13,7 +13,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 ## Inserting table of contents
 
-[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
+[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) exposes an API to insert table of contents at cursor position programmatically. You can specify the settings for table of contents explicitly. Otherwise, the default settings will be applied.
 
 `TableOfContentsSettings` contain the following properties:
 * **startLevel**: Specifies the start level for constructing table of contents.
@@ -26,7 +26,7 @@ The table of contents in a document is same as the list of chapters at the begin
 
 The following code illustrates how to insert table of content in document editor.
 
-```javascript
+```csharp
 TableOfContentsSettings tableOfContentsSettings = new TableOfContentsSettings();
 tableOfContentsSettings.StartLevel = 1;
 tableOfContentsSettings.EndLevel = 3;
@@ -70,7 +70,7 @@ You can update or edit the table of contents using the built-in context menu sho
 
 You can also do it programmatically by using the exposed API. Refer to the following sample code.
 
-```javascript
+```csharp
 documenteditor.Open(''); /*Open any existing document*/
 TableOfContentsSettings tableOfContentsSettings = new TableOfContentsSettings();
 tableOfContentsSettings.StartLevel = 1;
@@ -82,6 +82,6 @@ documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
 
 ```
 
->Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
+> Same method is used for inserting, updating, and editing table of contents. This will work based on the current element at cursor position and the optional settings parameter. If table of contents is present at cursor position, the update operation will be done based on the optional settings parameter. Otherwise, the insert operation will be done.
 
 You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

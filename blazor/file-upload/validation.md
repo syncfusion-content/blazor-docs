@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Validation in Blazor File Upload Component | Syncfusion
-description: Learn here all about Validation in Syncfusion Blazor File Upload component and more.
+description: Checkout and learn here all about Validation in Syncfusion Blazor File Upload component and much more.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Validation in Blazor File Upload Component
 
-The uploader component validate the selected files size and extension using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. The files can be validated before uploading to the server and can be ignored on uploading.
-Also, you can validate the files by setting the HTML attributes to the original input element.
-The validation process occurs on drag-and-drop the files also.
+The uploader component validate the selected files size and extension using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AllowedExtensions), [MinFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MinFileSize) and [MaxFileSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_MaxFileSize) properties. The files can be validated before uploading to the server and can be ignored on uploading. Also, you can validate the files by setting the HTML attributes to the original input element. The validation process occurs on drag-and-drop the files also.
 
 ## File type
 
@@ -24,11 +22,11 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx">
  <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove">
-</UploaderAsyncSettings>
+ </UploaderAsyncSettings>
 </SfUploader>
 ```
 
-The output will be as follows.
+The output will be as follows,
 
 ![uploader](./images/uploader-valid-file.png)
 
@@ -47,6 +45,6 @@ The uploader component allows you to validate the files based on its size. The v
 </SfUploader>
 ```
 
-The output will be as follows.
+The output will be as follows,
 
 ![uploader](./images/uploader-valid-size.png)

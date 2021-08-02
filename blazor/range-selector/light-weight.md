@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Lightweight in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Lightweight in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Lightweight in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 By default, when the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DataSource) for [`RangeNavigatorSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) is empty, a lightweight Range Selector will be shown without Chart. The following code example shows the lightweight Range Selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -45,10 +45,6 @@ By default, when the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfu
 ```
 
 ![Lightweight Range Selector](images/common/light-weight.png)
-
-## See Also
-
-* [Period Selector](./period-selector/)common/light-weight.png)
 
 ## See Also
 

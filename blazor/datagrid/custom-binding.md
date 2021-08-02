@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Binding in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Custom Binding in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Custom Binding in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -171,13 +171,13 @@ If you want to inject some of your service into Custom Adaptor and use the servi
 Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 ```csharp
-    public void ConfigureServices(IServiceCollection services)
-    {
-        ...
-        services.AddSingleton<OrderDataAccessLayer>();
-        services.AddScoped<CustomAdaptor>();
-        services.AddScoped<ServiceClass>();
-    }
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddSingleton<OrderDataAccessLayer>();
+    services.AddScoped<CustomAdaptor>();
+    services.AddScoped<ServiceClass>();
+}
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,
@@ -249,11 +249,11 @@ Custom Adaptor can be created as a component when `DataAdaptor` is extended from
 Ensure to register your service in **Startup.cs** file.
 
 ```csharp
-    public void ConfigureServices(IServiceCollection services)
-    {
-        ...
-        services.AddScoped<Order>();
-    }
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddScoped<Order>();
+}
 ```
 
 The following sample code demonstrates creating Custom Adaptor as a component,

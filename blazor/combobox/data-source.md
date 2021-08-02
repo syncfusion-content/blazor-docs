@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Source in Blazor ComboBox Component | Syncfusion
-description: Learn here all about Data Source in Syncfusion Blazor ComboBox component and more.
+description: Checkout and learn here all about Data Source in Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Data Source in Blazor ComboBox Component
 
-The ComboBox loads the data either from local data sources or
-remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports
-the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
+The ComboBox loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
 The ComboBox also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html) adaptors.
 
@@ -30,8 +28,7 @@ Local data can be represented in two ways as described below.
 
 ### Array of JSON data
 
-The ComboBox can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Name` column from complex data have been mapped to the `Value` field.
 
@@ -52,7 +49,7 @@ In the following example, `Name` column from complex data have been mapped to th
     }
 
     List<Countries> Country = new List<Countries>
-{
+    {
         new Countries() { Name = "Australia", Code = "AU" },
         new Countries() { Name = "Bermuda", Code = "BM" },
         new Countries() { Name = "Canada", Code = "CA" },
@@ -82,8 +79,7 @@ The output will be as follows.
 
 ### Array of Complex data
 
-The ComboBox can generate its list items through an array of complex data. For this,
-the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
+The ComboBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html) property.
 
 In the following example, `Code.ID` column and `Country.CountryID` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
@@ -132,8 +128,7 @@ The output will be as follows.
 
 ## Binding remote data
 
-The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch
-data from the database and bind it to the ComboBox.
+The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the ComboBox.
 
 In the following sample, displayed first 6 contacts from the **Customers** table of `Northwind` Data Service.
 
@@ -246,10 +241,12 @@ The following sample code demonstrates implementing custom data binding using cu
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
     }
+
     public class CustomAdaptor : DataAdaptor
     {
         static readonly HttpClient client = new HttpClient();
         public static List<OrdersDetails> order = OrdersDetails.GetAllRecords();
+        
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<OrdersDetails> DataSource = order;
@@ -284,7 +281,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 To avoid post back for every action, set the ComboBox to load all data on initialization and make the actions process in client-side. To enable this behaviour, use the `Offline` property of [DataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DataManager.html).
 
-The following example for remote data binding and enabled offline mode.
+The following example for remote data binding and enabled offline mode,
 
 ```cshtml
 @using Syncfusion.Blazor.Data

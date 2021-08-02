@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open a Dialog on condition in Blazor Dialog Component | Syncfusion
-description: Learn here all about Open a Dialog on condition in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Open a Dialog on condition in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -9,10 +9,9 @@ documentation: ug
 
 # Open a Dialog on condition in Blazor Dialog Component
 
-You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true.
-In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
+You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true. In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -159,5 +158,4 @@ In the following sample, the success dialog is opened when you enter the usernam
     }
 }
 
-```
 ```

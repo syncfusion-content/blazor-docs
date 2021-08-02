@@ -1,7 +1,7 @@
 ---
 layout: post
 title: File Source in Blazor File Upload Component | Syncfusion
-description: Learn here all about File Source in Syncfusion Blazor File Upload component and more.
+description: Checkout and learn here all about File Source in Syncfusion Blazor File Upload component and much more.
 platform: Blazor
 control: File Upload
 documentation: ug
@@ -11,10 +11,7 @@ documentation: ug
 
 ## Directory upload
 
-The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) component allows you to upload all files in the folders to server by using
-the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled,
-the uploader component processes the files by iterating through the files and sub-directories in a directory.
-It allows you to select only folders instead of files to upload.
+The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-file-upload/) component allows you to upload all files in the folders to server by using the [DirectoryUpload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_DirectoryUpload) property. When this property is enabled, the uploader component processes the files by iterating through the files and sub-directories in a directory. It allows you to select only folders instead of files to upload.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -120,32 +117,31 @@ public void Save(IList<IFormFile> chunkFile, IList<IFormFile> UploadFiles)
         Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
     }
 }
-    [HttpPost("[action]")]
-    public void Remove(IList<IFormFile> UploadFiles)
+
+[HttpPost("[action]")]
+public void Remove(IList<IFormFile> UploadFiles)
+{
+    try
     {
-        try
+        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
+        if (System.IO.File.Exists(filename))
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-            if (System.IO.File.Exists(filename))
-            {
-                System.IO.File.Delete(filename);
-            }
-        }
-        catch (Exception e)
-        {
-            Response.Clear();
-            Response.StatusCode = 200;
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+            System.IO.File.Delete(filename);
         }
     }
+    catch (Exception e)
+    {
+        Response.Clear();
+        Response.StatusCode = 200;
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+    }
+}
 ```
 
 ## Drag and drop
 
-The uploader component allows you to drag and drop the files to upload.
-You can drag the files from file explorer and drop into the drop area.
-By default, the uploader component act as drop area element. The drop area gets highlighted when you drag the files over drop area.
+The uploader component allows you to drag and drop the files to upload. You can drag the files from file explorer and drop into the drop area. By default, the uploader component act as drop area element. The drop area gets highlighted when you drag the files over drop area.
 
 ### Custom drop area
 

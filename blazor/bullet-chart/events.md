@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Bullet Chart Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Bullet Chart component and more.
+description: Checkout and learn here all about available Events in Syncfusion Blazor Bullet Chart component and much more.
 platform: Blazor
 control: Bullet Chart 
 documentation: ug
@@ -138,9 +138,6 @@ The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
     public void LegendRenderHandler(BulletChartLegendRenderEventArgs args)
     {
         // Here you can customize the code.
-    }
-}
-```ze the code.
     }
 }
 ```

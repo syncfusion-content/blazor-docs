@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Tooltip Component | Syncfusion
-description: Learn here all about Customization in Syncfusion Blazor Tooltip component and more.
+description: Checkout and learn here all about Customization in Syncfusion Blazor Tooltip component and much more.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Customization in Blazor Tooltip Component
 
-The Tooltip can be customized by using the `CssClass` property, which accepts custom CSS class names that define specific user-defined
- styles and themes to be applied on the Tooltip element.
+The Tooltip can be customized by using the `CssClass` property, which accepts custom CSS class names that define specific user-defined styles and themes to be applied on the Tooltip element.
 
 ## Tip pointer customization
 
@@ -98,7 +97,8 @@ Output be like the below.
 ## Tooltip customization
 
 The complete look and feel of the Tooltip can be customized by changing it's background color, opacity, content font, etc.
- The following code example shows the way to achieve it.
+
+The following code example shows the way to achieve it.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups

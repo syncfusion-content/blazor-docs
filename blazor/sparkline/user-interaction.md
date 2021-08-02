@@ -1,7 +1,7 @@
 ---
 layout: post
 title: User Interaction in Blazor Sparkline Component | Syncfusion
-description: Learn here all about User Interaction in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about User Interaction in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -123,4 +123,4 @@ The track line tracks data points that are closest to the mouse position or touc
 </SfSparkline>
 ```
 
-![Sparkline Chart with Track Line](images/UserInteraction/Trackline.png)eraction/Trackline.png)
+![Sparkline Chart with Track Line](images/UserInteraction/Trackline.png)

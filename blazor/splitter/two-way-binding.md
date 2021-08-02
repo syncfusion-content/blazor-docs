@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Two way Binding in Blazor Splitter Component | Syncfusion
-description: Learn here all about Two way Binding in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about Two way Binding in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -13,7 +13,7 @@ The splitter `SplitterPane` `Collapsed` property supports the two-way binding an
 
 In the following example, if either the value is changed in checkbox or splitter first pane collpased state, it will reflect in both the checkbox and splitter pane.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons

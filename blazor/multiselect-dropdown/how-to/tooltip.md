@@ -1,13 +1,13 @@
 ---
 layout: post
-title: DropDownList options with tooltip in Blazor MultiSelect Dropdown Component | Syncfusion
+title: Blazor MultiSelect Dropdown List Options with Tooltip | Syncfusion
 description: Learn here all about DropDownList options with tooltip in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
 ---
 
-# DropDownList options with tooltip in Blazor MultiSelect Dropdown Component
+# Blazor MultiSelect Dropdown List Options with Tooltip
 
 You can achieve this behavior by using tooltip component. When the mouse is hovered over the DropDownList option, a tooltip appears with information about the hovered list item.
 

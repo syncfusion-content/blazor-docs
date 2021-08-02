@@ -20,13 +20,14 @@ This article provides step-by-step instructions about how to create Blazor ASP.N
 
 ## Create a Blazor ASP.NET Core Hosted project using .NET Core CLI
 
-1. Run the following command line to create a new Blazor WebAssembly application.
+Run the following command line to create a new Blazor WebAssembly application.
 
-    ```bash
-        dotnet new blazorwasm -o BlazorWasmHosted --hosted
-        cd BlazorWasmHosted
-    ```
-    > If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) for the available options.
+```
+dotnet new blazorwasm -o BlazorWasmHosted --hosted
+cd BlazorWasmHosted
+```
+
+> If you have installed multiple SDK versions and need any specific framework version (net5.0/netcoreapp3.1) project, then add `-f` flag along with `dotnet new blazorwasm` comment. Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) for the available options.
 
 ## Installing Syncfusion Blazor packages in the application
 
@@ -40,10 +41,10 @@ You can use any one of the following standards to install the Syncfusion Blazor 
 
 2. Navigate to created **`Client`[BlazorWasmHosted.Client]** project to configure the Syncfusion Blazor Library.
 
-    ```bash
-        cd Client
-        dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
-        dotnet restore
+    ```
+    cd Client
+    dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
+    dotnet restore
     ```
 
 2. The Syncfusion Blazor Calendars package will be included in the newly created project once the installation process is completed.

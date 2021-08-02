@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Change Size in Blazor Toggle Switch Button Component | Syncfusion
-description: Learn here all about Change Size in Syncfusion Blazor Toggle Switch Button component and more.
+description: Checkout and learn here all about Change Size in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug

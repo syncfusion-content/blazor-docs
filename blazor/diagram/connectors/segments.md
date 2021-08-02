@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Segments in Blazor Diagram Component | Syncfusion
-description: Learn here all about Segments in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Segments in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -54,13 +54,11 @@ To create a straight line, specify the [`Type`](https://help.syncfusion.com/cr/b
 
 ## Orthogonal
 
-Orthogonal segments are used to create segments that are perpendicular to each other.
-
-Set the segment [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Type) as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
+Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Type) as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
 
 Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [`connector.Segments`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_Segments) collection. The following code example illustrates how to create a connector with multiple segments.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -97,7 +95,7 @@ Multiple segments can be defined one after another. To create a connector with m
 
 The [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.OrthogonalSegmentModel.html#Syncfusion_Blazor_Diagrams_OrthogonalSegmentModel_Length) and [`Direction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.OrthogonalSegmentModel.html#Syncfusion_Blazor_Diagrams_OrthogonalSegmentModel_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -152,13 +150,13 @@ The [`Length`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
 
 ![Connector Orthogonal Segment](../images/connector-orthogonal.png)
 
->Note: You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
+> You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
 ## Avoid overlapping
 
 Orthogonal segments are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following preview illustrates how orthogonal segments are re-routed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -261,7 +259,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 To create a bezier segment, the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) of the segment is set as bezier and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

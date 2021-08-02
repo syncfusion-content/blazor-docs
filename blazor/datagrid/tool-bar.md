@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Blazor DataGrid Component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Blazor DataGrid component and more.
+description: Checkout and learn here all about Toolbar in Syncfusion Blazor DataGrid component and much more details.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor DataGrid Component
 
-The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar)
- property accepts either the collection of built-in tool bar items and [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor)
+The DataGrid provides tool bar support to handle datagrid actions. The [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar) property accepts either the collection of built-in tool bar items and [`ItemModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ItemModel.html#Syncfusion_Blazor_Navigations_ItemModel__ctor)
 
 ## Built-in Tool Bar Item
 
@@ -76,8 +75,7 @@ The following screenshots represent a datagrid with Built-in toolbar,
 
 ## Custom Toolbar Items
 
-Custom tool bar items can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar).
-Custom toolbar items can be achieved by using Expand all and Collapse all functions.
+Custom tool bar items can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar). Custom toolbar items can be achieved by using Expand all and Collapse all functions.
 
 ```csharp
 
@@ -526,7 +524,7 @@ The following screenshots represent a datagrid by customizing toolbar text.
 
 ## Customize toolbar styles
 
-You can able to customize the toolbar styles by using the toolbar class(.e-toolbar-item .e-tbar-btn)
+You can able to customize the toolbar styles by using the toolbar class (`.e-toolbar-item .e-tbar-btn`)
 
 ```csharp
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Period Selector in Blazor Range Selector Component | Syncfusion
-description: Learn here all about Period Selector in Syncfusion Blazor Range Selector component and more.
+description: Checkout and learn here all about Period Selector in Syncfusion Blazor Range Selector component and more.
 platform: Blazor
 control: Range Selector
 documentation: ug
@@ -25,7 +25,7 @@ An array of objects that allows the users to specify pre-defined time intervals.
 * Minutes
 * Seconds
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -76,7 +76,7 @@ An array of objects that allows the users to specify pre-defined time intervals.
 
 The [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriodSelectorSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriodSelectorSettings_Position) property allows the users to position the period selector at the **Top** or **Bottom**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -127,7 +127,7 @@ The [`Position`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriodSelectorSettings.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriodSelectorSettings_Height) property allows the users to specify the height of the period selector. The default value of the height property is **43px**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -178,7 +178,7 @@ The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ra
 
 The [`DisableRangeSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DisableRangeSelector) property allows the users to display only the period selector and not the Range Selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -224,7 +224,5 @@ The [`DisableRangeSelector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 ```
 
 ## See Also
-
-* [Disable Range Selector](./light-weight/)
 
 * [Disable Range Selector](./light-weight/)

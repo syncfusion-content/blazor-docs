@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download in Blazor - Syncfusion
-description: Check out the documentation for Download in Blazor
+title: Licensing FAQ for Syncfusion Blazor Components | Syncfusion
+description: Learn here all about frequently asked questions about licensing in Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Licensing FAQ
+# Licensing FAQ for Syncfusion Blazor Components
 
 ## How to upgrade from Trial version after purchasing a license
 
@@ -17,7 +17,7 @@ To upgrade from trial version, there are two possible solutions.
 
 * If you are using Syncfusion controls from [nuget.org](http://172.16.0.76/aspnet-core/licensing/licensing-faq/(https:/www.nuget.org/packages?q=syncfusion)), replace the currently used trial license key with a paid license key that can be generated from the [License & Downloads](https://www.syncfusion.com/account/downloads) section of our website. Refer to [this](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-register-the-syncfusion-license-key) topic for more information regarding registering the license in the application.
 
-> **Note** <br /> License registration is not required if you reference Syncfusion assemblies from Licensed installer. These licensing changes applicable to all evaluators who refers the Syncfusion assemblies from evaluation installer and those who use Syncfusion NuGet packages from [nuget.org](https://www.nuget.org/).
+> License registration is not required if you reference Syncfusion assemblies from Licensed installer. These licensing changes applicable to all evaluators who refers the Syncfusion assemblies from evaluation installer and those who use Syncfusion NuGet packages from [nuget.org](https://www.nuget.org/).
 
 ## Where can I get a license key
 
@@ -31,6 +31,6 @@ Syncfusion license keys are **version and platform specific**, refer to the [KB]
 
 If you have directly obtained Syncfusion assemblies from [NuGet.org](http://nuget.org/) and do not have a Syncfusion account, follow the steps to obtain a free 30-day trial license key:
 
-* Register for a free Syncfusion account [here](https://www.syncfusion.com/account/register)
-* Go to the start trials [page](https://syncfusion.com/account/manage-trials/start-trials) and start a trial
-* Finally proceed to the [Trial & Downloads section](https://www.syncfusion.com/account/manage-trials/downloads) to obtain the [license key](https://blazor.syncfusion.com/documentation/licensing/generating-license-keys)
+* Register for a free Syncfusion account [here](https://www.syncfusion.com/account/register).
+* Go to the start trials [page](https://syncfusion.com/account/manage-trials/start-trials) and start a trial.
+* Finally proceed to the [Trial & Downloads section](https://www.syncfusion.com/account/manage-trials/downloads) to obtain the [license key](https://blazor.syncfusion.com/documentation/licensing/generating-license-keys).

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Spinner in Blazor Spinner Component | Syncfusion
-description: Learn here all about Customize the Spinner in Syncfusion Blazor Spinner component and more.
+description: Checkout and learn here all about Customize the Spinner in Syncfusion Blazor Spinner component and more.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -22,11 +22,9 @@ Provided support to change the default Spinner appearance when initializing Spin
 
 ### CssClass
 
-Add the customized `Class` name to a Spinner root element to customize the Blazor Spinner component UI styles.
+Add the customized `Class` name to a Spinner root element to customize the Blazor Spinner component UI styles. The following code explains how to initialize a Spinner with the custom class name in the Blazor Razor page.
 
-The following code explains how to initialize a Spinner with the custom class name in the Blazor Razor page.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
@@ -68,7 +66,7 @@ You can initialize a modal spinner by adding the class `e-spin-overlay` to the `
 
 The following code explains how to render modal spinner.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
@@ -107,7 +105,7 @@ Add the customize label text in Blazor Spinner component at the bottom.
 
 The following code explains how to set the `Label` on Spinner in Blazor Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
@@ -149,7 +147,7 @@ By default, the `Type` is `None` where the Blazor Spinner is loaded based on the
 
 The following code explains how to use the `Type` property when initializing Spinner in Blazor Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
@@ -184,7 +182,7 @@ By default, the Spinner size is `30px`.  You can change the size of the Spinner 
 
 The following code explains how to use the `Size` property when initializing Spinner in Blazor Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
@@ -226,7 +224,7 @@ You can dynamically change the type of the Spinner using the `Type` property.
 
 The following code explains how to use the `Type` property after creating the Spinner in Blazor Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner
@@ -268,7 +266,7 @@ Add the custom class name to Spinner after creating the Spinner component.
 
 The following code explains how to dynamically add the `CssClass` property after creating the Spinner in Blazor Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Spinner

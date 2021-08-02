@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Select Items in Blazor ListBox Component | Syncfusion
-description: Learn here all about Select Items in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about Select Items in Syncfusion Blazor ListBox component and much more.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -47,4 +47,4 @@ In the following example, `Bugatti Chiron` is selected using [`SelectItems`](htt
 
 Output will be shown as
 
-![ListBox](./../images/select.png)/select.png)
+![ListBox](./../images/select.png)

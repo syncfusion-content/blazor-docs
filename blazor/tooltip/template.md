@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor Tooltip Component | Syncfusion
-description: Learn here all about Template in Syncfusion Blazor Tooltip component and more.
+description: Checkout and learn here all about Template in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug

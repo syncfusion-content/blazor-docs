@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Display geometry shapes in Bing maps in Blazor Maps Component | Syncfusion
+title: Display geometry shapes in Bing maps in Blazor Maps | Syncfusion
 description: Learn here all about Display geometry shapes in Bing maps in Syncfusion Blazor Maps component and more.
 platform: Blazor
 control: Maps

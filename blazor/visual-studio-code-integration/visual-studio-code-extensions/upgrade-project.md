@@ -17,7 +17,7 @@ The following steps help you to migrate your existing Syncfusion Blazor Web Appl
 
 1. Open an existing Syncfusion Blazor Web Application or create a new Syncfusion Blazor Web Application in Visual Studio Code.
 
-2. Right-click the Project file from Explorer (Workspace), select the Migrate Syncfusion Blazor Application to another version… Refer to the following screenshot for more information.
+2. Right-click the Project file from Explorer (Workspace), select the `Migrate Syncfusion Blazor Application to another version…`. Refer to the following screenshot for more information.
 
     ![Migration add-in](../images/Migration.PNG)
 

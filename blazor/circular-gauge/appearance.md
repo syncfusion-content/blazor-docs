@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Circular Gauge Component | Syncfusion
-description: Learn here all about Appearance in Syncfusion Blazor Circular Gauge component and more.
+description: Checkout and learn here all about Appearance in Syncfusion Blazor Circular Gauge component and more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Circular gauge title
 
-You can add a title to the Circular Gauge using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title) property. The title can be customized using the [`CircularGaugeTitleStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
+You can add a title to the Circular Gauge using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_Title)  property. The title can be customized using the [`CircularGaugeTitleStyle`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeTitleStyle.html) tag.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -25,9 +25,7 @@ You can add a title to the Circular Gauge using the [`Title`](https://help.syncf
 
 ## Circular gauge position
 
-The Circular Gauge can be positioned anywhere in the container using the [`CenterX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [`CenterY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) properties which accept values either in percentage or in pixels.
-
-The default value of the [`CenterX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [`CenterY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) property are 50%, so the Circular Gauge will get rendered to the center of the container.
+The Circular Gauge can be positioned anywhere in the container using the [`CenterX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [`CenterY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) properties which accept values either in percentage or in pixels. The default value of the [`CenterX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterX) and [`CenterY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_CenterY) property are 50%, so the Circular Gauge will get rendered to the center of the container.
 
 ### In pixel
 

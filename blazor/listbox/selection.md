@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor ListBox Component | Syncfusion
-description: Learn here all about Selection in Syncfusion Blazor ListBox component and more.
+description: Checkout and learn here all about Selection in Syncfusion Blazor ListBox component and much more details.
 platform: Blazor
 control: List Box
 documentation: ug
@@ -46,15 +46,13 @@ To enable single selection in the ListBox, [`Mode`](https://help.syncfusion.com/
 
 ```
 
-Output will be shown as
+Output will be shown as,
 
 ![ListBox](./images/single-selection.png)
 
 ## Multiple selection
 
-To enable multiple selection in the ListBox, `Mode` should be set as `Multiple` in `SelectionSettings` property.
-
-To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
+To enable multiple selection in the ListBox, `Mode` should be set as `Multiple` in `SelectionSettings` property. To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections.
 
 > By default, the selection mode is set as `Multiple`.
 
@@ -86,7 +84,7 @@ To select multiple items, use the SHIFT, CTRL, and arrow keys to make selections
 
 ```
 
-Output will be shown as
+Output will be shown as,
 
 ![ListBox](./images/multiple-selection.png)
 
@@ -96,7 +94,7 @@ ListBox supports checkbox selection which is used to select multiple items. To e
 
 ### Select All
 
-To select all the items in the ListBox, enable the [`ShowSelectAll`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property to true.
+To select all the items in the ListBox, enable the [`ShowSelectAll`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxSelectionSettings.html#Syncfusion_Blazor_DropDowns_ListBoxSelectionSettings_ShowSelectAll) property to `true`.
 
 ```csharp
 
@@ -127,6 +125,6 @@ To select all the items in the ListBox, enable the [`ShowSelectAll`](https://hel
 
 ```
 
-Output will be shown as
+Output will be shown as,
 
 ![ListBox](./images/checkbox.png)

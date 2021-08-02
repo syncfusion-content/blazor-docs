@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Sparkline Component | Syncfusion
-description: Learn here all about Dimensions in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Dimensions in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -26,6 +26,7 @@ The size of the Sparkline Chart is determined by the container size, and it can 
         public int Year;
         public int Population;
     };
+    
     private List<PopulationReport> populationData = new List<PopulationReport> {
         new  PopulationReport { Year= 2005, Population= 20090440 },
         new  PopulationReport { Year= 2006, Population= 20264080 },

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -161,7 +161,7 @@ The Rich Text Editor provides an option to localize its strings; it is used for 
 
 The following sample code block demonstrates that the Rich Text Editor control rendered with `de-DE` German language.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -190,7 +190,7 @@ Specifies the direction of the Rich Text Editor component using the `EnableRtl` 
 
 > `EnableRtl` property will not change, based on current culture.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show Not Operator in Blazor QueryBuilder Component | Syncfusion
-description: Learn here all about Show Not Operator in Syncfusion Blazor QueryBuilder component and more.
+description: Checkout and learn here all about Show Not Operator in Syncfusion Blazor QueryBuilder component and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
@@ -13,7 +13,7 @@ The Querybuilder provides `Not` operator along with AND, OR operators to filter 
 
 > By default `EnableNotCondition` set as false.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 

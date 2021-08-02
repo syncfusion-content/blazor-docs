@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Printing and Exporting in Blazor Diagram Component | Syncfusion
-description: Learn here all about Printing and Exporting in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Printing and Exporting in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -9,8 +9,7 @@ documentation: ug
 
 # Printing and Exporting in Blazor Diagram Component
 
-Diagram provides support to export its content as image/svg files.
-The server-side method [`ExportDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ExportDiagram_Syncfusion_Blazor_Diagrams_IExportOptions_) helps to export the diagram. The following code illustrates how to export the diagram as image.
+Diagram provides support to export its content as image/svg files. The server-side method [`ExportDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_ExportDiagram_Syncfusion_Blazor_Diagrams_IExportOptions_) helps to export the diagram. The following code illustrates how to export the diagram as image.
 
 <!-- markdownlint-disable MD033 -->
 

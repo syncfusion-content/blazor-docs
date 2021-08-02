@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render a dialog header dynamically in Blazor Dialog Component | Syncfusion
+title: Render a dialog header dynamically in Blazor Dialog | Syncfusion
 description: Learn here all about Render a dialog header dynamically in Syncfusion Blazor Dialog component and more.
 platform: Blazor
 control: Dialog
@@ -11,9 +11,9 @@ documentation: ug
 
 By default, the dialog is rendered without header. You can update its header dynamically using the `Header` property.
 
-> In the following code, the dialog header is rendered on a button click.
+In the following code, the dialog header is rendered on a button click.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

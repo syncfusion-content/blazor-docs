@@ -11,7 +11,7 @@ documentation: ug
 
 By default, label with ripple effect is not available in Toggle Switch Button. You can achieve this using `IJSRuntime` method. The following example illustrates how to enable ripple effect for labels in Toggle Switch Button component.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 

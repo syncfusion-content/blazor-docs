@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Radio Button For and Model Binding in Blazor RadioButton Component | Syncfusion
+title: Model Binding in Blazor RadioButton Component | Syncfusion
 description: Learn here all about Radio Button For and Model Binding in Syncfusion Blazor RadioButton component and more.
 platform: Blazor
 control: Radio Button
@@ -13,7 +13,7 @@ This section demonstrates the Strongly typed extension support in Radio Button. 
 
 In this sample, first check the male value and click the submit button to post the selected value in the Radio Button. When female value is checked, validation error message will be shown below the Radio Button.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using System.ComponentModel.DataAnnotations

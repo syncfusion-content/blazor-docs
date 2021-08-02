@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Export in Blazor Barcode Component | Syncfusion
-description: Learn here all about Export in Syncfusion Blazor Barcode component and more.
+description: Checkout and learn here all about Export functionality in Syncfusion Blazor Barcode component and much more.
 platform: Blazor
 control: Barcode
 documentation: ug
@@ -49,7 +49,6 @@ Barcode provides support to export as an image in the specified image type and r
 
 ```
 
->**Note:**
->Format is to specify the type/format of the exported file. You can export Barcode to the following formats:
+> Format is to specify the type/format of the exported file. You can export Barcode to the following formats:
 >* JPG.
 >* PNG.

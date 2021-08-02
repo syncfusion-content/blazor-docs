@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Stock Chart Component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Tooltip in Syncfusion Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -15,10 +15,9 @@ Stock Chart will display details about the points through tooltip, when the mous
 
 ## Default Tooltip
 
-By default, tooltip is not visible. Enable the tooltip by setting
-[`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property to true .
+By default, tooltip is not visible. Enable the tooltip by setting [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Enable) property to true .
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -44,7 +43,7 @@ By default, tooltip is not visible. Enable the tooltip by setting
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
          new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
          new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -70,7 +69,7 @@ By default, tooltip is not visible. Enable the tooltip by setting
 
 By default, tooltip shows information of x and y value in points. In addition to that, you can show more information in tooltip. For example the format `${point.x} : ${point.high}` shows point x and high value.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -96,7 +95,7 @@ By default, tooltip shows information of x and y value in points. In addition to
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
          new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
          new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -116,7 +115,7 @@ By default, tooltip shows information of x and y value in points. In addition to
 
 The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Fill) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Border) properties are used to customize the background color and border of the tooltip respectively. The [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_TextStyle) property in the tooltip is used to customize the font of the tooltip text.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -142,7 +141,7 @@ The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Stoc
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
          new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
          new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},

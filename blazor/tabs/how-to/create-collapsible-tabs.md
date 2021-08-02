@@ -15,7 +15,7 @@ You can achieve collapse and expand functionality in Tab by adding/removing a cu
 * Bind the `select`  event for Tab to collapse the initially selected Tab item and bind custom click handler for the Tab headers.
 * In the event handler, add and remove 'collapse' class to hide and show the corresponding Tab content.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

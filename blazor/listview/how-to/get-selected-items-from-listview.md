@@ -1,16 +1,15 @@
 ---
 layout: post
-title: Get selected items from listview in Blazor ListView Component | Syncfusion
-description: Learn here all about Get selected items from listview in Syncfusion Blazor ListView component and more.
+title: Get selected items from Blazor ListView Component | Syncfusion
+description: Learn here all about getting the selected items in Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug
 ---
 
-# Get selected items from listview in Blazor ListView Component
+# Get selected items from Blazor ListView Component
 
-Single or many items can be selected by users in the ListView control. An API is used to get selected items from the
-list items. This is called as the `GetCheckedItemsAsync` method.
+Single or many items can be selected by users in the ListView control. An API is used to get selected items from the list items. This is called as the `GetCheckedItemsAsync` method.
 
 **`GetCheckedItemsAsync` method**
 
@@ -105,4 +104,4 @@ list items. This is called as the `GetCheckedItemsAsync` method.
 </style>
 ```
 
-![ListView - Get Selected](../images/list/get-selected-items-from-listview.png))
+![ListView - Get Selected](../images/list/get-selected-items-from-listview.png)

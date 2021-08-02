@@ -38,15 +38,15 @@ The following table illustrates the HTML attributes and their equivalent Syncfus
 <table>
 <tr>
 <td><b>HTML Attribute</b></td>
-<td><b>Syncfusion API<b></td>
-<td><b>Components<b></td>
+<td><b>Syncfusion API</b></td>
+<td><b>Components</b></td>
 </tr>
 <tr>
 <td><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#attr-id">id</a></td>
 <td>ID</td>
 <td>
 <ul>
-<li><a href="#using-html-attributes-and-dom-events-to-the-input-element">all</a></li>
+<li>All Components</li>
 </ul>
 </td>
 </tr>

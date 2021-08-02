@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Tooltip in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Tooltip in Syncfusion Blazor TreeMap component and much more details.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -112,4 +112,4 @@ Tooltip can be rendered as a custom component using the [`TooltipTemplate`](http
 
 > Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![TreeMap with tooltip template](images/Tooltip/Template.png)oltip/Template.png)
+![TreeMap with tooltip template](images/Tooltip/Template.png)

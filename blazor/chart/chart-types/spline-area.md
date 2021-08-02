@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Spline Area in Blazor Charts Component | Syncfusion
-description: Learn here all about Spline Area in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about Spline Area Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,14 +11,15 @@ documentation: ug
 
 ## Spline Area
 
-[`Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) represents time dependent data and visualizes the trends at equal intervals, but with the data points connected with a smooth line. To render a [`Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart), use series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`Spline Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea).
+[`Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) represents time dependent data and visualizes trends at equal intervals, but with data points connected with a smooth line. To render a [`Spline Area Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart), set the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Spline Area`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_SplineArea).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Type="ChartSeriesType.SplineArea">
         </ChartSeries>
@@ -31,8 +32,9 @@ documentation: ug
         public string X { get; set;}
         public double Y { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
-   {
+    {
         new ChartData { X= "South Korea", Y= 39.4 },
         new ChartData { X= "India", Y= 61.3 },
         new ChartData { X= "Pakistan", Y= 20.4 },
@@ -48,7 +50,7 @@ documentation: ug
     };
 }
 
-```
+``` 
 
 ![Spline Area](../images/chart-types-images/splinearea.png)
 
@@ -63,12 +65,13 @@ The following properties can be used to customize the [`Spline Area`](https://he
 * [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) – Specifies the dashes of series border.
 * [`ChartSeriesBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesBorder.html) – Specifies the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Color) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonBorder.html#Syncfusion_Blazor_Charts_ChartCommonBorder_Width) of series border.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
 <SfChart Title="Olympic Medals">
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"></ChartPrimaryXAxis>
+	
     <ChartSeriesCollection>
         <ChartSeries DataSource="@MedalDetails" XName="X" YName="Y" Opacity="0.5" DashArray="5,5" Fill="blue" Type="ChartSeriesType.SplineArea">
             <ChartSeriesBorder Width="2" Color="black"></ChartSeriesBorder>
@@ -82,6 +85,7 @@ The following properties can be used to customize the [`Spline Area`](https://he
         public string X { get; set; }
         public double Y { get; set; }
     }
+	
     public List<ChartData> MedalDetails = new List<ChartData>
 	{
         new ChartData { X= "South Korea", Y= 39.4 },
@@ -99,13 +103,13 @@ The following properties can be used to customize the [`Spline Area`](https://he
     };
 }
 
-```
+``` 
 
-![Custom Spline Area](../images/chart-types-images/custom-spline-area.png)
+![Spline Area with series customization](../images/chart-types-images/custom-spline-area.png)
 
-> Refer to our Blazor [`Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our Blazor [`Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip)* [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

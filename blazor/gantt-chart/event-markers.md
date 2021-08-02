@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Event Markers in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Event Markers in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Event Markers in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -117,4 +117,4 @@ The event markers in the Gantt Chart component is used to highlight the importan
 
 ![Alt text](images/eventmarkers.png)
 
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

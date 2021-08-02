@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor ComboBox Component | Syncfusion
-description: Learn here all about Localization in Syncfusion Blazor ComboBox component and more.
+description: Checkout and learn here all about Localization in Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -44,108 +44,106 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using System.Globalization;
-using Microsoft.AspNetCore.Localization;
+    ```csharp
+    using Syncfusion.Blazor;
+    using System.Globalization;
+    using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
-{
-    public class Startup
+    namespace BlazorApplication
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Startup
         {
             ....
             ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
+            public void ConfigureServices(IServiceCollection services)
             {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
+                ....
+                ....
+                services.AddSyncfusionBlazor();
+                services.AddLocalization(options => options.ResourcesPath = "Resources");
+                services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new CultureInfo("de")
-                };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
-                };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
-```
-
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace blazorDropdowns
-{
-     public class SampleLocalizer : ISyncfusionStringLocalizer
-    {
-
-        public string Get(string key)
-        {
-            return this.Manager.GetString(key);
-        }
-
-        public System.Resources.ResourceManager Manager
-        {
-            get
-            {
-                return blazorDropdowns.Resources.SyncfusionBlazorLocale.ResourceManager;
+                    // define the list of cultures your app will support
+                    var supportedCultures = new List<CultureInfo>()
+                    {
+                        new CultureInfo("de")
+                    };
+                    // set the default culture
+                    options.DefaultRequestCulture = new RequestCulture("de");
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+                    new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                    };
+                });
+                services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
             }
         }
     }
-}
-```
+    ```
+
+* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+
+    ```csharp
+    using Syncfusion.Blazor;
+
+    namespace blazorDropdowns
+    {
+        public class SampleLocalizer : ISyncfusionStringLocalizer
+        {
+
+            public string Get(string key)
+            {
+                return this.Manager.GetString(key);
+            }
+
+            public System.Resources.ResourceManager Manager
+            {
+                get
+                {
+                    return blazorDropdowns.Resources.SyncfusionBlazorLocale.ResourceManager;
+                }
+            }
+        }
+    }
+    ```
 
 * Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the Value column as follows.
 
-| **Name** | **Value (in Deutsch culture)** |
-| --- | --- |
-| ComboBox_ActionFailureTemplate | Die Anfrage ist fehlgeschlagen |
-| ComboBox_NoRecordsTemplate | Keine Aufzeichnungen gefunden |
+    | **Name** | **Value (in Deutsch culture)** |
+    | --- | --- |
+    | ComboBox_ActionFailureTemplate | Die Anfrage ist fehlgeschlagen |
+    | ComboBox_NoRecordsTemplate | Keine Aufzeichnungen gefunden |
 
 * Finally, Specify the culture for ComboBox using `locale` property.
 
-```cshtml
-@using Syncfusion.Blazor.DropDowns
+    ```cshtml
+    @using Syncfusion.Blazor.DropDowns
 
-<SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" Locale="de" AllowFiltering="true" DataSource="@LocalData">
-    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
-</SfComboBox>
+    <SfComboBox TValue="string" TItem="Games" Placeholder="Select a game" Locale="de" AllowFiltering="true" DataSource="@LocalData">
+        <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
+    </SfComboBox>
 
-@code {
-    public class Games
-    {
-        public string ID { get; set; }
-        public string Text { get; set; }
+    @code {
+        public class Games
+        {
+            public string ID { get; set; }
+            public string Text { get; set; }
+        }
+        List<Games> LocalData = new List<Games> {
+        new Games() { ID= "Game1", Text= "American Football" },
+        new Games() { ID= "Game2", Text= "Badminton" },
+        new Games() { ID= "Game3", Text= "Basketball" },
+        new Games() { ID= "Game4", Text= "Cricket" },
+        new Games() { ID= "Game5", Text= "Football" },
+        new Games() { ID= "Game6", Text= "Golf" }
+    };
     }
-    List<Games> LocalData = new List<Games> {
-    new Games() { ID= "Game1", Text= "American Football" },
-    new Games() { ID= "Game2", Text= "Badminton" },
-    new Games() { ID= "Game3", Text= "Basketball" },
-    new Games() { ID= "Game4", Text= "Cricket" },
-    new Games() { ID= "Game5", Text= "Football" },
-    new Games() { ID= "Game6", Text= "Golf" }
-  };
-}
-```
+    ```
 
 ## Blazor WebAssembly
 
-The Localization library allows you to localize the static text content of the
-[NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate)
-and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) properties according to the culture currently assigned to the ComboBox.
+The Localization library allows you to localize the static text content of the [NoRecordsTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_NoRecordsTemplate) and [ActionFailureTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ActionFailureTemplate) properties according to the culture currently assigned to the ComboBox.
 
 | Locale key | en-US (default)
 |------|------
@@ -156,42 +154,42 @@ The following steps explain how to render the ComboBox in French culture (fr) in
 
 * Open the **program.cs** file and add the below configuration in the **Builder ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using Microsoft.AspNetCore.Builder;
+    ```csharp
+    using Syncfusion.Blazor;
+    using Microsoft.AspNetCore.Builder;
 
-namespace WebAssemblyLocale
-{
-    public class Program
+    namespace WebAssemblyLocale
     {
-        public static async Task Main(string[] args)
+        public class Program
         {
-            ....
-            ....
-            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            public static async Task Main(string[] args)
             {
-                // Define the list of cultures your app will support
-                var supportedCultures = new List<System.Globalization.CultureInfo>()
+                ....
+                ....
+                builder.Services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new System.Globalization.CultureInfo("en-US"),
-                    new System.Globalization.CultureInfo("fr"),
-                };
+                    // Define the list of cultures your app will support
+                    var supportedCultures = new List<System.Globalization.CultureInfo>()
+                    {
+                        new System.Globalization.CultureInfo("en-US"),
+                        new System.Globalization.CultureInfo("fr"),
+                    };
 
-                // Set the default culture
-                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("fr");
+                    // Set the default culture
+                    options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("fr");
 
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<Microsoft.AspNetCore.Localization.IRequestCultureProvider>() {
-                 new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider()
-                };
-            });
-            ....
-            ....
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<Microsoft.AspNetCore.Localization.IRequestCultureProvider>() {
+                    new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider()
+                    };
+                });
+                ....
+                ....
+            }
         }
     }
-}
-```
+    ```
 
 * To download the locale definition of Blazor components, use this [link](https://github.com/syncfusion/ej2-locale).
 

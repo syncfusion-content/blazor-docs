@@ -1,7 +1,7 @@
 ---
 layout: post
 title: OpenStreetMap in Blazor Maps Component | Syncfusion
-description: Learn here all about OpenStreetMap in Syncfusion Blazor Maps component and more.
+description: Checkout and learn here all about OpenStreetMap in Syncfusion Blazor Maps component and much more details.
 platform: Blazor
 control: Maps
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # OpenStreetMap in Blazor Maps Component
 
-The OpenStreetMap (OSM) is the world map built by a community of developers; it is free to use under an open license. It allows you to view geographical data in a collaborative way from anywhere on the earth. The OSM map provides small tile images based on our requests and combines those images into a single image to display the map area in the Maps component.
+The OpenStreetMap (OSM) is the world map built by a community of developers. it is free to use under an open license. It allows you to view geographical data in a collaborative way from anywhere on the earth. The OSM map provides small tile images based on our requests and combines those images into a single image to display the map area in the Maps component.
 
 ## Add OpenStreetMap
 

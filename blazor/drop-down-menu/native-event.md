@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Dropdown Menu Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor Dropdown Menu component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor Dropdown Menu component and much more.
 platform: Blazor
 control: Dropdown Menu
 documentation: ug
@@ -76,7 +76,6 @@ Above defined events are bind the Dropdown Menu component. Here, we have explain
     {
 
     }
-
 }
 
 ```

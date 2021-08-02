@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor TreeMap Component | Syncfusion
-description: Learn here all about Print and Export in Syncfusion Blazor TreeMap component and more.
+description: Checkout and learn here all about Print and Export in Syncfusion Blazor TreeMap component and much more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -101,4 +101,4 @@ The following code example shows how to export the TreeMap in [`PNG`](https://he
 }
 ```
 
-> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.GrowthReport**.
+> Refer to the [code block](#print) to know about the property value of the **GrowthReport**.

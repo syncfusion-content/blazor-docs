@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Toolbar in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about Toolbar in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about Toolbar in Syncfusion Blazor Gantt Chart component and much more details.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -131,7 +131,7 @@ The following table shows built-in toolbar items and its actions.
 
 ![Default toolbar](images/default-toolbar.png)
 
-> * The `Toolbar` has options to define both built-in and custom toolbar items.
+> The `Toolbar` has options to define both built-in and custom toolbar items.
 
 ## Custom Toolbar Items
 
@@ -489,4 +489,4 @@ You can enable or disable the toolbar items by using the `EnableItems` method.
 
 ![Alt text](images/enableToolbar.gif)
 
-> `Note:` You can refer to our [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Gantt Chart`](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

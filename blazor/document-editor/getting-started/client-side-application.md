@@ -1,13 +1,13 @@
 ---
 layout: post
-title: WebAssembly App in Visual Studio 2019 in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about WebAssembly App in Visual Studio 2019 in Syncfusion Blazor DocumentEditor component and more.
+title: Getting Stared with Blazor DocumentEditor in WebAssembly | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor DocumentEditor in Blazor WebAssembly (Client Side) App using Visual Studio and more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
 ---
 
-# WebAssembly App in Visual Studio 2019 in Blazor DocumentEditor Component
+# Blazor DocumentEditor Component in WebAssembly App using Visual Studio
 
 This article provides the step-by-step instructions to integrate the [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -15,7 +15,7 @@ Steps to get started with Word processor component for Blazor:
 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
-    ```bash
+    ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-preview2.20160.5
     ````
 
@@ -42,13 +42,13 @@ Steps to get started with Word processor component for Blazor:
 
 8. Open the **~/_Imports.razor** file and import the ``Syncfusion.Blazor.DocumentEditor``.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor.DocumentEditor
     ```
 
 9. Add the Syncfusion Word processor component (a.k.a DocumentEditor) to any web pages (razor) in the `Pages` folder. For example, the DocumentEditorContainer component is added in the **~/Pages/Index.razor** page.
 
-    ```csharp
+    ```cshtml
     <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
     ```
 
@@ -71,10 +71,10 @@ Steps to get started with Word processor component for Blazor:
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css).
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap4.css).
 
 12. Run the application. The Word processor component will be rendered in the web browser.
 
     ![DocumentEditor Sample](../images/browser-output.png)
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor ProgressBar Component | Syncfusion
-description: Learn here all about Events in Syncfusion Blazor ProgressBar component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor ProgressBar component and much more details.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
@@ -121,9 +121,6 @@ The `Loaded` event triggers after the component is rendered.
     public void LoadedHandler(System.EventArgs args)
     {
         // Here you can customize the code.
-    }
-}
-```omize the code.
     }
 }
 ```

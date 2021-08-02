@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Binding in Blazor ListView Component | Syncfusion
-description: Learn here all about Data Binding in Syncfusion Blazor ListView component and more.
+description: Checkout and learn here all about Data Binding in Syncfusion Blazor ListView component and much more.
 platform: Blazor
 control: Listview
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor ListView Component
 
-ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager.
-
-ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
+ListView provides an option to load the data either from local dataSource or remote data services. This can be done through the dataSource property that supports the data type of array or DataManager. ListView supports different kind of data services such as OData, OData V4, and Web API, and data formats like XML, JSON, and, JSONP with the help of DataManager Adaptors.
 
 | Fields | Type | Description |
 |------|------|-------------|
@@ -280,7 +278,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 </style>
 ```
 
->You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
+> You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
 
 The following GIF represents the ListView with Add, Delete the list items,
 ![ListView CRUD operations](./images/EFListView.gif)

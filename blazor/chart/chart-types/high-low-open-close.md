@@ -1,7 +1,7 @@
 ---
 layout: post
 title: High Low Open Close in Blazor Charts Component | Syncfusion
-description: Learn here all about High Low Open Close in Syncfusion Blazor Charts component and more.
+description: Checkout and learn here all about High Low Open Close Chart in Syncfusion Blazor Charts component and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 ## High Low Open Close
 
-[`HiloOpenClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series is used to represent the **Low**, **High**, **Open** and **Closing** values over time and it can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartSeries~Type.html) as [`HiloOpenClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose).
+[`HiloOpenClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series is used to represent the **Low**, **High**, **Open** and **Closing** values over time and it can be rendered by specifying the series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`HiloOpenClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose).
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -38,7 +38,7 @@ documentation: ug
     }
 
     public List<Data> StockDetails = new List<Data>
-{
+	{
         new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
         new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
         new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
@@ -47,16 +47,13 @@ documentation: ug
     };
 }
 
-
-
 ```
 
 ## Series Customization
 
-In [`HiloOpenClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series, [`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) property is used to fill the segment when the open value is greater than the close value and [`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) property is used to fill the segment when the open
-value is less than the close value. By default, [`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) is set as **Red** and [`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) is set as **Green**.
+In [`HiloOpenClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_HiloOpenClose) series, [`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) property is used to fill the segment when the open value is greater than the close value and [`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) property is used to fill the segment when the open value is less than the close value. By default, [`BullFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BullFillColor) is set as **green** and [`BearFillColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_BearFillColor) is set as **red**.
 
-```csharp
+```cshtml 
 
 @using Syncfusion.Blazor.Charts
 
@@ -64,7 +61,7 @@ value is less than the close value. By default, [`BullFillColor`](https://help.s
     <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.Category"/>    
 
     <ChartSeriesCollection>
-        <ChartSeries DataSource="@StockDetails" XName="X" High="High" BearFillColor="#e56590" BullFillColor="#f8b883" Low="Low" Open="Open" Close="Close" Type="ChartSeriesType.HiloOpenClose">
+        <ChartSeries DataSource="@StockDetails" XName="X" High="High" Width="5" BearFillColor="darkred" BullFillColor="darkgreen" Low="Low" Open="Open" Close="Close" Type="ChartSeriesType.HiloOpenClose">
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
@@ -81,7 +78,7 @@ value is less than the close value. By default, [`BullFillColor`](https://help.s
     }
 
     public List<Data> StockDetails = new List<Data>
-{
+	{
         new Data{ X= "Jan", Open= 120, High= 160, Low= 100, Close= 140 },
         new Data{ X= "Feb", Open= 150, High= 190, Low= 130, Close= 170 },
         new Data{ X= "Mar", Open= 130, High= 170, Low= 110, Close= 150 },
@@ -92,11 +89,11 @@ value is less than the close value. By default, [`BullFillColor`](https://help.s
 
 ```
 
-![HiloOpenClose with Series Customization](../images/financial-types/custom.png)
+![HiloOpenClose with series customization](../images/financial-types/custom.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 
 * [Data Label](../data-labels)
-* [Tooltip](../tool-tip) [Tooltip](../tool-tip)
+* [Tooltip](../tool-tip)

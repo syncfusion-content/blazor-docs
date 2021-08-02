@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Marker and Data labels in Blazor Smith Chart Component | Syncfusion
-description: Learn here all about Marker and Data labels in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about Marker and Data labels in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -254,4 +254,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)te.png)
+![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)

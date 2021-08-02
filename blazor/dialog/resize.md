@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resizing in Blazor Dialog Component | Syncfusion
-description: Learn here all about Resizing in Syncfusion Blazor Dialog component and more.
+description: Checkout and learn here all about Resizing in Syncfusion Blazor Dialog component and much more details.
 platform: Blazor
 control: Dialog
 documentation: ug
@@ -13,7 +13,7 @@ The Dialog supports resizing feature. To resize the dialog, we have to select an
 
 The resizable dialog can be created by setting the `EnableResize` property to true, which is used to change the size of a dialog dynamically and view its content with expanded mode. The `ResizeHandles` property can also be configured for all the which directions in which the dialog should be resized. When you configure the target property along with the `EnableResize` property, the dialog can be resized within its specified target container.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

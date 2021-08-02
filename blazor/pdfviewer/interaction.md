@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interaction mode in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Interaction mode in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Interaction mode in Syncfusion Blazor PDF Viewer component and more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -18,7 +18,7 @@ The built-in toolbar of PDF Viewer contains the following two interaction option
 
 In this mode, the text selection can be performed in the PDF document loaded in the PDF Viewer. It allows users to select and copy text from the PDF files. This is helpful for copying and sharing text content.
 
->Note: The panning and scrolling of the pages by touch cannot be performed in this mode.
+> The panning and scrolling of the pages by touch cannot be performed in this mode.
 
 You can enable or disable text selection by setting the `EnableTextSelection` property.
 

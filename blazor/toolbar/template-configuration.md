@@ -22,7 +22,7 @@ The Toolbar can be rendered by item based collection and by HTML elements.  To r
 
 Here, the template ID, `#template_toolbar` is directly appended to the Toolbar.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -64,7 +64,7 @@ Class              | Description
   e-popup-text     | Button text is only  visible in the `Popup`.
   e-toolbar-text   | Button text is only visible on the `Toolbar`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

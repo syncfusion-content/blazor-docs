@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sidebar for specific content in Blazor Sidebar Component | Syncfusion
-description: Learn here all about Sidebar for specific content in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about Sidebar for specific content in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -15,7 +15,7 @@ By default, Sidebar initializes context to the body element. Using the `Target` 
 
 In the following sample, click the toggle button to expand or collapse the sidebar and add button in sidebar element.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

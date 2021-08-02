@@ -76,9 +76,9 @@ Represents an appointment that is created for an entire day such as holiday even
 You can make use of the CSS customization to prevent the display of all-day row appointments on the Scheduler UI.
 
 ```css
-    .e-schedule .e-date-header-wrap .e-schedule-table thead {
-        display: none;
-    }
+.e-schedule .e-date-header-wrap .e-schedule-table thead {
+    display: none;
+}
 ```
 
 ## Recurring events

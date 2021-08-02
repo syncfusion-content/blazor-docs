@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range Band in Blazor Sparkline Component | Syncfusion
-description: Learn here all about Range Band in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about Range Band in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -31,4 +31,4 @@ The following properties are used for the customization of the range band:
 </SfSparkline>
 ```
 
-![Sparkline Charts with multiple range band](./images/rangeband/MultipleRangeBand.png)geBand.png)
+![Sparkline Charts with multiple range band](./images/rangeband/MultipleRangeBand.png)

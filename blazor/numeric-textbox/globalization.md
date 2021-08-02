@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Numeric TextBox Component | Syncfusion
-description: Learn here all about Globalization in Syncfusion Blazor Numeric TextBox component and more.
+description: Checkout and learn here all about Globalization in Syncfusion Blazor Numeric TextBox component and more.
 platform: Blazor
 control: Numeric TextBox
 documentation: ug
@@ -44,131 +44,129 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using System.Globalization;
-using Microsoft.AspNetCore.Localization;
+    ```csharp
+    using Syncfusion.Blazor;
+    using System.Globalization;
+    using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
-{
-    public class Startup
+    namespace BlazorApplication
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Startup
         {
             ....
             ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
+            public void ConfigureServices(IServiceCollection services)
             {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
+                ....
+                ....
+                services.AddSyncfusionBlazor();
+                services.AddLocalization(options => options.ResourcesPath = "Resources");
+                services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new CultureInfo("de")
-                };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
-                };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
-```
-
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace blazorInputs
-{
-     public class SampleLocalizer : ISyncfusionStringLocalizer
-    {
-
-        public string Get(string key)
-        {
-            return this.Manager.GetString(key);
-        }
-
-        public System.Resources.ResourceManager Manager
-        {
-            get
-            {
-                return blazorInputs.Resources.SyncfusionBlazorLocale.ResourceManager;
+                    // define the list of cultures your app will support
+                    var supportedCultures = new List<CultureInfo>()
+                    {
+                        new CultureInfo("de")
+                    };
+                    // set the default culture
+                    options.DefaultRequestCulture = new RequestCulture("de");
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+                    new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                    };
+                });
+                services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
             }
         }
     }
-}
-```
+    ```
+
+* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+
+    ```csharp
+    using Syncfusion.Blazor;
+
+    namespace blazorInputs
+    {
+        public class SampleLocalizer : ISyncfusionStringLocalizer
+        {
+
+            public string Get(string key)
+            {
+                return this.Manager.GetString(key);
+            }
+
+            public System.Resources.ResourceManager Manager
+            {
+                get
+                {
+                    return blazorInputs.Resources.SyncfusionBlazorLocale.ResourceManager;
+                }
+            }
+        }
+    }
+    ```
 
 * Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the Value column as follows.
 
-| **Name** | **Value (in Deutsch culture)** |
-| --- | --- |
-| NumericTextBox_DecrementTitle | Wert verringern |
-| NumericTextBox_IncrementTitle | Inkrementieren Sie den Wert |
+    | **Name** | **Value (in Deutsch culture)** |
+    | --- | --- |
+    | NumericTextBox_DecrementTitle | Wert verringern |
+    | NumericTextBox_IncrementTitle | Inkrementieren Sie den Wert |
 
 * Finally, Specify the culture for Numeric TextBox using `locale` property.
 
-```cshtml
-@using Syncfusion.Blazor.Inputs
+    ```cshtml
+    @using Syncfusion.Blazor.Inputs
 
-<SfNumericTextBox TValue="int?" Value=10 Locale="de"></SfNumericTextBox>
-```
+    <SfNumericTextBox TValue="int?" Value=10 Locale="de"></SfNumericTextBox>
+    ```
 
 ## Blazor WebAssembly
 
-Internationalization library provides support for formatting and parsing the number by using the
-official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The NumericTextBox comes with built-in
-internationalization support to adapt based on culture.
+Internationalization library provides support for formatting and parsing the number by using the official [Unicode CLDR](http://cldr.unicode.org/) JSON data. The NumericTextBox comes with built-in internationalization support to adapt based on culture.
 
 The following steps explain how to render the NumericTextBox in German culture (‘de-DE’) in Blazor Web Assembly application.
 
 * Open the **program.cs** file and add the below configuration in the **Builder ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using Microsoft.AspNetCore.Builder;
+    ```csharp
+    using Syncfusion.Blazor;
+    using Microsoft.AspNetCore.Builder;
 
-namespace WebAssemblyLocale
-{
-    public class Program
+    namespace WebAssemblyLocale
     {
-        public static async Task Main(string[] args)
+        public class Program
         {
-            ....
-            ....
-            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            public static async Task Main(string[] args)
             {
-                // Define the list of cultures your app will support
-                var supportedCultures = new List<System.Globalization.CultureInfo>()
+                ....
+                ....
+                builder.Services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new System.Globalization.CultureInfo("en-US"),
-                    new System.Globalization.CultureInfo("de"),
-                };
+                    // Define the list of cultures your app will support
+                    var supportedCultures = new List<System.Globalization.CultureInfo>()
+                    {
+                        new System.Globalization.CultureInfo("en-US"),
+                        new System.Globalization.CultureInfo("de"),
+                    };
 
-                // Set the default culture
-                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("de");
+                    // Set the default culture
+                    options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("de");
 
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<Microsoft.AspNetCore.Localization.IRequestCultureProvider>() {
-                 new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider()
-                };
-            });
-            ....
-            ....
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<Microsoft.AspNetCore.Localization.IRequestCultureProvider>() {
+                    new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider()
+                    };
+                });
+                ....
+                ....
+            }
         }
     }
-}
-```
+    ```
 
 * Download the required locale packages to render the Blazor NumericTextBox component with specified locale.
 
@@ -180,48 +178,46 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```cshtml
-@using Syncfusion.Blazor.Inputs
-@inject HttpClient Http
+    ```cshtml
+    @using Syncfusion.Blazor.Inputs
+    @inject HttpClient Http
 
-<SfNumericTextBox TValue="int?" Value=10 Locale="de"></SfNumericTextBox>
+    <SfNumericTextBox TValue="int?" Value=10 Locale="de"></SfNumericTextBox>
 
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/de.json")).SetCulture("de");
+    @code {
+        [Inject]
+        protected IJSRuntime JsRuntime { get; set; }
+        protected override async Task OnInitializedAsync()
+        {
+            this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/de.json")).SetCulture("de");
+        }
     }
-}
-```
+    ```
 
-The output will be as follows.
+    The output will be as follows.
 
-![NumericTextBox Sample](./images/de_culture.png)
+    ![NumericTextBox Sample](./images/de_culture.png)
 
 ## Customize the localized text
 
 * You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
 
-* In the following code, modified the localized text of `increment title` and `decrement title` in `de` culture.
+* In the following code, modified the localized text of `increment title` and `decrement title` in `de` culture. File - `wwwroot/blazor-locale/src/de.json`. 
 
-[`wwwroot/blazor-locale/src/de.json`]
-
-```csharp
-{
-  "de": {
-    "numerictextbox": {
-      "incrementTitle": "Wert erhöhen",
-      "decrementTitle": "Dekrementwert"
+    ```
+    {
+    "de": {
+        "numerictextbox": {
+        "incrementTitle": "Wert erhöhen",
+        "decrementTitle": "Dekrementwert"
+        }
     }
-  }
-}
-```
+    }
+    ```
 
-The output will be as follows.
+    The output will be as follows.
 
-![NumericTextBox Sample](./images/de_culture_02.png)
+    ![NumericTextBox Sample](./images/de_culture_02.png)
 
 ## Right to Left
 

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Get selected items from listview template in Blazor ListView Component | Syncfusion
+title: Get selected items in Blazor ListView Component | Syncfusion
 description: Learn here all about Get selected items from listview template in Syncfusion Blazor ListView component and more.
 platform: Blazor
 control: Listview
@@ -9,9 +9,7 @@ documentation: ug
 
 # Get selected items from listview template in Blazor ListView Component
 
-Single or multiple items can be selected by users in the ListView control.
-
-By default, dataSource `Id` and `Text` is mapped in default rendering of listview, since it returns the selected item data properly. But in the custom template, dataSource and the corresponding mapping (text, id, elements rendered inside li element) will vary as per the application requirement.
+Single or multiple items can be selected by users in the ListView control. By default, dataSource `Id` and `Text` is mapped in default rendering of listview, since it returns the selected item data properly. But in the custom template, dataSource and the corresponding mapping (text, id, elements rendered inside li element) will vary as per the application requirement.
 
 So, we need to map id attribute to listview items using `ListViewFieldSettings` of `DataSource` to get the selected item data properly while working with custom templates. Refer to the below code snippet for template sample.
 
@@ -124,4 +122,4 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
 </style>
 ```
 
-![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)istview-template-sample.png)
+![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)

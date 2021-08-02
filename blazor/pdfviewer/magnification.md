@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Magnification in Blazor PDF Viewer Component | Syncfusion
-description: Learn here all about Magnification in Syncfusion Blazor PDF Viewer component and more.
+description: Checkout and learn here all about Magnification in Syncfusion Blazor PDF Viewer component and much more.
 platform: Blazor
 control: PDF Viewer
 documentation: ug
@@ -92,4 +92,4 @@ Also, you can programmatically perform zooming operations as follows.
 }
 ```
 
->Note: PDF Viewer can support zoom value ranges from 50% to 400%.
+> PDF Viewer can support zoom value ranges from 50% to 400%.

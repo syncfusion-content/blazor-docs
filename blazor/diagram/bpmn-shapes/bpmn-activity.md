@@ -1,7 +1,7 @@
 ---
 layout: post
 title: BPMN Activity in Blazor Diagram Component | Syncfusion
-description: Learn here all about BPMN Activity in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about BPMN Activity in Syncfusion Blazor Diagram component and much more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -9,14 +9,12 @@ documentation: ug
 
 # BPMN Activity in Blazor Diagram Component
 
-The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
-
-There are two types of activities. They are listed as follows:
+The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle. There are two types of activities. They are listed as follows:
 
 * Task: Occurs within a process and it is not broken down to a finer level of detail.
 * Subprocess: Occurs within a process and it is broken down to a finer level of detail.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -55,6 +53,7 @@ There are two types of activities. They are listed as follows:
 ## BPMN activity task
 
 The [`Task`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnTask.html) property of the node allows you to define the type of task such as sending, receiving, user-based task, etc. By default, the `Type` property of task is set to **None**. The following code explains how to create different types of BPMN tasks.
+
 The events property of tasks allows you to represent these results as an event attached to the task.
 
 ```cshtml
@@ -152,9 +151,8 @@ A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 ```
 
 The different types of subprocess are as follows:
-
-    * Event subprocess
-    * Transaction
+* Event subprocess
+* Transaction
 
 ### Event sub Process
 
@@ -211,7 +209,7 @@ A [`SubProcess`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ### Transaction sub process
 
-* The [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
+The [`Transaction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Transaction) is a set of activities that logically belong together that all contained activities must complete their parts of the transaction, otherwise the process is fail.
 
 The execution result of a transaction is one of
 * Successful Completion
@@ -360,6 +358,7 @@ The `Events` property of subprocess allows you to represent these results as an 
 ### Loop
 
 [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is **None**.
+
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 ```cshtml

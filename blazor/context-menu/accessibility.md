@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor ContextMenu Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor ContextMenu component and more.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -11,10 +11,9 @@ documentation: ug
 
 ## ARIA attributes
 
-The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
-Context Menu provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded` and `aria-haspopup` applied for menu item in
-Context Menu. It helps the people with disabilities by providing information about the widget for assistive
-technology in the screen readers. Context Menu component contains the `menu` role and `menuItem` role.
+The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. 
+
+Context Menu provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded` and `aria-haspopup` applied for menu item in Context Menu. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers. Context Menu component contains the `menu` role and `menuItem` role.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

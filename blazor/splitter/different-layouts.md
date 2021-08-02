@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Different Layouts in Blazor Splitter Component | Syncfusion
-description: Learn here all about Different Layouts in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about Different Layouts in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -16,7 +16,7 @@ By using splitter control, you can create the different layouts with multiple an
 **Step 1**:
 Create the element with two child to render the outer splitter.
 
-```csharp
+```cshtml
 
 <SfSplitter Height="400px" Orientation="Orientation.Vertical">
     <SplitterPanes>
@@ -48,7 +48,7 @@ Create the element with two child to render the outer splitter.
 
 Render the first pane of vertical splitter as a horizontal splitter.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -119,7 +119,7 @@ Render the first pane of vertical splitter as a horizontal splitter.
 
 ```
 
-```bash
+```css
 
 <style>
     #code-text {
@@ -171,7 +171,7 @@ Once the above configurations has been completed, you will get the output like [
 
 Create the element with three panes and place the elements within the pane to render `Treeview`, `Listview` and `RichTextEditor`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Lists
 @using Syncfusion.Blazor.Inputs
@@ -288,7 +288,7 @@ Create the element with three panes and place the elements within the pane to re
 
 Place the `TreeViewTemplates` inside the `SfTreeView` to render the treeview template.
 
-```csharp
+```cshtml
 
 <TreeViewTemplates>
     <NodeTemplate>
@@ -318,7 +318,7 @@ Place the `TreeViewTemplates` inside the `SfTreeView` to render the treeview tem
 
 Define the components DataSource in `@code` section.
 
-```csharp
+```cshtml
 
 @code {
     private SfRichTextEditor RichTextEditorObj;
@@ -384,7 +384,7 @@ Define the components DataSource in `@code` section.
 
 ```
 
-```bash
+```css
 
 <style>
     #discard {

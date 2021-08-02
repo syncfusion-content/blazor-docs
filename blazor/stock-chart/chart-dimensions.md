@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stock Chart Dimensions in Blazor Stock Chart Component | Syncfusion
-description: Learn here all about Stock Chart Dimensions in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about Stock Chart Dimensions in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 Stock Chart can render to its container size. You can set the size via inline or CSS as demonstrated below.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -38,7 +38,7 @@ Stock Chart can render to its container size. You can set the size via inline o
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -57,8 +57,7 @@ Stock Chart can render to its container size. You can set the size via inline o
 
 ## Size for Stock Chart
 
-You can also set size for stock chart directly through [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Width) and
-[`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Height) properties.
+You can also set size for stock chart directly through [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Height) properties.
 
 <!-- markdownlint-disable MD036 -->
 **In Pixel**
@@ -66,7 +65,7 @@ You can also set size for stock chart directly through [`Width`](https://help.sy
 
 You can set the size of chart in pixel as demonstrated below.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -89,7 +88,7 @@ You can set the size of chart in pixel as demonstrated below.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -108,10 +107,9 @@ You can set the size of chart in pixel as demonstrated below.
 
 **In Percentage**
 
-By setting value in percentage, stock chart gets its dimension with respect to its container. For example,
-when the height is ‘50%’, chart renders to half of the container height.
+By setting value in percentage, stock chart gets its dimension with respect to its container. For example, when the height is ‘50%’, chart renders to half of the container height.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -134,7 +132,7 @@ when the height is ‘50%’, chart renders to half of the container height.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -151,4 +149,4 @@ when the height is ‘50%’, chart renders to half of the container height.
 
 ![Size](images/size/size-percentage.png)
 
-> Note:  When you do not specify the size, it takes `450px` as the height and window size as its width.
+> When you do not specify the size, it takes `450px` as the height and window size as its width.

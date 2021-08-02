@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Interaction in Blazor Diagram Component | Syncfusion
-description: Learn here all about Interaction in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Interaction in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -67,7 +67,7 @@ The server-side method [`SelectAll`](https://help.syncfusion.com/cr/blazor/Syncf
 
 ![Resize](images/resize.gif)
 
->Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
+>  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
 
 ## Rotate
 

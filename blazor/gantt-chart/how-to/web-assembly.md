@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Gantt Chart in Blazor Gantt Chart Component | Syncfusion
-description: Learn here all about WebAssembly Gantt Chart in Syncfusion Blazor Gantt Chart component and more.
+description: Checkout and learn here all about WebAssembly Gantt Chart in Syncfusion Blazor Gantt Chart component and more.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -54,18 +54,18 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 2. You can add the client-side style resources through CDN or from NuGet packages in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+</head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the poly fills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
 ```
 
 ## Adding component package to the application
@@ -376,7 +376,7 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 }
 ```
 
-`Note:` When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
+> When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
 You can find the full information regarding Editing from [here](/managing-tasks/)
 
@@ -578,4 +578,5 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](/task-dependencies/)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-![Gantt Features](../images/enableDependency.png)leDependency.png)
+
+![Gantt Features](../images/enableDependency.png)

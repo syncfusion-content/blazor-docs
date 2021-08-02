@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Diagram Component | Syncfusion
-description: Learn here all about Positioning in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Positioning in Syncfusion Blazor Diagram component and much more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Positioning in Blazor Diagram Component
 
-Diagram allows you to customize the position and appearance of the port efficiently.
-Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [`DiagramPort`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html) class.
-Ports of a node can be positioned using the following properties of `DiagramPort`.
+Diagram allows you to customize the position and appearance of the port efficiently. Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [`DiagramPort`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html) class. Ports of a node can be positioned using the following properties of `DiagramPort`.
 
 * [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Offset)
 * [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_HorizontalAlignment)
@@ -75,13 +73,12 @@ The following code shows the relationship between the shape port position and pa
 | (1,0.5) | ![Left](../images/offset8.png) |
 | (1,1) | ![Left](../images/offset9.png) |
 
->**Note:**
->* Type of the offset property for node’s shape port is NodePortOffset.
+
+> Type of the offset property for node’s shape port is NodePortOffset.
 
 ## Horizontal and vertical alignment
 
-* The [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_HorizontalAlignment) property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values.
-* The [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_VerticalAlignment) property is used to set how the port is vertically aligned at the port position.
+The [`HorizontalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_HorizontalAlignment) property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The [`VerticalAlignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_VerticalAlignment) property is used to set how the port is vertically aligned at the port position.
 
 The following table shows all the possible alignments visually with `offset (0, 0)`.
 
@@ -140,7 +137,6 @@ The following code explains how to align ports.
 
 ```
 
->**Note:**
 >* The value of the `HorizontalAlignment` is `Center` by default.
 >* The value of the `VerticalAlignment` is `Center` by default.
 >* Alignment positioned based on the offset value.

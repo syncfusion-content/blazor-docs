@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor MultiSelect Dropdown Component | Syncfusion
-description: Learn here all about Accessibility in Syncfusion Blazor MultiSelect Dropdown component and more.
+description: Checkout and learn here all about Accessibility in Syncfusion Blazor MultiSelect Dropdown component and more.
 platform: Blazor
 control: MultiSelect Dropdown
 documentation: ug
@@ -9,10 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor MultiSelect Dropdown Component
 
-The MultiSelect component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies
-the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
-by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who
-use assistive technologies (AT) or those who completely rely on keyboard navigation.
+The MultiSelect component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
 

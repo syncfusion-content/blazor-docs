@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor WebAssembly Diagram in Blazor Diagram Component | Syncfusion
-description: Learn here all about Blazor WebAssembly Diagram in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Blazor WebAssembly Diagram in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -27,7 +27,7 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
     ```bash
-      dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
+    dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ```
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
@@ -65,23 +65,23 @@ Please ensure to check the Include prerelease option for our Beta release.
 
 5. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
-<environment include="Development">
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
- </environment>
+    <environment include="Development">
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </environment>
 </head>
 
 ```
 
 For Internet Explorer 11 kindly refer the polyfills. Refer the documentation for more information.
 
-```html
+```cshtml
 <head>
-<environment include="Development">
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</environment>
+    <environment include="Development">
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </environment>
 </head>
 
 ```
@@ -90,9 +90,9 @@ For Internet Explorer 11 kindly refer the polyfills. Refer the documentation for
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Diagram** package.
 
-```csharp
-  @using Syncfusion.Blazor
-  @using Syncfusion.Blazor.Diagrams
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Diagrams
 ```
 
 ## Add SyncfusionBlazor service in Startup.cs
@@ -105,26 +105,26 @@ Open the **Startup.cs** file and add services required by Syncfusion components 
  namespace BlazorApplication
 {
     public class Startup
-{
-    ....
-    ....
-        public void ConfigureServices(IServiceCollection services)
     {
         ....
         ....
-        services.AddSyncfusionBlazor();
+            public void ConfigureServices(IServiceCollection services)
+        {
+            ....
+            ....
+            services.AddSyncfusionBlazor();
+        }
     }
-}
 }
 
 ```
 
 **Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```cshtml
 <head>
-<environment include="Development">
-   <script src="https://cdn.syncfusion.com/blazor/18.4.42/syncfusion-blazor.min.js"></script>
+   <environment include="Development">
+    <script src="https://cdn.syncfusion.com/blazor/18.4.42/syncfusion-blazor.min.js"></script>
    </environment>
 </head>
 
@@ -136,7 +136,7 @@ Diagram component can be rendered by using the `SfDiagram` tag helper in ASP.NET
 
 The following example shows a basic Diagram component.
 
-```csharp
+```cshtml
 <SfDiagram Width="100%" Height="600px">
 </SfDiagram>
 
@@ -286,10 +286,10 @@ private void CreateNode(string id, double y, FlowShapes shape, string label, boo
 
 ```
 
-![flowChart sample image](../images/flowChart.png)
+![flowChart sample image](../images/diagram.png)
 
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 Preview](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)r-side-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

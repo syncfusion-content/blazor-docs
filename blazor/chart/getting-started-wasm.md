@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Started for WebAssembly in Blazor Charts Component | Syncfusion
-description: Learn here all about Getting Started for WebAssembly in Syncfusion Blazor Charts component and more.
+title: Getting Stared with Blazor Chart in Client Side App | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor Chart Component in Blazor WebAssembly (Client Side) App and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Getting Started for WebAssembly in Blazor Charts Component
+# Blazor Chart Component in Client Side (WebAssembly) App
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Chart in a simple Blazor WebAssembly application using Visual Studio 2019.
 
@@ -48,22 +48,22 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 3. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/wwwroot/index.html** page. For Internet Explorer 11, kindly refer the polyfills.
 
     ```html
-        <head>
-            ....
-            ....
-            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-        </head>
+    <head>
+        ....
+        ....
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
     ```
 
 4. Now add the lodash script to the **HEAD** element of the **~/wwwroot/index.html** page, since we have used it in our [`chart interactive`]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
 
     ```html
-      <head>
-            ....
-            ....
-            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
-      </head>
+    <head>
+        ....
+        ....
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+    </head>
     ```
 
 ## Adding component package to the application
@@ -119,20 +119,21 @@ To bind data for the chart component, you can assign a IEnumerable object to the
 
 ```csharp
 public class SalesInfo
-    {
-        public string Month { get; set; }
-        public double SalesValue { get; set; }
-    }
+{
+    public string Month { get; set; }
+    public double SalesValue { get; set; }
+}
+
 public List<SalesInfo> Sales = new List<SalesInfo>
-    {
-        new SalesInfo { Month = "Jan", SalesValue = 35 },
-        new SalesInfo { Month = "Feb", SalesValue = 28 },
-        new SalesInfo { Month = "Mar", SalesValue = 34 },
-        new SalesInfo { Month = "Apr", SalesValue = 32 },
-        new SalesInfo { Month = "May", SalesValue = 40 },
-        new SalesInfo { Month = "Jun", SalesValue = 32 },
-        new SalesInfo { Month = "Jul", SalesValue = 35 }
-    };
+{
+    new SalesInfo { Month = "Jan", SalesValue = 35 },
+    new SalesInfo { Month = "Feb", SalesValue = 28 },
+    new SalesInfo { Month = "Mar", SalesValue = 34 },
+    new SalesInfo { Month = "Apr", SalesValue = 32 },
+    new SalesInfo { Month = "May", SalesValue = 40 },
+    new SalesInfo { Month = "Jun", SalesValue = 32 },
+    new SalesInfo { Month = "Jul", SalesValue = 35 }
+};
 ```
 
 Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_XName) and [`YName`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_YName) properties, then set the data to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DataSource) property, and the [`chart type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) to **Column** because we will be viewing the data in a column chart.
@@ -155,6 +156,7 @@ Now, map the data fields  `Month` and `Sales` to the series [`XName`](https://he
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+    
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -186,12 +188,14 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -226,12 +230,14 @@ You can add data labels to improve the readability of the chart. This can be ach
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -264,12 +270,14 @@ When space constraints prevent you from displaying information using data labels
         </ChartSeries>
     </ChartSeriesCollection>
 </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set; }
         public double SalesValue { get; set; }
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -302,12 +310,14 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
             </ChartSeries>
         </ChartSeriesCollection>
     </SfChart>
+
 @code {
     public class SalesInfo
     {
         public string Month { get; set;}
         public double SalesValue { get; set;}
     }
+
     public List<SalesInfo> Sales = new List<SalesInfo>
     {
         new SalesInfo { Month = "Jan", SalesValue = 35 },
@@ -323,7 +333,7 @@ You can use legend for the chart by setting the [`Visible`](https://help.syncfus
 
 ![Legend](images/getting-started/legend.png)
 
-> You can find the fully working sample for chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WASM1504645919.zip). And also you can refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [`Blazor Chart example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
+> You can find the fully working sample for chart [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WASM1504645919.zip). And also you can refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
 ## See also
 

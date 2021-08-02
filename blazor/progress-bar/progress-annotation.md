@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations and Label in Blazor ProgressBar Component | Syncfusion
-description: Learn here all about Annotations and Label in Syncfusion Blazor ProgressBar component and more.
+description: Checkout and learn here all about Annotations and Label in Syncfusion Blazor ProgressBar component and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
@@ -56,4 +56,4 @@ When the [`ShowProgressValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 ```
 
-![Progress Bar with Label](images/label.png)h Label](images/label.png)
+![Progress Bar with Label](images/label.png)

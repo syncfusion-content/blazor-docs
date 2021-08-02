@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Mode and Value in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Mode and Value in Syncfusion Blazor Color Picker component and more.
+description: Checkout and learn here all about Mode and Value in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
@@ -38,8 +38,7 @@ In the following sample, the color value sets as `four` digit hex code, the last
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
 
-Output be like
+Output be like below,
 ![color-picker](./images/color-value.png)
 
-> The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property
-supports hex code with or without `#` prefix.
+> The [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.

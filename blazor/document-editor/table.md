@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tables in Blazor DocumentEditor Component | Syncfusion
-description: Learn here all about Tables in Syncfusion Blazor DocumentEditor component and more.
+description: Checkout and learn here all about Tables in Syncfusion Blazor DocumentEditor component and much more.
 platform: Blazor
 control: DocumentEditor
 documentation: ug
@@ -17,7 +17,7 @@ You can create and insert a table at cursor position by specifying the required 
 
 Refer to the following sample code.
 
-```javascript
+```csharp
  documentEditor.Editor.InsertTable(3, 3);
 ```
 
@@ -34,7 +34,7 @@ count(optional) | number | This is optional and if omitted, it takes the value a
 
 Refer to the following sample code.
 
-```javascript
+```csharp
 //Inserts a row below the row at cursor position
 documentEditor.Editor.InsertRow();
 //Inserts a row above the row at cursor position
@@ -54,7 +54,7 @@ count(optional) | number |  This is optional and if omitted, it takes the value 
 
 Refer to the following sample code.
 
-```javascript
+```csharp
 //Insert a column to the right of the column at cursor position.
 documentEditor.Editor.InsertColumn();
 //Insert a column to the left of the column at cursor position.
@@ -67,7 +67,7 @@ documentEditor.Editor.InsertColumn(false, 2);
 
 If the cursor position is inside a table, you can select the entire table by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.SelectTable();
 ```
 
@@ -75,7 +75,7 @@ documentEditor.Selection.SelectTable();
 
 You can select the entire row at cursor position by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.SelectRow();
 ```
 
@@ -85,7 +85,7 @@ If current selection spans across cells of different rows, all these rows will b
 
 You can select the entire column at cursor position by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.SelectColumn();
 ```
 
@@ -95,7 +95,7 @@ If current selection spans across cells of different columns, all these columns 
 
 You can select the cell at cursor position by using the following sample code.
 
-```javascript
+```csharp
 documentEditor.Selection.SelectCell();
 ```
 
@@ -103,7 +103,7 @@ documentEditor.Selection.SelectCell();
 
 Document editor allows you to delete the entire table. You can use the `DeleteTable()` method of editor instance, if selection is in table. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.DeleteTable();
 ```
 
@@ -111,7 +111,7 @@ documentEditor.Editor.DeleteTable();
 
 Document editor allows you to delete the selected number of rows. You can use the `DeleteRow()` method of editor instance to delete the selected number of rows, if selection is in table. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.DeleteRow();
 ```
 
@@ -119,7 +119,7 @@ documentEditor.Editor.DeleteRow();
 
 Document editor allows you to delete the selected number of columns. You can use the `DeleteColumn()` method of editor instance to delete the selected number of columns, if selection is in table. Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.DeleteColumn();
 ```
 
@@ -128,7 +128,7 @@ documentEditor.Editor.DeleteColumn();
 You can merge cells vertically, horizontally, or combination of both to a single cell. To vertically merge the cells, the columns within selection should be even in left and right directions. To horizontally merge the cells, the rows within selection should be even in top and bottom direction.
 Refer to the following sample code.
 
-```javascript
+```csharp
 documentEditor.Editor.MergeCells();
 ```
 

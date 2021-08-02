@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Customize placeholder style in Blazor RichTextEditor Component | Syncfusion
+title: Customize placeholder style in Blazor RichTextEditor | Syncfusion
 description: Learn here all about Customize placeholder style in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
@@ -11,7 +11,7 @@ documentation: ug
 
 By using `e-rte-placeholder` class, you can customize the placeholder style.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

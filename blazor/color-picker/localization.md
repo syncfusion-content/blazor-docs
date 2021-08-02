@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization and RTL in Blazor Color Picker Component | Syncfusion
-description: Learn here all about Localization and RTL in Syncfusion Blazor Color Picker component and more.
+description: Checkout and learn here all about Localization and RTL in Syncfusion Blazor Color Picker component and more.
 platform: Blazor
 control: Color Picker
 documentation: ug
@@ -12,7 +12,7 @@ documentation: ug
 
 ## Localization
 
-The `Localization` library allows you to localize default text content of the Color Picker. The Color Picker component has static text for control buttons (apply / cancel) and mode switcher that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object.  You can refer [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) page for the introduction and configuring the localization.
+The `Localization` library allows you to localize default text content of the Color Picker. The Color Picker component has static text for control buttons (apply / cancel) and mode switcher that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the locale value and translation object. You can refer [How to enable Localization in Blazor application](https://blazor.syncfusion.com/documentation/common/localization/#how-to-enable-localization-in-blazor-application) page for the introduction and configuring the localization.
 
 You can modify the default value in `.res` file added to Resource folder. Enter the key value (Locale Keywords) in the `Name` column and the translated string in the `Value` column. The following list of keys and its values are used in the Color Picker.
 
@@ -22,7 +22,7 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 | `ColorPicker_Cancel`  | `Cancel` | `Abbrechen` |
 | `ColorPicker_ModeSwitcher` | `Switch Mode` | `Modus wechseln` |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -30,7 +30,8 @@ You can modify the default value in `.res` file added to Resource folder. Enter 
 
 ```
 
-Output be like
+Output be like below,
+
 ![color-picker](./images/cp-locale.png)
 
 ## RTL
@@ -39,7 +40,7 @@ Color Picker component has `RTL` support. It helps to render the Color Picker fr
 
 In the following example Color Picker component is rendered in RTL mode with `arabic` locale.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -47,5 +48,6 @@ In the following example Color Picker component is rendered in RTL mode with `ar
 
 ```
 
-Output be like
+Output be like below,
+
 ![color-picker](./images/cp-rtl.png)

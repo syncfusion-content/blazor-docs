@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Customize the Dialog appearance in Blazor Dialog Component | Syncfusion
-description: Learn here all about Customize the Dialog appearance in Syncfusion Blazor Dialog component and more.
+title: Customize the appearance in Blazor Dialog Component | Syncfusion
+description: Learn here all about customizing the appearance in Syncfusion Blazor Dialog component and much more.
 platform: Blazor
 control: Dialog
 documentation: ug
 ---
 
-# Customize the Dialog appearance in Blazor Dialog Component
+# Customize the appearance in Blazor Dialog Component
 
 You can customize the dialog appearance by providing dialog template as string or HTML element to the `Content` template property. In the following code block, dialog is customized as error window appearance.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

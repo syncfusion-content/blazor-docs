@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Paste from MS Word in Blazor RichTextEditor Component | Syncfusion
-description: Learn here all about Paste from MS Word in Syncfusion Blazor RichTextEditor component and more.
+description: Checkout and learn here all about Paste from MS Word in Syncfusion Blazor RichTextEditor component and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -87,7 +87,7 @@ For Example,
 
 In the following example, the paste cleanup related settings are explained with configuration.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

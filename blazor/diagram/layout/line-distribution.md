@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Line Distribution in Blazor Diagram Component | Syncfusion
-description: Learn here all about Line Distribution in Syncfusion Blazor Diagram component and more.
+description: Checkout and learn here all about Line Distribution in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -97,15 +97,15 @@ The following code illustrates how to prevents the connector segments overlappin
 
 ```csharp
   
-    protected override void OnInitialized()
+protected override void OnInitialized()
+{
+    LayoutValue = new DiagramLayout()
         {
-            LayoutValue = new DiagramLayout()
-                {
-                    //this prevents connector segments overlapping
-                    enableRouting: true,
-                };
-            }
-        }
+            //this prevents connector segments overlapping
+            enableRouting: true,
+        };
+    }
+}
 
 ```
 
