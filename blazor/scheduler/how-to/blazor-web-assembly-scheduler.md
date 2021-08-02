@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor Scheduler in Client Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor Scheduler Component in Blazor WebAssembly (Client Side) App and more.
+title: Getting Started With Blazor Scheduler in Web Assembly | Syncfusion
+description: Helps you to get started of Syncfusion Blazor Scheduler component in Web Assembly project. Also helps to bind appointments and set current view and date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug
