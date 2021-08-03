@@ -20,19 +20,19 @@ This section briefly explains about how to include a **MultiSelect** Component i
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
-    <head>
-            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-            @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
-    </head>
+<head>
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        @*<link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" />*@
+</head>
 ```
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
 ```
 
 ## Adding component package to the application
@@ -69,16 +69,16 @@ namespace BlazorApplication
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
-    <head>
-            <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
-    </head>
+<head>
+        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+</head>
 ```
 
 ## Adding MultiSelect component to the application
 
 To initialize the MultiSelect component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
-```csharp
+```cshtml
 <SfMultiSelect TValue="string[]" TItem="string" Placeholder='First Name'></SfMultiSelect>
 ```
 
@@ -92,9 +92,9 @@ After initialization, populate the MultiSelect with data using the [DataSource](
 
 The following example illustrates the output in your browser.
 
-```csharp
+```cshtml
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" DataSource="@LocalData">
-<MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {
@@ -131,9 +131,9 @@ The height and width of the popup list can also be customized using the [PopupHe
 
 In the following sample, popup list's width and height are configured.
 
-```csharp
+```cshtml
 <SfMultiSelect TValue="string[]" TItem="Games" Placeholder="Favorite Sports" PopupHeight="350px" PopupWidth="350px" DataSource="@LocalData">
-<MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
+    <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
 @code {

@@ -14,39 +14,39 @@ Allows end user to change the appearance of the pivot table value cells with its
 The conditional formatting can be applied at runtime through the built-in dialog, invoked from the toolbar. To do so, set [`AllowConditionalFormatting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowConditionalFormatting) and [`ShowToolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowToolbar) properties in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class to **true**. Also, include the item [**ToolbarItems.ConditionalFormatting**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) within the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_Toolbar) property in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class. End user can now see the "Conditional Formatting" icon in toolbar UI automatically, which on clicking will invoke the formatting dialog to perform necessary operations.
 
 ```csharp
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true">
-            <PivotViewDataSourceSettings DataSource="@data">
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-            </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true">
+        <PivotViewDataSourceSettings DataSource="@data">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ToolbarItems> toolbar = new List<ToolbarItems> {
-          ToolbarItems.ConditionalFormatting
-        };
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.ConditionalFormatting
+    };
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -80,56 +80,56 @@ The available style properties in [`PivotViewStyle`](https://help.syncfusion.com
 Meanwhile, user can also view conditional formatting dialog in UI by invoking [`ShowConditionalFormattingDialogAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowConditionalFormattingDialog) method on an external button click which is shown in the below code sample.
 
 ```csharp
-    @using Syncfusion.Blazor.PivotView
-    @using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
 
-    <SfButton OnClick="@OnCondFormatting" IsPrimary="true">Conditional Formatting</SfButton>
+<SfButton OnClick="@OnCondFormatting" IsPrimary="true">Conditional Formatting</SfButton>
 
-    <SfPivotView TValue="ProductDetails" @ref="pivot" AllowConditionalFormatting="true">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFilters>
-                <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
-            </PivotViewFilters>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-            <PivotViewConditionalFormatSettings>
-                <PivotViewConditionalFormatSetting Measure="Amount" Conditions=Condition.GreaterThan Value1=1000>
-                    <PivotViewStyle BackgroundColor="#80cbc4" Color="black" FontFamily="Tahoma" FontSize="12px">
-                    </PivotViewStyle>
-                </PivotViewConditionalFormatSetting>
-                <PivotViewConditionalFormatSetting Measure="Sold" Conditions=Condition.Between  Value1=500 Value2=40000>
-                    <PivotViewStyle BackgroundColor="#f48fb1" Color="black" FontFamily="Tahoma" FontSize="12px">
-                    </PivotViewStyle>
-                </PivotViewConditionalFormatSetting>
-            </PivotViewConditionalFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" @ref="pivot" AllowConditionalFormatting="true">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFilters>
+            <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
+        </PivotViewFilters>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewConditionalFormatSettings>
+            <PivotViewConditionalFormatSetting Measure="Amount" Conditions=Condition.GreaterThan Value1=1000>
+                <PivotViewStyle BackgroundColor="#80cbc4" Color="black" FontFamily="Tahoma" FontSize="12px">
+                </PivotViewStyle>
+            </PivotViewConditionalFormatSetting>
+            <PivotViewConditionalFormatSetting Measure="Sold" Conditions=Condition.Between  Value1=500 Value2=40000>
+                <PivotViewStyle BackgroundColor="#f48fb1" Color="black" FontFamily="Tahoma" FontSize="12px">
+                </PivotViewStyle>
+            </PivotViewConditionalFormatSetting>
+        </PivotViewConditionalFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
-        public void OnCondFormatting(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
-        {
-            this.pivot.ShowConditionalFormattingDialogAsync();
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+    public void OnCondFormatting(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        this.pivot.ShowConditionalFormattingDialogAsync();
+    }
+}
 
 ```
 
@@ -142,45 +142,45 @@ Meanwhile, user can also view conditional formatting dialog in UI by invoking [`
 Allows end user to apply conditional formatting commonly for all value fields just by ignoring the [`Measure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure) property and setting rest of the properties in [`PivotViewConditionalFormatSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class.
 
  ```csharp
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-        <SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
-            <PivotViewDataSourceSettings DataSource="@data">
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFilters>
-                    <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
-                </PivotViewFilters>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-                <PivotViewConditionalFormatSettings>
-                    <PivotViewConditionalFormatSetting Conditions=Condition.GreaterThan Value1=500>
-                        <PivotViewStyle BackgroundColor="#80cbc4" Color="black" FontFamily="Tahoma" FontSize="12px">
-                        </PivotViewStyle>
-                    </PivotViewConditionalFormatSetting>
-                </PivotViewConditionalFormatSettings>
-            </PivotViewDataSourceSettings>
-        </SfPivotView>
+<SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFilters>
+            <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
+        </PivotViewFilters>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewConditionalFormatSettings>
+            <PivotViewConditionalFormatSetting Conditions=Condition.GreaterThan Value1=500>
+                <PivotViewStyle BackgroundColor="#80cbc4" Color="black" FontFamily="Tahoma" FontSize="12px">
+                </PivotViewStyle>
+            </PivotViewConditionalFormatSetting>
+        </PivotViewConditionalFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -191,45 +191,45 @@ Allows end user to apply conditional formatting commonly for all value fields ju
 Allows end user to apply conditional formatting to a specific value field by setting the [`Measure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewConditionalFormatSetting_Measure) property with specific value field name in [`PivotViewConditionalFormatSetting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewConditionalFormatSetting.html) class.
 
   ```csharp
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-        <SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
-            <PivotViewDataSourceSettings DataSource="@data">
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFilters>
-                    <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
-                </PivotViewFilters>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-                <PivotViewConditionalFormatSettings>
-                    <PivotViewConditionalFormatSetting Measure="Sold" Conditions=Condition.GreaterThan Value1=500>
-                        <PivotViewStyle BackgroundColor="#80cbc4" Color="black" FontFamily="Tahoma" FontSize="12px">
-                        </PivotViewStyle>
-                    </PivotViewConditionalFormatSetting>
-                </PivotViewConditionalFormatSettings>
-            </PivotViewDataSourceSettings>
-        </SfPivotView>
+<SfPivotView TValue="ProductDetails" AllowConditionalFormatting="true">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFilters>
+            <PivotViewFilter Name="Product_Categories" Caption="Product Categories"></PivotViewFilter>
+        </PivotViewFilters>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+        <PivotViewConditionalFormatSettings>
+            <PivotViewConditionalFormatSetting Measure="Sold" Conditions=Condition.GreaterThan Value1=500>
+                <PivotViewStyle BackgroundColor="#80cbc4" Color="black" FontFamily="Tahoma" FontSize="12px">
+                </PivotViewStyle>
+            </PivotViewConditionalFormatSetting>
+        </PivotViewConditionalFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 

@@ -20,37 +20,37 @@ The field list can be displayed in two different formats to interact with pivot 
 
 To enable deferred updates in the pivot table, set the property [`AllowDeferLayoutUpdate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_AllowDeferLayoutUpdate) in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) as **true**. To make a note, the defer update option can be controlled only via Field List during runtime.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowDeferLayoutUpdate="true">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotvotView>
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowDeferLayoutUpdate="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotvotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -64,58 +64,58 @@ To enable deferred updates in the static fieldlist, set the property [`AllowDefe
 
 > To make field list interact with pivot table, you need to use the **UpdateViewAsync** and **UpdateAsync** methods for data source update in both field list and pivot table simultaneously.
 
-```csharp
-        <SfPivotView TValue="ProductDetails" ID="pivotview"  @ref="pivotView" AllowDeferLayoutUpdate="true" Height="530">
-            <PivotViewEvents TValue="ProductDetails" EnginePopulated="pivotenginepopulated"></PivotViewEvents>
-        </SfPivotView>
-        <SfPivotFieldList TValue="ProductDetails" ID="fieldlist" @ref="fieldList" RenderMode="Mode.Fixed" AllowDeferLayoutUpdate="true">
-            <PivotFieldListDataSourceSettings DataSource="@data" EnableSorting=true>
-                <PivotFieldListColumns>
-                    <PivotFieldListColumn Name="Year"></PivotFieldListColumn>
-                    <PivotFieldListColumn Name="Quarter"></PivotFieldListColumn>
-                </PivotFieldListColumns>
-                <PivotFieldListRows>
-                    <PivotFieldListRow Name="Country"></PivotFieldListRow>
-                    <PivotFieldListRow Name="Products"></PivotFieldListRow>
-                </PivotFieldListRows>
-                <PivotFieldListValues>
-                    <PivotFieldListValue Name="Sold" Caption="Unit Sold"></PivotFieldListValue>
-                    <PivotFieldListValue Name="Amount" Caption="Sold Amount"></PivotFieldListValue>
-                </PivotFieldListValues>
-            </PivotFieldListDataSourceSettings>
-            <PivotFieldListEvents TValue="ProductDetails" EnginePopulated="enginepopulated"></PivotFieldListEvents>
-        </SfPivotFieldList>
-        <style>
-            #fieldlist {
-                width: 42%;
-                height: 100%;
-                float: right;
-            }
+```cshtml
+<SfPivotView TValue="ProductDetails" ID="pivotview"  @ref="pivotView" AllowDeferLayoutUpdate="true" Height="530">
+    <PivotViewEvents TValue="ProductDetails" EnginePopulated="pivotenginepopulated"></PivotViewEvents>
+</SfPivotView>
+<SfPivotFieldList TValue="ProductDetails" ID="fieldlist" @ref="fieldList" RenderMode="Mode.Fixed" AllowDeferLayoutUpdate="true">
+    <PivotFieldListDataSourceSettings DataSource="@data" EnableSorting=true>
+        <PivotFieldListColumns>
+            <PivotFieldListColumn Name="Year"></PivotFieldListColumn>
+            <PivotFieldListColumn Name="Quarter"></PivotFieldListColumn>
+        </PivotFieldListColumns>
+        <PivotFieldListRows>
+            <PivotFieldListRow Name="Country"></PivotFieldListRow>
+            <PivotFieldListRow Name="Products"></PivotFieldListRow>
+        </PivotFieldListRows>
+        <PivotFieldListValues>
+            <PivotFieldListValue Name="Sold" Caption="Unit Sold"></PivotFieldListValue>
+            <PivotFieldListValue Name="Amount" Caption="Sold Amount"></PivotFieldListValue>
+        </PivotFieldListValues>
+    </PivotFieldListDataSourceSettings>
+    <PivotFieldListEvents TValue="ProductDetails" EnginePopulated="enginepopulated"></PivotFieldListEvents>
+</SfPivotFieldList>
+<style>
+    #fieldlist {
+        width: 42%;
+        height: 100%;
+        float: right;
+    }
 
-            #pivotview {
-                width: 57%;
-                height: 530px;
-                float: left;
-            }
-        </style>
-        @code{
-            SfPivotFieldList<ProductDetails> fieldList;
-            SfPivotView<ProductDetails> pivotView;
-            public List<ProductDetails> data { get; set; }
-            protected override void OnInitialized()
-            {
-                this.data = ProductDetails.GetProductData();
-            }
+    #pivotview {
+        width: 57%;
+        height: 530px;
+        float: left;
+    }
+</style>
+@code{
+    SfPivotFieldList<ProductDetails> fieldList;
+    SfPivotView<ProductDetails> pivotView;
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData();
+    }
 
-            public void pivotenginepopulated(EnginePopulatedEventArgs args)
-            {
-                this.fieldList.UpdateAsync(this.pivotView);
-            }
-            public void enginepopulated(EnginePopulatedEventArgs args)
-            {
-                this.fieldList.UpdateViewAsync(this.pivotView);
-            }
-        }
+    public void pivotenginepopulated(EnginePopulatedEventArgs args)
+    {
+        this.fieldList.UpdateAsync(this.pivotView);
+    }
+    public void enginepopulated(EnginePopulatedEventArgs args)
+    {
+        this.fieldList.UpdateViewAsync(this.pivotView);
+    }
+}
 
 ```
 

@@ -13,7 +13,7 @@ The submenu position can be changed by using the [`OnOpen`](https://help.syncfus
 
 In the below sample, the sub menu opens above the parent menu item
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

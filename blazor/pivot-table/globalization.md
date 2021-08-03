@@ -321,73 +321,73 @@ In the following example, we have demonstrate how to enable **Localization** for
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using System.Globalization;
-using Microsoft.AspNetCore.Localization;
+    ```csharp
+    using Syncfusion.Blazor;
+    using System.Globalization;
+    using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
-{
-    public class Startup
+    namespace BlazorApplication
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Startup
         {
             ....
             ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
+            public void ConfigureServices(IServiceCollection services)
             {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
+                ....
+                ....
+                services.AddSyncfusionBlazor();
+                services.AddLocalization(options => options.ResourcesPath = "Resources");
+                services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new CultureInfo("de")
-                };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
-                };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
-```
-
-> Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
-
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace BlazorApplication
-{
-     public class SampleLocalizer : ISyncfusionStringLocalizer
-    {
-
-        public string Get(string key)
-        {
-            return this.Manager.GetString(key);
-        }
-
-        public System.Resources.ResourceManager Manager
-        {
-            get
-            {
-                return BlazorApplication.Resources.SyncfusionBlazorLocale.ResourceManager;
+                    // define the list of cultures your app will support
+                    var supportedCultures = new List<CultureInfo>()
+                    {
+                        new CultureInfo("de")
+                    };
+                    // set the default culture
+                    options.DefaultRequestCulture = new RequestCulture("de");
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+                    new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                    };
+                });
+                services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
             }
         }
     }
-}
-```
+    ```
 
-```csharp
+    > Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+
+* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+
+    ```csharp
+    using Syncfusion.Blazor;
+
+    namespace BlazorApplication
+    {
+        public class SampleLocalizer : ISyncfusionStringLocalizer
+        {
+
+            public string Get(string key)
+            {
+                return this.Manager.GetString(key);
+            }
+
+            public System.Resources.ResourceManager Manager
+            {
+                get
+                {
+                    return BlazorApplication.Resources.SyncfusionBlazorLocale.ResourceManager;
+                }
+            }
+        }
+    }
+    ```
+
+    ```cshtml
     @using Syncfusion.Blazor.PivotView;
     @using Syncfusion.Blazor
 
@@ -415,11 +415,11 @@ namespace BlazorApplication
         protected override void OnInitialized()
         {
             this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
+            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
         }
     }
 
-```
+    ```
 
 ![output](images/localization.png)
 
@@ -429,96 +429,96 @@ In the following examples, demonstrate how to enable **Localization** for pivot 
 
 * Open the **Program.cs** file and add the below configuration in the **Main** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using System.Globalization;
+    ```csharp
+    using Syncfusion.Blazor;
+    using System.Globalization;
 
-namespace ClientApplication
-{
-    public class Program
+    namespace ClientApplication
     {
-        public static async Task Main(string[] args)
+        public class Program
         {
-            var builder = WebAssemblyHostBuilder.CreateDefault(args);
-            builder.RootComponents.Add<App>("app");
+            public static async Task Main(string[] args)
+            {
+                var builder = WebAssemblyHostBuilder.CreateDefault(args);
+                builder.RootComponents.Add<App>("app");
 
-            builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-            builder.Services.AddSyncfusionBlazor();
+                builder.Services.AddTransient(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
+                builder.Services.AddSyncfusionBlazor();
 
 
-            // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
-            builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
+                // Register the Syncfusion locale service to customize the  SyncfusionBlazor component locale culture
+                builder.Services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SyncfusionLocalizer));
 
-            // Set the default culture of the application
-            CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de");
-            CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
+                // Set the default culture of the application
+                CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de");
+                CultureInfo.DefaultThreadCurrentUICulture = new CultureInfo("de");
 
-            await builder.Build().RunAsync();
+                await builder.Build().RunAsync();
+            }
         }
     }
-}
-```
+    ```
 
 * Then, create a **~/Shared/SyncfusionLocalizer.cs** file and implement **ISyncfusionStringLocalizer** interface to the class and override the ResourceManager property to get the resource file details from the application end.
 
-```csharp
-using Syncfusion.Blazor;
+    ```csharp
+    using Syncfusion.Blazor;
 
-public class SyncfusionLocalizer : ISyncfusionStringLocalizer
-{
-    // To get the locale key from mapped resources file
-    public string GetText(string key)
+    public class SyncfusionLocalizer : ISyncfusionStringLocalizer
     {
-        return this.ResourceManager.GetString(key);
-    }  
-
-    // To access the resource file and get the exact value for locale key
-
-    public System.Resources.ResourceManager ResourceManager
-    {
-        get
+        // To get the locale key from mapped resources file
+        public string GetText(string key)
         {
-            // Replace the ApplicationNamespace with your application name.
-            return ClientApplication.Resources.SfResources.ResourceManager;
+            return this.ResourceManager.GetString(key);
+        }  
+
+        // To access the resource file and get the exact value for locale key
+
+        public System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                // Replace the ApplicationNamespace with your application name.
+                return ClientApplication.Resources.SfResources.ResourceManager;
+            }
         }
     }
-}
-```
+    ```
 
-> **Note** ClientApplication denotes the ApplicationNameSpace of your project.
+    > ClientApplication denotes the ApplicationNameSpace of your project.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView;
+    ```cshtml
+        @using Syncfusion.Blazor.PivotView;
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
+        <SfPivotView TValue="ProductDetails">
+            <PivotViewDataSourceSettings DataSource="@data">
+                <PivotViewColumns>
+                    <PivotViewColumn Name="Year"></PivotViewColumn>
+                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
+                </PivotViewColumns>
+                <PivotViewRows>
+                    <PivotViewRow Name="Country"></PivotViewRow>
+                    <PivotViewRow Name="Products"></PivotViewRow>
+                </PivotViewRows>
+                <PivotViewValues>
+                    <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+                </PivotViewValues>
+                <PivotViewFormatSettings>
+                    <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+                </PivotViewFormatSettings>
+            </PivotViewDataSourceSettings>
+        </SfPivotView>
+        @code{
+            public List<ProductDetails> data { get; set; }
+            protected override void OnInitialized()
+            {
+                this.data = ProductDetails.GetProductData().ToList();
+            //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
+            }
         }
-    }
 
-```
+    ```
 
 ![output](images/localization.png)
 
@@ -526,49 +526,49 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format). In the below sample we set the culture and currency using the `SetCulture` and `SetCurrencyCode` methods.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView;
-    @using Syncfusion.Blazor
-    @using Microsoft.JSInterop;
+```cshtml
+@using Syncfusion.Blazor.PivotView;
+@using Syncfusion.Blazor
+@using Microsoft.JSInterop;
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<PivotViewData.ProductDetails> data { get; set; }
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
+@code{
+    public List<PivotViewData.ProductDetails> data { get; set; }
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
+    }
+    [Inject]
+    protected IJSRuntime JsRuntime { get; set; }
+    protected override void OnAfterRender(bool firstRender)
+    {
+        if (firstRender)
         {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in  getting started for more details.
-        }
-        [Inject]
-        protected IJSRuntime JsRuntime { get; set; }
-        protected override void OnAfterRender(bool firstRender)
-        {
-            if (firstRender)
-            {
-                this.JsRuntime.Sf().SetCulture("de-DE").SetCurrencyCode("EUR");
-            }
+            this.JsRuntime.Sf().SetCulture("de-DE").SetCurrencyCode("EUR");
         }
     }
+}
 
 ```
 
@@ -585,34 +585,34 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-   <SfPivotView TValue="ProductDetails" ShowFieldList="true" EnableRtl="true">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" EnableRtl="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 

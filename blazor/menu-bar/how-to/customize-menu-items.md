@@ -15,7 +15,7 @@ Menu items can be added or removed using the [`InsertAfter`](https://help.syncfu
 
 In the following example, the `Europe` menu items are added before the Oceania item, the `Africa` menu items are added after the Asia, and the South America and Mexico items are removed from menu.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -105,7 +105,7 @@ You can enable and disable the menu items using the [`Disabled`](https://help.sy
 
 In the following example, the Directory header item, Conferences, and Music sub menu items are disabled.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons
@@ -168,7 +168,7 @@ You can show or hide the menu items using the [`Hidden`](https://help.syncfusion
 
 In the following example, the Movies header item, Workshops, and Music sub menu items are hidden in menu.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @using Syncfusion.Blazor.Buttons

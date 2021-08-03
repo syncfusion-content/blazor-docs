@@ -62,7 +62,7 @@ For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentatio
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the ConfigureServices function as follows.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor
 
 namespace BlazorApplication
@@ -85,8 +85,9 @@ namespace BlazorApplication
 
 **Step 8:** Now, add the PDF Viewer (Client-side) component to the **~/Pages/Index.razor** page.
 
-```csharp
-<SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" Height="500px" Width="1060px" ></SfPdfViewer>
+```cshtml
+<SfPdfViewer DocumentPath="PDF_Succinctly.pdf" ServiceUrl="https://ej2services.syncfusion.com/production/web-services/api/pdfviewer" Height="500px" Width="1060px">
+</SfPdfViewer>
 ```
 
 > Since Syncfusion PDF Viewer (Blazor client-side) control depends on server-side processing to render the PDF files, it is mandatory to create a web service as mentioned [here](https://www.syncfusion.com/kb/10346/how-to-create-pdf-viewer-web-service-application-in-asp-net-core)
