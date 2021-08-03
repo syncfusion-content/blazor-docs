@@ -446,7 +446,7 @@ The following code example describes the behavior of the `LoadChildOnDemand` fea
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -505,7 +505,7 @@ public class SelfReferenceData
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 using System;
 using System.Collections;

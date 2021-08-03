@@ -46,7 +46,7 @@ To specify the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -132,7 +132,7 @@ Specify the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~S
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -239,7 +239,7 @@ In this demo, the [`FrozenColumns`](https://help.syncfusion.com/cr/blazor/Syncfu
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -313,7 +313,7 @@ In this demo, the columns with field name **TaskName** and **Duration** is froze
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

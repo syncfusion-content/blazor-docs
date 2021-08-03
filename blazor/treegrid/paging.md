@@ -40,7 +40,7 @@ Paging provides an option to display Tree Grid data in page segments. To enable 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -121,7 +121,7 @@ Two behaviour are available in Tree Grid paging to display certain number of rec
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -202,7 +202,7 @@ The pager Dropdown allows you to change the number of records in the Tree Grid d
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

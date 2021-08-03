@@ -39,7 +39,7 @@ The Tree Grid component has options to dynamically insert, delete and update rec
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -125,7 +125,7 @@ TreeColumnIndex="1" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Up
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -235,7 +235,7 @@ Component |Example
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -325,7 +325,7 @@ The cell edit template is used to add a custom component for a particular column
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -403,7 +403,7 @@ In Cell edit mode, when you double click on a cell, it is changed to edit state.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -479,7 +479,7 @@ In Row edit mode, when you start editing the currently selected record, the enti
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -552,7 +552,7 @@ In Dialog edit mode, when you start editing the currently selected row, data wil
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -628,7 +628,7 @@ To enable Batch edit, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syn
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -754,7 +754,7 @@ In the following sample, tree grid enabled with dialog template editing.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -826,7 +826,7 @@ The Tree Grid control provides the support to add the new row in the top, bottom
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -914,7 +914,7 @@ The available built-in command buttons are:
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -1056,7 +1056,7 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -1131,7 +1131,7 @@ Column validation allows you to validate the edited or added row data and it dis
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -1480,7 +1480,7 @@ The tree grid provides an option to set the default value for the columns when a
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -1549,7 +1549,7 @@ In the following demo, editing is disabled for the **Duration** column.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

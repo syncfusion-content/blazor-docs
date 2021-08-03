@@ -62,7 +62,7 @@ This is demonstrated in the below sample code where we have custom toolbar items
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

@@ -48,7 +48,7 @@ Expand and Collapse state of any child record will be persisted.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

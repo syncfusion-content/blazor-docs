@@ -41,7 +41,7 @@ Filtering allows you to view specific or related records based on filter criteri
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -139,7 +139,7 @@ To apply the filter at initial rendering, set the filter **PredicateModel** in [
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -248,7 +248,7 @@ N/A |N/A |**Equal** operator will always be used for Boolean filter. |Boolean
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -349,7 +349,7 @@ In the following sample, the dropdown is used as a custom component in the Durat
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -422,7 +422,7 @@ You can enable filter menu by setting the [`Type`](https://help.syncfusion.com/c
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -511,7 +511,7 @@ In the following sample, dropdown is used as custom component in the duration co
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -586,7 +586,7 @@ In the following sample menu filter is enabled by default and excel filter is en
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -657,7 +657,7 @@ You can enable Excel like filter by defining. [`Type`](https://help.syncfusion.c
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

@@ -56,7 +56,7 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

@@ -46,7 +46,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -121,7 +121,7 @@ The tree grid supports three types of selection mode that can be set by using th
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -200,7 +200,7 @@ The tree grid supports two types of cell selection mode that can be set by using
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -276,7 +276,7 @@ Checkbox selection provides an option to select multiple tree grid records with 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -355,7 +355,7 @@ In checkbox selection, selection can also be done by clicking on rows. This sele
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -429,7 +429,7 @@ The Toggle selection allows to perform selection and unselection of the particul
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -501,7 +501,7 @@ To select a row at initial rendering, set the [SelectedRowIndex](https://help.sy
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -594,7 +594,7 @@ You can get the selected row indexes by using the GetSelectedRowIndexes method.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

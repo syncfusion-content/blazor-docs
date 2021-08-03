@@ -46,7 +46,7 @@ Interaction keys |Description
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -130,7 +130,7 @@ To copy selected rows or cells data into the clipboard with help of external but
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -253,7 +253,7 @@ Tree Grid provides support for a set of copy modes with `CopyHierarchyMode` prop
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -323,7 +323,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -401,7 +401,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject

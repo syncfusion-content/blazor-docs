@@ -39,7 +39,7 @@ The HTML tags can be displayed in the Tree Grid header and content by enabling t
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -134,7 +134,7 @@ The appearance of cells can be customized by using the [`QueryCellInfo`](https:/
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -207,7 +207,7 @@ Note: When a column width is not specified, then auto wrap of columns will be ad
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -286,7 +286,7 @@ The available modes of grid lines are:
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -363,7 +363,7 @@ There are three types of [`ClipMode`](https://help.syncfusion.com/cr/blazor/Sync
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

@@ -147,7 +147,7 @@ The following sample code demonstrates implementing custom data binding using cu
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -337,7 +337,7 @@ The following sample code demonstrates creating Custom Adaptor as a component,
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -570,7 +570,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

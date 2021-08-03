@@ -63,7 +63,7 @@ This is demonstrated in the below sample code,
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

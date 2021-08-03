@@ -90,7 +90,7 @@ Footer aggregate value is calculated for all the rows, and it is displayed in th
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -182,7 +182,7 @@ You can format the aggregate value result by using the [`Format`](https://help.s
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

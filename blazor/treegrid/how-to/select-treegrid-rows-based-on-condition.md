@@ -75,7 +75,7 @@ This is demonstrated in the below sample code where the index value of Tree Grid
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

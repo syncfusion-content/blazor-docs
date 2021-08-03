@@ -52,7 +52,7 @@ This is demonstrated in the below sample code where the value for **Resources** 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

@@ -59,7 +59,7 @@ The following table shows built-in toolbar items and its actions.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

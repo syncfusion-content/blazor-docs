@@ -250,7 +250,7 @@ Pager_TotalItemsInfo |({0} Artikel)
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -435,7 +435,7 @@ The following example demonstrates the Tree Grid in **Deutsch** culture. Here we
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -568,7 +568,7 @@ The **Internationalization** library is used to globalize number, date, and time
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -2804,7 +2804,7 @@ RTL provides an option to switch the text direction and layout of the Tree Grid 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

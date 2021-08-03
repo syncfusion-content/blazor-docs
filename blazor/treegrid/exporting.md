@@ -54,7 +54,7 @@ PDF export allows exporting Tree Grid data to PDF document. You need to use the
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -141,7 +141,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -224,7 +224,7 @@ Page orientation can be changed Landscape(Default Portrait) for the exported doc
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -337,7 +337,7 @@ Supported page sizes are:
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -420,7 +420,7 @@ PDF export provides an option to export the current page into PDF. To export cur
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -503,7 +503,7 @@ PDF export provides an option to export hidden columns of Tree Grid by defining 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -621,7 +621,7 @@ To apply theme in exported PDF, define the **theme** in export properties.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

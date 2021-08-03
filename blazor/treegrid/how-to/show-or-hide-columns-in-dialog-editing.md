@@ -87,7 +87,7 @@ You can show hidden columns or hide visible column’s editor in the dialog whil
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

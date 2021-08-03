@@ -84,7 +84,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
