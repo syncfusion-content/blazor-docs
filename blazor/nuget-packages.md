@@ -738,7 +738,7 @@ SfInPlaceEditor
 
 ### Syncfusion.Blazor.Inputs
 
-A package of Blazor input components. It comes with a collection of form components.  They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.
+A package of Blazor input components. It comes with a collection of form components. They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.
 
 <table>
 <tr>

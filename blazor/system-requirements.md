@@ -9,7 +9,7 @@ documentation: ug
 
 # System requirements
 
-To get started with the Blazor application, we need to ensure the following software to be installed on the machine.
+To get started with the Blazor application, we need to ensure the following software is installed on the machine.
 
 ## Integrated Development Environment
 
@@ -20,7 +20,7 @@ By using the following IDEs, you can develop Blazor applications
 
 ## Framework & SDK
 
-The below tool required to run the Blazor application.
+The below tool is required to run the Blazor application.
 
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 

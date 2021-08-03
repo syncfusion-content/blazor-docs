@@ -17,7 +17,7 @@ The following steps will help you to add the Syncfusion components code in your 
 
 1. Open your existing Blazor application.
 
-2. To open the Syncfusion Blazor Code Generator Wizard, one of the following options in the Razor file, and add Syncfusion components:
+2. To open the Syncfusion Blazor Code Generator Wizard, select one of the following options in the Razor file, and add Syncfusion components:
 
    **Option 1:**
 

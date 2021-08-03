@@ -34,11 +34,11 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    **Use Unlock Key:**
 
-   Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either    Syncfusion licensed or trial Unlock key to unlock Syncfusion Blazor installer.
+   Unlock keys are used to unlock the Syncfusion offline installer, and they are platform and version specific. You should use either Syncfusion licensed or trial Unlock key to unlock Syncfusion Blazor installer.
 
    The trial unlock key is only valid for 30 days, and the installer will not accept an expired trial key.
 
-   To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge    Base article.
+   To learn how to generate an unlock key for both trial and licensed products, see [this](https://www.syncfusion.com/kb/2326) Knowledge Base article.
 
    ![Web Offline Installer UseUnlockKey Wizard](images/webofflineinstaller-3.png)
 
@@ -50,9 +50,9 @@ The steps below show how to install the Essential Studio Blazor installer.
 
    ***Additional Settings***
 
-   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install    Syncfusion samples.
+   * Select the **Install Demos** check box to install Syncfusion samples, or leave the check box unchecked, if you do not want to install Syncfusion samples.
 
-   * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual    Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
+   * Select the **Configure Syncfusion Extensions controls in Visual Studio** checkbox to configure the Syncfusion Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion Extensions in Visual Studio.
 
    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion Control Panel.
 

@@ -65,7 +65,7 @@ Use the following command to specify the path for the output directory.
 dotnet publish -c Release -o <output directory>
 ```
 
-> If the output directory not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
+> If the output directory is not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 
 If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.
 

@@ -13,7 +13,7 @@ Syncfusion provides the Blazor Template Studio to create a Syncfusion Blazor app
 
 The following steps will help you create your **Syncfusion Blazor Application** through **Visual Studio 2019**:
 
-> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
+> Before using the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension is installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
 
 1. Open Visual Studio 2019.
 
@@ -133,7 +133,7 @@ The selected Syncfusion Blazor components and features render code added as .raz
 
 ### Authentication Configuration
 
-We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registrations we can get the tenant id and project client id for Microsoft Identity Platform. We need to configure these id values in created applications then only project will be run correctly with authentication support.
+We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registrations we can get the tenant id and project client id for Microsoft Identity Platform. We need to configure these id values in created applications then only the project will run correctly with authentication support.
 
 ### Individual Accounts Authentication
 
@@ -339,7 +339,7 @@ You can select a culture language in combobox at top right on the page to apply 
 
 #### Server Application, ASP.NET Core hosted Web Application, and Progressive Web Application with ASP.NET Core hosted
 
-1. For register the application, submit your email address and create a password.
+1. To register the application, submit your email address and create a password.
 
     ![Register the application](../images/RegisterApplication.png)
 

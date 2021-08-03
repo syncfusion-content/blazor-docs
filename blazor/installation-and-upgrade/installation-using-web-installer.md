@@ -35,13 +35,13 @@ The steps below show how to install Essential Studio Blazor Web Installer.
 
    ![Web Installer Available Tab](images/webinstaller-3.png)
 
-   If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which    products to uninstall from the same version. Click the Next button.
+   If you have multiple products installed in the same version, they will be listed under the **Installed** tab. You can also select which products to uninstall from the same version. Click the Next button.
 
    ***Installed***
 
    ![Web Installer Installed Tab](images/webinstaller-4.png)
 
-   > If the required software for the selected product isn’t already installed, the **Additional Software Required**    alert will appear. You can, however, continue the installation and install the necessary software later.
+   > If the required software for the selected product isn’t already installed, the **Additional Software Required**    alert will appear. However, you can continue the installation and install the necessary software later.
 
    ***Required Software***
 
@@ -89,7 +89,7 @@ The steps below show how to install Essential Studio Blazor Web Installer.
    ![Web Installer Installation Wizard](images/webinstaller-11.png)
    To open the Syncfusion Control Panel, click **Launch Control Panel**.
 
-11. When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been installed successfully and those that have failed. To close the Summary wizard, click Finish.
+11. When the installation is finished, the **Summary** wizard will appear. Here, you can see the list of products that have been installed successfully and those that have failed. To close the Summary wizard, click Finish.
    ![Web Installer Installation Summary](images/webinstaller-12.png)
 12. After installation, there will be two Syncfusion control panel entries, as shown below. The Essential Studio entry will manage all Syncfusion products installed in the same version, while the Product entry will only uninstall the specific product setup.
    ![Control Panel Installation entries](images/webinstaller-13.png)
@@ -136,7 +136,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Uninstall Available Tab](images/webinstaller-uninstall-3.png)
 
-2. If any other products selected for installation, Uninstall previous version wizard will be displayed with previous version(s) installed for the selected products. Here you can view the list of installed previous versions for the selected products. Select **Uninstall All** checkbox to select all the versions. Click Next.
+2. If any other products selected for installation, Uninstall previous version wizard will be displayed with previous version(s) installed for the selected products. Here, you can view the list of installed previous versions for the selected products. Select **Uninstall All** checkbox to select all the versions. Click Next.
 
    ![Web Installer Uninstall Previous version Wizard](images/webinstaller-uninstall-4.png)
 
@@ -144,7 +144,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Uninstall Previous confirmation](images/webinstaller-7.png)
 
-4. The Confirmation Wizard will appear with the list of products to be installed/uninstalled. Here you can view and modify the list of products that will be installed/uninstalled.
+4. The Confirmation Wizard will appear with the list of products to be installed/uninstalled. Here, you can view and modify the list of products that will be installed/uninstalled.
 
    ![Web Installer Product Install/Uninstall Wizard](images/webinstaller-uninstall-5.png)
 
@@ -166,7 +166,7 @@ You can uninstall all the installed products by selecting the **Syncfusion Essen
 
    ![Web Installer Uninstallation Wizard](images/webinstaller-uninstall-7.png)
 
-9. When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been successfully and unsuccessfully installed/uninstalled. To close the Summary wizard, click Finish.
+9. When the installation is finished, the **Summary** wizard will appear. Here, you can see the list of products that have been successfully and unsuccessfully installed/uninstalled. To close the Summary wizard, click Finish.
 
    ![Web Installer Uninstallation Summary](images/webinstaller-uninstall-8.png)
 

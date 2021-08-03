@@ -19,7 +19,7 @@ The following steps help you create **Syncfusion Blazor Applications** through t
 
     ![CreateProjectPalette](../images/CreateBlazorProjectPalette.png)
 
-2. Select **Syncfusion Blazor Template Studio: Launch** and then press **Enter**.The Template Studio wizard for configuring the Syncfusion Blazor app will appear. Provide the require Project Name and Path to create the new Syncfusion Blazor application.
+2. Select **Syncfusion Blazor Template Studio: Launch** and then press **Enter**. The Template Studio wizard for configuring the Syncfusion Blazor app will appear. Provide the require Project Name and Path to create the new Syncfusion Blazor application.
 
     ![TemplateStudioWizard](../images/ProjectLocationName.png)
 

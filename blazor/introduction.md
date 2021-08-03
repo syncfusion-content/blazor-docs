@@ -11,7 +11,7 @@ documentation: ug
 
 Welcome to Syncfusion Blazor!
 
-Syncfusion Blazor is a modern enterprise UI components library for creating Blazor WebAssembly or Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular and touch-friendly.
+Syncfusion Blazor is a modern enterprise UI components library for creating Blazor WebAssembly or Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular, and touch-friendly.
 
 ## How to best read this user guide
 
@@ -22,4 +22,4 @@ all other information can be referred to as needed.
 
 ## Getting Help
 
-* If you are still not able to find the information that you are looking for in the self-help resources mentioned above then please contact us by creating a support ticket in [our support site](http://syncfusion.com/support) or ask your query in Stack Overflow with the tag `syncfusion-blazor`.
+* If you are still not able to find the information that you are looking for in the self-help resources mentioned above, then please contact us by creating a support ticket on [our support site](http://syncfusion.com/support) or ask your query in Stack Overflow with the tag `syncfusion-blazor`.

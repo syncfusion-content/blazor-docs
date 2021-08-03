@@ -14,7 +14,7 @@ Entity Framework is an open-source object-relational mapper (O/RM) from Microsof
 
 ## Prerequisite software
 
-The following software is needed
+The following software are needed
 
 * Visual Studio 2019 v16.9.0 or later
 * .NET SDK 5.0 or later.

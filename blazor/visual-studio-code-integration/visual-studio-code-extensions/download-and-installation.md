@@ -13,7 +13,7 @@ Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code mar
 
 ## Prerequisites
 
-The following prerequisites software need to be installed for the Syncfusion Blazor extension installation and for creating, converting and upgrading the Syncfusion Blazor applications.
+The following prerequisites software need to be installed for the Syncfusion Blazor extension installation and for creating, converting, and upgrading the Syncfusion Blazor applications.
 
 * [Visual Studio Code](https://code.visualstudio.com/download).
 
