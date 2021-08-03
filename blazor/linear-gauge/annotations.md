@@ -192,10 +192,8 @@ Multiple annotations can be added to the Linear Gauge component by adding the mu
 
 <SfLinearGauge>
     <LinearGaugeAnnotations>
-        <LinearGaugeAnnotation ZIndex="1"
-                               AxisValue="100"
-                               X="-110"
-                               Y="-35">
+        <LinearGaugeAnnotation ZIndex="1" AxisValue="100"
+                               X="-110" Y="-35">
             <ContentTemplate>
                 <div class="custom-annotation">Speed to get higher milage</div>
             </ContentTemplate>

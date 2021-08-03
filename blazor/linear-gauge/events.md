@@ -327,7 +327,8 @@ The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Line
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugePointers>
-                    <LinearGaugePointer EnableDrag="true" PointerValue="10"></LinearGaugePointer>
+                    <LinearGaugePointer EnableDrag="true" PointerValue="10">
+                    </LinearGaugePointer>
                 </LinearGaugePointers>
             </LinearGaugeAxis>
         </LinearGaugeAxes>

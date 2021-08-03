@@ -43,10 +43,7 @@ The following properties in the [`LinearGaugeLine`](https://help.syncfusion.com/
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
-            <LinearGaugeLine Height="150"
-                             Width="2"
-                             Color="#4286f4"
-                             Offset="2">
+            <LinearGaugeLine Height="150" Width="2" Color="#4286f4" Offset="2">
             </LinearGaugeLine>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -95,9 +92,11 @@ The minor and major ticks can be positioned by using the [`Offset`](https://help
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis Minimum="0" Maximum="160">
-           <LinearGaugeMajorTicks Interval="10" Color="red" Height="10" Width="3" Position="Position.Outside">
+           <LinearGaugeMajorTicks Interval="10" Color="red" Height="10" Width="3"
+                                  Position="Position.Outside">
            </LinearGaugeMajorTicks>
-            <LinearGaugeMinorTicks Interval="5" Color="green" Height="5" Width="2" Position="Position.Cross">
+            <LinearGaugeMinorTicks Interval="5" Color="green" Height="5" Width="2"
+                                   Position="Position.Cross">
             </LinearGaugeMinorTicks>
             <LinearGaugePointers>
                 <LinearGaugePointer></LinearGaugePointer>
@@ -172,7 +171,7 @@ If the last label is not in the visible range, it will be hidden by default. The
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis Minimum="0" Maximum="170" ShowLastLabel="true">
-        <LinearGaugePointers>
+            <LinearGaugePointers>
                 <LinearGaugePointer></LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
@@ -285,14 +284,16 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 
 ## Orientation
 
-By default, the Linear Gauge is rendered vertically. To change its orientation, the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Orientation.html) property must be set "**Horizontal**".
+By default, the Linear Gauge is rendered vertically. To change its orientation, the [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Orientation) property must be set to "**Horizontal**".
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Orientation="Orientation.Horizontal">
     <LinearGaugeAxes>
-        <LinearGaugeAxis Minimum="20" Maximum="140"></LinearGaugeAxis>
+        <LinearGaugeAxis Minimum="20" Maximum="140">
+            <LinearGaugeMajorTicks Interval="10"></LinearGaugeMajorTicks>
+        </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
 ```

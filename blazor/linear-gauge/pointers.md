@@ -92,7 +92,9 @@ The marker pointer can be customized using the following properties and class.
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue="60" MarkerType="MarkerType.Circle" Height="15" Width="15" Position="Position.Outside" Color="#cd41f4">
+                <LinearGaugePointer PointerValue="60" MarkerType="MarkerType.Circle"
+                                    Height="15" Width="15" Color="#cd41f4"
+                                    Position="Position.Outside">
                 </LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
@@ -104,7 +106,7 @@ The marker pointer can be customized using the following properties and class.
 
 ### Bar pointer
 
-The bar pointer is used to track the axis value. The bar pointer starts from the beginning of the gauge and ends at the pointer value. To enable bar pointer set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Type) property in [`LinearGaugePointer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html) class as "[**Bar**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Point.html#Syncfusion_Blazor_LinearGauge_Point_Bar)".
+The bar pointer is used to track the axis value. The bar pointer starts from the beginning of the gauge and ends at the pointer value. To enable bar pointer, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html#Syncfusion_Blazor_LinearGauge_LinearGaugePointer_Type) property in [`LinearGaugePointer`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugePointer.html) class as "[**Bar**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Point.html#Syncfusion_Blazor_LinearGauge_Point_Bar)".
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -113,7 +115,8 @@ The bar pointer is used to track the axis value. The bar pointer starts from the
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue="60" Type="Point.Bar" Color="#a6a6a6">
+                <LinearGaugePointer PointerValue="60" Type="Point.Bar"
+                                    Color="#a6a6a6">
                 </LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
@@ -144,7 +147,8 @@ The bar pointer can be customized using the following properties and class.
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue="80" Type="Point.Bar" Width="20" Color="#f44141">
+                <LinearGaugePointer PointerValue="80" Type="Point.Bar" Width="20"
+                                    Color="#f44141">
                 </LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
@@ -226,18 +230,22 @@ Using linear gradient, colors will be applied in a linear progression. The start
                 <LinearGaugeMajorTicks Height="0.01" Interval="25" />
                 <LinearGaugeMinorTicks Height="0.01" />
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="80" Height="25" Width="35" Offset="-40" MarkerType="MarkerType.Triangle"
-                                        Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
+                    <LinearGaugePointer PointerValue="80" Height="25" Width="35"
+                                Offset="-40" MarkerType="MarkerType.Triangle"
+                                Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
                         <LinearGradient StartValue="1%" EndValue="99%">
                             <ColorStops>
-                                <ColorStop Opacity="1" Color= "#fef3f9" Offset="1%" ></ColorStop>
-                                <ColorStop Opacity="1" Color= "#f54ea2" Offset="100%"></ColorStop>
+                                <ColorStop Opacity="1" Color= "#fef3f9" Offset="1%">
+                                </ColorStop>
+                                <ColorStop Opacity="1" Color= "#f54ea2" Offset="100%">
+                                </ColorStop>
                             </ColorStops>
                         </LinearGradient>
                     </LinearGaugePointer>
                 </LinearGaugePointers>
                 <LinearGaugeRanges>
-                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80" StartWidth="30" EndWidth="30" Offset="30">
+                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80"
+                                      StartWidth="30" EndWidth="30" Offset="30">
                     </LinearGaugeRange>
                 </LinearGaugeRanges>
             </LinearGaugeAxis>
@@ -267,20 +275,24 @@ Using radial gradient, colors will be applied in circular progression. The inner
                 <LinearGaugeMajorTicks Height="0.01" Interval="25" />
                 <LinearGaugeMinorTicks Height="0.01" />
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="80" Height="25" Width="35" Offset="-40" MarkerType="MarkerType.Triangle"
-                                        Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
+                    <LinearGaugePointer PointerValue="80" Height="25" Width="35"
+                                Offset="-40" MarkerType="MarkerType.Triangle"
+                                Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
                         <RadialGradient Radius="60%">
                             <InnerPosition X="50%" Y="50%"></InnerPosition>
                             <OuterPosition X="50%" Y="50%"></OuterPosition>
                             <ColorStops>
-                                <ColorStop Opacity="0.9" Color="#fff5f5" Offset="1%"></ColorStop>
-                                <ColorStop Opacity="1" Color="#f54ea2" Offset="99%"></ColorStop>
+                                <ColorStop Opacity="0.9" Color="#fff5f5" Offset="1%">
+                                </ColorStop>
+                                <ColorStop Opacity="1" Color="#f54ea2" Offset="99%">
+                                </ColorStop>
                             </ColorStops>
                         </RadialGradient>
                     </LinearGaugePointer>
                 </LinearGaugePointers>
                 <LinearGaugeRanges>
-                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80" StartWidth="30" EndWidth="30" Offset="30">
+                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80"
+                                      StartWidth="30" EndWidth="30" Offset="30">
                     </LinearGaugeRange>
                 </LinearGaugeRanges>
             </LinearGaugeAxis>

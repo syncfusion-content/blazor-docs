@@ -51,9 +51,6 @@ The title for the Linear Gauge can be set using [`Title`](https://help.syncfusio
     </LinearGaugeTitleStyle>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
-            <LinearGaugePointers>
-                <LinearGaugePointer></LinearGaugePointer>
-            </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
@@ -89,7 +86,8 @@ The "[**Normal**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linear
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="50" Width="15" Type="Point.Bar" Color="#a6a6a6">
+                    <LinearGaugePointer PointerValue="50" Width="15" Type="Point.Bar"
+                                        Color="#a6a6a6">
                     </LinearGaugePointer>
                 </LinearGaugePointers>
             </LinearGaugeAxis>
@@ -112,7 +110,8 @@ The "[**RoundedRectangle**](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="50" Width="15" Type="Point.Bar" Color="#a6a6a6">
+                    <LinearGaugePointer PointerValue="50" Width="15" Type="Point.Bar"
+                                        Color="#a6a6a6">
                     </LinearGaugePointer>
                 </LinearGaugePointers>
             </LinearGaugeAxis>
@@ -135,7 +134,8 @@ The "[**Thermometer**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.L
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="80" Width="15" Type="Point.Bar" Color="#a6a6a6">
+                    <LinearGaugePointer PointerValue="80" Width="15" Type="Point.Bar"
+                                        Color="#a6a6a6">
                     </LinearGaugePointer>
                 </LinearGaugePointers>
             </LinearGaugeAxis>
@@ -153,7 +153,8 @@ The Linear Gauge component is rendered with margin by default. To remove the mar
 ```csharp
 @using Syncfusion.Blazor.LinearGauge
 
-<SfLinearGauge AllowMargin="false" Width="100%" Height="100%" Orientation="Orientation.Horizontal" Background="#04fbfb">
+<SfLinearGauge AllowMargin="false" Width="100%" Height="100%"
+               Orientation="Orientation.Horizontal" Background="#04fbfb">
     <LinearGaugeBorder Color="#FF0000" Width="2"></LinearGaugeBorder>
     <LinearGaugeMargin Left="0" Right="0" Top="0" Bottom="0"></LinearGaugeMargin>
     <LinearGaugeAxes>
