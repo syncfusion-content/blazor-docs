@@ -9,8 +9,7 @@ documentation: ug
 
 # Events in Blazor TreeGrid Component
 
-In this section, we have provided the list of events of the Tree Grid component which will be
-triggered for appropriate Tree Grid actions.
+In this section, we have provided the list of events of the Tree Grid component which will be triggered for appropriate Tree Grid actions.
 
 The events should be provided to the Tree Grid using **TreeGridEvents** component. When using events of Tree Grid, **TValue** must be provided in the **TreeGridEvents** component.
 

@@ -211,7 +211,7 @@ Pager_TotalItemsInfo |({0} Artikel)
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -394,7 +394,7 @@ The following example demonstrates the Tree Grid in **Deutsch** culture. Here we
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -528,7 +528,7 @@ The **Internationalization** library is used to globalize number, date, and time
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Microsoft.JSInterop
@@ -2765,7 +2765,7 @@ RTL provides an option to switch the text direction and layout of the Tree Grid 
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;

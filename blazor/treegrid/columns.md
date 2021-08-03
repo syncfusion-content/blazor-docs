@@ -311,7 +311,7 @@ To format cell values based on specific culture, use the [`Format`](https://help
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -395,7 +395,7 @@ For built-in date format you can specify [`Format`](https://help.syncfusion.com/
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -468,7 +468,7 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -550,7 +550,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -618,7 +618,7 @@ Multiple columns can be reordered at a time by using the **ReorderColumns** meth
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -695,7 +695,7 @@ In the below example, Duration column is locked and its reordering functionality
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -767,7 +767,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -840,7 +840,7 @@ In the following sample, minimum and maximum width are defined for **Duration**,
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -908,7 +908,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1009,7 +1009,7 @@ The column [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1099,7 +1099,7 @@ In the following code, checkbox is rendered based on **Duration** field value.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1225,7 +1225,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1302,7 +1302,7 @@ In this below example, we have opened column chooser using external button click
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Data;
@@ -1395,7 +1395,7 @@ The default items are displayed in following table.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1471,7 +1471,7 @@ It is also possible to select the rows hierarchically using checkboxes in Tree G
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1544,7 +1544,7 @@ The [`HideAtMedia`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Sync
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1614,7 +1614,7 @@ You can enable or disable tree grid action for a particular column by setting th
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1680,7 +1680,7 @@ You can show or hide tree grid columns dynamically using external buttons by inv
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1760,7 +1760,7 @@ To render boolean values as checkbox in columns, you need to set [`DisplayAsChec
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;

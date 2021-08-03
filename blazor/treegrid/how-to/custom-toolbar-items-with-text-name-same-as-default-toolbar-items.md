@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where we have custom toolbar items
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;

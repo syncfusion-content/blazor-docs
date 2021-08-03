@@ -13,8 +13,7 @@ The Tree Grid provides Toolbar support to handle tree grid actions.
 
 ## Built-in toolbar items
 
-Built-in toolbar items execute standard actions of the tree grid, and it can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html)
-as a collection of built-in items. It renders the button with icon and text.
+Built-in toolbar items execute standard actions of the tree grid, and it can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) as a collection of built-in items. It renders the button with icon and text.
 
 The following table shows built-in toolbar items and its actions.
 
@@ -35,7 +34,7 @@ The following table shows built-in toolbar items and its actions.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -107,7 +106,7 @@ The following output is displayed as a result of the above code example.
 
 You can enable / disable tool bar items by using the [`EnableToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableToolbarItems.html) method.
 
-```csharp
+```htmlcs
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.TreeGrid;

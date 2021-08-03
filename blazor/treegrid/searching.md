@@ -13,7 +13,7 @@ You can search records in a Tree Grid, by using the [`Search`](https://help.sync
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -83,7 +83,7 @@ To apply search at initial rendering, set the Fields, Operator, Key, and IgnoreC
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -174,7 +174,7 @@ To search tree grid records from an external button, invoke the [`Search`](https
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid
@@ -248,7 +248,7 @@ By default, tree grid searches all visible columns. You can search specific colu
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;

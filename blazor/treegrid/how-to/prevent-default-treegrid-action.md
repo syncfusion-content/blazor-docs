@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the `Add` operation is preve
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;

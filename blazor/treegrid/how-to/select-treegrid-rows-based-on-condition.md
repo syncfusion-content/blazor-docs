@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the index value of Tree Grid
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;

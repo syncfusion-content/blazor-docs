@@ -9,13 +9,11 @@ documentation: ug
 
 # Editing in Blazor TreeGrid Component
 
-The Tree Grid component has options to dynamically insert, delete and update records.
-Editing feature is enabled by using [`TreeGridEditSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations.
-To define the primary key, set [`TreeGridColumn.IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
+The Tree Grid component has options to dynamically insert, delete and update records. Editing feature is enabled by using [`TreeGridEditSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations. To define the primary key, set [`TreeGridColumn.IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -78,8 +76,7 @@ public class TreeData
 
 {% endtabs %}
 
-You can disable editing for a particular column, by specifying
-[`TreeGridColumn.AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
+You can disable editing for a particular column, by specifying [`TreeGridColumn.AllowEditing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowEditing.html) to **false**.
 
 > To perform the editing operation in the Blazor Tree Grid, we recommend to mention the respective model class type (List<TreeData.BusinessObject>), in the Tree Grid's dataSource property value.
 
@@ -97,12 +94,11 @@ You can disable editing for a particular column, by specifying
 
 ## Toolbar with edit option
 
-The tree grid toolbar has the built-in items to execute Editing actions.
-You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Toolbar.html) property.
+The tree grid toolbar has the built-in items to execute Editing actions. You can define this by using the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Toolbar.html) property.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -172,8 +168,7 @@ The following output is displayed as a result of the above code example.
 
 ## Cell edit type and its params
 
-The [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) is used to customize the edit type of the particular column.
-You can set the [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) based on data type of the column.
+The [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) is used to customize the edit type of the particular column. You can set the [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) based on data type of the column.
 
 * [`NumericTextBox`](../numerictextbox/getting-started) component for integers, double, and decimal data types.
 
@@ -187,7 +182,7 @@ You can set the [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazo
 
 * [`Checkbox`](../check-box/getting-started) component for boolean type.
 
-Also, you can customize model of the [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) component through the [`TreeGridColumn.Edit.params`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Edit.html).
+Also, you can customize model of the [`TreeGridColumn.EditType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~EditType.html) component through the `TreeGridColumn.Edit.params`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Edit.html).
 
 The following table describes cell edit type component and their corresponding edit params of the column.
 
@@ -202,7 +197,7 @@ Component |Example
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -286,13 +281,11 @@ The following output is displayed as a result of the above code example.
 
 ## Cell Edit Template
 
-The cell edit template is used to add a custom component for a particular column when the column is edited.
-
-The following code example describes, how to define the Edit template for a particular column.
+The cell edit template is used to add a custom component for a particular column when the column is edited. The following code example describes, how to define the Edit template for a particular column.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -380,13 +373,11 @@ Tree Grid supports the following types of edit modes, they are:
 
 ### Cell
 
-In Cell edit mode, when you double click on a cell, it is changed to edit state.
-You can change the cell value and save to the data source.
-To enable Cell edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Cell**.
+In Cell edit mode, when you double click on a cell, it is changed to edit state. You can change the cell value and save to the data source. To enable Cell edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Cell**.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -458,13 +449,11 @@ The following output is displayed as a result of the above code example.
 
 ### Row
 
-In Row edit mode, when you start editing the currently selected record, the entire row is changed to edit state.
-You can change the cell values of the row and save edited data to the data source.
-To enable Row edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Row**.
+In Row edit mode, when you start editing the currently selected record, the entire row is changed to edit state. You can change the cell values of the row and save edited data to the data source. To enable Row edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Row**.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -533,13 +522,11 @@ The following output is displayed as a result of the above code example.
 
 ### Dialog
 
-In Dialog edit mode, when you start editing the currently selected row, data will be shown on a dialog.
-You can change the cell values and save edited data to the data source.
-To enable Dialog edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog**.
+In Dialog edit mode, when you start editing the currently selected row, data will be shown on a dialog. You can change the cell values and save edited data to the data source. To enable Dialog edit, set the [`TreeGridEditSettings.Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog**.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -608,13 +595,12 @@ The following output is displayed as a result of the above code example.
 
 ### Batch
 
-In Batch edit mode, when you double-click on the tree grid cell, the target cell goes into edit state.
-You can bulk save (added, changed and deleted data in the single request) to data source by clicking on the toolbar's **Update** button or by externally invoking the [`EndEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEdit) method.
+In Batch edit mode, when you double-click on the tree grid cell, the target cell goes into edit state. You can bulk save (added, changed and deleted data in the single request) to data source by clicking on the toolbar's **Update** button or by externally invoking the [`EndEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_EndEdit) method.
 To enable Batch edit, set the [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) property of `TreeGridEditSettings` as **Batch**.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -687,7 +673,7 @@ In the following sample, tree grid enabled with dialog template editing.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -808,63 +794,13 @@ The following output is displayed as a result of the above code example.
 
 > The template form editors should have **name** attribute.
 
- <!-- Get value from editor
-
-You can read, format, and update the current editor value in the [`ActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionBegin.html) event at the time of setting `requestType` to `save`.
-
-In the following code example, the `progress` value has been formatted and updated.
-
-``` typescript
-    function actionBegin(args) {
-        if (args.requestType === 'save') {
-            // cast string to integer value.
-            args.data['progress'] = parseFloat(args.form.querySelector("#progress").value);
-        }
-    }
-
-```
-
- Set focus to editor
-
-By default, the first input element in the dialog will be focused while opening the dialog.
-If the first input element is in disabled or hidden state, focus the valid input element in the
-[`ActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html)
-event based on `requestType` as `beginEdit`.
-
-```typescript
-
-    function actionComplete(args) {
-        // Set initail Focus
-        if (args.requestType === 'beginEdit') {
-            (args.form.elements.namedItem('taskName')as HTMLInputElement).focus();
-        }
-    }
-
-```
-
- Adding validation rules for custom editors
-
-If you have used additional fields that are not present in the column model, then add the validation rules to the [`ActionComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html) event.
-
-```typescript
-
-    function actionComplete(args: DialogEditEventArgs) {
-        if ((args.requestType === 'beginEdit' || args.requestType === 'add')) {
-            // Add Validation Rules
-            args.form.ej2_instances[0].addRules('progress', {max: 100});
-        }
-    }
-
-```
--->
-
 ## Adding row position
 
 The Tree Grid control provides the support to add the new row in the top, bottom, above selected row, below selected row and child position of tree grid content using [`TreeGridEditSettings.NewRowPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~NewRowPosition.html) property. By default, a new row will be added at the top of the tree grid.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -944,7 +880,7 @@ The available built-in command buttons are:
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1095,7 +1031,7 @@ The delete confirm dialog can be shown when deleting a record by defining the [`
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1164,13 +1100,11 @@ The following output is displayed as a result of the above code example.
 
 ## Column validation
 
-Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data.
-Tree Grid uses **Form Validator** component for column validation.
-You can set validation rules by defining the [`TreeGridColumn.ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
+Column validation allows you to validate the edited or added row data and it display errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. You can set validation rules by defining the [`TreeGridColumn.ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1483,23 +1417,23 @@ namespace TreeGridWebApiEFSample.Controllers
 @using Syncfusion.Blazor.TreeGrid
 @using Shared.Models
 
-    <SfTreeGrid TValue="Shared.Models.Task"  @ref="treeGrid" IdMapping="TaskID" AllowPaging="true"
-                ParentIdMapping="ParentID" HasChildMapping="IsParent"
-                TreeColumnIndex="0" Toolbar="Toolbaritems">
-        <SfDataManager Url="api/TreeGrid" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
-        <TreeGridEditSettings AllowEditing="true"
-                              AllowAdding="true"
-                              AllowDeleting="true"
-                              Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"
-                              NewRowPosition="Syncfusion.Blazor.TreeGrid.RowPosition.Child"></TreeGridEditSettings>
-        <TreeGridColumns>
-            <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true" Type=ColumnType.Number></TreeGridColumn>
-            <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160" Type=ColumnType.String></TreeGridColumn>
-            <TreeGridColumn Field="Duration" HeaderText="Duration" Width="160" Type=ColumnType.Number></TreeGridColumn>
-            <TreeGridColumn Field="Progress" HeaderText="Progress" Width="160" Type=ColumnType.Number></TreeGridColumn>
+<SfTreeGrid TValue="Shared.Models.Task"  @ref="treeGrid" IdMapping="TaskID" AllowPaging="true"
+            ParentIdMapping="ParentID" HasChildMapping="IsParent"
+            TreeColumnIndex="0" Toolbar="Toolbaritems">
+    <SfDataManager Url="api/TreeGrid" Adaptor="Adaptors.WebApiAdaptor" CrossDomain="true"></SfDataManager>
+    <TreeGridEditSettings AllowEditing="true"
+                            AllowAdding="true"
+                            AllowDeleting="true"
+                            Mode="Syncfusion.Blazor.TreeGrid.EditMode.Row"
+                            NewRowPosition="Syncfusion.Blazor.TreeGrid.RowPosition.Child"></TreeGridEditSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="80" IsPrimaryKey="true" Type=ColumnType.Number></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160" Type=ColumnType.String></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="160" Type=ColumnType.Number></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="160" Type=ColumnType.Number></TreeGridColumn>
 
-        </TreeGridColumns>
-    </SfTreeGrid>
+    </TreeGridColumns>
+</SfTreeGrid>
 
 @code{
 
@@ -1510,16 +1444,15 @@ namespace TreeGridWebApiEFSample.Controllers
 }
 ```
 
->You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
+> You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
 
 ## Default column values on add new
 
-The tree grid provides an option to set the default value for the columns when adding a new record in it.
-To set a default value for the particular column by defining the [`TreeGridColumn.DefaultValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DefaultValue.html).
+The tree grid provides an option to set the default value for the columns when adding a new record in it. To set a default value for the particular column by defining the [`TreeGridColumn.DefaultValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~DefaultValue.html).
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1591,7 +1524,7 @@ In the following demo, editing is disabled for the **Duration** column.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1654,5 +1587,4 @@ public class TreeData
 
 ## Troubleshoot: Editing works only for first row
 
-The Editing functionalities can be performed based upon the primary key value of the selected row.
-If [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is not defined in the tree grid, then edit or delete action take places the first row.
+The Editing functionalities can be performed based upon the primary key value of the selected row. If [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is not defined in the tree grid, then edit or delete action take places the first row.

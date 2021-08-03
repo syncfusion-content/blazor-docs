@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the [`Print`](https://help.s
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
@@ -53,7 +53,7 @@ This is demonstrated in the below sample code where the [`Print`](https://help.s
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

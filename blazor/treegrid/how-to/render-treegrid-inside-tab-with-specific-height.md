@@ -13,7 +13,7 @@ By default, Tree Grid will occupy the entire space of the parent element when Tr
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;

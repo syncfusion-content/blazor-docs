@@ -15,7 +15,7 @@ This is demonstrated in the below sample code we have render the tooltip for **T
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
