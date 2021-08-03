@@ -19,7 +19,7 @@ Use the chart's [`Rows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 * To bind a vertical axis to a specific row, set the axis's [`RowIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_RowIndex) property to that row's index.
 
-* Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartRow.html#Syncfusion_Blazor_Charts_ChartRow_Border) property to customize the bottom line of each row.
+* The bottom line of each row can be customized by specified in [`ChartBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
 
 ```cshtml
 
@@ -144,7 +144,7 @@ Use the chart's [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 * To bind a horizontal axis to a specific column, set the axis's [`ColumnIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_ColumnIndex) property to that column's index.
 
-* Use the [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartColumn.html#Syncfusion_Blazor_Charts_ChartColumn_Border) property to customize the left line of each column.
+* The left line of each column can be customized by specified in [`ChartBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
 
 ```cshtml
 

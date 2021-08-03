@@ -69,7 +69,7 @@ The default color of series or points can be changed by providing a custom color
 
 <!-- markdownlint-disable MD013 -->
 
-The chart's background color and border can be customized using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html) properties respectively.
+The chart's background color can be customized using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Background) property and the border color and width can be customized to specified in [`ChartBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartBorder.html).
 
 ```cshtml
 
@@ -112,7 +112,7 @@ The chart's background color and border can be customized using the [`Background
 
 ### Chart Margin
 
-The chart's margin from its container can be customized using the [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html) property.
+The chart's margin from its container can be customized using the [`ChartMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartMargin.html).
 
 ```cshtml
 
@@ -158,7 +158,7 @@ The chart's margin from its container can be customized using the [`Margin`](htt
 
 ### Chart Area Background and Border
 
-The chart area's background color and border can be customized using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) and [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Border) properties in the [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html).
+The chart area's background color can be customized using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html#Syncfusion_Blazor_Charts_ChartArea_Background) property and the border color and width can be customized to specified in [`ChartAreaBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAreaBorder.html) of [`ChartArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartArea.html).
 
 ```cshtml
 
