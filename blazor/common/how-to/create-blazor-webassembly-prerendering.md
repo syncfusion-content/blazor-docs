@@ -23,7 +23,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 3. Remove the below line from Client project's `~/Program.cs` file.
 
-    ```csharp
+    ```c#
     // builder.RootComponents.Add<App>("#app");
     ```
 
@@ -68,7 +68,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 6. Open `Startup.cs` file in the Server project and change endpoint of `MapFallbackToFile` configuration from `index.html` to `/_Host` on `Configure` method.
 
-    ```csharp
+    ```c#
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         ....
@@ -84,7 +84,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 7. Add Syncfusion Blazor service in the `~/Server/Startup.cs` file.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     public void ConfigureServices(IServiceCollection services)
@@ -110,7 +110,7 @@ The Syncfusion Blazor service has registered the HttpClient service itself by de
 
 If you configure with absolute URI in the `~/Client/Pages/Index.razor` file, you will face another runtime error.
 
-```csharp
+```c#
 protected override async Task OnInitializedAsync()
 {
     forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("http://localhost:44376/WeatherForecast");
@@ -127,7 +127,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 1. Create a public interface in the `~/Shared/WeatherForecast.cs` file on the Shared project to abstract the API call.
 
-    ```csharp
+    ```c#
     using System.Threading.Tasks;
 
     public interface IWeatherForecastService
@@ -138,7 +138,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 2. Create a class file `~/Client/Shared/WeatherForecastService.cs` and inherit the class with the new interface `IWeatherForecastService`. Here, the override method `GetForecastAsync` will fetch the data using HTTP Get action.
 
-    ```csharp
+    ```c#
     using System.Net.Http;
     using System.Net.Http.Json;
     using System.Threading.Tasks;
@@ -165,7 +165,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 3. create a new class file with same class name on the Server project and inherit with the interface `IWeatherForecastService`. Here, the existing API `~/Server/Controller/WeatherForecastController.cs` data creation process moved into the override method `GetForecastAsync`.
 
-    ```csharp
+    ```c#
     using System;
     using System.Linq;
     using System.Threading.Tasks;
@@ -196,7 +196,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 4. Now, the API controller will have the below changes on `~/Server/Controller/WeatherForecastController.cs` file.
 
-    ```csharp
+    ```c#
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Mvc;
     using System.Collections.Generic;
@@ -228,7 +228,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
     **Client/Program.cs**
 
-    ```csharp
+    ```c#
     using BlazorWebAssemblyHosted.Shared;
     using BlazorWebAssemblyHosted.Client.Shared;
 
@@ -244,7 +244,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
     **Server/Startup.cs**
 
-    ```csharp
+    ```c#
     using BlazorWebAssemblyHosted.Shared;
     using BlazorWebAssemblyHosted.Server.Shared;
 
@@ -259,7 +259,7 @@ Refer to the below steps to resolve these issues and make the app running with H
 
 6. Now, change the DI injection from `HttpClient` to `IWeatherForecastService` on the `~/Client/Pages/Index.razor` file.
 
-    ```csharp
+    ```cshtml
     @using BlazorWebAssemblyHosted.Shared
     @inject IWeatherForecastService  WeatherForecastService
 
