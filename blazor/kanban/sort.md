@@ -25,7 +25,7 @@ The SortBy `DataSourceOrder` property does not require any `Field` mapping. In t
 
 > By default, the `SortBy` property is `DataSourceOrder`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban;
 
@@ -113,7 +113,7 @@ For Example,
 
 **Odd/Even order** - Consider, Column A has Card A with priority value `1`, Card B with priority value `3`, and Card C with priority value `5`, and Column B has Card D with priority value `5`, then the Dropped Card D will be placed between Card A and Card B. Now, the Cards D, B, and C will be dynamically changed to the priority values as `2, 3, and 5` respectively.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban;
 
@@ -199,7 +199,7 @@ The output will be as follows.
 
 The SortBy `Custom` property must require datasource `Field` mapping. In this behavior, cards are loaded based on the `Field` mapping value and also cards are dropped based on the `Field` mapping value.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban;
 
@@ -270,7 +270,7 @@ Kanban board also provides support for aligning the cards in the columns using t
 
 In the following sample, cards are aligned in `Descending` order.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban;
 

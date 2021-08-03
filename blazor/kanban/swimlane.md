@@ -15,7 +15,7 @@ Swimlanes are horizontal categorizations of cards on the Kanban board.  It is us
 
 Cards can be grouped based on `KeyField` and displayed in rows, which are separated by columns. It is mandatory to define the `KeyField` that is mapped from the datasource for rendering swimlane rows in the Kanban board.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -84,7 +84,7 @@ Customize the swimlane row header text by using the `TextField` property mapped 
 
 > It is not mandatory to define the `TextField` to `KanbanSwimlaneSettings`.  It will automatically consider the `KeyField` to swimlane row header text. If the mapping `TextField` key is not present in the datasource, it will consider the swimlane `KeyField` as swimlane row header text.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -148,7 +148,7 @@ Customize the swimlane row header text by using the `TextField` property mapped 
 
 You can customize the Kanban swimlane row by using `Template`, which is specified within the `KanbanSwimlaneSettings` property. In this demo, the swimlane header is customized with HTML element.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -249,7 +249,7 @@ Output be like the below.
 
 Swimlane rows are rendered on descending order when using the `SortDirection` property set to `Descending` order. By default, swimlane rows are rendered by **Ascending** order.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -316,7 +316,7 @@ Output be like the below.
 
 By default, The Kanban does not allow dragging the cards across the swimlane rows. Enabling the `AllowDragAndDrop` property allows you to drag the cards across the swimlane rows, which is specified inside `KanbanSwimlaneSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -383,7 +383,7 @@ Users can show or hide the cards count by swimlane row in header when enabling t
 
 In below demo, disabled on `ShowItemCount` property on rendering swimlane row without total count.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -454,7 +454,7 @@ By default, the `EnableFrozenRows` property is set as `false`. If you wish to sh
 
 > This feature support only when using Kanban content scrolling. The Expand/collapse swimlane icon does not work on frozen rows.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

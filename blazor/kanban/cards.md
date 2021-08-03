@@ -25,7 +25,7 @@ The card header is achieved by mapping the `HeaderField` property, which is plac
 
 In the following demo, the `ShowHeader` property is disabled on Kanban board.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -97,7 +97,7 @@ The card tags are used to display the tag text with the background color. Each t
 
 > The mapped datasource key value contains single or multiple tags. If it is multiple tags, each tag will be separated by a comma in the datasource.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -164,7 +164,7 @@ Kanban card supports to custom the left border color for all the cards. This can
 
 > By default, the card border left color width is `3px`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -231,7 +231,7 @@ The card allows to render the custom elements based on the given class names ins
 
 In the following demo, images and icons are rendered using the `FooterCssField` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -380,7 +380,7 @@ The output will be as follows.
 
 You can customize the default card layout using template as per your application needs. This can be achieved by template of the `KanbanCardSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -493,7 +493,7 @@ Kanban board allows to select single and multiple selection of cards when mouse 
 
 Select the multiple cards randomly using Ctrl + mouse click and select the multiple cards continuously using Shift + mouse click action on Kanban board. Set `Multiple` in `SelectionType` to enable the multiple selection in a board.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

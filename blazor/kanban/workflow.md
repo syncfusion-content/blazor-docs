@@ -15,7 +15,7 @@ Kanban workflow allows to set the flow of cards between the columns. It provides
 
 Provides restriction on columns when performing drag and drop actions while providing the `KeyField` inside the `TransitionColumns` property. If a card is dragged, dotted border line will be shown on the possible drop columns and the not-allowed cursor point will be shown in the restricted dropped columns.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -66,7 +66,7 @@ Column will not allow any dropped card action when you disable the `AllowDrop` p
 
 In the following code, the `Backlog` column will not allow any card drop action within the column and any other columns cards.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -117,7 +117,7 @@ Column will not allow any dragged card action when you disable the `AllowDrag` p
 
 In the following code, the `Done` column will not allow any card drag action within the column.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
