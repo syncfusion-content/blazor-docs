@@ -45,7 +45,7 @@ The `ExecuteCommand` will perform the following commands.
 
 The following code block demonstrates the usage of the ExecuteCommand in Rich Text Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor

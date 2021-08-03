@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where **Designation** is defined a
 
 
 
-```csharp
+```cshtml
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;

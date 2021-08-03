@@ -20,7 +20,7 @@ The **Dashboard Layout** is a grid structured component, which can be split into
 
 The size of grid cells can be modified to the required size using the `Columns` and `CellAspectRatio` properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -62,7 +62,7 @@ The following output demonstrates the setting of `cellAspectRatio` and `Columns`
 
 The spacing between each panel in a row and column can be defined using the `CellSpacing` property. Adding space between the panels will make the layout effective and provides a clear data representation.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -100,7 +100,7 @@ The following output demonstrates the neat and clear representation of data by s
 
 These cells combinedly forms a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the `ShowGridLines` property, which clearly pictures the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

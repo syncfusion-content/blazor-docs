@@ -13,7 +13,7 @@ The Querybuilder provides `Not` operator along with AND, OR operators to filter 
 
 > By default `EnableNotCondition` set as false.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 

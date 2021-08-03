@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
@@ -84,7 +84,7 @@ This is demonstrated in the below sample code where Autocomplete component is re
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

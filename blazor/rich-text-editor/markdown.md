@@ -50,15 +50,13 @@ The [Blazor Markdown editor](https://www.syncfusion.com/blazor-components/blazor
 
 ## Table
 
-Rich Text Editor allows you to insert Markdown table in edit panel with 2 X 2 rows and columns along with the heading.
-To use table tool, add the `CreateTable` item in toolbar items.
+Rich Text Editor allows you to insert Markdown table in edit panel with 2 X 2 rows and columns along with the heading. To use table tool, add the `CreateTable` item in toolbar items.
 
 ### Insert table
 
-To insert the table in Rich Text Editor, click the `Table` toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices.
-Refer to the following sample and code snippets to add the table in Markdown editor.
+To insert the table in Rich Text Editor, click the `Table` toolbar option to insert the table into Rich Text Editor content and this is the default way in all the devices. Refer to the following sample and code snippets to add the table in Markdown editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

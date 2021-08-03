@@ -13,7 +13,7 @@ By default, the Blazor dialog focuses on the first elements of the content area 
 
 Bind the Opened event and enable the PreventFocus argument within an event like the below example.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

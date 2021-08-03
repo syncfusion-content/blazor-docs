@@ -49,7 +49,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
 3. Add the below Syncfusion Button sample in `~/Pages/Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor.Buttons
 
     <SfButton @onclick="OnButtonClick">My Button</SfButton>
@@ -71,7 +71,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
 4. Add the below bUnit test cases in the `~/UnitTest1.cs` file on xUnit project.
 
-    ```csharp
+    ```c#
     using Xunit;
     using Bunit;
     using BlazorServerApp.Pages;
@@ -119,7 +119,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     * Created a new `TestContext` and added Syncfusion Blazor Service.
 
-    ```csharp
+    ```c#
     using var testContext = new TestContext();
 
     // Add Syncfusion Blazor service and Ignore script isolation.
@@ -131,14 +131,14 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     * Rendered the Blazor application's `Index` component which we added in the 3rd step.
 
-    ```csharp
+    ```c#
     // Rendering application Index component (~/Pages/Index.razor).
     var indexComponent = testContext.RenderComponent<Index>();
     ```
 
     * Find Syncfusion Button component and span element from the rendered `Index` component.
 
-    ```csharp
+    ```c#
     // Find Syncfusion Button component.
     var sfButton = indexComponent.FindComponent<SfButton>();
     // Find span element.
@@ -147,14 +147,14 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     * Test the span element's markup at initial state.
 
-    ```csharp
+    ```c#
     // Testing span element markup.
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
     ```
 
     * Find the button element from Syncfusion Button component and trigger the click action. Test the span element's markup state after the button click.
 
-    ```csharp
+    ```c#
     // Click Syncfusion Button component.
     sfButton.Find(".e-btn").Click();
     // Testing span element markup again.
@@ -203,7 +203,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
 3. Add the below Syncfusion Button sample in `~/Pages/Index.razor` file on the Blazor project for testing purpose. You can test your Blazor component from your application instead of the below example component.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor.Buttons
 
     <SfButton @onclick="OnButtonClick">My Button</SfButton>
@@ -225,7 +225,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
 4. Add the below bUnit test cases in the `~/UnitTest1.cs` file on NUnit project.
 
-    ```csharp
+    ```c#
     using Bunit;
     using NUnit.Framework;
     using BlazorServerApp.Pages;
@@ -274,7 +274,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     * Created a new `TestContext` and added Syncfusion Blazor Service.
 
-    ```csharp
+    ```c#
     using var testContext = new Bunit.TestContext();
 
     // Add Syncfusion Blazor service and Ignore script isolation.
@@ -286,14 +286,14 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     * Rendered the Blazor application's `Index` component which we added in the 3rd step.
 
-    ```csharp
+    ```c#
     // Rendering application Index component (~/Pages/Index.razor).
     var indexComponent = testContext.RenderComponent<Index>();
     ```
 
     * Find Syncfusion Button component and span element from the rendered `Index` component.
 
-    ```csharp
+    ```c#
     // Find Syncfusion Button component.
     var sfButton = indexComponent.FindComponent<SfButton>();
     // Find span element.
@@ -302,14 +302,14 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     * Test the span element's markup at initial state.
 
-    ```csharp
+    ```c#
     // Testing span element markup.
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 0</span>");
     ```
 
     * Find the button element from Syncfusion Button component and trigger the click action. Test the span element's markup state after the button click.
 
-    ```csharp
+    ```c#
     // Click Syncfusion Button component.
     sfButton.Find(".e-btn").Click();
     // Testing span element markup again.
@@ -324,7 +324,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
 You can set the Blazor component parameter using `SetParametersAndRender` method.
 
-```csharp
+```c#
 [Fact]
 public void TestParameter()
 {

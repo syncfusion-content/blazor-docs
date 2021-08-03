@@ -11,11 +11,9 @@ documentation: ug
 
 The toolbar items can be customized using the `ToolbarSettings` API and `ToolbarItemClicked` events.
 
-The following example shows adding a custom item in the toolbar.
+The following example shows adding a custom item in the toolbar. The new toolbar button is added using `ToolbarSettings`. The  event is used to add an `ToolbarItemClicked` event handler to the new toolbar button.
 
-The new toolbar button is added using `ToolbarSettings`. The  event is used to add an `ToolbarItemClicked` event handler to the new toolbar button.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.FileManager
 

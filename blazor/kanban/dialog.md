@@ -31,7 +31,7 @@ KeyField | DropDown | -
 KanbanCardSettings.ContentField | TextArea | -
 KanbanSwimlaneSettings.KeyField (If applicable) | DropDown | -
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -97,7 +97,7 @@ Output be like the below.
 
 Using the dialog template, you can render your own form fields with dialog by using the `Template`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 @using Syncfusion.Blazor.Inputs
@@ -248,7 +248,7 @@ Output be like the below.
 
 The Kanban allows to prevent to open a dialog on card double-click by enabling `args.Cancel` in `DialogOpen` event.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

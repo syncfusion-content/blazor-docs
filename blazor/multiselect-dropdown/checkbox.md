@@ -9,8 +9,7 @@ documentation: ug
 
 # CheckBox in Blazor MultiSelect Dropdown Component
 
-The MultiSelect has built-in support to select multiple values through checkbox,
-when the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_Mode) property is set to `CheckBox`.
+The MultiSelect has built-in support to select multiple values through checkbox, when the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_Mode) property is set to `CheckBox`.
 
 To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
@@ -61,15 +60,9 @@ The output will be as follows.
 
 ## Select All
 
-The MultiSelect component has in-built support to select the all list items using `Select All` options in the header.
+The MultiSelect component has in-built support to select the all list items using `Select All` options in the header. When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_ShowSelectAll) property is set to true, by default Select All text will show. You can customize the name attribute of the Select All option by using [SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_SelectAllText).
 
-When the [ShowSelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_ShowSelectAll) property is set to true, by default Select All text will show.
-You can customize the name attribute of the Select All option by using
-[SelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_SelectAllText).
-
-For the unSelect All option, by default unSelect All text will show.
-You can customize the name attribute of the unSelect All option by using
-[UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_UnSelectAllText).
+For the unSelect All option, by default unSelect All text will show. You can customize the name attribute of the unSelect All option by using [UnSelectAllText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_UnSelectAllText).
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -120,7 +113,7 @@ The output will be as follows.
 
 Defines the limit of the selected items using [MaximumSelectionLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_MaximumSelectionLength).
 
-```csharp
+```cshtml
 <SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" MaximumSelectionLength=3 Mode="VisualMode.CheckBox" DataSource="@Country">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>
@@ -167,7 +160,7 @@ The output will be as follows.
 
 Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-1.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_1_EnableSelectionOrder) to Reorder the selected items in popup visibility state.
 
-```csharp
+```cshtml
 <SfMultiSelect TValue="string[]" Placeholder="e.g. Australia" EnableSelectionOrder=false  Mode="VisualMode.CheckBox" DataSource="@Country">
     <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
 </SfMultiSelect>

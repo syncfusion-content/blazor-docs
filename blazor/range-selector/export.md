@@ -13,7 +13,7 @@ documentation: ug
 
 The rendered Range Selector can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Print).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons
@@ -66,7 +66,7 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
 * **File name** - To specify the file name to export.
 * **Orientation** - To specify the orientation type. This is applicable only for PDF export type. It is an optional parameter.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 @using Syncfusion.Blazor.Buttons

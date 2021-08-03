@@ -15,7 +15,7 @@ The Syncfusion Blazor UI input and editor components can be validated by the sta
 
 1. Create a model class and set [DataAnnotation attributes](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/validation?view=aspnetcore-5.0) to its properties.
 
-    ```csharp
+    ```cshtml
     @using System.ComponentModel.DataAnnotations;
 
     @code {

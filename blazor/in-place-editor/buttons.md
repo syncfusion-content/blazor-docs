@@ -22,7 +22,7 @@ In the following sample, the `Content` and `CssClass` properties of the `Button`
 
 > For more details about buttons, refer this documentation [section](../button/).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs

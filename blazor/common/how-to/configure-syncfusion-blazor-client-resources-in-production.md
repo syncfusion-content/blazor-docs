@@ -18,7 +18,7 @@ documentation: ug
 * Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
     **Blazor Server App (~/Startup.cs)**
-    ```csharp
+    ```c#
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddRazorPages();
@@ -34,7 +34,7 @@ documentation: ug
     ```
 
     **Blazor WebAssembly App (~/Program.cs)**
-    ```csharp
+    ```c#
     public static async Task Main(string[] args)
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args);

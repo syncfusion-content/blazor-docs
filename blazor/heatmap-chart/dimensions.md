@@ -17,7 +17,7 @@ You can  set the size of heat map directly by using the  `Width` and `Height` pr
 
 You can set the size for heat map in a pixel.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -60,7 +60,7 @@ You can set the size for heat map in a pixel.
 
 By setting value in percentage, heat map gets its dimension with respect to its container. For example, when the height is ‘50%’, heat map rendered to half of the container height.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

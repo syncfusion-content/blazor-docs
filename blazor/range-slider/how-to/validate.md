@@ -9,18 +9,16 @@ documentation: ug
 
 # Validation of Slider in Blazor Range Slider Component
 
-The Slider component can be validated using our FormValidator. The following steps walk-through slider validation.
-
-Render slider component inside a form, by giving the required styles.
+The Slider component can be validated using our FormValidator. The following steps walk-through slider validation. Render slider component inside a form, by giving the required styles.
 
 In Blazor Slider component, the DataAnnotation Validator is used here.
 
 ```csharp
  public class Annotation
-    {
-        [Required, Range(0, 40, ErrorMessage = "You must select a value less than or equal to forty.")]
-        public int Value { get; set; }
-    }
+{
+    [Required, Range(0, 40, ErrorMessage = "You must select a value less than or equal to forty.")]
+    public int Value { get; set; }
+}
 ```
 
 ```cshtml

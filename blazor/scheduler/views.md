@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Views in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Views in Syncfusion Blazor Scheduler component and much more details.
+description: This section helps you to learn about available views and view specific customization options for each views in Syncfusion Blazor Scheduler.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -33,6 +33,11 @@ As the Scheduler displays `Week` view by default, therefore to change the active
 * Year
 
 It is possible to display only the desired views on the Scheduler using the `Views` property.
+
+To get start quickly on customizing individual views of scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bBhn7YHje8k"%}
 
 In the following example, the Scheduler displays 2 views namely, Week and TimelineDay.
 

@@ -13,12 +13,11 @@ The row represents record details fetched from data source.
 
 ## Customize rows
 
-You can customize the appearance of a row by using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event.
-The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event triggers for every row. In the event handler, you can get the **args** which contains details of the row.
+You can customize the appearance of a row by using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event. The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event triggers for every row. In the event handler, you can get the **args** which contains details of the row.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -68,7 +67,7 @@ The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -121,7 +120,7 @@ Please refer to the following example.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -151,7 +150,7 @@ Please refer to the following example.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -199,7 +198,7 @@ In the below example, the **RowHeight** is set as *60px*.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -223,7 +222,7 @@ In the below example, the **RowHeight** is set as *60px*.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -270,7 +269,7 @@ the **template** string or HTML elements.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -329,7 +328,7 @@ the **template** string or HTML elements.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -374,7 +373,7 @@ If [`RowTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncf
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -435,7 +434,7 @@ If [`RowTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncf
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -493,7 +492,7 @@ The detail template provides additional information about a particular row. By e
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -536,7 +535,7 @@ The detail template provides additional information about a particular row. By e
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -632,7 +631,7 @@ The Tree Grid row drag and drop allows you to drag and drop Tree Grid rows on th
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -661,7 +660,7 @@ The Tree Grid row drag and drop allows you to drag and drop Tree Grid rows on th
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -1158,7 +1157,7 @@ To drag and drop between two Tree Grid, enable the [`AllowRowDragAndDrop`](https
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -1198,7 +1197,7 @@ To drag and drop between two Tree Grid, enable the [`AllowRowDragAndDrop`](https
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

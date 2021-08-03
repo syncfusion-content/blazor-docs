@@ -13,7 +13,7 @@ You can enable and disable the menu items using the [`Disabled`](https://help.sy
 
 In the following example, the **Display Settings** in parent items is disabled during initial loading and **Medium icons** in sub menu items are enabled/disabled dynamically while opening the sub menu.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

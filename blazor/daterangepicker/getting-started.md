@@ -26,8 +26,8 @@ To get start quickly with Blazor DateRangePicker component, you can check on thi
 
  ```html
 <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
 </head>
 ```
 
@@ -74,7 +74,7 @@ namespace BlazorApplication
 
  ```html
 <head>
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 
@@ -84,7 +84,7 @@ To initialize the DateRangePicker component add the below code to your `Index.ra
 
 The following code shows a basic DateRangePicker component.
 
-```csharp
+```cshtml
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range"></SfDateRangePicker>
 ```
 
@@ -102,7 +102,7 @@ The minimum and maximum date range can be defined with the help of [Min](https:/
 
 The following code demonstrates how to set the `Min` and `Max` on initializing the DateRangePicker.
 
-```csharp
+```cshtml
 <SfDateRangePicker TValue="DateTime?" Placeholder="Choose a Range" Min="@MinDate" Max="@MaxDate"></SfDateRangePicker>
 
 @code {

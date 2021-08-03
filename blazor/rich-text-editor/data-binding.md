@@ -19,7 +19,7 @@ This section explains how to bind the `Value` to the Rich Text Editor component 
 
 You can bind the value to the Rich Text Editor by using the `Value` property directly as string or from code-behind as the following example.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -37,7 +37,7 @@ The two-way data binding can be achieved by using the `@bind-Value` attribute fr
 
 The following example explains how to achieve two-way binding with textarea and the Rich Text Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -59,7 +59,7 @@ You can update the value dynamically by using the `Value` property.
 
 The following example shows how to update a Rich Text Editor value dynamically on button click.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor

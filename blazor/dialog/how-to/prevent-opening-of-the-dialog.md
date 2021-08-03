@@ -11,7 +11,7 @@ documentation: ug
 
 You can prevent opening of  the dialog by setting the `OnOpen` event argument cancel value to true. In the following sample, the success dialog is opened when you enter the username value with minimum 4 characters. Otherwise, it will not be opened.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons
@@ -158,5 +158,4 @@ You can prevent opening of  the dialog by setting the `OnOpen` event argument ca
     }
 }
 
-```
 ```

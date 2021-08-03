@@ -13,7 +13,7 @@ documentation: ug
 
 The Menu Bar component supports horizontal and vertical scrolling to render large Menu Bars and sub menus in an adaptive way. This can be achieved by enabling the [`EnableScrolling`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~EnableScrolling.html) property and by restricting the corresponding Menu Bar/Sub Menu Bar size.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -81,7 +81,7 @@ Output be like
 
 The following example demonstrates the use case of [`HamburgerMenu`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfMenu~HamburgerMode.html) mode.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations;
 
@@ -150,7 +150,7 @@ Output be like
 
 The following example demonstrates the use case of Menu Bar in Mobile mode with hamburger.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations;
 

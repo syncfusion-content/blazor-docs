@@ -1,7 +1,7 @@
 ---
 layout: post
 title: WebAssembly Performance in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about WebAssembly Performance in Syncfusion Blazor Scheduler component and more.
+description: This topic helps you to improve the performance of Web Assembly Application when using Syncfusion Blazor Scheduler components with some tips.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -15,7 +15,7 @@ This section provides performance guidelines for using Syncfusion Scheduler comp
 
 ## Avoid unnecessary component renders
 
-During Blazor diffing algorithm, every views of the Scheduler component and its child component will be checked for re-rendering.  For instance, having **EventCallBack** on the application or Scheduler will check every child component once event callback is completed.
+During Blazor Diffing Algorithm, every views of the Scheduler component and its child component will be checked for re-rendering.  For instance, having **EventCallBack** on the application or Scheduler will check every child component once event callback is completed.
 
 You can have fine-grained control over Scheduler component rendering. **PreventRender** method help you to avoid unnecessary re-rendering of the Scheduler component. This method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
 

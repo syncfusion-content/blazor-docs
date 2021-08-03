@@ -19,7 +19,7 @@ This section explains about how to connect the [`SfDataManager`](https://help.sy
 
  2. You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-    ```html
+    ```cshtml
     <head>
         <environment include="Development">
         ....
@@ -35,7 +35,7 @@ This section explains about how to connect the [`SfDataManager`](https://help.sy
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Data** package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Data
 ```
 
@@ -43,7 +43,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Data** package
 
 To initialize the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
-```csharp
+```cshtml
 
 <SfDataManager>
 </SfDataManager>

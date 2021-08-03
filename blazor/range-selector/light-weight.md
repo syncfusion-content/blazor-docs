@@ -11,7 +11,7 @@ documentation: ug
 
 By default, when the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_DataSource) for [`RangeNavigatorSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorSeries.html) is empty, a lightweight Range Selector will be shown without Chart. The following code example shows the lightweight Range Selector.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

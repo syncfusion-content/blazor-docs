@@ -19,7 +19,7 @@ This section briefly explains how to include a Kanban component in your Blazor S
 
 2. You can add the client-side style resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
     ....
@@ -34,7 +34,7 @@ This section briefly explains how to include a Kanban component in your Blazor S
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
+```cshtml
 <head>
    <environment include="Development">
       <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
@@ -48,7 +48,7 @@ This section briefly explains how to include a Kanban component in your Blazor S
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Kanban** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -82,7 +82,7 @@ namespace BlazorApplication
 
 To initialize the Kanban component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -119,7 +119,7 @@ The output will be as follows.
 
 To populate the empty Kanban with cards, define the Enumerable object or remote data using the `DataSource` property. To define `DataSource`, the mandatory fields in object or remote data should be relevant to `KeyField`. In the following example, you can see the cards defined with default fields such as ID, Summary, and Status.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -165,7 +165,7 @@ The output will be as follows.
 
 `Swimlane` can be enabled by mapping the fields `KanbanSwimlaneSettings.KeyField` to appropriate column name in DataSource. This enables the grouping of the cards based on the mapped column values.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

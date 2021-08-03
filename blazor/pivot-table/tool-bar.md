@@ -35,124 +35,124 @@ The following table shows built-in toolbar options and its actions.
 
 > The order of toolbar options can be changed by simply moving the position of items in the [**ToolbarItems**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) collection. Also if end user wants to remove any toolbar option from getting displayed, it can be simply ignored from adding into the [**ToolbarItems**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ToolbarItems.html) collection.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" @ref="pivot" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
-        <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
-            <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-            </PivotViewDataSourceSettings>
-            <PivotViewEvents TValue="ProductDetails" RenameReport="renamereport" RemoveReport="removereport" SaveReport="savereport" LoadReport="loadreport" FetchReport="fetchreport" ></PivotViewEvents>
-            <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" @ref="pivot" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true">
+    <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewEvents TValue="ProductDetails" RenameReport="renamereport" RemoveReport="removereport" SaveReport="savereport" LoadReport="loadreport" FetchReport="fetchreport" ></PivotViewEvents>
+        <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        SfPivotView<ProductDetails> pivot;
-        public List<ToolbarItems> toolbar = new List<ToolbarItems> {
-            ToolbarItems.New,
-            ToolbarItems.Load,
-            ToolbarItems.Remove,
-            ToolbarItems.Rename,
-            ToolbarItems.SaveAs,
-            ToolbarItems.Save,
-            ToolbarItems.Grid,
-            ToolbarItems.Chart,
-            ToolbarItems.Export,
-            ToolbarItems.SubTotal,
-            ToolbarItems.GrandTotal,
-            ToolbarItems.ConditionalFormatting,
-            ToolbarItems.FieldList
-        };
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
+@code{
+    SfPivotView<ProductDetails> pivot;
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Load,
+        ToolbarItems.Remove,
+        ToolbarItems.Rename,
+        ToolbarItems.SaveAs,
+        ToolbarItems.Save,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.FieldList
+    };
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public List<string> report = new List<string>();
+    public List<string> reportName = new List<string>();
+    //to save report
+    public void savereport(SaveReportArgs args)
+    {
+        var i = 0;
+        bool isSaved = false;
+        for (i = 0; i < this.reportName.Count; i++)
         {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
-        public List<string> report = new List<string>();
-        public List<string> reportName = new List<string>();
-        //to save report
-        public void savereport(SaveReportArgs args)
-        {
-            var i = 0;
-            bool isSaved = false;
-            for (i = 0; i < this.reportName.Count; i++)
+            if (this.reportName[i] == args.ReportName)
             {
-                if (this.reportName[i] == args.ReportName)
-                {
-                    this.report[i] = args.Report;
-                    isSaved = true;
-                }
-            }
-            if (args.Report != null && !(isSaved))
-            {
-                this.report.Add(args.Report);
-                this.reportName.Add(args.ReportName);
-            }
-
-        }
-        //fetch reports
-        public void fetchreport(FetchReportArgs args)
-        {
-            args.ReportName = this.reportName.ToArray();
-
-        }
-        //to load the selected report
-        public void loadreport(LoadReportArgs args)
-        {
-            var i = 0;
-            var j = 0;
-            for (i = 0; i < this.reportName.Count; i++)
-            {
-                if (this.reportName[i] == args.ReportName)
-                {
-                    j = i;
-                }
-            }
-            this.pivot.LoadPersistDataAsync(this.report[j]);
-        }
-        //to delete a report
-        public void removereport(RemoveReportArgs args)
-        {
-            var i = 0;
-            for( i=0;i<this.reportName.Count; i++)
-            {
-                if(this.reportName[i] == args.ReportName)
-                {
-                    this.reportName.RemoveAt(i);
-                    this.report.RemoveAt(i);
-                }
+                this.report[i] = args.Report;
+                isSaved = true;
             }
         }
-        // to rename a report
-        public void renamereport(RenameReportArgs args)
+        if (args.Report != null && !(isSaved))
         {
-            var i = 0;
-            for( i=0;i<=(this.reportName.Count - 1); i++)
+            this.report.Add(args.Report);
+            this.reportName.Add(args.ReportName);
+        }
+
+    }
+    //fetch reports
+    public void fetchreport(FetchReportArgs args)
+    {
+        args.ReportName = this.reportName.ToArray();
+
+    }
+    //to load the selected report
+    public void loadreport(LoadReportArgs args)
+    {
+        var i = 0;
+        var j = 0;
+        for (i = 0; i < this.reportName.Count; i++)
+        {
+            if (this.reportName[i] == args.ReportName)
             {
-                if(this.reportName[i] == args.ReportName)
-                {
-                    this.reportName.RemoveAt(i);
-                    this.reportName.Add(args.Rename);
-                }
+                j = i;
+            }
+        }
+        this.pivot.LoadPersistDataAsync(this.report[j]);
+    }
+    //to delete a report
+    public void removereport(RemoveReportArgs args)
+    {
+        var i = 0;
+        for( i=0;i<this.reportName.Count; i++)
+        {
+            if(this.reportName[i] == args.ReportName)
+            {
+                this.reportName.RemoveAt(i);
+                this.report.RemoveAt(i);
             }
         }
     }
+    // to rename a report
+    public void renamereport(RenameReportArgs args)
+    {
+        var i = 0;
+        for( i=0;i<=(this.reportName.Count - 1); i++)
+        {
+            if(this.reportName[i] == args.ReportName)
+            {
+                this.reportName.RemoveAt(i);
+                this.reportName.Add(args.Rename);
+            }
+        }
+    }
+}
 
 ```
 
@@ -162,49 +162,49 @@ The following table shows built-in toolbar options and its actions.
 
 By default, all chart types are displayed in the dropdown menu included in the toolbar. However, based on the request for an application, we may need to show selective chart types on our own. This can be achieved using the [`ChartTypes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ChartTypes) property. To know more about supporting chart types, [`click here`](https://blazor.syncfusion.com/documentation/pivot-table/pivot-chart/#chart-types).
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar" ChartTypes="@chartTypes">
-        <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
-            <PivotViewDataSourceSettings DataSource="@data">
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-            </PivotViewDataSourceSettings>
-            <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar" ChartTypes="@chartTypes">
+    <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@data">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ToolbarItems> toolbar = new List<ToolbarItems> {
-            ToolbarItems.Grid,
-            ToolbarItems.Chart,
-        };
-        public List<ChartSeriesType> chartTypes = new List <ChartSeriesType> {
-            ChartSeriesType.Column,
-            ChartSeriesType.Bar,
-            ChartSeriesType.Line,
-            ChartSeriesType.Area,
-        };
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+    };
+    public List<ChartSeriesType> chartTypes = new List <ChartSeriesType> {
+        ChartSeriesType.Column,
+        ChartSeriesType.Bar,
+        ChartSeriesType.Line,
+        ChartSeriesType.Area,
+    };
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -257,158 +257,158 @@ The pivot table (or) pivot chart can be exported as a pdf, excel, csv etc.,  doc
 
 For example, you can add the header and footer for the pdf document by setting the `header` and `footer` properties for the `PdfExportProperties` in the `BeforeExport` event.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
-    @using Syncfusion.Blazor.Grids
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Grids
 
-    <SfPivotView @ref="pivot" TValue="ProductDetails" EnableVirtualization="true" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true" Height="300" Width="800">
-        <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
-            <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-            </PivotViewDataSourceSettings>
-            <PivotViewEvents TValue="ProductDetails" BeforeExport="beforeExport" RenameReport="renamereport" RemoveReport="removereport" SaveReport="savereport" LoadReport="loadreport" FetchReport="fetchreport" ></PivotViewEvents>
-            <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView @ref="pivot" TValue="ProductDetails" EnableVirtualization="true" ShowFieldList="true" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" AllowConditionalFormatting="true" AllowPdfExport="true" AllowExcelExport="true" Height="300" Width="800">
+    <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@data" ShowGrandTotals="true" ShowSubTotals="true">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewEvents TValue="ProductDetails" BeforeExport="beforeExport" RenameReport="renamereport" RemoveReport="removereport" SaveReport="savereport" LoadReport="loadreport" FetchReport="fetchreport" ></PivotViewEvents>
+        <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        SfPivotView<ProductDetails> pivot;
+@code{
+    SfPivotView<ProductDetails> pivot;
 
-        public List<ToolbarItems> toolbar = new List<ToolbarItems> {
-            ToolbarItems.New,
-            ToolbarItems.Load,
-            ToolbarItems.Remove,
-            ToolbarItems.Rename,
-            ToolbarItems.SaveAs,
-            ToolbarItems.Save,
-            ToolbarItems.Grid,
-            ToolbarItems.Chart,
-            ToolbarItems.Export,
-            ToolbarItems.SubTotal,
-            ToolbarItems.GrandTotal,
-            ToolbarItems.ConditionalFormatting,
-            ToolbarItems.NumberFormatting,
-            ToolbarItems.FieldList
+    public List<ToolbarItems> toolbar = new List<ToolbarItems> {
+        ToolbarItems.New,
+        ToolbarItems.Load,
+        ToolbarItems.Remove,
+        ToolbarItems.Rename,
+        ToolbarItems.SaveAs,
+        ToolbarItems.Save,
+        ToolbarItems.Grid,
+        ToolbarItems.Chart,
+        ToolbarItems.Export,
+        ToolbarItems.SubTotal,
+        ToolbarItems.GrandTotal,
+        ToolbarItems.ConditionalFormatting,
+        ToolbarItems.NumberFormatting,
+        ToolbarItems.FieldList
+    };
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+    }
+    public List<PdfHeaderFooterContent> HeaderContent = new List<PdfHeaderFooterContent>
+    {
+        new PdfHeaderFooterContent() { Type = ContentType.Line, Points = new PdfPoints() { X1 = 0, Y1 = 4, X2 = 685, Y2 = 4 }, Style = new PdfContentStyle() { PenColor = "#000080", DashStyle = PdfDashStyle.Solid }}
+    };
+    public void beforeExport(BeforeExportEventArgs args) {
+        PdfExportProperties ExportProperties = new PdfExportProperties();
+        PdfHeader Header = new PdfHeader()
+        {
+            FromTop = 0,
+            Height = 130,
+            Contents = HeaderContent
         };
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
+        ExportProperties.Header = Header;
+        args.PdfExportProperties = ExportProperties;
+
+            ExcelExportProperties ExcelProperties = new ExcelExportProperties();
+        ExcelTheme Theme = new ExcelTheme();
+
+        ExcelStyle ThemeStyle = new ExcelStyle()
         {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
-        public List<PdfHeaderFooterContent> HeaderContent = new List<PdfHeaderFooterContent>
-        {
-            new PdfHeaderFooterContent() { Type = ContentType.Line, Points = new PdfPoints() { X1 = 0, Y1 = 4, X2 = 685, Y2 = 4 }, Style = new PdfContentStyle() { PenColor = "#000080", DashStyle = PdfDashStyle.Solid }}
+            FontName = "Segoe UI",
+            FontColor = "#666666",
+            FontSize = 20
         };
-        public void beforeExport(BeforeExportEventArgs args) {
-            PdfExportProperties ExportProperties = new PdfExportProperties();
-            PdfHeader Header = new PdfHeader()
-            {
-                FromTop = 0,
-                Height = 130,
-                Contents = HeaderContent
-            };
-            ExportProperties.Header = Header;
-            args.PdfExportProperties = ExportProperties;
 
-             ExcelExportProperties ExcelProperties = new ExcelExportProperties();
-            ExcelTheme Theme = new ExcelTheme();
-
-            ExcelStyle ThemeStyle = new ExcelStyle()
-            {
-                FontName = "Segoe UI",
-                FontColor = "#666666",
-                FontSize = 20
-            };
-
-            Theme.Header = ThemeStyle;
-            Theme.Record = ThemeStyle;
-            Theme.Caption = ThemeStyle;
-            ExcelProperties.Theme = Theme;
-            args.ExcelExportProperties = ExcelProperties;
-        }
-        public List<string> report = new List<string>();
-        public List<string> reportName = new List<string>();
-        //to save report
-        public void savereport(SaveReportArgs args)
+        Theme.Header = ThemeStyle;
+        Theme.Record = ThemeStyle;
+        Theme.Caption = ThemeStyle;
+        ExcelProperties.Theme = Theme;
+        args.ExcelExportProperties = ExcelProperties;
+    }
+    public List<string> report = new List<string>();
+    public List<string> reportName = new List<string>();
+    //to save report
+    public void savereport(SaveReportArgs args)
+    {
+        var i = 0;
+        bool isSaved = false;
+        for (i = 0; i < this.reportName.Count; i++)
         {
-            var i = 0;
-            bool isSaved = false;
-            for (i = 0; i < this.reportName.Count; i++)
+            if (this.reportName[i] == args.ReportName)
             {
-                if (this.reportName[i] == args.ReportName)
-                {
-                    this.report[i] = args.Report;
-                    isSaved = true;
-                }
-            }
-            if (args.Report != null && !(isSaved))
-            {
-                this.report.Add(args.Report);
-                this.reportName.Add(args.ReportName);
-            }
-
-        }
-        //fetch reports
-        public void fetchreport(FetchReportArgs args)
-        {
-            args.ReportName = this.reportName.ToArray();
-
-        }
-        //to load the selected report
-        public void loadreport(LoadReportArgs args)
-        {
-            var i = 0;
-            var j = 0;
-            for (i = 0; i < this.reportName.Count; i++)
-            {
-                if (this.reportName[i] == args.ReportName)
-                {
-                    j = i;
-                }
-            }
-            this.pivot.LoadPersistDataAsync(this.report[j]);
-        }
-        //to delete a report
-        public void removereport(RemoveReportArgs args)
-        {
-            var i = 0;
-            for( i=0;i<this.reportName.Count; i++)
-            {
-                if(this.reportName[i] == args.ReportName)
-                {
-                    this.reportName.RemoveAt(i);
-                    this.report.RemoveAt(i);
-                }
+                this.report[i] = args.Report;
+                isSaved = true;
             }
         }
-        // to rename a report
-        public void renamereport(RenameReportArgs args)
+        if (args.Report != null && !(isSaved))
         {
-            var i = 0;
-            for( i=0;i<=(this.reportName.Count - 1); i++)
+            this.report.Add(args.Report);
+            this.reportName.Add(args.ReportName);
+        }
+
+    }
+    //fetch reports
+    public void fetchreport(FetchReportArgs args)
+    {
+        args.ReportName = this.reportName.ToArray();
+
+    }
+    //to load the selected report
+    public void loadreport(LoadReportArgs args)
+    {
+        var i = 0;
+        var j = 0;
+        for (i = 0; i < this.reportName.Count; i++)
+        {
+            if (this.reportName[i] == args.ReportName)
             {
-                if(this.reportName[i] == args.ReportName)
-                {
-                    this.reportName.RemoveAt(i);
-                    this.reportName.Add(args.Rename);
-                }
+                j = i;
+            }
+        }
+        this.pivot.LoadPersistDataAsync(this.report[j]);
+    }
+    //to delete a report
+    public void removereport(RemoveReportArgs args)
+    {
+        var i = 0;
+        for( i=0;i<this.reportName.Count; i++)
+        {
+            if(this.reportName[i] == args.ReportName)
+            {
+                this.reportName.RemoveAt(i);
+                this.report.RemoveAt(i);
             }
         }
     }
+    // to rename a report
+    public void renamereport(RenameReportArgs args)
+    {
+        var i = 0;
+        for( i=0;i<=(this.reportName.Count - 1); i++)
+        {
+            if(this.reportName[i] == args.ReportName)
+            {
+                this.reportName.RemoveAt(i);
+                this.reportName.Add(args.Rename);
+            }
+        }
+    }
+}
 
 ```
 

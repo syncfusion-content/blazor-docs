@@ -104,7 +104,7 @@ To create a Web API controller, right-click the **Controller** folder in the Ser
 
 Now, replace the Web API controller with the following code which contains code to handle CRUD operations in the Orders table.
 
-```csharp
+```c#
 
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -162,7 +162,7 @@ namespace WebAPICRUDServerApp
 
 Open **Startup.cs** file and add **MapDefaultControllerRoute** in **Configure** method as follows.
 
-```csharp
+```c#
 
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
@@ -202,7 +202,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
 
-```csharp
+```c#
 
 public void ConfigureServices(IServiceCollection services)
 {
@@ -273,7 +273,7 @@ Grid columns can be defined by using the [`GridColumn`](https://help.syncfusion.
 
 When you run the application, the `Get()` method will be called in your API controller.
 
-```csharp
+```c#
 
 using System.Collections.Generic;
 using System.Linq;
@@ -307,7 +307,7 @@ The response object from the Web API should contain the properties, `Items` and 
 
 The sample response object should look like this:
 
-```csharp
+```c#
 
 {
     "Items": [{..}, {..}, {..}, ...],
@@ -348,7 +348,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will insert the record in the Orders table by calling the following **POST** method of the Web API.
 
-```csharp
+```c#
 
 [HttpPost]
 public void Post([FromBody] Orders book)
@@ -369,7 +369,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Clicking the **Update** toolbar button will update the record in the Orders table by calling the following **PUT** method of the Web API.
 
-```csharp
+```c#
 
 [HttpPut]
 public void Put(long id, [FromBody] Orders book)
@@ -391,7 +391,7 @@ The resultant grid will look like below.
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the Web API with the selected record`s primary key value to remove the corresponding record from the Orders table.
 
-```csharp
+```c#
 
 [HttpDelete("{id}")]
 public void Delete(long id)

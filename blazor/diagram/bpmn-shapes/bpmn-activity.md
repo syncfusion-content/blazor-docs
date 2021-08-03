@@ -9,14 +9,12 @@ documentation: ug
 
 # BPMN Activity in Blazor Diagram Component
 
-The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle.
-
-There are two types of activities. They are listed as follows:
+The [`Activity`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnActivity.html) is the task that is performed in a business process. It is represented by a rounded rectangle. There are two types of activities. They are listed as follows:
 
 * Task: Occurs within a process and it is not broken down to a finer level of detail.
 * Subprocess: Occurs within a process and it is broken down to a finer level of detail.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -153,9 +151,8 @@ A [`Sub-process`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 ```
 
 The different types of subprocess are as follows:
-
-    * Event subprocess
-    * Transaction
+* Event subprocess
+* Transaction
 
 ### Event sub Process
 
@@ -361,6 +358,7 @@ The `Events` property of subprocess allows you to represent these results as an 
 ### Loop
 
 [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is a task that is internally being looped. The loop property of task allows you to define the type of loop. The default value for [`Loop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnSubProcess.html#Syncfusion_Blazor_Diagrams_DiagramBpmnSubProcess_Loop) is **None**.
+
 You can define the loop property in subprocess BPMN shape as shown in the following code.
 
 ```cshtml

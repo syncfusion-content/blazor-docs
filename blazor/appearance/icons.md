@@ -39,7 +39,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
     The below code snippet represents the complete example of icon usage in `~/Pages/Index.razor`.
 
-    ```csharp
+    ```cshtml
         <div class="icons">
             <ul>
                 <li><span class="e-icons e-search"></span></li>
@@ -64,7 +64,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 The Syncfusion Blazor icon library can customize its color, size by overriding the `e-icons` class.
 
-```csharp
+```cshtml
     <style>
         .e-icons{
             color: #00ffff;

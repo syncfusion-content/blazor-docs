@@ -14,7 +14,7 @@ The excel export allows exporting Tree Grid data to Excel document. You need to 
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -54,7 +54,7 @@ The excel export allows exporting Tree Grid data to Excel document. You need to 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -99,7 +99,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -141,7 +141,7 @@ The excel export provides an option to export the current page into excel. To ex
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -182,7 +182,7 @@ The excel export provides an option to export hidden columns of Tree Grid by def
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -224,7 +224,7 @@ The excel export provides an option to export hidden columns of Tree Grid by def
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -267,7 +267,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -320,7 +320,7 @@ To apply theme in exported Excel, define the **theme** in export properties.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -363,7 +363,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -405,7 +405,7 @@ You can assign the file name for the exported document by defining **fileName** 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -446,7 +446,7 @@ You can persist the collapsed state in the exported document by defining **IsCol
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -488,7 +488,7 @@ You can persist the collapsed state in the exported document by defining **IsCol
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

@@ -32,7 +32,7 @@ First, create a database named `BugTracker` and a table named `Bugs` to hold the
 3. Right-click on the created database and select New Query.
 4. Use the following SQL query to create a table named Bugs.
 
-```csharp
+```
 Create Table Bugs(
 Id BigInt Identity(1,1) Primary Key Not Null,
 Summary Varchar(400) Not Null,
@@ -83,7 +83,7 @@ In the following example,
 * `UpdateBugAsync` method updates the given bug object in the table.
 * `RemoveBugAsync` method removes the given bug by Id.
 
-```csharp
+```c#
 public class BugDataAccessLayer
 {
     public IConfiguration Configuration;
@@ -173,7 +173,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 Open `Startup.cs` file and register the Syncfusion service in the `ConfigureServices` method as follows.
 
-```csharp
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorDapper
@@ -232,7 +232,7 @@ In the following code example,
 * Extended `BugDataAdaptor` class with `DataAdaptor` base class.
 * Injected `BugDataAccessLayer` instance to perform data operations.
 
-```csharp
+```c#
 public class BugDataAdaptor: DataAdaptor
 {
     private BugDataAccessLayer _dataLayer;
@@ -252,7 +252,7 @@ public class BugDataAdaptor: DataAdaptor
 
 Now, Open the `Startup.cs` file and register the `BugDataAdaptor` class in the `ConfigureServices` method as follows.
 
-```csharp
+```c#
 public void ConfigureServices(IServiceCollection services)
 {
    services.AddRazorPages();
@@ -280,7 +280,7 @@ In the following code example,
 
 Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. We are going to create columns using the following code, let us see the properties used and their usage.
 
-```csharp
+```cshtml
 <SfGrid TValue="Bug">
     <SfDataManager AdaptorInstance="typeof(BugDataAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <GridColumns>
@@ -327,7 +327,7 @@ We have already created CRUD operations method in the data access layer section 
 
 Add the following codes(`InsertAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform insert operation.
 
-```csharp
+```c#
 public override async Task<object> InsertAsync(DataManager dataManager, object data, string key)
 {
     await _dataLayer.AddBugAsync(data as Bug);
@@ -347,7 +347,7 @@ Clicking the `Update` toolbar button will call the `InsertAsync` method of our `
 
 Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to  perform update operation.
 
-```csharp
+```c#
 public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)
 {
     await _dataLayer.UpdateBugAsync(data as Bug);
@@ -367,7 +367,7 @@ Here, we are changing the `Status` field value from `Not started` to `In progres
 
 Add the following codes(`RemoveAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
 
-```csharp
+```c#
 public override async Task<object> RemoveAsync(DataManager dataManager, object primaryKeyValue, string keyField, string key)
 {
     await _dataLayer.RemoveBugAsync(Convert.ToInt32(primaryKeyValue));

@@ -17,7 +17,7 @@ The height and width of the Linear Gauge can be set using the [`Width`](https://
 
 The size of the Linear Gauge can be set in pixel as demonstrated below.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Width="100px" Height="350px">
@@ -37,7 +37,7 @@ The size of the Linear Gauge can be set in pixel as demonstrated below.
 
 By setting value in percentage, Linear Gauge receives its dimension matching to its parent. For example, when the height is set as "**50%**", Linear Gauge renders to half of the parent height. The Linear Gauge will be responsive when the width is set as "**100%**".
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Width="100%" Height="50%">

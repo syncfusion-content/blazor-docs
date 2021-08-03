@@ -78,7 +78,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` pack
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```csharp
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorApplication

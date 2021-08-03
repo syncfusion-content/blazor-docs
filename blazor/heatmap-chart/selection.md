@@ -11,7 +11,7 @@ documentation: ug
 
 In the HeatMap, the cell selection is used to select the single or multiple heat map cells at runtime and get the selected cell details using the `CellSelected`  event. You can enable this cell selection using the `AllowSelection` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

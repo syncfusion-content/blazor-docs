@@ -15,19 +15,19 @@ You can create your own ToolBar items in the Tree Grid. It can be added by defin
 
 Initialize the template for your custom component. Using the following code add the DropDownList component to the ToolBar.
 
-```csharp
-    <SfToolbar>
-        <ToolbarItems>
-            <ToolbarItem Type="ItemType.Input">
-                <Template>
-                    <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
-                        <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
-                        <DropDownListEvents TValue="string" ValueChange="OnChange" TItem="Select"> </DropDownListEvents>
-                    </SfDropDownList>
-                </Template>
-            </ToolbarItem>
-        </ToolbarItems>
-    </SfToolbar>
+```cshtml
+<SfToolbar>
+    <ToolbarItems>
+        <ToolbarItem Type="ItemType.Input">
+            <Template>
+                <SfDropDownList TValue="string" TItem="Select" DataSource=@LocalData Width="200">
+                    <DropDownListFieldSettings Text="text" Value="text"> </DropDownListFieldSettings>
+                    <DropDownListEvents TValue="string" ValueChange="OnChange" TItem="Select"> </DropDownListEvents>
+                </SfDropDownList>
+            </Template>
+        </ToolbarItem>
+    </ToolbarItems>
+</SfToolbar>
 ```
 
 **Step 2**:
@@ -37,7 +37,7 @@ You can select the Tree Grid row index based on the selected data in the DropDow
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Grids
@@ -102,7 +102,7 @@ You can select the Tree Grid row index based on the selected data in the DropDow
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

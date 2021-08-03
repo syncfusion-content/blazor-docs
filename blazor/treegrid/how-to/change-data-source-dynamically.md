@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
@@ -56,7 +56,7 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

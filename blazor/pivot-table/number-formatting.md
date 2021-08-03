@@ -34,37 +34,37 @@ Other properties include:
 * [`UseGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_UseGrouping): It allows to enable or disable the separator, for example, $100,000,000 or $100000000 respectively. By default, it will be set as **true**.
 * [`Currency`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Currency): It allows to set the currency code which needs to considered for the currency formatting.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C2" UseGrouping="false" Currency='EUR'></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C2" UseGrouping="false" Currency='EUR'></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -88,38 +88,38 @@ You can add any custom format directly to the [`Format`](https://help.syncfusion
 
 > If custom format is defined, certain properties such as [`UseGrouping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_UseGrouping) and [`Currency`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Currency) will not be considered.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-                <PivotViewFormatSetting Name="Sold" Format="####.00 'Nos'"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Sold" Format="####.00 'Nos'"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -129,10 +129,10 @@ You can add any custom format directly to the [`Format`](https://help.syncfusion
 
 You can enable formatting dialog option in the toolbar by adding `NumberFormatting` in the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_Toolbar). After that, you can see the option to invoke the formatting dialog in the toolbar.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView @ref="pivot" TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" Height="300" Width="800">
+<SfPivotView @ref="pivot" TValue="ProductDetails" ShowToolbar="true" Toolbar="@toolbar" AllowNumberFormatting="true" Height="300" Width="800">
     <PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>
     <PivotViewDataSourceSettings DataSource="@data">
         <PivotViewColumns>

@@ -9,16 +9,13 @@ documentation: ug
 
 # Sorting in Blazor TreeGrid Component
 
-Sorting enables you to sort data in the **Ascending** or **Descending** order.
-To sort a column, click the column header.
-
-To sort multiple columns, press and hold the CTRL key and click the column header.  You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
+Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header.  You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
 
 To enable sorting in the Tree Grid, set the [`AllowSorting`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSorting.html) to true. Sorting options can be configured through the [`TreeGridSortSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortSettings.html).
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -48,7 +45,7 @@ To enable sorting in the Tree Grid, set the [`AllowSorting`](https://help.syncfu
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -95,7 +92,7 @@ To sort at initial rendering, set the **Field** and **Direction** in the [`Colum
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -125,7 +122,7 @@ To sort at initial rendering, set the **Field** and **Direction** in the [`Colum
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -172,7 +169,7 @@ During the sort action, the tree grid component triggers two events. The [`Actio
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -211,7 +208,7 @@ During the sort action, the tree grid component triggers two events. The [`Actio
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

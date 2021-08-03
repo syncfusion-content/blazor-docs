@@ -20,7 +20,7 @@ Annotations of a connector can be positioned using the following properties of A
 
 The `Offset` property of annotation is used to align the annotations based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -64,7 +64,7 @@ The following image shows the relationship between the annotation position and o
 
 The connector’s annotation can be aligned over its segment path using the `Alignment` property of annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -109,7 +109,7 @@ The `SegmentAngle` property is used to rotate the annotation based on the connec
 
 The following code example shows how the connector annotation rotated in its path direction.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">

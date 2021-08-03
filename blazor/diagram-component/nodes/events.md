@@ -19,7 +19,7 @@ The `SelectionChange` event is triggered when select/unselect the node or connec
 
 The following code example explains how to get the selection change event in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" SelectionChange="@OnSelectionChange">
@@ -56,7 +56,7 @@ The following code example explains how to get the selection change event in the
 
 The `PositionChange` event is triggered when drag the node or connector through interaction. The `DraggingEventArgs` is used to get position change event arguments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" PositionChange="@OnPositionChange">
@@ -92,7 +92,7 @@ The `PositionChange` event is triggered when drag the node or connector through 
 
 The `SizeChange` event is triggered when resizing the node during the interaction. The `SizeChangeEventArgs` is used to get size change event arguments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" SizeChange="@OnSizeChange">  
@@ -128,7 +128,7 @@ The `SizeChange` event is triggered when resizing the node during the interactio
 
 The `RotateChange` event is triggered when rotate the node during the interaction. The `RotationEventArgs` is used to get angle value change event arguments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" RotateChange="@OnRotateChange">  

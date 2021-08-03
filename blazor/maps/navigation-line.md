@@ -11,10 +11,7 @@ documentation: ug
 
 Navigation lines are used to denote the path between the two locations. We can use this feature as flight or train or sea routes.
 
-Following example shows rendering the path between two locations using latitudes and longitudes.
-
-Yon can customize the navigation line color, dashArray, width and angle by modifying their default values in
-`MapsNavigationLine`.
+Following example shows rendering the path between two locations using latitudes and longitudes. Yon can customize the navigation line color, dashArray, width and angle by modifying their default values in `MapsNavigationLine`.
 
 Refer the below code snippet to navigate line between two cities in World map.
 

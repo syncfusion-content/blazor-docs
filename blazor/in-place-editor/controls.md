@@ -23,7 +23,7 @@ The following table explains Editor components name and their configurations.
 
 The following example demonstrates how to render the Editor components in the In-place Editor,
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs

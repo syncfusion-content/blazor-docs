@@ -11,12 +11,12 @@ documentation: ug
 
 The Dialog can be positioned using the `DialogPositionData` property by providing the X and Y coordinates. It can be positioned inside the target of the `container` or `<body>` of the element based on the given X and Y values.
 
-for X is: left, center, right (or) any offset value
-for Y is: top, center, bottom (or) any offset value
+For X is: left, center, right (or) any offset value
+For Y is: top, center, bottom (or) any offset value
 
 The following code demonstrates the different Dialog positions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

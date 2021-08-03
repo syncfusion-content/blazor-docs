@@ -197,7 +197,7 @@ namespace BlazorServer
 }
 ```
 
-> **Note** BlazorServer denotes the ApplicationNameSpace of your project.
+> BlazorServer denotes the ApplicationNameSpace of your project.
 
 * Finally, Specify the culture for Gantt using `Locale` property.
 

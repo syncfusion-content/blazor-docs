@@ -15,7 +15,7 @@ If one or more panels collide while dragging, then the colliding panels will be 
 
 > The complete panel will act as the handler for dragging the panel such that the dragging action occurs on clicking anywhere over a panel.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -55,7 +55,7 @@ The following output demonstrates the dragging functionality of dashboard compon
 
 The dragging handler for the panels can be customized using the `DraggableHandle` property to restrict the dragging action within a particular element in the panel.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

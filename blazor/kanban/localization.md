@@ -35,7 +35,7 @@ By using `Locale` property, you can set the culture dynamically in kanban compon
 
 The following example demonstrates the Kanban in `Deutsch` culture.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -101,7 +101,7 @@ Output be like the below.
 
 The Kanban provides an option to switch its text direction and layout from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable right-to-left mode in Kanban, set the `EnableRtl` to true.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

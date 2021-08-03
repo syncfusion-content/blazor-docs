@@ -13,7 +13,7 @@ To print the Tree Grid, use the [`Print`](https://help.syncfusion.com/cr/blazor/
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -38,7 +38,7 @@ To print the Tree Grid, use the [`Print`](https://help.syncfusion.com/cr/blazor/
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -94,7 +94,7 @@ To print the tree grid from an external button, invoke the [`Print`](https://hel
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -126,7 +126,7 @@ To print the tree grid from an external button, invoke the [`Print`](https://hel
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -173,7 +173,7 @@ By default, the tree grid prints all the pages. To print the current page alone,
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -199,7 +199,7 @@ By default, the tree grid prints all the pages. To print the current page alone,
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

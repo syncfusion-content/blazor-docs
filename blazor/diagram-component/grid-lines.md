@@ -9,15 +9,13 @@ documentation: ug
 
 # Gridlines in Blazor Diagram Component
 
-Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface.
-
-The `SnapSettings` property is used to customize the gridlines and control the snapping behavior in the diagram.
+Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface. The `SnapSettings` property is used to customize the gridlines and control the snapping behavior in the diagram.
 
 ## Customize the Gridlines visibility
 
 The `SnapConstraints` enables you to show/hide the gridlines. The following code example illustrates how to show or hide gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -68,7 +66,7 @@ The appearance of the gridlines can be customized by using a set of predefined p
 
 The following code example illustrates how to customize the appearance of gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px">
@@ -87,7 +85,7 @@ The following code example illustrates how to customize the appearance of gridli
 
 The appearance of the grid lines can be changed into dots by using the `GridType` as Dots. The following code illustrates how to render grid patterns as Dots.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="1000px" Height="500px">
@@ -114,7 +112,7 @@ Thickness and the space between gridlines can be customized by using horizontal 
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px">
@@ -145,7 +143,7 @@ This feature allows the diagram objects to snap to the nearest intersection of g
 
 Snapping to gridlines can be enabled/disabled with the `SnapConstraints`. The following code example illustrates how to enable/disable the snapping to gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -177,7 +175,7 @@ protected override void OnInitialized()
 
 By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s `SnapIntervals` and the vertical gridline’s `SnapIntervals` properties.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -216,13 +214,13 @@ protected override void OnInitialized()
 
 The snap to object provides visual cues to assist with aligning and spacing diagram elements. A node can be snapped with its neighboring objects based on certain alignments. Such alignments are visually represented as smart guides.
 
-The `SnapObjectDistance` property allows you to define minimum distance between the selected object and the nearest object.
+* The `SnapObjectDistance` property allows you to define minimum distance between the selected object and the nearest object.
 
-The `SnapAngle` property allows you to define the snap angle by which the object needs to be rotated.
+* The `SnapAngle` property allows you to define the snap angle by which the object needs to be rotated.
 
-The `SnapConstraints` property allows you to enable or disable the certain features of the snapping, refer to `SnapConstraints`.
+* The `SnapConstraints` property allows you to enable or disable the certain features of the snapping, refer to `SnapConstraints`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">

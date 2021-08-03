@@ -15,7 +15,7 @@ documentation: ug
 
 The numeric scale is used to represent the numeric values of data in a Range Selector. By default, the [`ValueType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_ValueType) of a Range Selector is **Double**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -56,7 +56,7 @@ The numeric scale is used to represent the numeric values of data in a Range Sel
 
 The minimum and the maximum of the scale will be calculated automatically based on the provided data. It can be customized by using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum), the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum), and the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -106,7 +106,7 @@ The minimum and the maximum of the scale will be calculated automatically based 
 
 The numeric labels can be formatted using the [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property and it supports all the globalized formats.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -207,7 +207,7 @@ The following table shows the results of applying some commonly used label forma
 
 The Range Selector also supports the Custom Label formats using the placeholders such as **{value}$**, in which the value represents the axis label, e.g. 20$.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -249,7 +249,7 @@ The Range Selector also supports the Custom Label formats using the placeholders
 
 The Logarithmic supports the logarithmic scale, and it is used to visualize the data when the Range Selector has numerical values in both the lower (e.g.: 10-6) and the higher (e.g.: 106) orders of the magnitude.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -302,7 +302,7 @@ The Logarithmic supports the logarithmic scale, and it is used to visualize the 
 
 The minimum and the maximum of the Range Selector will be calculated automatically based on the provided data. It can be customized by using the [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum), the [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum), and the [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -355,7 +355,7 @@ The minimum and the maximum of the Range Selector will be calculated automatical
 
 The Logarithmic Base can be customized using the [`LogBase`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LogBase) property. The default value of this property is **10**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -408,7 +408,7 @@ The Logarithmic Base can be customized using the [`LogBase`](https://help.syncfu
 
 The Range Selector supports the DateTime scale and displays the DateTime values as labels in the specified format.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -460,7 +460,7 @@ DateTime supports the following interval types:
 * Hours
 * Minutes
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -501,7 +501,7 @@ DateTime supports the following interval types:
 
 The [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property is used to format and parse the date to all globalize format.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

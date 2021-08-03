@@ -25,7 +25,7 @@ In this bubble heat map type, the size factor of the bubble is used to denote th
 
 To render a bubble heat map with size series, set the `BubbleType` property to `Size`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -78,7 +78,7 @@ In heat map, defined with this tile type, the data points will be represented wi
 
 To represent the data points with variations in bubble colors, set the `BubbleType` property to `Color`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -130,7 +130,7 @@ In this bubble heat map type, the sector of the bubble decides the magnitude of 
 
 To render the data points with bubble sector, set the `BubbleType` property to `Sector`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

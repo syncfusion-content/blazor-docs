@@ -24,7 +24,7 @@ To use templates, the tree grid must be bound with named model. This can be done
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -61,7 +61,7 @@ To use templates, the tree grid must be bound with named model. This can be done
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -110,7 +110,7 @@ For example, you can access the data of the column template using `context` as f
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -147,7 +147,7 @@ For example, you can access the data of the column template using `context` as f
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -194,7 +194,7 @@ This prevents us from directly specifying templates such as `RowTemplate` and `D
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -251,7 +251,7 @@ This prevents us from directly specifying templates such as `RowTemplate` and `D
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

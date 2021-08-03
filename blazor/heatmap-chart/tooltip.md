@@ -15,7 +15,7 @@ Tooltip is used to provide the details of the heatmap cell, and this can be disp
 
 You can enable the tooltip by setting the `Enable` property to true inside the `HeatMapTooltipSettings` tag.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

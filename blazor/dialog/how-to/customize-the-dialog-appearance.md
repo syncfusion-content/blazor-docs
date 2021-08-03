@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the dialog appearance by providing dialog template as string or HTML element to the `Content` template property. In the following code block, dialog is customized as error window appearance.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scheduler Interactions in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Scheduler Interactions in Syncfusion Blazor Scheduler component and more.
+description: This section lists out the user interactions that are handled through the mouse and touch gestures on Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug

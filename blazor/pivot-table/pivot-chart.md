@@ -18,41 +18,41 @@ If user prefers, the pivot chart component can also be displayed individually wi
 
 The below sample displays the pivot chart component based on the pivot report bound on it.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" Width="800" Height="500">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" Width="800" Height="500">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -91,7 +91,7 @@ Supports 19 different types of charts as follows,
 
 In the below code sample, the pivot chart type is set as [**ChartSeriesType.Bar**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.ChartSeriesType.html).
 
-```csharp
+```cshtml
     @using Syncfusion.Blazor.PivotView
 
     <SfPivotView TValue="ProductDetails">
@@ -226,6 +226,7 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
 ### Drill Down/Up
 
 In the accumulation charts, drill down and drill up operations can be performed using the built-in context menu option. It will be shown while clicking on the chart series. The context menu has the following options:
+
 **Expand** - It is to drill down the corresponding series until the last level.
 **Collapse** - It is to drill up the corresponding series until the first level.
 **Exit** - It is to close the context menu.
@@ -329,7 +330,9 @@ If the column has more than one header, then need to mention all the headers sep
 ### Label Customization
 
 The data labels are visible by default showing header name. Its visibility can be modified using the `Visible` boolean property in `DataLabel` Tag. With regard to the label arrangement, the **Smart Labels** options help to arrange labels efficiently without overlapping. It can be disabled by setting the `EnableSmartLabels` property in [`PivotChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class as **false**.
+
 The `position` property in `dataLabel` allows to specify the position of the data label. The available options are,
+
 * `Outside`: Positions the label outside the point. It is the default option.
 * `Inside`: Positions the label inside the point.
 
@@ -473,6 +476,7 @@ User can draw pie and doughnut charts within the specified range using the `Star
 ![output](images/accumulation-angle.png)
 
 Users can get doughnut chart from pie chart and vice-versa using the `InnerRadius` property in [`PivotChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
+
 > It takes the value only in percentage.
 
 ```cshtml
@@ -566,43 +570,44 @@ Exploding can be enabled by setting the `Explode` property in [`PivotChartSeries
 ## Field List
 
 User can enable the field list by setting the property [`ShowFieldList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) in [`SfPivotView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html) class as **true**.
+
 By using this, user can customize the report dynamically and view the result in pivot chart. For more information regarding the field list, refer the [field list](./field-list) topic.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowFieldList="true">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" ShowFieldList="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -614,41 +619,41 @@ User can enable the grouping bar by setting the property [`ShowGroupingBar`](htt
 
 > For multiple axis support, buttons will be placed in value axis instead of dropdown list.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" Width="100%" Height="300" ShowGroupingBar="true">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" Width="100%" Height="300" ShowGroupingBar="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -702,41 +707,41 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
 
 By default, the pivot chart will be drawn with the value field (measure) which is set first in the report under value axis. But, user can change to specific value field using the property [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_Value) in [`PivotChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Value="Amount" Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Value="Amount" Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 ```
 
 ![output](images/chart_single_axis.png)
@@ -747,72 +752,72 @@ User can draw the pivot chart with multiple value fields by setting the property
 
 > The multi axis support is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-            <PivotChartSettings EnableMultiAxis="true"></PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+        <PivotChartSettings EnableMultiAxis="true"></PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 ```
 
 ![output](images/multi-axis.png)
 
 If the user binds more value fields, the result will be multiple pivot charts, and each chart will shrink within the parent container height. To avoid this, set the [`EnableScrollOnMultiAxis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableScrollOnMultiAxis) property in [`PivotChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) to **true**. By doing so, each pivot chart will only shrink to a minimal "160px" – "180px" height showing a vertical scrollbar for a clear view.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-                <PivotViewColumn Name="Products" Type="Count"></PivotViewColumn>
-            </PivotViewColumns>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-            <PivotChartSettings EnableMultiAxis="true" EnableScrollOnMultiAxis="true"></PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            <PivotViewColumn Name="Products" Type="Count"></PivotViewColumn>
+        </PivotViewColumns>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+        <PivotChartSettings EnableMultiAxis="true" EnableScrollOnMultiAxis="true"></PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 ```
 
 ![output](images/chart-scrollbar.png)
@@ -821,38 +826,38 @@ Meanwhile, there is another way to display multiple values in a chart. In this a
 
 In the following code sample, the pivot chart can be seen as a single chart with multiple value fields such as `Sold` and `Amount` that are drawn as multiple Y axis.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView ID="PivotView" TValue="ProductDetails" Height="400" Width="1400">
-    <PivotViewDisplayOption View="View.Chart" Primary="Primary.Chart"></PivotViewDisplayOption>
-        <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" AllowLabelFilter="true" AllowMemberFilter="true" AllowValueFilter="true" EnableSorting=true>
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotChartSettings Title="Sales Analysis" EnableMultipleAxis="enableMultiaxis" MultipleAxisMode="MultipleAxisMode.Grouped">
-            <PivotChartSeries Type=Syncfusion.Blazor.PivotView.ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView ID="PivotView" TValue="ProductDetails" Height="400" Width="1400">
+<PivotViewDisplayOption View="View.Chart" Primary="Primary.Chart"></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@pivotData" ExpandAll="false" AllowLabelFilter="true" AllowMemberFilter="true" AllowValueFilter="true" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotChartSettings Title="Sales Analysis" EnableMultipleAxis="enableMultiaxis" MultipleAxisMode="MultipleAxisMode.Grouped">
+        <PivotChartSeries Type=Syncfusion.Blazor.PivotView.ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> pivotData { get; set; }
-        protected override void OnInitialized()
-        {
-            this.pivotData = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> pivotData { get; set; }
+    protected override void OnInitialized()
+    {
+        this.pivotData = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 ```
 
 ![output](images/multiple-axis-mode.png)
@@ -861,43 +866,43 @@ In the following code sample, the pivot chart can be seen as a single chart with
 
 User can customize series of the pivot chart using [`PivotChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_ChartSeries) in [`PivotChartSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class. The changes handled in the property will be reflected commonly in all chart series.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-               <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column>
-                <PivotChartSeriesBorder Color="#000" Width=2></PivotChartSeriesBorder>
-                // Other major options are:
-                // <PivotChartCornerRadius TopLeft=20 TopRight=20 BottomLeft=10 BottomRight=10></PivotChartCornerRadius>
-                // <PivotChartSeriesAnimation Enable="true" Duration=500></PivotChartSeriesAnimation>
-            </PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+           <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column>
+            <PivotChartSeriesBorder Color="#000" Width=2></PivotChartSeriesBorder>
+            // Other major options are:
+            // <PivotChartCornerRadius TopLeft=20 TopRight=20 BottomLeft=10 BottomRight=10></PivotChartCornerRadius>
+            // <PivotChartSeriesAnimation Enable="true" Duration=500></PivotChartSeriesAnimation>
+        </PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -909,41 +914,41 @@ User can customize axis of the pivot chart using [`PivotChartPrimaryXAxis`](http
 
 > Axis customization is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-            <PivotChartPrimaryYAxis Title="Y Axis Title" LabelFormat="P" LabelPosition="PivotChartAxisPosition.Outside">
-            </PivotChartPrimaryYAxis>
-            <PivotChartPrimaryXAxis Title="X Axis Title" IsInversed="true" LabelPosition="PivotChartAxisPosition.Outside">
-            </PivotChartPrimaryXAxis>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+        <PivotChartPrimaryYAxis Title="Y Axis Title" LabelFormat="P" LabelPosition="PivotChartAxisPosition.Outside">
+        </PivotChartPrimaryYAxis>
+        <PivotChartPrimaryXAxis Title="X Axis Title" IsInversed="true" LabelPosition="PivotChartAxisPosition.Outside">
+        </PivotChartPrimaryXAxis>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -979,39 +984,39 @@ Also user can set the position of the legend in pivot chart using the property [
 
 > By default, the legend is not visible for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartLegendSettings Position=PivotChartLegendPosition.Right Background="rgb(230, 236, 239)" Padding=20 Alignment="PivotChartAlignment.Center">
-            </PivotChartLegendSettings>
-            <PivotChartSeries Type=ChartSeriesType.Column LegendShape=PivotChartLegendShape.Pentagon></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartLegendSettings Position=PivotChartLegendPosition.Right Background="rgb(230, 236, 239)" Padding=20 Alignment="PivotChartAlignment.Center">
+        </PivotChartLegendSettings>
+        <PivotChartSeries Type=ChartSeriesType.Column LegendShape=PivotChartLegendShape.Pentagon></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -1027,46 +1032,46 @@ Also user can enable and customize the crosshair tooltip for axes using [`PivotC
 
 > Marker and crosshair is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-           <PivotChartSettings>
-            <PivotChartCrosshairSettings Enable="true"></PivotChartCrosshairSettings>
-            <PivotChartSeries Type=ChartSeriesType.Line>
-                <PivotChartMarkerSettings Fill="#EEE" Height=10 Width=10 Visible="true" Shape=PivotChartShape.Pentagon></PivotChartMarkerSettings>
-            </PivotChartSeries>
-            <PivotChartPrimaryXAxis>
-                <PivotChartPrimaryXAxisCrosshairTooltip Enable="true" Fill="#ff0000"></PivotChartPrimaryXAxisCrosshairTooltip>
-            </PivotChartPrimaryXAxis>
-            <PivotChartPrimaryYAxis>
-                <PivotChartPrimaryYAxisCrosshairTooltip Enable="true" Fill="#0000FF"></PivotChartPrimaryYAxisCrosshairTooltip>
-            </PivotChartPrimaryYAxis>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+        <PivotChartSettings>
+        <PivotChartCrosshairSettings Enable="true"></PivotChartCrosshairSettings>
+        <PivotChartSeries Type=ChartSeriesType.Line>
+            <PivotChartMarkerSettings Fill="#EEE" Height=10 Width=10 Visible="true" Shape=PivotChartShape.Pentagon></PivotChartMarkerSettings>
+        </PivotChartSeries>
+        <PivotChartPrimaryXAxis>
+            <PivotChartPrimaryXAxisCrosshairTooltip Enable="true" Fill="#ff0000"></PivotChartPrimaryXAxisCrosshairTooltip>
+        </PivotChartPrimaryXAxis>
+        <PivotChartPrimaryYAxis>
+            <PivotChartPrimaryYAxisCrosshairTooltip Enable="true" Fill="#0000FF"></PivotChartPrimaryYAxisCrosshairTooltip>
+        </PivotChartPrimaryYAxis>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -1093,46 +1098,46 @@ This can be set using the property [`Mode`](https://help.syncfusion.com/cr/blazo
 
 > Zooming and panning is not applicable for the accumulation chart types like pie, doughnut, pyramid, and funnel.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-            <PivotChartZoomSettings ToolbarItems=@toolbar EnableDeferredZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true">
-            </PivotChartZoomSettings>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+        <PivotChartZoomSettings ToolbarItems=@toolbar EnableDeferredZooming="true" EnableMouseWheelZooming="true" EnablePinchZooming="true" EnableSelectionZooming="true">
+        </PivotChartZoomSettings>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<PivotChartToolbarItems> toolbar = new List<PivotChartToolbarItems> {
-            PivotChartToolbarItems.Zoom,
-            PivotChartToolbarItems.ZoomIn,
-            PivotChartToolbarItems.ZoomOut,
-            PivotChartToolbarItems.Pan,
-            PivotChartToolbarItems.Reset
-        };
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<PivotChartToolbarItems> toolbar = new List<PivotChartToolbarItems> {
+        PivotChartToolbarItems.Zoom,
+        PivotChartToolbarItems.ZoomIn,
+        PivotChartToolbarItems.ZoomOut,
+        PivotChartToolbarItems.Pan,
+        PivotChartToolbarItems.Reset
+    };
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -1144,40 +1149,40 @@ By default, tooltip for the pivot chart is enabled. User can customize it by usi
 
 > The tooltip can be disabled by setting the property [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html#Syncfusion_Blazor_PivotView_PivotChartTooltipSettings_Enable) in [`PivotChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartTooltipSettings.html) class as **false**.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-           <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-            <PivotChartTooltipSettings header="Tooltip Header" EnableAnimation="true" EnableMarker="true" Fill="black" Opacity=1>
-                <PivotChartTooltipTextStyle Color="#FFF" FontStyle="Italic" FontWeight=600></PivotChartTooltipTextStyle>
-            </PivotChartTooltipSettings>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+       <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+        <PivotChartTooltipSettings header="Tooltip Header" EnableAnimation="true" EnableMarker="true" Fill="black" Opacity=1>
+            <PivotChartTooltipTextStyle Color="#FFF" FontStyle="Italic" FontWeight=600></PivotChartTooltipTextStyle>
+        </PivotChartTooltipSettings>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -1196,50 +1201,50 @@ The following are the four export types:
 
 In the following code sample, exporting can be done using an external button named as "Chart Export".
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
-    @using Syncfusion.Blazor.Buttons
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
 
-    <SfButton OnClick="OnChartExport" Content="Chart Export"></SfButton>
-    <SfPivotView TValue="ProductDetails" @ref="@pivot" ShowFieldList="true">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfButton OnClick="OnChartExport" Content="Chart Export"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" ShowFieldList="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        SfPivotView<ProductDetails> pivot;
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
-        public void OnChartExport()
-        {
-            this.pivot.ExportToChartAsync("PDF", "sample", "Landscape");
-            //To export pivot chart to JPEG, SVG or PNG image formats, change the export type from "PDF" to JPEG, SVG or PNG.
-            //this.pivot.ExportToChartAsync("JPEG", "sample");
-        }
+@code{
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+    public void OnChartExport()
+    {
+        this.pivot.ExportToChartAsync("PDF", "sample", "Landscape");
+        //To export pivot chart to JPEG, SVG or PNG image formats, change the export type from "PDF" to JPEG, SVG or PNG.
+        //this.pivot.ExportToChartAsync("JPEG", "sample");
+    }
+}
 
 ```
 
@@ -1251,48 +1256,48 @@ The rendered pivot chart can be printed directly from the browser by calling [`P
 
 In the following code sample, printing can be done using an external button named as "Print Chart".
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
-    @using Syncfusion.Blazor.Buttons
+```cshtml
+@using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.Buttons
 
-    <SfButton OnClick="OnPrintChart" Content="Print Chart"></SfButton>
-    <SfPivotView TValue="ProductDetails" @ref="@pivot" ShowFieldList="true">
-         <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Country"></PivotViewColumn>
-                <PivotViewColumn Name="Products"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Year"></PivotViewRow>
-                <PivotViewRow Name="Quarter"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
-        <PivotChartSettings Title="Sales Analysis">
-            <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
-        </PivotChartSettings>
-    </SfPivotView>
+<SfButton OnClick="OnPrintChart" Content="Print Chart"></SfButton>
+<SfPivotView TValue="ProductDetails" @ref="@pivot" ShowFieldList="true">
+     <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Country"></PivotViewColumn>
+            <PivotViewColumn Name="Products"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year"></PivotViewRow>
+            <PivotViewRow Name="Quarter"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+    <PivotChartSettings Title="Sales Analysis">
+        <PivotChartSeries Type=ChartSeriesType.Column></PivotChartSeries>
+    </PivotChartSettings>
+</SfPivotView>
 
-    @code{
-        SfPivotView<ProductDetails> pivot;
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
-        public void OnPrintChart()
-        {
-            this.pivot.PrintChart();
-        }
+@code{
+    SfPivotView<ProductDetails> pivot;
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+    public void OnPrintChart()
+    {
+        this.pivot.PrintChart();
+    }
+}
 
 ```
 

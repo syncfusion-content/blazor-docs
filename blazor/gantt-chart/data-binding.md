@@ -23,9 +23,7 @@ To bind list binding to the gantt component, you can assign a IEnumerable object
 
 ### Hierarchical data Binding
 
-The `Child` property is used to map the child records in hierarchical data.
-
-The following code example shows how to bind the hierarchical list data into the Gantt Chart component.
+The `Child` property is used to map the child records in hierarchical data. The following code example shows how to bind the hierarchical list data into the Gantt Chart component.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -329,7 +327,7 @@ Gantt is a generic component which is strongly bound to a model type. There are 
 
 ExpandoObject can be bound to Gantt by assigning to the `DataSource` property. Gantt can also perform all kind of supported data operations and editing in ExpandoObject.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Gantt
 

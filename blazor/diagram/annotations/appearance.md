@@ -477,11 +477,11 @@ Refer to [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Annotation template
 
-Diagram provides the template support for annotation. You should define an SVG/HTML content to the diagram’s AnnotationTemplate property.
+Diagram provides the template support for annotation. You should define an SVG/HTML content to the diagram’s `AnnotationTemplate` property.
 
 The following code explains how to define a template in node’s annotation. similarly, you can define it in connectors.
 
-```csharp
+```cshtml
 <style>
 
     th {

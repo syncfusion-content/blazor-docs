@@ -13,9 +13,7 @@ Color mapping is used to customize the shape colors based on given values. It ha
 
 ## Range color mapping
 
-Range color mapping is applied by the mapped value, which is a numeric value. Within the given color mapping, ranges are provided in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource).
-
-Bind the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) value and specify the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) to 'Density' to map the range value for shapes. Refer to the following code snippets.
+Range color mapping is applied by the mapped value, which is a numeric value. Within the given color mapping, ranges are provided in [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource). Bind the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) value and specify the [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) to 'Density' to map the range value for shapes. Refer to the following code snippets.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

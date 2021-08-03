@@ -38,7 +38,7 @@ The mask can be formed by combining any one or more of these mask elements.
 
 The following example demonstrates the usage of standard mask elements.
 
-``` csharp
+``` cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="#####" Placeholder="Mask ##### (ex: 012+-)" FloatLabelType="@FloatLabelType.Always"></SfMaskedTextBox>
@@ -98,8 +98,7 @@ The output will be as follows.
 
 ## Prompt character
 
-The Prompt character is a prompting symbol in the MaskedTextBox for the mask elements. The symbol is used to show the input positions in the MaskedTextBox. You can customize the prompt character of MaskedTextBox
-by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property.
+The Prompt character is a prompting symbol in the MaskedTextBox for the mask elements. The symbol is used to show the input positions in the MaskedTextBox. You can customize the prompt character of MaskedTextBox by using the [PromptChar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_PromptChar) property.
 
 The following example demonstrates the MaskedTextBox with customized prompt character as `#`.
 

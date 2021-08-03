@@ -26,8 +26,8 @@ To get start quickly with Blazor DatePicker component, you can check on this vid
 
  ```html
 <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
 </head>
 ```
 
@@ -74,7 +74,7 @@ namespace BlazorApplication
 
  ```html
 <head>
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 
@@ -84,7 +84,7 @@ To initialize the DatePicker component add the below code to your `Index.razor` 
 
 The following code shows a basic DatePicker component.
 
-```csharp
+```cshtml
 <SfDatePicker TValue="DateTime?" Placeholder='Choose a Date'></SfDatePicker>
 ```
 
@@ -100,7 +100,7 @@ The output will be as follows.
 
 The following example demonstrates how to set the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Value) and [Min](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDatePicker-1.html) and [Max](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Max) dates on initializing the DatePicker. Here, you can select a date within the range from 5th to 27th of this month. `TValue` specifies the type of the DatePicker component.
 
-```csharp
+```cshtml
 <SfDatePicker TValue="DateTime?" Value='@DateValue' Min='@MinDate' Max='@MaxDate'></SfDatePicker>
 
 @code {

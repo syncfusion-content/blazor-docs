@@ -11,7 +11,7 @@ documentation: ug
 
 You can prevent closing of modal dialog by setting the `OnClose` event argument cancel value to `true`. In the following sample, the dialog is closed when you enter the username value with minimum 4 characters. Otherwise, it will not be closed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

@@ -11,7 +11,7 @@ documentation: ug
 
 Heat map can be displayed using `Scalable Vector Graphics (SVG)` rendering logic to improve the initial load performance and scalability.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

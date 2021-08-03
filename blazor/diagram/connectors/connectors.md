@@ -55,7 +55,7 @@ The following code example illustrates how to add a connector through connector 
 
 You can add a connector at runtime by using the server-side method `AddConnector` in the Diagram component.  The following code explains how to add connectors at runtime.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -113,7 +113,7 @@ Connectors can be predefined and added to the symbol palette. You can drop those
 
 For more information about adding connectors from symbol palette, refer to the [`Symbol Palette`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -255,7 +255,7 @@ You can change any connector's properties at runtime.
 
 The following code example explains how to change the connector properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -304,7 +304,7 @@ The [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 The following code example illustrates how to connect two nodes.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -386,7 +386,7 @@ When you remove [`NodeConstraints.InConnect`](https://help.syncfusion.com/cr/bla
 
 When you remove both InConnect and OutConnect [`NodeConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) from `Default`, the node restricts connector to establish connection in it. The following code illustrates how to disable InConnect constraints.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -428,7 +428,7 @@ The [`SourcePortID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 The following code example illustrates how to create port to port connections.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -535,7 +535,7 @@ The following code example illustrates how to create port to port connections.
 
 When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `OutConnect`, the port accepts only an outgoing connection to dock in it. When you set [`PortConstraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `None`, the port restricts connector to establish connection in it.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

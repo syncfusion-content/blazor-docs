@@ -15,7 +15,7 @@ The `Visible` property is enabled by default and has two-way binding capabilitie
 
 Bind the `Visible` property as mentioned below to show/hide the dialog on CheckBox state change.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

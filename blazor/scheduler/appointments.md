@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appointments in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Appointments in Syncfusion Blazor Scheduler component and much more.
+description: Learn here all about the types of events, recurring events, customizing events, and also drag and resize options in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -15,6 +15,11 @@ Appointments can be anything that are scheduled for a specific time period. It c
 * Spanned events
 * All-day events
 * Recurring events
+
+To get start quickly about appointments and how to customize it, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
 
 ## Normal events
 
@@ -71,9 +76,9 @@ Represents an appointment that is created for an entire day such as holiday even
 You can make use of the CSS customization to prevent the display of all-day row appointments on the Scheduler UI.
 
 ```css
-    .e-schedule .e-date-header-wrap .e-schedule-table thead {
-        display: none;
-    }
+.e-schedule .e-date-header-wrap .e-schedule-table thead {
+    display: none;
+}
 ```
 
 ## Recurring events
@@ -264,9 +269,9 @@ There are four repeat types available namely,
 
 ### Recurrence properties
 
- The properties based on which the recurrence appointments are created with its respective time period are depicted in the following table. Also, the valid rule string can be referred from [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications.
+ The properties based on which the recurrence appointments are created with its respective time period are depicted in the following table. Also, the valid rule string can be referred from [`iCalendar`](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications.
 
- > Refer [`iCalendar`](https://tools.ietf.org/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
+ > Refer [`iCalendar`](https://datatracker.ietf.org/doc/html/rfc5545#section-3.3.10) specifications for valid recurrence rule string.
 
 | Property | Purpose | Example |
 |-------|---------| --------- |
@@ -328,7 +333,7 @@ The built-in validation support has been added by default for recurring appointm
 | Validation messages | Description |
 |-------|---------|
 | The recurrence pattern is not valid. | This alert will raise, when the selected recurrence rule value is not a valid one. For example, when you try to select the end date value (using `Until` option) for a recurring event, which occurs before the start date, an alert will popup out saying that the chosen pattern is invalid. |
-| The changes made to specific instances of this series will be cancelled and those events will match the series again. | This alert will raise, when you try to edit the whole series, whose occurrence might have been already edited. For example, If there are five occurrences and one of the occurrence is already edited. Now, when you try to edit the entire series, you will get this validation alert. |
+| The changes made to specific instances of this series will be canceled and those events will match the series again. | This alert will raise, when you try to edit the whole series, whose occurrence might have been already edited. For example, If there are five occurrences and one of the occurrence is already edited. Now, when you try to edit the entire series, you will get this validation alert. |
 | The duration of the event must be shorter than how frequently it occurs. Shorten the duration, or change the recurrence pattern in the recurrence event editor. | This validation will occur, if the event duration is longer than the selected frequency. For example, if you create a recurring appointment with two days duration in `Daily` frequency with no intervals set to it, you may get this alert. |
 | Some months have fewer than the selected date. For these months, the occurrence will fall on the last date of the month. | When you try to create a recurring appointment on 31st of every month, where few months won’t have 31 days and in this scenario, you will get this alert. |
 | Two occurrences of the same event cannot occur on the same day. | This validation will occur, when you try to edit or move any single occurrence to some other date, where another occurrence of the same event is already present. |
@@ -519,6 +524,11 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 Appointments can be rescheduled to any time by dragging and dropping them onto the desired location. To work with drag and drop functionality make sure that `AllowDragAndDrop` is set to **true** on Scheduler. In mobile mode, you can drag and drop the events by tap holding an event and dropping them on to the desired location.
 
 > By default, drag and drop action is applicable on all Scheduler views, except Agenda and Month-Agenda view.
+
+To get start quickly about drag options available in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
 
 ### Drag and drop multiple appointments
 
@@ -836,6 +846,11 @@ By default, while dragging an appointment, it moves at an interval of 30 minutes
 
 It is possible to drag and drop the unplanned items from any of the external source into the scheduler, by manually saving those dropped item as a new appointment data through `AddEventAsync` method of Scheduler.
 
+To get start quickly about dropping items from external source to our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=QxBBZYef6cg"%}
+
 In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEventAsync` method.
 
 ```cshtml
@@ -1057,6 +1072,11 @@ There are scenarios where you want to open the editor filled with data on newly 
 
 Another way of rescheduling an appointment can be done by resizing it through either of its handlers. To work with resizing functionality make sure that `AllowResizing` property is set to **true**.
 
+To get start quickly about resize options available in our Scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=Vtl1Wyuwt-0"%}
+
 ### Disable the resize action
 
 By default, resizing of events is allowed on all Scheduler views except Agenda and Month-Agenda view. To disable this event resizing action, set false to the `AllowResizing` property.
@@ -1242,7 +1262,14 @@ The look and feel of the Scheduler events can be customized using any one of the
 
 ### Using template
 
-Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `Template` option available within the `ScheduleEventsettings` tag helper. The following code example customizes the appointment.
+Any kind of text, images and links can be added to customize the look of the events. The user can format and change the default appearance of the events by making use of the `Template` option available within the `ScheduleEventSettings` tag helper. 
+
+To get start quickly on customizing events using template, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=8kBXcBjL12A"%}
+
+The following code example customizes the appointment.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1286,7 +1313,7 @@ Any kind of text, images and links can be added to customize the look of the eve
 }
 ```
 
-> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventsettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
+> All the built-in fields that are mapped to the appropriate field properties within the `ScheduleEventSettings`, as well as custom mapped fields from the Scheduler dataSource can be accessed within the template code.
 
 ### Using EventRendered event
 

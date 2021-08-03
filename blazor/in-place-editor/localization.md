@@ -26,7 +26,7 @@ Localization library allows you to localize the default text content of the In-p
 
 In the following sample, `French` culture is set to In-place Editor and change the tooltip text.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
@@ -123,7 +123,7 @@ Specifies the direction of the In-place Editor component using the `EnableRtl` p
 
 > It will not change based on the locale property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs
@@ -162,7 +162,7 @@ Formatting is a way of representing the value in different formats. You can form
 * [Slider](../range-slider/format/)
 * [TimePicker](../timepicker/globalization/)
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Calendars

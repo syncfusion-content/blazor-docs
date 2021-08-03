@@ -64,7 +64,7 @@ For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentatio
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the ConfigureServices function as follows.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor
 
 namespace BlazorApplication
@@ -88,7 +88,7 @@ namespace BlazorApplication
 
 **Step 8:** Add the Syncfusion PDF Viewer component to the **~/Pages/Index.razor** page by using the `SfPdfViewerServer` tag. Also,you can load the PDF Viewer with a document from **wwwroot/Data** location. while initial rendering itself by specifying it in the  **DocumentPath** property of the PDF Viewer component.
 
-```csharp
+```cshtml
 <SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
 
 @code{
@@ -102,9 +102,9 @@ namespace BlazorApplication
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
-        {
-          services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000;  });
-        }
+{
+    services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000;  });
+}
 ```
 
 **Step:10**: Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.

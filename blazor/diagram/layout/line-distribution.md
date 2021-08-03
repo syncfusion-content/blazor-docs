@@ -97,15 +97,15 @@ The following code illustrates how to prevents the connector segments overlappin
 
 ```csharp
   
-    protected override void OnInitialized()
+protected override void OnInitialized()
+{
+    LayoutValue = new DiagramLayout()
         {
-            LayoutValue = new DiagramLayout()
-                {
-                    //this prevents connector segments overlapping
-                    enableRouting: true,
-                };
-            }
-        }
+            //this prevents connector segments overlapping
+            enableRouting: true,
+        };
+    }
+}
 
 ```
 
