@@ -291,7 +291,9 @@ By default, the Linear Gauge is rendered vertically. To change its orientation, 
 
 <SfLinearGauge Orientation="Orientation.Horizontal">
     <LinearGaugeAxes>
-        <LinearGaugeAxis Minimum="20" Maximum="140"></LinearGaugeAxis>
+        <LinearGaugeAxis Minimum="20" Maximum="140">
+            <LinearGaugeMajorTicks Interval="10"></LinearGaugeMajorTicks>
+        </LinearGaugeAxis>
     </LinearGaugeAxes>
 </SfLinearGauge>
 ```
