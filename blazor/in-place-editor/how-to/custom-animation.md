@@ -13,7 +13,7 @@ In popup mode, the In-place Editor is rendered with the Blazor `Tooltip` compone
 
 In the following example, popup animation can be customized by passing animation effect using the `InPlaceEditorPopupSettings` tag and the dynamic animation effect changes configured from the Blazor `DropDownList` component `ValueChange` event.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.InPlaceEditor

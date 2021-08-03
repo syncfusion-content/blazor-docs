@@ -17,7 +17,7 @@ You can customize the cell by using the `CellSettings`
 
 Change the width, color, and radius of the heat map cells by using the `HeatMapCellBorder` tag.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -65,7 +65,7 @@ Enable or disable the cell highlighting while hover over the heat map cells by u
 
 > The cell highlighting only works in a SVG rendering mode.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -109,7 +109,7 @@ Enable or disable the cell highlighting while hover over the heat map cells by u
 
 Set the margin for the heat map from its container by using the `HeatMapMargin` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -154,7 +154,7 @@ Set the margin for the heat map from its container by using the `HeatMapMargin` 
 
 The title is used to provide a quick information about the data plotted in heat map. The `Text` property is used to set the title for heat map. You can also customize text style of a title by using the `HeatMapTitleTextStyle` tag.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -200,7 +200,7 @@ The title is used to provide a quick information about the data plotted in heat 
 
 You can toggle the visibility of data labels by using the `ShowLabel` property. By default, the data label will be visible.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -244,7 +244,7 @@ You can toggle the visibility of data labels by using the `ShowLabel` property. 
 
 You can customize the font family, font size, and color of the data label by using the `HeatMapCellTextStyle` tag in the `HeatMapCellSettings` tag.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -291,7 +291,7 @@ You can customize the font family, font size, and color of the data label by usi
 
 You can change the format of the data label, such as currency, decimal, percent etc. by using `Format` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

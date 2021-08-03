@@ -19,38 +19,38 @@ This section briefly explains how to include a In-Place Editor component in your
 
 * You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+    ```cshtml
 
-<head>
+    <head>
+        <environment include="Development">
+        ....
+        ....
+            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+            <!---CDN--->
+            @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+    </environment>
+    </head>
+
+    ```
+
+    For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+    ```cshtml
+
+    <head>
     <environment include="Development">
-    ....
-    ....
         <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-        <!---CDN--->
-        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
-   </environment>
-</head>
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </environment>
+    </head>
 
-```
-
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```html
-
-<head>
-   <environment include="Development">
-      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-  </environment>
-</head>
-
-```
+    ```
 
 ## Adding component package to the application
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.InPlaceEditor** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -86,7 +86,7 @@ To initialize the In-Place Editor component, add the below code to your **Index.
 
 The following code explains how to initialize a simple In-place Editor with TextBox in the Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs
@@ -120,7 +120,7 @@ The following code explains how to initialize a simple In-place Editor with Text
 
 The following code explains how to initialize a simple In-place Editor with popup in the Blazor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
@@ -180,7 +180,7 @@ You can render the Blazor DropDownList by changing the `Type` property as `Dr
 
 The following sample demonstrates how to render the `DropDownList` component in the In-place Editor,
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
@@ -223,7 +223,7 @@ You can render the Blazor `DatePicker` by changing the `Type` property as `Da
 
 The following sample demonstrates how to render the `DatePicker` component in the In-place Editor,
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Calendars
@@ -243,7 +243,7 @@ The following sample demonstrates how to render the `DatePicker` component in th
 
 In the following code, it is configured to render the `DatePicker`, `Dropdownlist` and `Textbox` components.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs
@@ -349,7 +349,7 @@ You can submit editor value to the server by configuring the `SaveUrl`, `Adaptor
 
 The edited data is submitted to the server and you can see the new values getting reflected in the In-place Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
