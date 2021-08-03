@@ -97,15 +97,11 @@ The tooltip can be customized using the following properties in [`LinearGaugeToo
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
-            <LinearGaugeTooltipSettings Enable="true"
-                                        Format="Speed: {value}"
-                                        Fill="lightgray"
-                                        EnableAnimation="true">
-                <LinearGaugeTooltipBorder Color="darkgray"
-                                          Width="1">
+            <LinearGaugeTooltipSettings Enable="true" Format="Speed: {value}"
+                                        Fill="lightgray" EnableAnimation="true">
+                <LinearGaugeTooltipBorder Color="darkgray" Width="1">
                 </LinearGaugeTooltipBorder>
-                <LinearGaugeTooltipTextStyle Color="blue"
-                                             FontStyle="italic"
+                <LinearGaugeTooltipTextStyle Color="blue" FontStyle="italic"
                                              FontWeight="bold">
                 </LinearGaugeTooltipTextStyle>
             </LinearGaugeTooltipSettings>
@@ -128,11 +124,13 @@ The tooltip is positioned at the "[**End**](https://help.syncfusion.com/cr/blazo
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
-    <LinearGaugeTooltipSettings Enable="true" Position="TooltipPosition.Center"></LinearGaugeTooltipSettings>
+    <LinearGaugeTooltipSettings Enable="true" Position="TooltipPosition.Center">
+    </LinearGaugeTooltipSettings>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugePointers>
-                <LinearGaugePointer PointerValue="50" Type="Point.Bar" Color="blue"></LinearGaugePointer>
+                <LinearGaugePointer PointerValue="50" Type="Point.Bar" Color="blue">
+                </LinearGaugePointer>
             </LinearGaugePointers>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
