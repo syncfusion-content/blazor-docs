@@ -135,8 +135,7 @@ The following table shows built-in toolbar items and its actions.
 
 ## Custom Toolbar Items
 
-Custom toolbar items can be added to the toolbar by defining the `Toolbar` property as a collection of `ItemModels`.
-Actions for this customized toolbar items are defined in the `OnToolbarClick` event.
+Custom toolbar items can be added to the toolbar by defining the `Toolbar` property as a collection of `ItemModels`. Actions for this customized toolbar items are defined in the `OnToolbarClick` event.
 
 By default, the custom toolbar items are at left position. You can change the position by using the `Align` property. In the following sample, the `Quick Filter` toolbar item is positioned at right.
 

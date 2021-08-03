@@ -40,8 +40,8 @@ The uploader component allows you to validate the files based on its size. The v
 @using Syncfusion.Blazor.Inputs
 
 <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx"  MinFileSize=10000 MaxFileSize=1000000>
-<UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove">
-</UploaderAsyncSettings>
+    <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove">
+    </UploaderAsyncSettings>
 </SfUploader>
 ```
 

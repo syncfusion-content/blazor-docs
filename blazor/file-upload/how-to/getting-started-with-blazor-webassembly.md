@@ -26,7 +26,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
 
-    ```bash
+    ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ````
 
@@ -46,7 +46,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ![select framework](../images/blazor-client-template.png)
 
-> ASP.NET Core 3.1 available in Visual Studio 2019 version.
+    > ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -62,7 +62,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 4. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Inputs
     ```
@@ -122,7 +122,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 To initialize the uploader component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
-```csharp
+```cshtml
 <SfUploader></SfUploader>
 ```
 
@@ -142,7 +142,7 @@ You can upload the files and files of folders in the Blazor application without 
 
 You can get the uploaded files as file stream in the [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_ValueChange)  event argument. Now, you can write the save handler inside ValueChange event to save the files to desired location. Please find the save action code on below.
 
-```csharp
+```cshtml
 <SfUploader AutoUpload="false">
     <UploaderEvents ValueChange="OnChange"></UploaderEvents>
 </SfUploader>
@@ -198,67 +198,67 @@ The remove action is optional. The remove action handler removes the files that 
  ```csharp
 [Route("api/[controller]")]
 
-    private IHostingEnvironment hostingEnv;
+private IHostingEnvironment hostingEnv;
 
-    public SampleDataController(IHostingEnvironment env)
-    {
-        this.hostingEnv = env;
-    }
+public SampleDataController(IHostingEnvironment env)
+{
+    this.hostingEnv = env;
+}
 
-    [HttpPost("[action]")]
-    public void Save(IList<IFormFile> UploadFiles)
+[HttpPost("[action]")]
+public void Save(IList<IFormFile> UploadFiles)
+{
+    long size = 0;
+    try
     {
-        long size = 0;
-        try
+        foreach (var file in UploadFiles)
         {
-            foreach (var file in UploadFiles)
+            var filename = ContentDispositionHeaderValue
+                    .Parse(file.ContentDisposition)
+                    .FileName
+                    .Trim('"');
+                filename = hostingEnv.ContentRootPath + $@"\{filename}";
+                size += (int)file.Length;
+            if (!System.IO.File.Exists(filename))
             {
-                var filename = ContentDispositionHeaderValue
-                        .Parse(file.ContentDisposition)
-                        .FileName
-                        .Trim('"');
-                    filename = hostingEnv.ContentRootPath + $@"\{filename}";
-                    size += (int)file.Length;
-                if (!System.IO.File.Exists(filename))
+                using (FileStream fs = System.IO.File.Create(filename))
                 {
-                    using (FileStream fs = System.IO.File.Create(filename))
-                    {
-                        file.CopyTo(fs);
-                        fs.Flush();
-                    }
+                    file.CopyTo(fs);
+                    fs.Flush();
                 }
             }
         }
-        catch (Exception e)
-        {
-            Response.Clear();
-            Response.StatusCode = 204;
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-        }
     }
-    [HttpPost("[action]")]
-    public void Remove(IList<IFormFile> UploadFiles)
+    catch (Exception e)
     {
-        try
+        Response.Clear();
+        Response.StatusCode = 204;
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+    }
+}
+[HttpPost("[action]")]
+public void Remove(IList<IFormFile> UploadFiles)
+{
+    try
+    {
+        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
+        if (System.IO.File.Exists(filename))
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-            if (System.IO.File.Exists(filename))
-            {
-                System.IO.File.Delete(filename);
-            }
-        }
-        catch (Exception e)
-        {
-            Response.Clear();
-            Response.StatusCode = 200;
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+            System.IO.File.Delete(filename);
         }
     }
+    catch (Exception e)
+    {
+        Response.Clear();
+        Response.StatusCode = 200;
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+    }
+}
 ```
 
-```csharp
+```cshtml
 <SfUploader ID="UploadFiles">
     <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
 </SfUploader>
