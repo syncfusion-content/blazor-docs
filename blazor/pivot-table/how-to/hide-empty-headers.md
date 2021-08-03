@@ -15,38 +15,38 @@ For example, if the raw data for the field 'Country' is defined as **"United Kin
 
 > By default, this property is set as **true**.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data" ShowHeaderWhenEmpty=false>
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Sold" Format="N"></PivotViewFormatSetting>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data" ShowHeaderWhenEmpty=false>
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Sold" Format="N"></PivotViewFormatSetting>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 

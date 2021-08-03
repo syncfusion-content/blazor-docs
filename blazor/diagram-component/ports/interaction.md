@@ -17,7 +17,7 @@ Diagram provides the support to draw the connector in the port.
 
 The following code explains how to draw the connector by using the port constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">

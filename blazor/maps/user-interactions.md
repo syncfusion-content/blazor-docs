@@ -262,7 +262,7 @@ Initially, the shape can be selected by using the property `initialShapeSelectio
 
 **Note:** initialShapeSelection is an Array property.
 
-```csharp
+```cshtml
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">

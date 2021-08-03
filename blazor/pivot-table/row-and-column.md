@@ -21,36 +21,36 @@ Allows end user to set the pivot table's height and width by using [`Height`](ht
 
 > The pivot table will not be displayed less than **400px**, since it's the minimum width of the component.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-   <SfPivotView TValue="ProductDetails" Width="550" Height="315px">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" Width="550" Height="315px">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -65,37 +65,37 @@ Allows end user to set the height of each pivot table rows commonly using the [`
 
 In the below code sample, the [`RowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_RowHeight) property is set as **60** pixels.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewGridSettings RowHeight=60></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings RowHeight=60></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -109,37 +109,37 @@ Allows end user to set the width of each pivot table columns commonly using the 
 
 In the below example, the [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ColumnWidth) property is set as **200** pixels.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewGridSettings ColumnWidth=200></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings ColumnWidth=200></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -149,36 +149,36 @@ In the below example, the [`ColumnWidth`](https://help.syncfusion.com/cr/blazor/
 
 By default, if the component width set in code-behind is more than the width of the total columns, then the columns will be stretched to make it fit. To avoid the stretching, set the [`AutoFit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AutoFit) property in the [`PivotViewGridSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) to **false**. By doing so, the component will be adjusted (shrinked) based on the width of total columns.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" Height="500" Width="1000" ShowGroupingBar="true">
-        <PivotViewDataSourceSettings DataSource="@dataSource">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFilterSettings>
-                <PivotViewFilterSetting Name="Year" Type=FilterType.Exclude Items="@(new string[] { "FY 2017" })">
-                </PivotViewFilterSetting>
-            </PivotViewFilterSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewGridSettings AutoFit="false"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" Height="500" Width="1000" ShowGroupingBar="true">
+    <PivotViewDataSourceSettings DataSource="@dataSource">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFilterSettings>
+            <PivotViewFilterSetting Name="Year" Type=FilterType.Exclude Items="@(new string[] { "FY 2017" })">
+            </PivotViewFilterSetting>
+        </PivotViewFilterSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings AutoFit="false"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -188,37 +188,37 @@ By default, if the component width set in code-behind is more than the width of 
 
 Allows end user to reorder a particular column header from one index to another index within the pivot table through drag-and-drop option. It can be enabled by setting the [`AllowReordering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowReordering) property in [`PivotViewGridSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true**.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-     <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowReordering="true"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowReordering="true"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -231,34 +231,34 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 > By default, the column resizing option is enabled.
 > In RTL mode, user can click and drag the left edge of the header cell to resize the column.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowResizing="true"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowResizing="true"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -268,37 +268,37 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 
 Allows end user to wrap the cell content to the next line when it exceeds the boundary of the cell width. To enable text wrap, set the [`AllowTextWrap`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_AllowTextWrap) property in [`PivotViewGridSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html) class to **true**.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowTextWrap="true"></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowTextWrap="true"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -320,37 +320,37 @@ Available mode of grid lines are:
 
 > By default, pivot table renders grid lines in [**PivotGridLine.Both**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_GridLines) mode.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings GridLines=PivotTableGridLine.Vertical></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings GridLines=PivotTableGridLine.Vertical></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -366,39 +366,39 @@ The pivot table supports two types of selection that can be set using [`Type`](h
 * [**PivotSelectionType.Multiple**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html): Allows you to select multiple rows or columns or cells.
 To perform multi-selection, press and hold "CTRL" key and click the desired rows or cells. To select range of rows or cells, press and hold the "SHIFT" key and click the rows or columns or cells.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings Type=PivotTableSelectionType.Multiple></PivotViewSelectionSettings>
-            </PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowSelection="true">
+            <PivotViewSelectionSettings Type=PivotTableSelectionType.Multiple></PivotViewSelectionSettings>
+        </PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -413,39 +413,39 @@ The pivot table supports four types of selection mode that can be set using [`Mo
 * [**SelectionMode.Cell**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SelectionMode.html): Allows user to select only cells.
 * [**SelectionMode.Both**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SelectionMode.html): Allows user to select rows and columns at the same time.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings Mode=SelectionMode.Both Type=PivotTableSelectionType.Multiple></PivotViewSelectionSettings>
-            </PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowSelection="true">
+            <PivotViewSelectionSettings Mode=SelectionMode.Both Type=PivotTableSelectionType.Multiple></PivotViewSelectionSettings>
+        </PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -458,39 +458,39 @@ The pivot table supports two types of cell selection mode that can be set using 
 * [**PivotCellSelectionMode.Flow**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectionMode.html): It is set by default. The range of cells are selected between the start index and end index that includes in-between cells of rows.
 * [**PivotCellSelectionMode.Box**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectionMode.html): Range of cells are selected from the start and end column indexes that includes in-between cells of rows within the range.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
-            </PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowSelection="true">
+            <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
+        </PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -502,45 +502,45 @@ The pivot table supports two types of cell selection mode that can be set using 
 
 The background-color of the selected cell can be changed using built-in CSS names. To do so, please refer to the code sample below, which shows that the selected cells are changed to a **green yellow** color.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-    <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-        </PivotViewDataSourceSettings>
-            <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
-            </PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+<PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+    </PivotViewDataSourceSettings>
+        <PivotViewGridSettings AllowSelection="true">
+            <PivotViewSelectionSettings CellSelectionMode=PivotCellSelectionMode.Box Type=PivotTableSelectionType.Multiple Mode=SelectionMode.Cell></PivotViewSelectionSettings>
+        </PivotViewGridSettings>
+</SfPivotView>
 <style>
 
-   .e-pivotview .e-cellselectionbackground,
-   .e-pivotview .e-selectionbackground,
-   .e-pivotview .e-grid .e-rowsheader.e-selectionbackground,
-   .e-pivotview .e-grid .e-columnsheader.e-selectionbackground {
-    background-color: greenYellow !important;
-   }
+.e-pivotview .e-cellselectionbackground,
+.e-pivotview .e-selectionbackground,
+.e-pivotview .e-grid .e-rowsheader.e-selectionbackground,
+.e-pivotview .e-grid .e-columnsheader.e-selectionbackground {
+background-color: greenYellow !important;
+}
 
 </style>
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
 ```
 
@@ -550,70 +550,70 @@ The background-color of the selected cell can be changed using built-in CSS name
 
 The event `CellSelected` is triggered when cell selection gets completed. It provides selected cells information with its corresponding column and row headers. It has following parameters - [`SelectedCellsInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeFontSettings.html#Syncfusion_Blazor_CircularGauge_CircularGaugeFontSettings_FontStyle), [`CurrentCell`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_CurrentCell) and [`Target`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotCellSelectedEventArgs.html#Syncfusion_Blazor_PivotView_PivotCellSelectedEventArgs_Target). This event allows user to view selected cells information and user can pass those selected cells information to any external component for data binding.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
-    <div>
-        <div class="column-8">
-            <SfPivotView Width="800" Height="340">
-            <PivotViewDataSourceSettings @bind-DataSource="@data" ExpandAll="false" EnableSorting=true>
-                <PivotViewColumns>
-                    <PivotViewColumn Name="Year"></PivotViewColumn>
-                    <PivotViewColumn Name="Quarter"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Country"></PivotViewRow>
-                    <PivotViewRow Name="Products"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                    <PivotViewValue Name="Amount"></PivotViewValue>
-                </PivotViewValues>
-            </PivotViewDataSourceSettings>
-            <PivotViewEvents TValue="ProductDetails" CellSelected="cellSelected"></PivotViewEvents>
-            <PivotViewGridSettings AllowSelection="true">
-                <PivotViewSelectionSettings Mode="SelectionMode.Cell" Type="PivotTableSelectionType.Multiple" CellSelectionMode="PivotCellSelectionMode.Box"></PivotViewSelectionSettings>
-            </PivotViewGridSettings>
-            </SfPivotView>
-        </div>
-        <div class="column-4">
-        <h5>Event Trace:</h5> <br>
-        <div style="height:300px; overflow:auto;">
-            @if (SelectedCells != null)
+<div>
+    <div class="column-8">
+        <SfPivotView Width="800" Height="340">
+        <PivotViewDataSourceSettings @bind-DataSource="@data" ExpandAll="false" EnableSorting=true>
+            <PivotViewColumns>
+                <PivotViewColumn Name="Year"></PivotViewColumn>
+                <PivotViewColumn Name="Quarter"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Country"></PivotViewRow>
+                <PivotViewRow Name="Products"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount"></PivotViewValue>
+            </PivotViewValues>
+        </PivotViewDataSourceSettings>
+        <PivotViewEvents TValue="ProductDetails" CellSelected="cellSelected"></PivotViewEvents>
+        <PivotViewGridSettings AllowSelection="true">
+            <PivotViewSelectionSettings Mode="SelectionMode.Cell" Type="PivotTableSelectionType.Multiple" CellSelectionMode="PivotCellSelectionMode.Box"></PivotViewSelectionSettings>
+        </PivotViewGridSettings>
+        </SfPivotView>
+    </div>
+    <div class="column-4">
+    <h5>Event Trace:</h5> <br>
+    <div style="height:300px; overflow:auto;">
+        @if (SelectedCells != null)
+        {
+            @if (SelectedCells.SelectedCellsInfo != null)
             {
-                @if (SelectedCells.SelectedCellsInfo != null)
+                @foreach (var cell in SelectedCells.SelectedCellsInfo)
                 {
-                    @foreach (var cell in SelectedCells.SelectedCellsInfo)
-                    {
-                        <p>
-                            <b>ColumnHeader:</b> @cell.ColumnHeaders<br>
-                            <b>RowHeader:</b> @cell.RowHeaders<br>
-                            <b>Value:</b> @cell.Value<br>
-                            <b>Measure:</b> @cell.Measure
-                        </p>
-                        <br>
-                    }
+                    <p>
+                        <b>ColumnHeader:</b> @cell.ColumnHeaders<br>
+                        <b>RowHeader:</b> @cell.RowHeaders<br>
+                        <b>Value:</b> @cell.Value<br>
+                        <b>Measure:</b> @cell.Measure
+                    </p>
+                    <br>
                 }
             }
-        </div>
+        }
     </div>
+</div>
 
 </div>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        public PivotCellSelectedEventArgs SelectedCells;
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData();
-        }
-        public void cellSelected(PivotCellSelectedEventArgs args)
-        {
-            SelectedCells = args;
-            //args.SelectedCellsInfo -> get selected cells information
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    public PivotCellSelectedEventArgs SelectedCells;
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData();
     }
+    public void cellSelected(PivotCellSelectedEventArgs args)
+    {
+        SelectedCells = args;
+        //args.SelectedCellsInfo -> get selected cells information
+    }
+}
 
 ```
 
@@ -629,37 +629,37 @@ The clip mode provides options to display its overflow cell content in the pivot
 
 >By default, [`ClipMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewGridSettings.html#Syncfusion_Blazor_PivotView_PivotViewGridSettings_ClipMode) value is set to [**PivotClipMode.Ellipsis**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html).
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-             <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewGridSettings ClipMode=PivotClipMode.Clip></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+            <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings ClipMode=PivotClipMode.Clip></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 ```
 
 ![output](images/clipmode.png)
@@ -677,55 +677,55 @@ In this demo, the revenue cost for each year is represented with trend icons.
 ```cshtml
 @using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="TemplateData" Height="300" Width="800">
-            <PivotViewTemplates>
-                <CellTemplate>
-                    @{
-                        var data = (context as AxisSet);
-                        if (data.Value > 175)
-                        {
-                            <span class="tempwrap sb-icon-profit pv-icons"></span>
-                        }
-                        else if (data.Value > 100)
-                        {
-                            <span class="tempwrap sb-icon-neutral pv-icons"></span>
-                        }
-                        else if (data.Value > 0)
-                        {
-                            <span class="tempwrap sb-icon-loss pv-icons"></span>
-                        }
+<SfPivotView TValue="TemplateData" Height="300" Width="800">
+    <PivotViewTemplates>
+        <CellTemplate>
+            @{
+                var data = (context as AxisSet);
+                if (data.Value > 175)
+                {
+                    <span class="tempwrap sb-icon-profit pv-icons"></span>
+                }
+                else if (data.Value > 100)
+                {
+                    <span class="tempwrap sb-icon-neutral pv-icons"></span>
+                }
+                else if (data.Value > 0)
+                {
+                    <span class="tempwrap sb-icon-loss pv-icons"></span>
+                }
 
-                    }
-                </CellTemplate>
-            </PivotViewTemplates>
-            <PivotViewDataSourceSettings DataSource="@dataSource" ExpandAll=true EnableSorting=true>
-                <PivotViewColumns>
-                    <PivotViewColumn Name="EnerType" Caption="Energy Type"></PivotViewColumn>
-                    <PivotViewColumn Name="EneSource" Caption="Energy Source"></PivotViewColumn>
-                </PivotViewColumns>
-                <PivotViewRows>
-                    <PivotViewRow Name="Year" Caption="Year"></PivotViewRow>
-                    <PivotViewRow Name="HalfYear" Caption="Half Year"></PivotViewRow>
-                </PivotViewRows>
-                <PivotViewValues>
-                    <PivotViewValue Name="ProCost" Caption="Revenue Growth"></PivotViewValue>
-                </PivotViewValues>
-                <PivotViewFormatSettings>
-                    <PivotViewFormatSetting Name="ProCost" Format="C0" UseGrouping=true></PivotViewFormatSetting>
-                </PivotViewFormatSettings>
-            </PivotViewDataSourceSettings>
-            <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
-        </SfPivotView>
+            }
+        </CellTemplate>
+    </PivotViewTemplates>
+    <PivotViewDataSourceSettings DataSource="@dataSource" ExpandAll=true EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="EnerType" Caption="Energy Type"></PivotViewColumn>
+            <PivotViewColumn Name="EneSource" Caption="Energy Source"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Year" Caption="Year"></PivotViewRow>
+            <PivotViewRow Name="HalfYear" Caption="Half Year"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="ProCost" Caption="Revenue Growth"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="ProCost" Format="C0" UseGrouping=true></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings ColumnWidth="140"></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
+@code{
 
-        public List<TemplateData> dataSource { get; set; }
+    public List<TemplateData> dataSource { get; set; }
 
-        protected override void OnInitialized()
-        {
-            this.dataSource = TemplateData.GetTemplateData();
-        }
+    protected override void OnInitialized()
+    {
+        this.dataSource = TemplateData.GetTemplateData();
     }
+}
 
 ```
 

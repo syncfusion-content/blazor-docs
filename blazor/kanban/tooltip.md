@@ -13,7 +13,7 @@ The tooltip is used to show the card information when the cursor hover over the 
 
 > If you wish to show tooltip on Kanban board custom elements, you need to add `e-tooltip-text` class name of a particular element.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

@@ -20,27 +20,27 @@ This section briefly explains how to include a Linear gauge in your Blazor serve
 2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
-    <head>
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <!---CDN--->
-        @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
-    </head>
+<head>
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <!---CDN--->
+    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+</head>
 ```
 
 > For Internet Explorer 11 kindly refer to the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
-    <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-    </head>
+<head>
+    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+</head>
 ```
 
 ## Adding a component package to the application
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.LinearGauge** namespace.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 ```
 
@@ -73,7 +73,7 @@ namespace BlazorApplication
 
 The Syncfusion Linear gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Linear Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if the **Index.razor** page has any default content template, then those content can be completely removed and the following code can be added.
 
-```csharp
+```cshtml
 @page "/"
 
 @using Syncfusion.Blazor.LinearGauge
@@ -99,7 +99,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 
 > In Linear Gauge, you can configure multiple axes. On each axis, you can add a pointer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -120,7 +120,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 
 The title can be added to the linear gauge to provide a piece of quick information to the users about the context of the rendered linear gauge. You can add the title to the linear gauge using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Title) property in [`SfLinearGauge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Title="Linear Gauge">
@@ -140,7 +140,7 @@ The title can be added to the linear gauge to provide a piece of quick informati
 
 The range is used to specify a group of scale values in the gauge. We can set the range start and end using [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRange_Start) and [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html#Syncfusion_Blazor_LinearGauge_LinearGaugeRange_End) properties in the [`LinearGaugeRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html). You can add any number of ranges for an axis using [`LinearGaugeRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeRange.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>

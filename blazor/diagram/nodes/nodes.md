@@ -199,7 +199,7 @@ Nodes can be generated automatically with the information provided through data 
 
 ## Remove node at runtime
 
-* A node can be removed from diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
+A node can be removed from diagram at runtime by using the [`Remove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Remove_System_Object_) method.
 
 The following code shows how to remove a node at runtime.
 
@@ -253,7 +253,7 @@ public void RemoveNode()
 
 You can change any node's properties at runtime. The following code sample shows how the annotation of the node changed at runtime.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

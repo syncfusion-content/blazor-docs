@@ -15,7 +15,7 @@ To know more about Bitwise operators, refer to the [`Bitwise Operations`](#bitwi
 
 ## Diagram constraints
 
-Diagram constraints allow you to enable or disable the following behaviors. By default, `UndoRedo` , `UserInteraction` , `ApiUpdate` , `PageEditable` , `Zoom` , `Pan` constraints are enabled for diagram.
+Diagram constraints allow you to enable or disable the following behaviors. By default, `UndoRedo`, `UserInteraction`, `ApiUpdate`, `PageEditable`, `Zoom`, `Pan` constraints are enabled for diagram.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -73,7 +73,7 @@ DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramCons
 The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations) in the diagram.
 
 ```csharp
- //Removing multiple constraints from default
+//Removing multiple constraints from default
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~(DiagramConstraints.PageEditable|DiagramConstraints.Zoom);
 
 ```
@@ -82,7 +82,7 @@ For more information about diagram constraints, refer to the `DiagramConstraints
 
 ## Node constraints
 
-Node constraints allows you to enable or disable the following behaviors of node.  By default, `Select` , `Drag` , `Resize` , `Rotate` , `Delete` ,`InConnect` ,`OutConnect` constraints are enabled for the node.
+Node constraints allows you to enable or disable the following behaviors of node.  By default, `Select`, `Drag`, `Resize`, `Rotate`, `Delete`,`InConnect`, `OutConnect` constraints are enabled for the node.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -113,7 +113,7 @@ Node constraints allows you to enable or disable the following behaviors of node
 
 The following example shows how to disable rotate constraint from the default node constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with nodes *@
@@ -163,8 +163,7 @@ For more information about node constraints, refer to the `NodeConstraints`.
 
 ## Connector constraints
 
-Connector constraints allow you to enable or disable the following behaviors of connectors. By default,
-`Select`, `Drag`, `DragSourceEnd`, `DragTargetEnd`, `Delete`, `InheritBridging`, `PointerEvents` constraints are enabled for the connector.
+Connector constraints allow you to enable or disable the following behaviors of connectors. By default, `Select`, `Drag`, `DragSourceEnd`, `DragTargetEnd`, `Delete`, `InheritBridging`, `PointerEvents` constraints are enabled for the connector.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -188,7 +187,7 @@ Connector constraints allow you to enable or disable the following behaviors of 
 
 The following code shows how to disable select constraint from the default constraints of connector.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with connectors *@
@@ -226,7 +225,7 @@ ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | Conne
 The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
 
 ```csharp
- //Removing multiple constraints from default
+//Removing multiple constraints from default
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
 
 ```
@@ -247,7 +246,7 @@ You can enable or disable the following behaviors of port. By default, `InConnec
 
 The following code shows how to disable creating connections with a port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with nodes *@
@@ -314,7 +313,7 @@ You can enable or disable read-only mode for the annotations by using the annota
 
 The following code shows how to enable read-only mode for the annotations.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with nodes *@
@@ -386,7 +385,7 @@ Selector visually represents the selected elements with certain editable thumbs.
 
 The following code shows how to hide rotator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" SelectedItems="@selectedItems">
@@ -454,7 +453,7 @@ The following list of snapping constraints are used to Enables or Disables certa
 
 The following code shows how to show only horizontal gridlines.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -504,7 +503,7 @@ The following list of constraints are used to Enables or Disables certain featur
 
 The following code shows how to limit the interaction done inside a diagram within a page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -539,7 +538,7 @@ Some of the behaviors can be defined through both the specific object (node or c
 
 The following code example shows how to inherit the line bridging behavior from the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
@@ -583,7 +582,7 @@ You can add or enable multiple values at a time by using the Bitwise `|` (OR) op
 
 The following code shows to add bridging constraints into the default diagram constraints to enable bridging functionality into the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Constraints="@DiagramConstraint">
@@ -601,7 +600,7 @@ You can remove or disable values by using the Bitwise ‘&~’ (XOR) operator.
 
 The following code shows to remove zoom and pan constraints from the default constraints to disable zoom and panning functionality in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Constraints="@DiagramConstraint">

@@ -21,10 +21,11 @@ To change the pointer value dynamically, use the [`SetPointerValue`](https://hel
 |     pointerIndex     |    Specifies the index of the pointer to be updated.           |
 |     pointerValue            |    Specifies the value of the pointer to be updated.           |
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
-<button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value</button>
+<button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value
+</button>
 <SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
     <LinearGaugeAxes>
         <LinearGaugeAxis>
@@ -58,13 +59,14 @@ To change the annotation content dynamically, use the [`SetAnnotationValue`](htt
 
 > This method will not be applicable for the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) class in [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <button style="margin-left:34px" @onclick="ChangeAnnotationValue">Update annotation value</button>
 <SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
     <LinearGaugeAnnotations>
-        <LinearGaugeAnnotation AxisValue="0" ZIndex="1" Content="10"></LinearGaugeAnnotation>
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1" Content="10">
+        </LinearGaugeAnnotation>
     </LinearGaugeAnnotations>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
@@ -85,7 +87,7 @@ To change the annotation content dynamically, use the [`SetAnnotationValue`](htt
 
 The [`RefreshAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again. In the following example, the gauge is rendered again using the [`RefreshAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <button style="margin-left:34px" @onclick="RefreshAsync">Refresh Gauge</button>

@@ -22,34 +22,33 @@ This section briefly explains about how to include a `ListView` in your Blazor s
 ![nuget explorer](images/nuget-explorer1.png)
 2. Search Syncfusion.Blazor.Lists keyword in the Browse tab and install Syncfusion.Blazor.Lists NuGet package in the application.
 ![nuget list](images/individual-nuget.png)
-3. Once the installation process is completed, the Syncfusion Blazor Lists package will be installed in the project.
+3. Once the installation process is completed, the Syncfusion Blazor Lists package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-> You can also add the client-side style resources through CDN.
+    > You can also add the client-side style resources through CDN.
 
-```html
-<head>
-    ....
-    ....
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-</head>
-```
+    ```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
 
-```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-</head>
+    ```html
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    </head>
 
-```
+    ```
 
-* For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+    ```html
+    <head>
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+    ```
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
@@ -61,14 +60,14 @@ This section briefly explains about how to include a `ListView` in your Blazor s
     
     W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
-    * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+    You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
-        <head>
-            ....
-            ....
+    <head>
+        ....
+        ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        </head>
+    </head>
     ```
 
     W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
@@ -125,7 +124,7 @@ namespace BlazorApplication
 
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts to the `<head>` element of the **~/wwwroot/index.html** page in Blazor WebAssembly app or **~/Pages/_Host.cshtml** page in Blazor Server app. You can generate scripts for required components alone using CRG. Refer [here](https://blazor.syncfusion.com/documentation/common/custom-resource-generator/) for more details on CRG.
 
-```csharp
+```html
 <head>
     <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
 </head>
@@ -135,7 +134,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Lists` package.
 
-```csharp
+```cshtml
     @using Syncfusion.Blazor.Lists
 ```
 
@@ -154,12 +153,12 @@ Add the Syncfusion Blazor ListView component in any web page (razor) in the `Pag
 {
     private DataModel[] Data =
      {
-            new DataModel { Text = "ArtWork", Id = "list-01" },
-            new DataModel { Text = "Abstract", Id = "list-02" },
-            new DataModel { Text = "Modern Painting", Id = "list-03" },
-            new DataModel { Text = "Ceramics", Id = "list-04" },
-            new DataModel { Text = "Animation Art", Id = "list-05" },
-            new DataModel { Text = "Oil Painting", Id = "list-06" }
+        new DataModel { Text = "ArtWork", Id = "list-01" },
+        new DataModel { Text = "Abstract", Id = "list-02" },
+        new DataModel { Text = "Modern Painting", Id = "list-03" },
+        new DataModel { Text = "Ceramics", Id = "list-04" },
+        new DataModel { Text = "Animation Art", Id = "list-05" },
+        new DataModel { Text = "Oil Painting", Id = "list-06" }
     };
     public class DataModel
     {

@@ -11,7 +11,7 @@ documentation: ug
 
 The legend is used to provide the information about the heat map cell. You can enable the legend by setting the `Visible` property to true.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -76,7 +76,7 @@ Heat map supports two legend types: Gradient and list type.
 
 You can change the legend type by using the `Type` property in the `HeatMapPaletteSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -121,7 +121,7 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
 
 You can place the legend at left, right, top, or bottom to the heat map layout by using the `Position` property. The legend is positioned at the right to the heat map by default.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -166,7 +166,7 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 You can align the legend as center, far, or near to the heat map using the `Alignment` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -210,7 +210,7 @@ You can align the legend as center, far, or near to the heat map using the `Alig
 
 You can change the legend dimensions with values in pixels or percentage by using the`Width` and `Height` properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -254,7 +254,7 @@ You can change the legend dimensions with values in pixels or percentage by usin
 
 Paging is available only for the list type legend in the heat map, and it can be enabled by default, when the legend items exceed the legend bounds. You can view each legend items by navigating between the pages using navigation buttons.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -320,7 +320,7 @@ The following are the legend label display types:
 * Edge: Displays the legend labels only at extreme ends.
 * None: None of the labels are displayed. The tooltip will appear for this type of label display when hovering over the legend item.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -379,7 +379,7 @@ The following are the legend label display types:
 
 In the HeatMap, the legend selection is used to toggle the visibility of cell for viewing the specific range value. You can enable the legend selection using the `ToggleVisibility` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

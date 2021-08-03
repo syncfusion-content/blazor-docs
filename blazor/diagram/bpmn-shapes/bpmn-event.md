@@ -11,9 +11,9 @@ documentation: ug
 
 An [`Event`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramBpmnEvent.html#Syncfusion_Blazor_Diagrams_DiagramBpmnEvent_Event) is a common BPMN process model element that represents something happens during a business process and its is notated with a circle. The type of events are as follows:
 
-    * Start - indicates the beginning of the process and every business process start with an event.
-    * Intermediate - indicates the middle of the process.
-    * End - indicates the beginning of the process and every business process end with an event.
+* Start - indicates the beginning of the process and every business process start with an event.
+* Intermediate - indicates the middle of the process.
+* End - indicates the beginning of the process and every business process end with an event.
 
 The event property of the node allows you to define the type of the event. The default value of the event is **start**. The following code example explains how to create a BPMN event.
 

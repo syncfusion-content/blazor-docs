@@ -52,7 +52,7 @@ The following example illustrates how to move items from `Group A` to `Group B` 
     };
     public string[] Items = new string[] { "MoveUp", "MoveDown", "MoveTo", "MoveFrom", "MoveAllTo", "MoveAllFrom" };
     public List<CountryCode> GroupA = new List<CountryCode>
-  {
+    {
         new CountryCode{ Name = "Australia", Code = "AU" },
         new CountryCode{ Name = "Bermuda", Code = "BM" },
         new CountryCode{ Name = "Canada", Code = "CA" },

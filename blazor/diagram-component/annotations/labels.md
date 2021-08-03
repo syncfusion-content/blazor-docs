@@ -17,7 +17,7 @@ The `Annotation` is a block of text that can be displayed over a node or connect
 
 An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The `Content` property of annotation defines the text to be displayed. The following code explains how to create an annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
@@ -77,7 +77,7 @@ You can add Annotations at runtime to the nodes collection in the Diagram compon
 
 The following code explains how to add an annotation to a node at runtime by using `Add` method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
@@ -113,19 +113,17 @@ The following code explains how to add an annotation to a node at runtime by usi
 }
 ```
 
-Also, the annotations can be added at runtime by using the `AddAsync` method.
-
-The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
+Also, the annotations can be added at runtime by using the `AddAsync` method. The `await` operator suspends evaluation of the enclosing async method until the asynchronous operation represented by its operand completes.
 
 The following code explains how to add an annotation to a node at runtime by using `AddAsync` method.
 
 ```csharp
-    //Method to add labels at runtime
-    public async void AddLabel()
-    {
+//Method to add labels at runtime
+public async void AddLabel()
+{
     ShapeAnnotation annotation = new ShapeAnnotation { Content = "Annotation" };
     await(diagram.Nodes[0].Annotations as DiagramObjectCollection<ShapeAnnotation>).AddAsync(annotation);
-    }
+}
 ```
 
 ![Annotation](../images/Annotation_Add.png)
@@ -134,7 +132,7 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 A collection of annotations can be removed from the node by using the `RemoveAt` method. The following code explains how to remove an annotation to a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
@@ -175,7 +173,7 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 
 Also, A collection of annotations can be removed from the node by using the `Remove` method.
 
-```csharp
+```cshtml
     //Method to remove labels at runtime using Remove method.
     public void RemoveLabel()
     {
@@ -184,7 +182,6 @@ Also, A collection of annotations can be removed from the node by using the `Rem
     }
 ```
 
->**Note:**
 >* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
 >* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.
 
@@ -194,7 +191,7 @@ You can get the annotation directly from the node’s annotations collection pro
 
 The following code sample shows how the annotation of the node changed at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input value="Updatelabel" type="button" @onclick="@UpdateLabel" name="Updatelabel" />

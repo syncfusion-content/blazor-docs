@@ -20,7 +20,7 @@ Interaction keys |Description
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -46,7 +46,7 @@ Interaction keys |Description
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -87,7 +87,7 @@ To copy selected rows or cells data into the clipboard with help of external but
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -130,7 +130,7 @@ To copy selected rows or cells data into the clipboard with help of external but
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -167,8 +167,7 @@ namespace TreeGridComponent.Data {
 
 ## Copy Hierarchy Modes
 
-Tree Grid provides support for a set of copy modes with `CopyHierarchyMode` property.
-The below are the type of filter mode available in Tree Grid.
+Tree Grid provides support for a set of copy modes with `CopyHierarchyMode` property. The below are the type of filter mode available in Tree Grid.
 
 * **Parent** : This is the default copy hierarchy mode in Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records not have any parent record then the selected record will be in clipboard.
 
@@ -180,7 +179,7 @@ The below are the type of filter mode available in Tree Grid.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -254,7 +253,7 @@ The below are the type of filter mode available in Tree Grid.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -295,7 +294,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -324,7 +323,7 @@ AutoFill Feature allows you to copy the data of selected cells and paste it to a
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject
@@ -373,7 +372,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -402,7 +401,7 @@ You can able to copy the content of a cell or a group of cells by selecting the 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
         public class BusinessObject

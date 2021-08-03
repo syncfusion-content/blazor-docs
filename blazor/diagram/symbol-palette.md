@@ -25,12 +25,9 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
 
 ## Add palettes to SymbolPalette
 
-A palette allows to display a group of related symbols and it textually annotates the group with its header.
-A [`Palettes`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html) can be added as a collection of symbol groups.
+A palette allows to display a group of related symbols and it textually annotates the group with its header. A [`Palettes`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html) can be added as a collection of symbol groups.
 
-The collection of predefined symbols can be added in palettes using the [`Symbols`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Symbols) property.
-
-To initialize a palette, define a JSON object with the property [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Id) that is unique ID is set to the palettes.
+The collection of predefined symbols can be added in palettes using the [`Symbols`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Symbols) property. To initialize a palette, define a JSON object with the property [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Id) that is unique ID is set to the palettes.
 
 The following code example illustrates how to define a palette and how its added to symbol palette.
 
@@ -58,75 +55,76 @@ The following code example illustrates how to define a palette and how its added
         Palettes = new ObservableCollection<SymbolPalettePalette>();
         //Initialize the basicshapes for the symbol palette
         BasicShapes = new ObservableCollection<Object>()
-                {
-                new DiagramNode()
-                {
+        {
+            new DiagramNode()
+            {
                 Id = "Rectangle",
                 Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Rectangle }
-                },
-                new DiagramNode()
-                {
+            },
+            new DiagramNode()
+            {
                 Id = "Ellipse",
                 Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Ellipse }
-                },
-                new DiagramNode()
-                {
+            },
+            new DiagramNode()
+            {
                 Id = "Hexagon",
                 Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Hexagon }
-                }
-                };
+            }
+        };
+
         Palettes.Add(new SymbolPalettePalette() { Id="BasicShapes",Expanded=true,Symbols=BasicShapes,Title="Basicshapes"});
         //Initialize the flowshapes for the symbol palette
         FlowShapes = new ObservableCollection<Object>()
-                    {
-                    new DiagramNode()
-                    {
-                    Id = "process",
-                    Shape = new DiagramShape() { Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.Process }
-                    },
-                    new DiagramNode()
-                    {
-                    Id = "document",
-                    Shape = new DiagramShape() {Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.Document}
-                    },
-                    new DiagramNode()
-                    {
-                    Id = "predefinedprocess",
-                    Shape = new DiagramShape() { Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.PreDefinedProcess}
-                    }
-                    };
+        {
+            new DiagramNode()
+            {
+                Id = "process",
+                Shape = new DiagramShape() { Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.Process }
+            },
+            new DiagramNode()
+            {
+                Id = "document",
+                Shape = new DiagramShape() {Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.Document}
+            },
+            new DiagramNode()
+            {
+                Id = "predefinedprocess",
+                Shape = new DiagramShape() { Type = Shapes.Flow, FlowShape = Syncfusion.Blazor.Diagrams.FlowShapes.PreDefinedProcess}
+            }
+        };
         Palettes.Add(new SymbolPalettePalette() { Id = "Flowshapes", Expanded = true, Symbols = FlowShapes, Title = "Flowshapes" });
         //Initializes connector symbols for the symbol palette
         Connectors = new ObservableCollection<Object>()
-                        {
-                        new DiagramConnector()
-                        {
-                        Id = "Link1",
-                        Type = Segments.Orthogonal,
-                        SourcePoint = new ConnectorSourcePoint() { X = 0, Y = 0 },
-                        TargetPoint = new ConnectorTargetPoint() { X = 40, Y = 40 },
-                        Style = new ConnectorShapeStyle() { StrokeWidth = 1 },
-                        TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.Arrow }
-                        },
-                        new DiagramConnector()
-                        {
-                        Id = "Link2",
-                        Type = Segments.Straight,
-                        SourcePoint = new ConnectorSourcePoint() { X = 0, Y = 0 },
-                        TargetPoint = new ConnectorTargetPoint() { X = 40, Y = 40 },
-                        Style = new ConnectorShapeStyle() { StrokeWidth = 1 },
-                        TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.Arrow }
-                        },
-                        new DiagramConnector()
-                        {
-                        Id = "Link3",
-                        Type = Segments.Bezier,
-                        SourcePoint = new ConnectorSourcePoint() { X = 0, Y = 0 },
-                        TargetPoint = new ConnectorTargetPoint() { X = 40, Y = 40 },
-                        Style = new ConnectorShapeStyle() { StrokeWidth = 1 },
-                        TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.None }
-                        }
-                        };
+        {
+            new DiagramConnector()
+            {
+                Id = "Link1",
+                Type = Segments.Orthogonal,
+                SourcePoint = new ConnectorSourcePoint() { X = 0, Y = 0 },
+                TargetPoint = new ConnectorTargetPoint() { X = 40, Y = 40 },
+                Style = new ConnectorShapeStyle() { StrokeWidth = 1 },
+                TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.Arrow }
+            },
+            new DiagramConnector()
+            {
+                Id = "Link2",
+                Type = Segments.Straight,
+                SourcePoint = new ConnectorSourcePoint() { X = 0, Y = 0 },
+                TargetPoint = new ConnectorTargetPoint() { X = 40, Y = 40 },
+                Style = new ConnectorShapeStyle() { StrokeWidth = 1 },
+                TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.Arrow }
+            },
+            new DiagramConnector()
+            {
+                Id = "Link3",
+                Type = Segments.Bezier,
+                SourcePoint = new ConnectorSourcePoint() { X = 0, Y = 0 },
+                TargetPoint = new ConnectorTargetPoint() { X = 40, Y = 40 },
+                Style = new ConnectorShapeStyle() { StrokeWidth = 1 },
+                TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.None }
+            }
+        };
         Palettes.Add(new SymbolPalettePalette() { Id = "Connectors", Expanded = true, Symbols = Connectors, Title = "Connectors" });
     }
 }
@@ -160,25 +158,24 @@ The [`Fit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Sym
     // Defines palette's basic-shape collection
     public ObservableCollection<Object> BasicShapes { get; set; }
     public SymbolInfo symbolInfo;
+
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
         // Enables to fit the content into the specified palette item size. When it is set as false, the element is rendered with actual node size
         symbolInfo = new SymbolInfo() { Fit = true };
         //Initialize the basicshapes for the symbol palette
-        BasicShapes = new ObservableCollection<Object>
-            ()
+        BasicShapes = new ObservableCollection<Object>()
         {
-        new DiagramNode()
-        {
-        Id = "Rectangle",
-        Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Rectangle }
-        }
+            new DiagramNode()
+            {
+                Id = "Rectangle",
+                Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Rectangle }
+            }
         };
         Palettes.Add(new SymbolPalettePalette() { Id = "BasicShapes", Expanded = true, Symbols = BasicShapes, Title = "Basicshapes" });
     }
-        }
-
+}
 
 ```
 
@@ -208,24 +205,23 @@ The size of the individual symbol can be customized. The [`SymbolWidth`](https:/
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
-        BasicShapes = new ObservableCollection<Object>
-        ()
+        BasicShapes = new ObservableCollection<Object>()
         {
-        new DiagramNode()
-        {
-        Id = "Rectangle",
-        Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Rectangle }
-        },
-        new DiagramNode()
-        {
-        Id="Ellipse" ,
-        Shape = new DiagramShape(){ Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Ellipse  }
-        },
-        new DiagramNode()
-        {
-        Id="Hexagon" ,
-        Shape = new DiagramShape(){ Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Hexagon  }
-        }
+            new DiagramNode()
+            {
+                Id = "Rectangle",
+                Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Rectangle }
+            },
+            new DiagramNode()
+            {
+                Id="Ellipse" ,
+                Shape = new DiagramShape(){ Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Ellipse  }
+            },
+            new DiagramNode()
+            {
+                Id="Hexagon" ,
+                Shape = new DiagramShape(){ Type = Shapes.Basic, BasicShape = Syncfusion.Blazor.Diagrams.BasicShapes.Hexagon  }
+            }
         };
         Palettes.Add(new SymbolPalettePalette() { Id = "BasicShapes", Expanded = true, Symbols = BasicShapes, Title = "Basicshapes" });
     }
@@ -233,14 +229,11 @@ The size of the individual symbol can be customized. The [`SymbolWidth`](https:/
 
 ```
 
-The [`SymbolMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolMargin) property is used to create the space around
-elements, outside of any defined borders.
+The [`SymbolMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolMargin) property is used to create the space around elements, outside of any defined borders.
 
 ## Symbol preview
 
-The symbol preview size of the palette items can be customized using [`SymbolPreview`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolPreview).
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Height) properties of SymbolPalette enables you to define the preview size to all the symbol palette items.
-The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Offset) of the dragging helper relative to the mouse cursor.
+The symbol preview size of the palette items can be customized using [`SymbolPreview`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolPreview). The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Height) properties of SymbolPalette enables you to define the preview size to all the symbol palette items. The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Offset) of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 

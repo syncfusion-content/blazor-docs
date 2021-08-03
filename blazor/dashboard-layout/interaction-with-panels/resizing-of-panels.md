@@ -11,7 +11,7 @@ documentation: ug
 
 The DashboardLayout component is also provided with the panel resizing functionality, which can be enabled or disabled using the `AllowResizing` property. This functionality allows you to resize the panels dynamically through UI interactions using the resizing handlers, which controls the panel resizing in various directions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -45,4 +45,4 @@ The following output demonstrates the Resizing behavior of Dashboard layout comp
 
 ![Resizing of panels](../images/resizing.gif)
 
->**Note:** Initially, the panels can be resized only in south-east direction. However, panels can also be resized in east, west, north, south, and south-west directions by defining the required directions with the `ResizableHandles` property.
+> Initially, the panels can be resized only in south-east direction. However, panels can also be resized in east, west, north, south, and south-west directions by defining the required directions with the `ResizableHandles` property.

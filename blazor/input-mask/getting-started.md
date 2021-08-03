@@ -20,25 +20,25 @@ To get start quickly with Blazor MaskedTextBox component, you can check on this 
 
 * Install `Syncfusion.Blazor.Inputs` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
+    > Please ensure to check the `Include prerelease` option for our Beta release.
 
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
- ```html
-<head>
+    ```html
+    <head>
+            <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+            <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
+    </head>
+    ```
+
+    For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+    ```html
+    <head>
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-        <!-- <link href="https://cdn.syncfusion.com/blazor/{{version}}/styles/{{theme}}.css" rel="stylesheet" /> -->
-</head>
-```
-
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
- ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
-```
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
+    ```
 
 ## Adding component package to the application
 
@@ -82,7 +82,7 @@ namespace BlazorApplication
 
 To initialize the MaskedTextBox component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
-```csharp
+```cshtml
 <SfMaskedTextBox></SfMaskedTextBox>
 ```
 
@@ -96,7 +96,7 @@ You can set the mask to the MaskedTextBox to validate the user input by using th
 
 The following example demonstrates the usage of mask element `0` that allows any single digit from `0` to `9`.
 
-```csharp
+```cshtml
 <SfMaskedTextBox Mask='000-000-0000'></SfMaskedTextBox>
 ```
 

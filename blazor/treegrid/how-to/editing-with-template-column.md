@@ -15,7 +15,7 @@ In the below demo, the **TaskName** column is rendered with the template.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
@@ -54,7 +54,7 @@ In the below demo, the **TaskName** column is rendered with the template.
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

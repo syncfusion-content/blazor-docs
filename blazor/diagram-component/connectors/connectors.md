@@ -21,7 +21,7 @@ The `SourcePoint` and `TargetPoint` properties of connector allow you to define 
 
 The following code example illustrates how to add a connector through connector collection,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
@@ -51,7 +51,7 @@ The following code example illustrates how to add a connector through connector 
 
 You can add a connector at runtime by adding connector to the connectors collection in the Diagram component.  The following code explains how to add connectors at runtime.
 
-```csharp
+```cshtml
 @page "/ConnectorDocument2"
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="Add Connector" @onclick="@AddConnector">
@@ -78,7 +78,7 @@ You can add a connector at runtime by adding connector to the connectors collect
 
 Connectors can be predefined and added to the symbol palette. You can drop those connectors into the diagram when required.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.SymbolPalette
 <div style="width: 200px; float: left">
@@ -158,7 +158,7 @@ A connector can be removed from the diagram at runtime by using the `Remove` met
 
 The following code shows how to remove a connector at runtime.
 
-```csharp
+```cshtml
 <input type="button" value="Add Connector" @onclick="@RemoveConnector">
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
@@ -194,7 +194,7 @@ The following code shows how to remove a connector at runtime.
 
 A connector can be removed from the diagram by using the native `RemoveAt` method. Refer to the following example that shows how to remove the connector at runtime.
 
-```csharp
+```cshtml
 public void RemoveConnector()
 {
     connectors.RemoveAt(0);
@@ -207,7 +207,7 @@ You can change any connector's properties at runtime.
 
 The following code example explains how to change the connector properties.
 
-```csharp
+```cshtml
 <input type="button" value="Update Connector" @onclick="@UpdateConnector">
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
@@ -253,7 +253,7 @@ The `SourceID` and `TargetID`properties allow to define the nodes to be connecte
 
 The following code example illustrates how to connect two nodes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 
@@ -324,7 +324,7 @@ The `SourcePortID` and `TargetPortID` properties allow to create connections bet
 
 The following code example illustrates how to create port to port connections.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 

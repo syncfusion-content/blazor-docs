@@ -21,7 +21,7 @@ Diagram allows you to customize the connector appearances . The following topics
 
 * The following code example illustrates how to create decorators of various shapes.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -69,7 +69,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 * The following code example illustrates how to leave space between the connection end points and source, target nodes.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -160,7 +160,7 @@ The flip types are as follows:
 
 * `Both` is used to interchange the source point as target point and target point as source point
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -202,7 +202,7 @@ Line bridging creates a bridge for lines to smartly cross over the other lines, 
 
 The following code example illustrates how to enable line bridging.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -262,7 +262,7 @@ Limitation: `Bezier` segments do not support bridging.
 
 Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with the [`CornerRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_CornerRadius) property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -310,7 +310,7 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 The following code example illustrates how to customize the segment appearance.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -354,7 +354,7 @@ The following code example illustrates how to customize the segment appearance.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -406,7 +406,7 @@ The following code example illustrates how to customize the appearance of the de
 
 The following code illustrates how to disable selection.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -445,7 +445,7 @@ The following code illustrates how to disable selection.
 
 * The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_AddInfo) property of connectors allow you to maintain additional information to the connectors.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
@@ -485,7 +485,7 @@ The connectors [`ZIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 The following code illustrates how to render connector based on the stack order.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel

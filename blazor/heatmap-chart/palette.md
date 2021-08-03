@@ -19,7 +19,7 @@ You can display the heat map cells either in gradient colors or fixed colors.
 
 The smooth transition between the given palette colors can be applied for the heat map cells based on value. The heat map calculates all the gradient colors between the start and end colors for all distinct data values. Default start color and end color will be considered for gradient calculation, if the colors are not defined. The palette type must be defined as `Gradient` for the `Type` property in the `HeatMapPaletteSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -69,7 +69,7 @@ The smooth transition between the given palette colors can be applied for the he
 
 In fixed palette type, solid colors are applied to the heat map cells. The data values can be grouped based on the number of colors defined for the heat map. The palette type should be defined as `Fixed` for the `Type` property in the `HeatMapPaletteSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -119,7 +119,7 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
 
 You can define the colors ranges or color stops for data values in both gradient and fixed palette types. You need to define the data value in the `Value` property for `HeatMapPalette` property to calculate the color stops. The heat map automatically calculates the color stops if the `Value` property is not defined. The `Label` property is used to provide the additional information about the color that is to be displayed in the legend. If the label is not provided, the value will be displayed in the legend. The labels can be automatically calculated based on data values, if both the values and labels are not defined.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

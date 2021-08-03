@@ -31,9 +31,9 @@ The following section list out the events provided in PDF Viewer component:
 
 The Syncfusion PDF Viewer events has to be wrapped inside the `PdfViewerEvents` tag. Refer to the following code snippet to use the DocumentLoaded event.
 
-```csharp
+```cshtml
 <SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" >
-<PdfViewerEvents DocumentLoaded="@DocumentLoaded"></PdfViewerEvents>
+    <PdfViewerEvents DocumentLoaded="@DocumentLoaded"></PdfViewerEvents>
 </SfPdfViewerServer>
 
 @code{

@@ -52,7 +52,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 Open **Startup.cs** file and register the Syncfusion service in the ConfigureServices method as follows.
 
-```csharp
+```c#
 
 using Syncfusion.Blazor;
 public class Startup
@@ -98,7 +98,7 @@ Now, get the SQL data from the SQL server and bind it to the DataGrid component 
 
 Grid columns can be defined using the [`GridColumn`](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Create columns using the following code. The properties used and their usage are discussed below.
 
-```csharp
+```cshtml
 [Index.razor]
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" >
@@ -132,7 +132,7 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 
 * Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
 
-```csharp
+```cshtml
 [CustomAdaptorComponent.razor]
 
 @using Syncfusion.Blazor;
@@ -245,7 +245,7 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```csharp
+```c#
 
 // Performs Insert operation
 //You will get the DataManager instance in the DataManager parameter
@@ -287,7 +287,7 @@ The resultant grid will look like below.
 
 To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```csharp
+```c#
 
 // Performs Update operation
 //You will get the DataManager instance in the DataManager parameter
@@ -328,7 +328,7 @@ The resultant grid will look like below.
 
 To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```csharp
+```c#
 
 // Performs Remove operation
 //You will get the DataManager instance in the DataManager parameter

@@ -97,8 +97,10 @@ The properties of the shape annotations can be set before creating the control u
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
+
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" LineSettings="@LineSettings" ArrowSettings="@ArrowSettings" RectangleSettings="@RectangleSettings" CircleSettings="@CircleSettings" PolygonSettings="@PolygonSettings">
 </SfPdfViewerServer>
+
 @code{
     SfPdfViewerServer viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";

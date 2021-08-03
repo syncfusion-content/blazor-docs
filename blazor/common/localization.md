@@ -29,7 +29,7 @@ The culture can be set using one of the following approaches:
 
 * The Syncfusion Blazor UI components can translate its UI element content based on the user-defined language or culture. The Localization support is processed by using Resource `.resx` files. These resource files contain the key-value pair of locale content in the following format.
 
-    ```csharp
+    ```
     <Component_Name>_<Feature_Name>_<Locale_Key>
     ```
 
@@ -43,7 +43,7 @@ The culture can be set using one of the following approaches:
 
     > The Syncfusion locale service should be added after the Syncfusion default service. so that the application level Syncfusion locale service injection will override the default Syncfusion locale service. Map the folder path to the `ResourcesPath` in the default localization service.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
     using System.Globalization;
     using ApplicationNamespace.Shared;
@@ -111,7 +111,7 @@ The culture can be set using one of the following approaches:
 
     > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     public class SyncfusionLocalizer : ISyncfusionStringLocalizer
@@ -154,7 +154,7 @@ The culture can be set using one of the following approaches:
 
 4. Create `~/Pages/_Host.cshtml.cs` file and use cookies to store the user-selected culture.
 
-    ```csharp
+    ```c#
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Localization;
     using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -176,7 +176,7 @@ The culture can be set using one of the following approaches:
 
 5. Create `~/Controllers/CultureController.cs` file and configure the controller to switch the culture using UI.
 
-    ```csharp
+    ```c#
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Localization;
@@ -201,7 +201,7 @@ The culture can be set using one of the following approaches:
 
 6. Create a Blazor component `CultureSwitcher.razor` in the `~/Shared/` folder.
 
-    ```csharp
+    ```cshtml
     @inject NavigationManager NavigationManager
 
     <h3>Select your language</h3>
@@ -228,7 +228,7 @@ The culture can be set using one of the following approaches:
 
 7. Add `CultureSwitcher` component to `~/Shared/MainLayout.razor` file to enable the culture switcher in all pages.
 
-    ```csharp
+    ```cshtml
     <div class="main">
         <div class="top-row px-4">
             <CultureSwitcher />
@@ -251,7 +251,7 @@ The culture can be set using one of the following approaches:
 
 1. Add the Localization service configuration in the `~/Program.cs` file.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
     using Microsoft.JSInterop;
     using System.Globalization;
@@ -299,7 +299,7 @@ The culture can be set using one of the following approaches:
 
     > Map the `SfResources.ResourceManager` to this interface `Manager`.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     public class SyncfusionLocalizer : ISyncfusionStringLocalizer
@@ -374,7 +374,7 @@ The culture can be set using one of the following approaches:
 
 5. Create a Blazor component `CultureSwitcher.razor` in the `~/Shared/` folder.
 
-    ```csharp
+    ```cshtml
     @using  System.Globalization
     @inject IJSRuntime JSRuntime
     @inject NavigationManager NavigationManager
@@ -411,7 +411,7 @@ The culture can be set using one of the following approaches:
     ```
 6. Add `CultureSwitcher` component to `~/Shared/MainLayout.razor` file to enable the culture switcher in all pages.
 
-    ```csharp
+    ```cshtml
     <div class="main">
         <div class="top-row px-4">
             <CultureSwitcher />

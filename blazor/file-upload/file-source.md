@@ -28,38 +28,38 @@ The uploader save action configration in server-side blazor application, using M
 ```csharp
 using Microsoft.AspNetCore.Mvc;
 
-    public void ConfigureServices(IServiceCollection services)
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+    services.AddRazorPages();
+    services.AddServerSideBlazor();
+    services.AddSingleton<WeatherForecastService>();
+}
+
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+    if (env.IsDevelopment())
     {
-        services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
-        services.AddRazorPages();
-        services.AddServerSideBlazor();
-        services.AddSingleton<WeatherForecastService>();
+        app.UseDeveloperExceptionPage();
+    }
+    else
+    {
+        app.UseExceptionHandler("/Error");
+        app.UseHsts();
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    app.UseHttpsRedirection();
+    app.UseStaticFiles();
+
+    app.UseRouting();
+    app.UseMvcWithDefaultRoute();
+
+    app.UseEndpoints(endpoints =>
     {
-        if (env.IsDevelopment())
-        {
-            app.UseDeveloperExceptionPage();
-        }
-        else
-        {
-            app.UseExceptionHandler("/Error");
-            app.UseHsts();
-        }
-
-        app.UseHttpsRedirection();
-        app.UseStaticFiles();
-
-        app.UseRouting();
-        app.UseMvcWithDefaultRoute();
-
-        app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapBlazorHub<App>(selector: "app");
-            endpoints.MapFallbackToPage("/_Host");
-        });
-    }
+        endpoints.MapBlazorHub<App>(selector: "app");
+        endpoints.MapFallbackToPage("/_Host");
+    });
+}
 ```
 
 ### Server-side configuration for save the files of folders

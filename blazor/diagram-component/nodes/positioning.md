@@ -27,7 +27,7 @@ The following table shows how pivot relates offset values with node boundaries.
 
 The following code shows how to change the `Pivot` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
@@ -70,7 +70,7 @@ The following code shows how to change the `Pivot` value.
 
 Rotation of a node is controlled by using the `RotateAngle` property. The following code shows how to change the `RotateAngle` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
@@ -107,7 +107,7 @@ Rotation of a node is controlled by using the `RotateAngle` property. The follow
 
 The `MinWidth` and `MinHeight` properties of node allows you to control the minimum size of the node while resizing. Similarly, the `MaxWidth` and `MaxHeight` properties of node allows you to control the minimum size of the node while resizing. The below gif explains how minimum and maximum size is controlled.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">

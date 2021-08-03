@@ -104,7 +104,7 @@ To create OData controller, right-click **Controller** folder in ODataServicePro
 
 Now, replace the controller with the following code which contains code to handle CRUD operations in the Orders table.
 
-```csharp
+```c#
 
 using Microsoft.AspNet.OData;
 using System.Threading.Tasks;
@@ -195,7 +195,7 @@ Add the following line in the **launchSettings.json** file.
 
 Open **Startup.cs** file and configure by referring to the following codes.
 
-```csharp
+```c#
 
 namespace ODataServiceProject
 {
@@ -276,7 +276,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
 
-```csharp
+```c#
 
 public void ConfigureServices(IServiceCollection services)
 {
@@ -348,7 +348,7 @@ Grid columns can be defined by using the [`GridColumn`](https://help.syncfusion.
 
 When you run the application, the **Get()** method will be called in your OData controller.
 
-```csharp
+```c#
 
 [Route("api/[controller]")]
 public class OrdersController : ODataController
@@ -401,7 +401,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will insert the record in the Orders table by calling the below **POST** method of the OData controller.
 
-```csharp
+```c#
 
 [EnableQuery]
 public async Task<IActionResult> Post([FromBody] Orders book)
@@ -423,7 +423,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Clicking the **Update** toolbar button will update the record in the Orders table by calling the below **PATCH** method of the OData controller.
 
-```csharp
+```c#
 
 [EnableQuery]
 public async Task<IActionResult> Patch([FromODataUri] long key, [FromBody] Delta<Orders> book)
@@ -444,7 +444,7 @@ The resultant grid will look like below.
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will send a **DELETE** request to the OData controller with the selected record`s primary key value to remove the corresponding record from the Orders table.
 
-```csharp
+```c#
 
 [EnableQuery]
 public long Delete([FromODataUri] long key)

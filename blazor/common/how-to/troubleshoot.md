@@ -27,7 +27,7 @@ documentation: ug
 
     You can register the `SyncfusionBlazorService` in `Startup.cs` file to resolve the exception.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
     public class Startup
     {

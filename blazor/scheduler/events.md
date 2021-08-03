@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Scheduler component and much more details.
+description: Learn here all about available Scheduler Events and customizing Syncfusion Blazor Scheduler component and performing actions within it.
 platform: Blazor
 control: Scheduler
 documentation: ug

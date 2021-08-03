@@ -23,21 +23,21 @@ If the `SaveURL` property value is empty, data passing will handled at local and
 Find the following sample server codes for defining models and controller functions to configure processing data.
 
 ```csharp
-    public class SubmitModel
-    {
-        public string Name { get; set; }
-        public string PrimaryKey { get; set; }
-        public string Value { get; set; }
-    }
+public class SubmitModel
+{
+    public string Name { get; set; }
+    public string PrimaryKey { get; set; }
+    public string Value { get; set; }
+}
 ```
 
 ```csharp
 
-    public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value)
-    {
-        // User can process data
-        return value;
-    }
+public IEnumerable<SubmitModel> UpdateData([FromBody]SubmitModel value)
+{
+    // User can process data
+    return value;
+}
 
 ```
 

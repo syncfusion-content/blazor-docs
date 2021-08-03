@@ -23,7 +23,7 @@ documentation: ug
 
 * The annotation text property defines the additional information about the flow object in a BPMN process.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@

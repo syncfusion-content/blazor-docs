@@ -25,10 +25,10 @@ Install **Syncfusion.Blazor** NuGet package to the application by using the `NuG
 
 The Syncfusion Pivot Table component can be initialized in any razor page inside `~/Pages` folder. Here, the pivot table component is initialized inside `~/Pages/Index.razor` page. In a new application, if `Index.razor` page has any default content template, then those content can be completely removed and following code can be added.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails"></SfPivotView>
+<SfPivotView TValue="ProductDetails"></SfPivotView>
 
 ```
 
@@ -37,13 +37,13 @@ The Syncfusion Pivot Table component can be initialized in any razor page inside
 The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) component further needs to be populated with an appropriate data source. For illustration purpose, a collection of objects mentioning the sales details of certain products over a period and region has been prepared. This sample data is assigned to the pivot table component through [`PivotViewDataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html) class.
 Refer [here](#data-binding) to know the more details about OLAP data binding.
 
-```csharp
+```cshtml
 
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE"Cube="Adventure Works" Url="https:/bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033"EnableSorting="true"></PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE"Cube="Adventure Works" Url="https:/bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033"EnableSorting="true"></PivotViewDataSourceSettings>
+</SfPivotView>
 
 ```
 
@@ -70,7 +70,7 @@ In-order to define each [OLAP cube element](#olap-cube-elements) in the respecti
 In this sample, "Product Categories" is added in column, "Customer Geography" in row, and "Customer Count" and "Internet Sales Amount" in value axes respectively.
 
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
@@ -117,7 +117,7 @@ Formatting defines a way in which values should be displayed in pivot table. For
 > Only measures from [`PivotViewValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axis, which is in the form of numeric data values are applicable for formatting.
 
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
@@ -169,11 +169,11 @@ After successful compilation of the application, simply press F5 to run the same
 The component provides a built-in Field List similar to Microsoft Excel. It allows you to add or remove [OLAP cube elements](#olap-cube-elements) and also rearrange the [OLAP cube elements](#olap-cube-elements) between different axes, including [`PivotViewRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [`PivotViewColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [`PivotViewValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [`PivotViewFilters`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) along with filter and sort options dynamically at runtime. It can be enabled by setting the [`ShowFieldList`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowFieldList) property to **true** as follows. To know more about field list, [`refer`](./field-list) here.
 
 
-```csharp
+```cshtml
 
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowFieldList="true" Width="800" Height="350" >
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" Width="800" Height="350" >
     <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
@@ -220,11 +220,11 @@ The component provides a built-in Field List similar to Microsoft Excel. It allo
 
 The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube-elements) from the bound data source and allows end users to drag [OLAP cube elements](#olap-cube-elements) between different axes such as [`PivotViewRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [`PivotViewColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html), [`PivotViewValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) and [`PivotViewFilters`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFilter.html) along with filter and sort options dynamically at runtime. It can be enabled by setting the [`ShowGroupingBar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_ShowGroupingBar) property to **true** as follows. To know more about grouping bar, [`refer`](./grouping-bar) here.
 
-```csharp
+```cshtml
 
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Width="800" Height="350" >
+<SfPivotView TValue="ProductDetails" ShowGroupingBar="true" Width="800" Height="350" >
     <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
         <PivotViewColumns>
             <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Category"></PivotViewColumn>
@@ -270,30 +270,30 @@ The Grouping Bar feature automatically populates [OLAP cube elements](#olap-cube
 The filter axis contains collection of [OLAP cube elements](#olap-cube-elements) such as hierarchies and calculated members that would act as master filter over the data bound in [`PivotViewRows`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html), [`PivotViewColumns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewColumn.html),  and [`PivotViewValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewValue.html) axes of the pivot table. The [OLAP cube elements](#olap-cube-elements) along with filter members could be set to filter axis either through report via code behind or by dragging and dropping [OLAP cube elements](#olap-cube-elements) from other axes to filter axis via grouping bar or field list at runtime.
 
 
- ```csharp
+ ```cshtml
 
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true">
-          <PivotViewDataSourceSettings TValue="ProductDetails"  Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" url="https://bi.syncfusion.com/olap/msmdpump.dll" ProviderType="SSAS" EnableSorting=true>
-            <PivotViewColumns>
-                <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Categories"></PivotViewColumn>
-                <PivotViewColumn Name="[Measures]" Caption="Measures"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
-                <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFilters>
-                <PivotViewFilter Name="[Date].[Fiscal]" Caption="Date Fiscal"></PivotViewFilter>
-            </PivotViewFilters>
-        </PivotViewDataSourceSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails" ShowGroupingBar="true" ShowFieldList="true">
+      <PivotViewDataSourceSettings TValue="ProductDetails"  Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" url="https://bi.syncfusion.com/olap/msmdpump.dll" ProviderType="SSAS" EnableSorting=true>
+        <PivotViewColumns>
+            <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Categories"></PivotViewColumn>
+            <PivotViewColumn Name="[Measures]" Caption="Measures"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
+            <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFilters>
+            <PivotViewFilter Name="[Date].[Fiscal]" Caption="Date Fiscal"></PivotViewFilter>
+        </PivotViewFilters>
+    </PivotViewDataSourceSettings>
+</SfPivotView>
 
-    @code{
+@code{
     public class ProductDetails
     {
         public int Sold { get; set; }
@@ -334,46 +334,46 @@ Also calculated fields can be added at run time through the built-in dialog. The
 
 > Calculated measure can be added only in value axis.
 
-```csharp
+```cshtml
 
-    @using Syncfusion.Blazor.PivotView
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Width="800" Height="350" >
-    @*<PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>*@
-    <PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
-        <PivotViewColumns>
-            <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Categories"></PivotViewColumn>
-            <PivotViewColumn Name="[Measures]" Caption="Measures"></PivotViewColumn>
-        </PivotViewColumns>
-        <PivotViewRows>
-            <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
-        </PivotViewRows>
-        <PivotViewValues>
-            <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
-            <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
-            <PivotViewValue Name="Order on Discount" IsCalculatedField="true"></PivotViewValue>
-        </PivotViewValues>
-        <PivotViewFilters>
-            <PivotViewFilter Name="[Date].[Fiscal]" Caption="Date Fiscal"></PivotViewFilter>
-        </PivotViewFilters>
-        <PivotViewCalculatedFieldSettings>
-            <PivotViewCalculatedFieldSetting Name="BikeAndComponents" Formula="([Product].[Product Categories].[Category].[Bikes] + [Product].[Product Categories].[Category].[Components])" HierarchyUniqueName="[Product].[Product Categories]" FormatString="Standard"></PivotViewCalculatedFieldSetting>
-            <PivotViewCalculatedFieldSetting Name="Order on Discount" Formula="[Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)" FormatString="Currency"></PivotViewCalculatedFieldSetting>
-        </PivotViewCalculatedFieldSettings>
-    </PivotViewDataSourceSettings>
-    <PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>
-    </SfPivotView>
-    @code{
-        public class ProductDetails
-        {
-            public int Sold { get; set; }
-            public double Amount { get; set; }
-            public string Country { get; set; }
-            public string Products { get; set; }
-            public string Year { get; set; }
-            public string Quarter { get; set; }
-        }
+<SfPivotView TValue="ProductDetails" ShowFieldList="true" AllowCalculatedField="true" Width="800" Height="350" >
+@*<PivotViewDisplayOption Primary=Primary.Table View=View.Both></PivotViewDisplayOption>*@
+<PivotViewDataSourceSettings TValue="ProductDetails" ProviderType="ProviderType.SSAS" Catalog="Adventure Works DW 2008 SE" Cube="Adventure Works" Url="https://bi.syncfusion.com/olap/msmdpump.dll" LocaleIdentifier="1033" EnableSorting="true">
+    <PivotViewColumns>
+        <PivotViewColumn Name="[Product].[Product Categories]" Caption="Product Categories"></PivotViewColumn>
+        <PivotViewColumn Name="[Measures]" Caption="Measures"></PivotViewColumn>
+    </PivotViewColumns>
+    <PivotViewRows>
+        <PivotViewRow Name="[Customer].[Customer Geography]" Caption="Customer Geography"></PivotViewRow>
+    </PivotViewRows>
+    <PivotViewValues>
+        <PivotViewValue Name="[Measures].[Customer Count]" Caption="Customer Count"></PivotViewValue>
+        <PivotViewValue Name="[Measures].[Internet Sales Amount]" Caption="Internet Sales Amount"></PivotViewValue>
+        <PivotViewValue Name="Order on Discount" IsCalculatedField="true"></PivotViewValue>
+    </PivotViewValues>
+    <PivotViewFilters>
+        <PivotViewFilter Name="[Date].[Fiscal]" Caption="Date Fiscal"></PivotViewFilter>
+    </PivotViewFilters>
+    <PivotViewCalculatedFieldSettings>
+        <PivotViewCalculatedFieldSetting Name="BikeAndComponents" Formula="([Product].[Product Categories].[Category].[Bikes] + [Product].[Product Categories].[Category].[Components])" HierarchyUniqueName="[Product].[Product Categories]" FormatString="Standard"></PivotViewCalculatedFieldSetting>
+        <PivotViewCalculatedFieldSetting Name="Order on Discount" Formula="[Measures].[Order Quantity] + ([Measures].[Order Quantity] * 0.10)" FormatString="Currency"></PivotViewCalculatedFieldSetting>
+    </PivotViewCalculatedFieldSettings>
+</PivotViewDataSourceSettings>
+<PivotViewGridSettings ColumnWidth="160"></PivotViewGridSettings>
+</SfPivotView>
+@code{
+    public class ProductDetails
+    {
+        public int Sold { get; set; }
+        public double Amount { get; set; }
+        public string Country { get; set; }
+        public string Products { get; set; }
+        public string Year { get; set; }
+        public string Quarter { get; set; }
     }
+}
 
 ```
 
@@ -482,7 +482,7 @@ Allows large amounts of data to be loaded without any performance degradation by
 To use the virtual scrolling feature, inject the `VirtualScroll` module into the pivot table.
 
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
@@ -545,7 +545,7 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 | [`Catalog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_Catalog)| Contains the database name (catalog name) to fetch the data.|
 
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
@@ -596,7 +596,7 @@ To bind OLAP datasource to the pivot table, you need to specify following proper
 
 By default, the measures are plotted in column axis. You can place measures in row axis either thorough code behind or UI. To plot those measures in row axis, place the **Measures** field in the row axis as follows.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
@@ -648,7 +648,7 @@ Named set is a multidimensional expression (MDX) that returns a set of dimension
 You can bind the named sets in the pivot table by setting it's unique name in the [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_Name) property either in row or column axis and [`IsNamedSet`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_IsNamedSet) boolean property to **true**. In this sample, we have added "Core Product Group" named set in the column axis.
 
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 
@@ -699,7 +699,7 @@ Users can configure basic authentication information to access the OLAP cube usi
 
 > If the user does not configure the authentication, a default popup will appear in the browser to get the authentication information.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.PivotView
 

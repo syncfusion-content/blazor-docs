@@ -11,9 +11,9 @@ documentation: ug
 
 The In-place Editor supports adding HTML5 input components using the `InPlaceEditorTemplate` property. The Template property can be given as follows.
 
-```bash
- <InPlaceEditorTemplate>
-    <input id="date" type="text" />
+```cshtml
+<InPlaceEditorTemplate>
+   <input id="date" type="text" />
 </InPlaceEditorTemplate>
 
 ```
@@ -22,7 +22,7 @@ In Template mode, the `Value` property cannot be handled by the In-place Editor 
 
 In the following template sample, before submitting data to the server, the event argument and `Value` property contents are updated in the `OnActionSuccess` event handler.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 

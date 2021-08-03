@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Scheduler Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Scheduler component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Syncfusion Blazor Scheduler component. Also helps you to bind appointments and set current view and date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug

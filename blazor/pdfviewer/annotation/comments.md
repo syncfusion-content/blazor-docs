@@ -105,4 +105,4 @@ The annotation comment and comment replies can be edited by the following ways:
 
 ![CommentEdit](../../pdfviewer/images/commentsdelete.png)
 
->The annotation will be deleted on deleting the comment using comment panel.
+> The annotation will be deleted on deleting the comment using comment panel.

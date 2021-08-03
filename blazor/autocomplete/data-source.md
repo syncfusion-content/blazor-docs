@@ -213,7 +213,7 @@ For implementing custom data binding in AutoComplete, the `DataAdaptor` class is
 
 The `DataAdaptor` abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
-```csharp
+```c#
 public abstract class DataAdaptor
 {
     /// <summary>
@@ -324,7 +324,7 @@ You need to follow the below steps to consume data from the **Entity Framework**
 
 The first step is to create a DBContext class called **OrderContext** to connect to a Microsoft SQL Server database.
 
-```csharp
+```c#
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -353,7 +353,7 @@ namespace EFDropDown.Shared.DataAccess
 
 Now you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
 
-```csharp
+```c#
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -387,7 +387,7 @@ namespace EFDropDown.Shared.DataAccess
 
 A Web API Controller has to be created which allows AutoComplete directly to consume data from the Entity framework.
 
-```csharp
+```c#
 using EFDropDown.Shared.DataAccess;
 using EFDropDown.Shared.Models;
 using Microsoft.AspNetCore.Mvc;

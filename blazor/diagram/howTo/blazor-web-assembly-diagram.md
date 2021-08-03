@@ -65,23 +65,23 @@ Please ensure to check the Include prerelease option for our Beta release.
 
 5. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
-<environment include="Development">
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
- </environment>
+    <environment include="Development">
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </environment>
 </head>
 
 ```
 
 For Internet Explorer 11 kindly refer the polyfills. Refer the documentation for more information.
 
-```html
+```cshtml
 <head>
-<environment include="Development">
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</environment>
+    <environment include="Development">
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </environment>
 </head>
 
 ```
@@ -90,7 +90,7 @@ For Internet Explorer 11 kindly refer the polyfills. Refer the documentation for
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Diagram** package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagrams
 ```
@@ -105,26 +105,26 @@ Open the **Startup.cs** file and add services required by Syncfusion components 
  namespace BlazorApplication
 {
     public class Startup
-{
-    ....
-    ....
-        public void ConfigureServices(IServiceCollection services)
     {
         ....
         ....
-        services.AddSyncfusionBlazor();
+            public void ConfigureServices(IServiceCollection services)
+        {
+            ....
+            ....
+            services.AddSyncfusionBlazor();
+        }
     }
-}
 }
 
 ```
 
 **Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```cshtml
 <head>
-<environment include="Development">
-   <script src="https://cdn.syncfusion.com/blazor/18.4.42/syncfusion-blazor.min.js"></script>
+   <environment include="Development">
+    <script src="https://cdn.syncfusion.com/blazor/18.4.42/syncfusion-blazor.min.js"></script>
    </environment>
 </head>
 
@@ -136,7 +136,7 @@ Diagram component can be rendered by using the `SfDiagram` tag helper in ASP.NET
 
 The following example shows a basic Diagram component.
 
-```csharp
+```cshtml
 <SfDiagram Width="100%" Height="600px">
 </SfDiagram>
 

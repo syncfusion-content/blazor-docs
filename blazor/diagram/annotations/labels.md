@@ -120,17 +120,17 @@ Also, the annotations can be added at runtime by using the `Add` method.
 
 ```csharp
 //Method to add labels at runtime
-  public void AddLabel()
-  {
+public void AddLabel()
+{
     diagram.Nodes[0].Annotations = new ObservableCollection<DiagramNodeAnnotation>();
     DiagramNodeAnnotation annotation = new DiagramNodeAnnotation() { Content = "Annotation" };
     (diagram.Nodes[0].Annotations as ObservableCollection<DiagramNodeAnnotation>).Add(annotation);
-  }
+}
 ```
 
 ![Annotation](../images/Annotation_Add.png)
 
->**Note:** You cannot reset the annotation collection directly to add or update the annotation collection.
+> You cannot reset the annotation collection directly to add or update the annotation collection.
 
 ## Remove annotations
 
@@ -184,20 +184,19 @@ Also, A collection of annotations can be removed from the node by using the `Rem
 
 ```csharp
 //Method to remove labels at runtime using RemoveAt method.
-    public void RemoveLabel()
-    {
-        (diagram.Nodes[0].Annotations as ObservableCollection<DiagramNodeAnnotation>).RemoveAt(0);
-    }
+public void RemoveLabel()
+{
+    (diagram.Nodes[0].Annotations as ObservableCollection<DiagramNodeAnnotation>).RemoveAt(0);
+}
 
-    //Method to remove labels at runtime using Remove method.
-    public void RemoveLabel()
-    {
-         DiagramNodeAnnotation annotation = diagram.Nodes[0].Annotations[0] as DiagramNodeAnnotation;
-        (diagram.Nodes[0].Annotations as ObservableCollection<DiagramNodeAnnotation>).Remove(annotation);
-    }
+//Method to remove labels at runtime using Remove method.
+public void RemoveLabel()
+{
+        DiagramNodeAnnotation annotation = diagram.Nodes[0].Annotations[0] as DiagramNodeAnnotation;
+    (diagram.Nodes[0].Annotations as ObservableCollection<DiagramNodeAnnotation>).Remove(annotation);
+}
 ```
 
->**Note:**
 >* You can delete multiple annotations from node to pass the collection of annotation objects as argument.
 >* Both the AddLabels and RemoveLabels API’s are applicable to nodes and connectors.
 >* The `Add`, `Remove`, and `RemoveAt` methods are applicable for connectors too.

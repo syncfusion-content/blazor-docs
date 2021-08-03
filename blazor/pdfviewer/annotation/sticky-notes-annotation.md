@@ -61,13 +61,16 @@ After editing the default opacity using the Edit Opacity tool, they will be chan
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
+
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" StickyNotesSettings="@StickyNotesSettings" >
 </SfPdfViewerServer>
+
 @code{
     SfPdfViewerServer viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
     PdfViewerStickyNotesSettings StickyNotesSettings = new PdfViewerStickyNotesSettings {Author="Syncfusion"};
 }
+
 ```
 
 ## Disabling sticky note annotations
@@ -80,7 +83,9 @@ The PDF Viewer control provides an option to disable the sticky note annotations
 
 <SfPdfViewerServer DocumentPath="@DocumentPath" EnableStickyNotesAnnotation=false>
 </SfPdfViewerServer>
+
 @code{
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
+
 ```

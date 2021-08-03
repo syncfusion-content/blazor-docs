@@ -23,7 +23,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 4. Register Blazor server service and Syncfusion Blazor service in the `ConfigureServices` method on `~/Startup.cs` file.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     public void ConfigureServices(IServiceCollection services)
@@ -37,7 +37,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 5. Add BlazorHub endpoint in the `Configure` method on `~/Startup.cs` file.
 
-    ```csharp
+    ```c#
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
         app.UseEndpoints(endpoints =>
@@ -52,7 +52,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 6. Create `~/_Imports.razor` file in the root of your application and add the below namespaces.
 
-    ```csharp
+    ```cshtml
     @using System.Net.Http
     @using Microsoft.AspNetCore.Authorization
     @using Microsoft.AspNetCore.Components.Authorization
@@ -85,7 +85,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
 
 9. Add the Syncfusion Blazor component in the created razor file.
 
-    ```csharp
+    ```cshtml
     <SfGrid DataSource="@Orders" AllowPaging="true">
         <GridPageSettings PageSize="5"></GridPageSettings>
         <GridColumns>

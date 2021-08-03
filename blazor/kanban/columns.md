@@ -17,7 +17,7 @@ Kanban columns are categorized by mapping the **key** from the datasource using 
 
 > The `KeyField` property is mandatory to render the columns in the Kanban board.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -83,7 +83,7 @@ Output be like the below.
 
 Kanban board allows to render a single column by mapping multiple keys using `KeyField` property. In below sample, specified the multiple keys(Open, Validate) to a single column.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -153,7 +153,7 @@ You can provide the column header text of Kanban columns using the `HeaderText` 
 
 You can customize the column header with `Template` property as shown in the following code.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -328,7 +328,7 @@ Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanCo
 
 > By default, collapsed column width is set to `50px`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -398,7 +398,7 @@ By default, all columns are on expanded state when loading the Kanban board init
 
 In the following example, the Backlog column is collapsed on initialization of Kanban board.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -466,7 +466,7 @@ Stacked headers are the additional headers to column header that will group the 
 
 In the following code, the kanban columns 'InProgress, Review' are grouped under 'Development Phase' category.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

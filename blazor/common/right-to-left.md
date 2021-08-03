@@ -15,7 +15,7 @@ The right-to-left (RTL) support can be enabled for Syncfusion Blazor components 
 
 To control a component’s direction, set the component’s `EnableRtl` property to true directly. For illustration, the RTL support has been enabled for the DropDownList component in the following code snippet.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns
 
@@ -52,7 +52,7 @@ After the successful compilation, press F5 to run the application. The following
 
 To control the direction of all Syncfusion Blazor components in an application, import `Syncfusion.Blazor`, inject  and the `SyncfusionBlazorService` in your `@code` section and invoke `EnableRtl` method. In the following code snippet, the RTL support has been enabled for all Syncfusion Blazor components.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor;
 @using Syncfusion.Blazor.Grids;

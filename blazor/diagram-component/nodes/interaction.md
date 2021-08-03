@@ -15,7 +15,7 @@ Diagram provides the support to drag, resize, or rotate the node interactively.
 
 A node can be select at runtime by using the `Select` method and clear the selection in the diagram using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
@@ -70,7 +70,7 @@ And also the selection enable during the interaction.
 
 A node can be drag at runtime by using the `Drag` method. The following code explains how to drag the node by using the drag method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Drag" @onclick="OnDrag">
@@ -115,7 +115,7 @@ And also the drag the node during the interaction.
 
 A node can be resize at runtime by using the `Scale` method. The following code explains how to resize the node by using the scale method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Resize" @onclick="OnResize">
@@ -163,7 +163,7 @@ And also you can resize the node during interaction.
 
 A node can be rotate at runtime by using the `Rotate` method. The following code explains how to rotate the node by using method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Rotate" @onclick="OnRotate">

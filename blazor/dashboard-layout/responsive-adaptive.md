@@ -13,7 +13,7 @@ The control is provided with built-in responsive support, where panels within th
 
 The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets 600px or lower resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the `MediaQuery` property of the component.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

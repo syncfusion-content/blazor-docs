@@ -19,7 +19,7 @@ There are three different axis types available in the heat map, which defines th
 
 Category axis type is used to represent the string values in axis labels.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -62,7 +62,7 @@ Category axis type is used to represent the string values in axis labels.
 
 Numeric axis type is used to represent the numeric values in axis labels.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -103,7 +103,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 Date-time axis type is used to represent the date-time values in axis labels with a specific format. In date-time axis, you can define the start and end date/time using the `Minimum` and `Maximum` properties.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -147,7 +147,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 Heat map supports inversing the axis origin for both axes, where the axis labels are placed in an inversed manner. You can enable axis inversing by enabling the `IsInversed` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -191,7 +191,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 In heat map, you can place the axis label in an opposite position of its default axis label position by using the `OpposedPosition` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -235,7 +235,7 @@ In heat map, you can place the axis label in an opposite position of its default
 
 Heat map supports formatting the axis labels by using the `LabelFormat` property. Using this property, you can customize the axis label by global string format (‘P’, ‘C’, etc) or customized format like ‘{value}°C’.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -279,7 +279,7 @@ Heat map supports formatting the axis labels by using the `LabelFormat` property
 
 In heat map, you can define an interval between the axis labels using the `Interval` property. In date-time axis, you can change the interval mode by using the `IntervalType` property. The date-time axis supports the following interval types.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 
@@ -323,7 +323,7 @@ In heat map, you can define an interval between the axis labels using the `Inter
 
 Axis label increment in the heat map is used to display the axis labels with regular interval values in numeric and date-time axes. The labels will be displayed with tick gaps when you set the label interval. But, to achieve the same behavior without tick gaps, use the label increment. You can set the axis label increment using the `Increment` property and the default value of this property is 1.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.HeatMap
 

@@ -58,7 +58,7 @@ Refer to the following steps to download the custom resources in CRG:
 2. Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
     **Blazor Server App (~/Startup.cs)**
-    ```csharp
+    ```c#
     public void ConfigureServices(IServiceCollection services)
     {
         services.AddRazorPages();
@@ -74,7 +74,7 @@ Refer to the following steps to download the custom resources in CRG:
     ```
 
     **Blazor WebAssembly App (~/Program.cs)**
-    ```csharp
+    ```c#
     public static async Task Main(string[] args)
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;

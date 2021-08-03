@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editor Window Customization in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Editor Window Customization in Syncfusion Blazor Scheduler component and more.
+description: This topic demonstrates how to customize the editor and quick pop-up using templates and how to prevent popups in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -254,6 +254,11 @@ It is possible to open the editor window by manually for on specific time or cer
 ## Customizing event editor using template
 
 The event editor window can be customized by making use of the `EditorTemplate` option. Each field defined within template must use two way binding for the `Value` property of the components used within the template to perform CRUD actions.
+
+To get start quickly on customizing editor window using template, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=t0v8rCEP7ps"%}
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

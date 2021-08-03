@@ -78,7 +78,7 @@ namespace BlazorApplication
 
 To initialize the uploader component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
-```csharp
+```cshtml
 <SfUploader></SfUploader>
 ```
 
@@ -156,68 +156,68 @@ The remove action is optional. The remove action handler removes the files that 
  ```csharp
 [Route("api/[controller]")]
 
-    private IHostingEnvironment hostingEnv;
+private IHostingEnvironment hostingEnv;
 
-    public SampleDataController(IHostingEnvironment env)
-    {
-        this.hostingEnv = env;
-    }
+public SampleDataController(IHostingEnvironment env)
+{
+    this.hostingEnv = env;
+}
 
-    [HttpPost("[action]")]
-    public void Save(IList<IFormFile> UploadFiles)
+[HttpPost("[action]")]
+public void Save(IList<IFormFile> UploadFiles)
+{
+    long size = 0;
+    try
     {
-        long size = 0;
-        try
+        foreach (var file in UploadFiles)
         {
-            foreach (var file in UploadFiles)
+            var filename = ContentDispositionHeaderValue
+                    .Parse(file.ContentDisposition)
+                    .FileName
+                    .Trim('"');
+                filename = hostingEnv.ContentRootPath + $@"\{filename}";
+                size += (int)file.Length;
+            if (!System.IO.File.Exists(filename))
             {
-                var filename = ContentDispositionHeaderValue
-                        .Parse(file.ContentDisposition)
-                        .FileName
-                        .Trim('"');
-                    filename = hostingEnv.ContentRootPath + $@"\{filename}";
-                    size += (int)file.Length;
-                if (!System.IO.File.Exists(filename))
+                using (FileStream fs = System.IO.File.Create(filename))
                 {
-                    using (FileStream fs = System.IO.File.Create(filename))
-                    {
-                        file.CopyTo(fs);
-                        fs.Flush();
-                    }
+                    file.CopyTo(fs);
+                    fs.Flush();
                 }
             }
         }
-        catch (Exception e)
-        {
-            Response.Clear();
-            Response.StatusCode = 204;
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
-        }
     }
-
-    [HttpPost("[action]")]
-    public void Remove(IList<IFormFile> UploadFiles)
+    catch (Exception e)
     {
-        try
+        Response.Clear();
+        Response.StatusCode = 204;
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File failed to upload";
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+    }
+}
+
+[HttpPost("[action]")]
+public void Remove(IList<IFormFile> UploadFiles)
+{
+    try
+    {
+        var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
+        if (System.IO.File.Exists(filename))
         {
-            var filename = hostingEnv.ContentRootPath + $@"\{UploadFiles[0].FileName}";
-            if (System.IO.File.Exists(filename))
-            {
-                System.IO.File.Delete(filename);
-            }
-        }
-        catch (Exception e)
-        {
-            Response.Clear();
-            Response.StatusCode = 200;
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
-            Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+            System.IO.File.Delete(filename);
         }
     }
+    catch (Exception e)
+    {
+        Response.Clear();
+        Response.StatusCode = 200;
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = "File removed successfully";
+        Response.HttpContext.Features.Get<IHttpResponseFeature>().ReasonPhrase = e.Message;
+    }
+}
 ```
 
-```csharp
+```cshtml
 <SfUploader ID="UploadFiles">
     <UploaderAsyncSettings SaveUrl="api/SampleData/Save" RemoveUrl="api/SampleData/Remove"></UploaderAsyncSettings>
 </SfUploader>
@@ -227,7 +227,7 @@ The remove action is optional. The remove action handler removes the files that 
 
 You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
 
-```csharp
+```cshtml
 <SfUploader AllowedExtensions=".doc, docx, .xls, xlsx"></SfUploader>
 ```
 

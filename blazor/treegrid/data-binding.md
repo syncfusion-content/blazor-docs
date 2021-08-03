@@ -34,7 +34,7 @@ Tree Grid is rendered from Self-Referential data structures by providing two fie
 * [`IdMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IdMapping.html): This field contains unique values used to identify nodes.
 * [`ParentIdMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ParentIdMapping.html): This field contains values that indicate parent nodes.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
 
@@ -81,7 +81,7 @@ The [`ChildMapping`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syn
 
 The following code example shows you how to bind the hierarchical list data into the Tree Grid component.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
@@ -247,7 +247,7 @@ Tree Grid is a generic component which is strongly bound to a model type. There 
 
 ExpandoObject can be bound to Tree grid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~DataSource.html) property. Tree Grid can also perform all kind of supported data operations and editing in ExpandoObject.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
 
@@ -356,7 +356,7 @@ When a root node is expanded, its child nodes are rendered and are cached locall
 
 Similarly, if the user navigates to a new page, the root nodes of that specific page, will be rendered with request to the remote server.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
@@ -399,7 +399,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 
 On remote data binding, all tree grid actions such as paging, loading child on-demand, will be processed on server-side. To avoid postback, set the tree grid to load all data on initialization and make the actions process in client-side. To enable this behavior, use the *offline* property of **SfDataManager**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
@@ -427,7 +427,7 @@ The following code example describes the behavior of the `LoadChildOnDemand` fea
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -446,7 +446,7 @@ The following code example describes the behavior of the `LoadChildOnDemand` fea
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -505,7 +505,7 @@ public class SelfReferenceData
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 using System;
 using System.Collections;
@@ -657,7 +657,7 @@ You can create your own adaptor by extending the built-in adaptors. The followin
 
 To add a custom parameter to the data request, use the **addParams** method of **Query**. Assign the **Query** object with additional parameters to the tree grid [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Query.html) property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.TreeGrid;
 @using Syncfusion.Blazor.Data;
@@ -880,4 +880,5 @@ Now you can configure the Tree Grid using the **'SfDataManager'** to interact wi
 ```
 
 To perform Tree Grid CRUD operation using Entity Framework. You can refer [`here`](./edit/#entity-framework).
->You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).
+
+> You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-TreeGrid-With-EntityFramework).

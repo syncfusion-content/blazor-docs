@@ -9,16 +9,15 @@ documentation: ug
 
 # Filtering in Blazor MultiSelect Dropdown Component
 
-The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter
-operation starts as soon as you start typing characters in the MultiSelect input.
+The MultiSelect has built-in support to filter data items when [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.MultiSelectModel-1.html#Syncfusion_Blazor_DropDowns_MultiSelectModel_1_AllowFiltering) is enabled. The filter operation starts as soon as you start typing characters in the MultiSelect input.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns
 
-    <SfMultiSelect TValue="string[]" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
-        <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
-    </SfMultiSelect>
+<SfMultiSelect TValue="string[]" TItem="Countries" Placeholder="Select a country" AllowFiltering="true" DataSource="@Country">
+    <MultiSelectFieldSettings Text="Name" Value="Code"></MultiSelectFieldSettings>
+</SfMultiSelect>
 
 @code{
     public class Countries
@@ -107,7 +106,5 @@ The MultiSelect component filter queries can be customized. You can also use you
 
         await mulObj.FilterAsync(Country1, query);
     }
-
-
 }
 ```

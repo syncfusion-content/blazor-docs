@@ -11,11 +11,9 @@ documentation: ug
 
 The context menu can be customized using the `ContextMenuSettings`, `MenuOpened`, and `OnMenuClick` events.
 
-The following example shows adding a custom item in the context menu.
+The following example shows adding a custom item in the context menu. The `ContextMenuSettings` is used to add new menu item. The `MenuOpened` event is used to add the icon to the new menu item. The `OnMenuClick` event is used to add an event handler to the new menu item.
 
-The `ContextMenuSettings` is used to add new menu item. The `MenuOpened` event is used to add the icon to the new menu item. The `OnMenuClick` event is used to add an event handler to the new menu item.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.FileManager
 

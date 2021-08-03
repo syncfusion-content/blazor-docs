@@ -13,7 +13,7 @@ documentation: ug
 
 To customize Context Menu items in your application, set your customized template using [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Context Menu has been rendered with customized Context Menu items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -62,7 +62,7 @@ Output be like
 
 The Context Menu items can be customized by using the `CssClass` property. In the following sample, the menu items is customized by adding new styles.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

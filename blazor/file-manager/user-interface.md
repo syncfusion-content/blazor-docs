@@ -33,7 +33,7 @@ The `Toolbar` provides easy access to the file operations using different button
 
 If the toolbar items exceed the size of the toolbar, then the exceeding toolbar size will be moved to toolbar popup with a dropdown button at the end of toolbar.
 
-*Refer [Toolbar](./file-operations/#toolbar) section in file operations to know more about the buttons present in toolbar*.
+Refer [Toolbar](./file-operations/#toolbar) section in file operations to know more about the buttons present in toolbar.
 
 ![Toolbar](./images/toolbar.png "Responsiveness of Toolbar")
 
@@ -46,13 +46,11 @@ The file manager provides navigation between files and folders using the followi
 
 ### Navigation pane
 
-The navigation pane displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using `NavigationPaneSettings` minimum and maximum width of the navigation pane can be changed.
-The navigation pane can be shown or hidden using the `Visible` option in the `NavigationPaneSettings`.
+The navigation pane displays the folder hierarchy of the file system and provides easy navigation to the desired folder. Using `NavigationPaneSettings` minimum and maximum width of the navigation pane can be changed. The navigation pane can be shown or hidden using the `Visible` option in the `NavigationPaneSettings`.
 
 ### BreadCrumb
 
-The file manager provides breadcrumb for navigating to the parent folders. The breadcrumb the in file manager is responsible for resizing.
-Whenever the path length exceeds the breadcrumb length, a dropdown button will be added at the starting of the breadcrumb to hold the parent folders adjacent to root.
+The file manager provides breadcrumb for navigating to the parent folders. The breadcrumb the in file manager is responsible for resizing. Whenever the path length exceeds the breadcrumb length, a dropdown button will be added at the starting of the breadcrumb to hold the parent folders adjacent to root.
 
 ![BreadCrumb](./images/breadcrumb.png "Responsiveness of BreadCrumb Bar")
 
@@ -83,6 +81,6 @@ The context menu appears on user interaction such as right-click. The file manag
 
 Context menu can be customized using the `ContextMenuSettings`, `MenuOpened`, and `OnMenuClick` events.
 
-*Refer [Context Menu](./file-operations/#context-menu) section in file operations to know more about the menu items present in context menu*.
+Refer [Context Menu](./file-operations/#context-menu) section in file operations to know more about the menu items present in context menu.
 
 ![Context Menu](./images/contextmenu.png "Context Menu")

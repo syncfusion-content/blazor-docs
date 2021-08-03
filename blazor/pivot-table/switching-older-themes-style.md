@@ -19,34 +19,34 @@ From Volume 1, 2020 onwards Syncfusion has revised the theming and layout of the
 In current theme, the cells can be differentiated by their background colors. To avoid it, you need to override its background colors via simple CSS coding within your application. The below CSS selectors allow to achieve the same for material, fabric, bootstrap and bootstrap v4 themes.
 
 ```html      
-    <!-- Codes here... -->
-    <style>
-        .e-pivotview .e-rowsheader, 
-        .e-pivotview .e-columnsheader,
-        .e-pivotview .e-gtot,
-        .e-pivotview .e-content,
-        .e-pivotview .e-gridheader,
-        .e-pivotview .e-headercell {
-            background-color:#fff !important;
-        }
-    </style>
+<!-- Codes here... -->
+<style>
+    .e-pivotview .e-rowsheader, 
+    .e-pivotview .e-columnsheader,
+    .e-pivotview .e-gtot,
+    .e-pivotview .e-content,
+    .e-pivotview .e-gridheader,
+    .e-pivotview .e-headercell {
+        background-color:#fff !important;
+    }
+</style>
 
 ```
 
 Meanwhile for high contrast theme, we need to set the following CSS.
 
 ```html      
-    <!-- Codes here... -->
-    <style>
-        .e-pivotview .e-rowsheader, 
-        .e-pivotview .e-columnsheader,
-        .e-pivotview .e-gtot,
-        .e-pivotview .e-content,
-        .e-pivotview .e-gridheader,
-        .e-pivotview .e-headercell {
-            background-color:#000 !important;
-        }
-    </style>
+<!-- Codes here... -->
+<style>
+    .e-pivotview .e-rowsheader, 
+    .e-pivotview .e-columnsheader,
+    .e-pivotview .e-gtot,
+    .e-pivotview .e-content,
+    .e-pivotview .e-gridheader,
+    .e-pivotview .e-headercell {
+        background-color:#000 !important;
+    }
+</style>
 
 ```
 
@@ -56,49 +56,49 @@ In current theme, to make the component compact we have reduced the height of ea
 
 In the below code sample, we replicate the older theme style.
 
-```csharp
-    @using Syncfusion.Blazor.PivotView
+```cshtml
+@using Syncfusion.Blazor.PivotView
 
-    <SfPivotView TValue="ProductDetails">
-        <PivotViewDataSourceSettings DataSource="@data">
-            <PivotViewColumns>
-                <PivotViewColumn Name="Year"></PivotViewColumn>
-                <PivotViewColumn Name="Quarter"></PivotViewColumn>
-            </PivotViewColumns>
-            <PivotViewRows>
-                <PivotViewRow Name="Country"></PivotViewRow>
-                <PivotViewRow Name="Products"></PivotViewRow>
-            </PivotViewRows>
-            <PivotViewValues>
-                <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
-                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
-            </PivotViewValues>
-            <PivotViewFormatSettings>
-                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
-            </PivotViewFormatSettings>
-        </PivotViewDataSourceSettings>
-        <PivotViewGridSettings RowHeight=36></PivotViewGridSettings>
-    </SfPivotView>
+<SfPivotView TValue="ProductDetails">
+    <PivotViewDataSourceSettings DataSource="@data">
+        <PivotViewColumns>
+            <PivotViewColumn Name="Year"></PivotViewColumn>
+            <PivotViewColumn Name="Quarter"></PivotViewColumn>
+        </PivotViewColumns>
+        <PivotViewRows>
+            <PivotViewRow Name="Country"></PivotViewRow>
+            <PivotViewRow Name="Products"></PivotViewRow>
+        </PivotViewRows>
+        <PivotViewValues>
+            <PivotViewValue Name="Sold" Caption="Units Sold"></PivotViewValue>
+            <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+        </PivotViewValues>
+        <PivotViewFormatSettings>
+            <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+        </PivotViewFormatSettings>
+    </PivotViewDataSourceSettings>
+    <PivotViewGridSettings RowHeight=36></PivotViewGridSettings>
+</SfPivotView>
 
-    @code{
-        public List<ProductDetails> data { get; set; }
-        protected override void OnInitialized()
-        {
-            this.data = ProductDetails.GetProductData().ToList();
-           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
-        }
+@code{
+    public List<ProductDetails> data { get; set; }
+    protected override void OnInitialized()
+    {
+        this.data = ProductDetails.GetProductData().ToList();
+        //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
     }
+}
 
-    <style>
-        .e-pivotview .e-rowsheader, 
-        .e-pivotview .e-columnsheader,
-        .e-pivotview .e-gtot,
-        .e-pivotview .e-content,
-        .e-pivotview .e-gridheader,
-        .e-pivotview .e-headercell {
-            background-color:#fff !important;
-        }
-    </style>
+<style>
+    .e-pivotview .e-rowsheader, 
+    .e-pivotview .e-columnsheader,
+    .e-pivotview .e-gtot,
+    .e-pivotview .e-content,
+    .e-pivotview .e-gridheader,
+    .e-pivotview .e-headercell {
+        background-color:#fff !important;
+    }
+</style>
 
 ```
 

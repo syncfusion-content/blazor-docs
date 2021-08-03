@@ -11,13 +11,13 @@ documentation: ug
 
 An `Event` is a common BPMN process model element that represents something happens during a business process and its is notated with a circle. The type of events are as follows:
 
-    * Start - indicates the beginning of the process and every business process start with an event.
-    * Intermediate - indicates the middle of the process.
-    * End - indicates the beginning of the process and every business process end with an event.
+* Start - indicates the beginning of the process and every business process start with an event.
+* Intermediate - indicates the middle of the process.
+* End - indicates the beginning of the process and every business process end with an event.
 
 The event property of the node allows you to define the type of the event. The default value of the event is **Start**. The following code example explains how to create a BPMN event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -55,7 +55,7 @@ The event property of the node allows you to define the type of the event. The d
 
 Event triggers are notated as icons inside the circle and they represent the specific details of the process. The Trigger property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@

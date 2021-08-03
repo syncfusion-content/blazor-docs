@@ -26,7 +26,7 @@ The `BPMN Association` flow is used to link flow objects with its corresponding 
 
 The association property allows you to define the type of association. The following code example explains how to create an association.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -76,7 +76,7 @@ A `Sequence` flow shows the order that the activities are performed in a BPMN pr
 
 The sequence property allows you to define the type of sequence. The following code example explains how to create a sequence flow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
@@ -126,7 +126,7 @@ A `Message` flow shows the flow of messages between two participants and is repr
 
 The message property allows you to define the type of message. The following code example explains how to define a message flow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@

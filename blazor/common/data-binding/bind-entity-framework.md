@@ -29,7 +29,7 @@ The first step is to create a Library database and a table named Book to hold a 
 * Right-click on the created database and select New Query.
 * Use the following SQL query to create a table named Book.
 
-```csharp
+```
 Create Table Book(
 Id BigInt Identity(1,1) Primary Key Not Null,
 Name Varchar(200) Not Null,
@@ -104,7 +104,7 @@ To create an interface, right-click on the Models folder and create an interface
 
 Create a data access layer LibraryService.cs.
 
-```csharp
+```c#
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -217,7 +217,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 Open **Startup.cs** file and register the Syncfusion service in the **ConfigureServices** method as follows.
 
-```csharp
+```c#
 using Syncfusion.Blazor;
 
 namespace LibraryManagement
@@ -394,7 +394,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. We can insert the record into our database (Book table) by calling the **Addbook()** method of the **LibraryService**.
 
-```csharp
+```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
@@ -418,7 +418,7 @@ To edit a row, select any row and click the **Edit** toolbar button. The edit fo
 
 Now, we have changed the Price column value to 125 from 250. Clicking the **Update** toolbar button will initiate the update action and trigger the OnActionBegin event with **Save RequestType**. Here, we can update the record in the Book table by calling the **UpdateBook()** method of the LibraryService when **Args.Action** is **Edit**.  Refer to the following code example.  
 
-```csharp
+```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Save))
@@ -440,7 +440,7 @@ The resultant grid will look like below.
 
 To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequstType as Delete. Now, we can delete the record from the database by calling **DeleteBook()** method of LibraryService with the selected record`s primary key value. Refer to the following code example.
 
-```csharp
+```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
 {
     if (Args.RequestType.Equals(Syncfusion.Blazor.Grids.Action.Delete))
