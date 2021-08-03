@@ -310,7 +310,7 @@ The following sample code demonstrates creating Custom Adaptor as a component,
 
 {% tabs %}
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Data;
@@ -468,7 +468,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 
 {% tabs %}
 
-{% highlight cshtml %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;

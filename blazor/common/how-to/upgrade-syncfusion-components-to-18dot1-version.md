@@ -54,14 +54,14 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 <tr>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 <EjsButton>Button</EjsButton>
 {% endhighlight %}
 
 </td>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 <SfButton>Button</SfButton>
 {% endhighlight %}
 
@@ -70,14 +70,14 @@ In the previous version, the component names are prefixed with Ejs (example: Ejs
 <tr>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 <EjsCalendar TValue="DateTime"></EjsCalendar>
 {% endhighlight %}
 
 </td>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 <SfCalendar TValue="DateTime"></SfCalendar>
 {% endhighlight %}
 
@@ -102,7 +102,7 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
 <tr>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 <head>
     ....
     ....
@@ -116,7 +116,7 @@ Till the previous version, you will be loading scripts `ej2.min.js` and `ejs-int
 </td>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 <head>
     ....
     ....
@@ -148,7 +148,7 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 <tr>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 @using Syncfusion.EJ2.Blazor.Data
 
 @{ var chartQuery = $"new ej.data.Query().where('EmployeeID', 'equal', {employee.EmployeeID}, false)"; }
@@ -169,7 +169,7 @@ In the previous version, Query's initialization was made as `new ej.data.Query()
 </td>
 <td>
 
-{% highlight cshtml %}
+{% highlight razor %}
 @using Syncfusion.Blazor.Data
 
 @{ var chartQuery = $"new sf.data.Query().where('EmployeeID', 'equal', {employee.EmployeeID}, false)"; }
