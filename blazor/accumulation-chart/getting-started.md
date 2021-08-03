@@ -55,7 +55,7 @@ Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```cshtml 
+```c# 
 using Syncfusion.Blazor;
 namespace BlazorApplication
 {
@@ -75,7 +75,7 @@ namespace BlazorApplication
 
 During initial loading, we collect and send individual character size information in-order to render the chart. To avoid any disconnection, increase the buffer size to 64 KB or more over the SignalR connection.
 
-```cshtml 
+```c# 
 using Syncfusion.Blazor;
 namespace BlazorApplication
 {
@@ -98,7 +98,7 @@ namespace BlazorApplication
 
 **Note:** Use the following configuration to host your Blazor server application on **Azure SignalR**.
 
-```cshtml 
+```c#
 using Syncfusion.Blazor;
 namespace BlazorApplication
 {
@@ -312,7 +312,7 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
 
 ![Legend](images/getting-started/legend.png)
 
->You can find the fully working sample for accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocApp2124811315.zip).
+> You can find the fully working sample for accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocApp2124811315.zip).
 
 ## See also
 
