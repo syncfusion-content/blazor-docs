@@ -49,8 +49,11 @@ Ranges can be customized using the following properties in [`LinearGaugeRange`](
     <LinearGaugeAxes>
         <LinearGaugeAxis Minimum="0" Maximum="100">
             <LinearGaugeRanges>
-                <LinearGaugeRange Start="50" End="80" StartWidth="2" EndWidth="15" Color="orange" Position="Position.Inside" Offset="4">
-                    <LinearGaugeRangeBorder Color="red" Width="2"></LinearGaugeRangeBorder>
+                <LinearGaugeRange Start="50" End="80" StartWidth="2" EndWidth="15"
+                                  Color="orange" Position="Position.Inside"
+                                  Offset="4">
+                    <LinearGaugeRangeBorder Color="red" Width="2">
+                    </LinearGaugeRangeBorder>
                 </LinearGaugeRange>
             </LinearGaugeRanges>
             <LinearGaugePointers>
@@ -73,9 +76,11 @@ To set the color of the labels like the range color, set the [`UseRangeColor`](h
 <SfLinearGauge>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
-           <LinearGaugeAxisLabelStyle UseRangeColor="true"></LinearGaugeAxisLabelStyle>
+           <LinearGaugeAxisLabelStyle UseRangeColor="true">
+           </LinearGaugeAxisLabelStyle>
             <LinearGaugeRanges>
-                <LinearGaugeRange Start="20" End="60" Color="red"></LinearGaugeRange>
+                <LinearGaugeRange Start="20" End="60" Color="red">
+                </LinearGaugeRange>
             </LinearGaugeRanges>
         </LinearGaugeAxis>
     </LinearGaugeAxes>
@@ -95,11 +100,14 @@ Multiple ranges can be added to the Linear Gauge by adding multiple [`LinearGaug
     <LinearGaugeAxes>
         <LinearGaugeAxis>
             <LinearGaugeRanges>
-                <LinearGaugeRange Start="1" End="30" StartWidth="10" EndWidth="10" Color="#41f47f">
+                <LinearGaugeRange Start="1" End="30" StartWidth="10" EndWidth="10"
+                                  Color="#41f47f">
                 </LinearGaugeRange>
-                <LinearGaugeRange Start="30" End="50" StartWidth="10" EndWidth="10" Color="#f49441">
+                <LinearGaugeRange Start="30" End="50" StartWidth="10" EndWidth="10"
+                                  Color="#f49441">
                 </LinearGaugeRange>
-                <LinearGaugeRange Start="50" End="80" StartWidth="10" EndWidth="10" Color="#cd41f4">
+                <LinearGaugeRange Start="50" End="80" StartWidth="10" EndWidth="10"
+                                  Color="#cd41f4">
                 </LinearGaugeRange>
             </LinearGaugeRanges>
             <LinearGaugePointers>
@@ -138,16 +146,20 @@ Using linear-gradient, colors will be applied in a linear progression. The start
                 <LinearGaugeMajorTicks Height="0" Interval="25" />
                 <LinearGaugeMinorTicks Height="0" />
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="80" Height="25" Width="35" Color="#f54ea2" Offset="-40" MarkerType="MarkerType.Triangle"
-                                        Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
+                    <LinearGaugePointer PointerValue="80" Height="25" Width="35"
+                                Color="#f54ea2" Offset="-40" MarkerType="MarkerType.Triangle"
+                                Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
                     </LinearGaugePointer>
                 </LinearGaugePointers>
                 <LinearGaugeRanges>
-                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80" StartWidth="30" EndWidth="30" Offset="30">
+                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80"
+                                      StartWidth="30" EndWidth="30" Offset="30">
                         <LinearGradient StartValue="1%" EndValue="99%">
                             <ColorStops>
-                                <ColorStop Opacity="1" Offset="0%" Color="#fef3f9"></ColorStop>
-                                <ColorStop Opacity="1" Offset="100%" Color="#f54ea2"></ColorStop>
+                                <ColorStop Opacity="1" Offset="0%" Color="#fef3f9">
+                                </ColorStop>
+                                <ColorStop Opacity="1" Offset="100%" Color="#f54ea2">
+                                </ColorStop>
                             </ColorStops>
                         </LinearGradient>
                     </LinearGaugeRange>
@@ -179,18 +191,22 @@ Using radial gradient, colors will be applied in circular progression. The inner
                 <LinearGaugeMajorTicks Height="0" Interval="25" />
                 <LinearGaugeMinorTicks Height="0" />
                 <LinearGaugePointers>
-                    <LinearGaugePointer PointerValue="80" Height="25" Width="35" Color="#f54ea2" Offset="-40" MarkerType="MarkerType.Triangle"
-                                        Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
+                    <LinearGaugePointer PointerValue="80" Height="25" Width="35"
+                                Color="#f54ea2" Offset="-40" MarkerType="MarkerType.Triangle"
+                                Placement="Syncfusion.Blazor.LinearGauge.Placement.Near">
                     </LinearGaugePointer>
                 </LinearGaugePointers>
                 <LinearGaugeRanges>
-                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80" StartWidth="30" EndWidth="30" Offset="30">
+                    <LinearGaugeRange Color="#f54ea2" Start="0" End="80"
+                                      StartWidth="30" EndWidth="30" Offset="30">
                         <RadialGradient Radius="65%">
                              <InnerPosition X="50%" Y="70%"></InnerPosition>
                              <OuterPosition X="60%" Y="60%"></OuterPosition>
                             <ColorStops>
-                                <ColorStop Opacity="0.9" Color= "#fff5f5" Offset="5%"></ColorStop>
-                                <ColorStop Opacity="1" Color="#f54ea2" Offset="99%"></ColorStop>
+                                <ColorStop Opacity="0.9" Color= "#fff5f5" Offset="5%">
+                                </ColorStop>
+                                <ColorStop Opacity="1" Color="#f54ea2" Offset="99%">
+                                </ColorStop>
                             </ColorStops>
                         </RadialGradient>
                     </LinearGaugeRange>

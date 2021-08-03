@@ -24,7 +24,8 @@ To change the pointer value dynamically, use the [`SetPointerValue`](https://hel
 ```csharp
 @using Syncfusion.Blazor.LinearGauge
 
-<button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value</button>
+<button style="margin-left:34px" @onclick="ChangePoinerValue">Update pointer value
+</button>
 <SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
     <LinearGaugeAxes>
         <LinearGaugeAxis>
@@ -64,7 +65,8 @@ To change the annotation content dynamically, use the [`SetAnnotationValue`](htt
 <button style="margin-left:34px" @onclick="ChangeAnnotationValue">Update annotation value</button>
 <SfLinearGauge @ref="lineargauge" Width="250px" Height="250px">
     <LinearGaugeAnnotations>
-        <LinearGaugeAnnotation AxisValue="0" ZIndex="1" Content="10"></LinearGaugeAnnotation>
+        <LinearGaugeAnnotation AxisValue="0" ZIndex="1" Content="10">
+        </LinearGaugeAnnotation>
     </LinearGaugeAnnotations>
     <LinearGaugeAxes>
         <LinearGaugeAxis>
