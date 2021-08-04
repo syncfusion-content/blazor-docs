@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor DataGrid in Server Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor DataGrid in Blazor Server Side App using CLI and more.
+title: Getting Stared with Blazor Chart in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor Chart in Blazor Server Side App using CLI and more.
 platform: Blazor
 control: Chart
 documentation: ug
