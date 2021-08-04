@@ -63,11 +63,11 @@ State persistence allows the Grid to retain the current grid state in the browse
 }
 ```
 
-You can use [`ResetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) method to reset grid state to its original state. This will clear persisted data in window local storage and renders grid with its original property values.
+You can use [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) method to reset grid state to its original state. This will clear persisted data in window local storage and renders grid with its original property values.
 
 ## Handling grid state manually
 
-You can handle the grid's state manually by using in-built state persistence methods. You can use [`GetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData), [`SetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistData_System_String_), [`ResetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) methods of grid to save, load and reset the Grid's persisted state manually. [`GetPersistData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData) method will return grid current state as a string value, which is suitable for sending them over network and storing in data bases.
+You can handle the grid's state manually by using in-built state persistence methods. You can use [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData), [SetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SetPersistData_System_String_), [ResetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ResetPersistData) methods of grid to save, load and reset the Grid's persisted state manually. [GetPersistData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GetPersistData) method will return grid current state as a string value, which is suitable for sending them over network and storing in data bases.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

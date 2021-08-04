@@ -13,7 +13,7 @@ documentation: ug
 
 * Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
 
-* The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) property is used to define the data source either as a collection of objects or as an instance of [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) that needs to be populated in the diagram.
+* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) property is used to define the data source either as a collection of objects or as an instance of [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramDataSource.html#Syncfusion_Blazor_Diagrams_DiagramDataSource_DataSource) that needs to be populated in the diagram.
 
 * The `ID` property is used to define the unique field of each JSON data.
 
@@ -21,7 +21,7 @@ documentation: ug
 
 * The `Root` property is used to define the root node for the diagram populated from the data source.
 
-* To explore those properties, see [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings).
+* To explore those properties, see [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings).
 
 * Diagram supports two types of data binding. They are:
 
@@ -32,7 +32,7 @@ documentation: ug
 
 Diagram can be populated based on the user defined JSON data (Local Data) by mapping the relevant data source fields.
 
-To map the user defined JSON data with diagram, configure the fields of [`DataSourceSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings). The following code example illustrates how to bind local data with the diagram.
+To map the user defined JSON data with diagram, configure the fields of [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings). The following code example illustrates how to bind local data with the diagram.
 
 ```csharp
 ausing Syncfusion.Blazor.Diagrams

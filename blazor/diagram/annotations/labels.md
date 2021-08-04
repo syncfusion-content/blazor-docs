@@ -9,13 +9,13 @@ documentation: ug
 
 # Actions of annotation in Blazor Diagram Component
 
-The [`Annotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
+The [Annotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html) is a block of text that can be displayed over a node or connector and it is used to textually represent an object with a string that can be edited at run time. Multiple annotations can be added to a node or connector.
 
 <!-- markdownlint-disable MD033 -->
 
 ## Create annotations
 
-An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Content) property of annotation defines the text to be displayed. The following code explains how to create an annotation.
+An annotation can be added to a node or connector by defining the annotation object and adding that to the annotation collection of the node or connector. The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Content) property of annotation defines the text to be displayed. The following code explains how to create an annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -68,13 +68,13 @@ An annotation can be added to a node or connector by defining the annotation obj
 ![Annotation](../images/Annotation.png)
 
 
->* [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Id) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
+>* [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramNodeAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramNodeAnnotation_Id) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned center point of its path.
 
 ## Add annotations at runtime
 
-Annotations can be added at runtime by using the [`AddLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLabels_System_Object_System_Object_) method. The following code explains how to add an annotation to a node.
+Annotations can be added at runtime by using the [AddLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddLabels_System_Object_System_Object_) method. The following code explains how to add an annotation to a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -134,7 +134,7 @@ public void AddLabel()
 
 ## Remove annotations
 
-A collection of annotations can be removed from the node by using the [`RemoveLabels`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemoveLabels_System_Object_System_Object_) method. The following code explains how to remove an annotation to a node.
+A collection of annotations can be removed from the node by using the [RemoveLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_RemoveLabels_System_Object_System_Object_) method. The following code explains how to remove an annotation to a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -245,12 +245,12 @@ The following code sample shows how the annotation of the node changed at runtim
 
 ## See also
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)
 
-* [`How to interact the annotation at runtime`](./interaction)
+* [How to interact the annotation at runtime](./interaction)
 
-* [`How to localize the annotation Text`](../../common/localization)
+* [How to localize the annotation Text](../../common/localization)
 
-* [`Accessibility`](../accessibility)
+* [Accessibility](../accessibility)
