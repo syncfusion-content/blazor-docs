@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Stared with Blazor Charts in Server Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor Charts in Blazor Server Side App using CLI and more.
+description: Learn here all about Getting Started with Syncfusion Blazor Charts in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Blazor Charts Component in Server Side App using CLI
+# Blazor Charts Component in Server Side App using Visual Studio
 
 This section briefly explains about how to include a `Chart` in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
