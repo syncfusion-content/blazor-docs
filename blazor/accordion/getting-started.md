@@ -117,7 +117,7 @@ Now, add the Syncfusion Blazor Accordion component in any web page (razor) in th
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![Blazor Accordion](./images/browser-output.png)
+![Blazor Accordion Component](images/blazor-accordion-component.png)
 
 ## Initialize Accordion using Template
 
@@ -174,7 +174,7 @@ The following code explains how to initialize accordion using `Template`.
 </style>
 ```
 
-![Blazor Accordion with template](./images/template.png)
+![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
 
 ## See Also
 

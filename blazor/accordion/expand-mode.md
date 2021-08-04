@@ -34,7 +34,7 @@ This property enables to expand only one Accordion item at a time. If you expand
 
 Output be like the below.
 
-![Accordion Control with expand mode of single type](./images/acrdnSingle.png)
+![Blazor Accordion Component with Single Expand Mode](./images/blazor-accordion-single-expand-mode.png)
 
 ## Multiple
 
@@ -60,7 +60,7 @@ Default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Nav
 
 Output be like the below.
 
-![Accordion Control with expand mode of multiple type](./images/acrdnMultiple.png)
+![Blazor Accordion Component with Multiple Expand Mode](./images/blazor-accordion-multiple-expand-mode.png)
 
 ## Expanding the items
 
@@ -130,4 +130,4 @@ By default, accordion items were in collapsed state on initial load. To expand p
 
 Output be like the below.
 
-![Accordion Control with expanding the items](./images/acrdnExpandingItems.png)
+![Blazor Accordion Component with Expanding Items](./images/blazor-accordion-expand-items.png)
