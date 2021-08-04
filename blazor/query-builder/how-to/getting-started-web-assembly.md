@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Blazor QueryBuilder in WebAssembly using Visual Studio | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor QueryBuilder Component in Blazor WebAssembly (Client Side) App using Visual Studio and more.
+description: Learn here all about Getting Started with Syncfusion Blazor QueryBuilder Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: QueryBuilder
 documentation: ug
 ---
 
-# Blazor QueryBuilder Component in Client Side App using Visual Studio
+# Blazor QueryBuilder Component in WebAssembly App using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
