@@ -8,6 +8,7 @@ documentation: ug
 ---
 
 <!-- markdownlint-disable MD040 -->
+<!-- markdownlint-disable MD013 -->
 
 # Blazor Accumulation Chart Component in Server Side App using Visual Studio
 
