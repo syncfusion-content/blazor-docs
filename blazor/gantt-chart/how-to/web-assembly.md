@@ -101,7 +101,7 @@ namespace BlazorApplication
 
 ## Adding Gantt Chart component to the application
 
-Now, add the Syncfusion [`Blazor Gantt Chart component`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in any web page (razor) in the `Pages` folder. For example, the Gantt Chart component is added in the **~/Pages/Index.razor** page.
+Now, add the Syncfusion [Blazor Gantt Chart component](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) in any web page (razor) in the `Pages` folder. For example, the Gantt Chart component is added in the **~/Pages/Index.razor** page.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
