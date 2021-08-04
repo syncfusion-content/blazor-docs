@@ -11,7 +11,7 @@ documentation: ug
 
 In this section, we have provided a list of chart component events that will be triggered for appropriate chart actions.
 
-The events should be provided to the chart using [`ChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
+The events should be provided to the chart using [ChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html) component.
 
 > From `v18.4.*`, we have added few additional events for the chart component
 
@@ -62,13 +62,13 @@ PointMoved|
 
 ## OnZoomStart
 
-After the zoom selection is made, the [`OnZoomStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggered.
+After the zoom selection is made, the [OnZoomStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomStart) event is triggered.
 
 ### Arguments
 
-Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
+Below property available in the the [ZoomingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
 
-* [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
+* [AxisCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
 
 ```cshtml
 
@@ -115,13 +115,13 @@ Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion
 
 ## OnZoomEnd
 
-[`OnZoomEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers, after the zoom selection is completed.
+[OnZoomEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZoomEnd) event triggers, after the zoom selection is completed.
 
 ### Arguments
 
-Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
+Below property available in the the [ZoomingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
 
-* [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
+* [AxisCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
 
 ```cshtml
 
@@ -168,13 +168,13 @@ Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion
 
 ## OnZooming
 
-[`OnZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers, after the zoom selection is completed.
+[OnZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnZooming) event triggers, after the zoom selection is completed.
 
 ### Arguments
 
-Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
+Below property available in the the [ZoomingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html).
 
-* [`AxisCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
+* [AxisCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ZoomingEventArgs.html#Syncfusion_Blazor_Charts_ZoomingEventArgs_AxisCollection) – Specifies the collection of the axis.
 
 ```cshtml
 
@@ -221,16 +221,16 @@ Below property available in the the [`ZoomingEventArgs`](https://help.syncfusion
 
 ## OnLegendItemRender
 
-[`OnLegendItemRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event triggers,before the legend is rendered.
+[OnLegendItemRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendItemRender) event triggers,before the legend is rendered.
 
 ### Arguments
 
-Below properties are available in the the [`LegendRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html).
+Below properties are available in the the [LegendRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html).
 
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Fill) – Specifies the fill color of the legend item's icon.
-* [`MarkerShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_MarkerShape) – Specifies the shape of the marker.
-* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Shape) – Specifies the shape of the legend item's icon.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Text) – Specifies the text to be displayed in the legend item.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Fill) – Specifies the fill color of the legend item's icon.
+* [MarkerShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_MarkerShape) – Specifies the shape of the marker.
+* [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Shape) – Specifies the shape of the legend item's icon.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendRenderEventArgs.html#Syncfusion_Blazor_Charts_LegendRenderEventArgs_Text) – Specifies the text to be displayed in the legend item.
 
 ```cshtml
 
@@ -277,17 +277,17 @@ Below properties are available in the the [`LegendRenderEventArgs`](https://help
 
 ## OnDataLabelRender
 
-[`OnDataLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event triggers, before the data label for series is rendered.
+[OnDataLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender) event triggers, before the data label for series is rendered.
 
 ### Arguments
 
-Below properties are available in the the [`TextRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender).
+Below properties are available in the the [TextRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataLabelRender).
 
-* [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Border) – Specifies the color and the width of the data label border.
-* [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Color) – Specifies the text color of the data label.
-* [`Font`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Font) – Specifies the font information of the data label.
-* [`Template`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Template) – Provides the information about the data point to be used in the data label template.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Text) – Specifies the text to be displayed in the data label.
+* [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Border) – Specifies the color and the width of the data label border.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Color) – Specifies the text color of the data label.
+* [Font](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Font) – Specifies the font information of the data label.
+* [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Template) – Provides the information about the data point to be used in the data label template.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TextRenderEventArgs.html#Syncfusion_Blazor_Charts_TextRenderEventArgs_Text) – Specifies the text to be displayed in the data label.
 
 ```cshtml
 
@@ -335,17 +335,17 @@ Below properties are available in the the [`TextRenderEventArgs`](https://help.s
 
 ## OnPointRender
 
-[`OnPointRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event triggers, before each points for the series is rendered.
+[OnPointRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointRender) event triggers, before each points for the series is rendered.
 
 ### Arguments
 
-Below properties are available in the the [`PointRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html).
+Below properties are available in the the [PointRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html).
 
-* [`Border`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Border) – Specifies the color and the width of the point border.
-* [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Fill) – Specifies the fill color of the point.
-* [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Height) – Specifies the current point's height.
-* [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Shape) – Specifies the marker shape of the point.
-* [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Width) – Specifies the current point's width.
+* [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Border) – Specifies the color and the width of the point border.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Fill) – Specifies the fill color of the point.
+* [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Height) – Specifies the current point's height.
+* [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Shape) – Specifies the marker shape of the point.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointRenderEventArgs.html#Syncfusion_Blazor_Charts_PointRenderEventArgs_Width) – Specifies the current point's width.
 
 ```cshtml
 
@@ -392,15 +392,15 @@ Below properties are available in the the [`PointRenderEventArgs`](https://help.
 
 ## OnAxisLabelRender
 
-[`OnAxisLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event triggers, before each axis label is rendered.
+[OnAxisLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelRender) event triggers, before each axis label is rendered.
 
 ### Arguments
 
-Below properties are available in the the [`AxisLabelRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html).
+Below properties are available in the the [AxisLabelRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html).
 
-* [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
-* [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label.
+* [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_LabelStyle) – Specifies the font information of the axis label.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelRenderEventArgs_Value) – Specifies the value of the axis label.
 
 ```cshtml
 
@@ -445,19 +445,19 @@ Below properties are available in the the [`AxisLabelRenderEventArgs`](https://h
 
 ## OnAxisLabelClick
 
-[`OnAxisLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event triggers, when x axis label is clicked.
+[OnAxisLabelClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisLabelClick) event triggers, when x axis label is clicked.
 
 ### Arguments
 
-Below fields are available in the the [`AxisLabelClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html).
+Below fields are available in the the [AxisLabelClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html).
 
-* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the current axis.
-* [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Chart) – Specifies the chart instance.
-* [`Index`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Index) – Specifies the index of the axis label.
-* [`LabelID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_LabelID) – Specifies the current axis label's element id.
-* [`Location`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Location) – Specifies the location of the axis label.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Text) – Specifies the text of the axis label.
-* [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Value) – Specifies the value of the axis label.
+* [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Axis) – Specifies the current axis.
+* [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Chart) – Specifies the chart instance.
+* [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Index) – Specifies the index of the axis label.
+* [LabelID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_LabelID) – Specifies the current axis label's element id.
+* [Location](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Location) – Specifies the location of the axis label.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Text) – Specifies the text of the axis label.
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisLabelClickEventArgs.html#Syncfusion_Blazor_Charts_AxisLabelClickEventArgs_Value) – Specifies the value of the axis label.
 
 ```cshtml
 
@@ -502,15 +502,15 @@ Below fields are available in the the [`AxisLabelClickEventArgs`](https://help.s
 
 ## OnAxisActualRangeCalculated
 
-[`OnAxisActualRangeCalculated`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event triggers, before each axis range is calculated.
+[OnAxisActualRangeCalculated](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisActualRangeCalculated) event triggers, before each axis range is calculated.
 
 ### Arguments
 
-Below properties are available in the the [`AxisRangeCalculatedEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html).
+Below properties are available in the the [AxisRangeCalculatedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html).
 
-* [`Interval`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Interval) – Specifies the current interval of the axis.
-* [`Maximum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Maximum) – Specifies the current maximum value of the axis.
-* [`Minimum`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Minimum) – Specifies current minimum value of the axis.
+* [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Interval) – Specifies the current interval of the axis.
+* [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Maximum) – Specifies the current maximum value of the axis.
+* [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisRangeCalculatedEventArgs.html#Syncfusion_Blazor_Charts_AxisRangeCalculatedEventArgs_Minimum) – Specifies current minimum value of the axis.
 
 ```cshtml
 
@@ -557,15 +557,15 @@ Below properties are available in the the [`AxisRangeCalculatedEventArgs`](https
 
 ## OnAxisMultiLevelLabelRender
 
-[`OnAxisMultiLevelLabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers, while rendering multilevellabels.
+[OnAxisMultiLevelLabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnAxisMultiLevelLabelRender) event triggers, while rendering multilevellabels.
 
 ### Arguments
 
-Below properties are available in the the [`AxisMultiLabelRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html).
+Below properties are available in the the [AxisMultiLabelRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html).
 
-* [`Alignment`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_Alignment) – Specifies the alignment of the axis label.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
-* [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_TextStyle) – Specifies the text style of the axis label.
+* [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_Alignment) – Specifies the alignment of the axis label.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_Text) – Specifies the text to be displayed in the axis label.
+* [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AxisMultiLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_AxisMultiLabelRenderEventArgs_TextStyle) – Specifies the text style of the axis label.
 
 ```cshtml
 
@@ -622,14 +622,14 @@ Below properties are available in the the [`AxisMultiLabelRenderEventArgs`](http
 
 ## SizeChanged
 
-[`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event triggers after resizing of the chart.
+[SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SizeChanged) event triggers after resizing of the chart.
 
 ### Arguments
 
-Below fields are available in the the [`ResizeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html).
+Below fields are available in the the [ResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html).
 
-* [`CurrentSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_CurrentSize) – Specifies the current size of the chart.
-* [`PreviousSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_PreviousSize) – Specifies the previous size of the chart.
+* [CurrentSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_CurrentSize) – Specifies the current size of the chart.
+* [PreviousSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ResizeEventArgs.html#Syncfusion_Blazor_Charts_ResizeEventArgs_PreviousSize) – Specifies the previous size of the chart.
 
 ```cshtml
 
@@ -674,21 +674,21 @@ Below fields are available in the the [`ResizeEventArgs`](https://help.syncfusio
 
 ## OnScrollChanged
 
-[`OnScrollChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event triggers while scrolling the chart.
+[OnScrollChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnScrollChanged) event triggers while scrolling the chart.
 
 ### Arguments
 
-Below properties are available in the the [`ScrollEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html).
+Below properties are available in the the [ScrollEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html).
 
-* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Axis) – Specifies the current axis that is scrolled.
-* [`CurrentRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_CurrentRange) – Specifies the current range of the axis.
-* [`PreviousAxisRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousAxisRange) – Specifies the current axis.
-* [`PreviousRange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousRange) – Specifies the previous range of the axis.
-* [`PreviousZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomFactor) – Specifies the previous zoom factor value.
-* [`PreviousZoomPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomPosition) – Specifies the previous zoom position value.
-* [`Range`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Range) – Specifies the range of the axis.
-* [`ZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_ZoomFactor) – Specifies the current zoom factor value.
-* [`ZoomPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_ZoomPosition) – Specifies the current zoom position value.
+* [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Axis) – Specifies the current axis that is scrolled.
+* [CurrentRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_CurrentRange) – Specifies the current range of the axis.
+* [PreviousAxisRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousAxisRange) – Specifies the current axis.
+* [PreviousRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousRange) – Specifies the previous range of the axis.
+* [PreviousZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomFactor) – Specifies the previous zoom factor value.
+* [PreviousZoomPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_PreviousZoomPosition) – Specifies the previous zoom position value.
+* [Range](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_Range) – Specifies the range of the axis.
+* [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_ZoomFactor) – Specifies the current zoom factor value.
+* [ZoomPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ScrollEventArgs.html#Syncfusion_Blazor_Charts_ScrollEventArgs_ZoomPosition) – Specifies the current zoom position value.
 
 ```cshtml
 
@@ -735,13 +735,13 @@ Below properties are available in the the [`ScrollEventArgs`](https://help.syncf
 
 ## OnExportComplete
 
-[`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event triggers after exporting the chart.
+[OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnExportComplete) event triggers after exporting the chart.
 
 ### Arguments
 
-Below field is available in the the [`ExportEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html).
+Below field is available in the the [ExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html).
 
-* [`DataUrl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html#Syncfusion_Blazor_Charts_ExportEventArgs_DataUrl) – Specifies the DataUrl of the exported file.
+* [DataUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html#Syncfusion_Blazor_Charts_ExportEventArgs_DataUrl) – Specifies the DataUrl of the exported file.
 
 ```cshtml
 
@@ -793,18 +793,18 @@ Below field is available in the the [`ExportEventArgs`](https://help.syncfusion.
 
 ## OnDataEdit
 
-[`OnDataEdit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event triggers, while dragging the data point.
+[OnDataEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEdit) event triggers, while dragging the data point.
 
 ### Arguments
 
-Below fields are available in the the [`DataEditingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html).
+Below fields are available in the the [DataEditingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html).
 
-* [`NewValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_NewValue) – Specifies the new value of the current point.
-* [`OldValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_OldValue) – Specifies the previous value of the current point.
-* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Point) – Specifies the current point which is being edited.
-* [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_PointIndex) – Specifies the index of the current point.
-* [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Series) – Specifies the current chart series whose point is being edited.
-* [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_SeriesIndex) – Specifies the index of the current series.
+* [NewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_NewValue) – Specifies the new value of the current point.
+* [OldValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_OldValue) – Specifies the previous value of the current point.
+* [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Point) – Specifies the current point which is being edited.
+* [PointIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_PointIndex) – Specifies the index of the current point.
+* [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Series) – Specifies the current chart series whose point is being edited.
+* [SeriesIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_SeriesIndex) – Specifies the index of the current series.
 
 ```cshtml
 
@@ -851,18 +851,18 @@ Below fields are available in the the [`DataEditingEventArgs`](https://help.sync
 
 ## OnDataEditCompleted
 
-[`OnDataEditCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event triggers  when the point drag completed.
+[OnDataEditCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnDataEditCompleted) event triggers  when the point drag completed.
 
 ### Arguments
 
-Below fields are available in the the [`DataEditingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html).
+Below fields are available in the the [DataEditingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html).
 
-* [`NewValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_NewValue) – Specifies the new value of the current point.
-* [`OldValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_OldValue) – Specifies the previous value of the current point.
-* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Point) – Specifies the current point which is being edited.
-* [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_PointIndex) – Specifies the index of the current point.
-* [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Series) – Specifies the current chart series whose point is being edited.
-* [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_SeriesIndex) – Specifies the index of the current series.
+* [NewValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_NewValue) – Specifies the new value of the current point.
+* [OldValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_OldValue) – Specifies the previous value of the current point.
+* [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Point) – Specifies the current point which is being edited.
+* [PointIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_PointIndex) – Specifies the index of the current point.
+* [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_Series) – Specifies the current chart series whose point is being edited.
+* [SeriesIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.DataEditingEventArgs.html#Syncfusion_Blazor_Charts_DataEditingEventArgs_SeriesIndex) – Specifies the index of the current series.
 
 ```cshtml
 
@@ -909,13 +909,13 @@ Below fields are available in the the [`DataEditingEventArgs`](https://help.sync
 
 ## OnLegendClick
 
-[`OnLegendClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event triggers after legend click.
+[OnLegendClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnLegendClick) event triggers after legend click.
 
 ### Arguments
 
-Below properties are available in the the [`LegendClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html).
+Below properties are available in the the [LegendClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html).
 
-* [`LegendShape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendShape) – Specifies the shape of the legend item.
+* [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendClickEventArgs.html#Syncfusion_Blazor_Charts_LegendClickEventArgs_LegendShape) – Specifies the shape of the legend item.
 
 ```cshtml
 
@@ -962,18 +962,18 @@ Below properties are available in the the [`LegendClickEventArgs`](https://help.
 
 ## OnMultiLevelLabelClick
 
-[`OnMultiLevelLabelClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after click on multilevellabelclick.
+[OnMultiLevelLabelClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnMultiLevelLabelClick) event triggers after click on multilevellabelclick.
 
 ### Arguments
 
-Below fields are available in the the [`MultiLevelLabelClickEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html).
+Below fields are available in the the [MultiLevelLabelClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html).
 
-* [`Axis`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Axis) – Specifies the axis of the clicked label.
-* [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_CustomAttributes) – Specifies the custom objects for multi level labels.
-* [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_End) – Specifies the end value of the multi level labels.
-* [`Level`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Level) – Specifies the current level of the label.
-* [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Start) – Specifies the start value of the multi level labels
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Text) – Specifies the text of the current label.
+* [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Axis) – Specifies the axis of the clicked label.
+* [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_CustomAttributes) – Specifies the custom objects for multi level labels.
+* [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_End) – Specifies the end value of the multi level labels.
+* [Level](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Level) – Specifies the current level of the label.
+* [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Start) – Specifies the start value of the multi level labels
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.MultiLevelLabelClickEventArgs.html#Syncfusion_Blazor_Charts_MultiLevelLabelClickEventArgs_Text) – Specifies the text of the current label.
 
 ```cshtml
 
@@ -1030,13 +1030,13 @@ Below fields are available in the the [`MultiLevelLabelClickEventArgs`](https://
 
 ## OnSelectionChanged
 
-[`OnSelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers after the selection is completed.
+[OnSelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnSelectionChanged) event triggers after the selection is completed.
 
 ### Arguments
 
-Below property available in the the [`SelectionCompleteEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SelectionCompleteEventArgs.html).
+Below property available in the the [SelectionCompleteEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SelectionCompleteEventArgs.html).
 
-* [`SelectedDataValues`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SelectionCompleteEventArgs.html#Syncfusion_Blazor_Charts_SelectionCompleteEventArgs_SelectedDataValues) – Specifies the selected Data X, Y values.
+* [SelectedDataValues](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SelectionCompleteEventArgs.html#Syncfusion_Blazor_Charts_SelectionCompleteEventArgs_SelectedDataValues) – Specifies the selected Data X, Y values.
 
 ```cshtml
 
@@ -1128,21 +1128,21 @@ Below property available in the the [`SelectionCompleteEventArgs`](https://help.
 
 ## OnPointClick
 
-[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers on point click.
+[OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_OnPointClick) event triggers on point click.
 
 ### Arguments
 
-Below fields are available in the the [`PointEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html).
+Below fields are available in the the [PointEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html).
 
-* [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Chart) – Specifies the current chart instance.
-* [`PageX`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageX) – Specifies the current window page x location.
-* [`PageY`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageY) – Specifies the current window page y location.
-* [`Point`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Point) – Specifies the current point which is clicked.
-* [`PointIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PointIndex) – Specifies the index of the current point.
-* [`Series`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Series) – Specifies the current series.
-* [`SeriesIndex`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_SeriesIndex) – Specifies the current series index.
-* [`X`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_X) – Specifies the x coordinate of the current mouse click.
-* [`Y`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Y) – Specifies the y coordinate of the current mouse click.
+* [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Chart) – Specifies the current chart instance.
+* [PageX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageX) – Specifies the current window page x location.
+* [PageY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PageY) – Specifies the current window page y location.
+* [Point](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Point) – Specifies the current point which is clicked.
+* [PointIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_PointIndex) – Specifies the index of the current point.
+* [Series](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Series) – Specifies the current series.
+* [SeriesIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_SeriesIndex) – Specifies the current series index.
+* [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_X) – Specifies the x coordinate of the current mouse click.
+* [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PointEventArgs.html#Syncfusion_Blazor_Charts_PointEventArgs_Y) – Specifies the y coordinate of the current mouse click.
 
 ```cshtml
 
@@ -1187,14 +1187,14 @@ Below fields are available in the the [`PointEventArgs`](https://help.syncfusion
 
 ## TooltipRender
 
-[`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event triggers, before the tooltip for series is rendered.
+[TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_TooltipRender) event triggers, before the tooltip for series is rendered.
 
 ### Arguments
 
-Below property available in the the [`TooltipRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html).
+Below property available in the the [TooltipRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html).
 
-* [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_Text) – Specifies the text for the tooltip.  
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_Text) – Specifies the text for the tooltip.  
 
 ```cshtml
 
@@ -1241,14 +1241,14 @@ Below property available in the the [`TooltipRenderEventArgs`](https://help.sync
 
 ## SharedTooltipRender
 
-[`SharedTooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers, before the sharedtooltip for series is rendered.
+[SharedTooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartEvents.html#Syncfusion_Blazor_Charts_ChartEvents_SharedTooltipRender) event triggers, before the sharedtooltip for series is rendered.
 
 ### Arguments
 
-Below property available in the the [`SharedTooltipRenderEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html).
+Below property available in the the [SharedTooltipRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html).
 
-* [`HeaderText`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_SharedTooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_SharedTooltipRenderEventArgs_Text) – Specifies the text for the tooltip.  
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_SharedTooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SharedTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_SharedTooltipRenderEventArgs_Text) – Specifies the text for the tooltip.  
 
 ```cshtml
 
@@ -1295,4 +1295,4 @@ Below property available in the the [`SharedTooltipRenderEventArgs`](https://hel
 
 ```
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
