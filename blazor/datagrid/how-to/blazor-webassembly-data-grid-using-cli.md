@@ -47,14 +47,14 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 3. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor`.
 
-    ```csharp
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Grids
-    ```
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Grids
+```
 
 4. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     namespace WebApplication1

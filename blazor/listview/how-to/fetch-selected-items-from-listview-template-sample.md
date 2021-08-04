@@ -13,7 +13,7 @@ Single or multiple items can be selected by users in the ListView control. By de
 
 So, we need to map id attribute to listview items using `ListViewFieldSettings` of `DataSource` to get the selected item data properly while working with custom templates. Refer to the below code snippet for template sample.
 
-```C#
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <div id="container">

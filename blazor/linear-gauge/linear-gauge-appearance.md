@@ -17,7 +17,7 @@ The following property and classes are available in the [SfLinearGauge](https://
 * [LinearGaugeBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeBorder.html) - To customize the color and width of the border in Linear Gauge.
 * [LinearGaugeMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeMargin.html) - To customize the margins of the Linear Gauge.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Width="200px" Height="400px" Background="skyblue">
@@ -43,7 +43,7 @@ The title for the Linear Gauge can be set using [Title](https://help.syncfusion.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeFontSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeFontSettings_Opacity) - Specifies the opacity of the title.
 * [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeFontSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeFontSettings_FontFamily) - Specifies the font family of the title.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Title="Linear Gauge">
@@ -78,7 +78,7 @@ The type of the container can be modified by using the [Type](https://help.syncf
 
 The "[Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ContainerType.html#Syncfusion_Blazor_LinearGauge_ContainerType_Normal)" type will render the container as a rectangle and this is the default container type.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -102,7 +102,7 @@ The "[Normal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGaug
 
 The "[RoundedRectangle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ContainerType.html#Syncfusion_Blazor_LinearGauge_ContainerType_RoundedRectangle)" type will render the container as a rectangle with rounded corner radius. The rounded corner radius of the container can be customized using the  [RoundedCornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeContainer.html#Syncfusion_Blazor_LinearGauge_LinearGaugeContainer_RoundedCornerRadius) property in [LinearGaugeContainer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeContainer.html) class.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -126,7 +126,7 @@ The "[RoundedRectangle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 The "[Thermometer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ContainerType.html#Syncfusion_Blazor_LinearGauge_ContainerType_Thermometer)" type will render the container similar to the appearance of thermometer.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -150,7 +150,7 @@ The "[Thermometer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linea
 
 The Linear Gauge component is rendered with margin by default. To remove the margin around the Linear Gauge, the [AllowMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowMargin) property in [SfLinearGauge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html) class is set as "**false**".
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge AllowMargin="false" Width="100%" Height="100%"

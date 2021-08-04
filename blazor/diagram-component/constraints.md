@@ -35,7 +35,7 @@ Diagram constraints allow you to enable or disable the following behaviors. By d
 
 The following example shows how to disable PageEditable constraint from default diagram constraints.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@

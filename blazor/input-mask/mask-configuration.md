@@ -38,7 +38,7 @@ The mask can be formed by combining any one or more of these mask elements.
 
 The following example demonstrates the usage of standard mask elements.
 
-``` cshtml
+```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfMaskedTextBox Mask="#####" Placeholder="Mask ##### (ex: 012+-)" FloatLabelType="@FloatLabelType.Always"></SfMaskedTextBox>
