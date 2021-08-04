@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Print) method can be used to print a rendered chart directly from the browser.
+The `PrintAsync` method can be used to print a rendered chart directly from the browser.
 
 ```cshtml
 
@@ -34,9 +34,9 @@ The [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfC
 
     SfChart ChartObj;
 
-    private void Print(MouseEventArgs args)
+    private async Task Print(MouseEventArgs args)
     {
-        ChartObj.Print();
+        await ChartObj.PrintAsync();
     }
 
     public class ChartData
@@ -64,11 +64,11 @@ The [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfC
 
 ## Export
 
-Using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method, the rendered chart can be exported to [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [`Export Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and [`FileName`](Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) specifies the name of the exported file. Both of these parameters are required input parameters for this method.
+Using the `ExportAsync` method, the rendered chart can be exported to [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [`Export Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
 The optional parameters for this method are,
-* [`Orientation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) - Specifies the portrait or landscape orientation in the PDF document.
-* [`AllowDownload`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html#Syncfusion_Blazor_Charts_SfChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) - Specifies whether to download or not. If not, base64 string will be returned.
+* `Orientation` - Specifies the portrait or landscape orientation in the PDF document.
+* `AllowDownload` - Specifies whether to download or not. If not, base64 string will be returned.
 
 ```cshtml
 
@@ -91,9 +91,9 @@ The optional parameters for this method are,
 
     SfChart ChartObj;
 
-    private void Export(MouseEventArgs args)
+    private async Task Export(MouseEventArgs args)
     {
-        ChartObj.Export(ExportType.PNG, "pngImage");
+        await ChartObj.ExportAsync(ExportType.PNG, "pngImage");
     }
 
     public class ChartData

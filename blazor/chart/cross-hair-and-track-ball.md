@@ -97,7 +97,7 @@ The [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ## Crosshair Customization
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_Fill) and [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_TextStyle) property of the [`CrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html) is used to customize the background color and font style of the crosshair tooltip. The color and width of the crosshair line can be customized using the [`Line`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html#Syncfusion_Blazor_Charts_ChartCrosshairSettings_Line) property in the crosshair.
+The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html#Syncfusion_Blazor_Charts_ChartCommonCrosshairTooltip_Fill) and [`ChartCrosshairTextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairTextStyle.html) of the [`ChartAxisCrosshairTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonCrosshairTooltip.html) is used to customize the background color and text style of the crosshair tooltip. The color and width of the crosshair line can be customized using the [`ChartCrosshairLine`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairLine.html) of [`ChartCrosshairSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCrosshairSettings.html).
 
 ```cshtml
 

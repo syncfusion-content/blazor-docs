@@ -96,7 +96,7 @@ namespace BlazorApplication
 }
 ```
 
-**Note:** Use the following configuration to host your Blazor server application on **Azure SignalR**.
+> Use the following configuration to host your Blazor server application on **Azure SignalR**.
 
 ```c#
 using Syncfusion.Blazor;

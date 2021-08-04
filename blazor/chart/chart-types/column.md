@@ -11,8 +11,7 @@ documentation: ug
 
 ## Column
 
-[`Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time. To render a column series, set series
-[`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column).
+[`Column Chart`](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) is the most common chart type that is used to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories. It is ideal for showing variations in the value of an item over time. To render a column series, set series [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Column).
 
 ```cshtml
 
