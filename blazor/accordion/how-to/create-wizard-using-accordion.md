@@ -225,4 +225,4 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
 
 Output be like the below.
 
-![Accordion wizard](../images/wizard.png)
+![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)

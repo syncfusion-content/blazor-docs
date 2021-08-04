@@ -181,4 +181,4 @@ The following example shows how to render a TreeView within the Accordion,
 
 Output be like the below.
 
-![Treeview inside Accordion](../images/treeview.png)
+![Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)
