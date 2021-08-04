@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Resource Generator
 
-Syncfusion provides an option to generate a component's interop script and styles using the [`Custom Resource Generator`](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components from v19.2.0.44.
+Syncfusion provides an option to generate a component's interop script and styles using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components from v19.2.0.44.
 
 ![Custom resource generator preview for Blazor](images/custom-resource-generator-preview.png)
 
@@ -19,7 +19,7 @@ Search and select the required Syncfusion Blazor UI components from the CRG to g
 
 Refer to the following steps to search and select the components in CRG:
 
-1. Navigate to the Custom Resource Generator (CRG) application at [`CRG`](https://blazor.syncfusion.com/crg).
+1. Navigate to the Custom Resource Generator (CRG) application at [CRG](https://blazor.syncfusion.com/crg).
 
 2. Type the required component name in the search bar, and then select the checkbox. The dependency of the selected component is resolved in the application itself, so you do not need to choose each dependent component manually.
 
