@@ -9,13 +9,13 @@ documentation: ug
 
 # Columns in Blazor QueryBuilder Component
 
-The column definitions are used as the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) schema in the Query Builder. This plays a vital role in rendering column values. The Query Builder operations such as create or delete conditions and create or delete groups are performed based on the column definitions. The [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property of the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) is necessary to map the data source values in the query builder columns.
+The column definitions are used as the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) schema in the Query Builder. This plays a vital role in rendering column values. The Query Builder operations such as create or delete conditions and create or delete groups are performed based on the column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) property of the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) is necessary to map the data source values in the query builder columns.
 
 > If the column field is not specified in the data source, the column values will be empty.
 
 ## Auto generation
 
-The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from datasource when the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
+The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) are automatically generated from datasource when the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) declaration is empty or undefined while initializing the query builder. All the columns in the `DataSource` are bound as the query builder columns.
 
 > When columns are auto-generated, the column type will be determined from the first record of the data source.
 
@@ -49,13 +49,13 @@ The [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBui
 
 ## Labels
 
-By default, the column label is displayed from the column [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) value. To override the default label, you have to define the [`Label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Label) value.
+By default, the column label is displayed from the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Field) value. To override the default label, you have to define the [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Label) value.
 
 > If both the field and label are not defined in the column, the column renders with `empty` text.
 
 ## Operators
 
-The operator for a column can be defined in the [`Columns`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) property. You can directly set the custom operators using [`OperatorsModel`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.OperatorsModel.html) in columns `Operator` property. The available operators and its supported data types are:
+The operator for a column can be defined in the [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Columns) property. You can directly set the custom operators using [OperatorsModel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.OperatorsModel.html) in columns `Operator` property. The available operators and its supported data types are:
 
 | Operators | Description | Supported Types |
 | ------------ | ----------------------- | ------------------ |
@@ -79,7 +79,7 @@ The operator for a column can be defined in the [`Columns`](https://help.syncfus
 
 ## Step
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [`Step`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) allows you to set the step values to the number fields. It allows you to increase or decrease the numeric value with the predefined Step value using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Step) property.
 
 > By default the Step value is 1.
 
@@ -113,7 +113,7 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 
 ## Format
 
-The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) formats date and number values. Use the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Format) property, to format date and number values.
+The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) formats date and number values. Use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderColumn.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderColumn_Format) property, to format date and number values.
 
 > From the standard numeric format, you can use the numeric related format specifiers such as n,p, and c in the format property. By using these format specifiers, you can achieve the percentage and currency textbox behavior.
 
@@ -160,7 +160,7 @@ Output will be shown as
 
 ## Validations
 
-Validation allows you to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [`AllowValidation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) property to true.
+Validation allows you to validate the conditions and it display errors for invalid fields. To enable validation in the Query Builder, set [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) to true. Column fields are validated after setting [AllowValidation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_AllowValidation) property to true.
 
 > You can set `Min` and `Max` values for number values.
 
