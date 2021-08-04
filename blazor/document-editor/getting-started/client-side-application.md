@@ -17,7 +17,7 @@ Steps to get started with Word processor component for Blazor:
 
     ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-preview2.20160.5
-    ````
+    ```
 
 2. Select **Create a new project** from the Visual Studio dashboard.
 

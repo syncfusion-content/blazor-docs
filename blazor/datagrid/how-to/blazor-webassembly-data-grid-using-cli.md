@@ -25,7 +25,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
     ```bash
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
-    ````
+    ```
 
 2. Once project templates installed, run the following command line to create a new Blazor WebAssembly application.
 

@@ -30,7 +30,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ```bash
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
-    ````
+    ```
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
 
