@@ -106,7 +106,7 @@ The following output is displayed as a result of the above code example.
 
 You can enable / disable tool bar items by using the [`EnableToolbarItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~EnableToolbarItems.html) method.
 
-```htmlcs
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.TreeGrid;
