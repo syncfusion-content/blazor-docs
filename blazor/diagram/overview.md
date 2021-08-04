@@ -17,9 +17,9 @@ Overview control solves these problems by showing a preview, that is, an overall
 
 ## Create overview
 
-The [`SourceID`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfOverview.html#Syncfusion_Blazor_Diagrams_SfOverview_SourceID) property of overview should be set with the corresponding diagram ID for the overall view.
+The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfOverview.html#Syncfusion_Blazor_Diagrams_SfOverview_SourceID) property of overview should be set with the corresponding diagram ID for the overall view.
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfOverview.html#Syncfusion_Blazor_Diagrams_SfOverview_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfOverview.html#Syncfusion_Blazor_Diagrams_SfOverview_Height) properties of the overview allow you to define the size of the overview.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfOverview.html#Syncfusion_Blazor_Diagrams_SfOverview_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfOverview.html#Syncfusion_Blazor_Diagrams_SfOverview_Height) properties of the overview allow you to define the size of the overview.
 
 The following code illustrates how to create overview.
 

@@ -295,7 +295,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Class` to create a new class file (SyncTextBox.cs).
 
-2. Inherit the newly created class with [`ComponentBase`](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase) and override the [`BuildRenderTree`](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method to create the component.
+2. Inherit the newly created class with [ComponentBase](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase) and override the [BuildRenderTree](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method to create the component.
 
     ```c#
     using Microsoft.AspNetCore.Components;

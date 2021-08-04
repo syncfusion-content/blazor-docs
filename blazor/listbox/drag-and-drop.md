@@ -15,14 +15,14 @@ The elements can be customized on drag and drop by using the following events.
 
 | Events | Description |
 |------|------|
-| [`DragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_DragStart) | Triggers when the selected element's drag starts. |
-| [`Dragging`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_Dragging) | Triggers when the selected element is being dragged. |
-| [`OnDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_OnDrop) | Triggers before the selected element is dropped. |
-| [`Dropped`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_Dropped) | Triggers when the selected element is dropped. |
+| [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_DragStart) | Triggers when the selected element's drag starts. |
+| [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_Dragging) | Triggers when the selected element is being dragged. |
+| [OnDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_OnDrop) | Triggers before the selected element is dropped. |
+| [Dropped](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.ListBoxEvents-1.html#Syncfusion_Blazor_DropDowns_ListBoxEvents_1_Dropped) | Triggers when the selected element is dropped. |
 
 ## Single ListBox
 
-To drag and drop an item or group of item within the listbox can achieved by setting [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true`.
+To drag and drop an item or group of item within the listbox can achieved by setting [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true`.
 
 The following sample illustrates how to drag and drop an item within the same listbox.
 
@@ -61,7 +61,7 @@ Output will be shown as
 
 ## Multiple ListBox
 
-To drag and drop an item or group of item between two listbox can achieved by setting [`AllowDragAndDrop`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true` and [`Scope`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) should be set as `combined-list` in both the listbox.
+To drag and drop an item or group of item between two listbox can achieved by setting [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_AllowDragAndDrop) property to `true` and [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_Scope) should be set as `combined-list` in both the listbox.
 
 The following sample illustrates how to drag and drop an item between two listbox.
 

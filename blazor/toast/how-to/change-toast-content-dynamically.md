@@ -49,4 +49,4 @@ The Toast component supports to change its content dynamically while displaying 
     }
 }
 
-``````
+```

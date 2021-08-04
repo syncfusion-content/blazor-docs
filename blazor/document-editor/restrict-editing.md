@@ -9,7 +9,7 @@ documentation: ug
 
 # Restrict editing in Blazor DocumentEditor Component
 
-This [`Blazor Word Processor control`](https://www.syncfusion.com/blazor-components/blazor-word-processor) (DocumentEditor) provides 2 types of restriction for editing:
+This [Blazor Word Processor control](https://www.syncfusion.com/blazor-components/blazor-word-processor) (DocumentEditor) provides 2 types of restriction for editing:
 * Read-only: Allows all the users to view the document contents but not make changes to it.
 * Allows changes to certain portion of the document: Allows the users to edit to certain portion of the document.
 
@@ -41,4 +41,4 @@ Also, at some situations, you might need to allow changes for a certain portion 
 
 ![Restrict Editing Enabled](./images/protection-not-enforced.png)
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

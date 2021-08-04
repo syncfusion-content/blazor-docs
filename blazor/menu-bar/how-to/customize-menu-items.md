@@ -11,7 +11,7 @@ documentation: ug
 
 ## Add or Remove Menu Items
 
-Menu items can be added or removed using the [`InsertAfter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertAfter.html), [`InsertBefore`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertBefore.html) and [`RemoveItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~RemoveItems.html) methods.
+Menu items can be added or removed using the [InsertAfter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertAfter.html), [InsertBefore](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertBefore.html) and [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~RemoveItems.html) methods.
 
 In the following example, the `Europe` menu items are added before the Oceania item, the `Africa` menu items are added after the Asia, and the South America and Mexico items are removed from menu.
 
@@ -101,7 +101,7 @@ Output be like
 
 ## Enable or Disable Menu Items
 
-You can enable and disable the menu items using the [`Disabled`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in Menu items. To disable menuItems, set the `Disabled` property to true and vice-versa.
+You can enable and disable the menu items using the [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Disabled) property in Menu items. To disable menuItems, set the `Disabled` property to true and vice-versa.
 
 In the following example, the Directory header item, Conferences, and Music sub menu items are disabled.
 
@@ -164,7 +164,7 @@ Output be like
 
 ## Show or Hide Menu Items
 
-You can show or hide the menu items using the [`Hidden`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property in Menu items. To hide the menuItems, set the `Hidden` property to true and vice-versa.
+You can show or hide the menu items using the [Hidden](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Hidden) property in Menu items. To hide the menuItems, set the `Hidden` property to true and vice-versa.
 
 In the following example, the Movies header item, Workshops, and Music sub menu items are hidden in menu.
 

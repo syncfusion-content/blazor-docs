@@ -13,7 +13,7 @@ documentation: ug
 
 The visibility of row, column, value and filter axis in Field List and Grouping Bar can be changed using custom CSS setting. To do so, please refer the code sample below:
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 <SfPivotView TValue="ProductDetails" ID="PivotView" ShowGroupingBar="true" ShowFieldList="true">
     <PivotViewDataSourceSettings DataSource="@data">
@@ -111,7 +111,7 @@ The visibility of row, column, value and filter axis in Field List and Grouping 
 
 The alignment of text inside row headers, column headers, value cells and summary cells can be changed using custom CSS setting. To do so, please refer the code sample below:
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 <SfPivotView TValue="ProductDetails">
     <PivotViewDataSourceSettings DataSource="@dataSource">
@@ -175,7 +175,7 @@ The alignment of text inside row headers, column headers, value cells and summar
 
 The elements in pivot table like header cell, value cell and summary cell style can be customized using built-in CSS names. To do so, please refer the code sample below:
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.PivotView
 <SfPivotView TValue="ProductDetails" ID="PivotView" ShowFieldList="true">
     <PivotViewDataSourceSettings DataSource="@data">

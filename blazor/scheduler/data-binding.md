@@ -414,7 +414,7 @@ Now you can configure the Scheduler using the `SfDataManager` to interact with t
 }
 ```
 
-> You can find the working sample [`here`](https://github.com/SyncfusionExamples/blazor-scheduler-crud).
+> You can find the working sample [here](https://github.com/SyncfusionExamples/blazor-scheduler-crud).
 
 ## Passing additional parameters to the server
 

@@ -13,7 +13,7 @@ The Range Selector's left and right thumbs are used to indicate the selected ran
 
 * By dragging the thumbs.
 * By tapping on the labels.
-* By setting the start and the end through the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property.
+* By setting the start and the end through the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property.
 
 <!-- markdownlint-disable MD036 -->
 
@@ -26,7 +26,7 @@ This section describes how to bind the value to the Range Selector component in 
 
 **One-way binding**
 
-As shown in the following example, the [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property can be used directly as an object or from code-behind for the Range Selector.
+As shown in the following example, the [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) property can be used directly as an object or from code-behind for the Range Selector.
 
 ```cshtml
 

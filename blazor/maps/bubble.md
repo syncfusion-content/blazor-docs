@@ -11,7 +11,7 @@ documentation: ug
 
 Bubbles in the Maps component represent the underlying data values of the maps. Bubbles are scattered throughout the map shapes that contain bound values.
 
-To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleSettings.html), and set [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) as `Population`. The following code example demonstrates how to enable bubbles for the World map with data source.
+To add bubbles to the maps, bind data source to [MapsBubble](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleSettings.html), and set [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) as `Population`. The following code example demonstrates how to enable bubbles for the World map with data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -65,7 +65,7 @@ To add bubbles to the maps, bind data source to [`MapsBubble`](https://help.sync
 
 ## Bubble sizing
 
-Using the [`MinRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MinRadius) and [`MaxRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MaxRadius) properties in [`MapsBubble`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html), you can render the bubbles in different sizes based on the [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) and [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_DataSource) values.
+Using the [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MinRadius) and [MaxRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MaxRadius) properties in [MapsBubble](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html), you can render the bubbles in different sizes based on the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_DataSource) values.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -127,7 +127,7 @@ Using the [`MinRadius`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## Multiple bubble groups
 
-You can specify multiple types of bubble groups using the [`MapsBubble`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html) property and customize it according to your requirement.
+You can specify multiple types of bubble groups using the [MapsBubble](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html) property and customize it according to your requirement.
 
 In the following code example, the gender-wise population ratio is demonstrated with two different bubble groups.
 
@@ -210,7 +210,7 @@ In the following code example, the gender-wise population ratio is demonstrated 
 
 ## Enabling legend for bubble
 
-To enable the legends for bubbles, set [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_Visible) to true and set [`Type`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendType.html) to [`Bubbles`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendType.html) in [`MapsLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
+To enable the legends for bubbles, set [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_Visible) to true and set [Type](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendType.html) to [Bubbles](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendType.html) in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
 
 The following code example demonstrates how to enable the legends for bubbles with each bubble different colors rendering.
 

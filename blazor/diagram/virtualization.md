@@ -15,7 +15,7 @@ Virtualization is the process of loading the diagramming objects available in th
 
 This feature gives an optimized performance while loading and dragging items to the Diagram that consists of many Nodes and Connectors.
 
-The following code illustrates how to enable [`Virtualization`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html) mode in the diagram.
+The following code illustrates how to enable [Virtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConstraints.html) mode in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

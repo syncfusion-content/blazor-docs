@@ -17,13 +17,13 @@ The UML class diagram shapes are explained as follows.
 
 ## Class
 
-* A class describes a set of objects that shares the same specifications of features, constraints, and semantics. To define a class object, you should define the classifier as [`Class`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html).
+* A class describes a set of objects that shares the same specifications of features, constraints, and semantics. To define a class object, you should define the classifier as [Class](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html).
 
-* Also, define the [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html#Syncfusion_Blazor_Diagrams_DiagramUmlClass_Name), [`Attributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html#Syncfusion_Blazor_Diagrams_DiagramUmlClass_Attributes), and [`Methods`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html#Syncfusion_Blazor_Diagrams_DiagramUmlClass_Methods) of the class using the class property of node.
+* Also, define the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html#Syncfusion_Blazor_Diagrams_DiagramUmlClass_Name), [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html#Syncfusion_Blazor_Diagrams_DiagramUmlClass_Attributes), and [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClass.html#Syncfusion_Blazor_Diagrams_DiagramUmlClass_Methods) of the class using the class property of node.
 
-* The attribute’s [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassAttribute.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassAttribute_Name), [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassAttribute.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassAttribute_Type), and [`Scope`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassAttribute.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassAttribute_Scope) properties allow you to define the name, data type, and visibility of the attribute.
+* The attribute’s [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassAttribute.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassAttribute_Name), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassAttribute.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassAttribute_Type), and [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassAttribute.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassAttribute_Scope) properties allow you to define the name, data type, and visibility of the attribute.
 
-* The method’s [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Name), [`Parameters`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Parameters), [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Type), and [`Scope`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Scope) properties allow you to define the name, parameter, return type, and visibility of the methods.
+* The method’s [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Name), [Parameters](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Parameters), [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Type), and [Scope](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlClassMethod.html#Syncfusion_Blazor_Diagrams_DiagramUmlClassMethod_Scope) properties allow you to define the name, parameter, return type, and visibility of the methods.
 
 * The method parameters object properties allow you to define the name and type of the parameter.
 
@@ -80,9 +80,9 @@ The UML class diagram shapes are explained as follows.
 
 ## Interface
 
-* An Interface is a kind of classifier that represents a declaration of a set of coherent public features and obligations. To create an interface, define the classifier property as [`Interface`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html).
+* An Interface is a kind of classifier that represents a declaration of a set of coherent public features and obligations. To create an interface, define the classifier property as [Interface](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html).
 
-* Also, define the [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html#Syncfusion_Blazor_Diagrams_DiagramUmlInterface_Name), [`Attributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html#Syncfusion_Blazor_Diagrams_DiagramUmlInterface_Attributes), and [`Methods`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html#Syncfusion_Blazor_Diagrams_DiagramUmlInterface_Methods) of the interface using the interface property of the node.
+* Also, define the [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html#Syncfusion_Blazor_Diagrams_DiagramUmlInterface_Name), [Attributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html#Syncfusion_Blazor_Diagrams_DiagramUmlInterface_Attributes), and [Methods](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlInterface.html#Syncfusion_Blazor_Diagrams_DiagramUmlInterface_Methods) of the interface using the interface property of the node.
 
 * The attribute’s name, type, and scope properties allow you to define the name, data type, and visibility of the attribute.
 
@@ -147,7 +147,7 @@ The UML class diagram shapes are explained as follows.
 
 ## Enumeration
 
-* To define an enumeration, define the classifier property of node as [`Enumeration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlEnumeration.html). Also, define the name and members of the enumeration using the enumeration property of the node.
+* To define an enumeration, define the classifier property of node as [Enumeration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramUmlEnumeration.html). Also, define the name and members of the enumeration using the enumeration property of the node.
 
 * You can set a name for the enumeration members collection using the name property of members collection.
 
@@ -209,7 +209,7 @@ The UML class diagram shapes are explained as follows.
 
 * The connector shape property defines the role or meaning of the connector.
 
-* The different types of connector shapes are `BPMN`, [`UmlClassifier`](https://help.syncfusion.com/cr/blazor) and [`UmlActivity`](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
+* The different types of connector shapes are `BPMN`, [UmlClassifier](https://help.syncfusion.com/cr/blazor) and [UmlActivity](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
 
 * The type of flow shapes in a BPMN process are sequence, association, and message.
 
@@ -233,7 +233,7 @@ Association is basically a set of links that connects elements of an UML model. 
 1. Directional
 2. BiDirectional
 
-The association property allows you to define the type of association. The default value of association is [`Directional`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html). The following code example illustrates how to create an association.
+The association property allows you to define the type of association. The default value of association is [Directional](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.BpmnAssociationFlows.html). The following code example illustrates how to create an association.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

@@ -9,7 +9,7 @@ documentation: ug
 
 # Select Items in Blazor ListBox Component
 
-In the following example, `Bugatti Chiron` is selected using [`SelectItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItems_System_Object_System_Boolean_) method.
+In the following example, `Bugatti Chiron` is selected using [SelectItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html#Syncfusion_Blazor_DropDowns_SfListBox_2_SelectItems_System_Object_System_Boolean_) method.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

@@ -38,9 +38,9 @@ namespace BlazorApplication
 
 Localization library allows you to localize default text content of the pivot table. The pivot table component has static text of some features (like drop and drop region, pivot field list, etc...) that can be changed to other cultures (Arabic, Deutsch, French, etc...).The static local texts in the pivot table component can be changed to other culture by referring the Resource file. You can refer more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/).
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
-* Add **.resx** file to [`Resource`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
 ```csharp
 <Component_Name>_<Feature_Name>_<Locale_Key>
@@ -359,7 +359,7 @@ In the following example, we have demonstrate how to enable **Localization** for
     }
     ```
 
-    > Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+    > Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
@@ -524,7 +524,7 @@ In the following examples, demonstrate how to enable **Localization** for pivot 
 
 ## Internationalization
 
-Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format). In the below sample we set the culture and currency using the `SetCulture` and `SetCurrencyCode` methods.
+Internationalization library is used to globalize number, date, and time values in pivot table component using format strings in the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format). In the below sample we set the culture and currency using the `SetCulture` and `SetCurrencyCode` methods.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView;
@@ -572,7 +572,7 @@ Internationalization library is used to globalize number, date, and time values 
 
 ```
 
-> * In the above sample, **Amount** column is formatted by [`Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format).
+> * In the above sample, **Amount** column is formatted by [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewFormatSetting.html#Syncfusion_Blazor_PivotView_PivotViewFormatSetting_Format).
 > * Default culture is **en-US**. If you want to change the **en-US** culture to a different culture, you have to set accordingly in `SetCulture` method.
 > * The decimal separators of pivot table values varies based on the culture applied to the component.
 
