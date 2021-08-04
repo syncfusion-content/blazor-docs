@@ -11,7 +11,7 @@ documentation: ug
 
 Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
 
-To know more about Bitwise operators, refer to the [`Bitwise Operations`](#bitwise-operations).
+To know more about Bitwise operators, refer to the [Bitwise Operations](#bitwise-operations).
 
 ## Diagram constraints
 
@@ -70,7 +70,7 @@ DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramCons
 
 ```
 
-The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations) in the diagram.
+The diagram constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations) in the diagram.
 
 ```csharp
 //Removing multiple constraints from default
@@ -151,7 +151,7 @@ NodeConstraints NodeConstraints = NodeConstraints.Default | NodeConstraints.Shad
 
 ```
 
-The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
+The node constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ```csharp
  //Removing multiple constraints from default
@@ -222,7 +222,7 @@ ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default | Conne
 
 ```
 
-The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
+The connector constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ```csharp
 //Removing multiple constraints from default
@@ -292,7 +292,7 @@ The following another code example shows to modify the port constraints to accep
 port.Constraints = PortConstraints.InConnect;
 ```
 
-The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
+The port constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ```csharp
 //Enable to create target connection alone.
@@ -481,7 +481,7 @@ The following code shows how to show only horizontal gridlines.
 }
 ```
 
-The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [`Bitwise Operations`](#bitwise-operations).
+The snap constraints are provided as flagged enumerations, so that multiple behaviors can be added or removed from the default constraints using the [Bitwise Operations](#bitwise-operations).
 
 ```csharp
 snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;

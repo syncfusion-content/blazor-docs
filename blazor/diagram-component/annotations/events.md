@@ -107,10 +107,10 @@ The following code example shows how to register and get the notification from t
 
 ## See also
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)
 
-* [`How to add annotation for Node`](./node-annotation)
+* [How to add annotation for Node](./node-annotation)
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)

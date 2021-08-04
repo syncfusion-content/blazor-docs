@@ -201,8 +201,8 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)
