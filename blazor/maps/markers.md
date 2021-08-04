@@ -11,7 +11,7 @@ documentation: ug
 
 Markers are notes that are used to leave a message on the Maps component. It indicates or marks a specific location with desired symbols on the maps.
 
-The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_DataSource) property has a list of objects that contains data for markers. By default, it displays the bound data at the specified latitude and longitude. Using the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Visible) API, you can enable or disable the markers.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_DataSource) property has a list of objects that contains data for markers. By default, it displays the bound data at the specified latitude and longitude. Using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Visible) API, you can enable or disable the markers.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -50,7 +50,7 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 
 <b>Adding marker objects to map</b>
 
-The n number of markers can be added to shape layers using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_DataSource) property. Each dataSource object contains the following list of properties:
+The n number of markers can be added to shape layers using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_DataSource) property. Each dataSource object contains the following list of properties:
 
 * city - Displays some information about the annotation in text format.
 * Latitude - Determines the y-axis position of annotation.
@@ -92,7 +92,7 @@ The n number of markers can be added to shape layers using the [`DataSource`](ht
 
 ## Marker shapes
 
-The Maps component contains the following marker shapes. You can select any shape using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Shape) property in [`MapsMarker`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarker.html).
+The Maps component contains the following marker shapes. You can select any shape using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_Shape) property in [MapsMarker](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarker.html).
 
 * Ballon
 * Circle
@@ -283,7 +283,7 @@ The cluster is formed by grouping an identical and non-identical marker from the
 
 ## Enabling legend for markers
 
-The legend can be enabled for markers using [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum) as **Markers** and setting [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) to true in [`MapsLegendSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
+The legend can be enabled for markers using [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Minimum) as **Markers** and setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) to true in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
 
 The following code snippet demonstrates how to enable legend for markers.
 
@@ -333,7 +333,7 @@ The Maps component provides support to hide and cluster markers when they overla
 
 The number on a cluster indicates how many overlapped markers it contains. If you zoom any cluster location, the number on the cluster is decreased, and you can see the individual marker on the maps. When zooming out, the overlapping marker is increased, so that you can cluster it again and increase the count over the cluster.
 
-Using the [`AllowClustering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) API in [`MapsMarkerClusterSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) option, you can enable or disable the cluster support. The [`MapsMarkerClusterSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) also helps to customize clusters.
+Using the [AllowClustering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html#Syncfusion_Blazor_Maps_MapsMarkerClusterSettings_AllowClustering) API in [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) option, you can enable or disable the cluster support. The [MapsMarkerClusterSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerClusterSettings.html) also helps to customize clusters.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

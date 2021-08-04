@@ -49,7 +49,7 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagrams** pa
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```c#
-@using Syncfusion.Blazor;
+using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {

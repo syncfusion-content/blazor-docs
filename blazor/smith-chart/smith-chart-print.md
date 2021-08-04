@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The rendered Smith Chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Print).
+The rendered Smith Chart can be printed directly from the browser by calling the public method [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Print).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -52,7 +52,7 @@ The rendered Smith Chart can be printed directly from the browser by calling the
 
 ## Export
 
-The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__) method in the Smith Chart. This method contains the following parameters:
+The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [Export](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__) method in the Smith Chart. This method contains the following parameters:
 
 * **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format.
 * **File name** - To specify the file name to export.

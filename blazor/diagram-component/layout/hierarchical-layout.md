@@ -150,6 +150,6 @@ public void UpdateMargin()
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to create a connector`](../connectors/connectors)
+* [How to create a connector](../connectors/connectors)

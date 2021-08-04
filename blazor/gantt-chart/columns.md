@@ -258,7 +258,7 @@ The column header text can be defined using the `HeaderText` property, and you c
 
 ## Format
 
-To format the cell values based on a specific culture, use the `GanttColumn.Format` property. The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component uses the `Internationalization` library to format `number` and `date` values.
+To format the cell values based on a specific culture, use the `GanttColumn.Format` property. The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component uses the `Internationalization` library to format `number` and `date` values.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

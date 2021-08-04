@@ -15,7 +15,7 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 
 ## Shapes
 
-To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [`Tool`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Tool) property. The following code example illustrates how to draw a rectangle at runtime.
+To draw a shape, set the JSON of that shape to the drawType property of the diagram and activate the drawing tool by using the [Tool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Tool) property. The following code example illustrates how to draw a rectangle at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -74,7 +74,7 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
 
 ## Connectors
 
-To draw connectors, set the JSON of the connector to the drawType property. The drawing [`Tool`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDiagram.html) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
+To draw connectors, set the JSON of the connector to the drawType property. The drawing [Tool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDiagram.html) can be activated by using the tool property. The following code example illustrates how to draw a straight line connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -287,7 +287,7 @@ When more than one of those tools are applied, a tool is activated based on the 
 |5th|SingleSelect|Allows you to select individual nodes or connectors.|
 |6th|None|Disables all tools.|
 
-Set the desired [`Tool`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDiagram.html) to the tool property of the diagram model.
+Set the desired [Tool](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IDiagram.html) to the tool property of the diagram model.
 
 The following code illustrates how to enable single tools,
 

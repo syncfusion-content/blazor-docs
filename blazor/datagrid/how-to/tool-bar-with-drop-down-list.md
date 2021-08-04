@@ -9,7 +9,7 @@ documentation: ug
 
 # Create custom toolbar with drop-down list in Blazor DataGrid Component
 
-You can create your own ToolBar items in the DataGrid. It can be added by defining the [`Toolbar`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar). Actions for this ToolBar template items are defined in the [`ToolbarClick`]
+You can create your own ToolBar items in the DataGrid. It can be added by defining the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Toolbar). Actions for this ToolBar template items are defined in the [ToolbarClick`]
 
 **Step 1**:
 
@@ -32,7 +32,7 @@ Initialize the template for your custom component. Using the following code add 
 
 **Step 2**:
 
-To render the DropDownList component, use the [`DropDownListEvents`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-1.html)
+To render the DropDownList component, use the [DropDownListEvents](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-1.html)
 You can select the datagrid row index based on the selected data in the DropDownList. The output will appear as follows.
 
 ```cshtml
@@ -112,4 +112,4 @@ You can select the datagrid row index based on the selected data in the DropDown
 ```
 
 Output be like the below.
-![`Final output`](../images/dropdowntoolbar.PNG)
+![Final output](../images/dropdowntoolbar.PNG)

@@ -10,7 +10,7 @@ documentation: ug
 
 # Bind data from RESTful web services to Syncfusion Blazor components and perform CRUD operations
 
-In this topic, we are going to learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, we have fetched data from the ODataV4 service using [`ODataV4Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
+In this topic, we are going to learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, we have fetched data from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
 
 It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Please refer to the following documentation to know about the available Adaptors of SfDataManager.
  * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/)
@@ -261,7 +261,7 @@ Now, in the **Browse** tab, search and install the **Syncfusion.Blazor.Grid** Nu
 
 ![Add Syncfusion package](../images/odata-syncfusion-package.png)
 
-> For this demo, we have used Syncfusion.Blazor(**19.1.0.66**) NuGet package. We have released a new **Syncfusion.Blazor** NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the latest versions by using this [`link`](https://www.nuget.org/packages/Syncfusion.Blazor).
+> For this demo, we have used Syncfusion.Blazor(**19.1.0.66**) NuGet package. We have released a new **Syncfusion.Blazor** NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
@@ -318,7 +318,7 @@ In previous steps, we have successfully configured the Syncfusion Blazor package
 
 To consume data from the OData Controller, we need to add the **SfDataManager** with **ODataV4Adaptor**. Please refer to the following documentation for more details on ODataV4Adaptor.
 
-[`ODataV4Adaptor`](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
+[ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor)
 
 ```cshtml
 
@@ -330,7 +330,7 @@ To consume data from the OData Controller, we need to add the **SfDataManager** 
 
 > In the above code example, we have used our localhost address from our application. Instead of localhost, you can give the exact URL of your OData service.
 
-Grid columns can be defined by using the [`GridColumn`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
+Grid columns can be defined by using the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html) component. We are going to create columns using the following code.
 
 ```cshtml
 
@@ -371,7 +371,7 @@ public class OrdersController : ODataController
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-We can enable editing in the grid component using the [`GridEditSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [`Inline/Normal`](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [`Dialog`](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [`Batch`](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
+We can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
 
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.
@@ -391,7 +391,7 @@ We have added the DataGrid Editing and Toolbar code with previous Grid model.
 
 ```
 
-> Normal editing is the default edit mode for the DataGrid component. Set the [`IsPrimaryKey`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
+> Normal editing is the default edit mode for the DataGrid component. Set the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsPrimaryKey) property of Column as **true** for a particular column, whose value is a unique value for editing purposes.
 
 ### Insert a row
 

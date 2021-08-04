@@ -9,17 +9,17 @@ documentation: ug
 
 # Data Binding in Blazor DataGrid Component
 
-The DataGrid uses [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) value can be assigned either with the property values from [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
+The DataGrid uses [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html), which supports both RESTful JSON data services binding and IEnumerable binding. The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) value can be assigned either with the property values from [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or list of business objects.
 
 It supports the following kinds of data binding method:
 * List binding
 * Remote data
 
-> When using [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the datagrid component.
+> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the datagrid component.
 
 ## List binding
 
-To bind list binding to the datagrid, you can assign a IEnumerable object to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
+To bind list binding to the datagrid, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using[SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -57,7 +57,7 @@ To bind list binding to the datagrid, you can assign a IEnumerable object to the
 }
 ```
 
-> By default, [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+> By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
 ### ExpandoObject binding
 
@@ -69,7 +69,7 @@ To know about **ExpandoObject** data binding in Blazor DataGrid component, you c
 "youtube:https://www.youtube.com/watch?v=Xhaw3DdHmJk"%}
 
 
-**ExpandoObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
+**ExpandoObject** can be bound to datagrid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in ExpandoObject.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -173,9 +173,9 @@ To know about **DynamicObject** data binding in Blazor DataGrid component, you c
 
 
 
-**DynamicObject** can be bound to datagrid by assigning to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in DynamicObject.
+**DynamicObject** can be bound to datagrid by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. Grid can also perform all kind of supported data operations and editing in DynamicObject.
 
-> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+> The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -299,14 +299,14 @@ The following image represents DynamicObject complex data binding
 
 ## Remote data
 
-To bind remote data to datagrid component, assign service data as an instance of [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using[`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source,  provide the endpoint **Url**.
+To bind remote data to datagrid component, assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property or by using[SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component. To interact with remote data source,  provide the endpoint **Url**.
 
-> When using [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the datagrid component.
-> By default, [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
+> When using [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding then the **TValue** must be provided explicitly in the datagrid component.
+> By default, [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **ODataAdaptor** for remote data-binding.
 
 ### Binding with OData services
 
-[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote Data binding using **OData** service.
+[OData](http://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from OData service using the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote Data binding using **OData** service.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -337,7 +337,7 @@ To bind remote data to datagrid component, assign service data as an instance of
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
+The ODataV4 is an improved version of OData protocols, and the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the **ODataV4Adaptor**.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -408,7 +408,7 @@ The sample response object should look like this:
 
 ### Enable SfDataManager after initial rendering
 
-It is possible to render the datasource in DataGrid after initial rendering. This can be achieved by conditionally enabling the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component after datagrid rendering.
+It is possible to render the datasource in DataGrid after initial rendering. This can be achieved by conditionally enabling the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component after datagrid rendering.
 
 The following sample code demonstrates enabling data manager condition in the DataGrid on button click,
 
@@ -457,7 +457,7 @@ The following GIF represents dynamically rendering data manager in DataGrid,
 
 ### Sending additional parameters to the server
 
-To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
+To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
 The following sample code demonstrates sending additional paramaters using the Query property,
 
@@ -509,9 +509,9 @@ To troubleshoot the requests and responses made using HttpClient, a custom HTTP 
 
 ### Handling HTTP error
 
-During server interaction from the datagrid, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+During server interaction from the datagrid, sometimes server-side exceptions might occur. These error messages or exception details can be acquired in client-side using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
-The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
 The following sample code demonstrates notifying user when server-side exception has occurred,
 
@@ -590,7 +590,7 @@ Getting the bearer token may vary with access token providers. More information 
 
 ### Setting custom headers
 
-To add a custom headers to the data request, use the [`Headers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+To add a custom headers to the data request, use the [Headers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Headers) property of the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The following sample code demonstrates adding custom headers to the `SfDataManager` request,
 
@@ -625,7 +625,7 @@ The following sample code demonstrates adding custom headers to the `SfDataManag
 
 ### Change Query parameter value dynamically
 
-It is possible to dynamically modify datagrid's [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property value.
+It is possible to dynamically modify datagrid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property value.
 
 The following sample code demonstrates achieving this,
 
@@ -670,7 +670,7 @@ The following GIF represents dynamically modifying the query property in DataGri
 
 ## SQL Server data binding(SQL Client)
 
-The following examples demonstrate,how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor DataGrid. You can achieve this requirement by using [`Custom Adaptor`](./custom-binding/#custom-adaptor-as-component).
+The following examples demonstrate,how to consume data from SQL Server using Microsoft SqlClient and bound it to Blazor DataGrid. You can achieve this requirement by using [Custom Adaptor](./custom-binding/#custom-adaptor-as-component).
 
 Before the implementation, add required NuGet like **Microsoft.Data.SqlClient** and **Syncfusion.Blazor** in your application. In the below sample, Custom Adaptor can be created as a Component. In custom adaptor **Read** method you can get grid action details like paging, filtering, sorting information etc., using **DataManagerRequest**.
 
@@ -774,7 +774,7 @@ Based on the DataManagerRequest, you can form SQL query string (to perform pagin
 }
 ```
 
-> * In this [`sample`](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding),paging action is handled for Blazor grid based on your need you can extend the given logic for other operations.
+> * In this [sample](https://github.com/SyncfusionExamples/blazor-grid-sqldatabinding),paging action is handled for Blazor grid based on your need you can extend the given logic for other operations.
 > * For performing data manipulation, you can override available methods such as **Insert**, **Update** and **Remove** of the Custom Adaptor.
 
 ## Entity Framework
@@ -915,12 +915,12 @@ Now you can configure the datagrid using the **'SfDataManager'** to interact wit
 }
 ```
 
-To perform datagrid CRUD operation using Entity Framework. You can refer [`here`](./editing/#entity-framework).
->You can find the fully working sample [`here`](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
+To perform datagrid CRUD operation using Entity Framework. You can refer [here](./editing/#entity-framework).
+>You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
 ## Http client
 
-It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending Http requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [`HttpClient`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
+It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending Http requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
 
 This can be achieved by initially injecting the `HttpClient` instance in the app.
 
@@ -997,7 +997,7 @@ Then using the `GetJsonAsync` method request is sent to the api controller for f
 }
 ```
 
-> The above steps are processed in the blazor WebAssembly app which has the preconfigured `HttpClient` service. For blazor server apps, web api calls are created using [`IHttpClientFactory`](https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory). More information on making requests using `IHttpClientFactory` is available in this [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0).
+> The above steps are processed in the blazor WebAssembly app which has the preconfigured `HttpClient` service. For blazor server apps, web api calls are created using [IHttpClientFactory](https://docs.microsoft.com/dotnet/api/system.net.http.ihttpclientfactory). More information on making requests using `IHttpClientFactory` is available in this [link](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0).
 
 ## Observable Collection
 
@@ -1147,9 +1147,9 @@ public void ConfigureServices(IServiceCollection services)
 
 ## Handling exceptions
 
-Exceptions occurred during grid actions can be handled without stopping application. These error messages or exception details can be acquired using the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
+Exceptions occurred during grid actions can be handled without stopping application. These error messages or exception details can be acquired using the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event.
 
-The argument passed to the [`OnActionFailure`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
+The argument passed to the [OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_OnActionFailure) event contains the error details returned from the server.
 
 > We recommend you to bind **OnActionFailure** event during your application development phase, this helps you to find any exceptions. You can pass these exception details to our support team to get solution as early as possible.
 

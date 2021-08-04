@@ -11,7 +11,7 @@ documentation: ug
 
 The localization library allows you to localize the default text content of the Kanban to different cultures using the `Locale` property.
 
-> Use `Resource` file to translate the static text of the kanban. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
+> Use `Resource` file to translate the static text of the kanban. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
 
 By using `Locale` property, you can set the culture dynamically in kanban component.
 

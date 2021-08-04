@@ -15,7 +15,7 @@ Bing maps is a map of the entire World owned by Microsoft. As like OSM, it provi
 
 One of the most important features in Blazor Maps component is the built-in online map provider support. By using this feature, you can render Bing maps in the maps component. This provides the ability to visualize satellite, aerial, and street maps without using any external shape files.
 
-You can enable this feature by setting [`LayerType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) to “ShapeLayerType.Bing”.
+You can enable this feature by setting [LayerType](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) to “ShapeLayerType.Bing”.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -40,7 +40,7 @@ You can enable this feature by setting [`LayerType`](https://help.syncfusion.com
 * **CanvasLight** - Displays light version of the road maps.
 * **CanvasGray** - Displays grayscale version of the road maps.
 
-To render the light version of the road maps, set the [`BingMapType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_BingMapType) to [`CanvasLight`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.BingMapType.html) as demonstrated in the following code sample.
+To render the light version of the road maps, set the [BingMapType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_BingMapType) to [CanvasLight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.BingMapType.html) as demonstrated in the following code sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

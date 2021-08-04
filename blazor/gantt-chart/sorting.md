@@ -114,7 +114,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 
 ## Sorting Column on Gantt Chart Initialization
 
-The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

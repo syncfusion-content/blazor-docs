@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor Gantt Chart Component
 
-The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has a support to display a tooltip for various UI elements like taskbar, timeline cells, and grid cells
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has a support to display a tooltip for various UI elements like taskbar, timeline cells, and grid cells
 
 ## Enable Tooltip
 

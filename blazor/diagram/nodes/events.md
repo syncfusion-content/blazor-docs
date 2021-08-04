@@ -13,7 +13,7 @@ Diagram provides some events support for node that triggers when interacting the
 
 ## Selection change
 
-The [`SelectionChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_SelectionChanged) events is triggered when select/unselect the node or connector. The [`IBlazorSelectionChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorSelectionChangeEventArgs.html) interface is used to get selection change event arguments.
+The [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_SelectionChanged) events is triggered when select/unselect the node or connector. The [IBlazorSelectionChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorSelectionChangeEventArgs.html) interface is used to get selection change event arguments.
 
 The following code example explains how to get the selection change event in the diagram.
 
@@ -54,7 +54,7 @@ The following code example explains how to get the selection change event in the
 
 ## Position change
 
-The [`OnPositionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) events is triggered when drag the node or connector in interaction. The [`IBlazorDraggingEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDraggingEventArgs.html) interface is used to get position change event arguments.
+The [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) events is triggered when drag the node or connector in interaction. The [IBlazorDraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IBlazorDraggingEventArgs.html) interface is used to get position change event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -92,7 +92,7 @@ The [`OnPositionChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Size change
 
-The [`OnSizeChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnSizeChange) events is triggered when resizing the node during the interaction. The [`ISizeChangeEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ISizeChangeEventArgs.html) interface is used to get size change event arguments.
+The [OnSizeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnSizeChange) events is triggered when resizing the node during the interaction. The [ISizeChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.ISizeChangeEventArgs.html) interface is used to get size change event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -130,7 +130,7 @@ The [`OnSizeChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ## Rotate change
 
-The [`OnRotateChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnRotateChange) events is triggered when resizing the node during the interaction. The [`IRotationEventArgs`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IRotationEventArgs.html) interface is used to get size change event arguments.
+The [OnRotateChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnRotateChange) events is triggered when resizing the node during the interaction. The [IRotationEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IRotationEventArgs.html) interface is used to get size change event arguments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -168,8 +168,8 @@ The [`OnRotateChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
 
 ## See also
 
-* [`How to interact the node in diagram`](./interaction)
+* [How to interact the node in diagram](./interaction)
 
-* [`How to get events when they interact the connector`](../connectors/events)
+* [How to get events when they interact the connector](../connectors/events)
 
-* [`How to get events when they interact the annotation`](../annotations/events)
+* [How to get events when they interact the annotation](../annotations/events)

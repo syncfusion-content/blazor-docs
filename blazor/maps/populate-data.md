@@ -17,7 +17,7 @@ The shape data collection describes geographical shape information that can be o
 
 ## Data source
 
-The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, you can provide a list of objects as input. This data source will be further used to color the map, display data labels, display tooltips, and more.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, you can provide a list of objects as input. This data source will be further used to color the map, display data labels, display tooltips, and more.
 
 ```cshtml
 @code{
@@ -57,14 +57,14 @@ The [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 
 ## Data binding
 
-The following properties in the [`MapsLayer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html) are used for binding data in the Maps component. Both the properties are related to each other.
+The following properties in the [MapsLayer](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html) are used for binding data in the Maps component. Both the properties are related to each other.
 
 * ShapePropertyPath
 * ShapeDataPath
 
 <b>Shape property path</b>
 
-The [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property is used to refer the field name in the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) property of shape layers to identify the shape.
+The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property is used to refer the field name in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) property of shape layers to identify the shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -97,7 +97,7 @@ The [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 <b>Shape data path</b>
 
-The [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property is similar to the [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property, but it refers the field name in `DataSource` property value.
+The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property is similar to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property, but it refers the field name in `DataSource` property value.
 For example, following population data contains field 'Name', 'Population' and 'Density'. Here the 'Name' field is set to the `ShapeDataPath` to map the corresponding name field value of shape data.
 
 ```cshtml
@@ -132,7 +132,7 @@ For example, following population data contains field 'Name', 'Population' and '
 
 In the above example, both 'name' fields contain the same value as 'Afghanistan', this value is matched in both shape data and statistical data, so that the details associated with 'Afghanistan' will be mapped to the corresponding shape and used to color the corresponding shape, display data labels, display tooltips, and more.
 
-When values of the [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property in the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) and [`ShapePropertyPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) in the [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) match, then the associated object from the DataSource is bound to the corresponding shape.
+When values of the [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) and [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) match, then the associated object from the DataSource is bound to the corresponding shape.
 
 Refer both shape data and data source as demonstrated in the following code example.
 
@@ -186,13 +186,13 @@ Refer both shape data and data source as demonstrated in the following code exam
 }
 ```
 
-> You can also set the [`MapsDataLabelSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) property to display the bound items.
+> You can also set the [MapsDataLabelSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) property to display the bound items.
 
 ![Maps with data source](./images/populatedata/Populatedata.png)
 
 ## Fetching data from JSON file
 
-You can also read the JSON file data, convert it to the C# object, and assign it to the Maps component's [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property.
+You can also read the JSON file data, convert it to the C# object, and assign it to the Maps component's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property.
 
 Refer to the following code sample for fetching  data from JSON file.
 
@@ -273,11 +273,11 @@ Here, the `PopulationDensity.json` file contains following data.
 
 You can bind the data field from data source to the maps in two different ways.
 
-1. Bind the field name directly to the properties as [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath), [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath),
-[`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ValuePath) and [`ShapeValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_ShapeValuePath).
+1. Bind the field name directly to the properties as [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath), [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath),
+[ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ValuePath) and [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_ShapeValuePath).
 
-2. Bind the field name as `data.field` to the properties as [`ShapeDataPath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath), [`ColorValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath),
-[`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ValuePath) and [`ShapeValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_ShapeValuePath).
+2. Bind the field name as `data.field` to the properties as [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath), [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath),
+[ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ValuePath) and [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_ShapeValuePath).
 
 The complex data source binding can be done as illustrated in the following code example.
 

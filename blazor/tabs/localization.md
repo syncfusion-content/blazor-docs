@@ -59,7 +59,7 @@ The static local texts in the Tabs component can be changed to other culture by 
     }
     ```
 
-    > Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+    > Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the `ResourceManager` property to get the resource file details from the application end.
 
@@ -86,7 +86,7 @@ The static local texts in the Tabs component can be changed to other culture by 
     }
     ```
 
-* Add **.resx** file to [`Resource`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and that file contains the key value pair of locale content in the following format.
+* Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and that file contains the key value pair of locale content in the following format.
 
     ```
     <Component_Name>_<Feature_Name>_<Locale_Key>

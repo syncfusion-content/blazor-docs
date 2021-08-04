@@ -9,7 +9,7 @@ documentation: ug
 
 # Working with Table Formatting in Blazor DocumentEditor Component
 
-[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
+[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) customizes the formatting of table, or table cells such as table width, cell margins, cell spacing, background color, and table alignment. This section describes how to customize these formatting for selected cells, rows, or table in detail.
 
 ## Cell margins
 
@@ -160,4 +160,4 @@ This property is valid if a table row does not fit in the current page during ta
 documentEditor.Selection.RowFormat.SetAllowBreakAcrossPages(false);
 ```
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

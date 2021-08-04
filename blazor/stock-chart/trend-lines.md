@@ -13,7 +13,7 @@ Trendlines are used to show the direction and speed of price. Stock Chart suppor
 
 ## Linear
 
-A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Linear`.
+A linear trendline is a best fit straight line that is used with simpler data sets. To render a linear trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Linear`.
 
 ```cshtml
 
@@ -74,7 +74,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
 
 A logarithmic trendline is a best-fit curved line that is most useful when the rate of change in the data increases or decreases quickly and then levels out. A logarithmic trendline can use negative and/or positive values.
 
-To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Logarithmic`.
+To render a logarithmic trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Logarithmic`.
 
 ```cshtml
 
@@ -134,7 +134,7 @@ To render a logarithmic trendline, use trendline [`Type`](https://help.syncfusio
 
 An exponential trendline is a curved line that is most useful when data values rise or fall at increasingly higher rates. You cannot create an exponential trendline, if your data contains zero or negative values.
 
-To render a exponential trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Exponential`.
+To render a exponential trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Exponential`.
 
 ```cshtml
 
@@ -192,7 +192,7 @@ To render a exponential trendline, use trendline [`Type`](https://help.syncfusio
 
 ## Polynomial
 
-A polynomial trendline is a curved line that is used when data fluctuates. To render a polynomial trendline, use trendline [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Polynomial`. `PolynomialOrder` used to define the polynomial value.
+A polynomial trendline is a curved line that is used when data fluctuates. To render a polynomial trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `Polynomial`. `PolynomialOrder` used to define the polynomial value.
 
 ```cshtml
 

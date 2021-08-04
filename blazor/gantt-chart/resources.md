@@ -9,7 +9,7 @@ documentation: ug
 
 # Resources in Blazor Gantt Chart Component
 
-In [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
+In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
 
 ## Resource Collection
 

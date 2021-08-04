@@ -13,7 +13,7 @@ documentation: ug
 
 ## Save
 
-The diagram is serialized as string while saving. The server-side method, [`SaveDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SaveDiagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
+The diagram is serialized as string while saving. The server-side method, [SaveDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SaveDiagram) helps to serialize the diagram as a string. The following code illustrates how to save the diagram.
 
 ```csharp
 SfDiagram Diagram;
@@ -29,11 +29,11 @@ saveData = localStorage.getItem('fileName');
 
 ```
 
-Diagram can also be saved as raster or vector image files. For more information about saving the diagram as images, refer to [`Print and Export`](./export).
+Diagram can also be saved as raster or vector image files. For more information about saving the diagram as images, refer to [Print and Export](./export).
 
 ## Load
 
-Diagram is loaded from the serialized string data by server-side method, [`LoadDiagram`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_LoadDiagram_System_String_). The following code illustrates how to load the diagram from serialized string data.
+Diagram is loaded from the serialized string data by server-side method, [LoadDiagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_LoadDiagram_System_String_). The following code illustrates how to load the diagram from serialized string data.
 
 ```csharp
 SfDiagram Diagram;
