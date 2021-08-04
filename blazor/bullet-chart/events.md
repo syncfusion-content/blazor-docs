@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Bullet Chart Component
 
-This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [`BulletChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
+This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
 ## Loaded
 
@@ -41,7 +41,7 @@ The `Loaded` event triggers after the Bullet Chart component has been loaded.
 
 ## OnPrintComplete
 
-The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event triggers before the rendered Bullet Chart starts printing.
+The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event triggers before the rendered Bullet Chart starts printing.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -72,7 +72,7 @@ The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## TooltipRender
 
-The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event triggers before the tooltip rendering.
+The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event triggers before the tooltip rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -101,7 +101,7 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ## LegendRender
 
-The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before each legend item rendering.
+The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before each legend item rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|

@@ -9,7 +9,7 @@ documentation: ug
 
 # Editing with template column in Blazor TreeGrid Component
 
-You can edit a template column value by defining the [`Field`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for that particular [`TreeGridColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component
+You can edit a template column value by defining the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for that particular [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component
 
 In the below demo, the **TaskName** column is rendered with the template.
 
@@ -89,4 +89,4 @@ public class TreeData
 {% endtabs %}
 
 Output be like the below.
-![`Final output`](../images/template-edit.PNG)
+![Final output](../images/template-edit.PNG)

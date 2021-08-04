@@ -13,14 +13,14 @@ The row represents record details fetched from data source.
 
 ## Row template
 
-> Before adding row template to the datagrid, we strongly recommend you to go through the [`template`](./templates/#templates) section topic to configure the template.
+> Before adding row template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Row Template** in Blazor DataGrid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
-The **RowTemplate** has an option to customize the look and behavior of the datagrid rows. The **RowTemplate** should be wrapped around a component named [`GridTemplates`](./templates/#gridtemplates-component) as follows. The **RowTemplate** content must be **TD** elements and the number of **TD** elements must match the number of datagrid columns.
+The **RowTemplate** has an option to customize the look and behavior of the datagrid rows. The **RowTemplate** should be wrapped around a component named [GridTemplates](./templates/#gridtemplates-component) as follows. The **RowTemplate** content must be **TD** elements and the number of **TD** elements must match the number of datagrid columns.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -157,9 +157,9 @@ The output will be as follows.
 
 ### Row template with formatting
 
-If the [`RowTemplate`](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [`Columns.Format`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, C# custom formats can be used.
+If the [RowTemplate](./templates/#gridtemplates-component) is used, the value cannot be formatted inside the template using the [Columns.Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Format) property. In that case, C# custom formats can be used.
 
-Here [`Custom DateTime`](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
+Here [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings) format is used for below sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -318,14 +318,14 @@ Row template feature is not compatible with all the features which are available
 
 ## Detail Template
 
-> Before adding detail template to the datagrid, we strongly recommend you to go through the [`template`](./templates/#templates) section topic to configure the template.
+> Before adding detail template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Detail Template** in Blazor DataGrid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Dft0kerEGUQ"%}
 
-The detail template provides additional information about a particular row by expanding or collapsing detail content. The **DetailTemplate** should be wrapped around a component named [`GridTemplates`](./templates/#gridtemplates-component) as follows.
+The detail template provides additional information about a particular row by expanding or collapsing detail content. The **DetailTemplate** should be wrapped around a component named [GridTemplates](./templates/#gridtemplates-component) as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -437,7 +437,7 @@ The output will be as follows.
 
 ### Rendering custom component
 
-To render the custom component inside the detail row, define the template in the [`DetailTemplate`](./templates/#detailtemplates-component) and render the custom component in any of the detail row element.
+To render the custom component inside the detail row, define the template in the [DetailTemplate](./templates/#detailtemplates-component) and render the custom component in any of the detail row element.
 
 In the below sample, a datagrid component is rendered as custom component using detailed row details.
 
@@ -639,7 +639,7 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 ```
 
 > * You can expand all the rows by using `ExpandAll` method.
-> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [`dataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
+> * If you want to expand all the rows at initial DataGrid rendering, then use `ExpandAll` method in [dataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event of the DataGrid.
 
 <!-- Row spanning
 
@@ -830,7 +830,7 @@ Also DataGrid supports the spanning of rows and columns for same cells. **Lunch 
 
 ## Customize rows
 
-You can customize the appearance of a row by using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. The [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers for every row. In the event handler, you can get the **RowDataBoundEventArgs** that contains details of the row.
+You can customize the appearance of a row by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event. The [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event triggers for every row. In the event handler, you can get the **RowDataBoundEventArgs** that contains details of the row.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -971,7 +971,7 @@ The output will be as follows.
 
 ## Row height
 
-You can customize the row height of datagrid rows through the [`RowHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property. The [`RowHeight`](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property is used to change the row height of entire datagrid rows.
+You can customize the row height of datagrid rows through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property. The [RowHeight](hhttps://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_RowHeight) property is used to change the row height of entire datagrid rows.
 
 In the below example, the `RowHeight` is set as '60'.
 
@@ -1021,9 +1021,9 @@ The output will be as follows.
 
 ### Customize row height for particular row
 
-DataGrid row height for particular row can be customized using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event by setting the height by adding `row-height` class in required row element.
+DataGrid row height for particular row can be customized using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event by setting the height by adding `row-height` class in required row element.
 
-In the below example, the row height for the row with OrderID as '1003' is set as '90px' using the [`RowDataBound`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
+In the below example, the row height for the row with OrderID as '1003' is set as '90px' using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

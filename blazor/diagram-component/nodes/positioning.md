@@ -145,6 +145,6 @@ The `MinWidth` and `MinHeight` properties of node allows you to control the mini
 
 ## See also
 
-* [`How to customize the node`](./appearance)
+* [How to customize the node](./appearance)
 
-* [`How to get events when they interact the node`](./events)
+* [How to get events when they interact the node](./events)

@@ -9,7 +9,7 @@ documentation: ug
 
 # HTML Attribute Support in Blazor Button Component
 
-HTML attribute support is given for button using [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
+HTML attribute support is given for button using [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html) property.
 
 ```csharp
 

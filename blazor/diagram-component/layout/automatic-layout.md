@@ -19,10 +19,10 @@ Diagram provides support to auto-arrange the nodes in the diagram area that is r
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to create a connector`](../connectors/connectors)
+* [How to create a connector](../connectors/connectors)
 
-* [`How to generate the organization chart`](./organizational-chart)
+* [How to generate the organization chart](./organizational-chart)
 
-* [`How to generate the hierarchical layout`](./hierarchical-layout)
+* [How to generate the hierarchical layout](./hierarchical-layout)

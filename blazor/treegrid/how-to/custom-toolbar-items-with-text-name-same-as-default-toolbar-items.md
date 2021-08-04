@@ -98,4 +98,4 @@ public class TreeData
 
 Output be like the below.
 
-![`Final output`](../images/custom-toolbar-text.PNG)
+![Final output](../images/custom-toolbar-text.PNG)

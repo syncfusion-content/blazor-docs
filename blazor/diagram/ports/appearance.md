@@ -11,13 +11,13 @@ documentation: ug
 
 ## Appearance
 
-* The shape of a port can be changed by using the [`Shape`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapes.html) property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
+* The shape of a port can be changed by using the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapes.html) property. To explore the different types of port shapes, refer to Port Shapes. If you need to render a custom shape, then you can set shape to path and define path using the path data property.
 
-* The appearance of the ports can be customized by using the [`StrokeColor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapeStyle.html#Syncfusion_Blazor_Diagrams_PortShapeStyle_StrokeColor), [`StrokeWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapeStyle.html#Syncfusion_Blazor_Diagrams_PortShapeStyle_StrokeWidth), and [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapeStyle.html#Syncfusion_Blazor_Diagrams_PortShapeStyle_Fill) properties.
+* The appearance of the ports can be customized by using the [StrokeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapeStyle.html#Syncfusion_Blazor_Diagrams_PortShapeStyle_StrokeColor), [StrokeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapeStyle.html#Syncfusion_Blazor_Diagrams_PortShapeStyle_StrokeWidth), and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapeStyle.html#Syncfusion_Blazor_Diagrams_PortShapeStyle_Fill) properties.
 
-* Customize the port size by using the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Height) properties of port.
+* Customize the port size by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Height) properties of port.
 
-* The ports [`Visibility`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Visibility) property allows you to define when the port should be visible.
+* The ports [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Visibility) property allows you to define when the port should be visible.
 
 The following code explains how to change the appearance of the port.
 
@@ -75,7 +75,7 @@ The visibility of the ports depends upon the properties of `Connect`, `Hidden`, 
 
 ## Types of port shapes
 
-We have provided some basic built-in [`PortShapes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapes.html) for the port. Please find the shapes as follows.
+We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortShapes.html) for the port. Please find the shapes as follows.
 
 * Circle
 * Custom
@@ -129,7 +129,7 @@ We have provided some basic built-in [`PortShapes`](https://help.syncfusion.com/
 
 ## Constraints
 
-The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [`Port Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Constraints). You can verify the [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Constraints) to learn how to enable or disable the port constraints.
+The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Constraints). You can verify the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_Constraints) to learn how to enable or disable the port constraints.
 
 The PortConstraints may have multiple behaviors listed as follows:
 
@@ -143,14 +143,14 @@ The PortConstraints may have multiple behaviors listed as follows:
 
 ## Custom properties
 
-The [`AddInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_AddInfo) property of the port allows you to maintain additional information to the port.
+The [AddInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramPort.html#Syncfusion_Blazor_Diagrams_DiagramPort_AddInfo) property of the port allows you to maintain additional information to the port.
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to set the position of the port`](./positioning)
+* [How to set the position of the port](./positioning)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)

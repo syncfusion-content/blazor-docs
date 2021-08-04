@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Column Styles in Blazor DataGrid Component
 
-You can customise the appearance of the header and content of a particular column using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
+You can customise the appearance of the header and content of a particular column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
 
 To customize the datagrid column, follow the given steps:
 
@@ -28,7 +28,7 @@ Create a CSS class with custom style to override the default style for rowcell a
 
 **Step 2**:
 
-Add the custom CSS class to the specified column by using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
+Add the custom CSS class to the specified column by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -77,4 +77,4 @@ Add the custom CSS class to the specified column by using the [`CustomAttributes
 
 Output be like the below.
 
-![`Final output`](../images/changecolumnstyle.PNG)
+![Final output](../images/changecolumnstyle.PNG)

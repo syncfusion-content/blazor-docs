@@ -509,4 +509,4 @@ The following code shows how to set the `AddInfo` value.
 
 ## See also
 
-* [`How to get events when they interact the node`](./events)
+* [How to get events when they interact the node](./events)

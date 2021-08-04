@@ -369,8 +369,8 @@ Multiple segments can be defined one after another. To create a connector with m
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)

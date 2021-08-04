@@ -9,7 +9,7 @@ documentation: ug
 
 # Managing Tasks in Blazor Gantt Chart Component
 
-The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `GanttColumn.IsPrimaryKey` property to `true` in the column.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component has options to dynamically insert, delete, and update tasks in a project. The primary key column is necessary to manage the tasks and perform CRUD operations in Gantt Chart. To define the primary key, set the `GanttColumn.IsPrimaryKey` property to `true` in the column.
 
 ## Adding New Tasks
 
@@ -1217,17 +1217,17 @@ Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` met
 
 The `GanttColumn.EditType` is used to customize the edit type of the particular column. You can set the `GanttColumn.EditType` based on data type of the column.
 
-* [`NumericTextBox`](../numerictextbox/getting-started) component for integers, double, and decimal data types.
+* [NumericTextBox](../numerictextbox/getting-started) component for integers, double, and decimal data types.
 
-* [`TextBox`](../textbox/getting-started) component for string data type.
+* [TextBox](../textbox/getting-started) component for string data type.
 
-* [`DropDownList`](../dropdownlist/getting-started) component for list data type.
+* [DropDownList](../dropdownlist/getting-started) component for list data type.
 
-* [`DatePicker`](../datepicker/getting-started) component for date values.
+* [DatePicker](../datepicker/getting-started) component for date values.
 
-* [`DateTimePicker`](../datetimepicker/getting-started) component for datetime type.
+* [DateTimePicker](../datetimepicker/getting-started) component for datetime type.
 
-* [`Checkbox`](../check-box/getting-started) component for boolean type.
+* [Checkbox](../check-box/getting-started) component for boolean type.
 
 Also, you can customize model of the `GanttColumn.EditType` component through the `GanttColumn.EditorSettings`.
 
@@ -1235,12 +1235,12 @@ The following table describes cell edit type component and their corresponding e
 
 Component |Example
 -----|-----
-[`NumericTextBox`](../numerictextbox/getting-started) | @(new { @params = new { format = "n"} })
-[`TextBox`](../textbox/getting-started) | -
-[`DropDownList`](../dropdownlist/getting-started) | @(new { @params = new { value = "Germany"} })
-[`DatePicker`](../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
-[`DateTimePicker`](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
-[`Checkbox`](../check-box/getting-started) | @(new { @params = new { checked = true} })
+[NumericTextBox](../numerictextbox/getting-started) | @(new { @params = new { format = "n"} })
+[TextBox](../textbox/getting-started) | -
+[DropDownList](../dropdownlist/getting-started) | @(new { @params = new { value = "Germany"} })
+[DatePicker](../datepicker/getting-started) | @(new { @params = new { format = "yyyy-MM-dd"} })
+[DateTimePicker](../datetimepicker/getting-started) | @(new { @params = new { strictMode = true} })
+[Checkbox](../check-box/getting-started) | @(new { @params = new { checked = true} })
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -2062,7 +2062,7 @@ Toolbar="@(new List<string>(){ "Add", "Edit", "Update", "Delete", "Cancel", "Exp
 }
 ```
 
->You can find the sample for server-side application using entity framework [`here`](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
+>You can find the sample for server-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-with-Entity-framework).
 
 ### Entity Framework in Client-Side Application
 
@@ -2188,7 +2188,7 @@ The following sample code explains you about, how to implement CRUD operations f
 
 ```
 
-You can find the sample for client-side application using entity framework [`here`](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-Client-Side-Application-with-EF).
+You can find the sample for client-side application using entity framework [here](https://github.com/SyncfusionExamples/Blazor-Gantt-Chart-Client-Side-Application-with-EF).
 
 ## Indent and Outdent
 

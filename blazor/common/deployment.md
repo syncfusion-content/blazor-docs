@@ -47,13 +47,13 @@ For CLI deployment, run the following command from your root directory.
 
 ```
 dotnet publish -c Release
-````
+```
 
 For Blazor Server CLI deployment.
 
 ```
 dotnet publish -c Release --self-contained true -r win-x86
-````
+```
 
 Refer to the dotnet publish\'s [optional arguments](https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-publish?tabs=netcore21#arguments).
 
