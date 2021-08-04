@@ -9,7 +9,7 @@ documentation: ug
 
 # Headers and Footers in Blazor DocumentEditor Component
 
-[`Blazor Document Editor`](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
+[Blazor Document Editor](https://www.syncfusion.com/blazor-components/blazor-word-processor) supports headers and footers in its document. Each section in the document can have the following types of headers and footers:
 
 * First page: Used only on the first page of the section.
 * Even pages: Used on all even numbered pages in the section.
@@ -56,4 +56,4 @@ Move the selection to the document body from header or footer region by double c
 documentEditor.Selection.CloseHeaderFooter();
 ```
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

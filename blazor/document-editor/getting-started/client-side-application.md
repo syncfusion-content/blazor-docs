@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor DocumentEditor Component in WebAssembly App using Visual Studio
 
-This article provides the step-by-step instructions to integrate the [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides the step-by-step instructions to integrate the [Blazor Word Processor component](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 Steps to get started with Word processor component for Blazor:
 
