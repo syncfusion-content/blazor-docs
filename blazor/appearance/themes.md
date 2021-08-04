@@ -75,6 +75,158 @@ The following list of common variables is used in the Syncfusion Blazor library 
 
 ### Syncfusion Blazor Bootstrap 4 Theme
 
+<table>
+    <style>
+        .circle-color-indicator {
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, .08);
+            vertical-align: middle;
+        }
+    </style>
+    <colgroup>
+        <col style="white-space:nowrap; width: 100px;">
+        <col>
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$white</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff;"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-100</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8f9fa;"></span> #f8f9fa
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-200</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #e9ecef;"></span> #e9ecef
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-300</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dee2e6;"></span> #dee2e6
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-400</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ced4da;"></span> #ced4da
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-500</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #adb5bd;"></span> #adb5bd
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-600</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6c757d;"></span> #6c757d
+            </td>
+        </tr>
+        <tr>
+        <td>$gray-700</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #495057;"></span> #495057
+            </td>
+        </tr>
+        <tr>
+        <td>$gray-800</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #343a40;"></span> #343a40
+            </td>
+        </tr>
+        <tr>
+        <td>$gray-900</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #212529;"></span> #212529
+            </td>
+        </tr>
+        <tr>
+        <td>$black</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000;"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$blue</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #007bff;"></span> #007bff
+            </td>
+        </tr>
+        <tr>
+            <td>$indigo</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6610f2;"></span> #6610f2
+            </td>
+        </tr>
+        <tr>
+            <td>$purple</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6f42c1;"></span> #6f42c1
+            </td>
+        </tr>
+        <tr>
+            <td>$pink</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #e83e8c;"></span> #e83e8c
+            </td>
+        </tr>
+        <tr>
+            <td>$red</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dc3545;"></span> #dc3545
+            </td>
+        </tr>
+        <tr>
+            <td>$orange</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fd7e14;"></span> #fd7e14
+            </td>
+        </tr>
+        <tr>
+            <td>$yellow</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffc107;"></span> #ffc107
+            </td>
+        </tr>
+        <tr>
+            <td>$green</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #28a745;"></span> #28a745
+            </td>
+        </tr>
+        <tr>
+            <td>$teal</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #20c997;"></span> #20c997
+            </td>
+        </tr>
+        <tr>
+            <td>$cyan</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #17a2b8;"></span> #17a2b8
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
 | Name | Value |
 | ------------- | ------------- |
 | `$white` | ![#fff](https://ej2.syncfusion.com/download/documentation/svg/fff.svg) `#fff` |
