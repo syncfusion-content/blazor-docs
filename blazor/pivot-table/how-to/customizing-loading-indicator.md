@@ -9,9 +9,9 @@ documentation: ug
 
 # Customizing loading indicator in Blazor Pivot Table Component
 
-You can customize the appearance of the loading indicator in the pivot table by using the [`SpinnerTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_SpinnerTemplate) property. This property accepts an HTML string which can be used for appearance customization.
+You can customize the appearance of the loading indicator in the pivot table by using the [SpinnerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_SpinnerTemplate) property. This property accepts an HTML string which can be used for appearance customization.
 
-> You can also disable the loading indicator by setting [`SpinnerTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_SpinnerTemplate) to empty string.
+> You can also disable the loading indicator by setting [SpinnerTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SfPivotView-1.html#Syncfusion_Blazor_PivotView_SfPivotView_1_SpinnerTemplate) to empty string.
 
 ```cshtml
 @using Syncfusion.Blazor.PivotView
