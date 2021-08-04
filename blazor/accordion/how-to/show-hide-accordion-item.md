@@ -139,4 +139,4 @@ In the following demo, specified accordion item are Show/Hide dynamically when y
 
 Output be like the below.
 
-![Dynamic Show/Hide AccordionItems](../images/showHideItem.gif)
+![Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.gif)
