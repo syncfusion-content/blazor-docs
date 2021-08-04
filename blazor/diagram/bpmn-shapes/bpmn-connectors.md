@@ -35,25 +35,29 @@ The association property allows you to define the type of association. The follo
 </SfDiagram>
 
 @code{
-    //Create connector and stored it to the connector collection
-    ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>()
+    //Defines diagram's connector collection
+    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramConnector()
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        DiagramConnector connector = new DiagramConnector()
         {
             //Unique Id of the connector
-            Id="connector1",
+            Id = "connector1",
             // Start and end point of the connector
-            SourcePoint=new ConnectorSourcePoint(){X=100,Y=200},
-            TargetPoint=new ConnectorTargetPoint(){X=300,Y=200},
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 200 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 200 },
             //Sets the type to Bpmn, flow to Association and association to bidirectional
-            Shape=new DiagramConnectorShape()
+            Shape = new DiagramConnectorShape()
             {
-                Type=ConnectionShapes.Bpmn,
-                BpmnFlow=BpmnFlows.Association,
-                Association=BpmnAssociationFlows.BiDirectional
+                Type = ConnectionShapes.Bpmn,
+                BpmnFlow = BpmnFlows.Association,
+                Association = BpmnAssociationFlows.BiDirectional
             }
-        }
-    };
+        };
+        ConnectorCollection.Add(connector);
+    }
 }
 ```
 
@@ -86,25 +90,29 @@ The sequence property allows you to define the type of sequence. The following c
 </SfDiagram>
 
 @code{
-    //Create connector and stored it to the connector collection
-    ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>()
+    //Defines diagram's connector collection
+    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramConnector()
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        DiagramConnector connector = new DiagramConnector()
         {
             //Unique Id of the connector
-            Id="connector1",
+            Id = "connector1",
             // Start and end point of the connector
-            SourcePoint=new ConnectorSourcePoint(){X=100,Y=200},
-            TargetPoint=new ConnectorTargetPoint(){X=300,Y=200},
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 200 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 200 },
             //Sets type to Bpmn, flow to Sequence, and sequence to Conditional
-            Shape=new DiagramConnectorShape()
+            Shape = new DiagramConnectorShape()
             {
-                Type=ConnectionShapes.Bpmn,
-                BpmnFlow=BpmnFlows.Sequence,
-                Sequence=BpmnSequenceFlows.Conditional
+                Type = ConnectionShapes.Bpmn,
+                BpmnFlow = BpmnFlows.Sequence,
+                Sequence = BpmnSequenceFlows.Conditional
             }
-        }
-    };
+        };
+        ConnectorCollection.Add(connector);
+    }
 }
 ```
 
@@ -137,25 +145,29 @@ The message property allows you to define the type of message. The following cod
 </SfDiagram>
 
 @code{
-    //Create connector and stored it to the connector collection
-    ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>()
+    //Defines diagram's connector collection
+    public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramConnector()
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        DiagramConnector connector = new DiagramConnector()
         {
             //Unique Id of the connector
-            Id="connector1",
+            Id = "connector1",
             // Start and end point of the connector
-            SourcePoint=new ConnectorSourcePoint(){X=100,Y=200},
-            TargetPoint=new ConnectorTargetPoint(){X=300,Y=200},
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 200 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 200 },
             //Sets type to Bpmn, flow to Message, and message to InitiatingMessage
-            Shape=new DiagramConnectorShape()
+            Shape = new DiagramConnectorShape()
             {
-                Type=ConnectionShapes.Bpmn,
-                BpmnFlow=BpmnFlows.Message,
-                Message=BpmnMessageFlows.InitiatingMessage
+                Type = ConnectionShapes.Bpmn,
+                BpmnFlow = BpmnFlows.Message,
+                Message = BpmnMessageFlows.InitiatingMessage
             }
-        }
-    };
+        };
+        ConnectorCollection.Add(connector);
+    }
 }
 ```
 

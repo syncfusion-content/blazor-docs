@@ -20,10 +20,13 @@ A data object represents information flowing through the process, such as data p
 </SfDiagram>
 
 @code{
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
             OffsetX = 100,
@@ -37,16 +40,17 @@ A data object represents information flowing through the process, such as data p
             Shape = new DiagramShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape=BpmnShapes.DataObject,
+                BpmnShape = BpmnShapes.DataObject,
                 //Sets collection to true when Dataobject is not a Single instance
-                DataObject=new DiagramBpmnDataObject()
+                DataObject = new DiagramBpmnDataObject()
                 {
-                    Collection=true,
-                    Type=BpmnDataObjects.Input
+                    Collection = true,
+                    Type = BpmnDataObjects.Input
                 }
             }
-        },
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

@@ -26,7 +26,8 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
     {
         //Sets layout type as HierarchicalTree...
         Type = LayoutType.HierarchicalTree,
-        VerticalSpacing = 40, HorizontalSpacing = 40,
+        VerticalSpacing = 40,
+        HorizontalSpacing = 40,
     };
     //Sets the default properties for nodes
     DiagramNode NodeDefaults = new DiagramNode()
@@ -70,7 +71,6 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
         };
     }
 }
-
 ```
 
 ![HierarchicalTree layout manager](../images/HierarchicalTree.png)

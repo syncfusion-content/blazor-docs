@@ -32,10 +32,13 @@ documentation: ug
 </SfDiagram>
 
 @code{
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
             OffsetX = 100,
@@ -49,16 +52,16 @@ documentation: ug
             Shape = new DiagramShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape=BpmnShapes.DataObject,
+                BpmnShape = BpmnShapes.DataObject,
                 //Sets collection as true when Dataobject is not a Single instance
-                DataObject=new DiagramBpmnDataObject()
+                DataObject = new DiagramBpmnDataObject()
                 {
-                    Collection=true,
-                    Type=BpmnDataObjects.Input
+                    Collection = true,
+                    Type = BpmnDataObjects.Input
                 }
             },
             //Sets the id, angle, and text for the annotation
-            Annotations=new ObservableCollection<DiagramNodeAnnotation>()
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
                 new DiagramNodeAnnotation()
                 {
@@ -67,8 +70,9 @@ documentation: ug
                     Content="Left"
                 }
             }
-        },
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

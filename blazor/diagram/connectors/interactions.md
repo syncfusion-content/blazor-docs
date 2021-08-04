@@ -40,9 +40,18 @@ A connector can be selected at runtime by using the [`Select`](https://help.sync
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal
         };
         ConnectorCollection.Add(diagramConnector);
@@ -76,6 +85,7 @@ A connector can be dragged at runtime by using the [`Drag`](https://help.syncfus
 @using System.Collections.ObjectModel
 
 <input type="button" value="Drag" @onclick="OnDrag">
+
 <SfDiagram @ref="@Diagram" Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
@@ -95,9 +105,18 @@ A connector can be dragged at runtime by using the [`Drag`](https://help.syncfus
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal
         };
         ConnectorCollection.Add(diagramConnector);
@@ -143,9 +162,18 @@ The connector can be selected by clicking it. When the connector is selected, ci
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Straight,
         };
         //Add the connector into connectors's collection.
@@ -177,13 +205,13 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
     //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();  
+    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 
     public DiagramConstraints Constraints { get; set; }
 
     protected override void OnInitialized()
     {
-         Constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting | DiagramConstraints.Bridging;
+        Constraints = DiagramConstraints.Default | DiagramConstraints.LineRouting | DiagramConstraints.Bridging;
         //Creates source node
         DiagramNode node1 = new DiagramNode()
         {
@@ -192,7 +220,11 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
             Height = 50,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -210,7 +242,11 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
             Height = 50,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -227,7 +263,11 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
             Height = 50,
             Width = 100,
             Id = "node3",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -247,16 +287,24 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#37909A", StrokeColor = "#37909A", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#37909A",
+                    StrokeColor = "#37909A",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#37909A", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#37909A",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
         //Adding conector into connector's collection
         ConnectorCollection.Add(diagramConnector);
     }
 }
-
 ```
 
 ![Connector Routing](../images/LineRouting.gif)
