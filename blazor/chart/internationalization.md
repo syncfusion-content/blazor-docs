@@ -16,7 +16,7 @@ Internationalization is the process of designing and developing an component tha
 * Tooltip.
 
 <!-- markdownlint-disable MD036 -->
-**Globalization**
+## Globalization
 
 [`LabelFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property in axis is used to globalize the number, date and time value of the elements such as [`Axis label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html), [`Data label`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartDataLabel.html), and [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartTooltipSettings.html) in the [`Chart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) component.
 
