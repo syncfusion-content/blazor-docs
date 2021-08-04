@@ -13,7 +13,7 @@ This section explains the different styles and types of Buttons.
 
 ## Button styles
 
-The Blazor Button has the following predefined styles that can be defined using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property.
+The Blazor Button has the following predefined styles that can be defined using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property.
 
 | Class | Description |
 | -------- | -------- |
@@ -55,15 +55,15 @@ The types of Blazor Button are as follows:
 
 ### Flat Button
 
-The Flat Button is styled with no background color. To create a flat Button, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-flat`.
+The Flat Button is styled with no background color. To create a flat Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-flat`.
 
 ### Outline Button
 
-An outline Button has a border with transparent background. To create an outline Button, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-outline`.
+An outline Button has a border with transparent background. To create an outline Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-outline`.
 
 ### Round Button
 
-A round Button is shaped like a circle. Usually, it contains an icon representing its action. To create a round Button, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-round`.
+A round Button is shaped like a circle. Usually, it contains an icon representing its action. To create a round Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-round`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -85,7 +85,7 @@ Output be like
 
 ### Primary Button
 
-The primary button is styled with background color and it is used to represent a primary action. To create a Primary Button, set the [`IsPrimary`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsPrimary) property to `true`.
+The primary button is styled with background color and it is used to represent a primary action. To create a Primary Button, set the [IsPrimary](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsPrimary) property to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -99,7 +99,7 @@ Output be like
 
 ### Toggle Button
 
-A toggle Button allows you to change between the two states. The Button is active in toggled state and can be recognized through the `e-active class`. The functionality of the toggle Button is handled by [`OnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event. To create a toggle Button, set the [`IsToggle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property to true. In the following code snippet, the toggle Button text changes to play/pause based on the state of the Button with the use of OnClick event.
+A toggle Button allows you to change between the two states. The Button is active in toggled state and can be recognized through the `e-active class`. The functionality of the toggle Button is handled by [OnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_OnClick) event. To create a toggle Button, set the [IsToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IsToggle) property to true. In the following code snippet, the toggle Button text changes to play/pause based on the state of the Button with the use of OnClick event.
 
 ```csharp
 
@@ -148,7 +148,7 @@ Output be like
 
 ### Button with font icons
 
-The Button can have an icon to provide the visual representation of the action. To place the icon on a Button, set the [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Button. You can customize the icon's position by using the [`IconPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property.
+The Button can have an icon to provide the visual representation of the action. To place the icon on a Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Button. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_IconPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -173,7 +173,7 @@ Output be like
 
 ## Button size
 
-The two types of Button sizes are default and small. To change the size of the default Button to small Button, set the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
+The two types of Button sizes are default and small. To change the size of the default Button to small Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-small`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

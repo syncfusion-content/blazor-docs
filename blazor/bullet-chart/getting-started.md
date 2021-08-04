@@ -25,7 +25,7 @@ This section briefly explains how to include a Bullet Chart component in the Bla
 </head>
 ```
 
-> For Internet Explorer 11, kindly refer to the polyfills. Refer to the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer to the polyfills. Refer to the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
 <head>
@@ -96,7 +96,7 @@ On successful compilation of the application, the Syncfusion Blazor Bullet Chart
 
 ## Adding Title
 
-Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
+Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
 
 ```cshtml
 @page "/"
@@ -121,7 +121,7 @@ Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfus
 
 ## Adding Ranges
 
-Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
+Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
 
 ```cshtml
 @page "/"
@@ -151,7 +151,7 @@ Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.c
 
 ## Adding Tooltip
 
-Use the tooltip to show the measured values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
+Use the tooltip to show the measured values by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
 
 ```cshtml
 @page "/"
