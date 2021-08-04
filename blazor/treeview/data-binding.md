@@ -628,4 +628,4 @@ Now, you can configure the Blazor TreeView using the **‘SfDataManager’** to 
 
 ```
 
-> You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).
