@@ -222,7 +222,7 @@ The custom data binding can be performed in the MultiSelect component by providi
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 <SfMultiSelect TValue="string[]" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <MultiSelectFieldSettings Value="CustomerID"></MultiSelectFieldSettings>

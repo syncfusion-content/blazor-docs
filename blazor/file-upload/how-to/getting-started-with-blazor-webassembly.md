@@ -268,7 +268,7 @@ public void Remove(IList<IFormFile> UploadFiles)
 
 You can allow the specific files alone to upload using the [AllowedExtensions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_AllowedExtensions) property. The extension can be represented as collection by comma separators. The uploader component filters the selected or dropped files to match against the specified file types and processes the upload operation. The validation happens when you specify value to inline attribute to accept the original input element.
 
-```csharp
+```cshtml
 <SfUploader AllowedExtensions=".doc, docx, .xls, xlsx"></SfUploader>
 ```
 

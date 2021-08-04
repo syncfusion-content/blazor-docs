@@ -43,7 +43,7 @@ The Bullet Chart can be rendered in different orientations such as [Horizontal](
 
 The Bullet Chart supports the right-to-left rendering that can be enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
 
-```csharp
+```cshtml
 <SfBulletChart DataSource="@BulletChartData" EnableRtl="true" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
     <BulletChartRangeCollection>
         <BulletChartRange End=35></BulletChartRange>

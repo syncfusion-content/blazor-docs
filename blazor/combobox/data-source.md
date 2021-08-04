@@ -222,7 +222,7 @@ The custom data binding can be performed in the ComboBox component by providing 
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 <SfComboBox TValue="string" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <ComboBoxFieldSettings Value="CustomerID"></ComboBoxFieldSettings>
