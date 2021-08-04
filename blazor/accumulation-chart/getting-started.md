@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD013 -->
+
 ---
 layout: post
 title: Getting Stared with Blazor Accumulation Chart in Server Side | Syncfusion
@@ -8,7 +10,6 @@ documentation: ug
 ---
 
 <!-- markdownlint-disable MD040 -->
-<!-- markdownlint-disable MD013 -->
 
 # Blazor Accumulation Chart Component in Server Side App using Visual Studio
 
