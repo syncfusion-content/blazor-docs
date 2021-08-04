@@ -104,7 +104,7 @@ Assign service data as an instance of [`SfDataManager`](https://help.syncfusion.
 @using Syncfusion.Blazor.Charts
 
 <SfChart>
-    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor">
+    <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Orders" Adaptor="Adaptors.ODataV4Adaptor"></SfDataManager>
 
     <ChartPrimaryXAxis Title="Orders" ValueType="Syncfusion.Blazor.Charts.ValueType.Category"
                        RangePadding="ChartRangePadding.Additional"></ChartPrimaryXAxis>
