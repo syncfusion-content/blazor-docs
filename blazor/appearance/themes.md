@@ -85,11 +85,12 @@ The following list of common variables is used in the Syncfusion Blazor library 
             border: 1px solid rgba(0, 0, 0, .08);
             vertical-align: middle;
         }
+        th, td {
+        text-align: left;
+        padding: 5px 15px;
+        vertical-align: top;
+        }
     </style>
-    <colgroup>
-        <col style="white-space:nowrap; width: 100px;">
-        <col>
-    </colgroup>
     <thead>
         <tr>
             <th>Name</th>
@@ -226,80 +227,439 @@ The following list of common variables is used in the Syncfusion Blazor library 
     </tbody>
 </table>
 
-
-| Name | Value |
-| ------------- | ------------- |
-| `$white` | ![#fff](https://ej2.syncfusion.com/download/documentation/svg/fff.svg) `#fff` |
-| `$gray-100` | ![#f8f9fa](https://ej2.syncfusion.com/download/documentation/svg/f8f9fa.svg) `#f8f9fa` |
-| `$gray-200` | ![#e9ecef](https://ej2.syncfusion.com/download/documentation/svg/e9ecef.svg) `#e9ecef` |
-| `$gray-300` | ![#dee2e6](https://ej2.syncfusion.com/download/documentation/svg/dee2e6.svg) `#dee2e6` |
-| `$gray-400` | ![#ced4da](https://ej2.syncfusion.com/download/documentation/svg/ced4da.svg) `#ced4da` |
-| `$gray-500` | ![#adb5bd](https://ej2.syncfusion.com/download/documentation/svg/adb5bd.svg) `#adb5bd` |
-| `$gray-600` | ![#6c757d](https://ej2.syncfusion.com/download/documentation/svg/6c757d.svg) `#6c757d` |
-| `$gray-700` | ![#495057](https://ej2.syncfusion.com/download/documentation/svg/495057.svg) `#495057` |
-| `$gray-800` | ![#343a40](https://ej2.syncfusion.com/download/documentation/svg/343a40.svg) `#343a40` |
-| `$gray-900` | ![#212529](https://ej2.syncfusion.com/download/documentation/svg/212529.svg) `#212529` |
-| `$black` | ![#000](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#000` |
-| `$blue` | ![#007bff](https://ej2.syncfusion.com/download/documentation/svg/007bff.svg) `#007bff` |
-| `$indigo` | ![#6610f2](https://ej2.syncfusion.com/download/documentation/svg/6610f2.svg) `#6610f2` |
-| `$purple` | ![#6f42c1](https://ej2.syncfusion.com/download/documentation/svg/6f42c1.svg) `#6f42c1` |
-| `$pink` | ![#e83e8c](https://ej2.syncfusion.com/download/documentation/svg/e83e8c.svg) `#e83e8c` |
-| `red` | ![#dc3545](https://ej2.syncfusion.com/download/documentation/svg/dc3545.svg) `#dc3545` |
-| `$orange` | ![#fd7e14](https://ej2.syncfusion.com/download/documentation/svg/fd7e14.svg) `#fd7e14` |
-| `$yellow` | ![#ffc107](https://ej2.syncfusion.com/download/documentation/svg/ffc107.svg) `#ffc107` |
-| `$green` | ![#28a745](https://ej2.syncfusion.com/download/documentation/svg/28a745.svg) `#28a745` |
-| `$teal` | ![#20c997](https://ej2.syncfusion.com/download/documentation/svg/20c997.svg) `#20c997` |
-| `$cyan` | ![#17a2b8](https://ej2.syncfusion.com/download/documentation/svg/17a2b8.svg) `#17a2b8` |
-
 ### Syncfusion Blazor Bootstrap Theme
 
-| Name | Value (Default Theme) | Value (Dark Theme) |
-| ------------- | ------------- | ------------- |
-| `$brand-primary` | ![#317ab9](https://ej2.syncfusion.com/download/documentation/svg/317ab9.svg) `#317ab9` | ![#0070f0](./images/bootstrap-dark/0070f0.png) `#0070f0` |
-| `$brand-primary-darken-10` | ![#3071a9](https://ej2.syncfusion.com/download/documentation/svg/3071a9.svg) `#3071a9` | ![#0058bd](./images/bootstrap-dark/0058bd.png) `#0058bd` |
-| `$brand-primary-darken-15` | ![#2a6496](https://ej2.syncfusion.com/download/documentation/svg/2a6496.svg) `#2a6496` | ![#00408a](./images/bootstrap-dark/00408a.png) `#00408a` |
-| `$brand-primary-darken-25` | ![#1f496e](https://ej2.syncfusion.com/download/documentation/svg/1f496e.svg) `#1f496e` | ![#002957](./images/bootstrap-dark/002957.png) `#002957` |
-| `$brand-primary-darken-35` | ![#142f46](https://ej2.syncfusion.com/download/documentation/svg/142f46.svg) `#142f46` | ![#001124](./images/bootstrap-dark/001124.png) `#001124` |
-| `$brand-primary-font` | ![#ffffff](https://ej2.syncfusion.com/download/documentation/svg/ffffff.svg) `#ffffff` | ![#fff](https://ej2.syncfusion.com/download/documentation/svg/fff.svg) `#fff` |
-| `$grey-base` | ![#000000](https://ej2.syncfusion.com/download/documentation/svg/000000.svg) `#000000` | ![#1a1a1a](https://ej2.syncfusion.com/download/documentation/svg/1a1a1a.svg) `#1a1a1a` |
-| `$grey-darker` | ![#222222](https://ej2.syncfusion.com/download/documentation/svg/222222.svg) `#222222` | ![#131313](./images/bootstrap-dark/131313.png) `#131313` |
-| `$grey-dark` | ![#333333](https://ej2.syncfusion.com/download/documentation/svg/333333.svg) `#333333` | ![#2a2a2a](./images/bootstrap-dark/2a2a2a.png) `#2a2a2a` |
-| `$grey` | ![#555555](https://ej2.syncfusion.com/download/documentation/svg/555555.svg) `#555555` | ![#313131](./images/bootstrap-dark/313131.png) `#313131` |
-| `$grey-light` | ![#777777](https://ej2.syncfusion.com/download/documentation/svg/777777.svg) `#777777` | ![#393939](./images/bootstrap-dark/393939.png) `#393939` |
-| `$grey-44` | ![#444444](https://ej2.syncfusion.com/download/documentation/svg/444444.svg) `#444444` | ![#414141](./images/bootstrap-dark/414141.png) `#414141` |
-| `$grey-88` | ![#888888](https://ej2.syncfusion.com/download/documentation/svg/888888.svg) `#888888` | ![#484848](./images/bootstrap-dark/484848.png) `#484848` |
-| `$grey-99` | ![#999999](https://ej2.syncfusion.com/download/documentation/svg/999999.svg) `#999999` | ![#505050](./images/bootstrap-dark/505050.png) `#505050` |
-| `$grey-8c` | ![#8c8c8c](https://ej2.syncfusion.com/download/documentation/svg/8c8c8c.svg) `#8c8c8c` | ![#585858](./images/bootstrap-dark/585858.png) `#585858` |
-| `$grey-ad` | ![#adadad](https://ej2.syncfusion.com/download/documentation/svg/adadad.svg) `#adadad` | ![#676767](./images/bootstrap-dark/676767.png) `#676767` |
-| `$grey-dark-font` | ![#ffffff](https://ej2.syncfusion.com/download/documentation/svg/ffffff.svg) `#ffffff` | ![#f0f0f0](./images/bootstrap-dark/f0f0f0.png) `#f0f0f0` |
-| `$grey-white` | ![#ffffff](https://ej2.syncfusion.com/download/documentation/svg/ffffff.svg) `#ffffff` | ![#6e6e6e](./images/bootstrap-dark/6e6e6e.png) `#6e6e6e` |
-| `$grey-lighter` | ![#eeeeee](https://ej2.syncfusion.com/download/documentation/svg/eeeeee.svg) `#eeeeee` | ![#767676](https://ej2.syncfusion.com/download/documentation/svg/767676.svg) `#767676` |
-| `$grey-f9` | ![#f9f9f9](https://ej2.syncfusion.com/download/documentation/svg/f9f9f9.svg) `#f9f9f9` | ![#7e7e7e](./images/bootstrap-dark/7e7e7e.png) `#7e7e7e` |
-| `$grey-f8` | ![#f8f8f8](https://ej2.syncfusion.com/download/documentation/svg/f8f8f8.svg) `#f8f8f8` | ![#858585](./images/bootstrap-dark/858585.png) `#858585` |
-| `$grey-f5` | ![#f5f5f5](https://ej2.syncfusion.com/download/documentation/svg/f5f5f5.svg) `#f5f5f5` | ![#8d8d8d](./images/bootstrap-dark/8d8d8d.png) `#8d8d8d` |
-| `$grey-e6` | ![#e6e6e6](https://ej2.syncfusion.com/download/documentation/svg/e6e6e6.svg) `#e6e6e6` | ![#959595](./images/bootstrap-dark/959595.png) `#959595` |
-| `$grey-dd` | ![#dddddd](https://ej2.syncfusion.com/download/documentation/svg/dddddd.svg) `#dddddd` | ![#9c9c9c](./images/bootstrap-dark/9c9c9c.png) `#9c9c9c` |
-| `$grey-d4` | ![#d4d4d4](https://ej2.syncfusion.com/download/documentation/svg/d4d4d4.svg) `#d4d4d4` | ![#a4a4a4](./images/bootstrap-dark/a4a4a4.png) `#a4a4a4` |
-| `$grey-cc` | ![#cccccc](https://ej2.syncfusion.com/download/documentation/svg/cccccc.svg) `#cccccc` | ![#acacac](./images/bootstrap-dark/acacac.png) `#acacac` |
-| `$grey-light-font` | ![#333333](https://ej2.syncfusion.com/download/documentation/svg/333333.svg) `#333333` | ![#fff](https://ej2.syncfusion.com/download/documentation/svg/fff.svg) `#fff` |
-| `$brand-success` | ![#5cb85c](https://ej2.syncfusion.com/download/documentation/svg/5cb85c.svg) `#5cb85c` | ![#48b14c](./images/bootstrap-dark/48b14c.png) `#48b14c` |
-| `$brand-success-dark` | ![#3c763d](https://ej2.syncfusion.com/download/documentation/svg/3c763d.svg) `#3c763d` | ![#358238](./images/bootstrap-dark/358238.png) `#358238` |
-| `$brand-info` | ![#5bc0de](https://ej2.syncfusion.com/download/documentation/svg/5bc0de.svg) `#5bc0de` | ![#2aaac0](./images/bootstrap-dark/2aaac0.png) `#2aaac0` |
-| `$brand-info-dark` | ![#31708f](https://ej2.syncfusion.com/download/documentation/svg/31708f.svg) `#31708f` | ![#208090](./images/bootstrap-dark/208090.png) `#208090` |
-| `$brand-warning` | ![#f0ad4e](https://ej2.syncfusion.com/download/documentation/svg/f0ad4e.svg) `#f0ad4e` | ![#fac168](./images/bootstrap-dark/fac168.png) `#fac168` |
-| `$brand-warning-dark` | ![#8a6d3b](https://ej2.syncfusion.com/download/documentation/svg/8a6d3b.svg) `#8a6d3b` | ![#f9ad37](./images/bootstrap-dark/f9ad37.png) `#f9ad37` |
-| `$brand-danger` | ![#d9534f](https://ej2.syncfusion.com/download/documentation/svg/d9534f.svg) `#d9534f` | ![#d44f4f](./images/bootstrap-dark/d44f4f.png) `#d44f4f` |
-| `$brand-danger-dark` | ![#a94442](https://ej2.syncfusion.com/download/documentation/svg/a94442.svg) `#a94442` | ![#c12f2f](./images/bootstrap-dark/c12f2f.png) `#c12f2f` |
-| `$brand-success-light` | ![#dff0d8](https://ej2.syncfusion.com/download/documentation/svg/dff0d8.svg) `#dff0d8` | ![#dff0d8](https://ej2.syncfusion.com/download/documentation/svg/dff0d8.svg) `#dff0d8` |
-| `$brand-info-light` | ![#d9edf7](https://ej2.syncfusion.com/download/documentation/svg/d9edf7.svg) `#d9edf7` | ![#d9edf7](https://ej2.syncfusion.com/download/documentation/svg/d9edf7.svg) `#d9edf7` |
-| `$brand-warning-light` | ![#fcf8e3](https://ej2.syncfusion.com/download/documentation/svg/fcf8e3.svg) `#fcf8e3` | ![#fcf8e3](https://ej2.syncfusion.com/download/documentation/svg/fcf8e3.svg) `#fcf8e3` |
-| `$brand-danger-light` | ![#f2dede](https://ej2.syncfusion.com/download/documentation/svg/f2dede.svg) `#f2dede` | ![#f2dede](https://ej2.syncfusion.com/download/documentation/svg/f2dede.svg) `#f2dede` |
-| `$input-border-focus` | ![#66afe9](https://ej2.syncfusion.com/download/documentation/svg/66afe9.svg) `#66afe9` | ![#104888](./images/bootstrap-dark/104888.png) `#104888` |
-| `$brand-success-font` | ![#3c763d](https://ej2.syncfusion.com/download/documentation/svg/3c763d.svg) `#3c763d` | ![#2f7432](./images/bootstrap-dark/2f7432.png) `#2f7432` |
-| `$brand-info-font` | ![#31708f](https://ej2.syncfusion.com/download/documentation/svg/31708f.svg) `#31708f` | ![#1a6c7a](./images/bootstrap-dark/1a6c7a.png) `#1a6c7a` |
-| `$brand-warning-font` | ![#8a6d3b](https://ej2.syncfusion.com/download/documentation/svg/8a6d3b.svg) `#8a6d3b` | ![#9d6106](./images/bootstrap-dark/9d6106.png) `#9d6106` |
-| `$brand-danger-font` |![#a94442](https://ej2.syncfusion.com/download/documentation/svg/a94442.svg) `#a94442` | ![#ac2a2a](./images/bootstrap-dark/ac2a2a.png) `#ac2a2a` |
-| `$base-font` | ![#000000](https://ej2.syncfusion.com/download/documentation/svg/000000.svg) `#000000` | ![#000](https://ej2.syncfusion.com/download/documentation/svg/000.svg) `#000` |
+<table>
+    <style>
+        .circle-color-indicator {
+            width: 1em;
+            height: 1em;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, .08);
+            vertical-align: middle;
+        }
+        th, td {
+        text-align: left;
+        padding: 5px 15px;
+        vertical-align: top;
+        }
+    </style>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value (Default Theme) </th>
+            <th>Value (Dark Theme) </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$brand-primary</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #317ab9;"></span> #317ab9
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #0070f0;"></span> #0070f0
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-primary-darken-10</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #3071a9;"></span> #3071a9
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #0058bd;"></span> #0058bd
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-primary-darken-15</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #2a6496;"></span> #2a6496
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #00408a;"></span> #00408a
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-primary-darken-25</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #1f496e;"></span> #1f496e
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #002957;"></span> #002957
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-primary-darken-35</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #142f46;"></span> #142f46
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #001124;"></span> #001124
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-primary-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffffff;"></span> #ffffff
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #fff;"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-base</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000000;"></span> #000000
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #1a1a1a;"></span> #1a1a1a
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-darker</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #222222;"></span> #222222
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #131313;"></span> #131313
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333333;"></span> #333333
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #2a2a2a;"></span> #2a2a2a
+            </td>
+        </tr>
+        <tr>
+            <td>$grey</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #555555;"></span> #555555
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #313131;"></span> #313131
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #777777;"></span> #777777
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #393939;"></span> #393939
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-44</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #444444;"></span> #444444
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #414141;"></span> #414141
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-88</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #888888;"></span> #888888
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #484848;"></span> #484848
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-99</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #999999;"></span> #999999
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #505050;"></span> #505050
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-8c</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #8c8c8c;"></span> #8c8c8c
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #585858;"></span> #585858
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-ad</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #adadad;"></span> #adadad
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #676767;"></span> #676767
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-dark-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffffff;"></span> #ffffff
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #f0f0f0;"></span> #f0f0f0
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-white</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffffff;"></span> #ffffff
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #6e6e6e;"></span> #6e6e6e
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-lighter</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #eeeeee;"></span> #eeeeee
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #767676;"></span> #767676
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-f9</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f9f9f9;"></span> #f9f9f9
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #7e7e7e;"></span> #7e7e7e
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-f8</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8f8f8;"></span> #f8f8f8
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #858585;"></span> #858585
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-f5</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f5f5f5;"></span> #f5f5f5
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #8d8d8d;"></span> #8d8d8d
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-e6</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #e6e6e6;"></span> #e6e6e6
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #959595;"></span> #959595
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-dd</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dddddd;"></span> #dddddd
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #9c9c9c;"></span> #9c9c9c
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-d4</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d4d4d4;"></span> #d4d4d4
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #a4a4a4;"></span> #a4a4a4
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-cc</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #cccccc;"></span> #cccccc
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #acacac;"></span> #acacac
+            </td>
+        </tr>
+        <tr>
+            <td>$grey-light-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #333333;"></span> #333333
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #fff;"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-success</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #5cb85c;"></span> #5cb85c
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #48b14c;"></span> #48b14c
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-success-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #3c763d;"></span> #3c763d
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #358238;"></span> #358238
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-info</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #5bc0de;"></span> #5bc0de
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #2aaac0;"></span> #2aaac0
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-info-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #31708f;"></span> #31708f
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #208090;"></span> #208090
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-warning</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f0ad4e;"></span> #f0ad4e
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #fac168;"></span> #fac168
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-warning-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #8a6d3b;"></span> #8a6d3b
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #f9ad37;"></span> #f9ad37
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-danger</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d9534f;"></span> #d9534f
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #d44f4f;"></span> #d44f4f
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-danger-dark</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #a94442;"></span> #a94442
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #c12f2f;"></span> #c12f2f
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-success-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dff0d8;"></span> #dff0d8
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #dff0d8;"></span> #dff0d8
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-info-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d9edf7;"></span> #d9edf7
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #d9edf7;"></span> #d9edf7
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-warning-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fcf8e3;"></span> #fcf8e3
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #fcf8e3;"></span> #fcf8e3
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-danger-light</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f2dede;"></span> #f2dede
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #f2dede;"></span> #f2dede
+            </td>
+        </tr>
+        <tr>
+            <td>$input-border-focus</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #66afe9;"></span> #66afe9
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #104888;"></span> #104888
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-success-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #3c763d;"></span> #3c763d
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #2f7432;"></span> #2f7432
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-info-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #31708f;"></span> #31708f
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #1a6c7a;"></span> #1a6c7a
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-warning-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #8a6d3b;"></span> #8a6d3b
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #9d6106;"></span> #9d6106
+            </td>
+        </tr>
+        <tr>
+            <td>$brand-danger-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #a94442;"></span> #a94442
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #ac2a2a;"></span> #ac2a2a
+            </td>
+        </tr>
+        <tr>
+            <td>$base-font</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000000;"></span> #000000
+            </td>
+               <td>
+                <span class="circle-color-indicator" style="background: #000;"></span> #000
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ### Syncfusion Blazor Material Theme
 
