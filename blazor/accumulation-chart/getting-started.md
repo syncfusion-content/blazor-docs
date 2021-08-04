@@ -29,7 +29,7 @@ This section briefly explains about how to include a `Accumulation Chart` in you
     </head>
     ```
 
-3. Now add the lodash script to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our [`chart interactive`]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
+3. Now add the lodash script to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our [chart interactive]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
 
     ```html
     <head>
@@ -158,7 +158,7 @@ On successful compilation of your application, the Syncfusion Blazor Accumulatio
 
 ## Add Title
 
-Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, you can add a title to the accumulation chart to provide the user with quick information about the data plotted in the chart.
+Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html#Syncfusion_Blazor_Charts_SfAccumulationChart_Title) property, you can add a title to the accumulation chart to provide the user with quick information about the data plotted in the chart.
 
 ```cshtml 
 @page "/"
@@ -195,7 +195,7 @@ Using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ## Add Data Label
 
-You can add data labels to improve the readability of the accumulation chart. This can be achieved by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to **true** in the [`AccumulationDataLabelSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
+You can add data labels to improve the readability of the accumulation chart. This can be achieved by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html#Syncfusion_Blazor_Charts_AccumulationDataLabelSettings_Visible) property to **true** in the [AccumulationDataLabelSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationDataLabelSettings.html).
 
 ```cshtml 
 @page "/"
@@ -234,7 +234,7 @@ You can add data labels to improve the readability of the accumulation chart. Th
 
 ## Enable Tooltip
 
-When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [`AccumulationChartTooltipSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to **true**.
+When space constraints prevent you from displaying information using data labels, the tooltip comes in handy. The tooltip can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html#Syncfusion_Blazor_Charts_AccumulationChartTooltipSettings_Enable) property in [AccumulationChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartTooltipSettings.html) to **true**.
 
 ```cshtml 
 @page "/"
@@ -273,7 +273,7 @@ When space constraints prevent you from displaying information using data labels
 
 ## Enable Legend
 
-You can use legend for the accumulation chart by setting the [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to **true** in [`AccumulationChartLegendSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
+You can use legend for the accumulation chart by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html#Syncfusion_Blazor_Charts_AccumulationChartLegendSettings_Visible) property to **true** in [AccumulationChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartLegendSettings.html).
 
 ```cshtml 
  @page "/"
@@ -312,7 +312,7 @@ You can use legend for the accumulation chart by setting the [`Visible`](https:/
 
 ![Legend](images/getting-started/legend.png)
 
-> You can find the fully working sample for accumulation chart [`here`](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocApp2124811315.zip).
+> You can find the fully working sample for accumulation chart [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocApp2124811315.zip).
 
 ## See also
 
