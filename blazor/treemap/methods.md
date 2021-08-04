@@ -88,7 +88,7 @@ The [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.T
 
 ## Refresh
 
-The `RefreshAsync` method helps to render the TreeMap component again.
+The `RefreshAsync` method helps to refresh the TreeMap component.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
