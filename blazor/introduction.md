@@ -23,4 +23,4 @@ Syncfusion Blazor is a modern enterprise UI components library for creating Blaz
 
 * If you are still not able to find the information that you are looking for in the self-help resources mentioned above then please contact us by creating a support ticket in [our support site](http://syncfusion.com/support) or ask your query in Stack Overflow with the tag `syncfusion-blazor`.
 
-Don’t see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
+* Don’t see what you need? Please request it in our [feedback portal](https://www.syncfusion.com/feedback/blazor-components).
