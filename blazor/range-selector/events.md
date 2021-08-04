@@ -23,7 +23,7 @@ The Range Selector component supports the following events.
 
 ## Loaded
 
-The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered.
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Loaded) event triggers, after the Range Selector is rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -63,7 +63,7 @@ The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ra
 
 ## OnPrintCompleted
 
-The [`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers, after the Range Selector is printed.
+The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_OnPrintCompleted) event triggers, after the Range Selector is printed.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -103,13 +103,13 @@ The [`OnPrintCompleted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Changed
 
-The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers, whenever the slider position is changed. The following arguments are present in this event:
+The [Changed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Changed) event triggers, whenever the slider position is changed. The following arguments are present in this event:
 
-* [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_Start) - Specifies the start value.
-* [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_End) - Specifies the end value.
-* [`ZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_ZoomFactor) - Specifies the zoom factor.
-* [`ZoomPosition`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_ZoomPosition) - Specifies the zoom position.
-* [`SelectedData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_SelectedData) - The selected data collection can be accessed in this argument.
+* [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_Start) - Specifies the start value.
+* [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_End) - Specifies the end value.
+* [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_ZoomFactor) - Specifies the zoom factor.
+* [ZoomPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_ZoomPosition) - Specifies the zoom position.
+* [SelectedData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChangedEventArgs.html#Syncfusion_Blazor_Charts_ChangedEventArgs_SelectedData) - The selected data collection can be accessed in this argument.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -149,10 +149,10 @@ The [`Changed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.R
 
 ## Resized
 
-The [`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers, when the browser window is resized. The following arguments are present in this event:
+The [Resized](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_Resized) event triggers, when the browser window is resized. The following arguments are present in this event:
 
-* [`CurrentSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_CurrentSize) - Specifies the current size for the Range Selector.
-* [`PreviousSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_PreviousSize) - Specifies the previous size for the Range Selector.
+* [CurrentSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_CurrentSize) - Specifies the current size for the Range Selector.
+* [PreviousSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeResizeEventArgs.html#Syncfusion_Blazor_Charts_RangeResizeEventArgs_PreviousSize) - Specifies the previous size for the Range Selector.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -192,12 +192,12 @@ The [`Resized`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.R
 
 ## LabelRender
 
-Before rendering each axis label, the [`LabelRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_LabelRender) event is triggered. The following arguments are present in this event:
+Before rendering each axis label, the [LabelRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_LabelRender) event is triggered. The following arguments are present in this event:
 
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Text) - Specifies the current axis label text.
-* [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Value) - Specifies the current axis label value.
-* [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Region) - Specifies the current axis label position.
-* [`LabelStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_LabelStyle) - Specifies the current axis label style.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Text) - Specifies the current axis label text.
+* [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Value) - Specifies the current axis label value.
+* [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_Region) - Specifies the current axis label position.
+* [LabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeLabelRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeLabelRenderEventArgs_LabelStyle) - Specifies the current axis label style.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -237,10 +237,10 @@ Before rendering each axis label, the [`LabelRender`](https://help.syncfusion.co
 
 ## TooltipRender
 
-The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_TooltipRender) event triggers before the tooltip is rendered. The following arguments are present in this event:
+The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_TooltipRender) event triggers before the tooltip is rendered. The following arguments are present in this event:
 
-* [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_Text) - Specifies the current tooltip text.
-* [`TextStyle`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_TextStyle) - Specifies the current tooltip text style.
+* [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_Text) - Specifies the current tooltip text.
+* [TextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeTooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeTooltipRenderEventArgs_TextStyle) - Specifies the current tooltip text style.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -280,11 +280,11 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ## SelectorRender
 
-The [`SelectorRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_SelectorRender) event triggers before the period selector is rendered. The following arguments are present in this event:
+The [SelectorRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorEvents.html#Syncfusion_Blazor_Charts_RangeNavigatorEvents_SelectorRender) event triggers before the period selector is rendered. The following arguments are present in this event:
 
-* [`Content`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Content) - Specifies the content for the calendar in the period selector.
-* [`EnableCustomFormat`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_EnableCustomFormat) - Enables to show the content for the calendar in the period selector. By default it is true.
-* [`Selector`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Selector) - Specifies the period selector collection.
+* [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Content) - Specifies the content for the calendar in the period selector.
+* [EnableCustomFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_EnableCustomFormat) - Enables to show the content for the calendar in the period selector. By default it is true.
+* [Selector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeSelectorRenderEventArgs.html#Syncfusion_Blazor_Charts_RangeSelectorRenderEventArgs_Selector) - Specifies the period selector collection.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
