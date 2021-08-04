@@ -18,7 +18,7 @@ The [ValueChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Progr
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
-<SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
+<SfProgressBar Type="ProgressType.Linear" Value="80" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents ValueChanged="@ValueHandler"></ProgressBarEvents>
 </SfProgressBar>
 
@@ -51,12 +51,13 @@ The [ProgressCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## AnimationComplete
 
-The [AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when an animation is enabled and the progress value is reached.
+The [AnimationComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_AnimationComplete) event triggers when an animation is enabled and the progress attains to maximum value.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
 <SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
+    <ProgressBarAnimation Enable="true"></ProgressBarAnimation>
     <ProgressBarEvents AnimationComplete="@AnimationHandler"></ProgressBarEvents>
 </SfProgressBar>
 
@@ -75,8 +76,19 @@ The [AnnotationRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.P
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
-<SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
+<SfProgressBar Type="ProgressType.Circular" Value="80" Height="160" Minimum="0" Maximum="100">
     <ProgressBarEvents AnnotationRender="@AnnotationHandler"></ProgressBarEvents>
+    <ProgressBarAnnotations>
+        <ProgressBarAnnotation>
+            <ContentTemplate>
+                <div style="font-size:20px;font-weight:bold;color:#000000;fill:#ffffff">
+                    <span>
+                        80%
+                    </span>
+                </div>
+            </ContentTemplate>
+        </ProgressBarAnnotation>
+    </ProgressBarAnnotations>
 </SfProgressBar>
 
 @code{
@@ -94,7 +106,7 @@ The [TextRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Progres
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
 
-<SfProgressBar Type="ProgressType.Linear" Value="100" Height="60" Minimum="0" Maximum="100">
+<SfProgressBar Type="ProgressType.Linear" ShowProgressValue="true" Value="100" Height="60" Minimum="0" Maximum="100">
     <ProgressBarEvents TextRender="@TextRenderHandler"></ProgressBarEvents>
 </SfProgressBar>
 

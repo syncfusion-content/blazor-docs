@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ProgressBar component of Syncfusion, and more details.
+title: Getting Stared with Blazor ProgressBar in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor ProgressBar in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressBar Component
+# Blazor ProgressBar Component in Server Side App using Visual Studio
 
 This section briefly explains how to include a Progress Bar component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -87,6 +87,8 @@ On successful compilation of the application, the Syncfusion Blazor Progress Bar
 Change the type of the Progress Bar by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property. By default, the [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear) type of Progress Bar will be rendered. In the following example, view the [Circular](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular) type.
 
 ```cshtml
+@using Syncfusion.Blazor.ProgressBar
+
 <SfProgressBar Type="ProgressType.Circular" Value="70" Minimum="0" Maximum="100" TrackThickness="8" ProgressThickness="8">
 </SfProgressBar>
 ```

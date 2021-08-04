@@ -67,8 +67,9 @@ The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
+@using Syncfusion.Blazor.Buttons
 
-<SfRangeNavigator Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
+<SfRangeNavigator @ref="RangeObj" Value="@Value" ValueType="RangeValueType.DateTime" IntervalType="RangeIntervalType.Years">
     <RangeNavigatorEvents OnPrintCompleted="PrintCompleted"></RangeNavigatorEvents>
     <RangeNavigatorSeriesCollection>
         <RangeNavigatorSeries DataSource="@StockInfo" XName="Date" Type="RangeNavigatorType.Line" YName="Close">
@@ -76,7 +77,11 @@ The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     </RangeNavigatorSeriesCollection>
 </SfRangeNavigator>
 
+<SfButton Id="button" Content="Print" @onclick="@Click" IsPrimary="true" CssClass="e-flat">
+</SfButton>
+
 @code {
+    public SfRangeNavigator RangeObj;
     public class StockDetails
     {
         public DateTime Date { get; set; }
@@ -94,6 +99,10 @@ The [OnPrintCompleted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
     public DateTime[] Value = new DateTime[] {
         new DateTime(2006, 01, 01), new DateTime(2008, 01, 01)
     };
+    public async Task Click(MouseEventArgs args)
+    {
+        await RangeObj.PrintAsync();
+    }
     public void PrintCompleted(EventArgs args)
     {
         // Here you can customize your code.
