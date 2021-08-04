@@ -115,7 +115,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![AutoComplete](./images/default.png)
+![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)
 
 ## Binding data source
 
@@ -163,7 +163,7 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![AutoComplete](./images/data_binding.png)
+![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)
 
 ## Custom values
 
@@ -253,7 +253,7 @@ In the following sample, suggestion list's width and height are configured.
 
 The output will be as follows.
 
-![AutoComplete](./images/width_height.png)
+![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
 
 ## See Also
 
