@@ -13,8 +13,8 @@ documentation: ug
 
 This section explains the supported rendering modes of the In-place Editor. The possible Rendering modes are:
 
-    * Popup
-    * Inline
+* Popup
+* Inline
 
 > By default, `Inline` mode will be rendered when opening an editor.
 
@@ -24,7 +24,7 @@ This section explains the supported rendering modes of the In-place Editor. The 
 
 In the following code block, the In-place Editor renders with `Inline` mode. You can dynamically switch into another mode by changing the drop-down item value.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
@@ -117,7 +117,7 @@ The following options are also supported:
 
 In the following code block, when switching the drop-down item, the selected value is assigned to the `EditableOn` property. The editor will be opened when you double click on the input.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.DropDowns
@@ -303,7 +303,7 @@ By default, the In-place Editor input element is highlighted with a dotted under
 
 In the following code block, indicates the intractable and normal display modes with different examples.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs

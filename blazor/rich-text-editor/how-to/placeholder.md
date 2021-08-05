@@ -11,7 +11,7 @@ documentation: ug
 
 By using `e-rte-placeholder` class, you can customize the placeholder style.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

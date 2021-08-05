@@ -13,7 +13,7 @@ The splitter `SplitterPane` `Collapsed` property supports the two-way binding an
 
 In the following example, if either the value is changed in checkbox or splitter first pane collpased state, it will reflect in both the checkbox and splitter pane.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 @using Syncfusion.Blazor.Buttons

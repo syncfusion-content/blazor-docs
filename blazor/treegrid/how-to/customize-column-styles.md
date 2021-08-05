@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Column Styles in Blazor TreeGrid Component
 
-You can customise the appearance of the header and content of a particular column using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+You can customise the appearance of the header and content of a particular column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 
 To customize the Tree Grid column, follow the given steps:
 
@@ -28,11 +28,11 @@ Create a CSS class with custom style to override the default style for rowcell a
 
 **Step 2**:
 
-Add the custom CSS class to the specified column by using the [`CustomAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+Add the custom CSS class to the specified column by using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
@@ -72,7 +72,7 @@ Add the custom CSS class to the specified column by using the [`CustomAttributes
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -108,4 +108,4 @@ public class TreeData
 
 Output be like the below.
 
-![`Final output`](../images/changecolumnstyle.PNG)
+![Final output](../images/changecolumnstyle.PNG)

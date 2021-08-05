@@ -15,7 +15,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `OnLoad` event allows customization of Kanban properties before rendering.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -36,7 +36,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `ActionBegin` event triggers at the beginning of every Kanban action.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -57,7 +57,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `ActionComplete` event triggers on successful completion of the Kanban actions.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -78,7 +78,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `ActionFailure` event triggers when a Kanban action gets failed or interrupted and it will return an error information.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -99,7 +99,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `CardClick` event triggers on single-clicking the Kanban cards.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -120,7 +120,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `CardDoubleClick` event triggers on double-clicking the Kanban cards.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -141,7 +141,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `CardRendered` event triggers before each card of the Kanban rendering on the page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -162,7 +162,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `DataBinding` event triggers before the data binds to the Kanban.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -183,7 +183,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `DialogClose` event triggers before the dialog closes.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -204,7 +204,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `DialogOpen` event triggers before the dialog opens.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -225,7 +225,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `DragStart` event triggers when the card drag actions start.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -246,7 +246,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `DragStop` event triggers when the card drag actions stop.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -267,7 +267,7 @@ This section explains the list of events of the Kanban component which will be t
 
 `QueryCellInfo` event triggers before each column of the Kanban rendering on the page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

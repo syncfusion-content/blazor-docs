@@ -15,7 +15,7 @@ The following example illustrates how to create ButtonGroup with icons.
 
 `Index.razor`
 
-```csharp
+```cshtml
 
 <div class='e-btn-group'>
     <EjsButton ID="left" Content="Left" IconCss="e-icons e-left-icon"></EjsButton>

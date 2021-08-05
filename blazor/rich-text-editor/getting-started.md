@@ -25,38 +25,38 @@ To get start quickly with Blazor Rich Text Editor components, you can check on t
 
 * You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+    ```cshtml
 
-<head>
+    <head>
+        <environment include="Development">
+        ....
+        ....
+            <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
+            <!---CDN--->
+            @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
+    </environment>
+    </head>
+
+    ```
+
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+    ```cshtml
+
+    <head>
     <environment include="Development">
-    ....
-    ....
         <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-        <!---CDN--->
-        @*<link href="https://cdn.syncfusion.com/blazor/18.4.42/styles/fabric.css" rel="stylesheet" />*@
-   </environment>
-</head>
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </environment>
+    </head>
 
-```
-
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```html
-
-<head>
-   <environment include="Development">
-      <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
-      <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-  </environment>
-</head>
-
-```
+    ```
 
 ## Adding component package to the application
 
 Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.RichTextEditor** package.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -93,7 +93,7 @@ To initialize the Rich Text Editor component, add the below code to your **Index
 
 The following code explains how to initialize a simple Rich Text Editor in Razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -117,7 +117,7 @@ The output will be as follows.
 
 Configure the toolbar with the tools using `Items` field of the `RichTextEditorToolbarSettings` property as your application requires.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -188,7 +188,7 @@ The `Image` module inserts an image into Rich Text Editor's content area, and th
 
 Specifies the items to be rendered in quick toolbar based on the target elements such as image, link and table element. The quick toolbar opens to customize the element by clicking the target element.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -253,7 +253,7 @@ The output will be as follows.
 
 To retrieve the editor contents, use the `Value` property of Rich Text Editor. To fetch the Rich Text Editor's text content, use `GetText` method of Rich Text Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor

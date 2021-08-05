@@ -15,7 +15,7 @@ Importing allows you to view or edit the predefined conditions which is availabl
 
 To apply conditions initially, you can define the condition and rules in **QueryBuilderRule** . Here, you can import list of rules by defining the **QueryBuilderRule**.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 
@@ -68,7 +68,8 @@ Output will be shown as
 
 ### Importing from SQL
 
-You can set the conditions from SQL query through the [`SetRulesFromSql`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
+You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
+
 In the following sample sql rules binding on querybuilder on button click.
 
 ```cshtml
@@ -126,7 +127,7 @@ Exporting allows you to save or maintain the created conditions through the [Bla
 
 ## Exporting to SQL
 
-You can export the defined conditions to SQL query through the [`GetSqlFromRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
+You can export the defined conditions to SQL query through the [GetSqlFromRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_GetSqlFromRules) method.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder

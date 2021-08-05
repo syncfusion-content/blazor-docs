@@ -15,7 +15,7 @@ The path of the connector is defined with a collection of segments. There are th
 
 To create a straight line, specify the `Type` of the segment as **Straight** and add a straight segment to `Segments` collection and need to specify `Type` for the connector. The following code example illustrates how to create a default straight segment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -60,7 +60,7 @@ To create a straight line, specify the `Type` of the segment as **Straight** and
 
 Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment `Type` as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -101,7 +101,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
 
 The `Length` and `Direction` properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -159,7 +159,7 @@ The `Length` and `Direction` properties allow to define the flow and length of s
 
 Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the `Type` of the segment is set as bezier and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -203,7 +203,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 We have properties called `Point1` and `Point2` which is used to control the points of the bezier connector . And also we have properties called `vector1` and `vector2` which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
 
-```csharp
+```cshtml
 Connector Connector1 = new Connector()
         {
             ID = "Connector1",
@@ -236,7 +236,7 @@ Connector Connector1 = new Connector()
 
 Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to `connector.Segments` collection. The following code example illustrates how to create a connector with multiple segments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
@@ -317,7 +317,7 @@ Multiple segments can be defined one after another. To create a connector with m
 * Any number of new segments can be inserted into a straight line by clicking, when Shift and Ctrl keys are pressed (Ctrl+Shift+Click).
 * Straight segments can be removed by clicking the segment end point, when Ctrl and Shift keys are pressed (Ctrl+Shift+Click).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -342,7 +342,7 @@ Multiple segments can be defined one after another. To create a connector with m
 * Orthogonal thumbs allow you to adjust the length of adjacent segments by clicking and dragging it.
 * When necessary, some segments are added or removed automatically, when dragging the segment. This is to maintain proper routing of orthogonality between segments.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent @ref="Diagram" Width="1000px"  Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -369,8 +369,8 @@ Multiple segments can be defined one after another. To create a connector with m
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)

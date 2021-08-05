@@ -11,7 +11,7 @@ documentation: ug
 
 Toast supports to change templates dynamically with displaying in multiple toasts. You can change the toast properties while calling in the `Show` method.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

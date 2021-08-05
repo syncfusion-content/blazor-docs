@@ -13,25 +13,25 @@ The stock events are used to mark specific events such as market open and close,
 
 ## Date
 
-The [`Date`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Date) property is used to display the stock event in the Chart at the specified time. For example, Quarter 1 ends on March 31, 2021, and the stock event date must be set to March 31, 2021. More customization options are available in the immediate sections such as **Text**, **Type**, **Description**, and so on.
+The [Date](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Date) property is used to display the stock event in the Chart at the specified time. For example, Quarter 1 ends on March 31, 2021, and the stock event date must be set to March 31, 2021. More customization options are available in the immediate sections such as **Text**, **Type**, **Description**, and so on.
 
 ## Text
 
-The text acts as a quick and short representation of the stock event, such as **Q1** for Quarter 1 and **High** for highest price over a period; it can be customized separately for each stock event using the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) property.
+The text acts as a quick and short representation of the stock event, such as **Q1** for Quarter 1 and **High** for highest price over a period; it can be customized separately for each stock event using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) property.
 
 ## Type
 
-The [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FlagType.html) property can be used to set the background shape of a stock event, with options such as **Circle**, **Square**, **Flag**, **Text**, **Sign**, **Triangle**, **InvertedTriangle**, **ArrowUp**, **ArrowDown**, **ArrowLeft**, and **ArrowRight**.
+The [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FlagType.html) property can be used to set the background shape of a stock event, with options such as **Circle**, **Square**, **Flag**, **Text**, **Sign**, **Triangle**, **InvertedTriangle**, **ArrowUp**, **ArrowDown**, **ArrowLeft**, and **ArrowRight**.
 
 ## Background
 
-The [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Background) property of the stock event is used to customize the color of the background shape, which accepts values in hex and rgba as a valid CSS color string.
+The [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Background) property of the stock event is used to customize the color of the background shape, which accepts values in hex and rgba as a valid CSS color string.
 
 ## Description
 
-The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) property specifies the content of the stock event tooltip that appears on the Chart when the mouse is moved over the stock event. The description will be displayed as the text of the tooltip. For instance, if [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) **Q1** contains a [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) as **Quarter 1**, the tooltip will show **Quarter 1**.
+The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) property specifies the content of the stock event tooltip that appears on the Chart when the mouse is moved over the stock event. The description will be displayed as the text of the tooltip. For instance, if [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Text) **Q1** contains a [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartStockEvent.html#Syncfusion_Blazor_Charts_StockChartStockEvent_Description) as **Quarter 1**, the tooltip will show **Quarter 1**.
 
-```csharp
+```cshtml
 
 @page "/"
 
@@ -65,6 +65,7 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
     </StockChartChartArea>
 </SfStockChart>
 @code{
+
     public class ChartData
     {
         public DateTime date { get; set; }
@@ -74,6 +75,7 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public double high { get; set; }
         public double volume { get; set; }
     }
+
     public class StockEventDetails
     {
         public DateTime Date { get; set; }
@@ -85,9 +87,11 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
         public string TextColor { get; set; } = "#FFFFFF";
         public bool ShowOnSeries { get; set; } = true;
     }
+
     public List<ChartSeriesType> SeriesValue = new List<ChartSeriesType>();
     private ChartData[] DataSource;
     private List<StockEventDetails> StockEvents;
+    
     protected override async Task OnInitializedAsync()
     {
         GetStockEventsDetails();
@@ -96,6 +100,7 @@ The [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
             DataSource = JsonConvert.DeserializeObject<ChartData[]>(System.IO.File.ReadAllText("./wwwroot/data/chart-data.json"));
         });
     }
+
     private void GetStockEventsDetails()
     {
         StockEvents = new List<StockEventDetails>()

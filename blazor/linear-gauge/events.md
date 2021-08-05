@@ -9,13 +9,13 @@ documentation: ug
 
 # Events in Blazor Linear Gauge Component
 
-This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed. The events should be provided to the Linear Gauge by using the [`LinearGaugeEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html) class.
+This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed. The events should be provided to the Linear Gauge by using the [LinearGaugeEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html) class.
 
 ## AnnotationRendering
 
-Before the annotation is rendered in the Linear Gauge, the [`AnnotationRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_AnnotationRendering) event will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.AnnotationRenderEventArgs.html#properties).
+Before the annotation is rendered in the Linear Gauge, the [AnnotationRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_AnnotationRendering) event will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.AnnotationRenderEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -43,9 +43,9 @@ Before the annotation is rendered in the Linear Gauge, the [`AnnotationRendering
 
 ## AxisLabelRendering
 
-Before each axis label is rendered in the Linear Gauge, the [`AxisLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_AxisLabelRendering) event is fired. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.AxisLabelRenderEventArgs.html#properties).
+Before each axis label is rendered in the Linear Gauge, the [AxisLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_AxisLabelRendering) event is fired. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.AxisLabelRenderEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -66,9 +66,9 @@ Before each axis label is rendered in the Linear Gauge, the [`AxisLabelRendering
 
 ## Loaded
 
-After the Linear Gauge has been loaded, the [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_Loaded) event will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LoadedEventArgs.html).
+After the Linear Gauge has been loaded, the [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_Loaded) event will be triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LoadedEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -89,9 +89,9 @@ After the Linear Gauge has been loaded, the [`Loaded`](https://help.syncfusion.c
 
 ## OnDragEnd
 
-The [`OnDragEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnDragEnd) event will be fired before the pointer drag is completed. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.PointerDragEventArgs.html#properties).
+The [OnDragEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnDragEnd) event will be fired before the pointer drag is completed. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.PointerDragEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -115,9 +115,9 @@ The [`OnDragEnd`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linear
 
 ## OnDragStart
 
-When the pointer drag begins, the [`OnDragStart`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnDragStart) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.PointerDragEventArgs.html#properties).
+When the pointer drag begins, the [OnDragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnDragStart) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.PointerDragEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -141,9 +141,9 @@ When the pointer drag begins, the [`OnDragStart`](https://help.syncfusion.com/cr
 
 ## OnGaugeMouseDown
 
-When mouse is pressed down on the gauge, the [`OnGaugeMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseDown) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
+When mouse is pressed down on the gauge, the [OnGaugeMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseDown) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -164,9 +164,9 @@ When mouse is pressed down on the gauge, the [`OnGaugeMouseDown`](https://help.s
 
 ## OnGaugeMouseLeave
 
-When mouse pointer leaves the gauge, the [`OnGaugeMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseLeave) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
+When mouse pointer leaves the gauge, the [OnGaugeMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseLeave) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -187,9 +187,9 @@ When mouse pointer leaves the gauge, the [`OnGaugeMouseLeave`](https://help.sync
 
 ## OnGaugeMouseUp
 
-When the mouse pointer is released over the Linear Gauge, the [`OnGaugeMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseUp) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
+When the mouse pointer is released over the Linear Gauge, the [OnGaugeMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnGaugeMouseUp) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.MouseEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -210,9 +210,9 @@ When the mouse pointer is released over the Linear Gauge, the [`OnGaugeMouseUp`]
 
 ## OnLoad
 
-Before the Linear Gauge is loaded, the [`OnLoad`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnLoad) event is fired. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LoadEventArgs.html).
+Before the Linear Gauge is loaded, the [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnLoad) event is fired. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LoadEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge>
@@ -233,9 +233,9 @@ Before the Linear Gauge is loaded, the [`OnLoad`](https://help.syncfusion.com/cr
 
 ## OnPrint
 
-The [`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnPrint) event is fired before the print begins. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.PrintEventArgs.html).
+The [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_OnPrint) event is fired before the print begins. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.PrintEventArgs.html).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <button @onclick="PrintGauge">Print</button>
@@ -266,9 +266,9 @@ The [`OnPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGa
 
 ## Resizing
 
-Prior to the window resizing, the [`Resizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_Resizing) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ResizeEventArgs.html#properties).
+Prior to the window resizing, the [Resizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_Resizing) event is triggered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ResizeEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Width="100%">
@@ -289,9 +289,9 @@ Prior to the window resizing, the [`Resizing`](https://help.syncfusion.com/cr/bl
 
 ## TooltipRendering
 
-The [`TooltipRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_TooltipRendering) event is fired before the tooltip is rendered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipRenderEventArgs.html#properties).
+The [TooltipRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_TooltipRendering) event is fired before the tooltip is rendered. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.TooltipRenderEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <SfLinearGauge Width="100%">
@@ -316,9 +316,9 @@ The [`TooltipRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## ValueChange
 
-The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_ValueChange) event is triggered when the pointer is dragged from one value to another. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ValueChangeEventArgs.html#properties).
+The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html#Syncfusion_Blazor_LinearGauge_LinearGaugeEvents_ValueChange) event is triggered when the pointer is dragged from one value to another. To know more about the arguments of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.ValueChangeEventArgs.html#properties).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.LinearGauge
 
 <div style="width:250px">
@@ -327,7 +327,8 @@ The [`ValueChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Line
         <LinearGaugeAxes>
             <LinearGaugeAxis>
                 <LinearGaugePointers>
-                    <LinearGaugePointer EnableDrag="true" PointerValue="10"></LinearGaugePointer>
+                    <LinearGaugePointer EnableDrag="true" PointerValue="10">
+                    </LinearGaugePointer>
                 </LinearGaugePointers>
             </LinearGaugeAxis>
         </LinearGaugeAxes>

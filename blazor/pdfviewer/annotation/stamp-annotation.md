@@ -57,8 +57,10 @@ Refer to the following code snippet to set the default sticky note annotation se
 ```cshtml
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
+
 <SfPdfViewerServer @ref="@viewer" DocumentPath="@DocumentPath" StampSettings="@StampSettings" >
 </SfPdfViewerServer>
+
 @code{
     SfPdfViewerServer viewer;
     private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";

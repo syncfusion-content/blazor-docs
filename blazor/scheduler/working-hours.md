@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Working Days and Hours in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Working Days and Hours in Syncfusion Blazor Scheduler component and more.
+description: This section shows the way to set different working days and hours, start and end hours, and start day of the week on Syncfusion Blazor Scheduler.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -98,7 +98,7 @@ Here, the working days are defined as [1, 3, 4, 5] on Scheduler and therefore th
 
 It is possible to show the week number count of a week in the header bar of the Scheduler by setting true to `ShowWeekNumber` property. By default, its default value is `false`. In Month view, the week numbers are displayed as a first column.
 
-> The `ShowWeekNumber` property is not applicable on Timeline views, as it has the equivalent [`HeaderRows`](./header-rows/#display-week-numbers-in-timeline-views) property to handle such requirement with additional customization.
+> The `ShowWeekNumber` property is not applicable on Timeline views, as it has the equivalent [HeaderRows](./header-rows/#display-week-numbers-in-timeline-views) property to handle such requirement with additional customization.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

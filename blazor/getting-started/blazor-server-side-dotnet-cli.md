@@ -38,7 +38,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Now, add **Syncfusion.Blazor.Calendars** NuGet package to the new application using the following command line. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
-    ```bash
+    ```
     dotnet add package Syncfusion.Blazor.Calendars -v '{:nuget-version:}'
     dotnet restore
     ```
@@ -86,14 +86,14 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
     ```
 
 2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -114,7 +114,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
 
-    ```csharp
+    ```cshtml
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 

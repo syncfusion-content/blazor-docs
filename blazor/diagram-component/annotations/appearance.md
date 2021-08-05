@@ -13,7 +13,7 @@ documentation: ug
 
 Diagram allows you set size for annotations by using the Height and Width properties. The default value of the `Width`, and `Height` properties are 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -51,7 +51,7 @@ Diagram allows you set size for annotations by using the Height and Width proper
 
 Diagram provides support to add a `Hyperlink` to the nodes or connectors annotation. It can also be customized.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
     <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -90,7 +90,7 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
 ### Hyperlink with content
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -131,7 +131,7 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
 When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. The following code explains how to wrap a text in a node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -181,7 +181,7 @@ The `TextOverflow` property specifies how the overflowed content that is not dis
 
 The following code sample shows how the different types of overflow property working for the different types of text wrapping.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -241,7 +241,7 @@ You can change the font style of the annotations with the font specific properti
 
 The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize Background, Opacity, and Border of the annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -279,9 +279,9 @@ protected override void OnInitialized()
 
 ## Update the annotation style at runtime
 
-* You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
+You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Style" @onclick="@UpdateStyle" />
@@ -346,7 +346,7 @@ Double-clicking any annotation will enable the editing and the node enables firs
 
 Diagram allows to create read-only annotations. You have to set the read-only property of annotation to enable or disable the read-only `Constraints`. The following code explains how to enable read-only mode.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -383,7 +383,7 @@ protected override void OnInitialized()
 
 You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. Different labels by position is same or different point of the shapes of connector depends upon the offset values specified.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
@@ -464,8 +464,8 @@ Refer to `Constraints` to learn about how to enable or disable the annotation co
 
 ## See also
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to add annotation for Node`](./node-annotation)
+* [How to add annotation for Node](./node-annotation)
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)

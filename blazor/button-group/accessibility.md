@@ -10,8 +10,8 @@ documentation: ug
 # Accessibility
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
-ButtonGroup provides built-in compliance with `WAI-ARIA` specifications. It helps the people with disabilities by providing information about the widget for assistive
-technology in the screen readers. ButtonGroup component contains the `group` role.
+
+ButtonGroup provides built-in compliance with `WAI-ARIA` specifications. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers. ButtonGroup component contains the `group` role.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
@@ -75,7 +75,7 @@ technology in the screen readers. ButtonGroup component contains the `group` rol
 
 `Index.razor`
 
-```csharp
+```cshtml
   <h5>Normal behavior</h5>
    <div class='e-btn-group e-outline'>
     <EjsButton ID="html" CssClass='e-outline' Content="HTML"></EjsButton>

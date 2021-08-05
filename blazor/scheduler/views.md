@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Views in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Views in Syncfusion Blazor Scheduler component and much more details.
+description: This section helps you to learn about available views and view specific customization options for each views in Syncfusion Blazor Scheduler.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -33,6 +33,11 @@ As the Scheduler displays `Week` view by default, therefore to change the active
 * Year
 
 It is possible to display only the desired views on the Scheduler using the `Views` property.
+
+To get start quickly on customizing individual views of scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=bBhn7YHje8k"%}
 
 In the following example, the Scheduler displays 2 views namely, Week and TimelineDay.
 
@@ -424,7 +429,7 @@ By default the timeline year view orientation is set to Horizontal view. In this
 
 #### Setting the first month of timeline year
 
-By default, months in timeline year view displayed from January to December. User can customize this default behavior with the help of scheduler [`FirstMonthOfYear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear) property. This property allows user to set the first month of the timeline year on Scheduler. User can set first month of timeline year by passing integer value to the `FirstMonthOfYear` property, whereby 1 is always denoted as January, 2 as February and so on. This property applicable only in timeline year views.
+By default, months in timeline year view displayed from January to December. User can customize this default behavior with the help of scheduler [FirstMonthOfYear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear) property. This property allows user to set the first month of the timeline year on Scheduler. User can set first month of timeline year by passing integer value to the `FirstMonthOfYear` property, whereby 1 is always denoted as January, 2 as February and so on. This property applicable only in timeline year views.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

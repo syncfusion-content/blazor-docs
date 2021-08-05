@@ -9,9 +9,7 @@ documentation: ug
 
 # Sorting in Blazor Gantt Chart Component
 
-Sorting enables you to sort data in the ascending or descending order. To sort a column, click the column header.
-
-To sort multiple columns, press and hold the CTRL key and click the column header. You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
+Sorting enables you to sort data in the ascending or descending order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
 
 To enable sorting in the Gantt Chart component, set the `AllowSorting` property to true. Sorting options can be configured through the `GanttSortSettings` property.
 
@@ -116,7 +114,7 @@ The following screenshot shows the output of multicolumn sorting in Gantt Chart 
 
 ## Sorting Column on Gantt Chart Initialization
 
-The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component can be rendered with sorted columns initially, and this can be achieved by using the `GanttSortSettings` property. You can add columns that are sorted initially in the `GanttSortSettings.GanttSortDescriptors` collection defined with `Field` and `Direction` properties. The following code example shows how to add the sorted column to Gantt Chart initialization.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

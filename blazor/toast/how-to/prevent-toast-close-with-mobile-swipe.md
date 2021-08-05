@@ -13,7 +13,7 @@ You can prevent the toast close with mobile swipe action by setting `OnClose` ar
 
 The following sample demonstrates preventing toast close with mobile swipe element displaying with custom code blocks.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Sparkline Component
 
-This section describes the Sparkline component's events that will be triggered when appropriate actions are performed. The events should be provided to the Sparkline through the [`SparklineEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html).
+This section describes the Sparkline component's events that will be triggered when appropriate actions are performed. The events should be provided to the Sparkline through the [SparklineEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html).
 
 ## Loaded
 
@@ -32,7 +32,7 @@ The `Loaded` event triggers after the Sparkline component has been loaded.
 
 ## OnPointRendering
 
-The [`OnPointRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnPointRendering) event triggers before the point rendering.
+The [OnPointRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnPointRendering) event triggers before the point rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -59,7 +59,7 @@ The [`OnPointRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## OnPointRegionMouseClick
 
-The [`OnPointRegionMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnPointRegionMouseClick) event triggers when the mouse click on the point region.
+The [OnPointRegionMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnPointRegionMouseClick) event triggers when the mouse click on the point region.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -84,7 +84,7 @@ The [`OnPointRegionMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 ## OnResizing
 
-The [`OnResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnResizing) event triggers while resizing the window.
+The [OnResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnResizing) event triggers while resizing the window.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
@@ -109,7 +109,7 @@ The [`OnResizing`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Chart
 
 ## OnSeriesRendering
 
-The [`OnSeriesRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnSeriesRendering) event triggers before rendering on each Sparkline series.
+The [OnSeriesRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnSeriesRendering) event triggers before rendering on each Sparkline series.
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|
@@ -135,7 +135,7 @@ The [`OnSeriesRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## OnMarkerRendering
 
-The [`OnMarkerRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnMarkerRendering) event triggers before rendering the Sparkline marker render.
+The [OnMarkerRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnMarkerRendering) event triggers before rendering the Sparkline marker render.
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|
@@ -165,7 +165,7 @@ The [`OnMarkerRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## OnDataLabelRendering
 
-The [`OnDataLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnDataLabelRendering) event triggers before rendering the Sparkline data label render.
+The [OnDataLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineEvents.html#Syncfusion_Blazor_Charts_SparklineEvents_OnDataLabelRendering) event triggers before rendering the Sparkline data label render.
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|

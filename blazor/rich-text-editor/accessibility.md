@@ -31,7 +31,7 @@ The Rich Text Editor element is assigned the role of application.
 | role="application" | This attribute added to the Rich Text Editor element describes the actual role of the element. |
 | aria-disabled | Indicates the disabled state of the Rich Text Editor. |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

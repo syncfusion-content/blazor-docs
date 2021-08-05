@@ -9,7 +9,7 @@ documentation: ug
 
 # Features in Blazor DocumentEditor Component
 
-The [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.
+The [Blazor Word Processor component](https://www.syncfusion.com/blazor-components/blazor-word-processor) for Blazor is used to compose, edit, view, and print Word (DOC, DOCX, and RTF) documents in Blazor applications.
 
 * Composes a document from scratch.
 * Opens and edits the Word (DOC, DOCX), RTF, and SFDT (Syncfusion Document Text) format files.
@@ -37,4 +37,4 @@ The [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-compon
 * [Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/)
 * [.NET Core SDK 3.1.2](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
-You can also explore our [`Blazor Word Processor`](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
+You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

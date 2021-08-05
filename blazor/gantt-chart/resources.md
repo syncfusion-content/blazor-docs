@@ -9,7 +9,7 @@ documentation: ug
 
 # Resources in Blazor Gantt Chart Component
 
-In [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
+In [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart), the resources are represented by staff, equipment and materials etc. In Gantt Chart component you can show or allocate the resources (human resources) for each task.
 
 ## Resource Collection
 
@@ -167,15 +167,15 @@ We can assign resources for a task at initial load by using the resource id valu
 We can assign the quantity of work done by the resources for the specific task as like below code snippet.
 
 ```csharp
-    new TaskData() {
-        TaskId = 2,
-        TaskName = "Identify Site location",
-        StartDate = new DateTime(2019, 03, 29),
-        Progress = 30,
-        ParentId = 1,
-        Duration="2",
-        Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} }
-    },
+new TaskData() {
+    TaskId = 2,
+    TaskName = "Identify Site location",
+    StartDate = new DateTime(2019, 03, 29),
+    Progress = 30,
+    ParentId = 1,
+    Duration="2",
+    Resources = new List<ResourceAlloacteData>(){ new ResourceAlloacteData() { ResourceId=1, Unit=70} }
+},
 ```
 
 When resource unit is defined in resource collection, the amount of work done by that particular resource will be same for all the tasks.

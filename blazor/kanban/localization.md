@@ -11,7 +11,7 @@ documentation: ug
 
 The localization library allows you to localize the default text content of the Kanban to different cultures using the `Locale` property.
 
-> Use `Resource` file to translate the static text of the kanban. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
+> Use `Resource` file to translate the static text of the kanban. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
 
 By using `Locale` property, you can set the culture dynamically in kanban component.
 
@@ -35,7 +35,7 @@ By using `Locale` property, you can set the culture dynamically in kanban compon
 
 The following example demonstrates the Kanban in `Deutsch` culture.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 
@@ -101,7 +101,7 @@ Output be like the below.
 
 The Kanban provides an option to switch its text direction and layout from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). To enable right-to-left mode in Kanban, set the `EnableRtl` to true.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Kanban
 

@@ -55,23 +55,23 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     </head>
     ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
- ```html
-    <head>
-        ...
-            <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-        ...
-    </head>
-```
+    ```html
+        <head>
+            ...
+                <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+                <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+            ...
+        </head>
+    ```
 
 ## Adding component package to the application
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` package.
 
-```csharp
-    @using Syncfusion.Blazor.Navigations
+```cshtml
+@using Syncfusion.Blazor.Navigations
 ```
 
 ## Add SyncfusionBlazor service in Startup file

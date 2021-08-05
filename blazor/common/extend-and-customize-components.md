@@ -235,7 +235,7 @@ You can define the RenderFragment delegate with [RenderTreeBuilder](https://docs
 
 You can render the nested components by using `RenderFragment`.
 
-```csharp
+```cshtml
 <SfChip>
     <ChipItems>
         @RenderChipItem("Apple")
@@ -295,9 +295,9 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
 
 1. Right-click on the `~/Pages` folder in the Visual Studio and select `Add -> Class` to create a new class file (SyncTextBox.cs).
 
-2. Inherit the newly created class with [`ComponentBase`](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase) and override the [`BuildRenderTree`](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method to create the component.
+2. Inherit the newly created class with [ComponentBase](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase) and override the [BuildRenderTree](https://docs.microsoft.com/dotnet/api/microsoft.aspnetcore.components.componentbase.buildrendertree) method to create the component.
 
-    ```csharp
+    ```c#
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Rendering;
     using Syncfusion.Blazor.Inputs;
@@ -344,7 +344,7 @@ You can create a simple Blazor component with the `BuildRenderTree` method and g
 
 3. Now, render the new reusable Blazor component in the `~/Pages/Index.razor` page and run the application.
 
-    ```csharp
+    ```cshtml
     <SyncTextBox ID="first-name" Label="First Name:" TextAttributes="@textAttributes"></SyncTextBox>
     <SyncTextBox ID="last-name" Label="Lat Name:" TextAttributes="@textAttributes"></SyncTextBox>
     <SyncTextBox ID="address" Label="Address:" TextAttributes="@textAttributes"></SyncTextBox>

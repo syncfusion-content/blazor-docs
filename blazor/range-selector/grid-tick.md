@@ -11,9 +11,9 @@ documentation: ug
 
 ## Gridline Customization
 
-The gridlines indicate axis divisions by drawing the chart plot. Gridlines include helpful cues to the user, particularly for large or complicated charts. The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Width), the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Color), and the [`DashArray`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_DashArray) of the major gridlines can be customized by using the [`RangeNavigatorMajorGridLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorGridLines.html) setting.
+The gridlines indicate axis divisions by drawing the chart plot. Gridlines include helpful cues to the user, particularly for large or complicated charts. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Width), the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_Color), and the [DashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorGridLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorGridLines_DashArray) of the major gridlines can be customized by using the [RangeNavigatorMajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorGridLines.html) setting.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -50,9 +50,9 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
 
 ## Tickline Customization
 
-Ticklines are the small lines which is drawn on the axis line representing the axis labels. Ticklines will be drawn outside the axis by default. The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Width), the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Color), and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Height) of the major ticklines can be customized by using the [`RangeNavigatorMajorTickLines`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorTickLines.html) setting.
+Ticklines are the small lines which is drawn on the axis line representing the axis labels. Ticklines will be drawn outside the axis by default. The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Width), the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Color), and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonMajorTickLines.html#Syncfusion_Blazor_Charts_ChartCommonMajorTickLines_Height) of the major ticklines can be customized by using the [RangeNavigatorMajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorMajorTickLines.html) setting.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 

@@ -26,7 +26,7 @@ State persistence allows the Splitter to retain the current splitter panes state
 
 > The state will be persisted based on **ID** property. So, it is recommended to explicitly set the **ID** property for Splitter.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

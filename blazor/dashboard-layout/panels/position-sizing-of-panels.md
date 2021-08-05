@@ -32,7 +32,7 @@ The following table represents all the available panel properties and the corres
 
 The panels within the layout can be easily positioned or ordered using the `Row` and `Col` properties of the panels. Positioning of panels will be beneficial to represent the data in any desired order.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -81,7 +81,7 @@ A panel's size can be varied easily by defining the `SizeX` and `SizeY` properti
 
 These properties are helpful in designing a dashboard, where the content of each panel may vary in size.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

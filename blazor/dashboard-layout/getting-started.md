@@ -122,7 +122,7 @@ namespace BlazorApplication
 
 Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Layouts` package.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Layouts
 ```
 
@@ -132,16 +132,16 @@ It is easy to initialize a dashboard layout component with panel. To render a da
 
 ### [Pages/Index.razor]
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
-    <SfDashboardLayout>
-        <DashboardLayoutPanels>
-            <DashboardLayoutPanel>
-            </DashboardLayoutPanel>
-        </DashboardLayoutPanels>
-    </SfDashboardLayout>
+<SfDashboardLayout>
+    <DashboardLayoutPanels>
+        <DashboardLayoutPanel>
+        </DashboardLayoutPanel>
+    </DashboardLayoutPanels>
+</SfDashboardLayout>
 
 ```
 

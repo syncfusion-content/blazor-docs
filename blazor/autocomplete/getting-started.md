@@ -20,7 +20,7 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 * Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
 
-    > Please ensure to check the `Include prerelease` option for our Beta release.
+    > Please ensure to check the `Include Prerelease` option for our Beta release.
 
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
@@ -52,7 +52,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.DropDowns` packag
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```csharp
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
@@ -115,7 +115,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![AutoComplete](./images/default.png)
+![Blazor AutoComplete Component](./images/blazor-autocomplete-component.png)
 
 ## Binding data source
 
@@ -163,7 +163,7 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![AutoComplete](./images/data_binding.png)
+![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-data-binding.png)
 
 ## Custom values
 
@@ -253,7 +253,7 @@ In the following sample, suggestion list's width and height are configured.
 
 The output will be as follows.
 
-![AutoComplete](./images/width_height.png)
+![Customizing Popup Height and Width in Blazor AutoComplete](./images/blazor-autocomplete-popup-customization.png)
 
 ## See Also
 

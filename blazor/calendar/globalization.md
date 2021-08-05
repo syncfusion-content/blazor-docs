@@ -207,7 +207,7 @@ The output will be as follows.
 
 [`wwwroot/blazor-locale/src/de.json`]
 
-```csharp
+```xml
 {
   "de": {
     "calendar": {

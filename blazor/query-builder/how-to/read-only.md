@@ -9,10 +9,9 @@ documentation: ug
 
 # Readonly in Blazor QueryBuilder Component
 
-The readonly property in the querybuilder disables the user interactions on the component.
-You can enable this feature by setting the [`Readonly`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Readonly) property to `true`.
+The readonly property in the querybuilder disables the user interactions on the component. You can enable this feature by setting the [Readonly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_Readonly) property to `true`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.QueryBuilder
 

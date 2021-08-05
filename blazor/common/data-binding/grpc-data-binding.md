@@ -55,7 +55,7 @@ To add a proto file, **Right-click** the **Shared** project, go to **Add**, and 
 
 Remove the boiler plate code in the file. Copy the following code and paste it into your proto file.
 
-```csharp
+```c#
 syntax = "proto3";
 
 import "google/protobuf/empty.proto";
@@ -90,7 +90,7 @@ Go to the proto file `properties` and select the `Protobuf` compiler as the **Bu
 
 Now, add `Orders` partial class in the **Shared** project. The main properties of this class are generated from the `.proto` file. However, you can also add some extra useful properties to this partial class.
 
-```csharp
+```c#
 using Google.Protobuf.WellKnownTypes;
 using System;
 
@@ -109,7 +109,7 @@ namespace BlazorAPPgRPC.Shared
 
 Create **Services folder** in the **Server** project and add **OrdersService** file in that folder. Then, copy the following code and paste it into your service file or create your own service logic.
 
-```csharp
+```c#
 public class OrdersService : BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase
 {
     private static readonly string[] Countries = new[]
@@ -153,7 +153,7 @@ public class OrdersService : BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBas
 
 You need to register the **gRPC service** in your `Startup.cs` file. This enables you to use dependency injection to consume the service across the app. Add the following code to your `ConfigureServices` method in the **Server Startup.cs** file:
 
-```csharp
+```c#
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddScoped<OrdersService>();
@@ -164,7 +164,7 @@ public void ConfigureServices(IServiceCollection services)
 
 Then, add the gRPC-Web middleware to the apps configuration and register the gRPC service. This must be added after UseRouting and before UseEndpoints in the `Configure` method.
 
-```csharp
+```c#
 public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 {
     . . .
@@ -180,7 +180,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 In the **Client** project, add the **OrdersService** to the container, then create a gRPC-Web channel pointing to the back-end server and instantiate the gRPC clients for this channel. Refer to the following code to modify the `Program.cs` file.
 
-```csharp
+```c#
 using Grpc.Net.Client;
 using Grpc.Net.Client.Web;
 using Microsoft.AspNetCore.Components;
@@ -225,7 +225,7 @@ Open `_Import.razor` file and add the following namespaces which are required to
 
 Open `Program.cs` file in a **Client** project and **register** the `Syncfusion service` in the **ConfigureServices** method as follows.
 
-```csharp
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorAPPgRPC.Client

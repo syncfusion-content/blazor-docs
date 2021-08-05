@@ -13,7 +13,7 @@ The appearance of a node can be customized by changing its `Fill`, `StrokeDashAr
 
 The following code shows how to customize the appearance of the shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -50,7 +50,7 @@ Default values for all the Nodes can be set using the NodeDefaults method. For e
 
 The following code shows how to customize the appearance of the shape.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" NodeDefaults="@NodeDefaults"/>
@@ -95,7 +95,7 @@ The following code shows how to customize the appearance of the shape.
 
 We can define node style using template in NodeTemplate at tag level. If we want to define separate template for each node , differentiate the nodes by the ID property. The following code explains how to define template for a node.
 
-```csharp
+```cshtml
 @page "/Nodetemplatesample"
 
 @using Syncfusion.Blazor.Diagram
@@ -182,7 +182,7 @@ We can define node style using template in NodeTemplate at tag level. If we want
 
 The `SetNodeTemplate` method of diagram allows you to define the style for the Node. The following code demonstrates how to set different style for different node through SetNodeTemplate method.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
@@ -283,7 +283,7 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
 
 Diagram provides support to add `Shadow` effect to a node that is disabled, by default. It can be enabled with the constraints property of the node. The following code shows how to draw shadow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -317,7 +317,7 @@ Diagram provides support to add `Shadow` effect to a node that is disabled, by d
 
 The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the shadow property of the node. The following code example illustrates how to customize shadow.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -369,7 +369,7 @@ There are two types of gradients as follows:
 
 `LinearGradient` defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -419,7 +419,7 @@ There are two types of gradients as follows:
 
 `RadialGradient` defines a smooth transition between stops on a circle. A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -473,7 +473,7 @@ The `AddInfo` property of the node allows you to maintain additional information
 
 The following code shows how to set the `AddInfo` value.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -509,4 +509,4 @@ The following code shows how to set the `AddInfo` value.
 
 ## See also
 
-* [`How to get events when they interact the node`](./events)
+* [How to get events when they interact the node](./events)

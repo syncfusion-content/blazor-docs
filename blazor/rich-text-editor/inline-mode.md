@@ -9,17 +9,13 @@ documentation: ug
 
 # Inline Mode in Blazor RichTextEditor Component
 
-This is the inline example for the Rich Text Editor. For this, you must set the `RichTextEditorInlineMode` property.
-
-Inline edition allows you to select any editable element or click the element on the page and edit it in-place.
-
-Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Editor HTML/MD editing, the styles that are used for edited content comes directly from the document stylesheet. This means that inline editors ignore the default Rich Text Editor content styles.
+This is the inline example for the Rich Text Editor. For this, you must set the `RichTextEditorInlineMode` property. Inline editing allows you to select any editable element or click the element on the page and edit it in-place. Inline editing is a true WYSIWYG formation and on the contrary to Rich Text Editor HTML/MD editing, the styles that are used for edited content comes directly from the document stylesheet. This means that inline editors ignore the default Rich Text Editor content styles.
 
 ## Show on select/click
 
 Enabling the `ShowOnSelection` option of `RichTextEditorInlineMode` makes the inline Rich Text Editor to appear. You can select the text in the editable area, otherwise the inline Rich Text Editor will be appeared after clicking the editable area.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

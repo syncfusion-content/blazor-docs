@@ -21,7 +21,7 @@ By default, diagram displays a tooltip to provide the size, position, and angle 
 
 ## Common tooltip for all nodes and connectors
 
-The diagram provides support to show tooltip when the mouse hovers over any node/connector. To show tooltip on mouse over, the [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramTooltip.html) property of diagram model needs to be set with the tooltip `Content` and `Position` as shown in the following example.
+The diagram provides support to show tooltip when the mouse hovers over any node/connector. To show tooltip on mouse over, the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramTooltip.html) property of diagram model needs to be set with the tooltip `Content` and `Position` as shown in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -72,7 +72,7 @@ The diagram provides support to show tooltip when the mouse hovers over any node
 
 ### Disable tooltip at runtime
 
-The tooltip on mouse over can be disabled by assigning the [`Tooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramTooltip.html) property as `null`. The following code example illustrates how to disable the mouse over tooltip at runtime.
+The tooltip on mouse over can be disabled by assigning the [Tooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramTooltip.html) property as `null`. The following code example illustrates how to disable the mouse over tooltip at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -89,7 +89,7 @@ The tooltip on mouse over can be disabled by assigning the [`Tooltip`](https://h
 
 ## Tooltip for a specific node/connector
 
-The tooltip can be customized for each node and connector. Remove the `InheritTooltip` option from the [`Constraints`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) of that node/connector. The following code example illustrates how to customize the tooltip for individual elements.
+The tooltip can be customized for each node and connector. Remove the `InheritTooltip` option from the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeConstraints.html) of that node/connector. The following code example illustrates how to customize the tooltip for individual elements.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -148,7 +148,7 @@ The tooltip can be customized for each node and connector. Remove the `InheritTo
 
 ### Tooltip relative to object
 
-The diagram provides support to show tooltip around the node/connector that is hovered by the mouse. The tooltip can be aligned by using the `Position` property of the tooltip. The [`RelativeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeTooltip.html#Syncfusion_Blazor_Diagrams_NodeTooltip_RelativeMode) property of the tooltip defines whether the tooltip has to be displayed around the object or at the mouse position.
+The diagram provides support to show tooltip around the node/connector that is hovered by the mouse. The tooltip can be aligned by using the `Position` property of the tooltip. The [RelativeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeTooltip.html#Syncfusion_Blazor_Diagrams_NodeTooltip_RelativeMode) property of the tooltip defines whether the tooltip has to be displayed around the object or at the mouse position.
 
 The following code example illustrates how to position the tooltip around object.
 
@@ -206,7 +206,7 @@ The following code example illustrates how to position the tooltip around object
 
 ### Tooltip relative to mouse position
 
-To display the tooltip at mouse position, need to set mouse option to the [`RelativeMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeTooltip.html#Syncfusion_Blazor_Diagrams_NodeTooltip_RelativeMode) property of the tooltip. The following code example illustrates how to show tooltip at mouse position.
+To display the tooltip at mouse position, need to set mouse option to the [RelativeMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.NodeTooltip.html#Syncfusion_Blazor_Diagrams_NodeTooltip_RelativeMode) property of the tooltip. The following code example illustrates how to show tooltip at mouse position.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -260,7 +260,7 @@ To display the tooltip at mouse position, need to set mouse option to the [`Rela
 
 ## Tooltip animation
 
-To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the [`Animation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsTooltip.html#Syncfusion_Blazor_Diagrams_DiagramsTooltip_Animation) property. The animation property also allows you to set delay, duration, and various other effects of your choice.
+To animate the tooltip, a set of specific animation effects are available, and it can be controlled by using the [Animation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramsTooltip.html#Syncfusion_Blazor_Diagrams_DiagramsTooltip_Animation) property. The animation property also allows you to set delay, duration, and various other effects of your choice.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

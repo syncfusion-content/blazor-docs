@@ -13,7 +13,7 @@ At component initial load, you can open the editor state without interacting wit
 
 In the following example, editor opened at initial load and when toggling a checkbox, it will remove or open the editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Buttons

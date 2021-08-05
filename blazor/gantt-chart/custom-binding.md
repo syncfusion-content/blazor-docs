@@ -9,11 +9,9 @@ documentation: ug
 
 # Custom Binding in Blazor Gantt Chart Component
 
-The [`SfDataManager`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
+The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Gantt component.
 
-For implementing custom data binding in Gantt, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
-
-The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
+For implementing custom data binding in Gantt, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor. The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
 ```csharp
 public abstract class DataAdaptor
@@ -187,13 +185,13 @@ If you want to inject some of your service into Custom Adaptor and use the servi
 Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 ```csharp
-    public void ConfigureServices(IServiceCollection services)
-    {
-        ...
-        services.AddSingleton<TaskDataAccessLayer>();
-        services.AddScoped<CustomAdaptor>();
-        services.AddScoped<ServiceClass>();
-    }
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+    services.AddSingleton<TaskDataAccessLayer>();
+    services.AddScoped<CustomAdaptor>();
+    services.AddScoped<ServiceClass>();
+}
 ```
 
 The following sample code demonstrates injecting service into Custom Adaptor,

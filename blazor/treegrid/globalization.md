@@ -42,7 +42,7 @@ The **Localization** library allows you to localize default text content of the 
 
 In the following examples, demonstrate how to enable **Localization** for Tree Grid in server side Blazor samples. Here, we have used Resource file to translate the static text of the Tree Grid.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -84,7 +84,7 @@ namespace BlazorApplication
 }
 ```
 
-> Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+> Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
@@ -112,7 +112,7 @@ namespace BlazorApplication
 }
 ```
 
-* Add **.resx** file to [`Resource`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
 Name |Value (in Deutsch culture)
 -----|-----
@@ -207,11 +207,11 @@ Pager_PreviousPagerTooltip | Zum vorherigen Pager wechseln
 Pager_PreviousPageTooltip |Zurück zur letzten Seite
 Pager_TotalItemsInfo |({0} Artikel)
 
-* Finally, Specify the culture for Tree Grid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Locale.html) property.
+* Finally, Specify the culture for Tree Grid using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Locale.html) property.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -250,7 +250,7 @@ Pager_TotalItemsInfo |({0} Artikel)
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -394,7 +394,7 @@ The following example demonstrates the Tree Grid in **Deutsch** culture. Here we
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -435,7 +435,7 @@ The following example demonstrates the Tree Grid in **Deutsch** culture. Here we
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -528,7 +528,7 @@ The **Internationalization** library is used to globalize number, date, and time
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Microsoft.JSInterop
@@ -568,7 +568,7 @@ The **Internationalization** library is used to globalize number, date, and time
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -2765,7 +2765,7 @@ RTL provides an option to switch the text direction and layout of the Tree Grid 
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
@@ -2804,7 +2804,7 @@ RTL provides an option to switch the text direction and layout of the Tree Grid 
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

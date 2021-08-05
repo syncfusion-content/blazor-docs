@@ -13,10 +13,10 @@ Blazor has templated components which accepts one or more UI segments as input t
 
 The available template options in tree grid are as follows,
 
-* [`Column template`](./columns/#column-template) - Used to customize cell content.
-* [`Header template`](./columns/#header-template) - Used to customize header cell content.
-* [`Row template`](./rows/#row-template) - Used to customize row content.
-* [`Detail template`](./rows/#detail-template) - Used to customize the detail cell content.
+* [Column template](./columns/#column-template) - Used to customize cell content.
+* [Header template](./columns/#header-template) - Used to customize header cell content.
+* [Row template](./rows/#row-template) - Used to customize row content.
+* [Detail template](./rows/#detail-template) - Used to customize the detail cell content.
 
 ## Template ModelType
 
@@ -24,7 +24,7 @@ To use templates, the tree grid must be bound with named model. This can be done
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -61,7 +61,7 @@ To use templates, the tree grid must be bound with named model. This can be done
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -110,7 +110,7 @@ For example, you can access the data of the column template using `context` as f
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -147,7 +147,7 @@ For example, you can access the data of the column template using `context` as f
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -188,13 +188,13 @@ The following output is displayed as a result of the above code example.
 
 ## TreeGridTemplates component
 
-If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [`by design in Blazor`](https://github.com/aspnet/AspNetCore/issues/10836).
+If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/aspnet/AspNetCore/issues/10836).
 
 This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendent of Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data
 @using Syncfusion.Blazor.TreeGrid;
@@ -251,7 +251,7 @@ This prevents us from directly specifying templates such as `RowTemplate` and `D
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 

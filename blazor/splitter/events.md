@@ -15,7 +15,7 @@ This section explains the list of events of the splitter component which will be
 
 `Created` event triggers after creating the splitter component with its panes.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -36,7 +36,7 @@ This section explains the list of events of the splitter component which will be
 
 `OnResizeStart` event triggers when the split pane is started to resize.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -57,7 +57,7 @@ This section explains the list of events of the splitter component which will be
 
 `OnResizeStop` event triggers when the resizing of split pane is stopped.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -78,7 +78,7 @@ This section explains the list of events of the splitter component which will be
 
 `Resizing` event triggers when a split pane is being resized.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -99,7 +99,7 @@ This section explains the list of events of the splitter component which will be
 
 `OnCollapse` event triggers when before panes get collapsed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -120,7 +120,7 @@ This section explains the list of events of the splitter component which will be
 
 `OnExpand` event triggers when before panes get expanded.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -141,7 +141,7 @@ This section explains the list of events of the splitter component which will be
 
 `Collapsed` event triggers when after panes get collapsed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -162,7 +162,7 @@ This section explains the list of events of the splitter component which will be
 
 `Expanded` event triggers when after panes get expanded.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 

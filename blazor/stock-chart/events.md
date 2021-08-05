@@ -9,10 +9,7 @@ documentation: ug
 
 # Events in Blazor Stock Chart Component
 
-In this section, we have provided the list of events of Stock Chart component which will be
-triggered for appropriate stock chart actions.
-
-The events should be provided to the Stock Chart using **StockChartEvents** component.
+In this section, we have provided the list of events of Stock Chart component which will be triggered for appropriate stock chart actions. The events should be provided to the Stock Chart using **StockChartEvents** component.
 
 The following are the number of events supported for Stock Chart component.
 
@@ -28,7 +25,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## Loaded
 
-[`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Loaded) event triggers after stock chart is rendered.
+[Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_Loaded) event triggers after stock chart is rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -55,7 +52,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -71,7 +68,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## OnPointClick
 
-[`OnPointClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnPointClick) event triggers when data point is clicked.
+[OnPointClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnPointClick) event triggers when data point is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -98,7 +95,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -114,7 +111,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## PointMoved
 
-[`PointMoved`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_PointMoved) event triggers when moving mouse over the data point.
+[PointMoved](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_PointMoved) event triggers when moving mouse over the data point.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -141,7 +138,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -157,7 +154,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## RangeChange
 
-[`RangeChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_RangeChange) event triggers when range is changed.
+[RangeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_RangeChange) event triggers when range is changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -184,7 +181,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -200,7 +197,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## OnStockChartMouseClick
 
-[`OnStockChartMouseClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseClick) event triggers when clicking the stock chart.
+[OnStockChartMouseClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseClick) event triggers when clicking the stock chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -227,7 +224,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -243,7 +240,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## OnStockChartMouseDown
 
-[`OnStockChartMouseDown`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseDown) event triggers when mouse down over the stock chart.
+[OnStockChartMouseDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseDown) event triggers when mouse down over the stock chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -270,7 +267,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -286,7 +283,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## OnStockChartMouseLeave
 
-[`OnStockChartMouseLeave`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseLeave) event triggers when cursor leaves the stock chart.
+[OnStockChartMouseLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseLeave) event triggers when cursor leaves the stock chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -313,7 +310,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -329,7 +326,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## OnStockChartMouseMove
 
-[`OnStockChartMouseMove`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseMove) event triggers when hovering the stock chart.
+[OnStockChartMouseMove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseMove) event triggers when hovering the stock chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -356,7 +353,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},
@@ -372,7 +369,7 @@ The following are the number of events supported for Stock Chart component.
 
 ## OnStockChartMouseUp
 
-[`OnStockChartMouseUp`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseUp) event triggers when mouse is up.
+[OnStockChartMouseUp](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartEvents.html#Syncfusion_Blazor_Charts_StockChartEvents_OnStockChartMouseUp) event triggers when mouse is up.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -399,7 +396,7 @@ The following are the number of events supported for Stock Chart component.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
          new ChartData { Date = new DateTime(2012, 04, 02), Y= 100},
          new ChartData { Date = new DateTime(2012, 04, 09), Y= 10 },
          new ChartData { Date = new DateTime(2012, 04, 16), Y= 500},

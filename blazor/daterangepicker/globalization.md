@@ -46,90 +46,90 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using System.Globalization;
-using Microsoft.AspNetCore.Localization;
+    ```csharp
+    using Syncfusion.Blazor;
+    using System.Globalization;
+    using Microsoft.AspNetCore.Localization;
 
-namespace BlazorApplication
-{
-    public class Startup
+    namespace BlazorApplication
     {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
+        public class Startup
         {
             ....
             ....
-            services.AddSyncfusionBlazor();
-            services.AddLocalization(options => options.ResourcesPath = "Resources");
-            services.Configure<RequestLocalizationOptions>(options =>
+            public void ConfigureServices(IServiceCollection services)
             {
-                // define the list of cultures your app will support
-                var supportedCultures = new List<CultureInfo>()
+                ....
+                ....
+                services.AddSyncfusionBlazor();
+                services.AddLocalization(options => options.ResourcesPath = "Resources");
+                services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new CultureInfo("de")
-                };
-                // set the default culture
-                options.DefaultRequestCulture = new RequestCulture("de");
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
-                };
-            });
-            services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
-        }
-    }
-}
-```
-
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
-
-```csharp
-using Syncfusion.Blazor;
-
-namespace blazorCalendars
-{
-     public class SampleLocalizer : ISyncfusionStringLocalizer
-    {
-
-        public string Get(string key)
-        {
-            return this.Manager.GetString(key);
-        }
-
-        public System.Resources.ResourceManager Manager
-        {
-            get
-            {
-                return blazorCalendars.Resources.SyncfusionBlazorLocale.ResourceManager;
+                    // define the list of cultures your app will support
+                    var supportedCultures = new List<CultureInfo>()
+                    {
+                        new CultureInfo("de")
+                    };
+                    // set the default culture
+                    options.DefaultRequestCulture = new RequestCulture("de");
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<IRequestCultureProvider>() {
+                    new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                    };
+                });
+                services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
             }
         }
     }
-}
-```
+    ```
+
+* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+
+    ```csharp
+    using Syncfusion.Blazor;
+
+    namespace blazorCalendars
+    {
+        public class SampleLocalizer : ISyncfusionStringLocalizer
+        {
+
+            public string Get(string key)
+            {
+                return this.Manager.GetString(key);
+            }
+
+            public System.Resources.ResourceManager Manager
+            {
+                get
+                {
+                    return blazorCalendars.Resources.SyncfusionBlazorLocale.ResourceManager;
+                }
+            }
+        }
+    }
+    ```
 
 * Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the Value column as follows.
 
-| **Name** | **Value (in Deutsch culture)** |
-| --- | --- |
-| DateRangePicker_ApplyText | Anwenden |
-| DateRangePicker_CancelText | Stornieren |
-| DateRangePicker_CustomRange | Benutzerdefinierten Bereich |
-| DateRangePicker_Days | Tage |
-| DateRangePicker_EndLabel | Endtermin |
-| DateRangePicker_Placeholder | Wählen Sie einen Datumsbereich |
-| DateRangePicker_SelectedDays | Ausgewählte Tage |
-| DateRangePicker_StartLabel | Anfangsdatum |
+    | **Name** | **Value (in Deutsch culture)** |
+    | --- | --- |
+    | DateRangePicker_ApplyText | Anwenden |
+    | DateRangePicker_CancelText | Stornieren |
+    | DateRangePicker_CustomRange | Benutzerdefinierten Bereich |
+    | DateRangePicker_Days | Tage |
+    | DateRangePicker_EndLabel | Endtermin |
+    | DateRangePicker_Placeholder | Wählen Sie einen Datumsbereich |
+    | DateRangePicker_SelectedDays | Ausgewählte Tage |
+    | DateRangePicker_StartLabel | Anfangsdatum |
 
 * Finally, Specify the culture for DateRangePicker using `locale` property.
 
-```cshtml
-@using Syncfusion.Blazor.Calendars
+    ```cshtml
+    @using Syncfusion.Blazor.Calendars
 
-<SfDateRangePicker TValue="DateTime?" Locale="de"></SfDateRangePicker>
-```
+    <SfDateRangePicker TValue="DateTime?" Locale="de"></SfDateRangePicker>
+    ```
 
 ## Blazor WebAssembly
 
@@ -139,42 +139,42 @@ The following steps explain how to render the DateRangePicker in German culture 
 
 * Open the **program.cs** file and add the below configuration in the **Builder ConfigureServices** function as follows.
 
-```csharp
-using Syncfusion.Blazor;
-using Microsoft.AspNetCore.Builder;
+    ```csharp
+    using Syncfusion.Blazor;
+    using Microsoft.AspNetCore.Builder;
 
-namespace WebAssemblyLocale
-{
-    public class Program
+    namespace WebAssemblyLocale
     {
-        public static async Task Main(string[] args)
+        public class Program
         {
-            ....
-            ....
-            builder.Services.Configure<RequestLocalizationOptions>(options =>
+            public static async Task Main(string[] args)
             {
-                // Define the list of cultures your app will support
-                var supportedCultures = new List<System.Globalization.CultureInfo>()
+                ....
+                ....
+                builder.Services.Configure<RequestLocalizationOptions>(options =>
                 {
-                    new System.Globalization.CultureInfo("en-US"),
-                    new System.Globalization.CultureInfo("de"),
-                };
+                    // Define the list of cultures your app will support
+                    var supportedCultures = new List<System.Globalization.CultureInfo>()
+                    {
+                        new System.Globalization.CultureInfo("en-US"),
+                        new System.Globalization.CultureInfo("de"),
+                    };
 
-                // Set the default culture
-                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("de");
+                    // Set the default culture
+                    options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("de");
 
-                options.SupportedCultures = supportedCultures;
-                options.SupportedUICultures = supportedCultures;
-                options.RequestCultureProviders = new List<Microsoft.AspNetCore.Localization.IRequestCultureProvider>() {
-                 new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider()
-                };
-            });
-            ....
-            ....
+                    options.SupportedCultures = supportedCultures;
+                    options.SupportedUICultures = supportedCultures;
+                    options.RequestCultureProviders = new List<Microsoft.AspNetCore.Localization.IRequestCultureProvider>() {
+                    new Microsoft.AspNetCore.Localization.QueryStringRequestCultureProvider()
+                    };
+                });
+                ....
+                ....
+            }
         }
     }
-}
-```
+    ```
 
 * Download the required locale packages to render the Blazor DateRangePicker component with specified locale.
 
@@ -186,25 +186,25 @@ namespace WebAssemblyLocale
 
 * Set the culture by using the `SetCulture` method.
 
-```cshtml
-@using Syncfusion.Blazor.Calendars
-@inject HttpClient Http;
+    ```cshtml
+    @using Syncfusion.Blazor.Calendars
+    @inject HttpClient Http;
 
-<SfDateRangePicker TValue="DateTime?" Locale="de"></SfDateRangePicker>
+    <SfDateRangePicker TValue="DateTime?" Locale="de"></SfDateRangePicker>
 
-@code {
-    [Inject]
-    protected IJSRuntime JsRuntime { get; set; }
-    protected override async Task OnInitializedAsync()
-    {
-        this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/de.json")).SetCulture("de");
+    @code {
+        [Inject]
+        protected IJSRuntime JsRuntime { get; set; }
+        protected override async Task OnInitializedAsync()
+        {
+            this.JsRuntime.Sf().LoadLocaleData(await Http.GetJsonAsync<object>("blazor-locale/src/de.json")).SetCulture("de");
+        }
     }
-}
-```
+    ```
 
-The output will be as follows.
+    The output will be as follows.
 
-![DateRangePicker](./images/de_culture.png)
+    ![DateRangePicker](./images/de_culture.png)
 
 ## Customize the localized text
 

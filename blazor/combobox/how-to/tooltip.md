@@ -13,7 +13,7 @@ You can achieve this behavior by using tooltip component. When the mouse is hove
 
 The following code demonstrates how to display a tooltip when hovering over the DropDownList option.
 
-```csharp
+```cshtml
 <SfTooltip @ref="TooltipObj" ID="Tooltip" Target=".e-list-item .name[title]">
 </SfTooltip>
 <SfComboBox TItem="GameFields" TValue="string" Placeholder="Select a game" DataSource="@Games">

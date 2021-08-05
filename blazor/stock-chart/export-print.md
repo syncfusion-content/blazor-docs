@@ -13,7 +13,7 @@ The rendered stock chart can be exported to `JPEG`, `PNG`, `SVG`, or `PDF` forma
 
 The rendered stock chart can be printed directly using print button in period selector toolbar.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -43,7 +43,7 @@ The rendered stock chart can be printed directly using print button in period se
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},
@@ -64,7 +64,7 @@ The rendered stock chart can be printed directly using print button in period se
 
 Empty the value of `ExportType` to disable the Export.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Charts
 
@@ -87,7 +87,7 @@ Empty the value of `ExportType` to disable the Export.
     }
 
     public List<ChartData> StockDetails = new List<ChartData>
-{
+    {
         new ChartData { Date = new DateTime(2012, 04, 02), Open= 85.9757, High = 90.6657,Low = 85.7685, Close = 90.5257,Volume = 660187068},
         new ChartData { Date = new DateTime(2012, 04, 09), Open= 89.4471, High = 92,Low = 86.2157, Close = 86.4614,Volume = 912634864},
         new ChartData { Date = new DateTime(2012, 04, 16), Open= 87.1514, High = 88.6071,Low = 81.4885, Close = 81.8543,Volume = 1221746066},

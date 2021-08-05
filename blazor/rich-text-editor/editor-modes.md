@@ -16,11 +16,9 @@ The [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazo
 
 ## HTML editor
 
-Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component for formatting the word content as HTML.
+Rich Text Editor is a [WYSIWYG Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) component for formatting the word content as HTML. The HTML editing mode is the default mode in Rich Text Editor to format the content through the available toolbar items to return the valid HTML markup. Set the `EditorMode` property to `HTML`.
 
-The HTML editing mode is the default mode in Rich Text Editor to format the content through the available toolbar items to return the valid HTML markup. Set the `EditorMode` property to `HTML`.
-
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -45,14 +43,12 @@ The output will be as follows.
 
 ## Markdown editor
 
-Set the `EditorMode` property to `Markdown` to create or edit the content and apply formatting to view markdown formatted content.
-
-The third-party library such as `Marked` or any other library is used to convert markdown into HTML content.
+Set the `EditorMode` property to `Markdown` to create or edit the content and apply formatting to view markdown formatted content. The third-party library such as `Marked` or any other library is used to convert markdown into HTML content.
 
 * The Supported Tags are  `h6`,`h5`,`h4`,`h3`,`h2`,`h1`,`blockquote`,`pre`,`p`,`OL`,`UL`.
 * The Supported Selection Tags are `Bold`, `Italic`, `StrikeThrough`, `InlineCode`, `SubScript`, `SuperScript`, `UpperCase` and `LowerCase`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -76,7 +72,7 @@ The output will be as follows.
 
 ![output](./images/markdown-editor.png)
 
-For further details on Markdown editing, refer to the [`Markdown`](./markdown/) section.
+For further details on Markdown editing, refer to the [Markdown](./markdown/) section.
 
 > You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 

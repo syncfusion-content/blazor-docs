@@ -15,7 +15,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 `Created` event  triggers once the component rendering is completed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -36,7 +36,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 `OnActionBegin` event  triggers before the data submitted to the server.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -57,7 +57,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 `OnActionSuccess` event  triggers when data submitted successfully to the server.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -78,7 +78,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 `OnActionFailure` event  triggers when data submission failed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -99,7 +99,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 `ValueChange` event  triggers when the integrated component value has changed that render based on the `type` property in the In-place editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 
@@ -120,7 +120,7 @@ This section explains the list of events of the In-place Editor's component whic
 
 `Destroyed` event  triggers when the component gets destroyed.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 

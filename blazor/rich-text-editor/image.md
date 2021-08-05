@@ -34,8 +34,7 @@ If the path field is not specified in the `RichTextEditorImageSettings`, the ima
 
 The image has been loaded from the local machine and it will be saved in the given location.
 
-```bash
-
+```
 <img src="blob:http://blazor.syncfusion.com/3ab56a6e-ec0d-490f-85a5-f0aeb0ad8879" >
 
 ```
@@ -50,7 +49,7 @@ The selected image can be uploaded to the required destination by using the foll
 
 `Index.razor`
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -176,7 +175,7 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 > It has two possible options: `Inline` and `Break`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -192,7 +191,7 @@ Sets the default display for an image when it is inserted in the Rich Text Edito
 
 ## Image with link
 
-The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open links will be added to the quick toolbar of image as below. For further details about link, refer to the [`link documentation`](./link).
+The hyperlink itself can be an image in Rich Text Editor. If the image given as hyperlink, the remove, edit, and open links will be added to the quick toolbar of image as below. For further details about link, refer to the [link documentation](./link).
 
 ![RTE image with link](./images/image-link.png)
 

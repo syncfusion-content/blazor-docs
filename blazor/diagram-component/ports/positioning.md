@@ -20,7 +20,7 @@ Diagram allows you to customize the position and appearance of the port efficien
 
 The `Offset` property is used to align the Ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -95,7 +95,7 @@ The following table shows all the possible alignments visually with `offset (0, 
 
 The following code explains how to align ports.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -144,7 +144,7 @@ protected override void OnInitialized()
 
 `Margin` is an absolute value used to add some blank space to any one of its four sides. The ports can be displaced with the margin property. The following code example explains how to align an port based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -189,8 +189,8 @@ protected override void OnInitialized()
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)

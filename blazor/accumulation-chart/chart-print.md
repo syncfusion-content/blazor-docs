@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The [`Print`] method can be used to print a rendered chart directly from the browser.
+The `PrintAsync` method can be used to print a rendered chart directly from the browser.
 
 ```cshtml 
 
@@ -34,9 +34,9 @@ The [`Print`] method can be used to print a rendered chart directly from the bro
 @code{
     SfAccumulationChart ChartObj;
 
-    private void Click()
+    private async Task Click()
     {
-        ChartObj.Print();
+        await ChartObj.PrintAsync();
     }
 
     public class Statistics
@@ -62,11 +62,11 @@ The [`Print`] method can be used to print a rendered chart directly from the bro
 
 ## Export
 
-Using the [`Export`] method, the rendered chart can be exported to [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [`Export Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and [`FileName`] specifies the name of the exported file. Both of these parameters are required input parameters for this method.
+Using the `ExportAsync` method, the rendered chart can be exported to [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_JPEG), [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PNG), [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_SVG), or [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html#Syncfusion_Blazor_Charts_ExportType_PDF) format. The [Export Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportType.html) specifies the image format and `FileName` specifies the name of the exported file. Both of these parameters are required input parameters for this method.
 
 The optional parameters for this method are,
-* [`Orientation`] - Specifies the portrait or landscape orientation in the PDF document.
-* [`AllowDownload`] - Specifies whether to download or not. If not, base64 string will be returned.
+* `Orientation` - Specifies the portrait or landscape orientation in the PDF document.
+* `AllowDownload` - Specifies whether to download or not. If not, base64 string will be returned.
 
 ```cshtml 
 
@@ -90,9 +90,9 @@ The optional parameters for this method are,
 @code{
     SfAccumulationChart ChartObj;
 
-    private void Click()
+    private async Task Click()
     {
-        ChartObj.Export(ExportType.JPEG, "chart");
+        await ChartObj.ExportAsync(ExportType.JPEG, "chart");
     }
 
     public class Statistics
@@ -114,7 +114,7 @@ The optional parameters for this method are,
 
 ```
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

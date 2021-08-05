@@ -21,7 +21,7 @@ documentation: ug
 
 The following code explains how to change the appearance of the port.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
  <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -84,7 +84,7 @@ We have provided some basic built-in `PortShapes` for the port. Please find the 
 
  We have provided custom shape support for port. you can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
 
- ```csharp
+ ```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -144,10 +144,10 @@ The `AddInfo` property of the port allows you to maintain additional information
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to set the position of the port`](./positioning)
+* [How to set the position of the port](./positioning)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show half-yearly view in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Show half-yearly view in Syncfusion Blazor Scheduler component and more.
+description: Learn how to Show half-yearly view in Syncfusion Blazor Scheduler component and limit number of months and customization in year view.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 The year view of our scheduler displays all the 365 days and their related appointments of a particular year. You can customize the year view by using the following properties.
 
-* [`FirstMonthOfYear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear)
-* [`MonthsCount`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MonthsCount)
-* [`MonthHeaderTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_MonthHeaderTemplate)
+* [FirstMonthOfYear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_FirstMonthOfYear)
+* [MonthsCount](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_MonthsCount)
+* [MonthHeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.ScheduleTemplates.html#Syncfusion_Blazor_Schedule_ScheduleTemplates_MonthHeaderTemplate)
 
 In the following code example, you can see how to render only the last six months of a year in the scheduler. To start with the month of  June, `FirstMonthYear` is set to 6 and `MonthsCount` is set to 6 to render only 6 months.
 

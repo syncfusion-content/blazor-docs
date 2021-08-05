@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Scheduler component and much more.
+description: This section explains how the Syncfusion Blazor Scheduler adapts to various languages and culture by parsing and formatting the date or number appropriately.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -58,7 +58,7 @@ namespace SchedulerLocalization
 }
 ```
 
-> Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+> Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the `ResourceManager` property to get the resource file details from the application end.
 
@@ -85,9 +85,9 @@ namespace SchedulerLocalization
 }
 ```
 
-* Add **.resx** file to [`Resource`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and that file contains the key value pair of locale content in the following format.
+* Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and that file contains the key value pair of locale content in the following format.
 
-```csharp
+```cshtml
 <Component_Name>_<Feature_Name>_<Locale_Key>
 ```
 

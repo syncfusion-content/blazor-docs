@@ -13,7 +13,7 @@ In this section, the progress can be visualized in different shapes, such as a r
 
 ## Linear
 
-To get a linear progress bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Linear`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear). As shown in the following, it also supports secondary progress, indeterminate, segments, and different modes of progress.
+To get a linear progress bar, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Linear). As shown in the following, it also supports secondary progress, indeterminate, segments, and different modes of progress.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -36,7 +36,7 @@ To get a linear progress bar, set the [`Type`](https://help.syncfusion.com/cr/bl
 
 ## Circular
 
-To get the circular progress bar, set the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [`Circular`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular). As shown in the following, it also supports secondary progress, indeterminate, segments, pie progress, and different modes of progress.
+To get the circular progress bar, set the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html) property to [Circular](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressType.html#Syncfusion_Blazor_ProgressBar_ProgressType_Circular). As shown in the following, it also supports secondary progress, indeterminate, segments, pie progress, and different modes of progress.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar

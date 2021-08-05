@@ -13,7 +13,7 @@ documentation: ug
 
 Localization library allows you to localize the default text content of the In-place Editor to different cultures using the `Locale` property. In-place Editor following keys will be localize based on culture.
 
-> Use `Resource` file to translate the static text of the In-place Editor. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
+> Use `Resource` file to translate the static text of the In-place Editor. The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](../../common/localization/) link to know more about how to configure and use localization in the Blazor Server and WebAssembly project for Syncfusion Blazor components.
 
 | Locale key | en-US (default) |
 |------|------|
@@ -26,7 +26,7 @@ Localization library allows you to localize the default text content of the In-p
 
 In the following sample, `French` culture is set to In-place Editor and change the tooltip text.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.InPlaceEditor
@@ -123,7 +123,7 @@ Specifies the direction of the In-place Editor component using the `EnableRtl` p
 
 > It will not change based on the locale property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Inputs
@@ -162,7 +162,7 @@ Formatting is a way of representing the value in different formats. You can form
 * [Slider](../range-slider/format/)
 * [TimePicker](../timepicker/globalization/)
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 @using Syncfusion.Blazor.Calendars

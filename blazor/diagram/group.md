@@ -155,9 +155,7 @@ The following code illustrates how a ungroup  at runtime.
 
 ## Add group at runtime
 
-A group node can be added at runtime by using Nodes collection of diagram.
-
-The following code illustrates how a group node is added at runtime
+A group node can be added at runtime by using Nodes collection of diagram. The following code illustrates how a group node is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -216,9 +214,7 @@ The following code illustrates how a group node is added at runtime
 
 ## Group from SymbolPalette
 
-Group Nodes can be predefined and added to SymbolPalette. You can drop those Groups into Diagram, when required.
-
-The following code illustrates how to add group into SymbolPalette.
+Group Nodes can be predefined and added to SymbolPalette. You can drop those Groups into Diagram, when required. The following code illustrates how to add group into SymbolPalette.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -327,11 +323,11 @@ The following code illustrates how to add group into SymbolPalette.
 
 ```
 
-![`SymbolPalette`](./images/symbol-palette-group.gif)
+![SymbolPalette](./images/symbol-palette-group.gif)
 
 ## Update position at runtime
 
-You can change the position of the group similar to node. For more information about node positioning, refer to [`Positioning`](./nodes/positioning).
+You can change the position of the group similar to node. For more information about node positioning, refer to [Positioning](./nodes/positioning).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -395,11 +391,11 @@ You can change the position of the group similar to node. For more information a
 
 ## Appearance
 
-You can change the appearance of the group similar to node. For more information about node appearance, refer to [`Appearance`](./nodes/appearance).
+You can change the appearance of the group similar to node. For more information about node appearance, refer to [Appearance](./nodes/appearance).
 
 ## Interaction
 
-You can edit the group and its children at runtime. We able to interact the group as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [`Interaction`](./nodes/interaction).
+You can edit the group and its children at runtime. We able to interact the group as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](./nodes/interaction).
 
 ## See Also
 

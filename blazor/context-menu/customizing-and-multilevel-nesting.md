@@ -11,9 +11,9 @@ documentation: ug
 
 ## Customizing Context Menu Items
 
-To customize Context Menu items in your application, set your customized template using [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Context Menu has been rendered with customized Context Menu items.
+To customize Context Menu items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Context Menu has been rendered with customized Context Menu items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -62,7 +62,7 @@ Output be like
 
 The Context Menu items can be customized by using the `CssClass` property. In the following sample, the menu items is customized by adding new styles.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -100,8 +100,8 @@ Output be like
 
 ## Multilevel nesting
 
-The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [`MenuItems`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItems.html)
-property inside the parent [`MenuItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html). In the below sample, three level nesting of Context Menu is provided.
+The Multiple level nesting supports in Context Menu. It can be achieved by mapping the [MenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItems.html)
+property inside the parent [MenuItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html). In the below sample, three level nesting of Context Menu is provided.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

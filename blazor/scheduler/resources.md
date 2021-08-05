@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resources and Grouping in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Resources and Grouping in Syncfusion Blazor Scheduler component and more.
+description: This article demonstrates how to assign resources and also shows how to group them with customizations in Syncfusion Blazor Scheduler component.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -25,8 +25,8 @@ The default options available within the `Resources` collection are as follows,
 | `Title` | string | It holds the title of the resource field to be displayed on the event editor window. |
 | `Name` | string | A unique resource name used for differentiating various resource objects while grouping. |
 | `AllowMultiple` | bool | When set to `true`, allows multiple selection of resource names, thus creating multiple instances of same appointment for the selected resources. |
-| `DataSource` | Object | Assigns the resource `DataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
-| `Query` | query | Defines the external [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) that will be executed along with the data processing. |
+| `DataSource` | Object | Assigns the resource `DataSource`, where data can be passed either as an array of JavaScript objects, or else can create an instance of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) in case of processing remote data and can be assigned to the `DataSource` property. With the remote data assigned to `DataSource`, check the available [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/) to customize the data processing. |
+| `Query` | query | Defines the external [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) that will be executed along with the data processing. |
 | `IdField` | string/int/Guid | Binds the resource ID field name from the resources `DataSource`. |
 | `TextField` | string | Binds the text field name from the resources `DataSource`. It usually holds the resource names. |
 | `GroupIDField` | string | Binds the group ID field name from the resource `DataSource`. It usually holds the value of resource IDs of parent level resources. |
@@ -94,6 +94,11 @@ It is possible to display the Scheduler in default mode without visually showcas
 
 The appointments belonging to the different resources will be displayed altogether on the default Scheduler, which will be differentiated based on the resource color assigned in the **Resources** (depicting to which resource that particular appointment belongs) collection.
 
+To get start quickly about multiple resource on scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=ZJU73bqeoC0"%}
+
 **Example:** To display default Scheduler with multiple resource options in the event editor, ignore the group option and simply define the `ScheduleResource` with all its internal options.
 
 ```cshtml
@@ -152,6 +157,11 @@ The appointments belonging to the different resources will be displayed altogeth
 ## Resource grouping
 
 Resource grouping support allows the Scheduler to group the resources in a hierarchical structure both as an expandable groups (Timeline views) and as vertical hierarchy displaying resources one after the other (Resources view).
+
+To get start quickly about grouping multiple resource on scheduler, you can check on this video:
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=XD3IYl9lkms"%}
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 

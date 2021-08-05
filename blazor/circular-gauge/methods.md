@@ -11,7 +11,7 @@ documentation: ug
 
 ## Using methods in Circular Gauge component
 
-You can create object for the circular gauge component using `@ref` and call the [`SetPoinerValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetPointerValue_System_Double_System_Double_System_Double_) method as shown in the following example.
+You can create object for the circular gauge component using `@ref` and call the [SetPoinerValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.SfCircularGauge.html#Syncfusion_Blazor_CircularGauge_SfCircularGauge_SetPointerValue_System_Double_System_Double_System_Double_) method as shown in the following example.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

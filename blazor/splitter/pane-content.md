@@ -15,7 +15,7 @@ This section explains how to provide plain text content or HTML markup to splitt
 
 Splitter is a layout based container Component. You can render the pane contents from existing HTML markups. Converting HTML markup as splitter pane is easy way to add the panes content dynamically.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -63,7 +63,7 @@ You can refer [Listview within splitter](https://blazor.syncfusion.com/demos/spl
 
 You can add the plain text as a pane contents using either inner HTML or `Content` API
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Layouts
 
@@ -111,7 +111,7 @@ The following example demonstrates the above two solutions. The first pane rende
 
 Index.razor
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Layouts
@@ -160,7 +160,7 @@ Index.razor
 
 Other SplitterContent.razor page.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

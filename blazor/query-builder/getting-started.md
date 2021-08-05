@@ -24,26 +24,26 @@ To get start quickly with Query Builder Component using Blazor, you can check on
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-> Please ensure to check the **Include prerelease** option.
+    > Please ensure to check the **Include prerelease** option.
 
-```csharp
-<head>
-    <link href="_content/Syncfusion.Blazor/styles/material.css" rel="stylesheet" />
-    <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/material.css" rel="stylesheet" />*@
-</head>
-```
-
-For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
-
-```csharp
-<head>
-    <environment include="Development">
+    ```cshtml
+    <head>
         <link href="_content/Syncfusion.Blazor/styles/material.css" rel="stylesheet" />
-        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-     </environment>
-</head>
-```
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/material.css" rel="stylesheet" />*@
+    </head>
+    ```
+
+    For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+
+    ```cshtml
+    <head>
+        <environment include="Development">
+            <link href="_content/Syncfusion.Blazor/styles/material.css" rel="stylesheet" />
+            <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+        </environment>
+    </head>
+    ```
 
 ## Adding component package to the application
 
@@ -57,8 +57,7 @@ Open `/_Imports.razor file` and import the **Syncfusion.Blazor.QueryBuilder** pa
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components.
-Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components. Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
 
 ```csharp
 namespace BlazorApplication
@@ -79,7 +78,7 @@ namespace BlazorApplication
 
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```cshtml
 <head>
     <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
     </script>

@@ -103,14 +103,14 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Calendars
     ```
 
 2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -131,7 +131,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the Calendar component is added in the **~/Pages/Index.razor** page.
 
-    ```csharp
+    ```cshtml
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 

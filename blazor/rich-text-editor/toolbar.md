@@ -9,9 +9,7 @@ documentation: ug
 
 # Toolbar in Blazor RichTextEditor Component
 
-The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs.
-
-The Rich Text Editor allows you to configure different types of toolbar using `RichTextEditorToolbarSettings` - `Type` property. The types of toolbar are:
+The Rich Text Editor toolbar contains a collection of tools such as bold, Italic, and text alignment buttons that are used to format the content. However, in most integrations, you can customize the toolbar configurations easily to suit your needs. The Rich Text Editor allows you to configure different types of toolbar using `RichTextEditorToolbarSettings` - `Type` property. The types of toolbar are:
 
 1. Expand
 2. MultiRow
@@ -20,7 +18,7 @@ The Rich Text Editor allows you to configure different types of toolbar using `R
 
 The default mode of `RichTextEditorToolbarSettings` - `Type` as `Expand` to hide the overflowing items in the next row. By clicking the expand arrow, view the overflowing toolbar items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -92,7 +90,7 @@ The output will be as follows.
 
 Set the `RichTextEditorToolbarSettings` - `Type` as `MultiRow` to display the toolbar items in a row-wise format. All toolbar items are visible always.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -166,7 +164,7 @@ By default, toolbar is float at the top of the Rich Text Editor on scrolling. It
 
 Enable or disable the floating toolbar using `EnableFloating` of the `RichTextEditorToolbarSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -276,7 +274,7 @@ This sample shows how to add your own tools to toolbar of the Rich Text Editor. 
 
 Refer to the following code snippet for custom tool with tooltip text which will be included in `Items` field of `RichTextEditorToolbarSettings` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.RichTextEditor
@@ -321,7 +319,7 @@ Refer to the following code snippet for custom tool with tooltip text which will
     }
 }
 
-```
+``` 
 
 ## Quick inline toolbar
 
@@ -335,7 +333,7 @@ Quick commands are opened as context-menu on clicking the corresponding element.
 
 The following sample demonstrates the option to insert the image to the Rich Text Editor content as well as option to rotate the image through the quick toolbar. The image rotation functionalities have been achieved through the `OnToolbarClick` event.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

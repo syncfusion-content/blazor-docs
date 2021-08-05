@@ -15,7 +15,7 @@ Specifies the placeholder for the Rich Text Editor’s content used when the Ric
 
 Use the `e-rte-placeholder` class to define the custom font family, font color, and styles to the placeholder text.
 
-```bash
+```css
 
 .e-richtexteditor .e-rte-placeholder {
     font-family: monospace;
@@ -25,7 +25,7 @@ Use the `e-rte-placeholder` class to define the custom font family, font color, 
 
 The following sample demonstrates the placeholder option in Rich Text Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -55,7 +55,7 @@ The character count color will be modified based on the characters in the Rich T
 | Warning | Once the number of character count in the Rich Text Editor reached 70% of given maxLength count, the character count color will be orange, indicating that, the Rich Text Editor value going to reach the maximum count.|
 | Error | Once the number of character count in the Rich Text Editor reached 90% of given maxLength count, the character count color will be red, indicating that, the Rich Text Editor value reached the maximum count.|
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -78,7 +78,7 @@ The output will be as follows.
 
 Rich Text Editor includes the ability for users to directly edit HTML code via `Source View` in the text area. If you made any modification in Source view directly, the changes will be reflected in the Rich Text Editor's content. So, the users will have more flexibility over the content they have created.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -108,7 +108,7 @@ To undo and redo operations, do one of the following:
 
 Customize the undo/redo step count using `UndoRedoSteps` property. By default, undo/redo actions take `300ms` time interval for store the action to the undo redo manager. The time interval can be customized by using the `UndoRedoTimer`.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -135,7 +135,7 @@ This feature allows the editor to be resized dynamically. The users can enable o
 
 To render the Rich Text Editor in the resizable mode, set the `EnableResize` property to true.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -172,7 +172,7 @@ To have a restricted resizable area for the Rich Text Editor, you need to specif
 
 This feature allows the user to change the appearance of the Numbered and Bulleted lists. Users can also apply different numbering or bullet formats lists such as lowercase greek, upper Alpha, square and circles. You can also customize the style type of the lists to be populated in the dropdown from the toolbar by using the `NumberFormatList` and `BulletFormatList` properties in the Rich Text Editor.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

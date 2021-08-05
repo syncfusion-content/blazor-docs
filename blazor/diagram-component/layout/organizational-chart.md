@@ -9,10 +9,9 @@ documentation: ug
 
 # Organizational Chart in Blazor Diagram Component
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the `Type` of layout should be set as an `OrganizationalChart`.
-The following code example illustrates how to create an organizational chart.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the `Type` of layout should be set as an `OrganizationalChart`. The following code example illustrates how to create an organizational chart.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@connectors" NodeDefaults="@NodeDefaults" ConnectorDefaults="@ConnectorDefaults">
@@ -124,7 +123,7 @@ The layout can be aligned anywhere over the layout bounds/viewport using the `Ho
 
 The following code illustrates how to align the layout at the top-left of the layout bounds.
 
-```csharp
+```cshtml
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-VerticalAlignment="@verticalAlignment"></Layout>
 </SfDiagramComponent>
@@ -148,7 +147,7 @@ The following table illustrates the different chart orientations and chart types
 
 The following code example illustrates how to set the vertical right arrangement to the leaf level trees.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.Internal
@@ -224,7 +223,7 @@ Layout provides support to add space horizontally and vertically between the nod
 
 Layout provides support to add some blank space between the layout bounds/viewport and the layout. The `Margin` property of the layout allows you to set the blank space.
 
-```csharp
+```cshtml
 //Initialize the organizational chart layout with Margin
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
   <Layout Type="LayoutType.HierarchicalTree">
@@ -243,7 +242,7 @@ Diagram provides support to customize the `Orientation` of layout. You can set t
 
 The following code illustrates how to arrange the nodes in a BottomToTop orientation.
 
-```csharp
+```cshtml
 //Initialize the layout with layout orientation as BottomToTop in page
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
@@ -257,7 +256,7 @@ LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 
 Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the `FixedNode` of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
-```csharp
+```cshtml
 //Initialize the organizational chart layout with FixedNode
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.OrganizationalChart" FixedNode="Node1" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Orientation="@orientation"></Layout>
@@ -275,7 +274,7 @@ int VerticalSpacing = 50;
 
 Diagram allows to refresh the layout at runtime. Use the below code example to refresh the layout.
 
-```csharp
+```cshtml
 //update the layout at runtime.
 diagram.DoLayout();
 
@@ -284,6 +283,6 @@ diagram.DoLayout();
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to create a connector`](../connectors/connectors)
+* [How to create a connector](../connectors/connectors)

@@ -16,7 +16,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
  1. Install **Syncfusion.Blazor.Diagrams** NuGet package to the application by using the **NuGet Package Manager**.
  2. You can add the client-side style resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
@@ -26,7 +26,7 @@ This section briefly explains about how to include a Diagram in your Blazor Serv
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
@@ -48,8 +48,8 @@ Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagrams** pa
 
 Open the **Startup.cs** file and add services required by Syncfusion components using  **services.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
-```cshtml
-@using Syncfusion.Blazor;
+```c#
+using Syncfusion.Blazor;
 
 namespace BlazorApplication
 {
@@ -69,7 +69,7 @@ namespace BlazorApplication
 
 **Note**: To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
@@ -83,7 +83,7 @@ Diagram component can be rendered by using the `SfDiagram` tag helper in ASP.NET
 
 The following example shows a basic Diagram component.
 
-```csharp
+```cshtml
 <SfDiagram Width="100%" Height="600px">
 </SfDiagram>
 

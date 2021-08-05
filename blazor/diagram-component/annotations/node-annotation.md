@@ -22,7 +22,7 @@ The `Offset` property of an annotation is used to align the annotations based on
 
 The following code shows the relationship between the shape annotation position and path annotation offset (fraction values).
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -64,7 +64,7 @@ protected override void OnInitialized()
 | (1,0.5) | ![Left](../images/Offset1,5.png) |
 | (1,1) | ![Left](../images/Offset1,1.png) |
 
->**Note:**
+
 >* Type of the offset property for node’s shape annotation is NodeAnnotationOffset.
 >* Type of the offset property for connector’s path annotation is double.
 
@@ -88,7 +88,7 @@ The following table shows all the possible alignments visually with 'offset (0, 
 
 The following code explains how to align annotations.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -130,7 +130,7 @@ protected override void OnInitialized()
 
 `Margin` is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -169,7 +169,7 @@ protected override void OnInitialized()
 
 The `TextAlign` inside the text block. The following code explains how to set TextAlign for an annotation.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -205,8 +205,8 @@ protected override void OnInitialized()
 
 ## See also
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)

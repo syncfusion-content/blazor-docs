@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Stared with Blazor Scheduler in Client Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor Scheduler Component in Blazor WebAssembly (Client Side) App and more.
+title: Getting Started With Blazor Scheduler in Web Assembly | Syncfusion
+description: Helps you to get started of Syncfusion Blazor Scheduler component in Web Assembly (WASM) project. Also helps to bind appointments and set current view and date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug
 ---
 
-# Blazor Scheduler Component in Client Side (WebAssembly) App
+# Blazor Scheduler Component in WebAssembly (WASM) App
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor Scheduler in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -18,9 +18,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later.
->
-> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
@@ -105,14 +103,14 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor
     @using Syncfusion.Blazor.Schedule
     ```
 
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     namespace WebApplication1

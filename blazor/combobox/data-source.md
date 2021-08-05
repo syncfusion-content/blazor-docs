@@ -49,7 +49,7 @@ In the following example, `Name` column from complex data have been mapped to th
     }
 
     List<Countries> Country = new List<Countries>
-{
+    {
         new Countries() { Name = "Australia", Code = "AU" },
         new Countries() { Name = "Bermuda", Code = "BM" },
         new Countries() { Name = "Canada", Code = "CA" },
@@ -222,7 +222,7 @@ The custom data binding can be performed in the ComboBox component by providing 
 
 The following sample code demonstrates implementing custom data binding using custom adaptor,
 
-```csharp
+```cshtml
 <SfComboBox TValue="string" TItem="Orders">
     <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
     <ComboBoxFieldSettings Value="CustomerID"></ComboBoxFieldSettings>
@@ -241,10 +241,12 @@ The following sample code demonstrates implementing custom data binding using cu
         public int OrderID { get; set; }
         public string CustomerID { get; set; }
     }
+
     public class CustomAdaptor : DataAdaptor
     {
         static readonly HttpClient client = new HttpClient();
         public static List<OrdersDetails> order = OrdersDetails.GetAllRecords();
+        
         public override object Read(DataManagerRequest dm, string key = null)
         {
             IEnumerable<OrdersDetails> DataSource = order;

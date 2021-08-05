@@ -29,7 +29,7 @@ The following native events support is provided to the In-place Editor component
 
 The `onmousedown` attribute is used to bind the mouse down event for In-place Editor. The sample code snippets of `onmousedown` in In-place Editor to change the mode as Inline are explained as follows.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.InPlaceEditor
 

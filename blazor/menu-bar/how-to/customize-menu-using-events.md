@@ -11,9 +11,9 @@ documentation: ug
 
 The Menu Bar provides a set of events to enable users to customize it.
 
-The available events are [`OnOpen`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~OnOpen.html), [`OnClose`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~OnClose.html), [`Closed`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~Closed.html), [`Opened`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~Opened.html), and [`ItemSelected`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~ItemSelected.html).
+The available events are [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~OnOpen.html), [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~OnClose.html), [Closed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~Closed.html), [Opened](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~Opened.html), and [ItemSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.ContextMenuEvents~ItemSelected.html).
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

@@ -11,7 +11,7 @@ documentation: ug
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout `Type` as `HierarchicalTree`. The following example shows how to arrange the nodes in a hierarchical structure.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@connectors" NodeDefaults="@NodeDefaults" ConnectorDefaults="@ConnectorDefaults">
@@ -84,7 +84,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 You can change the orientation at runtime. The following code is used to how to change the layout.
 
-```csharp
+```cshtml
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
@@ -104,7 +104,7 @@ public void UpdateOrientation()
 
 You can change the horizontal and vertical spacing for the diagram layout.
 
-```csharp
+```cshtml
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"></Layout>
 </SfDiagramComponent>
@@ -127,7 +127,7 @@ public void UpdateSpacing()
 
 You can change the margin values for the diagram layout.
 
-```csharp
+```cshtml
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
   <Layout Type="LayoutType.HierarchicalTree">
      <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
@@ -150,6 +150,6 @@ public void UpdateMargin()
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to create a connector`](../connectors/connectors)
+* [How to create a connector](../connectors/connectors)

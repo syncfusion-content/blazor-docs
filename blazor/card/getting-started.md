@@ -23,7 +23,7 @@ To get start quickly with Blazor Card component, you can check on this video.
 
 2. You can add the client-side style resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
-```html
+```cshtml
 <head>
     <environment include="Development">
     ....
@@ -38,7 +38,7 @@ To get start quickly with Blazor Card component, you can check on this video.
 
 > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```html
+```cshtml
 <head>
    <environment include="Development">
       <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
@@ -83,7 +83,7 @@ namespace BlazorApplication
 
 To initialize the Card component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
-```csharp
+```cshtml
 <SfCard> Sample Card </SfCard>
 ```
 

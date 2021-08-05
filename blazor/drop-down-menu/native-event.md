@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Dropdown Menu Component
 
-You can define the dropdown menu event using on [`DropDownButtonEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents) in component. The value of event is treated as an event handler. The event specific data will be available in event arguments.
+You can define the dropdown menu event using on [DropDownButtonEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.DropDownButtonEvents.html#Syncfusion_Blazor_SplitButtons_DropDownButtonEvents) in component. The value of event is treated as an event handler. The event specific data will be available in event arguments.
 
 ## List of events supported
 

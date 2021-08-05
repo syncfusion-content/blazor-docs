@@ -26,7 +26,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 
 > The Rich Text Editor link tool validates the URLs as you type them in Web Address. URLs considered invalid will be highlighted with red color by clicking the insert button in the `Insert Link` dialog.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 
@@ -80,7 +80,7 @@ The quick toolbar for the link has the following options.
 | Edit Link | Edits the link in the Rich Text Editor content. |
 | Remove Link | Removes link from the content of Rich Text Editor. |
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.RichTextEditor
 

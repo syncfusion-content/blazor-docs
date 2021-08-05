@@ -21,7 +21,7 @@ Diagram allows you to customize the connector appearances . The following topics
 
 * The following code example illustrates how to create decorators of various shapes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -76,7 +76,7 @@ Diagram allows you to customize the connector appearances . The following topics
 
 The following code example illustrates how to customize the appearance of the decorator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -144,7 +144,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 * The following code example illustrates how to leave space between the connection end points and source, target nodes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors" Nodes="@nodes">
 </SfDiagramComponent>
@@ -209,7 +209,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default,`BridgeDirection` is set to `Top`. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. The following code example illustrates how to enable line bridging.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px"@bind-Constraints="@diagramConstraints" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -300,7 +300,7 @@ Limitation: `Bezier` segments do not support bridging.
 
 Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with the `CornerRadius`property.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px"  Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -362,7 +362,7 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 The following code example illustrates how to customize the segment appearance.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -418,7 +418,7 @@ The following code example illustrates how to customize the segment appearance.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -484,7 +484,7 @@ The following code example illustrates how to customize the appearance of the de
 
 The following code illustrates how to disable selection.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -535,7 +535,7 @@ The following code illustrates how to disable selection.
 
 * The `AddInfo` property of connectors allow you to maintain additional information to the connectors.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
@@ -584,8 +584,8 @@ The following code illustrates how to disable selection.
 
 ## See also
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)

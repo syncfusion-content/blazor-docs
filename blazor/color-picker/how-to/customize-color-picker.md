@@ -11,9 +11,9 @@ documentation: ug
 
 ## Custom Palette
 
-By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [`PresetColors`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To customize the color palette, add a custom class to palette tiles using [`OnTileRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
+By default, the Palette will be rendered with default colors. To load custom colors in the palette, specify the colors in the [PresetColors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_PresetColors) property. To customize the color palette, add a custom class to palette tiles using [OnTileRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_OnTileRender) event.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 
@@ -82,7 +82,7 @@ Output be like
 
 ## Hide input area from picker
 
-By default, the input area will be rendered in Color Picker. To hide the input area from it, add `e-hide-value` class to Color Picker using the [`CssClass`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property.
+By default, the input area will be rendered in Color Picker. To hide the input area from it, add `e-hide-value` class to Color Picker using the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_CssClass) property.
 
 In the following sample, the Color Picker is rendered without input area.
 
@@ -102,7 +102,7 @@ Color Picker handle shape and UI can be customized. Here, we have customized the
 
 The following sample show the customized Color Picker handle.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 

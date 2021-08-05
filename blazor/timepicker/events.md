@@ -177,4 +177,4 @@ This section explains the list of events of the TimePicker component which will 
 }
 ```
 
-> TimePicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then please request [`here`](https://www.syncfusion.com/feedback/blazor-components).
+> TimePicker will be limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).

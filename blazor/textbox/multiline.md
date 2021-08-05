@@ -74,13 +74,13 @@ The output will be as follows.
 By default, the multiline text box is rendered with resizable. You can disable the resize of the multiline text box by applying the following CSS styles.
 
 ```CSS
-    textarea.e-input,
-    .e-float-input textarea,
-    .e-float-input.e-control-wrapper textarea,
-    .e-input-group textarea,
-    .e-input-group.e-control-wrapper textarea {
-        resize: none;
-    }
+textarea.e-input,
+.e-float-input textarea,
+.e-float-input.e-control-wrapper textarea,
+.e-input-group textarea,
+.e-input-group.e-control-wrapper textarea {
+    resize: none;
+}
 
 ```
 

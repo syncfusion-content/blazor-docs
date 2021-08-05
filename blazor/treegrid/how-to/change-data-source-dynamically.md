@@ -9,13 +9,13 @@ documentation: ug
 
 # Change datasource dynamically in Blazor TreeGrid Component
 
-You can change the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) of the Tree Grid component dynamically through an external button.
+You can change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) of the Tree Grid component dynamically through an external button.
 
-This is demonstrated in the below sample code where the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) is dynamically modified using the bounded property,
+This is demonstrated in the below sample code where the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_DataSource) is dynamically modified using the bounded property,
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
@@ -56,7 +56,7 @@ This is demonstrated in the below sample code where the [`DataSource`](https://h
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -102,4 +102,4 @@ public class TreeData
 {% endtabs %}
 
 The following GIF represents Tree Grid data source modified dynamically on button click,
-![`Update datasource dynamically`](../images/change-datasource.gif)
+![Update datasource dynamically](../images/change-datasource.gif)

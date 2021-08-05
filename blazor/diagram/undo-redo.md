@@ -21,7 +21,7 @@ Undo/redo commands can be executed through shortcut keys. Shortcut key for undo 
 
 ## Undo/redo through public APIs
 
-The server-side methods [`Undo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Undo) and [`Redo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Redo) help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through script.
+The server-side methods [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Redo) help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through script.
 
 ```csharp
 SfDiagram Diagram;
@@ -33,13 +33,13 @@ this.Diagram.Undo();
 this.Diagram.Redo();
 ```
 
-When a change in the diagram is reverted or restored (undo/redo), the [`HistoryChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event gets triggered.
+When a change in the diagram is reverted or restored (undo/redo), the [HistoryChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event gets triggered.
 
 ### Group multiple changes
 
 History list allows to revert or restore multiple changes through a single undo/redo command. For example, revert/restore the fill color change of multiple elements at a time.
 
-The server-side method [`StartGroupAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_StartGroupAction) is used  to notify the diagram to start grouping the changes. The server-side method [`EndGroupAction`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
+The server-side method [StartGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_StartGroupAction) is used  to notify the diagram to start grouping the changes. The server-side method [EndGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
 
 ```csharp
 SfDiagram Diagram;
@@ -56,8 +56,7 @@ this.Diagram.EndGroupAction();
 Diagram provides options to track the changes that are made to custom properties. For example, in case of an employee relationship diagram, track the changes in the employee information. The `HistoryList` of the diagram enables you to track such changes.
 The following example illustrates how to track such custom property changes.
 
-Before changing the employee information, save the existing information to history list by using the server-side method push of `HistoryList`.
-The history list [`CanLog`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_CanLog) method can be used which takes a history entry as argument and returns whether the specific entry can be added or not.
+Before changing the employee information, save the existing information to history list by using the server-side method push of `HistoryList`. The history list [CanLog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.History.html#Syncfusion_Blazor_Diagrams_History_CanLog) method can be used which takes a history entry as argument and returns whether the specific entry can be added or not.
 
 The following code example illustrates how to save the existing property values.
 
@@ -127,7 +126,7 @@ The following code example illustrates how to save the existing property values.
 
 ### Track undo/redo actions
 
-The [`GetHistoryStack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetHistoryStack_System_Boolean_) method is used to get the collection of undo and redo actions which should be performed in the diagram.
+The [GetHistoryStack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_GetHistoryStack_System_Boolean_) method is used to get the collection of undo and redo actions which should be performed in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -149,7 +148,7 @@ The [`GetHistoryStack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ## History change event
 
-The [`HistoryChange`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event triggers, whenever the interaction of the node and connector is take place.
+The [HistoryChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramModel.html#Syncfusion_Blazor_Diagrams_DiagramModel_HistoryChange) event triggers, whenever the interaction of the node and connector is take place.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

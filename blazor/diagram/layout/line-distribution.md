@@ -9,7 +9,7 @@ documentation: ug
 
 # Line Distribution in Blazor Diagram Component
 
-Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be same point or different point. The [`ConnectionPointOrigin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_ConnectionPointOrigin) property of layout is used to enable or disable the line distribution in layout. By default ConnectionPointOrigin will be `SamePoint`.
+Line distribution is used to arrange the connectors without overlapping in automatic layout. In some cases, the automatic layout connectors connecting to the nodes will be overlapped with one another. So user can decide whether the segment of each connector from a single parent node should be same point or different point. The [ConnectionPointOrigin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_ConnectionPointOrigin) property of layout is used to enable or disable the line distribution in layout. By default ConnectionPointOrigin will be `SamePoint`.
 
 The following code example illustrates how to create a complex hierarchical tree with line distribution.
 
@@ -97,20 +97,20 @@ The following code illustrates how to prevents the connector segments overlappin
 
 ```csharp
   
-    protected override void OnInitialized()
+protected override void OnInitialized()
+{
+    LayoutValue = new DiagramLayout()
         {
-            LayoutValue = new DiagramLayout()
-                {
-                    //this prevents connector segments overlapping
-                    enableRouting: true,
-                };
-            }
-        }
+            //this prevents connector segments overlapping
+            enableRouting: true,
+        };
+    }
+}
 
 ```
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to create a connector`](../connectors/connectors)
+* [How to create a connector](../connectors/connectors)

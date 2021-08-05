@@ -15,9 +15,9 @@ The Menu Bar supports data source bindings such as data source that can be struc
 
 Menu Bar can be populated from self-referential data structure that contains data with `ParentId` mapping.
 
-In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [`ItemId`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~ItemId.html), [`ParentId`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~ParentId.html), and [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~Text.html) fields, respectively.
+In the following example, the **id**, **pId**, and **text** columns from self-referential data have been mapped to the [ItemId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~ItemId.html), [ParentId](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~ParentId.html), and [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuFieldSettings~Text.html) fields, respectively.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 
@@ -69,9 +69,9 @@ Output be like
 
 ## Custom Menu Bar Items
 
-To customize Menu Bar items in your application, set your customized template using [`MenuTemplates`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
+To customize Menu Bar items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Menu Bar has been rendered with customized Menu Bar items.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 @inject Microsoft.AspNetCore.Components.NavigationManager UriHelper;

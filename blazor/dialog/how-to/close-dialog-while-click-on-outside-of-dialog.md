@@ -13,7 +13,7 @@ By default, dialog can be closed by pressing `Esc` key and clicking the close ic
 
 In the following code, dialog is closed when clicking outside the dialog area using `Visible` property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Popups
 @using Syncfusion.Blazor.Buttons

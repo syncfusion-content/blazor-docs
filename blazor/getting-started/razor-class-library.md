@@ -67,7 +67,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
-    ```csharp
+    ```cshtml
 
     <div class="my-component">
     This Blazor component is defined in the <strong>RazorClassLibrary</strong> package.
@@ -92,13 +92,13 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. Open **~/_Imports.razor** file in RLC and import the `Syncfusion.Blazor`.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor
     ```
 
 5. Now, import and add the Syncfusion Blazor components in the `~/Component.razor` file. For example, the Calendar component is imported and added in the **~/Component.razor** page.
 
-    ```csharp
+    ```cshtml
     @using Syncfusion.Blazor.Calendars
 
     <div class="my-component">
@@ -154,13 +154,13 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file in Blazor App and import the `RazorClassLibrary`.
 
-    ```csharp
+    ```cshtml
     @using RazorClassLibrary
     ```
 
 2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service from RCL.
 
-    ```csharp
+    ```c#
     ....
     using Syncfusion.Blazor;
     namespace BlazorApp
@@ -203,7 +203,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. Now, add the created custom component that is imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
 
-    ```csharp
+    ```cshtml
     <Component></Component>
     ```
 
@@ -257,13 +257,13 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Open **~/_Imports.razor** file in Blazor WebAssembly App and import the `RazorClassLibrary`.
 
-    ```csharp
+    ```cshtml
     @using RazorClassLibrary
     ```
 
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service from RCL.
 
-    ```csharp
+    ```c#
     using Syncfusion.Blazor;
 
     namespace BlazorApp
@@ -304,7 +304,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. Now, add the created custom component that is imported with Syncfusion Blazor component from Razor Class Library in any web page (razor) in the `~/Pages` folder. For example, the custom component with imported Syncfusion Blazor Calendar component from Razor Class Library is added to the **~/Pages/Index.razor** page as like below.
 
-    ```csharp
+    ```cshtml
     <Component></Component>
     ```
 

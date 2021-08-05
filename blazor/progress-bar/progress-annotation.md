@@ -11,7 +11,7 @@ documentation: ug
 
 ## Annotations
 
-The annotations are used to add text, shapes, or images to the track area in the Progress Bar. It can be added using the [`ProgressBarAnnotations`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnnotations.html) collection, and elements that need to be displayed in the track area can be specified using the `ContentTemplate` property in the [`ProgressBarAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnnotation.html).
+The annotations are used to add text, shapes, or images to the track area in the Progress Bar. It can be added using the [ProgressBarAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnnotations.html) collection, and elements that need to be displayed in the track area can be specified using the `ContentTemplate` property in the [ProgressBarAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarAnnotation.html).
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar
@@ -37,7 +37,7 @@ The annotations are used to add text, shapes, or images to the track area in the
 
 ## Label
 
-When the [`ShowProgressValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ShowProgressValue) property is set to **true**, the progress text is rendered in percentage format by default, and can be customized to different types of label formats by using the [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.TextRenderEventArgs.html#Syncfusion_Blazor_ProgressBar_TextRenderEventArgs_Text) argument in the [`TextRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event.
+When the [ShowProgressValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.SfProgressBar.html#Syncfusion_Blazor_ProgressBar_SfProgressBar_ShowProgressValue) property is set to **true**, the progress text is rendered in percentage format by default, and can be customized to different types of label formats by using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.TextRenderEventArgs.html#Syncfusion_Blazor_ProgressBar_TextRenderEventArgs_Text) argument in the [TextRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.ProgressBarEvents.html#Syncfusion_Blazor_ProgressBar_ProgressBarEvents_TextRender) event.
 
 ```cshtml
 @using Syncfusion.Blazor.ProgressBar

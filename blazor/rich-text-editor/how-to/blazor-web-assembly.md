@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting Stared with Blazor RichTextEditor in Client Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor RichTextEditor Component in Blazor WebAssembly (Client Side) App using Visual Studio and more.
+title: Getting Stared with Blazor RichTextEditor in WebAssembly | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor RichTextEditor Component in Blazor WebAssembly (WASM) App using Visual Studio and more.
 platform: Blazor
 control: RichTextEditor
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Blazor RichTextEditor Component in Client Side App using Visual Studio
+# Blazor RichTextEditor Component in WebAssembly App using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -78,7 +78,7 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.RichTextEditor` package.
 
-```html
+```cshtml
 @using Syncfusion.Blazor.RichTextEditor
 ```
 
@@ -86,7 +86,7 @@ Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.RichTextEditor`
 
 Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the ConfigureServices function as follows.
 
-```html
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
@@ -111,7 +111,7 @@ To initialize the Rich Text Editor component, add the below code to your **Index
 
 The following code explains how to initialize a simple Rich Text Editor in Razor page.
 
-```html
+```cshtml
 @using Syncfusion.Blazor.RichTextEditor
 
 <SfRichTextEditor>

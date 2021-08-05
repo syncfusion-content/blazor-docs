@@ -11,11 +11,11 @@ documentation: ug
 
 You can access the public methods available in the Tree Grid component by using its reference defined in the component initialization.
 
-This is demonstrated in the below sample code where the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Print) method of the Tree Grid component is invoked on button click using the Tree Grid reference,
+This is demonstrated in the below sample code where the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Print) method of the Tree Grid component is invoked on button click using the Tree Grid reference,
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.Buttons
@@ -53,7 +53,7 @@ This is demonstrated in the below sample code where the [`Print`](https://help.s
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -87,4 +87,4 @@ public class TreeData
 
 {% endtabs %}
 
-> Similarly all the public methods of the Tree Grid can be invoked. The available public methods can be found in this [`link`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).
+> Similarly all the public methods of the Tree Grid can be invoked. The available public methods can be found in this [link](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html).

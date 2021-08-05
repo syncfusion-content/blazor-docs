@@ -29,7 +29,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 To add a connection port, define the port object and add it to node’s ports collection. The `Offset` property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -72,7 +72,7 @@ You can add Ports at runtime to the nodes collection in the Diagram component by
 The following code explains how to add ports to node at runtime by using `Add` method. The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime.
 If **ID** is not set, then default **ID** is automatically set.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
@@ -112,15 +112,15 @@ Also, the Port can be added at runtime by using the `AddAsync` method. The `awai
 The following code explains how to add ports to node at runtime by using `AddAsync` method.
 
 ```csharp
-    //Method to add Port at runtime
-    public async void AddPorts()
-    {
-        PointPort port = new PointPort()
-            {
-               Style=new ShapeStyle(){ Fill="gray" }, Offset= new Point(){X=0.5,Y=0.5}, Visibility = PortVisibility.Visible
-            };
-        await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
-    }
+//Method to add Port at runtime
+public async void AddPorts()
+{
+    PointPort port = new PointPort()
+        {
+            Style=new ShapeStyle(){ Fill="gray" }, Offset= new Point(){X=0.5,Y=0.5}, Visibility = PortVisibility.Visible
+        };
+    await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
+}
 ```
 
 ![Add Port Image](../images/Addport.png)
@@ -131,7 +131,7 @@ Add Multiple ports at runtime by using the server-side method `Add` in the port 
 
 The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime. If **ID** is not set, then default **ID** is automatically set.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
@@ -174,7 +174,7 @@ The port’s `ID` property is used to define the unique ID for the port and it i
 
 A collection of ports can be removed from the node by using the native`RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="RemovePorts" @onclick="@RemovePorts" />
@@ -223,7 +223,7 @@ You can change any port properties at runtime.
 
 The following code example explains how to change the port properties at runtime.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Port" @onclick="@UpdatePort" />
@@ -266,10 +266,10 @@ The following code example explains how to change the port properties at runtime
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)
 
-* [`How to set the position of the port`](./positioning)
+* [How to set the position of the port](./positioning)

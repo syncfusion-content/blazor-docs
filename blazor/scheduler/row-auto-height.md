@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Row Auto Height in Blazor Scheduler Component | Syncfusion
-description: Checkout and learn here all about Row Auto Height in Syncfusion Blazor Scheduler component and more.
+description: Learn the way to auto-adjust the height of the work cells of Syncfusion Blazor Scheduler based on the number of events present in those time ranges.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -106,9 +106,9 @@ The following screenshot shows the auto-adjustment of row in timeline week view 
 
 ## Appointments occupying entire cell
 
-By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` taghelper whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
+By default, with the feature `EnableAutoRowHeight`, there will be a space in the bottom of the cell when appointment is rendered. To avoid this space, we can set true to the property `IgnoreWhitespace` with `ScheduleEventSettings` tag helper whereas its default property value is false. In the following code example, the whitespace below the appointments has been ignored.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Schedule
 
@@ -168,4 +168,4 @@ In following image the whitespace below the appointment has been ignored.
 
 ![IgnoreWhitespace](images/ignore-whitespace.png)
 
-> The property `IgnoreWhitspace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.
+> The property `IgnoreWhitespace` will be applicable only when `EnableAutoRowHeight` feature is enabled in the Scheduler.

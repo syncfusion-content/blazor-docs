@@ -37,7 +37,7 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 ![Add Syncfusion Blazor DataGrid package](../images/SQLServer-BrowserGrid.png)
 
-> For this demo, use Syncfusion.Blazor.Grid(19.1.0.66) NuGet package. A new Syncfusion.Blazor.Grid NuGet package with new enhancement will be released in our every-week release and main release. So, check and update to the [`latest versions`](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
+> For this demo, use Syncfusion.Blazor.Grid(19.1.0.66) NuGet package. A new Syncfusion.Blazor.Grid NuGet package with new enhancement will be released in our every-week release and main release. So, check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
 
 ## Adding Syncfusion Blazor DataGrid Component into the application
 
@@ -52,7 +52,7 @@ Open **_Import.razor** file and add the following namespaces which are required 
 
 Open **Startup.cs** file and register the Syncfusion service in the ConfigureServices method as follows.
 
-```csharp
+```c#
 
 using Syncfusion.Blazor;
 public class Startup
@@ -94,11 +94,11 @@ In previous steps, Syncfusion Blazor DataGrid package is successfully configured
 
 ## Binding SQL data to the Blazor DataGrid Component
 
-Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [`Component`](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component). Please refer the [`Grid Custom Binding`](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/) and [`Custom adaptor as component`](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component) documentation for more details on the Custom adaptor.
+Now, get the SQL data from the SQL server and bind it to the DataGrid component as a datasource by using the Custom adaptor feature. The Custom Adaptor can be created as a [Component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component). Please refer the [Grid Custom Binding](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/) and [Custom adaptor as component](https://blazor.syncfusion.com/documentation/datagrid/custom-binding/#custom-adaptor-as-component) documentation for more details on the Custom adaptor.
 
-Grid columns can be defined using the [`GridColumn`](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Create columns using the following code. The properties used and their usage are discussed below.
+Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com/documentation/datagrid/columns/) component. Create columns using the following code. The properties used and their usage are discussed below.
 
-```csharp
+```cshtml
 [Index.razor]
 
 <SfGrid @ref="Grid" TValue="Order" AllowPaging="true" >
@@ -132,7 +132,7 @@ In the custom adaptor’s **Read** method, you can get the Grid action details l
 
 * Return the response in Result and Count pair object in Read method to bind the data to the DataGrid.
 
-```csharp
+```cshtml
 [CustomAdaptorComponent.razor]
 
 @using Syncfusion.Blazor;
@@ -218,9 +218,9 @@ While running the application, the grid will be displayed as follows.
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-Enable editing in the grid component using the [`GridEditSettings`](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Kindly refer the [`Grid Editing`](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing) documentation for reference.
+Enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Kindly refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing) documentation for reference.
 
-Here, inline edit mode and [`Toolbar`](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property are used to show toolbar items for editing.
+Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property are used to show toolbar items for editing.
 
 ```cshtml
 
@@ -245,7 +245,7 @@ Let’s see how to perform CRUD operation using SQL server data with Syncfusion 
 
 To Perform the Insert operation, override the Insert/InsertAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```csharp
+```c#
 
 // Performs Insert operation
 //You will get the DataManager instance in the DataManager parameter
@@ -287,7 +287,7 @@ The resultant grid will look like below.
 
 To Perform the Update operation, override the Update/UpdateAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```csharp
+```c#
 
 // Performs Update operation
 //You will get the DataManager instance in the DataManager parameter
@@ -328,7 +328,7 @@ The resultant grid will look like below.
 
 To Perform the Delete operation, override the Remove/RemoveAsync method of the custom adaptor and add the following code in the CustomAdaptorComponent.razor.
 
-```csharp
+```c#
 
 // Performs Remove operation
 //You will get the DataManager instance in the DataManager parameter

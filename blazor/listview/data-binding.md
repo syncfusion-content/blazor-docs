@@ -278,7 +278,7 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 </style>
 ```
 
-> You can find the fully working sample [`here`](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
+> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
 
 The following GIF represents the ListView with Add, Delete the list items,
 ![ListView CRUD operations](./images/EFListView.gif)

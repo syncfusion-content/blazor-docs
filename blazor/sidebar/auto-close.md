@@ -15,7 +15,7 @@ Sidebar often behaves differently on a mobile versus a desktop display. It has a
 
 In the following sample, mediaQuery has been used for specific resolution to close and open sidebar.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

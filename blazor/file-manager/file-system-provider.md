@@ -29,7 +29,7 @@ The following file providers are added in Syncfusion Blazor File Manager compone
 
 The ASP.NET Core file system provider allows the users to access and manage the physical file system. To get started, we need to clone the [ej2-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-aspcore-file-provider) using the following command.
 
-```csharp
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-aspcore-file-provider  ej2-aspcore-file-provider
 
@@ -41,7 +41,7 @@ After cloning, just open the project in Visual Studio and restore the NuGet pack
 
 After setting the root directory of the file system, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
 
-```csharp
+```cshtml
 
 @* Initializing File Manager with ASP.NET Core service *@
 
@@ -75,7 +75,7 @@ After cloning, just open the project in Visual Studio and restore the NuGet pack
 
 After setting the root directory of the file system, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the physical file system.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with ASP.NET MVC service*@
 
@@ -98,7 +98,7 @@ After setting the root directory of the file system, just build and run the proj
 
 The Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [ej2-azure-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider) using the following command
 
-```csharp
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider  ej2-azure-aspcore-file-provider
 
@@ -120,11 +120,11 @@ void setBlobContainer(string blobPath, string filePath)
 
 ```
 
-> Also, assign the same *blobPath URL* and *filePath URL* in [**AzureFileOperations** and **AzureUpload**](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
+> Also, assign the same *blobPath URL* and *filePath URL* in [AzureFileOperations and AzureUpload](https://github.com/SyncfusionExamples/ej2-azure-aspcore-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
 
 After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with Azure service.*@
 
@@ -140,11 +140,11 @@ After setting the blob container references, just build and run the project. Now
 
 ```
 
-> **NuGet:** Additionally, we have created a [**NuGet**](https://www.nuget.org/packages/Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core) package of **ASP.NET Core Azure file system provider**.
+> **NuGet:** Additionally, we have created a [NuGet](https://www.nuget.org/packages/Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core) package of **ASP.NET Core Azure file system provider**.
 
 Please, use the following command to install the NuGet package in an application.
 
-```typescript
+```
 
  dotnet add package Syncfusion.EJ2.FileManager.AzureFileProvider.AspNet.Core
 
@@ -156,7 +156,7 @@ Please, use the following command to install the NuGet package in an application
 
 In ASP.NET MVC, Azure file system provider allows the users to access and manage the blobs in the Azure blob storage. To get started, we need to clone the [ej2-azure-aspmvc-file-provider](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider) using the following command
 
-```csharp
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider  ej2-azure-aspmvc-file-provider
 
@@ -178,11 +178,11 @@ void setBlobContainer(string blobPath, string filePath)
 
 ```
 
-> Also, assign the same *blobPath URL* and *filePath URL* in [**AzureFileOperations** and **AzureUpload**](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
+> Also, assign the same *blobPath URL* and *filePath URL* in [AzureFileOperations and AzureUpload](https://github.com/SyncfusionExamples/ej2-azure-aspmvc-file-provider/blob/master/Controllers/AzureProviderController.cs) methods in the FileManager controller to determine the original path of the Azure blob.
 
 After setting the blob container references, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Azure blob storage.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with Azure service.*@
 
@@ -204,7 +204,7 @@ After setting the blob container references, just build and run the project. Now
 
 In ASP.NET Core, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted file system as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [ej2-amazon-s3-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider) using the following command
 
-```typescript
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provider.git  ej2-amazon-s3-aspcore-file-provider.git
 
@@ -214,7 +214,7 @@ git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspcore-file-provi
 
 After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register Amazon S3 client account details like *awsAccessKeyId*, *awsSecretKeyId* and *awsRegion* details in **RegisterAmazonS3** method in the FileManager controller to perform the file operations.
 
-```typescript
+```csharp
 
  void RegisterAmazonS3(string bucketName, string awsAccessKeyId, string awsSecretAccessKey, string bucketRegion)
 
@@ -222,7 +222,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with ASP.NET Core Amazon service*@
 
@@ -244,7 +244,7 @@ After registering the Amazon client account details, just build and run the proj
 
 In ASP.NET MVC, Amazon ***S3*** (*Simple Storage Service*) cloud file provider allows the users to access and manage a server hosted files as collection of objects stored in the Amazon S3 Bucket. To get started, clone the [ej2-amazon-s3-aspmvc-file-provider](https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider) using the following command
 
-```typescript
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provider.git  ej2-amazon-s3-aspmvc-file-provider.git
 
@@ -254,7 +254,7 @@ git clone https://github.com/SyncfusionExamples/ej2-amazon-s3-aspmvc-file-provid
 
 After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register Amazon S3 client account details like *awsAccessKeyId*, *awsSecretKeyId* and *awsRegion* details in **RegisterAmazonS3** method in the FileManager controller to perform the file operations.
 
-```typescript
+```csharp
 
  void RegisterAmazonS3(string bucketName, string awsAccessKeyId, string awsSecretAccessKey, string bucketRegion)
 
@@ -262,7 +262,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 After registering the Amazon client account details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows to manage the Amazon ***S3*** (*Simple Storage Service*) bucket's objects storage.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with ASP.NET MVC Amazon service*@
 
@@ -284,7 +284,7 @@ After registering the Amazon client account details, just build and run the proj
 
 In ASP.NET Core, File Transfer Protocol file system provider allows the users to access to the hosted file system as collection of objects stored in the file storage using File Transfer Protocol. To get started, clone the [ej2-ftp-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider) using the following command
 
-```typescript
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.git  ej2-ftp-aspcore-file-provider.git
 
@@ -292,7 +292,7 @@ git clone https://github.com/SyncfusionExamples/ej2-ftp-aspcore-file-provider.gi
 
 After cloning, open the project in Visual Studio and restore the NuGet packages. Now, register File Transfer Protocol details like *hostName*, *userName* and *password* in **SetFTPConnection** method in the FileManager controller to perform the file operations.
 
-```typescript
+```csharp
 
  void SetFTPConnection(string hostName, string userName, string password)
 
@@ -300,7 +300,7 @@ After cloning, open the project in Visual Studio and restore the NuGet packages.
 
 After registering the File Transfer Protocol details, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the FileManager component to the appropriate controller methods allows you to manage the FTP’s objects storage.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with File Transfer Protocol service*@
 
@@ -322,7 +322,7 @@ After registering the File Transfer Protocol details, just build and run the pro
 
 The SQL database file system provider allows the users to manage the file system being maintained in a SQL database table. Unlike the other file system providers, the SQL database file system provider works on ID basis. Here, each file and folder have a unique ID based on which all the file operations will be performed. To get started, we need to clone the [ej2-sql-server-database-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-sql-server-database-aspcore-file-provider) using the following command.
 
-```csharp
+```json
 
 <add name="FileExplorerConnection" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\FileManager.mdf;Integrated Security=True;Trusted_Connection=true" />
 
@@ -330,7 +330,7 @@ The SQL database file system provider allows the users to manage the file system
 
 After cloning, just open the project in Visual Studio and restore the NuGet packages. To establish the SQL server connection with the database file (for eg: FileManager.mdf), we need to specify the connection string in the web config file as shown below.
 
-```csharp
+```json
 
 <add name="FileExplorerConnection" connectionString="Data Source=(LocalDB)\v11.0;AttachDbFilename=|DataDirectory|\FileManager.mdf;Integrated Security=True;Trusted_Connection=true" />
 
@@ -338,7 +338,7 @@ After cloning, just open the project in Visual Studio and restore the NuGet pack
 
 Then, make an entry for the connection string in `appsettings.json` file as shown below.
 
-```csharp
+```json
 
 "ConnectionStrings": {
     "FileManagerConnection": "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\App_Data\\FileManager.mdf;Integrated Security=True;Connect Timeout=30"
@@ -358,7 +358,7 @@ void SetSQLConnection(string name, string tableName, string tableID)\
 
 After configuring the connection, just build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods allows to manage the files in the SQL database table.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with SQL database file system service*@
 
@@ -380,7 +380,7 @@ After configuring the connection, just build and run the project. Now, the proje
 
 The Google Drive file system provider allows the users to manage the files and folders in a Google Drive account. The Google Drive file system provider works on id basis where each file and folder have a unique ID. To get started, we need to clone the [ej2-google-drive-aspcore-file-provider](https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider) using the following command.
 
-```csharp
+```
 
 git clone https://github.com/SyncfusionExamples/ej2-google-drive-aspcore-file-provider  ej2-google-drive-aspcore-file-provider
 
@@ -397,7 +397,7 @@ After generating the client secret data, copy the JSON data to the following spe
 
 After updating the credentials, just build and run the project. Now, the project will be hosted in `http://localhost:{port}`, and it will ask to log on to the Gmail account for which created the client secret credentials. Then, provide permission to access the Google Drive files by clicking the allow access button in the page. Now, just mapping the ajaxSettings property of the FileManager component to the appropriate controller methods will allows to manage the files from the Google Drive.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with Google Drive file system service.*@
 
@@ -423,7 +423,7 @@ The NodeJS file system provider allows the users to manage the files and folders
 
 * Install the ej2-filemanager-node-filesystem package by running the below command.
 
- ```csharp
+ ```
 
 npm install @syncfusion/ej2-filemanager-node-filesystem
 
@@ -436,7 +436,7 @@ npm install @syncfusion/ej2-filemanager-node-filesystem
 
 * Clone the ej2-filemanager-node-filesystem using the following command.
 
-```csharp
+```
 
 git clone  https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem.git node-filesystem-provider
 
@@ -446,7 +446,7 @@ git clone  https://github.com/SyncfusionExamples/ej2-filemanager-node-filesystem
 
 After installing the packages, set the root folder directory of the physical file system in the package JSON under scripts sections as shown below.
 
-```csharp
+```
 "start": "node filesystem-server.js -d D:/Projects"
 ```
 
@@ -454,7 +454,7 @@ After installing the packages, set the root folder directory of the physical fil
 
 To set the port in which the project to be hosted and the root directory of the file system. Run the following command.
 
-```csharp
+```
 
 set PORT=3000 && node filesystem-server.js -d D:/Projects
 
@@ -464,7 +464,7 @@ set PORT=3000 && node filesystem-server.js -d D:/Projects
 
 Now, just mapping the ajaxSettings property of the FileManager component to the appropriate file operation methods in the filesystem-server.js file will allows  to manage the physical file system with NodeJS file system provider.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with NodeJS service *@
 
@@ -508,7 +508,7 @@ To interpolate with the Firebase Realtime Database, create a project under Fireb
 
 > By default, rules of a Firebase project will be **false**. To read and write the data, configure the  **Rules** as given in the following code snippet in the *Rules* tab in the Firebase Realtime Database project.
 
-```typescript
+```json
 
 {
   /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
@@ -522,7 +522,7 @@ To interpolate with the Firebase Realtime Database, create a project under Fireb
 
 Then, create a root node and add children to the root node. Refer to the following code snippet for the structure of JSON.
 
-```csharp
+```json
 
 {
   "Files" : [ {
@@ -565,11 +565,11 @@ Then, create a root node and add children to the root node. Refer to the followi
 
 Here, the `Files` denotes the `rootNode` and the subsequent object refers to the children of the root node. `rootNode` will be taken as the root folder of the file system loaded which will be loaded in File Manager component.
 
-After that, clone the [`ej2-firebase-realtime-database-apscore-file-provider`](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
+After that, clone the [ej2-firebase-realtime-database-apscore-file-provider](https://github.com/SyncfusionExamples/ej2-firebase-realtime-database-aspcore-file-provider) and just open the project in Visual Studio and restore the NuGet package.
 
 Register the Firebase Realtime Database by assigning *Firebase Realtime Database REST API link*, *rootNode*, and *serviceAccountKeyPath* parameters in the `RegisterFirebaseRealtimeDB` method of class `FirebaseRealtimeDBFileProvider` in controller part of the ASP.NET Core application.
 
-```typescript
+```
 
 void RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAccountKeyPath)
 
@@ -577,7 +577,7 @@ void RegisterFirebaseRealtimeDB(string apiUrl, string rootNode, string serviceAc
 
 **Example:**
 
-```typescript
+```
 
 void RegisterFirebaseRealtimeDB("https://filemanager-c0f6d.firebaseio.com/", "Files", "{give the service account key path}");
 
@@ -593,7 +593,7 @@ In the above code,
 
 After configuring the Firebase Realtime Database service link, build and run the project. Now, the project will be hosted in `http://localhost:{port}` and just mapping the **ajaxSettings** property of the File Manager component to the appropriate controller methods allows to manage the files in the Firebase Realtime Database.
 
-```csharp
+```cshtml
 
 @*Initializing File Manager with Firebase Realtime Database service*@
 

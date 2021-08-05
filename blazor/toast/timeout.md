@@ -17,7 +17,7 @@ The toast can be expired based on the `Timeout` property. The toast can live til
 
 > You can terminate the process by using the `ShowCloseButton` property for destroying the toast at any time.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Buttons
@@ -92,7 +92,7 @@ The above code will give following output.
 
 You can prevent auto hiding in a toast as visible like static by setting zero (`0`) value in the `Timeout` Property.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications

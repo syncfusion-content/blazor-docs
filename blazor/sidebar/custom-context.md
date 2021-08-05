@@ -15,7 +15,7 @@ By default, Sidebar initializes context to the body element. Using the `Target` 
 
 In the following sample, click the toggle button to expand or collapse the sidebar and add button in sidebar element.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Navigations
 

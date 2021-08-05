@@ -12,9 +12,9 @@ documentation: ug
 ## ARIA attributes
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
+
 Split Button provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-expanded`, `aria-owns` and `aria-haspopup` applied for action item in
-Split Button. It helps the people with disabilities by providing information about the widget for assistive
-technology in the screen readers. Split Button component contains the  `MenuItem` role.
+Split Button. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers. Split Button component contains the  `MenuItem` role.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |

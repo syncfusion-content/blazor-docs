@@ -15,7 +15,7 @@ This is demonstrated in the below sample code where we have custom toolbar items
 
 {% tabs %}
 
-{% highlight csharp %}
+{% highlight razor %}
 
 @using TreeGridComponent.Data;
 @using  Syncfusion.Blazor.Grids;
@@ -62,7 +62,7 @@ This is demonstrated in the below sample code where we have custom toolbar items
 
 {% endhighlight %}
 
-{% highlight cs %}
+{% highlight c# %}
 
 namespace TreeGridComponent.Data {
 
@@ -98,4 +98,4 @@ public class TreeData
 
 Output be like the below.
 
-![`Final output`](../images/custom-toolbar-text.PNG)
+![Final output](../images/custom-toolbar-text.PNG)

@@ -26,6 +26,7 @@ The size of the Sparkline Chart is determined by the container size, and it can 
         public int Year;
         public int Population;
     };
+    
     private List<PopulationReport> populationData = new List<PopulationReport> {
         new  PopulationReport { Year= 2005, Population= 20090440 },
         new  PopulationReport { Year= 2006, Population= 20264080 },
@@ -45,7 +46,7 @@ The size of the Sparkline Chart is determined by the container size, and it can 
 
 ## Size for Sparkline
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties can be used to set the size of the Sparkline Chart.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties can be used to set the size of the Sparkline Chart.
 
 ### In Pixel
 

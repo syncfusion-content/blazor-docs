@@ -11,7 +11,7 @@ documentation: ug
 
 The Toast component supports to change its content dynamically while displaying in newest toasts. You can change the toast content by updating property value, before calling in the `show` method.
 
-```csharp
+```cshtml
 
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Notifications
@@ -49,4 +49,4 @@ The Toast component supports to change its content dynamically while displaying 
     }
 }
 
-``````
+```

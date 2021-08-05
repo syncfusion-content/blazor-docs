@@ -16,9 +16,7 @@ Maps provides support for internationalization for the below elements.
 
 ## Globalization
 
-Globalization is the process of designing and developing an component that works in different
-cultures/locales. Internationalization library is used to globalize number, date, time values in
-Maps component using `LoadCldrData` method.
+Globalization is the process of designing and developing an component that works in different cultures/locales. Internationalization library is used to globalize number, date, time values in Maps component using `LoadCldrData` method.
 
 ## Numeric Format
 
