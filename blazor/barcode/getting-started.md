@@ -89,7 +89,7 @@ The following example shows a basic BarcodeGenerator component.
 
 ```
 
-![Barcode Generator](images/BarcodeGenerator1.png)
+![Blazor Barcode Generator Component](images/blazor-barcode-generator-component.png)
 
 > Running the above code will display the barcode generator component on the browser.
 
@@ -102,7 +102,7 @@ You can add the QR code in our barcode generator component.
 
 ```
 
-![QR Code Generator](images/QRCode1.png)
+![QR Code Generator in Blazor Barcode Component](images/blazor-barcode-with-qr-code.png)
 
 ## Adding Datamatrix Generator control
 
@@ -113,7 +113,7 @@ You can add the datamatrix code in our barcode generator component.
 
 ```
 
-![Data Matrix Generator](images/DataMatrix1.png)
+![Data Matrix Generator in Blazor Barcode Component](images/blazor-barcode-with-data-matrix.png)
 
 ## See Also
 

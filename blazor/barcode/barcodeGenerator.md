@@ -20,7 +20,7 @@ The Code 39 character set includes the digits 0-9, the letters A-Z (upper case o
 
 ```
 
-![Code39 Barcode](images/BarcodeGenerator2.png)
+![Code39 in Blazor Barcode](images/blazor-code39-barcode.png)
 
 ## Code39 Extended
 
@@ -33,7 +33,7 @@ Code 39 Extended is an extended version of Code 39 that supports ASCII character
 
 ```
 
-![Code39 Extended Barcode](images/BarcodeGenerator3.png)
+![Code39 Extended in Blazor Barcode](images/blazor-code39-extended-barcode.png)
 
 ## Code 11
 
@@ -46,7 +46,7 @@ Code 11 is used primarily for labeling the telecommunication equipment’s. The 
 
 ```
 
-![Barcode Generator](images/BarcodeGenerator4.png)
+![Code11 in Blazor Barcode](images/blazor-code11-barcode.png)
 
 ## Codabar
 
@@ -63,7 +63,7 @@ The characters, A, B, C and D are used as start and stop characters. Codabar is 
 
 ```
 
-![Codabar in Barcode](images/BarcodeGenerator5.png)
+![Codabar in Blazor Barcode](images/blazor-codebar-barcode.png)
 
 ## Code 32
 
@@ -81,7 +81,7 @@ The value to be encoded must be 8 digits Pharmacode (prefix it with ‘0’ if n
 
 ```
 
-![Code 32 in Barcode](images/BarcodeGenerator6.png)
+![Code32 in Blazor Barcode](images/blazor-code32-barcode.png)
 
 ## Code 93
 
@@ -94,7 +94,7 @@ Code 93 is designed to complement and improve upon Code 39. It can represent the
 
 ```
 
-![Code 93 in Barcode](images/BarcodeGenerator7.png)
+![Code 93 in Blazor Barcode](images/blazor-code93-barcode.png)
 
 ## Code 93 Extended
 
@@ -121,7 +121,7 @@ The last seven characters of Code Sets A and B (character values 96 - 102) and t
 
 ```
 
-![Code 128 Special characters in Barcode](images/BarcodeGenerator8.png)
+![Code 128 Special Characters in Blazor Barcode](images/blazor-code128-barcode.png)
 
 
 ## Customizing the Barcode color
@@ -135,7 +135,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 ```
 
-![Customizing the Barcode color in Barcode](images/BarcodeGenerator9.png)
+![Customizing Blazor Barcode Color](images/blazor-barcode-color-customization.png)
 
 ## Customizing the Barcode dimension
 
@@ -148,7 +148,7 @@ The dimension of the barcode can be changed using the [Height](https://help.sync
 
 ```
 
-![Customizing the Barcode dimension in Barcode](images/BarcodeGenerator10.png)
+![Customizing Blazor Barcode Dimension](images/blazor-barcode-dimension-customization.png)
 
 ## Customizing the text
 
@@ -163,7 +163,7 @@ In barcode generators you can customize the barcode text by using display [Text]
 
 ```
 
-![Customizing the text in Barcode](images/BarcodeGenerator11.png)
+![Customizing the Text in Blazor Barcode](images/blazor-barcode-text-customization.png)
 
 ## Event
 
