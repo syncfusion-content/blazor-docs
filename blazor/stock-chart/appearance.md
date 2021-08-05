@@ -11,7 +11,7 @@ documentation: ug
 
 ## Stock Chart Title
 
-Stock Chart can be given a title using [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information about the data plotted.
+Stock Chart can be given a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property, to show the information about the data plotted.
 
 ```cshtml
 

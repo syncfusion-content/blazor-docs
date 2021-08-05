@@ -75,4 +75,4 @@ The below sample explains how to initialize accordion items through `templates`.
 
 Output be like the below,
 
-![Blazor Accordion Data Binding](./images/acrdnDatabinding.png)
+![Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)

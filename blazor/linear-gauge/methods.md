@@ -13,7 +13,7 @@ The following methods are available in the Linear Gauge component.
 
 ## SetPointerValue
 
-To change the pointer value dynamically, use the [`SetPointerValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetPointerValue_System_Int32_System_Int32_System_Double_) method in the Linear Gauge component. The following are the arguments for this method.
+To change the pointer value dynamically, use the [SetPointerValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetPointerValue_System_Int32_System_Int32_System_Double_) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -49,7 +49,7 @@ To change the pointer value dynamically, use the [`SetPointerValue`](https://hel
 
 ## SetAnnotationValue
 
-To change the annotation content dynamically, use the [`SetAnnotationValue`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetAnnotationValue_System_Int32_System_String_System_Int32_) method in the Linear Gauge component. The following are the arguments for this method.
+To change the annotation content dynamically, use the [SetAnnotationValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_SetAnnotationValue_System_Int32_System_String_System_Int32_) method in the Linear Gauge component. The following are the arguments for this method.
 
 |   Argument name      |   Description                            |
 |----------------------| -----------------------------------------|
@@ -57,7 +57,7 @@ To change the annotation content dynamically, use the [`SetAnnotationValue`](htt
 |     content          |    Specifies the text for the annotation to be updated.        |
 |     axisValue        |    Specifies the value of the axis where the annotation is to be placed.|
 
-> This method will not be applicable for the [`ContentTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) class in [`LinearGaugeAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html).
+> This method will not be applicable for the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAnnotation_ContentTemplate) class in [LinearGaugeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAnnotation.html).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -85,7 +85,7 @@ To change the annotation content dynamically, use the [`SetAnnotationValue`](htt
 
 ## RefreshAsync
 
-The [`RefreshAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again. In the following example, the gauge is rendered again using the [`RefreshAsync`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
+The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again. In the following example, the gauge is rendered again using the [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge

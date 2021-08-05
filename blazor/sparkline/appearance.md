@@ -13,7 +13,7 @@ The rendering direction, padding, border, and the background appearance of the S
 
 ## Right-to-left (RTL)
 
-The Sparkline supports the right-to-left (RTL) rendering that can be enabled by setting the [`EnableRtl`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EnableRtl) property to **true**.
+The Sparkline supports the right-to-left (RTL) rendering that can be enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_EnableRtl) property to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -28,8 +28,8 @@ The Sparkline supports the right-to-left (RTL) rendering that can be enabled by 
 
 ## Border
 
-The border can be enabled and customized by specifying the [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Color)
- and the [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Width) properties of the [`SparklineContainerAreaBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html).
+The border can be enabled and customized by specifying the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Color)
+ and the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BorderSettings.html#Syncfusion_Blazor_Charts_BorderSettings_Width) properties of the [SparklineContainerAreaBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.SparklineContainerAreaBorder.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -45,7 +45,7 @@ The border can be enabled and customized by specifying the [`Color`](https://hel
 
 ## Padding
 
-The Sparkline supports padding between the container and the component using the [`SparklinePadding`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklinePadding.html). The code example in the following shows the Sparkline Chart with overall padding set to 20.
+The Sparkline supports padding between the container and the component using the [SparklinePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklinePadding.html). The code example in the following shows the Sparkline Chart with overall padding set to 20.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -63,7 +63,7 @@ The Sparkline supports padding between the container and the component using the
 
 ## Background
 
-The background color of the Sparkline area can be changed using the [`Background`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html#Syncfusion_Blazor_Charts_SparklineContainerArea_Background) property of the [`SparklineContainerArea`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html). By default, the Sparkline background color is **Transparent**.
+The background color of the Sparkline area can be changed using the [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html#Syncfusion_Blazor_Charts_SparklineContainerArea_Background) property of the [SparklineContainerArea](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineContainerArea.html). By default, the Sparkline background color is **Transparent**.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

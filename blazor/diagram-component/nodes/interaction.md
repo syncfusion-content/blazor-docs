@@ -225,18 +225,18 @@ And also the rotate the node during the interaction.
 
 ![Rotate](../images/rotate.gif)
 
-For more information about node interaction, refer to [`Node Interaction`](../interaction).
+For more information about node interaction, refer to [Node Interaction](../interaction).
 
 ## See also
 
-* [`How to get events while the interact the node`](./events)
+* [How to get events while the interact the node](./events)
 
-* [`How to positioning the node`](./positioning)
+* [How to positioning the node](./positioning)
 
-* [`How to customize the node`](./appearance)
+* [How to customize the node](./appearance)
 
-* [`How to interact the annotation in diagram`](../annotations/interaction)
+* [How to interact the annotation in diagram](../annotations/interaction)
 
-* [`How to interact the port in diagram`](../ports/interaction)
+* [How to interact the port in diagram](../ports/interaction)
 
-* [`How to interact the connector in diagram`](../connectors/interactions)
+* [How to interact the connector in diagram](../connectors/interactions)

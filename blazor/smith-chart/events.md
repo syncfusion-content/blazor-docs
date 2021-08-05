@@ -26,7 +26,7 @@ The Smith Chart component supports the following events.
 
 ## Loaded
 
-The [`Loaded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_Loaded) event triggers after the Smith Chart is rendered.
+The [Loaded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_Loaded) event triggers after the Smith Chart is rendered.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -106,7 +106,7 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
 
 ## OnExportComplete
 
-The [`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_OnExportComplete) event triggers after the Smith Chart is exported.
+The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_OnExportComplete) event triggers after the Smith Chart is exported.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -152,7 +152,7 @@ The [`OnExportComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## AxisLabelRendering
 
-Before rendering each axis label, the [`AxisLabelRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_AxisLabelRendering) event is triggered. The following arguments are present in this event:
+Before rendering each axis label, the [AxisLabelRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_AxisLabelRendering) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current axis label text.
 * `X` - Specifies the current axis label X position.
@@ -193,7 +193,7 @@ Before rendering each axis label, the [`AxisLabelRendering`](https://help.syncfu
 
 ## LegendRendering
 
-Before rendering each legend, the [`LegendRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_LegendRendering) event is triggered. The following arguments are present in this event:
+Before rendering each legend, the [LegendRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_LegendRendering) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current legend text.
 * `Shape` - Customize the shape of the legend.
@@ -235,7 +235,7 @@ Before rendering each legend, the [`LegendRendering`](https://help.syncfusion.co
 
 ## SeriesRender
 
-Before rendering each series, the [`SeriesRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SeriesRender) event is triggered. The following arguments are present in this event:
+Before rendering each series, the [SeriesRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SeriesRender) event is triggered. The following arguments are present in this event:
 
 * `Text` - Specifies the current series text.
 * `Index` - Specifies the current series index.
@@ -276,7 +276,7 @@ Before rendering each series, the [`SeriesRender`](https://help.syncfusion.com/c
 
 ## TitleRendering
 
-The [`TitleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TitleRendering) event triggers before the title is rendered. The following arguments are present in this event:
+The [TitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TitleRendering) event triggers before the title is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current title text.
 * `X` - Specifies the current title X position.
@@ -319,7 +319,7 @@ The [`TitleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ## SubtitleRendering
 
-The [`SubtitleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SubtitleRendering) event triggers before the subtitle is rendered. The following arguments are present in this event:
+The [SubtitleRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SubtitleRendering) event triggers before the subtitle is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current subtitle text.
 * `X` - Specifies the current subtitle X position.
@@ -363,7 +363,7 @@ The [`SubtitleRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ## TextRendering
 
-The [`TextRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TextRendering) event triggers before the datalabel text is rendered. The following arguments are present in this event:
+The [TextRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_TextRendering) event triggers before the datalabel text is rendered. The following arguments are present in this event:
 
 * `Text` - Specifies the current text of the label.
 * `X` - Specifies the current datalabel X position.
@@ -411,7 +411,7 @@ The [`TextRendering`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ## SizeChanged
 
-The [`SizeChanged`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SizeChanged) event triggers when the browser window is resized. The following arguments are present in this event:
+The [SizeChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartEvents.html#Syncfusion_Blazor_Charts_SmithChartEvents_SizeChanged) event triggers when the browser window is resized. The following arguments are present in this event:
 
 * `CurrentSize` - Specifies the current size of the Chart.
 * `PreviousSize` - Specifies the previous size of the Chart.

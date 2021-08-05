@@ -110,4 +110,4 @@ We can prevent the expand and collapse of accordion item for specific condition,
 
 Output be like the below.
 
-![Prevent Expand or Collapse the Accordion item](../images/preventExpandCollapseItem.png)
+![Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-expand-collapse-tem.png)

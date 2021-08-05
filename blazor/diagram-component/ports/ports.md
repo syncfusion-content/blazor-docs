@@ -287,10 +287,10 @@ The following code example explains how to change the port properties at runtime
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)
 
-* [`How to set the position of the port`](./positioning)
+* [How to set the position of the port](./positioning)

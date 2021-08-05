@@ -40,9 +40,9 @@ The **Localization** library allows you to localize default text content of the 
 
 We have used Resource file (**.resx**) to translate the static text of the DataGrid.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [`Localization`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
 
-* Add **.resx** file to [`Resources`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add **.resx** file to [Resources](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
 Name |Value (in Deutsch culture)
 -----|-----
@@ -186,7 +186,7 @@ namespace BlazorApplication
 }
 ```
 
-> Add [`UseRequestLocalization()`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
+> Add [UseRequestLocalization()](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#localization-middleware) middle-ware in Configure method in **Startup.cs** file to get browser Culture Information.
 
 * Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
@@ -216,7 +216,7 @@ namespace BlazorServer
 
 > BlazorServer denotes the ApplicationNameSpace of your project.
 
-* Finally, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
+* Finally, Specify the culture for DataGrid using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -320,7 +320,7 @@ public class SyncfusionLocalizer : ISyncfusionStringLocalizer
 
 > ClientApplication denotes the ApplicationNameSpace of your project.
 
-* Now, Specify the culture for DataGrid using [`locale`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
+* Now, Specify the culture for DataGrid using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

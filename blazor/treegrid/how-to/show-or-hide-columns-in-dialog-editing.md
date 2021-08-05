@@ -122,4 +122,4 @@ public class TreeData
 {% endtabs %}
 
 Output be like the below.
-![`Final output`](../images/showhidecolumn.PNG)
+![Final output](../images/showhidecolumn.PNG)

@@ -15,7 +15,7 @@ The TextEdit event will notify the annotation content changes after editing. The
 
 The following code example shows how to register and get the notification from the TextEdit event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" TextEdit="textedit" Nodes="@nodes" />
@@ -62,7 +62,7 @@ The keyup event occurs when a keyboard key is released and updated the respectiv
 
 The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" KeyDown="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@nodes" />
@@ -106,10 +106,10 @@ The following code example shows how to register and get the notification from t
 
 ## See also
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)
 
-* [`How to add annotation for Node`](./node-annotation)
+* [How to add annotation for Node](./node-annotation)
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)

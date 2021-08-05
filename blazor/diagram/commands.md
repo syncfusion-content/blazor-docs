@@ -31,9 +31,9 @@ Alignment commands enable you to align the selected or defined objects such as n
 
 | Parameters | Description |
 |:------------| :------ |
-|[`Alignment Options`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, with respect to which the objects to be aligned. The accepted values of the argument "alignment options" are as follows. <br> Left - Aligns all the selected objects at the left of the selection boundary. <br> Right - Aligns all the selected objects at the right of the selection boundary. <br> Center - Aligns all the selected objects at the center of the selection boundary. <br> Top - Aligns all the selected objects at the top of the selection boundary. <br> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br> Middle - Aligns all the selected objects at the middle of the selection boundary.|
+|[Alignment Options](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentOptions.html) | Defines the specific direction, with respect to which the objects to be aligned. The accepted values of the argument "alignment options" are as follows. <br> Left - Aligns all the selected objects at the left of the selection boundary. <br> Right - Aligns all the selected objects at the right of the selection boundary. <br> Center - Aligns all the selected objects at the center of the selection boundary. <br> Top - Aligns all the selected objects at the top of the selection boundary. <br> Bottom - Aligns all the selected objects at the bottom of the selection boundary. <br> Middle - Aligns all the selected objects at the middle of the selection boundary.|
 | Objects | Defines the objects to be aligned. This is an optional parameter. By default, all the nodes and connectors in the selected region of the diagram gets aligned. |
-[`Alignment Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br> The accepted values of the argument "alignment mode" are as follows. <br> Object - Aligns the objects based on the first object in the selected list. <br> Selector - Aligns the objects based on the selection boundary. | 
+[Alignment Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AlignmentMode.html)  | Defines the specific mode, with respect to which the objects to be aligned. This is an optional parameter. The default alignment mode is `Object`. <br> The accepted values of the argument "alignment mode" are as follows. <br> Object - Aligns the objects based on the first object in the selected list. <br> Selector - Aligns the objects based on the selection boundary. | 
 
 
 The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
@@ -58,7 +58,7 @@ The following code example illustrates how to align all the selected objects at 
 
 ## Distribute
 
-The [`Distribute`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Distribute_Syncfusion_Blazor_Diagrams_DistributeOptions_System_Object_) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
+The [Distribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Distribute_Syncfusion_Blazor_Diagrams_DistributeOptions_System_Object_) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
 
 The factor to distribute the shapes `DistributeOptions` are listed as follows:
 
@@ -94,7 +94,7 @@ The following code example illustrates how to execute the space commands.
 
 ## Sizing Commands
 
-Sizing [`SameSize`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SameSize_Syncfusion_Blazor_Diagrams_SizingOptions_System_Object_) commands enable to equally size the selected nodes with respect to the first selected object.
+Sizing [SameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SameSize_Syncfusion_Blazor_Diagrams_SizingOptions_System_Object_) commands enable to equally size the selected nodes with respect to the first selected object.
 
 `SizingOptions` are as follows:
 
@@ -126,11 +126,11 @@ The following code example illustrates how to execute the size commands.
 
 Clipboard commands are used to cut, copy, or paste the selected elements. Refer to the following link which shows how to use clipboard methods in the diagram.
 
-* Cuts the selected elements from the diagram to the diagram’s clipboard, [`Cut`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Cut).
+* Cuts the selected elements from the diagram to the diagram’s clipboard, [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Cut).
 
-* Copies the selected elements from the diagram to the diagram’s clipboard, [`Copy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Copy).
+* Copies the selected elements from the diagram to the diagram’s clipboard, [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Copy).
 
-* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram, [`Paste`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Paste_System_Object_).
+* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram, [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Paste_System_Object_).
 
 The following code illustrates how to execute the clipboard commands.
 
@@ -168,9 +168,9 @@ The following code illustrates how to execute the clipboard commands.
 
 **Grouping commands** are used to group/ungroup the selected elements on the diagram. Refer to the following link which shows how to use grouping commands in the diagram.
 
-[`Group`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Group) the selected nodes and connectors in the diagram.
+[Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Group) the selected nodes and connectors in the diagram.
 
-[`Ungroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_UnGroup) the selected nodes and connectors in the diagram.
+[Ungroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_UnGroup) the selected nodes and connectors in the diagram.
 
 The following code illustrates how to execute the grouping commands.
 
@@ -203,7 +203,7 @@ The following code illustrates how to execute the grouping commands.
 
 ## BringToFront command
 
-The [`BringToFront`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToFront) command visually brings the selected element to front over all the other overlapped elements. The following code illustrates how to execute the `BringToFront` command.
+The [BringToFront](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToFront) command visually brings the selected element to front over all the other overlapped elements. The following code illustrates how to execute the `BringToFront` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -225,7 +225,7 @@ The [`BringToFront`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ## SendToBack command
 
-The [`SendToBack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendToBack) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `SendToBack` command.
+The [SendToBack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendToBack) command visually moves the selected element behind all the other overlapped elements. The following code illustrates how to execute the `SendToBack` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -247,7 +247,7 @@ The [`SendToBack`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 ## MoveForward command
 
-The [`MoveForward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_MoveForward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `MoveForward` command.
+The [MoveForward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_MoveForward) command visually moves the selected element over the nearest overlapping element. The following code illustrates how to execute the `MoveForward` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -269,7 +269,7 @@ The [`MoveForward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 ## SendBackward command
 
-The [`SendBackward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendBackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `SendBackward` command.
+The [SendBackward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_SendBackward) command visually moves the selected element behind the underlying element. The following code illustrates how to execute the `SendBackward` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -291,7 +291,7 @@ The [`SendBackward`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ## Zoom
 
-The [`Zoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Zoom_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) command is used to zoom-in and zoom-out the diagram view.
+The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Zoom_System_Double_Syncfusion_Blazor_Diagrams_PointModel_) command is used to zoom-in and zoom-out the diagram view.
 
 The following code illustrates how to zoom-in/zoom out the diagram.
 
@@ -317,7 +317,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 ## Nudge command
 
-The [`Nudge`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Nudge_Syncfusion_Blazor_Diagrams_NudgeDirection_System_Nullable_System_Double__System_Nullable_System_Double__) commands move the selected elements towards up, down, left, or right by 1 pixel.
+The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Nudge_Syncfusion_Blazor_Diagrams_NudgeDirection_System_Nullable_System_Double__System_Nullable_System_Double__) commands move the selected elements towards up, down, left, or right by 1 pixel.
 
 `NudgeDirection` nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
 
@@ -358,7 +358,7 @@ Nudge commands are particularly useful for accurate placement of elements.
 
 ## BringIntoView
 
-The [`BringIntoView`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringIntoView_System_Object_) command brings the specified rectangular region into the viewport of the diagram.
+The [BringIntoView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringIntoView_System_Object_) command brings the specified rectangular region into the viewport of the diagram.
 
 The following code illustrates how to execute the `BringIntoView` command.
 
@@ -383,7 +383,7 @@ The following code illustrates how to execute the `BringIntoView` command.
 
 ## BringToCenter
 
-The [`BringToCenter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToCenter_System_Object_) command brings the specified rectangular region of the diagram content to the center of the viewport.
+The [BringToCenter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BringToCenter_System_Object_) command brings the specified rectangular region of the diagram content to the center of the viewport.
 
 The following code illustrates how to execute the `BringToCenter` command.
 
@@ -408,17 +408,17 @@ The following code illustrates how to execute the `BringToCenter` command.
 
 ## FitToPage command
 
-The [`FitToPage`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_FitToPage_Syncfusion_Blazor_Diagrams_IFitOptions_) command helps to fit the diagram content into the view with respect to either width, height, or at the whole.
+The [FitToPage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_FitToPage_Syncfusion_Blazor_Diagrams_IFitOptions_) command helps to fit the diagram content into the view with respect to either width, height, or at the whole.
 
-The [`Mode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Mode) parameter defines whether the diagram must be horizontally/vertically fit into the viewport with respect to width, height, or entire bounds of the diagram.
+The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Mode) parameter defines whether the diagram must be horizontally/vertically fit into the viewport with respect to width, height, or entire bounds of the diagram.
 
-The [`Region`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Region) parameter defines the region that must be drawn as an image.
+The [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Region) parameter defines the region that must be drawn as an image.
 
-The [`Margin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Margin) parameter defines the region/bounds of the diagram content that is to be fit into the view.
+The [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_Margin) parameter defines the region/bounds of the diagram content that is to be fit into the view.
 
-The [`CanZoomIn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CanZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
+The [CanZoomIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CanZoomIn) parameter enables/disables zooming to fit the smaller content into a larger viewport.
 
-The [`CustomBounds`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CustomBounds) parameter the custom region that must be fit into the viewport.
+The [CustomBounds](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.IFitOptions.html#Syncfusion_Blazor_Diagrams_IFitOptions_CustomBounds) parameter the custom region that must be fit into the viewport.
 
 The following code illustrates how to execute `FitToPage` command.
 
@@ -442,7 +442,7 @@ The following code illustrates how to execute `FitToPage` command.
 
 ## Undo and Redo command
 
-The [`Undo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Undo) and [`Redo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Redo) commands help you to revert/restore the changes.
+The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_Redo) commands help you to revert/restore the changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -471,20 +471,20 @@ The [`Undo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Sf
 ## Command manager
 
 Diagram provides support to map or bind command execution with desired combination of key gestures. Diagram provides some built-in commands.
-The [`CommandManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommandManager.html) provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
+The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommandManager.html) provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
 
 ### Command Execution Event
 
-You can use the [`OnCommandExecuted`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnCommandExecuted) event to trigger when execute the custom command in diagram.
+You can use the [OnCommandExecuted](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnCommandExecuted) event to trigger when execute the custom command in diagram.
 
 ### Custom command
 
 To define a custom command, specify the following properties:
-* [`Gesture`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Gesture): A combination of [`Keys`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramKeyGesture.html#Syncfusion_Blazor_Diagrams_DiagramKeyGesture_Key) and [`KeyModifiers`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramKeyGesture.html#Syncfusion_Blazor_Diagrams_DiagramKeyGesture_KeyModifiers).
-* [`Parameter`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Parameter): Defines any additional parameters that are required at runtime.
-* [`Name`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Name): Defines the name of the command.
+* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramKeyGesture.html#Syncfusion_Blazor_Diagrams_DiagramKeyGesture_Key) and [KeyModifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramKeyGesture.html#Syncfusion_Blazor_Diagrams_DiagramKeyGesture_KeyModifiers).
+* [Parameter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Parameter): Defines any additional parameters that are required at runtime.
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommand.html#Syncfusion_Blazor_Diagrams_DiagramCommand_Name): Defines the name of the command.
 
-To explore the properties of custom commands, refer to the [`Commands`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommandManager.html).
+To explore the properties of custom commands, refer to the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramCommandManager.html).
 
 The following code example shows how to define a custom command.
 

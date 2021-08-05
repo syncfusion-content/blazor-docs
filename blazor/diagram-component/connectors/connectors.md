@@ -416,12 +416,12 @@ The following code example illustrates how to create port to port connections.
 
 ## See also
 
-* [`How to customize the connector properties`](./customization)
+* [How to customize the connector properties](./customization)
 
-* [`How to interact the connector`](./interactions)
+* [How to interact the connector](./interactions)
 
-* [`How to change the segments`](./segments)
+* [How to change the segments](./segments)
 
-* [`How to get the connector events`](./events)
+* [How to get the connector events](./events)
 
-* [`How to add annotations to the connectors`](../annotations/labels)
+* [How to add annotations to the connectors](../annotations/labels)

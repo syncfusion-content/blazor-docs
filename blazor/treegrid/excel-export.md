@@ -10,7 +10,7 @@ documentation: ug
 # Excel Export in Blazor TreeGrid Component
 
 The excel export allows exporting Tree Grid data to Excel document. You need to use the
- **ExcelExport** method for exporting. To enable Excel export in the Tree Grid, set the [`AllowExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~AllowExcelExport.html) property as true.
+ **ExcelExport** method for exporting. To enable Excel export in the Tree Grid, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~AllowExcelExport.html) property as true.
 
 {% tabs %}
 
@@ -442,7 +442,7 @@ public class TreeData
 
 ### To persist collapsed state
 
-You can persist the collapsed state in the exported document by defining **IsCollapsedStatePersist** property as true in **TreeGridExcelExportProperties** parameter of [`ExcelExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExcelExport_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
+You can persist the collapsed state in the exported document by defining **IsCollapsedStatePersist** property as true in **TreeGridExcelExportProperties** parameter of [ExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExcelExport_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
 
 {% tabs %}
 

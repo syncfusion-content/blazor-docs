@@ -62,4 +62,4 @@ Accordion supports to render the nested level of Accordion by using `ContentTemp
 
 Output be like the below.
 
-![Nested Accordion](../images/nested.png)
+![Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.png)

@@ -183,8 +183,8 @@ The Constraints property of node allows you to enable or disable certain feature
 
 ## See also
 
-* [`How to interact the node in diagram`](./interaction)
+* [How to interact the node in diagram](./interaction)
 
-* [`How to get events when they interact the connector`](../connectors/events)
+* [How to get events when they interact the connector](../connectors/events)
 
-* [`How to get events when they interact the annotation`](../annotations/events)
+* [How to get events when they interact the annotation](../annotations/events)

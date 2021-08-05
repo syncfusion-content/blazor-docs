@@ -11,7 +11,7 @@ documentation: ug
 
 ## Multiple Chart Series
 
-The [`ChartSeries`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property allows to add multiple series to the chart. The series are rendered in the order they were added to the series array.
+The [ChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html) property allows to add multiple series to the chart. The series are rendered in the order they were added to the series array.
 
 ```cshtml
 
@@ -115,7 +115,7 @@ A chart can be created by combining several chart types such as line, column, an
 
 ![Combination Chart](images/multiple-series/combination-razor.png)
 
-> Refer to our [`Blazor Charts`](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [`Blazor Chart Example`](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
+> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
 ## See Also
 

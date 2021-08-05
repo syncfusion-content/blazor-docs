@@ -13,11 +13,11 @@ The options such as zoom, pan, single-click, double-click, highlight, and map se
 
 ## Zooming
 
-The zooming feature enables you to zoom in and zoom out the maps to show the in-depth information. It is controlled using the [`ZoomFactor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) in maps. When the `ZoomFactor` is increased, the map is zoomed in and when the `ZoomFactor` is decreased, the map is zoomed out.
+The zooming feature enables you to zoom in and zoom out the maps to show the in-depth information. It is controlled using the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) in maps. When the `ZoomFactor` is increased, the map is zoomed in and when the `ZoomFactor` is decreased, the map is zoomed out.
 
 <b>Enable zooming</b>
 
-To enable the zooming feature, set the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to true in [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
+To enable the zooming feature, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to true in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -35,7 +35,7 @@ To enable the zooming feature, set the [`Enable`](https://help.syncfusion.com/cr
 
 <b>Enable panning</b>
 
-We can enable or disable the panning feature, using the `EnablePanning` in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html)
+We can enable or disable the panning feature, using the `EnablePanning` in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html)
 
 ### Various types of zooming
 
@@ -43,7 +43,7 @@ Zooming can be performed in the following types:
 
 <b>Zooming toolbar</b>
 
-By default, the toolbar is rendered with `zoom-in`, `zoom-out`, and `reset` options when it is set to 'true' in the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). You can also customize the toolbar items using the [`Toolbars`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Toolbars) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
+By default, the toolbar is rendered with `zoom-in`, `zoom-out`, and `reset` options when it is set to 'true' in the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). You can also customize the toolbar items using the [Toolbars](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Toolbars) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 The following options are available in toolbar, and you can use the options as needed:
 
@@ -70,7 +70,7 @@ The following options are available in toolbar, and you can use the options as n
 
 <b>Pinch zooming</b>
 
-Use the [`PinchZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_PinchZooming) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the pinch zooming.
+Use the [PinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_PinchZooming) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the pinch zooming.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -86,7 +86,7 @@ Use the [`PinchZooming`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 <b>Single-click zooming</b>
 
-Use the [`ZoomOnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnClick) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the single-click zooming.
+Use the [ZoomOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnClick) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the single-click zooming.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -102,7 +102,7 @@ Use the [`ZoomOnClick`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 <b>Double-click zooming</b>
 
-Use the [`DoubleClickZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_DoubleClickZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the double-click zooming.
+Use the [DoubleClickZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_DoubleClickZoom) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the double-click zooming.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -118,7 +118,7 @@ Use the [`DoubleClickZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 
 <b>Mouse wheel zooming</b>
 
-Use the [`MouseWheelZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MouseWheelZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable mouse wheel zooming.
+Use the [MouseWheelZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MouseWheelZoom) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable mouse wheel zooming.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -134,7 +134,7 @@ Use the [`MouseWheelZoom`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ### Zooming with animation
 
-You can use the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_AnimationDuration) property in [`MapsLayer`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html) to zoom in or zoom out the maps with animation.
+You can use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html) to zoom in or zoom out the maps with animation.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -156,9 +156,9 @@ You can use the [`AnimationDuration`](https://help.syncfusion.com/cr/blazor/Sync
 
 Each shape in the maps can be selected and deselected when interacting with the shapes.
 
-In [`MapsLayerSelectionSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html), the [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum) property is used to change the selected layer shape color. The [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Border) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Border) properties are used to customize the selected shape border.
+In [MapsLayerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html), the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum) property is used to change the selected layer shape color. The [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Border) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Border) properties are used to customize the selected shape border.
 
-You can select a shape by tapping the shape. The single selection is enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) property of shape layer. When the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) property is set to false, the shapes cannot be selected.
+You can select a shape by tapping the shape. The single selection is enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) property of shape layer. When the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) property is set to false, the shapes cannot be selected.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -180,7 +180,7 @@ You can select a shape by tapping the shape. The single selection is enabled usi
 
 By tapping a specific legend, the shapes bound to the selected legends are selected and vice-versa.
 
-The following code example demonstrates how to add interactive legend along with the configuration of [`MapsLayerSelectionSettings`](s://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsLayerSelectionSettings_members.html) and `MapsLegendSettings` to render interactive shape selection.
+The following code example demonstrates how to add interactive legend along with the configuration of [MapsLayerSelectionSettings](s://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsLayerSelectionSettings_members.html) and `MapsLegendSettings` to render interactive shape selection.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -286,9 +286,9 @@ Initially, the shape can be selected by using the property `initialShapeSelectio
 
 Each shape in the maps can be highlighted by hovering the mouse over the shapes.
 
-The [`Fill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LogBase) property is used to change the highlighted layer shape color. The [`Color`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) and [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) properties are used to customize the highlighted shape border.
+The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LogBase) property is used to change the highlighted layer shape color. The [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) properties are used to customize the highlighted shape border.
 
-You can highlight a shape by hovering the mouse over the shape. The highlight is enabled using the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property of [`MapsLayerHighlightSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerHighlightSettings.html). When the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property is set to false, the shapes cannot be highlighted.
+You can highlight a shape by hovering the mouse over the shape. The highlight is enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property of [MapsLayerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerHighlightSettings.html). When the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property is set to false, the shapes cannot be highlighted.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -310,7 +310,7 @@ You can highlight a shape by hovering the mouse over the shape. The highlight is
 
 By hovering over a specific legend, the shapes bound to the selected legend are highlighted and vice-versa.
 
-The following code example demonstrates how to add interactive legend along with the configuration of [`MapsLayerHighlightSettings`](tps://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.LayerHighlightSettings_members.html) and `MapsLegendSettings` to render interactive shape highlight with legend items.
+The following code example demonstrates how to add interactive legend along with the configuration of [MapsLayerHighlightSettings](tps://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.LayerHighlightSettings_members.html) and `MapsLegendSettings` to render interactive shape highlight with legend items.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -360,13 +360,13 @@ Tooltip is used to get more information about layer, bubble, and marker on mouse
 
 ### Tooltip format
 
-Tooltip can be enabled for layer by setting [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) to **true** in [`MapsLayerTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html). The value of tooltip [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) needs to be set to display data source whose field is set as tooltip text.
+Tooltip can be enabled for layer by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) to **true** in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html). The value of tooltip [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) needs to be set to display data source whose field is set as tooltip text.
 
 The following steps explain how to enable tooltip for layer to show shape data name field.
 
-**Step 1:** Import the world map geo json data and assign to [`ShapeData`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData).
+**Step 1:** Import the world map geo json data and assign to [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData).
 
-**Step 2:** Enable tooltip for layer by setting [`Visible`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) to true in [`MapsLayerTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) and binding [`ValuePath`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) value to 'name'.
+**Step 2:** Enable tooltip for layer by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) to true in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) and binding [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) value to 'name'.
 
 The following code snippet demonstrates how to enable tooltip for layer to show shape data name field.
 
@@ -426,7 +426,7 @@ The following code snippet demonstrates how to enable tooltip for layer to show 
 
 ### Tooltip for other elements
 
-You can also provide tooltips for other elements such as markers and bubbles using [`MapsMarkerTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) and [`MapsBubbleTooltipSettings`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html).
+You can also provide tooltips for other elements such as markers and bubbles using [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) and [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

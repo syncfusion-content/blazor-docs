@@ -203,8 +203,8 @@ The following code explains how to align ports.
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)

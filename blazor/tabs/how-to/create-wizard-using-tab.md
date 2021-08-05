@@ -9,7 +9,7 @@ documentation: ug
 
 # Create wizard in Blazor Tabs Component
 
-Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the [`EnableTab`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
+Tab items can be disabled during initial control rendering by passing the boolean value and tab index to the [EnableTab](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_EnableTab_System_Int32_System_Boolean_) public method.
 
 In the below Wizard sample, each tab is integrated with required components to complete the reservation. Each field is provided with validation for all mandatory option to proceed to next tabs. Using tab item's template property the components are added into content.
 

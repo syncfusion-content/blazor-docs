@@ -21,7 +21,7 @@ The ListView control triggers events based on its actions. The events can be use
 
 5. Use clear button to remove event trace information.
 
-```C#
+```cshtml
 @using Syncfusion.Blazor.Lists
 
 <div id="container">
