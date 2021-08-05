@@ -90,4 +90,4 @@ You can use the following key shortcuts to access the AutoComplete without inter
 
 The output will be as follows.
 
-![AutoComplete](./images/accessibility.png)
+![Accessibility in Blazor AutoComplete](./images/blazor-autocomplete-accessibility.png)

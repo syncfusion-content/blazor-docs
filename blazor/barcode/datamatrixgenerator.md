@@ -20,11 +20,11 @@ DataMatrix Barcode is a two dimensional barcode that consists of a grid of dark 
 
 ```
 
-![Data Matrix Generator](images/DataMatrix2.png)
+![Data Matrix Generator in Blazor Barcode](images/blazor-barcode-with-datamatrix.png)
 
 ## Customizing the Barcode color
 
-A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using the [Forecolor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property.
+A page or printed media with barcode often appears colorful in the background and surrounding region with other contents. In such cases the barcode can also be customized to suit the needs. You can achieve this by using the [ForeColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_ForeColor) property.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -33,7 +33,7 @@ A page or printed media with barcode often appears colorful in the background an
 
 ```
 
-![Customizing Barcode color in Data Matrix Generator](images/DataMatrix3.png)
+![Customizing Blazor Barcode Color in Data Matrix Generator](images/blazor-barcode-datamatrix-color-customization.png)
 
 ## Customizing the Barcode dimension
 
@@ -59,7 +59,7 @@ In barcode generators you can customize the barcode text by using the display [T
 
 ```
 
-![Customizing Text in Data Matrix Generator](images/DataMatrix4.png)
+![Customizing Blazor Barcode Text in Data Matrix Generator](images/blazor-barcode-text-in-datamatrix.png)
 
 ## Event
 
