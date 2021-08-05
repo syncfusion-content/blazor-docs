@@ -52,7 +52,7 @@ The shape of the target bar can be customized using the [TargetTypes](https://he
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#target-bar) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#target-bar-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Target Bar with types](images/target-type.png)
 
@@ -75,6 +75,6 @@ The following properties can be used to customize the Target Bar.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#target-bar) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#target-bar-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Target Bar with customization](images/target-custom.png)

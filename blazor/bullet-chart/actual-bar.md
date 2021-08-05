@@ -52,7 +52,7 @@ The shape of the actual bar can be customized using the [Type](https://help.sync
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#feature-bar) to know more about the property value of the **BulletChartData**.
+> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about the property value of the **BulletChartData**.
 
 ![Types of Actual Bar](images/value-type.png)
 
@@ -77,6 +77,6 @@ The following properties will be used to customize the actual bar.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#feature-bar) to know more about  the property value of the **BulletChartData**.
+> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about  the property value of the **BulletChartData**.
 
 ![Actual Bar - Customization](images/valuebar-custom.png)

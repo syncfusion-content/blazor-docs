@@ -69,7 +69,7 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
 @using Syncfusion.Blazor.Charts
 
 <button id="print" @onclick="Print">Print</button>
-<SfSmithChart>
+<SfSmithChart @ref="SmithChart">
     <SmithChartEvents OnPrintComplete="PrintCompleted"></SmithChartEvents>
     <SmithChartSeriesCollection>
         <SmithChartSeries DataSource='FirstTransmissionData'
@@ -79,7 +79,7 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
 </SfSmithChart>
 
 @code {
-    private SfSmithChart smithChart;
+    public SfSmithChart SmithChart;
     public class SmithChartData
     {
         public double? Resistance { get; set; }
@@ -93,9 +93,9 @@ The `OnPrintComplete` event triggers after the Smith Chart is printed.
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-    private void Print()
+    private async Task Print()
     {
-        smithChart.Print();
+        await SmithChart.PrintAsync();
     }
     public void PrintCompleted()
     {
@@ -112,7 +112,7 @@ The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 @using Syncfusion.Blazor.Charts
 
 <button id="export" @onclick="Export">Export</button>
-<SfSmithChart @ref="smithChart">
+<SfSmithChart @ref="SmithChart">
     <SmithChartEvents OnExportComplete="ExportCompleted"></SmithChartEvents>
     <SmithChartSeriesCollection>
         <SmithChartSeries Name="Transmission" DataSource='TransmissionData'
@@ -125,7 +125,7 @@ The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 </SfSmithChart>
 
 @code {
-    private SfSmithChart smithChart;
+    public SfSmithChart SmithChart;
     public class SmithChartData
     {
         public double? Resistance { get; set; }
@@ -139,9 +139,9 @@ The [OnExportComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-    private void Export()
+    private async Task Export()
     {
-        smithChart.Export(ExportType.PNG, "SmithChart");
+        await SmithChart.ExportAsync(ExportType.PNG, "SmithChart");
     }
     public void ExportCompleted(SmithChartExportEventArgs args)
     {

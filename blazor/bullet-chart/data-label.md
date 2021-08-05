@@ -63,6 +63,6 @@ The Data Labels color, opacity, font size, font family, font weight, and font st
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#data-label) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#data-labels-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Bullet Chart with Data Labels](images/data-label.png)

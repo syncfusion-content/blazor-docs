@@ -192,7 +192,7 @@ When space constraints prevent from displaying information using Data Labels, th
 </SfSparkline>
 ```
 
-> Refer to the [code block](#adding-sparkline-component-to-an-application) to know about the property value of the **ClimateData**.
+> Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
 ![Sparkline with tooltip](./images/sparkline-with-tooltip.png)
 

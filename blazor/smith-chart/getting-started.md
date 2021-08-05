@@ -172,7 +172,7 @@ Title can be added to the Smith Chart to provide a quick information to the user
 </SfSmithChart>
 ```
 
-> Refer to the [code block](#add-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
+> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
 ![Smith chart with title](./images/Title.png)
 
@@ -200,7 +200,7 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 </SfSmithChart>
 ```
 
-> Refer to the [code block](#add-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
+> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
 ![Smith chart with marker](./images/marker.png)
 
@@ -230,7 +230,7 @@ To display data label for particular marker series, set the [Visible](https://he
 </SfSmithChart>
 ```
 
-> Refer to the [code block](#add-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
+> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
 ![Smith chart with data label and marker](./images/datalabel.png)
 
@@ -258,7 +258,7 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 </SfSmithChart>
 ```
 
-> Refer to the [code block](#add-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
+> Refer to the [code block](#adding-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
 ![Smith chart with legend](./images/legend.png)
 
@@ -288,7 +288,7 @@ When space constraints prevents from displaying information using data labels, t
 </SfSmithChart>
 ```
 
-> Refer to the [code block](#add-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
+> Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
 ![Smith chart with tooltip](./images/tooltip.png)
 
