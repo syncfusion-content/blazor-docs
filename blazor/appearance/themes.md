@@ -1328,6 +1328,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             <th>Value</th>
         </tr>
     </thead>
+    <tbody>
         <tr>
             <td>$selection-bg</td>
             <td>
