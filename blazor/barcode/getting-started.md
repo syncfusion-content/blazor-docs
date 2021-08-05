@@ -106,7 +106,7 @@ You can add the QR code in our barcode generator component.
 
 ## Adding Data Matrix Generator control
 
-You can add the data matrix code in our barcode generator component.
+You can add the Data Matrix code in our barcode generator component.
 
 ```cshtml
  <SfDataMatrixGenerator Width="200" Height="150" Mode="@RenderingMode.SVG" Value="SYNCFUSION"></SfDataMatrixGenerator>
