@@ -198,6 +198,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
         public string FillColor { get; set; }
         public string Category { get; set; }
     }
+
     public List<object> DataSource = new List<object>()
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
@@ -213,6 +214,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
         new HierarchicalDetails(){ Name ="University", Category="Management",FillColor="#659be5"},
         new HierarchicalDetails(){ Name ="Business", Category="#Management",FillColor="#659be5"}
     };
+
     protected override void OnInitialized()
     {
         LayoutValue = new DiagramLayout()
@@ -274,8 +276,8 @@ The following code example shows how to create a complex hierarchical tree.
         CornerRadius = 7,
         TargetDecorator = new ConnectorTargetDecorator() { Width = 7, Height = 7 },
         Style = new ConnectorShapeStyle() { StrokeColor = "#6d6d6d" }
-
     };
+
     public class DataModel
     {
         public string Name;
@@ -283,6 +285,7 @@ The following code example shows how to create a complex hierarchical tree.
         public string border;
         public string[] ReportingPerson;
     }
+
     public object dataSource = new List<object>()
     {
         new DataModel { Name = "node11", fillColor = "#e7704c", border = "#c15433" },

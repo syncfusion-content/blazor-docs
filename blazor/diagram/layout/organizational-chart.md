@@ -28,7 +28,8 @@ The following code example illustrates how to create an organizational chart.
     {
         //Sets layout type as OrganizationalChart...
         Type = LayoutType.OrganizationalChart,
-        VerticalSpacing = 40, HorizontalSpacing = 40,
+        VerticalSpacing = 40,
+        HorizontalSpacing = 40,
     };
     //Initializing node defaults
     DiagramNode NodeDefaults = new DiagramNode()
@@ -39,7 +40,14 @@ The following code example illustrates how to create an organizational chart.
         Style = new NodeShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" },
         Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
-            new DiagramNodeAnnotation() { Style= new AnnotationStyle() { Color="white", Bold=true } }
+            new DiagramNodeAnnotation() 
+            { 
+                Style= new AnnotationStyle()
+                {
+                    Color="white",
+                    Bold=true
+                }
+            }
         }
     };
     //Initializing connector defaults
@@ -152,8 +160,8 @@ The following code example illustrates how to add assistants to layout.
     }
     //Initializing DataMap Setting
     List<DiagramDataMapSetting> DataMap = new List<DiagramDataMapSetting>()
-{
-         new DiagramDataMapSetting() { Property = "Annotations[0].Content",
+    {
+        new DiagramDataMapSetting() { Property = "Annotations[0].Content",
         Field = "Role" },
     };
 
@@ -176,9 +184,6 @@ The following code example illustrates how to add assistants to layout.
             Shape = DecoratorShapes.None,
             Style = new DecoratorShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", },
         }
-
-
-
     };
 
     public class OrgChartDataModel
@@ -187,8 +192,9 @@ The following code example illustrates how to add assistants to layout.
         public string Team { get; set; }
         public string Role { get; set; }
     }
+
     public object DataSource = new List<object>()
-   {
+    {
         new OrgChartDataModel() { Id= "1", Role= "General Manager" },
         new OrgChartDataModel() { Id= "2", Role= "Assistant Manager", Team= "1" },
         new OrgChartDataModel() { Id= "3", Role= "Human Resource Manager", Team= "1" },
@@ -276,8 +282,22 @@ The following code example illustrates how to set the vertical right arrangement
     {
         Width = 150,
         Height = 50,
-        Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Id = "label1", Style = new AnnotationStyle() { Color = "white" } }, },
-        Style = new NodeShapeStyle { Fill = "#6BA5D7", StrokeColor = "black", },
+        Annotations = new ObservableCollection<DiagramNodeAnnotation>() 
+        { 
+            new DiagramNodeAnnotation() 
+            { 
+                Id = "label1", 
+                Style = new AnnotationStyle() 
+                { 
+                Color = "white" 
+                }
+            }, 
+        },
+        Style = new NodeShapeStyle 
+        { 
+            Fill = "#6BA5D7", 
+            StrokeColor = "black",
+        },
         LayoutInfo = new DiagramNodeLayoutInfo()
         {
             Orientation = Orientation.Vertical,
@@ -289,11 +309,19 @@ The following code example illustrates how to set the vertical right arrangement
     DiagramConnector ConnectorDefaults = new DiagramConnector()
     {
         Type = Syncfusion.Blazor.Diagrams.Segments.Orthogonal,
-        Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 },
+        Style = new ConnectorShapeStyle() 
+        { 
+            StrokeColor = "#6BA5D7",
+            StrokeWidth = 1
+        },
         TargetDecorator = new ConnectorTargetDecorator()
         {
             Shape = DecoratorShapes.None,
-            Style = new DecoratorShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", },
+            Style = new DecoratorShapeStyle() 
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "#6BA5D7",
+            },
         }
     };
 
@@ -303,6 +331,7 @@ The following code example illustrates how to set the vertical right arrangement
         public string Team { get; set; }
         public string Role { get; set; }
     }
+
     public object DataSource = new List<object>()
     {
         new OrgChartDataModel() { Id= "1", Role= "General Manager" },

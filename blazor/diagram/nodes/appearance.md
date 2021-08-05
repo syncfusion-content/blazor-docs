@@ -34,7 +34,13 @@ The following code shows how to customize the appearance of the shape.
             Width = 100,
             Height = 100,
             // Add node
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+            Style = new NodeShapeStyle() 
+            {
+                Fill = "#6BA5D7", 
+                StrokeDashArray = "5,5",
+                StrokeColor = "red",
+                StrokeWidth = 2
+            },
         };
         NodeCollection.Add(node1);
     }
@@ -78,7 +84,8 @@ There are two types of gradients as follows:
             Width = 100,
             Height = 100,
             Style = new NodeShapeStyle() {
-                Gradient = new DiagramGradient() {
+                Gradient = new DiagramGradient() 
+                {
                     //Start point of linear gradient
                     X1 = 0, Y1 = 0,
                     //End point of linear gradient
@@ -86,8 +93,16 @@ There are two types of gradients as follows:
                     //Sets an array of stop objects
                     Stops = new ObservableCollection<DiagramsGradientStop>()
                     {
-                        new DiagramsGradientStop(){ Color = "white", Offset = 0},
-                        new DiagramsGradientStop(){ Color = "#6BA5D7", Offset = 100}
+                        new DiagramsGradientStop()
+                        {
+                            Color = "white",
+                            Offset = 0
+                        },
+                        new DiagramsGradientStop()
+                        {
+                        Color = "#6BA5D7", 
+                        Offset = 100
+                        }
                     },
                     Type = GradientType.Linear
                 }
@@ -137,9 +152,17 @@ There are two types of gradients as follows:
                     R = 50,
                     //Sets an array of stop objects
                     Stops = new ObservableCollection<DiagramsGradientStop>()
-                {
-                        new DiagramsGradientStop(){ Color = "white", Offset = 0},
-                        new DiagramsGradientStop(){ Color = "#6BA5D7", Offset = 100}
+                    {
+                        new DiagramsGradientStop()
+                        {
+                            Color = "white", 
+                            Offset = 0
+                        },
+                        new DiagramsGradientStop()
+                        {
+                            Color = "#6BA5D7",
+                            Offset = 100
+                        }
                     },
                     Type = GradientType.Radial
                 }
@@ -180,7 +203,11 @@ The following code shows how to draw shadow.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle() 
+            {
+                Fill = "#6BA5D7", 
+                StrokeColor = "white"
+            },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow
         };
         NodeCollection.Add(node1);
@@ -218,7 +245,11 @@ The following code example illustrates how to customize shadow.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle() 
+            {
+                Fill = "#6BA5D7", 
+                StrokeColor = "white"
+            },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
             // Custom Shadow of the node
             Shadow =  new DiagramShadow()
@@ -261,8 +292,13 @@ The following code example shows how to create an icon of various shapes.
     {
         Width = 140,
         Height = 50,
-        Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+        Style = new NodeShapeStyle() 
+        {
+            Fill = "#6BA5D7",
+            StrokeColor = "white"
+        },
     };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()
@@ -271,11 +307,24 @@ The following code example shows how to create an icon of various shapes.
             OffsetX = 300,
             OffsetY = 50,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-                new DiagramNodeAnnotation(){ Content = "Node1" }
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Node1"
+                }
             },
-            ExpandIcon = new NodeExpandIcon() { Shape = IconShapes.ArrowDown, Width = 10, Height = 10 },
-            CollapseIcon = new NodeCollapseIcon() { Shape = IconShapes.ArrowUp, Width = 10, Height = 10 }
+            ExpandIcon = new NodeExpandIcon() 
+            { 
+                Shape = IconShapes.ArrowDown,
+                Width = 10,
+                Height = 10
+            },
+            CollapseIcon = new NodeCollapseIcon() 
+            {
+                Shape = IconShapes.ArrowUp,
+                Width = 10, 
+                Height = 10 
+            }
         };
         NodeCollection.Add(node1);
 
@@ -285,8 +334,11 @@ The following code example shows how to create an icon of various shapes.
             OffsetX = 300,
             OffsetY = 140,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-                new DiagramNodeAnnotation(){ Content = "Node2" }
+            {
+                new DiagramNodeAnnotation()
+                {
+                Content = "Node2"
+                }
             },
         };
         NodeCollection.Add(node2);
@@ -346,8 +398,13 @@ The following code shows how to set the `AddInfo` value.
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
     public List<NodeAddInfo> AddInfo = new List<NodeAddInfo>()
     {
-        new NodeAddInfo(){ Content = "NodeContent", ParentID = "diagram" }
+        new NodeAddInfo()
+        {
+            Content = "NodeContent", 
+            ParentID = "diagram" 
+        }
     };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -360,7 +417,11 @@ The following code shows how to set the `AddInfo` value.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle() 
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
             AddInfo = AddInfo
         };
         // Add node
@@ -403,23 +464,36 @@ The following code illustrates how to render a node based on the stack order.
                 // Unique id of the node
                 Id = "Node1",
                 // Position of the node
-                OffsetX = 100, OffsetY = 100,
+                OffsetX = 100,
+                OffsetY = 100,
                 // Size of the node
-                Width = 100, Height = 100,
+                Width = 100,
+                Height = 100,
                 // Sets style of the node
-                Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+                Style = new NodeShapeStyle() 
+                {
+                    Fill = "#6BA5D7",
+                    StrokeColor = "white"
+                },
                 //Specify the z-index value
                 ZIndex = 2,
             },
-            new DiagramNode(){
+            new DiagramNode()
+            {
                 // Unique id of the node
                 Id = "Node2",
                 // Position of the node
-                OffsetX = 150, OffsetY = 150,
+                OffsetX = 150,
+                OffsetY = 150,
                 // Size of the node
-                Width = 100, Height = 100,
+                Width = 100,
+                Height = 100,
                 // Sets style of the node
-                Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+                Style = new NodeShapeStyle() 
+                {
+                    Fill = "#6BA5D7", 
+                    StrokeColor = "white"
+                },
                 //Specify the z-index value
                 ZIndex = 1,
             }
@@ -437,7 +511,9 @@ You can find the flow in the diagram by using the [GetEdges](https://help.syncfu
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="UpdateEdges" @onclick="@UpdateEdges" />
+
 <SfDiagram Height="600px" @ref="@Diagram" Nodes="@NodeCollection" Connectors="@ConnectorCollection" NodeDefaults="@NodeDefaults">
 </SfDiagram>
 
@@ -453,8 +529,13 @@ You can find the flow in the diagram by using the [GetEdges](https://help.syncfu
         // Size of the node
         Width = 80, Height = 50,
         // Style of the node
-        Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+        Style = new NodeShapeStyle() 
+        {
+            Fill = "#6BA5D7", 
+            StrokeColor = "white"
+        },
     };
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>() {
@@ -462,39 +543,47 @@ You can find the flow in the diagram by using the [GetEdges](https://help.syncfu
             {
                 Id = "node1",
                 // Position of the node
-                OffsetX = 450, OffsetY = 100
+                OffsetX = 450,
+                OffsetY = 100
             },
             new DiagramNode()
             {
                 Id = "node2",
                 // Position of the node
-                OffsetX = 350, OffsetY = 200
+                OffsetX = 350,
+                OffsetY = 200
             },
             new DiagramNode()
             {
                 Id = "node3",
                 // Position of the node
-                OffsetX = 450, OffsetY = 200
+                OffsetX = 450,
+                OffsetY = 200
             },
             new DiagramNode()
             {
                 Id = "node4",
                 // Position of the node
-                OffsetX = 550, OffsetY = 200
+                OffsetX = 550,
+                OffsetY = 200
             }
         };
         ConnectorCollection = new ObservableCollection<DiagramConnector>() {
             new DiagramConnector()
             {
                 // Sets the unique id, source node, taget node
-                Id = "connector1", SourceID = "node1", TargetID = "node2",
+                Id = "connector1", 
+                SourceID = "node1",
+                TargetID = "node2",
                 // Sets the type of the connector
                 Type = Segments.Orthogonal
             },
             new DiagramConnector()
             {
                 // Sets the unique id, source node, taget node
-                Id = "connector2", SourceID = "node1", TargetID = "node3",
+                Id = "connector2",
+                SourceID = "node1", 
+                TargetID = "node3",
                 // Sets the type of the connector
                 Type = Segments.Orthogonal
             },
@@ -507,6 +596,7 @@ You can find the flow in the diagram by using the [GetEdges](https://help.syncfu
             }
         };
     }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)

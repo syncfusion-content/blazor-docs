@@ -35,6 +35,7 @@ The following code example illustrates how to create an organizational chart.
             new DiagramDataMapSetting() { Property = "Shape.Content",
         Field = "Label" },
     };
+
     DiagramNode NodeDefaults = new DiagramNode()
     {
         Width = 25,
@@ -70,7 +71,7 @@ The following code example illustrates how to create an organizational chart.
     }
 
     public object DataSource = new List<object>()
-{
+    {
         new MindMapDetails() { Id= "1",Label="Creativity", ParentId ="", Branch = "Root"},
         new MindMapDetails() { Id= "2",  Label="Brainstorming", ParentId ="1", Branch = "Right" },
         new MindMapDetails() { Id= "3",  Label="Complementing", ParentId ="1", Branch = "Left" },

@@ -34,20 +34,44 @@ The following code illustrates how to arrange the nodes in a radial tree structu
         MaxIteration = 500,
         Margin = new LayoutMargin() { Top = 20, Left = 20 }
     };
+
     //Initializing DataMapSetting
     List<DiagramDataMapSetting> DataMap = new List<DiagramDataMapSetting>()
     {
-            new DiagramDataMapSetting() { Property = "Annotations[0].Content",
-        Field = "Type" },
+        new DiagramDataMapSetting() 
+        { 
+            Property = "Annotations[0].Content",
+            Field = "Type" 
+        },
     };
+
     DiagramNode NodeDefaults = new DiagramNode()
     {
         Width = 25,
         Height = 25,
-        Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Id = "label1", Style = new AnnotationStyle() { Color = "black" } }, },
-        Style = new NodeShapeStyle { Fill = "#ff6329", StrokeColor = "black", },
-        Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse }
+        Annotations = new ObservableCollection<DiagramNodeAnnotation>() 
+        { 
+            new DiagramNodeAnnotation() 
+            {
+                Id = "label1", 
+                Style = new AnnotationStyle() 
+                {
+                    Color = "black"
+                }
+            }
+        },
+        Style = new NodeShapeStyle 
+        {
+            Fill = "#ff6329", 
+            StrokeColor = "black"
+        },
+        Shape = new DiagramShape() 
+        {
+        Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+        BasicShape = BasicShapes.Ellipse
+        }
     };
+
     TreeInfo treeLayoutInfo = new TreeInfo()
     {
         Orientation = SubTreeOrientation.Vertical,
@@ -58,6 +82,7 @@ The following code illustrates how to arrange the nodes in a radial tree structu
             Assistants = new string[] {"Assistant Manager"}
         }
     };
+
     DiagramConnector ConnectorDefaults = new DiagramConnector
     {
         Type = Syncfusion.Blazor.Diagrams.Segments.Straight,
