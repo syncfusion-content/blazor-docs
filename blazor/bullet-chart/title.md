@@ -37,7 +37,7 @@ The title of the Bullet Chart displays the information about the data plotted by
 }
 ```
 
-![Title in Bullet Chart](images/default-title.png)
+![Blazor Bullet Chart with Title](images/blazor-bullet-chart-with-title.png)
 
 ## Subtitle
 
@@ -57,7 +57,7 @@ To show additional information about the data plotted, the Bullet Chart can also
 
 > Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
-![Subtitle in Bullet Chart](images/sub-title.png)
+![Blazor Bullet Chart with Subtitle](images/blazor-bullet-chart-subtitle.png)
 
 ## Title and Subtitle Position
 
@@ -101,7 +101,7 @@ The title and the subtitle positions can be customized using the [TitlePosition]
 
 > Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
-![Title and Subtitle Position](images/title-positions.png)
+![Changing Title and Subtitle Position in Blazor Bullet Chart](images/blazor-bullet-chart-title-positions.png)
 
 ## Title and Subtitle Customization
 
@@ -123,4 +123,4 @@ The title and the subtitle - color, opacity, font size, font family, font weight
 
 > Refer to the [code block](#title) to know about the property value of the **BulletChartData**.
 
-![Title and Subtitle Customization](images/title-custom.png)
+![Customizing Title and Subtitle in Blazor Bullet Chart](images/blazor-bullet-chart-title-customization.png)
