@@ -1526,7 +1526,6 @@ The following list of common variables is used in the Syncfusion Blazor library 
                 <span class="circle-color-indicator" style="background: #757575"></span> #757575
             </td>
         <tr>
-    <tbody>
     </tbody>
 </table>
 
@@ -2108,5 +2107,3 @@ The following list of common variables is used in the Syncfusion Blazor library 
         <tr>
     </tbody>
 </table>
-
-
