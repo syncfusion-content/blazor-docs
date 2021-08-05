@@ -15,31 +15,37 @@ Gateway is used to control the flow of a process and it is represented as a diam
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
+    // Initialize node collection with Node
+    DiagramObjectCollection<Node> nodes;
 
-    //Initialize the node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+    protected override void OnInitialized()
     {
-        new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
             //Position of the node
-            OffsetX = 100, OffsetY = 100,
+            OffsetX = 100,
+            OffsetY = 100,
             //Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             //Unique Id of the node
             ID = "node1",
             Shape = new BpmnShape()
             {
                 //Sets type to Bpmn and shape to Gateway
-                Type = Shapes.Bpmn, Shape = BpmnShapes.Gateway,
+                Type = Shapes.Bpmn,
+                Shape = BpmnShapes.Gateway,
                 //Sets type of the gateway to None
-                Gateway = new BpmnGateway(){Type = BpmnGateways.None}
+                Gateway = new BpmnGateway() { Type = BpmnGateways.None }
             }
-        }
-    };
+        };
+        nodes.Add(node);
+    }
 }
 ```
 

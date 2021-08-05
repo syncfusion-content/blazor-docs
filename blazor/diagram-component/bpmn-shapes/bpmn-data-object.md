@@ -15,37 +15,41 @@ A data object represents information flowing through the process, such as data p
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the Diagram*@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize the node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
+{
+    // Initialize the node collection with node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node
             Width = 100,
             Height = 100,
-            //Unique Id of the node
+            // Unique Id of the node
             ID = "node1",
-            //Sets type to Bpmn and shape to DataObject
+            // Sets type to Bpmn and shape to DataObject
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                Shape=BpmnShapes.DataObject,
-                //Sets collection to true when Dataobject is not a Single instance
-                DataObject=new BpmnDataObject()
+                Shape = BpmnShapes.DataObject,
+                // Sets collection to true when Dataobject is not a Single instance
+                DataObject = new BpmnDataObject()
                 {
-                    Collection=true,
-                    Type=BpmnDataObjects.Input
+                    Collection = true,
+                    Type = BpmnDataObjects.Input
                 }
             }
-        },
-    };
+        };
+        nodes.Add(node);
+    }
 }
 ```
 

@@ -28,90 +28,33 @@ A group can be added to the diagram model through `Nodes` collection. To define 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-@* Initialize the diagram with nodes *@
- <SfDiagramComponent Height="500px" @ref="diagram" Nodes="@nodes">
- </SfDiagramComponent>
-
-@code{
-SfDiagramComponent diagram;
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-protected override void OnInitialized()
-{
-    Node node1 = createNode("node1", 100, 100, "Node1");
-    Node node2 = createNode("node2", 300, 100, "Node2");
-    Node node3 = createNode("node3", 200, 250, "Node3");
-    Group groupnode = new Group();
-    // Grouping node 1 and node 2 into a single group
-    groupnode.Children = new string[] { "node1", "node2" };
-    nodes.Add(node1);
-    nodes.Add(node2);
-    nodes.Add(node3);
-    nodes.Add(groupnode);
-}
-public Node createNode(string id, double offx, double offy, string content)
-{
-    Node node = new Node()
-    {
-        ID = id,
-        OffsetX = offx,
-        OffsetY = offy,
-        Height = 100,
-        Width = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED" }
-    };
-
-    ShapeAnnotation annotation = new ShapeAnnotation
-    {
-        ID="annotation1",
-        Content = content,
-        Style=new TextShapeStyle(){Color="white", Fill="transparent",StrokeColor="None"},
-    };
-    node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
-        annotation
-    };
-    return node;
-}
-
-protected override async Task OnAfterRenderAsync(bool firstRender)
-{
-    if (firstRender)
-    {
-        await Task.Delay(500);
-        diagram.SelectAll();
-        // Adding the third node into the existing group
-        diagram.Group();
-    }
-}
-}
-```
-
-![Create Group](images/CreateGroup.png)
-
-The following code illustrates how a ungroup  at runtime.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-@* Initialize the diagram with nodes *@
+@* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" @ref="diagram" Nodes="@nodes">
+    <SnapSettings>
+        <HorizontalGridLines LineColor="white" LineDashArray="2,2"></HorizontalGridLines>
+        <VerticalGridLines LineColor="white" LineDashArray="2,2"></VerticalGridLines>
+    </SnapSettings>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-
+        Node node3 = createNode("node3", 200, 250, "Node3");
         Group groupnode = new Group();
         // Grouping node 1 and node 2 into a single group
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
+        nodes.Add(node3);
         nodes.Add(groupnode);
     }
+
     public Node createNode(string id, double offx, double offy, string content)
     {
         Node node = new Node()
@@ -123,7 +66,6 @@ The following code illustrates how a ungroup  at runtime.
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
         };
-
         ShapeAnnotation annotation = new ShapeAnnotation
         {
             ID = "annotation1",
@@ -131,9 +73,72 @@ The following code illustrates how a ungroup  at runtime.
             Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            annotation
+        };
+        return node;
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-    annotation
-    };
+        if (firstRender)
+        {
+            await Task.Delay(500);
+            diagram.SelectAll();
+            // Adding the third node into the existing group
+            diagram.Group();
+        }
+    }
+}
+```
+
+![Create Group](images/CreateGroup.png)
+
+The following code illustrates how a ungroup  at runtime.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize the diagram with nodes *@
+<SfDiagramComponent Height="500px" @ref="diagram" Nodes="@nodes"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    protected override void OnInitialized()
+    {
+        Node node1 = createNode("node1", 100, 100, "Node1");
+        Node node2 = createNode("node2", 300, 100, "Node2");
+        Group groupnode = new Group();
+        // Grouping node 1 and node 2 into a single group
+        groupnode.Children = new string[] { "node1", "node2" };
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(groupnode);
+    }
+
+    public Node createNode(string id, double offx, double offy, string content)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            OffsetX = offx,
+            OffsetY = offy,
+            Height = 100,
+            Width = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        ShapeAnnotation annotation = new ShapeAnnotation
+        {
+            ID = "annotation1",
+            Content = content,
+            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+        };
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            annotation
+        };
         return node;
     }
 
@@ -160,69 +165,14 @@ The following code illustrates how a group node is added at runtime
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddGroup" @onclick="@AddGroup" />
-@* Initialize the diagram with nodes *@
-<SfDiagramComponent Height="500px" Nodes="@nodes">
-</SfDiagramComponent>
+@* Initialize the diagram with NodeCollection *@
+<SfDiagramComponent Height="500px" Nodes="@nodes" />
 
-@code{
-
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-Group groupnode = new Group();
-protected override void OnInitialized()
+@code
 {
-    Node node1 = createNode("node1", 100, 100, "Node1");
-    Node node2 = createNode("node2", 300, 100, "Node2");
-    // Grouping node 1 and node 2 into a single group
-    groupnode.Children = new string[] { "node1", "node2" };
-    nodes.Add(node1);
-    nodes.Add(node2);
-}
-public Node createNode(string id, double offx, double offy, string content)
-{
-    Node node = new Node()
-    {
-        ID = id,
-        OffsetX = offx,
-        OffsetY = offy,
-        Height = 100,
-        Width = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED" }
-    };
-
-    ShapeAnnotation annotation = new ShapeAnnotation()
-    {
-        ID="annotation1",
-        Content = content,
-        Style=new TextShapeStyle(){Color="white", Fill="transparent",StrokeColor="None"},
-    };
-    node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
-        annotation
-    };
-    return node;
-}
-private void AddGroup()
-{
-    nodes.Add(groupnode);
-}
-
-}
-```
-
-* Also, you can add the child to the group through `AddChild` method. The following code illustrates how to add child to the existing group through AddChild method.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<input type="button" value="AddChildToGroup" @onclick="@AddChildToGroup" />
-@* Initialize the diagram with nodes *@
-<SfDiagramComponent @ref="@diagram" Height="500px" Nodes="@nodes">
-</SfDiagramComponent>
-
-@code{
-    SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     Group groupnode = new Group();
+
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
@@ -231,8 +181,8 @@ private void AddGroup()
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
-        nodes.Add(groupnode);
     }
+
     public Node createNode(string id, double offx, double offy, string content)
     {
         Node node = new Node()
@@ -244,7 +194,6 @@ private void AddGroup()
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
         };
-
         ShapeAnnotation annotation = new ShapeAnnotation()
         {
             ID = "annotation1",
@@ -252,11 +201,69 @@ private void AddGroup()
             Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-{
-        annotation
-    };
+        {
+            annotation
+        };
         return node;
     }
+
+    private void AddGroup()
+    {
+        NodeCollection.Add(groupnode);
+    }
+}
+```
+
+* Also, you can add the child to the group through `AddChild` method. The following code illustrates how to add child to the existing group through AddChild method.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="AddChildToGroup" @onclick="@AddChildToGroup" />
+@* Initialize the diagram with nodes *@
+<SfDiagramComponent @ref="@diagram" Height="500px" Nodes="@nodes"/>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    Group groupnode = new Group();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = createNode("node1", 100, 100, "Node1");
+        Node node2 = createNode("node2", 300, 100, "Node2");
+        // Grouping node 1 and node 2 into a single group
+        groupnode.Children = new string[] { "node1", "node2" };
+        nodes.Add(node1);
+        nodes.Add(node2);
+        nodes.Add(groupnode);
+    }
+
+    public Node createNode(string id, double offx, double offy, string content)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            OffsetX = offx,
+            OffsetY = offy,
+            Height = 100,
+            Width = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        ShapeAnnotation annotation = new ShapeAnnotation()
+        {
+            ID = "annotation1",
+            Content = content,
+            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+        };
+        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+        {
+            annotation
+        };
+        return node;
+    }
+
     private async void AddChildToGroup()
     {
         Group group = diagram.SelectedItems.Nodes[0] as Group;
@@ -269,13 +276,13 @@ private void AddGroup()
             Height = 50,
             Style = new ShapeStyle() { Fill = "#6495ED" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-                    {
-                        new ShapeAnnotation()
-                        {
-                            Content = "Node" + nodes.Count.ToString(),
-                            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
-                        }
-                    }
+            {
+                new ShapeAnnotation()
+                {
+                    Content = "Node" + nodes.Count.ToString(),
+                    Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+                }
+            }
         };
         await diagram.AddChild(group as Group, node);
     }
@@ -290,15 +297,14 @@ You can change the position of the group similar to node. For more information a
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="UpdatePosition" @onclick="@UpdatePosition" />
-@* Initialize the diagram with nodes *@
-<SfDiagramComponent Height="500px" Nodes="@nodes">
-</SfDiagramComponent>
+@* Initialize the diagram with NodeCollection *@
+<SfDiagramComponent Height="500px" Nodes="@nodes"/>
 
-@code{
-
+@code
+{
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     Group groupnode = new Group();
-    SfDiagramComponent Diagram;
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -310,6 +316,7 @@ You can change the position of the group similar to node. For more information a
         nodes.Add(node2);
         nodes.Add(groupnode);
     }
+
     public Node createNode(string id, double offx, double offy, string content)
     {
         Node node = new Node()
@@ -321,7 +328,6 @@ You can change the position of the group similar to node. For more information a
             Width = 100,
             Style = new ShapeStyle() { Fill = "#6495ED" }
         };
-
         ShapeAnnotation annotation = new ShapeAnnotation
         {
             ID = "annotation1",
@@ -329,19 +335,18 @@ You can change the position of the group similar to node. For more information a
             Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
-    annotation
-    };
+        {
+            annotation
+        };
         return node;
     }
+
     private void UpdatePosition()
     {
         nodes[2].OffsetX = 500;
         nodes[2].OffsetY = 200;
     }
-
 }
-
 ```
 
 ## Appearance

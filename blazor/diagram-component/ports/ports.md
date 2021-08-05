@@ -32,12 +32,12 @@ To add a connection port, define the port object and add it to node’s ports co
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -54,7 +54,7 @@ To add a connection port, define the port object and add it to node’s ports co
             // Initialize port collection
             Ports = new DiagramObjectCollection<PointPort>()
             {
-                // Sets the position for the port
+               // Sets the position for the port
                new PointPort(){Style=new ShapeStyle(){ Fill="gray" }, Offset= new Point(){X=0.5,Y=0.5}, Visibility = PortVisibility.Visible}
             }
         };
@@ -76,12 +76,12 @@ If **ID** is not set, then default **ID** is automatically set.
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         //A node is created and stored in nodes array
@@ -98,10 +98,17 @@ If **ID** is not set, then default **ID** is automatically set.
         };
         nodes.Add(node);
     }
+
     public void AddPorts()
     {
+        PointPort port = new PointPort()
+        {
+            ID = "port",
+            Offset = new Point() { X = 0, Y = 0.5 },
+            Visibility = PortVisibility.Visible
+        };
         // Initialize port collection
-        nodes[0].Ports.Add(new PointPort() { ID = "port1", Offset = new Point() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible });
+        nodes[0].Ports.Add(port);
     }
 }
 
@@ -116,9 +123,11 @@ The following code explains how to add ports to node at runtime by using `AddAsy
 public async void AddPorts()
 {
     PointPort port = new PointPort()
-        {
-            Style=new ShapeStyle(){ Fill="gray" }, Offset= new Point(){X=0.5,Y=0.5}, Visibility = PortVisibility.Visible
-        };
+    {
+        Style=new ShapeStyle(){ Fill="gray" }, 
+        Offset= new Point(){X=0.5,Y=0.5}, 
+        Visibility = PortVisibility.Visible
+    };
     await ((nodes[0].Ports) as DiagramObjectCollection<PointPort>).AddAsync(port);
 }
 ```
@@ -135,12 +144,12 @@ The port’s `ID` property is used to define the unique ID for the port and it i
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
         //A node is created and stored in nodes array
@@ -157,13 +166,18 @@ The port’s `ID` property is used to define the unique ID for the port and it i
         };
         nodes.Add(node);
     }
+
     public void AddPorts()
     {
+        PointPort port1 = new PointPort() { ID = "port1", Offset = new Point() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible };
+        PointPort port2 = new PointPort() { ID = "port2", Offset = new Point() { X = 1, Y = 0.5 }, Visibility = PortVisibility.Visible };
+        PointPort port3 = new PointPort() { ID = "port3", Offset = new Point() { X = 0.5, Y = 0 }, Visibility = PortVisibility.Visible };
+        PointPort port4 = new PointPort() { ID = "port4", Offset = new Point() { X = 0.5, Y = 1 }, Visibility = PortVisibility.Visible };
         // Initialize port collection
-        nodes[0].Ports.Add(new PointPort() { ID = "port1", Offset = new Point() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible });
-        nodes[0].Ports.Add(new PointPort() { ID = "port2", Offset = new Point() { X = 1, Y = 0.5 }, Visibility = PortVisibility.Visible });
-        nodes[0].Ports.Add(new PointPort() { ID = "port3", Offset = new Point() { X = 0.5, Y = 0 }, Visibility = PortVisibility.Visible });
-        nodes[0].Ports.Add(new PointPort() { ID = "port4", Offset = new Point() { X = 0.5, Y = 1 }, Visibility = PortVisibility.Visible });
+        nodes[0].Ports.Add(port1);
+        nodes[0].Ports.Add(port2);
+        nodes[0].Ports.Add(port3);
+        nodes[0].Ports.Add(port4);
     }
 }
 ```
@@ -178,11 +192,12 @@ A collection of ports can be removed from the node by using the native`RemoveAt`
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="RemovePorts" @onclick="@RemovePorts" />
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
-@code{
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -197,19 +212,23 @@ A collection of ports can be removed from the node by using the native`RemoveAt`
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new DiagramObjectCollection<PointPort>() {
-            new PointPort() {
-                ID = "port1",
-                Offset = new Point() { X = 0, Y = 0.5 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new ShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
-                // Sets the shape of the port as Circle
-                Width= 12, Height=12, Shape= PortShapes.Circle
-            }},
+            Ports = new DiagramObjectCollection<PointPort>() 
+            {
+                new PointPort() 
+                {
+                    ID = "port1",
+                    Offset = new Point() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new ShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
+                    // Sets the shape of the port as Circle
+                    Width= 12, Height=12, Shape= PortShapes.Circle
+                }
+            },
         };
         nodes.Add(node);
     }
+
     public void RemovePorts()
     {
         (nodes[0].Ports as DiagramObjectCollection<PointPort>).RemoveAt(0);
@@ -227,17 +246,18 @@ The following code example explains how to change the port properties at runtime
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Port" @onclick="@UpdatePort" />
-<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
         // Initialize port collection
-        DiagramObjectCollection<PointPort> Ports1 = new DiagramObjectCollection<PointPort>() { };
-        Ports1.Add(new PointPort() { ID = "port1", Offset = new Point() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible });
+        DiagramObjectCollection<PointPort> ports = new DiagramObjectCollection<PointPort>();
+        ports.Add(new PointPort() { ID = "port", Offset = new Point() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible });
         // A node is created and stored in nodes array
         nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
@@ -248,18 +268,19 @@ The following code example explains how to change the port properties at runtime
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            Ports = Ports1
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Ports = ports
         };
         nodes.Add(node);
     }
-    public void UpdatePort()
+
+    public async void UpdatePort()
     {
         //update ports at run time
         diagram.BeginUpdate();
         nodes[0].Ports[0].Offset.X = 1;
         nodes[0].Ports[0].Offset.Y = 1;
-        diagram.EndUpdate();
+        await diagram.EndUpdate();
     }
 }
 ```
