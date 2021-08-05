@@ -60,7 +60,7 @@ In the following sample, each list item is split into two columns to display rel
 
 The output will be as follows.
 
-![AutoComplete](./images/item_template.png)
+![Blazor AutoComplete with ItemTemplate](./images/blazor-autocomplete-item-template.png)
 
 ## Group template
 
@@ -109,7 +109,7 @@ In the following sample, employees are grouped according to their country.
 
 The output will be as follows.
 
-![AutoComplete](./images/group_template.png)
+![Blazor AutoComplete with GroupTemplate](./images/blazor-autocomplete-group-template.png)
 
 ## Header template
 
@@ -180,7 +180,7 @@ In the following sample, the list items and its headers are designed and display
 
 The output will be as follows.
 
-![AutoComplete](./images/header_template.png)
+![Blazor AutoComplete with HeaderTemplate](./images/blazor-autocomplete-header-template.png)
 
 ## Footer template
 
@@ -232,7 +232,7 @@ In the following sample, footer element displays the total number of list items 
 
 The output will be as follows.
 
-![AutoComplete](./images/footer_template.png)
+![Blazor AutoComplete with FooterTemplate](./images/blazor-autocomplete-footer-template.png)
 
 ## No records template
 
@@ -279,7 +279,7 @@ In the following sample, suggestion list content displays the notification of no
 
 The output will be as follows.
 
-![AutoComplete](./images/data_template.png)
+![Blazor AutoComplete without Data](./images/blazor-autocomplete-without-data.png)
 
 ## Action failure template
 

@@ -14,7 +14,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 ## Importing Syncfusion Blazor component in the application
 
  1. Install the **Syncfusion.Blazor.BarcodeGenerator**  NuGet package to the application by using the **NuGet Package Manager**.
- 2. You can add the client-side resources through CDN or from Nuget package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+ 2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml
     <head>
@@ -89,7 +89,7 @@ The following example shows a basic BarcodeGenerator component.
 
 ```
 
-![Barcode Generator](images/BarcodeGenerator1.png)
+![Blazor Barcode Generator Component](images/blazor-barcode-generator-component.png)
 
 > Running the above code will display the barcode generator component on the browser.
 
@@ -102,18 +102,18 @@ You can add the QR code in our barcode generator component.
 
 ```
 
-![QR Code Generator](images/QRCode1.png)
+![QR Code Generator in Blazor Barcode Component](images/blazor-barcode-with-qr-code.png)
 
-## Adding Datamatrix Generator control
+## Adding Data Matrix Generator control
 
-You can add the datamatrix code in our barcode generator component.
+You can add the Data Matrix code in our barcode generator component.
 
 ```cshtml
  <SfDataMatrixGenerator Width="200" Height="150" Mode="@RenderingMode.SVG" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
 
-![Data Matrix Generator](images/DataMatrix1.png)
+![Data Matrix Generator in Blazor Barcode Component](images/blazor-barcode-with-data-matrix.png)
 
 ## See Also
 
