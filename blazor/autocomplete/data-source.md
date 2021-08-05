@@ -74,7 +74,7 @@ In the following example, `Name` column from complex data have been mapped to 
 
 The output will be as follows.
 
-![AutoComplete](./images/data_binding_02.png)
+![Binding Blazor AutoComplete Component Items](./images/blazor-aurocomplete-binding-items.png)
 
 ### Array of complex object
 
@@ -124,7 +124,7 @@ In the following example, `Country.CountryID` column from complex data have be
 
 The output will be as follows.
 
-![AutoComplete](./images/complex.png)
+![Binding Complex Items with Blazor AutoComplete](./images/blazor-autocomplete-binding-complex-items.png)
 
 ## Bind to remote data
 
@@ -167,7 +167,7 @@ The following sample displays the first 6 contacts from the **Customers** table 
 
 The output will be as follows.
 
-![AutoComplete](./images/remote_data.png)
+![Blazor AutoComplete with Data Binding](./images/blazor-autocomplete-remote-data.png)
 
 ### Web API Adaptor
 
@@ -203,7 +203,7 @@ Use the `WebApiAdaptor` to bind autocomplete with Web API created using OData.
 
 The output will be as follows.
 
-![AutoComplete](./images/remote_data.png)
+![Blazor AutoComplete with Web API Adaptor](./images/blazor-autocomplete-remote-data.png)
 
 ### Custom Adaptor
 
@@ -314,7 +314,7 @@ Refer to the following example for remote data binding and enabled offline mode.
 
 The output will be as follows.
 
-![AutoComplete](./images/remote_data.png)
+![Blazor AutoComplete Component in Offline Mode](./images/blazor-autocomplete-remote-data.png)
 
 ## Entity Framework
 
