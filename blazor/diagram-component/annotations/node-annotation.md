@@ -25,30 +25,30 @@ The following code shows the relationship between the shape annotation position 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-//Defines diagram's node collection
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's node collection
+    DiagramObjectCollection<Node> nodes;
 
-protected override void OnInitialized()
-{
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+    protected override void OnInitialized()
     {
-        Width = 100,
-        Height = 100,
-        OffsetX = 100,
-        Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation { Content = "Offset(0,0)", Offset = new Point() { X = 0, Y = 0 } }
-        },
-        OffsetY = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-    };
-    nodes.Add(node);
-}
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation { Content = "Offset(0,0)", Offset = new Point() { X = 0, Y = 0 } }
+            },
+            OffsetY = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
@@ -91,35 +91,32 @@ The following code explains how to align annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes"/>
 
 @code
 {
-//Defines diagram's node collection
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's node collection
+    DiagramObjectCollection<Node> nodes;
 
-protected override void OnInitialized()
-{
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+    protected override void OnInitialized()
     {
-        ID = "node1",
-        Width = 100,
-        Height = 100,
-        OffsetX = 250,
-        OffsetY = 250,
-        Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation { Content = "Annotation", HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Center}
-        },
-
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-    };
-    nodes.Add(node);
-
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 250,
+            OffsetY = 250,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+            {
+                new ShapeAnnotation { Content = "Annotation", HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Center}
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        nodes.Add(node);
+    }
 }
-}
-
 ```
 
 >* The value of the `HorizontalAlignment` is `Center` by default.
@@ -131,38 +128,35 @@ protected override void OnInitialized()
 `Margin` is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
 ```cshtml
-@using Syncfusion.Blazor.Diagram
+@@using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-//Defines diagram's node collection
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's node collection
+    DiagramObjectCollection<Node> nodes;
 
-protected override void OnInitialized()
-{
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+    protected override void OnInitialized()
     {
-        ID = "node1",
-        Width = 100,
-        Height = 100,
-        OffsetX = 100,
-        OffsetY = 100,
-        // Sets the margin for the content
-        Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation { Content = "Task1",Margin = new Margin() { Top = 10},
-                HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Top,Offset = new Point(){ X = .5 ,Y = 1} }
-        },
-
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-    };
-    nodes.Add(node);
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            // Sets the margin for the content
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation { Content = "Task1",Margin = new Margin() { Top = 10},HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Top,Offset = new Point(){ X = .5 ,Y = 1} }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        nodes.Add(node);
+    }
 }
-}
-
 ```
 
 ## Text align
@@ -172,35 +166,33 @@ The `TextAlign` inside the text block. The following code explains how to set Te
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
-//Defines diagram's node collection
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's node collection
+    DiagramObjectCollection<Node> nodes;
 
-protected override void OnInitialized()
-{
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+    protected override void OnInitialized()
     {
-        ID = "node1",
-        Width = 100,
-        Height = 100,
-        OffsetX = 100,
-        OffsetY = 100,
-        // Sets the textAlign as left for the content
-        Annotations = new DiagramObjectCollection<ShapeAnnotation>() {
-            new ShapeAnnotation { Content = "Text align is set as Left",Style = new TextShapeStyle(){ TextAlign = TextAlign.Left} }
-        },
-
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-    };
-    nodes.Add(node);
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            // Sets the textAlign as left for the content
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation { Content = "Text align is set as Left",Style = new TextShapeStyle(){ TextAlign = TextAlign.Left} }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        nodes.Add(node);
+    }
 }
-}
-
 ```
 
 ## See also

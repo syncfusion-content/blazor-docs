@@ -37,13 +37,13 @@ The Bullet Chart can be rendered in different orientations such as [Horizontal](
 }
 ```
 
-![Bullet Chart with Orientation](images/orientation.png)
+![Blazor Bullet Chart with Orientation](images/blazor-bullet-chart-orientation.png)
 
 ## Right-to-left (RTL)
 
 The Bullet Chart supports the right-to-left rendering that can be enabled by setting the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_EnableRtl) property to **true**.
 
-```csharp
+```cshtml
 <SfBulletChart DataSource="@BulletChartData" EnableRtl="true" ValueField="FieldValue" TargetField="TargetValue" Minimum="0" Maximum="100" Interval="20">
     <BulletChartRangeCollection>
         <BulletChartRange End=35></BulletChartRange>
@@ -55,7 +55,7 @@ The Bullet Chart supports the right-to-left rendering that can be enabled by set
 
 > Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
-![Bullet Chart in right-to-left flow direction](images/rtl.png)
+![Right to Left Flow Direction in Blazor Bullet Chart](images/blazor-bullet-chart-right-to-left-direction.png)
 
 ## Animation
 
@@ -95,7 +95,7 @@ The Bullet Chart supports different type of themes via the [Theme](https://help.
 
 > Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
-![Bullet Chart with Theme](images/theme.png)
+![Applying Theme to Blazor Bullet Chart](images/blazor-bullet-chart-theme.png)
 
 ## Border
 
@@ -116,4 +116,4 @@ The Bullet Chart border color can be enabled by setting the [Color](https://help
 
 > Refer to the [code block](#orientation) to know about the property value of **BulletChartData**.
 
-![Bullet Chart with Border](images/border.png)
+![Blazor Bullet Chart with Border](images/blazor-bullet-chart-with-border.png)

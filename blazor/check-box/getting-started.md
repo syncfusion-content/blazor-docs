@@ -98,7 +98,7 @@ Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages ot
 
 Now, add the Syncfusion Blazor Checkbox component in `razor` page in the `Pages` folder. For example, the Checkbox component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 <SfCheckBox Label="Default" @bind-Checked="isChecked"></SfCheckBox>
 
 @code 

@@ -92,7 +92,7 @@ To initialize the Bullet Chart component, add the below code to the **Index.raz
 
 On successful compilation of the application, the Syncfusion Blazor Bullet Chart component will render in the web browser as follows.
 
-![Bullet Chart](images/default.png)
+![Blazor Bullet Chart Component](images/blazor-bullet-chart-component.png)
 
 ## Adding Title
 
@@ -117,7 +117,7 @@ Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusio
 }
 ```
 
-![Bullet Chart](images/title.png)
+![Blazor Bullet Chart with Title](images/blazor-bullet-chart-title.png)
 
 ## Adding Ranges
 
@@ -147,7 +147,7 @@ Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com
 }
 ```
 
-![Bullet Chart](images/ranges.png)
+![Adding Range in Blazor Bullet Chart](images/blazor-bullet-chart-ranges.png)
 
 ## Adding Tooltip
 
@@ -178,4 +178,4 @@ Use the tooltip to show the measured values by setting the [Enable](https://help
 }
 ```
 
-![Bullet Chart](images/tool-tip.png)
+![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)

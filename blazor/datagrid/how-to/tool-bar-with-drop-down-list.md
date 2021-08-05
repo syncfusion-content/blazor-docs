@@ -15,7 +15,7 @@ You can create your own ToolBar items in the DataGrid. It can be added by defini
 
 Initialize the template for your custom component. Using the following code add the DropDownList component to the ToolBar.
 
-```csharp
+```cshtml
 <SfToolbar>
         <ToolbarItems>
             <ToolbarItem Type="ItemType.Input">
