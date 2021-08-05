@@ -16,19 +16,21 @@ The **SymbolPalette** displays a collection of palettes. The palette shows a s
 The `Width` and `Height` properties of the symbol palette allows to define the size of the symbol palette.
 
 ```csharp
-@using Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.SymbolPalette
+@using Syncfusion.Blazor.Diagram
 
 @* Initializes the symbol palette *@
-<SfSymbolPalette id="palettes" Height="600px"/>
+<SfSymbolPaletteComponent Height="600px" 
+                          SymbolHeight="80" SymbolWidth="80">
+</SfSymbolPaletteComponent>
 ```
 
 ### Add node to palette
 `SymbolWidth` and `SymbolHeight` properties of the SfSymbolPaletteComponent should be defined to render the symbol(node, connector or group) in the palette. The following code example illustrates how to add node to a palette.
 
 * To render a node in a palette , first create SymbolPalette and initialize palettes collection.
-```csharp
-@page "/ToolsSelection"
 
+```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.SymbolPalette
 
@@ -286,12 +288,13 @@ The following code example illustrates how to define a palette.
 @using Syncfusion.Blazor.Diagram
 
 @* Initializes the symbol palette *@
-<SfSymbolPaletteComponent @ref="symbolpalette" Height="600px" SymbolHeight="80" SymbolWidth="80" Palettes="@palettes">
+<SfSymbolPaletteComponent @ref="SymbolPalette" Height="600px" 
+                          SymbolHeight="80" SymbolWidth="80" Palettes="@palettes">
 </SfSymbolPaletteComponent>
 
 @code
 {
-    SfSymbolPaletteComponent symbolpalette;
+    SfSymbolPaletteComponent SymbolPalette;
     DiagramObjectCollection<Palette> palettes = new DiagramObjectCollection<Palette>();   
 }
 ```
@@ -427,7 +430,7 @@ To initialize drag and drop , you must add the diagram to the `DiagramInstances`
 @code
 {
     SfDiagramComponent diagram;
-    
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         symbolpalette.DiagramInstances = new DiagramObjectCollection<SfDiagramComponent>() { };

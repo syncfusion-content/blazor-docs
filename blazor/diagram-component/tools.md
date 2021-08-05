@@ -171,7 +171,7 @@ The following code illustrates how to draw a polygon shape.
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",

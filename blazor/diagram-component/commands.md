@@ -41,13 +41,35 @@ The following code example illustrates how to align all the selected objects at 
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 500, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
     }
 
@@ -76,15 +98,37 @@ The following code example illustrates how to align all the selected objects at 
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    protected override void OnInitialized()
+   protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 500, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
     }
 
@@ -113,13 +157,35 @@ The following code example illustrates how to align all the selected objects at 
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 500, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
     }
 
@@ -146,15 +212,37 @@ The following code example illustrates how to align all the selected objects at 
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    protected override void OnInitialized()
+   protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 500, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
     }
 
@@ -183,13 +271,35 @@ The following code example illustrates how to align all the selected objects at 
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 500, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
     }
 
@@ -219,15 +329,38 @@ The following code example illustrates how to align all the selected objects at 
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 500, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 500,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
-    }    
+    }
+
     private void OnAlignCenter()
     {
         diagram.Align(AlignmentOptions.Center);
@@ -263,8 +396,7 @@ The following code example illustrates how to execute the space commands.
 <input type="button" value="BottomToTop" @onclick="@OnDistributeBottomToTop" />
 <input type="button" value="RightToLeft" @onclick="@OnDistributeRightToLeft" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
@@ -272,15 +404,37 @@ The following code example illustrates how to execute the space commands.
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
 
-    protected override void OnInitialized()
+     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 400, OffsetY = 200, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+        };
         nodes.Add(node3);
     }
 
@@ -339,28 +493,52 @@ The following code example illustrates how to execute the size commands.
 <input type="button" value="SameWidth" @onclick="@OnSameWidth" />
 <input type="button" value="SameHeight" @onclick="@OnSameHeight" />
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
 @code
 {
     //Reference to diagram
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 400, OffsetY = 200, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
         nodes.Add(node2);
-
-        Node node3 = new Node() { ID = "node3", Width = 70, Height = 50, OffsetX = 500, OffsetY = 300, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
+        Node node3 = new Node()
+        {
+            ID = "node3",
+            Width = 70,
+            Height = 50,
+            OffsetX = 500,
+            OffsetY = 300,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
         nodes.Add(node3);
-
     }
+
     private void OnSameSize()
     {
         diagram.SameSize(SizingTypes.Size);
@@ -389,16 +567,13 @@ Clipboard commands are used to cut, copy, or paste the selected elements.
 The following code illustrates how to execute the clipboard commands.
 
 ```csharp
-@page "/Clipboardcmdsample"
-
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Cut" @onclick="@OnCut" />
 <input type="button" value="Copy" @onclick="@OnCopy" />
 <input type="button" value="Paste" @onclick="@OnPaste" />
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
@@ -409,10 +584,27 @@ The following code illustrates how to execute the clipboard commands.
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 400, OffsetY = 200, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
         nodes.Add(node2);
     }
 
@@ -448,8 +640,7 @@ The following code illustrates how to execute the grouping commands.
 <input type="button" value="UnGroup" @onclick="@OnUnGroup" />
 <input type="button" value="SelectAll" @onclick="@OnSelectAll" />
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors" />
 
 @code
 {
@@ -460,11 +651,28 @@ The following code illustrates how to execute the grouping commands.
 
     protected override void OnInitialized()
     {
-        Node node1 = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
         nodes.Add(node1);
-
-        Node node2 = new Node() { ID = "node2", Width = 60, Height = 40, OffsetX = 400, OffsetY = 200, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
-        nodes.Add(node2);        
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 60,
+            Height = 40,
+            OffsetX = 400,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node2);
     }
 
     private void OnGroup()
@@ -472,15 +680,14 @@ The following code illustrates how to execute the grouping commands.
         diagram.Group();
     }
     private void OnUnGroup()
-    {        
+    {
         diagram.UnGroup();
     }
     private void OnSelectAll()
-    {        
+    {
         diagram.SelectAll();
     }
 }
-
 ```
 
 ## Zoom
@@ -494,8 +701,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 <input type="button" value="Zoom" @onclick="@OnZoom" />
 
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
 @code
 {
@@ -506,8 +712,17 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
     protected override void OnInitialized()
     {
-        Node node = new Node() { ID = "node1", Width = 50, Height = 30, OffsetX = 500, OffsetY = 100, Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }, Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" } };
-        nodes.Add(node);       
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 30,
+            OffsetX = 500,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
+        };
+        nodes.Add(node1);
     }
 
     private void OnZoom()
@@ -518,7 +733,6 @@ The following code illustrates how to zoom-in/zoom out the diagram.
         diagram.Zoom(1.2, new Point() { X = 100, Y = 100 });
     }
 }
-
 ```
 
 ## Undo and Redo command
@@ -568,30 +782,33 @@ To define a custom command, specify the following properties:
 The following code example shows how to define a custom command.
 
 ```csharp
-@page "/Customcmd"
-
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px"
-           Nodes="@nodes">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
         <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@canexe">
         </CommandManager>
-    </CommandManager>  
+    </CommandManager>
 </SfDiagramComponent>
 
-@code 
+@code
 {
     // Reference to diagram
     SfDiagramComponent diagram;
-
-    DiagramObjectCollection<Command> command = new DiagramObjectCollection<Command>() 
-    { 
-        new Command() { Name = "CustomGroup", Gesture = new KeyGesture() { Key = Keys.G, KeyModifiers = KeyModifiers.Control } },
-        new Command() { Name = "CustomUnGroup", Gesture = new KeyGesture() { Key = Keys.U, KeyModifiers = KeyModifiers.Control } },         
-    };
-
+    DiagramObjectCollection<Command> command = new DiagramObjectCollection<Command>()
+    {
+        new Command()
+        {
+            Name = "CustomGroup",
+            Gesture = new KeyGesture() { Key = Keys.G, KeyModifiers = KeyModifiers.Control }
+        },
+        new Command()
+        {
+            Name = "CustomUnGroup",
+            Gesture = new KeyGesture() { Key = Keys.U, KeyModifiers = KeyModifiers.Control }
+        },
+     };
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
@@ -605,7 +822,10 @@ The following code example shows how to define a custom command.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation() { Content = "Node" } }
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation() { Content = "Node" }
+            }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -615,9 +835,11 @@ The following code example shows how to define a custom command.
             OffsetY = 100,
             Width = 100,
             Height = 100,
-
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation() { Content = "Node1" } }
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation() { Content = "Node1" }
+            }
         };
         nodes.Add(node2);
     }
@@ -639,15 +861,18 @@ The following code example shows how to define a custom command.
         }
         if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.U)
         {
+            Selector selector = diagram.SelectedItems;
             //Custom command to ungroup the selected items
-            if (diagram.SelectedItems.Nodes.Count > 0 && diagram.SelectedItems.Nodes[0] is Group && (diagram.SelectedItems.Nodes[0] as Group).Children.Length > 0)
+            if (selector.Nodes.Count > 0 && selector.Nodes[0] is Group)
             {
-                diagram.UnGroup();
+                if ((selector.Nodes[0] as Group).Children.Length > 0)
+                {
+                    diagram.UnGroup();
+                }
             }
         }
     }
 }
-
 ```
 
 ### Modify the existing command
@@ -657,12 +882,9 @@ When any one of the default commands is not desired, they can be disabled. To ch
 The following code example shows how to disable a command and how to modify the built-in commands.
 
 ```csharp
-@page "/Modifycmd"
-
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Height="600px"
-                    Nodes="@nodes">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
         <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@canexe">
@@ -670,7 +892,7 @@ The following code example shows how to disable a command and how to modify the 
     </CommandManager>
 </SfDiagramComponent>
 
-@code 
+@code
 {
     // Reference to diagram
     SfDiagramComponent diagram;
@@ -678,8 +900,16 @@ The following code example shows how to disable a command and how to modify the 
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Command> commands = new DiagramObjectCollection<Command>()
     {
-        new Command() { Name = "SelectAll", Gesture = new KeyGesture() { Key = Keys.A, KeyModifiers = KeyModifiers.Control } },
-        new Command() { Name = "Copy", Gesture = new KeyGesture() { Key = Keys.C, KeyModifiers = KeyModifiers.Control } }
+        new Command()
+        {
+            Name = "SelectAll",
+            Gesture = new KeyGesture() { Key = Keys.A, KeyModifiers = KeyModifiers.Control }
+        },
+        new Command()
+        {
+            Name = "Copy",
+            Gesture = new KeyGesture() { Key = Keys.C, KeyModifiers = KeyModifiers.Control }
+        }
     };
 
     protected override void OnInitialized()
@@ -692,7 +922,10 @@ The following code example shows how to disable a command and how to modify the 
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation() { Content = "Node" } }
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation() { Content = "Node" }
+            }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -702,9 +935,11 @@ The following code example shows how to disable a command and how to modify the 
             OffsetY = 100,
             Width = 100,
             Height = 100,
-
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation() { Content = "Node1" } }
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation() { Content = "Node1" }
+            }
         };
         nodes.Add(node2);
     }
@@ -713,7 +948,7 @@ The following code example shows how to disable a command and how to modify the 
     {
         args.CanExecute = true;
     }
-    
+
     /// <summary>
     /// Custom command execution event
     /// </summary>
