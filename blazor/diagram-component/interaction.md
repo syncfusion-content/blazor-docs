@@ -17,7 +17,7 @@ Selector provides a visual representation of selected elements. It behaves like 
 
 An element can be selected by clicking that element. During single click, all previously selected items are cleared. The following image shows how the selected elements are visually represented.
 
-![Single Selection](images/selection.gif)
+![Single Selection in Blazor Diagram](images/selection.gif)
 
 * While selecting the diagram elements, the following events can be used to do your customization.
 * When selecting/unselecting the diagram elements, the `SelectionChanged` event gets triggered.
@@ -38,7 +38,7 @@ During single click, any existing item in the selection list be cleared, and onl
 
 Clicking and dragging the diagram area allows to create a rectangular region. The elements that are covered under the rectangular region are selected at the end.
 
-![Multiple Rubberband Selection](images/multiselect.gif)
+![Multiple Selection in Blazor Diagram](images/multiselect.gif)
 
 ## Select/Unselect elements using program
 
@@ -141,32 +141,34 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" Click='@OnClick'>
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" Click='@OnClick' />
 
 @code
 {
-        public DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>() { };
-        protected override void OnInitialized()
+    public DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes array.
+        Node node = new Node()
         {
-            // A node is created and stored in nodes array.
-            Node node = new Node()
-            {
-                // Position of the node
-                OffsetX = 250,
-                OffsetY = 250,
-                // Size of the node
-                Width = 100,
-                Height = 100,
-                // Add node
-                Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
-            };
-            nodes.Add(node);
-        }
-        private async void OnClick(ClickEventArgs args)
-        {
-           Console.WriteLine("Button", args.Button);            
-        }
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            // Add node
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+        };
+        nodes.Add(node);
+    }
+
+    private async void OnClick(ClickEventArgs args)
+    {
+        Console.WriteLine("Button", args.Button);
+    }
 }
 ```
 
@@ -179,7 +181,7 @@ The appearance of the user handle can be customized by using the `Size`, `Border
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
-![Zoom Pan](images/zoompan.gif)
+![Zoom Pan in Blazor Diagram](images/zoompan.gif)
 
 ## Keyboard
 

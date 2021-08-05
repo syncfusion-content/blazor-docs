@@ -233,14 +233,12 @@ The following code illustrates how to enable single tools,
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Connectors="@connectors" Height="600px" Tool="@tool">
-</SfDiagramComponent>
+<SfDiagramComponent Connectors="@connectors" Height="600px" Tool="@tool" />
 
 @code
 {
     //Enable the single tool
     public DiagramTools tool = DiagramTools.DrawOnce;
-
     //Defines diagram's connectors collection
     public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
@@ -251,18 +249,15 @@ The following code illustrates how to enable multiple tools,
 ```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Connectors="@connectors" @ref="diagram" Height="600px" Tool="@tool">
-</SfDiagramComponent>
+<SfDiagramComponent Connectors="@connectors" @ref="diagram" Height="600px" Tool="@tool" />
 
 @code
 {
     //Reference to diagram
-    SfDiagram diagram;
-
+    SfDiagramComponent diagram;
     //Enable the multiple tools
     public DiagramTools tool = DiagramTools.DrawOnce | DiagramTools.ZoomPan;
-
     //Defines diagram's connectors collection
-    public DiagramObjectCollection<Connector> ConnectorCollection = new ObservableCollection<Connector>();
+    public DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
 }
 ```

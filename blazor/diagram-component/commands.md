@@ -31,9 +31,10 @@ The following code example illustrates how to align all the selected objects at 
 
 <input type="button" value="Left" @onclick="@OnAlignLeft" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -67,9 +68,10 @@ The following code example illustrates how to align all the selected objects at 
 
 <input type="button" value="Right" @onclick="@OnAlignRight" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -101,9 +103,10 @@ The following code example illustrates how to align all the selected objects at 
 
 <input type="button" value="Top" @onclick="@OnAlignTop" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -135,9 +138,10 @@ The following code example illustrates how to align all the selected objects at 
 
 <input type="button" value="Bottom" @onclick="@OnAlignBottom" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -169,9 +173,10 @@ The following code example illustrates how to align all the selected objects at 
 
 <input type="button" value="Middle" @onclick="@OnAlignMiddle" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -204,9 +209,10 @@ The following code example illustrates how to align all the selected objects at 
 
 <input type="button" value="Center" @onclick="@OnAlignCenter" />
 
-<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"></SfDiagramComponent>
+<SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -260,7 +266,8 @@ The following code example illustrates how to execute the space commands.
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors">
 </SfDiagramComponent>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     DiagramObjectCollection<Connector> Connectors = new DiagramObjectCollection<Connector>();
@@ -574,7 +581,8 @@ The following code example shows how to define a custom command.
     </CommandManager>  
 </SfDiagramComponent>
 
-@code {
+@code 
+{
     // Reference to diagram
     SfDiagramComponent diagram;
 
@@ -582,7 +590,7 @@ The following code example shows how to define a custom command.
     { 
         new Command() { Name = "CustomGroup", Gesture = new KeyGesture() { Key = Keys.G, KeyModifiers = KeyModifiers.Control } },
         new Command() { Name = "CustomUnGroup", Gesture = new KeyGesture() { Key = Keys.U, KeyModifiers = KeyModifiers.Control } },         
-     };
+    };
 
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
@@ -599,9 +607,7 @@ The following code example shows how to define a custom command.
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation() { Content = "Node" } }
         };
-
         nodes.Add(node1);
-
         Node node2 = new Node()
         {
             ID = "node2",
@@ -613,9 +619,7 @@ The following code example shows how to define a custom command.
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation() { Content = "Node1" } }
         };
-
         nodes.Add(node2);
-
     }
 
     public void canexe(CommandKeyArgs args)
@@ -666,7 +670,8 @@ The following code example shows how to disable a command and how to modify the 
     </CommandManager>
 </SfDiagramComponent>
 
-@code {
+@code 
+{
     // Reference to diagram
     SfDiagramComponent diagram;
     // Defines diagram's nodes collection
@@ -676,6 +681,7 @@ The following code example shows how to disable a command and how to modify the 
         new Command() { Name = "SelectAll", Gesture = new KeyGesture() { Key = Keys.A, KeyModifiers = KeyModifiers.Control } },
         new Command() { Name = "Copy", Gesture = new KeyGesture() { Key = Keys.C, KeyModifiers = KeyModifiers.Control } }
     };
+
     protected override void OnInitialized()
     {
         Node node1 = new Node()
@@ -702,10 +708,12 @@ The following code example shows how to disable a command and how to modify the 
         };
         nodes.Add(node2);
     }
+
     public void canexe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
+    
     /// <summary>
     /// Custom command execution event
     /// </summary>
