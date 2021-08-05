@@ -42,7 +42,7 @@ The Resource file is an XML file which contains the strings(key and value pairs)
 
 * Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
-```csharp
+```cshtml
 <Component_Name>_<Feature_Name>_<Locale_Key>
 ```
 

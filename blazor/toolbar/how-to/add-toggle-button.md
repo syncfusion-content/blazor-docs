@@ -13,10 +13,10 @@ Toolbar supports to add a toggle Button by using the `Template` property. Refer 
 
 * By using Toolbar template property, pass required HTML String to render toggle button.
 
-```csharp
-    <Template>
-        <SfButton></SfButton>
-    </Template>
+```cshtml
+<Template>
+    <SfButton></SfButton>
+</Template>
 ```
 
 * Now render the toggle Button into the targeted element in Toolbar created event handler and bind click event for it.
