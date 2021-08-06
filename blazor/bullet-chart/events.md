@@ -57,18 +57,29 @@ The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 @code{
     public SfBulletChart<ChartData> BulletChart { get; set; }
+
+    public class ChartData
+    {
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
+    }
+
+    public List<ChartData> BulletChartData = new List<ChartData>
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
+    };
+
     public async Task PrintCall()
     {
-        await BulletChart.Print();
+        await BulletChart.PrintAsync();
     }
+
     public void PrintCompleteHandler(PrintEventArgs args)
     {
         // Here you can customize the code.
     }
 }
 ```
-
-> Refer to the [code block](#Loaded) to know about the property value of **BulletChartData**.
 
 ## TooltipRender
 
@@ -90,14 +101,23 @@ The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 </SfBulletChart>
 
 @code{
+    public class ChartData
+    {
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
+    }
+    
+    public List<ChartData> BulletChartData = new List<ChartData>
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
+    };
+
     public void TooltipRenderHandler(BulletChartTooltipEventArgs args)
     {
         // Here you can customize the code.
     }
 }
 ```
-
-> Refer to the [code block](#Loaded) to know about the property value of **BulletChartData**.
 
 ## LegendRender
 

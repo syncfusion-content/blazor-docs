@@ -60,6 +60,8 @@ The [Squarified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap
 The [SliceAndDiceVertical](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and displays items in a vertically sorted order.
 
 ```cshtml
+@using Syncfusion.Blazor.TreeMap;
+
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP" LayoutType="LayoutMode.SliceAndDiceVertical">
 </SfTreeMap>
 ```
@@ -73,6 +75,8 @@ The [SliceAndDiceVertical](https://help.syncfusion.com/cr/aspnetcore-blazor/Sync
 The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and displays items in a horizontally sorted order.
 
 ```cshtml
+@using Syncfusion.Blazor.TreeMap;
+
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP" LayoutType="LayoutMode.SliceAndDiceHorizontal">
 </SfTreeMap>
 ```
@@ -86,6 +90,8 @@ The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/aspnetcore-blazor/Sy
 The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and display items sorted both horizontally and vertically.
 
 ```cshtml
+@using Syncfusion.Blazor.TreeMap;
+
 <SfTreeMap DataSource="GrowthReports" TValue="GDPReport" WeightValuePath="GDP" LayoutType="LayoutMode.SliceAndDiceAuto">
 </SfTreeMap>
 ```
@@ -108,7 +114,7 @@ The TreeMap can be rendered in the following directions:
 The following example shows, how to render the TreeMap in the RTL direction with [TopLeftBottomRight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```csharp
-using Syncfusion.Blazor.TreeMap;
+@using Syncfusion.Blazor.TreeMap;
 
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.TopLeftBottomRight">
     <TreeMapLeafItemSettings LabelPath="Name">
@@ -140,6 +146,8 @@ using Syncfusion.Blazor.TreeMap;
 The following example shows, how to render the TreeMap in the RTL direction with [TopRightBottomLeft](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```cshtml
+@using Syncfusion.Blazor.TreeMap;
+
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.TopRightBottomLeft">
     <TreeMapLeafItemSettings LabelPath="Name">
     </TreeMapLeafItemSettings>
@@ -155,6 +163,8 @@ The following example shows, how to render the TreeMap in the RTL direction with
 The following example shows, how to render the TreeMap in the RTL direction with [BottomRightTopLeft](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```cshtml
+@using Syncfusion.Blazor.TreeMap;
+
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.BottomRightTopLeft">
     <TreeMapLeafItemSettings LabelPath="Name">
     </TreeMapLeafItemSettings>
@@ -170,6 +180,8 @@ The following example shows, how to render the TreeMap in the RTL direction with
 The following example shows, how to render the TreeMap in the RTL direction with [BottomLeftTopRight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
 ```cshtml
+@using Syncfusion.Blazor.TreeMap;
+
 <SfTreeMap DataSource="Fruits" TValue="Fruit" WeightValuePath="Count" Palette='new string[]{"#71B081","#5A9A77", "#498770", "#39776C", "#266665","#124F5E"}' RenderDirection="RenderingMode.BottomLeftTopRight">
     <TreeMapLeafItemSettings LabelPath="Name">
     </TreeMapLeafItemSettings>
