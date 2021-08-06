@@ -13,7 +13,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 
 ## Importing Syncfusion Blazor component in the application
 
- 1. Install the [Syncfusion.Blazor.BarcodeGenerator](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazorbarcodegenerator) NuGet package to the application by using the **NuGet Package Manager**.
+ 1. Install the [Syncfusion.Blazor.BarcodeGenerator](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazorbarcodegenerator) NuGet package to the application by using the [NuGet Package Manager](https://blazor.syncfusion.com/documentation/nuget-packages/).
  2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml

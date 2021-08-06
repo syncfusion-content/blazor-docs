@@ -62,7 +62,7 @@ Blazor provides set of argument types to map to native events. The list of event
 * Touch Events – TouchEventArgs
 * Pointer Events – PointerEventArgs
 
-In the following example, the onkeypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
+In the following example, the on keypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
 
 ```cshtml
 <SfAutoComplete TValue="string" TItem="Countries" @onkeypress="@(e => KeyPressed(e))" >
