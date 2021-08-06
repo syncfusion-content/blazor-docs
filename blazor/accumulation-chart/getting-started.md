@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accumulation Chart in Server Side | Syncfusion
+title: Getting Stared with Blazor Accumulation Chart in Server Side
 description: Learn here all about Getting Started with Syncfusion Blazor Accumulation Chart in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: Accumulation Chart
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD040 -->
 
-# Blazor Accumulation Chart Component in Server Side App using Visual Studio
+# Blazor Accumulation Chart in Server Side App using Visual Studio
 
 This section briefly explains about how to include a `Accumulation Chart` in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
