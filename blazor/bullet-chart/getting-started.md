@@ -13,7 +13,7 @@ This section briefly explains how to include a Bullet Chart component in the Bla
 
 ## Importing Syncfusion Blazor Bullet Chart component in the application
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
+1. Install **Syncfusion.Blazor** NuGet package to the application by using the [NuGet Package Manager](https://blazor.syncfusion.com/documentation/nuget-packages/).
 
 2. Add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
@@ -36,7 +36,7 @@ This section briefly explains how to include a Bullet Chart component in the Bla
 
 ## Adding component package to the application
 
-Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Charts** namespace.
+Open the **~/_Imports.razor** file and include the [Syncfusion.Blazor.Charts](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazorbulletchart) namespace.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

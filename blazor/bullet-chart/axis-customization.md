@@ -11,7 +11,7 @@ documentation: ug
 
 ## MajorTickLines and MinorTickLines Customization
 
-The following properties can be used to customize MajorTicklines and MinorTicklines.
+The following properties can be used to customize [MajorTicklines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMajorTickLines.html) and [MinorTicklines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMinorTickLines.html).
 
 * **Width** - Specifies the width of the ticklines.
 * **Height** - Specifies the height of the ticklines.
@@ -238,7 +238,7 @@ To place an axis opposite to its original position, set the [OpposedPosition](ht
 
 ## Category Label
 
-The Bullet Chart supports X-axis label by specifying the property from the data source to the [CategoryField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_CategoryField). It helps to understand the input data in a more efficient way.
+The [Bullet Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html) supports X-axis label by specifying the property from the data source to the [CategoryField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_CategoryField). It helps to understand the input data in a more efficient way.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
