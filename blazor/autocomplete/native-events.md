@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor AutoComplete Component
 
-The following section explains the steps to include native events and pass data to event handler in the AutoComplete component.
+The following section explains the steps to include native events and pass data to event handler in the [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component.
 
 ## Bind native events to AutoComplete
 

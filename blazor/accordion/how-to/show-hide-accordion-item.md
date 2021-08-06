@@ -79,7 +79,7 @@ In the following demo, specified accordion item are Show/Hide dynamically when y
 
 ## Using property
 
-Accordion provides support to Show/Hide the specified accordion item dynamically using accordion item **Visible** property.
+Accordion provides support to Show/Hide the specified accordion item dynamically using accordion item [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Visible) property.
 
 In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
 

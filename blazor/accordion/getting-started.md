@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Accordion Component
 
-This section briefly explains about how to include a `Accordion` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a [Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html) in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Accordion, you can check on this video:
 
@@ -36,11 +36,11 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above [Syncfusion.Blazor.Themes](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazorthemes) static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+W> If you prefer the above new standard ([individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/)), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
 
@@ -68,7 +68,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 ## Adding component package to the application
 
-Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` package.
+Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.Navigations](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazornavigations) package.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor AutoComplete Component
 
-This section briefly explains how to include a **AutoComplete** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
+This section briefly explains how to include a [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
 To get start quickly with Blazor AutoComplete component, you can check on this video.
 
@@ -18,7 +18,7 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
+* Install [Syncfusion.Blazor.DropDowns](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazordropdowns) NuGet package to the application by using the `NuGet Package Manager`.
 
     > Please ensure to check the `Include Prerelease` option for our Beta release.
 
@@ -42,7 +42,7 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 ## Adding component package to the application
 
-Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.DropDowns` package.
+Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.DropDowns](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazordropdowns) package.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -119,7 +119,7 @@ The output will be as follows.
 
 ## Binding data source
 
-After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the AutoComplete component.
+After initialization, populate the AutoComplete with data using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. Here, an array of string values is passed to the [AutoComplete](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazordropdowns) component.
 
 The following example illustrates the output in your browser.
 
@@ -209,7 +209,7 @@ The AutoComplete allows the users to give input as custom value, which is not re
 
 ## Configure the suggestion list
 
-By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) property respectively.
+By default, suggestion list width automatically adjusts according to the AutoComplete input element's width, and the height of the suggestion list has `300px`. The height and width of the popup list can also be customized using the [PopupHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupHeight) and [PopupWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_PopupWidth) property respectively.
 
 In the following sample, suggestion list's width and height are configured.
 

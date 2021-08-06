@@ -64,7 +64,7 @@ Output be like the below.
 
 ## Expanding the items
 
-By default, accordion items were in collapsed state on initial load. To expand particular item(s) on initial load, you can use either `ExpandedIndices` property or `Expanded` option within `AccordionItem` tag helper. In the following code example, `ExpandedIndices` is used to expand the second and third item.
+By default, accordion items were in collapsed state on initial load. To expand particular item(s) on initial load, you can use either [ExpandedIndices](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandedIndices) property or [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) option within [AccordionItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) tag helper. In the following code example, `ExpandedIndices` is used to expand the second and third item.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

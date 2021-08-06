@@ -9,7 +9,7 @@ documentation: ug
 
 # Filtering in Blazor AutoComplete Component
 
-The AutoComplete has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the component.
+The [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) has built-in support to filter data items. The filter operation starts as soon as you start typing characters in the component.
 
 ## Change the filter type
 

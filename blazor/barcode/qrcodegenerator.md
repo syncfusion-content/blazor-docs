@@ -63,7 +63,7 @@ In barcode generators You can customize the barcode text by using display [Text]
 
 ## Event
 
-`OnValidationFailed` event in the `SfQRCodeGenerator` is used to trigger when the input is an invalid string.
+[OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_OnValidationFailed) event in the [SfQRCodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html) is used to trigger when the input is an invalid string.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
