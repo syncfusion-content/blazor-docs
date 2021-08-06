@@ -110,8 +110,8 @@ Refer to the following steps to download the custom resources in CRG:
     <head>
         ....
         ....
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js" type="text/javascript"></script>
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
 

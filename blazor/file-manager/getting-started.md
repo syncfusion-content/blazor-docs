@@ -57,7 +57,7 @@ This section briefly explains how to include a `File Manager` in your Blazor Ser
 
     ```html
     <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 

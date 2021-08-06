@@ -75,7 +75,7 @@ namespace BlazorApplication
 
  ```html
 <head>
-  <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+  <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 

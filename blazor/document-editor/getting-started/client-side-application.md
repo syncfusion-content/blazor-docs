@@ -71,7 +71,7 @@ Steps to get started with Word processor component for Blazor:
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap4.css).
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
 12. Run the application. The Word processor component will be rendered in the web browser.
 
