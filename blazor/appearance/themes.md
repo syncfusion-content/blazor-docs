@@ -65,7 +65,7 @@ The Syncfusion Blazor themes also available in the CDN.
 <head>
     ....
     ....
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
 </head>
 ```
 
@@ -1328,6 +1328,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             <th>Value</th>
         </tr>
     </thead>
+    <tbody>
         <tr>
             <td>$selection-bg</td>
             <td>

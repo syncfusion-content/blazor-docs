@@ -63,7 +63,7 @@ Steps to get started with Word processor component for Blazor:
     <head>
         ....
         ....
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/material.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css" rel="stylesheet" />
     </head>
     ```
 

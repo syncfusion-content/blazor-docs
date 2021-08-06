@@ -15,31 +15,35 @@ A group is used to frame a part of the diagram, shows that elements included in 
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize the node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
+{
+    // Initialize node collection with Node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node
             Width = 100,
             Height = 100,
-            //Unique Id of the node
+            // Unique Id of the node
             ID = "node1",
-            //Sets type to Bpmn and shape to Group
+            // Sets type to Bpmn and shape to Group
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                Shape=BpmnShapes.Group,
+                Shape = BpmnShapes.Group,
             }
-        }
-    };
+        };
+        nodes.Add(node);
+    }
 }
 ```
 

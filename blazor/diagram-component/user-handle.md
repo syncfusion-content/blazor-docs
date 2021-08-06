@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# User Handles in Blazor Diagram Component
+# User Handles for node , connector in Blazor Diagram Component
 
 User handles are customizable handles that can be used to perform custom actions and default clipboard actions.
 
@@ -19,11 +19,16 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-           Nodes="@nodes"
-           SelectedItems="@SelectedModel">
+                    Nodes="@NodeCollection"
+                    SelectedItems="@SelectedModel">
+    <SnapSettings>
+        <HorizontalGridLines LineColor="White" LineDashArray="2,2" />
+        <VerticalGridLines LineColor="White" LineDashArray="2,2" />
+    </SnapSettings>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Defines diagram's SelectedItems
@@ -58,9 +63,8 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+        Node diagramNode = new Node()
         {
             ID = "node1",
             OffsetX = 100,
@@ -70,13 +74,12 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
         };
-
-        nodes.Add(node);
+        nodes.Add(diagramNode);
     }
 }
 ```
 
-![User handle for node](images/userhandle1.png)
+![User handle for node in blazor diagram](images/userhandle1.png)
 
 ## Customization
 
@@ -88,14 +91,14 @@ The following table shows all the possible alignments visually shows the user ha
 
 | Offset | Side | Output |
 | -------- | -------- | -------- |
-|0|Left|![User handle for node](images/userhandle2.png)|
-|0|Right|![User handle for node](images/userhandle3.png)|
-|0|Top|![User handle for node](images/userhandle4.png)|
-|0|Bottom|![User handle for node](images/userhandle5.png)|
-|1|Left|![User handle for node](images/userhandle6.png)|
-|1|Right|![User handle for node](images/userhandle7.png)|
-|1|Top|![User handle for node](images/userhandle8.png)|
-|1|Bottom|![User handle for node](images/userhandle9.png)|
+|0|Left|![User handle for node in blazor diagram](images/userhandle2.png)|
+|0|Right|![User handle for node in blazor diagram](images/userhandle3.png)|
+|0|Top|![User handle for node in blazor diagram](images/userhandle4.png)|
+|0|Bottom|![User handle for node in blazor diagram](images/userhandle5.png)|
+|1|Left|![User handle for node in blazor diagram](images/userhandle6.png)|
+|1|Right|![User handle for node in blazor diagram](images/userhandle7.png)|
+|1|Top|![User handle for node in blazor diagram](images/userhandle8.png)|
+|1|Bottom|![User handle for node in blazor diagram](images/userhandle9.png)|
 
 ### Size
 
@@ -117,48 +120,50 @@ The following code explains how to customize the appearance of the user handle.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-           Nodes="@nodes"
-           SelectedItems="@SelectedModel">
-           <SnapSettings>
-        <HorizontalGridLines LineColor="White" LineDashArray="2,2" ></HorizontalGridLines>
-        <VerticalGridLines LineColor="White" LineDashArray="2,2" ></VerticalGridLines>
+                    Nodes="@nodes"
+                    SelectedItems="@SelectedModel">
+    <SnapSettings>
+        <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
+        <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
     </SnapSettings>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     // Defines diagram's SelectedItems
     Selector SelectedModel = new Selector();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
+
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects
         UserHandle cloneHandle = new UserHandle()
         {
-//Name of the user handle
-Name = "clone",
-//Set pathdata for userhandle
-PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
-//Set visibility for the user handle
-Visible = true,
-//Set the position for the user handle
-Offset = 1,
-//Set side based on the given offset
-Side = Side.Bottom,
-//set margin for the user handle
-Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
-//Set size of the user handle
-Size = 50,
-//Set pathcolor for given pathdata
-PathColor = "yellow",
-//Set Border color of the user handle
-BorderColor = "red",
-//Set Background Color of the user handle
-BackgroundColor = "green",
-//Set Border Width Color of the user handle
-BorderWidth = 3,
-};
+            //Name of the user handle
+            Name = "clone",
+            //Set pathdata for userhandle
+            PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z",
+            //Set visibility for the user handle
+            Visible = true,
+            //Set the position for the user handle
+            Offset = 1,
+            //Set side based on the given offset
+            Side = Side.Bottom,
+            //set margin for the user handle
+            Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
+            //Set size of the user handle
+            Size = 50,
+            //Set pathcolor for given pathdata
+            PathColor = "yellow",
+            //Set Border color of the user handle
+            BorderColor = "red",
+            //Set Background Color of the user handle
+            BackgroundColor = "green",
+            //Set Border Width Color of the user handle
+            BorderWidth = 3,
+        };
         //Add user handle to the collection...
         UserHandles = new DiagramObjectCollection<UserHandle>()
         {
@@ -170,9 +175,8 @@ BorderWidth = 3,
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+        Node diagramNode = new Node()
         {
             ID = "node1",
             OffsetX = 100,
@@ -182,8 +186,7 @@ BorderWidth = 3,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "none" },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } }
         };
-
-        nodes.Add(node);
+        nodes.Add(diagramNode);
     }
 }
 ```
@@ -201,29 +204,40 @@ To create the fixed user handles, define and add them to the collection of nodes
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
- // Defines diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-protected override void OnInitialized()
+@code
 {
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-        OffsetX = 250,
-        OffsetY = 250,
-        Width = 100,
-        Height = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-        // A fixed user handle is created and stored in fixed user handle collection of Node.
-        FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+    // Defines diagram's nodes collection
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
     {
-     new NodeFixedUserHandle() { ID = "user1",Height = 20, Width = 20, Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, Margin = new Margin(){ Right = 20},Offset = new Point() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" },}
-    };
-    nodes.Add(node);
-}
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // A fixed user handle is created and stored in fixed user handle collection of Node.
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+            {
+                new NodeFixedUserHandle() 
+                { 
+                    ID = "user1",
+                    Height = 20, 
+                    Width = 20, 
+                    Visibility = true,
+                    Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, 
+                    Margin = new Margin(){ Right = 20},Offset = new Point() { X =0 , Y = 0 }, 
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" 
+                },
+            }
+        };
+        nodes.Add(node1);
+    }
 }
 ```
 
@@ -257,45 +271,45 @@ The following code explains how to customize the appearance of the fixed user ha
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
-<SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors">
+
+<SfDiagramComponent Height="600px" Connectors="@connectors">
+    <SnapSettings>
+        <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
+        <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
+    </SnapSettings>
 </SfDiagramComponent>
+
 @code
 {
-    //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-    //Defines diagram's node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-protected override void OnInitialized()
-{
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
+
+    protected override void OnInitialized()
     {
-        Width = 100,
-        Height = 100,
-        OffsetX = 100,
-        OffsetY = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-        // A fixed user handle is created and stored in fixed user handle collection of Node.
-        FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>(){
-     new NodeFixedUserHandle() { ID = "user1",Height = 20, Width = 20, Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, Margin = new Margin(){ Right = 20},Offset = new Point() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  },}
-    };
-    nodes.Add(node);
-    connectors = new DiagramObjectCollection<Connector>();
+        connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            SourcePoint = new Point() { X = 300, Y = 40 },
-            TargetPoint = new Point() { X = 400, Y = 160 },
+            SourcePoint = new Point() { X = 100, Y = 100 },
+            TargetPoint = new Point() { X = 200, Y = 200 },
             Type = Segments.Orthogonal,
-            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
+            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
             // A fixed user handle is created and stored in fixed user handle collection of Connector.
             FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>()
-                {
-                    new ConnectorFixedUserHandle() { ID = "user1", Height = 25, Width = 25, Offset = 0.5, Visibility = true, Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, Alignment = FixedUserHandleAlignment.After, Displacement = new Point() { X = 5, Y = 5 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" }
+            {
+                new ConnectorFixedUserHandle() 
+                { 
+                    ID = "user1",
+                    Height = 25, 
+                    Width = 25,
+                    Offset = 0.5,
+                    Alignment = FixedUserHandleAlignment.After,
+                    Displacement = new Point{Y= 10},
+                    Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 }
-            };
-    connectors.Add(connector);
-}
+            },
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -317,14 +331,14 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Margin | Output |
 | -------- | -------- | -------- |
-| (0,0) | Right = 20 |![fixed user handle for node](images/topleft.png)|
-| (0.5,0) | Bottom = 20 |![fixed user handle for node](images/topcenter.png)|
-| (1,0) | Left = 20 |![fixed user handle for node](images/topright.png)|
-| (0,0.5) | Right = 20 |![fixed user handle for node](images/leftcenter.png)|
-| (1,0.5) | Left = 20 |![fixed user handle for node](images/rightcenter.png)|
-| (0,1) | Right = 20 |![fixed user handle for node](images/bottomleft.png)|
-| (0.5,1) | Top = 20 |![fixed user handle for node](images/bottomcenter.png)|
-| (1,1) | Left = 20 |![fixed user handle for node](images/bottomright.png)|
+| (0,0) | Right = 20 |![fixed user handle for node in blazor diagram](images/topleft.png)|
+| (0.5,0) | Bottom = 20 |![fixed user handle for node in blazor diagram](images/topcenter.png)|
+| (1,0) | Left = 20 |![fixed user handle for node in blazor diagram](images/topright.png)|
+| (0,0.5) | Right = 20 |![fixed user handle for node in blazor diagram](images/leftcenter.png)|
+| (1,0.5) | Left = 20 |![fixed user handle for node in blazor diagram](images/rightcenter.png)|
+| (0,1) | Right = 20 |![fixed user handle for node in blazor diagram](images/bottomleft.png)|
+| (0.5,1) | Top = 20 |![fixed user handle for node in blazor diagram](images/bottomcenter.png)|
+| (1,1) | Left = 20 |![fixed user handle for node in blazor diagram](images/bottomright.png)|
 
 The following code explains how to customize the node fixed user handle.
 
@@ -332,36 +346,45 @@ The following code explains how to customize the node fixed user handle.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-           Nodes="@nodes">
-           <SnapSettings>
-        <HorizontalGridLines LineColor="White" LineDashArray="2,2" ></HorizontalGridLines>
-        <VerticalGridLines LineColor="White" LineDashArray="2,2" ></VerticalGridLines>
+                    Nodes="@nodes">
+    <SnapSettings>
+        <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
+        <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
     </SnapSettings>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects
         nodes = new DiagramObjectCollection<Node>();
         Node diagramNode = new Node()
         {
-        OffsetX = 250,
-        OffsetY = 250,
-        Width = 100,
-        Height = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-        // A fixed user handle is created and stored in fixed user handle collection of Node.
-        FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>(){
-     new NodeFixedUserHandle() { ID = "user1",Height = 20, Width = 20, Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 },
-     Margin = new Margin(){ Left = 20},
-     Offset = new Point() { Y = 0},
-
-
-PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  },}
-    };
+            OffsetX = 250,
+            OffsetY = 250,
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // A fixed user handle is created and stored in fixed user handle collection of Node.
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+            {
+                new NodeFixedUserHandle() 
+                { 
+                    ID = "user1",
+                    Height = 20, 
+                    Width = 20, 
+                    Visibility = true,
+                    Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 },
+                    Margin = new Margin(){ Left = 20},
+                    Offset = new Point() { Y = 0},
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                },
+            }
+        };
         nodes.Add(diagramNode);
     }
 }
@@ -385,9 +408,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![fixed user handle for node](images/before.png)|
-| 0.5 | Center |![fixed user handle for node](images/center.png)|
-| 1 | After |![fixed user handle for node](images/after.png)|
+| 0 | Before |![fixed user handle for node in blazor diagram](images/before.png)|
+| 0.5 | Center |![fixed user handle for node in blazor diagram](images/center.png)|
+| 1 | After |![fixed user handle for node in blazor diagram](images/after.png)|
 
 ### Displacement
 
@@ -397,8 +420,8 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Displacement | Alignment | Output |
 | -------- | -------- | -------- |
-| y=10 | Before |![fixed user handle for node](images/ybefore.png)|
-| y=10 | After |![fixed user handle for node](images/yafter.png)|
+| y=10 | Before |![fixed user handle for node in blazor diagram](images/ybefore.png)|
+| y=10 | After |![fixed user handle for node in blazor diagram](images/yafter.png)|
 
 > Displacement will not be done if the alignment is set to be center.
 
@@ -408,37 +431,43 @@ The following code explains how to customize the connector fixed user handle.
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
- <SnapSettings>
-        <HorizontalGridLines LineColor="White" LineDashArray="2,2" ></HorizontalGridLines>
-        <VerticalGridLines LineColor="White" LineDashArray="2,2" ></VerticalGridLines>
+    <SnapSettings>
+        <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
+        <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
     </SnapSettings>
 </SfDiagramComponent>
 
 @code
 {
-DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
-protected override void OnInitialized()
-{
-    connectors = new DiagramObjectCollection<Connector>();
-    Connector connector = new Connector()
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
     {
-        SourcePoint = new Point() { X = 100, Y = 100 },
-        TargetPoint = new Point() { X = 200, Y = 200 },
-        Type = Segments.Orthogonal,
-        Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
-        // A fixed user handle is created and stored in fixed user handle collection of Connector.
-        FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-          new ConnectorFixedUserHandle() { ID = "user1",Height = 25, Width = 25,
-          Offset = 0.5,
-          Alignment = FixedUserHandleAlignment.After,
-          Displacement = new Point{Y= 10},
-          Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 },
-          PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" }
-        },
-    };
-    connectors.Add(connector);
-}
+            SourcePoint = new Point() { X = 100, Y = 100 },
+            TargetPoint = new Point() { X = 200, Y = 200 },
+            Type = Segments.Orthogonal,
+            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            // A fixed user handle is created and stored in fixed user handle collection of Connector.
+            FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>()
+            {
+                new ConnectorFixedUserHandle()
+                {
+                    ID = "user1",
+                    Height = 25,
+                    Width = 25,
+                    Offset = 0.5,
+                    Alignment = FixedUserHandleAlignment.After,
+                    Displacement = new Point { Y = 10 },
+                    Visibility = true, Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                }
+            }
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -454,37 +483,53 @@ The Diagram control provides following event for the fixed user handle.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent Height="600px" FixedUserHandleClick="Changed" Nodes="@nodes"  @ref="diagram">
+<SfDiagramComponent Height="600px"
+                    FixedUserHandleClick="Changed" Nodes="@nodes" @ref="diagram">
 </SfDiagramComponent>
 
-@code{
-    SfDiagramComponent diagram;
-public async void Changed(FixedUserHandleClickEventArgs args)
+@code
 {
+    SfDiagramComponent diagram;
+
+    public async void Changed(FixedUserHandleClickEventArgs args)
+    {
         if ((args.Element as Node).ID == "node1" && args.FixedUserHandle.ID == "user1")
-            {
+        {
             diagram.Copy();
             diagram.Paste();
+        }
+    }
+
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
+        {
+            OffsetX = 250,
+            OffsetY = 250,
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            // A fixed user handle is created and stored in fixed user handle collection of Node.
+            FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
+            {
+                new NodeFixedUserHandle()
+                {
+                    ID = "user1",
+                    Height = 20, 
+                    Width = 20, 
+                    Visibility = true,
+                    Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, 
+                    Margin = new Margin(){ Right = 20},
+                    Offset = new Point() { X =0 , Y = 0 }, 
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" 
+                },
             }
-}
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-protected override void OnInitialized()
-{
-    nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-    {
-        OffsetX = 250,
-        OffsetY = 250,
-        ID = "node1",
-        Width = 100,
-        Height = 100,
-        Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-        // A fixed user handle is created and stored in fixed user handle collection of Node.
-        FixedUserHandles = new DiagramObjectCollection<NodeFixedUserHandle>()
-    {
-     new NodeFixedUserHandle() { ID = "user1",Height = 20, Width = 20, Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, Margin = new Margin(){ Right = 20},Offset = new Point() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  },}
-    };
-    nodes.Add(node);
-}
+        };
+        nodes.Add(node1);
+    }
 }
 ```

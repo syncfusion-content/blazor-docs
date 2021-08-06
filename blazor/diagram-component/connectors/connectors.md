@@ -52,7 +52,6 @@ The following code example illustrates how to add a connector through connector 
 You can add a connector at runtime by adding connector to the connectors collection in the Diagram component.  The following code explains how to add connectors at runtime.
 
 ```cshtml
-@page "/ConnectorDocument2"
 @using Syncfusion.Blazor.Diagram
 <input type="button" value="Add Connector" @onclick="@AddConnector">
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>

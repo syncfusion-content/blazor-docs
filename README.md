@@ -251,6 +251,7 @@ File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/96305500
 
 | Variable Name     	           | Output         | Description            					                             |  
 | ---------------------------------|:--------------:|:----------------------------------------------------------------------:|  
+| {{ site.blazorversion }}         | 13.2.29        |Syncfusion Essential Studio version                                     |  
 | {{ site.releaseversion }}        | 13.2.0.29      |Syncfusion Essential Studio version                                     |  
 | {{ site.20esreleaseversion }}    | 13.1200.0.29   |Syncfusion Essential Studio assemblies version for .NET Framework 2.0   |  
 | {{ site.35esreleaseversion }}    | 13.1350.0.29   |Syncfusion Essential Studio assemblies version for .NET Framework 3.5   |  

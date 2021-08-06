@@ -21,14 +21,17 @@ The event property of the node allows you to define the type of the event. The d
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize node collection with Node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
+{
+    // Initialize node collection with Node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
             // Position of the node
             OffsetX = 100,
@@ -42,12 +45,13 @@ The event property of the node allows you to define the type of the event. The d
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                Shape=BpmnShapes.Event,
+                Shape = BpmnShapes.Event,
                 // set the event type as End
                 Events = new BpmnSubEvent() { Event = BpmnEvents.End }
             }
-        }
-    };
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
@@ -56,17 +60,21 @@ The event property of the node allows you to define the type of the event. The d
 Event triggers are notated as icons inside the circle and they represent the specific details of the process. The Trigger property of the node allows you to set the type of trigger and by default, it is set to None. The following code example explains how to create a BPMN trigger.
 
 ```cshtml
+
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize node collection with Node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
+{
+    // Initialize node collection with Node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
             // Position of the node
             OffsetX = 100,
@@ -80,17 +88,18 @@ Event triggers are notated as icons inside the circle and they represent the spe
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                Shape=BpmnShapes.Event,
+                Shape = BpmnShapes.Event,
                 // set the event type as End
                 Events = new BpmnSubEvent()
                 {
                     // Set the event type to NonInterruptingIntermediate and set the trigger as message
                     Event = BpmnEvents.NonInterruptingIntermediate,
-                    Trigger=BpmnTriggers.Message
+                    Trigger = BpmnTriggers.Message
                 }
             }
-        }
-    };
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
