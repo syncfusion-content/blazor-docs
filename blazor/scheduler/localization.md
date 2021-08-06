@@ -87,7 +87,7 @@ namespace SchedulerLocalization
 
 * Add **.resx** file to [Resource](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0#resource-files) folder and that file contains the key value pair of locale content in the following format.
 
-```csharp
+```cshtml
 <Component_Name>_<Feature_Name>_<Locale_Key>
 ```
 

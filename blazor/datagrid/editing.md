@@ -1357,7 +1357,7 @@ The output will be as follows.
 
 **Validator** property can also be used to disable the in-built validator component used by the grid. For instance, by default, the grid uses two validator components, **DataAnnotationValidator** and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ValidationRules) property handling validator, for handling edit form validation. If you are willing to use only the **DataAnnotationValidator** component, then it could be simply achieved by using the below code.
 
-```csharp
+```cshtml
 <SfGrid TValue="OrdersDetails" DataSource="GridData"
         Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel" })">
         <GridEditSettings AllowAdding="true" AllowEditing="true" Mode="EditMode.Dialog">

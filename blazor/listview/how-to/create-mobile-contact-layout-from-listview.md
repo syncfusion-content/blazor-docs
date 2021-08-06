@@ -25,7 +25,7 @@ new ListDataModel {
 
 * Set `avatar` classes in ListView template to customize contact icon. In the following codes, medium size avatar has been set using the class name `e-avatar e-avatar-circle` from data source.
 
-```C#
+```cshtml
 ListDataModel item = context as ListDataModel;
 <div class="e-list-wrapper e-list-multi-line e-list-avatar">
     @if (item.Avatar != "")

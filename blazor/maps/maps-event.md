@@ -766,7 +766,7 @@ After panning the Maps, the [OnPanComplete](https://help.syncfusion.com/cr/blazo
 
 Before the print operation starts, the [OnPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html#Syncfusion_Blazor_Maps_MapsEvents_OnPrint) event will be triggered. To know more about the argument of this event, refer [here](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.PrintEventArgs.html).
 
-```csharp
+```cshtml
 <button @onclick="PrintMap">Print</button>
 
 @using Syncfusion.Blazor.Maps

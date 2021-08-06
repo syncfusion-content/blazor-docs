@@ -26,7 +26,7 @@ This section explains about how to connect the [SfDataManager](https://help.sync
         ....
             <link href="_content/Syncfusion.Blazor/styles/fabric.css" rel="stylesheet" />
             <!---CDN--->
-            @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/fabric.css" rel="stylesheet" />*@
+            @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css" rel="stylesheet" />*@
         </environment>
     </head>
     ```

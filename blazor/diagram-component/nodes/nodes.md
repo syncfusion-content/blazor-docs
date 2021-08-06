@@ -24,13 +24,15 @@ To create a node, define the `Node` object and add that to the nodes collection 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in the nodes collection.
         Node node = new Node()
         {
@@ -42,7 +44,6 @@ To create a node, define the `Node` object and add that to the nodes collection 
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-
         };
         // Add node
         nodes.Add(node);
@@ -60,13 +61,15 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Add Node" @onclick="@AddNode">
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes"></SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
-@code{
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -80,6 +83,7 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
         };
         nodes.Add(node);
     }
+
     public void AddNode()
     {
         Node NewNode = new Node()
@@ -133,14 +137,16 @@ The following code shows how to remove a node at runtime.
 
 <input type="button" value="Remove Node" @onclick="@RemoveNodes">
 
-<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
-@code{
+@code
+{
     //Defines diagram's connector collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -151,11 +157,11 @@ The following code shows how to remove a node at runtime.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-
         };
         // Add node
         nodes.Add(node);
     }
+
     public void RemoveNodes()
     {
         // Remove Node at runtime
@@ -183,16 +189,17 @@ The following code example explains how to change the node properties.
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Update Node" @onclick="@UpdateNodes">
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes"/>
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes">
-</SfDiagramComponent>
-
-@code{
+@code
+{
     SfDiagramComponent Diagram;
     //Defines diagram's node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             ID = "node1",
@@ -203,10 +210,10 @@ The following code example explains how to change the node properties.
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
-
         };
         nodes.Add(node);
     }
+
     public async void UpdateNodes()
     {
         Diagram.BeginUpdate();

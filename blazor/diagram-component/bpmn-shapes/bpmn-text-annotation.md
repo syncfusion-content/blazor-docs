@@ -27,37 +27,40 @@ documentation: ug
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize the node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
+{
+    // Initialize node collection with Node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        new Node()
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
-            //Position of the node
+            // Position of the node
             OffsetX = 100,
             OffsetY = 100,
-            //Size of the node
+            // Size of the node
             Width = 100,
             Height = 100,
-            //Unique Id of the node
+            // Unique Id of the node
             ID = "node1",
-            //Sets type as Bpmn and shape as DataObject
+            // Sets type as Bpmn and shape as DataObject
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
-                Shape=BpmnShapes.DataObject,
-                //Sets collection as true when Dataobject is not a Single instance
-                DataObject=new BpmnDataObject()
+                Shape = BpmnShapes.DataObject,
+                // Sets collection as true when Dataobject is not a Single instance
+                DataObject = new BpmnDataObject()
                 {
-                    Collection=true,
-                    Type=BpmnDataObjects.Input
+                    Collection = true,
+                    Type = BpmnDataObjects.Input
                 }
             },
-            //Sets the id, angle, and text for the annotation
-            Annotations=new DiagramObjectCollection<ShapeAnnotation>()
+            // Sets the id, angle, and text for the annotation
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
                 new ShapeAnnotation()
                 {
@@ -66,8 +69,9 @@ documentation: ug
                     Content="Left"
                 }
             }
-        },
-    };
+        };
+        nodes.Add(node);
+    }
 }
 ```
 

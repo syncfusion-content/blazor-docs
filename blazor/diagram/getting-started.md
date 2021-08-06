@@ -72,7 +72,7 @@ namespace BlazorApplication
 ```cshtml
 <head>
     <environment include="Development">
-       <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+       <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
    </environment>
 </head>
 ```

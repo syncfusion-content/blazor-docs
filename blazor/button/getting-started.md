@@ -29,7 +29,7 @@ To get start quickly with Button Component using Blazor, you can check on this v
 ```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
@@ -79,7 +79,7 @@ namespace BlazorApplication
 ```cshtml
 <head>
     <environment include="Development">
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
+        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js">
         </script>
     </environment>
 </head>
@@ -98,7 +98,7 @@ Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages ot
 
 Now, add the Syncfusion Blazor Button component in `razor` page in the `Pages` folder. For example the Button component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 <SfButton>Button</SfButton>
 
 ```

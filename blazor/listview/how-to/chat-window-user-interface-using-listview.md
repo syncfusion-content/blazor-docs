@@ -16,7 +16,7 @@ ListView can be customized as chat window. To achieve that, use the ListView `Te
 
 Refer the below template code snippet for Template of chat window.
 
-```c#
+```cshtml
 <div class="flex item__container">
     <div class="flex flex__1 vertical__center flex__center @(currentData.Chat == "sender" ? "flex__order__2" : "")">
         @if (currentData.Avatar != "")

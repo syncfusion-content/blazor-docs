@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Shapes in Blazor Diagram Component
+# Node Shapes in Blazor Diagram Component
 
 Diagram provides support to add different kind of nodes. They are as follows:
 
@@ -18,7 +18,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 * Flow shapes
 * SVG node
 
-## Image
+## Image node
 
 Diagram allows to add images as `Image` nodes. The shape property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the source property of shape enables you to set the image source.
 
@@ -30,26 +30,34 @@ The following code illustrates how an image node is created.
 @* Initialize Diagram *@
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
     {
-        new Node()
+        Node node = new Node()
         {
-             ID="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             Shape= new Image(){Type=Shapes.Image,Source="/diagram/images/Imagenode.png"}
-        }
-    };
+            ID = "node1",
+            //Size of the node
+            Height = 100,
+            Width = 100,
+            //Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            Shape = new Image() 
+            { 
+                Type = Shapes.Image, 
+                Source = "/diagram/images/syncfusion.png"
+            }
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
-![Image node](images/Imagenode.png)
+![Image node in Blazor Diagram](images/Imagenode.png)
 
 ### Base64 encoded image into the image node
 
@@ -59,30 +67,38 @@ The following code illustrates how add Base64 image into image node.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" Nodes="@nodes"></SfDiagramComponent>
 
-@code{
-    //Initialize node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
 {
-     //Creates a image node
-     new Node()
-     {
-         ID="node1",
-         //Size of the node
-         Height=100,
-         Width=100,
-         //Position of the node
-         OffsetX=100,
-         OffsetY=100,
-         //Sets type of the shape as image
-         Shape=new Image(){Type=Shapes.Image,Source="data:image/gif;base64,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"}
-     }
-};
+    //Initialize node collection with node
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            //Size of the node
+            Height = 100,
+            Width = 100,
+            //Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            //Sets type of the shape as image
+            Shape = new Image()
+            {
+                Type = Shapes.Image,
+                Source = "data:image/gif;base64,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"
+            },
+            Style = new ShapeStyle() { StrokeColor = "White" }
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
-![Image node](images/base64.png)
+![Image node in Blazor Diagram](images/base64.png)
 
 > Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
@@ -91,29 +107,37 @@ The following code illustrates how add Base64 image into image node.
 Stretch and align the image content anywhere but within the node boundary. The scale property of the node allows to stretch the image as you desired (either to maintain proportion or to stretch). By default, the `Scale` property of the node is set as Meet. The following code illustrates how to scale or stretch the content of the image node.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
-</SfDiagramComponent>
-@code{
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
     {
-        new Node()
+        Node node = new Node()
         {
-             ID="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             Shape=new Image(){Type=Shapes.Image,Source="/diagram/images/productmanager.png",Scale=Scale.Meet,Align=ImageAlignment.XMinYMax}
-        }
-    };
+            ID = "node1",
+            //Size of the node
+            Height = 100,
+            Width = 100,
+            //Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            Shape = new Image()
+            {
+                Type = Shapes.Image,
+                Source = "/diagram/images/productmanager.png",
+                Scale = Scale.Meet,
+                Align = ImageAlignment.XMinYMax
+            }
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
@@ -121,13 +145,13 @@ Stretch and align the image content anywhere but within the node boundary. The s
 
 |Scale Values|Align Values |Result|
 |---|---|---|
-|   Meet  |     XMinYMax  |![XminYmax](images/MeetXminYmax.png)|
-|Meet|XMinYMin|![XminYmin](images/MeetXinYmin.png)|
-|Meet|XMaxYMax|![XmaxYmax](images/Meetxmaxymax.png)|
-|None|XMinYMax|![XminYmax](images/NoneXminYmax.png)|
-|None|XMinYMin|![XminYmin](images/NoneXminYmin.png)|
-|Slice|XMinYMax|![XminYmax](images/Slicexminymax.png)|
-|Slice|XMinYMin|![XminYmin](images/Slicexminymin.png)|
+|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/MeetXminYmax.png)|
+|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/MeetXinYmin.png)|
+|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/Meetxmaxymax.png)|
+|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/NoneXminYmax.png)|
+|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/NoneXminYmin.png)|
+|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/Slicexminymax.png)|
+|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/Slicexminymin.png)|
 
 ## HTML template shape
 
@@ -144,7 +168,7 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
     <DiagramTemplates>
         <NodeTemplate>
             @{
-                  <SfCircularGauge Width="300px" Height="300px">
+                <SfCircularGauge Width="300px" Height="300px">
                     <CircularGaugeAxes>
                         <CircularGaugeAxis StartAngle="210" EndAngle="150" Minimum="0" Maximum="120" Radius="80%">
                             <CircularGaugeAxisLineStyle Width="10" Color="transparent">
@@ -194,31 +218,34 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
     </DiagramTemplates>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     //Initialize node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
     {
-         //Creates an HTML node
-         new Node()
-          {
-             ID="node1",
-             //Size of the node
-             Height=300,
-             Width=300,
-             //Position of the node
-             OffsetX=400,
-             OffsetY=100,
-             //sets the type of the shape as HTML
-             Shape=new Shape()
-             {
-                 Type=Shapes.HTML,
-             }
-          }
+        Node node = new Node()
+        {
+            ID = "node1",
+            //Size of the node
+            Width = 300,
+            Height = 300,
+            //Position of the node
+            OffsetX = 400,
+            OffsetY = 300,
+            //sets the type of the shape as HTML
+            Shape = new Shape()
+            {
+                Type = Shapes.HTML,
+            }
         };
+        nodes.Add(node);
+    }
 }
 ```
 
-![HTML node](images/Htmlnode.png)
+![HTML node in Blazor Diagram](images/Htmlnode.png)
 
 > HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
@@ -234,24 +261,28 @@ The following code example illustrates how to create a basic shape.
 @* Initialize Diagram *@
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
 {
-         //Creates a basic shape node
-         new Node()
-         {
-             ID="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //sets the type of the shape as basic
-             Shape=new BasicShape(){Type=Shapes.Basic,Shape=BasicShapes.Rectangle}
-         }
-    };
+    //Initialize node collection with node
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            //Size of the node
+            Height = 100,
+            Width = 100,
+            //Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            //sets the type of the shape as basic
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle, CornerRadius = 10 },
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
@@ -261,7 +292,7 @@ The following code example illustrates how to create a basic shape.
 
 The list of basic shapes are as follows.
 
-![BasicShapes](images/Basic.png)
+![BasicShape node in Blazor Diagram](images/Basic.png)
 
 ## Path shape
 
@@ -304,7 +335,7 @@ To create a path node, specify the shape as **Path**. The path property of node 
 }
 ```
 
-![Path](images/Pathnode.png)
+![Path shape node in Blazor Diagram](images/Pathnode.png)
 
 ## Flow Shapes
 
@@ -315,34 +346,38 @@ The `Flow` shapes are used to represent the process flow. It is used for analyzi
 
 @* Initialize Diagram *@
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
-@code{
-    //Initialize node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+
+@code
 {
-         //Creates a flow shape node
-         new Node()
-         {
-             ID="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets the type of the shape as flow
-             Shape=new FlowShape()
-             {
-                 Type=Shapes.Flow,
-                 Shape=FlowShapes.DirectData
-             }
-         }
-    };
+    //Initialize node collection with node
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            //Size of the node
+            Height = 100,
+            Width = 100,
+            //Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            //Sets the type of the shape as flow
+            Shape = new FlowShape()
+            {
+                Type = Shapes.Flow,
+                Shape = FlowShapes.DirectData
+            }
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
 The list of flow shapes are as follows.
 
-![FlowShapes](images/FlowShapes.png)
+![FlowShape node in Blazor Diagram](images/FlowShapes.png)
 
 ## SVG template shape
 
@@ -372,27 +407,30 @@ Diagram provides support to embed SVG element into a node. The shape property of
     </DiagramTemplates>
 </SfDiagramComponent>
 
-@code{
-    //Initialize node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
 {
-        //Creates a text node
-         new Node()
-         {
-             ID="node1",
-             // Size of the node
-             Height=100,
-             Width=100,
-             // Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets type of the shape as Native
-             Shape = new Shape() { Type = Shapes.Native},
-         }
-     };
+    //Initialize node collection with node
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Size of the node
+            Height = 100,
+            Width = 100,
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+            //Sets type of the shape as Native
+            Shape = new Shape() { Type = Shapes.Native },
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
-![Native](images/svgnode.png)
+![Svg node in Blazor Diagram](images/svgnode.png)
 
 > Like HTML node, the SVG node also cannot be exported to image format. Fill color of svg node can be overridden by the inline style or fill of the SVG element specified in the template.

@@ -40,7 +40,6 @@ This section briefly explains about how to include a Diagram in your Blazor WebA
 Open **~/_Imports.Blazor** file and import the **Syncfusion.Blazor.Diagram** packages.
 
 ```cshtml
-@using Syncfusion.Blazor
 @using Syncfusion.Blazor.Diagram
 ```
 
@@ -74,9 +73,7 @@ Diagram component can be rendered by using the `SfDiagramComponent` tag helper i
 The following example shows a basic Diagram component.
 
 ```cshtml
-<SfDiagramComponent Width="100%" Height="600px">
-</SfDiagramComponent>
-
+<SfDiagramComponent Width="100%" Height="600px"/>
 ```
 
 ## Adding Nodes and Connectors
@@ -85,20 +82,22 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes">
-                </SfDiagramComponent>
-@code{
 
+<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes"/>
+
+@code
+{
     SfDiagramComponent diagram;
     int connectorCount = 0;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-
     //Defines Diagram's connectors collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         InitDiagramModel();
     }
+
     private void InitDiagramModel()
     {
         CreateNode("Start", 300, 50, FlowShapes.Terminator, "Start");
@@ -137,8 +136,7 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
         CreateConnector("Condition", "End", "Yes", segment1, segment2);
         CreateConnector("Print", "Increment", "No");
         CreateConnector("Increment", "Condition", null, segment3, segment4);
-     }
-
+    }
 
     private void CreateConnector(string sourceId, string targetId, string label = default(string), OrthogonalSegment segment1 = null, OrthogonalSegment segment2 = null)
     {
@@ -147,14 +145,12 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
             ID = string.Format("connector{0}", ++connectorCount),
             SourceID = sourceId,
             TargetID = targetId,
-
         };
         if (label != default(string))
         {
             var annotation = new PathAnnotation()
             {
                 Content = label,
-
                 Style = new TextShapeStyle() { Fill = "white" }
             };
             diagramConnector.Annotations = new DiagramObjectCollection<PathAnnotation>() { annotation };
@@ -164,12 +160,11 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
             diagramConnector.Type = Segments.Orthogonal;
             diagramConnector.Segments = new DiagramObjectCollection<ConnectorSegment> { segment1, segment2 };
         }
-
         connectors.Add(diagramConnector);
     }
+
     private void CreateNode(string id, double x, double y, FlowShapes shape, string label)
     {
-
         Node diagramNode = new Node()
         {
             ID = id,
@@ -178,30 +173,26 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
             Width = 145,
             Height = 60,
             Style = new ShapeStyle { Fill = "#357BD2", StrokeColor = "White" },
-
             Shape = new FlowShape() { Type = Shapes.Flow, Shape = shape },
             Annotations = new DiagramObjectCollection<ShapeAnnotation>
-        {
-                    new ShapeAnnotation
-                    {
-                        Content = label,
-                        Style = new TextShapeStyle()
-                        {
-                          Color="White",
-
-                           Fill = "transparent"
-                        }
+            {
+                new ShapeAnnotation
+                {
+                    Content = label,
+                    Style = new TextShapeStyle()
+                    {   
+                        Color="White",
+                        Fill = "transparent"
                     }
                 }
+            }
         };
-
         nodes.Add(diagramNode);
     }
 }
-
 ```
 
-![Diagram](images/Diagram.png)
+![Flow chart in Blazor Diagram](images/Diagram.png)
 
 ## See Also
 

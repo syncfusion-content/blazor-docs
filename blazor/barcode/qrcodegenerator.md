@@ -20,7 +20,7 @@ A QR Code is a two-dimensional barcode that consists of a grid of dark and light
 
 ```
 
-![QR Code Generator](images/QRCode2.png)
+![QR Code in Blazor Barcode Component](images/blazor-barcode-with-qrcode.png)
 
 ## Customizing the Barcode color
 
@@ -33,11 +33,11 @@ A page or printed media with barcode often appears colorful in the background an
 
 ```
 
-![Customizing colot for QR Code](images/QRCode3.png)
+![Customizing QR Code Color in Blazor Barcode](images/blazor-barcode-qrcode-color-customization.png)
 
 ## Customizing the Barcode dimension
 
-The dimension of the barcode can be changed using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_Width) properties of the barcodegenerator.
+The dimension of the barcode can be changed using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfQRCodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfQRCodeGenerator_Width) properties of the barcode generator.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
@@ -59,7 +59,7 @@ In barcode generators You can customize the barcode text by using display [Text]
 
 ```
 
-![Customizing the text for QR Code](images/QRCode4.png)
+![Customizing the Text for QR Code in Blazor Barcode](images/blazor-barcode-qrcode-text-customization.png)
 
 ## Event
 
