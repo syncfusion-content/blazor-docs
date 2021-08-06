@@ -56,7 +56,7 @@ Refer to the Individual NuGet Packages section for the available NuGet packages.
 
     ```html
     <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
@@ -117,7 +117,7 @@ namespace BlazorApplication
 
 ```html
 <head>
-    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 
