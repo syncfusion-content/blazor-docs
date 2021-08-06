@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor Accumulation Chart in Server Side
+title: Getting Stared with Blazor Accumulation Chart in Server | Syncfusion
 description: Learn here all about Getting Started with Syncfusion Blazor Accumulation Chart in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: Accumulation Chart
