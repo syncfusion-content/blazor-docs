@@ -11,11 +11,11 @@ documentation: ug
 
 # Getting Started with Blazor Accumulation Chart Component
 
-This section briefly explains about how to include a `Accumulation Chart` in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a [Accumulation Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
+1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the [NuGet Package Manager](https://blazor.syncfusion.com/documentation/nuget-packages/).
 
 2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
@@ -154,7 +154,7 @@ To initialize the accumulation chart component add the below code to your **Ind
 
 On successful compilation of your application, the Syncfusion Blazor Accumulation Chart component will render in the web browser.
 
-![pie chart](images/getting-started/pie-chart.png)
+![Blazor Pie Chart](images/getting-started/blazor-pie-chart.png)
 
 ## Add Title
 
@@ -191,7 +191,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 }
 ```
 
-![Accumulation Chart Title](images/getting-started/title.png)
+![Adding Title in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-with-title.png)
 
 ## Add Data Label
 
@@ -230,7 +230,7 @@ You can add data labels to improve the readability of the accumulation chart. Th
 }
 ```
 
-![Data Label](images/getting-started/data-label.png)
+![Adding Data Label in Blazor Accumulation Chart](images/getting-started/blazor-accumulation-chart-data-label.png)
 
 ## Enable Tooltip
 
@@ -269,7 +269,7 @@ When space constraints prevent you from displaying information using data labels
 }
 ```
 
-![Tooltip](images/getting-started/tooltip.png)
+![Blazor Accumulation Chart displays Tooltip](images/getting-started/blazor-accumulation-chart-tooltip.png)
 
 ## Enable Legend
 
@@ -310,7 +310,7 @@ You can use legend for the accumulation chart by setting the [Visible](https://h
 }
 ```
 
-![Legend](images/getting-started/legend.png)
+![Blazor Accumulation Chart with Legend](images/getting-started/blazor-accumulation-chart-legend.png)
 
 > You can find the fully working sample for accumulation chart [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocApp2124811315.zip).
 

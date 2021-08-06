@@ -47,7 +47,7 @@ Data points that contain **NaN** or **null** value are considered as empty point
 
 ```
 
-![Empty Points](images/empty/empty.png)
+![Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-with-empty-point.png)
 
 ## Customization
 
@@ -92,7 +92,7 @@ The [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ```
 
-![Customized Empty Points](images/empty/custom.png)
+![Customizing Empty Points in Blazor Accumulation Chart](images/empty/blazor-accumulation-chart-empty-point-customization.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
