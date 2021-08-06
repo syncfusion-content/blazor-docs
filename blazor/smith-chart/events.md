@@ -13,16 +13,16 @@ This section describes about the Smith Chart component's events that will be tri
 
 The Smith Chart component supports the following events.
 
-* [Loaded](events/#loaded)
-* [OnPrintComplete](events/#onprintcomplete)
-* [OnExportComplete](events/#onexportcomplete)
-* [AxisLabelRendering](events/#axislabelrendering)
-* [LegendRendering](events/#legendrendering)
-* [SeriesRender](events/#seriesrender)
-* [TitleRendering](events/#titlerendering)
-* [SubtitleRendering](events/#subtitlerendering)
-* [TextRendering](events/#textrendering)
-* [SizeChanged](events/#sizechanged)
+* [Loaded](#loaded)
+* [OnPrintComplete](#onprintcomplete)
+* [OnExportComplete](#onexportcomplete)
+* [AxisLabelRendering](#axislabelrendering)
+* [LegendRendering](#legendrendering)
+* [SeriesRender](#seriesrender)
+* [TitleRendering](#titlerendering)
+* [SubtitleRendering](#subtitlerendering)
+* [TextRendering](#textrendering)
+* [SizeChanged](#sizechanged)
 
 ## Loaded
 
