@@ -38,7 +38,7 @@ Legend is used to provide a valuable information for interpreting what the Bulle
 }
 ```
 
-![Legend](images/legend.png)
+![Legend in Blazor Bullet Chart](images/blazor-bullet-chart-legend.png)
 
 ## Legend items from color mapping
 
@@ -67,7 +67,7 @@ Legend item to be customized by the following properties.
 
 > Refer to the [code block](#legend) to know the property value of the **BulletChartData**.
 
-![Legend items with color mapping](images/legend-color-mapping.png)
+![Customizing Legend Items with Color Mapping in Blazor Bullet Chart](images/blazor-bullet-chart-legend-color-mapping.png)
 
 ## Legend size
 
@@ -88,7 +88,7 @@ Customize the legend size by modifying the [Height](https://help.syncfusion.com/
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend with custom legend size](images/legend-size.png)
+![Customizing Legend Size in Blazor Bullet Chart](images/blazor-bullet-chart-legend-size.png)
 
 ## Legend with paging support
 
@@ -111,7 +111,7 @@ Bullet Chart supports the legend paging, if the legend items cannot be placed wi
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend with custom legend size](images/legend-paging.png)
+![Legend with Paging in Blazor Bullet Chart](images/blazor-bullet-chart-legend-paging.png)
 
 ## Position and Alignment
 
@@ -141,7 +141,7 @@ The following code example demonstrates the top legend position.
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend on top position](images/legend-top.png)
+![Blazor Bullet Chart displays Legend on Top Position](images/blazor-bullet-chart-legend-on-top-position.png)
 
 [Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Auto) position will be rendered with the responsive legend height to the [Bottom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Bottom) of the component and the [Custom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.LegendPosition.html#Syncfusion_Blazor_Charts_LegendPosition_Custom) position renders based on x and y coordinates by specified to [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendLocation.html#Syncfusion_Blazor_Charts_BulletChartLegendLocation_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendLocation.html#Syncfusion_Blazor_Charts_BulletChartLegendLocation_Y) properties in the [BulletChartLegendLocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendLocation.html).
 
@@ -165,7 +165,7 @@ The following code example demonstrates the [Custom](https://help.syncfusion.com
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend on custom position](images/legend-custom-position.png)
+![Blazor Bullet Chart displays Legend on Custom position](images/blazor-bullet-chart-legend-on-custom-position.png)
 
 The legend alignment is used to align the legend items to the specific location. The following options are available to customize using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartLegendSettings.html#Syncfusion_Blazor_Charts_BulletChartLegendSettings_Alignment)  property:
 
@@ -190,7 +190,7 @@ The following code example demonstrates legend item alignment.
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend item with alignment](images/legend-align.png)
+![Changing Legend Item Alignment in Blazor Bullet Chart](images/blazor-bullet-chart-legend-alignment.png)
 
 ## Customization
 
@@ -220,4 +220,4 @@ Legend can be customized by the following properties:
 
 > Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
 
-![Legend with customization](images/custom-legend.png)
+![Customizing Legend Items in Blazor Bullet Chart](images/blazor-bullet-chart-legend-customization.png)
