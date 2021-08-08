@@ -7,13 +7,13 @@ control: Maps
 documentation: ug
 ---
 
-# Annotations
+# Annotations in Blazor Maps component
 
-Annotations are used to mark a specific area of interest in the map area with texts, shapes, or images. You can add any number of annotations to the maps.
+Annotations are used to mark the specific area of interest in the Maps with texts, shapes, or images. Any number of annotations can be added to the Maps component.
 
 ## Annotation
 
-By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) object, you can either specify the ID of an element or specify the code to create a new element that needs to be displayed in the gauge area.
+By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html), text content or an HTML element can be specified to render a new HTML element in Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -23,7 +23,7 @@ By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfus
         <MapsAnnotation X="0%" Y="50%">
             <ContentTemplate>
                 <div>
-                    <img src='src/maps/images/flight.png'>
+                    <img style="height: 30px; width: 40px" src='src/maps/images/wheel.png'>
                 </div>
             </ContentTemplate>
         </MapsAnnotation>
@@ -36,11 +36,13 @@ By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfus
 </SfMaps>
 ```
 
+![Maps with Annotation](./images/Annotation/Annotation.PNG)
+
 ## Annotation customization
 
-### Changing the z-order
+### Changing the z-index
 
-You can change the z-order of an annotation element using the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_ZIndex) property.
+The stack order of an annotation element can be changed using the [ZIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_ZIndex) property in the [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -63,9 +65,11 @@ You can change the z-order of an annotation element using the [ZIndex](https://
 </SfMaps>
 ```
 
-### Positioning of annotation
+![Annotation ZIndex](./images/Annotation/Annotation-zIndex.PNG)
 
-You can place an annotation anywhere in gauge area by specifying pixel values to the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_Y) properties.
+### Positioning an annotation
+
+Annotations can be placed anywhere in the Maps by specifying percentage values to the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_Y) properties in the [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -88,16 +92,18 @@ You can place an annotation anywhere in gauge area by specifying pixel values to
 </SfMaps>
 ```
 
-### Alignment of annotation
+![Annotation position](./images/Annotation/Annotation-position.PNG)
 
-You can align annotations using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_VerticalAlignment) properties.
+### Alignment of an annotation
+
+Annotations can be aligned using the [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_HorizontalAlignment) and [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html#Syncfusion_Blazor_Maps_MapsAnnotation_VerticalAlignment)  properties in the [`MapsAnnotation`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) class. The possible values can be "[**Center**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnnotationAlignment.html#Syncfusion_Blazor_Maps_AnnotationAlignment_Center)", "[**Far**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnnotationAlignment.html#Syncfusion_Blazor_Maps_AnnotationAlignment_Far)", "[**Near**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnnotationAlignment.html#Syncfusion_Blazor_Maps_AnnotationAlignment_Near)" and "[**None**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.AnnotationAlignment.html#Syncfusion_Blazor_Maps_AnnotationAlignment_None)".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsAnnotations>
-        <MapsAnnotation X="20%" Y="50%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
+        <MapsAnnotation X="20%" Y="10%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
             <ContentTemplate>
                 <div>
                     <div id="first"><h1>Maps</h1></div>
@@ -112,3 +118,39 @@ You can align annotations using the [HorizontalAlignment](https://help.syncfusio
     </MapsLayers>
 </SfMaps>
 ```
+
+![Annotation alignment](./images/Annotation/Annotation-alignment.PNG)
+
+## Multiple Annotation
+
+Multiple annotations can be added to the Maps by adding multiple [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) classes in the [MapsAnnotations](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotations.html) class and customization for the annotations can be done with the [MapsAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsAnnotation.html) class.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsAnnotations>
+        <MapsAnnotation X="0%" Y="50%">
+            <ContentTemplate>
+                <div>
+                    <img style="height: 30px; width: 40px" src='src/maps/images/wheel.png'>
+                </div>
+            </ContentTemplate>
+        </MapsAnnotation>
+        <MapsAnnotation X="20%" Y="10%" ZIndex= "-1" VerticalAlignment="AnnotationAlignment.Center" HorizontalAlignment="AnnotationAlignment.Center">
+            <ContentTemplate>
+                <div>
+                    <div id="first"><h1>Maps</h1></div>
+                </div>
+            </ContentTemplate>
+        </MapsAnnotation>
+    </MapsAnnotations>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   ShapePropertyPath='new string[] {"name"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Annotation alignment](./images/Annotation/Annotation-multiple.PNG)

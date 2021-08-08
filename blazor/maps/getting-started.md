@@ -18,27 +18,27 @@ This section briefly explains how to include a Maps component in your Blazor ser
 2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
-<head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-    <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
-</head>
+    <head>
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+        <!---CDN--->
+        @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    </head>
 ```
 
 > For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
 ```
 
 ## Adding component package to the application
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Maps** namespace.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Maps
 ```
 
@@ -71,10 +71,11 @@ namespace BlazorApplication
 
 The Syncfusion Maps component can be initialized in any razor page inside the **~/Pages** folder. For example, the Maps component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
-```cshtml
+```csharp
 @page "/"
 
 <SfMaps>
+
 </SfMaps>
 ```
 
@@ -297,8 +298,6 @@ The tooltip can be used when you cannot display information using the data label
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
 ![Map with tooltip](./images/tooltip.png)
-
-> You can refer to our [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Maps example](https://blazor.syncfusion.com/demos/maps/default-functionalities?theme=bootstrap4) to knows how to render and configure the maps.
 
 ## See also
 

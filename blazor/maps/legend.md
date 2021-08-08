@@ -9,36 +9,32 @@ documentation: ug
 
 # Legend in Blazor Maps Component
 
-A legend is a key used on a map that contains swatches of symbols with descriptions. Legends provide valuable information for interpreting what the map displays, and they can be represented in various colors, shapes, or other identifiers based on the data. It gives a breakdown of what each symbol represents throughout the maps.
+A Legend is a visual representation of the symbols used on the map. It can be represented in various colors, shapes or other identifiers based on the data and provides valuable information for interpreting what the Maps are displaying. It explains what each symbol in the Maps represents. Legends are enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class to "**true**".
 
-<b>Visibility</b>
+## Modes of legend
 
-The legends can be made visible by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to true.
+Legend had two types of mode.
+1. [**Default**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendMode.html#Syncfusion_Blazor_Maps_LegendMode_Default) mode
+2. [**Interactive**](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.LegendMode.html#Syncfusion_Blazor_Maps_LegendMode_Interactive) mode
 
-## Legend mode
+### Default mode
 
-The Maps component contains the following two types of legend modes: The [Default](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendMode.html) mode and the [Interactive](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendMode.html) mode.
+Default mode legends having symbols with legend labels, used to identify the shape or bubble or marker color. To enable this option by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Mode) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class as "**Default**".
 
-<b>Default mode</b>
+### Interactive mode
 
-The default mode legends have symbols with legend labels. They are used to identify the shapes, bubbles, or marker color.
-
-<b>Interactive mode</b>
-
-The legends can be made interactive with an arrow mark that indicates the exact range color in legend when the mouse hovers over a shape. You can enable this option by setting the value of [Mode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendMode.html) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) to “Interactive”. The default value of the [Mode](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendMode.html) property is “Default”.
+The legends can be made interactive with an arrow mark indicating the exact range color in the legend when the mouse hovers over the corresponding shapes. To enable this type of mode by setting the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Mode) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class as "**Interactive**". The [InvertedPointer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_InvertedPointer) property is used to enable or disable the visibility of the inverted pointer in interactive legend in Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     @*  To set legend mode as interactive  *@
-    <MapsLegendSettings Visible="true" Mode="LegendMode.Interactive">
+    <MapsLegendSettings Visible="true" Mode="LegendMode.Interactive" InvertedPointer="true">
     </MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapePropertyPath='new string[] {"name"}'
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="UNCouncilCountry"
+                   DataSource="SecurityCouncilDetails" ShapePropertyPath='new string[] {"name"}' ShapeDataPath="Name">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -71,29 +67,27 @@ The legends can be made interactive with an arrow mark that indicates the exact 
 
 ![Maps with interactive legend](./images/Legend/interactive-legend.png)
 
-## Positioning the legends
+## Positioning of the legend
 
-The legends can be positioned in the following two ways:
+The legend can be positioned in the following two ways:
 
 * Absolute position
 * Dock position
 
 <b>Absolute position</b>
 
-Based on the margin values of x and y-axes, the maps legends can be positioned using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Location) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Location) properties available in the [Location](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Location) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html). For positioning the legends based on margins corresponding to map, the value of [Position](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendPosition.html) is set to ‘Float’.
+The legend of the Maps can be positioned using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Y) properties in the [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class. For positioning the legend based on co-ordinates corresponding to a Maps, the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property is set as "**Float**".
 
 <b>Dock position</b>
 
-You can set the position for legend using the [Position](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendPosition.html) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
-
-The map legends can be positioned in following locations within the container:
+Legends are positioned in the following locations within the container. The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Position) property in [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class is used to set these options in Maps.
 
 * Top
 * Left
 * Bottom
 * Right
 
-The above four positions can be aligned with combination of 'Near', 'Center', and 'Far' using [Alignment](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.Alignment.html) in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html). So, the legends can be aligned to 12 positions.
+The above four positions can be aligned with combination of "**Near**", "**Center**", and "**Far**" using [Alignment](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.Alignment.html) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class. So, the legend can be aligned to 12 positions.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -103,10 +97,8 @@ The above four positions can be aligned with combination of 'Near', 'Center', an
     <MapsLegendSettings Visible="true" Position="LegendPosition.Top" Alignment="Alignment.Near">
     </MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="SecurityCouncilDetails"
-                   ShapePropertyPath='new string[] {"name"}'
-                   ShapeDataPath="Name" TValue="UNCouncilCountry">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="SecurityCouncilDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -122,25 +114,11 @@ The above four positions can be aligned with combination of 'Near', 'Center', an
 
 ![Positioning Maps legend](./images/Legend/legend-position.png)
 
-## Customization
+## Legend for shapes
 
-### Appearance
+Legend for shapes can be generated from color mapping types such as equal color mapping, range color mapping and desaturation color mapping.
 
-<b>Legend size</b>
-
-The legend size can be modified using the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Height) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Width) properties in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
-
-<b>Legend opacity</b>
-
-To specify the transparency for legend shapes, set the [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Opacity) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
-
-<b>Legend for shapes</b>
-
-The layer shape type legends can be generated for each color mappings in shape settings.
-
-To load United Nations Council related data source, bind the `memberShipDetails` to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) of [MapsLayer](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html), set the value of [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) to 'name', and then set the value of [shapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) to 'Country'.
-
-To enable equal color mapping, refer to the [MapsShapeSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) code snippet. Set [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) to true in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
+The below code snippet demonstrate the equal color mapping legends for the shapes. To bind the "**MembershipDetails**" data to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class. Set the value of [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) to "**name**" and [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) to "**Country**". To enable equal color mapping, set the [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) in [MapsShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html) class. Finally, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) as "**true**". The [Label](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Label) property in [MapsColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Label) class is used to set the text name for legend in Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -149,10 +127,8 @@ To enable equal color mapping, refer to the [MapsShapeSettings](https://help.syn
     <MapsLegendSettings Visible="true">
     </MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="MembershipDetails"
-                   ShapeDataPath="Country"
-                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
+                   DataSource="MembershipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings ColorValuePath="Membership" >
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -183,29 +159,52 @@ To enable equal color mapping, refer to the [MapsShapeSettings](https://help.syn
 
 ![Maps with legend](./images/Legend/Legend.png)
 
-<b>Custom shape for legend</b>
+### Legend shape
 
-To get the legend shape value for [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html), use the [Shape](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendShape.html) property. You can customize the shape using the [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShapeWidth) and [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShapeHeight) properties.
+Maps supports the following types of legend shapes. The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Shape) property in the [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class can be used to change the type of legend shapes.
+
+* Circle
+* Rectangle
+* Triangle
+* Diamond
+* Cross
+* Star
+* HorizontalLine
+* VerticalLine
+* Pentagon
+* InvertedTriangle
+
+The shape of legends can be customized using the [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShapeHeight), [ShapeWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShapeWidth), [ShapePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShapePadding) properties and [MapsLegendShapeBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendShapeBorder.html) class.
+
+### Customization
+
+The following properties and classes are available in legend to customize the legend and legend text in Maps.
+
+* [Background](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Background) - To customize the background color of the Legend.
+* [MapsLegendBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendBorder.html) - To customize the color and width of the border for the Legend.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Fill) - To apply the color for the Legend in Maps.
+* [LabelDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_LabelDisplayMode) - To customize the display mode for the Legend text in Maps.
+* [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_LabelPosition) - To customize the position of the Legend text in Maps.
+* [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Orientation) - To customize the orientation of the Legend in Maps.
+* [MapsLegendTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendTextStyle.html) - To customize the text style for Legend in Maps.
+* [MapsLegendTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendTitle.html) - To apply the title for the Legend in Maps.
+* [MapsLegendTitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendTitleStyle.html) - To customize the style of the title for the Legend in Maps.
+* [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Height) - To customize the height of the Legend in Maps.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Width) - To customize the width of the Legend in Maps.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Opacity) - To apply the opacity to the Legend in Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     @*  To customize the legend  *@
-    <MapsLegendSettings Visible="true"
-                        Shape="MarkerType.Star"
-                        ShapeHeight="30"
-                        ShapeWidth="30"
-                        ShapePadding="10">
-        <MapsLegendShapeBorder Color="blue"
-                               Width="0.5">
+    <MapsLegendSettings Visible="true" Shape="Syncfusion.Blazor.Maps.LegendShape.Star" ShapeHeight="30" ShapeWidth="30" ShapePadding="10">
+        <MapsLegendShapeBorder Color="blue" Width="0.5">
         </MapsLegendShapeBorder>
     </MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="MemberShipDetails"
-                   ShapeDataPath="Country"
-                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
+                   DataSource="MemberShipDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncilCountry">
             <MapsShapeSettings ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -217,13 +216,13 @@ To get the legend shape value for [MapsLegendSettings](https://help.syncfusion.c
 </SfMaps>
 
 @code{
-
     public class UNCouncil
     {
         public string Country { get; set; }
         public string Membership { get; set; }
     }
-    private List<UNCouncil> MemberShipDetails = new List<UNCouncil> {
+    private List<UNCouncil> MemberShipDetails = new List<UNCouncil>
+    {
         new UNCouncil { Country= "China", Membership= "Permanent" },
         new UNCouncil { Country= "France",Membership= "Permanent" },
         new UNCouncil { Country= "Russia",Membership= "Permanent" },
@@ -238,11 +237,9 @@ To get the legend shape value for [MapsLegendSettings](https://help.syncfusion.c
 
 ### Legend for items excluded from color mapping
 
-Based on the ranges in data source, get the excluded ranges from color mapping, and show the legend with excluded range values bound to the specific legend.
+The legend can be enabled for items excluded from the color mapping using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Color) property in [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) class.
 
-The following code example shows legends for the items excluded from color mapping.
-
-Bind the `populationDetails` value to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property, and specify the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath) as 'Density' to map the range values for shapes. Refer to the following the code example for more details.
+The following example shows how to enable legend for items excluded from the color mapping. In the following example, color mapping is added for the ranges from "**0**" to "**200**". If there are any records in the data source that are outside of this range, the color mapping will not be applied. To apply the color for these excluded items, set the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_Color) property alone in the [MapsShapeColorMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) class. To enable legend for these items, set the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class to "**true**".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -250,10 +247,8 @@ Bind the `populationDetails` value to the [DataSource](https://help.syncfusion.c
 <SfMaps>
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="populationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="populationDetails" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Density">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping StartRange="0.0001" EndRange="100" Color='new string[] {"yellow"}' />
@@ -273,30 +268,22 @@ Bind the `populationDetails` value to the [DataSource](https://help.syncfusion.c
         public double Density { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
-       new PopulationDetail
-       {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33
-       },
-       new PopulationDetail
-       {
-           Name = "Russia",
-           Population = 142905208,
-           Density = 8.3
-       },
-       new PopulationDetail
+        new PopulationDetail
         {
-           Name="India",
-           Population=1198003000,
-           Density=364
+            Name ="United States", Population = 325020000, Density = 33
         },
-       new PopulationDetail
-       {
-           Name="China",
-           Population=1389750000,
-           Density=144
-       }
+        new PopulationDetail
+        {
+            Name = "Russia", Population = 142905208, Density = 8.3
+        },
+        new PopulationDetail
+        {
+            Name="India", Population=1198003000, Density=364
+        },
+        new PopulationDetail
+        {
+            Name="China", Population=1389750000, Density=144
+        }
     };
 }
 ```
@@ -305,7 +292,7 @@ Bind the `populationDetails` value to the [DataSource](https://help.syncfusion.c
 
 ### Hiding desired legend items
 
-To enable or disable the desired legend for each color mapping, set the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html#Syncfusion_Blazor_Maps_MapsShapeColorMapping_ShowLegend) property to `true` in [MapsShapeColorMapping](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html).
+Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) property in the [MapsShapeColorMapping](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsShapeColorMapping.html) class to show or hide the desired legend items in Maps. If the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsColorMapping.html#Syncfusion_Blazor_Maps_MapsColorMapping_ShowLegend) property is set to "**false**", the legend item will be hidden. otherwise, it will be visible.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -313,23 +300,14 @@ To enable or disable the desired legend for each color mapping, set the [ShowLeg
 <SfMaps>
     <MapsLegendSettings Visible="true"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="populationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="populationDetails" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
             <MapsShapeSettings ColorValuePath="Density">
                 <MapsShapeColorMappings>
-                    <MapsShapeColorMapping StartRange="0.0001"
-                                      EndRange="100"
-                                      Color='new string[] {"yellow"}'
-                                      ShowLegend="true" />
+                    <MapsShapeColorMapping StartRange="0.0001" EndRange="100" Color='new string[] {"yellow"}' ShowLegend="true" />
                     @*  hide legend for this range  *@
-                    <MapsShapeColorMapping StartRange="101"
-                                      EndRange="200"
-                                      Color='new string[] {"orange"}'
-                                      ShowLegend="false" />
-                    <MapsShapeColorMapping Color='new string[] {"blue"}'
-                                      ShowLegend="true" />
+                    <MapsShapeColorMapping StartRange="101" EndRange="200" Color='new string[] {"orange"}' ShowLegend="false" />
+                    <MapsShapeColorMapping Color='new string[] {"blue"}' ShowLegend="true" />
                 </MapsShapeColorMappings>
             </MapsShapeSettings>
         </MapsLayer>
@@ -341,11 +319,9 @@ To enable or disable the desired legend for each color mapping, set the [ShowLeg
 
 ![Maps with specific legend hide option](./images/Legend/hidelegendDS.png)
 
-### Hiding desired items based on data source value
+### Hide legend items based on data source value
 
-To enable or disable the legend visibility for each item, bind the field name in data source to the [LegendPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShowLegendPath) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
-
-The following code example demonstrates how to hide the legend items based data source value.
+Depending on the boolean values provided in the data source, the legend items will be hidden or visible. Bind the field name that contains the visibility state in the data source to the [ShowLegendPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ShowLegendPath) property of the [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class to achieve this.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -354,12 +330,9 @@ The following code example demonstrates how to hide the legend items based data 
     @*  To hide legend based in data source fields  *@
     <MapsLegendSettings Visible="true" ShowLegendPath="LegendVisibility"/>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="populationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
-            <MapsShapeSettings ColorValuePath="Color">
-            </MapsShapeSettings>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="populationDetails" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+            <MapsShapeSettings ColorValuePath="Color"> </MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -375,38 +348,22 @@ The following code example demonstrates how to hide the legend items based data 
 
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
-       new PopulationDetail
-       {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33,
-           LegendVisibility = true,
-           Color = "green"
-       },
-       new PopulationDetail
-       {
-           Name = "Russia",
-           Population = 142905208,
-           Density = 8.3,
-           LegendVisibility = false,
-           Color = "red"
-       },
-       new PopulationDetail
+        new PopulationDetail
         {
-           Name="India",
-           Population=1198003000,
-           Density=364,
-           LegendVisibility = true,
-           Color = "blue"
+            Name ="United States", Population = 325020000, Density = 33, LegendVisibility = true, Color = "green"
         },
-       new PopulationDetail
-       {
-           Name="China",
-           Population=1389750000,
-           Density=144,
-           LegendVisibility = false,
-           Color = "orange"
-       }
+        new PopulationDetail
+        {
+            Name = "Russia", Population = 142905208, Density = 8.3, LegendVisibility = false, Color = "red"
+        },
+        new PopulationDetail
+        {
+            Name="India", Population=1198003000, Density=364, LegendVisibility = true, Color = "blue"
+        },
+        new PopulationDetail
+        {
+            Name="China", Population=1389750000, Density=144, LegendVisibility = false, Color = "orange"
+        }
     };
 }
 ```
@@ -415,7 +372,7 @@ The following code example demonstrates how to hide the legend items based data 
 
 ### Binding legend item text from data source
 
-To show the legend text based on binding, the field name in the data source should be set to the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ValuePath) property in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
+To show the legend text based on values provided in the data source, use the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_ValuePath) property in the [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -423,12 +380,9 @@ To show the legend text based on binding, the field name in the data source shou
 <SfMaps>
     <MapsLegendSettings Visible="true" ValuePath="Color"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
-            <MapsShapeSettings ColorValuePath="Color">
-            </MapsShapeSettings>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="PopulationDetails" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+            <MapsShapeSettings ColorValuePath="Color"> </MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -442,34 +396,22 @@ To show the legend text based on binding, the field name in the data source shou
         public string Color { get; set; }
     };
     private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
-       new PopulationDetail
-       {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33,
-           Color="yellow"
-       },
-       new PopulationDetail
-       {
-           Name = "Russia",
-           Population = 142905208,
-           Density = 8.3,
-           Color="red"
-       },
-       new PopulationDetail
+        new PopulationDetail
         {
-           Name="India",
-           Population=1198003000,
-           Density=364,
-           Color="blue"
+            Name ="United States", Population = 325020000, Density = 33, Color="yellow"
         },
-       new PopulationDetail
-       {
-           Name="China",
-           Population=1389750000,
-           Density=144,
-           Color="orange"
-       }
+        new PopulationDetail
+        {
+            Name = "Russia", Population = 142905208, Density = 8.3, Color="red"
+        },
+        new PopulationDetail
+        {
+            Name="India", Population=1198003000, Density=364, Color="blue"
+        },
+        new PopulationDetail
+        {
+            Name="China", Population=1389750000, Density=144, Color="orange"
+        }
     };
 }
 ```
@@ -478,7 +420,7 @@ To show the legend text based on binding, the field name in the data source shou
 
 ### Hiding duplicate legend items
 
-To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_RemoveDuplicateLegend) property to `true` in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
+To hide the duplicate legend items in Maps, set the [RemoveDuplicateLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_RemoveDuplicateLegend) property to "**true**" in the [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -486,12 +428,9 @@ To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend]
 <SfMaps>
     <MapsLegendSettings Visible="true" RemoveDuplicateLegend="true"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
-                   ShapeDataPath="Name" TValue="PopulationDetail"
-                   ShapePropertyPath='new string[] {"name"}'>
-            <MapsShapeSettings ColorValuePath="Color">
-            </MapsShapeSettings>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="populationDetails" TValue="PopulationDetail" ShapePropertyPath='new string[] {"name"}'>
+            <MapsShapeSettings ColorValuePath="Color"> </MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -505,41 +444,22 @@ To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend]
         public string Color { get; set; }
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
-       new PopulationDetail
-       {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33,
-           Color="yellow"
-       },
-       new PopulationDetail
-       {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33,
-           Color="yellow"
-       },
-       new PopulationDetail
-       {
-           Name = "Russia",
-           Population = 142905208,
-           Density = 8.3,
-           Color="red"
-       },
-       new PopulationDetail
+        new PopulationDetail
         {
-           Name="India",
-           Population=1198003000,
-           Density=364,
-           Color="blue"
+            Name = "United States", Population = 325020000, Density = 33, Color = "yellow"
         },
-       new PopulationDetail
-       {
-           Name="China",
-           Population=1389750000,
-           Density=144,
-           Color="orange"
-       }
+        new PopulationDetail
+        {
+            Name = "United States", Population = 325020000, Density = 33, Color = "yellow"
+        }
+        new PopulationDetail
+        {
+            Name = "India", Population = 1198003000, Density = 364, Color = "blue"
+        },
+        new PopulationDetail
+        {
+            Name = "China", Population = 1389750000, Density = 144, Color = "orange"
+        }
     };
 }
 ```
@@ -548,16 +468,16 @@ To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend]
 
 ### Toggle option in legend
 
-The toggle option has been provided for legend. So, if you toggle a legend, the given color will be changed to the corresponding maps shape item. You can enable the toggle options using the `ToggleLegendSettings` property.
+The toggle option has been provided for legend. If the legend can be toggled, the given color will be changed to the corresponding map shape item. To enable the toggle options in Legend, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html#Syncfusion_Blazor_Maps_MapsToggleLegendSettings_Enable) property of the [MapsToggleLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html) class to "**true**".
 
-The following options are available to customize the shape of the map:
+The following properties and class are available to customize the toggle option in legend.
 
-* `ApplyShapeSettings` – Applies the fill property value in shapeSettings to a shape of the maps if it is true and a legend item is clicked.
-* `Fill`- Specifies the color to the shape of the maps.
-* `Opacity` – Specifies the transparency of the legend.
-* `Border` – Specifies the border color and width.
+* [ApplyShapeSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html#Syncfusion_Blazor_Maps_MapsToggleLegendSettings_ApplyShapeSettings) – To apply the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_Fill) property value of the shape of the Maps when toggling the legend items.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html#Syncfusion_Blazor_Maps_MapsToggleLegendSettings_Fill) - To apply the color to the shape of the Maps for which legend item is toggled.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendSettings.html#Syncfusion_Blazor_Maps_MapsToggleLegendSettings_Opacity) – To customize the transparency for the shapes for which legend item is toggled.
+* [MapsToggleLegendBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsToggleLegendBorder.html) – To customize the color and width of the border of the shapes in Maps.
 
-The following code example demonstrates how to add the toggle option to legend.
+The following example demonstrates how to add the toggle option to legend.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -569,12 +489,9 @@ The following code example demonstrates how to add the toggle option to legend.
     <MapsLegendBorder Width="2" Color="green"></MapsLegendBorder></MapsToggleLegendSettings>
     </MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
-                   ShapeDataPath="Name" TValue="PopulationDetail"
-                   ShapePropertyPath='new string[] {"name"}'>
-            <MapsShapeSettings ColorValuePath="Color">
-            </MapsShapeSettings>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="populationDetails" TValue="PopulationDetail" ShapePropertyPath='new string[] {"name"}'>
+            <MapsShapeSettings ColorValuePath="Color"> </MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
@@ -587,49 +504,113 @@ The following code example demonstrates how to add the toggle option to legend.
         public double Density;
         public bool LegendVisibility;
         public string Color;
-
     };
     private List<PopulationDetail> populationDetails = new List<PopulationDetail> {
-       new PopulationDetail
-       {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33,
-           LegendVisibility = true,
-           Color = "green"
-       },
-       new PopulationDetail
-       {
-           Name = "Russia",
-           Population = 142905208,
-           Density = 8.3,
-           LegendVisibility = false,
-           Color = "red"
-       },
-       new PopulationDetail
+        new PopulationDetail
         {
-           Name="India",
-           Population=1198003000,
-           Density=364,
-           LegendVisibility = true,
-           Color = "blue"
+            Name ="United States", Population = 325020000, Density = 33, LegendVisibility = true, Color = "green"
         },
-       new PopulationDetail
-       {
-           Name="China",
-           Population=1389750000,
-           Density=144,
-           LegendVisibility = false,
-           Color = "orange"
-       }
+        new PopulationDetail
+        {
+            Name = "Russia", Population = 142905208, Density = 8.3, LegendVisibility = false, Color = "red"
+        },
+        new PopulationDetail
+        {
+            Name="India", Population=1198003000, Density=364, LegendVisibility = true, Color = "blue"
+        },
+        new PopulationDetail
+        {
+            Name="China", Population=1389750000, Density=144, LegendVisibility = false, Color = "orange"
+        }
     };
 }
 ```
 
 ![Hide desired legends in maps using data source](./images/Legend/maps-legend-toggle.gif)
 
-## See also
+## Enable legend for bubbles
 
-* [Enabling legend for markers](markers/#enabling-legend-for-markers)
-* [Enabling legend for Bubble](bubble/#enabling-legend-for-bubble)
-* [Available color mapping options](color-mapping)
+To enable the legend for the bubble by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class as "**true**" and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Type) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class as "**Bubbles**". Refer to the below code snippet to enable the legend for bubbles with each bubble different colors rendering.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    @* To enable legend for bubbles *@
+    <MapsLegendSettings Visible="true" Type="LegendType.Bubbles"></MapsLegendSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   DataSource="PopulationDetails" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+            <MapsBubbleSettings>
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color"
+                            DataSource="PopulationDetails" TValue="PopulationDetail">
+                </MapsBubble>
+            </MapsBubbleSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public class PopulationDetail
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public double Density { get; set; }
+        public string Color { get; set; }
+    };
+    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+        new PopulationDetail
+        { 
+            Name ="United States", Population = 325020000, Density = 33, Color="yellow"
+        },
+        new PopulationDetail
+        {
+            Name = "Russia", Population = 142905208, Density = 8.3, Color="red"
+        },
+        new PopulationDetail
+        {
+            Name="India", Population=1198003000, Density=364, Color="blue"
+        }
+    };
+}
+```
+
+![Maps with bubble and legend](./images/Bubble/bubblelegend.png)
+
+## Enable legend for markers
+
+To enable legend for marker by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Visible) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class as "**true**" and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html#Syncfusion_Blazor_Maps_MapsLegendSettings_Type) property of [MapsLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html) class as "**Markers**". The [LegendText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html#Syncfusion_Blazor_Maps_MapsMarker_1_LegendText) property in the [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class can be used to show the legend text based on values provided in the data source. Refer to the below example to enable the legend for the markers.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    @*  To enable legend for marker *@
+    <MapsLegendSettings Visible="true" Type="LegendType.Markers"></MapsLegendSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15" LegendText="Name" TValue="City">
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+    };
+    private List<City> Cities = new List<City> {
+        new City { Latitude=35.145083, Longitude=-117.960260, Name= "Californiya" },
+        new City { Latitude=40.724546, Longitude=-73.850344, Name="New York" },
+        new City { Latitude= 41.657782, Longitude=-91.533857, Name="Iowa" }
+    };
+}
+```
+
+![Markers with legend](./images/Marker/MarkerLegend.png)

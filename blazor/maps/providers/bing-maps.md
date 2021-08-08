@@ -9,13 +9,11 @@ documentation: ug
 
 # Bing Maps in Blazor Maps Component
 
-Bing maps is a map of the entire World owned by Microsoft. As like OSM, it provides map tile images based on our requests and combines those images into a single one to display the map area.
+Bing maps is a online map provider, owned by Microsoft, for accessing the external geospatial imagery services for deep-zoom satellite view which is supported in the Blazor Maps component. This provides the ability to visualize satellite, aerial, and street maps without using any external shape files. As like OSM, it provides map tile images based on our requests and combines those images into a single one to display the map area.
 
-## Add Bing Maps
+## Adding Bing Maps
 
-One of the most important features in Blazor Maps component is the built-in online map provider support. By using this feature, you can render Bing maps in the maps component. This provides the ability to visualize satellite, aerial, and street maps without using any external shape files.
-
-You can enable this feature by setting [LayerType](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) to “ShapeLayerType.Bing”.
+The Bing Maps can be rendered by setting the [LayerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType) as "**Bing**" and the key for the Bing Maps must be set in the [Key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Key) property. The Bing Maps key can be obtained from [here](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -32,6 +30,8 @@ You can enable this feature by setting [LayerType](https://help.syncfusion.com/c
 ![Bing map](../images/MapProviders/Bing-map.png)
 
 ## Types of Bing maps
+
+Bing Maps provides different types of maps and it is supported in the Maps component.
 
 * **Aerial** - Displays satellite images to highlight roads and major landmarks for easy identification.
 * **AerialWithLabel** - Displays aerial map with labels for the continent, country, ocean, etc.
@@ -62,7 +62,7 @@ To render the light version of the road maps, set the [BingMapType](https://help
 
 ## Zooming and panning
 
-You can zoom and pan the Bing maps layer. Zooming helps you get a closer look at a particular area on a map for in-depth analysis. Panning helps you to move a map around to focus the targeted area.
+Bing maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a map for in-depth analysis. Panning helps to move a map around to focus the targeted area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -84,7 +84,7 @@ You can zoom and pan the Bing maps layer. Zooming helps you get a closer look at
 
 ## Adding markers and navigation line
 
-Markers can be added to the layers of Bing maps by setting the corresponding location's coordinates of latitude and longitude using `MapsMarker` property. You can add navigation lines on top of an Bing maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the `MapsNavigationLine` property.
+Markers can be added to the layers of Bing maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be added on top of an Bing maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -93,23 +93,15 @@ Markers can be added to the layers of Bing maps by setting the corresponding loc
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing"
-                   BingMapType="BingMapType.CanvasLight"
-                   Key="" TValue="string">
+        <MapsLayer LayerType="ShapeLayerType.Bing" BingMapType="BingMapType.CanvasLight" Key="" TValue="string">
             @* Add markers *@
             <MapsMarkerSettings>
-                <MapsMarker Visible="true"
-                            Height="25"
-                            Width="15"
-                            DataSource="Cities" TValue="City">
+                <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             @* Add navigation line *@
             <MapsNavigationLines>
-                <MapsNavigationLine Visible="true"
-                                    Color="blue"
-                                    Angle="0.1"
-                                    Latitude="new double[]{34.060620, 40.724546}"
+                <MapsNavigationLine Visible="true" Color="blue" Angle="0.1" Latitude="new double[]{34.060620, 40.724546}"
                                     Longitude="new double[]{-118.330491,-73.850344}">
                 </MapsNavigationLine>
             </MapsNavigationLines>
@@ -137,10 +129,6 @@ Markers can be added to the layers of Bing maps by setting the corresponding loc
 
 ## Sublayer
 
-You can render any GeoJSON shape as a sublayer on top of an Bing maps layer for highlighting a particular continent or country in Bing maps by adding another layer and specifying the type to SubLayer.
+Any GeoJSON shape can be rendered as a sublayer on top of the Bing maps layer for highlighting a particular continent or country in Bing maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class to "**SubLayer**".
 
 > [Refer to section](../how-to/display-geometry-shapes-in-bing-maps) to learn how to add a sublayer in Bing maps
-
-## Key
-
-The Bing maps key is provided as input to this key property. The Bing Maps key can be obtained from [Bing Maps](http://www.microsoft.com/maps/create-a-bing-maps-key.aspx).
