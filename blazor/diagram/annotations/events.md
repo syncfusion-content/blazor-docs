@@ -56,7 +56,6 @@ The following code example shows how to register and get the notification from t
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## Double click
@@ -108,7 +107,6 @@ The following code example shows how to register and get the notification from t
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## Key down

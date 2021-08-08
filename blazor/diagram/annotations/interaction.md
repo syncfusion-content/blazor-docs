@@ -49,14 +49,18 @@ The following code snippet explains how the select constraints are enabled for a
             },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-                new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select }
-           
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select
+                }
             },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Selection](../images/Annotation_Selection.png)
@@ -97,13 +101,18 @@ The dragging process can be applied over an annotation and dragging can be contr
             },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-             new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag
+                }
             },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Drag](../images/Annotation_Drag.gif)
@@ -115,6 +124,7 @@ Resizing of the annotation can be enabled by using the Constraints property of `
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -143,13 +153,18 @@ Resizing of the annotation can be enabled by using the Constraints property of `
             },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-                new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select|AnnotationConstraints.Resize }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Resize
+                }
             },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Selection](../images/Annotation_Resize.gif)
@@ -190,13 +205,18 @@ Resizing of the annotation can be enabled by using the Constraints property of `
             },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-                new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select|AnnotationConstraints.Rotate }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Rotate
+                }
             },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Rotate](../images/Annotation_Rotate.gif)
@@ -233,7 +253,12 @@ The following code explains how to set a dragLimit for connector annotations.
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-                new DiagramConnectorAnnotation() {Content = "Annotation", Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag, DragLimit=new ConnectorAnnotationDragLimit(){ Left=10,Top=10,Right=10,Bottom=10} },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "Annotation",
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag,
+                    DragLimit=new ConnectorAnnotationDragLimit(){ Left=10,Top=10,Right=10,Bottom=10}
+                },
             }
         };
         ConnectorCollection.Add(connector);

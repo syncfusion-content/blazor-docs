@@ -52,11 +52,14 @@ The following example shows how to disable page editing using the diagram constr
 @* Initialize the diagram with constraints *@
 <SfDiagram Height="600px" Nodes="@NodeCollection" Constraints="@DiagramConstraints">
 </SfDiagram>
+
 @code{
-     //sets the Diagram constraints...
+    //sets the Diagram constraints...
     DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
+
     //Initialize the Nodes Collection.
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -151,7 +154,8 @@ The following example shows how to disable rotation using the node constraints.
 
 @code{
 
-   ObservableCollection<DiagramNode> NodeCollection;
+    ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -234,15 +238,16 @@ The following code shows how to disable selection by using the connector constra
 @using System.Collections.ObjectModel
 
 @* Initialize the diagram with ConnectorCollection *@
- <SfDiagram Height="600px" Connectors="@ConnectorCollection">
- </SfDiagram>
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
+</SfDiagram>
 
 @code{
 
-   ObservableCollection<DiagramConnector> ConnectorCollection;
+    ObservableCollection<DiagramConnector> ConnectorCollection;
+
     protected override void OnInitialized()
     {
-       ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "connector1",
@@ -311,6 +316,7 @@ The following code shows how to disable creating connections with a port.
 @code{
 
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
@@ -385,6 +391,7 @@ The following code shows how to enable read-only mode for the annotations.
 @code{
 
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
@@ -406,7 +413,7 @@ The following code shows how to enable read-only mode for the annotations.
                 //sets the Constraints for Annotation...
                 Constraints=AnnotationConstraints.ReadOnly,
                 Style=new AnnotationStyle(){Color="#000000", Fill="transparent",
-                    FontFamily="TimesNewRoman", FontSize=12, Bold=true, Italic=true},
+                FontFamily="TimesNewRoman", FontSize=12, Bold=true, Italic=true},
             }
         };
         NodeCollection.Add(node);
@@ -633,7 +640,9 @@ The following code example shows how to inherit the line bridging behavior from 
 @code{
     //Sets the diagram constraints
     public DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
+
     ObservableCollection<DiagramConnector> ConnectorCollection;
+
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
@@ -645,7 +654,7 @@ The following code example shows how to inherit the line bridging behavior from 
             //sets the ConnectorConstraints...
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
         };
-         DiagramConnector connector1 = new DiagramConnector()
+        DiagramConnector connector1 = new DiagramConnector()
         {
             Id = "connector2",
             SourcePoint = new ConnectorSourcePoint() { X = 200, Y = 100 },

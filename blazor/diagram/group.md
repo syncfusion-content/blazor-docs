@@ -30,12 +30,13 @@ A group can be added to the diagram model through `Nodes` collection. To define 
 @using System.Collections.ObjectModel
 
 @* Initialize the diagram with NodeCollection *@
- <SfDiagram Height="500px" @ref="diagram" Nodes="@NodeCollection">
- </SfDiagram>
+<SfDiagram Height="500px" @ref="diagram" Nodes="@NodeCollection">
+</SfDiagram>
 
 @code{
     SfDiagram diagram;
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -65,9 +66,9 @@ A group can be added to the diagram model through `Nodes` collection. To define 
 
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
-            Id="annotation1",
+            Id = "annotation1",
             Content = content,
-            Style=new AnnotationStyle(){Color="white", Fill="transparent",StrokeColor="None"},
+            Style = new AnnotationStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -96,8 +97,8 @@ The following code illustrates how a ungroup  at runtime.
 @using System.Collections.ObjectModel
 
 @* Initialize the diagram with NodeCollection *@
- <SfDiagram Height="500px" @ref="diagram" Nodes="@NodeCollection">
- </SfDiagram>
+<SfDiagram Height="500px" @ref="diagram" Nodes="@NodeCollection">
+</SfDiagram>
 
 @code{
     SfDiagram diagram;
@@ -129,9 +130,9 @@ The following code illustrates how a ungroup  at runtime.
 
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
-            Id="annotation1",
+            Id = "annotation1",
             Content = content,
-            Style=new AnnotationStyle(){Color="white", Fill="transparent",StrokeColor="None"},
+            Style = new AnnotationStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -146,7 +147,7 @@ The following code illustrates how a ungroup  at runtime.
         {
             await Task.Delay(500);
             diagram.SelectAll();
-           // Ungroup the selected group into nodes
+            // Ungroup the selected group into nodes
             diagram.UnGroup();
         }
     }
@@ -194,9 +195,9 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
 
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
-            Id="annotation1",
+            Id = "annotation1",
             Content = content,
-            Style=new AnnotationStyle(){Color="white", Fill="transparent",StrokeColor="None"},
+            Style = new AnnotationStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -208,7 +209,6 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
     {
         NodeCollection.Add(groupnode);
     }
-
 }
 ```
 
@@ -296,9 +296,14 @@ Group Nodes can be predefined and added to SymbolPalette. You can drop those Gro
         {
             Id = "annotation1",
             Content = content,
-            Style = new AnnotationStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new AnnotationStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
         };
-        if(content == "GroupNode")
+        if (content == "GroupNode")
         {
             Annotation.Style.Color = "black";
         }
@@ -310,17 +315,16 @@ Group Nodes can be predefined and added to SymbolPalette. You can drop those Gro
             Height = 50,
             Width = 50,
             Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = shape },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()  { Annotation }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>() { Annotation }
         };
 
-        if(content != "GroupNode")
+        if (content != "GroupNode")
         {
             Node.Style = new NodeShapeStyle() { Fill = "#6BA5D7" };
         }
         return Node;
     }
 }
-
 ```
 
 ![SymbolPalette](./images/symbol-palette-group.gif)
@@ -369,7 +373,12 @@ You can change the position of the group similar to node. For more information a
         {
             Id = "annotation1",
             Content = content,
-            Style = new AnnotationStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new AnnotationStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -384,9 +393,7 @@ You can change the position of the group similar to node. For more information a
         NodeCollection[2].OffsetY = 200;
         NodeCollection[2].EndUpdate();
     }
-
 }
-
 ```
 
 ## Appearance

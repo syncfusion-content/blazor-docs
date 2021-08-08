@@ -22,6 +22,7 @@ You can add the node at runtime by using the [AddNode](https://help.syncfusion.c
 @using System.Collections.ObjectModel
 
 <input type="button" value="Add Node" @onclick="@AddNodeInCollection" />
+
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -35,9 +36,11 @@ You can add the node at runtime by using the [AddNode](https://help.syncfusion.c
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         NodeCollection.Add(node1);
@@ -49,8 +52,10 @@ You can add the node at runtime by using the [AddNode](https://help.syncfusion.c
         DiagramNode Node1 = new DiagramNode()
         {
             Id = "New Node1",
-            OffsetX = 100, OffsetY = 100,
-            Width = 100, Height = 100
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100
         };
         Diagram.AddNode(Node1);
     }
@@ -83,7 +88,8 @@ The following code shows how to remove a node at runtime.
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 // Position of the node
@@ -94,7 +100,7 @@ The following code shows how to remove a node at runtime.
             }
         };
         ConnectorCollection = new ObservableCollection<DiagramConnector>()
-    {
+        {
             new DiagramConnector()
             {
                 Id = "Connector1",
@@ -154,14 +160,17 @@ You can add the child to group node at runtime by using the [AddChildToGroup](ht
         DiagramNode Node = new DiagramNode()
         {
             Id = Id,
-            OffsetX = OffsetX, OffsetY = OffsetY,
-            Height = 100, Width = 100,
+            OffsetX = OffsetX,
+            OffsetY = OffsetY,
+            Height = 100,
+            Width = 100,
             Style = new NodeShapeStyle() { Fill = "darkcyan" },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
                 new DiagramNodeAnnotation()
                 {
-                    Id="annotation1", Content = Content,
+                    Id="annotation1",
+                    Content = Content,
                     Style=new AnnotationStyle(){Color="white", Fill="transparent",StrokeColor="None"},
                 }
             }
@@ -187,6 +196,7 @@ You can find and get the node from the id property itself. The following code sh
 @using System.Collections.ObjectModel
 
 <input type="button" value="Get Node and Update style" @onclick="@GetNode" />
+
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -201,9 +211,11 @@ You can find and get the node from the id property itself. The following code sh
         {
             Id = "Node1",
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         NodeCollection.Add(node1);
@@ -228,8 +240,11 @@ You can find what are all the in and out connectors that are connected to the no
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="UpdateEdges" @onclick="@UpdateEdges" />
-<SfDiagram Height="600px" @ref="@Diagram" Nodes="@NodeCollection" Connectors="@ConnectorCollection" NodeDefaults="@NodeDefaults">  
+<SfDiagram Height="600px" @ref="@Diagram"
+           Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+           NodeDefaults="@NodeDefaults">
 </SfDiagram>
 
 @code{
@@ -244,18 +259,21 @@ You can find what are all the in and out connectors that are connected to the no
     DiagramNode NodeDefaults = new DiagramNode()
     {
         // Size of the node
-        Width = 80, Height = 50,
+        Width = 80,
+        Height = 50,
         // Style of the node
         Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
     };
     protected override void OnInitialized()
     {
-        NodeCollection = new ObservableCollection<DiagramNode>() {
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
                 // Position of the node
-                OffsetX = 100, OffsetY = 100
+                OffsetX = 100,
+                OffsetY = 100
             },
             new DiagramNode()
             {
@@ -270,7 +288,8 @@ You can find what are all the in and out connectors that are connected to the no
                 OffsetX = 272, OffsetY = 100
             }
         };
-        ConnectorCollection = new ObservableCollection<DiagramConnector>() {
+        ConnectorCollection = new ObservableCollection<DiagramConnector>()
+        {
             new DiagramConnector()
             {
                 // Sets the unique id, source node, and taget node
@@ -294,6 +313,7 @@ You can find what are all the in and out connectors that are connected to the no
             }
         };
     }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -340,6 +360,7 @@ You can find the parent of the object by using the [GetParentID](https://help.sy
 @using System.Collections.ObjectModel
 
 <input type="button" value="Get Parent Node" @onclick="@GetParentNode" />
+
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -372,7 +393,8 @@ You can find the parent of the object by using the [GetParentID](https://help.sy
             {
                 new DiagramNodeAnnotation()
                 {
-                    Id="annotation1", Content = Content,
+                    Id="annotation1",
+                    Content = Content,
                     Style=new AnnotationStyle(){Color="white", Fill="transparent",StrokeColor="None"},
                 }
             }
@@ -402,6 +424,7 @@ You can add a connector at runtime by using the server-side method [AddConnector
 @using Syncfusion.Blazor.Diagrams
 
 <input type="button" value="Add Connector" @onclick="@AddConnector">
+
 <SfDiagram @ref="@Diagram" Height="600px">
 </SfDiagram>
 
@@ -422,7 +445,12 @@ You can add a connector at runtime by using the server-side method [AddConnector
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             Type = Segments.Straight,
@@ -466,13 +494,23 @@ You can get the connector from property `Id` by using the [GetConnector](https:/
                 TargetDecorator = new ConnectorTargetDecorator()
                 {
                     Shape = DecoratorShapes.Arrow,
-                    Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                    Style = new DecoratorShapeStyle()
+                    { 
+                        Fill = "#6f409f", 
+                        StrokeColor = "#6f409f",
+                        StrokeWidth = 1
+                    }
                 },
-                Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+                Style = new ConnectorShapeStyle() 
+                {
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                },
                 Type = Segments.Straight,
             }
         };
     }
+
     public void GetConnector()
     {
         // Get the connector
@@ -559,8 +597,9 @@ Annotations can be added at runtime by using the [AddLabels](https://help.syncfu
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
-<SfDiagram Height="600px" @ref="@diagram" Nodes="@NodeCollection">  
+<SfDiagram Height="600px" @ref="@diagram" Nodes="@NodeCollection">
 </SfDiagram>
 
 @code
@@ -590,7 +629,7 @@ Annotations can be added at runtime by using the [AddLabels](https://help.syncfu
     {
         ObservableCollection<DiagramNodeAnnotation> annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
-        new DiagramNodeAnnotation() { Content = "Annotation" },
+            new DiagramNodeAnnotation() { Content = "Annotation" },
         };
         // AddLabels method is used to add annotations at run time
         diagram.AddLabels(diagram.Nodes[0], annotations);
@@ -607,6 +646,7 @@ A collection of annotations can be removed from the node by using the [RemoveLab
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
 <SfDiagram Height="600px" @ref="@diagram" Nodes="@NodeCollection">
 </SfDiagram>
@@ -630,8 +670,8 @@ A collection of annotations can be removed from the node by using the [RemoveLab
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-    {
-          new DiagramNodeAnnotation() {Id="label", Content = "Annotation" },
+        {
+            new DiagramNodeAnnotation() {Id="label", Content = "Annotation" },
         };
         NodeCollection.Add(node);
     }
@@ -639,8 +679,8 @@ A collection of annotations can be removed from the node by using the [RemoveLab
     public void RemoveLabel()
     {
         ObservableCollection<DiagramNodeAnnotation> annotations = new ObservableCollection<DiagramNodeAnnotation>()
-    {
-          new DiagramNodeAnnotation() {Id="label", Content = "Annotation" }
+        {
+            new DiagramNodeAnnotation() {Id="label", Content = "Annotation" }
         };
         // RemoveLabels method is used to remove label at run time.
         diagram.RemoveLabels(diagram.Nodes[0], annotations);
@@ -657,6 +697,7 @@ You can change the annotation content by using the [StartTextEdit](https://help.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input value="Annotation Editing" type="button" @onclick="@AnnotationEditing" />
 <SfDiagram Height="600px" @ref="@Diagram" Nodes="@NodeCollection">
 </SfDiagram>
@@ -678,7 +719,8 @@ You can change the annotation content by using the [StartTextEdit](https://help.
             OffsetX = 100,
             OffsetY = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>(){
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
                 new DiagramNodeAnnotation() { Id = "Annotation1", Content = "Annotation" }
             }
         };
@@ -701,9 +743,9 @@ You can change the annotation content by using the [StartTextEdit](https://help.
 You can add ports to a node at runtime by using the [AddPorts](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_AddPorts_Syncfusion_Blazor_Diagrams_DiagramNode_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagrams_DiagramPort__) methods. The following code shows how to add new port in a node.
 
 ```csharp
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
@@ -737,7 +779,6 @@ You can add ports to a node at runtime by using the [AddPorts](https://help.sync
             new DiagramPort() { Id = "port4", Offset = new NodePortOffset() { X = 0.5, Y = 1 }, Visibility = PortVisibility.Visible }
         };
         Diagram.AddPorts(NodeCollection[0], ports);
-
     }
 }
 ```
@@ -751,6 +792,7 @@ You can remove the existing ports in a node by using the [RemovePorts](https://h
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="RemovePorts" @onclick="@RemovePorts" />
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
@@ -771,16 +813,21 @@ You can remove the existing ports in a node by using the [RemovePorts](https://h
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-            new DiagramPort() {
-                Id = "port1",
-                Offset = new NodePortOffset() { X = 0, Y = 0.5 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new PortShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
-                // Sets the shape of the port as Circle
-                Width= 12, Height=12, Shape= PortShapes.Circle
-            }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
+                    // Sets the shape of the port as Circle
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Circle
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
@@ -802,6 +849,7 @@ You can print the diagram area by using the [Print](https://help.syncfusion.com/
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="Print Diagram" @onclick="@PrintDiagram" />
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
@@ -815,9 +863,11 @@ You can print the diagram area by using the [Print](https://help.syncfusion.com/
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         NodeCollection.Add(node1);
@@ -853,9 +903,11 @@ You can export the diagram area by using the [ExportDiagram](https://help.syncfu
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         NodeCollection.Add(node1);
@@ -893,9 +945,11 @@ You can export the diagram area by using the [ExportDiagram](https://help.syncfu
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
         };
         NodeCollection.Add(node1);
@@ -932,6 +986,7 @@ You can add new layers in a diagram by using the `AddLayers` method. The followi
 <input type="button" value="Add Layers" @onclick="@AddLayerCollection" />
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@LayersCollection">
 </SfDiagram>
+
 @code{
     SfDiagram Diagram;
     SnapConstraints Constraints;
@@ -942,7 +997,8 @@ You can add new layers in a diagram by using the `AddLayers` method. The followi
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1011,7 +1067,8 @@ You can remove the layers in a diagram by using the `RemoveLayers` method. The f
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1032,7 +1089,6 @@ You can remove the layers in a diagram by using the `RemoveLayers` method. The f
                 Type = Segments.Orthogonal
             }
         };
-
         LayersCollection = new ObservableCollection<DiagramLayer>()
         {
             new DiagramLayer() { Id = "Layer1", Objects = new string[] {"Node1", "Connector1" } }
@@ -1058,7 +1114,9 @@ You can clone the layers in a diagram by using the `CloneLayer` method. The foll
 @using System.Collections.ObjectModel
 
 <input type="button" value="Clone Layers" @onclick="@CloneLayers" />
-<SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@LayersCollection">
+<SfDiagram @ref="@Diagram" Height="600px"
+           Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+           Layers="@LayersCollection">
 </SfDiagram>
 
 @code{
@@ -1075,31 +1133,31 @@ You can clone the layers in a diagram by using the `CloneLayer` method. The foll
         Constraints = SnapConstraints.None;
         // A node is created and stored in node's collection.
         NodeCollection = new ObservableCollection<DiagramNode>(){
-            new DiagramNode()
-            {
-                Id = "Node1",
-                // Position of the node
-                OffsetX = 250, OffsetY = 250,
-                // Size of the node
-                Width = 100, Height = 100,
-                Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
-            }
-        };
-        ConnectorCollection = new ObservableCollection<DiagramConnector>()
+        new DiagramNode()
         {
-            new DiagramConnector()
-            {
-                Id = "Connector1",
-                SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 100 },
-                TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 200 },
-                Type = Segments.Orthogonal
-            }
-        };
+            Id = "Node1",
+            // Position of the node
+            OffsetX = 250, OffsetY = 250,
+            // Size of the node
+            Width = 100, Height = 100,
+            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+        }
+    };
+        ConnectorCollection = new ObservableCollection<DiagramConnector>()
+    {
+        new DiagramConnector()
+        {
+            Id = "Connector1",
+            SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 200 },
+            Type = Segments.Orthogonal
+        }
+    };
 
         LayersCollection = new ObservableCollection<DiagramLayer>()
-        {
-            new DiagramLayer() { Id = "Layer1", Objects = new string[] {"Node1", "Connector1" } }
-        };
+    {
+        new DiagramLayer() { Id = "Layer1", Objects = new string[] {"Node1", "Connector1" } }
+    };
     }
 
     // Clone layer at runtime
@@ -1134,7 +1192,8 @@ You can get the active layer in a diagram by using the `GetActiveLayer` method. 
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1177,7 +1236,6 @@ You can get the active layer in a diagram by using the `GetActiveLayer` method. 
     {
         Diagram.GetActiveLayer();
     }
-
 }
 ```
 
@@ -1263,7 +1321,9 @@ You can change the layer order, to get the layer forward by using the `BringLaye
 @using System.Collections.ObjectModel
 
 <input type="button" value="Bring Layer To Forward" @onclick="@BringLayerToForward" />
-<SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@LayersCollection">
+<SfDiagram @ref="@Diagram" Height="600px"
+           Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+           Layers="@LayersCollection">
 </SfDiagram>
 
 @code{
@@ -1276,7 +1336,8 @@ You can change the layer order, to get the layer forward by using the `BringLaye
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1333,7 +1394,9 @@ You can change the layer order, to get the layer forward by using the `SendLayer
 @using System.Collections.ObjectModel
 
 <input type="button" value="Send Layer To Backward" @onclick="@SendLayerToBackward" />
-<SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@LayersCollection">
+<SfDiagram @ref="@Diagram" Height="600px"
+           Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+           Layers="@LayersCollection">
 </SfDiagram>
 
 @code{
@@ -1342,11 +1405,13 @@ You can change the layer order, to get the layer forward by using the `SendLayer
     public ObservableCollection<DiagramNode> NodeCollection;
     public ObservableCollection<DiagramConnector> ConnectorCollection;
     public ObservableCollection<DiagramLayer> LayersCollection;
+
     protected override void OnInitialized()
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1403,7 +1468,9 @@ You can move node or connector from one layer to another layer by using the [Mov
 @using System.Collections.ObjectModel
 
 <input type="button" value="Move Objects" @onclick="@MoveObjectsLayer" />
-<SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@LayersCollection">
+<SfDiagram @ref="@Diagram" Height="600px"
+           Nodes="@NodeCollection" Connectors="@ConnectorCollection"
+           Layers="@LayersCollection">
 </SfDiagram>
 
 @code{
@@ -1412,11 +1479,13 @@ You can move node or connector from one layer to another layer by using the [Mov
     public ObservableCollection<DiagramNode> NodeCollection;
     public ObservableCollection<DiagramConnector> ConnectorCollection;
     public ObservableCollection<DiagramLayer> LayersCollection;
+
     protected override void OnInitialized()
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1458,7 +1527,7 @@ You can move node or connector from one layer to another layer by using the [Mov
     public async void MoveObjectsLayer()
     {
         List<string> nodelist = new List<string>() { "Node1" };
-          await  Diagram.MoveObjects( nodelist, "Layer2");
+        await Diagram.MoveObjects(nodelist, "Layer2");
     }
 }
 ```
@@ -1506,7 +1575,8 @@ The following code example shows how to execute the SameSize commands.
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1594,7 +1664,8 @@ Alignment commands enable you to align the selected or defined objects such as n
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1663,7 +1734,8 @@ The Distribute commands enable to place the selected objects on the page at equa
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1682,7 +1754,7 @@ The Distribute commands enable to place the selected objects on the page at equa
                 Width = 60, Height = 80,
                 Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
             },
-             new DiagramNode()
+            new DiagramNode()
             {
                 Id = "Node3",
                 // Position of the node
@@ -1734,7 +1806,8 @@ A Clipboard commands are used to cut, copy, or paste the selected elements. Refe
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1753,7 +1826,7 @@ A Clipboard commands are used to cut, copy, or paste the selected elements. Refe
                 Width = 100, Height = 100,
                 Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
             },
-             new DiagramNode()
+            new DiagramNode()
             {
                 Id = "Node3",
                 // Position of the node
@@ -1816,7 +1889,8 @@ The following code shows how to execute the grouping commands.
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1879,7 +1953,8 @@ Order commands enable you to visually arrange the selected objects such as nodes
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -1888,10 +1963,10 @@ Order commands enable you to visually arrange the selected objects such as nodes
                 // Size of the node
                 Width = 100, Height = 100,
                 Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-                Annotations = new ObservableCollection<DiagramNodeAnnotation>(){
+                Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+                {
                     new DiagramNodeAnnotation(){ Id="Annotation1", Content="Node1" }
                 }
-
             },
             new DiagramNode()
             {
@@ -1901,11 +1976,12 @@ Order commands enable you to visually arrange the selected objects such as nodes
                 // Size of the node
                 Width = 100, Height = 100,
                 Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-                Annotations = new ObservableCollection<DiagramNodeAnnotation>(){
+                Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+                {
                     new DiagramNodeAnnotation(){ Id="Annotation1", Content="Node2" }
                 }
             },
-             new DiagramNode()
+            new DiagramNode()
             {
                 Id = "Node3",
                 // Position of the node
@@ -1913,7 +1989,8 @@ Order commands enable you to visually arrange the selected objects such as nodes
                 // Size of the node
                 Width = 100, Height = 100,
                 Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-                Annotations = new ObservableCollection<DiagramNodeAnnotation>(){
+                Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+                {
                     new DiagramNodeAnnotation(){ Id="Annotation1", Content="Node3" }
                 }
             },
@@ -1925,7 +2002,8 @@ Order commands enable you to visually arrange the selected objects such as nodes
                 // Size of the node
                 Width = 100, Height = 100,
                 Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-                Annotations = new ObservableCollection<DiagramNodeAnnotation>(){
+                Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+                {
                     new DiagramNodeAnnotation(){ Id="Annotation1", Content="Node4" }
                 }
             }
@@ -2031,7 +2109,12 @@ Diagram provides the support to interact the nodes, connectors, and so on.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             Type = Segments.Orthogonal
@@ -2119,9 +2202,18 @@ A object can be drag at runtime by using the [Drag](https://help.syncfusion.com/
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal
         };
         ConnectorCollection.Add(Connector1);
@@ -2205,6 +2297,7 @@ A node can be rotate at runtime by using the [Rotate](https://help.syncfusion.co
     SnapConstraints constraints = SnapConstraints.None;
     // To define node collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
@@ -2219,6 +2312,7 @@ A node can be rotate at runtime by using the [Rotate](https://help.syncfusion.co
         // Add node
         NodeCollection.Add(node1);
     }
+
     public void OnRotate()
     {
         // Rotate the node
@@ -2304,7 +2398,12 @@ You can drag the target point of the connector by using the [DragTargetEnd](http
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             Type = Segments.Orthogonal
@@ -2369,7 +2468,12 @@ You can move a single or some of the distance of the selected node by using the 
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                     Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             Type = Segments.Orthogonal
@@ -2440,7 +2544,8 @@ You can zoom in or zoom out the diagram. The following code how to zoom the diag
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2471,7 +2576,16 @@ You can zoom in or zoom out the diagram. The following code how to zoom the diag
 
     public void OnZoomRegion()
     {
-        ZoomOptions Options = new ZoomOptions() { FocusPoint = new PointModel() { X = 100, Y = 100 }, Type = ZoomTypes.ZoomIn, ZoomFactor = 2.5 };
+        ZoomOptions Options = new ZoomOptions()
+        {
+            FocusPoint = new PointModel()
+            {
+                X = 100,
+                Y = 100
+            },
+            Type = ZoomTypes.ZoomIn,
+            ZoomFactor = 2.5
+        };
         Diagram.ZoomTo(Options);
     }
 }
@@ -2500,7 +2614,8 @@ You can move the diagram view port by using the [Pan](https://help.syncfusion.co
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2554,7 +2669,8 @@ You can fit the diagram elements within the diagram bounds. The following code i
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2608,7 +2724,8 @@ You can change the size of the diagram area, after that you can update the view 
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2717,7 +2834,8 @@ You can view the particular bounds to the view port by using the [BringIntoView]
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2773,7 +2891,8 @@ You can get the diagram bounds by using the [GetDiagramBounds](https://help.sync
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2830,7 +2949,8 @@ You can clear all the elements in diagram by using the [Clear](https://help.sync
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -2980,7 +3100,8 @@ The following code shows how to manage and get the history list.
     {
         Constraints = SnapConstraints.None;
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",
@@ -3088,7 +3209,8 @@ You can show and hide the tooltip by using the [ShowTooltip](https://help.syncfu
     protected override void OnInitialized()
     {
         // A node is created and stored in the node's collection.
-        NodeCollection = new ObservableCollection<DiagramNode>(){
+        NodeCollection = new ObservableCollection<DiagramNode>()
+        {
             new DiagramNode()
             {
                 Id = "Node1",

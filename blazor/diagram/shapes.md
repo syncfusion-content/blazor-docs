@@ -34,25 +34,24 @@ Texts can be added to the diagram as [Text](https://help.syncfusion.com/cr/blazo
 </SfDiagram>
 
 @code{
-     //Initialize node collection with node
-     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    //Initialize node collection with node
+    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
      {
         //Creates a text node
-         new DiagramNode()
-         {
-             Id="node1",
-             // Size of the node
-             Height=100,
-             Width=100,
-             // Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets type of the shape as text
-             Shape=new DiagramShape(){Type=Shapes.Text,Content="Text Node"}
-         }
+        new DiagramNode()
+        {
+            Id="node1",
+            // Size of the node
+            Height=100,
+            Width=100,
+            // Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //Sets type of the shape as text
+            Shape=new DiagramShape(){Type=Shapes.Text,Content="Text Node"}
+        }
      };
 }
-
 ```
 
 ![Text node](images/Textnode.png)
@@ -68,25 +67,25 @@ The following code illustrates how an image node is created.
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection"/>
+<SfDiagram Height="600px" Nodes="@NodeCollection" />
 
-@code{  
+@code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
-         //Creates a image node
-         new DiagramNode()
-         {
-             Id="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets type of the shape as image
-             Shape=new DiagramShape(){Type=Shapes.Image,Source="/diagram/images/syncfusion.png"}
-         }
+        //Creates a image node
+        new DiagramNode()
+        {
+            Id="node1",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //Sets type of the shape as image
+            Shape=new DiagramShape(){Type=Shapes.Image,Source="/diagram/images/syncfusion.png"}
+        }
     };
 }
 ```
@@ -104,7 +103,7 @@ The following code illustrates how add Base64 image into image node.
 @* Initialize Diagram *@
 <SfDiagram Height="600px" Nodes="@NodeCollection"/>
 
-@code{  
+@code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
@@ -144,24 +143,25 @@ The scale property of the node allows to stretch the image as you desired (eithe
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagram  Height="600px" Nodes="@NodeCollection"/>
+<SfDiagram Height="600px" Nodes="@NodeCollection" />
+
 @code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
-         //Creates a image node
-         new DiagramNode()
-         {
-             Id="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets type of the shape as image
-             Shape=new DiagramShape(){Type=Shapes.Image,Source="/diagram/images/syncfusion.png",Scale=Stretch.Meet, Align = ImageAlignment.XMinYMin}
-         }
+        //Creates a image node
+        new DiagramNode()
+        {
+            Id="node1",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //Sets type of the shape as image
+            Shape=new DiagramShape(){Type=Shapes.Image,Source="/diagram/images/syncfusion.png",Scale=Stretch.Meet, Align = ImageAlignment.XMinYMin}
+        }
     };
 }
 ```
@@ -188,43 +188,43 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
 
 @* Initialize Diagram with node template *@
 <SfDiagram ModelType="@model" Height="600px" Nodes="@NodeCollection">
-        <DiagramTemplates>
-            <NodeTemplate>
-                @{
-                    <SfTextBox Placeholder="My text" ></SfTextBox>
-                }
-            </NodeTemplate>
-        </DiagramTemplates>
+    <DiagramTemplates>
+        <NodeTemplate>
+            @{
+                <SfTextBox Placeholder="My text"></SfTextBox>
+            }
+        </NodeTemplate>
+    </DiagramTemplates>
 </SfDiagram>
 
 @code{
-       public Type model = typeof(Node);
-       public class Node
-       {
-           public string Id { get; set; }
-           public double Width { get; set; }
-       }
-       
-       //Initialize node collection with node
-       ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    public Type model = typeof(Node);
+    public class Node
+    {
+        public string Id { get; set; }
+        public double Width { get; set; }
+    }
+
+    //Initialize node collection with node
+    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    {
+        //Creates an HTML node
+        new DiagramNode()
         {
-         //Creates an HTML node
-         new DiagramNode()
-          {
-             Id="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=400,
-             OffsetY=100,
-             //sets the type of the shape as HTML
-             Shape=new DiagramShape()
-             {
-                 Type=Shapes.HTML,
-             }
-          }
-        };
+            Id="node1",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=400,
+            OffsetY=100,
+            //sets the type of the shape as HTML
+            Shape=new DiagramShape()
+            {
+                Type=Shapes.HTML,
+            }
+        }
+    };
 }
 ```
 
@@ -245,27 +245,27 @@ The following code example illustrates how to create a basic shape.
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection"/>
+<SfDiagram Height="600px" Nodes="@NodeCollection" />
 
 @code{
-     //Initialize node collection with node
+    //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
-         //Creates a basic shape node
-         new DiagramNode()
-         {
-             Id="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //sets the type of the shape as basic
-             Shape=new DiagramShape(){Type=Shapes.Basic,BasicShape=BasicShapes.Rectangle}
-         }
+        //Creates a basic shape node
+        new DiagramNode()
+        {
+            Id="node1",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //sets the type of the shape as basic
+            Shape=new DiagramShape(){Type=Shapes.Basic,BasicShape=BasicShapes.Rectangle}
+        }
     };
-     }
+}
 ```
 
 > By default, the `Shape` property of the node is set as **basic**.
@@ -287,30 +287,30 @@ The [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Diag
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection"/>
+<SfDiagram Height="600px" Nodes="@NodeCollection" />
 @code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
-         // Creates a path node
-         new DiagramNode()
-         {
-             Id="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets the type of the shape as path
-             Shape=new DiagramShape()
-             {
-                 Type=Shapes.Path,
-                 Data="M35.2441,25 L22.7161,49.9937 L22.7161,0.00657536 L35.2441,25 z M22.7167,25 L-0.00131226,25 M35.2441,49.6337 L35.2441,0.368951 M35.2441,25 L49.9981,25"
-             }
-         }
+        // Creates a path node
+        new DiagramNode()
+        {
+            Id="node1",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //Sets the type of the shape as path
+            Shape=new DiagramShape()
+            {
+                Type=Shapes.Path,
+                Data="M35.2441,25 L22.7161,49.9937 L22.7161,0.00657536 L35.2441,25 z M22.7167,25 L-0.00131226,25 M35.2441,49.6337 L35.2441,0.368951 M35.2441,25 L49.9981,25"
+            }
+        }
     };
-    }
+}
 ```
 
 ## Flow Shapes
@@ -322,30 +322,30 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Diag
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagram Height="600px" Nodes="@NodeCollection"/>
-@code{  
+<SfDiagram Height="600px" Nodes="@NodeCollection" />
+@code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
-         //Creates a flow shape node
-         new DiagramNode()
-         {
-             Id="node1",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Sets the type of the shape as flow
-             Shape=new DiagramShape()
-             {
-                 Type=Shapes.Flow,
-                 FlowShape=FlowShapes.DirectData
-             }
-         }
+        //Creates a flow shape node
+        new DiagramNode()
+        {
+            Id="node1",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //Sets the type of the shape as flow
+            Shape=new DiagramShape()
+            {
+                Type=Shapes.Flow,
+                FlowShape=FlowShapes.DirectData
+            }
+        }
     };
-    }
+}
 ```
 
 The list of flow shapes are as follows.

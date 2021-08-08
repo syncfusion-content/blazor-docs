@@ -91,7 +91,11 @@ The following code example shows how to add custom context menu items along with
             Height = 100,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#6BA5D7",
@@ -100,7 +104,6 @@ The following code example shows how to add custom context menu items along with
         };
         //Add node into node's collection
         NodeCollection.Add(node1);
-
         //Create a node
         DiagramNode node2 = new DiagramNode()
         {
@@ -109,7 +112,11 @@ The following code example shows how to add custom context menu items along with
             Height = 100,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#6BA5D7",
@@ -126,18 +133,21 @@ The following code example shows how to add custom context menu items along with
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { StrokeColor = "black", Fill = "black", StrokeWidth = 1 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "black",
+                    Fill = "black",
+                    StrokeWidth = 1
+                },
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector1);
     }
-
     // Add the custom context menu items
     List<ContextMenuItemModel> contextMenuItemModels = new List<ContextMenuItemModel>()
-{
+    {
         new ContextMenuItemModel()
         {
             Text ="color",
@@ -145,13 +155,12 @@ The following code example shows how to add custom context menu items along with
             Target =".e-elementcontent",
             // Add the nested custom context menu items
             Items = new List<ContextMenuItemModel>()
-    {
+            {
                 new ContextMenuItemModel(){  Text ="Red", Id="Red", },
                 new ContextMenuItemModel(){  Text ="Yellow", Id="Yellow", },
                 new ContextMenuItemModel(){  Text ="Green", Id="Green", }
             }
         },
-
     };
 }
 ```
@@ -184,6 +193,7 @@ The Diagram control triggers the event [OnContextMenuOpen](https://help.syncfusi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Height="600px">
     // Defines OnContextMenuOpen event
     <DiagramEvents OnContextMenuOpen="@OnContextMenuOpen"></DiagramEvents>
@@ -191,6 +201,7 @@ The Diagram control triggers the event [OnContextMenuOpen](https://help.syncfusi
     <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="false">
     </DiagramContextMenuSettings>
 </SfDiagram>
+
 @code
 {
     public void OnContextMenuOpen(DiagramBeforeMenuOpenEventArgs arg)
@@ -227,11 +238,11 @@ The following code example shows how to add separate custom context menu items f
 
 ```cshtml
 <SfDiagram @ref="@diagram" Height="600px"
-            Nodes="@NodeCollection"
-            Connectors="@ConnectorCollection"
-            Constraints="@diagramConstraints">
+           Nodes="@NodeCollection"
+           Connectors="@ConnectorCollection"
+           Constraints="@diagramConstraints">
     // Defines the ContextMenuItemClicked event
-    <DiagramEvents OnContextMenuOpen="@OnContextMenuOpen"  ></DiagramEvents>
+    <DiagramEvents OnContextMenuOpen="@OnContextMenuOpen"></DiagramEvents>
     // Defines the context menu
     <DiagramContextMenuSettings Show="true" Items="@contextMenuItemModels" ShowCustomMenuOnly="true">
     </DiagramContextMenuSettings>
@@ -260,7 +271,11 @@ The following code example shows how to add separate custom context menu items f
             Height = 100,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#6BA5D7",
@@ -278,7 +293,11 @@ The following code example shows how to add separate custom context menu items f
             Height = 100,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#6BA5D7",
@@ -295,7 +314,12 @@ The following code example shows how to add separate custom context menu items f
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { StrokeColor = "black", Fill = "black", StrokeWidth = 1 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "black",
+                    Fill = "black",
+                    StrokeWidth = 1
+                },
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
             Type = Segments.Orthogonal,
@@ -303,8 +327,6 @@ The following code example shows how to add separate custom context menu items f
 
         ConnectorCollection.Add(diagramConnector1);
     }
-
-
     List<ContextMenuItemModel> contextMenuItemModels = new List<ContextMenuItemModel>()
     {
         new ContextMenuItemModel()
@@ -318,12 +340,12 @@ The following code example shows how to add separate custom context menu items f
                 new ContextMenuItemModel(){  Text ="Yellow", Id="Yellow", },
                 new ContextMenuItemModel(){  Text ="Green", Id="Green", }
             }
-        }, new ContextMenuItemModel()
+        },
+        new ContextMenuItemModel()
         {
             Text ="Connector Color",
             Id="Connector",
             Target =".e-elementcontent",
-
             Items = new List<ContextMenuItemModel>()
             {
                 new ContextMenuItemModel(){  Text ="Red", Id="black", },
@@ -331,7 +353,6 @@ The following code example shows how to add separate custom context menu items f
                 new ContextMenuItemModel(){  Text ="Green", Id="brown", }
             }
         },
-
     };
 
     public void OnContextMenuOpen(DiagramBeforeMenuOpenEventArgs arg)
@@ -345,7 +366,6 @@ The following code example shows how to add separate custom context menu items f
             arg.HiddenItems.Add("Node");
         }
     }
-
 }
 ```
 

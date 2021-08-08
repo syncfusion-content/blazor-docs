@@ -18,7 +18,7 @@ The following code example illustrates how to create an organizational chart.
 @using System.Collections.ObjectModel
 
 <SfDiagram ID="diagram" Height="600px" NodeDefaults="@NodeDefaults" ConnectorDefaults="@ConnectorDefault" Layout="@LayoutValue">
-    <DiagramDataSource Id="Id" ParentId="ParentId" DataSource="@DataSource" DataMapSettings="@DataMap"></DiagramDataSource>  
+    <DiagramDataSource Id="Id" ParentId="ParentId" DataSource="@DataSource" DataMapSettings="@DataMap"></DiagramDataSource>
 </SfDiagram>
 
 @code {
@@ -31,9 +31,8 @@ The following code example illustrates how to create an organizational chart.
     };
 
     List<DiagramDataMapSetting> DataMap = new List<DiagramDataMapSetting>()
-{
-            new DiagramDataMapSetting() { Property = "Shape.Content",
-        Field = "Label" },
+    {
+    new DiagramDataMapSetting() { Property = "Shape.Content",Field = "Label" },
     };
 
     DiagramNode NodeDefaults = new DiagramNode()
@@ -42,7 +41,7 @@ The following code example illustrates how to create an organizational chart.
         Height = 25,
         BackgroundColor = "#6BA5D7",
         Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Id = "label1", Style = new AnnotationStyle() { Color = "black" } }, },
-        Style = new NodeShapeStyle { Fill = "#6BA5D7", StrokeWidth = 1,StrokeColor = "white"},
+        Style = new NodeShapeStyle { Fill = "#6BA5D7", StrokeWidth = 1, StrokeColor = "white" },
         Shape = new DiagramShape()
         {
             Type = Syncfusion.Blazor.Diagrams.Shapes.Text,

@@ -22,6 +22,7 @@ The following code shows how to customize the appearance of the shape.
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -34,9 +35,9 @@ The following code shows how to customize the appearance of the shape.
             Width = 100,
             Height = 100,
             // Add node
-            Style = new NodeShapeStyle() 
+            Style = new NodeShapeStyle()
             {
-                Fill = "#6BA5D7", 
+                Fill = "#6BA5D7",
                 StrokeDashArray = "5,5",
                 StrokeColor = "red",
                 StrokeWidth = 2
@@ -72,6 +73,7 @@ There are two types of gradients as follows:
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -83,13 +85,16 @@ There are two types of gradients as follows:
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() {
-                Gradient = new DiagramGradient() 
+            Style = new NodeShapeStyle()
+            {
+                Gradient = new DiagramGradient()
                 {
                     //Start point of linear gradient
-                    X1 = 0, Y1 = 0,
+                    X1 = 0,
+                    Y1 = 0,
                     //End point of linear gradient
-                    X2 = 50, Y2 = 50,
+                    X2 = 50,
+                    Y2 = 50,
                     //Sets an array of stop objects
                     Stops = new ObservableCollection<DiagramsGradientStop>()
                     {
@@ -100,8 +105,8 @@ There are two types of gradients as follows:
                         },
                         new DiagramsGradientStop()
                         {
-                        Color = "#6BA5D7", 
-                        Offset = 100
+                            Color = "#6BA5D7",
+                            Offset = 100
                         }
                     },
                     Type = GradientType.Linear
@@ -203,9 +208,9 @@ The following code shows how to draw shadow.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() 
+            Style = new NodeShapeStyle()
             {
-                Fill = "#6BA5D7", 
+                Fill = "#6BA5D7",
                 StrokeColor = "white"
             },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow
@@ -213,7 +218,6 @@ The following code shows how to draw shadow.
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Node shadow](../images/node_shadow.png)
@@ -245,14 +249,14 @@ The following code example illustrates how to customize shadow.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() 
+            Style = new NodeShapeStyle()
             {
-                Fill = "#6BA5D7", 
+                Fill = "#6BA5D7",
                 StrokeColor = "white"
             },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
             // Custom Shadow of the node
-            Shadow =  new DiagramShadow()
+            Shadow = new DiagramShadow()
             {
                 Angle = 50,
                 Opacity = 0.8,
@@ -282,17 +286,18 @@ The following code example shows how to create an icon of various shapes.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-    <SfDiagram Height="600px" Nodes="@NodeCollection" NodeDefaults="@NodeDefault" Connectors="@ConnectorCollection">
-    </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection" NodeDefaults="@NodeDefault" Connectors="@ConnectorCollection">
+</SfDiagram>
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
     DiagramNode NodeDefault = new DiagramNode()
     {
         Width = 140,
         Height = 50,
-        Style = new NodeShapeStyle() 
+        Style = new NodeShapeStyle()
         {
             Fill = "#6BA5D7",
             StrokeColor = "white"
@@ -313,17 +318,17 @@ The following code example shows how to create an icon of various shapes.
                     Content = "Node1"
                 }
             },
-            ExpandIcon = new NodeExpandIcon() 
-            { 
+            ExpandIcon = new NodeExpandIcon()
+            {
                 Shape = IconShapes.ArrowDown,
                 Width = 10,
                 Height = 10
             },
-            CollapseIcon = new NodeCollapseIcon() 
+            CollapseIcon = new NodeCollapseIcon()
             {
                 Shape = IconShapes.ArrowUp,
-                Width = 10, 
-                Height = 10 
+                Width = 10,
+                Height = 10
             }
         };
         NodeCollection.Add(node1);
@@ -337,7 +342,7 @@ The following code example shows how to create an icon of various shapes.
             {
                 new DiagramNodeAnnotation()
                 {
-                Content = "Node2"
+                    Content = "Node2"
                 }
             },
         };

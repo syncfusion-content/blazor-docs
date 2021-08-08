@@ -85,9 +85,10 @@ The following code example illustrates how to customize the thickness of lines a
 
 @code{
     //Sets the line intervals for the gridlines
-    public double[] LineIntervals { get; set; } = new double[] {
-                1.25, 14, 0.25, 15, 0.25, 15, 0.25, 15, 0.25, 15
-                };
+    public double[] LineIntervals { get; set; } = new double[]
+    {
+    1.25, 14, 0.25, 15, 0.25, 15, 0.25, 15, 0.25, 15
+    };
 }
 ```
 
@@ -112,10 +113,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 @code{
     //Sets the snap constraints
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
-    public ObservableCollection<DiagramNode> NodeCollection
-    {
-        get; set;
-    }
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -140,25 +138,13 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Nodes="@NodeCollection">
-    @* Initialize the diagram snapping the custom interval *@
-    <DiagramSnapSettings Constraints="SnapConstraints.All">
-        <HorizontalGridlines SnapIntervals="@SnapInterval">
-        </HorizontalGridlines>
-        <VerticalGridlines SnapIntervals="@SnapInterval">
-        </VerticalGridlines>
-    </DiagramSnapSettings>
+    <DiagramSnapSettings Constraints="@snapConstraints"></DiagramSnapSettings>
 </SfDiagram>
 
 @code{
-    //Sets the snapinterval...
-    public double[] SnapInterval { get; set; } = new double[]
-    {
-        10
-        };
-    public ObservableCollection<DiagramNode> NodeCollection
-    {
-        get; set;
-    }
+    //Sets the snap constraints
+    public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -196,10 +182,8 @@ The [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @code{
     //Sets the Snap to objects constraints...
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
-    public ObservableCollection<DiagramNode> NodeCollection
-    {
-        get; set;
-    }
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -222,5 +206,4 @@ The [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         NodeCollection.Add(diagramNode);
     }
 }
-
 ```

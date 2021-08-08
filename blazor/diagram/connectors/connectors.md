@@ -209,7 +209,6 @@ A connector can be removed from the diagram at runtime by using the [Remove](htt
 The following code shows how to remove a connector at runtime.
 
 ```cshtml
-@page "/"
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 

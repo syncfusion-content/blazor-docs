@@ -22,6 +22,7 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
 @using System.Collections.ObjectModel
 
 <input Type="button" value="addNode" @onclick="AddNode" />
+
 <SfDiagram @ref="diagram" Nodes="@NodeCollection" Height="600px">
 </SfDiagram>
 
@@ -44,7 +45,7 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-    {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",
@@ -66,7 +67,11 @@ To draw a shape, set the JSON of that shape to the drawType property of the diag
         //Initialize the drawing object to draw the shape
         diagram.DrawingObject = new DiagramNode()
         {
-            Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
         };
     }
 }
@@ -102,7 +107,7 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-    {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",
@@ -127,7 +132,7 @@ To draw connectors, set the JSON of the connector to the drawType property. The 
             Id = "connector1",
             Type = Segments.Straight,
             Segments = new ObservableCollection<DiagramConnectorSegment>()
-    {
+            {
                 new DiagramConnectorSegment()
                 {
                     Type = Segments.Polyline,
@@ -168,7 +173,7 @@ Diagram allows you to create a textNode, when you click on the diagram page. The
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",
@@ -212,6 +217,7 @@ The following code illustrates how to draw a polygon shape.
 ```cshtml
 @using System.Collections.ObjectModel
 @using Syncfusion.Blazor.Diagrams
+
 <input Type="button" value="Polygon" @onclick="Polygon" />
 <SfDiagram @ref="diagram" Nodes="@NodeCollection" Height="600px">
 </SfDiagram>
@@ -234,7 +240,7 @@ The following code illustrates how to draw a polygon shape.
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",

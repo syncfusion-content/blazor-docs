@@ -47,7 +47,8 @@ The UML class diagram shapes are explained as follows.
         DiagramNode node = new DiagramNode()
         {
             Id = "Patient",
-            OffsetX = 200, OffsetY = 200,
+            OffsetX = 200,
+            OffsetY = 200,
             Shape = new DiagramShape()
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
@@ -110,7 +111,8 @@ The UML class diagram shapes are explained as follows.
         DiagramNode node = new DiagramNode()
         {
             Id = "Patient",
-            OffsetX = 200, OffsetY = 200,
+            OffsetX = 200,
+            OffsetY = 200,
             Shape = new DiagramShape()
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
@@ -190,11 +192,11 @@ The UML class diagram shapes are explained as follows.
                         },
                         new DiagramUmlEnumerationMember()
                         {
-                             Name = "Savings Account"
+                            Name = "Savings Account"
                         },
                         new DiagramUmlEnumerationMember()
                         {
-                             Name = "Credit Account"
+                            Name = "Credit Account"
                         }
                     }
                 }
@@ -256,8 +258,8 @@ The association property allows you to define the type of association. The defau
             Id = "Connector1",
             Type = Segments.Straight,
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y= 100},
-            TargetPoint = new ConnectorTargetPoint() { X   = 300, Y= 300},
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 },
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
@@ -305,10 +307,9 @@ The following code example illustrates how to create an aggregation.
                 Relationship = ClassifierShape.Aggregation
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -347,8 +348,8 @@ The following code example illustrates how to create a composition.
                 Relationship = ClassifierShape.Composition
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
         //Add connector
         ConnectorCollection.Add(connector);
@@ -388,10 +389,9 @@ The following code example illustrates how to create an dependency.
                 //Set an relationship for connector
                 Relationship = ClassifierShape.Dependency
             },
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -432,10 +432,9 @@ The following code example illustrates how to create an inheritance.
                 Relationship = ClassifierShape.Inheritance
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -466,7 +465,7 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram  Height="600px" Connectors="@ConnectorCollection">
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code{
@@ -507,10 +506,9 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
                 }
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -614,8 +612,8 @@ The following code illustrates how to create a UmlActivity connector.
                 UmlActivityFlow = UmlActivityFlows.Exception
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y= 100},
-            TargetPoint = new ConnectorTargetPoint() { X   = 200, Y= 200}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 }
         };
         ConnectorCollection.Add(connector);
     }

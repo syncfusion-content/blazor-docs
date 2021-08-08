@@ -151,16 +151,19 @@ The diagram component notifies the mouse button clicked. For example, whenever t
 @using Syncfusion.Blazor.Diagrams
 @using Syncfusion.Blazor.Navigations
 @using System.Collections.ObjectModel
+
 <h2>Diagram</h2>
 <br />
 <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 <link href="https://ej2.syncfusion.com/javascript/demos/src/diagram/styles/diagram-common.css" rel="stylesheet">
+
 <SfDiagram Height="600px" Nodes="@NodeCollection" @onclick='@Click'>
 </SfDiagram>
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     string greeting;
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -182,9 +185,10 @@ The diagram component notifies the mouse button clicked. For example, whenever t
         //Sets the export option for diagram
         IBlazorClickEventArgs options = new IBlazorClickEventArgs()
         {
-           Console.WriteLine("Button", options.MouseButtons);
+            Console.WriteLine("Button", options.MouseButtons);
         };
-}}
+    }
+}
 ```
 
 ## Appearance

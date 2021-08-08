@@ -26,6 +26,7 @@ Page settings enable to customize the appearance, width, and height of the diagr
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" id="diagram">
     @*Initialize the page settings with page orientation and break lines*@
     <DiagramPageSettings Height="300" Width="300" Orientation="@orientation" ShowPageBreaks="true">
@@ -54,7 +55,7 @@ Page settings enable to customize the appearance, width, and height of the diagr
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",
@@ -81,11 +82,12 @@ The following code illustrates how to stretch and align the background image.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Height="600px" id="diagram">
     @*Initialize the page settings with page orientation and break lines*@
     <DiagramPageSettings Height="300" Width="300" Orientation="@orientation" ShowPageBreaks="true">
-        <DiagramBackground Source="https://www.w3schools.com/images/w3schools_green.jpg"/>
-        <PageSettingsMargin Left="10" Top="10" Bottom="10"/>
+        <DiagramBackground Source="https://www.w3schools.com/images/w3schools_green.jpg" />
+        <PageSettingsMargin Left="10" Top="10" Bottom="10" />
     </DiagramPageSettings>
 </SfDiagram>
 
@@ -108,13 +110,13 @@ The [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 <SfDiagram Nodes="@NodeCollection" Height="600px" id="diagram">
     <DiagramSnapSettings>
-        <HorizontalGridlines LineColor="gray"/>
-        <VerticalGridlines LineColor="gray"/>
+        <HorizontalGridlines LineColor="gray" />
+        <VerticalGridlines LineColor="gray" />
     </DiagramSnapSettings>
     @*Initialize the page settings with page orientation and multiple pages*@
     <DiagramPageSettings Height="300" Width="300" MultiplePage="true" Orientation="@orientation" ShowPageBreaks="true">
-        <DiagramBackground Color="lightblue"/>
-        <PageSettingsMargin Left="10" Top="10" Bottom="10"/>
+        <DiagramBackground Color="lightblue" />
+        <PageSettingsMargin Left="10" Top="10" Bottom="10" />
     </DiagramPageSettings>
 </SfDiagram>
 
@@ -188,30 +190,29 @@ The following code example illustrates how to define boundary constraints with r
     public ObservableCollection<DiagramNode>
     NodeCollection = new ObservableCollection<DiagramNode>();
 
-        protected override void OnInitialized()
-        {
+    protected override void OnInitialized()
+    {
         DiagramNode node = new DiagramNode()
         {
-        Id = "group",
-        OffsetX = 200,
-        OffsetY = 200,
-        Width = 100,
-        Height = 100,
-        Annotations = new ObservableCollection<DiagramNodeAnnotation>
-            ()
+            Id = "group",
+            OffsetX = 200,
+            OffsetY = 200,
+            Width = 100,
+            Height = 100,
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-            new DiagramNodeAnnotation()
-            {
-            Content = "Node1",
-            Style = new AnnotationStyle()
-            {
-            Color = "white",
-            }
-            }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Node1",
+                    Style = new AnnotationStyle()
+                    {
+                        Color = "white",
+                    }
+                }
             },
             Style = new NodeShapeStyle() { Fill = "cornflowerblue", StrokeColor = "white" }
-            };
-            NodeCollection.Add(node);
-            }
-            }
+        };
+        NodeCollection.Add(node);
+    }
+}
 ```

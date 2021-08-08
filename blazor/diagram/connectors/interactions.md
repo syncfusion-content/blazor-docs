@@ -180,7 +180,6 @@ The connector can be selected by clicking it. When the connector is selected, ci
         ConnectorCollection.Add(diagramConnector);
     }
 }
-
 ```
 
 ![End point dragging](../images/connector-end-point.gif)

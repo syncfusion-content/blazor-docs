@@ -152,22 +152,22 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Or
             Type = Segments.Orthogonal,
             //Initialize the segments collection
             Segments = new ObservableCollection<DiagramConnectorSegment>()
-        {
-            //Create a new segment with length and direction
-            new DiagramConnectorSegment()
             {
-                Length = 100,
-                Type = Segments.Orthogonal,
-                Direction = Direction.Right,
+                //Create a new segment with length and direction
+                new DiagramConnectorSegment()
+                {
+                    Length = 100,
+                    Type = Segments.Orthogonal,
+                    Direction = Direction.Right,
+                },
+                //Create another new segment with length and direction
+                new DiagramConnectorSegment()
+                {
+                    Length = 100,
+                    Type = Segments.Orthogonal,
+                    Direction = Direction.Bottom,
+                }
             },
-            //Create another new segment with length and direction
-            new DiagramConnectorSegment()
-            {
-                Length = 100,
-                Type = Segments.Orthogonal,
-                Direction = Direction.Bottom,
-            }
-        },
         };
         ConnectorCollection.Add(diagramConnector);
     }

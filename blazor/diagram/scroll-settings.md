@@ -137,7 +137,8 @@ Scrolling beyond any particular rectangular area can be restricted by using the 
 </SfDiagram>
 
 @code{
-    public class Area {
+    public class Area
+    {
         public int X { get; set; }
         public int Y { get; set; }
         public int Width { get; set; }

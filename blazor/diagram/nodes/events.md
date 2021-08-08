@@ -28,17 +28,24 @@ The following code example explains how to get the selection change event in the
 @code{
     // To define node collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             // Apperence of the node
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         // Add node
         NodeCollection.Add(node1);
@@ -73,10 +80,16 @@ The [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100,
+            Height = 100,
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         // Add node
         NodeCollection.Add(node1);
@@ -105,16 +118,23 @@ The [OnSizeChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 @code{
     // To define node collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100,
+            Height = 100,
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         // Add node
         NodeCollection.Add(node1);
@@ -143,16 +163,23 @@ The [OnRotateChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 @code{
     // To define node collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100,
+            Height = 100,
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         // Add node
         NodeCollection.Add(node1);

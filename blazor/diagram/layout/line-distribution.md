@@ -86,7 +86,6 @@ The following code example illustrates how to create a complex hierarchical tree
         };
     }
 }
-
 ```
 
 ![Line Distribution](../images/line-distribution.png)

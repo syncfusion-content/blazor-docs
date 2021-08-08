@@ -38,7 +38,12 @@ The following code example shows how the annotation size is customized.
             Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7" },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-              new DiagramConnectorAnnotation() { Content = "Annotation length will be varied", Width = 50, Height = 50 },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "Annotation length will be varied",
+                    Width = 50,
+                    Height = 50
+                },
             }
         };
         ConnectorCollection.Add(connector);
@@ -77,8 +82,11 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
             // Sets the annotation for the Node
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              // Add text as hyperlink.
-              new DiagramNodeAnnotation() { Hyperlink = new NodeHyperlink(){ Link = "https://www.syncfusion.com"} }
+                // Add text as hyperlink.
+                new DiagramNodeAnnotation()
+                {
+                    Hyperlink = new NodeHyperlink(){ Link = "https://www.syncfusion.com"}
+                }
             },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
@@ -116,8 +124,12 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
             // Sets the annotation for the Node
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              // Add text as hyperlink.
-              new DiagramNodeAnnotation() { Hyperlink = new NodeHyperlink(){ Content = "Syncfusion", Link = "https://www.syncfusion.com" } }
+                // Add text as hyperlink.
+                new DiagramNodeAnnotation()
+                {
+                    Hyperlink = new NodeHyperlink()
+                    { Content = "Syncfusion", Link = "https://www.syncfusion.com" }
+                }
             },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
@@ -159,14 +171,17 @@ The following code explains how to wrap a text in a node.
             //Sets the annotation for the node
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              new DiagramNodeAnnotation() {Content = "Annotation Text Wrapping",Style = new AnnotationStyle(){ TextWrapping = TextWrap.Wrap} }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation Text Wrapping",
+                    Style = new AnnotationStyle(){ TextWrapping = TextWrap.Wrap}
+                }
             },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 | Value | Description | Image |
@@ -210,14 +225,21 @@ The following code sample shows how the different types of overflow property wor
             // Sets the style for the text to be displayed
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              new DiagramNodeAnnotation() {Content = "The text element with property of overflow as Wrap and wrapping as NoWrap",Style = new AnnotationStyle(){ TextOverflow = TextOverflow.Wrap,TextWrapping=TextWrap.NoWrap } },
+                new DiagramNodeAnnotation()
+                {
+                    Content = "The text element with property of overflow as Wrap and wrapping as NoWrap",
+                    Style = new AnnotationStyle()
+                    {
+                        TextOverflow = TextOverflow.Wrap,
+                        TextWrapping=TextWrap.NoWrap
+                    }
+                },
             },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 | TextOverflow | Wrapping | Image |
@@ -271,7 +293,19 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
             // Sets the annotation for the node
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              new DiagramNodeAnnotation() {Content = "Annotation Text",Style = new AnnotationStyle() {Color="black",Bold = true,Italic = true,TextDecoration=TextDecoration.Underline,FontSize = 12,FontFamily = "TimesNewRoman"  } }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation Text",
+                    Style = new AnnotationStyle()
+                    {
+                        Color="black",
+                        Bold = true,
+                        Italic = true,
+                        TextDecoration=TextDecoration.Underline,
+                        FontSize = 12,
+                        FontFamily = "TimesNewRoman"
+                    }
+                }
             },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
@@ -291,6 +325,7 @@ You can change the font style of the annotations with the font specific properti
 @using System.Collections.ObjectModel
 
 <input type="button" value="Update Style" @onclick="@UpdateStyle" />
+
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -314,7 +349,7 @@ You can change the font style of the annotations with the font specific properti
             // Sets the annotation for the node
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              new DiagramNodeAnnotation()
+                new DiagramNodeAnnotation()
                 {
                     Content = "Annotation Text",
                     Style = new AnnotationStyle()
@@ -385,7 +420,11 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
             //Sets the constraints as Read only
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-              new DiagramNodeAnnotation() {Content = "Annotation Text",Constraints = AnnotationConstraints.ReadOnly}
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation Text",
+                    Constraints = AnnotationConstraints.ReadOnly
+                }
             },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
@@ -431,9 +470,18 @@ You can add any number of annotations to a node or connector. The following code
             // Sets the multiple annotation for the node
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
             {
-                new DiagramNodeAnnotation() {Content = "Left",Offset = new NodeAnnotationOffset(){ X = .12,Y = .1} },
-                new DiagramNodeAnnotation() {Content = "Center",Offset = new NodeAnnotationOffset(){ X = .5,Y = .5} },
-                new DiagramNodeAnnotation() {Content = "Right",Offset = new NodeAnnotationOffset(){ X = .82,Y = .9} }
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Left",Offset = new NodeAnnotationOffset(){ X = .12,Y = .1}
+                },
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Center",Offset = new NodeAnnotationOffset(){ X = .5,Y = .5}
+                },
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Right",Offset = new NodeAnnotationOffset(){ X = .82,Y = .9}
+                }
             },
         };
         NodeCollection.Add(node1);
@@ -443,9 +491,9 @@ You can add any number of annotations to a node or connector. The following code
             SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 160 },
             Type = Segments.Orthogonal,
-            Style = new ConnectorShapeStyle() 
-            { 
-                StrokeColor = "#6BA5D7" 
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7"
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
@@ -591,7 +639,11 @@ The following code explains how to define a template in node’s annotation. sim
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-                new DiagramConnectorAnnotation() {Id="label2", AnnotationType=AnnotationType.Template },
+                new DiagramConnectorAnnotation()
+                {
+                    Id="label2",
+                    AnnotationType=AnnotationType.Template
+                },
             }
         };
         ConnectorCollection.Add(connector);

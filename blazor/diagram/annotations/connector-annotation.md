@@ -40,15 +40,15 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
             SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 160 },
             Type = Segments.Orthogonal,
-            Style = new ConnectorShapeStyle() 
-            { 
-                StrokeColor = "#6BA5D7" 
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7"
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-            new DiagramConnectorAnnotation() { Content = "Offset as 0",Offset=0 },
-            new DiagramConnectorAnnotation() { Content = "Offset as 0.5",Offset=0.5 },
-            new DiagramConnectorAnnotation() { Content = "Offset as 1",Offset=1 },
+                new DiagramConnectorAnnotation() { Content = "Offset as 0",Offset=0 },
+                new DiagramConnectorAnnotation() { Content = "Offset as 0.5",Offset=0.5 },
+                new DiagramConnectorAnnotation() { Content = "Offset as 1",Offset=1 },
             }
         };
         ConnectorCollection.Add(connector);
@@ -92,8 +92,16 @@ The connector’s annotation can be aligned over its segment path using the [Ali
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-                new DiagramConnectorAnnotation() { Content = "Before",Alignment=AnnotationAlignment.Before },
-                new DiagramConnectorAnnotation() { Content = "After",Alignment=AnnotationAlignment.After },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "Before",
+                    Alignment=AnnotationAlignment.Before
+                },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "After",
+                    Alignment=AnnotationAlignment.After
+                },
             }
         };
         ConnectorCollection.Add(connector);
@@ -132,13 +140,18 @@ The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
             SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 160 },
             Type = Segments.Orthogonal,
-            Style = new ConnectorShapeStyle() 
-            { 
-                StrokeColor = "#6BA5D7" 
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7"
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-                new DiagramConnectorAnnotation() { Content = "After", Displacement=new ConnectorDisplacementPoint(){X=50,Y=50}, Alignment=AnnotationAlignment.After },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "After",
+                    Displacement=new ConnectorDisplacementPoint(){X=50,Y=50},
+                    Alignment=AnnotationAlignment.After
+                },
             }
         };
         ConnectorCollection.Add(connector);
@@ -188,11 +201,17 @@ The following code example shows how the connector annotation rotated in its pat
             },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-                new DiagramConnectorAnnotation() { Content = "Annotation", SegmentAngle=true,Offset=0.7 },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "Annotation",
+                    SegmentAngle=true,
+                    Offset=0.7
+                },
             }
         };
         ConnectorCollection.Add(connector);
     }
+}
 ```
 
 | Segment Angle | Output |

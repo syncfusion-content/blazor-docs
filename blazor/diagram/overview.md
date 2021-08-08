@@ -26,14 +26,15 @@ The following code illustrates how to create overview.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
-    <SfDiagram id="diagram" Height="600px" Layout="@LayoutValue" ConnectorDefaults="@ConnectorDefault" NodeDefaults="@NodeDefaults">
-        <DiagramDataSource Id="Name" ParentId="Category" DataSource="@DataSource" DataMapSettings="@datamap">
-            <DiagramDataMapSettings>
-                <DiagramDataMapSetting Property="Annotations[0].Content" Field="Name"></DiagramDataMapSetting>
-            </DiagramDataMapSettings>
-        </DiagramDataSource>
-    </SfDiagram>
-<SfOverview  Height="150px" SourceID="diagram" />
+
+<SfDiagram id="diagram" Height="600px" Layout="@LayoutValue" ConnectorDefaults="@ConnectorDefault" NodeDefaults="@NodeDefaults">
+    <DiagramDataSource Id="Name" ParentId="Category" DataSource="@DataSource" DataMapSettings="@datamap">
+        <DiagramDataMapSettings>
+            <DiagramDataMapSetting Property="Annotations[0].Content" Field="Name"></DiagramDataMapSetting>
+        </DiagramDataMapSettings>
+    </DiagramDataSource>
+</SfDiagram>
+<SfOverview Height="150px" SourceID="diagram" />
 
 @code
 {
@@ -51,7 +52,7 @@ The following code illustrates how to create overview.
         Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = BasicShapes.Rectangle },
         Style = new NodeShapeStyle { Fill = "#ffeec7", StrokeColor = "#ffeec7", StrokeWidth = 1, },
         Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-{
+        {
             new DiagramNodeAnnotation()
             {
                 Id = "label1",
@@ -82,7 +83,7 @@ The following code illustrates how to create overview.
     };
 
     List<DiagramDataMapSetting> datamap { get; set; } = new List<DiagramDataMapSetting>()
-{
+    {
         new DiagramDataMapSetting() { Property = "Shape.TextContent", Field = "Name" }
     };
 
@@ -109,7 +110,7 @@ The following code illustrates how to create overview.
     }
     //Create the data source with node name and fill color values.
     public List<object> DataSource = new List<object>()
-{
+    {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#916DAF"},
         new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor=""},
         new HierarchicalDetails(){ Name ="Tree Layout", Category="Layout",FillColor=""},
@@ -144,7 +145,7 @@ The following image shows how the diagram is zoomed/panned with overview.
 <SfDiagram Nodes="@NodeCollection" id="diagram" Height="600px">
     <DiagramScrollSettings ScrollLimit="@ScrollLimit.Infinity" />
 </SfDiagram>
-<SfOverview  Height="150px" SourceID="diagram" />
+<SfOverview Height="150px" SourceID="diagram" />
 
 @code
 {
@@ -160,7 +161,7 @@ The following image shows how the diagram is zoomed/panned with overview.
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
+            {
                 new DiagramNodeAnnotation()
                 {
                     Content = "Node1",

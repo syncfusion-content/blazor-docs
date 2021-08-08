@@ -75,42 +75,42 @@ The following code example illustrates how to save the existing property values.
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
     {
-         new DiagramNode()
-         {
-             //Unique id of the node
-             Id="NewIdea",
-             //Size of the node
-             Height=100,
-             Width=100,
-             //Position of the node
-             OffsetX=100,
-             OffsetY=100,
-             //Customize the appearance of the node
-             Style= new NodeShapeStyle(){Fill="#6BA5D7",StrokeColor="White"},
-             //Enable shadow constraint of the node
-             Constraints=NodeConstraints.Default|NodeConstraints.Shadow,
-             //Initialize annotation collection with annotation
-             Annotations=new ObservableCollection<DiagramNodeAnnotation>()
-             {
-                 new DiagramNodeAnnotation()
-                 {
-                     Content="node1",
-                     //Customize the appearance of the annotations
-                     Style=new AnnotationStyle()
-                     {
-                         Color="White",
-                         StrokeColor="None"
-                     },
-                 }
-             },
-             //Customizes the appearance of the node shadow style
-             Shadow=new DiagramShadow()
-             {
-                 Angle=50,
-                 Opacity=0.8,
-                 Distance=9
-             }
-         }
+        new DiagramNode()
+        {
+            //Unique id of the node
+            Id="NewIdea",
+            //Size of the node
+            Height=100,
+            Width=100,
+            //Position of the node
+            OffsetX=100,
+            OffsetY=100,
+            //Customize the appearance of the node
+            Style= new NodeShapeStyle(){Fill="#6BA5D7",StrokeColor="White"},
+            //Enable shadow constraint of the node
+            Constraints=NodeConstraints.Default|NodeConstraints.Shadow,
+            //Initialize annotation collection with annotation
+            Annotations=new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content="node1",
+                    //Customize the appearance of the annotations
+                    Style=new AnnotationStyle()
+                    {
+                        Color="White",
+                        StrokeColor="None"
+                    },
+                }
+            },
+            //Customizes the appearance of the node shadow style
+            Shadow=new DiagramShadow()
+            {
+                Angle=50,
+                Opacity=0.8,
+                Distance=9
+            }
+        }
     };
 
     public void TrackCustomActions()
@@ -121,7 +121,7 @@ The following code example illustrates how to save the existing property values.
         diagram.AddHistoryEntry(historyEntry);
         diagram.DataBind();
     }
-     }
+}
 ```
 
 ### Track undo/redo actions
@@ -137,13 +137,13 @@ The [GetHistoryStack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 </SfDiagram>
 
 @code
- {
+{
     //Get the collection of undostack objects when passing true to GetHistoryStack() method.
     List<HistoryEntry> undostack = await diagram.GetHistoryStack(true);
 
     //Get the collection of redo stack objects when passing true to GetHistoryStack() method.
     List<HistoryEntry> redostack = await diagram.GetHistoryStack(false);
- }
+}
 ```
 
 ## History change event
@@ -159,11 +159,11 @@ The [HistoryChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 </SfDiagram>
 
 @code
- {
-public void Onhistorychange(IBlazorHistoryChangeArgs args)
+{
+    public void Onhistorychange(IBlazorHistoryChangeArgs args)
     {
         //causes of history change
         var cause = args.Cause;
     }
- }
+}
 ```

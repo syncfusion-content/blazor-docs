@@ -290,8 +290,15 @@ The `Events` property of subprocess allows you to represent these results as an 
                         //Sets offset and visible for cancel and offset for failure
                         Transaction = new DiagramBpmnTransactionSubProcess()
                         {
-                            Cancel = new CancelSubEvent() { Visible = true, Offset = new BpmnSubEventOffset() { X = 0.25, Y = 1 } },
-                            Failure = new FailureSubEvent() { Offset = new BpmnSubEventOffset() { X = 0.75, Y = 1 } }
+                            Cancel = new CancelSubEvent()
+                            {
+                                Visible = true,
+                                Offset = new BpmnSubEventOffset() { X = 0.25, Y = 1 }
+                            },
+                            Failure = new FailureSubEvent()
+                            {
+                                Offset = new BpmnSubEventOffset() { X = 0.75, Y = 1 }
+                            }
                         }
                     },
                 }
@@ -612,7 +619,6 @@ A [Call](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Diagra
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ### Ad-Hoc

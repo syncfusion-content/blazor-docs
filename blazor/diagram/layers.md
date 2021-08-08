@@ -26,8 +26,75 @@ The layer's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-   <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
-   </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
+</SfDiagram>
+
+@code{
+    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
+    public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
+    protected override void OnInitialized()
+    {
+        // A node is created and stored in nodes array.
+        DiagramNode node1 = new DiagramNode()
+        {
+            Id = "node1",
+            OffsetX = 100,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+        {
+            new DiagramNodeAnnotation(){ Content = "Default Shape"}
+        }
+        };
+        NodeCollection.Add(node1);
+
+        DiagramNode node2 = new DiagramNode()
+        {
+            Id = "node2",
+            OffsetX = 300,
+            OffsetY = 100,
+            Width = 100,
+            Height = 100,
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation(){ Content = "Path Element"}
+            },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Path,
+                Data = "M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643," +
+                "179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
+            }
+        };
+        NodeCollection.Add(node2);
+        DiagramConnector connector1 = new DiagramConnector()
+        {
+            Id = "connector1",
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 300 },
+            TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 400 },
+            Type = Segments.Straight
+        };
+        ConnectorCollection.Add(connector1);
+        string[] objects = new string[] { "node1" };
+        // initialize Layers
+        Layers.Add(new DiagramLayer() { Id = "Layer1", Visible = true, Objects = objects });
+    }
+}
+
+```
+
+## Lock
+
+The layer's [Lock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Lock) property is used to prevent or allow changes to the elements dimension and position.
+
+```cshtml
+@using Syncfusion.Blazor.Diagrams
+@using System.Collections.ObjectModel
+
+<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
+</SfDiagram>
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
@@ -78,80 +145,11 @@ The layer's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         };
         ConnectorCollection.Add(connector1);
         string[] objects = new string[] { "node1" };
-        // initialize Layers
-        Layers.Add(new DiagramLayer() { Id = "Layer1", Visible = true, Objects = objects });
-    }
-}
-
-```
-
-## Lock
-
-The layer's [Lock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayer.html#Syncfusion_Blazor_Diagrams_DiagramLayer_Lock) property is used to prevent or allow changes to the elements dimension and position.
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
-
-   <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
-   </SfDiagram>
-
-@code{
-     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
-    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
-    public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
-    protected override void OnInitialized()
-    {
-        // A node is created and stored in nodes array.
-        DiagramNode node1 = new DiagramNode()
-        {
-            Id = "node1",
-            OffsetX = 100,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-            {
-                new DiagramNodeAnnotation(){ Content = "Default Shape"}
-            }
-        };
-        NodeCollection.Add(node1);
-
-        DiagramNode node2 = new DiagramNode()
-        {
-            Id = "node2",
-            OffsetX = 300,
-            OffsetY = 100,
-            Width = 100,
-            Height = 100,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-            {
-                new DiagramNodeAnnotation(){ Content = "Path Element"}
-            },
-            Shape = new DiagramShape()
-            {
-                Type = Syncfusion.Blazor.Diagrams.Shapes.Path,
-                Data = "M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643," +
-                "179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
-            }
-        };
-        NodeCollection.Add(node2);
-        DiagramConnector connector1 = new DiagramConnector()
-        {
-            Id = "connector1",
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 300 },
-            TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 400 },
-            Type = Segments.Straight
-        };
-        ConnectorCollection.Add(connector1);
-        string[] objects = new string[] { "node1" };
         string[] objects1 = new string[] { "node2" };
         Layers.Add(new DiagramLayer() { Id = "Layer1", Visible = true, Objects = objects, Lock = true });
         Layers.Add(new DiagramLayer() { Id = "layer2", Visible = true, Objects = objects1, Lock = false });
-
     }
 }
-
 ```
 
 ## Objects
@@ -162,11 +160,11 @@ The layer's [Objects](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-   <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
-   </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
+</SfDiagram>
 
 @code{
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() {};
+    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
     public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
     protected override void OnInitialized()
@@ -213,11 +211,10 @@ The layer's [Objects](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             Type = Segments.Straight
         };
         ConnectorCollection.Add(connector1);
-        string[] objects = new string[] { "node1" ,"node2"};
+        string[] objects = new string[] { "node1", "node2" };
         string[] objects1 = new string[] { "node2" };
         Layers.Add(new DiagramLayer() { Id = "Layer1", Visible = true, Objects = objects });
-        Layers.Add(new DiagramLayer() { Id = "layer2", Visible = true, Objects = objects1});
-
+        Layers.Add(new DiagramLayer() { Id = "layer2", Visible = true, Objects = objects1 });
     }
 }
 ```
@@ -304,7 +301,9 @@ The following code illustrates how to add a layer.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
- <input type="button" value="Addlayer" @onclick="@addLayer" />
+
+<input type="button" value="Addlayer" @onclick="@addLayer" />
+
 <SfDiagram Height="600px" @ref="@diagram">
 </SfDiagram>
 
@@ -319,7 +318,8 @@ The following code illustrates how to add a layer.
         ZIndex = -1,
         AddInfo = { }
     };
-    List<DiagramConnector> connectors = new List<DiagramConnector>() {
+    List<DiagramConnector> connectors = new List<DiagramConnector>()
+    {
         new DiagramConnector()
         {
             Id = "connector2",
