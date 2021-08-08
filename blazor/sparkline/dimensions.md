@@ -64,7 +64,7 @@ The Sparkline Chart can be sized in pixels, as shown in the following code.
 </SfSparkline>
 ```
 
-> Refer to the [code block](#size-for-container) to know about the property value of the `populationData`.
+> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
 
 ![Sparkline Chart in pixel](./images/SparklineDimension/Inpixel.png)
 
@@ -86,6 +86,6 @@ By setting values in percentage, the Sparkline Chart gets their dimension with r
 </div>
 ```
 
-> Refer to the [code block](#size-for-container) to know about the property value of the `populationData`.
+> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
 
 ![Sparkline Chart in percentage](./images/SparklineDimension/Inpercentage.png)

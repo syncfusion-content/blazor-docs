@@ -139,8 +139,7 @@ The [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ## Position
 
-By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector
-using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelPosition) property.
+By default, the labels can be placed outside the Range Selector. It can also be placed inside the Range Selector using the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelPosition) property.
 
 ```cshtml
 

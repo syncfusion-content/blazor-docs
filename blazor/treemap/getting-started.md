@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor TreeMap Component | Syncfusion
-description: Checkout and learn about getting started with Blazor TreeMap component of Syncfusion, and more details.
+title: Getting Stared with Blazor TreeMap in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor TreeMap in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
 ---
 
-# Getting Started with Blazor TreeMap Component
+# Blazor TreeMap Component in Server Side App using Visual Studio
 
 This section briefly explains how to include a TreeMap component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -116,7 +116,7 @@ Add label text to the leaf items in the TreeMap component by setting the field n
 </SfTreeMap>
 ```
 
-> Refer to [code block](#adding-treemap-component-to-an-application) to know about the property value of **GrowthReport**.
+> Refer to [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
 
 ![TreeMap with label](images/treemap-with-label.png)
 
@@ -133,7 +133,7 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component-to-an-application) to know the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know the property value of **GrowthReport**.
 
 ![TreeMap with title](images/treemap-with-title.png)
 
@@ -156,7 +156,7 @@ The color mapping supports customization of item colors based on the underlying 
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component-to-an-application) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
 
 ![TreeMap with color mapping](images/Colormapping.png)
 
@@ -180,7 +180,7 @@ Legend items are used to denote the color mapping categories and show the legend
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component-to-an-application) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
 
 ![TreeMap with legend](images/Legend.png)
 
@@ -205,14 +205,14 @@ When space constraints prevents from displaying information using data labels, t
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component-to-an-application) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
 
 ![TreeMap with legend](images/Tooltip.png)
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

@@ -88,8 +88,8 @@ The [OnResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
-|   CurrentSize        |   Specifies the size of the Sparkline.         |
-|   PreviousSize       |   Specifies the size of the previous Sparkline. |
+|   CurrentSize        |   Specifies the size of Sparkline.         |
+|   PreviousSize       |   Specifies the previous size of Sparkline. |
 |   Cancel             |   Specifies the event cancel status. |
 
 ```cshtml
@@ -113,7 +113,7 @@ The [OnSeriesRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 |   Argument name      |   Description                                                         |
 |----------------------| ----------------------------------------------------------------------|
-|   Border             |   Specifies the color and the width of the series border.                         |
+|   Border             |   Specifies the color and width of the series border.                         |
 |   Fill               |   Specifies the series fill color.                             |
 |   LineWidth          |   Specifies the series line width. |
 |   Cancel             |   Specifies the event cancel status. |
@@ -143,7 +143,7 @@ The [OnMarkerRendering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 |   Fill               |   Specifies the marker fill color.                             |
 |   PointIndex          |   Specifies the marker point index. |
 |   X          |   Specifies the x axis of the marker. |
-|   Y          |   Specifies the x axis of the marker. |
+|   Y          |   Specifies the y axis of the marker. |
 |   Size          |   Specifies the size of the marker. |
 |   Cancel             |   Specifies the event cancel status. |
 
