@@ -45,7 +45,7 @@ The legend is available for accumulation charts, just like it is for charts, and
 
 ```
 
-![Legend](images/legend/default-razor.png)
+![Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend.png)
 
 ## Position and Alignment
 
@@ -85,7 +85,7 @@ The legend can be placed at [Left](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ```
 
-![Position and Alignment](images/legend/position-razor.png)
+![Changing Position and Alignment of Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-position.png)
 
 ## Legend Shape
 
@@ -126,7 +126,7 @@ The [LegendShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Legend Shape](images/legend/legend-shape-razor.png)
+![Changing Legend Shape in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-shape.png)
 
 ## Legend Size
 
@@ -168,7 +168,7 @@ The legend size can be customized by using the [Width](https://help.syncfusion.c
 
 ```
 
-![Legend Size](images/legend/size-razor.png)
+![Changing Legend Size in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-size.png)
 
 ## Legend Shape Size
 
@@ -209,7 +209,7 @@ The [ShapeHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Legend Item Size](images/legend/item-size-razor.png)
+![Changing Legend Item Size in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-item-size.png)
 
 ## Paging for Legend
 
@@ -250,7 +250,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ```
 
-![Paging for Legend](images/legend/paging-razor.png)
+![Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
