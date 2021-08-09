@@ -51,7 +51,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
         ....
         ....
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-         @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+         @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
     </head>
     ```
 
@@ -60,7 +60,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     ```html
         <head>
             ...
-                <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+                <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
                 <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
             ...
         </head>
@@ -117,7 +117,7 @@ Now, add the Syncfusion Blazor Accordion component in any web page (razor) in th
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![Blazor Accordion](./images/browser-output.png)
+![Blazor Accordion Component](images/blazor-accordion-component.png)
 
 ## Initialize Accordion using Template
 
@@ -174,7 +174,7 @@ The following code explains how to initialize accordion using `Template`.
 </style>
 ```
 
-![Blazor Accordion with template](./images/template.png)
+![Blazor Accordion with Header Template](./images/blazor-accordion-header-template.png)
 
 ## See Also
 

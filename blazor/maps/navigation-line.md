@@ -40,11 +40,11 @@ Refer the below code snippet to navigate line between two cities in World map.
 
 ## Enabling arrows
 
-You can enable arrows in the navigation lines using the [`ShowArrow`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_ShowArrow) property in [`MapsArrow`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsArrow.html) tag. You can also customize the following properties in arrow:
+You can enable arrows in the navigation lines using the [ShowArrow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_ShowArrow) property in [MapsArrow](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsArrow.html) tag. You can also customize the following properties in arrow:
 
 * Color - Specifies the color of arrow.
 * Offset - Specifies the arrow's offset position.
-* Position - Specifies the arrow position to the [`Start`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_Position) or [`End`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_Position) of line.
+* Position - Specifies the arrow position to the [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_Position) or [End](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsArrow.html#Syncfusion_Blazor_Maps_MapsArrow_Position) of line.
 * Size - Specifies the arrow size in pixels.
 
 ```cshtml

@@ -46,7 +46,7 @@ The size of the Sparkline Chart is determined by the container size, and it can 
 
 ## Size for Sparkline
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties can be used to set the size of the Sparkline Chart.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_Height) properties can be used to set the size of the Sparkline Chart.
 
 ### In Pixel
 
@@ -64,7 +64,7 @@ The Sparkline Chart can be sized in pixels, as shown in the following code.
 </SfSparkline>
 ```
 
-> Refer to the [code block](#size-for-container) to know about the property value of the `populationData`.
+> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
 
 ![Sparkline Chart in pixel](./images/SparklineDimension/Inpixel.png)
 
@@ -86,6 +86,6 @@ By setting values in percentage, the Sparkline Chart gets their dimension with r
 </div>
 ```
 
-> Refer to the [code block](#size-for-container) to know about the property value of the `populationData`.
+> Refer to the [code block](#size-for-the-container) to know about the property value of the `populationData`.
 
 ![Sparkline Chart in percentage](./images/SparklineDimension/Inpercentage.png)

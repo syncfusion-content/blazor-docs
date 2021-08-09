@@ -20,34 +20,41 @@ The following code explains how to draw the connector by using the port constrai
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
-@code{
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-   DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new DiagramObjectCollection<PointPort>() {
-            new PointPort() {
-                ID = "port1",
-                Offset = new Point() { X = 0.5, Y = 0.5 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
-                // Sets the shape of the port as Circle
-                Width = 12, Height = 12, Shape = PortShapes.X,
-                // Enable drag operation for Port
-                Constraints = PortConstraints.Default|PortConstraints.Draw
-            }},
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new Point() { X = 0.5, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
+                    // Sets the shape of the port as Circle
+                    Width = 12, Height = 12, Shape = PortShapes.X,
+                    // Enable drag operation for Port
+                    Constraints = PortConstraints.Default|PortConstraints.Draw
+                }
+            },
         };
         nodes.Add(node);
     }
@@ -58,8 +65,8 @@ The following code explains how to draw the connector by using the port constrai
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to set the position of the port`](./positioning)
+* [How to set the position of the port](./positioning)

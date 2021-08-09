@@ -13,18 +13,21 @@ BPMN(Business Process Model and Notation) shapes are used to represent the inter
 
 The following code example explains how to create a simple business process.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    //Initialize node collection with Node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
 {
-        new Node()
+    // Initialize node collection with Node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
         {
             // Position of the node
             OffsetX = 100,
@@ -34,15 +37,15 @@ The following code example explains how to create a simple business process.
             Height = 100,
             // Unique Id of the node
             ID = "node1",
-            //Sets type as Bpmn and shape as Event
+            // Sets type as Bpmn and shape as Event
             Shape = new BpmnShape()
             {
                 Type = Shapes.Bpmn,
             }
-        }
-    };
+        };
+        nodes.Add(node);
+    }
 }
-
 ```
 
 > The default value for the property `Shape` is “Event”.

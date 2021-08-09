@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Interaction in Blazor Diagram Component
+# Node Interaction in Blazor Diagram Component
 
 Diagram provides the support to drag, resize, or rotate the node interactively.
 
@@ -21,17 +21,18 @@ A node can be select at runtime by using the `Select` method and clear the selec
 
 <input type="button" value="Select" @onclick="OnSelect">
 <input type="button" value="UnSelect" @onclick="@UnSelect" />
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
-@code {
+@code
+{
     // reference of the diagram
     SfDiagramComponent diagram;
-
     // To define node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
@@ -46,11 +47,13 @@ A node can be select at runtime by using the `Select` method and clear the selec
         // Add node
         nodes.Add(node);
     }
+
     public void OnSelect()
     {
         // Select the node
-        diagram.Select(new ObservableCollection<IDiagramObject> { Diagram.Nodes[0] });
+        diagram.Select(new ObservableCollection<IDiagramObject> { diagram.Nodes[0] });
     }
+
     public void UnSelect()
     {
         // clear selection in the diagram
@@ -74,32 +77,37 @@ A node can be drag at runtime by using the `Drag` method. The following code exp
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Drag" @onclick="OnDrag">
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
 
-@code {
+@code
+{
     // reference of the diagram
-    SfDiagramComponent diagram;
+    SfDiagramComponent Diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
         nodes.Add(node);
     }
+
     public void OnDrag()
     {
         // Drag the node
-        diagram.Drag(Diagram.Nodes[0], 10, 10);
+        Diagram.Drag(Diagram.Nodes[0], 10, 10);
     }
 }
 ```
@@ -119,32 +127,37 @@ A node can be resize at runtime by using the `Scale` method. The following code 
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Resize" @onclick="OnResize">
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
-@code {
+@code
+{
     // reference of the diagram
     SfDiagramComponent diagram;
     // To define node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
         nodes.Add(node);
     }
+
     public void OnResize()
     {
         // Resize the node
-        diagram.Scale(Diagram.Nodes[0], 0.5, 0.5, new Point() { X = 0, Y = 0 } );
+        diagram.Scale(diagram.Nodes[0], 0.5, 0.5, new Point() { X = 0, Y = 0 });
     }
 }
 ```
@@ -164,36 +177,42 @@ And also you can resize the node during interaction.
 A node can be rotate at runtime by using the `Rotate` method. The following code explains how to rotate the node by using method.
 
 ```cshtml
+@page "/Rotate-Interaction"
+
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Rotate" @onclick="OnRotate">
-<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
-@code {
+@code
+{
     // reference of the diagram
     SfDiagramComponent diagram;
-
     // To define node collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes collection.
         Node node = new Node()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
         };
         // Add node
         nodes.Add(node);
     }
+
     public void OnRotate()
     {
         // Rotate the node
-        diagram.Rotate(Diagram.Nodes[0], Diagram.Nodes[0].RotateAngle+10);
+        diagram.Rotate(diagram.Nodes[0], diagram.Nodes[0].RotateAngle + 10);
     }
 }
 ```
@@ -206,18 +225,18 @@ And also the rotate the node during the interaction.
 
 ![Rotate](../images/rotate.gif)
 
-For more information about node interaction, refer to [`Node Interaction`](../interaction).
+For more information about node interaction, refer to [Node Interaction](../interaction).
 
 ## See also
 
-* [`How to get events while the interact the node`](./events)
+* [How to get events while the interact the node](./events)
 
-* [`How to positioning the node`](./positioning)
+* [How to positioning the node](./positioning)
 
-* [`How to customize the node`](./appearance)
+* [How to customize the node](./appearance)
 
-* [`How to interact the annotation in diagram`](../annotations/interaction)
+* [How to interact the annotation in diagram](../annotations/interaction)
 
-* [`How to interact the port in diagram`](../ports/interaction)
+* [How to interact the port in diagram](../ports/interaction)
 
-* [`How to interact the connector in diagram`](../connectors/interactions)
+* [How to interact the connector in diagram](../connectors/interactions)

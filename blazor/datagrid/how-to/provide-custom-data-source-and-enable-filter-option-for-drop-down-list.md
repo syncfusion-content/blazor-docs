@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom data source & filtering for DropDownList in Blazor DataGrid
 
-You can provide custom data source and enable filter option for DropDownList while performing DataGrid editing by using the [`Edit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) params property.
+You can provide custom data source and enable filter option for DropDownList while performing DataGrid editing by using the [Edit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) params property.
 
-While setting new data source for DropDownList using [`Edit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) params, you must also specify a new [`Query`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.IDropDownList.html) property for DropDownList.
+While setting new data source for DropDownList using [Edit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) params, you must also specify a new [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.IDropDownList.html) property for DropDownList.
 
 This is demonstrated in the below sample code,
 

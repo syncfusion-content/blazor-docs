@@ -13,7 +13,7 @@ Create an object for the TreeMap component using `@ref` property and call the de
 
 ## Print
 
-To print the rendered TreeMap component by setting the [`AllowPrint`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**.
+To print the rendered TreeMap component by setting the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -28,7 +28,7 @@ To print the rendered TreeMap component by setting the [`AllowPrint`](https://he
     public SfTreeMap<Country> Treemap { get; set; }
     public async Task PrintMap()
     {
-        await Treemap.Print();
+        await Treemap.PrintAsync();
     }
     public class Country
     {
@@ -45,9 +45,9 @@ To print the rendered TreeMap component by setting the [`AllowPrint`](https://he
 
 ## Export
 
-Export the current TreeMap component to different file formats such as [`PNG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG), [`PDF`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF), [`JPEG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_JPEG) and [`SVG`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_SVG).
+Using `ExportAsync` method the current TreeMap component will be exported to different file formats such as [PNG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PNG), [PDF](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_PDF), [JPEG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_JPEG) and [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ExportType.html#Syncfusion_Blazor_TreeMap_ExportType_SVG).
 
-The [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) and the [`AllowPdfExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property represents to allow the file to be downloaded in an image and pdf type export.
+The [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowImageExport) and [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPdfExport) property represents to allow the file to be downloaded in an image and pdf type export.
 
 |   Arguments      |   Description                                       |
 |----------------------| ----------------------------------------------------|
@@ -71,7 +71,7 @@ The [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     public SfTreeMap<Country> Treemap { get; set; }
     public async Task ExportMap()
     {
-        await Treemap.Export(ExportType.SVG, "Export", Syncfusion.PdfExport.PdfPageOrientation.Portrait, true);
+        await Treemap.ExportAsync(ExportType.SVG, "Export", Syncfusion.PdfExport.PdfPageOrientation.Portrait, true);
     }
     public class Country
     {
@@ -88,7 +88,7 @@ The [`AllowImageExport`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ## Refresh
 
-The TreeMap component is rendered again.
+The `RefreshAsync` method helps to refresh the TreeMap component.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -101,7 +101,7 @@ The TreeMap component is rendered again.
     public SfTreeMap<Country> Treemap { get; set; }
     public async Task RefreshCall()
     {
-        await Treemap.Refresh();
+        await Treemap.RefreshAsync();
     }
     public class Country
     {
@@ -118,7 +118,7 @@ The TreeMap component is rendered again.
 
 ## SelectItem
 
-The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_SelectItem_System_String___System_Boolean_) method can be used to select or unselect the TreeMap item programmatically.
+The `SelectItemAsync` method can be used to select or unselect the TreeMap item programmatically.
 
 |   Arguments      |   Description                                       |
 |----------------------| ----------------------------------------------------|
@@ -140,7 +140,7 @@ The [`SelectItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeM
     public SfTreeMap<Country> Treemap { get; set; }
     public async Task SelectCall()
     {
-        await Treemap.SelectItem(new string[] { "United States" }, true);
+        await Treemap.SelectItemAsync(new string[] { "United States" }, true);
     }
     public class Country
     {

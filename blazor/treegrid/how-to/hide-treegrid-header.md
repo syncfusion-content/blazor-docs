@@ -23,4 +23,4 @@ You can hide the Tree Grid header by applying the below styles to Tree Grid comp
 
 Output be like the below.
 
-![`Final output`](../images/hide-header.PNG)
+![Final output](../images/hide-header.PNG)

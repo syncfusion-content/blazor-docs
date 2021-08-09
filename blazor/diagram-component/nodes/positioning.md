@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Position in Blazor Diagram Component
+# Positioning a node in Blazor Diagram Component
 
 ## Arrange the nodes
 
@@ -31,17 +31,20 @@ The following code shows how to change the `Pivot` value.
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
-@code {
+@code
+{
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
+            ID = "node",
             // Position of the node
             OffsetX = 250,
             OffsetY = 250,
@@ -54,6 +57,7 @@ The following code shows how to change the `Pivot` value.
         };
         nodes.Add(node);
     }
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
@@ -73,15 +77,16 @@ Rotation of a node is controlled by using the `RotateAngle` property. The follow
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
 @code
 {
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -110,14 +115,16 @@ The `MinWidth` and `MinHeight` properties of node allows you to control the mini
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
-@code {
+@code
+ {
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -145,6 +152,6 @@ The `MinWidth` and `MinHeight` properties of node allows you to control the mini
 
 ## See also
 
-* [`How to customize the node`](./appearance)
+* [How to customize the node](./appearance)
 
-* [`How to get events when they interact the node`](./events)
+* [How to get events when they interact the node](./events)

@@ -9,7 +9,7 @@ documentation: ug
 
 # How to position connector’s annotation
 
-Annotations of a connector can be positioned using the following properties of AnnotationEditorViewModel class.
+Annotations of a connector can be positioned using the following properties of Annotation class.
 
 * Offset
 * Alignment
@@ -23,34 +23,31 @@ The `Offset` property of annotation is used to align the annotations based on fr
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
 @code
 {
-//Defines diagram's connector collection
-DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Defines diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
 
-protected override void OnInitialized()
-{
-
-    connectors = new DiagramObjectCollection<Connector>();
-        Connector connector = new Connector()
+    protected override void OnInitialized()
     {
-      SourcePoint = new Point() { X = 300, Y = 40 },
-        TargetPoint = new Point() { X = 400, Y = 160 },
-        Type = Segments.Orthogonal,
-        Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
-      Annotations = new DiagramObjectCollection<PathAnnotation>()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            new PathAnnotation { Content = "Offset as 0",Offset=0 },
-            new PathAnnotation { Content = "Offset as 0.5",Offset=0.5 },
-            new PathAnnotation { Content = "Offset as 1",Offset=1 },
-        }
-    };
-
-    connectors.Add(connector);
-}
+            SourcePoint = new Point() { X = 300, Y = 40 },
+            TargetPoint = new Point() { X = 400, Y = 160 },
+            Type = Segments.Orthogonal,
+            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation { Content = "Offset as 0",Offset=0 },
+                new PathAnnotation { Content = "Offset as 0.5",Offset=0.5 },
+                new PathAnnotation { Content = "Offset as 1",Offset=1 },
+            }
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -67,33 +64,30 @@ The connector’s annotation can be aligned over its segment path using the `Ali
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors" />
 
 @code
 {
-//Defines diagram's connector collection
-DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    //Defines diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
 
-protected override void OnInitialized()
-{
-
-    connectors = new DiagramObjectCollection<Connector>();
-        Connector connector = new Connector()
+    protected override void OnInitialized()
     {
-      SourcePoint = new Point() { X = 300, Y = 40 },
-        TargetPoint = new Point() { X = 400, Y = 160 },
-        Type = Segments.Orthogonal,
-        Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
-      Annotations = new DiagramObjectCollection<PathAnnotation>()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-           new PathAnnotation { Content = "Before",Alignment=AnnotationAlignment.Before },
-           new PathAnnotation { Content = "After",Alignment=AnnotationAlignment.After },
-        }
-    };
-
-    connectors.Add(connector);
-}
+            SourcePoint = new Point() { X = 300, Y = 40 },
+            TargetPoint = new Point() { X = 400, Y = 160 },
+            Type = Segments.Orthogonal,
+            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation { Content = "Before",Alignment=AnnotationAlignment.Before },
+                new PathAnnotation { Content = "After",Alignment=AnnotationAlignment.After },
+            }
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -112,32 +106,29 @@ The following code example shows how the connector annotation rotated in its pat
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
 @code
 {
-//Defines diagram's connector collection
-DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    // Defines diagram's connector collection
+    DiagramObjectCollection<Connector> connectors;
 
-protected override void OnInitialized()
-{
-
-    connectors = new DiagramObjectCollection<Connector>();
-        Connector connector = new Connector()
+    protected override void OnInitialized()
     {
-      SourcePoint = new Point() { X = 300, Y = 40 },
-        TargetPoint = new Point() { X = 400, Y = 160 },
-        Type = Segments.Orthogonal,
-        Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
-      Annotations = new DiagramObjectCollection<PathAnnotation>()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-          new PathAnnotation { Content = "Annotation", SegmentAngle=true,Offset=0.7 },
-        }
-    };
-
-    connectors.Add(connector);
-}
+            SourcePoint = new Point() { X = 300, Y = 40 },
+            TargetPoint = new Point() { X = 400, Y = 160 },
+            Type = Segments.Orthogonal,
+            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            Annotations = new DiagramObjectCollection<PathAnnotation>()
+            {
+                new PathAnnotation { Content = "Annotation", SegmentAngle=true,Offset=0.7 },
+            }
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -150,8 +141,8 @@ protected override void OnInitialized()
 
 ## See also
 
-* [`How to add annotation for Node`](./node-annotation)
+* [How to add annotation for Node](./node-annotation)
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)

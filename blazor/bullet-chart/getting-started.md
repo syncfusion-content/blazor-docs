@@ -21,15 +21,15 @@ This section briefly explains how to include a Bullet Chart component in the Bla
 <head>
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
-> For Internet Explorer 11, kindly refer to the polyfills. Refer to the [`documentation`](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11, kindly refer to the polyfills. Refer to the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
  ```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 ```
@@ -92,11 +92,11 @@ To initialize the Bullet Chart component, add the below code to the **Index.raz
 
 On successful compilation of the application, the Syncfusion Blazor Bullet Chart component will render in the web browser as follows.
 
-![Bullet Chart](images/default.png)
+![Blazor Bullet Chart Component](images/blazor-bullet-chart-component.png)
 
 ## Adding Title
 
-Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
+Add a title by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Title) property in the Bullet Chart, to provide quick information to the user about the data plotted in the component.
 
 ```cshtml
 @page "/"
@@ -117,11 +117,11 @@ Add a title by using the [`Title`](https://help.syncfusion.com/cr/blazor/Syncfus
 }
 ```
 
-![Bullet Chart](images/title.png)
+![Blazor Bullet Chart with Title](images/blazor-bullet-chart-title.png)
 
 ## Adding Ranges
 
-Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
+Add ranges by using the [BulletChartRangeCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartRangeCollection.html) to measure the qualitative state by observing the distance between each range.
 
 ```cshtml
 @page "/"
@@ -147,11 +147,11 @@ Add ranges by using the [`BulletChartRangeCollection`](https://help.syncfusion.c
 }
 ```
 
-![Bullet Chart](images/ranges.png)
+![Adding Range in Blazor Bullet Chart](images/blazor-bullet-chart-ranges.png)
 
 ## Adding Tooltip
 
-Use the tooltip to show the measured values by setting the [`Enable`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in the [`BulletChartTooltip`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
+Use the tooltip to show the measured values by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html#Syncfusion_Blazor_Charts_BulletChartTooltip_1_Enable) property to **true** in the [BulletChartTooltip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartTooltip-1.html).
 
 ```cshtml
 @page "/"
@@ -178,4 +178,4 @@ Use the tooltip to show the measured values by setting the [`Enable`](https://he
 }
 ```
 
-![Bullet Chart](images/tool-tip.png)
+![Blazor Bullet Chart displays ToolTip](images/blazor-bullet-chart-tooltip.png)

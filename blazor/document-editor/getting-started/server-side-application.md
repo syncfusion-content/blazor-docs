@@ -63,7 +63,7 @@ Steps to get started with Word processor component for Blazor:
     <head>
         ....
         ....
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/material.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css" rel="stylesheet" />
     </head>
     ```
 
@@ -73,7 +73,7 @@ Steps to get started with Word processor component for Blazor:
 
 12. To load an existing document during control initialization, use the following code example, which opens a Word document. Convert it to SFDT and load in the editor.
 
-    ```csharp
+    ```cshtml
     @using System.IO;
     @using Syncfusion.Blazor.DocumentEditor;
 

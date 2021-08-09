@@ -89,15 +89,14 @@ You can change the orientation at runtime. The following code is used to how to 
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
 
-//Initializing the orientation value
+// Initializing the orientation value
 LayoutOrientation orientation = LayoutOrientation.TopToBottom;
 
 public void UpdateOrientation()
 {
-    //Update LayoutOrientation in runtime
+    // Update LayoutOrientation in runtime
     orientation = LayoutOrientation.BottomToTop;
 }
-
 ```
 
 ### Spacing
@@ -106,10 +105,10 @@ You can change the horizontal and vertical spacing for the diagram layout.
 
 ```cshtml
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
-    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"></Layout>
+    <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
 </SfDiagramComponent>
 
-//Initializing the Horizontal and Vertical value
+// Initializing the Horizontal and Vertical value
 int HorizontalSpacing = 40;
 int VerticalSpacing = 50;
 
@@ -134,7 +133,7 @@ You can change the margin values for the diagram layout.
   </Layout>
 </SfDiagramComponent>
 
-//Initializing the Mergin Top and Left value
+// Initializing the Mergin Top and Left value
 int left = 40;
 int top = 50;
 
@@ -150,6 +149,6 @@ public void UpdateMargin()
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to create a connector`](../connectors/connectors)
+* [How to create a connector](../connectors/connectors)

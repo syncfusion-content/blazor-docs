@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The rendered Range Selector can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Print).
+The rendered Range Selector can be printed directly from the browser by calling the public method `PrintAsync`.
 
 ```cshtml
 
@@ -50,9 +50,9 @@ The rendered Range Selector can be printed directly from the browser by calling 
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70  }
     };
 
-    private void Click(MouseEventArgs args)
+    public async Task Click(MouseEventArgs args)
     {
-        RangeObj.Print();
+        await RangeObj.PrintAsync();
     }
 }
 
@@ -60,7 +60,7 @@ The rendered Range Selector can be printed directly from the browser by calling 
 
 ## Export
 
-The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method in the Range Selector. This method contains the following parameters:
+The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the `ExportAsync` method in the Range Selector. This method contains the following parameters:
 
 * **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format.
 * **File name** - To specify the file name to export.
@@ -103,9 +103,9 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
         new StockDetails { Date = new DateTime(2011, 01, 01), Close = 70  }
     };
 
-    private void Click(MouseEventArgs args)
+    public async Task Click(MouseEventArgs args)
     {
-        RangeObj.Export(ExportType.PDF, "pngImage", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
+        await RangeObj.ExportAsync(ExportType.PDF, "pngImage", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
     }
 }
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The rendered Smith Chart can be printed directly from the browser by calling the public method [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Print).
+The rendered Smith Chart can be printed directly from the browser by calling the public method `PrintAsync`.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -43,16 +43,16 @@ The rendered Smith Chart can be printed directly from the browser by calling the
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-    private void Print()
+    private async Task Print()
     {
-        smithChart.Print();
+        await smithChart.PrintAsync();
     }
 }
 ```
 
 ## Export
 
-The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the [`Export`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmithChart.html#Syncfusion_Blazor_Charts_SfSmithChart_Export_Syncfusion_Blazor_Charts_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__) method in the Smith Chart. This method contains the following parameters:
+The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format by using the `ExportAsync` method in the Smith Chart. This method contains the following parameters:
 
 * **Type** - To specify the export type. The component can be exported to **JPEG**, **PNG**, **SVG**, or **PDF** format.
 * **File name** - To specify the file name to export.
@@ -88,9 +88,9 @@ The rendered Smith Chart can be exported to **JPEG**, **PNG**, **SVG**, or **PDF
         new SmithChartData { Resistance= 1, Reactance= 0.8 },
         new SmithChartData { Resistance= 0, Reactance= 0.2 }
     };
-    private void Export()
+    private async Task Export()
     {
-        smithChart.Export(ExportType.PDF, "SmithChart", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
+        await smithChart.ExportAsync(ExportType.PDF, "SmithChart", Syncfusion.PdfExport.PdfPageOrientation.Landscape);
     }
 }
 ```

@@ -25,9 +25,9 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
 
 ## Add palettes to SymbolPalette
 
-A palette allows to display a group of related symbols and it textually annotates the group with its header. A [`Palettes`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html) can be added as a collection of symbol groups.
+A palette allows to display a group of related symbols and it textually annotates the group with its header. A [Palettes](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html) can be added as a collection of symbol groups.
 
-The collection of predefined symbols can be added in palettes using the [`Symbols`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Symbols) property. To initialize a palette, define a JSON object with the property [`Id`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Id) that is unique ID is set to the palettes.
+The collection of predefined symbols can be added in palettes using the [Symbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Symbols) property. To initialize a palette, define a JSON object with the property [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Id) that is unique ID is set to the palettes.
 
 The following code example illustrates how to define a palette and how its added to symbol palette.
 
@@ -134,17 +134,17 @@ The following code example illustrates how to define a palette and how its added
 
 Palettes can be annotated with its header texts.
 
-The [`Title`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Title) displayed as the header text of palette.
+The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Title) displayed as the header text of palette.
 
-The [`Expanded`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Expanded) property of palette allows to expand/collapse its palette items.
+The [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Expanded) property of palette allows to expand/collapse its palette items.
 
-The [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Height) property of palette sets the height of the symbol group.
+The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_Height) property of palette sets the height of the symbol group.
 
-The [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_IconCss) property sets the content of the symbol group.
+The [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html#Syncfusion_Blazor_Diagrams_SymbolPalettePalette_IconCss) property sets the content of the symbol group.
 
 ## Stretch the symbols into the palette
 
-The [`Fit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolInfo.html#Syncfusion_Blazor_Diagrams_SymbolInfo_Fit) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
+The [Fit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolInfo.html#Syncfusion_Blazor_Diagrams_SymbolInfo_Fit) property defines whether the symbol has to be fit inside the size, that is defined by the symbol palette. For example, when you resize the rectangle in the symbol, ratio of the rectangle size has to be maintained rather changing into square shape. The following code example illustrates how to customize the symbol size.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -181,13 +181,13 @@ The [`Fit`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Sym
 
 ## Add/Remove symbols to palette at runtime
 
-* Symbols can be added to palette at runtime by using public method, [`AddPaletteItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_AddPaletteItem_System_String_System_Object_).
+* Symbols can be added to palette at runtime by using public method, [AddPaletteItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_AddPaletteItem_System_String_System_Object_).
 
-* Symbols can be removed from palette at runtime by using public method, [`RemovePaletteItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_RemovePaletteItem_System_String_System_String_).
+* Symbols can be removed from palette at runtime by using public method, [RemovePaletteItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_RemovePaletteItem_System_String_System_String_).
 
 ## Customize the size of symbols
 
-The size of the individual symbol can be customized. The [`SymbolWidth`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolWidth) and  [`SymbolHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolHeight) properties of node enables you to define the size of the symbols. The following code example illustrates how to change the size of a symbol.
+The size of the individual symbol can be customized. The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolWidth) and  [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolHeight) properties of node enables you to define the size of the symbols. The following code example illustrates how to change the size of a symbol.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -229,11 +229,11 @@ The size of the individual symbol can be customized. The [`SymbolWidth`](https:/
 
 ```
 
-The [`SymbolMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolMargin) property is used to create the space around elements, outside of any defined borders.
+The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolMargin) property is used to create the space around elements, outside of any defined borders.
 
 ## Symbol preview
 
-The symbol preview size of the palette items can be customized using [`SymbolPreview`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolPreview). The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Width) and [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Height) properties of SymbolPalette enables you to define the preview size to all the symbol palette items. The [`Offset`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Offset) of the dragging helper relative to the mouse cursor.
+The symbol preview size of the palette items can be customized using [SymbolPreview](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_SymbolPreview). The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Height) properties of SymbolPalette enables you to define the preview size to all the symbol palette items. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SymbolPaletteSymbolPreview.html#Syncfusion_Blazor_Diagrams_SymbolPaletteSymbolPreview_Offset) of the dragging helper relative to the mouse cursor.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -289,7 +289,7 @@ The following code example illustrates how to change the preview size of a palet
 
 ## Default settings
 
-While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [`NodeDefaults`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_NodeDefaults) and the `ConnectorDefaults` properties of diagram allows to define the default settings for nodes and connectors.
+While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [NodeDefaults](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfSymbolPalette.html#Syncfusion_Blazor_Diagrams_SfSymbolPalette_NodeDefaults) and the `ConnectorDefaults` properties of diagram allows to define the default settings for nodes and connectors.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams

@@ -15,23 +15,23 @@ The TextEdit event will notify the annotation content changes after editing. The
 
 The following code example shows how to register and get the notification from the TextEdit event.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" TextEdit="textedit"  Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" TextEdit="textedit" Nodes="@nodes" />
 
 @code
 {
-   //Defines diagram's nodes collection
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
 
-   //Triggered this event when complete the editing for Annotation and update the old text and new text values.
-   private void textedit(TextEditEventArgs args)
+    // Triggered this event when complete the editing for Annotation and update the old text and new text values.
+    private void textedit(TextEditEventArgs args)
     {
         Console.WriteLine("Oldvalue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
     }
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -50,7 +50,6 @@ The following code example shows how to register and get the notification from t
         nodes.Add(node);
     }
 }
-
 ```
 
 ## Key down
@@ -63,27 +62,28 @@ The keyup event occurs when a keyboard key is released and updated the respectiv
 
 The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" KeyDown ="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@nodes" >
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" KeyDown="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@nodes" />
 
 @code
 {
-    //Defines diagram's nodes collection
-   DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    // Defines diagram's nodes collection
+    DiagramObjectCollection<Node> nodes;
 
-   //Occurs when  click the annotation and enter the character in key down state
+    // Occurs when  click the annotation and enter the character in key down state
     private void OnKeyDown(KeyEventArgs args)
     {
 
     }
-    //Occurs when click the annotation and enter the character in key release state
+
+    // Occurs when click the annotation and enter the character in key release state
     private void OnKeyUp(KeyEventArgs args)
     {
 
     }
+
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
@@ -101,16 +101,15 @@ The following code example shows how to register and get the notification from t
         };
         nodes.Add(node);
     }
-}}
-
+}
 ```
 
 ## See also
 
-* [`How to add or remove annotation constraints`](../constraints/#annotation-constraints)
+* [How to add or remove annotation constraints](../constraints/#annotation-constraints)
 
-* [`How to customize the annotation`](./appearance)
+* [How to customize the annotation](./appearance)
 
-* [`How to add annotation for Node`](./node-annotation)
+* [How to add annotation for Node](./node-annotation)
 
-* [`How to add annotation for Connector`](./connector-annotation)
+* [How to add annotation for Connector](./connector-annotation)

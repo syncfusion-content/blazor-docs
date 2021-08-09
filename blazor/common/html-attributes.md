@@ -194,7 +194,7 @@ The textbox will be rendered with the following output.
 </span>
 ```
 
-In some cases, you may need to add HTML attributes to the root/container element of the above input-based components. For this, you can use [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) Syncfusion API to add HTML attributes to the root/container element.
+In some cases, you may need to add HTML attributes to the root/container element of the above input-based components. For this, you can use [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_HtmlAttributes) Syncfusion API to add HTML attributes to the root/container element.
 
 ```cshtml
 <SfTextBox HtmlAttributes="@(new() { { "style", "background:aliceblue;" } })"></SfTextBox>

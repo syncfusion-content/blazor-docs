@@ -15,7 +15,7 @@ The OpenStreetMap (OSM) is the world map built by a community of developers. it 
 
 One of the most important features in Blazor Maps component is the built-in online map provider support. By using this feature, you can render OpenStreetMaps in the maps component. This provides the ability to visualize street map tiles without using any external shape files.
 
-You can enable this feature by setting the value of [`LayerType`](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) property to “ShapeLayerType.OSM”.
+You can enable this feature by setting the value of [LayerType](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) property to “ShapeLayerType.OSM”.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

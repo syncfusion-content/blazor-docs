@@ -53,7 +53,7 @@ The following examples shows data filtering is done with the `StartsWith` type
 
 The output will be as follows.
 
-![AutoComplete](./images/filter.png)
+![Filtering in Blazor AutoComplete](./images/blazor-autocomplete-filter.png)
 
 ## Filter item count
 
@@ -91,7 +91,7 @@ Refer to the following example to restrict the suggestion list item counts as 3.
 
 The output will be as follows.
 
-![AutoComplete](./images/filtercount.png)
+![Filtering Blazor AutoComplete Items based on Count](./images/blazor-autocomplete-filter-item-count.png)
 
 ## Limit the minimum filter character
 
@@ -129,7 +129,7 @@ In the following example, the remote request doesn't fetch the search data until
 
 The output will be as follows.
 
-![AutoComplete](./images/minlenght.png)
+![Filtering Blazor AutoComplete Items based on Character Count](./images/blazor-autocomplete-filter-based-length.png)
 
 ## Case sensitive filtering
 

@@ -24,37 +24,42 @@ The following code explains how to change the appearance of the port.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
- <SfDiagramComponent Height="600px" Nodes="@nodes">
- </SfDiagramComponent>
-@code{
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-protected override void OnInitialized()
+@code
 {
-    // A node is created and stored in nodes array.
-    Node node = new Node()
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        // Position of the node
-        OffsetX = 250,
-        OffsetY = 250,
-        // Size of the node
-        Width = 100,
-        Height = 100,
-        Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-        // Initialize port collection
-        Ports = new DiagramObjectCollection<PointPort>() {
-        new PointPort() {
-            ID = "port1",
-            Offset = new Point() { X = 0, Y = 0.5 },
-            Visibility = PortVisibility.Visible,
-            //Set the style for the port
-            Style= new ShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
-            // Sets the shape of the port as Circle
-            Width= 12, Height=12, Shape= PortShapes.Circle
-        }},
-    };
-    nodes.Add(node);
-}
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Initialize port collection
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new Point() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new ShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
+                    // Sets the shape of the port as Circle
+                    Width= 12, Height=12, Shape= PortShapes.Circle
+                }
+            },
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
@@ -87,38 +92,43 @@ We have provided some basic built-in `PortShapes` for the port. Please find the 
  ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
-@code{
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-protected override void OnInitialized()
+@code
 {
-   // A node is created and stored in nodes array.
-  Node node = new Node()
-   {
-       // Position of the node
-       OffsetX = 250,
-       OffsetY = 250,
-       // Size of the node
-       Width = 100,
-       Height = 100,
-       Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-       // Initialize port collection
-       Ports = new DiagramObjectCollection<PointPort>() {
-       new PointPort() {
-          ID = "port1",
-          Offset = new Point() { X = 0.5, Y = 0.5 },
-          Visibility = PortVisibility.Visible,
-          //Set the style for the port
-          Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
-          // Sets the shape of the port as Circle
-          Width= 12, Height=12, Shape= PortShapes.Custom,
-          PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
-        }},
-   };
-   nodes.Add(node);
-}
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in nodes array.
+        Node node = new Node()
+        {
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            // Initialize port collection
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "port1",
+                    Offset = new Point() { X = 0.5, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
+                    // Sets the shape of the port as Circle
+                    Width= 12, Height=12, Shape= PortShapes.Custom,
+                    PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
+                }
+            },
+        };
+        nodes.Add(node);
+    }
 }
 ```
 
@@ -144,10 +154,10 @@ The `AddInfo` property of the port allows you to maintain additional information
 
 ## See also
 
-* [`How to create a node`](../nodes/nodes)
+* [How to create a node](../nodes/nodes)
 
-* [`How to customize the ports`](./appearance)
+* [How to customize the ports](./appearance)
 
-* [`How to set the position of the port`](./positioning)
+* [How to set the position of the port](./positioning)
 
-* [`How to interact the ports`](./interaction)
+* [How to interact the ports](./interaction)

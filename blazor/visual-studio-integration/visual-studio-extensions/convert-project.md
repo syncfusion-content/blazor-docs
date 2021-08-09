@@ -35,7 +35,7 @@ The steps below help you to convert the **Blazor application** to the **Syncfusi
 
     ![ConversionWizard](../images/Conversion.png)
 
-    > The versions are loaded from the Syncfusion Blazor NuGet packages published in [`NuGet.org`](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
+    > The versions are loaded from the Syncfusion Blazor NuGet packages published in [NuGet.org](https://www.nuget.org/packages?q=Tags%3A%22blazor%22syncfusion) and it requires internet connectivity.
 
 4. Check the **“Enable a backup before converting”** checkbox if you want to take the project backup and choose the location.
 

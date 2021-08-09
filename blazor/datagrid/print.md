@@ -11,7 +11,7 @@ documentation: ug
 
 # Print in Blazor DataGrid Component
 
-To print the DataGrid, call the [`Print`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Print) method using datagrid reference. The print option can also be displayed on the toolbar by adding the `Print` toolbar item.
+To print the DataGrid, call the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Print) method using datagrid reference. The print option can also be displayed on the toolbar by adding the `Print` toolbar item.
 
 The below sample code demonstrates DataGrid with print option added in the toolbar,
 
@@ -122,7 +122,7 @@ The following image represents DataGrid with external button for invoking print 
 
 ## Print the visible page
 
-By default, the datagrid prints all the pages. To print the current page alone, set the [`PrintMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) value as **CurrentPage**.
+By default, the datagrid prints all the pages. To print the current page alone, set the [PrintMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_DashArray) value as **CurrentPage**.
 
 The below sample code demonstrates this,
 

@@ -87,4 +87,4 @@ In the following demo, initially we have three accordion as the **AccordionItems
 
 Output be like the below.
 
-![Dynamic Add/Remove AccordionItems](../images/addRemoveItem.gif)
+![Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)

@@ -65,21 +65,21 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 4. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
     > You can also add the client-side style resources through CDN.
 
-```csharp
+```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 </head>
 ```
 
-```csharp
+```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
 </head>
 ```
 
 > For `Internet Explorer` 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```csharp
+```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
@@ -90,7 +90,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 Open the **Startup.cs** file and add services required by Syncfusion components using `services.AddSyncfusionBlazor()` method. Add this method in the **ConfigureServices** function as follows.
 
-```csharp
+```c#
 using Syncfusion.Blazor;
 
 namespace BlazorApplication
@@ -113,7 +113,7 @@ namespace BlazorApplication
 
 Open the **Program.cs** file and add services required by Syncfusion components using `builder.Services.AddSyncfusionBlazor()` method. Add this method in the **Main** function as follows.
 
-```csharp
+```c#
 namespace BlazorApplication
 {
     public class Program
@@ -134,9 +134,9 @@ namespace BlazorApplication
 
  Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` packages.
 
-```csharp
-    @using Syncfusion.Blazor
-    @using Syncfusion.Blazor.Navigations
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Navigations
 ```
 
 ## Adding TreeView component to the application

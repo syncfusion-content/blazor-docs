@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Bullet Chart Component
 
-This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [`BulletChartEvents`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
+This section describes about the Bullet Chart component's events that will be triggered when appropriate actions are performed. The events should be provided to the Bullet Chart through the [BulletChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html).
 
 ## Loaded
 
@@ -41,7 +41,7 @@ The `Loaded` event triggers after the Bullet Chart component has been loaded.
 
 ## OnPrintComplete
 
-The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event triggers before the rendered Bullet Chart starts printing.
+The [OnPrintComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_OnPrintComplete) event triggers before the rendered Bullet Chart starts printing.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -57,10 +57,23 @@ The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 @code{
     public SfBulletChart<ChartData> BulletChart { get; set; }
+
+    public class ChartData
+    {
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
+    }
+
+    public List<ChartData> BulletChartData = new List<ChartData>
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
+    };
+
     public async Task PrintCall()
     {
-        await BulletChart.Print();
+        await BulletChart.PrintAsync();
     }
+
     public void PrintCompleteHandler(PrintEventArgs args)
     {
         // Here you can customize the code.
@@ -68,11 +81,9 @@ The [`OnPrintComplete`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 }
 ```
 
-> Refer to the [code block](#Loaded) to know about the property value of **BulletChartData**.
-
 ## TooltipRender
 
-The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event triggers before the tooltip rendering.
+The [TooltipRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_TooltipRender) event triggers before the tooltip rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|
@@ -90,6 +101,17 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 </SfBulletChart>
 
 @code{
+    public class ChartData
+    {
+        public double FieldValue { get; set; }
+        public double TargetValue { get; set; }
+    }
+    
+    public List<ChartData> BulletChartData = new List<ChartData>
+    {
+        new ChartData { FieldValue = 270, TargetValue = 250 }
+    };
+
     public void TooltipRenderHandler(BulletChartTooltipEventArgs args)
     {
         // Here you can customize the code.
@@ -97,11 +119,9 @@ The [`TooltipRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 }
 ```
 
-> Refer to the [code block](#Loaded) to know about the property value of **BulletChartData**.
-
 ## LegendRender
 
-The [`LegendRender`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before each legend item rendering.
+The [LegendRender](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartEvents.html#Syncfusion_Blazor_Charts_BulletChartEvents_LegendRender) event triggers before each legend item rendering.
 
 |   Argument name    |   Description                                          |
 |--------------------| -------------------------------------------------------|

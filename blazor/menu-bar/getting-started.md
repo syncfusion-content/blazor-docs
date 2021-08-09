@@ -27,7 +27,7 @@ To get start quickly with Menu Bar Component using Blazor, you can check on this
 ```cshtml
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />*@
+    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
@@ -77,7 +77,7 @@ namespace BlazorApplication
 ```cshtml
 <head>
     <environment include="Development">
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
+        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js">
         </script>
     </environment>
 </head>

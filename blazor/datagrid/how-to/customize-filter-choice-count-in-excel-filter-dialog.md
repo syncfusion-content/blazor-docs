@@ -11,7 +11,7 @@ documentation: ug
 
 For better performance, excel filter will take only the first 1000 records for filter choices item list. So, the distinct values of first thousand records will only be displayed in excel filter dialog as filter choices.
 
-To overcome this default behavior, you can customize the count of filter choice items to be displayed in Excel filter dialog by setting the `FilterChoiceCount` in [`OnActionBegin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event handler.
+To overcome this default behavior, you can customize the count of filter choice items to be displayed in Excel filter dialog by setting the `FilterChoiceCount` in [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event handler.
 
 This is demonstrated in the below sample code,
 

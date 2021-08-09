@@ -7,7 +7,7 @@ control: Diagram Component
 documentation: ug
 ---
 
-# Appearance in Blazor Diagram Component
+# Appearance of a Node in Blazor Diagram Component
 
 The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties. The `Visible` property of the node enables or disables the visibility of the node.
 
@@ -16,15 +16,17 @@ The following code shows how to customize the appearance of the shape.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
-        Node node = new Node()
+        Node node1 = new Node()
         {
             // Position of the node
             OffsetX = 250,
@@ -35,12 +37,12 @@ The following code shows how to customize the appearance of the shape.
             // Add node
             Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
         };
-        nodes.Add(node);
+        nodes.Add(node1);
     }
 }
 ```
 
-![Node appearance](../images/node_appearance.png)
+![Node appearance in Blazor Diagram](../images/node_appearance.png)
 
 > `ID` for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
@@ -53,12 +55,16 @@ The following code shows how to customize the appearance of the shape.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" NodeDefaults="@NodeDefaults"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" NodeDefaults="@NodeDefaults" />
 
-@code{
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node1 = new Node()
         {
@@ -66,7 +72,7 @@ The following code shows how to customize the appearance of the shape.
             OffsetX = 250,
             OffsetY = 250,
             // Shape of the Node
-            Shape=new BasicShape() {Type= Shapes.Basic, Shape = BasicShapes.Rectangle}
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
         };
         Node node2 = new Node()
         {
@@ -83,7 +89,7 @@ The following code shows how to customize the appearance of the shape.
     private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;
-        node.Style = new ShapeStyle() { Fill = "#6495ED"};
+        node.Style = new ShapeStyle() { Fill = "#6495ED" };
         // Size of the node
         node.Width = 100;
         node.Height = 100;
@@ -101,68 +107,68 @@ We can define node style using template in NodeTemplate at tag level. If we want
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="diagram" Width="1200px" Height="1000px" Nodes="@nodes">
-    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
     <DiagramTemplates>
         <NodeTemplate>
             @{
-                    <style>
-                        th {
-                            border: 5px solid #c1dad7
-                        }
+                <style>
+                    th {
+                        border: 5px solid #c1dad7
+                    }
 
-                        td {
-                            border: 5px solid #c1dad7
-                        }
+                    td {
+                        border: 5px solid #c1dad7
+                    }
 
-                        .c1 {
-                            background: transparent
-                        }
+                    .c1 {
+                        background: transparent
+                    }
 
-                        .c2 {
-                            background: transparent
-                        }
+                    .c2 {
+                        background: transparent
+                    }
 
-                        .c3 {
-                            background: transparent
-                        }
+                    .c3 {
+                        background: transparent
+                    }
 
-                        .c4 {
-                            background: transparent
-                        }
-                    </style>
-                    <div id="node0_content_html_element" class="foreign-object" style="height: 164px; width: 137px; left: 0px; top: 0px; position: absolute; transform: scale(1, 1) rotate(0deg); pointer-events: all; visibility: visible; opacity: 1;">
-                        <div style="height: 100%; width: 100%;">
-                            <table style="width:100%;">
-                                <tbody>
-                                    <tr><th class="c1">ID</th><th class="c2">Offset</th></tr>
-                                    <tr><td class="c1">node0</td><td class="c2">100</td></tr>
-                                </tbody>
-                            </table>
-                            <input type="button" value="Button2" @onclick="@OnClick" />
-                        </div>
+                    .c4 {
+                        background: transparent
+                    }
+                </style>
+                <div id="node0_content_html_element" class="foreign-object" style="height: 164px; width: 137px; left: 0px; top: 0px; position: absolute; transform: scale(1, 1) rotate(0deg); pointer-events: all; visibility: visible; opacity: 1;">
+                    <div style="height: 100%; width: 100%;">
+                        <table style="width:100%;">
+                            <tbody>
+                                <tr><th class="c1">ID</th><th class="c2">Offset</th></tr>
+                                <tr><td class="c1">node0</td><td class="c2">100</td></tr>
+                            </tbody>
+                        </table>
+                        <input type="button" value="Button2" @onclick="@OnClick" />
                     </div>
-             }
+                </div>
+            }
         </NodeTemplate>
     </DiagramTemplates>
 </SfDiagramComponent>
 
-@code{
+@code
+{
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>(){
-         new Node()
-         {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
             Width = 137,
             Height = 64,
             OffsetX = 300,
             OffsetY = 100,
             ID = "html1",
-            Shape = new Shape() { Type = Shapes.HTML},
-          },
-    };
+            Shape = new Shape() { Type = Shapes.HTML },
+        };
+        nodes.Add(node);
     }
 
     public void OnClick()
@@ -171,7 +177,6 @@ We can define node style using template in NodeTemplate at tag level. If we want
         StateHasChanged();
     }
 }
-
 ```
 
 > In the above example , node's background color is updated using the click event of the button defined in the template.
@@ -183,41 +188,46 @@ We can define node style using template in NodeTemplate at tag level. If we want
 The `SetNodeTemplate` method of diagram allows you to define the style for the Node. The following code demonstrates how to set different style for different node through SetNodeTemplate method.
 
 ```cshtml
+@page "/settemplate"
+
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" SetNodeTemplate="@SetNodeTemplate">
-    <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SetNodeTemplate="@SetNodeTemplate" />
 
-@code{
-    //Initialize node collection with node
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>()
+@code
+{
+    // Initialize node collection with node
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
     {
-        //Creates a text node
-         new Node()
-         {
-             ID="node1",
-             // Size of the node
-             Height=100,
-             Width=100,
-             // Position of the node
-             OffsetX=100,
-             OffsetY=100,
-         },
+        nodes = new DiagramObjectCollection<Node>();
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            // Size of the node
+            Height = 100,
+            Width = 100,
+            // Position of the node
+            OffsetX = 100,
+            OffsetY = 100,
+        };
+        Node node2 = new Node()
+        {
+            ID = "node6",
+            // Size of the node
+            Height = 510,
+            Width = 202,
+            // Position of the node
+            OffsetX = 300,
+            OffsetY = 100,
+        };
+        nodes.Add(node1);
+        nodes.Add(node2);
+    }
 
-         new Node()
-         {
-             ID="node6",
-             // Size of the node
-             Height=510,
-             Width=202,
-             // Position of the node
-             OffsetX=300,
-             OffsetY=100,
-         }
-     };
     private ICommonElement SetNodeTemplate(IDiagramObject node)
     {
         if ((node as Node).ID == "node6")
@@ -286,14 +296,15 @@ Diagram provides support to add `Shadow` effect to a node that is disabled, by d
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
+    DiagramObjectCollection<Node> nodes;
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>() { };
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -303,7 +314,7 @@ Diagram provides support to add `Shadow` effect to a node that is disabled, by d
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow
         };
         nodes.Add(node);
@@ -320,14 +331,15 @@ The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code{
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>() { };
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -337,7 +349,7 @@ The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
             // Custom Shadow of the node
             Shadow = new Shadow()
@@ -370,15 +382,19 @@ There are two types of gradients as follows:
 `LinearGradient` defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
 ```cshtml
+@page "/lineargradient"
+
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>() { };
+@code
+{
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
         Node node = new Node()
         {
@@ -400,9 +416,9 @@ There are two types of gradients as follows:
                     Y2 = 50,
                     //Sets an array of stop objects
                     Stops = new DiagramObjectCollection<GradientStop>()
-                {
+                    {
                         new GradientStop(){ Color = "white", Offset = 0},
-                        new GradientStop(){ Color = "#6BA5D7", Offset = 100}
+                        new GradientStop(){ Color = "#6495ED", Offset = 100}
                     },
                     Type = GradientType.Linear
                 }
@@ -420,15 +436,18 @@ There are two types of gradients as follows:
 `RadialGradient` defines a smooth transition between stops on a circle. A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 ```cshtml
+@page "/radialgradient"
+
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code{
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         Node node = new Node()
         {
             // Position of the node
@@ -440,7 +459,7 @@ There are two types of gradients as follows:
             Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Ellipse },
             Style = new ShapeStyle()
             {
-                Fill= "37909A#",
+                Fill = "37909A#",
                 StrokeColor = "#024249",
                 Gradient = new RadialGradient()
                 {
@@ -451,10 +470,10 @@ There are two types of gradients as follows:
                     Fx = 50,
                     Fy = 50,
                     Stops = new DiagramObjectCollection<GradientStop>()
-                {
-                    new GradientStop() { Color = "#00555b", Offset = 45 },
-                    new GradientStop() { Color= "#37909A", Offset= 90 }
-                },
+                    {
+                        new GradientStop() { Color = "#00555b", Offset = 45 },
+                        new GradientStop() { Color= "#37909A", Offset= 90 }
+                    },
                     Type = GradientType.Radial
                 }
             },
@@ -476,18 +495,18 @@ The following code shows how to set the `AddInfo` value.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code{
 
-    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes;
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>();
         Dictionary<string, object> NodeInfo = new Dictionary<string, object>();
         NodeInfo.Add("nodeInfo", "Central Node");
         // A node is created and stored in nodes collection.
-
         Node node = new Node()
         {
             // Position of the node
@@ -509,4 +528,4 @@ The following code shows how to set the `AddInfo` value.
 
 ## See also
 
-* [`How to get events when they interact the node`](./events)
+* [How to get events when they interact the node](./events)

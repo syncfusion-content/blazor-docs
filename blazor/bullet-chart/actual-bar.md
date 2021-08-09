@@ -9,7 +9,7 @@ documentation: ug
 
 # Actual Bar in Blazor Bullet Chart Component
 
-To display the primary data or the current value of the data being measured known as the **Feature Measure** that should be encoded as a bar. This is called as the **Actual Bar** or the **Feature Bar** in the Bullet Chart, and to display the actual bar the [`ValueField`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) should be mapped to the appropriate field from the data source.
+To display the primary data or the current value of the data being measured known as the **Feature Measure** that should be encoded as a bar. This is called as the **Actual Bar** or the **Feature Bar** in the Bullet Chart, and to display the actual bar the [ValueField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueField) should be mapped to the appropriate field from the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -34,11 +34,11 @@ To display the primary data or the current value of the data being measured know
 }
 ```
 
-![Actual Bar in Bullet Chart](images/value-bar.png)
+![Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar.png)
 
 ## Types of Actual Bar
 
-The shape of the actual bar can be customized using the [`Type`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Type) property of the Bullet Chart. The actual bar contains [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect) and [`Dot`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Dot) shapes. By default, the actual bar shape is [`Rect`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect).
+The shape of the actual bar can be customized using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Type) property of the Bullet Chart. The actual bar contains [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect) and [Dot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Dot) shapes. By default, the actual bar shape is [Rect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.FeatureType.html#Syncfusion_Blazor_Charts_FeatureType_Rect).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -52,17 +52,17 @@ The shape of the actual bar can be customized using the [`Type`](https://help.sy
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#feature-bar) to know more about the property value of the **BulletChartData**.
+> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about the property value of the **BulletChartData**.
 
-![Types of Actual Bar](images/value-type.png)
+![Blazor Bullet Chart with Dot Actual Bar](images/blazor-bullet-chart-dot-actual-bar.png)
 
 ## Actual Bar Customization
 
 The following properties will be used to customize the actual bar.
 
-* [`ValueFill`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueFill) - Specifies the fill color of the actual bar.
-* [`ValueHeight`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueHeight) - Specifies the width of the actual bar.
-* [`BulletChartValueBorder`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartValueBorder.html) - Specifies the border color and the border width of the actual bar.
+* [ValueFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueFill) - Specifies the fill color of the actual bar.
+* [ValueHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_ValueHeight) - Specifies the width of the actual bar.
+* [BulletChartValueBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartValueBorder.html) - Specifies the border color and the border width of the actual bar.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -77,6 +77,6 @@ The following properties will be used to customize the actual bar.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#feature-bar) to know more about  the property value of the **BulletChartData**.
+> Refer to the [code block](#actual-bar-in-blazor-bullet-chart-component) to know more about  the property value of the **BulletChartData**.
 
-![Actual Bar - Customization](images/valuebar-custom.png)
+![Customizing Actual Bar in Blazor Bullet Chart](images/blazor-bullet-chart-actual-bar-customization.png)

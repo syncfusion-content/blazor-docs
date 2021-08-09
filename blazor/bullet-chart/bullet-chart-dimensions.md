@@ -44,7 +44,7 @@ The size of the Bullet Chart is determined by the container size, and it can be 
 
 ## Size for Bullet Chart
 
-The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and the [`Height`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties are used to adjust the size of the Bullet Chart. Both the pixel and the percentage values are accepted. If the value is expressed as a percentage, the dimension of the Bullet Chart is determined by its container.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_Height) properties are used to adjust the size of the Bullet Chart. Both the pixel and the percentage values are accepted. If the value is expressed as a percentage, the dimension of the Bullet Chart is determined by its container.
 
 > If the size is not specified, the Bullet Chart will be rendered with a height of **126px** and a width of the window.
 
@@ -67,7 +67,7 @@ The [`Width`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfB
 
 ## Margin
 
-The [`BulletChartMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMargin.html) is used to customize the bottom, the left, the right, and the top margins of the Bullet Chart.
+The [BulletChartMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMargin.html) is used to customize the bottom, the left, the right, and the top margins of the Bullet Chart.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -88,4 +88,4 @@ The [`BulletChartMargin`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 > Refer to the [code block](#size-for-container) to know about the property value of **BulletChartData**.
 
-![Bullet Chart with Margin](images/margin.png)
+![Blazor Bullet Chart with Margin](images/blazor-bullet-chart-margin.png)

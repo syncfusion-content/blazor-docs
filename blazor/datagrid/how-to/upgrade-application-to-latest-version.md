@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrade Application To Latest Version in Blazor DataGrid Component
 
-**Step 1:** Update the latest Syncfusion blazor [`nuget`](https://www.nuget.org/packages/Syncfusion.Blazor/) from Nuget package manager in your application.
+**Step 1:** Update the latest Syncfusion blazor [nuget](https://www.nuget.org/packages/Syncfusion.Blazor/) from Nuget package manager in your application.
 
 ![update syncfusion blazor nuget](../images/upgrade-version.PNG)
 

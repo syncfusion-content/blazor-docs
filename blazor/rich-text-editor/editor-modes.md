@@ -72,7 +72,7 @@ The output will be as follows.
 
 ![output](./images/markdown-editor.png)
 
-For further details on Markdown editing, refer to the [`Markdown`](./markdown/) section.
+For further details on Markdown editing, refer to the [Markdown](./markdown/) section.
 
 > You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 

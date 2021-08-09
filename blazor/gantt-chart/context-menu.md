@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor Gantt Chart Component
 
-The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component allows you to perform quick actions by using the context menu. When right-clicking the context menu, the context menu options will be shown. To enable this feature, set the `EnableContextMenu` to true. The default context menu options are enabled using the `GanttEditSettings` property. The context menu options can be customized using the `ContextMenuItems` property.
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component allows you to perform quick actions by using the context menu. When right-clicking the context menu, the context menu options will be shown. To enable this feature, set the `EnableContextMenu` to true. The default context menu options are enabled using the `GanttEditSettings` property. The context menu options can be customized using the `ContextMenuItems` property.
 
 The default items are listed in the following table.
 

@@ -16,7 +16,7 @@ This section briefly explains about how to include a `Badge` in your Blazor serv
 ## Importing Syncfusion Blazor component in the application
 
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
-    > Please ensure to check the **Include prerelease** option for our Beta release.
+    > Please ensure to check the **Include Prerelease** option for our Beta release.
 
 * You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
     > You can also add the client-side style resources through CDN.
@@ -29,7 +29,7 @@ This section briefly explains about how to include a `Badge` in your Blazor serv
 
     ```html
     <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
@@ -56,4 +56,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Badge Sample](images/badge.png)
+![Blazor Badge Component](images/blazor-badge-component.png)

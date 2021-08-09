@@ -56,7 +56,7 @@ Refer to the Individual NuGet Packages section for the available NuGet packages.
 
     ```html
     <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
@@ -117,7 +117,7 @@ namespace BlazorApplication
 
 ```html
 <head>
-    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js"></script>
 </head>
 ```
 
@@ -134,7 +134,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Buttons` package.
 
 Now, add the Syncfusion Blazor Chip component in any web page `razor` in the `Pages` folder. For example, the Chip component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfChip>

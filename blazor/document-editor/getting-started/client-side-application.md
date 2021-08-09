@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor DocumentEditor Component in WebAssembly App using Visual Studio
 
-This article provides the step-by-step instructions to integrate the [`Blazor Word Processor component`](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
+This article provides the step-by-step instructions to integrate the [Blazor Word Processor component](https://www.syncfusion.com/blazor-components/blazor-word-processor) in Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
 Steps to get started with Word processor component for Blazor:
 
@@ -17,7 +17,7 @@ Steps to get started with Word processor component for Blazor:
 
     ```
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-preview2.20160.5
-    ````
+    ```
 
 2. Select **Create a new project** from the Visual Studio dashboard.
 
@@ -71,7 +71,7 @@ Steps to get started with Word processor component for Blazor:
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
-    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.releaseversion }}/styles/bootstrap4.css).
+    > The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css).
 
 12. Run the application. The Word processor component will be rendered in the web browser.
 

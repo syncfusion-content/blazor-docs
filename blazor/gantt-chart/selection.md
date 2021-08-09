@@ -18,7 +18,7 @@ The Gantt Chart component supports two types of selection that can be set by usi
 
 ## Selection Mode
 
-The [`Blazor Gantt Chart`](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component supports three types of selection modes that can be set by using the `SelectionSettings.Mode`. They are:
+The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) component supports three types of selection modes that can be set by using the `SelectionSettings.Mode`. They are:
 
 * `Row`: Allows you to select only rows, and the row value is set by default.
 * `Cell`: Allows you to select only cells.

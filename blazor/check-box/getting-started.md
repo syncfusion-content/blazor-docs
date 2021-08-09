@@ -26,16 +26,16 @@ To get start quickly with CheckBox Component using Blazor, you can check on this
 
 > Please ensure to check the **Include prerelease** option.
 
-```csharp
+```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
-    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
+    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
 For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
-```csharp
+```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
@@ -76,10 +76,10 @@ namespace BlazorApplication
 
 > To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
-```csharp
+```html
 <head>
     <environment include="Development">
-        <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
+        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js">
         </script>
     </environment>
 </head>
@@ -98,7 +98,7 @@ Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages ot
 
 Now, add the Syncfusion Blazor Checkbox component in `razor` page in the `Pages` folder. For example, the Checkbox component is added in the `~/Pages/Index.razor` page.
 
-```csharp
+```cshtml
 <SfCheckBox Label="Default" @bind-Checked="isChecked"></SfCheckBox>
 
 @code 

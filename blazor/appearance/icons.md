@@ -33,7 +33,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
     ```html
     <head>
-        <link href="https://cdn.syncfusion.com/blazor/{:version:}/bootstrap4.css" rel="stylesheet" />
+        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 

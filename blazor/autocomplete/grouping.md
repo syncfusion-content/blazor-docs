@@ -52,4 +52,4 @@ In the following sample, vegetables are grouped according on its category using 
 
 The output will be as follows.
 
-![AutoComplete](./images/grouping.png)
+![Blazor AutoComplete Grouping](./images/blazor-autocomplete-grouping.png)

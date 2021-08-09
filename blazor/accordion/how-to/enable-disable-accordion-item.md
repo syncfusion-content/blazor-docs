@@ -39,4 +39,4 @@ In the following demo, specified accordion item are Enable/Disable dynamically w
 
 Output be like the below.
 
-![Enable or Disable the Accordion item](../images/enableDisableItem.gif)
+![Enabling or Disabling Item in Blazor Accordion](../images/blazor-accordion-enable-disable-item.gif)

@@ -30,29 +30,33 @@ The association property allows you to define the type of association. The follo
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
-@code{
-    //Create connector and stored it to the connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>()
+@code
+{
+    // Create connector and stored it to the connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
     {
-        new Connector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            //Unique Id of the connector
-            ID="connector1",
+            // Unique Id of the connector
+            ID = "connector1",
             // Start and end point of the connector
-            SourcePoint=new Point(){X=100,Y=200},
-            TargetPoint=new Point(){X=300,Y=200},
-            //Sets the type to Bpmn, flow to Association and association to bidirectional
-            Shape=new BpmnFlow()
+            SourcePoint = new Point() { X = 100, Y = 200 },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            // Sets the type to Bpmn, flow to Association and association to bidirectional
+            Shape = new BpmnFlow()
             {
-                Type=ConnectionShapes.Bpmn,
-                Flow=BpmnFlows.Association,
-                Association=BpmnAssociationFlows.BiDirectional
+                Type = ConnectionShapes.Bpmn,
+                Flow = BpmnFlows.Association,
+                Association = BpmnAssociationFlows.BiDirectional
             }
-        }
-    };
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -80,29 +84,33 @@ The sequence property allows you to define the type of sequence. The following c
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
-@code{
-    //Create connector and stored it to the connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>()
+@code
+{
+    // Create connector and stored it to the connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
     {
-        new Connector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            //Unique Id of the connector
-            ID="connector1",
+            // Unique Id of the connector
+            ID = "connector1",
             // Start and end point of the connector
-            SourcePoint=new Point(){X=100,Y=200},
-            TargetPoint=new Point(){X=300,Y=200},
-            //Sets type to Bpmn, flow to Sequence, and sequence to Conditional
-            Shape=new BpmnFlow()
+            SourcePoint = new Point() { X = 100, Y = 200 },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            // Sets the type to Bpmn, flow to Association and association to bidirectional
+            Shape = new BpmnFlow()
             {
-                Type=ConnectionShapes.Bpmn,
-                Flow=BpmnFlows.Sequence,
-                Sequence=BpmnSequenceFlows.Conditional
+                Type = ConnectionShapes.Bpmn,
+                Flow = BpmnFlows.Sequence,
+                Sequence = BpmnSequenceFlows.Conditional
             }
-        }
-    };
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 
@@ -130,29 +138,33 @@ The message property allows you to define the type of message. The following cod
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600px" Connectors="@connectors">
-</SfDiagramComponent>
+<SfDiagramComponent Height="600px" Connectors="@connectors"/>
 
-@code{
-    //Create connector and stored it to the connector collection
-    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>()
+@code
+{
+    // Create connector and stored it to the connector collection
+    DiagramObjectCollection<Connector> connectors;
+
+    protected override void OnInitialized()
     {
-        new Connector()
+        connectors = new DiagramObjectCollection<Connector>();
+        Connector connector = new Connector()
         {
-            //Unique Id of the connector
-            ID="connector1",
+            // Unique Id of the connector
+            ID = "connector1",
             // Start and end point of the connector
-            SourcePoint=new Point(){X=100,Y=200},
-            TargetPoint=new Point(){X=300,Y=200},
-            //Sets type to Bpmn, flow to Message, and message to InitiatingMessage
-            Shape=new BpmnFlow()
+            SourcePoint = new Point() { X = 100, Y = 200 },
+            TargetPoint = new Point() { X = 300, Y = 200 },
+            // Sets the type to Bpmn, flow to Association and association to bidirectional
+            Shape = new BpmnFlow()
             {
-                Type=ConnectionShapes.Bpmn,
-                Flow=BpmnFlows.Message,
-                Message=BpmnMessageFlows.InitiatingMessage
+                Type = ConnectionShapes.Bpmn,
+                Flow = BpmnFlows.Message,
+                Message = BpmnMessageFlows.InitiatingMessage
             }
-        }
-    };
+        };
+        connectors.Add(connector);
+    }
 }
 ```
 

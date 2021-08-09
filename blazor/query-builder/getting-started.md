@@ -30,7 +30,7 @@ To get start quickly with Query Builder Component using Blazor, you can check on
     <head>
         <link href="_content/Syncfusion.Blazor/styles/material.css" rel="stylesheet" />
         <!---CDN--->
-        @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/material.css" rel="stylesheet" />*@
+        @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/material.css" rel="stylesheet" />*@
     </head>
     ```
 
@@ -80,7 +80,7 @@ namespace BlazorApplication
 
 ```cshtml
 <head>
-    <script src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js">
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js">
     </script>
 </head>
 ```

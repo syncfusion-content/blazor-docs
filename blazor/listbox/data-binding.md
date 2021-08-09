@@ -9,15 +9,15 @@ documentation: ug
 
 # Data Binding in Blazor ListBox Component
 
-The ListBox loads the data from local data sources using the [`DataSource`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The ListBox loads the data from local data sources using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
 | Fields | Type | Description |
 |------|------|-------------|
-| [`Text`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) |  `string` | Specifies the display text of each list item. |
-| [`Value`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) |  `string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
-| [`GroupBy`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_GroupBy) |  `string` | Specifies the category under which the list item has to be grouped. |
-| [`IconCss`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_IconCss) |  `string` | Specifies the iconCss class that needs to be mapped. |
-| [`HtmlAttributes`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_HtmlAttributes) |  `string` | Allows additional attributes to configure the elements in various ways to meet the criteria. |
+| [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Text) |  `string` | Specifies the display text of each list item. |
+| [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_Value) |  `string` | Specifies the hidden data value mapped to each list item that should contain a unique value. |
+| [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_GroupBy) |  `string` | Specifies the category under which the list item has to be grouped. |
+| [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_IconCss) |  `string` | Specifies the iconCss class that needs to be mapped. |
+| [HtmlAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.FieldSettingsModel.html#Syncfusion_Blazor_DropDowns_FieldSettingsModel_HtmlAttributes) |  `string` | Allows additional attributes to configure the elements in various ways to meet the criteria. |
 
 > When binding complex data to the ListBox, fields should be mapped correctly. Otherwise, the selected item remains undefined.
 
@@ -43,7 +43,7 @@ Output will be shown as
 
 ### Array of object
 
-The ListBox can generate its list items through an array of object data. For this, the appropriate columns should be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The ListBox can generate its list items through an array of object data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
 In the following example, `id` and `sports` column from complex data have been mapped to the `Value` field and `Text` field, respectively.
 
@@ -79,7 +79,7 @@ Output will be shown as
 
 ### Array of complex object
 
-The ListBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [`Fields`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
+The ListBox can generate its list items through an array of complex data. For this, the appropriate columns should be mapped to the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfListBox-2.html) property.
 
 In the following example, `sports.Name` column from complex data have been mapped to the `Text` field.
 
@@ -119,7 +119,7 @@ Output will be shown as
 
 ## Remote Data
 
-The ListBox supports retrieval of data from remote data services with the help of [`DataManager`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
+The ListBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html).
 
 The following sample displays the employee names from `Employee` table.
 
