@@ -62,7 +62,7 @@ The Maps control supports following themes.
 * Material
 * Fabric
 * Bootstrap
-* Highcontrast
+* HighContrast
 * MaterialDark
 * FabricDark
 * BootstrapDark

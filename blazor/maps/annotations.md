@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Annotations in Blazor Maps Component | Syncfusion 
-description: Learn about Annotations in Blazor Maps component of Syncfusion, and more details.
+description: Checkout and learn here all about Annotations in Blazor Maps component of Syncfusion, and more details.
 platform: Blazor
 control: Maps
 documentation: ug
