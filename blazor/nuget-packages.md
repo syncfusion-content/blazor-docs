@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Individual NuGet Packages in Blazor - Syncfusion
-description: Check out the documentation for Individual NuGet Packages in Blazor
+description: Learn here about the installing, managing and upgrading of NuGet packages of Syncfusion Blaor Components.
 platform: Blazor
 component: Common
 documentation: ug

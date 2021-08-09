@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Create Project in Blazor - Syncfusion
-description: Check out the documentation for Create Project in Blazor
+description: Learn here about that how to creating and rendering the project in Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Create project
+# Create project in Blazor 
 
 Syncfusion provides **project templates** for **Visual Studio Code** to create Syncfusion Blazor applications. Syncfusion Blazor creates applications with the required Syncfusion NuGet packages, namespaces, and component render code for the Calendar, Button, and DataGrid components, and the style for making development easier with Syncfusion components.
 

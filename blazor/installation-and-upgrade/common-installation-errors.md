@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation Errors in Blazor - Syncfusion
-description: Check out the documentation for Installation Errors in Blazor
+description: Learn here about the common installation errors and solution to those errors in Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug

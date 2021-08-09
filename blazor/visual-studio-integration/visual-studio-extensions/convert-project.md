@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convert Project in Blazor - Syncfusion
-description: Check out the documentation for Convert Project in Blazor
+description: Learn here about that how to converting the application in the Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug

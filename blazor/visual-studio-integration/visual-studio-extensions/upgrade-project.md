@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade Project in Blazor - Syncfusion
-description: Check out the documentation for Upgrade Project in Blazor
+description: Learn here about that how to upgrading the project in the Syncfusion Essential Blazor application to latest version.
 platform: Blazor
 component: Common
 documentation: ug

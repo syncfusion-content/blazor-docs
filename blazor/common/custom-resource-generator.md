@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CRG in Blazor - Syncfusion
-description: Check out the documentation for CRG in Blazor
+title: Custom Resource Generator | Blazor | Syncfusion
+description: Learn here about that how to using the custom resource generator in the Syncfusion Blazor Components
 platform: Blazor
 component: Common
 documentation: ug

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download and Installation in Blazor - Syncfusion
-description: Check out the documentation for Download and Installation in Blazor
+description: Learn here about that how to download and installation in the Esssntial Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug

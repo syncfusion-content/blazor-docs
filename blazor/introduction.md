@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Introduction documentation to Blazor Components Library - Syncfusion
-description: Check out the documentation the Syncfusion native Blazor components library of UI and Data Viz web controls that are responsive and lightweight for building modern web apps.
+description: Learn here about Syncfusion native Blazor components library of UI and Data Viz web controls that are responsive and lightweight for building modern web apps.
 platform: Blazor
 component: Common
 documentation: ug

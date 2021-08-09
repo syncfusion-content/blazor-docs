@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Template Studio in Blazor - Syncfusion
-description: Check out the documentation for Template Studio in Blazor
+description: Learn here about that how to create the Essential Syncusion Blazor Components for the template studio.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Template Studio
+# Template Studio in Blazor
 
 Syncfusion provides the Blazor Template Studio to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor application is created with the required Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that teaches you how to create an application with Syncfusion components.
 
@@ -143,7 +143,7 @@ We need to register the created application in Google Platform API Console for I
 
     <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104>
 
-2. Click Create Credentials and OAuth Client Id.
+2. Click Create Credentials and O-Auth Client Id.
 
     ![Google API console credentials page](../images/GoogelAPIConsoleCredentials.png)
 
@@ -157,7 +157,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![RedirectedURI](../images/RedirectedURI.png)
 
-5. Click save then OAuth client id will be created and copy that credentials.
+5. Click save then O-Auth client id will be created and copy that credentials.
 
     ![ClientIdCreation](../images/ClientIdCreation.PNG)
 

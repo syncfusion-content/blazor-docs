@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scaffolding in Blazor - Syncfusion
-description: Check out the documentation for Scaffolding in Blazor
+description: Learn here about that how to adding the scaffolding for the Scaffolding in Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug

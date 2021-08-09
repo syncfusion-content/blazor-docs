@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code Generator in Blazor - Syncfusion
-description: Check out the documentation for Code Generator in Blazor
+description: Learn here about that how to adding the Essential Syncfusion Blazor Component to the Code Generator.
 platform: Blazor
 component: Common
 documentation: ug

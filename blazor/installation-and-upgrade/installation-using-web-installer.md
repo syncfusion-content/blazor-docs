@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation using Web Installer in Blazor - Syncfusion
-description: Check out the documentation for Installation using Web Installer in Blazor
+description: Learn here about that how to install using the web installer of Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
