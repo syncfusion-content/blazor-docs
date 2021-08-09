@@ -65,7 +65,7 @@ Legend item to be customized by the following properties.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know the property value of the **BulletChartData**.
 
 ![Customizing Legend Items with Color Mapping in Blazor Bullet Chart](images/blazor-bullet-chart-legend-color-mapping.png)
 
@@ -86,7 +86,7 @@ Customize the legend size by modifying the [Height](https://help.syncfusion.com/
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Customizing Legend Size in Blazor Bullet Chart](images/blazor-bullet-chart-legend-size.png)
 
@@ -109,7 +109,7 @@ Bullet Chart supports the legend paging, if the legend items cannot be placed wi
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Legend with Paging in Blazor Bullet Chart](images/blazor-bullet-chart-legend-paging.png)
 
@@ -139,7 +139,7 @@ The following code example demonstrates the top legend position.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart displays Legend on Top Position](images/blazor-bullet-chart-legend-on-top-position.png)
 
@@ -163,7 +163,7 @@ The following code example demonstrates the [Custom](https://help.syncfusion.com
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Blazor Bullet Chart displays Legend on Custom position](images/blazor-bullet-chart-legend-on-custom-position.png)
 
@@ -188,7 +188,7 @@ The following code example demonstrates legend item alignment.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Changing Legend Item Alignment in Blazor Bullet Chart](images/blazor-bullet-chart-legend-alignment.png)
 
@@ -218,6 +218,6 @@ Legend can be customized by the following properties:
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#legend) to know about the property value of the **BulletChartData**.
+> Refer to the [code block](#legend-in-blazor-bullet-chart-component) to know about the property value of the **BulletChartData**.
 
 ![Customizing Legend Items in Blazor Bullet Chart](images/blazor-bullet-chart-legend-customization.png)

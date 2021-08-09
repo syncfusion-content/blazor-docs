@@ -13,7 +13,7 @@ Using the `@ref` property, create an object for the Sparkline component and call
 
 ## Refresh
 
-The refresh method helps to render the Sparkline component again.
+The `RefreshAsync` method helps to render the Sparkline component again.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -27,7 +27,7 @@ The refresh method helps to render the Sparkline component again.
     public SfSparkline<int> Sparkline { get; set; }
     public async Task RefreshCall()
     {
-        await Sparkline.Refresh();
+        await Sparkline.RefreshAsync();
     }
 }
 ```

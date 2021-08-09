@@ -62,7 +62,7 @@ The major and the minor ticks can be placed [Inside](https://help.syncfusion.com
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#majorTickLines-and-minorTickLines-customization) to know about the property value of **BulletChartData**.
+> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
 
 ![Changing Tick Position in Blazor Bullet Chart](images/blazor-bullet-chart-tick-position.png)
 
@@ -82,7 +82,7 @@ The axis labels support all the globalize formats and can be changed using the [
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#majorTickLines-and-minorTickLines-customization) to know about the property value of **BulletChartData**.
+> Refer to the [code block](#majorticklines-and-minorticklines-customization) to know about the property value of **BulletChartData**.
 
 ![Changing Label Format in Blazor Bullet Chart](images/blazor-bullet-chart-label-format.png)
 
@@ -192,7 +192,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#groupingSeparator) to know about the property value of **BulletChartData**.
+> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 ![Blazor Bullet Chart with Custom Label Format](images/blazor-bullet-chart-custom-label-format.png)
 
@@ -212,7 +212,7 @@ Label can be placed [Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#groupingSeparator) to know about the property value of **BulletChartData**.
+> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 ![Changing Label Position in Blazor Bullet Chart](images/blazor-bullet-chart-labels-position.png)
 
@@ -232,7 +232,7 @@ To place an axis opposite to its original position, set the [OpposedPosition](ht
 </SfBulletChart>
 ```
 
-> Refer to the [code block](#groupingSeparator) to know about the property value of **BulletChartData**.
+> Refer to the [code block](#grouping-separator) to know about the property value of **BulletChartData**.
 
 ![Blazor Bullet Chart with Opposed Position](images/blazor-bullet-chart-opposed-position.png)
 
