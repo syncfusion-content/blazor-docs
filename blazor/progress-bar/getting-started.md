@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Getting Started with Blazor ProgressBar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ProgressBar component of Syncfusion, and more details.
+title: Getting Stared with Blazor ProgressBar in Server Side | Syncfusion
+description: Learn here all about Getting Started with Syncfusion Blazor ProgressBar in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: Progress Bar 
 documentation: ug
 ---
 
-# Getting Started with Blazor ProgressBar Component
+# Blazor ProgressBar Component in Server Side App using Visual Studio
 
 This section briefly explains how to include a Progress Bar component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
@@ -25,7 +25,7 @@ This section briefly explains how to include a Progress Bar component in the Bla
     </head>
     ```
 
-    > For Internet Explorer 11, kindly refer to the polyfills. Refer to the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11, kindly refer to the polyfills. Refer to the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```cshtml
     <head>
