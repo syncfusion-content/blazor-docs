@@ -50,7 +50,7 @@ The OSM maps layer can be zoomed and panned. Zooming helps to get a closer look 
 </SfMaps>
 ```
 
-![OpenStreetMap with zooming](../images/MapProviders/osm-zooming.gif)
+![OpenStreetMap with zooming](../images/MapProviders/osm-zooming.png)
 
 ## Adding markers and navigation line
 

@@ -80,7 +80,7 @@ Bing maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 
 > Specify Bing map key in the `Key` property.
 
-![Bing Maps with zooming](../images/MapProviders/osm-zooming.gif)
+![Bing Maps with zooming](../images/MapProviders/bing-zooming.png)
 
 ## Adding markers and navigation line
 
