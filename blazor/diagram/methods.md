@@ -2519,8 +2519,6 @@ You can move a single or some of the distance of the selected node by using the 
 }
 ```
 
-![Nudge Methods](images/Nudge-Method.gif)
-
 ## View Port
 
 ### Zoom
@@ -3173,8 +3171,6 @@ The following code shows how to manage and get the history list.
     }
 }
 ```
-
-![History Methods](images/History-Methods.gif)
 
 ## Tool tip
 
