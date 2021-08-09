@@ -200,6 +200,8 @@ The appearance of the user handle can be customized by using the [Size](https://
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
+![Zoom Pan](images/Zoom-pan.gif)
+
 ## Keyboard
 
 Diagram provides support to interact with the elements with key gestures. By default, some in-built commands are bound with a relevant set of key combinations.
