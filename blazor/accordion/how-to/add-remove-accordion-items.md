@@ -11,7 +11,7 @@ documentation: ug
 
 Accordion can be added/removed dynamically by iteration of Accordion Items using conditional **foreach** loop.
 
-In the following demo, initially we have three accordion as the **AccordionItems** has three items. On `Add Item` button click, new item is added to **AccordionItems** results in adding fourth accordion to the Accordion component. On clicking the `Remove Item`, the first item of **AccordionItems** has been removed which results in removing first accordion of our Accordion component.
+In the following demo, initially we have three accordion as the [AccordionItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html) has three items. On `Add Item` button click, new item is added to **AccordionItems** results in adding fourth accordion to the Accordion component. On clicking the `Remove Item`, the first item of **AccordionItems** has been removed which results in removing first accordion of our Accordion component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
