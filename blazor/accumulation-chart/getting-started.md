@@ -15,7 +15,7 @@ This section briefly explains about how to include a [Accumulation Chart](https:
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the [NuGet Package Manager](https://blazor.syncfusion.com/documentation/nuget-packages/).
+1. Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)  NuGet package to the application by using the [NuGet Package Manager](https://blazor.syncfusion.com/documentation/nuget-packages/).
 
 2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
