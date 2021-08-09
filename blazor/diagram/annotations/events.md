@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Diagram Component | Syncfusion 
-description: Learn Events in Blazor Diagram component of Syncfusion, and more details.
+description: Checkout and learn here all about Events in Blazor Diagram component of Syncfusion, and more details.
 platform: Blazor
 control: Diagram
 documentation: ug
