@@ -577,9 +577,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![fixed user handle for node](images/0before.png)|
-| 0.5 | Center |![fixed user handle for node](images/0.5center.png)|
-| 1 | After |![fixed user handle for node](images/1after.png)|
+| 0 | Before |![fixed user handle for node](images/before_0.png)|
+| 0.5 | Center |![fixed user handle for node](images/center_0.5.png)|
+| 1 | After |![fixed user handle for node](images/after_1.png)|
 
 ### Displacement
 

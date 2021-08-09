@@ -332,8 +332,6 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
 
 * A segment control point of the Bezier connector is used to change the bezier vectors, points of the connector.
 
-<!-- ![Bezier Segment Edit](../images/bezier-segment-edit.gif) -->
-
 ## See also
 
 * [How to customize the connector properties](./customization)

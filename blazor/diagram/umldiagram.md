@@ -9,7 +9,7 @@ documentation: ug
 
 # UML Diagram Shapes in Blazor Diagram Component
 
-## Uml Class Diagram Shapes
+## UML Class Diagram Shapes
 
 Class diagram is used to represent the static view of an application. The class diagrams are widely used in the modelling of object-oriented systems because they are the only UML diagrams which can be mapped directly with object-oriented languages. Diagram supports to generate the class diagram shapes from business logic.
 
@@ -211,7 +211,7 @@ The UML class diagram shapes are explained as follows.
 
 * The connector shape property defines the role or meaning of the connector.
 
-* The different types of connector shapes are `BPMN`, [UmlClassifier](https://help.syncfusion.com/cr/blazor) and [UmlActivity](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
+* The different types of connector shapes are `BPMN`, [UMLClassifier](https://help.syncfusion.com/cr/blazor) and [UMLActivity](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
 
 * The type of flow shapes in a BPMN process are sequence, association, and message.
 
@@ -541,7 +541,7 @@ To create a UmlActivity, define type as "UmlActivity" and the list of built-in s
 | StructuredNode | ![StructuredNode](images/StructuredNode.png) |
 | Note           | ![Note](images/Note.png)           |
 
-The following code illustrates how to create a UmlActivity shapes.
+The following code illustrates how to create a UMLActivity shapes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -581,11 +581,11 @@ The following code illustrates how to create a UmlActivity shapes.
 }
 ```
 
-### UmlActivity connector
+### UMLActivity connector
 
-To create an UmlActivity connector, define the type as "UmlActivity" and flow as either "Exception" or "Control" or "Object".
+To create an UMLActivity connector, define the type as "UMLActivity" and flow as either "Exception" or "Control" or "Object".
 
-The following code illustrates how to create a UmlActivity connector.
+The following code illustrates how to create a UMLActivity connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
