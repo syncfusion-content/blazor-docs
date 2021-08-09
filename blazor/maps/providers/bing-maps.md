@@ -40,7 +40,7 @@ Bing Maps provides different types of maps and it is supported in the Maps compo
 * **CanvasLight** - Displays light version of the road maps.
 * **CanvasGray** - Displays grayscale version of the road maps.
 
-To render the light version of the road maps, set the [BingMapType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_BingMapType) to [CanvasLight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.BingMapType.html) as demonstrated in the following code sample.
+To render the light version of the road maps, set the [BingMapType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_BingMapType) to [CanvasLight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.BingMapType.html) as demonstrated in the following code sample.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
