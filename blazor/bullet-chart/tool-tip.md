@@ -46,7 +46,7 @@ The tooltip is not visible by default. To make it visible, set the [Enable](http
 }
 ```
 
-![Tooltip in Bullet Chart](images/default-tool-tip.png)
+![Blazor Bullet Chart displays ToolTip](images/blazor-bulletchart-tooltip.png)
 
 ## Tooltip Customization
 
@@ -74,7 +74,7 @@ The following properties can be used to customize the Bullet Chart tooltip.
 
 > Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
-![Tooltip Customization](images/tooltip-custom.png)
+![Customizing Blazor Bullet Chart ToolTip](images/blazor-bullet-chart-tooltip-customization.png)
 
 ## Tooltip Template
 
@@ -111,4 +111,4 @@ The tooltip can be rendered as a custom component using the [Template](https://h
 
 > Refer to the [code block](#default-tooltip) to know about the property value of the **BulletChartData**.
 
-![Tooltip with Template](images/tooltip-template.png)
+![Blazor Bullet Chart Tooltip with Template](images/blazor-bullet-chart-tooltip-template.png)
