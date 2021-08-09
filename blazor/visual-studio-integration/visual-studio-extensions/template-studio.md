@@ -143,7 +143,7 @@ We need to register the created application in Google Platform API Console for I
 
     <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104>
 
-2. Click Create Credentials and O-Auth Client Id.
+2. Click Create Credentials and o-auth Client Id.
 
     ![Google API console credentials page](../images/GoogelAPIConsoleCredentials.png)
 
@@ -157,7 +157,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![RedirectedURI](../images/RedirectedURI.png)
 
-5. Click save then O-Auth client id will be created and copy that credentials.
+5. Click save then o-auth client id will be created and copy that credentials.
 
     ![ClientIdCreation](../images/ClientIdCreation.PNG)
 
