@@ -18,7 +18,7 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install [Syncfusion.Blazor.DropDowns](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazordropdowns) NuGet package to the application by using the `NuGet Package Manager`.
+* Install [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) NuGet package to the application by using the `NuGet Package Manager`.
 
     > Please ensure to check the `Include Prerelease` option for our Beta release.
 
@@ -42,7 +42,7 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 ## Adding component package to the application
 
-Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.DropDowns](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazordropdowns) package.
+Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) package.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

@@ -24,7 +24,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 > Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
-1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application using the `NuGet Package Manager`.
+1. Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) NuGet package to the application using the `NuGet Package Manager`.
 
 2. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
@@ -36,7 +36,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above [Syncfusion.Blazor.Themes](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazorthemes) static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
@@ -68,7 +68,7 @@ W> If you prefer the above new standard ([individual NuGet packages](https://bla
 
 ## Adding component package to the application
 
-Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.Navigations](https://blazor.syncfusion.com/documentation/nuget-packages/#syncfusionblazornavigations) package.
+Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) package.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
