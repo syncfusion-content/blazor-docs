@@ -38,7 +38,7 @@ This section briefly explains about how to include a BarcodeGenerator in your Bl
 
 ## Adding component package to the application
 
-Open **~/_Imports.Blazor** file and import the [Syncfusion.Blazor.BarcodeGenerator](https://www.nuget.org/packages/Syncfusion.Blazor.BarcodeGenerator/) packages.
+Open **~/_Imports.Blazor** file and import the `Syncfusion.Blazor.BarcodeGenerator` packages.
 
 ```cshtml
 @using Syncfusion.Blazor

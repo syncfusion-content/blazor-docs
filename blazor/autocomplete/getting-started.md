@@ -42,7 +42,7 @@ To get start quickly with Blazor AutoComplete component, you can check on this v
 
 ## Adding component package to the application
 
-Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.DropDowns](https://www.nuget.org/packages/Syncfusion.Blazor.DropDowns/) package.
+Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.DropDowns` package.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

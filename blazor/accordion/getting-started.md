@@ -68,7 +68,7 @@ W> If you prefer the above new standard ([individual NuGet packages](https://bla
 
 ## Adding component package to the application
 
-Open `~/_Imports.razor` file and import the [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) package.
+Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Navigations` package.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
