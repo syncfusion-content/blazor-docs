@@ -116,6 +116,7 @@ Annotations can be added at runtime by using the [AddLabels](https://help.syncfu
         };
         NodeCollection.Add(node);
     }
+
     //Method to add labels at runtime
     public void AddLabel()
     {
@@ -211,7 +212,7 @@ public void RemoveLabel()
 //Method to remove labels at runtime using Remove method.
 public void RemoveLabel()
 {
-        DiagramNodeAnnotation annotation = diagram.Nodes[0].Annotations[0] as DiagramNodeAnnotation;
+    DiagramNodeAnnotation annotation = diagram.Nodes[0].Annotations[0] as DiagramNodeAnnotation;
     (diagram.Nodes[0].Annotations as ObservableCollection<DiagramNodeAnnotation>).Remove(annotation);
 }
 ```
@@ -263,6 +264,7 @@ The following code sample shows how the annotation of the node changed at runtim
         };
         NodeCollection.Add(node);
     }
+    
     public void UpdateLabel()
     {
         diagram.Nodes[0].Annotations[0].Content = "Updated Annotation";

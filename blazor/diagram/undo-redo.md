@@ -140,7 +140,6 @@ The [GetHistoryStack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 {
     //Get the collection of undostack objects when passing true to GetHistoryStack() method.
     List<HistoryEntry> undostack = await diagram.GetHistoryStack(true);
-
     //Get the collection of redo stack objects when passing true to GetHistoryStack() method.
     List<HistoryEntry> redostack = await diagram.GetHistoryStack(false);
 }

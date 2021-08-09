@@ -28,6 +28,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
     // Defines diagram's SelectedItems
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
+
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects
@@ -57,9 +58,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         NodeCollection = new ObservableCollection<DiagramNode>();
-
         DiagramNode diagramNode = new DiagramNode()
         {
             Id = "node1",
@@ -107,6 +106,7 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
     // Defines diagram's SelectedItems
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
+
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects
@@ -127,21 +127,18 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
             //set margin for the user handle
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-
         //Add user handle to the collection...
         UserHandles = new ObservableCollection<DiagramUserHandle>()
-    {
-        cloneHandle
-    };
+        {
+            cloneHandle
+        };
         SelectedModel = new Syncfusion.Blazor.Diagrams.DiagramSelectedItems()
         {
             //Enable userhandle for selected items...
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         NodeCollection = new ObservableCollection<DiagramNode>();
-
         DiagramNode diagramNode = new DiagramNode()
         {
             Id = "node1",
@@ -160,7 +157,6 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
         };
         NodeCollection.Add(diagramNode);
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector diagramConnector = new DiagramConnector()
         {
             SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 100 },
@@ -266,15 +262,12 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
 @code {
     // Reference to diagram
     SfDiagram Diagram;
-
     // Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     // Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
-
     // Defines diagram's SelectedItems
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
-
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
 
     protected override void OnInitialized()
@@ -297,7 +290,6 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
             //set margin for the user handle
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-
         //Add user handle to the collection...
         UserHandles = new ObservableCollection<DiagramUserHandle>()
         {
@@ -310,7 +302,6 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
             UserHandles = this.UserHandles
         };
         NodeCollection = new ObservableCollection<DiagramNode>();
-
         DiagramNode diagramNode = new DiagramNode()
         {
             Id = "node1",
@@ -321,19 +312,16 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
         };
-
         NodeCollection.Add(diagramNode);
-
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector diagramConnector = new DiagramConnector()
         {
             SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
+
     /// <summary>
     /// mouse up event for the userhandles...
     /// </summary>
@@ -366,6 +354,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()
@@ -435,6 +424,7 @@ The following code explains how to customize the appearance of the fixed user ha
 {
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -529,6 +519,7 @@ The following code explains how to customize the node fixed user handle.
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()
@@ -608,6 +599,7 @@ The following code explains how to customize the connector fixed user handle.
 @code
 {
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
     protected override void OnInitialized()
     {
         DiagramConnector diagramConnector = new DiagramConnector()
@@ -655,6 +647,7 @@ The Diagram control provides following event for the fixed user handle.
 
 @code{
     SfDiagram diagram;
+    
     public async void Changed(FixedUserHandleClickEventArgs args)
     {
         if (args.Element.Node.Id == "node1" && args.FixedUserHandle.NodeFixedUserHandle.Id == "user1")
@@ -663,7 +656,9 @@ The Diagram control provides following event for the fixed user handle.
             await diagram.Paste();
         }
     }
+
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()

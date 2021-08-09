@@ -34,6 +34,7 @@ The following code example shows how to register and get the notification from t
         Console.WriteLine("Oldvalue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
     }
+    
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();

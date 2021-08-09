@@ -33,6 +33,7 @@ The layer's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
     public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -44,12 +45,11 @@ The layer's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             Width = 100,
             Height = 100,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-            new DiagramNodeAnnotation(){ Content = "Default Shape"}
-        }
+            {
+                new DiagramNodeAnnotation(){ Content = "Default Shape"}
+            }
         };
         NodeCollection.Add(node1);
-
         DiagramNode node2 = new DiagramNode()
         {
             Id = "node2",
@@ -82,7 +82,6 @@ The layer's [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         Layers.Add(new DiagramLayer() { Id = "Layer1", Visible = true, Objects = objects });
     }
 }
-
 ```
 
 ## Lock
@@ -100,6 +99,7 @@ The layer's [Lock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
     public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -116,7 +116,6 @@ The layer's [Lock](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
             }
         };
         NodeCollection.Add(node1);
-
         DiagramNode node2 = new DiagramNode()
         {
             Id = "node2",
@@ -167,6 +166,7 @@ The layer's [Objects](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
     public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -183,7 +183,6 @@ The layer's [Objects](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
             }
         };
         NodeCollection.Add(node1);
-
         DiagramNode node2 = new DiagramNode()
         {
             Id = "node2",
@@ -229,18 +228,19 @@ The following code illustrates how to add additional information to the layers.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-   <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
-   </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" Layers="@Layers">
+</SfDiagram>
 
 @code{
-
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>() { };
     public ObservableCollection<DiagramLayer> Layers = new ObservableCollection<DiagramLayer>() { };
+
     public class AdditionalInfo
     {
         public string Description { get; set; }
     };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -257,7 +257,6 @@ The following code illustrates how to add additional information to the layers.
             }
         };
         NodeCollection.Add(node1);
-
         DiagramNode node2 = new DiagramNode()
         {
             Id = "node2",
@@ -328,6 +327,7 @@ The following code illustrates how to add a layer.
             Type = Segments.Straight
         }
     };
+    
     // add the layers to the existing diagram layer collection
     public void addLayer()
     {

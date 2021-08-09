@@ -43,7 +43,6 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         DiagramNode node1 = createNode("node1", 100, 100, "Node1");
         DiagramNode node2 = createNode("node2", 300, 100, "Node2");
         DiagramNode node3 = createNode("node3", 200, 250, "Node3");
-
         DiagramNode groupnode = new DiagramNode();
         // Grouping node 1 and node 2 into a single group
         groupnode.Children = new string[] { "node1", "node2" };
@@ -52,6 +51,7 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         NodeCollection.Add(node3);
         NodeCollection.Add(groupnode);
     }
+
     public DiagramNode createNode(string id, double offx, double offy, string content)
     {
         DiagramNode node = new DiagramNode()
@@ -63,7 +63,6 @@ A group can be added to the diagram model through `Nodes` collection. To define 
             Width = 100,
             Style = new NodeShapeStyle() { Fill = "darkcyan" }
         };
-
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
             Id = "annotation1",
@@ -103,12 +102,12 @@ The following code illustrates how a ungroup  at runtime.
 @code{
     SfDiagram diagram;
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
         DiagramNode node1 = createNode("node1", 100, 100, "Node1");
         DiagramNode node2 = createNode("node2", 300, 100, "Node2");
-
         DiagramNode groupnode = new DiagramNode();
         // Grouping node 1 and node 2 into a single group
         groupnode.Children = new string[] { "node1", "node2" };
@@ -116,6 +115,7 @@ The following code illustrates how a ungroup  at runtime.
         NodeCollection.Add(node2);
         NodeCollection.Add(groupnode);
     }
+
     public DiagramNode createNode(string id, double offx, double offy, string content)
     {
         DiagramNode node = new DiagramNode()
@@ -127,7 +127,6 @@ The following code illustrates how a ungroup  at runtime.
             Width = 100,
             Style = new NodeShapeStyle() { Fill = "darkcyan" }
         };
-
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
             Id = "annotation1",
@@ -168,9 +167,9 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
     DiagramNode groupnode = new DiagramNode();
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -181,6 +180,7 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
         NodeCollection.Add(node1);
         NodeCollection.Add(node2);
     }
+
     public DiagramNode createNode(string id, double offx, double offy, string content)
     {
         DiagramNode node = new DiagramNode()
@@ -192,7 +192,6 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
             Width = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7" }
         };
-
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
             Id = "annotation1",
@@ -205,6 +204,7 @@ A group node can be added at runtime by using Nodes collection of diagram. The f
         };
         return node;
     }
+
     private void AddGroup()
     {
         NodeCollection.Add(groupnode);
@@ -285,11 +285,11 @@ Group Nodes can be predefined and added to SymbolPalette. You can drop those Gro
         DiagramNode node2 = createNode("node2", 150, 150, "Node2", Syncfusion.Blazor.Diagrams.BasicShapes.Ellipse);
         //Grouping node 1 and node 2 into a single group
         groupnode.Children = new string[] { "node1", "node2" };
-
         BasicShapes.Add(node1);
         BasicShapes.Add(node2);
         BasicShapes.Add(groupnode);
     }
+
     public DiagramNode createNode(string id, double offx, double offy, string content, Syncfusion.Blazor.Diagrams.BasicShapes shape)
     {
         DiagramNodeAnnotation Annotation = new DiagramNodeAnnotation()
@@ -317,7 +317,6 @@ Group Nodes can be predefined and added to SymbolPalette. You can drop those Gro
             Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = shape },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>() { Annotation }
         };
-
         if (content != "GroupNode")
         {
             Node.Style = new NodeShapeStyle() { Fill = "#6BA5D7" };
@@ -343,9 +342,9 @@ You can change the position of the group similar to node. For more information a
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
     DiagramNode groupnode = new DiagramNode();
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -357,6 +356,7 @@ You can change the position of the group similar to node. For more information a
         NodeCollection.Add(node2);
         NodeCollection.Add(groupnode);
     }
+
     public DiagramNode createNode(string id, double offx, double offy, string content)
     {
         DiagramNode node = new DiagramNode()
@@ -368,7 +368,6 @@ You can change the position of the group similar to node. For more information a
             Width = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7" }
         };
-
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation()
         {
             Id = "annotation1",
@@ -386,6 +385,7 @@ You can change the position of the group similar to node. For more information a
         };
         return node;
     }
+    
     private void UpdatePosition()
     {
         NodeCollection[2].BeginUpdate();

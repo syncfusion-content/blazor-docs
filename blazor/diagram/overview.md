@@ -81,7 +81,6 @@ The following code illustrates how to create overview.
         //Specify the sub-tree orientation
         Orientation = SubTreeOrientation.Horizontal
     };
-
     List<DiagramDataMapSetting> datamap { get; set; } = new List<DiagramDataMapSetting>()
     {
         new DiagramDataMapSetting() { Property = "Shape.TextContent", Field = "Name" }
@@ -101,6 +100,7 @@ The following code illustrates how to create overview.
 
         };
     }
+
     //Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
@@ -108,6 +108,7 @@ The following code illustrates how to create overview.
         public string FillColor { get; set; }
         public string Category { get; set; }
     }
+
     //Create the data source with node name and fill color values.
     public List<object> DataSource = new List<object>()
     {
@@ -151,6 +152,7 @@ The following image shows how the diagram is zoomed/panned with overview.
 {
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
+    
     protected override void OnInitialized()
     {
         DiagramNode node = new DiagramNode()

@@ -286,6 +286,7 @@ The [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Diag
 
 @* Initialize Diagram *@
 <SfDiagram Height="600px" Nodes="@NodeCollection" />
+
 @code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
@@ -321,6 +322,7 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Diag
 
 @* Initialize Diagram *@
 <SfDiagram Height="600px" Nodes="@NodeCollection" />
+
 @code{
     //Initialize node collection with node
     ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()

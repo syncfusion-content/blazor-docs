@@ -114,6 +114,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
     //Sets the snap constraints
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -145,6 +146,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
     //Sets the snap constraints
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -195,7 +197,6 @@ The [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
         diagramNode.Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7" };
         diagramNode.Id = "node1";
         NodeCollection.Add(diagramNode);
-
         diagramNode = new DiagramNode();
         diagramNode.OffsetX = 300;
         diagramNode.OffsetY = 100;

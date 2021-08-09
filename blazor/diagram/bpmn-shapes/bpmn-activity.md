@@ -23,7 +23,6 @@ The [Activity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
 </SfDiagram>
 
 @code{
-
     //Defines diagram's node collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
@@ -130,7 +129,6 @@ A [Sub-process](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams
 </SfDiagram>
 
 @code{
-
     //Defines diagram's node collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
@@ -257,7 +255,7 @@ The `Events` property of subprocess allows you to represent these results as an 
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
-@code {
+@code{
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()

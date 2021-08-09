@@ -180,6 +180,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
         };
         NodeCollection.Add(node1);
     }
+    
     private async void Click()
     {
         //Sets the export option for diagram

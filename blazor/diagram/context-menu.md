@@ -72,7 +72,6 @@ The following code example shows how to add custom context menu items along with
 
 @code
 {
-
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
@@ -174,11 +173,12 @@ The following code example shows how to add custom context menu items alone.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-    <SfDiagram Height="600px">
-        // Defines context menu and set the ShowCustomMenuOnly to true to render the custom context menu alone
-        <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="true">
-        </DiagramContextMenuSettings>
-    </SfDiagram>
+
+<SfDiagram Height="600px">
+    // Defines context menu and set the ShowCustomMenuOnly to true to render the custom context menu alone
+    <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="true">
+    </DiagramContextMenuSettings>
+</SfDiagram>
 ```
 
 ![Custom Context Menu](images/CustomContextMenu.gif)
@@ -225,6 +225,7 @@ The Diagram control triggers the event [ContextMenuItemClicked](https://help.syn
     <DiagramContextMenuSettings Show="true" ShowCustomMenuOnly="false">
     </DiagramContextMenuSettings>
 </SfDiagram>
+
 @code
 {
     public void ContextMenuItemClicked(DiagramMenuEventArgs arg)
@@ -324,7 +325,6 @@ The following code example shows how to add separate custom context menu items f
             Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector1);
     }
     List<ContextMenuItemModel> contextMenuItemModels = new List<ContextMenuItemModel>()

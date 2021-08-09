@@ -336,7 +336,6 @@ The following code example illustrates how to create a composition.
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -378,7 +377,6 @@ The following code example illustrates how to create an dependency.
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -420,7 +418,6 @@ The following code example illustrates how to create an inheritance.
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -475,7 +472,6 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -554,7 +550,6 @@ The following code illustrates how to create a UMLActivity shapes.
 @code{
     //Defines diagram's connector collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-
     public DiagramConstraints diagramConstraints = DiagramConstraints.Default;
 
     protected override void OnInitialized()

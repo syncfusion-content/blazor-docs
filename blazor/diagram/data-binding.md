@@ -110,6 +110,7 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
             LayoutInfo = this.LayoutInfo
         };
     }
+
     //Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
@@ -117,6 +118,7 @@ To map the user defined JSON data with diagram, configure the fields of [DataSou
         public string FillColor { get; set; }
         public string Category { get; set; }
     }
+    
     //Create the data source with node name and fill color values.
     public List<object> DataSource = new List<object>()
     {

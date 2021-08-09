@@ -153,7 +153,6 @@ The following example shows how to disable rotation using the node constraints.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
 
     protected override void OnInitialized()
@@ -242,7 +241,6 @@ The following code shows how to disable selection by using the connector constra
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramConnector> ConnectorCollection;
 
     protected override void OnInitialized()
@@ -314,7 +312,6 @@ The following code shows how to disable creating connections with a port.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
 
     protected override void OnInitialized()
@@ -389,7 +386,6 @@ The following code shows how to enable read-only mode for the annotations.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
 
     protected override void OnInitialized()
@@ -471,7 +467,6 @@ The following code shows how to hide rotator.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
 
     DiagramSelectedItems selectedItems = new DiagramSelectedItems() { Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate };
@@ -543,6 +538,7 @@ The following code shows how to show only horizontal gridlines.
     @* Initialize the snapsettings with constraints *@
     <DiagramSnapSettings Constraints="SnapConstraints.ShowHorizontalLines"></DiagramSnapSettings>
 </SfDiagram>
+
 @code{
     ObservableCollection<DiagramNode> NodeCollection;
     protected override void OnInitialized()
@@ -599,6 +595,7 @@ The following code shows how to limit the interaction done inside a diagram with
 
 @code{
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
@@ -646,6 +643,7 @@ The following code example shows how to inherit the line bridging behavior from 
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "connector1",
@@ -681,7 +679,6 @@ The following code shows to add line routing constraints into the default diagra
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Constraints="@DiagramConstraint">
-
 </SfDiagram>
 
 @code{
@@ -701,7 +698,6 @@ The following code shows to remove zoom and pan constraints from the default con
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Constraints="@DiagramConstraint">
-
 </SfDiagram>
 
 @code{

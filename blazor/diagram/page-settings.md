@@ -41,7 +41,6 @@ Page settings enable to customize the appearance, width, and height of the diagr
 {
     //Sets the page orientation as landscape.
     public PageOrientation orientation = PageOrientation.Landscape;
-
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
@@ -124,7 +123,6 @@ The [MultiplePage](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 {
     //Sets the page orientation as landscape.
     public PageOrientation orientation = PageOrientation.Landscape;
-
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
@@ -181,11 +179,8 @@ The following code example illustrates how to define boundary constraints with r
 {
     //Reference to diagram
     SfDiagram diagram;
-
     public PageOrientation orientation = PageOrientation.Landscape;
-
     public BoundaryConstraints boundaryConstraints = BoundaryConstraints.Page;
-
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode>
     NodeCollection = new ObservableCollection<DiagramNode>();

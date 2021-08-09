@@ -51,6 +51,7 @@ The following code example illustrates how to define a palette and how its added
     public ObservableCollection<Object> FlowShapes { get; set; }
     // Defines palette's connector collection
     public ObservableCollection<Object> Connectors { get; set; }
+
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
@@ -255,6 +256,7 @@ The size of the individual symbol can be customized. The [SymbolWidth](https://h
     public ObservableCollection<SymbolPalettePalette> Palettes;
     // Defines palette's basic-shape collection
     public ObservableCollection<Object> BasicShapes { get; set; }
+
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
@@ -325,6 +327,7 @@ The following code example illustrates how to change the preview size of a palet
     public ObservableCollection<SymbolPalettePalette> Palettes;
     // Defines palette's basic-shape collection
     public ObservableCollection<Object> BasicShapes { get; set; }
+
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
@@ -390,7 +393,6 @@ While adding more number of symbols such as nodes and connectors to the palette,
     public ObservableCollection<SymbolPalettePalette> Palettes;
     // Defines palette's basic shape collection
     public ObservableCollection<Object> BasicShapes { get; set; }
-
     // Defines the default values for Nodes
     public DiagramNode PaletteNodeDefaults;
 
@@ -469,6 +471,7 @@ The diagram provides support to add symbol description below each symbol of a pa
     public ObservableCollection<Object> BasicShapes { get; set; }
     // Defines palette's flow-shape collection
     public ObservableCollection<Object> FlowShapes { get; set; }
+    
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
