@@ -46,7 +46,7 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Acc
 
 ```
 
-![Data Label](images/data-label/default-razor.png)
+![Blazor Accumulation Chart with Data Label](images/data-label/blazor-accumulation-chart-with-data-label.png)
 
 ## Position
 
@@ -87,7 +87,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ac
 
 ```
 
-![Positioning](images/data-label/position-razor.png)
+![Changing Data Label Position in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-label-position.png)
 
 ## Smart Labels
 
@@ -139,7 +139,7 @@ Data labels will be arranged smartly without overlapping with each other. The [E
 
 ```
 
-![Smart Labels](images/data-label/smartlabels-razor.png)
+![Blazor Accumulation Chart with Smart Labels](images/data-label/blazor-accumulation-chart-smart-labels.png)
 
 ## Connector Line
 
@@ -182,7 +182,7 @@ When the data label is placed [Outside](https://help.syncfusion.com/cr/blazor/Sy
 
 ```
 
-![Connector Line](images/data-label/connector-razor.png)
+![Blazor Accumulation Chart with Connector Line](images/data-label/blazor-accumulation-chart-connector-line.png)
 
 ## Text Mapping
 
@@ -223,7 +223,7 @@ The [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ```
 
-![Text Mapping](images/data-label/map-razor.png)
+![Text Mapping in Blazor Accumulation Chart](images/data-label/blazor-accumulation-chart-text-mapping.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

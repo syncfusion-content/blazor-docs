@@ -167,7 +167,7 @@ In barcode generators you can customize the barcode text by using display [Text]
 
 ## Event
 
-`OnValidationFailed` event in the `SfBarcodeGenerator` is used to trigger when the input is an invalid string.
+[OnValidationFailed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html#Syncfusion_Blazor_BarcodeGenerator_SfBarcodeGenerator_OnValidationFailed) event in the [SfBarcodeGenerator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.BarcodeGenerator.SfBarcodeGenerator.html) is used to trigger when the input is an invalid string.
 
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator

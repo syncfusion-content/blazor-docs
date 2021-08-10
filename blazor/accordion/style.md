@@ -13,7 +13,7 @@ The following content provides the exact CSS structure that can be used to modif
 
 ## Customizing Accordion
 
-Use the following CSS to customize the Accordion.
+Use the following CSS to customize the [Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html).
 
 ```CSS
 
@@ -64,7 +64,7 @@ Use the following CSS to customize the expand and collapse icons of Accordion co
 
 ## Customizing the hover state of Accordion control
 
-Use the following CSS to customize the accordion item when hovering.
+Use the following CSS to customize the [accordion item](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html) when hovering.
 
 ```CSS
 

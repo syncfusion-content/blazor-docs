@@ -9,7 +9,7 @@ documentation: ug
 
 # Native Events in Blazor AutoComplete Component
 
-The following section explains the steps to include native events and pass data to event handler in the AutoComplete component.
+The following section explains the steps to include native events and pass data to event handler in the [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) component.
 
 ## Bind native events to AutoComplete
 
@@ -62,7 +62,7 @@ Blazor provides set of argument types to map to native events. The list of event
 * Touch Events – TouchEventArgs
 * Pointer Events – PointerEventArgs
 
-In the following example, the onkeypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
+In the following example, the on keypress method is called every time any key is pressed inside input. But the message will print when you press "a" key.
 
 ```cshtml
 <SfAutoComplete TValue="string" TItem="Countries" @onkeypress="@(e => KeyPressed(e))" >

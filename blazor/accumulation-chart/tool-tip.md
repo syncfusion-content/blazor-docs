@@ -47,7 +47,7 @@ The [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ```
 
-![Tooltip](images/tool-tip/default-razor.png)
+![Blazor Accumulation Chart displays ToolTip](images/tool-tip/blazor-accumulation-chart-tooltip.png)
 
 ## Header
 
@@ -90,7 +90,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ```
 
-![Header](images/tool-tip/header-razor.png)
+![Blazor Accumulation Chart displays ToolTip for Header](images/tool-tip/blazor-accumulation-chart-header-tooltip.png)
 
 ## Tooltip Format
 
@@ -133,7 +133,7 @@ By default, tooltip shows information about x and y value in points. In addition
 
 ```
 
-![Tooltip Format](images/tool-tip/format-razor.png)
+![Customizing ToolTip Format in Blazor Accumulation Chart](images/tool-tip/blazor-accumulation-chart-tooltip-format.png)
 
 ## Tooltip Customization 
 
@@ -177,7 +177,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accumu
 
 ```
 
-![Tooltip Customization](images/tool-tip/custom-razor.png)
+![Customizing Tooltip in Blazor Accumulation Chart](images/tool-tip/blazor-accumulation-chart-tooltip-customization.png)
 
 ## Tooltip Text Mapping
 
@@ -226,7 +226,7 @@ By default, tooltip shows information of x and y value in points. In addition, b
 
 ```
 
-![mapping](images/tool-tip/mapping-razor.png)
+![ToolTip Text Mapping in Blazor Accumulation Chart](images/tool-tip/blazor-accumulation-chart-tooltip-mapping.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

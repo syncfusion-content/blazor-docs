@@ -47,7 +47,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 ```
 
-![Title](images/title/title-razor.png)
+![Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title.png)
 
 ## Title Customization
 
@@ -89,7 +89,7 @@ The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAcc
 
 ```
 
-![Customized Title](images/title/custom_title.png)
+![Customizing Title in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-title-customization.png)
 
 ## Subtitle
 
@@ -128,7 +128,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-![Subtitle](images/title/sub-title-razor.png)
+![Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-with-subtitle.png)
 
 ## Subtitle Customization
 
@@ -169,7 +169,7 @@ The [SubTitle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Sf
 
 ```
 
-![Customized Subtitle](images/title/custom_subtitle.png)
+![Customizing Subtitle in Blazor Accumulation Chart](images/title/blazor-accumulation-chart-subtitle-customization.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
