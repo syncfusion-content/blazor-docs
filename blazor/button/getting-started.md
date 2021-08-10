@@ -20,7 +20,7 @@ To get start quickly with Button Component using Blazor, you can check on this v
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
+1. Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package to the application by using the `NuGet Package Manager`.
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
@@ -107,7 +107,7 @@ Now, add the Syncfusion Blazor Button component in `razor` page in the `Pages` f
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Button component will render in the web browser as shown below
 
-![Button Sample](./images/button.png)
+![Blazor Button Component](./images/blazor-button-component.png)
 
 ## See Also
 

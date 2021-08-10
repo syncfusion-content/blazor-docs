@@ -29,4 +29,4 @@ Tooltip can be shown on Button hover and it can be achieved by [HtmlAttributes](
 
 Output be like
 
-![Button Sample](./../images/tooltip.png)
+![Blazor Button displays ToolTip](./../images/blazor-button-tooltip.png)
