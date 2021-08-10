@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pyramid in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Pyramid in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about the Pyramid in the Essential Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -46,7 +46,7 @@ The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/c
 ```
 
 
-![Pyramid Chart](../images/pyramid/default-razor.png)
+![Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart.png)
 
 ## Pyramid Mode
 
@@ -86,7 +86,7 @@ The [Pyramid Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ```
 
-![Pyramid Mode](../images/pyramid/mode-razor.png)
+![Blazor Pyramid Chart with Surface Mode](../images/pyramid/blazor-pyramid-chart-with-surface-mode.png)
 
 ## Pyramid Size
 
@@ -126,7 +126,7 @@ The size of the pyramid chart can be customized by using the [Width](https://hel
 
 ```
 
-![Pyramid Size](../images/pyramid/size-razor.png)
+![Customizing Pyramid Size in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-size.png)
 
 ## Gap Between Pyramid Segments
 
@@ -166,7 +166,7 @@ The [Pyramid Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ```
 
-![Gap Between Pyramid Segments](../images/pyramid/gap-razor.png)
+![Blazor Pyramid Chart with Gap](../images/pyramid/blazor-pyramid-chart-with-gap.png)
 
 ## Pyramid Explode
 
@@ -206,7 +206,7 @@ By setting the [Explode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Pyramid Explode](../images/pyramid/explode-razor.png)
+![Explode in Blazor Pyramid Chart](../images/pyramid/blazor-pyramid-chart-explode.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pyramid?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

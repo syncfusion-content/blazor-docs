@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pie and Doughnut in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Pie and Doughnut in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here all about Pie and Doughnut in the Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
@@ -47,7 +47,7 @@ The [Pie Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart
 
 ```
 
-![Pie Chart](../images/pie-dough-nut/pie-razor.png)
+![Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart.png)
 
 ## Radius Customization
 
@@ -87,7 +87,7 @@ The radius of the pie series will be set to 80% of its size (minimum of chart wi
 
 ```
 
-![Radius Customization](../images/pie-dough-nut/radius-razor.png)
+![Customizing Radius in Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart-radius-customization.png)
 
 ## Pie Center
 
@@ -128,7 +128,7 @@ The center x and center y can be used to change the pie's center position. The p
 
 ```
 
-![Pie Center](../images/pie-dough-nut/piecenter-razor.png)
+![Changing Blazor Pie Chart Center Position](../images/pie-dough-nut/blazor-pie-chart-center-position.png)
 
 ## Various Radius Pie Chart
 
@@ -170,7 +170,7 @@ The [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ```
 
-![Various Radius Pie Chart](../images/pie-dough-nut/various-radius-razor.png)
+![Blazor Pie Chart displays Various Radius](../images/pie-dough-nut/blazor-pie-chart-with-various-radius.png)
 
 ## Doughnut Chart
 
@@ -210,7 +210,7 @@ The doughnut chart can be created by setting the [InnerRadius](https://help.sync
 
 ```
 
-![Doughnut Chart](../images/pie-dough-nut/doughnut-razor.png)
+![Blazor Doughnut Chart](../images/pie-dough-nut/blazor-doughnut-chart.png)
 
 ## Start and End angles
 
@@ -251,7 +251,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ```
 
-![Start and End angles](../images/pie-dough-nut/start-angle-razor.png)
+![Customizing Start and End angles in Blazor Pie Chart](../images/pie-dough-nut/blazor-pie-chart-start-angle-customization.png)
 
 ## Color and Text Mapping
 
@@ -293,7 +293,7 @@ The [StartAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.
 
 ```
 
-![Color Mapping](../images/pie-dough-nut/map-razor.png)
+![Blazor Pie Chart with Color and Text Mapping](../images/pie-dough-nut/blazor-pie-chart-text-mapping.png)
 
 ## Hide pie or doughnut border
 
@@ -332,7 +332,7 @@ When the mouse hovers over the pie/doughnut chart, the border appears by default
 
 ```
 
-![Disable Border](../images/pie-dough-nut/border.png)
+![Hiding Blazor Pie Chart Border](../images/pie-dough-nut/Blazor-pie-chart-disable-border.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 
