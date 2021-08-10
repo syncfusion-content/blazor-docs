@@ -20,7 +20,7 @@ The Bing Maps can be rendered by setting the [LayerType](https://help.syncfusion
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string" Key=""></MapsLayer>
+        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string" Key="" BingMapType="BingMapType.CanvasLight"></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
