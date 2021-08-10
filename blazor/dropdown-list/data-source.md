@@ -339,6 +339,25 @@ The output will shown as follows,
 
 ![Enum data](./images/drop-down-enum-data.png)
 
+### ValueTuple data binding
+
+You can bind ValueTuple data to DropDownList component. The following code helps you get a string value from the enumeration data by using ValueTuple.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfDropDownList TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+                DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <DropDownListFieldSettings Value="Item1" Text="Item2" />
+</SfDropDownList>
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList ValueTuple Data](./images/blazor_dropdown_valuetuple.png)
+
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the DropDownList component.
