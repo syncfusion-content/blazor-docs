@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom Resource Generator | Blazor | Syncfusion
+title: Custom Resource Generator (CRG) in Blazor | Syncfusion
 description: Learn here about that how to using the custom resource generator in the Syncfusion Blazor Components
 platform: Blazor
 component: Common
