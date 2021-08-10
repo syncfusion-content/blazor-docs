@@ -115,7 +115,7 @@ namespace blazorDropdowns
 | AutoComplete_ActionFailureTemplate | Die Anfrage ist fehlgeschlagen |
 | AutoComplete_NoRecordsTemplate | Keine Aufzeichnungen gefunden |
 
-* Finally, Specify the culture for AutoComplete using `locale` property.
+* Finally, Specify the culture for AutoComplete using [locale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Locale) property.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

@@ -32,7 +32,7 @@ This section briefly explains how to include a Kanban component in your Blazor S
 
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```cshtml
 <head>

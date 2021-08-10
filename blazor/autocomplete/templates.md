@@ -13,7 +13,7 @@ The AutoComplete has been provided with several options to customize each list i
 
 ## Item template
 
-The content of each list item within the AutoComplete can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
+The content of each list item within the [AutoComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) can be customized with the help of [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_ItemTemplate) property.
 
 In the following sample, each list item is split into two columns to display relevant data.
 
@@ -113,7 +113,7 @@ The output will be as follows.
 
 ## Header template
 
-The header element is shown statically at the top of the suggestion list items within the AutoComplete, and any custom element can be placed as a header element using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) property.
+The header element is shown statically at the top of the suggestion list items within the AutoComplete, and any custom element can be placed as a header element using the `HeaderTemplate` property.
 
 In the following sample, the list items and its headers are designed and displayed as two columns similar to multiple columns of the grid.
 
@@ -184,7 +184,7 @@ The output will be as follows.
 
 ## Footer template
 
-The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. Here, you can place any custom element as a footer element using [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfAutoComplete-2.html) property.
+The AutoComplete has options to show a footer element at the bottom of the list items in the suggestion list. Here, you can place any custom element as a footer element using `FooterTemplate` property.
 
 In the following sample, footer element displays the total number of list items present in the AutoComplete.
 

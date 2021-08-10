@@ -52,14 +52,24 @@ Steps to get started with Word processor component for Blazor:
     <SfDocumentEditorContainer EnableToolbar=true></SfDocumentEditorContainer>
     ```
 
-10. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+10. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
-    ```csharp
-     public void ConfigureServices(IServiceCollection services) {
-         .......
-         .......
-         services.AddSyncfusionBlazor();
-     }
+    ```c#
+    using Syncfusion.Blazor;
+
+    namespace WebApplication1
+    {
+        public class Program
+        {
+            public static async Task Main(string[] args)
+            {
+                ....
+                ....
+                builder.Services.AddSyncfusionBlazor();
+                await builder.Build().RunAsync();
+            }
+        }
+    }
     ```
 
 11. Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.

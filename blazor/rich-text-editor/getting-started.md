@@ -39,7 +39,7 @@ To get start quickly with Blazor Rich Text Editor components, you can check on t
 
     ```
 
-    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```cshtml
 
