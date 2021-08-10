@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Label in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Data Label in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here about that how to add data label in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

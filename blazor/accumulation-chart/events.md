@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here about that how to using the events in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

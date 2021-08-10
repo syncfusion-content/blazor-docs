@@ -43,7 +43,7 @@ The Blazor ButtonGroup has the following predefined styles that can be defined u
 
 Output be like
 
-![ButtonGroup Sample](./images/button-style.png)
+![Blazor ButtonGroup with different Style](./images/blazor-buttongroup-style.png)
 
 > Predefined ButtonGroup styles provide only the visual indication. So, ButtonGroup content should define the ButtonGroup style for the users of assistive technologies such as screen readers.
 
@@ -91,7 +91,7 @@ A round ButtonGroup is shaped like a circle. Usually, it contains an icon repres
 
 Output be like
 
-![ButtonGroup Sample](./images/button-type.png)
+![Displaying different Type of ButtonGroup Component](./images/blazor-buttongroup-type.png)
 
 ## Icons
 
@@ -121,7 +121,7 @@ To create ButtonGroup with icons, [IconCss](https://help.syncfusion.com/cr/blazo
 
 Output be like
 
-![ButtonGroup Sample](./images/button-icon.png)
+![Blazor ButtonGroup with Icon](./images/blazor-buttongroup-icon.png)
 
 ## ButtonGroup size
 
@@ -145,4 +145,4 @@ The two types of ButtonGroup sizes are default and small. To change the size of 
 
 Output be like
 
-![ButtonGroup Sample](./images/button-size.png)
+![Changing Blazor ButtonGroup Size](./images/blazor-buttongroup-size.png)

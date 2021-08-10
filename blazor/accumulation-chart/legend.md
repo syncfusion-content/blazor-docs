@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Legend in Blazor Accumulation Chart Component | Syncfusion
-description: Checkout and learn here all about Legend in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here about that how to using the legend in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

@@ -105,7 +105,7 @@ Now, add the Syncfusion Blazor ButtonGroup component in `razor` page in the `Pag
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor ButtonGroup component will render in the web browser as shown below
 
-![ButtonGroup Sample](./images/button-group.png)
+![Blazor ButtonGroup Component](./images/blazor-button-group-component.png)
 
 ## See Also
 
