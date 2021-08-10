@@ -24,7 +24,7 @@ To get start quickly with Button Component using Blazor, you can check on this v
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-> Please ensure to check the **Include prerelease** option.
+> Please ensure to check the **Include Prerelease** option.
 
 ```html
 <head>
