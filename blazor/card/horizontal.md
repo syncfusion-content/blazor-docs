@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Horizontal Card in Blazor Card Component | Syncfusion
-description: Checkout and learn here all about Horizontal Card in Syncfusion Blazor Card component and much more.
+description: Learn here about that how to working with horizontal card in Syncfusion Blazor Card component and much more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -38,4 +38,4 @@ An horizontally aligned card can push a specific column to align vertical using 
 </style>
 ```
 
-![Value Bar](images/value-bar.png)
+![Horizontal Card in Blazor Card Component](images/blazor-card-with-horizontal-position.png)

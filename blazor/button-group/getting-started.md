@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ButtonGroup Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ButtonGroup component of Syncfusion, and more details.
+description: Learn here about that how to working with the Blazor ButtonGroup component of Syncfusion, and more details.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor ButtonGroup Component
 
-This section briefly explains about how to include ButtonGroup Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [ButtonGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html) Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

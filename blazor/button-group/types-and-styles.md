@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Types and Styles in Blazor ButtonGroup Component | Syncfusion
-description: Checkout and learn here all about Types and Styles in Syncfusion Blazor ButtonGroup component and more.
+description: Learn here about that different types and styles of Syncfusion Blazor ButtonGroup component and more.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
