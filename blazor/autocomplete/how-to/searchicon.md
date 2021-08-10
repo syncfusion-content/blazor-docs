@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Search icon with Blazor AutoComplete Component | Syncfusion
-description: Learn here all about adding search icon in Syncfusion Blazor AutoComplete component.
+description: Learn here all about adding search icon for Syncfusion Blazor AutoComplete component and more details.
 platform: Blazor
 control: AutoComplete
 documentation: ug
