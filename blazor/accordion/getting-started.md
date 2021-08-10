@@ -55,7 +55,7 @@ W> If you prefer the above new standard ([individual NuGet packages](https://bla
     </head>
     ```
 
-    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../../common/how-to/render-blazor-server-app-in-ie/) for more information.
+    > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](../common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
         <head>
