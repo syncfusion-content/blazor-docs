@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Single Pane Open Always in Blazor Accordion Component | Syncfusion
-description: Checkout and learn about to keep Single Pane open always in Blazor Accordion component of Syncfusion, and more details.
+title: How to Keep Single Pane Open Always in Blazor Accordion Component | Syncfusion
+description: Checkout and learn about how to keep Single Pane open always in Blazor Accordion component of Syncfusion, and more details.
 platform: Blazor
 control: Accordion
 documentation: ug

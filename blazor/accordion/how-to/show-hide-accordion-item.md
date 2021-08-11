@@ -18,7 +18,7 @@ Accordion provides support to Show/Hide the specified accordion item using follo
 
 Accordion provides support to Show/Hide the specified accordion item dynamically using conditional **if** statement.
 
-In the following demo, the specified accordion item is Show/Hide dynamically while clicking the **Show/Hide Item** button.
+In the following demo, the specified accordion item is Show/Hide dynamically when the **Show/Hide Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -81,7 +81,7 @@ In the following demo, the specified accordion item is Show/Hide dynamically whi
 
 Accordion provides support to Show/Hide the specified accordion item dynamically using accordion item [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Visible) property.
 
-In the following demo, the specified accordion item is Show/Hide dynamically while clicking the **Show/Hide Item** button.
+In the following demo, the specified accordion item is Show/Hide dynamically when the **Show/Hide Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
