@@ -18,7 +18,7 @@ In the following example, ListView element is given as `PopupContent` to Dropdow
 <SfDropDownButton CssClass="e-caret-hide" IconCss="e-icons e-down">
         <PopupContent>
             <SfListView ID="listview" DataSource="@Data" ShowCheckBox="true">
-                <ListViewFieldSettings Text="Text" GroupBy="Category"></ListViewFieldSettings>
+                <ListViewFieldSettings Text="Text" GroupBy="Category" TValue="ListData"></ListViewFieldSettings>
             </SfListView>
         </PopupContent>
     </SfDropDownButton>

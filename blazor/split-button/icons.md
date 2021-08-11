@@ -18,17 +18,20 @@ The following example illustrates how to place icon in Split Button component.
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
-<SfSplitButton Items="@SplitbtnItems" Content="Paste" IconCss="e-icons e-paste"></SfSplitButton>
-<SfSplitButton Items="@SplitbtnItems" Content="Paste" IconCss="e-icons e-paste" IconPosition="SplitButtonIconPosition.Top"></SfSplitButton>
-
-@code{
-    public List<DropDownMenuItem> SplitbtnItems = new List<DropDownMenuItem>
-    {
-        new DropDownMenuItem{ Text="Cut" },
-        new DropDownMenuItem{ Text="Copy" },
-        new DropDownMenuItem{ Text="Paste" }
-    };
-}
+<SfSplitButton Content="Paste" IconCss="e-icons e-paste">
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
+</SfSplitButton>
+<SfSplitButton Content="Paste" IconCss="e-icons e-paste" IconPosition="SplitButtonIconPosition.Top">
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Cut"></DropDownMenuItem>
+        <DropDownMenuItem Text="Copy"></DropDownMenuItem>
+        <DropDownMenuItem Text="Paste"></DropDownMenuItem>
+    </DropDownMenuItems>
+</SfSplitButton>
 
 <style>
     .e-paste::before {

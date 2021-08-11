@@ -133,7 +133,7 @@ You can export the defined conditions to SQL query through the [GetSqlFromRules]
 @using Syncfusion.Blazor.QueryBuilder
 @using Syncfusion.Blazor.Buttons
 
-<SfQueryBuilder DataSource="@EmployeeDetails" Rule="@ImportRules" @ref="QueryBuilderObj">
+<SfQueryBuilder DataSource="@EmployeeDetails" @ref="QueryBuilderObj">
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>
         <QueryBuilderColumn Field="FirstName" Label="First Name" Type="ColumnType.String"></QueryBuilderColumn>
@@ -142,11 +142,12 @@ You can export the defined conditions to SQL query through the [GetSqlFromRules]
         <QueryBuilderColumn Field="Country" Label="Country" Type="ColumnType.String"></QueryBuilderColumn>
         <QueryBuilderColumn Field="City" Label="City" Type="ColumnType.String"></QueryBuilderColumn>
     </QueryBuilderColumns>
+    <QueryBuilderRule Condition="or" Rules="Rules"></QueryBuilderRule>
 </SfQueryBuilder>
 <SfButton CssClass="e-primary" @onclick="getSql">Get SQL</SfButton>
 
 @code {
-    SfQueryBuilder QueryBuilderObj;
+    SfQueryBuilder<Employee> QueryBuilderObj;
     public List<Employee> EmployeeDetails = new List<Employee>
         {
         new Employee{ FirstName = "Martin", EmployeeID = "1001", Country = "England", City = "Manchester", HireDate = "23/04/2014" },
@@ -164,18 +165,15 @@ You can export the defined conditions to SQL query through the [GetSqlFromRules]
         public string HireDate { get; set; }
     }
 
-    public QueryBuilderRule ImportRules = new QueryBuilderRule
+    public List<RuleModel> Rules = new List<RuleModel>
     {
-        Condition = "or",
-        Rules = new List<RuleModel>{
-            new RuleModel { Field = "EmployeeID", type="Number",  Value = 1001, Operator = "notequal" },
-            new RuleModel { Field = "Country", type="String", Value = "England", Operator = "equal" }
-        }
+        new RuleModel { Field = "EmployeeID", Type="Number",  Value = 1001, Operator = "notequal" },
+        new RuleModel { Field = "Country", Type="String", Value = "England", Operator = "equal" }
     };
 
-    private async void getSql()
+    private void getSql()
     {
-        string sql = await QueryBuilderObj.GetSqlFromRules();
+        QueryBuilderObj.GetSqlFromRules();
     }
  }
 
