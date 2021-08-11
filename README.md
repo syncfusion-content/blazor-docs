@@ -4,6 +4,16 @@ This section contains guidelines on naming files, sections, documents and other 
 
 > **NOTE**: Some of the items are marked as TODO which will be documented later.
 
+## Hotfix branch 
+
+We will use the hotfix branch to merge the contents into both development branch ( staging) and aster branch ( live ) , 
+the branch name will be in the pattern:  https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v{last major release version}
+ for example the latest hotfix branch is : 
+https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v19.2.0.55
+
+Use this branch for documentation purposes 
+
+
 ## FrontMatter / (Title and description):
 
 All the md files in the documentation must contain the frontmatter. Front matter must be given with following fields.
