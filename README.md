@@ -5,14 +5,30 @@ This section contains guidelines on naming files, sections, documents and other 
 > **NOTE**: Some of the items are marked as TODO which will be documented later.
 
 
-## Hotfix branch 
+## Hotfix and Master branch usage
 
-We will use the hotfix branch to merge the contents into both development branch ( staging) and master branch ( live ) , 
-the branch name will be in the pattern:  https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v{last major release version}
- for example the latest hotfix branch is : 
+The hotfix branch name will be in the below pattern:  
+
+https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v{last major release version}
+ 
+For example the latest hotfix branch is:
 https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v19.2.0.55
 
-Use this branch for documentation purposes 
+
+**For Daily UG publishing to live**
+
+hotfix branch has been created for blazor-docs repository. hereafter use this hotfix branch to commit your daily changes as like ES.
+
+https://gitlab.synthofusion.com/content/blazor-docs/tree/hotfix/hotfix-v19.2.0.55
+
+We will merge the changes from hotfix to Master and publish to live from Master branch hereafter.
+
+**For release UG publishing (Main\SP)**
+
+You can use the development branch to commit the changes for Main\SP release.
+
+We will merge development branch to Master during release time as like other ES platforms and publish to live from Master branch and create hotfix for next version
+
 
 
 ## FrontMatter / (Title and description):
