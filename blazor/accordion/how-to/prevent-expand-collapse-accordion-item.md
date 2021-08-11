@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Prevent Expand or Collapse item in Blazor Accordion | Syncfusion
-description: Learn here all about Prevent Expand or Collapse item in Syncfusion Blazor Accordion component and more.
+title: Prevent the Expand or Collapse item in Blazor Accordion | Syncfusion
+description: Learn here all about how to prevent Expand or Collapse item in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Prevent Expand or Collapse item in Blazor Accordion Component
+# Prevent the Expand or Collapse item in Blazor Accordion Component
 
 We can prevent the expand and collapse of accordion item for specific condition, for example if we have a button in the accordion header, clicking on it we need to prevent expand and collapse. This can be achieved by checking the condition on Accordion [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events. You can refer the following code snippet in which prevention of collapse and expand action when clicking the Button and DropDownList.
 
@@ -108,6 +108,6 @@ We can prevent the expand and collapse of accordion item for specific condition,
 }
 ```
 
-Output be like the below.
+Output:
 
 ![Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-expand-collapse-tem.png)

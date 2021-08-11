@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add/Remove Accordion items in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Add/Remove Accordion items in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about how to add/remove Accordion items in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Add/Remove Accordion items in Blazor Accordion Component
 
-Accordion can be added/removed dynamically by iteration of Accordion Items using conditional **foreach** loop.
+Accordion can be added/removed dynamically by iteration of the Accordion Items using conditional **foreach** loop.
 
-In the following demo, initially we have three accordion as the [AccordionItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html) has three items. On `Add Item` button click, new item is added to **AccordionItems** results in adding fourth accordion to the Accordion component. On clicking the `Remove Item`, the first item of **AccordionItems** has been removed which results in removing first accordion of our Accordion component.
+In the following demo, initially we have three accordion as the [AccordionItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItems.html) has three items. On `Add Item` button click, new item is added to the  **AccordionItems** results in adding fourth accordion to the Accordion component. On clicking the `Remove Item`, the first item of the **AccordionItems** has been removed which results in removing the first accordion of our Accordion component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -85,6 +85,6 @@ In the following demo, initially we have three accordion as the [AccordionItems]
 }
 ```
 
-Output be like the below.
+Output:
 
 ![Adding or Removing items in Blazor Accordion](../images/blazor-accordion-add-remove-item.gif)

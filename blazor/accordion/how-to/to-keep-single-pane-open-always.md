@@ -1,7 +1,7 @@
 ---
 layout: post
-title: How to To Keep Single Pane Open Always in Blazor Accordion Component | Syncfusion
-description: Checkout and learn about To Keep Single Pane Open Always in Blazor Accordion component of Syncfusion, and more details.
+title: How to Keep Single Pane Open Always in Blazor Accordion Component | Syncfusion
+description: Checkout and learn about to keep Single Pane open always in Blazor Accordion component of Syncfusion, and more details.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # To keep single pane open always
 
-By default, all Accordion panels are collapsible. You can customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
+By default, all Accordion panels are collapsible. Customize the Accordion to keep one panel as expanded state always. This is applicable for `Single` expand mode.
 
 ```cshtml
 

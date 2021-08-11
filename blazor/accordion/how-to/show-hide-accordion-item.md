@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show/Hide Accordion item in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Show/Hide Accordion item in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about how to Show/Hide Accordion item in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Show/Hide Accordion item in Blazor Accordion Component
 
-Accordion provides a support to Show/Hide the specified accordion item using following ways.
+Accordion provides support to Show/Hide the specified accordion item using following ways.
 
 * Using conditional rendering.
 * Using property.
@@ -18,7 +18,7 @@ Accordion provides a support to Show/Hide the specified accordion item using fol
 
 Accordion provides support to Show/Hide the specified accordion item dynamically using conditional **if** statement.
 
-In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
+In the following demo, the specified accordion item is Show/Hide dynamically while clicking the **Show/Hide Item** button.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -81,7 +81,7 @@ In the following demo, specified accordion item are Show/Hide dynamically when y
 
 Accordion provides support to Show/Hide the specified accordion item dynamically using accordion item [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Visible) property.
 
-In the following demo, specified accordion item are Show/Hide dynamically when you click **Show/Hide Item** button.
+In the following demo, the specified accordion item is Show/Hide dynamically while clicking the **Show/Hide Item** button.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -137,6 +137,6 @@ In the following demo, specified accordion item are Show/Hide dynamically when y
 }
 ```
 
-Output be like the below.
+Output:
 
 ![Hiding or showing items in Blazor Accordion](../images/blazor-accordion-show-hide-item.gif)
