@@ -29,9 +29,6 @@ Also refer the below link for common validation errors and solution for this err
 
 [Front+Matter+validation+-+Guide](https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/412681710/Front+Matter+validation+-+Guide)
 
-## Youtube Video syntax:
-
-{% youtube "https://www.youtube.com/watch?9YF9HnFY5Ew" %}
 
 ## Notes and Warning Syntax:
 

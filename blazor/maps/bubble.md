@@ -9,9 +9,7 @@ documentation: ug
 
 # Bubble in Blazor Maps Component
 
-Bubbles in the Maps component represent the underlying data values of the maps. Bubbles are scattered throughout the map shapes that contain bound values.
-
-To add bubbles to the maps, bind data source to [MapsBubble](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleSettings.html), and set [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) as `Population`. The following code example demonstrates how to enable bubbles for the World map with data source.
+Bubbles in the Maps control represent the underlying data values of the Maps. It can be scattered throughout the Maps shapes that contain values in the data source. Bubbles are enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_Visible) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class to "**true**". To add bubbles to the Maps, bind the data source to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_DataSource) property of the [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class and set the field name, that contains the numerical data, in the data source to the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ValuePath) property. The following example demonstrates how to enable bubbles for the World map with the data source.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -19,9 +17,7 @@ To add bubbles to the maps, bind data source to [MapsBubble](https://help.syncfu
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="Country">
+                   DataSource="PopulationDetails" ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
             @* To add bubbles based on population count *@
             <MapsBubbleSettings>
                 <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" DataSource="PopulationDetails" TValue="Country">
@@ -38,24 +34,18 @@ To add bubbles to the maps, bind data source to [MapsBubble](https://help.syncfu
         public double Population { get; set; }
         public string Color { get; set; }
     };
-    private List<Country> PopulationDetails = new List<Country> {
+    public List<Country> PopulationDetails = new List<Country> {
        new Country
        {
-           Name ="United States",
-           Population = 325020000,
-           Color = "#b5e485"
+           Name ="United States", Population = 325020000, Color = "#b5e485"
        },
        new Country
        {
-           Name = "Russia",
-           Population = 142905208,
-           Color = "#7bc1e8"
+           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
        },
        new Country
         {
-           Name="India",
-           Population=1198003000,
-           Color = "#df819c"
+           Name="India", Population=1198003000, Color = "#df819c"
         }
     };
 }
@@ -63,9 +53,14 @@ To add bubbles to the maps, bind data source to [MapsBubble](https://help.syncfu
 
 ![Maps with bubbles](./images/Bubble/Bubble.png)
 
-## Bubble sizing
+## Bubble shapes
 
-Using the [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MinRadius) and [MaxRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_MaxRadius) properties in [MapsBubble](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html), you can render the bubbles in different sizes based on the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_ValuePath) and [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_DataSource) values.
+The following types of shapes are available to render the bubbles in Maps.
+
+* Circle
+* Square
+
+By default, bubbles are rendered in the "**Circle**" type. To change the type of the bubble, set the [BubbleType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_BubbleType) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class as "**Square**" to render the square shape bubbles.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -73,15 +68,156 @@ Using the [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ma
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+                   ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
+            @* To add bubbles based on population count *@
             <MapsBubbleSettings>
-                <MapsBubble Visible="true"
-                            ValuePath="Density"
-                            ColorValuePath="Color"
-                            MinRadius="5"
-                            MaxRadius="20"
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" DataSource="PopulationDetails"
+                            BubbleType="Syncfusion.Blazor.Maps.BubbleType.Square" TValue="Country">
+                </MapsBubble>
+            </MapsBubbleSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code{
+    public class Country
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public string Color { get; set; }
+    };
+    public List<Country> PopulationDetails = new List<Country> {
+       new Country
+       {
+           Name = "United States", Population = 325020000, Color = "#b5e485"
+       },
+       new Country
+       {
+           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
+       },
+       new Country
+       {
+           Name = "India", Population=1198003000, Color = "#df819c"
+       }
+    };
+}
+```
+
+![Maps with bubble shape](./images/Bubble/Bubble-shape.PNG)
+
+## Customization
+
+The following properties and a class are available in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class to customize the bubbles of the Maps component.
+
+* [MapsBubbleBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleBorder.html) - To customize the color and width of the border of the bubbles in Maps.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_Fill) - To apply the color for bubbles in Maps.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_Opacity) - To apply opacity to the bubbles in Maps.
+* [AnimationDelay](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_AnimationDelay) -  To change the time delay in the transition for bubbles.
+* [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_AnimationDuration) - To change the time duration of animation for bubbles.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
+            @* To add bubbles based on population count *@
+            <MapsBubbleSettings>
+                <MapsBubble Visible="true" ValuePath="Population" Fill="green" MinRadius=5 MaxRadius=40 AnimationDelay=100
+				            AnimationDuration=1000 Opacity=1 DataSource="PopulationDetails" TValue="Country">
+                    <MapsBubbleBorder Color="blue" Width=2></MapsBubbleBorder>
+                </MapsBubble>
+            </MapsBubbleSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code{
+    public class Country
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+    };
+    public List<Country> PopulationDetails = new List<Country> {
+       new Country
+       {
+           Name ="United States", Population = 325020000
+       },
+       new Country
+       {
+           Name = "Russia", Population = 142905208
+       },
+       new Country
+       {
+           Name = "India", Population=1198003000
+       }
+    };
+}
+```
+
+![Customization for bubbles](./images/Bubble/Bubble-customization.PNG)
+
+## Setting colors to the bubbles from the data source
+
+The color for each bubble in the Maps can be set using the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ColorValuePath) property of [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class. The value for the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ColorValuePath) property is the field name from the data source of the [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class which contains the color values.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
+            @* To add bubbles based on population count *@
+            <MapsBubbleSettings>
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" MinRadius=20 MaxRadius=40 
+                            DataSource="PopulationDetails" TValue="Country">
+                </MapsBubble>
+            </MapsBubbleSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code{
+    public class Country
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public string Color { get; set; }
+    };
+    public List<Country> PopulationDetails = new List<Country> {
+       new Country
+       {
+           Name = "United States", Population = 325020000, Color = "#b5e485"
+       },
+       new Country
+       {
+           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
+       },
+       new Country
+       {
+           Name = "India", Population = 1198003000, Color = "#df819c"
+       }
+    };
+}
+```
+
+![Setting color to the bubbles from the data source](./images/Bubble/Bubble-colorvaluepath.PNG)
+
+## Setting the range of the bubble size
+
+The size of the bubbles is calculated from the values got from the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_ValuePath) property. The range for the radius of the bubbles can be modified using [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_MinRadius) and [MaxRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html#Syncfusion_Blazor_Maps_MapsBubble_1_MaxRadius) properties.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   DataSource="PopulationDetails" ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+            <MapsBubbleSettings>
+                <MapsBubble Visible="true" ValuePath="Density" ColorValuePath="Color" MinRadius="5" MaxRadius="20"
                             DataSource="PopulationDetails" TValue="PopulationDetail">
                 </MapsBubble>
             </MapsBubbleSettings>
@@ -97,28 +233,19 @@ Using the [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ma
         public double Density { get; set; }
         public string Color { get; set; }
     };
-    private List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
+    public List<PopulationDetail> PopulationDetails = new List<PopulationDetail> {
        new PopulationDetail
        {
-           Name ="United States",
-           Population = 325020000,
-           Density = 33,
-           Color="yellow"
+           Name ="United States", Population = 325020000, Density = 33, Color="yellow"
        },
        new PopulationDetail
        {
-           Name = "Russia",
-           Population = 142905208,
-           Density = 8.3,
-           Color="red"
+           Name = "Russia", Population = 142905208, Density = 8.3, Color="red"
        },
        new PopulationDetail
-        {
-           Name="India",
-           Population=1198003000,
-           Density=364,
-           Color="blue"
-        }
+       {
+           Name="India", Population=1198003000, Density=364, Color="blue"
+       }
     };
 }
 ```
@@ -127,9 +254,7 @@ Using the [MinRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ma
 
 ## Multiple bubble groups
 
-You can specify multiple types of bubble groups using the [MapsBubble](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubble.html) property and customize it according to your requirement.
-
-In the following code example, the gender-wise population ratio is demonstrated with two different bubble groups.
+Multiple groups of bubbles can be added in the Maps by adding multiple [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) classes in the [MapsBubbleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSettings.html) class and customization for the bubbles can be done with the [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class. In the following example, the gender-wise population ratio is demonstrated with two different bubble groups.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -137,26 +262,14 @@ In the following code example, the gender-wise population ratio is demonstrated 
 <SfMaps>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource="GenderRatios"
-                   ShapeDataPath="Country" TValue="GenderRatio">
+                   ShapePropertyPath='new string[] {"name"}' DataSource="GenderRatios" ShapeDataPath="Country" TValue="GenderRatio">
             @* To add multiple bubble groups *@
             <MapsBubbleSettings>
-                <MapsBubble Visible="true"
-                            MinRadius="5"
-                            MaxRadius="20"
-                            ValuePath="FemaleRatio"
-                            ColorValuePath="FemaleRatioColor"
+                <MapsBubble Visible="true" MinRadius="5" MaxRadius="20" ValuePath="FemaleRatio" ColorValuePath="FemaleRatioColor"
                             DataSource="GenderRatios" TValue="GenderRatio">
                 </MapsBubble>
-                <MapsBubble Visible="true"
-                            BubbleType="BubbleType.Circle"
-                            Opacity="0.4"
-                            MinRadius="15"
-                            MaxRadius="25"
-                            ValuePath="MaleRatio"
-                            ColorValuePath="MaleRatioColor"
-                            DataSource="GenderRatios" TValue="GenderRatio">
+                <MapsBubble Visible="true" BubbleType="BubbleType.Circle" Opacity="0.4" MinRadius="15" MaxRadius="25" ValuePath="MaleRatio"
+                            ColorValuePath="MaleRatioColor" DataSource="GenderRatios" TValue="GenderRatio">
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
@@ -173,34 +286,18 @@ In the following code example, the gender-wise population ratio is demonstrated 
         public string MaleRatioColor { get; set; }
     }
 
-    private List<GenderRatio> GenderRatios = new List<GenderRatio> {
+    public List<GenderRatio> GenderRatios = new List<GenderRatio> {
         new GenderRatio {
-            Country ="United States",
-            FemaleRatio =50.50442726,
-            MaleRatio =49.49557274,
-            FemaleRatioColor ="green",
-            MaleRatioColor = "blue"
+            Country ="United States", FemaleRatio =50.50442726, MaleRatio =49.49557274, FemaleRatioColor ="green", MaleRatioColor = "blue"
         },
         new GenderRatio {
-            Country ="India",
-            FemaleRatio =48.18032713,
-            MaleRatio =51.81967287,
-            FemaleRatioColor ="blue",
-            MaleRatioColor = "#c2d2d6"
+            Country ="India", FemaleRatio =48.18032713, MaleRatio =51.81967287, FemaleRatioColor ="blue", MaleRatioColor = "#c2d2d6"
         },
         new GenderRatio {
-            Country ="Oman",
-            FemaleRatio =34.15597234,
-            MaleRatio =65.84402766,
-            FemaleRatioColor ="#09156d",
-            MaleRatioColor="orange"
+            Country ="Oman", FemaleRatio =34.15597234, MaleRatio =65.84402766, FemaleRatioColor ="#09156d", MaleRatioColor="orange"
         },
         new GenderRatio {
-            Country ="United Arab Emirates",
-            FemaleRatio =27.59638942,
-            MaleRatio =72.40361058,
-            FemaleRatioColor ="#09156d",
-            MaleRatioColor="orange"
+            Country ="United Arab Emirates", FemaleRatio =27.59638942, MaleRatio =72.40361058, FemaleRatioColor ="#09156d", MaleRatioColor="orange"
         }
     };
 }
@@ -208,37 +305,50 @@ In the following code example, the gender-wise population ratio is demonstrated 
 
 ![Maps with bubble groups](./images/Bubble/Bubble-group.png)
 
-## Enabling legend for bubble
+## Enable tooltip for bubble
 
-To enable the legends for bubbles, set [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble.html#Syncfusion_Blazor_Maps_MapsBubble_Visible) to true and set [Type](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendType.html) to [Bubbles](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.LegendType.html) in [MapsLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLegendSettings.html).
-
-The following code example demonstrates how to enable the legends for bubbles with each bubble different colors rendering.
+The tooltip for the bubbles can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property of the [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html) class as "**true**". The content for the tooltip can be set using the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_ValuePath) property in the [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html) of the [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class where the value for the [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_ValuePath) property is the field name from the data source of the [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class. Any HTML element can be added as the template in tooltip using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html#Syncfusion_Blazor_Maps_MapsBubbleTooltipSettings_TooltipTemplate) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
-    @* To enable legend for bubbles *@
-    <MapsLegendSettings Visible="true" Type="LegendType.Bubbles"></MapsLegendSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="PopulationDetails"
-                   ShapeDataPath="Name"
-                   ShapePropertyPath='new string[] {"name"}' TValue="PopulationDetail">
+                   ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
+            @* To add bubbles based on population count *@
             <MapsBubbleSettings>
-                <MapsBubble Visible="true"
-                            ValuePath="Population"
-                            ColorValuePath="Color"
-                            DataSource="PopulationDetails" TValue="PopulationDetail">
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" MinRadius=20 MaxRadius=40
+                            DataSource="PopulationDetails" TValue="Country">
+                    <MapsBubbleTooltipSettings Visible="true" ValuePath="Population"></MapsBubbleTooltipSettings>
                 </MapsBubble>
             </MapsBubbleSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+@code{
+    public class Country
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public string Color { get; set; }
+    };
+    public List<Country> PopulationDetails = new List<Country> {
+       new Country
+       {
+           Name ="United States", Population = 325020000, Color = "#b5e485"
+       },
+       new Country
+       {
+           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
+       },
+       new Country
+       {
+           Name="India", Population=1198003000, Color = "#df819c"
+       }
+    };
+}
 ```
 
-> Refer [code block](#bubble-sizing) to know the property value of `PopulationDetails`.
-
-![Maps with bubble and legend](./images/Bubble/bubblelegend.png)
-
-> Please refer to [legend section](legend) for more information on legend settings.
+![Tooltip for bubbles](./images/Bubble/Bubble-tooltip.PNG)
