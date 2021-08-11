@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Funnel in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here all about Funnel in the Essential Syncfusion Blazor Accumulation Chart component and more.
+description: Checkout and learn here all about Funnel in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

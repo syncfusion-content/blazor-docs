@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Grouping in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here about that how to set the group in Syncfusion Blazor Accumulation Chart component and more.
+description: Checkout and learn here all about Grouping in Syncfusion Blazor Accumulation Chart component and more.
 platform: Blazor
 control: Accumulation Chart
 documentation: ug

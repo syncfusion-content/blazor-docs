@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Accumulation Chart Component | Syncfusion
-description: Learn here about that how to display the tooltip in Syncfusion Blazor Accumulation Chart component and more.
+description: Learn here about that how to display the tooltip in Syncfusion Blazor Accumulation Chart component and more
 platform: Blazor
 control: Accumulation Chart
 documentation: ug
