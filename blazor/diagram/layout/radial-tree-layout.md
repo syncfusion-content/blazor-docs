@@ -30,37 +30,67 @@ To arrange nodes in a radial tree structure, set the [Type](https://help.syncfus
         VerticalSpacing = 20,
         HorizontalSpacing = 20
     };
+
     //sets Data map setting
     List<DiagramDataMapSetting> DataMap { get; set; } = new List<DiagramDataMapSetting>() {
         //Data mapping for the label
          new DiagramDataMapSetting() { Property = "Annotations[0].Content",
         Field = "Name" },
    };
+
     //Sets the default properties for nodes and connectors
     DiagramNode NodeDefaults = new DiagramNode()
     {
         Height = 100,
         Width = 100,
         //sets the default node's shape
-        Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+        Shape = new DiagramShape() 
+        { 
+            Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, 
+            BasicShape = BasicShapes.Ellipse 
+        },
         //sets the default node's annotation with style
-        Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Id = "label1", Style = new AnnotationStyle() { Color = "white" } }, },
+        Annotations = new ObservableCollection<DiagramNodeAnnotation>() 
+        { 
+            new DiagramNodeAnnotation() 
+            { 
+                Id = "label1", 
+                Style = new AnnotationStyle() 
+                {
+                Color = "white"
+                } 
+            } 
+        },
         //sets the default node's shape style
-        Style = new NodeShapeStyle { Fill = "#6BA5D7", StrokeColor = "white", }
+        Style = new NodeShapeStyle 
+        { 
+            Fill = "#6BA5D7",
+            StrokeColor = "white" 
+        }
     };
+
     DiagramConnector ConnectorDefault = new DiagramConnector
     {
         Type = Syncfusion.Blazor.Diagrams.Segments.Straight,
         //sets the default connector's style
-        Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 2 },
+        Style = new ConnectorShapeStyle() 
+        {
+            StrokeColor = "#6BA5D7",    
+            StrokeWidth = 2 
+        },
         //sets the connector's target decorator
         TargetDecorator = new ConnectorTargetDecorator()
         {
             Shape = DecoratorShapes.None,
             //sets decorator shape style
-            Style = new DecoratorShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", },
+            Style = new DecoratorShapeStyle() 
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "#6BA5D7",
+            },
         }
     };
+
     //Initialize radial tree data
     public class RadialTreeDetails
     {
@@ -69,9 +99,10 @@ To arrange nodes in a radial tree structure, set the [Type](https://help.syncfus
         public string Designation { get; set; }
         public string ReportingPerson { get; set; }
     }
+
     //Configures data source for diagram
     public object DataSource = new List<object>()
-{
+    {
         new RadialTreeDetails {Id = "parent", Name = "Maria Anders",Designation =  "Managing Director", ReportingPerson = "" },
         new RadialTreeDetails {Id = "1", Name= "Ana Trujillo", Designation= "Project Manager", ReportingPerson= "parent" },
         new RadialTreeDetails {Id ="2",Name= "Lino Rodri", Designation="Project Manager",ReportingPerson= "parent" },

@@ -18,6 +18,7 @@ The following code example shows how the annotation size is customized.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
@@ -28,20 +29,23 @@ The following code example shows how the annotation size is customized.
 
     protected override void OnInitialized()
     {
-
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
         DiagramConnector connector = new DiagramConnector()
         {
-          SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
+            SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 160 },
             Type = Segments.Orthogonal,
             Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7" },
-          Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
+            Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-              new DiagramConnectorAnnotation() { Content = "Annotation length will be varied", Width = 50, Height = 50 },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "Annotation length will be varied",
+                    Width = 50,
+                    Height = 50
+                },
             }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -56,45 +60,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
-    <SfDiagram Height="600px" Nodes="@NodeCollection">
-    </SfDiagram>
 
-@code
-{
-    //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-
-    protected override void OnInitialized()
-    {
-        NodeCollection = new ObservableCollection<DiagramNode>();
-        DiagramNode node1 = new DiagramNode()
-        {
-            Id = "node1",
-            Width = 100,
-            Height = 100,
-            OffsetX = 100,
-            OffsetY = 100,
-            // Sets the annotation for the Node
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                // Add text as hyperlink.
-                new DiagramNodeAnnotation() { Hyperlink = new NodeHyperlink(){ Link = "https://www.syncfusion.com"} }
-            },
-
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-        };
-        NodeCollection.Add(node1);
-
-    }
-}
-```
-
-![HyperLink](../images/hyperlink.png)
-
-### Hyperlink with content
-
-```cshtml
-@using Syncfusion.Blazor.Diagrams
-@using System.Collections.ObjectModel
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -114,15 +80,60 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
             OffsetX = 100,
             OffsetY = 100,
             // Sets the annotation for the Node
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
                 // Add text as hyperlink.
-                new DiagramNodeAnnotation() { Hyperlink = new NodeHyperlink(){ Content = "Syncfusion", Link = "https://www.syncfusion.com" } }
+                new DiagramNodeAnnotation()
+                {
+                    Hyperlink = new NodeHyperlink(){ Link = "https://www.syncfusion.com"}
+                }
             },
-
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
+    }
+}
+```
 
+![HyperLink](../images/hyperlink.png)
+
+### Hyperlink with content
+
+```cshtml
+@using Syncfusion.Blazor.Diagrams
+@using System.Collections.ObjectModel
+
+<SfDiagram Height="600px" Nodes="@NodeCollection">
+</SfDiagram>
+
+@code
+{
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
+    protected override void OnInitialized()
+    {
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node1 = new DiagramNode()
+        {
+            Id = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            // Sets the annotation for the Node
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                // Add text as hyperlink.
+                new DiagramNodeAnnotation()
+                {
+                    Hyperlink = new NodeHyperlink()
+                    { Content = "Syncfusion", Link = "https://www.syncfusion.com" }
+                }
+            },
+            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+        };
+        NodeCollection.Add(node1);
     }
 }
 ```
@@ -138,6 +149,7 @@ The following code explains how to wrap a text in a node.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -157,17 +169,19 @@ The following code explains how to wrap a text in a node.
             OffsetX = 100,
             OffsetY = 100,
             //Sets the annotation for the node
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() {Content = "Annotation Text Wrapping",Style = new AnnotationStyle(){ TextWrapping = TextWrap.Wrap} }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation Text Wrapping",
+                    Style = new AnnotationStyle(){ TextWrapping = TextWrap.Wrap}
+                }
             },
-
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 | Value | Description | Image |
@@ -189,6 +203,7 @@ The following code sample shows how the different types of overflow property wor
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -208,17 +223,23 @@ The following code sample shows how the different types of overflow property wor
             OffsetX = 100,
             OffsetY = 100,
             // Sets the style for the text to be displayed
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() {Content = "The text element with property of overflow as Wrap and wrapping as NoWrap",Style = new AnnotationStyle(){ TextOverflow = TextOverflow.Wrap,TextWrapping=TextWrap.NoWrap } },
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "The text element with property of overflow as Wrap and wrapping as NoWrap",
+                    Style = new AnnotationStyle()
+                    {
+                        TextOverflow = TextOverflow.Wrap,
+                        TextWrapping=TextWrap.NoWrap
+                    }
+                },
             },
-
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 | TextOverflow | Wrapping | Image |
@@ -250,6 +271,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -257,6 +279,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 {
     //Defines diagram's node collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -268,17 +291,27 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
             OffsetX = 100,
             OffsetY = 100,
             // Sets the annotation for the node
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-              new DiagramNodeAnnotation() {Content = "Annotation Text",Style = new AnnotationStyle() {Color="black",Bold = true,Italic = true,TextDecoration=TextDecoration.Underline,FontSize = 12,FontFamily = "TimesNewRoman"  } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation Text",
+                    Style = new AnnotationStyle()
+                    {
+                        Color="black",
+                        Bold = true,
+                        Italic = true,
+                        TextDecoration=TextDecoration.Underline,
+                        FontSize = 12,
+                        FontFamily = "TimesNewRoman"
+                    }
+                }
             },
-
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 ![Label WrapWith Overflow](../images/Annotation_appearance.png)
@@ -290,7 +323,9 @@ You can change the font style of the annotations with the font specific properti
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="Update Style" @onclick="@UpdateStyle" />
+
 <SfDiagram @ref="@Diagram" Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -300,6 +335,7 @@ You can change the font style of the annotations with the font specific properti
     SfDiagram Diagram;
     //Defines diagram's node collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -311,13 +347,19 @@ You can change the font style of the annotations with the font specific properti
             OffsetX = 100,
             OffsetY = 100,
             // Sets the annotation for the node
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() {
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
                     Content = "Annotation Text",
-                    Style = new AnnotationStyle() {
-                        Color = "black",Bold = true,Italic = true,
+                    Style = new AnnotationStyle()
+                    {
+                        Color = "black",
+                        Bold = true,
+                        Italic = true,
                         TextDecoration = TextDecoration.Underline,
-                        FontSize = 12, FontFamily = "TimesNewRoman"
+                        FontSize = 12,
+                        FontFamily = "TimesNewRoman"
                     }
                 }
             },
@@ -356,6 +398,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -375,16 +418,19 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
             OffsetX = 100,
             OffsetY = 100,
             //Sets the constraints as Read only
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() {Content = "Annotation Text",Constraints = AnnotationConstraints.ReadOnly} },
-
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation Text",
+                    Constraints = AnnotationConstraints.ReadOnly
+                }
+            },
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 ## Create multiple annotations
@@ -394,6 +440,7 @@ You can add any number of annotations to a node or connector. The following code
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -415,37 +462,49 @@ You can add any number of annotations to a node or connector. The following code
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            // Sets the multiple annotation for the node
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() {Content = "Left",Offset = new NodeAnnotationOffset(){ X = .12,Y = .1} },
-            new DiagramNodeAnnotation() {Content = "Center",Offset = new NodeAnnotationOffset(){ X = .5,Y = .5} },
-            new DiagramNodeAnnotation() {Content = "Right",Offset = new NodeAnnotationOffset(){ X = .82,Y = .9} }
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
             },
-
-
+            // Sets the multiple annotation for the node
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Left",Offset = new NodeAnnotationOffset(){ X = .12,Y = .1}
+                },
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Center",Offset = new NodeAnnotationOffset(){ X = .5,Y = .5}
+                },
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Right",Offset = new NodeAnnotationOffset(){ X = .82,Y = .9}
+                }
+            },
         };
         NodeCollection.Add(node1);
-              ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
         DiagramConnector connector = new DiagramConnector()
         {
-          SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
+            SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 160 },
             Type = Segments.Orthogonal,
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7" },
-          Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7"
+            },
+            Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
                 new DiagramConnectorAnnotation() { Content = "Offset as 0",Offset=0 },
                 new DiagramConnectorAnnotation() { Content = "Offset as 0.5",Offset=0.5 },
                 new DiagramConnectorAnnotation() { Content = "Offset as 1",Offset=1 },
             }
         };
-
         ConnectorCollection.Add(connector);
-
     }
 }
-
 ```
 
 ![Multiple Annotations](../images/Annotations.png)
@@ -483,7 +542,6 @@ The following code explains how to define a template in node’s annotation. sim
 
 ```cshtml
 <style>
-
     th {
         border: 5px solid #c1dad7
     }
@@ -508,78 +566,89 @@ The following code explains how to define a template in node’s annotation. sim
         background: #cffc83
     }
 </style>
+
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
-   <SfDiagram Height="600px" ModelType="@model" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
 
-        <DiagramTemplates>
-            <AnnotationTemplate>
-                @{
-                    <table style="width:100%;">
-                        <tbody>
-                            <tr>
-                                <th class="c1">ID</th>
-                                <td class="c1">Label1<b></b></td>
-                            </tr>
-                            <tr>
-                                <th class="c1">Width</th>
-                                <td class="c1">
-                                    <b>  <input type="button" value="Click Me"> </b>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                }
-            </AnnotationTemplate>
-        </DiagramTemplates>
-    </SfDiagram>
+<SfDiagram Height="600px" ModelType="@model" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
+    <DiagramTemplates>
+        <AnnotationTemplate>
+            @{
+                <table style="width:100%;">
+                    <tbody>
+                        <tr>
+                            <th class="c1">ID</th>
+                            <td class="c1">Label1<b></b></td>
+                        </tr>
+                        <tr>
+                            <th class="c1">Width</th>
+                            <td class="c1">
+                                <b>  <input type="button" value="Click Me"> </b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+        </AnnotationTemplate>
+    </DiagramTemplates>
+</SfDiagram>
 
 @code
 {
     //Defines diagram's nodes collection
-    public ObservableCollection<DiagramNode> NodeCollection { get;set; }
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     //Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
     public Type model = typeof(Node);
+
     public class Node
     {
         public string Id { get; set; }
         public double Width { get; set; }
     }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-    DiagramNode node = new DiagramNode()
+        DiagramNode node = new DiagramNode()
         {
             Width = 100,
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-       {
+        {
             new DiagramNodeAnnotation() {Id="label1", AnnotationType=AnnotationType.Template }
         };
         NodeCollection.Add(node);
-
-
         DiagramConnector connector = new DiagramConnector()
         {
             SourcePoint = new ConnectorSourcePoint() { X = 220, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 310, Y = 150 },
             Type = Segments.Orthogonal,
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7" },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7"
+            },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
-        {
-                   new DiagramConnectorAnnotation() {Id="label2", AnnotationType=AnnotationType.Template },
+            {
+                new DiagramConnectorAnnotation()
+                {
+                    Id="label2",
+                    AnnotationType=AnnotationType.Template
+                },
             }
         };
         ConnectorCollection.Add(connector);
     }
 }
-
 ```
 
 ![Annotation Template](../images/Annotation_Template.png)

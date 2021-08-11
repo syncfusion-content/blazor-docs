@@ -22,18 +22,20 @@ The following code example explains how to create a simple business process.
 </SfDiagram>
 
 @code{
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
-    // To hide gridlines of the diagram
-
-    //Initialize the node collection with Node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 100, OffsetY = 100,
+            OffsetX = 100,
+            OffsetY = 100,
             // Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             // Unique Id of the node
             Id = "node1",
             Shape = new DiagramShape()
@@ -41,8 +43,9 @@ The following code example explains how to create a simple business process.
                 //Sets type to Bpmn
                 Type = Shapes.Bpmn
             }
-        }
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

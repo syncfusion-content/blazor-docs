@@ -26,27 +26,33 @@ The event property of the node allows you to define the type of the event. The d
 </SfDiagram>
 
 @code{
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
-            OffsetX = 100, OffsetY = 100,
+            OffsetX = 100,
+            OffsetY = 100,
             //Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             //Unique Id of the node
             Id = "node1",
             Shape = new DiagramShape()
             {
                 //Sets type to Bpmn and shape to Event
-                Type = Shapes.Bpmn, BpmnShape = BpmnShapes.Event,
+                Type = Shapes.Bpmn,
+                BpmnShape = BpmnShapes.Event,
                 // Set the event type to End
                 Event = new DiagramBpmnEvent() { Event = BpmnEvents.End }
             }
-        }
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 
@@ -63,27 +69,37 @@ Event triggers are notated as icons inside the circle and they represent the spe
 </SfDiagram>
 
 @code{
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
-            OffsetX = 100, OffsetY = 100,
+            OffsetX = 100,
+            OffsetY = 100,
             //Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             //Unique Id of the node
             Id = "node1",
             Shape = new DiagramShape()
             {
                 //Sets type to Bpmn and shape to Event
-                Type = Shapes.Bpmn, BpmnShape = BpmnShapes.Event,
+                Type = Shapes.Bpmn,
+                BpmnShape = BpmnShapes.Event,
                 // Set the event type to NonInterruptingIntermediate and set the trigger as message
-                Event = new DiagramBpmnEvent() { Event = BpmnEvents.NonInterruptingIntermediate, Trigger = BpmnTriggers.Message }
+                Event = new DiagramBpmnEvent()
+                {
+                    Event = BpmnEvents.NonInterruptingIntermediate,
+                    Trigger = BpmnTriggers.Message
+                }
             }
-        }
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

@@ -24,8 +24,8 @@ The following code illustrates how to enable [Virtualization](https://help.syncf
 <SfDiagram Height="600px" Constraints="@Constraints">
 </SfDiagram>
 
-@code{
+@code
+{
     public DiagramConstraints Constraints = DiagramConstraints.Default | DiagramConstraints.Virtualization;
 }
-
 ```

@@ -15,6 +15,7 @@ Triggered when the diagram is rendered completely.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents Created="Created"></DiagramEvents>
 </SfDiagram>
@@ -42,7 +43,7 @@ Triggers when a node, connector, or diagram is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents Clicked="Clicked"></DiagramEvents>
 </SfDiagram>
@@ -69,7 +70,7 @@ Triggers when a context menu item is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents ContextMenuItemClicked="ContextMenuItemClicked"></DiagramEvents>
 </SfDiagram>
@@ -96,7 +97,7 @@ Triggers before opening the context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents OnContextMenuOpen="OnContextMenuOpen"></DiagramEvents>
 </SfDiagram>
@@ -120,7 +121,7 @@ Triggers after the diagram is are populated from the external data source
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents DataLoaded="DataLoaded"></DiagramEvents>
 </SfDiagram>
@@ -146,7 +147,7 @@ Triggers when a node, connector, or diagram is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents OnDoubleClick="OnDoubleClick"></DiagramEvents>
 </SfDiagram>
@@ -173,7 +174,7 @@ Triggers when a symbol is dragged into a diagram from the symbol palette.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents DragEnter="DragEnter"></DiagramEvents>
 </SfDiagram>
@@ -198,7 +199,7 @@ Triggers when a symbol is dragged outside of the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents DragLeave="DragLeave"></DiagramEvents>
 </SfDiagram>
@@ -226,7 +227,7 @@ Triggers when a symbol is dragged and dropped from the symbol palette to the dra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents OnDrop="OnDrop"></DiagramEvents>
 </SfDiagram>
@@ -253,7 +254,7 @@ Triggers when a change is reverted or restored(undo/redo).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents HistoryChanged="HistoryChanged"></DiagramEvents>
 </SfDiagram>
@@ -279,7 +280,7 @@ Triggered when the mouse enters a node/connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents MouseEnter="MouseEnter"></DiagramEvents>
 </SfDiagram>
@@ -305,7 +306,7 @@ Triggered when the mouse leaves node/connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents MouseLeave="MouseLeave"></DiagramEvents>
 </SfDiagram>
@@ -336,7 +337,7 @@ Triggers while dragging the elements in a diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents OnPositionChange="OnPositionChange"></DiagramEvents>
 </SfDiagram>
@@ -363,7 +364,7 @@ Triggers once the node or connector property changed.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents PropertyChanged="PropertyChanged"></DiagramEvents>
 </SfDiagram>
@@ -391,7 +392,7 @@ Triggers when the diagram elements are rotated.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents OnRotateChange="OnRotateChange"></DiagramEvents>
 </SfDiagram>
@@ -420,7 +421,7 @@ Triggers when the selection is changed in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents SelectionChanged="SelectionChanged"></DiagramEvents>
 </SfDiagram>
@@ -448,7 +449,7 @@ Triggers when a node is resized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents OnSizeChange="OnSizeChange"></DiagramEvents>
 </SfDiagram>
@@ -476,7 +477,7 @@ Triggers when editor got focus at the time of node’s label or text node editin
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-@using Syncfusion.Blazor.Diagrams
+
 <SfDiagram Width="1000px" Height="600px">
     <DiagramEvents TextEdited="TextEdited"></DiagramEvents>
 </SfDiagram>
@@ -512,6 +513,7 @@ The native events can be defined as mentioned below. For example, the onmousedow
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @onmousedown="@OnMouseDown" Height="600px"/>
 
 @code

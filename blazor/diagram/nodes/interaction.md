@@ -91,10 +91,16 @@ The following code explains how to drag the node by using the drag method.
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100,
+            Height = 100,
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         // Add node
         NodeCollection.Add(node1);
@@ -139,10 +145,16 @@ The following code explains how to resize the node by using the scale method.
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100,
+            Height = 100,
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         // Add node
         NodeCollection.Add(node1);
@@ -150,7 +162,7 @@ The following code explains how to resize the node by using the scale method.
     public void OnResize()
     {
         // Resize the node
-        Diagram.Scale(Diagram.Nodes[0], 0.5, 0.5, new PointModel() { X = 0, Y = 0 } );
+        Diagram.Scale(Diagram.Nodes[0], 0.5, 0.5, new PointModel() { X = 0, Y = 0 });
     }
 }
 ```
@@ -189,10 +201,16 @@ A node can be rotate at runtime by using the [Rotate](https://help.syncfusion.co
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100, 
+            Height = 100,
+            Style = new NodeShapeStyle() 
+        {
+        Fill = "#6BA5D7", 
+    StrokeColor = "white" 
+}
         };
         // Add node
         NodeCollection.Add(node1);

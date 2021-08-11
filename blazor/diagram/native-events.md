@@ -29,6 +29,7 @@ The native events can be defined as mentioned below. For example, the onmousedow
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @onmousedown="@OnMouseDown" Height="600px"/>
 
 @code
