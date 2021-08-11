@@ -6,7 +6,7 @@ This section contains guidelines on naming files, sections, documents and other 
 
 ## Hotfix branch 
 
-We will use the hotfix branch to merge the contents into both development branch ( staging) and aster branch ( live ) , 
+We will use the hotfix branch to merge the contents into both development branch ( staging) and Master branch ( live ) , 
 the branch name will be in the pattern:  https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v{last major release version}
  for example the latest hotfix branch is : 
 https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v19.2.0.55
