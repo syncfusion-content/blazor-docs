@@ -4,6 +4,55 @@ This section contains guidelines on naming files, sections, documents and other 
 
 > **NOTE**: Some of the items are marked as TODO which will be documented later.
 
+## FrontMatter / (Title and description):
+
+All the md files in the documentation must contain the frontmatter. Front matter must be given with following fields.
+
+```
+---
+layout: post
+title: Aggregates in Blazor DataGrid Component | Syncfusion
+description: Learn here all about aggregates in Syncfusion Blazor DataGrid component and more.
+platform: Blazor
+control: DataGrid
+documentation: ug
+---
+```
+
+## General guidelines
+
+Refer the below guidelines for adding description, title and h1 tags.
+
+[Format+of+meta+elements+for+UG+pages](https://syncfusion.atlassian.net/wiki/spaces/SEO/pages/2878079677/Format+of+meta+elements+for+UG+pages)
+
+Also refer the below link for common validation errors and solution for this errors in below.
+
+[Front+Matter+validation+-+Guide](https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/412681710/Front+Matter+validation+-+Guide)
+
+
+## Notes and Warning Syntax:
+
+For Notes, warning, information syntax refer the below table
+
+
+| Syntax name	| Syntax usage |
+|----------|:-------------:|
+| Notes	| > |
+| Warning	| W> |
+| Information or Notes | 	I> |
+|Errors	| E> |
+| Tips	| T> |
+	
+
+## Spelling and file naming conventions errors handling
+
+Refer the below guidelines to resolve spelling errors in the documentation.
+
+Spelling -  https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/689768804/Spell+Checker+Automation+-+Guide
+
+File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/963055005/File+Path+Validation-+Guidelines
+
+
 ## File naming Convention:
 * All files should have `.md` extension.
 * Separate words in file names should be hyphenated
@@ -19,9 +68,7 @@ This section contains guidelines on naming files, sections, documents and other 
 > **Description :** How to create a chart, add series, enable tooltip and other functionalities.
 
 
-## Markdown Syntax Guideline 
-
-
+## Markdown Syntax Guideline
 * Follow the syntax mentioned in this [link](http://kramdown.gettalong.org/syntax.html) for most of the elements. There are some elements which need special styling or additional settings to do. Those have been described in the below topics.
 
 ## General
@@ -96,6 +143,9 @@ This section contains guidelines on naming files, sections, documents and other 
 
 > \{{"{{"}} code block here {{}}}}
 
+
+
+
 ### YouTube
 
 * For embedding the Youtube video link use the following pattern.
@@ -127,6 +177,8 @@ This section contains guidelines on naming files, sections, documents and other 
 }
 
 {% endhighlight %}
+
+
 
 
 
@@ -196,6 +248,7 @@ This section contains guidelines on naming files, sections, documents and other 
 
 | Variable Name     	           | Output         | Description            					                             |  
 | ---------------------------------|:--------------:|:----------------------------------------------------------------------:|  
+| {{ site.blazorversion }}         | 13.2.29        |Syncfusion Essential Studio version                                     |  
 | {{ site.releaseversion }}        | 13.2.0.29      |Syncfusion Essential Studio version                                     |  
 | {{ site.20esreleaseversion }}    | 13.1200.0.29   |Syncfusion Essential Studio assemblies version for .NET Framework 2.0   |  
 | {{ site.35esreleaseversion }}    | 13.1350.0.29   |Syncfusion Essential Studio assemblies version for .NET Framework 3.5   |  
