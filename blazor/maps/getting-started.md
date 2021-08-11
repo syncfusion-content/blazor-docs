@@ -21,24 +21,24 @@ This section briefly explains how to include a Maps component in your Blazor ser
 <head>
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     <!---CDN--->
-    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />*@
+    @*<link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />*@
 </head>
 ```
 
 > For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
- ```html
-<head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
-    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
-</head>
+```html
+    <head>
+        <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
+        <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    </head>
 ```
 
 ## Adding component package to the application
 
 Open the **~/_Imports.razor** file and include the **Syncfusion.Blazor.Maps** namespace.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Maps
 ```
 
@@ -75,6 +75,7 @@ The Syncfusion Maps component can be initialized in any razor page inside the **
 @page "/"
 
 <SfMaps>
+
 </SfMaps>
 ```
 
@@ -86,7 +87,7 @@ Bind GeoJSON data to the Maps to render any geometric shape in SVG (Scalable Vec
 
 You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to load the GeoJSON shape data into the Maps component.
 
- ```cshtml
+```cshtml
 <SfMaps>
     <MapsLayers>
         @* To load shape data *@
@@ -298,12 +299,10 @@ The tooltip can be used when you cannot display information using the data label
 
 ![Map with tooltip](./images/tooltip.png)
 
-> You can refer to our [Blazor Maps](https://www.syncfusion.com/blazor-components/blazor-map) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Maps example](https://blazor.syncfusion.com/demos/maps/default-functionalities?theme=bootstrap4) to knows how to render and configure the maps.
-
 ## See also
 
-* [Getting Started with Syncfusion Blazor for client-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
+* [Getting Started with Syncfusion Blazor for WebAssembly application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
 * [Getting Started with Syncfusion Blazor for server-side application in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for server-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
+* [Getting Started with Syncfusion Blazor for server-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

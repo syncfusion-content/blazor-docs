@@ -9,13 +9,11 @@ documentation: ug
 
 # OpenStreetMap in Blazor Maps Component
 
-The OpenStreetMap (OSM) is the world map built by a community of developers. it is free to use under an open license. It allows you to view geographical data in a collaborative way from anywhere on the earth. The OSM map provides small tile images based on our requests and combines those images into a single image to display the map area in the Maps component.
+One of the most important features in Blazor Maps component is the built-in online map provider support. The OpenStreetMap (OSM) is the online map provider built by a community of developers. It is free to use under an open license. It allows to view geographical data in a collaborative way from anywhere on the earth. The OSM map provides small tile images based on our requests and combines those images into a single image to display the map area in the Maps component.
 
-## Add OpenStreetMap
+## Adding OpenStreetMap
 
-One of the most important features in Blazor Maps component is the built-in online map provider support. By using this feature, you can render OpenStreetMaps in the maps component. This provides the ability to visualize street map tiles without using any external shape files.
-
-You can enable this feature by setting the value of [LayerType](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.ShapeLayerType.html) property to “ShapeLayerType.OSM”.
+The OSM map can be rendered using by setting the [LayerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType) property value as "**OSM**".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -29,9 +27,13 @@ You can enable this feature by setting the value of [LayerType](https://help.syn
 
 ![Open street map](../images/MapProviders/OSM.png)
 
+### Changing the tile server of the OpenStreetMap
+
+The OSM tile server can be changed by setting the tile URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property. For more details about the OSM tile server, refer [here](https://wiki.openstreetmap.org/wiki/Tiles).
+
 ## Zooming and panning
 
-You can zoom and pan the OSM maps layer. Zooming helps you get a closer look at a particular area on a map for in-depth analysis. Panning helps you to move a map around to focus the targeted area.
+The OSM maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a map for in-depth analysis. Panning helps to move a map around to focus the targeted area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -48,11 +50,11 @@ You can zoom and pan the OSM maps layer. Zooming helps you get a closer look at 
 </SfMaps>
 ```
 
-![OpenStreetMap with zooming](../images/MapProviders/osm-zooming.gif)
+![OpenStreetMap with zooming](../images/MapProviders/osm-zooming.png)
 
 ## Adding markers and navigation line
 
-Markers can be added to the layers of OSM maps by setting the corresponding location's coordinates of latitude and longitude using `MapsMarker` property. You can add navigation lines on top of an OSM maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the `MapsNavigationLine` property.
+Markers can be added to the layers of OSM maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be added on top of an OSM maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -64,18 +66,12 @@ Markers can be added to the layers of OSM maps by setting the corresponding loca
         <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
             @* Add marker *@
             <MapsMarkerSettings>
-                <MapsMarker Visible="true"
-                            Height="25"
-                            Width="15"
-                            DataSource="Cities" TValue="City">
+                <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
                 </MapsMarker>
             </MapsMarkerSettings>
             @* Add navigation line *@
             <MapsNavigationLines>
-                <MapsNavigationLine Visible="true"
-                                    Color="blue"
-                                    Angle="0.1"
-                                    Latitude="new double[]{34.060620, 40.724546}"
+                <MapsNavigationLine Visible="true" Color="blue" Angle="0.1" Latitude="new double[]{34.060620, 40.724546}"
                                     Longitude="new double[]{-118.330491,-73.850344}">
                 </MapsNavigationLine>
             </MapsNavigationLines>
@@ -101,7 +97,7 @@ Markers can be added to the layers of OSM maps by setting the corresponding loca
 
 ## Sublayer
 
-You can render any GeoJSON shape as a sublayer on top of an OSM maps layer for highlighting a particular continent or country in OSM maps by adding another layer and specifying the type to SubLayer.
+Any GeoJSON shape can be rendered as a sublayer on top of the OSM map layer for highlighting a particular continent or country in Bing maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class to "**SubLayer**".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
