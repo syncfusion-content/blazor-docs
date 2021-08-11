@@ -41,7 +41,7 @@ The following code example illustrates how to align all the selected objects at 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 
-<SfDiagram @ref="@diagram" Height="600px"/>
+<SfDiagram @ref="@diagram" Height="600px" />
 
 @code
 {
@@ -77,7 +77,7 @@ The following code example illustrates how to execute the space commands.
 
 @using Syncfusion.Blazor.Diagrams
 
-<SfDiagram @ref="@diagram" Height="600px"/>
+<SfDiagram @ref="@diagram" Height="600px" />
 
 @code
 {
@@ -106,7 +106,8 @@ The following code example illustrates how to execute the size commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
-<SfDiagram @ref="@diagram" Height="600px"/>
+
+<SfDiagram @ref="@diagram" Height="600px" />
 
 @code
 {
@@ -136,6 +137,7 @@ The following code illustrates how to execute the clipboard commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -176,6 +178,7 @@ The following code illustrates how to execute the grouping commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -184,7 +187,7 @@ The following code illustrates how to execute the grouping commands.
     //Reference to diagram
     SfDiagram diagram;
 
-   private void SelectAll()
+    private void SelectAll()
     {
         //Selects the nodes
         this.diagram.SelectAll();
@@ -207,6 +210,7 @@ The [BringToFront](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -229,6 +233,7 @@ The [SendToBack](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -251,6 +256,7 @@ The [MoveForward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -273,6 +279,7 @@ The [SendBackward](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -297,6 +304,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -332,6 +340,7 @@ The following code illustrates how to execute nudge command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -364,6 +373,7 @@ The following code illustrates how to execute the `BringIntoView` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -389,6 +399,7 @@ The following code illustrates how to execute the `BringToCenter` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -424,6 +435,7 @@ The following code illustrates how to execute `FitToPage` command.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -446,6 +458,7 @@ The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 <SfDiagram @ref="@diagram" Height="600px">
 </SfDiagram>
 
@@ -493,7 +506,7 @@ The following code example shows how to define a custom command.
 @using System.Collections.ObjectModel
 
 <SfDiagram @ref="@Diagram" Height="600px"
-            Nodes="@NodeCollection">
+           Nodes="@NodeCollection">
     @* Initializing the custom commands *@
     <DiagramCommandManager>
         <DiagramCommands>
@@ -528,9 +541,11 @@ The following code example shows how to define a custom command.
             OffsetY = 100,
             Width = 100,
             Height = 100,
-
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation() { Content = "Node" }
+            }
         };
 
         NodeCollection.Add(diagramNode);
@@ -542,14 +557,15 @@ The following code example shows how to define a custom command.
             OffsetY = 100,
             Width = 100,
             Height = 100,
-
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation() { Content = "Node" }
+            }
         };
-
         NodeCollection.Add(diagramNode1);
-
     }
+
     /// <summary>
     /// Custom command execution event
     /// </summary>
@@ -563,7 +579,8 @@ The following code example shows how to define a custom command.
         if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.U)
         {
             //Custom command to ungroup the selected items
-            if (Diagram.SelectedItems.Nodes.Count > 0 && Diagram.SelectedItems.Nodes[0].Children != null && Diagram.SelectedItems.Nodes[0].Children.Length > 0)
+            if (Diagram.SelectedItems.Nodes.Count > 0 && Diagram.SelectedItems.Nodes[0].Children != null &&
+            Diagram.SelectedItems.Nodes[0].Children.Length > 0)
             {
                 Diagram.UnGroup();
             }
@@ -583,7 +600,7 @@ The following code example shows how to disable a command and how to modify the 
 @using System.Collections.ObjectModel
 
 <SfDiagram @ref="@Diagram" Height="600px"
-            Nodes="@NodeCollection">
+           Nodes="@NodeCollection">
     @* Initializing the custom commands *@
     <DiagramCommandManager>
         <DiagramCommands>
@@ -626,12 +643,14 @@ The following code example shows how to disable a command and how to modify the 
             Height = 100,
 
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation() { Content = "Node" }
+            }
         };
-
         NodeCollection.Add(diagramNode);
-
     }
+
     /// <summary>
     /// Custom command execute event
     /// </summary>
@@ -643,7 +662,8 @@ The following code example shows how to disable a command and how to modify the 
             if (Diagram.SelectedItems.Nodes.Count > 0)
                 Diagram.Nudge(NudgeDirection.Left);
         }
-        if (args.Gesture.Key == Keys.Down || args.Gesture.Key == Keys.Up || args.Gesture.Key == Keys.Right)
+        if (args.Gesture.Key == Keys.Down || args.Gesture.Key == Keys.Up ||
+        args.Gesture.Key == Keys.Right)
         {
             //to disable a built-in command and none of action execute
         }

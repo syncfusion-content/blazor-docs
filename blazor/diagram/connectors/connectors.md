@@ -56,18 +56,19 @@ The following code example illustrates how to add a connector through connector 
 You can add a connector at runtime by using the server-side method `AddConnector` in the Diagram component.  The following code explains how to add connectors at runtime.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
 <input type="button" value="Add Connector" @onclick="@AddConnector">
 <SfDiagram @ref="@Diagram" Height="600px">
 </SfDiagram>
+
 @code
-{  
+{
     SfDiagram Diagram;
     //Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
     public void AddConnector()
     {
         DiagramConnector diagramConnector = new DiagramConnector()
@@ -78,9 +79,18 @@ You can add a connector at runtime by using the server-side method `AddConnector
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Straight,
         };
         //Add the connector at the run time.
@@ -114,28 +124,31 @@ Connectors can be predefined and added to the symbol palette. You can drop those
 For more information about adding connectors from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Diagrams.SymbolPalettePalette.html).
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 @* Initializes the symbol palette *@
 <div style="width: 200px; float: left">
     <SfSymbolPalette Height="600px" @ref="@SymbolPalette" Palettes="@Palettes">
     </SfSymbolPalette>
 </div>
+
 <SfDiagram ID="diagram" @ref="@diagram" Width="500px" Height="600px">
 </SfDiagram>
+
 @code{
     SfDiagram diagram;
     SfSymbolPalette SymbolPalette;
     public ObservableCollection<Object> Connectors { get; set; }
     public ObservableCollection<SymbolPalettePalette> Palettes;
+
     protected override void OnInitialized()
     {
         Palettes = new ObservableCollection<SymbolPalettePalette>();
         //Initializes connector symbols for the symbol palette
         Connectors = new ObservableCollection<Object>()
-                    {
-                        new DiagramConnector()
+        {
+            new DiagramConnector()
             {
                 Id = "Link1",
                 // Sets the preview size
@@ -173,7 +186,7 @@ For more information about adding connectors from symbol palette, refer to the [
                 // Sets the shape for target decorator
                 TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.None }
             }
-                        };
+        };
         Palettes.Add(new SymbolPalettePalette() { Id = "Connectors", Expanded = true, Symbols = Connectors, Title = "Connectors" });
     }
 }
@@ -208,6 +221,7 @@ The following code shows how to remove a connector at runtime.
     SfDiagram Diagram;
     //Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
     protected override void OnInitialized()
     {
         DiagramConnector diagramConnector = new DiagramConnector()
@@ -219,10 +233,19 @@ The following code shows how to remove a connector at runtime.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
             // Style of the connector segment
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             // Type of the connector
             Type = Segments.Straight,
         };
@@ -256,7 +279,6 @@ You can change any connector's properties at runtime.
 The following code example explains how to change the connector properties.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -264,9 +286,11 @@ The following code example explains how to change the connector properties.
 </SfDiagram>
 
 @code
-{ SfDiagram Diagram;
+{
+    SfDiagram Diagram;
     //Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
     protected override void OnInitialized()
     {
         DiagramConnector diagramConnector = new DiagramConnector()
@@ -276,14 +300,24 @@ The following code example explains how to change the connector properties.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Straight,
         };
         //Add the connector into connectors's collection.
         ConnectorCollection.Add(diagramConnector);
     }
+
     public void AddConnector()
     {
         Diagram.BeginUpdate();
@@ -305,19 +339,19 @@ The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.
 The following code example illustrates how to connect two nodes.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
 </SfDiagram>
+
 @code
 {
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
 
     //Defines diagram's connector collection
-    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();  
+    public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
 
     public DiagramConstraints diagramConstraints = DiagramConstraints.Default;
 
@@ -331,7 +365,11 @@ The following code example illustrates how to connect two nodes.
             Height = 50,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -349,7 +387,11 @@ The following code example illustrates how to connect two nodes.
             Height = 50,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -369,9 +411,18 @@ The following code example illustrates how to connect two nodes.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#37909A", StrokeColor = "#37909A", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#37909A",
+                    StrokeColor = "#37909A",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#37909A", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#37909A",
+                StrokeWidth = 1
+            },
             Type = Segments.Straight,
         };
         //Adding conector into connector's collection
@@ -391,33 +442,38 @@ When you remove both InConnect and OutConnect [NodeConstraints](https://help.syn
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Nodes="@NodeCollection" >
+<SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
+
 @code
 {
     //Defines diagram's nodes collection
-    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode> ();
+    public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>();
+
     protected override void OnInitialized()
     {
-    //Creates source node
-    DiagramNode node1 = new DiagramNode()
-    {
-        OffsetX = 100,
-        OffsetY = 100,
-        Height = 50,
-        Width = 100,
-        Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
-        Style = new NodeShapeStyle()
+        //Creates source node
+        DiagramNode node1 = new DiagramNode()
         {
-            Fill = "#37909A",
-            StrokeColor = "#37909A",
-        },
-    };
-    //Add node into node's collection
-    NodeCollection.Add(node1);
-    //To disbale the inconnect constraints to node.
-    node1.Constraints = NodeConstraints.Default & ~NodeConstraints.InConnect;
-
+            OffsetX = 100,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#37909A",
+                StrokeColor = "#37909A",
+            },
+        };
+        //Add node into node's collection
+        NodeCollection.Add(node1);
+        //To disbale the inconnect constraints to node.
+        node1.Constraints = NodeConstraints.Default & ~NodeConstraints.InConnect;
     }
 }
 ```
@@ -429,7 +485,6 @@ The [SourcePortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 The following code example illustrates how to create port to port connections.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -456,7 +511,11 @@ The following code example illustrates how to create port to port connections.
             Height = 50,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -465,15 +524,19 @@ The following code example illustrates how to create port to port connections.
             //Create the port for source node
             Ports = new ObservableCollection<DiagramPort>()
             {
-                 new DiagramPort()
-                 {
-                     Id = "port1",
-                     Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 1, Y = 0.5 },
-                     Height = 10,
-                     Width = 10,
-                     Visibility = PortVisibility.Visible,
-                     Style = new PortShapeStyle() { Fill = "yellow", StrokeColor = "yellow" }
-                 },
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 1, Y = 0.5 },
+                    Height = 10,
+                    Width = 10,
+                    Visibility = PortVisibility.Visible,
+                    Style = new PortShapeStyle()
+                    {
+                            Fill = "yellow",
+                            StrokeColor = "yellow"
+                    }
+                },
             },
         };
         //Add node into node's collection
@@ -486,7 +549,11 @@ The following code example illustrates how to create port to port connections.
             Height = 50,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -495,15 +562,19 @@ The following code example illustrates how to create port to port connections.
             //Create the port for target node.
             Ports = new ObservableCollection<DiagramPort>()
             {
-                 new DiagramPort()
-                 {
-                     Id = "port2",
-                     Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 0, Y = 0.5 },
-                     Height = 10,
-                     Width = 10,
-                     Visibility = PortVisibility.Visible,
-                     Style = new PortShapeStyle() { Fill = "yellow", StrokeColor = "yellow" }
-                 },
+                new DiagramPort()
+                {
+                    Id = "port2",
+                    Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 0, Y = 0.5 },
+                    Height = 10,
+                    Width = 10,
+                    Visibility = PortVisibility.Visible,
+                    Style = new PortShapeStyle()
+                    {
+                        Fill = "yellow",
+                        StrokeColor = "yellow"
+                    }
+                },
             },
         };
         //Add node into node's collection
@@ -520,15 +591,23 @@ The following code example illustrates how to create port to port connections.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#37909A", StrokeColor = "#37909A", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#37909A",
+                    StrokeColor = "#37909A",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#37909A", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#37909A",
+                StrokeWidth = 1
+            },
             Type = Segments.Straight,
         };
         ConnectorCollection.Add(diagramConnector);
     }
 }
-
 ```
 
 ![Port to Port Connection](../images/PortToPortConnection.png)
@@ -536,18 +615,18 @@ The following code example illustrates how to create port to port connections.
 When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `OutConnect`, the port accepts only an outgoing connection to dock in it. When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.PortConstraints.html) to `None`, the port restricts connector to establish connection in it.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
+
 @code
 {
     //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode>
-    NodeCollection = new ObservableCollection<DiagramNode>
-        ();
+    NodeCollection = new ObservableCollection<DiagramNode>();
+
     protected override void OnInitialized()
     {
         //Creates source node
@@ -557,7 +636,11 @@ When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.
             OffsetY = 100,
             Height = 50,
             Width = 100,
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -574,14 +657,17 @@ When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.
             Height = 10,
             Width = 10,
             Visibility = PortVisibility.Visible,
-            Style = new PortShapeStyle() { Fill = "yellow", StrokeColor = "yellow" }
+            Style = new PortShapeStyle()
+            {
+                Fill = "yellow",
+                StrokeColor = "yellow"
+            }
         };
         //Port constraints to allow in connectors.
         Port.Constraints = PortConstraints.InConnect;
         NodeCollection[0].Ports.Add(Port);
     }
 }
-
 ```
 
 ## See also

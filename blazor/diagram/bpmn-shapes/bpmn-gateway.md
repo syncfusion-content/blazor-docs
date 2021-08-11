@@ -20,27 +20,36 @@ Gateway is used to control the flow of a process and it is represented as a diam
 </SfDiagram>
 
 @code{
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
-            OffsetX = 100, OffsetY = 100,
+            OffsetX = 100,
+            OffsetY = 100,
             //Size of the node
-            Width = 100, Height = 100,
+            Width = 100,
+            Height = 100,
             //Unique Id of the node
             Id = "node1",
             Shape = new DiagramShape()
             {
                 //Sets type to Bpmn and shape to Gateway
-                Type = Shapes.Bpmn, BpmnShape = BpmnShapes.Gateway,
+                Type = Shapes.Bpmn,
+                BpmnShape = BpmnShapes.Gateway,
                 //Sets type of the gateway to None
-                Gateway = new DiagramBpmnGateway(){Type = BpmnGateways.None}
+                Gateway = new DiagramBpmnGateway()
+                {
+                    Type = BpmnGateways.None
+                }
             }
-        }
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

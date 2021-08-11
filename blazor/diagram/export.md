@@ -22,6 +22,7 @@ Diagram provides support to export its content as image/svg files. The server-si
 
 @code{
      SfDiagram diagram;
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -61,6 +62,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 @code{
      SfDiagram diagram;
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -90,6 +92,7 @@ Diagram provides support to export the desired region of the diagram to desired 
 
 @code{
      SfDiagram diagram;
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -128,6 +131,7 @@ The following code example illustrates how to export the diagram as raw data.
 
 @code{
      SfDiagram diagram;
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -166,6 +170,7 @@ The following code example illustrates how to export the region occupied by the 
 
 @code{
      SfDiagram diagram;
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -199,6 +204,7 @@ The following code example illustrates how to export the region occupied by the 
 
 @code{
      SfDiagram diagram;
+
      //Define bounds class for export the diagram
      public class exportBounds
      {
@@ -207,6 +213,7 @@ The following code example illustrates how to export the region occupied by the 
           public double width { get; set; }
           public double height { get; set; }
      }
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -243,6 +250,7 @@ The following code example illustrates how to export the region occupied by the 
 
 @code{
      SfDiagram diagram;
+
      private void OnExport()
      {
           //Sets the export option for diagram
@@ -285,6 +293,7 @@ The following code example illustrates how to export the region occupied by the 
 
 @code{
      SfDiagram diagram;
+     
      private void OnPrint()
      {
           //Sets the print option for diagram

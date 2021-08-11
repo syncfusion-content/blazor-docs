@@ -53,9 +53,14 @@ To add a connection port, define the port object and add it to node’s ports co
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
             Ports = new ObservableCollection<DiagramPort>()
-        {
+            {
                 // Sets the position for the port
-               new DiagramPort(){Style=new PortShapeStyle(){ Fill="gray" }, Offset= new NodePortOffset(){X=0.5,Y=0.5}, Visibility = PortVisibility.Visible}
+                new DiagramPort()
+                {
+                    Style=new PortShapeStyle(){ Fill="gray" },
+                    Offset= new NodePortOffset(){X=0.5,Y=0.5},
+                    Visibility = PortVisibility.Visible
+                }
             }
         };
         NodeCollection.Add(node1);
@@ -74,13 +79,16 @@ The port’s [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <input type="button" value="AddPorts" @onclick="@AddPorts" />
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
 @code{
 
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         //A node is created and stored in nodes array
@@ -99,13 +107,32 @@ The port’s [Id](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
     public void AddPorts()
     {
         // Initialize port collection
-        NodeCollection[0].Ports.Add(new DiagramPort() { Id = "port1", Offset = new NodePortOffset() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible });
-        NodeCollection[0].Ports.Add(new DiagramPort() { Id = "port2", Offset = new NodePortOffset() { X = 1, Y = 0.5 }, Visibility = PortVisibility.Visible });
-        NodeCollection[0].Ports.Add(new DiagramPort() { Id = "port3", Offset = new NodePortOffset() { X = 0.5, Y = 0 }, Visibility = PortVisibility.Visible });
-        NodeCollection[0].Ports.Add(new DiagramPort() { Id = "port4", Offset = new NodePortOffset() { X = 0.5, Y = 1 }, Visibility = PortVisibility.Visible });
+        NodeCollection[0].Ports.Add(new DiagramPort()
+        {
+            Id = "port1",
+            Offset = new NodePortOffset() { X = 0, Y = 0.5 },
+            Visibility = PortVisibility.Visible
+        });
+        NodeCollection[0].Ports.Add(new DiagramPort()
+        {
+            Id = "port2",
+            Offset = new NodePortOffset() { X = 1, Y = 0.5 },
+            Visibility = PortVisibility.Visible
+        });
+        NodeCollection[0].Ports.Add(new DiagramPort()
+        {
+            Id = "port3",
+            Offset = new NodePortOffset() { X = 0.5, Y = 0 },
+            Visibility = PortVisibility.Visible
+        });
+        NodeCollection[0].Ports.Add(new DiagramPort()
+        {
+            Id = "port4",
+            Offset = new NodePortOffset() { X = 0.5, Y = 1 },
+            Visibility = PortVisibility.Visible
+        });
     }
 }
-
 ```
 
 ## Remove ports at runtime
@@ -134,16 +161,21 @@ A collection of ports can be removed from the node by using the native[RemoveAt`
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-            new DiagramPort() {
-                Id = "port1",
-                Offset = new NodePortOffset() { X = 0, Y = 0.5 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new PortShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
-                // Sets the shape of the port as Circle
-                Width= 12, Height=12, Shape= PortShapes.Circle
-            }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
+                    // Sets the shape of the port as Circle
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Circle
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
@@ -175,7 +207,12 @@ The following code example explains how to change the port properties at runtime
     {
         // Initialize port collection
         ObservableCollection<DiagramPort> Ports1 = new ObservableCollection<DiagramPort>() { };
-        Ports1.Add(new DiagramPort() { Id = "port1", Offset = new NodePortOffset() { X = 0, Y = 0.5 }, Visibility = PortVisibility.Visible });
+        Ports1.Add(new DiagramPort()
+        {
+            Id = "port1",
+            Offset = new NodePortOffset() { X = 0, Y = 0.5 },
+            Visibility = PortVisibility.Visible
+        });
         // A node is created and stored in nodes array
         DiagramNode node1 = new DiagramNode()
         {

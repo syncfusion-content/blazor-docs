@@ -52,11 +52,14 @@ The following example shows how to disable page editing using the diagram constr
 @* Initialize the diagram with constraints *@
 <SfDiagram Height="600px" Nodes="@NodeCollection" Constraints="@DiagramConstraints">
 </SfDiagram>
+
 @code{
-     //sets the Diagram constraints...
+    //sets the Diagram constraints...
     DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~DiagramConstraints.PageEditable;
+
     //Initialize the Nodes Collection.
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -150,8 +153,8 @@ The following example shows how to disable rotation using the node constraints.
 </SfDiagram>
 
 @code{
+    ObservableCollection<DiagramNode> NodeCollection;
 
-   ObservableCollection<DiagramNode> NodeCollection;
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -234,15 +237,15 @@ The following code shows how to disable selection by using the connector constra
 @using System.Collections.ObjectModel
 
 @* Initialize the diagram with ConnectorCollection *@
- <SfDiagram Height="600px" Connectors="@ConnectorCollection">
- </SfDiagram>
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
+</SfDiagram>
 
 @code{
+    ObservableCollection<DiagramConnector> ConnectorCollection;
 
-   ObservableCollection<DiagramConnector> ConnectorCollection;
     protected override void OnInitialized()
     {
-       ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "connector1",
@@ -309,8 +312,8 @@ The following code shows how to disable creating connections with a port.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
@@ -383,8 +386,8 @@ The following code shows how to enable read-only mode for the annotations.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
@@ -406,7 +409,7 @@ The following code shows how to enable read-only mode for the annotations.
                 //sets the Constraints for Annotation...
                 Constraints=AnnotationConstraints.ReadOnly,
                 Style=new AnnotationStyle(){Color="#000000", Fill="transparent",
-                    FontFamily="TimesNewRoman", FontSize=12, Bold=true, Italic=true},
+                FontFamily="TimesNewRoman", FontSize=12, Bold=true, Italic=true},
             }
         };
         NodeCollection.Add(node);
@@ -464,7 +467,6 @@ The following code shows how to hide rotator.
 </SfDiagram>
 
 @code{
-
     ObservableCollection<DiagramNode> NodeCollection;
 
     DiagramSelectedItems selectedItems = new DiagramSelectedItems() { Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate };
@@ -536,6 +538,7 @@ The following code shows how to show only horizontal gridlines.
     @* Initialize the snapsettings with constraints *@
     <DiagramSnapSettings Constraints="SnapConstraints.ShowHorizontalLines"></DiagramSnapSettings>
 </SfDiagram>
+
 @code{
     ObservableCollection<DiagramNode> NodeCollection;
     protected override void OnInitialized()
@@ -592,6 +595,7 @@ The following code shows how to limit the interaction done inside a diagram with
 
 @code{
     ObservableCollection<DiagramNode> NodeCollection;
+
     protected override void OnInitialized()
     {
         //Initialize the NodeCollection.
@@ -633,10 +637,13 @@ The following code example shows how to inherit the line bridging behavior from 
 @code{
     //Sets the diagram constraints
     public DiagramConstraints DiagramConstraints = DiagramConstraints.Default | DiagramConstraints.Bridging;
+
     ObservableCollection<DiagramConnector> ConnectorCollection;
+
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "connector1",
@@ -645,7 +652,7 @@ The following code example shows how to inherit the line bridging behavior from 
             //sets the ConnectorConstraints...
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
         };
-         DiagramConnector connector1 = new DiagramConnector()
+        DiagramConnector connector1 = new DiagramConnector()
         {
             Id = "connector2",
             SourcePoint = new ConnectorSourcePoint() { X = 200, Y = 100 },
@@ -672,7 +679,6 @@ The following code shows to add line routing constraints into the default diagra
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Constraints="@DiagramConstraint">
-
 </SfDiagram>
 
 @code{
@@ -692,7 +698,6 @@ The following code shows to remove zoom and pan constraints from the default con
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Constraints="@DiagramConstraint">
-
 </SfDiagram>
 
 @code{
