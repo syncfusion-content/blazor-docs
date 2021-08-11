@@ -38,4 +38,4 @@ An horizontally aligned card can push a specific column to align vertical using 
 </style>
 ```
 
-![Value Bar](images/value-bar.png)
+![Blazor Card Component with Horizontal Orientation](images/blazor-card-with-horizontal-orientation.png)

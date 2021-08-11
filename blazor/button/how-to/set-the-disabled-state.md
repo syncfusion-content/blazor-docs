@@ -22,4 +22,4 @@ The following example demonstrates Button in `Disabled` state.
 
 Output be like
 
-![Button Sample](./../images/button-disabled.png)
+![Disable State in Blazor Button](./../images/blazor-button-disable-state.png)

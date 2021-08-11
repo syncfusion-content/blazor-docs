@@ -39,7 +39,7 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 Output be like
 
-![Button Sample](./images/button-style.png)
+![Blazor Button Component with different Styles](./images/blazor-button-with-different-style.png)
 
 > Predefined Button styles provide only the visual indication. So, Button content should define the Button style for the users of assistive technologies such as screen readers.
 
@@ -81,7 +81,7 @@ A round Button is shaped like a circle. Usually, it contains an icon representin
 
 Output be like
 
-![Button Sample](./images/button-type.png)
+![Blazor Button with different Types](./images/blazor-button-types.png)
 
 ### Primary Button
 
@@ -95,7 +95,7 @@ The primary button is styled with background color and it is used to represent a
 
 Output be like
 
-![Button Sample](./images/button-primary.png)
+![Blazor Primary Button](./images/blazor-primary-button.png)
 
 ### Toggle Button
 
@@ -142,7 +142,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 Output be like
 
-![Button Sample](./images/toggle.png)
+![Blazor Toggle Button](./images/blazor-toggle-button.png)
 
 ## Icons
 
@@ -169,7 +169,7 @@ The Button can have an icon to provide the visual representation of the action. 
 
 Output be like
 
-![Button Sample](./images/button-icon.png)
+![Blazor Button with Icon](./images/blazor-button-icon.png)
 
 ## Button size
 
@@ -185,4 +185,4 @@ The two types of Button sizes are default and small. To change the size of the d
 
 Output be like
 
-![Button Sample](./images/button-size.png)
+![Blazor Button with different Size](./images/blazor-button-with-different-size.png)

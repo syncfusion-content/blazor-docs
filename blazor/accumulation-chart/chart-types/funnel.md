@@ -45,7 +45,7 @@ documentation: ug
 
 ```
 
-![Funnel Chart](../images/funnel/default-razor.png)
+![Blazor Funnel Chart](../images/funnel/blazor-funnel-chart.png)
 
 ## Funnel Size
 
@@ -85,7 +85,7 @@ The size of the funnel chart can be customized by using the [Width](https://help
 
 ```
 
-![Funnel Size](../images/funnel/size-razor.png)
+![Customizing Funnel Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-size-customization.png)
 
 > You can also explore our [Blazor Funnel Chart](https://blazor.syncfusion.com/demos/chart/funnel) example to knows how to render and configure the funnel chart.
 
@@ -127,7 +127,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 ```
 
-![Funnel Neck Size](../images/funnel/neck-size-razor.png)
+![Customizing Funnel Neck Size in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-neck-size.png)
 
 ## Gap Between Funnel Segments
 
@@ -167,7 +167,7 @@ The neck size of the funnel chart can be customized by using the [NeckWidth](htt
 
 ```
 
-![Gap Between Funnel Segments](../images/funnel/gap-razor.png)
+![Blazor Funnel Chart with Gap](../images/funnel/blazor-funnel-chart-with-gap.png)
 
 ## Funnel Explode
 
@@ -207,7 +207,7 @@ Points can be exploded on mouse click by setting the [Explode](https://help.sync
 
 ```
 
-![Funnel Explode](../images/funnel/explode-razor.png)
+![Explode in Blazor Funnel Chart](../images/funnel/blazor-funnel-chart-explode.png)
 
 ## Smart Data Label
 
@@ -260,7 +260,7 @@ Labels will be arranged smartly automatically on left side of the funnel and pyr
 
 ```
 
-![Smart Data Label](../images/funnel/smart-data-label-razor.png)
+![Blazor Funnel Chart with Smart Data Label](../images/funnel/blazor-funnel-chart-smart-data-label.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/funnel?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
 

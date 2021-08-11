@@ -39,4 +39,4 @@ The following example explains about how to achieve Repeat Button in mouse and t
 
 Output be like
 
-![Button Sample](./../images/button-repeat.png)
+![Repeat Button in Blazor Button Component](./../images/blazor-button-with-repeat-button.png)
