@@ -26,9 +26,9 @@ Syncfusion Blazor is a modern enterprise UI components library for creating Blaz
 ## See Also
 
 * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [Getting started with Syncfusion Blazor Components in Server Side using Visual Studio](https://blazor.syncfusion.com/testing/documentation/getting-started/blazor-server-side-visual-studio-2019)
-* [Getting started with Syncfusion Blazor Components in WebAssembly using Visual Studio](https://blazor.syncfusion.com/testing/documentation/getting-started/blazor-webassembly-visual-studio-2019)
-* [Getting started with Syncfusion Blazor Components in Server Side using .NET CLI](https://blazor.syncfusion.com/testing/documentation/getting-started/blazor-server-side-dotnet-cli)
-* [Getting started with Syncfusion Blazor Components in WebAssembly using .NET CLI](https://blazor.syncfusion.com/testing/documentation/getting-started/blazor-webassembly-dotnet-cli)
-* [Getting started with Syncfusion Blazor Components in Server Side using Visual Studio for Mac](https://blazor.syncfusion.com/testing/documentation/getting-started/blazor-server-side-mac)
-* [Getting started with Syncfusion Blazor Components in WebAssembly using Visual Studio for Mac](https://blazor.syncfusion.com/testing/documentation/getting-started/blazor-webassembly-visual-studio-mac)
+* [Getting started with Syncfusion Blazor Components in Server Side using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019)
+* [Getting started with Syncfusion Blazor Components in WebAssembly using Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019)
+* [Getting started with Syncfusion Blazor Components in Server Side using .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting started with Syncfusion Blazor Components in WebAssembly using .NET CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+* [Getting started with Syncfusion Blazor Components in Server Side using Visual Studio for Mac](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
+* [Getting started with Syncfusion Blazor Components in WebAssembly using Visual Studio for Mac](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
