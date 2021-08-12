@@ -82,7 +82,7 @@ namespace BlazorApplication
 }
 ```
 
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+* Create `~/Shared/SyncfusionLocalizer.cs` file. Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -109,7 +109,7 @@ namespace BlazorApplication
 }
 ```
 
-* Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application. Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
 | **Name** | **Value (in Deutsch culture)** |
 | --- | --- |
@@ -183,6 +183,16 @@ namespace WebAssemblyLocale
     }
 }
 ```
+
+ > For .NET 5.0 Blazor WebAssembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes.
+
+    ```xml
+    <PropertyGroup>
+        <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+    </PropertyGroup>
+    ```
+
+    Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-5.0#blazor-webassembly) for more details.
 
 * Now, Specify the culture for Slider using `Locale` property.
 
