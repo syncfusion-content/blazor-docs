@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor WebAssembly App in .NET Core CLI
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: WebAssembly App in .NET Core CLI | Blazor | Syncfusion
+description: Learn here about how to getting started with Syncfusion Blazor in WebAssembly App using .NET Core CLI.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor Components in Blazor WebAssembly App using .NET Core CLI
+# Blazor WebAssembly App using .NET Core CLI
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor WebAssembly application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor WebAssembly application using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
 
 > Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 

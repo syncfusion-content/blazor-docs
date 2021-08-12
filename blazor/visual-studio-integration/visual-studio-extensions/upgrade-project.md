@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrade Project in Blazor - Syncfusion
-description: Check out the documentation for Upgrade Project in Blazor
+description: Learn here about that how to upgrading the project in the Syncfusion Essential Blazor application to latest version.
 platform: Blazor
 component: Common
 documentation: ug
@@ -13,7 +13,7 @@ The Syncfusion Blazor migration add-in for Visual Studio allows you to migrate a
 
 The steps below will assist you to upgrade the Syncfusion version in the Syncfusion Blazor application via Visual Studio 2019:
 
-> Before use the Syncfusion Blazor Project Migration, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
+> Before using the Syncfusion Blazor Project Migration, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
 
 1. Open the Syncfusion Blazor application that uses the Syncfusion component.
 
@@ -43,7 +43,7 @@ The steps below will assist you to upgrade the Syncfusion version in the Syncfus
 
     ![MigrationSuccessMessage](../images/MigrationSuccess.png)
 
-    If you enabled project backup before migrating, the old project was saved in the specified backup path location, as shown below once the migration process completed.
+    If you enabled project backup before migrating, the old project will be saved in the specified backup path location as shown below once the migration process is completed.
 
     ![MigrationBackupLocation](../images/Backuplocation.png)
 
