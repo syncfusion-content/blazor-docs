@@ -35,7 +35,7 @@ The following example demonstrates how to set the `Year` as the start view of th
 
 The output will be as follows.
 
-![calendar](./images/year_view.png)
+![Changing Blazor Calendar View](./images/blazor-calendar-view.png)
 
 ## View Restriction
 
@@ -58,4 +58,4 @@ The following example displays the Calendar in `Decade` view, and allows you to 
 
 The output will be as follows.
 
-![calendar](./images/view_restriction.png)
+![Restriction in Blazor Calendar](./images/blazor-calendar-restriction.png)

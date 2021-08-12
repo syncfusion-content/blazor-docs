@@ -22,6 +22,6 @@ The following sample shows the inline type rendering of ColorPicker.
 
 Output be like below,
 
-![color-picker](./images/inline-rendering.png)
+![Inline Rendering in Blazor ColorPicker](./images/blazor-colorpicker-inline-rendering.png)
 
 > The `ShowButtons` property is disabled in this sample because the control buttons are not needed for inline type. To know about the control buttons functionality, refer to the [ShowButtons](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_ShowButtons).
