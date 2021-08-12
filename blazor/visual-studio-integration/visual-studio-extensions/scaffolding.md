@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scaffolding in Blazor - Syncfusion
-description: Check out the documentation for Scaffolding in Blazor
+description: Learn here about that how to adding the scaffolding for the Scaffolding in Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor platform to quickly add code that interacts with data models and reduce the amount of time to develop with data operation in your project. Scaffolding provides an easier way to create Razor and Controller action methods for Syncfusion Blazor DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer controls.
 
-> Check that at least one Entity Framework model exists, and the application has been compiled once. If no Entity Framework model exists in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
+> Check that at least one Entity Framework model exists, and the application has been compiled once. If no Entity Framework model exists in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes are made in the model properties, rebuild the application once before performing scaffolding.
 
 <!-- markdownlint-disable MD026 -->
 
@@ -21,7 +21,7 @@ Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor plat
 
 The following steps explain how to add a scaffolded item to your Blazor application.
 
-> Before use the Syncfusion Blazor Scaffolding, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
+> Before using the Syncfusion Blazor Scaffolding, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
 
 1. If the project type is **Blazor ServerSide**, right-click the **Pages** folder in the Solution Explorer, click **Add**, and then select **New Scaffolded Item..**
 
@@ -73,17 +73,17 @@ The following steps explain how to add a scaffolded item to your Blazor applicat
 
 Syncfusion provides **Scaffolding command-line** for Syncfusion Blazor to quickly add code that interacts with data models and reduce the amount of time to develop with data operation in your project. Scaffolding provides an easier way to create view file and Controller action methods for Syncfusion Blazor DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer controls.
 
-> Check that at least one Entity Framework model exists. If no Entity Framework model exist in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes made in the model properties, rebuild the application once before perform scaffolding.
+> Check that at least one Entity Framework model exists. If no Entity Framework model exist in your application, refer to this [documentation](https://www.freecodecamp.org/news/how-to-create-an-application-using-blazor-and-entity-framework-core-1c1679d87c7e/) to generate the Entity Framework model. After the model file has been added, check that the required DBContext and properties are added. Now, build the application, and try scaffolding. If any changes are made in the model properties, rebuild the application once before performing scaffolding.
 
 ## Install Command-line Scaffolding
 
-Install **syncfusion.scaffolding** tool globally by using below command.
+Install **syncfusion.scaffolding** tool globally by using the following command.
 
    ```dotnet tool install -g syncfusion.scaffolding```
 
 ## Update Command-line scaffolding
 
-Update **syncfusion.scaffolding** tool globally by using below command.
+Update **syncfusion.scaffolding** tool globally by using the following command.
 
    ```dotnet tool update -g syncfusion.scaffolding```
 
@@ -93,7 +93,7 @@ The following steps explains how to add a scaffolded item from command-line to y
 
 > Before adding the scaffolded item from command-line, check whether the **dotnet-aspnet-codegenerator** tool is installed or not by **dotnet tool list -g** command in command prompt. if it is not installed, then install **dotnet-aspnet-codegenerator** tool globally by using this command **dotnet tool install -g dotnet-aspnet-codegenerator**.
 
-1. After installed syncfusion.scaffolding tool, we can invoke syncfusion_scaffold command it shows the available controls
+1. After installed syncfusion.scaffolding tool, we can invoke syncfusion_scaffold command which displays the available controls
 
     **syncfusion_scaffold**
 
@@ -121,7 +121,7 @@ The following steps explains how to add a scaffolded item from command-line to y
     | --is-all-day                      | Set IsALLDay for Scheduler Event.                                             | Scheduler           |
     | -did&#124;--diagram-id            | Id of Diagram layout.                                                         | Diagram             |
 
-3. If you run the syncfusion_scaffold [control] command, the parameters of control shown like below image.
+3. If you run the syncfusion_scaffold [control] command, the parameters of control will be displayed as shown in the below image.
 
     ![control parameter details](../images/controlparameter.png)
 
