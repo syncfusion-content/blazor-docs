@@ -60,11 +60,11 @@ You can also delete the signature in the signature field by using Delete Option 
 
 ## Import and export FormFields
 
-The PDF Viewer control provides the support to import and export formfields using a JSON object in the PDF document.
+The PDF Viewer control provides the support to import and export form fields using a JSON object in the PDF document.
 
 ## Importing FormFields using PDF Viewer API
 
-You can import the formfields using JSON file or JSON object in code behind like the below code snippet
+You can import the form fields using JSON file or JSON object in code behind like the below code snippet
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
@@ -82,7 +82,7 @@ public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf
 }
 ```
 
->The JSON file for importing the formfields should be placed in the desired location and the path should be provided correctly.
+>The JSON file for importing the form fields should be placed in the desired location and the path should be provided correctly.
 
 ## Exporting FormFields from the PDF document using PDF Viewer API
 

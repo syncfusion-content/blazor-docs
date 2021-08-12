@@ -23,7 +23,7 @@ The PDF Viewer comes with a powerful built-in toolbar with the following importa
 * Bookmark panel
 * Thumbnail panel
 
-![Alt text <](./images/toolbar.png)
+![Alt text](./images/toolbar.png)
 
 The following section explains, how to show or hide the toolbar and toolbar item.
 
