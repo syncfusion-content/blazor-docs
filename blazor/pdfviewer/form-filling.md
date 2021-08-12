@@ -86,7 +86,7 @@ public string DocumentPath { get; set; } = "wwwroot/data/FormFillingDocument.pdf
 
 ## Exporting FormFields from the PDF document using PDF Viewer API
 
-You can export the formfields as JSON file in code behind as the following code snippet
+You can export the form fields as JSON file in code behind as the following code snippet
 
 ```cshtml
 @using Syncfusion.Blazor.PdfViewerServer
