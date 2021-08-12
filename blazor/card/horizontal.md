@@ -9,11 +9,11 @@ documentation: ug
 
 # Horizontal Card in Blazor Card Component
 
-By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using Orientation property.
+By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using the Orientation property.
 
 ## Stacked cards
 
-An horizontally aligned card can push a specific column to align vertical using `CardStacked` component. This will align the stacked section vertically aligned differentiating from horizontal layout.
+An horizontally aligned card can push a specific column to align vertically using the `CardStacked` component. This will align the stacked section vertically aligned differentiating from horizontal layout.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

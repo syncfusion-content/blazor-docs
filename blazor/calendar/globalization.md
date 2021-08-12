@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor Calendar Component
 
-Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
+Globalization is the combination of adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 
 ## Blazor server side
 
@@ -40,7 +40,7 @@ namespace BlazorApplication
 
 The **Localization** library allows you to localize default text content. The Calendar component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for Calendar in server side Blazor samples. Here, we have used Resource file to translate the static text.
+The following examples demonstrate how to enable **Localization** for Calendar in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
 The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
 
@@ -203,7 +203,7 @@ The output will be as follows.
 
 * You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
 
-* In the following code, modified the localized text of `today button` in `de` culture.
+* In the following code, we have modified the localized text of `today button` in `de` culture.
 
 [`wwwroot/blazor-locale/src/de.json`]
 

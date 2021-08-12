@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Button Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Button component of Syncfusion, and more details.
+description: Checkout and learn more about getting started with Blazor Button component of Syncfusion.
 platform: Blazor
 control: Button
 documentation: ug
@@ -52,7 +52,7 @@ Open `/_Imports.razor file` and import the **Syncfusion.Blazor.Buttons** package
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components.
+Open the **Startup.cs** file and add services required by the Syncfusion components.
 Add **services.AddSyncfusionBlazor()** method in the ConfigureServices function as follows.
 
 ```csharp
@@ -72,7 +72,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>
@@ -85,7 +85,7 @@ namespace BlazorApplication
 
 ## Adding component package to the application
 
-Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages otherwise import these packages in the individual `razor` pages.
+Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages. Otherwise, import these packages in the individual `razor` pages.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -94,7 +94,7 @@ Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages ot
 
 ## Adding Button component to the application
 
-Now, add the Syncfusion Blazor Button component in `razor` page in the `Pages` folder. For example the Button component is added in the `~/Pages/Index.razor` page.
+Now, add the Syncfusion Blazor Button component in `razor` page in the `Pages` folder. For example, the Button component is added in the `~/Pages/Index.razor` page.
 
 ```cshtml
 <SfButton>Button</SfButton>

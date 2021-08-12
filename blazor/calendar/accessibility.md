@@ -25,7 +25,7 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **role**: Gives information to assistive technologies about how to handle each element in a widget.
 
-* **grid-cell**: Defines the individual cell that can be focussed and selected.
+* **grid-cell**: Defines the individual cell that can be focused and selected.
 
 ## Keyboard interaction
 
@@ -37,7 +37,7 @@ It supports the following list of shortcut keys:
 | --- | --- |
 | <kbd>Upper Arrow</kbd>  | Focuses the same day of the previous week. |
 | <kbd>Down Arrow</kbd>  | Focuses the same day of the next week. |
-| <kbd>Left Arrow</kbd>  | Focuses the day before. |
+| <kbd>Left Arrow</kbd>  | Focuses the previous day. |
 | <kbd>Right Arrow</kbd>  | Focuses the next day. |
 | <kbd>Home</kbd>  | Focuses the first day of the month. |
 | <kbd>End</kbd>  | Focuses the last day of the month. |

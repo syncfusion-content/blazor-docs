@@ -13,7 +13,7 @@ documentation: ug
 
 ## Images
 
-The Card supports to include images within the elements, you can add image as direct element anywhere inside card root by adding the `CardImage` component . Using the class defined, you can write CSS styles to load images to that element.
+The Card supports to include images within the elements. You can add image as direct element anywhere inside card root by adding the `CardImage` component . Using the class defined, you can write CSS styles to load images to that element.
 
 > By default, card images occupies full width of its parent element.
 
@@ -27,7 +27,7 @@ The Card supports to include images within the elements, you can add image as di
 
 ### Title
 
-Card image is supported to include a `Title` property for the image. By default, Title is placed over the image on left-bottom position with overlay.
+Card image is supported to include a `Title` property for the image. By default, Title is placed over the image on the left-bottom position with overlay.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
@@ -44,7 +44,7 @@ Card image is supported to include a `Title` property for the image. By default,
 
 ## Divider
 
-Divider used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set `EnableSeperator` property to `true` in card content for adding a divider.
+Divider is used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set the `EnableSeperator` property to `true` in card content for adding a divider.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
