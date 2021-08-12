@@ -37,7 +37,7 @@ We will merge development branch to Master during release time as like other ES 
 | Topic 	| Detail |
 |----------|:-------------:|
 | Branch to commit 	| development  |
-|  Publishing URL	| https://help.syncfusion.com/staging/documentation/introduction |
+|  Publishing URL	| https://sfblazor.azurewebsites.net/staging/documentation/introduction |
 | Automation Starting time | 6 PM daily	 |
 | Publishing time | 7 PM  |
 
