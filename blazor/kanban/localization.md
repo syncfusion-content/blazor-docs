@@ -30,6 +30,7 @@ By using `Locale` property, you can set the culture dynamically in kanban compon
 | Kanban_Cancel | Cancel |
 | Kanban_Yes | Yes |
 | Kanban_No | No |
+| Kanban_No_Cards | No cards to display |
 
 ## Localization
 
