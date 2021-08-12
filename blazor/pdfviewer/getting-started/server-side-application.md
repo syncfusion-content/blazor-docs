@@ -9,70 +9,106 @@ documentation: ug
 
 # Server-side application in Blazor PDF Viewer Component
 
+>Note: There is a separate PDF Viewer component for Blazor server-side and Blazor WebAssembly applications.
+>* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
+>* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
+
 This section briefly explains how to include a PDF Viewer in your  Blazor server-side application.
 
-**Step 1:** Create a new ASP.NET Core Web application. Click Next.
+**Step 1:** Choose **Create a new project** from the Visual Studio dashboard.Click Next.
 
-![asp.net core template](../images/aspnet-core-template.png)
+![new project](../images/new-project.png)
 
-**Step 2:** Provide a project name and click Create.
+**Step 2:** Select **Blazor Server App** from the template, and then click **Next** button..
 
-![asp.net core project configuration](../images/project-configuration.png)
+![blazor template](../images/blazor-template-serve.png)
 
-**Step 3:** In the create a new ASP.NET Core Web application dialog.
+**Step 3:** Now, the project configuration window will popup. Click **Next** button to modify the additional information.
 
-* Confirm that .NET Core and ASP.NET Core 3.0 is selected
+ ![project-configuration](../images/project-configurations-server.png)
 
-* Choose the Blazor (server-side) template and click Create
+ **Step 4:** Select the target Framework **.NET 5.0** at the top of the Application based on your required target and then click **Create** button to create a new Blazor Server application.
 
- ![select framework](../images/blazor-server-template.png)
+  ![Add info](../images/addition-information-server.png)
 
- **Step 4:** Install the [Syncfusion.Blazor.PdfViewerServer.Windows](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Windows) from NuGet.org
+**Step 5:** Installing Syncfusion Blazor packages in the application
 
-  ![select Nuget](../images/select-nuget.png)
+You can use any one of the below standard to install the Syncfusion Blazor library in your application.
 
-  > If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+* **Using Syncfusion Blazor individual NuGet Packages [New standard]**
+
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+
+1. Install **Syncfusion.Blazor.PdfViewerServer.Windows** NuGet package to the new application using the `NuGet Package Manager`. For more details about available NuGet packages, refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) documentation.
+
+2. Right-click the project,and then select `Manage NuGet Packages`.
+
+    ![nuget explorer](../images/nuget-explorer.png)
+
+3. Search **Syncfusion.Blazor.PdfViewerServer.Windows** keyword in the Browse tab and install **Syncfusion.Blazor.PdfViewerServer.Windows** NuGet package in the application.
+
+    ![select nuget](../images/individual-nuget-server.png)
+
+4. The `Syncfusion.Blazor.PdfViewerServer.Windows` package will be included in the newly created project once the installation process is completed.
+
+> If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
-**Step 5:** Open the **~/_Imports.razor** file and import the following namespaces
+* **Using Syncfusion.Blazor NuGet Package [Old standard]**
 
-```cshtml
+W>If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+
+1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
+
+    ![nuget explorer](../images/nuget-explorer.png)
+
+2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
+
+    ![select nuget](../images/select-nugets.png)
+
+3. The `Syncfusion Blazor` package will be installed in the project once the installation process is completed.
+
+**Step 6:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
+
+```csharp
 @using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
 @using Syncfusion.Blazor.PdfViewer
 ```
 
-**Step 6:** Add the client-side resources through CDN in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+**Step 7:** Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page.
 
 ```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
+    ....
+    ....
+        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
 </head>
 ```
+
+> **Note:** The same theme file can be referred through the CDN version by using [https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css](https://cdn.syncfusion.com/blazor/19.2.51/styles/bootstrap4.css).
 
 For **Internet Explorer 11** kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
 ```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="https://cdn.syncfusion.com/blazor/{:version:}/styles/bootstrap4.css" rel="stylesheet" />
     <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
 </head>
 ```
 
-**Step 7:** Add **SyncfusionBlazor** service in **Startup.cs** file.
+**Step 8:** Add SyncfusionBlazor service in **Startup.cs** file.
 
 Open the **Startup.cs** file and add services required by Syncfusion components using **services.AddSyncfusionBlazor()** method. Add this method in the ConfigureServices function as follows.
 
-```c#
-using Syncfusion.Blazor
+```csharp
+using Syncfusion.Blazor;
 
-namespace BlazorApplication
+namespace BlazorServer
 {
     public class Startup
     {
-        ....
-        ....
         public void ConfigureServices(IServiceCollection services)
         {
             ....
@@ -81,36 +117,26 @@ namespace BlazorApplication
         }
     }
 }
-
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the ~/Pages/_Host.cshtml page.
+> To enable custom WebAssembly resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the `~/Pages/_Host.cshtml` page.
 
-**Step 8:** Add the Syncfusion PDF Viewer component to the **~/Pages/Index.razor** page by using the `SfPdfViewerServer` tag. Also,you can load the PDF Viewer with a document from **wwwroot/Data** location. while initial rendering itself by specifying it in the  **DocumentPath** property of the PDF Viewer component.
+**Step 9:**  Add the Syncfusion PDF Viewer component to the **~/Pages/Index.razor** page by using the `SfPdfViewerServer` tag. Also,you can load the PDF Viewer with a document from `wwwroot/Data` location. while initial rendering itself by specifying it in the **DocumentPath** property of the PDF Viewer component.
 
-```cshtml
+```csharp
 <SfPdfViewerServer DocumentPath="@DocumentPath" Height="500px" Width="1060px" ></SfPdfViewerServer>
 
 @code{
-    private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
+private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 }
 ```
 
 > If the DocumentPath property value is not provided, the PDF Viewer component will be rendered without loading the PDF document. The users can then use the open option from the toolbar to browse and open the PDF as required.
 
-**Step:9**: The Blazor application uses SignalR connection to manage communication between the server and client. By default, SignalR limits the [buffer size](https://docs.microsoft.com/en-us/aspnet/core/signalr/security?view=aspnetcore-2.1#buffer-management) to 32 KB. So,increase the buffer size of the blazor application to upload large documents from client to server.  To increase the connection buffer size, set  `MaximumReceiveMessageSize` property shown below in the **startup.cs**  file with in  **(ConfigureServices)** method.
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize = 102400000;  });
-}
-```
-
-**Step:10**: Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
+**Step 10:** Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
 
 ![output image](../images/browser-output.png)
 
-> There is a separate PDF Viewer component for Blazor server-side and Blazor client-side applications.
->* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
->* The `SfPdfViewer` control is for Blazor client-side application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
+Download the Server side application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorServer1089926850.zip)
+
+> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
