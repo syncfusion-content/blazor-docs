@@ -16,7 +16,7 @@ The following example illustrates how to enable right-to-left support in Toggle 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfSwitch EnableRtl="true" @bind-Checked="isCheked"></SfSwitch>
+<SfSwitch EnableRtl="true" @bind-Checked="isChecked"></SfSwitch>
 
 @code {
   private bool isChecked = false;

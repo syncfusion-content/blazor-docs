@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation Errors in Blazor - Syncfusion
-description: Check out the documentation for Installation Errors in Blazor
+description: Learn here about the common installation errors and solution to those errors in Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -94,7 +94,7 @@ This article describes the most common installation errors, as well as the cause
 
 ***Online***
 
-**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install, samples, or download location (e.g., Public Documents) is protected by the controlled folder access settings.
+**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install, samples, or download location (e.g., Public Documents) are protected by the controlled folder access settings.
 
 ![Installation Online Installer Error Controlled Folder Access](images/installation-error-8.png)
 
