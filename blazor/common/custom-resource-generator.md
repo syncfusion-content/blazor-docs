@@ -1,7 +1,7 @@
 ---
 layout: post
-title: CRG in Blazor - Syncfusion
-description: Check out the documentation for CRG in Blazor
+title: Custom Resource Generator (CRG) in Blazor | Syncfusion
+description: Learn here about that how to using the custom resource generator in the Syncfusion Blazor Components
 platform: Blazor
 component: Common
 documentation: ug
@@ -102,7 +102,7 @@ Refer to the following steps to download the custom resources in CRG:
     ```
     ***How to use CDN resources in the Blazor application***
     
-    The same theme and script files can be referred through the CDN version by set the `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app which is in step 2.
+    The same theme and script files can be referred through the CDN version by setting the `IgnoreScriptIsolation` to true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app which is in step 2.
     
     After that add the CDN interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
 

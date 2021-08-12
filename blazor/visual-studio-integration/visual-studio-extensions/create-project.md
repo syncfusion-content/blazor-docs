@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Create Project in Blazor - Syncfusion
-description: Create Project in Blazor - Syncfusion
+description: Learn here about that how to creating the project and installing NuGet packages in Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Create a project
+# Create a project in Blazor
 
 Syncfusion provides the Visual Studio Project Templates to create the Syncfusion Blazor Application. The Syncfusion Blazor application creates an application with the required Syncfusion references, namespaces, component code snippet, and CDN links for the earlier development with Syncfusion components.
 
@@ -33,11 +33,11 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
     ![CreateNewWizard](../images/CreateNewWizard_old.png)
 
-4. Name the project, pick the location of the destination, then press the Create button. Appears the configuration wizard for the Syncfusion Blazor project.
+4. Name the project, pick the location of the destination, then press the Create button. The configuration wizard for the Syncfusion Blazor project will be displayed.
 
     ![ProjectWizard](../images/ProjectWizard.png)
 
-5. The Syncfusion Blazor has three types of project and is listed below,
+5. The Syncfusion Blazor has three types of project, which are listed below,
 
     1. Syncfusion Blazor Server App.
     2. Syncfusion Blazor WebAssembly App.
@@ -64,7 +64,7 @@ The following NuGet package(s) are added as NuGet references based on applicatio
 | `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion Blazor Server App  |
 | `Syncfusion.Blazor.WordProcessor`  | Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App |
 
-> The installed Syncfusion Extension version of the NuGet package will be added as reference entry if there is no internet connection. You have to restore the NuGet packages when the internet available.
+> The installed Syncfusion Extension version of the NuGet package will be added as reference entry if there is no internet connection. You have to restore the NuGet packages when the internet is available.
 
 ![NuGetPackage](../images/NuGetPackage.png)
 

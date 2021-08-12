@@ -18,8 +18,8 @@ Radio Button caption can be defined by using the [Label](https://help.syncfusion
 ```cshtml
 @using Syncfusion.Blazor.Buttons
 
-<SfRadioButton Label="Left Side Label" Name="position" LabelPosition="RadioLabelPosition.Before" Value="Left"  @bind-Checked="stringChecked"></SfRadioButton><br />
-<SfRadioButton Label="Right Side Label" Name="position" LabelPosition="RadioLabelPosition.After" Value="Right" @bind-Checked="stringChecked"></SfRadioButton>
+<SfRadioButton Label="Left Side Label" Name="position" LabelPosition="LabelPosition.Before" Value="Left"  @bind-Checked="stringChecked"></SfRadioButton><br />
+<SfRadioButton Label="Right Side Label" Name="position" LabelPosition="LabelPosition.After" Value="Right" @bind-Checked="stringChecked"></SfRadioButton>
 
 @code {
     private string stringChecked ="Right";

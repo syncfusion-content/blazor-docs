@@ -77,7 +77,7 @@ Above defined events are bind the Split Button component. Here, we have explaine
 
     }
 
-    private void Clicked(ClickEventArgs args)
+    private void Clicked(Syncfusion.Blazor.SplitButtons.ClickEventArgs args)
     {
 
     }

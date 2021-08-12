@@ -21,7 +21,7 @@ The ValueChange event will triggers when Switch state has been changed by user i
 
 @code{
     private bool? isChecked = null;
-    private void Change(ChangeEventArgs<bool?> args)
+    private void Change(Syncfusion.Blazor.Buttons.ChangeEventArgs<bool?> args)
     {
         // Your code here.
     }
