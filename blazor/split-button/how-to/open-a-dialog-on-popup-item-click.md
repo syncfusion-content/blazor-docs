@@ -30,10 +30,10 @@ In the following example, Dialog will open while selecting `Update` item.
     <DialogPositionData X="300" Y="200"></DialogPositionData>
     <DialogButtons>
         <DialogButton OnClick="@click">
-            <DialogButtonModel Content="OK" IsPrimary="true"></DialogButtonModel>
+            <DialogButton Content="OK" IsPrimary="true"></DialogButton>
         </DialogButton>
         <DialogButton OnClick="@click">
-            <DialogButtonModel Content="Cancel"></DialogButtonModel>
+            <DialogButton Content="Cancel"></DialogButton>
         </DialogButton>
     </DialogButtons>
 </SfDialog>

@@ -16,7 +16,7 @@ In the following sample the display option is set as vertical.
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
 
-<SfQueryBuilder DataSource="@EmployeeData" Width="400px" DisplayMode="DisplayMode.Vertical">
+<SfQueryBuilder DataSource="@EmployeeData" Width="400px" DisplayMode="Syncfusion.Blazor.QueryBuilder.DisplayMode.Vertical">
     <QueryBuilderRule Condition="and" Rules="Rules"></QueryBuilderRule>
     <QueryBuilderColumns>
         <QueryBuilderColumn Field="EmployeeID" Label="Employee ID" Type="ColumnType.Number"></QueryBuilderColumn>

@@ -18,18 +18,22 @@ In the following example, the Dropdown Menu with default iconPosition and iconPo
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
-<SfDropDownButton Items="@DropItems" IconCss="e-icons e-message" content="Message"></SfDropDownButton>
-<SfDropDownButton Items="@DropItems" IconCss="e-icons e-message" IconPosition="SplitButtonIconPosition.Top" Content="Message"></SfDropDownButton>
-
-@code {
-    public List<DropDownMenuItem> DropItems { get; set; } = new List<DropDownMenuItem>
-    {
-        new DropDownMenuItem { Text = "Edit" },
-        new DropDownMenuItem { Text = "Delete" },
-        new DropDownMenuItem { Text = "Mark as Read" },
-        new DropDownMenuItem { Text = "Like Message" }
-    };
-}
+<SfDropDownButton IconCss="e-icons e-message" content="Message">
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem Text="Delete"></DropDownMenuItem>
+        <DropDownMenuItem Text="Mark as Read"></DropDownMenuItem>
+        <DropDownMenuItem Text="Like Message"></DropDownMenuItem>
+    </DropDownMenuItems>
+</SfDropDownButton>
+<SfDropDownButton IconCss="e-icons e-message" IconPosition="SplitButtonIconPosition.Top" Content="Message">
+    <DropDownMenuItems>
+        <DropDownMenuItem Text="Edit"></DropDownMenuItem>
+        <DropDownMenuItem Text="Delete"></DropDownMenuItem>
+        <DropDownMenuItem Text="Mark as Read"></DropDownMenuItem>
+        <DropDownMenuItem Text="Like Message"></DropDownMenuItem>
+    </DropDownMenuItems>
+</SfDropDownButton>
 
 <style>
     .e-message::before {

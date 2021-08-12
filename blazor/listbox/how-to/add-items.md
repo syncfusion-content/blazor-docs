@@ -44,7 +44,7 @@ To add an item or multiple items, `AddItem` method can be used. In the following
       };
 
       private async Task addData() {
-        await ListBoxObj.AddItem(Item);
+        await ListBoxObj.AddItems(Item);
       }
 }
 ```
