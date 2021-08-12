@@ -30,7 +30,7 @@ You can use the development branch to commit the changes for Main\SP release.
 We will merge development branch to Master during release time as like other ES platforms and publish to live from Master branch and create hotfix for next version
 
 
-## Publsihing Automation details 
+## Publishing Automation details 
 
 **1. Staging** 
 
