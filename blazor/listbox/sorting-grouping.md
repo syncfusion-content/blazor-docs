@@ -18,7 +18,7 @@ In the following example, the `SortOrder` is set as `Descending`.
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 
-<SfListBox TValue="string[]" DataSource="@CountryData" SortOrder="SortOrder.Descending" TItem="CountryCode">
+<SfListBox TValue="string[]" DataSource="@CountryData" SortOrder="Syncfusion.Blazor.DropDowns.SortOrder.Descending" TItem="CountryCode">
   <ListBoxFieldSettings Text="Name" Value="Code" />
 </SfListBox>
 

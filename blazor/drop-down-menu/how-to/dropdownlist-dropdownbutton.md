@@ -23,7 +23,7 @@ In the following example, render `DropDownList` component in popup.
         <div id="dropDownFilterExpenses">
             <SfDropDownList TValue="string" TItem="GameFields" PopupHeight="230px" Placeholder="Select a game" DataSource="@Games">
                 <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
-                <DropDownListEvents Opened="OpenPopup" OnClose="beforeClose" TValue="string"></DropDownListEvents>
+                <DropDownListEvents Opened="OpenPopup" OnClose="beforeClose" TValue="string" TItem="GameFields"></DropDownListEvents>
             </SfDropDownList>
         </div>
     </PopupContent>

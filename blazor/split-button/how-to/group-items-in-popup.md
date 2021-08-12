@@ -21,7 +21,7 @@ The following example illustrates how to group items in popup using ListView com
 <SfSplitButton Content="ClipBoard">
     <PopupContent>
         <SfListView ID="listview" DataSource="@Data" SortOrder="Syncfusion.Blazor.Lists.SortOrder.Descending" TValue="ListData">
-            <ListViewFieldSettings Text="Text" GroupBy="Category"></ListViewFieldSettings>
+            <ListViewFieldSettings Text="Text" GroupBy="Category" TValue="ListData"></ListViewFieldSettings>
         </SfListView>
     </PopupContent>
     <ChildContent>
