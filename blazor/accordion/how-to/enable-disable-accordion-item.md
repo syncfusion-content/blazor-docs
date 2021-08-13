@@ -11,7 +11,7 @@ documentation: ug
 
 Accordion provides a support to Enable/Disable the specified accordion item using accordion item [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) property.
 
-In the following demo, specified accordion item is Enable/Disable dynamically while clicking the **Enable/Disable First Item** button.
+In the following demo, specified accordion item is enabled/disabled dynamically when the **Enable/Disable First Item** button is clicked.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

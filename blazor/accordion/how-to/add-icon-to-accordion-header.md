@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Icon to Header in Blazor Accordion Component
 
-Add the icon custom css class to the Accordion header using [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_IconCss) property and also add css styles to the defined class.  The accordion icon element is rendered before the header text in the DOM element.
+Add the icon custom css class to the Accordion header using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_IconCss) property, and also add css styles to the defined class.  The accordion icon element is rendered before the header text in the DOM element.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Nested Accordion in Blazor Accordion Component
 
-Accordion supports to render the nested level of Accordion by using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. To render the nested Accordion, define the nested Accordion elements within the `ContentTemplate` property of the parent Accordion.
+Accordion supports to render the nested level of Accordion by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. To render the nested Accordion, define the nested Accordion elements within the `ContentTemplate` property of the parent Accordion.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
