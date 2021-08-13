@@ -9,9 +9,9 @@ documentation: ug
 
 # Hide expand icon in hierarchical Grid when it has no child records
 
-Hierarchical structure in Grid can be achieved using Detail Template featrue of Grid. But in some scenario, child grid may not have records. So expanding it will show empty Grid. So we can hide the expand icon when child grid has no records.
+Hierarchical structure in Grid can be achieved using Detail Template feature of Grid. But in some scenario, child grid may not have records. So expanding it will show empty Grid. So we can hide the expand icon when child grid has no records.
 
-We can achieve this requirment using [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component. This event will be triggered when a row is created in Grid.
+We can achieve this requirement using [`RowDataBound`](https://blazor.syncfusion.com/documentation/datagrid/events#rowdatabound) event of the DataGrid component. This event will be triggered when a row is created in Grid.
 
 In this event, we have checked whether the Child grid has any records using the current record details and child grid datasource. Based on the results, we have added specific class name to row using AddClass method. We have traversed that specific element to hide the icon and pointer events.
 
