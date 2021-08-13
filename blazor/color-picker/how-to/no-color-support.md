@@ -42,7 +42,7 @@ To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 ```
 
 Output be like
-![color-picker](./../images/cp-nocolor.png)
+![Blazor ColorPicker with Default No Color](./../images/blazor-colorpicker-nocolor.png)
 
 ## Custom No Color
 
@@ -123,4 +123,4 @@ The following sample show the color palette with custom no color option.
 ```
 
 Output be like
-![color-picker](./../images/cp-custom-nocolor.png)
+![Blazor ColorPicker with Custom No Color](./../images/blazor-colorpicker-custom-nocolor.png)

@@ -23,7 +23,7 @@ In the following sample, it will render the `Palette` at initial load.
 ```
 
 Output be like
-![color-picker](./images/palette.png)
+![Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.png)
 
 ## Color value
 
@@ -39,6 +39,6 @@ In the following sample, the color value sets as `four` digit hex code, the last
 ```
 
 Output be like below,
-![color-picker](./images/color-value.png)
+![Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)
 
 > The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.

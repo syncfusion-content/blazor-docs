@@ -21,4 +21,4 @@ The following example shows the `Disabled` state of Color Picker component.
 ```
 
 Output be like
-![color-picker](./../images/disable.png)
+![Disable State in Blazor ColorPicker](./../images/blazor-colorpicker-disable-state.png)

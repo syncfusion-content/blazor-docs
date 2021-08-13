@@ -85,7 +85,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButto
 
 <SfProgressButton Content="Slide Right">
     <ProgressButtonSpinSettings Position="SpinPosition.Center"></ProgressButtonSpinSettings>
-    <ProgressButtonAnimationSettings Effect="Syncfusion.Blazor.SplitButtons.SlideRight" Duration= "400" Easing="Linear"></ProgressButtonAnimationSettings>
+    <ProgressButtonAnimationSettings Effect="Syncfusion.Blazor.SplitButtons.AnimationEffect.SlideRight" Duration= "400" Easing="Linear"></ProgressButtonAnimationSettings>
 </SfProgressButton>
 
 ```
@@ -185,7 +185,7 @@ You can pause and resume the progress using the [Stop](https://help.syncfusion.c
         {
             Content = "Resume";
             IconCss = "e-icons e-play";
-            ProgressBtn.Stop();
+            await ProgressBtn.Stop();
         }
         else if (this.Content == "Resume")
         {
@@ -232,7 +232,7 @@ You can complete the progress by using ['ProgressComplete'](https://help.syncfus
 
 <SfProgressButton Content="Progress Button" EnableProgress="true" @ref="ProgressBtnObj">
     <ProgressButtonSpinSettings Position="SpinPosition.Left"></ProgressButtonSpinSettings>
-    <ProgressButtonAnimationSettings Effect="Syncfusion.Blazor.SplitButtons.SlideRight" Duration="400" Easing="Linear"></ProgressButtonAnimationSettings>
+    <ProgressButtonAnimationSettings Effect="Syncfusion.Blazor.SplitButtons.AnimationEffect.SlideRight" Duration="400" Easing="Linear"></ProgressButtonAnimationSettings>
 </SfProgressButton>
 <SfButton @onclick="OnCompleteClick">Complete</SfButton>
 

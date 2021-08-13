@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Template Studio in Blazor - Syncfusion
-description: Check out the documentation for Template Studio in Blazor
+description: Learn here about that how to create the Essential Syncusion Blazor Components for the template studio.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Template Studio
+# Template Studio in Blazor
 
 Syncfusion provides the Blazor Template Studio to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor application is created with the required Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that teaches you how to create an application with Syncfusion components.
 
 The following steps will help you create your **Syncfusion Blazor Application** through **Visual Studio 2019**:
 
-> Before use the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
+> Before using the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension is installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
 
 1. Open Visual Studio 2019.
 
@@ -133,7 +133,7 @@ The selected Syncfusion Blazor components and features render code added as .raz
 
 ### Authentication Configuration
 
-We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registrations we can get the tenant id and project client id for Microsoft Identity Platform. We need to configure these id values in created applications then only project will be run correctly with authentication support.
+We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registrations we can get the tenant id and project client id for Microsoft Identity Platform. We need to configure these id values in created applications then only the project will run correctly with authentication support.
 
 ### Individual Accounts Authentication
 
@@ -143,7 +143,7 @@ We need to register the created application in Google Platform API Console for I
 
     <https://console.cloud.google.com/apis/credentials?project=aerobic-furnace-244104>
 
-2. Click Create Credentials and OAuth Client Id.
+2. Click Create Credentials and o-auth Client Id.
 
     ![Google API console credentials page](../images/GoogelAPIConsoleCredentials.png)
 
@@ -157,7 +157,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![RedirectedURI](../images/RedirectedURI.png)
 
-5. Click save then OAuth client id will be created and copy that credentials.
+5. Click save then o-auth client id will be created and copy that credentials.
 
     ![ClientIdCreation](../images/ClientIdCreation.PNG)
 
@@ -339,7 +339,7 @@ You can select a culture language in combobox at top right on the page to apply 
 
 #### Server Application, ASP.NET Core hosted Web Application, and Progressive Web Application with ASP.NET Core hosted
 
-1. For register the application, submit your email address and create a password.
+1. To register the application, submit your email address and create a password.
 
     ![Register the application](../images/RegisterApplication.png)
 
