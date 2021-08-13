@@ -21,6 +21,6 @@ In the following sample, the [ShowButtons](https://help.syncfusion.com/cr/blazor
 ```
 
 Output be like
-![color-picker](./../images/palette-alone.png)
+![Rendering Palette Alone in Blazor ColorPicker](./../images/blazor-colorpicker-with-palette-alone.png)
 
 > To render `Picker` alone, specify the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Mode) property as 'Picker'.
