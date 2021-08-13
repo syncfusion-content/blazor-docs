@@ -26,4 +26,4 @@ By default, the calendar mode is in **Gregorian**. You can enable the Islamic mo
 
 The output will be as follows.
 
-![calendar](./images/islamic_calendar.png)
+![Blazor Calendar with Islamic Type](./images/blazor-calendar-with-islamic.png)

@@ -19,4 +19,4 @@ You can enable `WeekNumber` in the Calendar by using the [WeekNumber](https://he
 
 The output will be as follows.
 
-![calendar](../images/week_number.png)
+![Blazor Calendar displays Week Numbers](../images/blazor-calendar-week-number.png)
