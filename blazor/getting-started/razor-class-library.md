@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Razor Class Library in Visual Studio 2019
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Getting Started with Razor Class Library in Visual Studio
+description: Check out the documentation for Creating Razor Class Library (RCL) using Syncfusion Blazor components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -161,21 +161,17 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 2. Open the **~/Startup.cs** file and register the Syncfusion Blazor Service from RCL.
 
     ```c#
-    ....
     using Syncfusion.Blazor;
     namespace BlazorApp
     {
         public class Startup
         {
-        ....
-        ....
-        public void ConfigureServices(IServiceCollection services)
-        {
-            ....
-            ....
-            services.AddSyncfusionBlazor();
-        }
-        ....
+            public void ConfigureServices(IServiceCollection services)
+            {
+                ....
+                ....
+                services.AddSyncfusionBlazor();
+            }
         }
     }
     ```
