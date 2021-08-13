@@ -298,7 +298,7 @@ The following shows selection and deselection of row
 
 > If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
 
-## Perform Toggle selection programatically
+## Perform Toggle selection programmatically
 
 You can perform toggle selection programmatically by using the [SelectRowAsync] method by passing **true** value as the second argument. In the below code example, we have programmatically toggle the row index 2.
 
@@ -306,7 +306,7 @@ You can perform toggle selection programmatically by using the [SelectRowAsync] 
 @using Syncfusion.Blazor.Grids
 @using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Perform Toggle Selection Programatically for RowIndex 3" @onclick="Click"></SfButton>
+<SfButton Content="Perform Toggle Selection programmatically for RowIndex 3" @onclick="Click"></SfButton>
 
 <SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" AllowPaging="true">
     <GridSelectionSettings EnableToggle="true"></GridSelectionSettings>
