@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Hide expand icon in Hierarchical Grid when child grid has no records  | Syncfusion
-description: Learn here how to hide the expand icon in hierarchical grid when child grid has no records.
+title: Hide expand icon in specific record of Hierarchical Grid | Syncfusion
+description: Learn here how to hide the expand icon in hierarchical grid using RowDataBound event when child grid has no records.
 platform: Blazor
 control: DataGrid
 documentation: ug

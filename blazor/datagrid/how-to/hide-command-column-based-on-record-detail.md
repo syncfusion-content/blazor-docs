@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hide the command column button on specific record | Syncfusion
-description: Learn here how to hide command column in specific record based on its detail record.
+description: Learn here how to hide command column in specific record based on its detail record in Syncfusion Blazor DataGrid.
 platform: Blazor
 control: DataGrid
 documentation: ug
