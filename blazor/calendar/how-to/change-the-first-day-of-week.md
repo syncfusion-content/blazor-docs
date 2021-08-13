@@ -23,4 +23,4 @@ The following code shows the Calendar with `Tuesday` as the first day of the wee
 
 The output will be as follows.
 
-![calendar](../images/first-day-of-week.png)
+![Changing First Day of Week in Blazor Calendar](../images/blazor-calendar-first-day-of-week.png)
