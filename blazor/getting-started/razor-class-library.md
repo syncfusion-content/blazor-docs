@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Started with Razor Class Library in Visual Studio
+title: Getting Started with Razor Class Library in Visual Studio | Syncfusion
 description: Check out the documentation for Creating Razor Class Library (RCL) using Syncfusion Blazor components.
 platform: Blazor
 component: Common
@@ -36,7 +36,7 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![select framework](images/razor-class-server-template.png)
 
-    > If exist netstandard version is 2.0 in `RazorClassLibrary.csproj`, then change it to **netstandard2.1**
+    > If existing .NET Standard version is 2.0 in `RazorClassLibrary.csproj`, then change it to **.NET Standard2.1** or above.
 
     ```xml
     <PropertyGroup>
