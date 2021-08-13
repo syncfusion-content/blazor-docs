@@ -300,7 +300,7 @@ The following shows selection and deselection of row
 
 ## Perform Toggle selection programmatically
 
-You can perform toggle selection programmatically by using the [SelectRowAsync] method by passing **true** value as the second argument. In the below code example, we have programmatically toggle the row index 2.
+You can perform toggle selection programmatically by using the **SelectRowAsync** method by passing **true** value as the second argument. In the below code example, we have programmatically toggle the row index 2.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
