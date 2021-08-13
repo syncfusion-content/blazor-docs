@@ -26,4 +26,4 @@ The following example illustrates how to enable right-to-left support in Checkbo
 
 Output be like
 
-![Button Sample](./../images/cb-rtl.png)
+![Right to Lefft in Blazor CheckBox](./../images/blazor-checkbox-right-to-left.png)
