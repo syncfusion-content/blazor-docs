@@ -4,6 +4,7 @@ This section contains guidelines on naming files, sections, documents and other 
 
 > **NOTE**: Some of the items are marked as TODO which will be documented later.
 
+
 ## Hotfix and Master branch usage
 
 The hotfix branch name will be in the below pattern:  
@@ -26,7 +27,30 @@ We will merge the changes from hotfix to Master and publish to live from Master 
 
 You can use the development branch to commit the changes for Main\SP release.
 
-We will merge development branch to Master during release time as like other ES platforms and publish to live from Master branch and create hotfix for next version 
+We will merge development branch to Master during release time as like other ES platforms and publish to live from Master branch and create hotfix for next version
+
+
+## Publishing Automation details 
+
+**1. Staging** 
+
+| Topic 	| Detail |
+|----------|:-------------:|
+| Branch to commit 	| development  |
+|  Publishing URL	| https://sfblazor.azurewebsites.net/staging/documentation/introduction |
+| Automation Starting time | 6 PM daily	 |
+| Publishing time | 7 PM  |
+
+
+**2. Live**
+
+| Topic 	| Detail |
+|----------|:-------------:|
+| Branch to commit 	| latest hotfix before 2 PM |
+| Publishing URL	| https://blazor.syncfusion.com/documentation/introduction  |
+| Automation Starting time | 2:30 PM daily	 |
+| Publishing time |  3:30 PM  |
+
 
 
 ## FrontMatter / (Title and description):
