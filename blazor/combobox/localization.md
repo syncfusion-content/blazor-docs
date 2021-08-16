@@ -230,4 +230,4 @@ In the following sample, French culture is set to the ComboBox and no data is lo
 
 The output will be as follows.
 
-![ComboBox](./images/fr_locale.png)
+![Localization in Blazor ComboBox](./images/blazor-combobox-localization.png)

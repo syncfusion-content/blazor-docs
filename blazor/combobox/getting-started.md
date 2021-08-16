@@ -93,7 +93,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![ComboBox](./images/default.png)
+![Blazor ComboBox Component](./images/blazor-combobox-component.png)
 
 ## Binding data source
 
@@ -129,7 +129,7 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![ComboBox](./images/data_binding.png)
+![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
 
 ## Custom values
 
@@ -164,7 +164,7 @@ set of values. By default, this support is enabled by [AllowCustom](https://help
 
 The output will be as follows.
 
-![ComboBox](./images/custom.png)
+![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
 
 ## Configure the popup list
 
@@ -201,7 +201,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![ComboBox](./images/width_height.png)
+![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
 
 ## See Also
 

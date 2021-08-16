@@ -102,7 +102,7 @@ background-color:transparent!important;
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/color-picker/getting-started">Color Picker</a></td>
     </tr>
     <tr>
-        <td><a id="anchor" href="https://help.syncfusion.com/file-formats/docio/create-word-document-in-blazor">Word Processor</a></td>
+        <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/features">Word Processor</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/maps/getting-started">Map</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/file-upload/getting-started">File Upload</a></td>
     </tr>
