@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor CheckBox Component
 
-This section briefly explains about how to include Checkbox Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with CheckBox Component using Blazor, you can check on this video:
 
@@ -20,11 +20,9 @@ To get start quickly with CheckBox Component using Blazor, you can check on this
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
+1. Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package to the application by using the `NuGet Package Manager`.
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
-
-> Please ensure to check the **Include prerelease** option.
 
 ```html
 <head>
@@ -111,7 +109,7 @@ Now, add the Syncfusion Blazor Checkbox component in `razor` page in the `Pages`
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Checkbox component will render in the web browser as shown below
 
-![CheckBox Sample](./images/check-box.png)
+![Blazor CheckBox Component](./images/blazor-checkbox-component.png)
 
 ## See Also
 
