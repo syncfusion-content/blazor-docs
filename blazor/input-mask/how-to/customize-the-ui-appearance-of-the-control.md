@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Native Events in Blazor Input Mask Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor Input Mask component and much more.
+title: Customize the Appearance of Blazor Input Mask Component | Syncfusion
+description: Learn here all about customizing the UI appearance of Syncfusion Blazor Input Mask component and more.
 platform: Blazor
 control: Input Mask
 documentation: ug
 ---
 
-# Native Events in Blazor Input Mask Component
+# Customize the UI appearance of the Blazor Input Mask Component
 
 The appearance of the MaskedTextBox can be changed by adding custom [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfMaskedTextBox.html#Syncfusion_Blazor_Inputs_SfMaskedTextBox_CssClass) to the component and enabling styles.
 

@@ -20,6 +20,7 @@ The following code snippet explains how the select constraints are enabled for a
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -41,15 +42,25 @@ The following code snippet explains how the select constraints are enabled for a
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select }
-                 },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Selection](../images/Annotation_Selection.png)
@@ -61,6 +72,7 @@ The dragging process can be applied over an annotation and dragging can be contr
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -82,15 +94,25 @@ The dragging process can be applied over an annotation and dragging can be contr
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                 new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag }
-                 },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Drag](../images/Annotation_Drag.gif)
@@ -102,6 +124,7 @@ Resizing of the annotation can be enabled by using the Constraints property of `
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -123,15 +146,25 @@ Resizing of the annotation can be enabled by using the Constraints property of `
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                 new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select|AnnotationConstraints.Resize }
-                 },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Resize
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Selection](../images/Annotation_Resize.gif)
@@ -143,6 +176,7 @@ Resizing of the annotation can be enabled by using the Constraints property of `
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -164,15 +198,25 @@ Resizing of the annotation can be enabled by using the Constraints property of `
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                 new DiagramNodeAnnotation() {Content = "Annotation", Height=30, Width=70, Constraints=AnnotationConstraints.Select|AnnotationConstraints.Rotate }
-                 },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    Height=30,
+                    Width=70,
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Rotate
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Annotation Rotate](../images/Annotation_Rotate.gif)
@@ -186,6 +230,7 @@ The following code explains how to set a dragLimit for connector annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
@@ -194,25 +239,31 @@ The following code explains how to set a dragLimit for connector annotations.
     //Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
 
-
     protected override void OnInitialized()
     {
-         ConnectorCollection = new ObservableCollection<DiagramConnector>();
+        ConnectorCollection = new ObservableCollection<DiagramConnector>();
         DiagramConnector connector = new DiagramConnector()
         {
             SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 },
             Type = Segments.Orthogonal,
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7" },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7"
+            },
             Annotations = new ObservableCollection<DiagramConnectorAnnotation>()
             {
-                   new DiagramConnectorAnnotation() {Content = "Annotation", Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag, DragLimit=new ConnectorAnnotationDragLimit(){ Left=10,Top=10,Right=10,Bottom=10} },
+                new DiagramConnectorAnnotation()
+                {
+                    Content = "Annotation",
+                    Constraints=AnnotationConstraints.Select|AnnotationConstraints.Drag,
+                    DragLimit=new ConnectorAnnotationDragLimit(){ Left=10,Top=10,Right=10,Bottom=10}
+                },
             }
         };
         ConnectorCollection.Add(connector);
     }
 }
-
 ```
 
 ![Annotation DragLimit](../images/Annotation_DragLimit.gif)

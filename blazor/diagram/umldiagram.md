@@ -9,7 +9,7 @@ documentation: ug
 
 # UML Diagram Shapes in Blazor Diagram Component
 
-## Uml Class Diagram Shapes
+## UML Class Diagram Shapes
 
 Class diagram is used to represent the static view of an application. The class diagrams are widely used in the modelling of object-oriented systems because they are the only UML diagrams which can be mapped directly with object-oriented languages. Diagram supports to generate the class diagram shapes from business logic.
 
@@ -47,7 +47,8 @@ The UML class diagram shapes are explained as follows.
         DiagramNode node = new DiagramNode()
         {
             Id = "Patient",
-            OffsetX = 200, OffsetY = 200,
+            OffsetX = 200,
+            OffsetY = 200,
             Shape = new DiagramShape()
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
@@ -110,7 +111,8 @@ The UML class diagram shapes are explained as follows.
         DiagramNode node = new DiagramNode()
         {
             Id = "Patient",
-            OffsetX = 200, OffsetY = 200,
+            OffsetX = 200,
+            OffsetY = 200,
             Shape = new DiagramShape()
             {
                 Type = Syncfusion.Blazor.Diagrams.Shapes.UmlClassifier,
@@ -190,11 +192,11 @@ The UML class diagram shapes are explained as follows.
                         },
                         new DiagramUmlEnumerationMember()
                         {
-                             Name = "Savings Account"
+                            Name = "Savings Account"
                         },
                         new DiagramUmlEnumerationMember()
                         {
-                             Name = "Credit Account"
+                            Name = "Credit Account"
                         }
                     }
                 }
@@ -209,7 +211,7 @@ The UML class diagram shapes are explained as follows.
 
 * The connector shape property defines the role or meaning of the connector.
 
-* The different types of connector shapes are `BPMN`, [UmlClassifier](https://help.syncfusion.com/cr/blazor) and [UmlActivity](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
+* The different types of connector shapes are `BPMN`, [UMLClassifier](https://help.syncfusion.com/cr/blazor) and [UMLActivity](https://help.syncfusion.com/cr/blazor) and can render these shapes by setting the connector shape type property.
 
 * The type of flow shapes in a BPMN process are sequence, association, and message.
 
@@ -256,8 +258,8 @@ The association property allows you to define the type of association. The defau
             Id = "Connector1",
             Type = Segments.Straight,
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y= 100},
-            TargetPoint = new ConnectorTargetPoint() { X   = 300, Y= 300},
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 },
             Shape = new DiagramConnectorShape()
             {
                 Type = ConnectionShapes.UmlClassifier,
@@ -305,10 +307,9 @@ The following code example illustrates how to create an aggregation.
                 Relationship = ClassifierShape.Aggregation
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -335,7 +336,6 @@ The following code example illustrates how to create a composition.
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -347,8 +347,8 @@ The following code example illustrates how to create a composition.
                 Relationship = ClassifierShape.Composition
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
         //Add connector
         ConnectorCollection.Add(connector);
@@ -377,7 +377,6 @@ The following code example illustrates how to create an dependency.
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -388,10 +387,9 @@ The following code example illustrates how to create an dependency.
                 //Set an relationship for connector
                 Relationship = ClassifierShape.Dependency
             },
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -420,7 +418,6 @@ The following code example illustrates how to create an inheritance.
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -432,10 +429,9 @@ The following code example illustrates how to create an inheritance.
                 Relationship = ClassifierShape.Inheritance
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -466,7 +462,7 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram  Height="600px" Connectors="@ConnectorCollection">
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code{
@@ -476,7 +472,6 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
     protected override void OnInitialized()
     {
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector connector = new DiagramConnector()
         {
             Id = "Connector1",
@@ -507,10 +502,9 @@ Multiplicity is a definition of an inclusive interval of non-negative integers t
                 }
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100},
-            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(connector);
     }
 }
@@ -543,7 +537,7 @@ To create a UmlActivity, define type as "UmlActivity" and the list of built-in s
 | StructuredNode | ![StructuredNode](images/StructuredNode.png) |
 | Note           | ![Note](images/Note.png)           |
 
-The following code illustrates how to create a UmlActivity shapes.
+The following code illustrates how to create a UMLActivity shapes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -556,7 +550,6 @@ The following code illustrates how to create a UmlActivity shapes.
 @code{
     //Defines diagram's connector collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
-
     public DiagramConstraints diagramConstraints = DiagramConstraints.Default;
 
     protected override void OnInitialized()
@@ -583,11 +576,11 @@ The following code illustrates how to create a UmlActivity shapes.
 }
 ```
 
-### UmlActivity connector
+### UMLActivity connector
 
-To create an UmlActivity connector, define the type as "UmlActivity" and flow as either "Exception" or "Control" or "Object".
+To create an UMLActivity connector, define the type as "UMLActivity" and flow as either "Exception" or "Control" or "Object".
 
-The following code illustrates how to create a UmlActivity connector.
+The following code illustrates how to create a UMLActivity connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
@@ -614,8 +607,8 @@ The following code illustrates how to create a UmlActivity connector.
                 UmlActivityFlow = UmlActivityFlows.Exception
             },
             //Define connector start and end points
-            SourcePoint = new ConnectorSourcePoint() { X = 100, Y= 100},
-            TargetPoint = new ConnectorTargetPoint() { X   = 200, Y= 200}
+            SourcePoint = new ConnectorSourcePoint() { X = 100, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 200, Y = 200 }
         };
         ConnectorCollection.Add(connector);
     }

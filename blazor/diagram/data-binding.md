@@ -35,8 +35,9 @@ Diagram can be populated based on the user defined JSON data (Local Data) by map
 To map the user defined JSON data with diagram, configure the fields of [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_DataSourceSettings). The following code example illustrates how to bind local data with the diagram.
 
 ```cshtml
-ausing Syncfusion.Blazor.Diagrams
+@using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Layout="@LayoutValue" ConnectorDefaults="@ConnectorDefault" NodeDefaults="@NodeDefaults">
     <DiagramDataSource Id="Name" ParentId="Category" DataSource="@DataSource" DataMapSettings="@datamap">
         <DiagramDataMapSettings>
@@ -61,7 +62,7 @@ ausing Syncfusion.Blazor.Diagrams
         Shape = new DiagramShape() { Type = Shapes.Basic, BasicShape = BasicShapes.Rectangle },
         Style = new NodeShapeStyle { Fill = "#ffeec7", StrokeColor = "#ffeec7", StrokeWidth = 1, },
         Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-    {
+        {
             new DiagramNodeAnnotation()
             {
                 Id = "label1",
@@ -92,7 +93,7 @@ ausing Syncfusion.Blazor.Diagrams
     };
     //Create the data map settings.
     List<DiagramDataMapSetting> datamap { get; set; } = new List<DiagramDataMapSetting>()
-{
+    {
         new DiagramDataMapSetting() { Property = "Shape.TextContent", Field = "Name" }
     };
 
@@ -107,9 +108,9 @@ ausing Syncfusion.Blazor.Diagrams
             HorizontalSpacing = 30,
             EnableAnimation = true,
             LayoutInfo = this.LayoutInfo
-
         };
     }
+
     //Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
@@ -117,9 +118,10 @@ ausing Syncfusion.Blazor.Diagrams
         public string FillColor { get; set; }
         public string Category { get; set; }
     }
+    
     //Create the data source with node name and fill color values.
     public List<object> DataSource = new List<object>()
-{
+    {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#916DAF"},
         new HierarchicalDetails(){ Name ="Layout", Category="Diagram",FillColor=""},
         new HierarchicalDetails(){ Name ="Tree Layout", Category="Layout",FillColor=""},

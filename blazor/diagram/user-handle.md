@@ -19,9 +19,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px"
-           Nodes="@NodeCollection"
-           SelectedItems="@SelectedModel">
+<SfDiagram Height="600px" Nodes="@NodeCollection" SelectedItems="@SelectedModel">
 </SfDiagram>
 
 @code{
@@ -30,6 +28,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
     // Defines diagram's SelectedItems
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
+
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects
@@ -59,9 +58,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         NodeCollection = new ObservableCollection<DiagramNode>();
-
         DiagramNode diagramNode = new DiagramNode()
         {
             Id = "node1",
@@ -70,9 +67,14 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
             Width = 100,
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Node"
+                }
+            }
         };
-
         NodeCollection.Add(diagramNode);
     }
 }
@@ -104,6 +106,7 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
     // Defines diagram's SelectedItems
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
+
     protected override void OnInitialized()
     {
         //Creating the userhandle for cloning the objects
@@ -124,7 +127,6 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
             //set margin for the user handle
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-
         //Add user handle to the collection...
         UserHandles = new ObservableCollection<DiagramUserHandle>()
         {
@@ -136,9 +138,7 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         NodeCollection = new ObservableCollection<DiagramNode>();
-
         DiagramNode diagramNode = new DiagramNode()
         {
             Id = "node1",
@@ -147,19 +147,21 @@ If set `false` to the [DisableConnectors](https://help.syncfusion.com/cr/blazor/
             Width = 100,
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Node"
+                }
+            }
         };
-
         NodeCollection.Add(diagramNode);
-
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector diagramConnector = new DiagramConnector()
         {
-            SourcePoint = new ConnectorSourcePoint() { X= 300, Y=100},
-            TargetPoint = new ConnectorTargetPoint() { X= 300, Y=300}
+            SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
 }
@@ -260,15 +262,12 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
 @code {
     // Reference to diagram
     SfDiagram Diagram;
-
     // Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     // Defines diagram's connector collection
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
-
     // Defines diagram's SelectedItems
     public Syncfusion.Blazor.Diagrams.DiagramSelectedItems SelectedModel { get; set; }
-
     ObservableCollection<DiagramUserHandle> UserHandles { get; set; }
 
     protected override void OnInitialized()
@@ -291,7 +290,6 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
             //set margin for the user handle
             Margin = new DiagramUserHandleMargin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
-
         //Add user handle to the collection...
         UserHandles = new ObservableCollection<DiagramUserHandle>()
         {
@@ -303,9 +301,7 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
-
         NodeCollection = new ObservableCollection<DiagramNode>();
-
         DiagramNode diagramNode = new DiagramNode()
         {
             Id = "node1",
@@ -316,19 +312,16 @@ The following code explains how to use the `OnUserHandleMouseUp` event for an us
             Style = new NodeShapeStyle() { Fill = "#659be5", StrokeColor = "none" },
             Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Content = "Node" } }
         };
-
         NodeCollection.Add(diagramNode);
-
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
-
         DiagramConnector diagramConnector = new DiagramConnector()
         {
-            SourcePoint = new ConnectorSourcePoint() { X= 300, Y=100},
-            TargetPoint = new ConnectorTargetPoint() { X=300,Y=300}
+            SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 100 },
+            TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 }
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
+
     /// <summary>
     /// mouse up event for the userhandles...
     /// </summary>
@@ -361,6 +354,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()
@@ -372,13 +366,23 @@ To create the fixed user handles, define and add them to the collection of nodes
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // A fixed user handle is created and stored in fixed user handle collection of Node.
             FixedUserHandles = new ObservableCollection<DiagramNodeFixedUserHandle>()
-        {
-         new DiagramNodeFixedUserHandle() { Id = "user1",Height = 20, Width = 20, Visibility = true,Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 }, Margin = new UserHandleMargin(){ Right = 20},Offset = new UserHandleOffset() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" },}
+            {
+                new DiagramNodeFixedUserHandle()
+                {
+                    Id = "user1",
+                    Height = 20,
+                    Width = 20,
+                    Visibility = true,
+                    Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },
+                    Margin = new UserHandleMargin(){ Right = 20},
+                    Offset = new UserHandleOffset() { X =0 , Y = 0 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                },
+            }
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ## Customization the fixed user handle
@@ -412,12 +416,15 @@ The following code explains how to customize the appearance of the fixed user ha
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
 </SfDiagram>
+
 @code
 {
     public ObservableCollection<DiagramConnector> ConnectorCollection { get; set; }
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -429,21 +436,44 @@ The following code explains how to customize the appearance of the fixed user ha
             OffsetY = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // A fixed user handle is created and stored in fixed user handle collection of Node.
-            FixedUserHandles = new ObservableCollection<DiagramNodeFixedUserHandle>(){
-         new DiagramNodeFixedUserHandle() { Id = "user1",Height = 20, Width = 20, Visibility = true,Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 }, Margin = new UserHandleMargin(){ Right = 20},Offset = new UserHandleOffset() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  },}
+            FixedUserHandles = new ObservableCollection<DiagramNodeFixedUserHandle>()
+            {
+                new DiagramNodeFixedUserHandle()
+                {
+                    Id = "user1",
+                    Height = 20,
+                    Width = 20,
+                    Visibility = true,
+                    Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },
+                    Margin = new UserHandleMargin(){ Right = 20},
+                    Offset = new UserHandleOffset() { X =0 , Y = 0 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                },
+            }
         };
         NodeCollection.Add(node);
         ConnectorCollection = new ObservableCollection<DiagramConnector>();
         DiagramConnector connector = new DiagramConnector()
         {
-          SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
+            SourcePoint = new ConnectorSourcePoint() { X = 300, Y = 40 },
             TargetPoint = new ConnectorTargetPoint() { X = 400, Y = 160 },
             Type = Segments.Orthogonal,
             Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7" },
             // A fixed user handle is created and stored in fixed user handle collection of Connector.
             FixedUserHandles = new ObservableCollection<DiagramConnectorFixedUserHandle>()
             {
-              new DiagramConnectorFixedUserHandle() { Id = "user1",Height = 25, Width = 25, Offset = 0.5,Visibility = true,Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },Alignment = FixedUserHandleAlignment.After,Displacement = new ConnectorDisplacementPoint{X = 5, Y = 5 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" }
+                new DiagramConnectorFixedUserHandle()
+                {
+                    Id = "user1",
+                    Height = 25,
+                    Width = 25,
+                    Offset = 0.5,
+                    Visibility = true,
+                    Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },
+                    Alignment = FixedUserHandleAlignment.After,
+                    Displacement = new ConnectorDisplacementPoint{X = 5, Y = 5 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                }
             },
         };
         ConnectorCollection.Add(connector);
@@ -489,6 +519,7 @@ The following code explains how to customize the node fixed user handle.
 
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()
@@ -499,8 +530,20 @@ The following code explains how to customize the node fixed user handle.
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // A fixed user handle is created and stored in fixed user handle collection of Node.
-            FixedUserHandles = new ObservableCollection<DiagramNodeFixedUserHandle>(){
-         new DiagramNodeFixedUserHandle() { Id = "user1",Height = 20, Width = 20, Visibility = true,Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 }, Margin = new UserHandleMargin(){ Right = 20},Offset = new UserHandleOffset() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  },}
+            FixedUserHandles = new ObservableCollection<DiagramNodeFixedUserHandle>()
+            {
+                new DiagramNodeFixedUserHandle()
+                {
+                    Id = "user1",
+                    Height = 20,
+                    Width = 20,
+                    Visibility = true,
+                    Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },
+                    Margin = new UserHandleMargin(){ Right = 20},
+                    Offset = new UserHandleOffset() { X =0 , Y = 0 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                },
+            }
         };
         NodeCollection.Add(node1);
     }
@@ -525,9 +568,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![fixed user handle for node](images/0before.png)|
-| 0.5 | Center |![fixed user handle for node](images/0.5center.png)|
-| 1 | After |![fixed user handle for node](images/1after.png)|
+| 0 | Before |![fixed user handle for node](images/before_0.png)|
+| 0.5 | Center |![fixed user handle for node](images/center_0.5.png)|
+| 1 | After |![fixed user handle for node](images/after_1.png)|
 
 ### Displacement
 
@@ -556,6 +599,7 @@ The following code explains how to customize the connector fixed user handle.
 @code
 {
     public ObservableCollection<DiagramConnector> ConnectorCollection = new ObservableCollection<DiagramConnector>();
+
     protected override void OnInitialized()
     {
         DiagramConnector diagramConnector = new DiagramConnector()
@@ -566,7 +610,18 @@ The following code explains how to customize the connector fixed user handle.
             // A fixed user handle is created and stored in fixed user handle collection of Connector.
             FixedUserHandles = new ObservableCollection<DiagramConnectorFixedUserHandle>()
             {
-              new DiagramConnectorFixedUserHandle() { Id = "user1",Height = 25, Width = 25, Offset = 0.5,Visibility = true,Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },Alignment = FixedUserHandleAlignment.After,Displacement = new ConnectorDisplacementPoint{X = 5, Y = 5 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" }
+                new DiagramConnectorFixedUserHandle()
+                {
+                    Id = "user1",
+                    Height = 25,
+                    Width = 25,
+                    Offset = 0.5,
+                    Visibility = true,
+                    Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },
+                    Alignment = FixedUserHandleAlignment.After,
+                    Displacement = new ConnectorDisplacementPoint{X = 5, Y = 5 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                }
             },
         };
         ConnectorCollection.Add(diagramConnector);
@@ -586,12 +641,13 @@ The Diagram control provides following event for the fixed user handle.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Nodes="@NodeCollection"  @ref="diagram">
-  <DiagramEvents FixedUserHandleClick="Changed"></DiagramEvents>
+<SfDiagram Height="600px" Nodes="@NodeCollection" @ref="diagram">
+    <DiagramEvents FixedUserHandleClick="Changed"></DiagramEvents>
 </SfDiagram>
 
 @code{
     SfDiagram diagram;
+    
     public async void Changed(FixedUserHandleClickEventArgs args)
     {
         if (args.Element.Node.Id == "node1" && args.FixedUserHandle.NodeFixedUserHandle.Id == "user1")
@@ -600,7 +656,9 @@ The Diagram control provides following event for the fixed user handle.
             await diagram.Paste();
         }
     }
+
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         DiagramNode node1 = new DiagramNode()
@@ -613,8 +671,19 @@ The Diagram control provides following event for the fixed user handle.
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // A fixed user handle is created and stored in fixed user handle collection of Node.
             FixedUserHandles = new ObservableCollection<DiagramNodeFixedUserHandle>()
-        {
-         new DiagramNodeFixedUserHandle() { Id = "user1",Height = 20, Width = 20, Visibility = true,Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 }, Margin = new UserHandleMargin(){ Right = 20},Offset = new UserHandleOffset() { X =0 , Y = 0 }, PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  },}
+            {
+                new DiagramNodeFixedUserHandle()
+                {
+                    Id = "user1",
+                    Height = 20,
+                    Width = 20,
+                    Visibility = true,
+                    Padding = new IconPadding{Bottom=1,Left=1,Right=1,Top=1 },
+                    Margin = new UserHandleMargin(){ Right = 20},
+                    Offset = new UserHandleOffset() { X =0 , Y = 0 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                },
+            }
         };
         NodeCollection.Add(node1);
     }

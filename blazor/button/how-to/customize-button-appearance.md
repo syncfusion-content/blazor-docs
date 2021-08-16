@@ -34,4 +34,4 @@ You can customize the appearance of the Button by using the Cascading Style Shee
 
 Output be like
 
-![Button Sample](./../images/button-custom.png)
+![Customizing Blazor Button Appearance](./../images/blazor-button-customization.png)

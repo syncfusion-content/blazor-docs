@@ -56,7 +56,8 @@ The following code shows how to change the `Pivot` value.
         };
         NodeCollection.Add(node1);
     }
-     protected override async Task OnAfterRenderAsync(bool firstRender)
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
@@ -90,8 +91,8 @@ The following code shows how to provide the mirror image of the original element
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-    <SfDiagram Height="600px" Nodes="@NodeCollection">
-    </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection">
+</SfDiagram>
 
 @code {
     SfDiagram diagram;
@@ -107,7 +108,7 @@ The following code shows how to provide the mirror image of the original element
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white"  },
+            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Flip the node in Vertical Direction
             Flip = FlipDirection.Vertical,
             Shape = new DiagramShape()

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Diagram Component | Syncfusion 
-description: Learn about Events in Blazor Diagram component of Syncfusion, and more details.
+description: Checkout and learn here all about Events in Blazor Diagram component of Syncfusion, and more details.
 platform: Blazor
 control: Diagram
 documentation: ug
@@ -18,21 +18,23 @@ The following code example shows how to register and get the notification from t
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
-<SfDiagram Height="600px"  Nodes="@NodeCollection">
-        <DiagramEvents TextEdited="@TextEdited"></DiagramEvents>
+
+<SfDiagram Height="600px" Nodes="@NodeCollection">
+    <DiagramEvents TextEdited="@TextEdited"></DiagramEvents>
 </SfDiagram>
 
 @code
 {
-   //Defines diagram's nodes collection
+    //Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
-   //Triggered this event when complete the editing for Annotation and update the old text and new text values.
+    //Triggered this event when complete the editing for Annotation and update the old text and new text values.
     private void TextEdited(IBlazorTextEditEventArgs args)
     {
         Console.WriteLine("Oldvalue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
     }
+    
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -42,7 +44,11 @@ The following code example shows how to register and get the notification from t
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -51,7 +57,6 @@ The following code example shows how to register and get the notification from t
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## Double click
@@ -63,8 +68,9 @@ The following code example shows how to register and get the notification from t
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
-         <DiagramEvents OnDoubleClick="@OnDoubleClick" />
+    <DiagramEvents OnDoubleClick="@OnDoubleClick" />
 </SfDiagram>
 
 @code
@@ -73,12 +79,13 @@ The following code example shows how to register and get the notification from t
     public ObservableCollection<DiagramNode> NodeCollection
     { get; set; }
 
-   //Triggered this event when double click on the Annotation and update the position and source for clicked item.
-   private void OnDoubleClick(IBlazorDoubleClickEventArgs args)
+    //Triggered this event when double click on the Annotation and update the position and source for clicked item.
+    private void OnDoubleClick(IBlazorDoubleClickEventArgs args)
     {
         Console.WriteLine("Position", args.Position);
         Console.WriteLine("Source", args.Source);
     }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -88,7 +95,11 @@ The following code example shows how to register and get the notification from t
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -97,7 +108,6 @@ The following code example shows how to register and get the notification from t
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## Key down
@@ -113,7 +123,8 @@ The following code example shows how to register and get the notification from t
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
-<SfDiagram Height="600px"  Nodes="@NodeCollection" >
+
+<SfDiagram Height="600px" Nodes="@NodeCollection">
     <DiagramEvents OnKeyDown="@OnKeyDown" OnKeyUp="@OnKeyUp"></DiagramEvents>
 </SfDiagram>
 
@@ -123,16 +134,18 @@ The following code example shows how to register and get the notification from t
     public ObservableCollection<DiagramNode> NodeCollection
     { get; set; }
 
-   //Occurs when  click the annotation and enter the character in key down state
+    //Occurs when  click the annotation and enter the character in key down state
     private void OnKeyDown(IKeyEventArgs args)
     {
 
     }
+
     //Occurs when click the annotation and enter the character in key release state
     private void OnKeyUp(IKeyEventArgs args)
     {
 
     }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -142,7 +155,11 @@ The following code example shows how to register and get the notification from t
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         node.Annotations = new ObservableCollection<DiagramNodeAnnotation>()
         {
@@ -151,7 +168,6 @@ The following code example shows how to register and get the notification from t
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## See also

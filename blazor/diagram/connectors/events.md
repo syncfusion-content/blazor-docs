@@ -22,6 +22,7 @@ The following code example explains how to get the selection change event in the
 <SfDiagram Height="600px" Connectors="@ConnectorCollection">
     <DiagramEvents SelectionChanged="@SelectionChanged"></DiagramEvents>
 </SfDiagram>
+
 @code
 {
     //Defines diagram's connector collection
@@ -37,9 +38,18 @@ The following code example explains how to get the selection change event in the
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal
         };
         ConnectorCollection.Add(diagramConnector);
@@ -78,9 +88,18 @@ The [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.D
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal
         };
         ConnectorCollection.Add(diagramConnector);
@@ -103,7 +122,7 @@ The [OnConnectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 @using System.Collections.ObjectModel
 
 <SfDiagram Height="600px" Connectors="@ConnectorCollection" Constraints="@diagramConstraints">
-  <DiagramEvents OnConnectionChange="@OnConnectionChange"></DiagramEvents>
+    <DiagramEvents OnConnectionChange="@OnConnectionChange"></DiagramEvents>
 </SfDiagram>
 
 @code
@@ -127,16 +146,24 @@ The [OnConnectionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Straight,
         };
         //Add the connector into connectors's collection.
         ConnectorCollection.Add(diagramConnector);
     }
 }
-
 ```
 
 ## See also

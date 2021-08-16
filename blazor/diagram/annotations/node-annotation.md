@@ -25,17 +25,14 @@ The following code shows the relationship between the shape annotation position 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
 @code
 {
     //Defines diagram's node collection
-    public ObservableCollection<DiagramNode> NodeCollection
-    {
-        get;
-        set;
-    }
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
 
     protected override void OnInitialized()
     {
@@ -45,16 +42,24 @@ The following code shows the relationship between the shape annotation position 
             Width = 100,
             Height = 100,
             OffsetX = 100,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() { Content = "Offset(0,0)", Offset = new NodeAnnotationOffset() { X = 0, Y = 0 } }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Offset(0,0)",
+                    Offset = new NodeAnnotationOffset() { X = 0, Y = 0 }
+                }
             },
             OffsetY = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 | Offset values | Output |
@@ -96,6 +101,7 @@ The following code explains how to align annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -114,17 +120,24 @@ The following code explains how to align annotations.
             Height = 100,
             OffsetX = 250,
             OffsetY = 250,
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() { Content = "Annotation", HorizontalAlignment = HorizontalAlignment.Left,VerticalAlignment = VerticalAlignment.Center}
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Annotation",
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Center
+                }
             },
-
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 >* The value of the `HorizontalAlignment` is `Center` by default.
@@ -138,6 +151,7 @@ The following code explains how to align annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -157,18 +171,26 @@ The following code explains how to align annotations.
             OffsetX = 100,
             OffsetY = 100,
             // Sets the margin for the content
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() { Content = "Task1", Margin = new NodeAnnotationMargin(){ Top = 10},
-                    HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Top,Offset = new NodeAnnotationOffset(){ X = .5 ,Y = 1} }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Task1",
+                    Margin = new NodeAnnotationMargin(){ Top = 10},
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Offset = new NodeAnnotationOffset(){ X = .5 ,Y = 1}
+                }
             },
-
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 ## Text align
@@ -178,6 +200,7 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 <SfDiagram Height="600px" Nodes="@NodeCollection">
 </SfDiagram>
 
@@ -197,17 +220,23 @@ The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams
             OffsetX = 100,
             OffsetY = 100,
             // Sets the textAlign as left for the content
-            Annotations = new ObservableCollection<DiagramNodeAnnotation>() {
-                new DiagramNodeAnnotation() { Content = "Text align is set as Left",Style = new AnnotationStyle(){ TextAlign = TextAlign.Left} }
+            Annotations = new ObservableCollection<DiagramNodeAnnotation>()
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Content = "Text align is set as Left",
+                    Style = new AnnotationStyle(){ TextAlign = TextAlign.Left}
+                }
             },
-
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            },
         };
         NodeCollection.Add(node1);
-
     }
 }
-
 ```
 
 ## See also

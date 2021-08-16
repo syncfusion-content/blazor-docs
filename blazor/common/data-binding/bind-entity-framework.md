@@ -1,20 +1,20 @@
 ---
 layout: post
-title: Bind data from SQL server to Syncfusion Blazor components using Entity Framework and perform CRUD operations
+title: Bind data from SQL server in Blazor | Syncfusion
 description: Learn how to retrieve data from SQL server, bind it to Syncfusion DataGrid component using Entity Framework, and perform CRUD operations.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Bind data from SQL server to Syncfusion Blazor components using Entity Framework and perform CRUD operations
+# Bind data from SQL server to Syncfusion Blazor components
 
 In this topic, we are going to learn how to retrieve data from SQL database using [Entity Framework](https://docs.microsoft.com/en-us/ef/core/) to bind it to the Grid component and perform CRUD operations.  
 Entity Framework is an open-source object-relational mapper (O/RM) from Microsoft.  Entity Framework works with many databases. But here, we are going to discuss the step-by-step procedure to create an Entity Framework using the [MS SQL Server](https://en.wikipedia.org/wiki/Microsoft_SQL_Server) database and connect it to the Syncfusion component to perform CRUD operations in a Blazor Server Application.
 
 ## Prerequisite software
 
-The following software is needed
+The following software are needed
 
 * Visual Studio 2019 v16.9.0 or later
 * .NET SDK 5.0 or later.
@@ -86,7 +86,7 @@ We can see that **LibraryContext.cs** file contains the connection string detail
 
 ![Created Connectionstring](../images/connection-string.png)
 
-It is not recommended to have a connection string with sensitive information in the **LibaryContext.cs** file, so we are moving the connection string to the **appsettings.json** file.
+It is not recommended to have a connection string with sensitive information in the **LibraryContext.cs** file, so we are moving the connection string to the **app settings.json** file.
 
 ![Move connection string to appsettings.json](../images/change-connection-string.png)
 
@@ -196,7 +196,7 @@ Now, we need to register the **LibraryService** and **ILibraryService** as servi
 
 ## Add Syncfusion Blazor DataGrid package
 
-Before adding Syncfusion Blazor components to the application, we need to move Book.cs file to the LibraryManagement.Models project. Now, we are going to add the **Syncfusion DataGrid** component into the project. Since we are going to explain this process (Data binding and CRUD operation) with the help of the DataGrid component, Right-click on Dependencies and select Manage NuGet Packages to load the required DLLs.
+Before adding Syncfusion Blazor components to the application, we need to move Book.cs file to the LibraryManagement.Models project. Now, we are going to add the **Syncfusion DataGrid** component into the project. Since we are going to explain this process (Data binding and CRUD operation) with the help of the DataGrid component, Right-click on Dependencies and select Manage NuGet Packages to load the required assemblies.
 
 ![Open NuGet Package Manager](../images/nuget-package.png)
 
@@ -392,7 +392,7 @@ To insert a new row, click the **Add** toolbar button. The new record edit form 
 
 ![After Clicking a Add button](../images/add-row.png)
 
-Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. We can insert the record into our database (Book table) by calling the **Addbook()** method of the **LibraryService**.
+Clicking the **Update** toolbar button will initiate the insert action in Grid. Now, the **OnActionBegin** event will be triggered with a **RequestType** as **Save**. We can insert the record into our database (Book table) by calling the **InsertBook()** method of the **LibraryService**.
 
 ```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)
@@ -438,7 +438,7 @@ The resultant grid will look like below.
 
 ### Delete a row
 
-To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequstType as Delete. Now, we can delete the record from the database by calling **DeleteBook()** method of LibraryService with the selected record`s primary key value. Refer to the following code example.
+To delete a row, select any row and click the **Delete** toolbar button. Deleting operation will initiate the OnActionBegin event with RequestType as Delete. Now, we can delete the record from the database by calling **DeleteBook()** method of LibraryService with the selected record`s primary key value. Refer to the following code example.
 
 ```c#
 public void ActionBeginHandler(ActionEventArgs<Book> Args)

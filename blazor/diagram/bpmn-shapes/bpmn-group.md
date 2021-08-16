@@ -20,10 +20,13 @@ A group is used to frame a part of the diagram, shows that elements included in 
 </SfDiagram>
 
 @code{
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
             OffsetX = 100,
@@ -37,10 +40,11 @@ A group is used to frame a part of the diagram, shows that elements included in 
             Shape = new DiagramShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape=BpmnShapes.Group,
+                BpmnShape = BpmnShapes.Group,
             }
-        }
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

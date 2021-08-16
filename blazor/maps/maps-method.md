@@ -9,15 +9,53 @@ documentation: ug
 
 # Methods in Blazor Maps Component
 
-## Using methods in Maps component
+This section explains the methods used in the Maps component.
 
-You can create an object for the maps component using `@ref` and call the `Print` method as demonstrated in the following example.
+## ShapeSelectionAsync
+
+The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods) method can be used to select a shape dynamically in the shape layer of the Maps. The following are the arguments for this method.
+
+|   Argument name      |   Description                            |
+|----------------------| -----------------------------------------|
+|     layerIndex       |    Specifies the index number of layer in which the shape is to be selected. |
+|     propertyName     |    Specifies the property path for map shape data to select the shape.           |
+|     name             |    Specifies the shape data path for the data source of the layer.           |
+|     enable           |    Specifies whether to select or unselect the shape. |
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="PrintMap">Print</button>
-<SfMaps @ref="maps" @ref:suppressField>
+<button @onclick="ShapeSelectAsync">Select Shape</button>
+<SfMaps @ref="maps">
+    <MapsZoomSettings Enable="true" EnablePanning="true">
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+		    <MapsLayerSelectionSettings Enable="true">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    SfMaps maps;
+    public async Task ShapeSelectAsync()
+    {
+        await maps.ShapeSelectionAsync(0, "Argentina", "Argentina");
+    }
+}
+```
+
+## RefreshAsync
+
+The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods) method can be used to change the state of the component and render it again. In the following example, the Maps is rendered again using the [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<button @onclick="RefreshAsync">Refresh</button>
+<SfMaps @ref="maps">
+    <MapsZoomSettings Enable="true" EnablePanning="true">
+    </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
         </MapsLayer>
@@ -26,132 +64,110 @@ You can create an object for the maps component using `@ref` and call the `Print
 
 @code {
     SfMaps maps;
-    void PrintMap()
+    public async Task RefreshAsync()
     {
-        maps.Print();
+        await maps.RefreshAsync();
     }
 }
 ```
 
-## Available methods
+## PanByDirectionAsync
 
-### AddLayer
+[PanByDirectionAsync]((https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods)) method pans the Maps dynamically by specifying direction. The following are the arguments for this method.
 
-Adds a new layer to maps dynamically.
+|   Argument name      |   Description                            |
+|----------------------| -----------------------------------------|
+|     direction        |    Specifies to the direction of panning operation. |
+|     mouseLocation    |    Specifies the position of the panning within the Maps.  |
 
-Return: void
+```cshtml
+@using Syncfusion.Blazor.Maps
 
-|   Argument name      |   Description                                          |
-|----------------------| -------------------------------------------------------|
-|     layer            |    Defines the layer properties                         |
+<button @onclick="PanByDirectionAsync">Pan by Direction</button>
+<SfMaps @ref="maps">
+    <MapsZoomSettings Enable="true" EnablePanning="true">
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
 
-### AddMarker
+@code {
+    SfMaps maps;
+    void PanByDirectionAsync()
+    {
+        Syncfusion.Blazor.Maps.Internal.Point position = new Syncfusion.Blazor.Maps.Internal.Point();
+        position.X = 120;
+        position.Y = 200;
+        maps.PanByDirectionAsync(Syncfusion.Blazor.Maps.PanDirection.Bottom, position);
+    }
+}
+```
 
-Adds a new marker to maps dynamically.
+## ZoomByPosition
 
-Return: void
+[ZoomByPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomByPosition_Syncfusion_Blazor_Maps_MapsCenterPosition_System_Double_) method zooms the Maps by specifying the center position for the map. The following are the arguments for this method.
 
-|   Argument name      |   Description                                          |
-|----------------------| -------------------------------------------------------|
-|     layerIndex      |    Define the layer index                              |
-|     markerCollection |    Define the multiple marker settings properties in array    |
+|   Argument name      |   Description                            |
+|----------------------| -----------------------------------------|
+|     centerPosition   |    Specifies the position of the maps.   |
+|     zoomFactor       |    Specifies the zoom level of maps.     |
 
-### Export
+```cshtml
+@using Syncfusion.Blazor.Maps
 
-Exports the current map component to different file formats such as PNG, PDF, JPEG, and SVG.
+<button @onclick="ZoomByPosition">Print</button>
+<SfMaps @ref="maps">
+    <MapsZoomSettings Enable="true">
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
 
-Return: void
+@code {
+    SfMaps maps;
+    public void ZoomByPosition()
+    {
+        MapsCenterPosition centerPosition = new MapsCenterPosition();
+        centerPosition.Latitude = 35.145083;
+        centerPosition.Longitude = -117.960260;
+        maps.ZoomByPosition(centerPosition, 2);
+    }
+}
+```
 
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     type             |    Defines the export types (PNG, PDF, JPEG, and SVG)  |
-|     fileName        |    Defines the file name                             |
-|     orientation      |    Defines the orientation (horizontal and vertical) as an optional parameter    |
+## ZoomToCoordinates
 
-### GetGeoLocation
+[ZoomToCoordinates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ZoomToCoordinates_System_Double_System_Double_System_Double_System_Double_) zooms the map to the center point of the provied minimum and maximum coordinates.  The following are the arguments for this method.
 
-Gets the geo location.
+|   Argument name      |   Description                            |
+|----------------------| -----------------------------------------|
+|     minLatitude      |    Specifies the minimum latitude of the coordinate for the zooming operation.   |
+|     minLongitude     |    Specifies the minimum longitude of the coordinate for the zooming operation.     |
+|     maxLatitude      |    Specifies the maximum latitude of the coordinate for the zooming operation.   |
+|     maxLongitude     |    Specifies the maximum longitude of the coordinate for the zooming operation. |
 
-Return: GeoPosition - Returns geo position.
+```cshtml
+@using Syncfusion.Blazor.Maps
 
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     layerIndex      |    Defines the layer index                            |
-|     pointerEvent    |    Specifies the pointer event                 |
+<button @onclick="ZoomToCoordinates">Print</button>
+<SfMaps @ref="maps">
+    <MapsZoomSettings Enable="true">
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
 
-### GetLocalizedLabel
-
-Gets the localized label by locale keyword.
-
-Return: string
-
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     key              |    Defines the locale keyword                        |
-
-### GetTileGeoLocation
-
-Gets the geo location in OSM/tile maps.
-
-Return: GeoPosition - Returns geo position.
-
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     pointerEvent      |     Specifies the pointer event                  |
-
-### PerformClick
-
-Handles the click event for the maps.
-
-Return: void
-
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     pointerEvent     |    Defines the pointer event                         |
-
-### PerformDoubleClick
-
-Handles the double-click event for the maps.
-
-Return: void
-
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     pointerEvent     |    Defines the pointer event                         |
-
-### PanByDirection
-
-Pans the maps by specifying direction.
-
-Return: void
-
-|   Argument name      |   Description                                       |
-|----------------------| ----------------------------------------------------|
-|     direction        |    Defines the pan direction (Left, Right, Top, and Bottom)  |
-
-### Print
-
-Prints the rendered maps directly.
-
-Return: void
-
-### RemoveLayer
-
-Removes the layer.
-
-Return: void
-
-|   Argument name      |   Description                                             |
-|----------------------| ----------------------------------------------------------|
-|     index            |    Specifies the name of the layer to remove              |
-
-### ZoomByPosition
-
-Zooms the maps by specifying the center position.
-
-Return: void
-
-|   Argument name      |   Description                                             |
-|----------------------| ----------------------------------------------------------|
-|    centerPosition   |    Specifying the latitude and longitude value             |
-|    zoomFactor       |    Specifying the zoom level.                              |
+@code {
+    SfMaps maps;
+    public void ZoomToCoordinates()
+    {
+        maps.ZoomToCoordinates(0, 0, 100, 100);
+    }
+}
+```

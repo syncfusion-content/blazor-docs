@@ -43,15 +43,29 @@ Diagram allows you to customize the connector appearances . The following topics
             SourceDecorator = new ConnectorSourceDecorator()
             {
                 Shape = DecoratorShapes.Circle,
-                Style = new DecoratorShapeStyle() { StrokeColor = "#37909A", Fill = "#37909A" , StrokeWidth = 1 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "#37909A",
+                    Fill = "#37909A",
+                    StrokeWidth = 1
+                },
             },
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Custom,
-                Style = new DecoratorShapeStyle() { StrokeColor = "#37909A", Fill = "#37909A" , StrokeWidth = 1 },
-                PathData="M80.5,12.5 C80.5,19.127417 62.59139,24.5 40.5,24.5 C18.40861,24.5 0.5,19.127417 0.5,12.5 C0.5,5.872583 18.40861,0.5 40.5,0.5 C62.59139,0.5 80.5,5.872583 80.5,12.5 z"
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "#37909A",
+                    Fill = "#37909A",
+                    StrokeWidth = 1
+                },
+                PathData = "M80.5,12.5 C80.5,19.127417 62.59139,24.5 40.5,24.5 C18.40861,24.5 0.5,19.127417 0.5,12.5 C0.5,5.872583 18.40861,0.5 40.5,0.5 C62.59139,0.5 80.5,5.872583 80.5,12.5 z"
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#37909A", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#37909A",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
         ConnectorCollection.Add(diagramConnector);
@@ -76,6 +90,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 <SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection">
 </SfDiagram>
+
 @code
 {
     //Defines diagram's nodes collection
@@ -94,7 +109,11 @@ Padding is used to leave the space between the Connector's end point and the obj
             Height = 50,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#6BA5D7",
@@ -112,7 +131,11 @@ Padding is used to leave the space between the Connector's end point and the obj
             Height = 50,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Rectangle },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Rectangle
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#6BA5D7",
@@ -132,9 +155,18 @@ Padding is used to leave the space between the Connector's end point and the obj
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6BA5D7", StrokeColor = "#6BA5D7", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6BA5D7",
+                    StrokeColor = "#6BA5D7",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
         ConnectorCollection.Add(diagramConnector);
@@ -165,7 +197,7 @@ The flip types are as follows:
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Connectors="@ConnectorCollection">  
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 @code
 {
@@ -183,12 +215,20 @@ The flip types are as follows:
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
 }
@@ -227,9 +267,18 @@ The following code example illustrates how to enable line bridging.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
 
@@ -241,10 +290,19 @@ The following code example illustrates how to enable line bridging.
             TargetPoint = new ConnectorTargetPoint() { X = 300, Y = 300 },
             TargetDecorator = new ConnectorTargetDecorator()
             {
-                 Shape = DecoratorShapes.Arrow,
-                 Style = new DecoratorShapeStyle() { StrokeColor = "#6BA5D7", Fill = "#6BA5D7", StrokeWidth = 1 },
+                Shape = DecoratorShapes.Arrow,
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "#6BA5D7",
+                    Fill = "#6BA5D7",
+                    StrokeWidth = 1
+                },
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6BA5D7", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6BA5D7",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
         ConnectorCollection.Add(diagramConnector2);
@@ -267,7 +325,7 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram  Height="600px" Connectors="@ConnectorCollection" >
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code
@@ -286,9 +344,18 @@ Corner radius allows to create connectors with rounded corners. The radius of th
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
         ConnectorCollection.Add(diagramConnector);
@@ -315,7 +382,7 @@ The following code example illustrates how to customize the segment appearance.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Connectors="@ConnectorCollection" >  
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code
@@ -332,13 +399,22 @@ The following code example illustrates how to customize the segment appearance.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
             //To customize appearance of the connector segments
-            Style = new ConnectorShapeStyle() { StrokeColor = "red", StrokeWidth = 2, StrokeDashArray = "2,2" },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "red",
+                StrokeWidth = 2,
+                StrokeDashArray = "2,2"
+            },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
 }
@@ -359,7 +435,7 @@ The following code example illustrates how to customize the appearance of the de
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Connectors="@ConnectorCollection" >
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code
@@ -378,19 +454,28 @@ The following code example illustrates how to customize the appearance of the de
                 Shape = DecoratorShapes.Arrow,
                 Height = 15,
                 Width = 15,
-                Style = new DecoratorShapeStyle() { StrokeColor = "blue", Fill = "yellow", StrokeWidth = 3 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "blue",
+                    Fill = "yellow",
+                    StrokeWidth = 3
+                },
             },
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
                 Height = 15,
                 Width = 15,
-                Style = new DecoratorShapeStyle() { StrokeColor = "red", Fill = "yellow", StrokeWidth = 3 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "red",
+                    Fill = "yellow",
+                    StrokeWidth = 3
+                },
             },
             Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
 }
@@ -411,7 +496,7 @@ The following code illustrates how to disable selection.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Connectors="@ConnectorCollection" >
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code
@@ -428,14 +513,22 @@ The following code illustrates how to disable selection.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "black", StrokeColor = "black", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "black",
+                    StrokeColor = "black",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "black",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
             //Disable the select constraint
             Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.Select,
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
 }
@@ -450,7 +543,7 @@ The following code illustrates how to disable selection.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Connectors="@ConnectorCollection" >
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code
@@ -467,9 +560,18 @@ The following code illustrates how to disable selection.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "black", StrokeColor = "black", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "black",
+                    StrokeColor = "black",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "black",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
             //Define the add info value.
             AddInfo = "Central Connector",
@@ -509,12 +611,20 @@ The following code illustrates how to render connector based on the stack order.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { StrokeColor = "black", Fill = "black" , StrokeWidth = 1 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "black",
+                    Fill = "black",
+                    StrokeWidth = 1
+                },
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "black",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector1);
 
         DiagramConnector diagramConnector2 = new DiagramConnector()
@@ -526,9 +636,18 @@ The following code illustrates how to render connector based on the stack order.
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { StrokeColor = "black", Fill = "black" , StrokeWidth = 1 },
+                Style = new DecoratorShapeStyle()
+                {
+                    StrokeColor = "black",
+                    Fill = "black",
+                    StrokeWidth = 1
+                },
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "black", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "black",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
         ConnectorCollection.Add(diagramConnector2);

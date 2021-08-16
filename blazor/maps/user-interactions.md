@@ -9,15 +9,13 @@ documentation: ug
 
 # User Interactions in Blazor Maps Component
 
-The options such as zoom, pan, single-click, double-click, highlight, and map selection provide effective interaction on the maps elements.
-
 ## Zooming
 
-The zooming feature enables you to zoom in and zoom out the maps to show the in-depth information. It is controlled using the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) in maps. When the `ZoomFactor` is increased, the map is zoomed in and when the `ZoomFactor` is decreased, the map is zoomed out.
+The zooming feature is used to zoom in and out the Maps to show in-depth information. It is controlled by the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The Maps can be zoomed in or out dynamically using the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property.
 
 <b>Enable zooming</b>
 
-To enable the zooming feature, set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property to true in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
+Zooming of the Maps is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class to "**true**".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -35,31 +33,52 @@ To enable the zooming feature, set the [Enable](https://help.syncfusion.com/cr/b
 
 <b>Enable panning</b>
 
-We can enable or disable the panning feature, using the `EnablePanning` in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html)
-
-### Various types of zooming
-
-Zooming can be performed in the following types:
-
-<b>Zooming toolbar</b>
-
-By default, the toolbar is rendered with `zoom-in`, `zoom-out`, and `reset` options when it is set to 'true' in the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). You can also customize the toolbar items using the [Toolbars](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Toolbars) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
-
-The following options are available in toolbar, and you can use the options as needed:
-
-1. Zoom - Provides rectangular zoom support.
-2. ZoomIn - Zooms in the maps.
-3. ZoomOut - Zooms out the maps.
-4. Pan - Switches to panning if rectangular zoom is activated.
-5. Reset - Restores the maps to the default view.
+To enable the panning feature, set the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class to "**true**".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
-    <MapsZoomSettings Enable="true"
-                      ToolBarOrientation="Orientation.Vertical"
-                      Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true" EnablePanning="true"></MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+### Various types of zooming
+
+Zooming can be performed in the following types:
+
+#### Zooming toolbar
+
+By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset** options when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class is set to "**true**".
+
+The following options are available in toolbar.
+
+1. Zoom - Provides selection zoom support.
+2. ZoomIn - Zooms in the Maps.
+3. ZoomOut - Zooms out the Maps.
+4. Pan - Switches to panning if selection zoom is enabled.
+5. Reset -  Restores the Maps to the default view.
+
+The following properties are available in toolbars to customize the zooming toolbars.
+
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Color) - To apply the color for toolbars in Maps.
+* [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_HighlightColor) - To apply the color for the zooming toolbar when the mouse has hovered on the toolbar element in Maps.
+* [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_HorizontalAlignment) - To customize the position type of toolbar when it is placed horizontally.
+* [SelectionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_SelectionColor) - To apply the color for the zooming toolbar when clicking the zooming toolbar in Maps.
+* [ToolBarOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ToolBarOrientation) - To customize the orientation of the zooming toolbar.
+* [Toolbars](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Toolbars) - To customize the items that are to be shown in the zooming toolbar in Maps.
+* [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_VerticalAlignment) - To customize the position type of toolbar when it is placed vertically.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true" Color="green" HighlightColor="blue" SelectionColor="orange" HorizontalAlignment="Alignment.Center"
+                      ToolBarOrientation="Orientation.Vertical" Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
@@ -68,9 +87,9 @@ The following options are available in toolbar, and you can use the options as n
 </SfMaps>
 ```
 
-<b>Pinch zooming</b>
+#### Pinch zooming
 
-Use the [PinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_PinchZooming) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the pinch zooming.
+To enable or disable the pinch zooming, use the [PinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_PinchZooming) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -84,9 +103,9 @@ Use the [PinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.M
 </SfMaps>
 ```
 
-<b>Single-click zooming</b>
+#### Single-click zooming
 
-Use the [ZoomOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnClick) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the single-click zooming.
+To enable or disable the single-click zooming using mouse, use the [ZoomOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnClick) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -100,9 +119,9 @@ Use the [ZoomOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ma
 </SfMaps>
 ```
 
-<b>Double-click zooming</b>
+#### Double-click zooming
 
-Use the [DoubleClickZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_DoubleClickZoom) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable the double-click zooming.
+To enable or disable the double-click zooming using mouse, use the [DoubleClickZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_DoubleClickZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -116,9 +135,9 @@ Use the [DoubleClickZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 </SfMaps>
 ```
 
-<b>Mouse wheel zooming</b>
+#### Mouse wheel zooming
 
-Use the [MouseWheelZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MouseWheelZoom) property in [MapsZoomSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to enable or disable mouse wheel zooming.
+To enable or disable mouse wheel zooming, use the [MouseWheelZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MouseWheelZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -132,9 +151,41 @@ Use the [MouseWheelZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 </SfMaps>
 ```
 
+#### Selection zooming
+
+To enable or disable selection zooming, use the [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnableSelectionZooming) property in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property must be set to **false** to enable the selection zooming in Maps.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true" EnableSelectionZooming="true" EnablePanning="true" Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'></MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+### Setting minimum and maximum values for zoom factor
+
+The zoom factor range can be adjusted using the [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MinZoom) and [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MaxZoom) properties in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MinZoom) value is set to 1 by default, and the [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MaxZoom) value is set to 10.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true" MinZoom="2" MaxZoom="9"></MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
 ### Zooming with animation
 
-You can use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html) to zoom in or zoom out the maps with animation.
+To zoom in or zoom out the Maps with animation, use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -152,13 +203,14 @@ You can use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfu
 
 ## Selection
 
-### Shape selection
+Each shape in the Maps can be selected and deselected during interaction with the shapes. Selection is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html) class to "**true**".
 
-Each shape in the maps can be selected and deselected when interacting with the shapes.
+The following properties and class are available to customize the selection of Map elements such as shapes, bubbles and markers.
 
-In [MapsLayerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html), the [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Maximum) property is used to change the selected layer shape color. The [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Border) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Border) properties are used to customize the selected shape border.
-
-You can select a shape by tapping the shape. The single selection is enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) property of shape layer. When the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) property is set to false, the shapes cannot be selected.
+* [MapsLayerSelectionBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionBorder.html) - To customize the color and width of the border of which element is selected in Maps.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Fill) - Applies the color for the element that is selected.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Opacity) - To customize the transparency for the element that is selected.
+* [EnableMultiSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_EnableMultiSelect) - To enable or disable the selection for multiple shapes or markers or bubbles in the Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -176,11 +228,7 @@ You can select a shape by tapping the shape. The single selection is enabled usi
 
 ![Maps with shape selection](./images/UserInteraction/Selection.png)
 
-### Legend selection
-
-By tapping a specific legend, the shapes bound to the selected legends are selected and vice-versa.
-
-The following code example demonstrates how to add interactive legend along with the configuration of [MapsLayerSelectionSettings](s://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.MapsLayerSelectionSettings_members.html) and `MapsLegendSettings` to render interactive shape selection.
+By tapping on the specific legend, the shapes which are bounded to the selected legend is also selected and vice versa.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -188,10 +236,8 @@ The following code example demonstrates how to add interactive legend along with
 <SfMaps>
     <MapsLegendSettings Visible="true" Mode="LegendMode.Interactive"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="CouncilMemberdetails"
-                   ShapeDataPath="Country"
-                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
+                   DataSource="CouncilMemberdetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -212,21 +258,114 @@ The following code example demonstrates how to add interactive legend along with
         public string Membership { get; set; }
     };
     private List<UNCouncil> CouncilMemberdetails = new List<UNCouncil>{
-         new UNCouncil { Country= "China", Membership= "Permanent"},
-         new UNCouncil { Country= "France",Membership= "Permanent" },
-         new UNCouncil { Country= "Russia",Membership= "Permanent"},
-         new UNCouncil { Country= "Kazakhstan",Membership= "Non-Permanent"},
-         new UNCouncil { Country= "Poland",Membership= "Non-Permanent"},
-         new UNCouncil { Country= "Sweden",Membership= "Non-Permanent"}
+        new UNCouncil { Country= "China", Membership= "Permanent" },
+        new UNCouncil { Country= "France",Membership= "Permanent" },
+        new UNCouncil { Country= "Russia",Membership= "Permanent" },
+        new UNCouncil { Country= "Kazakhstan",Membership= "Non-Permanent" },
+        new UNCouncil { Country= "Poland",Membership= "Non-Permanent" },
+        new UNCouncil { Country= "Sweden",Membership= "Non-Permanent" }
     };
 }
 ```
 
 ![Maps with shape selection using legend](./images/UserInteraction/highlight-with-legend.png)
 
-## Public method for the shape selection
+### Enable selection for bubbles
 
-Each shape in the map can be selected by calling the `shapeSelection` method. Input parameters for this method are layerIndex, propertyName, country name and selected value as in boolean state(true / false).
+To enable the selection for bubbles in Maps, set the [MapsBubbleSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSelectionSettings.html) class in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsBubbleSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSelectionSettings.html) class as "**true**".
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   ShapePropertyPath='new string[] {"name"}' TValue="Country">
+            @* To add bubbles based on population count *@
+            <MapsBubbleSettings>
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" MinRadius=20 MaxRadius=40 
+                            DataSource="PopulationDetails" TValue="Country">
+                <MapsBubbleSelectionSettings Enable="true" Fill="green"></MapsBubbleSelectionSettings>
+                </MapsBubble>
+            </MapsBubbleSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code{
+    public class Country
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public string Color { get; set; }
+    };
+    private List<Country> PopulationDetails = new List<Country> {
+       new Country
+       {
+           Name ="United States", Population = 325020000, Color = "#b5e485"
+       },
+       new Country
+       {
+           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
+       },
+       new Country
+       {
+           Name="India", Population=1198003000, Color = "#df819c"
+       }
+    };
+}
+```
+
+![Enable selection for bubble](./images/UserInteraction/bubble-selection.PNG)
+
+### Enable selection for markers
+
+To enable the selection for markers in Maps, set the [MapsMarkerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSelectionSettings.html) class in the [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Enable) property of the [MapsLayerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html) property as "**true**".
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="California" Height="25" Width="15" TValue="City">
+                    <MapsMarkerSelectionSettings Fill="green" Enable="true"></MapsMarkerSelectionSettings>
+                </MapsMarker>
+                <MapsMarker Visible="true" DataSource="NewYork" Height="25" Width="15" TValue="City">
+                    <MapsMarkerSelectionSettings Fill="green" Enable="true"></MapsMarkerSelectionSettings>
+                </MapsMarker>
+                <MapsMarker Visible="true" DataSource="Iowa" Height="25" Width="15" TValue="City">
+                    <MapsMarkerSelectionSettings Fill="green" Enable="true"></MapsMarkerSelectionSettings>
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    };
+    public List<City> California = new List<City> {
+        new City { Latitude=35.145083,Longitude=-117.960260 }
+    };
+    public List<City> NewYork = new List<City> {
+        new City { Latitude=40.724546, Longitude=-73.850344 }
+    };
+    public List<City> Iowa = new List<City> {
+        new City { Latitude= 41.657782, Longitude=-91.533857 }
+    };
+}
+```
+
+![Enable selection for marker](./images/UserInteraction/marker-selection.PNG)
+
+### Public method for the shape selection
+
+The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ShapeSelection_System_Int32_System_String_System_String_System_Boolean_) method can be used to select each shape in the Maps. "**layerIndex**", "**propertyName**", "**shapeDataPath**", and "**isSelect**" boolean value to select or deselect the shape are the input parameters for this method.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -245,7 +384,7 @@ Each shape in the map can be selected by calling the `shapeSelection` method. In
         <button id="unselect" @onclick="Unselect">unselect</button>
 @code{
     SfMaps mapsref;
-    public void select() {
+    public void Select() {
         mapsref.ShapeSelection(0, "continent", "Asia", true);
     }
     public void Unselect() {
@@ -254,13 +393,11 @@ Each shape in the map can be selected by calling the `shapeSelection` method. In
 }
 ```
 
-![Markers with cluster](./images/Marker/public-method.png)
+![Markers with cluster](./images/Marker/public-method.PNG)
 
-## Initial shape selection
+### Initial shape selection
 
-Initially, the shape can be selected by using the property `initialShapeSelection` and the values are mapped to the `shapePath` and `shapeValue`.
-
-**Note:** initialShapeSelection is an Array property.
+The shape is initially selected using the [MapsInitialShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html) class, and the values are mapped to the [ShapePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html#Syncfusion_Blazor_Maps_MapsInitialShapeSelection_ShapePath) and [ShapeValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html#Syncfusion_Blazor_Maps_MapsInitialShapeSelection_ShapeValue).
 
 ```cshtml
 <SfMaps>
@@ -278,17 +415,59 @@ Initially, the shape can be selected by using the property `initialShapeSelectio
 </SfMaps>
 ```
 
-![initial with selection](./images/Marker/initial-selection.png)
+![initial with selection](./images/Marker/initial-selection.PNG)
+
+### Initial marker selection
+
+Using the [InitialMarkerSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html) class, the marker shape can be selected initially. Markers render based on the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html#Syncfusion_Blazor_Maps_InitialMarkerSelection_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html#Syncfusion_Blazor_Maps_InitialMarkerSelection_Longitude) values.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15" TValue="City">
+                    <MapsMarkerSelectionSettings Fill="green" Enable="true"></MapsMarkerSelectionSettings>
+                    <InitialMarkerSelectionSettings>
+                        <InitialMarkerSelection Latitude="35.145083" Longitude="-117.960260"></InitialMarkerSelection>
+                    </InitialMarkerSelectionSettings>
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+    };
+    private List<City> Cities = new List<City> {
+        new City {Latitude=35.145083,Longitude=-117.960260, Name= "Californiya"},
+        new City { Latitude=40.724546, Longitude=-73.850344, Name="New York"},
+        new City {Latitude= 41.657782, Longitude=-91.533857, Name="Iowa"}
+    };
+}
+```
+
+![Enable initial marker selection](./images/UserInteraction/marker-selection.PNG)
 
 ## Highlight
 
-### Shape highlight
+Each shape in the Map can be highlighted during mouse hover on the Map elements such as shapes, bubbles, markers and legends. Highlight is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Enable) property of [MapsHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html) to "**true**".
 
-Each shape in the maps can be highlighted by hovering the mouse over the shapes.
+The following properties and classes are available to customize the highlight of Map elements such as shapes, bubbles and markers.
 
-The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LogBase) property is used to change the highlighted layer shape color. The [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Interval) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_IntervalType) properties are used to customize the highlighted shape border.
-
-You can highlight a shape by hovering the mouse over the shape. The highlight is enabled using the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property of [MapsLayerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerHighlightSettings.html). When the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property is set to false, the shapes cannot be highlighted.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Fill) - Applies the color for the element that is highlighted.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Opacity) - To customize the transparency for the element that is highlighted.
+* [MapsLayerHighlightBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerHighlightBorder.html) - To customize the color and width of the border of the layer when that is highlighted.
+* [MapsBubbleHighlightBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightBorder.html) - To customize the color and width of the border of the bubble when that is highlighted.
+* [MapsMarkerHighlightBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightBorder.html) - To customize the color and width of the border of the marker when that is highlighted.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -306,11 +485,7 @@ You can highlight a shape by hovering the mouse over the shape. The highlight is
 
 ![Maps with highlighting shape](./images/UserInteraction/Highlight.png)
 
-### Legend highlight
-
-By hovering over a specific legend, the shapes bound to the selected legend are highlighted and vice-versa.
-
-The following code example demonstrates how to add interactive legend along with the configuration of [MapsLayerHighlightSettings](tps://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Maps.LayerHighlightSettings_members.html) and `MapsLegendSettings` to render interactive shape highlight with legend items.
+Hovering on the specific legend, the shapes which are bounded to the selected legend is also highlighted and vice versa.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -318,10 +493,8 @@ The following code example demonstrates how to add interactive legend along with
 <SfMaps>
     <MapsLegendSettings Visible="true" Mode="LegendMode.Interactive"></MapsLegendSettings>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   DataSource="CouncilMemberDetails"
-                   ShapeDataPath="Country"
-                   ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Country"
+                   DataSource="CouncilMemberDetails" ShapePropertyPath='new string[] {"name"}' TValue="UNCouncil">
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Membership">
                 <MapsShapeColorMappings>
                     <MapsShapeColorMapping Value="Permanent" Color='new string[] {"#D84444"}' />
@@ -354,33 +527,131 @@ The following code example demonstrates how to add interactive legend along with
 
 ![Maps with highlighting shape using legend](./images/UserInteraction/highlight-with-legend.png)
 
-## Tooltip
+### Enable highlight for bubbles
 
-Tooltip is used to get more information about layer, bubble, and marker on mouse over or by performing touch-end event.
-
-### Tooltip format
-
-Tooltip can be enabled for layer by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) to **true** in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html). The value of tooltip [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) needs to be set to display data source whose field is set as tooltip text.
-
-The following steps explain how to enable tooltip for layer to show shape data name field.
-
-**Step 1:** Import the world map geo json data and assign to [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData).
-
-**Step 2:** Enable tooltip for layer by setting [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_Value) to true in [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) and binding [ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartAxis.html#Syncfusion_Blazor_Charts_ChartAxis_MajorGridLines) value to 'name'.
-
-The following code snippet demonstrates how to enable tooltip for layer to show shape data name field.
+To enable the highlight for bubbles in Maps, set the [MapsBubbleHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightSettings.html) class in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsBubbleHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightSettings.html) class as "**true**".
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                   ShapePropertyPath='new string[] {"name"}'
-                   DataSource='PerformanceReport'
-                   ShapeDataPath="Name" TValue="Country">
-            <MapsLayerTooltipSettings Visible="true"
-                                  ValuePath="CountryName"
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
+                   ShapeDataPath="Name" ShapePropertyPath='new string[] {"name"}' TValue="Country">
+            @* To add bubbles based on population count *@
+            <MapsBubbleSettings>
+                <MapsBubble Visible="true" ValuePath="Population" ColorValuePath="Color" MinRadius=20 MaxRadius=40
+                            DataSource="PopulationDetails" TValue="Country">
+                    <MapsBubbleHighlightSettings Enable="true" Fill="green">
+                        <MapsBubbleHighlightBorder Width="2" Color="orange"></MapsBubbleHighlightBorder>
+                    </MapsBubbleHighlightSettings>
+                </MapsBubble>
+            </MapsBubbleSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code{
+    public class Country
+    {
+        public string Name { get; set; }
+        public double Population { get; set; }
+        public string Color { get; set; }
+    };
+    private List<Country> PopulationDetails = new List<Country> {
+        new Country
+       {
+           Name ="United States", Population = 325020000, Color = "#b5e485"
+       },
+       new Country
+       {
+           Name = "Russia", Population = 142905208, Color = "#7bc1e8"
+       },
+       new Country
+       {
+           Name="India", Population=1198003000, Color = "#df819c"
+       }
+    };
+}
+```
+
+![Enable highlight for bubbles](./images/UserInteraction/bubble-highlight.PNG)
+
+### Enable highlight for markers
+
+To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightSettings.html) class in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Enable) property of [MapsMarkerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightSettings.html) class as "**true**".
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+            <MapsMarkerSettings>
+                <MapsMarker Visible="true" DataSource="Cities" Height="25" Width="15" TValue="City">
+                    <MapsMarkerSelectionSettings Fill="green" Enable="true"></MapsMarkerSelectionSettings>
+                </MapsMarker>
+            </MapsMarkerSettings>
+            <MapsShapeSettings Fill="lightgray"></MapsShapeSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+
+@code {
+    public class City
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+        public string Name { get; set; }
+    };
+    private List<City> Cities = new List<City> {
+        new City { Latitude=35.145083,Longitude=-117.960260, Name= "California" },
+        new City { Latitude=40.724546, Longitude=-73.850344, Name="New York" },
+        new City { Latitude= 41.657782, Longitude=-91.533857, Name="Iowa" }
+    };
+}
+```
+
+![Enable highlight for markers](./images/UserInteraction/marker-highlight.PNG)
+
+## Tooltip
+
+On mouse over or touch end event, the tooltip is used to get more information about the layer, bubble, or marker. It can be enabled separately for layer or bubble or marker by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property of [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) or [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html) or [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) classes respectively. The [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_TooltipDisplayMode) property is used to change the display mode of the tooltip in Maps. Following display modes of tooltip are available in the Maps component. By default, [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_TooltipDisplayMode) is set to "**MouseMove**".
+
+* MouseMove
+* Click
+* DoubleClick
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
+            <MapsLayerTooltipSettings Visible="true" ValuePath="name">
+            </MapsLayerTooltipSettings>
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Maps with tooltip](./images/UserInteraction/default-tooltip.PNG)
+
+### Customization
+
+The following properties are available to customize the tooltip of the Maps component.
+
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Fill) - Applies the color of the tooltip in layers, markers, and bubbles of Maps.
+* [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Format) - To customize the format of the tooltip in layers, markers, and bubbles of Maps.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' ShapeDataPath="Name"
+                   ShapePropertyPath='new string[] {"name"}' DataSource='PerformanceReport' TValue="Country">
+            <MapsLayerTooltipSettings Visible="true" ValuePath="CountryName"
                                   Format="<b>${CountryName}</b><br>Finalist: <b>${Winner}</b><br>Win: <b>${Finalist}">
             </MapsLayerTooltipSettings>
             <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Finalist">
@@ -424,54 +695,109 @@ The following code snippet demonstrates how to enable tooltip for layer to show 
 
 ![Maps with tooltip](./images/UserInteraction/tooltip.png)
 
-### Tooltip for other elements
+### Tooltip template
 
-You can also provide tooltips for other elements such as markers and bubbles using [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) and [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html).
+The HTML element can be rendered in the tooltip of the Maps using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html#Syncfusion_Blazor_Maps_MapsLayerTooltipSettings_TooltipTemplate) property of the [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
+    <MapsTitleSettings Text="Finalist in Cricket World Cup">
+        <MapsTitleTextStyle Size="16px" />
+    </MapsTitleSettings>
+    <MapsZoomSettings Enable="false" />
     <MapsLayers>
-        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' TValue="string">
-            <MapsMarkerSettings>
-                <MapsMarker Visible="true"
-                            DataSource="OfficeLocations"
-                            Fill="white"
-                            Width="20"
-                            Shape="MarkerType.Circle" TValue="OfficeLocation">
-                    <MapsMarkerBorder Color="#285255" Width="2"></MapsMarkerBorder>
-                    <MapsMarkerTooltipSettings Visible="true" ValuePath="Name"></MapsMarkerTooltipSettings>
-                </MapsMarker>
-            </MapsMarkerSettings>
+        <MapsLayer ShapeData='new {dataOptions= "https://cdn.syncfusion.com/maps/map-data/world-map.json"}' DataSource="@PerformanceReport" TValue="Country"
+                   ShapePropertyPath="@ShapePropertyPath" ShapeDataPath="Name">
+            <MapsLayerTooltipSettings Visible="true" ValuePath="name">
+                <TooltipTemplate>
+                    @{
+                        var Data = context as Country;
+                            <div id="template">
+                                <div class="toolback">
+                                    <div class="listing2">
+                                        <center>
+                                            @Data.Name
+                                        </center>
+                                    </div>
+                                    <hr style="margin-top: 2px;margin-bottom:5px;border:0.5px solid #DDDDDD">
+                                        <div>
+                                            <span class="listing1">Finalist : </span><span class="listing2">@Data.Winner</span>
+                                        </div>
+                                        <div>
+                                            <span class="listing1">Win : </span><span class="listing2">@Data.Runner</span>
+                                        </div>
+                                </div>
+                            </div>
+                    }
+                </TooltipTemplate>
+            </MapsLayerTooltipSettings>
+            <MapsShapeSettings Fill="#E5E5E5" ColorValuePath="Winner">
+                <MapsShapeColorMappings>
+                    <MapsShapeColorMapping Value="1" Color="@ShapeColorOne" />
+                    <MapsShapeColorMapping Value="2" Color="@ShapeColorTwo" />
+                    <MapsShapeColorMapping Value="3" Color="@ShapeColorThree" />
+                    <MapsShapeColorMapping Value="7" Color="@ShapeColorFour" />
+                </MapsShapeColorMappings>
+            </MapsShapeSettings>
         </MapsLayer>
     </MapsLayers>
 </SfMaps>
-
 @code {
-    public class OfficeLocation
-    {
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public string Name { get; set; }
-    }
-    private List<OfficeLocation> OfficeLocations = new List<OfficeLocation> {
-        new OfficeLocation{ Latitude= 37.6276571, Longitude= -122.4276688, Name= "San Bruno" },
-        new OfficeLocation{ Latitude= 33.5302186, Longitude= -117.7418381, Name= "Laguna Niguel" },
-        new OfficeLocation{ Latitude= 40.7424509, Longitude= -74.0081468, Name= "New York" },
-        new OfficeLocation{ Latitude= -23.5268201, Longitude= -46.6489927, Name= "Bom Retiro" },
-        new OfficeLocation{ Latitude= 43.6533855, Longitude= -79.3729994, Name= "Toronto" },
-        new OfficeLocation{ Latitude= 48.8773406, Longitude= 2.3299627, Name= "Paris" },
-        new OfficeLocation{ Latitude= 52.4643089, Longitude= 13.4107368, Name= "Berlin" },
-        new OfficeLocation{ Latitude= 19.1555762, Longitude= 72.8849595, Name= "Mumbai" },
-        new OfficeLocation{ Latitude= 35.6628744, Longitude= 139.7345469, Name= "Minato" },
-        new OfficeLocation{ Latitude= 51.5326602, Longitude= -0.1262422, Name= "London" }
+    public string[] ShapePropertyPath = { "name" };
+    public string[] ShapeColorOne = { "#b3daff" };
+    public string[] ShapeColorTwo = { "#80c1ff" };
+    public string[] ShapeColorThree = { "#1a90ff" };
+    public string[] ShapeColorFour = { "#005cb3" };
+    public List<Country> PerformanceReport = new List<Country> {
+        new Country { Name="India", Winner="3", Runner="2", City="India" },
+        new Country { Name="Dominican Rep.", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Cuba", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Jamaica", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Haiti", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Guyana", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Suriname", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Trinidad and Tobago", Winner="3", Runner="2", City="West Indies" },
+        new Country { Name="Sri Lanka", Winner="3", Runner="1", City="Sri Lanka" },
+        new Country { Name="United Kingdom", Winner="3", Runner="0", City="England" },
+        new Country { Name="Pakistan", Winner="2", Runner="1", City="Pakistan" },
+        new Country { Name="New Zealand", Winner="1", Runner="0", City="New Zealand" },
+        new Country { Name="Australia", Winner="7", Runner="5", City="Australia" }
     };
-
+    public class Country
+    {
+        public string Name { get; set; }
+        public string Winner { get; set; }
+        public string Runner { get; set; }
+        public string City { get; set; }
+    }
 }
+<style>
+    .toolback {
+        width: 100px;
+        border-radius: 4px;
+        border: 1px #abb9c6;
+        background: rgba(53, 63, 76, 0.90);
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.40);
+        padding-bottom: 5px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px
+    }
+    .listing1 {
+        font-size: 13px;
+        color: #cccccc
+    }
+    .listing2 {
+        font-size: 13px;
+        color: #ffffff;
+        font-weight: 500;
+    }
+</style>
 ```
 
-![Maps with marker tooltip](./images/UserInteraction/maps-with-marker-tooltip.png)
+![Maps with tooltip template](./images/UserInteraction/tooltip-template.PNG)
 
 ## See also
 

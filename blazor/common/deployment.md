@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Deployment in Blazor - Syncfusion
-description: Check out the documentation for Deployment in Blazor
+title: Deployment | Blazor | Syncfusion
+description: Learn here about that how to getting the information about deploying in Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Deployment
+# Deployment in Blazor
 
 This section provides information about deploying Blazor applications with the Syncfusion Blazor components.
 
@@ -65,7 +65,7 @@ Use the following command to specify the path for the output directory.
 dotnet publish -c Release -o <output directory>
 ```
 
-> If the output directory not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
+> If the output directory is not specified, it defaults to `./bin/[configuration]/[framework]/publish/` for a **framework-dependent deployment** or `./bin/[configuration]/[framework]/[runtime]/publish/` for a **self-contained deployment**.
 
 If the path is relative, the output directory generated is relative to the project file location, not to the current working directory.
 

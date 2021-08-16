@@ -23,7 +23,7 @@ To enable single selection in the ListBox, [Mode](https://help.syncfusion.com/cr
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
     <ListBoxFieldSettings Text="Text" Value="Id" />
-    <ListBoxSelectionSettings Mode="SelectionMode.Single"></ListBoxSelectionSettings>
+    <ListBoxSelectionSettings Mode="Syncfusion.Blazor.DropDowns.SelectionMode.Single"></ListBoxSelectionSettings>
 </SfListBox>
 
 @code {
@@ -60,7 +60,7 @@ To enable multiple selection in the ListBox, `Mode` should be set as `Multiple` 
 @using Syncfusion.Blazor.DropDowns
 
 <SfListBox TValue="string[]" DataSource="@Vehicles" TItem="VehicleData">
-    <ListBoxSelectionSettings Mode="SelectionMode.Multiple"></ListBoxSelectionSettings>
+    <ListBoxSelectionSettings Mode="Syncfusion.Blazor.DropDowns.SelectionMode.Multiple"></ListBoxSelectionSettings>
     <ListBoxFieldSettings Text="Text" Value="Id" />
 </SfListBox>
 

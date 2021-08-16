@@ -24,8 +24,8 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-    <SfDiagram Height="600px" Nodes="@NodeCollection">
-    </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection">
+</SfDiagram>
 @code{
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
     protected override void OnInitialized()
@@ -41,16 +41,21 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Di
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-            new DiagramPort() {
-                Id = "port1",
-                Offset = new NodePortOffset() { X = 0, Y = 0.5 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-               Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
-                // Sets the shape of the port as Square
-                Width= 12, Height=12, Shape= PortShapes.Square,
-            }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
+                    // Sets the shape of the port as Square
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Square,
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
@@ -100,11 +105,12 @@ The following code explains how to align ports.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-    <SfDiagram Height="600px" Nodes="@NodeCollection">
-    </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection">
+</SfDiagram>
 @code{
 
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -118,23 +124,27 @@ The following code explains how to align ports.
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-            new DiagramPort() {
-                Id = "port1",
-                Offset = new NodePortOffset() { X = 0, Y = 0 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
-                // Sets the shape of the port as Square
-                Width= 12, Height=12, Shape= PortShapes.Square,
-                HorizontalAlignment = HorizontalAlignment.Left,
-                VerticalAlignment = VerticalAlignment.Top
-            }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0, Y = 0 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
+                    // Sets the shape of the port as Square
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Square,
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Top
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 >* The value of the `HorizontalAlignment` is `Center` by default.
@@ -167,24 +177,28 @@ The following code explains how to align ports.
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-            new DiagramPort() {
-                Id = "port1",
-                Offset = new NodePortOffset() { X = 0.5, Y = 1 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
-                // Sets the shape of the port as Circle
-                Width= 12, Height=12, Shape= PortShapes.Square,
-                HorizontalAlignment = HorizontalAlignment.Left,
-                VerticalAlignment = VerticalAlignment.Top,
-                Margin=new PortMargin(){Top=10}
-            }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0.5, Y = 1 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
+                    // Sets the shape of the port as Circle
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Square,
+                    HorizontalAlignment = HorizontalAlignment.Left,
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Margin=new PortMargin(){Top=10}
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
 }
-
 ```
 
 ![Margin](../images/port_margin.png)

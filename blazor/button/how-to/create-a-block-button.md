@@ -22,4 +22,4 @@ You can customize a Button into a Block Button that will span the entire width o
 
 Output be like
 
-![Button Sample](./../images/button-block.png)
+![Blazor Block Button](./../images/blazor-block-button.png)

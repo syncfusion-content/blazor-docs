@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Download and Installation in Blazor - Syncfusion
-description: Check out the documentation for Download and Installation in Blazor
+description: Learn here about that how to download and installation in the Esssntial Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -13,7 +13,7 @@ Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code mar
 
 ## Prerequisites
 
-The following prerequisites software need to be installed for the Syncfusion Blazor extension installation and for creating, converting and upgrading the Syncfusion Blazor applications.
+The following prerequisites software need to be installed for the Syncfusion Blazor extension installation and for creating, converting, and upgrading the Syncfusion Blazor applications.
 
 * [Visual Studio Code](https://code.visualstudio.com/download).
 
