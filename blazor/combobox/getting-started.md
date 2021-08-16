@@ -20,8 +20,6 @@ To get start quickly with Blazor ComboBox component, you can check on this video
 
 * Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
 
-  > Please ensure to check the `Include prerelease` option for our Beta release.
-
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
   ```html
