@@ -228,7 +228,7 @@ background-color:transparent!important;
     </tr>
     <tr>
         <td></td>
-        <td><a id="anchor" href="https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor">Power Point</a></td>
+        <td><a id="anchor" href="https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor">PowerPoint</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/query-builder/getting-started">Query Builder</a></td>
     </tr>
 </tbody>
