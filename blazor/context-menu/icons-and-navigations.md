@@ -57,7 +57,7 @@ You can also use third party icons on the Context Menu using the `IconCss`proper
 
 ## Navigation
 
-Navigation in Context Menu is usage to navigate to the other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property. In the following sample, Navigation URL for Flipkart, Amazon, and Snapdeal menu items are added using the `Url` property.
+Navigation in Context Menu is usage to navigate to the other web page when menu item is clicked. This can be achieved by providing link to the menu item using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuItem.html#Syncfusion_Blazor_Navigations_MenuItem_Url) property. In the following sample, Navigation URL for Flip kart, Amazon, and Snap deal menu items are added using the `Url` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

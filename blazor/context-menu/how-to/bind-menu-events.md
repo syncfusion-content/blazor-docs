@@ -49,4 +49,4 @@ To bind the menu event in the context menu [ItemSelected](https://help.syncfusio
 
 Output be like
 
-![Binding Blazor ContextMenu](./../images/blazor-contextmenu-component.png)
+![Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.png)

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customizing Context Menu Items
 
-To customize Context Menu items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.MenuTemplates.html). In the following example, the Context Menu has been rendered with customized Context Menu items.
+To customize Context Menu items in your application, set your customized template using [MenuTemplates](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.MenuTemplates-1.html). In the following example, the Context Menu has been rendered with customized Context Menu items.
 
 ```cshtml
 
