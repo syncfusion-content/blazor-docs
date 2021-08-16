@@ -56,7 +56,7 @@ To customize Context Menu items in your application, set your customized templat
 
 Output be like
 
-![Context Menu Sample](./images/cmenu-template.png)
+![Customizing Blazor ContextMenu Items](./images/blazor-contextmenu-items.png)
 
 ### Customizing Context Menu Items using CssClass
 
@@ -96,7 +96,7 @@ The Context Menu items can be customized by using the `CssClass` property. In th
 
 Output be like
 
-![Context Menu Sample](./images/cm-template.png)
+![Customizing ContextMenu Items](./images/blazor-contextmenu-item-customization.png)
 
 ## Multilevel nesting
 
@@ -140,4 +140,4 @@ property inside the parent [MenuItem](https://help.syncfusion.com/cr/blazor/Sync
 
 Output be like
 
-![Context Menu Sample](./images/cm-multilevel.png)
+![Multilevel Nesting in Blazor ContextMenu](./images/blazor-contextmenu-with-multilevel.png)

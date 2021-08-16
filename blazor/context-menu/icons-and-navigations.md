@@ -50,7 +50,7 @@ The Context Menu item have an icon/image in it to provide visual representation 
 
 Output be like
 
-![Context Menu Sample](./images/icons.png)
+![Blazor ContextMenu with Icon](./images/blazor-contextmenu-icon.png)
 
 > The Context Menu provides a set of [icons](https://blazor.syncfusion.com/documentation/appearance/icons/) that can be loaded by applying `e-icons` class name to the element.
 You can also use third party icons on the Context Menu using the `IconCss`property.
@@ -87,4 +87,4 @@ Navigation in Context Menu is usage to navigate to the other web page when menu 
 
 Output be like
 
-![Context Menu Sample](./images/cm-navi.png)
+![Navigation in Blazor ContextMenu](./images/blazor-contextmenu-navigation.png)
