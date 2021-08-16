@@ -20,10 +20,13 @@ Datasource is used to store or access data associated with a business process. T
 </SfDiagram>
 
 @code{
-    //Initialize the node collection with node
-    ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>()
+    //Defines diagram's node collection
+    public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
+    protected override void OnInitialized()
     {
-        new DiagramNode()
+        NodeCollection = new ObservableCollection<DiagramNode>();
+        DiagramNode node = new DiagramNode()
         {
             //Position of the node
             OffsetX = 100,
@@ -33,14 +36,15 @@ Datasource is used to store or access data associated with a business process. T
             Height = 100,
             //Unique Id of the node
             Id = "node1",
-             //Sets type to Bpmn and shape to DataSource
+            //Sets type to Bpmn and shape to DataSource
             Shape = new DiagramShape()
             {
                 Type = Shapes.Bpmn,
-                BpmnShape=BpmnShapes.DataSource,
+                BpmnShape = BpmnShapes.DataSource,
             }
-        },
-    };
+        };
+        NodeCollection.Add(node);
+    }
 }
 ```
 

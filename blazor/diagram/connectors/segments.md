@@ -38,9 +38,18 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
 
             //Specify the segments typs as straight.
             Type = Segments.Straight,
@@ -81,12 +90,21 @@ Multiple segments can be defined one after another. To create a connector with m
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
 
             //Specify the segments type as Orthogonal.
-           Type = Segments.Orthogonal,
+            Type = Segments.Orthogonal,
         };
         ConnectorCollection.Add(diagramConnector);
     }
@@ -96,7 +114,6 @@ Multiple segments can be defined one after another. To create a connector with m
 The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.OrthogonalSegmentModel.html#Syncfusion_Blazor_Diagrams_OrthogonalSegmentModel_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.OrthogonalSegmentModel.html#Syncfusion_Blazor_Diagrams_OrthogonalSegmentModel_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -119,9 +136,18 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Or
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             //Specify the connector type as orthogonal.
             Type = Segments.Orthogonal,
             //Initialize the segments collection
@@ -157,7 +183,6 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.Or
 Orthogonal segments are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following preview illustrates how orthogonal segments are re-routed.
 
 ```cshtml
-
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
@@ -181,7 +206,11 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
             Height = 50,
             Width = 100,
             Id = "node1",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -189,15 +218,19 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
             },
             Ports = new ObservableCollection<DiagramPort>()
             {
-                 new DiagramPort()
-                 {
-                     Id = "port1",
-                     Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 1, Y = 0.5 },
-                     Height = 10,
-                     Width = 10,
-                     Visibility = PortVisibility.Visible,
-                     Style = new PortShapeStyle() { Fill = "yellow", StrokeColor = "yellow" }
-                 },
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 1, Y = 0.5 },
+                    Height = 10,
+                    Width = 10,
+                    Visibility = PortVisibility.Visible,
+                    Style = new PortShapeStyle()
+                    {
+                        Fill = "yellow",
+                        StrokeColor = "yellow"
+                    }
+                },
             },
         };
         //Add node into node's collection
@@ -211,7 +244,11 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
             Height = 50,
             Width = 100,
             Id = "node2",
-            Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse },
+            Shape = new DiagramShape()
+            {
+                Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+                BasicShape = BasicShapes.Ellipse
+            },
             Style = new NodeShapeStyle()
             {
                 Fill = "#37909A",
@@ -219,15 +256,19 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
             },
             Ports = new ObservableCollection<DiagramPort>()
             {
-                 new DiagramPort()
-                 {
-                     Id = "port2",
-                     Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 0, Y = 0.5 },
-                     Height = 10,
-                     Width = 10,
-                     Visibility = PortVisibility.Visible,
-                     Style = new PortShapeStyle() { Fill = "yellow", StrokeColor = "yellow" }
-                 },
+                new DiagramPort()
+                {
+                    Id = "port2",
+                    Offset = new Syncfusion.Blazor.Diagrams.NodePortOffset() { X = 0, Y = 0.5 },
+                    Height = 10,
+                    Width = 10,
+                    Visibility = PortVisibility.Visible,
+                    Style = new PortShapeStyle()
+                    {
+                        Fill = "yellow",
+                        StrokeColor = "yellow"
+                    }
+                },
             },
         };
         //Add node into node's collection
@@ -242,12 +283,20 @@ Orthogonal segments are automatically re-routed, in order to avoid overlapping w
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#37909A", StrokeColor = "#37909A", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#37909A",
+                    StrokeColor = "#37909A",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#37909A", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#37909A",
+                StrokeWidth = 1
+            },
             Type = Segments.Orthogonal,
         };
-
         ConnectorCollection.Add(diagramConnector);
     }
 }
@@ -264,7 +313,7 @@ To create a bezier segment, the [Type](https://help.syncfusion.com/cr/blazor/Syn
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
-<SfDiagram Height="600px" Connectors="@ConnectorCollection" >
+<SfDiagram Height="600px" Connectors="@ConnectorCollection">
 </SfDiagram>
 
 @code
@@ -281,9 +330,18 @@ To create a bezier segment, the [Type](https://help.syncfusion.com/cr/blazor/Syn
             TargetDecorator = new ConnectorTargetDecorator()
             {
                 Shape = DecoratorShapes.Arrow,
-                Style = new DecoratorShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+                Style = new DecoratorShapeStyle()
+                {
+                    Fill = "#6f409f",
+                    StrokeColor = "#6f409f",
+                    StrokeWidth = 1
+                }
             },
-            Style = new ConnectorShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
+            Style = new ConnectorShapeStyle()
+            {
+                StrokeColor = "#6f409f",
+                StrokeWidth = 1
+            },
             Type = Segments.Bezier,
         };
         //Add the connector into connectors's collection.

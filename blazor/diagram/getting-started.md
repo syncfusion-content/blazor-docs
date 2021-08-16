@@ -99,8 +99,10 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
 @using System.Collections.ObjectModel
 @using DiagramShapes = Syncfusion.Blazor.Diagrams.Shapes
 @using DiagramSegments = Syncfusion.Blazor.Diagrams.Segments
-<SfDiagram  Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" NodeDefaults="@NodeDefaults"
-            ConnectorDefaults="@ConnectorDefaults"></SfDiagram>
+
+<SfDiagram Height="600px" Nodes="@NodeCollection" Connectors="@ConnectorCollection" NodeDefaults="@NodeDefaults" ConnectorDefaults="@ConnectorDefaults">
+</SfDiagram>
+
 @code
 {
     int connectorCount = 0;
@@ -114,6 +116,7 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
     public DiagramNode NodeDefaults { get; set; }
     // Defines default values for DiagramConnector object
     public DiagramConnector ConnectorDefaults { get; set; }
+
     protected override void OnInitialized()
     {
         InitDiagramModel();
@@ -160,8 +163,8 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
         CreateConnector("Condition", "End", "Yes", segment1, segment2);
         CreateConnector("Print", "Increment", "No");
         CreateConnector("Increment", "Condition", null, segment3, segment4);
-
     }
+
     private void CreateConnector(string sourceId, string targetId, string label = default(string), DiagramConnectorSegment segment1 = null, DiagramConnectorSegment segment2 = null)
     {
         DiagramConnector diagramConnector = new DiagramConnector()
@@ -214,6 +217,7 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
             TargetDecorator = new ConnectorTargetDecorator() { Shape = DecoratorShapes.Arrow, Width = 10, Height = 10 }
         };
     }
+
     private void CreateNode(string id, double y, FlowShapes shape, string label, bool positionLabel = false)
     {
         DiagramNodeAnnotation annotation = new DiagramNodeAnnotation() { Content = label };
@@ -232,7 +236,6 @@ Let us create and add a `nodes` with specific position, size, label and shape. C
         NodeCollection.Add(diagramNode);
     }
 }
-
 ```
 
 ![Diagram](images/Diagram.png)

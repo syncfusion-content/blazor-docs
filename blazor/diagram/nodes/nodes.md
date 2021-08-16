@@ -76,10 +76,16 @@ The following code shows how to add a node at runtime.
         DiagramNode node1 = new DiagramNode()
         {
             // Position of the node
-            OffsetX = 250, OffsetY = 250,
+            OffsetX = 250,
+            OffsetY = 250,
             // Size of the node
-            Width = 100, Height = 100,
-            Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Width = 100,
+            Height = 100,
+            Style = new NodeShapeStyle()
+            {
+                Fill = "#6BA5D7",
+                StrokeColor = "white"
+            }
         };
         NodeCollection.Add(node1);
     }
@@ -97,7 +103,6 @@ The following code shows how to add a node at runtime.
         };
         Diagram.AddNode(Node1);
     }
-
 }
 ```
 
@@ -110,8 +115,10 @@ public void AddNode()
     DiagramNode Node2 = new DiagramNode()
     {
         Id = "New Node2",
-        OffsetX = 100, OffsetY = 200,
-        Width = 100, Height = 100,
+        OffsetX = 100,
+        OffsetY = 200,
+        Width = 100,
+        Height = 100,
     };
     NodeCollection.Add(Node2);
 }
@@ -136,7 +143,6 @@ For more information about adding nodes from symbol palette, refer to the [Symbo
 @using System.Collections.ObjectModel
 @using DiagramShapes = Syncfusion.Blazor.Diagrams.Shapes
 
-
 <div id="palette-space" style="width: 130px; float: left">
     <SfSymbolPalette id="symbolPalette" Width="130px" Height="700px" SymbolHeight="60" SymbolWidth="60" SymbolInfo="@SymbolInfo">
         <SymbolPalettePalettes>
@@ -145,16 +151,14 @@ For more information about adding nodes from symbol palette, refer to the [Symbo
         </SymbolPalettePalettes>
     </SfSymbolPalette>
 </div>
-    <div style="border: 1px solid #D7D7D7">
-        <SfDiagram ID="diagram" Height="400px" Width="1200px">
-        </SfDiagram>
-    </div>
+<div style="border: 1px solid #D7D7D7">
+    <SfDiagram ID="diagram" Height="400px" Width="1200px">
+    </SfDiagram>
+</div>
 @code
 {
     // Defines palette's flow-shape collection
-    public ObservableCollection<DiagramNode>
-    FlowShapeList
-    { get; set; }
+    public ObservableCollection<DiagramNode> FlowShapeList { get; set; }
 
     // Defines Symbol info
     public SymbolInfo SymbolInfo { get; set; }
@@ -165,22 +169,23 @@ For more information about adding nodes from symbol palette, refer to the [Symbo
         SymbolInfo = new SymbolInfo() { Fit = true };
 
         // Add shapes to palette
-        FlowShapeList = new ObservableCollection<DiagramNode>
-            ()
-    {
-        new DiagramNode()
+        FlowShapeList = new ObservableCollection<DiagramNode>()
         {
-        Id = "Terminator",
-        // Set the symbol preview size
-        PreviewSize = new SymbolSizeModel() { Width = 100, Height = 100 },
-        // Sets the shape of the node
-        Shape = new DiagramShape() { Type = DiagramShapes.Flow, FlowShape = FlowShapes.Terminator }
-        }
+            new DiagramNode()
+            {
+                Id = "Terminator",
+                // Set the symbol preview size
+                PreviewSize = new SymbolSizeModel() { Width = 100, Height = 100 },
+                // Sets the shape of the node
+                Shape = new DiagramShape()
+                {
+                    Type = DiagramShapes.Flow,
+                    FlowShape = FlowShapes.Terminator
+                }
+            }
         };
     }
 }
-
-
 ```
 
 ![Node](../images/node-add-palette.gif)
@@ -267,6 +272,7 @@ You can change any node's properties at runtime. The following code sample shows
     SfDiagram Diagram;
 
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes collection.

@@ -29,4 +29,4 @@ HTML attribute support is given for button using [HtmlAttributes](https://help.s
 
 Output be like
 
-![Button Sample](./../images/html.png)
+![Blazor Button with HTML Attribute](./../images/blazor-button-with-html.png)

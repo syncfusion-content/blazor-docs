@@ -19,7 +19,7 @@ The following example illustrates the single selection behavior in ButtonGroup.
 
 @using Syncfusion.Blazor.SplitButtons
 
-<SfButtonGroup Mode="SelectionMode.Single">
+<SfButtonGroup Mode="Syncfusion.Blazor.SplitButtons.SelectionMode.Single">
     <ButtonGroupButton>Left</ButtonGroupButton>
     <ButtonGroupButton @bind-Selected="@centerSelected">Center</ButtonGroupButton>
     <ButtonGroupButton>Right</ButtonGroupButton>
@@ -33,7 +33,7 @@ The following example illustrates the single selection behavior in ButtonGroup.
 
 Output be like
 
-![ButtonGroup Sample](./images/single.png)
+![Blazor ButtonGroup with Single Selection](./images/blazor-buttongroup-single-selection.png)
 
 ## Multiple selection
 
@@ -44,7 +44,7 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
 
-<SfButtonGroup Mode="SelectionMode.Multiple">
+<SfButtonGroup Mode="Syncfusion.Blazor.SplitButtons.SelectionMode.Multiple">
     <ButtonGroupButton @bind-Selected="@boldSelected" IconCss="bg-icons e-btngrp-bold">Bold</ButtonGroupButton>
     <ButtonGroupButton @bind-Selected="@italicSelected" IconCss="bg-icons e-btngrp-italic e-icon-left">Italic</ButtonGroupButton>
     <ButtonGroupButton IconCss="bg-icons e-btngrp-underline e-icon-left">Underline</ButtonGroupButton>
@@ -59,7 +59,7 @@ The following example illustrates the multiple selection behavior in ButtonGroup
 
 Output be like
 
-![ButtonGroup Sample](./images/multiple.png)
+![Blazor ButtonGroup with Multiple Selection](./images/blazor-buttongroup-multiple-selection.png)
 
 ## Nesting
 
@@ -91,7 +91,7 @@ In the following example, the DropDownButton component can be added in ButtonGro
 
 Output be like
 
-![ButtonGroup Sample](./images/dropdown.png)
+![Blazor ButtonGroup with DropDown Button](./images/blazor-buttongroup-with-dropdown.png)
 
 ### SplitButton
 
@@ -116,4 +116,4 @@ In the following example, SplitButton component can be added in ButtonGroup tag.
 
 Output be like
 
-![ButtonGroup Sample](./images/splitbutton.png)
+![Blazor ButtonGroup with SplitButton](./images/blazor-buttongroup-with-splitbutton.png)

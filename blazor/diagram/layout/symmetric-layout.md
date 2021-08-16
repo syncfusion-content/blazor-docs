@@ -11,7 +11,7 @@ documentation: ug
 
 The symmetric layout has been formed using nodes position by closer together or pushing them further apart. This is repeated iteratively until the system comes to an equilibrium state.
 
-The layout’s [SpringLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_SpringLength)defined as how long edges should be, ideally. This will be the resting length for the springs. Edge attraction and vertex repulsion forces to be defined by using layout’s [SpringFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_SpringFactor), the more sibling nodes repel each other. The relative positions do not change any more from one iteration to the next. The number of iterations can be specified by using layout’s [MaxIteration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_MaxIteration).
+The layout’s [SpringLength](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_SpringLength), defined as how long edges should be, ideally. This will be the resting length for the springs. Edge attraction and vertex repulsion forces to be defined by using layout’s [SpringFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_SpringFactor), the more sibling nodes repel each other. The relative positions do not change any more from one iteration to the next. The number of iterations can be specified by using layout’s [MaxIteration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_MaxIteration).
 
 The following code illustrates how to arrange the nodes in a radial tree structure.
 
@@ -34,20 +34,44 @@ The following code illustrates how to arrange the nodes in a radial tree structu
         MaxIteration = 500,
         Margin = new LayoutMargin() { Top = 20, Left = 20 }
     };
+
     //Initializing DataMapSetting
     List<DiagramDataMapSetting> DataMap = new List<DiagramDataMapSetting>()
     {
-            new DiagramDataMapSetting() { Property = "Annotations[0].Content",
-        Field = "Type" },
+        new DiagramDataMapSetting() 
+        { 
+            Property = "Annotations[0].Content",
+            Field = "Type" 
+        },
     };
+
     DiagramNode NodeDefaults = new DiagramNode()
     {
         Width = 25,
         Height = 25,
-        Annotations = new ObservableCollection<DiagramNodeAnnotation>() { new DiagramNodeAnnotation() { Id = "label1", Style = new AnnotationStyle() { Color = "black" } }, },
-        Style = new NodeShapeStyle { Fill = "#ff6329", StrokeColor = "black", },
-        Shape = new DiagramShape() { Type = Syncfusion.Blazor.Diagrams.Shapes.Basic, BasicShape = BasicShapes.Ellipse }
+        Annotations = new ObservableCollection<DiagramNodeAnnotation>() 
+        { 
+            new DiagramNodeAnnotation() 
+            {
+                Id = "label1", 
+                Style = new AnnotationStyle() 
+                {
+                    Color = "black"
+                }
+            }
+        },
+        Style = new NodeShapeStyle 
+        {
+            Fill = "#ff6329", 
+            StrokeColor = "black"
+        },
+        Shape = new DiagramShape() 
+        {
+        Type = Syncfusion.Blazor.Diagrams.Shapes.Basic,
+        BasicShape = BasicShapes.Ellipse
+        }
     };
+
     TreeInfo treeLayoutInfo = new TreeInfo()
     {
         Orientation = SubTreeOrientation.Vertical,
@@ -58,6 +82,7 @@ The following code illustrates how to arrange the nodes in a radial tree structu
             Assistants = new string[] {"Assistant Manager"}
         }
     };
+
     DiagramConnector ConnectorDefaults = new DiagramConnector
     {
         Type = Syncfusion.Blazor.Diagrams.Segments.Straight,

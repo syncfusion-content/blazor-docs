@@ -25,8 +25,8 @@ The following code explains how to change the appearance of the port.
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
 
- <SfDiagram Height="600px" Nodes="@NodeCollection">
- </SfDiagram>
+<SfDiagram Height="600px" Nodes="@NodeCollection">
+</SfDiagram>
 @code{
 
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
@@ -43,16 +43,21 @@ The following code explains how to change the appearance of the port.
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-            new DiagramPort() {
-                Id = "port1",
-                Offset = new NodePortOffset() { X = 0, Y = 0.5 },
-                Visibility = PortVisibility.Visible,
-                //Set the style for the port
-                Style= new PortShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
-                // Sets the shape of the port as Circle
-                Width= 12, Height=12, Shape= PortShapes.Circle
-            }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="red", StrokeColor="black", StrokeWidth=2},
+                    // Sets the shape of the port as Circle
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Circle
+                }
+            },
         };
         NodeCollection.Add(node1);
     }
@@ -95,6 +100,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 @code{
 
     public ObservableCollection<DiagramNode> NodeCollection = new ObservableCollection<DiagramNode>() { };
+
     protected override void OnInitialized()
     {
         // A node is created and stored in nodes array.
@@ -108,17 +114,22 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
             Height = 100,
             Style = new NodeShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
             // Initialize port collection
-            Ports = new ObservableCollection<DiagramPort>() {
-           new DiagramPort() {
-               Id = "port1",
-               Offset = new NodePortOffset() { X = 0.5, Y = 0.5 },
-               Visibility = PortVisibility.Visible,
-               //Set the style for the port
-               Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
-               // Sets the shape of the port as Circle
-               Width= 12, Height=12, Shape= PortShapes.Custom,
-               PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
-           }},
+            Ports = new ObservableCollection<DiagramPort>()
+            {
+                new DiagramPort()
+                {
+                    Id = "port1",
+                    Offset = new NodePortOffset() { X = 0.5, Y = 0.5 },
+                    Visibility = PortVisibility.Visible,
+                    //Set the style for the port
+                    Style= new PortShapeStyle(){ Fill="gray", StrokeColor="black"},
+                    // Sets the shape of the port as Circle
+                    Width= 12,
+                    Height=12,
+                    Shape= PortShapes.Custom,
+                    PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
+                }
+            },
         };
         NodeCollection.Add(node1);
     }

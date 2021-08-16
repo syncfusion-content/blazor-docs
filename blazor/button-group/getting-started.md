@@ -11,15 +11,13 @@ documentation: ug
 
 # Getting Started with Blazor ButtonGroup Component
 
-This section briefly explains about how to include ButtonGroup Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [ButtonGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfButtonGroup.html) Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
-
-> Please ensure to check the **Include prerelease** option.
 
 ```html
 <head>
@@ -105,7 +103,7 @@ Now, add the Syncfusion Blazor ButtonGroup component in `razor` page in the `Pag
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor ButtonGroup component will render in the web browser as shown below
 
-![ButtonGroup Sample](./images/button-group.png)
+![Blazor ButtonGroup Component](./images/blazor-button-group-component.png)
 
 ## See Also
 

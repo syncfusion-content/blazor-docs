@@ -49,4 +49,4 @@ When the Checkbox has focus, pressing the Space key changes the state of the Che
 ```
 
 Output be like
-![ProgressButton Sample](./images/cb-accessibility.png)
+![Accessibility in Blazor CheckBox](./images/blazor-checkbox-accessibility.png)

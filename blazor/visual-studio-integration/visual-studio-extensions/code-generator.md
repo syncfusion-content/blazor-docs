@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Code Generator in Blazor - Syncfusion
-description: Check out the documentation for Code Generator in Blazor
+description: Learn here about that how to adding the Essential Syncfusion Blazor Component to the Code Generator.
 platform: Blazor
 component: Common
 documentation: ug
@@ -17,7 +17,7 @@ The following steps will help you to add the Syncfusion components code in your 
 
 1. Open your existing Blazor application.
 
-2. To open the Syncfusion Blazor Code Generator Wizard, one of the following options in the Razor file, and add Syncfusion components:
+2. To open the Syncfusion Blazor Code Generator Wizard, select one of the following options in the Razor file, and add Syncfusion components:
 
    **Option 1:**
 

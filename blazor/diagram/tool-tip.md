@@ -26,6 +26,7 @@ The diagram provides support to show tooltip when the mouse hovers over any node
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 @* Initializes the diagram component *@
 <SfDiagram Height="600px" Nodes="@NodeCollection" Tooltip="@tooltip">
 </SfDiagram>
@@ -34,6 +35,7 @@ The diagram provides support to show tooltip when the mouse hovers over any node
     //Defines diagram's node collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
     // Defines position of the tooltip
+
     public DiagramTooltip tooltip = new DiagramTooltip()
     {
         Content = "Nodes",
@@ -54,10 +56,12 @@ The diagram provides support to show tooltip when the mouse hovers over any node
             Style = new NodeShapeStyle() { StrokeColor = "#6BA5D7", Fill = "#6BA5D7" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-                new DiagramNodeAnnotation() {
+            {
+                new DiagramNodeAnnotation()
+                {
                     Id = "label", Content = "Rectangle",
-                    Offset = new NodeAnnotationOffset() {
+                    Offset = new NodeAnnotationOffset()
+                    {
                         X = 0.5,
                         Y = 0.5
                     },
@@ -76,6 +80,7 @@ The tooltip on mouse over can be disabled by assigning the [Tooltip](https://hel
 
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
+
 @* Initializes the diagram component *@
 <SfDiagram Height="600px" Tooltip="@tooltip">
 </SfDiagram>
@@ -96,13 +101,13 @@ The tooltip can be customized for each node and connector. Remove the `InheritTo
 @using System.Collections.ObjectModel
 
 @* Initializes the diagram component *@
-<SfDiagram Height="600px"
-           Constraints="DiagramConstraints.Default | DiagramConstraints.Tooltip" Nodes="@NodeCollection">
+<SfDiagram Height="600px" Constraints="DiagramConstraints.Default | DiagramConstraints.Tooltip" Nodes="@NodeCollection">
 </SfDiagram>
 
 @code{
     // Defines diagram's nodes collection
     public ObservableCollection<DiagramNode> NodeCollection { get; set; }
+
     protected override void OnInitialized()
     {
         NodeCollection = new ObservableCollection<DiagramNode>();
@@ -117,10 +122,12 @@ The tooltip can be customized for each node and connector. Remove the `InheritTo
             Style = new NodeShapeStyle() { StrokeColor = "#6BA5D7", Fill = "#6BA5D7" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-    {
-                new DiagramNodeAnnotation() {
+            {
+                new DiagramNodeAnnotation()
+                {
                     Id = "label", Content = "Rectangle",
-                    Offset = new NodeAnnotationOffset() {
+                    Offset = new NodeAnnotationOffset()
+                    {
                         X = 0.5,
                         Y = 0.5
                     },
@@ -141,7 +148,6 @@ The tooltip can be customized for each node and connector. Remove the `InheritTo
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## Tooltip alignments
@@ -155,6 +161,7 @@ The following code example illustrates how to position the tooltip around object
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 @* Initializes the diagram component *@
 <SfDiagram Height="600px"
            Constraints="DiagramConstraints.Default | DiagramConstraints.Tooltip" Nodes="@NodeCollection">
@@ -178,10 +185,13 @@ The following code example illustrates how to position the tooltip around object
             Style = new NodeShapeStyle() { StrokeColor = "#6BA5D7", Fill = "#6BA5D7" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-                new DiagramNodeAnnotation() {
-                    Id = "label", Content = "Rectangle",
-                    Offset = new NodeAnnotationOffset() {
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Id = "label",
+                    Content = "Rectangle",
+                    Offset = new NodeAnnotationOffset()
+                    {
                         X = 0.5,
                         Y = 0.5
                     },
@@ -201,7 +211,6 @@ The following code example illustrates how to position the tooltip around object
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ### Tooltip relative to mouse position
@@ -211,9 +220,9 @@ To display the tooltip at mouse position, need to set mouse option to the [Relat
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 @* Initializes the diagram component *@
-<SfDiagram Height="600px"
-           Constraints="DiagramConstraints.Default | DiagramConstraints.Tooltip" Nodes="@NodeCollection">
+<SfDiagram Height="600px" Constraints="DiagramConstraints.Default | DiagramConstraints.Tooltip" Nodes="@NodeCollection">
 </SfDiagram>
 
 @code{
@@ -234,10 +243,13 @@ To display the tooltip at mouse position, need to set mouse option to the [Relat
             Style = new NodeShapeStyle() { StrokeColor = "#6BA5D7", Fill = "#6BA5D7" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-                new DiagramNodeAnnotation() {
-                    Id = "label", Content = "Rectangle",
-                    Offset = new NodeAnnotationOffset() {
+            {
+                new DiagramNodeAnnotation()
+                {
+                    Id = "label",
+                    Content = "Rectangle",
+                    Offset = new NodeAnnotationOffset()
+                    {
                         X = 0.5,
                         Y = 0.5
                     },
@@ -255,7 +267,6 @@ To display the tooltip at mouse position, need to set mouse option to the [Relat
         NodeCollection.Add(node);
     }
 }
-
 ```
 
 ## Tooltip animation
@@ -265,6 +276,7 @@ To animate the tooltip, a set of specific animation effects are available, and i
 ```cshtml
 @using Syncfusion.Blazor.Diagrams
 @using System.Collections.ObjectModel
+
 @* Initializes the Diagram component *@
 <SfDiagram Height="600px"
            Constraints="DiagramConstraints.Default | DiagramConstraints.Tooltip" Nodes="@NodeCollection">
@@ -287,10 +299,12 @@ To animate the tooltip, a set of specific animation effects are available, and i
             Style = new NodeShapeStyle() { StrokeColor = "#6BA5D7", Fill = "#6BA5D7" },
             Constraints = NodeConstraints.Default | NodeConstraints.Tooltip,
             Annotations = new ObservableCollection<DiagramNodeAnnotation>()
-        {
-                new DiagramNodeAnnotation() {
+            {
+                new DiagramNodeAnnotation()
+                {
                     Id = "label", Content = "Rectangle",
-                    Offset = new NodeAnnotationOffset() {
+                    Offset = new NodeAnnotationOffset()
+                    {
                         X = 0.5,
                         Y = 0.5
                     },

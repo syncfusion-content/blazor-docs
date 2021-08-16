@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Card Component
 
-This section briefly explains about how to include a `Card` in your Blazor server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a [Card](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cards.SfCard.html) in your Blazor server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Card component, you can check on this video.
 {% youtube
@@ -112,4 +112,4 @@ To initialize the Card component, add the below code to your **Index.razor** vie
 
 After successful compilation of your application, the Syncfusion Blazor Card component will render in the web browser.
 
-![card](images/default.png)
+![Blazor Card Component](images/blazor-card-component.png)

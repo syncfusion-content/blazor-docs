@@ -22,8 +22,6 @@ To get start quickly with Color Picker Component using Blazor, you can check on 
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-> Please ensure to check the **Include prerelease** option.
-
 ```html
 <head>
     <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
@@ -95,7 +93,7 @@ Now, add the Blazor Color Picker component in `razor` page in the `Pages` folder
 
 The Blazor Color Picker component will render in the web browser as shown below,
 
-![ColorPicker Sample](./images/color-picker.png)
+![Blazor ColorPicker Component](./images/blazor-colorpicker-component.png)
 
 ## See Also
 

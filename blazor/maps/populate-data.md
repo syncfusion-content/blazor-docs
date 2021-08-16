@@ -13,11 +13,13 @@ This section explains how to populate data inputs and provide it to the Maps com
 
 ## Shape data
 
-The shape data collection describes geographical shape information that can be obtained from [GeoJSON format shapes](http://files2.syncfusion.com/dtsupport/uploads/user/uploads/Maps_GeoJSON.zip). The maps shapes are rendered with this data. You can also add custom shapes such as seat selection in bus, seat selection in cricket stadium, and more useful information besides geographical data.
+The shape data collection describes geographical shape information that is available in GeoJSON format. The Map shapes are rendered with this data. The custom shapes such as seat selection in bus, seat selection in a cricket stadium and more useful information can be also added as [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
 ## Data source
 
-The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, you can provide a list of objects as input. This data source will be further used to color the map, display data labels, display tooltips, and more.
+The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property is used to represent statistical data in the Maps component, and it accepts a collection of values as input. For example, a list of objects as input can be provided to the data source. This data source will be used to color the map, display data labels, and display tooltip, among other things.
+
+The data source is populated with list of objects relative to shape data. In the below example, **PopulationDetails** can be used as data source in Maps.
 
 ```cshtml
 @code{
@@ -57,14 +59,14 @@ The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.Ma
 
 ## Data binding
 
-The following properties in the [MapsLayer](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsLayer.html) are used for binding data in the Maps component. Both the properties are related to each other.
+The following properties in the [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) are used for binding data in the Maps component. Both the properties are related to each other.
 
 * ShapePropertyPath
 * ShapeDataPath
 
-<b>Shape property path</b>
+### ShapePropertyPath
 
-The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property is used to refer the field name in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) property of shape layers to identify the shape.
+The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property is used to refer the field name in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property of shape layers to identify the shape. When the values of [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property from the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property and [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property from the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeData) property match, then the associated object from the data source is bound to the corresponding shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -78,7 +80,7 @@ The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfMaps>
 ```
 
-> `world-map.json` file contains following data and its field 'name' value is used to map the corresponding shape with our statistical data.
+> `world-map.json` file contains following data and its field **name** value is used to map the corresponding shape with the provided data source.
 
 ```json
 [
@@ -95,10 +97,9 @@ The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ]
 ```
 
-<b>Shape data path</b>
+### ShapeDataPath
 
-The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property is similar to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) property, but it refers the field name in `DataSource` property value.
-For example, following population data contains field 'Name', 'Population' and 'Density'. Here the 'Name' field is set to the `ShapeDataPath` to map the corresponding name field value of shape data.
+The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) property is similar to the [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapePropertyPath) property, but it refers to the field name in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property. For example, following population data contains field **Name**, **Population** and **Density**. Here the **Name** field is set to the [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_ShapeDataPath) to map the corresponding value of field name in shape data.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -130,11 +131,7 @@ For example, following population data contains field 'Name', 'Population' and '
 }
 ```
 
-In the above example, both 'name' fields contain the same value as 'Afghanistan', this value is matched in both shape data and statistical data, so that the details associated with 'Afghanistan' will be mapped to the corresponding shape and used to color the corresponding shape, display data labels, display tooltips, and more.
-
-When values of the [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath) property in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) and [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapePropertyPath) in the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeData) match, then the associated object from the DataSource is bound to the corresponding shape.
-
-Refer both shape data and data source as demonstrated in the following code example.
+In the above example, both "**name**" fields contain the same value as "**Afghanistan**", this value is matched in both shape data and data source, so that the details associated with "**Afghanistan**" will be mapped to the corresponding shape and used to color the corresponding shape, display data labels, display tooltips, and more.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -186,17 +183,13 @@ Refer both shape data and data source as demonstrated in the following code exam
 }
 ```
 
-> You can also set the [MapsDataLabelSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html) property to display the bound items.
-
 ![Maps with data source](./images/populatedata/Populatedata.png)
 
 ## Fetching data from JSON file
 
-You can also read the JSON file data, convert it to the C# object, and assign it to the Maps component's [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_DataSource) property.
+To read the JSON file data, convert it to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
-Refer to the following code sample for fetching  data from JSON file.
-
-The `Http.GetJsonAsync` is used in the 'OnInitAsync' lifecycle method to load JSON file data. As this will be executed asynchronously, check whether 'populationDensity' is available, render the Maps component, or display the loading statement.
+Refer to the following sample for fetching data from JSON file. The **Http.GetJsonAsync** is used in the **OnInitAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
 ```cshtml
 @inject HttpClient Http;
@@ -241,107 +234,28 @@ Here, the `PopulationDensity.json` file contains following data.
 
 ```json
 [
-        {
-            "code": "AF",
-            "value": 53,
-            "name": "Afghanistan",
-            "population": 29863010,
-            "density": 119
-        },
-        {
-            "code"= "AL",
-            "value"= 117,
-            "name"= "Albania",
-            "population"= 3195000,
-            "density"= 111
-        },
-        {
-            "code"= "DZ",
-            "value"= 15,
-            "name"= "Algeria",
-            "population"= 34895000,
-            "density"= 15
-        }
+    {
+        "code": "AF",
+        "value": 53,
+        "name": "Afghanistan",
+        "population": 29863010,
+        "density": 119
+    },
+    {
+        "code": "AL",
+        "value": 117,
+        "name": "Albania",
+        "population": 3195000,
+        "density": 111
+    },
+    {
+        "code": "DZ",
+        "value": 15,
+        "name": "Algeria",
+        "population": 34895000,
+        "density": 15
+    }
 ]
 ```
 
 ![Maps with JSON data source](./images/populatedata/Populatedata.png)
-
-<!-- markdownlint-disable MD010 -->
-
-## Binding complex data source
-
-You can bind the data field from data source to the maps in two different ways.
-
-1. Bind the field name directly to the properties as [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath), [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath),
-[ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ValuePath) and [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_ShapeValuePath).
-
-2. Bind the field name as `data.field` to the properties as [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer.html#Syncfusion_Blazor_Maps_MapsLayer_ShapeDataPath), [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ColorValuePath),
-[ValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsShapeSettings.html#Syncfusion_Blazor_Maps_MapsShapeSettings_ValuePath) and [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker.html#Syncfusion_Blazor_Maps_MapsMarker_ShapeValuePath).
-
-The complex data source binding can be done as illustrated in the following code example.
-
-```cshtml
-@inject HttpClient Http;
-@using Syncfusion.Blazor.Maps
-
-@if (populationDensity == null)
-{
-    <p><em>Loading Maps component...</em></p>
-}
-else
-{
-    <SfMaps>
-        <MapsLayers>
-            <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/world-map.json"}'
-                       DataSource="PopulationDensity"
-                       ShapeDataPath="data.continent"
-                       ShapePropertyPath='new string[] {"continent"}' TValue="PopulationDensity">
-				<MapsShapeSettings ColorValuePath="data.color"></MapsShapeSettings>
-                <MapsDataLabelSettings Visible="true" LabelPath="Name"></MapsDataLabelSettings>
-            </MapsLayer>
-        </MapsLayers>
-    </SfMaps>
-}
-@code{
-    PopulationDensity[] populationDensity;
-    protected override async Task OnInitAsync()
-    {
-        PopulationDensity = await Http.GetJsonAsync<PopulationDensity[]>("sample-data/PopulationDensity.json");
-    }
-
-    public class PopulationDensity
-    {
-        public string Code { get; set; }
-        public double Value { get; set; }
-        public string Name { get; set; }
-        public double Population { get; set; }
-        public float Density { get; set; }
-    }
-}
-```
-
-Here, the `PopulationDensity.json` file contains following data.
-
-```json
-[
-        { "Continent": "North America", 'color': '#71B081',
-            data: { "continent": "North America", 'color': '#71B081' }
-            },
-            { "Continent": "South America", 'color': '#5A9A77',
-            data: { "continent": "South America", 'color': '#5A9A77' }
-            },
-            { "Continent": "Africa", 'color': '#498770',
-            data: { "continent": "Africa", 'color': '#498770' }
-            },
-            { "Continent": "Europe", 'color': '#39776C',
-            data: { "continent": "Europe", 'color': '#39776C' }
-            },
-            { "Continent": "Asia", 'color': '#266665',
-            data: { "continent": "Asia", 'color': '#266665' }
-            },
-            { "Continent": "Australia", 'color': '#124F5E',
-            data: { "continent": "Australia", 'color': '#124F5E' }
-            }
-]
-```
