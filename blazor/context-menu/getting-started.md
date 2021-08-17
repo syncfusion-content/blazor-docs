@@ -22,8 +22,6 @@ To get start quickly with Context Menu Component using Blazor, you can check on 
 
 2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-    > Please ensure to check the **Include prerelease** option.
-
     ```cshtml
     <head>
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
@@ -115,7 +113,7 @@ Now, add the Blazor Context Menu component in `razor` page in the `Pages` folder
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Context Menu component will render in the web browser as shown below
 
-![ContextMenu Sample](./images/context-menu.png)
+![Blazor ContextMenu Component](./images/blazor-contextmenu-component.png)
 
 ## See Also
 
