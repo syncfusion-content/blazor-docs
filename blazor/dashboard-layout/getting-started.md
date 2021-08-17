@@ -153,7 +153,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 The simple Dashboard panel is rendered with whole dimension of parent element.
 
-![simple dashboard layout](images/defaults.png)
+![Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)
 
 ## Defining panels
 
@@ -194,7 +194,7 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-![Dashboard Layout Sample](images/single-content.png)
+![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
 
 ### Panels with components
 
@@ -361,7 +361,7 @@ These complex data (components) are placed as the panel content by assigning the
 
 Output for the Dashboard Layout Complex data (Blazor Components) will be as follows.
 
-![Content of other component](images/chart-components.png)
+![Blazor DashboardLayout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)
 
 By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive/) according to the parent dimensions.
 
