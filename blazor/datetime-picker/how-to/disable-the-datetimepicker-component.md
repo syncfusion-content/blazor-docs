@@ -9,7 +9,7 @@ documentation: ug
 
 # Disable the Blazor DateTimePicker Component
 
-To disable the DateTimePicker, set its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Calendars.SfDateTimePicker%601~Enabled.html) property to `false`.
+To disable the DateTimePicker, set its [Enabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerModel-1.html#Syncfusion_Blazor_Calendars_DateTimePickerModel_1_Enabled) property to `false`.
 
 The following code demonstrates the disabled component.
 
