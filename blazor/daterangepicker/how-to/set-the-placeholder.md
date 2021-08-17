@@ -9,7 +9,7 @@ documentation: ug
 
 # Set the Placeholder in Blazor DateRangePicker Component
 
-The following code demonstrates how to set [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_Placeholder) in the DateRangePicker component.
+The following code demonstrates how to set [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_Placeholder) in the DateRangePicker component.
 
 Using `Placeholder`, you can display a short hint in the input element.
 

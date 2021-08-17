@@ -13,7 +13,7 @@ The DateRangePicker is available for UI customization that can be achieved by us
 
 ## First day of week
 
-Start day in a week will differ based on the culture, but you can also customize this based on the application needs. For this, use the [FirstDayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_FirstDayOfWeek) property. By default, first day of a week in en-US is Sunday. In the following example, it is customized to Wednesday with the help of this property.
+Start day in a week will differ based on the culture, but you can also customize this based on the application needs. For this, use the [FirstDayOfWeek](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateRangePickerModel-1.html#Syncfusion_Blazor_Calendars_DateRangePickerModel_1_FirstDayOfWeek) property. By default, first day of a week in en-US is Sunday. In the following example, it is customized to Wednesday with the help of this property.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
