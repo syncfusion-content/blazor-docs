@@ -25,4 +25,4 @@ The following code demonstrates the disabled component.
 
 The output will be as follows.
 
-![DateTimePicker](../images/disabled.png)
+![Disable State in Blazor DateTimePicker](../images/blazor-datetimepicker-disable-state.png)
