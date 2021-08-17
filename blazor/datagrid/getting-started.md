@@ -320,7 +320,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 ```
 
 The following image represents datagrid with paging, sorting, filtering and grouping.
-![Grid Features](images/getting-started.gif)
+![Blazor DataGrid Component](images/blazor-datagrid.gif)
 
 ## Handling exceptions
 

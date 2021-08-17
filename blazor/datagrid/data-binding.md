@@ -160,7 +160,7 @@ You can achieve ExpandoObject complex data binding in the datagrid by using the 
 > You can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
 The following image represents ExpandoObject complex data binding,
-![ExpandoObject Complex Data](./images/expandocomplexdata.png)
+![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
 
 ### DynamicObject binding
 
@@ -295,7 +295,7 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
 The following image represents DynamicObject complex data binding
-![DynamicObject Complex Data](./images/dynamiccomplexdata.png)
+![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
 
 ## Remote data
 
@@ -453,7 +453,7 @@ The following sample code demonstrates enabling data manager condition in the Da
 ```
 
 The following GIF represents dynamically rendering data manager in DataGrid,
-![Render data manager dynamically](./images/data-manager-dynamic.gif)
+![Dynamically Rendering Data Manager in Blazor DataGrid](./images/blazor-datagrid-dynamic-render-data-manager.gif)
 
 ### Sending additional parameters to the server
 
@@ -666,7 +666,7 @@ The following sample code demonstrates achieving this,
 ```
 
 The following GIF represents dynamically modifying the query property in DataGrid,
-![Modify query dynamically](./images/query-update.gif)
+![Changing Query Dynamically in Blazor DataGrid](./images/blazor-datagrid-query-update.gif)
 
 ## SQL Server data binding(SQL Client)
 
@@ -1124,7 +1124,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
  ```
 
- The following screenshot represents the DataGrid with **Observable Collection**.![ObservableCollection](./images/ObservableCollection.PNG)
+ The following screenshot represents the DataGrid with **Observable Collection**.![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable-collection.PNG)
 
 ## Troubleshoot: DataGrid renders without data even though server returns with correct data
 
