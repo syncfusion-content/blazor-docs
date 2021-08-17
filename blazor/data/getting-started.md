@@ -170,7 +170,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 ```
 
 The following image represents DropDownList bound with local data through the `SfDataManager` component,
-![Local Data](./images/dropdown-local-binding.png)
+![Binding DropDownList Item in Blazor DataManager Component](./images/blazor-datamanager-binding-dropdown-item.png)
 
 ### Remote data binding
 
@@ -199,4 +199,4 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 ```
 
 The following image represents DropDownList bound with remote data through the `SfDataManager` component,
-![Remote Data](./images/dropdown-remote-binding.png)
+![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-data-binding.png)
