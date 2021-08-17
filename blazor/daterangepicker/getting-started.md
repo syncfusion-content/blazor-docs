@@ -20,8 +20,6 @@ To get start quickly with Blazor DateRangePicker component, you can check on thi
 
 * Install `Syncfusion.Blazor.Calendars` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
@@ -94,7 +92,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![DateRangePicker](./images/default.png)
+![Blazor DateRangePicker Component](./images/blazor-daterangepicker-component.png)
 
 ## Setting the Min and Max
 
@@ -113,7 +111,7 @@ The following code demonstrates how to set the `Min` and `Max` on initializing t
 
 The output will be as follows.
 
-![DateRangePicker](./images/min_max.png)
+![Setting Minimum and Maximum Date in Blazor DateRangePicker](./images/blazor-daterangepicker-min-max-date.png)
 
 > You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
 

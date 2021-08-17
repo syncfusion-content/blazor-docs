@@ -33,7 +33,7 @@ In the following sample, you can select a range from 15th day of this month to 1
 
 The output will be as follows.
 
-![daterangepicker](./images/date-range.png)
+![Range Restriction in Blazor DateRangePicker](./images/blazor-daterangepicker-range-restriction.png)
 
 ## Range span
 
@@ -53,7 +53,7 @@ In the following sample, the range selection should be greater than 5 days and l
 
 The output will be as follows.
 
-![daterangepicker](./images/range_span.png)
+![Blazor DateRangePicker Selection in Span between Range](./images/blazor-daterangepicker-range-span.png)
 
 ## Strict mode
 
@@ -82,7 +82,7 @@ If StartDate is less than Min date, it will be updated with Min date or if EndDa
 
 The output will be as follows.
 
-![daterangepicker](./images/strict_mode.png)
+![Blazor DateRangePicker in Strict Mode](./images/blazor-daterangepicker-strict-mode.png)
 
 By default, the DatePicker acts in `StrictMode` false state that allows you to enter the invalid or out-of-range date in text box.
 
@@ -105,6 +105,6 @@ The following code demonstrates the `StrictMode` as false. Here, it allows you t
 
 The output will be as follows.
 
-![datepicker](./images/strict_mode_false.png)
+![Blazor DateRangePicker without Strict Mode](./images/blazor-daterangepicker-without-strict-mode.png)
 
 > You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.

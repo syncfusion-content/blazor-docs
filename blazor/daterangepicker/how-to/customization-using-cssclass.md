@@ -72,6 +72,6 @@ Following is the list of classes that provides flexible way to customize the Dat
 
 The output will be as follows.
 
-![DateRangePicker](../images/customization_cssclass.png)
+![Customization using CssClass Blazor DateRangePicker](../images/blazor-daterangepicker-cssclass-customization.png)
 
 > You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
