@@ -84,7 +84,7 @@ For example, you can access the data of the column template using **context** as
 ```
 
 The following screenshot represents the column Template.
-![Column template](./images/column-template.png)
+![Blazor DataGrid with Column Template](./images/blazor-datagrid-column-template.png)
 
 ## GridTemplates component
 
@@ -223,6 +223,6 @@ This prevents us from directly specifying templates such as **RowTemplate** and 
 ```
 
 The following image represents the Row Template
-![Row Template](./images/row-template.png)
+![Blazor DataGrid with Row Template](./images/blazor-datagrid-rows.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

@@ -34,7 +34,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 </head>
 ```
 
- For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+ For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie) for more information.
 
 ## Adding component package to the application
 

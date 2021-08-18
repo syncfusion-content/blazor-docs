@@ -153,7 +153,7 @@ The **RowTemplate** has an option to customize the look and behavior of the data
 
 The output will be as follows.
 
-![Row Template](./images/row-template.png)
+![Rows in Blazor DataGrid](./images/blazor-datagrid-rows.png)
 
 ### Row template with formatting
 
@@ -300,7 +300,7 @@ Here [Custom DateTime](https://docs.microsoft.com/en-us/dotnet/standard/base-typ
 
 The output will be as follows.
 
-![Row Template](./images/row-template-format.png)
+![Row Formatting in Blazor DataGrid](./images/blazor-datagrid-row-format.png)
 
 ### Limitations
 
@@ -433,7 +433,7 @@ The detail template provides additional information about a particular row by ex
 
 The output will be as follows.
 
-![Detail Template](./images/detail-template.png)
+![Blazor DataGrid with Detail Template](./images/blazor-datagrid-detail-template.png)
 
 ### Rendering custom component
 
@@ -518,7 +518,7 @@ In the below sample, a datagrid component is rendered as custom component using 
 
 The output will be as follows.
 
-![Custom Component](./images/custom-component.png)
+![Rendering Custom Component in Blazor DataGrid Row](./images/blazor-datagrid-row-with-custom-component.png)
 
 ### Expand by external button
 
@@ -905,7 +905,7 @@ You can customize the appearance of a row by using the [RowDataBound](https://he
 
 The output will be as follows.
 
-![Row Customization](./images/custom-rows.png)
+![Customizing Blazor DataGrid Rows](./images/blazor-datagrid-rows-customization.png)
 
 ## Styling alternate rows
 
@@ -967,7 +967,7 @@ Please refer to the following example.
 
 The output will be as follows.
 
-![Row Customization](./images/custom-alter-row.png)
+![Customizing Alternate Row in Blazor DataGrid](./images/blazor-datagrid-alter-row-customization.png)
 
 ## Row height
 
@@ -1017,7 +1017,7 @@ In the below example, the `RowHeight` is set as '60'.
 
 The output will be as follows.
 
-![Row Customization](./images/row-height.png)
+![Customizing Row Height in Blazor DataGrid](./images/blazor-datagrid-row-height-customization.png)
 
 ### Customize row height for particular row
 
@@ -1082,6 +1082,6 @@ In the below example, the row height for the row with OrderID as '1003' is set a
 
 The output will be as follows.
 
-![Row Customization](./images/specific-row_height.png)
+![Customizing Specific Row Height in Blazor DataGrid](./images/blazor-datagrid-specific-row-height-customization.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
