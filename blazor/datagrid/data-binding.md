@@ -459,7 +459,7 @@ The following GIF represents dynamically rendering data manager in DataGrid,
 
 To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
-The following sample code demonstrates sending additional paramaters using the Query property,
+The following sample code demonstrates sending additional parameters using the Query property,
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -844,7 +844,7 @@ namespace EFGrid.Shared.DataAccess
 
 ### Creating Web API Controller
 
- A Web API Controller has to be created which allows datagrid directly to consume data from the Entity framework.
+ A Web API Controller has to be created which allows datagrid directly to consume data from the Entity Framework.
 
 ```csharp
 using System;
@@ -918,9 +918,9 @@ Now you can configure the datagrid using the **'SfDataManager'** to interact wit
 To perform datagrid CRUD operation using Entity Framework. You can refer [here](./editing/#entity-framework).
 >You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
-## Http client
+## HTTP client
 
-It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending Http requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
+It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending HTTP requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
 
 This can be achieved by initially injecting the `HttpClient` instance in the app.
 
