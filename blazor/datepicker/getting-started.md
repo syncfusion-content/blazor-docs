@@ -20,8 +20,6 @@ To get start quickly with Blazor DatePicker component, you can check on this vid
 
 * Install `Syncfusion.Blazor.Calendars` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
@@ -94,7 +92,7 @@ After the successful compilation of your application, press `F5` to run the appl
 
 The output will be as follows.
 
-![DatePicker](./images/default.png)
+![Blazor DatePicker Component](./images/blazor-datepicker-component.png)
 
 ## Setting the Value and Min and Max dates
 
@@ -112,7 +110,7 @@ The following example demonstrates how to set the [Value](https://help.syncfusio
 
 The output will be as follows.
 
-![DatePicker](./images/min_max.png)
+![Settin Minimum and Maximum Dates in Blazor DatePicker](./images/blazor-datepicker-min-max-date.png)
 
 ## See Also
 

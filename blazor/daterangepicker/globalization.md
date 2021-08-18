@@ -42,7 +42,7 @@ The **Localization** library allows you to localize default text content. The Da
 
 In the following examples, demonstrate how to enable **Localization** for DateRangePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -204,7 +204,7 @@ The following steps explain how to render the DateRangePicker in German culture 
 
     The output will be as follows.
 
-    ![DateRangePicker](./images/de_culture.png)
+    ![Localization in Blazor DateRangePicker](./images/blazor-daterangepicker-localization.png)
 
 ## Customize the localized text
 
@@ -231,11 +231,11 @@ You can change the localized text of particular component by editing the `wwwroo
 
 The output will be as follows.
 
-![DateRangePicker](./images/de_culture_02.png)
+![Customizing Localized Text in Blazor DateRangePicker](./images/blazor-daterangepicker-localize-text.png)
 
 ## Right-To-Left
 
-The DateRangePicker supports RTL (right-to-left) functionality for languages like Hebrew and Hebrew to displays the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_EnableRtl) property to set the RTL direction.
+The DateRangePicker supports RTL (right-to-left) functionality for languages like Hebrew and Hebrew to displays the text in the right-to-left direction. Use [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfDateRangePicker-1.html#Syncfusion_Blazor_Calendars_SfDateRangePicker_1_EnableRtl) property to set the RTL direction.
 
 The following code example initialize the DateRangePicker component in `Hebrew` culture.
 
@@ -256,6 +256,6 @@ The following code example initialize the DateRangePicker component in `Hebrew` 
 
 The output will be as follows.
 
-![DateRangePicker](./images/he_culture.png)
+![Right to Left in Blazor DateRangePicker with Hebrew Culture](./images/blazor-daterangepicker-right-to-left.png)
 
 > You can refer to our [Blazor Date Range Picker](https://www.syncfusion.com/blazor-components/blazor-daterangepicker) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Date Range Picker example](https://blazor.syncfusion.com/demos/daterangepicker/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
