@@ -21,4 +21,4 @@ Using [Placeholder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cale
 
 The output will be as follows.
 
-![datepicker](../images/placeholder.png)
+![Blazor DatePicker displays Hint Element](../images/blazor-datepicker-hint-element.png)
