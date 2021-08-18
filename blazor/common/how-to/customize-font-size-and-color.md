@@ -15,11 +15,11 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 ## Steps to install the Web Compiler in Visual Studio 2019**
 
-1. Open the Visual Studio 2019 and click the **Extensions** in the visual studio toolbar.
+1. Open the Visual Studio 2019 and click the **Extensions** in the Visual Studio toolbar.
 
     ![Extension](../images/extensions.png)
 
-2. Download and install the **Web Compiler** in the visual studio 2019.
+2. Download and install the **Web Compiler** in the Visual Studio 2019.
 
     ![WebCompiler](../images/webcompiler.png)
 

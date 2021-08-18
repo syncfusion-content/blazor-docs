@@ -9,7 +9,7 @@ documentation: ug
 
 # Internationalization in Blazor Charts Component
 
-Internationalization is the process of designing and developing an component that can be easily adapted for, users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
+Internationalization is the process of designing and developing an component that can be easily adapted for users from any culture, region, or language. Below elements in the [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfChart.html) display content based on the internationalization configuration.
 
 * Data label.
 * Axis label.

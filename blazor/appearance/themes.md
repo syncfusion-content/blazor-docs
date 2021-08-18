@@ -308,7 +308,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-base</td>
+            <td>$gray-base</td>
             <td>
                 <span class="circle-color-indicator" style="background: #000000;"></span> #000000
             </td>
@@ -317,7 +317,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-darker</td>
+            <td>$gray-darker</td>
             <td>
                 <span class="circle-color-indicator" style="background: #222222;"></span> #222222
             </td>
@@ -326,7 +326,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-dark</td>
+            <td>$gray-dark</td>
             <td>
                 <span class="circle-color-indicator" style="background: #333333;"></span> #333333
             </td>
@@ -335,7 +335,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey</td>
+            <td>$gray</td>
             <td>
                 <span class="circle-color-indicator" style="background: #555555;"></span> #555555
             </td>
@@ -344,7 +344,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-light</td>
+            <td>$gray-light</td>
             <td>
                 <span class="circle-color-indicator" style="background: #777777;"></span> #777777
             </td>
@@ -353,7 +353,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-44</td>
+            <td>$gray-44</td>
             <td>
                 <span class="circle-color-indicator" style="background: #444444;"></span> #444444
             </td>
@@ -362,7 +362,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-88</td>
+            <td>$gray-88</td>
             <td>
                 <span class="circle-color-indicator" style="background: #888888;"></span> #888888
             </td>
@@ -371,7 +371,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-99</td>
+            <td>$gray-99</td>
             <td>
                 <span class="circle-color-indicator" style="background: #999999;"></span> #999999
             </td>
@@ -380,7 +380,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-8c</td>
+            <td>$gray-8c</td>
             <td>
                 <span class="circle-color-indicator" style="background: #8c8c8c;"></span> #8c8c8c
             </td>
@@ -389,7 +389,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-ad</td>
+            <td>$gray-ad</td>
             <td>
                 <span class="circle-color-indicator" style="background: #adadad;"></span> #adadad
             </td>
@@ -398,7 +398,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-dark-font</td>
+            <td>$gray-dark-font</td>
             <td>
                 <span class="circle-color-indicator" style="background: #ffffff;"></span> #ffffff
             </td>
@@ -407,7 +407,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-white</td>
+            <td>$gray-white</td>
             <td>
                 <span class="circle-color-indicator" style="background: #ffffff;"></span> #ffffff
             </td>
@@ -416,7 +416,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-lighter</td>
+            <td>$gray-lighter</td>
             <td>
                 <span class="circle-color-indicator" style="background: #eeeeee;"></span> #eeeeee
             </td>
@@ -425,7 +425,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-f9</td>
+            <td>$gray-f9</td>
             <td>
                 <span class="circle-color-indicator" style="background: #f9f9f9;"></span> #f9f9f9
             </td>
@@ -434,7 +434,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-f8</td>
+            <td>$gray-f8</td>
             <td>
                 <span class="circle-color-indicator" style="background: #f8f8f8;"></span> #f8f8f8
             </td>
@@ -443,7 +443,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-f5</td>
+            <td>$gray-f5</td>
             <td>
                 <span class="circle-color-indicator" style="background: #f5f5f5;"></span> #f5f5f5
             </td>
@@ -452,7 +452,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-e6</td>
+            <td>$gray-e6</td>
             <td>
                 <span class="circle-color-indicator" style="background: #e6e6e6;"></span> #e6e6e6
             </td>
@@ -461,7 +461,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-dd</td>
+            <td>$gray-dd</td>
             <td>
                 <span class="circle-color-indicator" style="background: #dddddd;"></span> #dddddd
             </td>
@@ -470,7 +470,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-d4</td>
+            <td>$gray-d4</td>
             <td>
                 <span class="circle-color-indicator" style="background: #d4d4d4;"></span> #d4d4d4
             </td>
@@ -479,7 +479,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-cc</td>
+            <td>$gray-cc</td>
             <td>
                 <span class="circle-color-indicator" style="background: #cccccc;"></span> #cccccc
             </td>
@@ -488,7 +488,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-light-font</td>
+            <td>$gray-light-font</td>
             <td>
                 <span class="circle-color-indicator" style="background: #333333;"></span> #333333
             </td>
@@ -796,7 +796,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-white</td>
+            <td>$gray-white</td>
             <td>
                 <span class="circle-color-indicator" style="background: #ffffff"></span> #ffffff
             </td>
@@ -805,7 +805,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-black</td>
+            <td>$gray-black</td>
             <td>
                 <span class="circle-color-indicator" style="background: #000000"></span> #000000
             </td>
@@ -814,7 +814,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-50</td>
+            <td>$gray-50</td>
             <td>
                 <span class="circle-color-indicator" style="background: #fafafa"></span> #fafafa
             </td>
@@ -823,7 +823,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-100</td>
+            <td>$gray-100</td>
             <td>
                 <span class="circle-color-indicator" style="background: #f5f5f5"></span> #f5f5f5
             </td>
@@ -832,7 +832,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-200</td>
+            <td>$gray-200</td>
             <td>
                 <span class="circle-color-indicator" style="background: #eeeeee"></span> #eeeeee
             </td>
@@ -841,7 +841,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-300</td>
+            <td>$gray-300</td>
             <td>
                 <span class="circle-color-indicator" style="background: #e0e0e0"></span> #e0e0e0
             </td>
@@ -850,7 +850,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-400</td>
+            <td>$gray-400</td>
             <td>
                 <span class="circle-color-indicator" style="background: #bdbdbd"></span> #bdbdbd
             </td>
@@ -859,7 +859,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-500</td>
+            <td>$gray-500</td>
             <td>
                 <span class="circle-color-indicator" style="background: #9e9e9e"></span> #9e9e9e
             </td>
@@ -868,7 +868,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-600</td>
+            <td>$gray-600</td>
             <td>
                 <span class="circle-color-indicator" style="background: #757575"></span> #757575
             </td>
@@ -877,7 +877,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-700</td>
+            <td>$gray-700</td>
             <td>
                 <span class="circle-color-indicator" style="background: #616161"></span> #616161
             </td>
@@ -886,7 +886,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-800</td>
+            <td>$gray-800</td>
             <td>
                 <span class="circle-color-indicator" style="background: #424242"></span> #424242
             </td>
@@ -895,7 +895,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-900</td>
+            <td>$gray-900</td>
             <td>
                 <span class="circle-color-indicator" style="background: #212121"></span> #212121
             </td>
@@ -904,7 +904,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-dark</td>
+            <td>$gray-dark</td>
             <td>
                 <span class="circle-color-indicator" style="background: #303030"></span> #303030
             </td>
@@ -913,7 +913,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-light-font</td>
+            <td>$gray-light-font</td>
             <td>
                 <span class="circle-color-indicator" style="background: #000000"></span> #000000
             </td>
@@ -922,7 +922,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-dark-font</td>
+            <td>$gray-dark-font</td>
             <td>
                 <span class="circle-color-indicator" style="background: #ffffff"></span> #ffffff
             </td>
@@ -1248,7 +1248,7 @@ The following list of common variables is used in the Syncfusion Blazor library 
             </td>
         </tr>
         <tr>
-            <td>$grey-dark-font</td>
+            <td>$gray-dark-font</td>
             <td>
                 <span class="circle-color-indicator" style="background: #ffffff"></span> #ffffff
             </td>

@@ -29,7 +29,7 @@ This section briefly explains about how to include a `Chart` in your Blazor Serv
     </head>
     ```
 
-3. Now add the lodash script to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our [chart interactive]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
+3. Now, add the lodash script to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our [chart interactive]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
 
     ```cshtml
     <head>
@@ -53,7 +53,7 @@ Open `**~/_Imports.razor` file and include the `Syncfusion.Blazor.**` namespaces
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components using the **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 using Syncfusion.Blazor;

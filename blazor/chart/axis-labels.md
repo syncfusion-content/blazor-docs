@@ -594,7 +594,7 @@ The label can be trimmed using the [EnableTrim](https://help.syncfusion.com/cr/b
 
 ## Line Break
 
-The `<br>` tag can used to separate the long axis label into multiple lines.
+The `<br>` tag can be used to separate the long axis label into multiple lines.
 
 ```cshtml
 

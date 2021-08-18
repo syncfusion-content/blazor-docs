@@ -55,7 +55,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
     </head>
     ```
 
-4. Now add the lodash script to the **HEAD** element of the **~/wwwroot/index.html** page, since we have used it in our [chart interactive]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
+4. Now, add the lodash script to the **HEAD** element of the **~/wwwroot/index.html** page, since we have used it in our [chart interactive]([https://www.syncfusion.com/blazor-components/blazor-charts/interactive-chart]) features. The absence of the script will result in console errors.
 
     ```html
     <head>
@@ -99,7 +99,7 @@ namespace WebApplication1
 
 ## Add Chart Component
 
-To initialize the chart component add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the chart component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```cshtml
 @page "/"
