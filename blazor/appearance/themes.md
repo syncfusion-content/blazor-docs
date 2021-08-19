@@ -34,10 +34,10 @@ For a server-side Blazor application refer it in `~/Pages/_Host.cshtml` file and
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
-1.	Static Web assets
-2.	CDN
-3.	NPM packages
-4.	LibMan
+1. Static Web assets
+2. CDN
+3. NPM packages
+4. LibMan
 
 Instead of using **Static Web assets** or a **CDN reference**, you can reference the stylesheet into your projects to customize the theme or bundle it with the other stylesheets using **NPM packages** or **LibMan**. 
 
@@ -97,30 +97,30 @@ NPM is a node package manager. It is basically used for managing dependencies of
 
 You can add the theme for the Blazor applications through **npm packages** using the **SCSS** files by following the below process.
 
-1.	Install Web Compiler to use SCSS files in Blazor applications.
+1. Install Web Compiler to use SCSS files in Blazor applications.
 
-2.	To install Web Compiler, open visual studio and click the **Extensions** in the toolbar.
+2. To install Web Compiler, open visual studio and click the **Extensions** in the toolbar.
 
 ![Themes-npm-packages-extension](../images/Themes-npm-packages-extension.png)
 ![Themes-npm-packages-webcompiler](../images/Themes-npm-packages-webcompiler.png)
  
-3.	Install the Syncfusion `node_modules` in this application using this command.
+3. Install the Syncfusion `node_modules` in this application using this command.
 
 ```
 npm install @syncfusion/ej2
 ```
 
-4.	Create a SCSS file under `~\wwwroot\styles\custom.scss` and add the following code.
+4. Create a SCSS file under `~\wwwroot\styles\custom.scss` and add the following code.
 
 ```scss
 $primary: blue !default;
 @import 'ej2/fabric.scss';
 ```
 
-5.	Right-click the SCSS file and click the Web Compiler to compile the file.
+5. Right-click the SCSS file and click the Web Compiler to compile the file.
 ![Themes-npm-packages-compiler](../images/Themes-npm-packages-compiler.png) 
 
-6.	The `compilerconfig.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
+6. The `compilerconfig.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
 
 ```json
 [
@@ -134,9 +134,9 @@ $primary: blue !default;
 ]
 ```
 
-7.	The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
+7. The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-8.	Run the application and see the fabric themes from installed npm packages was applied.
+8. Run the application and see the fabric themes from installed npm packages was applied.
 
 ### LibMan
 
@@ -144,9 +144,9 @@ Library Manager (LibMan) is a client-side library acquisition tool that is simpl
 
 LibMan offers the following advantages,
 
-1.	Only the library files you need are downloaded.
-2.	Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
-3.	Files can be placed in a specific location without resorting to build tasks or manual file copying.
+1. Only the library files you need are downloaded.
+2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
+3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
 In the server application root, add the `libman.json` file with the following content:
 
@@ -197,13 +197,13 @@ In the Blazor application, the application theme can be changed dynamically by c
 
 The following example demonstrates how to change a theme dynamically in Blazor application using Syncfusion Blazor themes.
 
-1.	Create a Blazor server application by referring [Blazor Server](../../getting-started/blazor-server-side-visual-studio-2019/) documentation.
+1. Create a Blazor server application by referring [Blazor Server](../../getting-started/blazor-server-side-visual-studio-2019/) documentation.
 
-2.	Install Syncfusion NuGet packages in the created Blazor application to utilize Syncfusion products.
+2. Install Syncfusion NuGet packages in the created Blazor application to utilize Syncfusion products.
 Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
 ![Themes-change-theme-install-nuget](../images/Themes-change-theme-install-nuget.png)
 
-3.	Add the following code to the `_Host.cshtml` file.
+3. Add the following code to the `_Host.cshtml` file.
 
 The themeName variable is assigned for theme switch result, in which its value is applied to the Syncfusion theme link reference where the specified theme is applied directly to the entire product.
 
@@ -238,7 +238,7 @@ The themeName variable is assigned for theme switch result, in which its value i
 </html>
 ```
 
-4.	Modify the `MainLayout.razor page` to process theme changing in application.
+4. Modify the `MainLayout.razor page` to process theme changing in application.
 
 ```cshtml
 @inherits LayoutComponentBase
@@ -335,7 +335,7 @@ The themeName variable is assigned for theme switch result, in which its value i
 }
 ```
 
-5.	Add the following code in `Index.razor` page to render the DataGrid in Blazor output.
+5. Add the following code in `Index.razor` page to render the DataGrid in Blazor output.
 
 ```cshtml
 @page "/"
