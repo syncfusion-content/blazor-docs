@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Version Compatibility - Syncfusion
-description: Learn here about the Version Compatibility of Blazor components and requirements for thos components.
+description: Learn here about the Version Compatibility of Blazor components and requirements for those components.
 platform: Blazor
 component: Common
 documentation: ug
