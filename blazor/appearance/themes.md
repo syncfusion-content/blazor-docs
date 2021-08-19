@@ -111,9 +111,9 @@ You can add the theme for the Blazor applications through **npm packages** using
 npm install @syncfusion/ej2
 ```
 
-4. Create a `SCSS` file under `~\wwwroot\styles\custom.scss` and add the following code.
+4. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
-```scss
+``` scss
 $primary: blue !default;
 @import 'ej2/fabric.scss';
 ```
