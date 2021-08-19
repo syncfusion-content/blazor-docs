@@ -1,3 +1,12 @@
+---
+layout: post
+title: Release history of Blazor Version Compatibility - Syncfusion
+description: Learn here about the Version Compatibility of Blazor components.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Version Compatibility
 
 The table below summarizes the version compatibility of the .NET Core SDK and the Syncfusion.Blazor NuGet package.

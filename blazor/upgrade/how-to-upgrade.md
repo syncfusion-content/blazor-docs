@@ -1,3 +1,12 @@
+---
+layout: post
+title: Upgrading Syncfusion Blazor installer to a latest version - Syncfusion
+description: Learn here about the how upgrade Syncfusion Blazor installer to a latest version.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Upgrading Syncfusion Blazor installer to a latest version
 
 Syncfusion releases new volumes once every three months, with exciting new features. There will be one Service Pack release for this volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.

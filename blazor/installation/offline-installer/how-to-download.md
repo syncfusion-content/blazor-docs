@@ -1,3 +1,12 @@
+---
+layout: post
+title: Downloading Syncfusion Blazor installer - Syncfusion
+description: Learn here about the how to download Syncfusion Blazor offline installer.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Downloading Syncfusion Blazor offline installer
 
 The Syncfusion Blazor offline installer can be downloaded from the [Syncfusion](https://www.syncfusion.com/blazor-components) website. You can either download the licensed installer or try our trial installer depending on your license.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Installing Syncfusion Blazor installer - Syncfusion
+description: Learn here about the how to install Syncfusion Blazor offline installer.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Installing Syncfusion Blazor offline installer
 
 ## Installing with UI

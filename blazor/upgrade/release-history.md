@@ -1,3 +1,12 @@
+---
+layout: post
+title: Release history of Blazor components - Syncfusion
+description: Learn here about the release history of Blazor components.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Release History
 
 Every new release of Syncfusion includes exciting new features. Refer to the Syncfusion Blazor [release notes](https://blazor.syncfusion.com/documentation/release-notes/index/) to know more about the changes in each releases.

@@ -1,3 +1,12 @@
+---
+layout: post
+title: Release history of Blazor Version Convention for Blazor NuGet packages - Syncfusion
+description: Learn here about the Version Convention for Blazor NuGet packages.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Version Convention for Blazor NuGet packages
 
 In a year, Syncfusion releases new volumes once every three months.

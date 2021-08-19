@@ -1,3 +1,12 @@
+---
+layout: post
+title: Upgrading Syncfusion Blazor components to a latest version - Syncfusion
+description: Learn here about the how upgrade Syncfusion Blazor components to a latest version.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Upgrading Syncfusion Blazor components to latest version
 
 The Syncfusion Blazor migration add-in for Visual Studio allows you to migrate an existing Syncfusion Blazor application from one version of Essential Studio version to another version. This reduces the amount of manual work required when migrating the Syncfusion version.

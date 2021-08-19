@@ -1,3 +1,12 @@
+---
+layout: post
+title: Upgrading Syncfusion Blazor NuGet packages to a latest version - Syncfusion
+description: Learn here about the how to upgrading Syncfusion Blazor NuGet packages to a latest version.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Upgrading Syncfusion Blazor NuGet packages to a latest version
 
 Every three months, Syncfusion releases new volumes with interesting new features. For this volume, there will be weekly NuGet releases and a service pack. Syncfusion Blazor NuGet packages are released on a weekly basis to address critical issue fixes.

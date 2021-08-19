@@ -1,3 +1,12 @@
+---
+layout: post
+title: Downloading Syncfusion Blazor web installer - Syncfusion
+description: Learn here about the how to download Syncfusion Blazor web installer.
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Downloading Syncfusion Blazor web installer
 
 Syncfusion Blazor web installer can be downloaded from our [Syncfusion](https://www.syncfusion.com/blazor-components) website. You can either download the licensed installer or try our trial installer depending on your license.
