@@ -645,7 +645,7 @@ By default, detail rows render in collapsed state. You can expand a detail row b
 
 The datagrid has option to span row cells. To achieve this, You need to define the `RowSpan` attribute to span cells in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
-In the following demo, **Davolio** cell is spanned to two rows in the **EmployeeName** column.
+In the following demo, Davolio cell is spanned to two rows in the **EmployeeName** column.
 
 Also DataGrid supports the spanning of rows and columns for same cells. **Lunch Break** cell is spanned to two rows and three columns in the **1:00** column.
 
