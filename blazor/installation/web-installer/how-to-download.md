@@ -75,4 +75,4 @@ You should initiate an evaluation if you have already obtained our components th
 
 > **Note** <br /> For Syncfusion trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion trial or licensed products will be installed via web installer.
 
-You can also refer to the [web installer](https://blazor.syncfusion.com/documentation/installation/web-installer/how-to-install)  links for step-by-step installation guidelines.
+You can also refer to the web installer links for step-by-step installation guidelines.

@@ -70,4 +70,4 @@ You should initiate an evaluation if you have already obtained our components th
 
    ![License Download Installer](images/blazor_mac.png)
 
-You can also refer to the [Blazor Mac installation](https://blazor.syncfusion.com/documentation/installation/mac-installer/how-to-install) link for step-by-step installation guidelines.
+You can also refer to the Blazor Mac installation link for step-by-step installation guidelines.
