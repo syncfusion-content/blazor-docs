@@ -66,4 +66,4 @@ In the following sample, Dialog will open while clicking `Save As...` item.
 ```
 
 Output be like
-![Context Menu Sample](./../images/dialog.png)
+![Blazor ContextMenu](./../images/blazor-contextmenu.png)

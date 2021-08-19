@@ -37,7 +37,7 @@ The Blazor Button has the following predefined styles that can be defined using 
 
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor Button Component with different Styles](./images/blazor-button-with-different-style.png)
 
@@ -55,15 +55,15 @@ The types of Blazor Button are as follows:
 
 ### Flat Button
 
-The Flat Button is styled with no background color. To create a flat Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-flat`.
+The Flat Button is styled with no background color. To create a Flat Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-flat`.
 
 ### Outline Button
 
-An outline Button has a border with transparent background. To create an outline Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-outline`.
+An Outline Button has a border with transparent background. To create an Outline Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-outline`.
 
 ### Round Button
 
-A round Button is shaped like a circle. Usually, it contains an icon representing its action. To create a round Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-round`.
+A Round Button is circular in shape. Usually, it contains an icon representing its action. To create a Round Button, set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfButton.html#Syncfusion_Blazor_Buttons_SfButton_CssClass) property to `e-round`.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -79,7 +79,7 @@ A round Button is shaped like a circle. Usually, it contains an icon representin
 </style>
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor Button with different Types](./images/blazor-button-types.png)
 
@@ -93,7 +93,7 @@ The primary button is styled with background color and it is used to represent a
 <SfButton IsPrimary="true">Primary</SfButton>
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor Primary Button](./images/blazor-primary-button.png)
 
@@ -140,7 +140,7 @@ A toggle Button allows you to change between the two states. The Button is activ
 
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor Toggle Button](./images/blazor-toggle-button.png)
 
@@ -167,7 +167,7 @@ The Button can have an icon to provide the visual representation of the action. 
 
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor Button with Icon](./images/blazor-button-icon.png)
 
@@ -183,6 +183,6 @@ The two types of Button sizes are default and small. To change the size of the d
 
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor Button with different Size](./images/blazor-button-with-different-size.png)
