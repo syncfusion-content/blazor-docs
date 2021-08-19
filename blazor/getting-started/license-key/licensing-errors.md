@@ -15,7 +15,7 @@ Licensing error popup is displayed with various messages under different circums
 
 The following error message will be shown if a Syncfusion license key has not been registered in your application.
 
-**Error message:** <br /> This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this [help topic](https://blazor.syncfusion.com/documentation/getting-started/license-key/licensing-error#license-key-not-registered) for more information.
+**Error message:** <br /> This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this help topic for more information.
 
 ![License key not registered](images/licensing-error-1.png)
 
