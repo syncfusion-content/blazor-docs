@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Overview of Syncfusion license and unlock keys - Syncfusion
-description: Learn here about the Syncfusion license and unlock keys.
+description: Learn here about the Syncfusion license and unlock keys and difference between license and unlock keys.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Overview
+# Syncfusion Licensing Overview
 
 Syncfusion license key registration is applicable for all evaluators and only to paid customers who use NuGet packages from [NuGet.org](https://www.nuget.org/packages?q=syncfusion). So, if you use the evaluation installer or the NuGet feed to reference Syncfusion assemblies, you must also include the corresponding platform and version license key in your projects
 

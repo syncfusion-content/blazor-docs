@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrading Syncfusion Blazor installer to a latest version - Syncfusion
-description: Learn here about the how upgrade Syncfusion Blazor installer to a latest version.
+description: Learn here about the how upgrade Syncfusion Blazor installer to a latest version from website and control panel.
 platform: Blazor
 component: Common
 documentation: ug

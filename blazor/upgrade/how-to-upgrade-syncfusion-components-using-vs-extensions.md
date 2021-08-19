@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Upgrading Syncfusion Blazor components to a latest version - Syncfusion
-description: Learn here about the how upgrade Syncfusion Blazor components to a latest version.
+description: Learn here about the how upgrade Syncfusion Blazor components to a latest version from NuGet.
 platform: Blazor
 component: Common
 documentation: ug

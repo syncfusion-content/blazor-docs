@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Release history of Blazor components - Syncfusion
-description: Learn here about the release history of Blazor components.
+description: Learn here about the release history of Syncfusion Blazor components for features and others.
 platform: Blazor
 component: Common
 documentation: ug
