@@ -331,17 +331,17 @@ The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 
 The available default edit types are,
 
-* [NumericEdit](https://blazor.syncfusion.com/blazor/documentation/numerictextbox/getting-started) component for integers, double, and decimal data types.
+* [NumericEdit](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component for integers, double, and decimal data types.
 
-* [DefaultEdit](https://blazor.syncfusion.com/blazor/documentation/textbox/getting-started/) component for string data type.
+* [DefaultEdit](https://blazor.syncfusion.com/documentation/textbox/getting-started) component for string data type.
 
-* [DropDownEdit](https://blazor.syncfusion.com/blazor/documentation/dropdownlist/getting-started/) component to show all unique values related to that field.
+* [DropDownEdit](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to show all unique values related to that field.
 
-* [BooleanEdit](https://blazor.syncfusion.com/blazor/documentation/check-box/getting-started/) component for boolean data type.
+* [BooleanEdit](https://blazor.syncfusion.com/documentation/check-box/getting-started) component for boolean data type.
 
-* [DatePickerEdit](https://blazor.syncfusion.com/blazor/documentation/datepicker/getting-started/) component for date data type.
+* [DatePickerEdit](https://blazor.syncfusion.com/documentation/datepicker/getting-started) component for date data type.
 
-* [DateTimePickerEdit](https://blazor.syncfusion.com/blazor/documentation/datetimepicker/getting-started/) component for date time data type.
+* [DateTimePickerEdit](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for date time data type.
 
 ## Customizing the default editor controls
 
@@ -2328,7 +2328,7 @@ The following image represents the dialog template of the DataGrid component wit
 
 By default, the first input element in the dialog will be focused while opening it. If the first input element is in the a disabled or hidden state, you can set focus to the required input element in the corresponding components **Created** or **DataBound** event.
 
-This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-1.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_1_DataBound) event.
+This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
