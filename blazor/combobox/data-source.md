@@ -309,6 +309,25 @@ The output will be as follows.
 
 ![DropdownList](./images/api_data.png)
 
+### ValueTuple data binding
+
+You can bind ValueTuple data to ComboBox component. The following code helps you get a string value from the enumeration data by using ValueTuple.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfComboBox TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+            DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <ComboBoxFieldSettings Value="Item1" Text="Item2" />
+</SfComboBox>
+
+```
+
+The output will shown as follows,
+
+![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
+
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the ComboBox component.
