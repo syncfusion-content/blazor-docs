@@ -7,7 +7,7 @@ component: Appearance
 documentation: ug
 ---
 
-# Blazor Themes
+# Blazor Themes in Syncfusion Components 
 
 The following list of themes are included in the Syncfusion Blazor components library.
 
@@ -93,16 +93,17 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 ### NPM Packages
 
-NPM is a node package manager. It is basically used for managing dependencies of various server-side dependencies. You can manage server-side dependencies manually. It is a command-line programme for dealing with said repository that aids in package installation, version management, and dependency management. It is an online repository for the publishing of open-source `Node.js` projects.
+NPM is a node package manager. It is basically used for managing dependencies of various server-side dependencies. You can manage server-side dependencies manually. It is a command-line program for dealing with said repository that aids in package installation, version management, and dependency management. It is an online repository for the publishing of open-source `Node.js` projects.
 
 You can add the theme for the Blazor applications through **npm packages** using the **SCSS** files by following the below process.
 
 1. Install Web Compiler to use SCSS files in Blazor applications.
 
-2. To install Web Compiler, open visual studio and click the **Extensions** in the toolbar.
+2. To install Web Compiler, open Visual Studio and click the **Extensions** in the toolbar.
 
-![Themes-npm-packages-extension](../images/Themes-npm-packages-extension.png)
-![Themes-npm-packages-webcompiler](../images/Themes-npm-packages-webcompiler.png)
+ ![Themes-npm-package-extension](../images/Themes-npm-package-extension.png)
+
+ ![Themes-npm-package-webcompiler](../images/Themes-npm-package-webcompiler.png)
  
 3. Install the Syncfusion `node_modules` in this application using this command.
 
@@ -110,7 +111,7 @@ You can add the theme for the Blazor applications through **npm packages** using
 npm install @syncfusion/ej2
 ```
 
-4. Create a SCSS file under `~\wwwroot\styles\custom.scss` and add the following code.
+4. Create a `SCSS` file under `~\wwwroot\styles\custom.scss` and add the following code.
 
 ```scss
 $primary: blue !default;
@@ -118,9 +119,10 @@ $primary: blue !default;
 ```
 
 5. Right-click the SCSS file and click the Web Compiler to compile the file.
-![Themes-npm-packages-compiler](../images/Themes-npm-packages-compiler.png) 
 
-6. The `compilerconfig.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
+ ![Themes-npm-packages-compile](../images/Themes-npm-packages-compile.png) 
+
+6. The `compiler config.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
 
 ```json
 [
@@ -140,7 +142,7 @@ $primary: blue !default;
 
 ### LibMan
 
-Library Manager (LibMan) is a client-side library acquisition tool that is simple to use. LibMan is a programme that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
+Library Manager (LibMan) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
 
 LibMan offers the following advantages,
 
@@ -148,7 +150,7 @@ LibMan offers the following advantages,
 2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
-In the server application root, add the `libman.json` file with the following content:
+In the server application root, add the `lib man.json` file with the following content:
 
 ```json
 {
@@ -201,7 +203,8 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 
 2. Install Syncfusion NuGet packages in the created Blazor application to utilize Syncfusion products.
 Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
-![Themes-change-theme-install-nuget](../images/Themes-change-theme-install-nuget.png)
+
+ ![Themes-install-nuget](../images/Themes-install-nuget.png)
 
 3. Add the following code to the `_Host.cshtml` file.
 
@@ -365,7 +368,7 @@ The themeName variable is assigned for theme switch result, in which its value i
 
 In the following demo, **Bootstrap** and **Material** theme from the Syncfusion packages are used and the background theme of the `Index` page are from normal CSS style. This will helps to change theme between Bootstrap and Material themes , as well as light and dark modes dynamically as shown below.
 
-![Themes-dynamically-change-theme-demo](../images/Themes-dynamically-change-theme-demo.gif) 
+ ![Themes-dynamically-change-theme-output-demo](../images/Themes-dynamically-change-theme-output-demo.gif) 
  
 
 
