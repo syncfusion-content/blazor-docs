@@ -16,7 +16,7 @@ The steps below show how to install the Blazor Mac installer.
 
 3. The License Agreement’s Confirmation window will appear. If you have read the Software License Agreement, click Agree.
 
-   ![License Agreement’s Confirmation](images/Mac_installer_3.PNG)
+   ![License Agreements Confirmation](images/Mac_installer_3.PNG)
 
    > **Note** <br /> The Unlock key is not required to install the Mac installer.
 
