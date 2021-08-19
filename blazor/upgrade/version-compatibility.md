@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Release history of Blazor Version Compatibility - Syncfusion
+title: Blazor Version Compatibility - Syncfusion
 description: Learn here about the Version Compatibility of Blazor components and requirements for thos components.
 platform: Blazor
 component: Common
