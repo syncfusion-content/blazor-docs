@@ -109,14 +109,14 @@ To change the start and end of a range in axis, use the [SetRangeValue](https://
     </CircularGaugeAxes>
 </SfCircularGauge>
 
-@code { 
+@code {
     SfCircularGauge gauge;
-    public void ChangeRangeValue()
+    public async Task ChangeRangeValue()
     {
         gauge.SetRangeValue(0, 0, 10, 50);
-        gauge.RefreshAsync();
+        await gauge.RefreshAsync();
     }
- }
+}
  ```
 
 ## RefreshAsync
