@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Blazor Version Convention for Blazor NuGet packages - Syncfusion
-description: Learn here about the Version Convention for Blazor NuGet packages based on the each version.
+description: Learn here about the Syncfusion blazor Version Conventions for Blazor NuGet packages based on the each version.
 platform: Blazor
 component: Common
 documentation: ug
