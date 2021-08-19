@@ -29,4 +29,4 @@ The following code demonstrates the DatePicker with the custom format (`yyyy-MM-
 
 The output will be as follows.
 
-![datepicker](./images/date_format.png)
+![Date Format in Blazor DatePicker](./images/blazor-datepicker-date-format.png)

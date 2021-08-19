@@ -42,7 +42,7 @@ The **Localization** library allows you to localize default text content. The Da
 
 In the following examples, demonstrate how to enable **Localization** for DatePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -198,7 +198,7 @@ namespace WebAssemblyLocale
 
 The output will be as follows.
 
-![DatePicker](./images/de_culture_01.png)
+![Localization in Blazor DatePicker](./images/blazor-datepicker-localization.png)
 
 ## Customize the localized text
 
@@ -221,7 +221,7 @@ The output will be as follows.
 
 The output will be as follows.
 
-![DatePicker](./images/de_culture_02.png)
+![Customizing Localized Text in Blazor DatePicker](./images/blazor-datepicker-localize-text.png)
 
 ## Right-To-Left
 
@@ -247,4 +247,4 @@ The following code example initializes the DatePicker component in `Arabic` cult
 
 The output will be as follows.
 
-![DatePicker](./images/ar_culture.png)
+![Right to Left in Blazor DatePicker with Arabic Culture](./images/blazor-datepicker-right-to-left.png)
