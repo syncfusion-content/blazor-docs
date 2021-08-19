@@ -97,13 +97,13 @@ NPM is a node package manager. It is basically used for managing dependencies of
 
 You can add the theme for the Blazor applications through **npm packages** using the **SCSS** files by following the below process.
 
-1. Install Web Compiler to use SCSS files in Blazor applications.
+1. Install Web Compiler to use `SCSS` files in Blazor applications.
 
 2. To install Web Compiler, open Visual Studio and click the **Extensions** in the toolbar.
 
- ![Themes-npm-package-extension](../images/Themes-npm-package-extension.png)
+ ![Themes-npm-package-extension](images/Themes-npm-package-extension.png)
 
- ![Themes-npm-package-webcompiler](../images/Themes-npm-package-webcompiler.png)
+ ![Themes-npm-package-webcompiler](images/Themes-npm-package-webcompiler.png)
  
 3. Install the Syncfusion `node_modules` in this application using this command.
 
@@ -118,9 +118,9 @@ $primary: blue !default;
 @import 'ej2/fabric.scss';
 ```
 
-5. Right-click the SCSS file and click the Web Compiler to compile the file.
+5. Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
- ![Themes-npm-packages-compile](../images/Themes-npm-packages-compile.png) 
+ ![Themes-npm-packages-compile](images/Themes-npm-packages-compile.png) 
 
 6. The `compiler config.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
 
@@ -136,7 +136,7 @@ $primary: blue !default;
 ]
 ```
 
-7. The SCSS file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
+7. The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
 8. Run the application and see the fabric themes from installed npm packages was applied.
 
@@ -204,7 +204,7 @@ The following example demonstrates how to change a theme dynamically in Blazor a
 2. Install Syncfusion NuGet packages in the created Blazor application to utilize Syncfusion products.
 Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
 
- ![Themes-install-nuget](../images/Themes-install-nuget.png)
+ ![Themes-install-nuget](images/Themes-install-nuget.png)
 
 3. Add the following code to the `_Host.cshtml` file.
 
@@ -368,7 +368,7 @@ The themeName variable is assigned for theme switch result, in which its value i
 
 In the following demo, **Bootstrap** and **Material** theme from the Syncfusion packages are used and the background theme of the `Index` page are from normal CSS style. This will helps to change theme between Bootstrap and Material themes , as well as light and dark modes dynamically as shown below.
 
- ![Themes-dynamically-change-theme-output-demo](../images/Themes-dynamically-change-theme-output-demo.gif) 
+ ![Themes-dynamically-change-theme-output-demo](images/Themes-dynamically-change-theme-output-demo.gif) 
  
 
 
