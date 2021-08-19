@@ -194,7 +194,7 @@ The following screenshot represents a DataGrid with auto wrap.
 
 ## Custom Attributes
 
-You can customize the datagrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ColumnModel.html#Syncfusion_Blazor_Gantt_ColumnModel_CustomAttributes) property of the column.
+You can customize the datagrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes) property of the column.
 
 In the below example, we have customized the cells of **OrderID** and **ShipCity** columns.
 
