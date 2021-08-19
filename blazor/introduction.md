@@ -150,12 +150,12 @@ background-color:transparent!important;
         <td></td>
         <td id="title">BUTTONS</td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/daterangepicker/getting-started">DateRangePicker</a></td>
-    <tr>
+    </tr>
     <tr>
         <td id="title">LAYOUT</td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/button/getting-started">Button</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started">DateTime Picker</a></td>
-    <tr>
+    </tr>
     <tr>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Dialog</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/button-group/getting-started">ButtonGroup</a></td>
