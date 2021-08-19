@@ -82,3 +82,35 @@ There is no need to call this method for native events since it’s called after
     }
 }
 ```
+
+## Complex data binding
+
+you can bind the complex data values to the TextBox component by initializing it in `OnInitialized()` method. The following code demonstrates how to bind complex data values to the TextBox component.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs; 
+
+<SfTextBox Value="@country.data.countryname"></SfTextBox>
+
+@code   {
+
+    Country country = new Country();
+
+    protected override void OnInitialized()
+    {
+        country.data = new Data();
+    }
+
+    public class Country
+    {
+
+        public string id { get; set; }
+        public Data data;
+    }
+
+    public class Data
+    {
+        public string countryname { get; set; } = "India";
+    }
+}
+```
