@@ -220,4 +220,4 @@ The following sample code demonstrates implementing custom adaptor of the [SfDat
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
 The following GIF demonstrates Grid component with data bound using custom adaptor and the CRUD operations being performed on it,
-![Custom adaptor](./images/custom-adaptor.gif)
+![Custom Binding in Blazor DataManager](./images/blazor-datamanager-custom-binding.gif)

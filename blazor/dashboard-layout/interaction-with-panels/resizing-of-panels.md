@@ -43,6 +43,6 @@ The DashboardLayout component is also provided with the panel resizing functiona
 
 The following output demonstrates the Resizing behavior of Dashboard layout component.
 
-![Resizing of panels](../images/resizing.gif)
+![Resizing Panels in Blazor DashboardLayout](../images/blazor-dashboard-layout-panel-resizing.gif)
 
 > Initially, the panels can be resized only in south-east direction. However, panels can also be resized in east, west, north, south, and south-west directions by defining the required directions with the `ResizableHandles` property.

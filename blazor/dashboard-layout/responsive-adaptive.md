@@ -45,6 +45,6 @@ The dashboard layout is designed to automatically adapt with lower resolutions b
 
 The following output will demonstrate the Responsive dashboard layout component.
 
-![Responsive Layout Sample](images/cell-space.png)
+![Responsive and Adaptive Layout in Blazor DashboardLayout](images/blazor-dashboard-layout-cell-space.png)
 
 The above sample demonstrates usage of the `MediaQuery` property to turn out the layout into a stacked one in user defined resolution. Here, whenever the window size reaches 700px or lesser, the layout becomes a stacked layout.
