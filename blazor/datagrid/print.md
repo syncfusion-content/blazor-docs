@@ -54,7 +54,7 @@ The below sample code demonstrates DataGrid with print option added in the toolb
 ```
 
 The following image represents DataGrid with print toolbar item,
-![Print Grid Content](./images/grid-print.png)
+![Printing in Blazor DataGrid](./images/blazor-datagrid-printing.png)
 
 ## Page setup
 
@@ -118,7 +118,7 @@ The below sample code demonstrates invoking print using an external button,
 ```
 
 The following image represents DataGrid with external button for invoking print operation,
-![Print using external button](./images/grid-print-external-button.png)
+![Blazor DataGrid displays Print Option in External Button](./images/blazor-datagrid-print-external-button.png)
 
 ## Print the visible page
 
@@ -254,7 +254,7 @@ By default, the browser uses A4 as page size option to print pages and in order 
 
 To print large number of columns, adjust the scale option from print option panel based on your content size.
 
-![Print large number of columns](./images/print-large-columns.png)
+![Printing Large Number of Columns in Blazor DataGrid](./images/blazor-datagrid-print-large-columns.png)
 
 <!-- Show or hide columns while Printing
 
