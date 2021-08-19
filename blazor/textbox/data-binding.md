@@ -59,7 +59,7 @@ public string Name { get; set; } = "Syncfusion";
 
 You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor TextBox component** only. This method notifies the component that its state has changed and queues a re-render.
 
-There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Refer to the following code example.
+There is no need to call this method for native events since it’s called after any life cycle method has been called and can also be invoked manually to trigger a re-render. Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
