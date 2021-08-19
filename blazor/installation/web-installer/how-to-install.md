@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Syncfusion Blazor web installer - Syncfusion
-description: Learn here about the how to install Syncfusion Blazor web installer after downloding from syncfusion website.
+description: Learn here about the how to install Syncfusion Blazor web installer after downloding from our syncfusion website.
 platform: Blazor
 component: Common
 documentation: ug

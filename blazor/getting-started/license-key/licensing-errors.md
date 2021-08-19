@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion licensing errors - Syncfusion
-description: Learn here about syncfusion common licensing errors which appears on license registration.
+description: Learn here about syncfusion common licensing errors which appears on license validation in syncfusion blazor applications.
 platform: Blazor
 component: Common
 documentation: ug

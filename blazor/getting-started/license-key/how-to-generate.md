@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion license generation - Syncfusion
-description: Learn here about how to generate Syncfusion blazor license key for blazor application. 
+description: Learn here about how to generate Syncfusion blazor license key for syncfusion blazor application for license validation. 
 platform: Blazor
 component: Common
 documentation: ug

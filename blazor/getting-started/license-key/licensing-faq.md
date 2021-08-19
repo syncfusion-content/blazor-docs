@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion licensing FAQ - Syncfusion
-description: Learn here about the Syncfusion licensing related frequently asked questions and solutions.
+description: Learn here about the Syncfusion licensing related frequently asked questions and solutions on license validation in syncfusion blazor applications.
 platform: Blazor
 component: Common
 documentation: ug

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Release history of Blazor Version Convention for Blazor NuGet packages - Syncfusion
+title: Release history of Blazor Version Convention for Blazor NuGet packages
 description: Learn here about the Version Convention for Blazor NuGet packages based on the each version.
 platform: Blazor
 component: Common
