@@ -7,11 +7,11 @@ control: AutoComplete
 documentation: ug
 ---
 
-# Adding search icon in in Blazor AutoComplete Component
+# Adding search icon in the Blazor AutoComplete component.
 
-You can add the search icon to the AutoComplete component by overriding the content of existing icon .
+You can add the search icon to the AutoComplete component by overriding the content of the existing icon.
 
-The following code demonstrates how to add search icon to the AutoComplete component.
+The following code demonstrates how to add a search icon to the AutoComplete component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
