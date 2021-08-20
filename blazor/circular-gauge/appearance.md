@@ -29,7 +29,7 @@ The Circular Gauge can be positioned anywhere in the container using the [Center
 
 ### In pixel
 
-You can set the mid point of the Circular Gauge in pixel as demonstrated as follows.
+You can set the mid point of the Circular Gauge in pixel as shown below.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

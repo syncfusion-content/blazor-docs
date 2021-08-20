@@ -116,7 +116,7 @@ To customize the annotation tooltip, use the `CircularGaugeAnnotationTooltipSett
 * `EnableAnimation` - Animates as it moves from one point to another.
 * `CircularGaugeAnnotationTooltipBorder` - Specifies the tooltip border.
 
-The following code example shows the tooltip for the pointers, ranges and annotations.
+The following code example shows the tooltip for the pointers, ranges, and annotations.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge

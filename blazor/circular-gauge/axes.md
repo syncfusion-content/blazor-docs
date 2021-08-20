@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axes in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Axes in Syncfusion Blazor Circular Gauge component and much more details.
+description: Checkout and learn here all about Axes in Syncfusion Blazor Circular Gauge component and much more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -70,7 +70,7 @@ By default, the radius of an axis is calculated based on the available size. You
 
 ### In pixel
 
-You can set the radius of the Circular Gauge in pixel as demonstrated as follows.
+You can set the radius of the Circular Gauge in pixel as shown below.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -103,7 +103,7 @@ By setting value in percentage, Circular Gauge gets its dimension with respect t
 
 ## Ticks
 
-You can customize the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Height), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Color) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Width) of major ticks and minor ticks using the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) and [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) tags.
+You can customize the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Height), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Color), and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Width) of major ticks and minor ticks using the [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) and [CircularGaugeAxisMinorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMinorTicks.html) tags.
 
 By default, [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Interval) for [CircularGaugeAxisMajorTicks](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.CircularGaugeAxisMajorTicks.html) will be calculated automatically. You can customize the interval for major ticks and minor ticks using the [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Interval) property.
 
@@ -130,7 +130,7 @@ The minor ticks and major ticks can be positioned using the [Offset](https://hel
 
 * The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.CircularGauge.TickModel.html#Syncfusion_Blazor_CircularGauge_TickModel_Offset) defines the distance between the axis and ticks. By default, offset value is 0.
 
-* The [Position](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.Position.html) will place the ticks on the axis. By default, ticks will be placed inside the axis. Its possible values are 'Position.Inside', 'Position.Outside' and 'Position.Cross'.
+* The [Position](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.CircularGauge.Position.html) will place the ticks on the axis. By default, ticks will be placed inside the axis. Its possible values are 'Position.Inside', 'Position.Outside', and 'Position.Cross'.
 
 ```cshtml
 @using Syncfusion.Blazor.CircularGauge
@@ -317,7 +317,7 @@ The following table describes the result of applying some commonly used label fo
 <td>1000</td>
 <td>c1</td>
 <td>$1,000.0</td>
-<td>The currency symbol is appended to number, and the number is rounded to 1 decimal places.</td>
+<td>The currency symbol is appended to number, and the number is rounded to 1 decimal place.</td>
 </tr>
 <tr>
 <td>1000</td>

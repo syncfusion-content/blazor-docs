@@ -28,7 +28,7 @@ Circular Gauge provides internationalization support for below elements.
 * Axis label.
 * Tooltip.
 
-In the below example axis labels are `globalized` to EUR.
+In the below example, axis labels are `globalized` to EUR.
 
 ```cshtml
 @using Syncfusion.Blazor

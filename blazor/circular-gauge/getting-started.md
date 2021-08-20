@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Circular Gauge component of Syncfusion, and more details.
+description: Checkout and learn more about getting started with Blazor Circular Gauge component of Syncfusion.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -69,7 +69,7 @@ namespace BlazorApplication
 
 ## Adding Circular Gauge component
 
-The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and the following code can be added.
 
 ```cshtml
 @page "/"

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Chip Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor Chip component and much more details.
+description: Checkout and learn here all about Customization in Syncfusion Blazor Chip component and much more.
 platform: Blazor
 control: Chip
 documentation: ug
@@ -38,7 +38,7 @@ The Chip control has the following predefined styles that can be defined using t
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Customizing Blazor Chip Styles](./images/blazor-chip-style.png)
 
@@ -77,7 +77,7 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
 
@@ -116,7 +116,7 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Blazor Chip with Avatar Icon](./images/blazor-chip-avatar-icon.gif)
 
@@ -137,7 +137,7 @@ You can add and customize the avatar content of chip using the `LeadingText` pro
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)
 
@@ -158,7 +158,7 @@ You can add and customize the trailing icon of chip using the `TrailingIconCss` 
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)
 
@@ -179,6 +179,6 @@ Outline chip has the border with the background transparent. It can be set using
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Blazor Outline Chip with Transparent Background](./images/blazor-outline-chip-transparent-background.gif)
