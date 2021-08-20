@@ -38,7 +38,7 @@ Output:
 
 ## Multiple
 
-The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) of the Accordion is `Multiple`. It enables to expand more than one Accordion item at a time. Expand/collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when it is clicked again.
+The default [ExpandMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html#Syncfusion_Blazor_Navigations_SfAccordion_ExpandMode) of the Accordion is `Multiple`. It enables to expand more than one Accordion item at a time. The expand or collapse action can also be toggled by clicking on it again. For example, expanded item is collapsed when it is clicked again.
 
 ```cshtml
 

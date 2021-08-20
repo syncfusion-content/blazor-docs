@@ -52,7 +52,7 @@ Use the following CSS to customize the header of Accordion control.
 
 ## Customizing Accordion's expand and collapse icons
 
-Use the following CSS to customize the expand and collapse icons of the Accordion control.
+The following CSS can be viewed to customize the expand and collapse icons of the Accordion control.
 
 ```CSS
 

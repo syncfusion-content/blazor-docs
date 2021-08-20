@@ -29,7 +29,7 @@ AfterExport |[OnExportComplete](events/#onexportcomplete)
 OnPrint |[OnPrintComplete](events/#onprintcomplete)
 Resized |[SizeChanged](events/#sizechanged)
 
-> From `v18.4.*`, remove the following previous release events from the Accumulation Chart component.
+> From `v18.4.*`, the following previous release events are removed from the Accumulation Chart component.
 
 Event Name|
 -----|

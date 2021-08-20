@@ -18,7 +18,7 @@ To get start quickly with Blazor Accordion, check on the following video:
 
 ## Importing Syncfusion Blazor component in the application
 
-Use any one of the following standards to install the Syncfusion Blazor library in the application.
+Any one of the following standards can be used to install the Syncfusion Blazor library in the application.
 
 ### Using Syncfusion Blazor individual NuGet Packages [New standard]
 
