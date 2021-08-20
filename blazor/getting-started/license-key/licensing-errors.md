@@ -15,7 +15,7 @@ Licensing error popup is displayed with various messages under different circums
 
 The following error message will be shown if a Syncfusion license key has not been registered in your application.
 
-**Error message:** <br /> This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-error#license-key-not-registered) for more information.
+**Error message:** <br /> This application was built using a trial version of Syncfusion Essential Studio. Please include a valid license to permanently remove this license validation message. You can also obtain a free 30 day evaluation license to temporarily remove this message during the evaluation period. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-errors#license-key-not-registered) for more information.
 
 ![License key not registered](images/licensing-error-1.png)
 
@@ -37,7 +37,7 @@ If you use blazor components through trial installer or obtained our components 
 
 If the application is registered with an invalid key, another version of license key, or another platform’s license key, the following error message will pop up when launching the application.
 
-**Error message:** <br /> The included Syncfusion license is invalid. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-error#invalid-key) for more information.
+**Error message:** <br /> The included Syncfusion license is invalid. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-errors#invalid-key) for more information.
 
 ![Invalid key](images/licensing-error-2.png)
 
@@ -59,7 +59,7 @@ If you use blazor components through trial installer or obtained our components 
 
 The following error message will be shown if the trial key has expired after 30 days.
 
-**Error message:** <br /> Your Syncfusion trial license has expired. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-error#trial-expired) for more information.
+**Error message:** <br /> Your Syncfusion trial license has expired. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-errors#trial-expired) for more information.
 
 ![Trial Expired](images/licensing-error-3.png)
 
@@ -69,7 +69,7 @@ The following error message will be shown if the trial key has expired after 30 
 
 If the application is registered with another platform’s license key, the following error message will pop up when launching the application.
 
-**Error message:** <br /> The included Syncfusion license is invalid (Platform mismatch). Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-error#platform-mismatch) for more information.
+**Error message:** <br /> The included Syncfusion license is invalid (Platform mismatch). Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-errors#platform-mismatch) for more information.
 
 ![Platform Mismatch](images/licensing-error-4.png)
 
@@ -89,7 +89,7 @@ License keys are version and product specific. So, if you use blazor components 
 
 If the application is registered with another version’s license key, the following error message will pop up when launching the application.
 
-**Error message:** <br /> The included Syncfusion license ({Registered Version}) is invalid for version {Required version}. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-error#version-mismatch) for more information.
+**Error message:** <br /> The included Syncfusion license ({Registered Version}) is invalid for version {Required version}. Please refer to this [help topic](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/licensing-errors#version-mismatch) for more information.
 
 ![Version Mismatch](images/licensing-error-5.png)
 
@@ -111,7 +111,7 @@ License keys are version and product specific. So, if you use blazor components 
 
 2. Ensure that all the Syncfusion assemblies referenced are of the same version and that the corresponding version and product's license key is registered in the application.
 
-3. The license key should be registered before initializing any Syncfusion controls in the application. Refer [this](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/how-to-register)  page for more information on registering license keys.
+3. The license key should be registered before initializing any Syncfusion controls in the application. Refer [this](https://sfblazor.azurewebsites.net/staging/documentation/getting-started/license-key/how-to-register-in-an-application)  page for more information on registering license keys.
 
 4. Same version Syncfusion assemblies should be present in the application output folders or published folders.
 
