@@ -9,13 +9,13 @@ documentation: ug
 
 # Icons Library
 
-The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in your web application also as needed.
+The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in the web application also as needed.
 
 ## Steps to use Icon
 
 1. Add a class `e-icons` to the HTML element that shows the icon. This class contains the font-family and common property of the font icons.
 
-2. Add the icon class with corresponding icon content from the [available icons](#available-icons). For example, the below code snippet represents the search icon class.
+2. Add the icon class with corresponding icon content from the [available icons](#available-icons). For example, the following code snippet represents the search icon class.
 
     ```css
     .e-search:before{
@@ -29,7 +29,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
     <span class="e-icons e-search"></span>
     ```
 
-4. You can add client-side resources through CDN in the `<head>` element of the `~/wwwroot/index.html` in Blazor WebAssembly app or `~/Pages/_Host.cshtml` in Blazor server app.
+4. Add the client-side resources through CDN in the `<head>` element of the `~/wwwroot/index.html` in Blazor WebAssembly app or `~/Pages/_Host.cshtml` in Blazor server app.
 
     ```html
     <head>
@@ -37,7 +37,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
     </head>
     ```
 
-    The below code snippet represents the complete example of icon usage in `~/Pages/Index.razor`.
+    The following code snippet represents the complete example of icon usage in `~/Pages/Index.razor`.
 
     ```cshtml
         <div class="icons">
@@ -62,7 +62,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 ## Customize Icon
 
-The Syncfusion Blazor icon library can customize its color, size by overriding the `e-icons` class.
+The Syncfusion Blazor icon library can customize its color and size by overriding the `e-icons` class.
 
 ```cshtml
     <style>
@@ -91,7 +91,7 @@ The Syncfusion Blazor icon library can customize its color, size by overriding t
 
 ## Available Icons
 
-The complete pack of Syncfusion Blazor icons is listed in the below table. The corresponding icon content can be referred to the content section.
+The complete pack of Syncfusion Blazor icons is listed in the following table. The corresponding icon content can be referred to the content section.
 
 <!-- markdownlint-disable MD033 -->
 

@@ -9,9 +9,9 @@ documentation: ug
 
 # Data binding in Blazor Accordion Component
 
-Accordion component provides an option to get accordion items from the local data. It can be done through iteration of Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding. You can use [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_HeaderTemplate) and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) properties to render accordion header and content respectively.
+Accordion component provides an option to get the accordion items from the local data. It can be done through iteration of the Accordion Items using conditional **foreach** loop. Accordion only supports the local data for data binding. Use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_HeaderTemplate) and [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) properties to render the accordion header and content respectively.
 
-The below sample explains how to initialize accordion items through `templates`.
+The following sample explains how to initialize accordion items through `templates`.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -73,6 +73,6 @@ The below sample explains how to initialize accordion items through `templates`.
 }
 ```
 
-Output be like the below,
+Output:
 
 ![Blazor Accordion Data Binding](./images/blazor-accordion-data-binding.png)
