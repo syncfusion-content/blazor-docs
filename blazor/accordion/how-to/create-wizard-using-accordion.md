@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Wizard in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Create Wizard in Syncfusion Blazor Accordion component and much more.
+description: Checkout and learn here all about how to create Wizard in Syncfusion Blazor Accordion component and much more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Create Wizard in Blazor Accordion Component
 
-Accordion items can be disabled and expanded dynamically using accordion item [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) property.
+Accordion items can be disabled and expanded dynamically using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) property.
 
-In the below demo, designed for simple payment module that Enable/Disable Accordion based on sequential validation of each Accordion content.
+The following demo is designed for simple payment module that Enable/Disable Accordion based on the sequential validation of each Accordion content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -223,6 +223,6 @@ In the below demo, designed for simple payment module that Enable/Disable Accord
 </style>
 ```
 
-Output be like the below.
+Output:
 
 ![Blazor Accordion Component Wizard](../images/blazor-accordion-wizard.png)
