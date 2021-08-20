@@ -265,7 +265,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 Output be like the below.
 
-![final output](../images/final-output.png)
+![Blazor DataGrid](../images/blazor-datagrid.png)
 
 ## See Also
 

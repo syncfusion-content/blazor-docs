@@ -11,7 +11,7 @@ documentation: ug
 
 **Step 1:** Update the latest Syncfusion blazor [nuget](https://www.nuget.org/packages/Syncfusion.Blazor/) from Nuget package manager in your application.
 
-![update syncfusion blazor nuget](../images/upgrade-version.PNG)
+![Updating Blazor NuGet Package](../images/blazor-datagrid-update-nuget-package.PNG)
 
 ## Compatible .NET version
 
