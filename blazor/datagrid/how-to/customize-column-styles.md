@@ -9,13 +9,13 @@ documentation: ug
 
 # Customize Column Styles in Blazor DataGrid Component
 
-You can customise the appearance of the header and content of a particular column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
+You can customize the appearance of the header and content of a particular column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_CustomAttributes) property.
 
 To customize the datagrid column, follow the given steps:
 
 **Step 1**:
 
-Create a CSS class with custom style to override the default style for rowcell and headercell.
+Create a CSS class with custom style to override the default style for row cell and header cell.
 
 ```css
 .e-attr{
