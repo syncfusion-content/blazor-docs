@@ -311,7 +311,7 @@ The output will be as follows.
 
 ### ValueTuple data binding
 
-You can bind ValueTuple data to ComboBox component. The following code helps you get a string value from the enumeration data by using ValueTuple.
+You can bind ValueTuple data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using ValueTuple.
 
 ```csharp
 
