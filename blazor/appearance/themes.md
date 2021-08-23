@@ -28,9 +28,10 @@ The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas
 
 ## Reference themes in Blazor application
 
-To reference the above themes in your Blazor application, its style sheet must be referred in the `<head>` of your main `index` file.
+Syncfusion Blazor themes can be used in your Blazor application by referencing the style sheet. 
 
-For a server-side Blazor application refer it in `~/Pages/_Host.cshtml` file and for a client-side Blazor application refer it in `wwwroot/index.html` file.
+* For Blazor Server application, refer style sheet inside the `<head>` element of `~/Pages/_Host.cshtml` file.
+* For Blazor WebAssembly application, refer style sheet inside the `<head>` element of `wwwroot/index.html` file.
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
@@ -39,17 +40,16 @@ Using the below approaches the themes can be referenced in the Blazor applicatio
 3. NPM packages
 4. LibMan
 
-Instead of using **Static Web assets** or a **CDN reference**, you can reference the stylesheet into your projects to customize the theme or bundle it with the other stylesheets using **NPM packages** or **LibMan**. 
+Instead of using **Static Web assets** or a **CDN reference**, you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using **NPM packages** or **LibMan**. 
 
-### Static Web assets
+### Static Web Assets
 
-Syncfusion Blazor themes are available as Static web assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
+Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
 
-* In Blazor Server Application, inside the `<head>` element of the `~/Pages/_Host.cshtml` file add the following link reference to use the static assets.
+* For Blazor Server application, refer style sheet inside the `<head>` element of `~/Pages/_Host.cshtml` file.
+* For Blazor WebAssembly application, refer style sheet inside the `<head>` element of `wwwroot/index.html` file.
 
-* In the Blazor WebAssembly Application, inside the `<head>` element of the `~/wwwroot/index.html` file add the following link reference to use the static assets.
-
-When using Individual NuGet Packages in your Application,
+When using individual NuGet packages in your application, add [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Package and reference style sheet as below,
 
  ```html
 <head>
@@ -69,7 +69,7 @@ When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/
 
 Instead of using a local resource on your server, you can use a cloud CDN to reference the theme style sheets. CDN Stands for "Content Delivery Network". A CDN is a group of servers distributed in different locations. While CDNs are often used to host websites, they are commonly used to provide other types of downloadable data as well. Examples include software programs, images, videos, and streaming media.
 
-Syncfusion Blazor Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion UI for Blazor package.
+Syncfusion Blazor Themes are available in the CDN. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
 
  ```html
 <head>
