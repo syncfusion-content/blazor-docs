@@ -9,7 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor ComboBox Component
 
-The ComboBox component has been designed, keeping in mind the `WAI-ARIA` specifications, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
+The ComboBox component has been designed with the `WAI-ARIA` specifications in mind, and applies the WAI-ARIA roles, states, and properties along with `keyboard support`. This component is characterized
 by complete keyboard interaction support and ARIA accessibility support that makes it easy for people who use assistive technologies (AT) or those who completely rely on keyboard navigation.
 
 ## ARIA attributes
@@ -33,7 +33,7 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 
 | **Keyboard shortcuts**  | **Actions**                                                                                                                                             |
 | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <kbd>Arrow Down</kbd>   | Selects the first item in the ComboBox when no item selected. Otherwise, selects the item next to the currently selected item.                          |
+| <kbd>Arrow Down</kbd>   | Selects the first item in the ComboBox when no item is selected. Otherwise, selects the item next to the currently selected item.                          |
 | <kbd>Arrow Up</kbd>     | Selects the item previous to the currently selected one.                                                                                                |
 | <kbd>Page Down</kbd>    | Scrolls down to the next page and selects the first item when popup list opens.                                                                         |
 | <kbd>Page Up</kbd>      | Scrolls up to the previous page and selects the first item when popup list opens.                                                                       |
@@ -41,10 +41,10 @@ You can use the following key shortcuts to access the ComboBox without interrupt
 | <kbd>Tab</kbd>          | Focuses on the next TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component.     |
 | <kbd>Shift + tab </kbd> | Focuses on the previous TabIndex element on the page when the popup is closed. Otherwise, closes the popup list and remains the focus of the component. |
 | <kbd>Alt + Down</kbd>   | Open the popup list                                                                                                                                     |
-| <kbd>Alt + Up</kbd>     | Close the popup list                                                                                                                                    |
+| <kbd>Alt + Up</kbd>     | Closes the popup list                                                                                                                                    |
 | <kbd>Esc(Escape)</kbd>  | Closes the popup list when it is in an open state and the currently selected item remains the same.                                                     |
-| <kbd>Home</kbd>         | Cursor moves to before of first character in input                                                                                                      |
-| <kbd>End</kbd>          | Cursor moves to next of last character in input                                                                                                         |
+| <kbd>Home</kbd>         | Cursor moves before the first character in input                                                                                                      |
+| <kbd>End</kbd>          | Cursor moves next to the last character in input                                                                                                         |
 
 > In the following sample, disable the ComboBox component using <kbd>t</kbd> keys.
 
