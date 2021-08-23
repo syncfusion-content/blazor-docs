@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Icons in Blazor - Syncfusion
-description: Check out the documentation for Icons in Blazor
+title: Icons Library in Blazor - Syncfusion
+description: Learn here all about that how to using Icons in the Syncfusion Blazor Component and its type of icons.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Icons Library
+# Blazor Icons Library
 
 The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in the web application also as needed.
 
