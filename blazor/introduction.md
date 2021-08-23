@@ -123,7 +123,7 @@ background-color:transparent!important;
     <tr>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/dropdown-list/getting-started">Dropdown List</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/smith-chart/getting-started">Smith Chart</a></td>
-        <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started">Toggle Switch Buttom</a></td>
+        <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started">Toggle Switch Button</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/datepicker/getting-started">DatePicker</a></td>
     </tr>
     <tr>
@@ -151,7 +151,7 @@ background-color:transparent!important;
         <td></td>
     </tr>
     <tr>
-        <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Doalog</a></td>
+        <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Dialog</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/kanban/getting-started">Kanban</a></td>
         <td><a id="anchor" href="https://blazor.syncfusion.com/documentation/button/getting-started">Button</a></td>
         <td></td>
