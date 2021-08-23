@@ -1246,7 +1246,7 @@ This support is used to view all the tasks available in a project to specific ti
 
 ## Zoom action by methods
 
-Zooming action also can be performed on external actions such as button click using the `ZoomIn()`, `ZoomOut()`, and `FitToProject()` built-in methods.
+Zooming action also can be performed on external actions such as button click using the `ZoomIn()`, `ZoomOut()`, and `ZoomToFitAsync()` built-in methods.
 
 <!-- ```cshtml
 @using Syncfusion.Blazor.Gantt
