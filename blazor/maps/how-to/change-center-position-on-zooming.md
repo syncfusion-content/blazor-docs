@@ -9,9 +9,7 @@ documentation: ug
 
 # Change center position on zooming in Blazor Maps Component
 
-If you zoom the map using the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property, the center location of the map will be zoomed. In some cases, you may need to zoom in other than the center position, and you can do this by specifying the geo location in the [CenterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_CenterPosition) property as shown in the following code example.
-
- The center position is used to configure the geo location, where the maps should be zoomed, and zoom factor is used to specify zoom level of the maps.
+Blazor Maps component provides support to change the center position of the Maps. This can be achieved by setting the coordinates of the location in the [CenterPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsCenterPosition.html) class. The [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property in the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class can be used to focus the provided center position in the Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

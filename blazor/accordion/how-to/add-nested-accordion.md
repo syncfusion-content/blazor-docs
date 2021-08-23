@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Nested Accordion in Blazor Accordion Component | Syncfusion
-description: Checkout and learn here all about Add Nested Accordion in Syncfusion Blazor Accordion component and more.
+description: Checkout and learn here all about how to add Nested Accordion in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Add Nested Accordion in Blazor Accordion Component
 
-Accordion supports to render the nested level of Accordion by using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. To render the nested Accordion, you can define nested Accordion elements within the `ContentTemplate` property of the parent Accordion.
+Accordion supports to render the nested level of Accordion by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. To render the nested Accordion, define the nested Accordion elements within the `ContentTemplate` property of the parent Accordion.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -60,6 +60,6 @@ Accordion supports to render the nested level of Accordion by using [ContentTemp
 </SfAccordion>
 ```
 
-Output be like the below.
+Output:
 
 ![Blazor Accordion Component with Nested Item](../images/blazor-accordion-with-nested-item.png)

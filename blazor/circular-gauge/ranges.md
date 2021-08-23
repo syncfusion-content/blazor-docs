@@ -450,4 +450,4 @@ To apply radial gradient to the range, follow the below code sample.
 
 ## See also
 
-* [Tooltip for Ranges](gauge-user-interaction/#tooltip-for-ranges)
+* [Tooltip for Ranges](user-interaction#tooltip-for-annotations)
