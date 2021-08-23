@@ -149,4 +149,4 @@ Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor
 
 ## See also
 
-* [Tooltip for Annotation](gauge-user-interaction/#tooltip-for-annotations)
+* [Tooltip for Annotation](user-interaction#tooltip-for-annotations)
