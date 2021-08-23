@@ -13,7 +13,7 @@ The uploader component allows you to upload the files asynchronously. The upload
 *  The save action is necessary to handle the upload operation.
 *  The remove action is optional, one can handle the removed files from server.
 
->The name attribute must match the name of a parameter in the POST method. For more information, refer [here](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#match-name-attribute-value-to-parameter-name-of-post-method). The name attribute is automatically generated from the control’s ID property. If the name attribute to be different from the ID property, then you can use the htmlAttributes property to set the name attribute directly to the input element. For more information refer [here](./how-to/html-attributes).
+>The name attribute must match the name of a parameter in the POST method. For more information, refer [here](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#match-name-attribute-value-to-parameter-name-of-post-method). The name attribute is automatically generated from the control’s ID property. If the name attribute differs from the ID property, then you can use the htmlAttributes property to set the name attribute directly to the input element. For more information refer [here](./how-to/html-attributes).
 
 The file can be uploaded automatically or manually. For more information, you can refer to the [Auto Upload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) section from the documentation.
 
