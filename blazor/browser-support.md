@@ -9,7 +9,7 @@ documentation: ug
 
 # Browser Support
 
-Syncfusion Blazor UI components supported by all modern web browsers on Windows, Linux, MacOS and below are the list,
+Syncfusion Blazor UI components are supported by all modern web browsers on Windows, Linux, and MacOS.
 
 ## Blazor WebAssembly
 
