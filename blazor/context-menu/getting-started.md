@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ContextMenu Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ContextMenu component of Syncfusion, and more details.
+description: Checkout and learn more about getting started with Blazor ContextMenu component of Syncfusion.
 platform: Blazor
 control: Context Menu
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor ContextMenu Component
 
-This section briefly explains about how to include Context Menu Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include Context Menu Component in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
-To get start quickly with Context Menu Component using Blazor, you can check on this video:
+To get started quickly with Context Menu Component using Blazor, you can check out this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=0-II6YezL1s"%}
@@ -29,7 +29,7 @@ To get start quickly with Context Menu Component using Blazor, you can check on 
     </head>
     ```
 
-    For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+    For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```cshtml
     <head>
