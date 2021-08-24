@@ -310,7 +310,7 @@ The following GIF represent a Tree Grid with Column virtualization.
 * Cell selection will not be persisted in both row and column virtualization.
 * Stacked Header is not compatible with detail template.
 * Virtual scrolling is not compatible with detail template.
-* Row count of the page does not depend on the **PageSize** property of the **TreeGridPageSettings**. Row count for the page is determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~Height.html) given to the Tree Grid.
+* Row count of the page does not depend on the **PageSize** property of the **TreeGridPageSettings**. Row count for the page is determined by the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Height) given to the Tree Grid.
 * The virtual height of the tree grid content is calculated using the row height and total number of records in the data source and hence features which changes row height such as text wrapping are not supported. If you want to increase the row height to accommodate the content then you can specify the row height as below to ensure all the table rows are in same height.
 * Programmatic selection using the **SelectRows** method is not supported in virtual scrolling.
 * Frozen column feature is not supported with Virtual Scrolling.
