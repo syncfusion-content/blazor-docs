@@ -21,7 +21,7 @@ W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same
 
 * While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
 
-* The [Blazor WebAssembly lazy loading](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0) functionality can be utilised with the Syncfusion Blazor individual NuGet packages.
+* The [Blazor WebAssembly lazy loading](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
 
 * These individual NuGet packages can be used in the Blazor Server application to reduce the application deployment size in production.
 
@@ -871,7 +871,7 @@ Syncfusion.Blazor.Layouts.dll
 
 ### Syncfusion.Blazor.LinearGauge
 
-The Blazor Linear Gauge is used for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more. The appearance of the gauge can be completely customised to simulate a thermometer, pressure gauge, ruler, etc.
+The Blazor Linear Gauge is used for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more. The appearance of the gauge can be completely customized to simulate a thermometer, pressure gauge, ruler, etc.
 
 <table>
 <tr>
