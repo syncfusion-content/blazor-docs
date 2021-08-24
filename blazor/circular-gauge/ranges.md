@@ -30,7 +30,7 @@ The start and end values of a range in an axis can be customized using the [Star
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
+![Blazor Circular Gauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
 ## Start width and end width
 
@@ -54,7 +54,7 @@ Using [StartWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Circu
 </SfCircularGauge>
 ```
 
-![Customizing Start and End Width of Range in Blazor CircularGauge](./images/blazor-circulargauge-width-customization.png)
+![Customizing Start and End Width of Range in Blazor Circular Gauge](./images/blazor-circulargauge-width-customization.png)
 
 ## Changing color
 
@@ -80,7 +80,7 @@ The color of a range can be customized using the [Color](https://help.syncfusion
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge Range with Custom Color](./images/blazor-circulargauge-range-color-customization.png)
+![Blazor Circular Gauge Range with Custom Color](./images/blazor-circulargauge-range-color-customization.png)
 
 ## Range Position
 
@@ -101,7 +101,7 @@ The ranges can be placed either inside, outside or center of the axis using the 
 </SfCircularGauge>
 ```
 
-![Changing Blazor CircularGauge Range Position](./images/blazor-circulargauge-range-position.png)
+![Changing Blazor Circular Gauge Range Position](./images/blazor-circulargauge-range-position.png)
 
 ## Rounded corners
 
@@ -122,7 +122,7 @@ You can customize the corner radius using the [RoundedCornerRadius](https://help
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge Range with Rounded Corner](./images/blazor-circulargauge-rounded-corner-range.png)
+![Blazor Circular Gauge Range with Rounded Corner](./images/blazor-circulargauge-rounded-corner-range.png)
 
 ## Radius
 
@@ -147,7 +147,7 @@ You can set a radius of the range in pixel as demonstrated as follows.
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge Range with Custom Radius in Pixel](./images/blazor-circulargauge-radius-in-pixel.png)
+![Blazor Circular Gauge Range with Custom Radius in Pixel](./images/blazor-circulargauge-radius-in-pixel.png)
 
 ### In percentage
 
@@ -168,7 +168,7 @@ By setting value in percentage, a range gets its dimension with respect to its a
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge Range with Custom Radius in Percentage](./images/blazor-circulargauge-radius-in-percentage.png)
+![Blazor Circular Gauge Range with Custom Radius in Percentage](./images/blazor-circulargauge-radius-in-percentage.png)
 
 <!-- markdownlint-disable MD010 -->
 
@@ -225,7 +225,7 @@ You can set the range color to ticks and labels of an axis by enabling the [UseR
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge with Multiple Ranges](./images/blazor-circulargauge-multiple-ranges.png)
+![Blazor Circular Gauge with Multiple Ranges](./images/blazor-circulargauge-multiple-ranges.png)
 
 ## Gradient Color
 

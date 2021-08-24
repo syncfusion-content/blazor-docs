@@ -81,7 +81,7 @@ To change the pointer value dynamically, use the [SetPointerValueAsync](https://
 }
 ```
 
-![Blazor CircularGauge](./images/blazor-circulargauge.png)
+![Blazor Circular Gauge](./images/blazor-circulargauge.png)
 
 ## SetRangeValue
 

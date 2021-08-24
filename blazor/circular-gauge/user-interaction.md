@@ -60,7 +60,7 @@ By default, the tooltip is not visible. You can enable the tooltip by setting th
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge displays ToolTip](./images/blazor-circulargauge-tooltip.png)
+![Blazor Circular Gauge displays ToolTip](./images/blazor-circulargauge-tooltip.png)
 
 ### Showing tooltip at mouse position
 
@@ -83,7 +83,7 @@ By default tooltip will be shown on the axis, you can show the tooltip at the cu
 </SfCircularGauge>
 ```
 
-![Displaying Blazor CircularGauge ToolTip at Cursor Position](./images/blazor-circulargauge-tooltip-at-cursor-position.png)
+![Displaying Blazor Circular Gauge ToolTip at Cursor Position](./images/blazor-circulargauge-tooltip-at-cursor-position.png)
 
 ## Tooltip for ranges
 
@@ -170,7 +170,7 @@ public string[] TooltipType = new string[] { "Range", "Annotation", "Pointer"};
 }
 ```
 
-![Blazor CircularGauge displays ToolTip for Annotation](./images/blazor-circulargauge-tooltip-annotation.gif)
+![Blazor Circular Gauge displays ToolTip for Annotation](./images/blazor-circulargauge-tooltip-annotation.gif)
 
 ## Dragging pointer
 
@@ -191,7 +191,7 @@ The pointers can be dragged over the axis values by clicking and dragging the po
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge with Dragging Pointer](./images/blazor-circulargauge-dragging-pointer.gif)
+![Blazor Circular Gauge with Dragging Pointer](./images/blazor-circulargauge-dragging-pointer.gif)
 
 ## Dragging Range
 

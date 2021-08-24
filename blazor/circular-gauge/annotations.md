@@ -47,7 +47,7 @@ You can place any custom element on the axis area using [ContentTemplate](https:
 </style>
 ```
 
-![Blazor CircularGauge with Annotation](./images/blazor-circulargauge-annotation.png)
+![Blazor Circular Gauge with Annotation](./images/blazor-circulargauge-annotation.png)
 
 ## Positioning the annotation
 
@@ -89,7 +89,7 @@ The radius of an annotation takes values either in pixel or in percentage. By se
 </style>
 ```
 
-![Changing Annoation Position in Blazor CircularGauge](./images/blazor-circulargauge-annotation-position.png)
+![Changing Annoation Position in Blazor Circular Gauge](./images/blazor-circulargauge-annotation-position.png)
 
 ## Multiple annotations
 
@@ -145,7 +145,7 @@ Using [CircularGaugeAnnotation](https://help.syncfusion.com/cr/aspnetcore-blazor
 </style>
 ```
 
-![Blazor CircularGauge with Multiple Annotation](./images/blazor-circulargauge-multiple-annotation.png)
+![Blazor Circular Gauge with Multiple Annotation](./images/blazor-circulargauge-multiple-annotation.png)
 
 ## See also
 

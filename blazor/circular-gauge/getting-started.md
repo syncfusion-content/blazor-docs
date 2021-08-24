@@ -87,7 +87,7 @@ The Syncfusion Circular Gauge component can be initialized in any razor page ins
 
 On successful compilation of your application, the Syncfusion Blazor Circular Gauge component will render in the web browser as shown below.
 
-![Blazor CircularGauge Component](./images/blazor-circulargauge-component.png)
+![Blazor Circular Gauge Component](./images/blazor-circulargauge-component.png)
 
 ## Set pointer value
 
@@ -108,7 +108,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
+![Blazor Circular Gauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
 
 ## Adding title for Circular Gauge
 
@@ -128,7 +128,7 @@ Title can be added to the circular gauge to provide a quick information to the u
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge with Title](./images/blazor-circulargauge-title.png)
+![Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.png)
 
 ## Adding ranges in the Circular Gauge
 
@@ -147,7 +147,7 @@ Range is used to specify a group of scale values in the gauge. We can set the ra
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
+![Blazor Circular Gauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
 ## See also
 

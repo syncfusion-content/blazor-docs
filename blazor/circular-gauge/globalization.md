@@ -54,4 +54,4 @@ In the below example axis labels are `globalized` to EUR.
 }
 ```
 
-![Localization in Blazor CircularGauge](./images/blazor-circulargauge-localization.png)
+![Localization in Blazor Circular Gauge](./images/blazor-circulargauge-localization.png)

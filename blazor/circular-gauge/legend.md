@@ -113,7 +113,7 @@ The following code example shows how to add legend in the gauge.
 </SfCircularGauge>
 ```
 
-![Legend in Blazor CircularGauge](./images/blazor-circulargauge-legend.PNG)
+![Legend in Blazor Circular Gauge](./images/blazor-circulargauge-legend.PNG)
 
 <!-- markdownlint-disable MD036 -->
 
@@ -151,7 +151,7 @@ The toggle option has been provided for legend. So, if you toggle the legend, th
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge Legend with Toggle Option](./images/blazor-circulargauge-legend-with-toggle-option.gif)
+![Blazor Circular Gauge Legend with Toggle Option](./images/blazor-circulargauge-legend-with-toggle-option.gif)
 
 ## Paging support in legend
 
@@ -187,7 +187,7 @@ By default, paging will be enabled if the legend items exceed the legend bounds.
 </SfCircularGauge>
 ```
 
-![Blazor CircularGauge Legend with Paging](./images/blazor-circulargauge-legend-paging.gif)
+![Blazor Circular Gauge Legend with Paging](./images/blazor-circulargauge-legend-paging.gif)
 
 ## Legend text customization
 
@@ -223,4 +223,4 @@ You can customize the legend text using `LegendText` property in `CircularGaugeR
 </SfCircularGauge>
 ```
 
-![Customizing Legend Text in Blazor CircularGauge](./images/blazor-circulargauge-legend-text.PNG)
+![Customizing Legend Text in Blazor Circular Gauge](./images/blazor-circulargauge-legend-text.PNG)
