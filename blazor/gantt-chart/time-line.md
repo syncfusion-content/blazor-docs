@@ -1363,4 +1363,4 @@ Zooming action also can be performed on external actions such as button click us
 }
 ``` -->
 
-![Alt text](images/zoomMethods.jpg)
+![Alt text](images/zoomMethods.gif)
