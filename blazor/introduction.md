@@ -34,26 +34,21 @@ border:0 !important;
 td
 {
 border:0 !important;
+vertical-align: top;
 }
 
-#anchor
+.controlanchorlink
 {
 text-decoration: none!important;
 font-size: 14px!important; 
-color: #0079F3!important;
-letter-spacing: 0.47px!important;
 text-align: left!important;
 }
-#title
+.controlcategory
 {
-font-family: CarosMedium!important;
 font-size: 14px!important;
-color: #22252A!important;
-letter-spacing: 0.47px!important;
 text-align: left!important;
 font-weight: bold!important;
 border:0 !important;
-background-color:transparent!important;
 }
 
 </style>
@@ -73,9 +68,15 @@ background-color:transparent!important;
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/datagrid/getting-started">DataGrid</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/pivot-table/getting-started">Pivot Table</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/treegrid/getting-started">TreeGrid</a></div>
-        <div><p class="controlcategory">EDITORS</p></div>
+        <div><p class="controlcategory">FILE VIEWERS & EDITORS</p></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/rich-text-editor/getting-started">RichTextEditor</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/features">Word Processor</a></div>        
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/features">PDF Viewer</a></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/document-editor/getting-started/features">Word Processor</a></div>     
+        <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>
+        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/xlsio/create-read-edit-excel-files-in-blazor-c-sharp">Excel</a></div>
+        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor">PDF</a></div>
+        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/docio/create-word-document-in-blazor">Word</a></div>
+        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor">PowerPoint</a></div>
         <div><p class="controlcategory">LAYOUT</p></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/dialog/getting-started">Dialog</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/listview/getting-started">ListView</a></div>
@@ -83,13 +84,6 @@ background-color:transparent!important;
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/splitter/getting-started">Splitter</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started">Dashboard</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/card/getting-started">Card</a></div>
-        <div><p class="controlcategory">FILE FORMAT FRAMEWORKS</p></div>
-        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/xlsio/create-read-edit-excel-files-in-blazor-c-sharp">Excel</a></div>
-        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/pdf/create-pdf-document-in-blazor">PDF</a></div>
-        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/docio/create-word-document-in-blazor">Word</a></div>
-        <div class="controlanchorlink"><a href="https://help.syncfusion.com/file-formats/presentation/create-read-edit-powerpoint-files-in-blazor">PowerPoint</a></div>
-        <div><p class="controlcategory">VIEWER</p></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/pdfviewer/getting-started/features">PDF Viewer</a></div><br/>
     </td>
     <td>
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
@@ -107,6 +101,15 @@ background-color:transparent!important;
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/treemap/getting-started">TreeMap</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/bullet-chart/getting-started">Bullet Chart</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/kanban/getting-started">Kanban</a></div>
+        <div><p class="controlcategory">BUTTONS</p></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/button/getting-started">Button</a></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/button-group/getting-started">ButtonGroup</a></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started">Dropdown Menu</a></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/progress-button/getting-started">Progress Button</a></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/split-button/getting-started">SplitButton</a></div>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/chip/getting-started">Chips</a></div>
+    </td>
+    <td>
         <div><p class="controlcategory">CALENDARS</p></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/scheduler/getting-started">Scheduler</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/gantt-chart/getting-started">Gantt Chart</a></div>
@@ -114,9 +117,7 @@ background-color:transparent!important;
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/datepicker/getting-started">DatePicker</a></div>
         <div class="controlanchorlink"><a href="">DateRangePicker</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/datetime-picker/getting-started">DateTime Picker</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started">TimePicker</a></div><br/><br/><br/>
-    </td>
-    <td>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/timepicker/getting-started">TimePicker</a></div>
         <div><p class="controlcategory">INPUTS</p></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/textbox/getting-started">TextBox</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/input-mask/getting-started">Input Mask</a></div>
@@ -127,16 +128,9 @@ background-color:transparent!important;
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/file-upload/getting-started">File Upload</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/range-slider/getting-started">Range Slider</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/toggle-switch-button/getting-started">Toggle Switch Button</a></div>
-        <div><p class="controlcategory">BUTTONS</p></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/button/getting-started">Button</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/button-group/getting-started">ButtonGroup</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/drop-down-menu/getting-started">Dropdown Menu</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/progress-button/getting-started">Progress Button</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/split-button/getting-started">SplitButton</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/chip/getting-started">Chips</a></div>
         <div><p class="controlcategory">FORMS</p></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/in-place-editor/getting-started">In-place Editor</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/query-builder/getting-started">Query Builder</a></div><br/><br/><br/><br/>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/query-builder/getting-started">Query Builder</a></div>
     </td>
     <td>
         <div><p class="controlcategory">DROPDOWNS</p></div>
@@ -157,7 +151,7 @@ background-color:transparent!important;
         <div><p class="controlcategory">NOTIFICATION</p></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/toast/getting-started">Toast</a></div>
         <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started">Progress Bar</a></div>
-        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/spinner/getting-started">Spinner</a></div><br/><br/><br/><br/><br/>
+        <div class="controlanchorlink"><a href="https://blazor.syncfusion.com/documentation/spinner/getting-started">Spinner</a></div>
     </td>
 </tr>
 </table>
