@@ -75,4 +75,4 @@ Set the inner Dialog target as `#dialog`.
 
 The output will be as follows.
 
-![dialog](../images/dialog-nested.png)
+![Creating Nested Blazor Dialog](../images/blazor-nested-dialog.png)
