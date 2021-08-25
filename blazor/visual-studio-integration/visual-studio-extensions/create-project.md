@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Project in Blazor - Syncfusion
-description: Learn here about that how to creating the project and installing NuGet packages in Essential Syncfusion Blazor Components.
+description: Learn here about how to create the project and install NuGet packages in Essential Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Syncfusion provides the Visual Studio Project Templates to create the Syncfusion Blazor Application. The Syncfusion Blazor application creates an application with the required Syncfusion references, namespaces, component code snippet, and CDN links for the earlier development with Syncfusion components.
 
-The following steps will help you create your **Syncfusion Blazor Application** through **Visual Studio 2019**:
+The following steps will help to create a **Syncfusion Blazor Application** through **Visual Studio 2019**:
 
 1. Open the Visual Studio 2019.
 
@@ -25,7 +25,7 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
     **Option 2**
 
-    Select **File -> New -> Project**. Opens a new dialog to create a new project. You can obtain the templates provided by Syncfusion for Blazor by filtering the project type with Syncfusion or Blazor, or by using the Syncfusion keyword in the search option.
+    Select **File -> New -> Project**. Open a new dialog to create a new project. Obtain the templates provided by Syncfusion for Blazor by filtering the project type with Syncfusion or Blazor, or by using the Syncfusion keyword in the search option.
 
     ![CreateNewWindow](../images/CreateNewWindow.png)
 
@@ -46,8 +46,8 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 6. Choose the desired Syncfusion Blazor application and Theme.
 7. Click the Create button to create the Blazor Syncfusion application.
 8. The Syncfusion Blazor application has been configured with Syncfusion.
-9. You can run the application and see the Syncfusion components.
-10. If you installed the trial setup or NuGet packages from nuget.org you have to register the Syncfusion license key to your project since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+9. Run the application and see the Syncfusion components.
+10. If the trial setup or NuGet packages are installed from the nuget.org, register the Syncfusion license key to the corresponding project since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to the project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
 
 ## Syncfusion integration
 
@@ -64,7 +64,7 @@ The following NuGet package(s) are added as NuGet references based on applicatio
 | `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion Blazor Server App  |
 | `Syncfusion.Blazor.WordProcessor`  | Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br/> Syncfusion Blazor WebAssembly App |
 
-> The installed Syncfusion Extension version of the NuGet package will be added as reference entry if there is no internet connection. You have to restore the NuGet packages when the internet is available.
+> The installed Syncfusion Extension version of the NuGet package will be added as reference entry if there is no internet connection. Restore the NuGet packages when the internet is available.
 
 ![NuGetPackage](../images/NuGetPackage.png)
 
@@ -83,7 +83,7 @@ following locations of Blazor type application.
 
 ### Namespaces
 
-The Syncfusion Blazor component Grids, Calendars, and Buttons namespace are added to the **`_imports.razor`** file in the application. You can add the required other component namespace for development.
+The Syncfusion Blazor component Grids, Calendars, and Buttons namespace are added to the **`_imports.razor`** file in the application. The required other component namespace can be added for development.
 
 ![NameSpace](../images/NameSpace.png)
 
