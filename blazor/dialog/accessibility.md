@@ -108,7 +108,7 @@ to last focusable element</td></tr>
 
 The output will be as follows.
 
-![dialog](./images/dialog-accessibility.png)
+![Accessibility in Blazor Dialog](./images/blazor-dialog-accessibility.png)
 
 ## See Also
 
