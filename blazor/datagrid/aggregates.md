@@ -103,7 +103,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 ```
 
 The following image represents the FooterTemplate with aggregates
-![Footer Template](./images/footertemplate.png)
+![Blazor DataGrid displays Footer with Aggregates](./images/blazor-datagrid-footer-aggregate.png)
 
 > The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 
@@ -263,7 +263,7 @@ To access the aggregate values inside the **GroupFooterTemplate** and **GroupCap
 ```
 
 The following image represents the Group and Caption template with aggregates.
-![Group Template](./images/captionaggregate.png)
+![Blazor DataGrid displays Caption with Aggregates](./images/blazor-datagrid-caption-aggregate.png)
 
 > The aggregate values must be accessed inside the template using their corresponding [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridAggregateColumn.html#Syncfusion_Blazor_Grids_GridAggregateColumn_Type) name.
 

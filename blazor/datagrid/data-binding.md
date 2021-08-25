@@ -160,7 +160,7 @@ You can achieve ExpandoObject complex data binding in the datagrid by using the 
 > You can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
 The following image represents ExpandoObject complex data binding,
-![ExpandoObject Complex Data](./images/expandocomplexdata.png)
+![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
 
 ### DynamicObject binding
 
@@ -295,7 +295,7 @@ You can achieve DynamicObject complex data binding in the datagrid by using the 
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
 The following image represents DynamicObject complex data binding
-![DynamicObject Complex Data](./images/dynamiccomplexdata.png)
+![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
 
 ## Remote data
 
@@ -453,13 +453,13 @@ The following sample code demonstrates enabling data manager condition in the Da
 ```
 
 The following GIF represents dynamically rendering data manager in DataGrid,
-![Render data manager dynamically](./images/data-manager-dynamic.gif)
+![Dynamically Rendering Data Manager in Blazor DataGrid](./images/blazor-datagrid-dynamic-render-data-manager.gif)
 
 ### Sending additional parameters to the server
 
 To add a custom parameter to the data request, use the addParams method of Query class. Assign the Query object with additional parameters to the datagrid's [Query](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.Query.html) property.
 
-The following sample code demonstrates sending additional paramaters using the Query property,
+The following sample code demonstrates sending additional parameters using the Query property,
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -666,7 +666,7 @@ The following sample code demonstrates achieving this,
 ```
 
 The following GIF represents dynamically modifying the query property in DataGrid,
-![Modify query dynamically](./images/query-update.gif)
+![Changing Query Dynamically in Blazor DataGrid](./images/blazor-datagrid-query-update.gif)
 
 ## SQL Server data binding(SQL Client)
 
@@ -844,7 +844,7 @@ namespace EFGrid.Shared.DataAccess
 
 ### Creating Web API Controller
 
- A Web API Controller has to be created which allows datagrid directly to consume data from the Entity framework.
+ A Web API Controller has to be created which allows datagrid directly to consume data from the Entity Framework.
 
 ```csharp
 using System;
@@ -918,9 +918,9 @@ Now you can configure the datagrid using the **'SfDataManager'** to interact wit
 To perform datagrid CRUD operation using Entity Framework. You can refer [here](./editing/#entity-framework).
 >You can find the fully working sample [here](https://github.com/ej2gridsamples/Blazor/blob/master/EntityFramework.zip).
 
-## Http client
+## HTTP client
 
-It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending Http requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
+It is possible to call web api from the blazor WebAssembly(client-side) app. This can be used for sending HTTP requests to fetch data from web api and bind them in the DataGrid's data source. The requests are sent using [HttpClient](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-3.0) service.
 
 This can be achieved by initially injecting the `HttpClient` instance in the app.
 
@@ -1001,7 +1001,7 @@ Then using the `GetJsonAsync` method request is sent to the api controller for f
 
 ## Observable Collection
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionchanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
 
 Here, Order class implements the interface of **INotifyPropertyChanged** and it raises the event when CustomerID property value was changed.
 
@@ -1124,7 +1124,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 
  ```
 
- The following screenshot represents the DataGrid with **Observable Collection**.![ObservableCollection](./images/ObservableCollection.PNG)
+ The following screenshot represents the DataGrid with **Observable Collection**.![Blazor DataGrid with ObservableCollection](./images/blazor-datagrid-observable-collection.PNG)
 
 ## Troubleshoot: DataGrid renders without data even though server returns with correct data
 
