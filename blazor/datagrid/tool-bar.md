@@ -71,7 +71,7 @@ The following table shows built-in tool bar items and its actions.
 ```
 
 The following screenshots represent a datagrid with Built-in toolbar,
-![Built in Toolbar](./images/built.PNG)
+![Blazor DataGrid with Built in ToolBar](./images/blazor-datagrid-with-built-in-toolbar.PNG)
 
 ## Custom Toolbar Items
 
@@ -146,7 +146,7 @@ Custom tool bar items can be added by defining the [Toolbar](https://help.syncfu
 ```
 
 The following screenshots represent a datagrid with Custom toolbar items,
-![Custom toolbat items](./images/customtoolbaritems.PNG)
+![Blazor DataGrid with Custom ToolBar Items](./images/blazor-datagrid-custom-toolbar-items.PNG)
 
 ## Built-in and Custom Items in Toolbar
 
@@ -209,7 +209,7 @@ In the below example, `Add`, `Edit`, `Delete`, `Update`, `Cancel` are built-in t
 ```
 
 The following screenshots represent a datagrid with Built-in and custom items in toolbar,
-![Built in and custom items in Toolbar](./images/builtintoolbar.PNG)
+![Blazor DataGrid displays Built-in and Custom Items in ToolBar](./images/blazor-datagrid-built-in-toolbar.PNG)
 
 ## Custom Toolbar
 
@@ -284,7 +284,7 @@ Custom tool bar items can be added by defining the [Toolbar Template](https://he
 ```
 
 The following screenshots represent a datagrid with Custom toolbar,
-![Custom Toolbar](./images/customtoolbar.PNG)
+![Blazor DataGrid with Custom ToolBar](./images/blazor-datagrid-custom-toolbar.PNG)
 
 > The custom toolbar can be placed inside datagrid using Toolbar template component. The contents in the DataGrid can be collapsed by clicking the Collapse icon button.
 
@@ -371,7 +371,7 @@ Drop down list can be added by using dropdownlist in the tool bar section.
 ```
 
 The following screenshots represent a datagrid with Custom toolbar dropdown list,
-![Custom Toolbar with dropdown list](./images/dropdownlist.PNG)
+![Blazor DataGrid with Custom Toolbar Dropdown List](./images/blazor-datagrid-custom-toolbar-dropdownlist.PNG)
 
 ## Enable/Disable Toolbar Items
 
@@ -467,7 +467,7 @@ You can enable / disable tool bar items by using the [EnableToolbarItems method]
 ```
 
 The following screenshots represent a datagrid with Enable/disable toolbar items,
-![Enable/disable Toolbar items](./images/Enabledisablegif.gif)
+![Enabling or Disabling ToolBar Items in Blazor DataGrid](./images/blazor-datagrid-enable-disable-toolbar-items.gif)
 
 ## Customize Toolbar Text
 
@@ -520,7 +520,7 @@ You can able to customize the toolbar text by using the [ItemModel](https://help
 ```
 
 The following screenshots represent a datagrid by customizing toolbar text.
-![Customize Toolbar Text](./images/customize-toolbar-text.jpg)
+![Customize ToolBar Text in Blazor DataGrid](./images/blazor-datagrid-toolbar-text-customization.jpg)
 
 ## Customize toolbar styles
 
@@ -575,6 +575,6 @@ You can able to customize the toolbar styles by using the toolbar class (`.e-too
 ```
 
 The following screenshots represent a datagrid by customizing toolbar styles.
-![Customize toolbar styles](./images/customize-toolbar-bgcolor.png)
+![Customizing ToolBar Styles in Blazor DataGrid](./images/blazor-datagrid-toolbar-style-customization.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
