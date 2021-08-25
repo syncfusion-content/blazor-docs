@@ -166,17 +166,18 @@ border:0 !important;
 
 * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
 
-* Using Visual Studio
+**Visual Studio**
 
-    * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019)
-    * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019)
+* [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019)
 
-* Using .NET CLI
+* [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019)
 
-    * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
-    * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
+**.NET CLI**
 
-* Using Visual Studio for Mac
+* [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
+* [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
-    * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
-    * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
+**Visual Studio for Mac**
+
+* [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
+* [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
