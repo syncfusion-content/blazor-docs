@@ -34,7 +34,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 </head>
 ```
 
- For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+ For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie) for more information.
 
 ## Adding component package to the application
 
@@ -80,7 +80,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 ## Defining Row Data
 
-To bind data for the DataGrid component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the **DataManager**. You can assign the data source through the **OnInitialized** lifecycle of the page.
+To bind data for the DataGrid component, you can assign a IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the **DataManager**. You can assign the data source through the **OnInitialized** life cycle of the page.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -320,7 +320,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 ```
 
 The following image represents datagrid with paging, sorting, filtering and grouping.
-![Grid Features](images/getting-started.gif)
+![Blazor DataGrid Component](images/blazor-datagrid.gif)
 
 ## Handling exceptions
 

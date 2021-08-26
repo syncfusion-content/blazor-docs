@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Render the Blazor Server App in IE11 Browser in Blazor - Syncfusion
-description: Check out the documentation for Render the Blazor Server App in IE11 Browser in Blazor
+description: Learn here all about how to Render the Blazor Server App in IE11 Browser in Blazor component and more.
 platform: Blazor
 component: Common
 documentation: ug
