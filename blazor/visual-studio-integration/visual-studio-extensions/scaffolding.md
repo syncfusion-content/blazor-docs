@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Scaffolding in Blazor - Syncfusion
-description: Learn here about how to add the scaffolding in the Essential Syncfusion Blazor Components.
+title: Scaffolding in Blazor Application | Syncfusion
+description: Learn here about scaffolding using Syncfusion Blazor Extension for Visual Studio to quickly add code to reduce the amount of development time. 
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Syncfusion Blazor Scaffolding
+# Scaffolding using Syncfusion Blazor Extension for Visual Studio
 
 Syncfusion provides **Visual Studio Scaffolding** for the Syncfusion Blazor platform to quickly add code that interacts with data models and reduce the amount of time to develop with data operation in the project. Scaffolding provides an easier way to create Razor and Controller action methods for Syncfusion Blazor DataGrid, Charts, Scheduler, Diagram, Tree Grid, Rich Text Editor, Document Editor, and PDF Viewer controls.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Create Project in Blazor - Syncfusion
-description: Learn here about how to create the project and install NuGet packages in Essential Syncfusion Blazor Components.
+title: Create Project in Blazor | Syncfusion
+description: Learn here about how to create the project and install NuGet packages using Syncfusion Blazor Extension for Visual Studio.
 platform: Blazor
 component: Common
 documentation: ug

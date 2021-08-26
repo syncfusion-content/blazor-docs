@@ -1,7 +1,7 @@
 ---
 layout: post
 title: System Requirements in Blazor - Syncfusion
-description: Learn here all about the system requirements needed to use Syncfusion Essential Blazor Components
+description: Checkout and learn here all about the system requirements needed to use Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug

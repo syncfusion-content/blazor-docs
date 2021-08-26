@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Download and Installation in Blazor - Syncfusion
-description: Learn here more about how to download and install in the Esssntial Syncfusion Blazor Components.
+title: Download and Installation in Blazor Extension | Syncfusion
+description: Learn here more about how to download and install in the Syncfusion Blazor Extension for Visual Studio Code and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Download and Installation
+# Download and Installation of Blazor Extension
 
 Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension). It can be either installed from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 

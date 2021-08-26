@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Convert Project in Blazor - Syncfusion
-description: Learn here about how to convert the application in the Essential Syncfusion Blazor Components.
+title: Convert Project in Blazor | Syncfusion
+description: Learn here about how to convert the blazor application to Syncfusion Blazor application using Syncfusion Blazor Extension for Visual Studio.
 platform: Blazor
 component: Common
 documentation: ug
