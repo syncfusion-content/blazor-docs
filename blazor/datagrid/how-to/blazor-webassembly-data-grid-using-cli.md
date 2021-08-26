@@ -21,13 +21,13 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Create a Blazor WebAssembly project using .NET Core CLI
 
-1. Install the Blazor project templates by using below command line in the command prompt:
+1. Install the Blazor project templates by using the following command line in the command prompt:
 
     ```bash
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
     ```
 
-2. Once project templates installed, run the following command line to create a new Blazor WebAssembly application.
+2. Once the project templates are installed, run the following command line to create a new Blazor WebAssembly application.
 
     ```bash
         dotnet new blazorwasm -o WebApplication1
@@ -36,7 +36,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the below command line.
+1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the following command line.
 
     ```bash
         dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
@@ -104,7 +104,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Add DataGrid Component
 
-To initialize the DataGrid component add the below code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
+To initialize the DataGrid component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
 
 ```cshtml
 <SfGrid >
@@ -132,7 +132,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 ## Defining Columns
 
-The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
+The columns are automatically generated when columns declaration is empty or undefined while initializing the DataGrid.
 
 The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
@@ -165,7 +165,7 @@ Let’s check the properties used here:
 
 ## Enable Paging
 
-The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
+The paging feature enables users to view the DataGrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
 ```cshtml
 <SfGrid DataSource="@gridData" AllowPaging="true">
@@ -240,7 +240,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 ## Enable Grouping
 
-The grouping feature enables you to view the datagrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
+The grouping feature enables you to view the DataGrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
 ```cshtml
 <SfGrid DataSource="@gridData" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true">
@@ -263,7 +263,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 }
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![final output](../images/final-output.png)
 

@@ -11,7 +11,7 @@ documentation: ug
 
 You can create the Custom toolbar items with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, we suggest you to define the **Id** property for custom toolbar items.
 
-This is demonstrated in the below sample code where we have custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when GridEditSettings is defined in DataGrid. So custom toolbar will be disabled state considering it as default toolbar item. We have overcome that behaviour by defining the Id property.
+This is demonstrated in the following sample code where we have custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when GridEditSettings is defined in DataGrid. So, custom toolbar will be disabled considering it as default toolbar item. We have overcome that behaviour by defining the Id property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

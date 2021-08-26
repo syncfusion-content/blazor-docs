@@ -26,7 +26,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 ## Create a Blazor WebAssembly project in Visual Studio 2019
 
-1. Install the essential project templates in the Visual Studio 2019 by running the below command line in the command prompt.
+1. Install the essential project templates in the Visual Studio 2019 by running the following command line in the command prompt.
 
     ```bash
     dotnet new -i Microsoft.AspNetCore.Components.WebAssembly.Templates::3.2.0-rc1.20223.4
@@ -44,11 +44,11 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ![asp.net core project configuration](../images/project-configuration.png)
 
-5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
+5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** are selected at the top.
 
     ![select framework](../images/blazor-client-template.png)
 
-    > ASP.NET Core 3.1 available in Visual Studio 2019 version.
+    > ASP.NET Core 3.1 is available in Visual Studio 2019 version.
   
 ## Importing Syncfusion Blazor component in the application
 
@@ -122,7 +122,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 ## Add DataGrid Component
 
-To initialize the DataGrid component add the below code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
+To initialize the DataGrid component, add the following code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
 
 ```cshtml
 <SfGrid >
@@ -150,7 +150,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 ## Defining Columns
 
-The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
+The columns are automatically generated when columns declaration is empty or undefined while initializing the DataGrid.
 
 The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
@@ -183,7 +183,7 @@ Let’s check the properties used here:
 
 ## Enable Paging
 
-The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
+The paging feature enables users to view the DataGrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
 ```cshtml
 <SfGrid DataSource="@gridData" AllowPaging="true">
@@ -281,7 +281,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 }
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![final output](../images/final-output.png)
 

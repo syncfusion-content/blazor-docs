@@ -1,17 +1,17 @@
 ---
 layout: post
 title: Custom control in Blazor DataGrid Component Toolbar | Syncfusion
-description: Learn here all about Custom control in datagrid toolbar in Syncfusion Blazor DataGrid component and more.
+description: Learn here all about Custom control in DataGrid toolbar in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
 ---
 
-# Custom control in datagrid toolbar in Blazor DataGrid Component
+# Custom control in DataGrid toolbar in Blazor DataGrid Component
 
-You can render custom controls inside the datagrid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the Toolbar component. This toolbar component is defined inside the datagrid component.
+You can render custom controls inside the DataGrid's toolbar area. This can be achieved by initializing the custom controls within the Template property of the Toolbar component. This toolbar component is defined inside the DataGrid component.
 
-This is demonstrated in the below sample code where Autocomplete component is rendered inside the DataGrid's toolbar and is used for performing search operation on the datagrid,
+This is demonstrated in the following sample code where Autocomplete component is rendered inside the DataGrid's toolbar and is used for performing search operation on the datagrid,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -86,6 +86,6 @@ This is demonstrated in the below sample code where Autocomplete component is re
 }
 ```
 
-The following GIF represents the search operation performed on the datagrid using the Autocomplete component rendered in the toolbar,
+The following GIF represents the search operation performed on the DataGrid using the Autocomplete component rendered in the toolbar,
 
 ![Custom control in toolbar](../images/custom-control-toolbar.gif)
