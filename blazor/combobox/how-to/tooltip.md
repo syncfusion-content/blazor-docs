@@ -66,4 +66,4 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 The output will be as follows.
 
-![combobox](../images/tooltip.png)
+![Blazor Combobox displays Tooltip for Dropdown Items](../images/blazor-combobox-tooltip.png)
