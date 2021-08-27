@@ -84,6 +84,7 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/getting-started">Splitter</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started">Dashboard</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/card/getting-started">Card</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/avatar/getting-started">Avatar</a></div>
     </td>
     <td>
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
@@ -152,6 +153,7 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/getting-started">Toast</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started">Progress Bar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/spinner/getting-started">Spinner</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/badge/getting-started">Badge</a></div>
     </td>
 </tr>
 </table>
