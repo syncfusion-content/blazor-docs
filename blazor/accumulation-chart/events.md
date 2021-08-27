@@ -9,11 +9,11 @@ documentation: ug
 
 # Events in Blazor Accumulation Chart Component
 
-In this section, we have provided the list of events of Accumulation Chart component which will be triggered for appropriate accumulation chart actions.
+In this section, the list of events of Accumulation Chart component is provided which will be triggered for appropriate accumulation chart actions.
 
 The events should be provided to the Accumulation Chart using [AccumulationChartEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartEvents.html) component.
 
-> From `v18.4.*`, we have added few additional following events for the Accumulation Chart component
+> From `v18.4.*`, a few additional following events are added to the Accumulation Chart component.
 
 Event Name|
 -----|
@@ -29,7 +29,7 @@ AfterExport |[OnExportComplete](events/#onexportcomplete)
 OnPrint |[OnPrintComplete](events/#onprintcomplete)
 Resized |[SizeChanged](events/#sizechanged)
 
-> From `v18.4.*`, we remove the following previous release events from Accumulation Chart component
+> From `v18.4.*`, the following previous release events are removed from the Accumulation Chart component.
 
 Event Name|
 -----|
@@ -46,7 +46,7 @@ PointMoved|
 
 ### Arguments
 
-Below properties are available in the the [AccumulationTextRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationTextRenderEventArgs.html).
+The following properties are available in the [AccumulationTextRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationTextRenderEventArgs.html).
 
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationTextRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationTextRenderEventArgs_Color) – Specifies the color for the data label text.
 * [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationTextRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationTextRenderEventArgs_Border) – Specifies the color and the width of the data label border.
@@ -96,7 +96,7 @@ Below properties are available in the the [AccumulationTextRenderEventArgs](http
 
 ### Arguments
 
-Below properties are available in the the [AccumulationLegendRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLegendRenderEventArgs.html).
+The following properties are available in the [AccumulationLegendRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLegendRenderEventArgs.html).
 
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLegendRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationLegendRenderEventArgs_Fill) – Specifies the fill color of the legend item's icon.
 * [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationLegendRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationLegendRenderEventArgs_Shape) – Specifies the shape of the legend item's icon.
@@ -147,7 +147,7 @@ Below properties are available in the the [AccumulationLegendRenderEventArgs](ht
 
 ### Arguments
 
-Below properties are available in the the [AccumulationPointRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointRenderEventArgs.html).
+The following properties are available in the [AccumulationPointRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointRenderEventArgs.html).
 
 * [Border](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointRenderEventArgs_Border) – Specifies the color and the width of the point border.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointRenderEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointRenderEventArgs_Fill) – Specifies the fill color of the point.
@@ -194,7 +194,7 @@ Below properties are available in the the [AccumulationPointRenderEventArgs](htt
 
 ### Arguments
 
-Below field is available in the the [ExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html).
+The following field is available in the [ExportEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html).
 
 * [DataUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ExportEventArgs.html#Syncfusion_Blazor_Charts_ExportEventArgs_DataUrl) – Specifies the DataUrl of the exported file.
 
@@ -293,7 +293,7 @@ Below field is available in the the [ExportEventArgs](https://help.syncfusion.co
 
 ### Arguments
 
-Below fields are available in the the [AccumulationResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationResizeEventArgs.html).
+The following fields are available in the [AccumulationResizeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationResizeEventArgs.html).
 
 * [Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationResizeEventArgs.html#Syncfusion_Blazor_Charts_AccumulationResizeEventArgs_Chart) – Specifies the current accumulation chart instance.
 * [CurrentSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationResizeEventArgs.html#Syncfusion_Blazor_Charts_AccumulationResizeEventArgs_CurrentSize) – Specifies the current size of the accumulation chart.
@@ -337,7 +337,7 @@ Below fields are available in the the [AccumulationResizeEventArgs](https://help
 
 ## Loaded
 
-`Loaded` event triggers after accumulation chart loaded.
+`Loaded` event triggers after accumulation chart is loaded.
 
 ```cshtml 
 @using Syncfusion.Blazor.Charts
@@ -381,7 +381,7 @@ Below fields are available in the the [AccumulationResizeEventArgs](https://help
 
 ### Arguments
 
-Below fields are available in the the [AccumulationPointEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html).
+The following fields are available in the [AccumulationPointEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html).
 
 * [PageX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_PageX) – Specifies the current window page x location.
 * [PageY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationPointEventArgs.html#Syncfusion_Blazor_Charts_AccumulationPointEventArgs_PageY) – Specifies the current window page y location.
@@ -434,7 +434,7 @@ Below fields are available in the the [AccumulationPointEventArgs](https://help.
 
 ### Arguments
 
-Below property available in the the [TooltipRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html).
+The following property is available in the [TooltipRenderEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html).
 
 * [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_HeaderText) – Specifies the header text for the tooltip.
 * [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.TooltipRenderEventArgs.html#Syncfusion_Blazor_Charts_TooltipRenderEventArgs_Text) – Specifies the text for the tooltip.
