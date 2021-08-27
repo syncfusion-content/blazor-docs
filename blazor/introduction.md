@@ -9,15 +9,15 @@ documentation: ug
 
 # Welcome to Syncfusion Blazor Components
 
-Syncfusion Blazor is a modern enterprise UI components library for creating Blazor WebAssembly or Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular, and touch-friendly.
+Syncfusion Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular, and touch-friendly.
 
 ## How to best read this user guide
 
-* The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The `Getting Started` gives just enough information that you need to know before starting to write code. This is the only section that we recommend reading end-to-end before starting to write code, all other information can be referred to as needed.
+* The best way to get started would be to read the "Getting Started" section of the documentation for the component that you would like to start using first. The `Getting Started` gives information that is to known before starting to write code. This is the only section that is recommended to be read end-to-end before starting to write code, all other information can be referred to as needed.
 
-* Now that you are familiar with the basics of using the component, the next step would be to start integrating the component into your application. A good starting point would be to refer to the code snippets in the [online sample browser](https://blazor.syncfusion.com/demos/) which contains hundreds of code samples, you will likely find a code sample that resembles your intended usage scenario.
+* After being familiar with the basics of using the component, the next step would be to start integrating the component into the application. A good starting point would be to refer to the code snippets in the [online sample browser](https://blazor.syncfusion.com/demos/) which contains hundreds of code samples, you will likely find a code sample that resembles your intended usage scenario.
 
-## Component List
+## Components List
 
 <style>
 #table
@@ -84,6 +84,7 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/splitter/getting-started">Splitter</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/dashboard-layout/getting-started">Dashboard</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/card/getting-started">Card</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/avatar/getting-started">Avatar</a></div>
     </td>
     <td>
         <div><p class="controlcategory">DATA VISUALIZATION</p></div>
@@ -91,7 +92,7 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/stock-chart/getting-started">Stock Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/circular-gauge/getting-started">Circular Gauge</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/linear-gauge/getting-started">Linear Gauge</a></div>
-        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/diagram/getting-started">Diagram</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/diagram/getting-started">Diagram Component</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/heatmap-chart/getting-started">HeatMap Chart</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/maps/getting-started">Map</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/range-selector/getting-started">Range Selector</a></div>
@@ -152,6 +153,7 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/getting-started">Toast</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started">Progress Bar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/spinner/getting-started">Spinner</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/badge/getting-started">Badge</a></div>
     </td>
 </tr>
 </table>
@@ -166,17 +168,17 @@ border:0 !important;
 
 * [Product Development Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
 
-**Visual Studio**
+    Visual Studio
 
 * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019)
 * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019)
 
-**.NET CLI**
+    .NET CLI
 
 * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
 * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli)
 
-**Visual Studio for Mac**
+    Visual Studio for Mac
 
 * [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-mac)
 * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-mac)
