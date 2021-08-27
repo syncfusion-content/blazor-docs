@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Studio in Blazor - Syncfusion
-description: Learn here about how to create the Essential Syncusion Blazor Components for the template studio.
+description: Learn here about how to create the Blazor application using Syncusion Blazor Components with the help of template studio.
 platform: Blazor
 component: Common
 documentation: ug

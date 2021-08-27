@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Code Snippet in Blazor - Syncfusion
-description: Check out the documentation for Code Snippet in Blazor
+title: Code Snippets - Blazor Extension Visual Studio Code | Syncfusion
+description: Learn here all about how to use code snippet utility of Syncfusion Blazor Extension for Visual Studio Code and much more. 
 platform: Blazor
 component: Common
 documentation: ug
