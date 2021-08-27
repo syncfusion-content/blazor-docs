@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Accessibility in Blazor - Syncfusion
-description: Check out the documentation for Accessibility in Blazor
+description: Check out and learn here all about the accessibility support of syncfusion blazor component and more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Accessibility
+# Accessibility in Blazor
 
 The Syncfusion JavaScript UI controls follows WAI-ARIA accessibility standard by default. This enables you to build accessible web application which are fully navigable by users with disabilities.
 
