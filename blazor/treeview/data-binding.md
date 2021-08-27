@@ -413,7 +413,7 @@ namespace SQLTreeView.Shared.DataAccess
 
 ### Creating Web API Controller
 
-A Web API Controller should be created which allows the TreeView directly to consume data from the Entity framework. Also, create a new **Post**, **Put**, **Delete** method in the web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **‘SfDataManager’** will make requests to this action based on the route name.
+A Web API Controller should be created which allows the TreeView directly to consume data from the Entity Framework. Also, create a new **Post**, **Put**, **Delete** method in the web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **‘SfDataManager’** will make requests to this action based on the route name.
 
 ```csharp
 
@@ -499,7 +499,7 @@ namespace WebApplication1.Server.Controllers
 
 ### Configure Blazor TreeView component using Web API adaptor
 
-Now, the Blazor TreeView can be configured using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, use web Api adaptor.
+Now, the Blazor TreeView can be configured using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, use web API adaptor.
 
 > The CRUD operation has been performed in the TreeView component using the context menu.
 
