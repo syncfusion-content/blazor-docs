@@ -19,6 +19,7 @@ The following sample demonstrates the click/tap action in toast.
 @using Syncfusion.Blazor.Notifications
 
 <SfToast @ref="ToastObj" Title="Alert" Content="@ToastContent">
+    <ToastEvents OnClick="@OnClickHandler"></ToastEvents>
     <ToastPosition X="Right" Y="Bottom"></ToastPosition>
 </SfToast>
 
@@ -48,6 +49,11 @@ The following sample demonstrates the click/tap action in toast.
         await Task.Delay(100);
         await this.ToastObj.ShowAsync();
         this.ToastFlag = ((this.ToastFlag != 5) ? (this.ToastFlag + 1) : 0);
+    }
+    
+    public void OnClickHandler(ToastClickEventArgs args)
+    {
+        args.ClickToClose = true;
     }
 }
 
