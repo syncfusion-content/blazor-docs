@@ -1493,7 +1493,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## SplitterResizeStart
 
-[SplitterResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_SplitterResizeStart)event triggers when column resize starts.
+[SplitterResizeStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_SplitterResizeStart) event triggers when column resize starts.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
