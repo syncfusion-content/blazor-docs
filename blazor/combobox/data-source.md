@@ -75,7 +75,7 @@ In the following example, `Name` column from complex data have been mapped to th
 
 The output will be as follows.
 
-![ComboBox](./images/data_binding_02.png)
+![Binding Blazor ComboBox Items](./images/blazor-combobox-binding-items.png)
 
 ### Array of Complex data
 
@@ -124,7 +124,7 @@ public IEnumerable<Complex> LocalData { get; set; } = new Complex().GetData();
 
 The output will be as follows.
 
-![ComboBox](./images/complex_data.png)
+![Binding Complex Items with Blazor ComboBox](./images/blazor-combobox-complex-data.png)
 
 ## Binding remote data
 
@@ -163,7 +163,7 @@ In the following sample, displayed first 6 contacts from the **Customers** table
 
 The output will be as follows.
 
-![ComboBox](./images/remote_data.png)
+![Blazor ComboBox with Data Binding](./images/blazor-combobox-binding-data.png)
 
 ### Web API Adaptor
 
@@ -193,7 +193,7 @@ Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
 
 Output be like the below.
 
-![DropdownList](./images/api_data.png)
+![Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.png)
 
 ### Custom Adaptor
 
@@ -307,7 +307,26 @@ The following example for remote data binding and enabled offline mode,
 
 The output will be as follows.
 
-![DropdownList](./images/api_data.png)
+![Blazor ComboBox in Offline Mode](./images/blazor-combobox-web-api-data.png)
+
+### ValueTuple data binding
+
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the ComboBox component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfComboBox TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+            DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <ComboBoxFieldSettings Value="Item1" Text="Item2" />
+</SfComboBox>
+
+```
+
+The output will shown as follows,
+
+![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
 
 ## Entity Framework
 

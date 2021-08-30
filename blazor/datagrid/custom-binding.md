@@ -160,7 +160,7 @@ The following sample code demonstrates implementing custom data binding using cu
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
 The following image shows the custom bound data displayed in the DataGrid component,
-![Custom binding](./images/custom-binding.png)
+![Custom Binding in Blazor DataGrid](./images/blazor-datagrid-custom-binding.png)
 
 > If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
 
@@ -554,7 +554,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 ```
 
 The following GIF displays the CRUD operations performed on the custom bounded data displayed in the DataGrid component,
-![Editing custom bound data](./images/custom-binding-editing.gif)
+![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 

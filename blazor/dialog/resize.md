@@ -61,4 +61,4 @@ The resizable dialog can be created by setting the `EnableResize` property to tr
 
 The output will be as follows.
 
-![dialog](./images/dialog_resize.gif)
+![Resizing in Blazor Dialog](./images/blazor-dialog-resizing.gif)
