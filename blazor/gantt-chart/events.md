@@ -225,7 +225,7 @@ The events should be provided to the Gantt Chart using the GanttChartEvents comp
 
 ## OnActionFailure
 
-[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event triggers when any Gantt Chart action failed to achieve the desired results. By using this event the error details and their cause is achieved. In the following sample, the wrong field name has been provided for the IdMapping property, so that it will throw the OnActionFailure event.
+[OnActionFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionFailure) event trigger when any Gantt Chart action failed to achieve the desired results. By using this event the error details and their cause is achieved. In the following sample, the wrong field name has been provided for the IdMapping property, so that it will throw the OnActionFailure event.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
