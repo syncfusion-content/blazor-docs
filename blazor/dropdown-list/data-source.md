@@ -341,7 +341,7 @@ The output will shown as follows,
 
 ### ValueTuple data binding
 
-You can bind ValueTuple data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using ValueTuple.
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
 
 ```csharp
 

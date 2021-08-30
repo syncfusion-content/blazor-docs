@@ -318,7 +318,7 @@ The output will be as follows.
 
 ### ValueTuple data binding
 
-You can bind ValueTuple data to the AutoComplete component. The following code helps you to get a string value from the enumeration data by using ValueTuple.
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to AutoComplete component. The following code helps you get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
 
 ```csharp
 
