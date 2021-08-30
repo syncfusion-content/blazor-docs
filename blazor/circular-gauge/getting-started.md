@@ -87,7 +87,7 @@ The Syncfusion Circular Gauge component can be initialized in any razor page ins
 
 On successful compilation of your application, the Syncfusion Blazor Circular Gauge component will render in the web browser as shown below.
 
-![Circular Gauge Sample](./images/getting-components.png)
+![Blazor Circular Gauge Component](./images/blazor-circulargauge-component.png)
 
 ## Set pointer value
 
@@ -108,7 +108,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 </SfCircularGauge>
 ```
 
-![Circular Gauge with pointer value](./images/getting-pointer.png)
+![Blazor Circular Gauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
 
 ## Adding title for Circular Gauge
 
@@ -128,7 +128,7 @@ Title can be added to the circular gauge to provide a quick information to the u
 </SfCircularGauge>
 ```
 
-![Circular Gauge with title](./images/title.png)
+![Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.png)
 
 ## Adding ranges in the Circular Gauge
 
@@ -147,12 +147,12 @@ Range is used to specify a group of scale values in the gauge. We can set the ra
 </SfCircularGauge>
 ```
 
-![Circular Gauge with custom range](./images/ranges.png)
+![Blazor Circular Gauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

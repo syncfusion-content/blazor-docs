@@ -99,4 +99,4 @@ In the below example, we have rendered the datagrid columns [OrderDate`] as hidd
 ```
 
 Output be like the below.
-![Final output](../images/columndialog.PNG)
+![Displaying Column Dialog in Blazor DataGrid](../images/blazor-datagrid-column-dialog.PNG)

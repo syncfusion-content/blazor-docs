@@ -9,7 +9,7 @@ documentation: ug
 
 # Pyramid in Blazor Accumulation Chart Component
 
-The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) used to visualize the hierarchical data in upside triangle shape with horizontally divided section. To render the [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as [Pyramid](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pyramid).
+The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/pyramid-chart) used to visualize the hierarchical data in upside triangle shape with horizontally divided section. To render the `Pyramid Chart`, set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_Type) as `Pyramid`.
 
 ```cshtml 
 
@@ -50,7 +50,7 @@ The [Pyramid Chart](https://www.syncfusion.com/blazor-components/blazor-charts/c
 
 ## Pyramid Mode
 
-The [Pyramid Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationType.html#Syncfusion_Blazor_Charts_AccumulationType_Pyramid) can be rendered in both [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PyramidMode.html#Syncfusion_Blazor_Charts_PyramidMode_Linear) and [Surface](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PyramidMode.html#Syncfusion_Blazor_Charts_PyramidMode_Surface) modes. The [PyramidMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PyramidMode)'s default type is [Linear](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.PyramidMode.html#Syncfusion_Blazor_Charts_PyramidMode_Linear).
+The Pyramid Chart can be rendered in both `Linear` or `Surface` modes by setting [PyramidMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartSeries.html#Syncfusion_Blazor_Charts_AccumulationChartSeries_PyramidMode) property. The default mode is `Linear`.
 
 ```cshtml 
 

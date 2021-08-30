@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Prevent Expand or Collapse item in Blazor Accordion | Syncfusion
-description: Learn here all about Prevent Expand or Collapse item in Syncfusion Blazor Accordion component and more.
+title: Prevent the Expand or Collapse item in Blazor Accordion | Syncfusion
+description: Learn here all about how to prevent Expand or Collapse item in Syncfusion Blazor Accordion component and more.
 platform: Blazor
 control: Accordion
 documentation: ug
 ---
 
-# Prevent Expand or Collapse item in Blazor Accordion Component
+# Prevent the Expand or Collapse item in Blazor Accordion Component
 
-We can prevent the expand and collapse of accordion item for specific condition, for example if we have a button in the accordion header, clicking on it we need to prevent expand and collapse. This can be achieved by checking the condition on Accordion [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events. You can refer the following code snippet in which prevention of collapse and expand action when clicking the Button and DropDownList.
+The expand and collapse of an accordion item can be prevented for a specific condition. For example, if there is a button in the accordion header, clicking on it must prevent the expanding and collapsing. This can be achieved by checking the condition on Accordion [Expanding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Expanding) and [Collapsing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionEvents.html#Syncfusion_Blazor_Navigations_AccordionEvents_Collapsing) events. Refer the following code snippet in which the prevention of collapse and expand action occurs while clicking the Button and DropDownList.
 
-* DropDownList - Prevented the expand and collapse of accordion item when open the DropDownList by using the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event of DropDownList. Also, prevented the expand or collapse of accordion item when close or select the DropDownList by using the [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of DropDownList.
-* Button - Prevented the expand or collapse of accordion item when clicking the button by using the `onclick` event of Button.
+* DropDownList - Prevents the expand and collapse of an accordion item while opening the DropDownList using the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnOpen) event of the DropDownList. It also prevents the expand or collapse of an accordion item while closing or selecting the DropDownList by using the [OnClose](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_OnClose) and [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.DropDownListEvents-2.html#Syncfusion_Blazor_DropDowns_DropDownListEvents_2_ValueChange) event of the DropDownList.
+* Button - Prevents the expand or collapse of an accordion item while clicking the button by using the `onclick` event of the Button.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -108,6 +108,6 @@ We can prevent the expand and collapse of accordion item for specific condition,
 }
 ```
 
-Output be like the below.
+Output:
 
 ![Expanding or Collapsing Item in Blazor Accordion](../images/blazor-accordion-expand-collapse-tem.png)

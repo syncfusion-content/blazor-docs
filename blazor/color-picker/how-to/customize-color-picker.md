@@ -78,7 +78,7 @@ By default, the Palette will be rendered with default colors. To load custom col
 ```
 
 Output be like
-![color-picker](./../images/cp-custom.png)
+![Blazor ColorPicker with Custom Palette](./../images/blazor-colorpicker-with-custom-palette.png)
 
 ## Hide input area from picker
 
@@ -94,7 +94,7 @@ In the following sample, the Color Picker is rendered without input area.
 ```
 
 Output be like
-![color-picker](./../images/hide-input.png)
+![Hide Input Area in Blazor ColorPicker](./../images/blazor-colorpicker-hide-input.png)
 
 ## Custom Handle
 
@@ -128,4 +128,4 @@ The following sample show the customized Color Picker handle.
 ```
 
 Output be like
-![color-picker](./../images/cp-custom-handle.png)
+![Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.png)

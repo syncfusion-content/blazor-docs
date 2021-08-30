@@ -29,7 +29,7 @@ The following code allows selecting a date within the range from 7th to 27th day
 
 The output will be as follows.
 
-![DateTimePicker](./images/datetime-range.png)
+![DateTime Selection in Blazor DateTimePicker](./images/blazor-datetimepicker-selection.png)
 
 When the Min and Max properties are configured and the selected datetime value is out-of-range or invalid, then the model value will be set to `out of range` datetime value or `null` respectively with highlighted `error` class to indicates the datetime is out of range or invalid.
 
@@ -47,6 +47,6 @@ When the Min and Max properties are configured and the selected datetime value i
 
 The output will be as follows.
 
-![DateTimePicker](./images/datetime-range_02.png)
+![Blazor DateTimePicker displays Selected Date and Time](./images/blazor-datetimepicker-date-time-selection.png)
 
 > If the value of `Min` or `Max` properties changed through code behind, you have to update the `Value` property to set within the range.
