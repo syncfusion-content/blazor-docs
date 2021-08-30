@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Source in Blazor DropDown List Component
 
-The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager_members.html).
+The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-js2) adaptors.
 
@@ -338,6 +338,25 @@ You can bind enum data to DropDownList component. The following code helps you g
 The output will shown as follows,
 
 ![Enum data](./images/drop-down-enum-data.png)
+
+### ValueTuple data binding
+
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfDropDownList TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+                DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <DropDownListFieldSettings Value="Item1" Text="Item2" />
+</SfDropDownList>
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList ValueTuple Data](./images/blazor_dropdown_valuetuple.png)
 
 ## Entity Framework
 
