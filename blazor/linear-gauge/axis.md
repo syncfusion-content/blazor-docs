@@ -13,7 +13,7 @@ Axis is used to indicate the numeric values in the linear scale. The Linear Gaug
 
 ## Setting the start value and end value of the axis
 
-The start value and end value for the Linear Gauge can be set using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_Maximum) properties in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class respectively. By default, the start value of the axis is "**0**" and the end value of the axis is "**100**".
+The start value and end value for the Linear Gauge can be set using the [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_Minimum) and [Maximum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_Maximum) properties in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class respectively. By default, the start value of the axis is **0** and the end value of the axis is **100**.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -26,7 +26,7 @@ The start value and end value for the Linear Gauge can be set using the [Minimum
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Minimum and Maximum values](images/min-max.png)
+![Linear Gauge with minimum and maximum values](images/min-max.png)
 
 ## Line Customization
 
@@ -50,7 +50,7 @@ The following properties in the [LinearGaugeLine](https://help.syncfusion.com/cr
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Line Customization Sample](images/line.png)
+![Linear Gauge with line customization](images/line.png)
 
 ## Ticks Customization
 
@@ -79,12 +79,12 @@ Ticks are used to specify the interval in the axis. Ticks are of two types, majo
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Ticks Customization Sample](images/ticks-custom.png)
+![Linear Gauge with ticks customization](images/ticks-custom.png)
 
 <!-- markdownlint-disable MD036 -->
 ### Positioning the ticks
 
-The minor and major ticks can be positioned by using the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Offset) and [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Position) properties. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Offset) is used to render the ticks with the specified distance from the axis. By default, the offset value is "**0**". The possible values of the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Position) property are "[Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Inside)", "[Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Outside)", "[Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Cross)", and "[Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Auto)". By default, the ticks will be placed inside the axis.
+The minor and major ticks can be positioned by using the [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Offset) and [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Position) properties. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Offset) is used to render the ticks with the specified distance from the axis. By default, the offset value is **0**. The possible values of the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeTickSettings.html#Syncfusion_Blazor_LinearGauge_LinearGaugeTickSettings_Position) property are "[Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Inside)", "[Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Outside)", "[Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Cross)", and "[Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Auto)". By default, the ticks will be placed inside the axis.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -106,7 +106,7 @@ The minor and major ticks can be positioned by using the [Offset](https://help.s
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Ticks position](images/tick-position.png)
+![Linear Gauge with ticks position](images/tick-position.png)
 
 ## Labels Customization
 
@@ -133,13 +133,13 @@ The style of the labels can be customized using the following properties in [Lin
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Label customization](images/label-styles.png)
+![Linear Gauge with label customization](images/label-styles.png)
 
 <!-- markdownlint-disable MD036 -->
 
 ### Positioning the axis label
 
-Labels can be positioned by using [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Offset) and [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Position) properties in the [LinearGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html) class. The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Offset) defines the distance between the labels and ticks. By default, the offset value is "**0**". The possible values of the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Position) property are "[Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Inside)", "[Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Outside)", "[Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Cross)", and "[Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Auto)". By default, the labels will be placed inside the axis.
+Labels can be positioned by using [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Offset) and [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Position) properties in the [LinearGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html). The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Offset) defines the distance between the labels and ticks. By default, the offset value is **0**. The possible values of the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Position) property are "[Inside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Inside)", "[Outside](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Outside)", "[Cross](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Cross)", and "[Auto](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.Position.html#Syncfusion_Blazor_LinearGauge_Position_Auto)". By default, the labels will be placed inside the axis.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -157,13 +157,13 @@ Labels can be positioned by using [Offset](https://help.syncfusion.com/cr/blazor
 </SfLinearGauge>
 ```
 
-![Linear Gauge with label Position](images/label-position.png)
+![Linear Gauge with label position](images/label-position.png)
 
 <!-- markdownlint-disable MD036 -->
 
 ### Customizing the display of the last label
 
-If the last label is not in the visible range, it will be hidden by default. The last label can be made visible by setting the [ShowLastLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_ShowLastLabel) property as "**true**" in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class.
+If the last label is not in the visible range, it will be hidden by default. The last label can be made visible by setting the [ShowLastLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_ShowLastLabel) property as **true** in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -179,13 +179,13 @@ If the last label is not in the visible range, it will be hidden by default. The
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Last label](images/last-label.png)
+![Linear Gauge with last label](images/last-label.png)
 
 <!-- markdownlint-disable MD036 -->
 
 ### Label Format
 
-Axis labels in the Linear Gauge control can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Format) property in the [LinearGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html) class. It is used to render the axis labels in a certain format or to add a user-defined unit in the label. It works with the help of placeholder like "**{value}°C**", where "**value**" represents the axis value. For example, 20°C.
+Axis labels in the Linear Gauge control can be formatted using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxisLabelStyle_Format) property in the [LinearGaugeAxisLabelStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxisLabelStyle.html) class. It is used to render the axis labels in a certain format or to add a user-defined unit in the label. It works with the help of placeholder like **{value}°C**, where **value** represents the axis value. For example, 20°C.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -203,7 +203,7 @@ Axis labels in the Linear Gauge control can be formatted using the [Format](http
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Custom label format](images/custom-format.png)
+![Linear Gauge with custom label format](images/custom-format.png)
 
 ### Displaying numeric format in labels
 
@@ -280,11 +280,11 @@ The numeric formats such as currency, percentage, and so on can be displayed in 
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Label format](images/label-format1.png)
+![Linear Gauge with label format](images/label-format1.png)
 
 ## Orientation
 
-By default, the Linear Gauge is rendered vertically. To change its orientation, the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Orientation) property must be set to "**Horizontal**".
+By default, the Linear Gauge is rendered vertically. To change its orientation, the [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_Orientation) property must be set to **Horizontal**.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -298,11 +298,11 @@ By default, the Linear Gauge is rendered vertically. To change its orientation, 
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Orientation](images/gauge-orientation.png)
+![Linear Gauge with orientation](images/gauge-orientation.png)
 
 ## Inverted Axis
 
-The axis of the Linear Gauge component can be inversed by setting the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_IsInversed) property to "**true**" in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html).
+The axis of the Linear Gauge component can be inversed by setting the [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_IsInversed) property to **true** in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html).
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -318,11 +318,11 @@ The axis of the Linear Gauge component can be inversed by setting the [IsInverse
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Inverted axis](images/invert.png)
+![Linear Gauge with inverted axis](images/invert.png)
 
 ## Opposed Axis
 
-To place an axis opposite from its original position, [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_OpposedPosition) property in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class must be set as "**true**".
+To place an axis opposite from its original position, [OpposedPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html#Syncfusion_Blazor_LinearGauge_LinearGaugeAxis_OpposedPosition) property in the [LinearGaugeAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeAxis.html) class must be set as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -338,7 +338,7 @@ To place an axis opposite from its original position, [OpposedPosition](https://
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Opposed position](images/opposite-axes.png)
+![Linear Gauge with opposed position](images/opposite-axes.png)
 
 ## Multiple Axes
 
@@ -371,4 +371,4 @@ Multiple axes can be added to the Linear Gauge by adding multiple [LinearGaugeAx
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Multiple axes](images/multiple-axes.png)
+![Linear Gauge with multiple axes](images/multiple-axes.png)
