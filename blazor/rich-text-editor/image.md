@@ -18,7 +18,7 @@ Rich Text Editor allows inserting images from online sources and local computer 
 | Width | Sets the default width of the image when it is inserted in the Rich Text Editor.|
 | Height | Sets the default height of the image when it is inserted in the Rich Text Editor.|
 | SaveUrl | Provides URL to map the action result method to save the image.|
-| Path | Specifies the location to store the image.|
+| Path | Specifies the location to store the image. It is of string type and it appends to the name of the file or folder where you want to store the image. For example, "api/Images/"|
 | EnableResize | Enables resizing for image element.|
 | MinWidth | Defines the minimum Width of the image.|
 | MaxWidth | Defines the maximum Width of the image.|
