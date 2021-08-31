@@ -193,41 +193,25 @@ In the client Blazor application, go to the `wwwroot/index.html` file and replac
 </html>
 ```
 
-### How to change theme dynamically
+## Change theme dynamically
 
-In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code.
+In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code. 
 
 
-#### Blazor Server Application
+### Change theme dynamically in blazor server app
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-**STEP 1:** Create a Blazor Server-side application by referring [Blazor Server](../../getting-started/blazor-server-side-visual-studio-2019/) documentation.
+1. In  `_Host.cshtml`, refer syncfusion style sheet where the style sheet name is defined based on query string. 
 
-**STEP 2:** Install Syncfusion NuGet packages in the created Blazor application to utilize Syncfusion products.
-
-Packages to be installed :
-1. Syncfusion.Blazor.Grid
-2. Syncfusion.Blazor.DropDowns
-
-Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
-
- ![Themes-install-nuget-grid](images/Themes-install-nuget-grid.png)
- ![Themes-install-nuget-dropdown](images/Themes-install-nuget-dropdowns.png)
-
-**STEP 3:** Add the following code to the `_Host.cshtml` file.
-
-The themeName variable is assigned for theme switch result, in which its value is applied to the Syncfusion theme link reference where the specified theme is applied directly to the entire product.
-
-```html
+```cshtml
 @page "/"
 @namespace BlazorThemeSwitcher.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = null;
-
-   QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
+    QueryHelpers.ParseQuery(Request.QueryString.Value).TryGetValue("theme", out var themeName);
     themeName = themeName.Count > 0 ? themeName.First() : "bootstrap";
 }
 
@@ -250,7 +234,7 @@ The themeName variable is assigned for theme switch result, in which its value i
 </html>
 ```
 
-**STEP 4:** Modify the `MainLayout.razor page` to process theme changing in application.
+2. In `MainLayout.razor` page add dropdown list with list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
 
 ```cshtml
 @inherits LayoutComponentBase
@@ -286,6 +270,7 @@ The themeName variable is assigned for theme switch result, in which its value i
         public string ID { get; set; }
         public string Text { get; set; }
     }
+    
     private List<ThemeDetails> Themes = new List<ThemeDetails>() {
        new ThemeDetails(){ ID = "material", Text = "Material" },
         new ThemeDetails(){ ID = "bootstrap", Text = "Bootstrap" },
@@ -298,66 +283,43 @@ The themeName variable is assigned for theme switch result, in which its value i
         new ThemeDetails(){ ID = "fabric-dark", Text = "Fabric Dark" },
         new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
     };
-
-public void OnThemeChange(ChangeEventArgs<string, ThemeDetails> args)
-{
-    var theme = GetThemeName();
-    if (theme != args.ItemData.ID)
+    
+    public void OnThemeChange(ChangeEventArgs<string, ThemeDetails> args)
     {
-        UrlHelper.NavigateTo(GetUri(args.ItemData.ID ), true);
+        var theme = GetThemeName();
+        if (theme != args.ItemData.ID)
+        {
+            UrlHelper.NavigateTo(GetUri(args.ItemData.ID ), true);
+        }
+    }
+    
+    private string GetThemeName()
+    {
+        var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+        QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
+        theme = theme.Count > 0 ? theme.First() : "bootstrap";
+        return theme;
+    }
+    
+    private string GetUri(string themeName)
+    {
+        var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
+        return uri.AbsolutePath + "?theme=" + themeName;
+    }
+    
+    protected override void OnInitialized()
+    {
+        var theme = GetThemeName();
+        themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
     }
 }
-
-private string GetThemeName()
-{
-    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-    QueryHelpers.ParseQuery(uri.Query).TryGetValue("theme", out var theme);
-    theme = theme.Count > 0 ? theme.First() : "bootstrap";
-    return theme;
-}
-
-private string GetUri(string themeName)
-{
-    var uri = UrlHelper.ToAbsoluteUri(UrlHelper.Uri);
-    return uri.AbsolutePath + "?theme=" + themeName;
-}
-
-protected override void OnInitialized()
-{
-    var theme = GetThemeName();
-    themeName = theme.Contains("bootstrap4") ? "bootstrap4" : theme;
-}
-}
 ```
 
-**STEP 5:** Add the following code in `Index.razor` page to render the DataGrid in Blazor output.
+![Change theme dynamically in blazor server app](images/Themes-dynamically-change-theme-demo.gif) 
 
-```cshtml
-@page "/"
-@inject NavigationManager Urlhelper
-@using Syncfusion.Blazor.Grids
+> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
-<div>
-    <h1>Dynamically Change Theme</h1>
-    <SfGrid DataSource="@Orders" AllowPaging="true">
-        <GridPageSettings PageSize="5"></GridPageSettings>
-        <GridColumns>
-           ........
-        </GridColumns>
-    </SfGrid>
-</div>
-
-@code{
-    ......
-}
-```
-
- ![Themes-dynamically-change-theme-demo](images/Themes-dynamically-change-theme-demo.gif) 
-
-You can download the sample from the below link,
-[Server-side sample](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
-
- #### Blazor WebAssembly Application 
+### Change theme dynamically in blazor WebAssembly (WASM) app
 
 The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion Blazor themes using Syncfusion Dropdown component.
 
@@ -488,7 +450,6 @@ Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select 
 }
 ```
 
- ![Themes-web-dynamically-change-theme-demo](images/Themes-web-dynamically-change-theme-demo.gif) 
+![Themes-web-dynamically-change-theme-demo](images/Themes-web-dynamically-change-theme-demo.gif) 
 
-You can download the sample from the below link,
-[WASM sample](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
+> [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
