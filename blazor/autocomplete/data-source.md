@@ -412,6 +412,37 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
+### ObservableCollection data binding
+
+You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the AutoComplete component.The following example helps you to bind the `ObservableCollection<T>` to the AutoComplete component.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Collections.ObjectModel;
+
+<SfAutoComplete TItem="Games" Placeholder="Select a game" Width="250px" DataSource="@LocalData" TValue="string">
+    <AutoCompleteFieldSettings Value="ID" Text="Text"></AutoCompleteFieldSettings>
+</SfAutoComplete>
+
+@code {
+
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    ObservableCollection<Games> LocalData = new ObservableCollection<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" }
+  };
+
+}
+
+```
+
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the AutoComplete component.

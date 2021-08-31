@@ -405,6 +405,37 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 ```
 
+### ObservableCollection data binding
+
+You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the ComboBox component.The following example helps you to bind the `ObservableCollection<T>` to the ComboBox component.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Collections.ObjectModel;
+
+<SfComboBox TItem="Games" Placeholder="Select a game" Width="250px" DataSource="@LocalData" TValue="string">
+    <ComboBoxFieldSettings Value="ID" Text="Text"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code {
+
+    public class Games
+    {
+        public string ID { get; set; }
+        public string Text { get; set; }
+    }
+    ObservableCollection<Games> LocalData = new ObservableCollection<Games> {
+    new Games() { ID= "Game1", Text= "American Football" },
+    new Games() { ID= "Game2", Text= "Badminton" },
+    new Games() { ID= "Game3", Text= "Basketball" },
+    new Games() { ID= "Game4", Text= "Cricket" }
+  };
+
+}
+
+```
+
 
 ## Entity Framework
 
