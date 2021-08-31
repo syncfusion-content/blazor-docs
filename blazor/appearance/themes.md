@@ -234,7 +234,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 </html>
 ```
 
-2. In `MainLayout.razor` page add dropdown list with list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+2. In `MainLayout.razor` page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
 
 ```cshtml
 @inherits LayoutComponentBase
@@ -315,7 +315,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 }
 ```
 
-![Change theme dynamically in blazor server app](images/Themes-dynamically-change-theme-demo.gif) 
+![Change theme dynamically in blazor server app](images/blazor-dynamic-theme-switching.gif) 
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
@@ -323,13 +323,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
 The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-**STEP 1:** Create a Blazor WebAssembly application by referring [Blazor WebAssembly](../../getting-started/blazor-webassembly-visual-studio-2019) in Visual Studio.
-
-**STEP 2:** Install the individual NuGet packages for Grid and Dropdown in the created WebAssembly application by following the below way:
-
-Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
-
-**STEP 3:** Add the below function code in the  `~/wwwroot/index.html` file to set the theme as selected by using its **id** value.
+1. Add the below function code in the  `index.html` file to set the theme as selected in dropdown by using its **id** value.
 
 ```html
 <head>
@@ -347,7 +341,8 @@ Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select 
     </script>
 …………… . . 
 ```
-**STEP 4:** Modify the `MainLayout.razor` page to implement a theme change dynamically using the dropdown in application.
+
+2. Modify the `MainLayout.razor` page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
 
 ```cshtml
 @inherits LayoutComponentBase
@@ -428,28 +423,6 @@ Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select 
 }
 
 ```
-**STEP 5:** Add the following code in `Index.razor` page to render the DataGrid in Blazor output.
-
-```cshtml
-@page "/"
-@inject NavigationManager Urlhelper
-@using Syncfusion.Blazor.Grids
-
-<div>
-    <h1>Dynamically Change Theme</h1>
-    <SfGrid DataSource="@Orders" AllowPaging="true">
-        <GridPageSettings PageSize="5"></GridPageSettings>
-        <GridColumns>
-            .......
-        </GridColumns>
-    </SfGrid>
-</div>
-
-@code{
-   .......
-}
-```
-
-![Themes-web-dynamically-change-theme-demo](images/Themes-web-dynamically-change-theme-demo.gif) 
+![Change theme dynamically in blazor WASM app](images/blazor-dynamic-theme-switching-wasm.gif) 
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
