@@ -355,7 +355,7 @@ protected override void OnInitialized()
  ![Themes-dynamically-change-theme-demo](images/Themes-dynamically-change-theme-demo.gif) 
 
 You can download the sample from the below link,
-
+[Serversample](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
  #### Blazor WebAssembly Application 
 
@@ -491,3 +491,4 @@ Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select 
  ![Themes-web-dynamically-change-theme-demo](images/Themes-web-dynamically-change-theme-demo.gif) 
 
 You can download the sample from the below link,
+[WASM sample](https://github.com/SyncfusionExamples/theme-switching-in-blazor-WASM-app)
