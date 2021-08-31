@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Cell in Syncfusion Blazor DataGrid component and much more details.
+description: Checkout and learn here all about Cell in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -130,13 +130,13 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 </style>
 ```
 
-The following screenshot represents a DataGrid with customize cell styles.
+The following screenshot represents a DataGrid with customized cell styles.
 
 ![customize cell styles](./images/customize-cell-styles.png)
 
 ## Auto wrap
 
-The auto wrap allows the cell content of the datagrid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words. To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to `true`. You can configure the auto wrap mode by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
+The auto wrap allows the cell content of the DataGrid to wrap to the next line when it exceeds the boundary of the cell width. The Cell Content wrapping works based on the position of white space between words. To enable auto wrap, set the [AllowTextWrap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowTextWrap) property to `true`. You can configure the auto wrap mode by setting the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) property.
 
 There are three types of [WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode). They are:
 
@@ -144,7 +144,7 @@ There are three types of [WrapMode](https://help.syncfusion.com/cr/blazor/Syncfu
 * **Header**: Auto wrap will be enabled only for the header.
 * **Content**: Auto wrap will be enabled only for the content.
 
-> When a column width is not specified, then auto wrap of columns will be adjusted with respect to the datagrid's width.
+> When a column width is not specified, then auto wrap of columns will be adjusted with respect to the DataGrid's width.
 
 In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridTextWrapSettings.html#Syncfusion_Blazor_Grids_GridTextWrapSettings_WrapMode) is set to **Content**.
 
@@ -194,9 +194,9 @@ The following screenshot represents a DataGrid with auto wrap.
 
 ## Custom Attributes
 
-You can customize the datagrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ColumnModel.html#Syncfusion_Blazor_Gantt_ColumnModel_CustomAttributes) property of the column.
+You can customize the DataGrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ColumnModel.html#Syncfusion_Blazor_Gantt_ColumnModel_CustomAttributes) property of the column.
 
-In the below example, we have customized the cells of **OrderID** and **ShipCity** columns.
+In the following example, the cells of the **OrderID** and **ShipCity** columns are customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -244,15 +244,15 @@ In the below example, we have customized the cells of **OrderID** and **ShipCity
 
 The [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) have option to display cell border and it can be defined by the [GridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GridLines) property.
 
-The available modes of datagrid lines are:
+The available modes of DataGrid lines are:
 
 | Modes | Actions |
 |-------|---------|
-| Both | Displays both the horizontal and vertical datagrid lines.|
-| None | No datagrid lines are displayed.|
-| Horizontal | Displays the horizontal datagrid lines only.|
-| Vertical | Displays the vertical datagrid lines only.|
-| Default | Displays datagrid lines based on the theme.|
+| Both | Displays both the horizontal and vertical DataGrid lines.|
+| None | No DataGrid lines are displayed.|
+| Horizontal | Displays the horizontal DataGrid lines only.|
+| Vertical | Displays the vertical DataGrid lines only.|
+| Default | Displays DataGrid lines based on the theme.|
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -290,7 +290,7 @@ The available modes of datagrid lines are:
 }
 ```
 
->By default, the datagrid renders with **Default** mode.
+>By default, the DataGrid renders with **Default** mode.
 
 ## Clip Mode
 
@@ -347,4 +347,4 @@ The following screenshot represents a clip mode in DataGrid
 
 ![clipmode](./images/clipmode.png)
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

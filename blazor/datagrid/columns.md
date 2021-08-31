@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Columns in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Columns in Syncfusion Blazor DataGrid component and much more details.
+description: Checkout and learn here all about Columns in Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Columns in Blazor DataGrid Component
 
-The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format. The datagrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of **GridColumn**, is necessary to map the datasource values in DataGrid columns.
+The column definitions are used as the **DataSource** schema in the DataGrid. This plays a vital role in rendering column values in the required format. The DataGrid operations such as sorting, filtering and grouping etc. are performed based on column definitions. The [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) property of **GridColumn** is necessary to map the datasource values in DataGrid columns.
 
 > 1. If the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) is not specified in the dataSource, the column values will be empty.
 > 2. If the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) name contains “dot” operator, it is considered as complex binding.
@@ -50,7 +50,7 @@ The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion
 
 ## Dynamic column building
 
-It is possible to dynamically build and customize each of the datagrid column using the type of the model.
+It is possible to dynamically build and customize each of the DataGrid column using the type of the model.
 
 You can refer the following code example to achieve this.
 
@@ -84,12 +84,12 @@ You can refer the following code example to achieve this.
 }
 ```
 
-The following image represents datagrid with dynamically build columns,
+The following image represents DataGrid with dynamically build columns,
 ![Dynamic Column](./images/dynamic-column-building.png)
 
 ## Complex data binding
 
-You can achieve complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples **Name.FirstName** and **Name.LastName** are complex data.
+You can achieve complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, **Name.FirstName** and **Name.LastName** are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -138,11 +138,11 @@ You can achieve complex data binding in the datagrid by using the dot(.) operato
 The following image represents complex data binding
 ![Complex Data](./images/complexdata.png)
 
->For OData and ODataV4 adaptors, you need to add expand query to the query property (of DataGrid), to eager load the complex data.
+>For OData and ODataV4 adaptors, you need to add expand query to the query property (of DataGrid) to load the complex data.
 
 ### ExpandoObject Complex data binding
 
-Before proceeding this you learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#expandoobject-binding). You can achieve ExpandoObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
+Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#expandoobject-binding). You can achieve ExpandoObject complex data binding in the DataGrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -194,7 +194,7 @@ The following image represents ExpandoObject complex data binding
 
 ### DynamicObject Complex data binding
 
-Before proceeding this you learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#dynamicobject-binding). You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the below examples `CustomerID.Name` and `ShipCountry.Country` are complex data.
+Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncfusion.com/documentation/datagrid/data-binding/#dynamicobject-binding). You can achieve DynamicObject complex data binding in the datagrid by using the dot(.) operator in the column.field. In the following examples, `CustomerID.Name` and `ShipCountry.Country` are complex data.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -513,7 +513,7 @@ The following screenshot represents the Header Template.
 
 ## Column template
 
-> Before adding column template to the datagrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding column template to the DataGrid, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
 
 To know about **Column Template** in Blazor DataGrid Component, you can check this video.
 
@@ -716,9 +716,9 @@ The following screenshot represents the Image Template.
 
 ### Using hyperlink column and performing routing on click
 
-The Column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html). For routing [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
+The Column template property can be used to provide routing links inside the [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Template) property of the [GridColumn](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumn.html). For routing, [UriHelper](https://docs.microsoft.com/en-us/aspnet/core/blazor/routing?view=aspnetcore-3.0#uri-and-navigation-state-helpers) can be utilized.
 
-This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. In this event the DataGrid data **context** is passed on to its function.
+This can be achieved by initially defining an anchor tag inside the column template and binding click event to it. In this event, the DataGrid data **context** is passed on to its function.
 
 ```cshtml
 @inject NavigationManager UriHelper
@@ -773,9 +773,9 @@ This can be achieved by initially defining an anchor tag inside the column templ
 }
 ```
 
-In the above code, the url to be navigated is specified in the Link variable of the DataGrid data. Based on this the page is routed to the corresponding url.
+In the above code, the url to be navigated is specified in the Link variable of the DataGrid data. Based on this, the page is routed to the corresponding url.
 
-After this add new razor page for routing with routing url along with the parameters to be received and initialize it with the required details.
+After that, add new razor page for routing with routing url along with the parameters to be received, and initialize it with the required details.
 
 ```cshtml
 @page "/nancy_fuller/{EmpID}/{Name}/{Title}"
@@ -815,7 +815,7 @@ DataGrid column supports the following types:
 * DateTime
 * CheckBox
 
-> If the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Incase if the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) is null/blank value for a column then it is necessary to define the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) for that column.
+> If the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Incase, if the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) is null/blank value for a column then it is necessary to define the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) for that column.
 
 ### Difference between Boolean type and CheckBox type column
 
@@ -879,7 +879,7 @@ The following GIF represents the column chooser functionality in DataGrid
 
 The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Fill) as true.
 
-In this below example, we have opened column chooser using external button click.
+In this following example, we have opened column chooser using external button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -938,7 +938,7 @@ The following GIF represents opening column chooser functionality in DataGrid us
 
 ## Format
 
-To format cell values based on specific culture, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of **GridColumn** component . The datagrid uses **Internalization** library to format **number** and **date**.
+To format cell values based on specific culture, use the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of **GridColumn** component . The DataGrid uses **Internalization** library to format **number** and **date**.
 values.
 
 ```cshtml
@@ -981,7 +981,7 @@ values.
 
 ### Number formatting
 
-The number or integer values can be formatted using the below format strings.
+The number or integer values can be formatted using the following format strings.
 
 Format |Description |Remarks
 -----|-----|-----
@@ -993,11 +993,11 @@ P | Denotes percentage type | The percentage format expects the input value to b
 
 You can format date values either using built-in date format string.
 
-For built-in date format you can specify [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of **GridColumn** as string.
+For built-in date format, you can specify the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Format) property of **GridColumn** as string.
 
 ## Visibility
 
-You can hide any particular column in DataGrid before rendering by defining [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of **GridColumn** as false. In the below sample **Freight** column is defined as visible false.
+You can hide any particular column in DataGrid before rendering by defining the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Visible) property of **GridColumn** as false. In the following sample, **Freight** column is defined as visible false.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1043,7 +1043,7 @@ The column width can be set using the **Width** property of the **GridColumn**. 
 
 * Columns will respect the width value irrespective of its cell content width.
 * Columns with no width set will share the available space equally.
-* When all columns are provided with a width value and the cumulative width of all columns is greater than the grid element width, a horizontal scrollbar will be showed.
+* When all columns are provided with a width value and the cumulative width of all columns is greater than the grid element width, a horizontal scrollbar will be shown.
 * When only some columns are provided with the width value and if the cumulative width of the columns is greater than the grid element width then columns with no width might be invisible as their width is zero.
 * When only some columns are provided with the width value and if the cumulative width of the columns is lesser than the grid element width then columns with no width will share the available space evenly.
 * When no width is provided in a column and MinWidth property is defined, if the cumulative width of the column is greater than the grid element width then MinWidth would be used as the column width to avoid it from becoming invisible.
@@ -1054,7 +1054,7 @@ You can auto fit a column interactively by double clicking the right border of t
 
 ### Autofit columns at initial rendering
 
-**AutoFit** resizes the column to fit the widest cell’s content without wrapping. To enable AutoFit for specific columns you need to set the AutoFit property to true.
+**AutoFit** resizes the column to fit the widest cell’s content without wrapping. To enable AutoFit for specific columns, you need to set the AutoFit property to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1092,12 +1092,12 @@ You can auto fit a column interactively by double clicking the right border of t
 }
 ```
 
-In the  following Image **Autofit** Property is set to true for CustomerName and OrderDate.
+In the  following Image, **Autofit** Property is set to true for CustomerName and OrderDate.
 ![Autofit Columns](./images/autofit-column.png)
 
 ### Autofit columns by method
 
-The **AutoFitColumns** method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the **AutoFitColumns** method in [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
+The **AutoFitColumns** method resizes the column to fit the widest cell's content without wrapping. You can autofit a specific column at initial rendering by invoking the **AutoFitColumns** method in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1150,7 +1150,7 @@ The following image represents AutoFit column by method
 
 ## Reorder
 
-Reordering can be done by drag and drop of a particular column header from one index to another index within the datagrid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property to true.
+Reordering can be done by drag and drop of a particular column header from one index to another index within the DataGrid. To enable reordering, set the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowReordering) property to true.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1194,7 +1194,7 @@ The following represents Reordering of columns
 
 ### Reorder single column
 
-DataGrid has option to reorder single column either by Interaction or by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method. In the below sample, **Freight** column is reordered to last column position by using the method.
+DataGrid has option to reorder single column either by Interaction or by using the [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method. In the following sample, **Freight** column is reordered to last column position by using the method.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -1246,9 +1246,9 @@ The following GIF represents Reordering column **Freight** by using method,
 
 ### Reorder multiple columns
 
-User can reorder a single column at a time by Interaction. Sometimes we need to have reorder multiple columns at the same time, It can be achieved programmatically by using [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method.
+User can reorder a single column at a time by Interaction. Sometimes, we need to reorder multiple columns at the same time. This can be achieved programmatically by using [ReorderColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ReorderColumns_System_Collections_Generic_List_System_String__System_String_) method.
 
-In the below sample, **Customer Name** and **Freight** columns are reordered to last column position by using this method on button click.
+In the following sample, **Customer Name** and **Freight** columns are reordered to last column position by using this method on button click.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -1358,7 +1358,7 @@ During the reorder action, the grid component triggers the below events,
 
 You can lock columns by using [`LockColumn`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_LockColumn) property. The locked columns will be moved to the first position and can’t be reordered.
 
-In the below example, Order ID column is locked and its reordering functionality is disabled.
+In the following example, Order ID column is locked and its reordering functionality is disabled.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -1521,12 +1521,12 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 }
 ```
 
-The following shows resizing of stacked header
+Resizing of stacked header is shown below
 ![Resize Stacked](images/resize-stacked.gif)
 
 ### Touch interaction
 
-When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can autoFit a column by using the Column menu of the datagrid.
+When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed. You can autoFit a column by using the Column menu of the DataGrid.
 
 The following screenshot represents the column resizing in touch device.
 
@@ -1838,7 +1838,7 @@ The following GIF shows the customized column menu item for particular column in
 
 <!-- Column spanning
 
-The grid has option to span the adjacent cells. To achieve this define the [`ColSpan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_QueryCellInfoEventArgs_1_ColSpan) attribute in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event.
+The grid has option to span the adjacent cells. To achieve this, define the [`ColSpan`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.QueryCellInfoEventArgs-1.html#Syncfusion_Blazor_Grids_QueryCellInfoEventArgs_1_ColSpan) attribute in the [`QueryCellInfo`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_QueryCellInfo) event.
 
 In the following demo, the cells have been spanned based on the employees schedule
 
@@ -2019,7 +2019,7 @@ The following GIF shows the column spanning in Grid -->
 
 You can toggle column visibility based on media queries. This can be achieved by defining Media Queries in the [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) Column property. The [HideAtMedia](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HideAtMedia) accepts valid [Media Queries](http://cssmediaqueries.com/what-are-css-media-queries.html).
 
-In the below sample code, for OrderID column - HideAtMedia property value is set as (min-width: 700px). This hides the OrderID column when the browser screen width is less than 700px.
+In the following sample code, for OrderID column - HideAtMedia property value is set as (min-width: 700px). This hides the OrderID column when the browser screen width is less than 700px.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2057,14 +2057,14 @@ In the below sample code, for OrderID column - HideAtMedia property value is set
 }
 ```
 
-The following GIF shows the responsive columns behaviour when window is resized,
+The following GIF shows the responsive columns behaviour when the window is resized,
 ![Responsive columns](images/responsive-columns.gif)
 
 ## Controlling datagrid actions
 
 You can enable or disable datagrid action for a particular column by using the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering), [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping), [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSorting), [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering), and [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) properties.
 
-The following sample code shows datagrid actions disabled for particular columns,
+The following sample code shows DataGrid actions disabled for particular columns,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2103,12 +2103,12 @@ The following sample code shows datagrid actions disabled for particular columns
 }
 ```
 
-The following GIF shows the datagrid actions for different columns,
+The following GIF shows the DataGrid actions for different columns,
 ![Responsive columns](images/grid-actions.gif)
 
 ## Show/hide columns by external button
 
-You can show or hide datagrid columns dynamically using external buttons by invoking the [ShowColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumns_System_Object_System_String_) or [HideColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumns_System_Object_System_String_) method.
+You can show or hide DataGrid columns dynamically using external buttons by invoking the [ShowColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_ShowColumns_System_Object_System_String_) or [HideColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_HideColumns_System_Object_System_String_) method.
 
 The following sample code demonstrates showing and hiding of columns using their header texts **("Order Date", "Freight")** on button click,
 
@@ -2223,7 +2223,7 @@ The following image represents the Grid with manipulated column data. -->
 
 You can bind an array of objects in a column by using the [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property.
 
-In the following sample code, the name field having an array of two objects, FirstName and LastName are joined and bound to a column using the [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property.
+In the following sample code, the name field has an array of two objects, FirstName and LastName are joined and bound to a column using the [`ValueAccessor`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2269,7 +2269,7 @@ In the following sample code, the name field having an array of two objects, Fir
 }
 ```
 
-The following image represents the binded column data in Grid using ValueAccessor property -->
+The following image represents the bound column data in Grid using ValueAccessor property -->
 
 <!-- Expression column
 
@@ -2377,4 +2377,4 @@ The following sample code demonstrates [DisplayAsCheckBox](https://help.syncfusi
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,
 ![Display as checkbox](./images/checkbox-boolean-values.png)
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
