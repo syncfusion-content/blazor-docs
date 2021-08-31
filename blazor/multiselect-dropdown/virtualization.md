@@ -23,7 +23,7 @@ The Virtual Scrolling feature is used to display a large amount of data that you
 
 @code{
 
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" });
+    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(10);
     public class OrderDetails
     {
         public int? OrderID { get; set; }
