@@ -355,7 +355,7 @@ protected override void OnInitialized()
  ![Themes-dynamically-change-theme-demo](images/Themes-dynamically-change-theme-demo.gif) 
 
 You can download the sample from the below link,
-[Serversample](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
+[Server-side sample](https://github.com/SyncfusionExamples/theme-switching-in-blazor-server-app) 
 
  #### Blazor WebAssembly Application 
 
