@@ -358,6 +358,83 @@ The output will shown as follows,
 
 ![Blazor DropDownList ValueTuple Data](./images/blazor_dropdown_valuetuple.png)
 
+### ExpandoObject data binding
+
+You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component.The following example helps you to bind the `ExpandoObject` to the DropDownList component.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfDropDownList TItem="ExpandoObject" TValue="string" PopupHeight="230px" Placeholder="Select a vehicle" DataSource="@VehicleData" >
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+ </SfDropDownList>
+
+@code{
+    public List<ExpandoObject> VehicleData { get; set; } = new List<ExpandoObject>();
+    protected override void OnInitialized()
+    {
+        VehicleData = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.ID = (1000 + x).ToString();
+            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1", "Aston Martin One- 77", "Jaguar XJ220", "McLaren P1", "Ferrari LaFerrari", "Mahindra Jaguar", "Hyundai Toyota", "Jeep Volkswagen", "Tata Maruti Suzuki", "Audi Mercedes Benz" }[x - 1]);
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+
+```
+
+### DynamicObject data binding
+
+You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component.The following example helps you to bind the `DynamicObject` to the DropDownList component.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfDropDownList TValue="string" TItem="DynamicDictionary" Placeholder="Select a name" DataSource="@Orders">
+    <DropDownListFieldSettings Text="CustomerName" Value="CustomerName"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code{
+    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.OrderID = 1000 + x;
+            d.CustomerName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Anne", "Nige", "Fuller", "Dodsworth", "Leverling", "Callahan", "Suyama", "Davolio" }[x - 1]);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        //The GetDynamicMemberNames method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+
+```
+
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the DropDownList component.
