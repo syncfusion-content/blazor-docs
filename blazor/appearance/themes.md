@@ -365,7 +365,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
 
 **STEP 2:** Install the individual NuGet packages for Grid and Dropdown in the created WebAssembly application by following the below way:
 
-Right-click on Dependencies folder -> Manage Nuget Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
+Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
 
 **STEP 3:** Add the below function code in the  `~/wwwroot/index.html` file to set the theme as selected by using its **id** value.
 
@@ -385,7 +385,7 @@ Right-click on Dependencies folder -> Manage Nuget Packages -> Browse -> select 
     </script>
 …………… . . 
 ```
-**STEP 4:** Modify the `MainLayout.razor` page to implement a theme change dynamically using the dropdownlist in application.
+**STEP 4:** Modify the `MainLayout.razor` page to implement a theme change dynamically using the dropdown in application.
 
 ```cshtml
 @inherits LayoutComponentBase
