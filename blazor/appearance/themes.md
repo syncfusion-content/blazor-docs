@@ -213,7 +213,7 @@ Packages to be installed :
 Right-click on Dependencies folder -> Manage NuGet Packages -> Browse -> select the package and click to install latest or select the specified version from the list and then install it.
 
  ![Themes-install-nuget-grid](images/Themes-install-nuget-grid.png)
- ![Themes-install-nuget-dropdown](images/Themes-install-nuget-dropdown.png)
+ ![Themes-install-nuget-dropdown](images/Themes-install-nuget-dropdowns.png)
 
 **STEP 3:** Add the following code to the `_Host.cshtml` file.
 
