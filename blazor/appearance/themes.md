@@ -40,7 +40,7 @@ Using the below approaches the themes can be referenced in the Blazor applicatio
 3. NPM packages
 4. LibMan
 
-Instead of using **Static Web assets** or a **CDN reference**, you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using **NPM packages** or **LibMan**. 
+Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages) or [LibMan](#libman). 
 
 ### Static Web Assets
 
