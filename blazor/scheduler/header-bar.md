@@ -303,3 +303,123 @@ We can customize the day header cells and month header cells in the TimelineYear
     }
 }
 ```
+
+## Customizing header indent cells
+
+It is possible to customize the header indent cells using the `HeaderIndentTemplate` option and change the look and appearance in both the vertical and timeline views. In vertical views, You can customize the header indent cells at the hierarchy level and you can customize the resource header left indent cell in timeline views using the template option.
+
+**Example:** To customize the header left indent cell to display resources text, refer to the below code example.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@OwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+        <ScheduleTemplates>
+            <HeaderIndentTemplate>
+                <div class='e-resource-text'>
+                    <div class="text">Resources</div>
+                </div>
+            </HeaderIndentTemplate>
+        </ScheduleTemplates>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+<style>
+    .e-schedule .e-timeline-view .e-resource-left-td {
+        vertical-align: bottom;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text,
+    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text {
+        font-weight: 500;
+        padding: 0;
+    }
+
+    .e-schedule .e-timeline-view .e-resource-left-td .e-resource-text > div {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        border-top: 1px solid rgba(0, 0, 0, 0.12);
+        flex: 0 0 33.3%;
+        font-weight: 500;
+        height: 36px;
+        line-height: 34px;
+        padding-left: 50px;
+    }
+
+    .e-schedule .e-timeline-month-view .e-resource-left-td .e-resource-text > div {
+        border-right: 1px solid rgba(0, 0, 0, 0.12);
+        flex: 0 0 33.3%;
+        font-weight: 500;
+        height: 38px;
+        line-height: 34px;
+        padding-left: 50px;
+    }
+
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-resource-cells {
+        border-bottom-color: rgba(0, 0, 0, 0.12);
+    }
+
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-resource-cells .e-resource-text {
+        font-weight: 500;
+    }
+
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-header-cells .e-resource-text,
+    .e-schedule .e-vertical-view .e-left-indent-wrap table tbody td.e-all-day-cells .e-resource-text {
+        display: none;
+    }
+    </style>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    public string[] Resources { get; set; } = { "Rooms", "Owners" };
+    public List<ResourceData> RoomData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData{ RoomText = "ROOM 1", Id = 1, RoomColor = "#cb6bb2" },
+        new ResourceData{ RoomText = "ROOM 2", Id = 2, RoomColor = "#56ca85" }
+    };
+    public List<ResourceData> OwnersData { get; set; } = new List<ResourceData>
+    {
+        new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerGroupId = 1, OwnerColor = "#ffaa00" },
+        new ResourceData{ OwnerText = "Steven", Id = 2, OwnerGroupId = 2, OwnerColor = "#f8a398" },
+        new ResourceData{ OwnerText = "Michael", Id = 3, OwnerGroupId = 1, OwnerColor = "#7499e1" }
+    };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+    };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+        public int RoomId { get; set; }
+    }
+    public class ResourceData
+    {
+        public int Id { get; set; }
+        public string RoomText { get; set; }
+        public string RoomColor { get; set; }
+        public string OwnerText { get; set; }
+        public string OwnerColor { get; set; }
+        public int OwnerGroupId { get; set; }
+    }
+}
+```
