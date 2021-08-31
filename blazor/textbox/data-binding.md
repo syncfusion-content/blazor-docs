@@ -14,6 +14,7 @@ This section briefly explains how to bind the value to the TextBox component in 
 * One-way data binding
 * Two-way data binding
 * Dynamic value binding
+* Complex data binding
 
 ## One-way binding
 
@@ -85,7 +86,7 @@ There is no need to call this method for native events since it’s called after
 
 ## Complex data binding
 
-You can bind the complex data values to the TextBox component by initializing it in the `OnInitialized()` method. The following code demonstrates how to bind complex data values to the TextBox component.
+You can bind the complex data values to the TextBox component.The following code demonstrates how to bind complex data values to the TextBox component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs; 
