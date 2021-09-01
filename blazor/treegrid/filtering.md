@@ -84,7 +84,7 @@ The following output is displayed as a result of the above code example.
 
 ## Filter hierarchy modes
 
-Tree Grid provides support for a set of filtering modes with [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~HierarchyMode.html) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) property. The below are the type of filter mode available in Tree Grid.
+Tree Grid provides support for a set of filtering modes with [HierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_HierarchyMode) of [FilterSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html) property. The below are the type of filter mode available in Tree Grid.
 
 * **Parent** : This is the default filter hierarchy mode in Tree Grid. The filtered records are displayed with its parent records, if the filtered records not have any parent record then the filtered records only displayed.
 
