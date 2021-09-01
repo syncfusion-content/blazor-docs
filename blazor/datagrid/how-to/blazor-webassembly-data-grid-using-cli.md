@@ -114,7 +114,7 @@ To initialize the DataGrid component add the below code to your **Index.razor**
 
 ## Defining Row Data
 
-To bind data for the DataGrid component, you can assign a IEnumerable object to the [dataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** lifecycle of the page.
+To bind data for the DataGrid component, you can assign a IEnumerable object to the [dataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_DataSource) property. The list data source can also be provided as an instance of the `DataManager`. You can assign the data source through the **OnInitialized** life cycle of the page.
 
 ```cshtml
 <SfGrid DataSource="@gridData">
@@ -265,7 +265,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 Output be like the below.
 
-![final output](../images/final-output.png)
+![Blazor DataGrid](../images/blazor-datagrid.png)
 
 ## See Also
 

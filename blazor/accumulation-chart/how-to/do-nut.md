@@ -15,7 +15,7 @@ The [AccumulationChartAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 **Step 1:**
 
-Render a doughnut chart with the required series using [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
+Render a doughnut chart with the required series using the [ChartSeriesCollection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesCollection.html).
 
 ```cshtml
 <AccumulationChartSeriesCollection>
@@ -27,7 +27,7 @@ Render a doughnut chart with the required series using [ChartSeriesCollection](h
 
 **Step 2:**
 
-Create a div element inside the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) to display the text placing centre of the doughnut.
+Create a div element inside the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_ContentTemplate) to display the text placing the centre of the doughnut.
 
 ```cshtml
 <AccumulationChartAnnotation>
@@ -40,7 +40,7 @@ Create a div element inside the [ContentTemplate](https://help.syncfusion.com/cr
 
 **Step 3:**
 
-Since the text need to be placed in the center of the doughnut chart the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property need to be set to **Regions.Chart**. Specify the [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) and set the X and Y coordinate values in percentage as shown below.
+Since the text need to be placed in the center of the doughnut chart the [Region](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_Region) property need to be set to **Regions.Chart**. Specify the [CoordinateUnits](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.AccumulationChartAnnotation.html#Syncfusion_Blazor_Charts_AccumulationChartAnnotation_CoordinateUnits) in [Pixel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Units.html#Syncfusion_Blazor_Charts_Units_Pixel) and set the X and Y coordinate values in percentage as shown in the following.
 
 ```cshtml
 <AccumulationChartAnnotations>
@@ -51,7 +51,7 @@ Since the text need to be placed in the center of the doughnut chart the [Region
         </AccumulationChartAnnotation>
 </AccumulationChartAnnotations>
 ```
-The complete code snippet for the preceding steps is available below.
+The complete code snippet for the preceding steps is as follows.
 
 ```cshtml 
 
@@ -99,4 +99,4 @@ The complete code snippet for the preceding steps is available below.
 
 ```
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.

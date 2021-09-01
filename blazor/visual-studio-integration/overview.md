@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion Blazor Extension for Visual Studio | Syncfusion
-description: Learn here all about introduction about Syncfusion Blazor extension for Visual Studio which made integration made ease.
+description: Learn here all about introduction on Syncfusion Blazor extension for Visual Studio which made integration ease.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Blazor Extension for Visual Studio
 
-The [Syncfusion Blazor Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) that make it easier to use the Syncfusion component by creating Syncfusion Blazor application in Visual Studio and updating the Syncfusion version from the application.
+The [Syncfusion Blazor Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) makes it easier to use the Syncfusion component by creating Syncfusion Blazor application in Visual Studio and updating the Syncfusion version from the application.
 
 The following Extensions supports are provided by Syncfusion Blazor in Visual Studio:
 

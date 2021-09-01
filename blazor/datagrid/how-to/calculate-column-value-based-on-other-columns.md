@@ -64,4 +64,4 @@ This is demonstrated in the below sample code where the value for **FinalCost** 
 ```
 
 The following image represents the output of the above sample code,
-![Column rendered based on other columns](../images/grid-columns-calculated.png)
+![Calculating Column Value based on Other Columns in Blazor DataGrid](../images/blazor-datagrid-calculate-column-values.png)
