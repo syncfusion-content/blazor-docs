@@ -85,7 +85,7 @@ To change the annotation content dynamically, use the [SetAnnotationValue](https
 
 ## RefreshAsync
 
-The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again. In the following example, the gauge is rendered again using the [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
+The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method can be used to change the state of the component and render it again.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge

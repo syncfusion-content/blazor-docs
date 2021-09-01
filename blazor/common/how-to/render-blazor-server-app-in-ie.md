@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Render the Blazor Server App in IE11 Browser in Blazor - Syncfusion
-description: Check out the documentation for Render the Blazor Server App in IE11 Browser in Blazor
+description: Learn here all about how to Render the Blazor Server App in IE11 Browser in Blazor component and more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -21,7 +21,7 @@ The Microsoft Internet Explorer supports `Blazor Server` app with additional pol
 
 Find the following steps to add the polyfills in the Blazor server application.
 
-1. Create a Blazor server application using [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation.
+1. Create a Blazor server application using [Blazor Server Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019) documentation.
 
 2. Add the polyfill script reference in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
