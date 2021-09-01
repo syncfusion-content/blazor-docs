@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Component Size Modes in Blazor - Syncfusion
-description: Check out the documentation for Component Size Modes in Blazor
+description: Check out the documentation for Component Size Modes in Blazor and learn here about how to use it in Blazor
 platform: Blazor
 component: Appearance
 documentation: ug
 ---
 
-# Size-modes
+# Size-modes in Syncfusion Components
 
 Syncfusion components and elements support different size modes.
 
@@ -73,7 +73,7 @@ Refer to the following code, in which the `e-bigger` class is added for touch mo
 
 ![size-modes](images/size-modes.gif)
 
-# Side-bar Responsiveness
+## Side-bar Responsiveness in Syncfusion Components
 
 Blazor application renders UI as HTML content in client-side (browser). So, based on the width of the viewport in a device, it is possible to determine whether it is a Desktop or a Mobile device and design responsive web pages accordingly.
 
