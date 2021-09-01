@@ -284,7 +284,7 @@ namespace TreeGridComponent.Data {
 
 ## Filter bar template with custom component
 
-The [FilterBarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~FilterBarTemplate.html) is used to add custom components to a particular column.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property is used to add custom components to a particular column. To access the filtered values inside the `FilterTemplate`, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
 In the following sample, the dropdown is used as a custom component in the Duration column.
 
@@ -305,6 +305,8 @@ In the following sample, the dropdown is used as a custom component in the Durat
             <FilterTemplate>
                 <SfDropDownList TValue="string" DataSource="@DropDownData" TItem="string">
                     <DropDownListEvents ValueChange="change" TValue="string"></DropDownListEvents>
+                <SfDropDownList TValue="string"c DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
+                    <DropDownListEvents ValueChange="change" TValue="string" ></DropDownListEvents>
                 </SfDropDownList>
             </FilterTemplate>
         </TreeGridColumn>
@@ -465,7 +467,7 @@ The following output is displayed as a result of the above code example.
 
 ## Custom component in filter menu
 
-The `FilterTemplate` property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~FilterTemplate.html) is used to add custom filter components to a particular column.
+The `FilterTemplate` property of [`Column`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~FilterTemplate.html) is used to add custom filter components to a particular column. In the following sample the FilterTemplate property is used to add custom components to a particular column. To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
 In the following sample, dropdown is used as custom component in the duration column.
 
@@ -485,8 +487,8 @@ In the following sample, dropdown is used as custom component in the duration co
         <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
             <FilterTemplate>
-                <SfDropDownList TValue="int?" DataSource="@TreeGridData" TItem="BusinessObject">
-                <DropDownListFieldSettings Value="Duration"></DropDownListFieldSettings>
+                <SfDropDownList TValue="string"c DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
+                    <DropDownListEvents ValueChange="change" TValue="string" ></DropDownListEvents>
                 </SfDropDownList>
             </FilterTemplate>
         </TreeGridColumn>
