@@ -35,14 +35,14 @@ Syncfusion Blazor themes can be used in your Blazor application by referencing t
 
 Using the below approaches the themes can be referenced in the Blazor application,
 
-1. Static Web assets
-2. CDN
-3. NPM packages
-4. LibMan
+1. [Static Web assets](#static-web-assets)
+2. [CDN](#cdn-reference)
+3. [NPM packages](#npm-packages)
+4. [LibMan](#libman)
 
-Instead of using **Static Web assets** or a **CDN reference**, you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using **NPM packages** or **LibMan**. 
+Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages) or [LibMan](#libman). 
 
-### Static Web Assets
+## Static Web Assets
 
 Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
 
@@ -65,7 +65,7 @@ When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/
 </head>
 ```
 
-### CDN Reference
+## CDN Reference
 
 Instead of using a local resource on your server, you can use a cloud CDN to reference the theme style sheets. CDN Stands for "Content Delivery Network". A CDN is a group of servers distributed in different locations. While CDNs are often used to host websites, they are commonly used to provide other types of downloadable data as well. Examples include software programs, images, videos, and streaming media.
 
@@ -91,7 +91,7 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 | Tailwind Dark CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
 
 
-### NPM Packages
+## NPM Packages
 
 NPM is a node package manager. It is basically used for managing dependencies of various server-side dependencies. You can manage server-side dependencies manually. It is a command-line program for dealing with said repository that aids in package installation, version management, and dependency management. It is an online repository for the publishing of open-source `Node.js` projects.
 
@@ -140,7 +140,7 @@ $primary: blue !default;
 
 8. Run the application and see the fabric themes from installed npm packages was applied.
 
-### LibMan
+## LibMan
 
 Library Manager (LibMan) is a client-side library acquisition tool that is simple to use. LibMan is a program that downloads popular libraries and frameworks from a file system or a content delivery network (CDN).
 
