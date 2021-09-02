@@ -33,4 +33,12 @@ int width = await documentEditor.Selection.ImageFormat.GetWidth();
 documentEditor.Selection.ImageFormat.Resize(width + 10, height + 10);
 ```
 
+## Text wrapping style
+
+Text wrapping refers to how images fit with surrounding text in a document. Please [refer to this page](../document-editor/text-wrapping-style) for more information about text wrapping styles available in Word documents.
+
+## Positioning the image
+
+DocumentEditor preserves the position properties of the image and displays the image based on position properties. It does not support modifying the position properties. Whereas the image will be automatically moved along with text edited if it is positioned relative to the line or paragraph.
+
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.
