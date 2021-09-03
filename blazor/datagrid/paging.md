@@ -117,6 +117,8 @@ The pager dropdown allows you to change the number of records in the DataGrid dy
 
 Blazor DataGrid provides a way to customize the pager UI using the pager template feature. We can make use of the **Template** property of the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridPageSettings.html) component to customize the pager template of DataGrid component.
 
+> Inside the **Template** RenderFragment, we can access the parameters passed to the pager templates using implicit parameter named context matching with the [PagerTemplateContent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.PagerTemplateContext.html) class name.  
+
 In the below sample, we have customized the Pager component in DataGrid control with custom button and input element to navigate between Grid pages. We have used **GotoPageAsync** method of Grid to navigate to specific page in DataGrid control.
 
 ```cshtml
