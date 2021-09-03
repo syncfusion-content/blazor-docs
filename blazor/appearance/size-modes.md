@@ -11,7 +11,85 @@ documentation: ug
 
 Syncfusion components and elements support different size modes.
 
-This article explains the size modes (Touch and Mouse) of the Syncfusion components.
+## Size mode for application
+
+This article explains how to implement the touch and mouse mode in an entire application.In the following example, there are two buttons, one for Touch mode and the other for normal mode.
+
+Using **JavaScriptInterop** you can achieve the size mode change in an entire application. Refer to the below steps,
+
+1. Add the `e-bigger` class in the `~/wwwroot/css/site.css` file.
+
+```css
+.e-bigger {
+    font-size: x-large;
+}
+```
+
+2.	To call JS from .NET, inject the **IJSRuntime** abstraction and call **InvokeAsync** method as given in the below code,
+
+```cshtml
+@page "/"
+
+@using Syncfusion.Blazor.Calendars;
+@using Syncfusion.Blazor.Buttons;
+@using Syncfusion.Blazor.Popups
+@inject IJSRuntime jsRuntime;
+
+<p> Size-modes for application </p>
+<p> This demo shows the Size-Modes applied for an entire application </p>
+
+<button @onclick="callOnTouch">Touch Mode</button>
+<button @onclick="callOnMouse">Mouse Mode</button>
+<div>
+    <SfCalendar TValue="DateTime?" Value="@DateValue"></SfCalendar>
+</div>
+
+<div>
+    <SfButton> Button </SfButton>
+</div>
+
+<div>
+    <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
+
+    @code
+    {
+        private bool isChecked = true;
+    }
+</div>
+
+@code {
+    ………………..
+
+    private async void callOnTouch(MouseEventArgs args)
+    {
+       await jsRuntime.InvokeAsync<string>("onTouch");
+    }
+    private async void callOnMouse(MouseEventArgs args)
+    {
+        await jsRuntime.InvokeAsync<string>("onMouse");
+    }
+}
+```
+
+3.	Add the following JS code inside the script tag of `wwwroot/index.html` (Blazor WebAssembly) or `Pages/_Host.cshtml` (Blazor Server) to add the `e-bigger` class for touch mode and remove it in mouse mode.
+
+```cshtml
+........... 
+<script>
+        function onTouch() {
+            document.body.classList.add('e-bigger');
+     }
+        function onMouse() {
+            document.body.classList.remove('e-bigger');
+                    }
+ </script>
+```
+![size-mode-for-application](images/size-mode-for-application.gif)
+
+
+## Size mode for a control
+
+This article explains the size modes (Touch and Mouse) of the Syncfusion controls.
 
 In the following example, there are two buttons, one for Touch mode and the other for normal mode. You can change the size of the element by adding the `e-bigger` class with a specific font size to the Div element. 
 
@@ -71,7 +149,7 @@ Refer to the following code, in which the `e-bigger` class is added for touch mo
 }
 ```
 
-![size-modes](images/size-modes.gif)
+![size-mode-for-control](images/size-mode-for-control.gif)
 
 ## Side-bar Responsiveness in Syncfusion Components
 
@@ -117,3 +195,14 @@ In the following sample, `MediaQuery` has been used for the specific resolution 
 </style>
 ```
 ![sidebar-responsiveness](images/sidebar-responsiveness.gif)
+
+## See Also
+
+Some other components also supports responsiveness, please refer to the below some of the responsive components in Syncfusion Blazor.
+
+[DataGrid](https://blazor.syncfusion.com/documentation/datagrid/columns#responsive-columns)
+[TreeGrid](https://blazor.syncfusion.com/documentation/treegrid/scrolling#responsive-with-parent-container)
+[Dashboard Layout](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive)
+[Kanban](https://blazor.syncfusion.com/documentation/kanban/responsive-mode)
+[Toolbar](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode)
+[Tabs](https://blazor.syncfusion.com/documentation/tabs/responsive-modes)
