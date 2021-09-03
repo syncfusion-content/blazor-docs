@@ -106,7 +106,7 @@ After successful compilation of your application, simply run the application.
 
 The output will be as follows.
 
-![Dialog Default](./images/default.png)
+![Blazor Dialog](./images/blazor-dialog.png)
 
 > * In the dialog control, max-height is calculated based on the dialog target element height. If the **Target** property is not configured, the **document.body** is considered as a target. Therefore, to show a dialog in proper height, you need to add min-height to the target element.
 > * If the dialog is rendered based on the body, then the dialog will get the height based on its body element height. If the height of the dialog is larger than the body height, then the dialog's height will not be set. For this scenario, we can set the CSS style for the html and body to get the dialog height.
@@ -158,7 +158,7 @@ While the user clicks the overlay, the action can be handled through the `OnOver
 
 The output will be as follows.
 
-![Modal Dialog](./images/modal-dialog.png)
+![Blazor Modal Dialog](./images/blazor-modal-dialog.png)
 
 ## Enable header
 
@@ -191,7 +191,7 @@ The Dialog header can be enabled by adding the header content as text or HTML co
 
 The output will be as follows.
 
-![dialog](./images/dialog_header.png)
+![Blazor Dialog with Header](./images/blazor-dialog-header.png)
 
 ## Render Dialog with buttons
 
@@ -233,7 +233,7 @@ By adding the `DialogButtons` can render a Dialog with buttons in Razor page.
 
 The output will be as follows.
 
-![dialog](./images/dialog_buttons.png)
+![Blazor Dialog with Buttons](./images/blazor-dialog-buttons.png)
 
 ## See Also
 

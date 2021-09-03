@@ -35,7 +35,7 @@ Input Chip holds information in compact form. It converts user input into chips.
 
 Output be like the below.
 
-![Chip inputs](./images/inputChips.png)
+![Blazor Chip with Input Items](./images/blazor-chip-input-items.png)
 
 ## Choice Chip
 
@@ -56,7 +56,7 @@ Choice Chip allows you to select a single chip from the set of Chip/ChipItems. I
 
 Output be like the below.
 
-![Chip Choice](./images/choicechip.gif)
+![Single Selection in Blazor Chip](./images/blazor-chip-single-selection.gif)
 
 ## Filter Chip
 
@@ -77,7 +77,7 @@ Filter Chip allows you to select a multiple chip from the set of Chip/ChipItems.
 
 Output be like the below.
 
-![Chip Filter](./images/filterchip.gif)
+![Multiple Selection in Blazor Chip](./images/blazor-chip-multiple-selection.gif)
 
 ## Action Chip
 
@@ -111,7 +111,7 @@ The Action Chip triggers the event like click or delete, which helps doing actio
 
 Output be like the below.
 
-![Chip Action](./images/actionchip.gif)
+![Blazor Action Chip](./images/blazor-action-chip.gif)
 
 ### Deletable Chip
 
@@ -132,4 +132,4 @@ Deletable Chip allows you to delete a chip from Chip/ChipItems. It can be enable
 
 Output be like the below.
 
-![Chip Delete](./images/deletablechip.gif)
+![Delete Item in Blazor Chip](./images/blazor-chip-delete-item.gif)

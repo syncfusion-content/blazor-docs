@@ -41,4 +41,4 @@ In this sample, first check the option and click the submit button to post the s
 
 Output be like
 
-![Button Sample](./../images/cb-form.png)
+![Model Binding in Blazor CheckBox](./../images/blazor-checkbox-model-binding.png)

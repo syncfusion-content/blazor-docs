@@ -9,7 +9,7 @@ documentation: ug
 
 # Style and Appearance in Blazor Accordion Component
 
-The following content provides the exact CSS structure that can be used to modify the control’s appearance based on user preference.
+The following content provides the exact CSS structure that can be used to modify the control’s appearance based on the user preference.
 
 ## Customizing Accordion
 
@@ -52,7 +52,7 @@ Use the following CSS to customize the header of Accordion control.
 
 ## Customizing Accordion's expand and collapse icons
 
-Use the following CSS to customize the expand and collapse icons of Accordion control.
+The following CSS can be viewed to customize the expand and collapse icons of the Accordion control.
 
 ```CSS
 

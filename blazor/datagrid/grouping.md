@@ -50,7 +50,7 @@ To enable grouping in the datagrid, set the [AllowGrouping](https://help.syncfus
 
 The following GIF image represents a DataGrid Grouping.
 
-![Grouping](images/grid-grouping.gif)
+![Grouping in Blazor DataGrid](images/blazor-datagrid-grouping.gif)
 
 > * You can group and ungroup columns by using the **GroupColumn** and **UngroupColumn** methods.
 > * To disable grouping for a particular column, set the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping) to false in **GridColumn** component.
@@ -100,7 +100,7 @@ To apply group at initial rendering, set the column field name in the [Columns](
 
 The following screenshot represents a DataGrid with initial grouping.
 
-![Initial group](./images/grid-initialgrouping.png)
+![Blazor DataGrid with Initial Grouping](./images/blazor-datagrid-initialgrouping.png)
 
 ## Hide drop area
 
@@ -147,7 +147,7 @@ To avoid ungrouping or further grouping of a column after initial column groupin
 
 The following screenshot represents hiding the Group drop area in DataGrid.
 
-![Hide drop area](./images/grid-hidedroparea.png)
+![Hiding Group Drop Area in Blazor DataGrid](./images/blazor-datagrid-hide-drop-area.png)
 
 <!--Group with paging
 
@@ -300,7 +300,7 @@ The following sample code demonstrates the above,
 ```
 
 The following screenshot represents a DataGrid with customized group caption,
-![Custom group caption](./images/custom-group-caption.png)
+![Blazor DataGrid with Custom Group Caption](./images/blazor-datagrid-custom-group-caption.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -356,7 +356,7 @@ The following sample code demonstrates the above,
 ```
 
 The following GIF represents the lazy load grouping functionality with paging in DataGrid
-![Grid with Lazy load grouping](./images/Lazyload.gif)
+![Blazor DataGrid with Lazy Load Grouping](./images/blazor-datagrid-lazy-load-grouping.gif)
 
 ### Lazy Load Grouping With Row Virtualization
 
@@ -443,7 +443,7 @@ The following sample code demonstrates the above,
 ```
 
 The following GIF represents the lazy load grouping functionality with virtualization in DataGrid
-![Virtual scrolling with Lazy load grouping](./images/virtuallazyload.gif)
+![Virtual Scrolling with Lazy Load Grouping in Blazor DataGrid](./images/blazor-datagrid-virtual-lazy-load-grouping.gif)
 
 ### Lazy Load Grouping With Custom Adaptor
 

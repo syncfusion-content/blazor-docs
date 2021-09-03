@@ -50,4 +50,4 @@ The following sample illustrates how to open Context Menu with `FadeIn` effect w
 
 Output be like
 
-![Context Menu Sample](./../images/context-menu.png)
+![Blazor ContextMenu with Animation](./../images/blazor-contextmenu-component.png)

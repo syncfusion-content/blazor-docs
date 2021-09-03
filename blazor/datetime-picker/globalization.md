@@ -42,7 +42,7 @@ The **Localization** library allows you to localize default text content. The Da
 
 In the following examples, demonstrate how to enable **Localization** for DateTimePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -198,7 +198,7 @@ The following steps explain how to render the DateTimePicker in German culture (
 
 The output will be as follows.
 
-![DateTimePicker](./images/de_culture.png)
+![Localization in Blazor DateTimePicker](./images/blazor-datetimepicker-localization.png)
 
 ## Customize the localized text
 
@@ -221,7 +221,7 @@ The output will be as follows.
 
     The output will be as follows.
 
-    ![DateTimePicker](./images/de_culture_02.png)
+    ![Customizing Localized Text in Blazor DateTimePicker](./images/blazor-datetimepicker-localize-text.png)
 
 ## Right-To-Left
 
@@ -247,4 +247,4 @@ The following code example initialize the DateTimePicker component in `Arabic` c
 
 The output will be as follows.
 
-![DateTimePicker](./images/ar_culture.png)
+![Right to Left in Blazor DateTimePicker with Arabic Culture](./images/blazor-datetimepicker-right-to-left.png)
