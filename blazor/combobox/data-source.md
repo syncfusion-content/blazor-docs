@@ -330,7 +330,7 @@ The output will shown as follows,
 
 ### ExpandoObject data binding
 
-You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the AutoComplete component. The following example helps you to bind the `ExpandoObject` to the  ComboBox component.
+You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the ComboBox component. The following example helps you to bind the `ExpandoObject` to the  ComboBox component.
 
 ```csharp
 
