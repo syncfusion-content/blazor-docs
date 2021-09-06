@@ -250,11 +250,6 @@ This section explains the list of events of the MultiSelect component which will
 
 ```cshtml
 
-## OnClose
-
-`OnClose` event triggers when the popup is opened
-
-```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfMultiSelect TItem="GameFields" TValue="string[]" DataSource="@Games">
@@ -316,7 +311,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### Filtering
+## Filtering
 
 `Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
 
@@ -352,7 +347,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ```
 
-### OnActionBegin
+## OnActionBegin
 
 `OnActionBegin` event triggers before fetching data from the remote server.
 
@@ -393,7 +388,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### OnActionFailure
+## OnActionFailure
 
 `OnActionFailure` event triggers when the data fetch request from the remote server fails.
 
@@ -434,7 +429,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### OnValueSelect
+## OnValueSelect
 
 `OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
@@ -468,7 +463,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### Opened
+## Opened
 
 `Opened` event triggers when the popup opens.
 
@@ -503,7 +498,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ```
 
-### ChipSelected
+## ChipSelected
 
 `ChipSelected` event triggers when the chip is selected.
 
@@ -538,7 +533,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ```
 
-### Cleared
+## Cleared
 
 `Cleared` event triggers after clearing all items using the clear icon.
 
@@ -572,7 +567,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### OnChipTag
+## OnChipTag
 
 `OnChipTag` event triggers before setting the selected item as chip in the component.
 
@@ -606,7 +601,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### OnValueRemove
+## OnValueRemove
 
 `OnValueRemove` event triggers before the selected item is removed from the widget.
 
@@ -641,7 +636,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### ValueRemoved
+## ValueRemoved
 
 `ValueRemoved` event triggers after the selected item is removed from the widget.
 
@@ -676,7 +671,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### CustomValueSpecifier
+## CustomValueSpecifier
 
 `CustomValueSpecifier` event triggers when the CustomValue is selected.
 
@@ -711,7 +706,7 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-### SelectedAll
+## SelectedAll
 
 `SelectedAll` event triggers after the select all process is completed.
 

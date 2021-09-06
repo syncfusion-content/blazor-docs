@@ -310,7 +310,7 @@ This section explains the list of events of the ComboBox component which will be
 }
 ```
 
-### Filtering
+## Filtering
 
 `Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
 
@@ -346,7 +346,7 @@ This section explains the list of events of the ComboBox component which will be
 
 ```
 
-### OnActionBegin
+## OnActionBegin
 
 `OnActionBegin` event triggers before fetching data from the remote server.
 
@@ -387,7 +387,7 @@ This section explains the list of events of the ComboBox component which will be
 }
 ```
 
-### OnActionComplete
+## OnActionComplete
 
 `OnActionComplete` event triggers after data is fetched successfully from the remote server.
 
@@ -428,7 +428,7 @@ This section explains the list of events of the ComboBox component which will be
 }
 ```
 
-### OnActionFailure
+## OnActionFailure
 
 `OnActionFailure` event triggers when the data fetch request from the remote server fails.
 
@@ -469,7 +469,7 @@ This section explains the list of events of the ComboBox component which will be
 }
 ```
 
-### OnValueSelect
+## OnValueSelect
 
 `OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
@@ -503,7 +503,7 @@ This section explains the list of events of the ComboBox component which will be
 }
 ```
 
-### Opened
+## Opened
 
 `Opened` event triggers when the popup opens.
 
