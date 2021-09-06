@@ -25,7 +25,7 @@ You can develop the Syncfusion Blazor Components by using any one of the followi
   
 * [JetBrains Rider](https://www.jetbrains.com/rider/)
 
-  JetBrains Rider differs from Visual Studio, which also offers a community edition, of course, lacking several features of its enterprise counterpart.Rider originates from other JetBrains such as ReSharper and WebStorm but now turned into an IDE.Rider from JetBrains only has a paid version, not a free one.Howeever it improves the build time drastically as compared to Visual Studio by applying heuristics to only build the projects that need to be updated. For large solutions, it is a real performance booster.
+  JetBrains Rider differs from Visual Studio, which also offers a community edition, of course, lacking several features of its enterprise counterpart.Rider originates from other JetBrains such as ReSharper and WebStorm but now turned into an IDE.Rider from JetBrains only has a paid version, not a free one.However it improves the build time drastically as compared to Visual Studio by applying heuristics to only build the projects that need to be updated. For large solutions, it is a real performance booster.
 
 ## Framework & SDK
 
