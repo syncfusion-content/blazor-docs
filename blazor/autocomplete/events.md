@@ -213,7 +213,7 @@ This section explains the list of events of the AutoComplete component which wil
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened
+`OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns

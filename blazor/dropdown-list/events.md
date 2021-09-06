@@ -250,12 +250,6 @@ This section explains the list of events of the DropDown List component which wi
 `OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 ```cshtml
-
-## OnClose
-
-`OnClose` event triggers when the popup is opened
-
-```cshtml
 @using Syncfusion.Blazor.DropDowns
 
 <SfDropDownList TItem="GameFields" TValue="string" DataSource="@Games">
@@ -317,7 +311,7 @@ This section explains the list of events of the DropDown List component which wi
 }
 ```
 
-### Filtering
+## Filtering
 
 `Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
 
@@ -353,7 +347,7 @@ This section explains the list of events of the DropDown List component which wi
 
 ```
 
-### OnActionBegin
+## OnActionBegin
 
 `OnActionBegin` event triggers before fetching data from the remote server.
 
@@ -394,7 +388,7 @@ This section explains the list of events of the DropDown List component which wi
 }
 ```
 
-### OnActionComplete
+## OnActionComplete
 
 `OnActionComplete` event triggers after data is fetched successfully from the remote server.
 
@@ -435,7 +429,7 @@ This section explains the list of events of the DropDown List component which wi
 }
 ```
 
-### OnActionFailure
+## OnActionFailure
 
 `OnActionFailure` event triggers when the data fetch request from the remote server fails.
 
@@ -476,7 +470,7 @@ This section explains the list of events of the DropDown List component which wi
 }
 ```
 
-### OnValueSelect
+## OnValueSelect
 
 `OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
@@ -510,7 +504,7 @@ This section explains the list of events of the DropDown List component which wi
 }
 ```
 
-### Opened
+## Opened
 
 `Opened` event triggers when the popup opens.
 
