@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Special Dates in Blazor DatePicker Component | Syncfusion
-description: Checkout and learn here all about Special Dates in Syncfusion Blazor DatePicker component and more.
+description: Checkout and learn here all about Special Dates in Syncfusion Blazor DatePicker component and more details.
 platform: Blazor
 control: DatePicker
 documentation: ug

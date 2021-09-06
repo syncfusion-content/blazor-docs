@@ -7,7 +7,7 @@ control: DateTimePicker
 documentation: ug
 ---
 
-# Render the Blazor DateTimePicker Component with highlighted Special Dates
+# Render the Blazor DateTimePicker Component with Special Dates
 
 You can customize specific dates in a DateTimePicker by using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DateTimePickerEvents-1.html#Syncfusion_Blazor_Calendars_DateTimePickerEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the calendar. Here 10, 15, and 25 dates are customized with custom styles by adding the special-dates class.
 
