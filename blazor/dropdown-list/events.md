@@ -214,12 +214,6 @@ This section explains the list of events of the DropDown List component which wi
 
 ## OnOpen
 
-`OnOpen` event triggers when the popup is opened
-
-```cshtml
-
-## OnOpen
-
 `OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
 
 ```cshtml
