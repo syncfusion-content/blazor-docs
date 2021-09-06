@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor AutoComplete Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor AutoComplete component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor AutoComplete component and much more details.
 platform: Blazor
 control: AutoComplete
 documentation: ug

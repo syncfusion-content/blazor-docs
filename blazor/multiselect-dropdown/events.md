@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor MultiSelect component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug

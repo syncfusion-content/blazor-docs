@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor DropDown List Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor DropDown List component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor DropDown List component and much more details.
 platform: Blazor
 control: DropDown List
 documentation: ug
