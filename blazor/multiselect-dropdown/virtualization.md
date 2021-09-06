@@ -9,7 +9,7 @@ documentation: ug
 
 # Virtualization in Blazor MultiSelect Dropdown Component
 
-The Virtual Scrolling feature is used to display a large amount of data that you require without buffering the entire load of a huge database records in the DropDowns, that is, when scrolling, the data manager request is sent to fetch some amount of data from the server dynamically. To achieve this scenario with DropDowns, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfMultiSelect-2.html#Syncfusion_Blazor_DropDowns_SfMultiSelect_2_EnableVirtualization) to true.The following code demonstrates how to enable the virtualization in MultiSelect Dropdown component.
+The Virtual Scrolling feature is used to display a large amount of data that you require without buffering the entire load of huge database records in the DropDowns. That is, when scrolling, the data manager request will be sent to fetch some amount of data from the server dynamically. To achieve this scenario with DropDowns, set the [EnableVirtualization](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_EnableVirtualization) to true. The following code explains how to enable the virtualization in MultiSelect Dropdown component.
 
 ```cshtml
 
