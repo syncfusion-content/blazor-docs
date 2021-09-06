@@ -9,7 +9,7 @@ documentation: ug
 
 # Adding Custom Value to Blazor ComboBox Component
 
-You can add custom value to the ComboBox component , When the typed character(s) is not present in the list, a button will be shown in the popup list. By clicking on this button, the custom value character(s) get added in the existing list as a new item.
+You can add custom value to the ComboBox component. When the typed character(s) is not present in the list, a button will be shown in the popup list. By clicking on this button, the custom value character(s) get added to the existing list as a new item.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns;

@@ -9,7 +9,7 @@ documentation: ug
 
 # Checkbox Grouping in Blazor MultiSelect Component
 
-You can arrange the datasource items by grouping with checkbox mode in MultiSelect. By Clicking the checkbox in group will select all the items grouped under it. Click the MultiSelect element and then type the character in the search box. It will display the filtered list items based on the typed characters and then select the multiple values through the checkbox.
+You can arrange the datasource items by grouping them with checkbox mode in MultiSelect. Clicking the checkbox in group will select all the items grouped under it. Click the MultiSelect element and then type the character in the search box. It will display the filtered list items based on the typed characters and then select the multiple values through the checkbox.
 
 ```cshtml
 

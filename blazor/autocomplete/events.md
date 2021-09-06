@@ -13,7 +13,7 @@ This section explains the list of events of the AutoComplete component which wil
 
 ## Blur
 
-`Blur` event triggers when the input loses the focus.
+`Blur` event triggers when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -252,7 +252,7 @@ This section explains the list of events of the AutoComplete component which wil
 
 ## OnClose
 
-`OnClose` event triggers before the popup is closed. If you cancel this event, the popup remains opened.
+`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 ```cshtml
 
@@ -286,7 +286,7 @@ This section explains the list of events of the AutoComplete component which wil
 
 ## DataBound
 
-`DataBound` event triggers when data source is populated in the popup list.
+`DataBound` event triggers when the data source is populated in the popup list.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -437,7 +437,7 @@ This section explains the list of events of the AutoComplete component which wil
 
 ### OnValueSelect
 
-`OnValueSelect` event triggers when an item in the popup is selected by the user either with mouse/tap or with keyboard navigation.
+`OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -504,6 +504,6 @@ This section explains the list of events of the AutoComplete component which wil
 
 ```
 
-> AutoComplete is limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
+> AutoComplete is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
 
 
