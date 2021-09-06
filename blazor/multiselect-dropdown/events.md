@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor MultiSelect Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor MultiSelect component and more.
+description: Checkout and learn here all about Events in Syncfusion Blazor MultiSelect component and much more details.
 platform: Blazor
 control: MultiSelect
 documentation: ug
@@ -13,7 +13,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## Blur
 
-`Blur` event triggers when the input loses the focus.
+`Blur` event triggers when the input loses focus.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -252,7 +252,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## OnClose
 
-`OnClose` event triggers before the popup is closed. If you cancel this event, the popup remains opened.
+`OnClose` event triggers before the popup is closed. If you cancel this event, the popup will remain open.
 
 ```cshtml
 
@@ -291,7 +291,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ## DataBound
 
-`DataBound` event triggers when data source is populated in the popup list.
+`DataBound` event triggers when the data source is populated in the popup list.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -442,7 +442,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### OnValueSelect
 
-`OnValueSelect` event triggers when an item in the popup is selected by the user either with mouse/tap or with keyboard navigation.
+`OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -511,7 +511,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### ChipSelected
 
-`ChipSelected` event triggers when the chip selection.
+`ChipSelected` event triggers when the chip is selected.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -546,7 +546,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### Cleared
 
-`Cleared` event triggers after cleared all item using clear icon.
+`Cleared` event triggers after clearing all items using the clear icon.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -580,7 +580,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### OnChipTag
 
-`OnChipTag` event triggers before set the selected item as chip in the component.
+`OnChipTag` event triggers before setting the selected item as chip in the component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
@@ -614,7 +614,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### OnValueRemove
 
-`OnValueRemove` event triggers before the selected item removed from the widget.
+`OnValueRemove` event triggers before the selected item is removed from the widget.
 
 ```cshtml
 
@@ -649,7 +649,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### ValueRemoved
 
-`ValueRemoved` event triggers after the selected item removed from the widget.
+`ValueRemoved` event triggers after the selected item is removed from the widget.
 
 ```cshtml
 
@@ -719,7 +719,7 @@ This section explains the list of events of the MultiSelect component which will
 
 ### SelectedAll
 
-`SelectedAll` event triggers after select all process completion.
+`SelectedAll` event triggers after the select all process is completed.
 
 ```cshtml
 
@@ -752,6 +752,6 @@ This section explains the list of events of the MultiSelect component which will
 }
 ```
 
-> MultiSelect is limited with these events and new events will be added in future based on the user requests. If the event you are looking for is not in the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
+> MultiSelect is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
 
 
