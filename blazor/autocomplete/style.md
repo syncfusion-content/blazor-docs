@@ -138,9 +138,7 @@ Use the following CSS to customize the appearance of popup element.
 
 ## Adding search icon in the Blazor AutoComplete component.
 
-You can add the search icon to the AutoComplete component by overriding the content of the existing icon.
-
-The following code demonstrates how to add a search icon to the AutoComplete component.
+You can add the search icon to the AutoComplete component by overriding the content of the existing icon.The following code demonstrates how to add a search icon to the AutoComplete component.
 
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
