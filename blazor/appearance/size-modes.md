@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Component Size Modes in Blazor - Syncfusion
-description: Check out the documentation for Component Size Modes in Blazor and learn here about how to use it in Blazor
+title: Component Size Modes in Blazor | Syncfusion
+description: Checkout and learn here all about different size modes in Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Appearance
 documentation: ug
 ---
 
-# Size-modes in Syncfusion Components
+# Size Modes in Syncfusion Blazor Components
 
-Syncfusion components and elements support different size modes.
+Syncfusion components and elements support different size modes. 
 
-## Size mode for application
+## Size mode for an application
 
-This article explains how to implement the touch and mouse mode in an entire application.In the following example, there are two buttons, one for Touch mode and the other for normal mode.
+This article explains how to implement the touch and mouse mode for entire application.In the following example, there are two buttons, one for Touch mode and the other for normal mode.
 
 Using **JavaScriptInterop** you can achieve the size mode change in an entire application. Refer to the below steps,
 
@@ -151,7 +151,7 @@ Refer to the following code, in which the `e-bigger` class is added for touch mo
 
 ![size-mode-for-control](images/size-mode-for-control.gif)
 
-## Side-bar Responsiveness in Syncfusion Components
+## Sidebar Responsiveness
 
 Blazor application renders UI as HTML content in client-side (browser). So, based on the width of the viewport in a device, it is possible to determine whether it is a Desktop or a Mobile device and design responsive web pages accordingly.
 
