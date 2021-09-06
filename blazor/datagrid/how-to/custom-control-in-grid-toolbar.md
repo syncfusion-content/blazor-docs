@@ -88,4 +88,4 @@ This is demonstrated in the below sample code where Autocomplete component is re
 
 The following GIF represents the search operation performed on the datagrid using the Autocomplete component rendered in the toolbar,
 
-![Custom control in toolbar](../images/custom-control-toolbar.gif)
+![Blazor DataGrid with Custom ToolBar](../images/blazor-datagrid-custom-toolbar.gif)

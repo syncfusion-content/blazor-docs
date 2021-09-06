@@ -294,7 +294,7 @@ The following demo shows how to change the default frozen line color.
 ```
 
 The following screenshots represent a datagrid by customizing frozen line color.
-![Change default frozen line color](./images/frozenline-color.png)
+![Changing Frozen Line Color in Blazor DataGrid](./images/blazor-datagrid-frozen-line-color.png)
 
 ### Limitations
 
@@ -378,7 +378,7 @@ In this demo, the **OrderID** column is frozen at the left and the **ShipCountry
 ```
 
 The following screenshots represent a frozen direction.
-![Frozen Direction](./images/frozenRight.png)
+![Frezzing Blazor DataGrid Columns on Right Side](./images/blazor-datagrid-frozen-right-side.png)
 
 ### Limitations of Freeze Direction
 
