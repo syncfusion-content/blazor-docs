@@ -97,32 +97,32 @@ NPM is a node package manager. It is basically used for managing dependencies of
 
 You can add the theme for the Blazor applications through **npm packages** using the **SCSS** files by following the below process.
 
-1. Install Web Compiler to use `SCSS` files in Blazor applications.
+**STEP 1**: Install Web Compiler to use `SCSS` files in Blazor applications.
 
-2. To install Web Compiler, open Visual Studio and click the **Extensions** in the toolbar.
+**STEP 2**: To install Web Compiler, open Visual Studio and click the **Extensions** in the toolbar.
 
  ![Themes-npm-package-extension](images/Themes-npm-package-extension.png)
 
  ![Themes-npm-package-webcompiler](images/Themes-npm-package-webcompiler.png)
  
-3. Install the Syncfusion `node_modules` in this application using this command.
+**STEP 3**: Install the Syncfusion `node_modules` in this application using this command.
 
 ```
 npm install @syncfusion/ej2
 ```
 
-4. Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
+**STEP 4**: Create a `SCSS` file as `~/wwwroot/styles/custom.scss` and provide the variables to override as shown below.
 
 ``` scss
 $primary: blue !default;
 @import 'ej2/fabric.scss';
 ```
 
-5. Right-click the `SCSS` file and click the Web Compiler to compile the file.
+**STEP 5**: Right-click the `SCSS` file and click the Web Compiler to compile the file.
 
  ![Themes-npm-packages-compile](images/Themes-npm-packages-compile.png) 
 
-6. The `compiler config.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
+**STEP 6**: The `compiler config.json` file is created. Then, provide the location of the compiled CSS file and include a path as shown in the following code snippet.
 
 ```json
 [
@@ -136,9 +136,9 @@ $primary: blue !default;
 ]
 ```
 
-7. The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
+**STEP 7**: The `SCSS` file has been compiled to the CSS file. Then, add this CSS file to the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
-8. Run the application and see the fabric themes from installed npm packages was applied.
+**STEP 8**: Run the application and see the fabric themes from installed npm packages was applied.
 
 ### LibMan
 
@@ -197,12 +197,11 @@ In the client Blazor application, go to the `wwwroot/index.html` file and replac
 
 In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code. 
 
-
 ### Change theme dynamically in blazor server app
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. In  `_Host.cshtml`, refer syncfusion style sheet where the style sheet name is defined based on query string. 
+**STEP 1**: In `_Host.cshtml`, refer syncfusion style sheet where the style sheet name is defined based on query string. 
 
 ```cshtml
 @page "/"
@@ -234,7 +233,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 </html>
 ```
 
-2. In `MainLayout.razor` page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+**STEP 2**: In `MainLayout.razor` page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
 
 ```cshtml
 @inherits LayoutComponentBase
@@ -323,7 +322,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
 
 The following example demonstrates how to change a theme dynamically in Blazor WebAssembly using the application with the Syncfusion Blazor themes using Syncfusion Dropdown component.
 
-1. Add the below function code in the  `index.html` file to set the theme as selected in dropdown by using its **id** value.
+**STEP 1**: Add the below function code in the  `index.html` file to set the theme as selected in dropdown by using its **id** value.
 
 ```html
 <head>
@@ -342,7 +341,7 @@ The following example demonstrates how to change a theme dynamically in Blazor W
 …………… . . 
 ```
 
-2. Modify the `MainLayout.razor` page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
+**STEP 2**: Modify the `MainLayout.razor` page with the below code to implement a theme change dynamically using the dropdown by its id value in javascript function in the application.
 
 ```cshtml
 @inherits LayoutComponentBase
@@ -393,7 +392,6 @@ The following example demonstrates how to change a theme dynamically in Blazor W
         new ThemeDetails(){ ID = "highcontrast", Text = "High Contrast" }
     };
     
-
     public void OnThemeChange(Syncfusion.Blazor.DropDowns.ChangeEventArgs<string, ThemeDetails> args)
     {
         JSRuntime.InvokeAsync<object>("setTheme", args.ItemData.ID);                
