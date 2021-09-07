@@ -74,7 +74,7 @@ Using **JavaScriptInterop**, you can enable or disable touch mode at run time by
 3.	Add the following JS code inside the script tag of `wwwroot/index.html` (Blazor WebAssembly) or `Pages/_Host.cshtml` (Blazor Server) to enable the `e-bigger` class for touch mode and disable it in mouse mode.
 
 ```cshtml
-........... 
+
 <script>
         function onTouch() {
             document.body.classList.add('e-bigger');
