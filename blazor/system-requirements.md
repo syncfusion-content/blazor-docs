@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-# System requirements
+# System requirements for Blazor Components
 
 To get started with the Blazor application, it has to be ensured that the following software is installed in the machine.
 
