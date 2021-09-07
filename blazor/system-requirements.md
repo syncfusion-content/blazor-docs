@@ -13,7 +13,7 @@ To get started with the Blazor application, it has to be ensured that the follow
 
 ## Integrated Development Environment
 
-By using the following IDEs, you can develop Blazor applications.
+Blazor applications can be developed using following IDEs..
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
 * [Visual Studio Code](https://code.visualstudio.com/download)
@@ -23,8 +23,6 @@ By using the following IDEs, you can develop Blazor applications.
 
 The following tool is required to run the Blazor application.
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) 
-* [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
-* The latest [Visual Studio 2019](https://visualstudio.microsoft.com/) version with the ASP.NET and Web development workload.
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet-core/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
 
 > .NET Core SDK 3.1.8 requires Visual Studio 2019 16.7 or later. <br /> .NET 5.0 requires Visual Studio 2019 16.8 or later.
