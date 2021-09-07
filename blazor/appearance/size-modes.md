@@ -13,11 +13,11 @@ Syncfusion components and elements support different size modes.
 
 ## Size mode for application
 
-This article explains how to implement the touch and mouse mode in an entire application.In the following example, there are two buttons, one for Touch mode and the other for normal mode.
+This article explains how to implement the touch and mouse mode in an entire application.
 
-Using **JavaScriptInterop** you can achieve the size mode change in an entire application. Refer to the below steps,
+Using **JavaScriptInterop**, you can enable or disable touch mode at run time by adding or removing `.e-bigger` class.Refer to the below steps,
 
-1. Add the `e-bigger` class in the `~/wwwroot/css/site.css` file.
+1. Add the `e-bigger` CSS class in the `~/wwwroot/css/site.css` file.
 
 ```css
 .e-bigger {
@@ -71,7 +71,7 @@ Using **JavaScriptInterop** you can achieve the size mode change in an entire ap
 }
 ```
 
-3.	Add the following JS code inside the script tag of `wwwroot/index.html` (Blazor WebAssembly) or `Pages/_Host.cshtml` (Blazor Server) to add the `e-bigger` class for touch mode and remove it in mouse mode.
+3.	Add the following JS code inside the script tag of `wwwroot/index.html` (Blazor WebAssembly) or `Pages/_Host.cshtml` (Blazor Server) to enable the `e-bigger` class for touch mode and disable it in mouse mode.
 
 ```cshtml
 ........... 
@@ -86,14 +86,13 @@ Using **JavaScriptInterop** you can achieve the size mode change in an entire ap
 ```
 ![size-mode-for-application](images/size-mode-for-application.gif)
 
+> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 ## Size mode for a control
 
-This article explains the size modes (Touch and Mouse) of the Syncfusion controls.
+Touch mode can be enabled in a Syncfusion control by adding `.e-bigger` class in CSS style element.
 
-In the following example, there are two buttons, one for Touch mode and the other for normal mode. You can change the size of the element by adding the `e-bigger` class with a specific font size to the Div element. 
-
-Refer to the following code, in which the `e-bigger` class is added for touch mode using the `check` variable and assigned a value to its Div element.
+Refer to the following code, in which the `e-bigger` class is added for enabling touch mode using the `check` variable.
 
 ```cshtml
 
@@ -150,6 +149,8 @@ Refer to the following code, in which the `e-bigger` class is added for touch mo
 ```
 
 ![size-mode-for-control](images/size-mode-for-control.gif)
+
+> [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
 ## Side-bar Responsiveness in Syncfusion Components
 
