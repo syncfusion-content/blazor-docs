@@ -15,7 +15,8 @@ Syncfusion components and elements support different size modes.
 
 This article explains how to implement the touch and mouse mode in an entire application.
 
-Using **JavaScriptInterop**, you can enable or disable touch mode at run time by adding or removing `.e-bigger` class.Refer to the below steps,
+Using **JavaScriptInterop**, you can enable or disable touch mode at run time by adding or removing `.e-bigger` class.
+Refer to the below steps,
 
 1. Add the `e-bigger` CSS class in the `~/wwwroot/css/site.css` file.
 
@@ -25,7 +26,7 @@ Using **JavaScriptInterop**, you can enable or disable touch mode at run time by
 }
 ```
 
-2.	To call JS from .NET, inject the **IJSRuntime** abstraction and call **InvokeAsync** method as given in the below code,
+2. To call JS from .NET, inject the **IJSRuntime** abstraction and call **InvokeAsync** method as given in the below code,
 
 ```cshtml
 @page "/"
@@ -71,7 +72,7 @@ Using **JavaScriptInterop**, you can enable or disable touch mode at run time by
 }
 ```
 
-3.	Add the following JS code inside the script tag of `wwwroot/index.html` (Blazor WebAssembly) or `Pages/_Host.cshtml` (Blazor Server) to enable the `e-bigger` class for touch mode and disable it in mouse mode.
+3. Add the following JS code inside the script tag of `wwwroot/index.html` (Blazor WebAssembly) or `Pages/_Host.cshtml` (Blazor Server) to enable the `e-bigger` class for touch mode and disable in mouse mode.
 
 ```cshtml
 
@@ -154,7 +155,7 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 ## Side-bar Responsiveness in Syncfusion Components
 
-Blazor application renders UI as HTML content in client-side (browser). So, based on the width of the viewport in a device, it is possible to determine whether it is a Desktop or a Mobile device and design responsive web pages accordingly.
+Blazor application renders UI as HTML content in client-side (browser). So based on the width of the viewport in a device, it is possible to determine whether it is a Desktop or a Mobile device and design responsive web pages accordingly.
 
 The meta tag named `viewport` is used to design the **webpage responsiveness** and this is included in all the Blazor applications of ` _Host.cshtml` file in Blazor server-side application and `index.html` file in Blazor Web Assembly application. CSS styling makes designs responsive in Blazor application.
 
