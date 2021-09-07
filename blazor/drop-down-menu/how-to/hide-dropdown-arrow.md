@@ -27,4 +27,4 @@ You can hide the dropdown arrow from the Dropdown Menu by adding class `e-caret-
 
 Output be like
 
-![Button Sample](./../images/ddb-hide.png)
+![Hiding DropDown Arrow in Blazor DropDownMenu](./../images/blazor-dropdownmenu-hide-arrow.png)

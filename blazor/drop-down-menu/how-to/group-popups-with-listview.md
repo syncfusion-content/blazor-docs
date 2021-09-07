@@ -44,4 +44,4 @@ In the following example, ListView element is given as `PopupContent` to Dropdow
 
 Output be like
 
-![Button Sample](./../images/ddb-listview.png)
+![Grouping Popup Items in Blazor DropDownMenu](./../images/blazor-dropdownmenu-grouping-popup-item.png)

@@ -49,7 +49,7 @@ In the following sample, the icons for edit, delete, mark as read  and like mess
 
 Output be like
 
-![Button Sample](./images/ddb-popup-icon.png)
+![Blazor DropDownMenu displays Icon in Popup Items](./images/blazor-dropdownmenu-with-popup-icon.png)
 
 ## Separator
 
@@ -76,7 +76,7 @@ In the following sample, cut, copy, and paste popup items are grouped using the 
 
 Output be like
 
-![Button Sample](./images/ddb-separator.png)
+![Blazor DropDownMenu with Separator](./images/blazor-dropdownmenu-separator.png)
 
 ## Navigations
 
@@ -108,7 +108,7 @@ In the following sample, navigation URL for Flipkart, Amazon, and Snapdeal actio
 
 Output be like
 
-![Button Sample](./images/ddb-navigation.png)
+![Blazor DropDownMenu Items with Navigation Link](./images/blazor-dropdownmenu-navigation.png)
 
 ## Template
 
@@ -140,4 +140,4 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 Output be like
 
-![Button Sample](./images/ddb-template.png)
+![Blazor DropDownMenu with Popup Items](./images/blazor-dropdownmenu-with-popup-items.png)

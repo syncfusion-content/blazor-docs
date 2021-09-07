@@ -45,7 +45,7 @@ In the following example, the Dropdown Menu with default iconPosition and iconPo
 
 Output be like
 
-![Button Sample](./images/ddb-icon.png)
+![Blazor DropDownMenu with Icon](./images/blazor-dropdownmenu-icon.png)
 
 You can also use third party icons on the Dropdown Menu using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfDropDownButton.html#Syncfusion_Blazor_SplitButtons_SfDropDownButton_IconCss) property.
 
@@ -74,7 +74,7 @@ Vertical button in Dropdown Menu can be achieved by adding `e-vertical` class us
 
 Output be like
 
-![Button Sample](./images/ddb-vertical.png)
+![Changing Blazor DropDownMenu Position in Vertical](./images/blazor-dropdownmenu-in-vertical.png)
 
 ## See Also
 

@@ -54,4 +54,4 @@ In the following example, the up arrow is updated on popup close and down arrow 
 
 Output be like
 
-![Change caret icon](./../images/ddb-caret.png)
+![Changing Caret Icon in Blazor DropDownMenu](./../images/blazor-dropdownmenu-caret-icon.png)
