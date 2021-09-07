@@ -11,7 +11,7 @@ documentation: ug
 
 Header in popup items is possible in Dropdown Menu by templating entire popup with ListView. Create ListView with [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.SfListView-1.html#Syncfusion_Blazor_Lists_SfListView_1_ID) listview and provide it as a `PopupContent` for Dropdown Menu.
 
-In the following example, ListView element is given as `PopupContent` to Dropdown Menu and header can be achieved by [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.FieldSettingsModel.html#Syncfusion_Blazor_Lists_FieldSettingsModel_GroupBy) property.
+In the following example, ListView element is given as `PopupContent` to Dropdown Menu and header can be achieved by [GroupBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Lists.ListViewFieldSettings-1.html#Syncfusion_Blazor_Lists_ListViewFieldSettings_1_GroupBy) property.
 
 ```cshtml
 
