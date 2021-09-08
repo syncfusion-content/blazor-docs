@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Custom toolbar items with text name same as default toolbar items
+title: Custom toolbar items in Blazor DataGrid Component | Syncfusion
 description: Learn here all about Custom toolbar items with text name same as default toolbar items in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
