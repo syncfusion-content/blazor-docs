@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Cell in Syncfusion Blazor DataGrid component and much more.
+description: Checkout and learn here all about the Cell in the Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
