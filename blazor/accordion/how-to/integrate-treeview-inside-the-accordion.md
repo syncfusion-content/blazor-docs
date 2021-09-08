@@ -9,7 +9,7 @@ documentation: ug
 
 # Treeview Integration in Blazor Accordion Component
 
-Accordion supports to render other blazor Components by using [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. You can give other components as an accordion content like below, for initializing the component.
+Accordion supports to render other blazor Components by using the [ContentTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_ContentTemplate) property. The other components are given an accordion content like the following, for initializing the component.
 
 ```cshtml
 <ContentTemplate>
@@ -17,7 +17,7 @@ Accordion supports to render other blazor Components by using [ContentTemplate](
 </ContentTemplate>
 ```
 
-The following example shows how to render a TreeView within the Accordion,
+The following example shows how to render a TreeView within the Accordion.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -179,6 +179,6 @@ The following example shows how to render a TreeView within the Accordion,
 }
 ```
 
-Output be like the below.
+Output:
 
 ![Treeview Integration in Blazor Accordion](../images/blazor-accordion-treeview-integration.png)
