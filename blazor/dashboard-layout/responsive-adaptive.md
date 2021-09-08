@@ -11,7 +11,7 @@ documentation: ug
 
 The control is provided with built-in responsive support, where panels within the layout get adjusted based on their parent element's dimensions to accommodate any resolution, which relieves the burden of building responsive dashboards.
 
-The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one, so that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets 600px or lower resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the `MediaQuery` property of the component.
+The dashboard layout is designed to automatically adapt with lower resolutions by transforming the entire layout into a stacked one. So that, the panels will be displayed in a vertical column. By default, whenever the screen resolution meets 600px or lower resolutions this layout transformation occurs. This transformation can be modified for any user defined resolution by defining the `MediaQuery` property of the component.
 
 ```cshtml
 
