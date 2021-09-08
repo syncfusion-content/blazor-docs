@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Syncfusion Blazor Extension for Visual Studio Code | Syncfusion
-description: Learn here all about introduction about Syncfusion Blazor extension for Visual Studio Code which made integration made ease.
+description: Learn here all about introduction on Syncfusion Blazor extension for Visual Studio Code which made integration made ease.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Overview of Blazor Extension for Visual Studio Code
 
-The [Syncfusion Blazor Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) allows you to use the Syncfusion Blazor components easily by configuring the Syncfusion NuGet packages and themes.
+The [Syncfusion Blazor Extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) allows to use the Syncfusion Blazor components easily by configuring the Syncfusion NuGet packages and themes.
 
 The Syncfusion Blazor Extension provides the following support in Visual Studio Code:
 

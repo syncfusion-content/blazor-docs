@@ -86,7 +86,7 @@ the [PageSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfG
 ```
 
 The following GIF represent a datagrid with Row virtualization.
-![Row virtualization](./images/Row.gif)
+![Blazor DataGrid with Row virtualization](./images/blazor-datagrid-row-virtualization.gif)
 
 ## Column Virtualization
 
@@ -165,7 +165,7 @@ To setup the column virtualization, set the
 > Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_Width) is required for column virtualization. If column's width is not defined then DataGrid will consider its value as **200px**.
 
 The following GIF represent a datagrid with Column virtualization.
-![Column virtualization](./images/Column.gif)
+![Blazor DataGrid with Column virtualization](./images/blazor-datagrid-column-virtualization.gif)
 
 > The collapsed/expanded state will persist only for local dataSource while scrolling.
 
@@ -243,7 +243,7 @@ To setup the enable cell placeholder during virtualization, you need to define [
 ```
 
 The following GIF represent a datagrid with Mask row virtualization.
-![Mask Row virtualization](./images/Mask.gif)
+![Blazor DataGrid with Mask Row virtualization](./images/blazor-datagrid-mask-row-virtualization.gif)
 
 ## Frozen Columns Virtualization
 
@@ -351,7 +351,7 @@ To setup the frozen right/left columns, you need to define Column property of **
 ```
 
 The following GIF represent a datagrid with Frozen columns/row virtualization.
-![Frozen virtualization](./images/FrozenVirtual.gif)
+![Blazor DataGrid with Frozen Column virtualization](./images/blazor-datagrid-frozen-column-virtualization.gif)
 
 ## Limitations for Virtualization
 
