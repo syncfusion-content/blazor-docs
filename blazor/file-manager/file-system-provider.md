@@ -490,7 +490,7 @@ The [Firebase Real time Database](https://firebase.google.com/) file system prov
 
 Follow the given steps to generate the secret access key:
 
-* Click this [link](https://console.firebase.google.com/) to Firebase console and navigate to the project settings.
+* Click this [link](https://console.firebase.google.com/u/0/?pli=1) to Firebase console and navigate to the project settings.
 
 * And then, navigate to the **Service Accounts** tab in the window.
 
