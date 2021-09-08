@@ -48,7 +48,7 @@ Filtering allows you to view particular records based on filter criteria. To ena
 ```
 
 The following screenshot shows filtering using FilterBar
-![Default Filter](./images/default-filtering.png)
+![Filtering in Blazor DataGrid](./images/blazor-datagrid-filtering.png)
 
 > * You can apply and clear filtering by using **FilterByColumn** and **ClearFiltering** methods.
 > * To disable filtering for a particular column, set [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false.
@@ -100,7 +100,7 @@ To apply the filter at initial rendering, set the filter **Predicate** object in
 ```
 
 The following screenshot shows Initial filtering using FilterBar
-![Initial Filter](./images/initial-filtering.png)
+![Blazor DataGrid with Initial Filter](./images/blazor-datagrid-initial-filtering.png)
 
 ## Filter operators
 
@@ -180,7 +180,7 @@ N/A |N/A |`equal` operator will always be used for Boolean filter. |Boolean
 ```
 
 The following screenshot shows filtering using FilterBar
-![Default Filter](./images/default-filtering.png)
+![Filtering in Blazor DataGrid](./images/blazor-datagrid-filtering.png)
 
 ### Filter bar template with custom component
 
@@ -261,7 +261,7 @@ To access the filtered values inside the FilterTemplate, you can use the implici
 ```
 
 The following screenshot shows filtering using custom component
-![Filterbar customcomponent](./images/filterbarcustom.PNG)
+![Filtering with Custom Component in Blazor DataGrid](./images/blazor-datagrid-custom-filter.PNG)
 
 ### Change default filter operator
 
@@ -308,7 +308,7 @@ In the following sample, we have changed the default operator for CustomerID col
 ```
 
 The following screenshot represents Filter with change in default operator as contains
-![Default operator](./images/defaultoperator.PNG)
+![Changing Filter Operator in Blazor DataGrid](./images/blazor-datagrid-filter-operator.PNG)
 
 ### Filter Modes
 
@@ -400,7 +400,7 @@ You can filter the records with different operators.
 ```
 
 The following screenshot represents Menu filter
-![Menu Filter](./images/menu-filter.png)
+![Blazor DataGrid with Menu Filter](./images/blazor-datagrid-menu-filter.png)
 
 > * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowFiltering) must be set as true to enable filter menu.
 > * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering) property of **GridColumn** as false will prevent
@@ -457,7 +457,7 @@ In the following sample the [FilterTemplate](https://help.syncfusion.com/cr/blaz
 ```
 
 The following screenshot shows filter menu using custom component
-![Filtermenu customcomponent](./images/Customfiltermenu.PNG)
+![Blazor DataGrid with Custom Filter Menu](./images/blazor-datagrid-custom-filter-menu.PNG)
 
 ### Override default filter operators for Menu Filtering
 
@@ -568,7 +568,7 @@ In the following sample menu filter is enabled by default and checkbox filter is
 ```
 
 The following screenshot represents CheckBox filter
-![CheckBox Filter](./images/checkbox-filter.png)
+![Blazor DataGrid with CheckBox Filter](./images/blazor-datagrid-checkbox-filter.png)
 
 ## CheckBox Filter
 
@@ -617,7 +617,7 @@ CheckBox filter contains an option such as searching and Clear filter.
 ```
 
 The following screenshot represents Checkbox filter
-![CheckBox Type](./images/Checkboxtype.png)
+![Blazor DataGrid with CheckBox Filter](./images/blazor-datagrid-checkbox-filtering.png)
 
 ## Excel like filter
 
@@ -661,10 +661,10 @@ You can enable Excel like filter by defining [Type](https://help.syncfusion.com/
 ```
 
 The following screenshot represents Excel filter
-![Excel Filter](./images/excel-filter.png)
+![Blazor DataGrid with Excel Filter](./images/blazor-datagrid-excel-filter.png)
 
 The following screenshot represents Custom filter in Excel filter
-![Custom Filter](./images/custom-filter.png)
+![Blazor DataGrid Custom Excel Filter](./images/blazor-datagrid-custom-excel-filter.png)
 
 ### Filter Item template
 
@@ -716,7 +716,7 @@ This **`FilterItemTemplate`** helps to you customize the each CheckBox list elem
 ```
 
 The following screenshot represents Filter Item template
-![Item Template](./images/ItemTemplate.png)
+![Blazor DataGrid Filter with Item Template](./images/blazor-datagrid-filter-item-template.png)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 

@@ -1,19 +1,19 @@
 ---
 layout: post
-title: Download and Installation in Blazor - Syncfusion
-description: Learn here about that how to download and installation in the Esssntial Syncfusion Blazor Components.
+title: Download and Installation in Blazor Extension | Syncfusion
+description: Learn here more about how to download and install in the Syncfusion Blazor Extension for Visual Studio Code and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Download and Installation
+# Download and Installation of Blazor Extension
 
-Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension). You can either install it from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
+Syncfusion publishes the Visual Studio Code extension in [Visual Studio Code marketplace](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension). It can be either installed from Visual Studio Code or download and install it from the Visual Studio Code marketplace.
 
 ## Prerequisites
 
-The following prerequisites software need to be installed for the Syncfusion Blazor extension installation and for creating, converting, and upgrading the Syncfusion Blazor applications.
+The following prerequisites software needs to be installed for the Syncfusion Blazor extension installation and for creating, converting, and upgrading the Syncfusion Blazor applications.
 
 * [Visual Studio Code](https://code.visualstudio.com/download).
 
@@ -49,7 +49,7 @@ The following steps explain how to install the Syncfusion Blazor extensions from
 
 ## Install from the Visual Studio Marketplace
 
-The following steps explain how to download Syncfusion Blazor applications from the Visual Studio Code Marketplace and install them.
+The following steps explains how to download Syncfusion Blazor applications from the Visual Studio Code Marketplace and install them.
 
 1. Open the [Syncfusion Blazor Extension](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-VSCode-Extensions) in Visual Studio Code Marketplace.
 

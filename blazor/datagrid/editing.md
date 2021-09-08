@@ -62,7 +62,7 @@ Deletion of the record is possible by selecting the required row and click on **
 ```
 
 The following screenshot represents Editing with Default Mode.
-![Edit Action](./images/edit-action.png)
+![Editing in Blazor DataGrid](./images/blazor-datagrid-editing.png)
 
 > * Grid uses `Activator.CreateInstance<TValue>()` to generate a new record when an insert operation is invoked, so it is must have a parameterless constructor defined for the model class. To provide custom logic for object creation during editing, you can refer [here](#provide-new-item-or-edited-item-using-events).
 > * If [IsIdentity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_IsIdentity) is enabled, then it will be considered as a read-only column when editing and adding a record.
@@ -122,7 +122,7 @@ You can define this by using the [Toolbar](https://help.syncfusion.com/cr/blazor
 ```
 
 The following screenshot represents Toolbar with Edit option.
-![Edit Action](./images/edit-action.png)
+![Blazor DataGrid displays Edit option in Toolbar](./images/blazor-datagrid-editing.png)
 
 ## Edit Modes
 
@@ -177,7 +177,7 @@ In Normal edit mode, when you start editing the currently selected record is cha
 ```
 
 The following screenshot represents Editing in Normal Mode.
-![Normal Editing](./images/normal-editing.png)
+![Blazor DataGrid with Normal Editing](./images/blazor-datagrid-normal-editing.png)
 
 > Normal edit mode is the default mode of editing.
 
@@ -227,7 +227,7 @@ In dialog edit mode, when you start editing the currently selected row data will
 ```
 
 The following screenshot represents Editing in Dialog Mode.
-![Dialog Editing](./images/dialog-editing.png)
+![Blazor DataGrid with Dialog Editing](./images/blazor-datagrid-dialog-editing.png)
 
 ### Batch
 
@@ -274,7 +274,7 @@ In batch edit mode, when you double-click on the datagrid cell, then the target 
 ```
 
 The following screenshot represents Editing in Batch mode.
-![Batch Editing](./images/batch-editing.png)
+![Blazor DataGrid with Batch Editing](./images/blazor-datagrid-batch-editing.png)
 
 ## Edit next row or previous row from the current row
 
@@ -323,7 +323,7 @@ Pressing `TAB` from the last cell of the current row allows editing the next row
 ```
 
 The following GIF represents Editing in Batch mode.
-![AllowNextRowEdit](./images/nextrow-edit.gif)
+![Editing Next Row in Blazor DataGrid](./images/blazor-datagrid-next-row-edit.gif)
 
 ## Cell edit type
 
@@ -331,17 +331,17 @@ The [EditType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.Gri
 
 The available default edit types are,
 
-* [NumericEdit](https://blazor.syncfusion.com/blazor/documentation/numerictextbox/getting-started) component for integers, double, and decimal data types.
+* [NumericEdit](https://blazor.syncfusion.com/documentation/numeric-textbox/getting-started) component for integers, double, and decimal data types.
 
-* [DefaultEdit](https://blazor.syncfusion.com/blazor/documentation/textbox/getting-started/) component for string data type.
+* [DefaultEdit](https://blazor.syncfusion.com/documentation/textbox/getting-started) component for string data type.
 
-* [DropDownEdit](https://blazor.syncfusion.com/blazor/documentation/dropdownlist/getting-started/) component to show all unique values related to that field.
+* [DropDownEdit](https://blazor.syncfusion.com/documentation/dropdown-list/getting-started) component to show all unique values related to that field.
 
-* [BooleanEdit](https://blazor.syncfusion.com/blazor/documentation/check-box/getting-started/) component for boolean data type.
+* [BooleanEdit](https://blazor.syncfusion.com/documentation/check-box/getting-started) component for boolean data type.
 
-* [DatePickerEdit](https://blazor.syncfusion.com/blazor/documentation/datepicker/getting-started/) component for date data type.
+* [DatePickerEdit](https://blazor.syncfusion.com/documentation/datepicker/getting-started) component for date data type.
 
-* [DateTimePickerEdit](https://blazor.syncfusion.com/blazor/documentation/datetimepicker/getting-started/) component for date time data type.
+* [DateTimePickerEdit](https://blazor.syncfusion.com/documentation/datetime-picker/getting-started) component for date time data type.
 
 ## Customizing the default editor controls
 
@@ -735,7 +735,7 @@ You can able to render SfAutoComplete component in EditTemplate. In the below sa
 ```
 
 In the following image, **Autocomplete** component is rendered with **EditTemplate** in Customer ID column
-![Celledit Template](./images/celledit-template.png)
+![Blazor DataGrid with CellEdit Template](./images/blazor-datagrid-celledit-template.png)
 
 ### Using DropDownList in EditTemplate
 
@@ -800,7 +800,7 @@ You can able to render SfDropDownList component in EditTemplate. In the below sa
 ```
 
 In the following image, **SfDropDownList** component is rendered with **EditTemplate** in ShipCountry column
-![Custom SfDropDownList in EditTemplate](./images/sfdropdownlist-edittemplate.png)
+![Blazor DataGrid with Editing in Custom DropDownList](./images/blazor-datagrid-editing-in-custom-dropdownlist.png)
 
 ### Using TimePicker in EditTemplate
 
@@ -854,7 +854,7 @@ You can able to render SfTimePicker component in EditTemplate. In the below samp
 ```
 
 In the following image, **SfTimePicker** component is rendered with **EditTemplate** in OrderDate column
-![Custom SfTimePicker in EditTemplate](./images/sftimepicker-edittemplate.png)
+![Blazor DataGrid with Editing in Custom TimePicker](./images/blazor-datagrid-editing-in-custom-timepicker.png)
 
 ### Using MultiSelect Dropdown in EditTemplate
 
@@ -923,7 +923,7 @@ You can able to render SfMultiSelect component in EditTemplate. In the below sam
 ```
 
 In the following image, **SfMultiSelect** component is rendered with **EditTemplate** in ChosenItems column
-![Custom SfMultiSelect in EditTemplate](./images/multiselect-edittemplate.png)
+![Blazor DataGrid with Editing in Custom MultiSelect](./images/blazor-datagrid-editing-in-custom-multiselect.png)
 
 ## Command column
 
@@ -986,7 +986,7 @@ The available built-in command buttons are:
 ```
 
 The following screenshot represents the command column.
-![Command Column](./images/command-column.png)
+![Blazor DataGrid with Command Column](./images/blazor-datagrid-command-column.png)
 
 ### Custom command
 
@@ -1045,7 +1045,7 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 ```
 
 The following image represents the custom command added in the **Manage Records** column of the DataGrid component,
-![Custom Command](./images/custom-command.png)
+![Blazor DataGrid with Custom Command](./images/blazor-datagrid-custom-command.png)
 
 ## Column validation
 
@@ -1091,7 +1091,7 @@ Column validation allows you to validate the edited or added row data and it dis
 ```
 
 The following screenshot represents the Column Validation in Normal Editing.
-![Validation Rules](./images/validation-rules.png)
+![Blazor DataGrid with Validation in Editing](./images/blazor-datagrid-validation-in-editing.png)
 
 ### Data Annotation
 
@@ -1314,7 +1314,7 @@ In the below code example, the following things have been done.
 
 The output will be as follows.
 
-![Custom Validator](./images/custom-validator1.png)
+![Blazor DataGrid with Custom Validator in Editing](./images/blazor-datagrid-custom-validator-in-editing.png)
 
 #### Display validation message using in-built tooltip
 
@@ -1351,7 +1351,7 @@ Now the HandleValidation method of the MyCustomValidator component would be chan
 
 The output will be as follows.
 
-![Custom Validator 2](./images/custom-validator.png)
+![Blazor DataGrid with Custom Validator in Editing](./images/blazor-datagrid-custom-validator.png)
 
 #### Disable in-built validator component
 
@@ -1950,7 +1950,7 @@ You can perform CRUD operations like **Add** , **Update** , **Delete** by using 
 ```
 
 The following GIF represents the datagrid with Add, Update, Delete items,
-![CRUD operations](./images/Editing.gif)
+![CRUD operations in Blazor DataGrid Editing](./images/blazor-datagrid-editing-in-crud-operation.gif)
 
 ## Custom external form editing
 
@@ -2059,7 +2059,7 @@ You can perform the edit operation of Datagrid in a Custom external form. The ed
 ```
 
 The following GIF represent the datagrid with Custom External form editing,
-![Custom external form](./images/Customform.gif)
+![Blazor DataGrid with Custom External Form Editing](./images/blazor-datagrid-custom-form-editing.gif)
 
 ## Dialog template
 
@@ -2189,7 +2189,7 @@ The following sample code demonstrates DataGrid enabled with dialog template edi
 > In the above sample code, the textbox rendered for **OrderID** column inside the dialog template is disabled using its `Enabled` property to prevent editing of the primary key column.
 
 The following image represents the dialog template that is displayed on double-clicking a DataGrid cell,
-![Dialog Template](./images/dialog-edit-template.png)
+![Blazor DataGrid with Dialog Edit Template](./images/blazor-datagrid-dialog-edit-template.png)
 
 ### Disable components in dialog template
 
@@ -2322,13 +2322,13 @@ This is demonstrated in the below sample code where if the `RequestType` argumen
 ```
 
 The following image represents the dialog template of the DataGrid component with disabled components,
-![Disable components](./images/disable-component.png)
+![Blazor DataGrid displays Disable components](./images/blazor-datagrid-disable-component.png)
 
 ### Set focus to editor
 
 By default, the first input element in the dialog will be focused while opening it. If the first input element is in the a disabled or hidden state, you can set focus to the required input element in the corresponding components **Created** or **DataBound** event.
 
-This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-1.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_1_DataBound) event.
+This is demonstrated in the below sample code where the first input element is in disabled state. So the  **CustomerID** Autocomplete component is focused by invoking its [FocusIn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownList-2.html#Syncfusion_Blazor_DropDowns_SfDropDownList_2_FocusIn) method in the AutoComplete's [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.AutoCompleteEvents-2.html#Syncfusion_Blazor_DropDowns_AutoCompleteEvents_2_DataBound) event.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -2444,7 +2444,7 @@ This is demonstrated in the below sample code where the first input element is i
 ```
 
 The following image represents the AutoComplete component in focused state inside the dialog template of the DataGrid component,
-![Dynamic focus of components](./images/dynamic-focus.png)
+![Blazor DataGrid displays Dynamic Focus of Components](./images/blazor-datagrid-dynamic-focus-component.png)
 
 ## Inline Template
 
@@ -2610,7 +2610,7 @@ The following sample code demonstrates changing the position of the new row that
 ```
 
 The following image represents the new row added at the bottom of the DataGrid,
-![New Row Position](./images/new-row-position.png)
+![Adding New Row at Bottom Position of Blazor DataGrid](./images/blazor-datagrid-add-new-row.png)
 
 >* In Batch mode while in edit mode, you can add a new row at bottom using the TAB key when you are on the last cell of the last row.
 
@@ -2662,7 +2662,7 @@ The following sample code demonstrates enabling delete confirmation dialog in th
 ```
 
 The following GIF represents the delete confirmation dialog displayed while deleting a record in DataGrid,
-![Delete confirmation dialog](./images/delete-confirm-dialog.gif)
+![Blazor DataGrid displays Delete Confirmation Dialog](./images/blazor-datagrid-delete-confirm-dialog.gif)
 
 > The [ShowDeleteConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowDeleteConfirmDialog) supports all type of edit modes.
 
@@ -2710,7 +2710,7 @@ The following sample code demonstrates enabling confirmation dialog for batch op
 ```
 
 The following GIF represents the confirmation dialog displayed while performing batch operations in DataGrid,
-![Confirmation dialog](./images/confirmation-dialog.gif)
+![Blazor DataGrid displays Update Confirmation Dialog](./images/blazor-datagrid-update-confirm-dialog.gif)
 
 > Enabling [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_Mode) property value of the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component to be **Batch**.
 > If [ShowConfirmDialog](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEditSettings.html#Syncfusion_Blazor_Grids_GridEditSettings_ShowConfirmDialog) is set to false, then confirmation dialog will not be displayed on batch editing.
@@ -2759,7 +2759,7 @@ The following sample code demonstrates setting default value as **ANTON** to the
 ```
 
 The following image represents the default value displayed in the **CustomerID** column while adding a new record in DataGrid,
-![Default Column Value](./images/default-column-value.png)
+![Adding New Record in Default Column Value of Blazor DataGrid](./images/blazor-datagrid-default-column-value.png)
 
 ## Disable editing for particular column
 
@@ -2807,7 +2807,7 @@ The following sample code demonstrates editing disabled for the **CustomerID** c
 > Similarly [AllowAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowAdding) property at the column level helps us to disable the particular column from inserting value to it.
 
 The following screenshot represents the editing disabled for the **CustomerID** column in DataGrid,
-![Editing Disabled](./images/editing-disabled.png)
+![Disable Editing for Specific Column in Blazor DataGrid](./images/blazor-datagrid-disable-editing.png)
 
 ## Troubleshoot: Editing works only for first row
 

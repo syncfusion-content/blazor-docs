@@ -160,7 +160,7 @@ The following sample code demonstrates implementing custom data binding using cu
 > If the **DataManagerRequest.RequiresCounts** value is **true**, then the Read/ReadAsync return value must be of **DataResult** with properties **Result** whose value is a collection of records and **Count** whose value is the total number of records. If the **DataManagerRequest.RequiresCounts** is **false**, then simply send the collection of records.
 
 The following image shows the custom bound data displayed in the DataGrid component,
-![Custom binding](./images/custom-binding.png)
+![Custom Binding in Blazor DataGrid](./images/blazor-datagrid-custom-binding.png)
 
 > If the Read/ReadAsync method is not overridden in the custom adaptor, then it will be handled by the default read handler.
 
@@ -554,7 +554,7 @@ The following sample code demonstrates implementing CRUD operations for the cust
 ```
 
 The following GIF displays the CRUD operations performed on the custom bound data displayed in the DataGrid component,
-![Editing custom bound data](./images/custom-binding-editing.gif)
+![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
@@ -670,6 +670,99 @@ The following sample code demonstrates implementing the aggregates for the custo
                 DataObject.Aggregates = DataUtil.PerformAggregation(DataSource, dm.Aggregates);
 
                 return dm.RequiresCounts ? DataObject : (object)DataSource;
+            }
+            return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
+        }
+    }
+}
+```
+
+## Handling Grouping in Custom Adaptor
+
+When using Custom Adaptor, the grouping operation has to be handled in the Read/ReadAsync method of Custom adaptor.
+
+The following sample code demonstrates implementing the grouping operation for the custom bounded data,
+
+```cshtml
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Grids
+@using System.Collections
+
+<SfGrid TValue="Order" ID="Grid" AllowSorting="true" AllowFiltering="true" AllowPaging="true" AllowGrouping="true">
+    <SfDataManager AdaptorInstance="@typeof(CustomAdaptor)" Adaptor="Adaptors.CustomAdaptor"></SfDataManager>
+    <GridPageSettings PageSize="8"></GridPageSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="@TextAlign.Center" Width="140"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="150"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public static List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public double Freight { get; set; }
+    }
+
+    // Implementing custom adaptor by extending the DataAdaptor class
+    public class CustomAdaptor : DataAdaptor
+    {
+        // Performs data Read operation
+        public override object Read(DataManagerRequest dm, string key = null)
+        {
+            IEnumerable<Order> DataSource = Orders;
+            if (dm.Search != null && dm.Search.Count > 0)
+            {
+                // Searching
+                DataSource = DataOperations.PerformSearching(DataSource, dm.Search);
+            }
+            if (dm.Sorted != null && dm.Sorted.Count > 0)
+            {
+                // Sorting
+                DataSource = DataOperations.PerformSorting(DataSource, dm.Sorted);
+            }
+            if (dm.Where != null && dm.Where.Count > 0)
+            {
+                // Filtering
+                DataSource = DataOperations.PerformFiltering(DataSource, dm.Where, dm.Where[0].Operator);
+            }
+            int count = DataSource.Cast<Order>().Count();
+            if (dm.Skip != 0)
+            {
+                //Paging
+                DataSource = DataOperations.PerformSkip(DataSource, dm.Skip);
+            }
+            if (dm.Take != 0)
+            {
+                DataSource = DataOperations.PerformTake(DataSource, dm.Take);
+            }
+            DataResult DataObject = new DataResult();
+            if (dm.Group != null)
+            {
+                IEnumerable ResultData = DataSource.ToList();
+                // Grouping
+                foreach (var group in dm.Group)
+                {
+                    ResultData = DataUtil.Group<Order>(ResultData, group, dm.Aggregates, 0, dm.GroupByFormatter);
+                }
+                DataObject.Result = ResultData;
+                DataObject.Count = count;
+                return dm.RequiresCounts ? DataObject : (object)ResultData;
             }
             return dm.RequiresCounts ? new DataResult() { Result = DataSource, Count = count } : (object)DataSource;
         }

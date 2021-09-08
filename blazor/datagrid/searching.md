@@ -51,7 +51,7 @@ You can search records in a DataGrid, by using the **Search** method with search
 
 The following GIF image represents a DataGrid Searching.
 
-![Searching](images/searching.gif)
+![Searching in Blazor DataGrid](images/blazor-datagrid-searching.gif)
 
 ## Initial search
 
@@ -99,7 +99,7 @@ To apply search at initial rendering, set the **Fields**, **Operator**, **Key**,
 
 The following screenshot represents a DataGrid with initial searching.
 
-![Initial Search](./images/grid-initialsearch.png)
+![Blazor DataGrid with Initial Search](./images/blazor-datagrid-initial-search.png)
 
 > By default, datagrid searches all the bound column values. To customize this behavior define the [Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSearchSettings.html#Syncfusion_Blazor_Grids_GridSearchSettings_Fields) property of **GridSearchSettings** component.
 

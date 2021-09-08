@@ -98,7 +98,7 @@ The following sample code demonstrates enabling context menu with its default it
 ```
 
 The following GIF represents the DataGrid enabled with default context menu items,
-![Grid with context menu](images/grid-context-menu.gif)
+![Blazor DataGrid with Context Menu](images/blazor-datagrid-context-menu.gif)
 
 ## Custom context menu items
 
@@ -155,7 +155,7 @@ The following sample code demonstrates defining custom context menu item and its
 ```
 
 The following image represents the DataGrid enabled with custom context menu item,
-![Grid with custom context menu item](images/custom-context-menu.png)
+![Blazor DataGrid with Custom Context Menu item](images/blazor-datagrid-custom-context-menu.png)
 
 ## Built-in and Custom context menu items
 

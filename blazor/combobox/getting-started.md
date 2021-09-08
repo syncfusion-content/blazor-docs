@@ -20,8 +20,6 @@ To get start quickly with Blazor ComboBox component, you can check on this video
 
 * Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
 
-  > Please ensure to check the `Include prerelease` option for our Beta release.
-
 * You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
   ```html
@@ -93,7 +91,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![ComboBox](./images/default.png)
+![Blazor ComboBox Component](./images/blazor-combobox-component.png)
 
 ## Binding data source
 
@@ -129,7 +127,7 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![ComboBox](./images/data_binding.png)
+![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
 
 ## Custom values
 
@@ -164,7 +162,7 @@ set of values. By default, this support is enabled by [AllowCustom](https://help
 
 The output will be as follows.
 
-![ComboBox](./images/custom.png)
+![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
 
 ## Configure the popup list
 
@@ -201,7 +199,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![ComboBox](./images/width_height.png)
+![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
 
 ## See Also
 

@@ -54,7 +54,7 @@ To perform the multi-selection, press and hold CTRL key and click the desired ro
 ```
 
 The following represents the multiple selected rows
-![Multiple Selection](./images/multi-selection.png)
+![Multiple Selection in Blazor DataGrid Rows](./images/blazor-datagrid-multi-selection.png)
 
 ## Selection mode
 
@@ -102,7 +102,7 @@ the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSel
 ```
 
 The following screenshot shows selection mode using both(row and cells selection)
-![Both Selection](./images/rowcell-selection.png)
+![Rows and Cells Selection in Blazor DataGrid](./images/blazor-datagrid-row-cell-selection.png)
 
 ## Cell selection
 
@@ -151,7 +151,7 @@ the [CellSelectionMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 ```
 
 The following screenshot shows selection mode using cell
-![Cell Selection](./images/cellselectionmode.png)
+![Cell Selection in Blazor DataGrid](./images/blazor-datagrid-cell-selection.png)
 
 > Cell selection requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) to be **Cell** or **Both**, and
 [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Type) should be **Multiple**.
@@ -200,7 +200,7 @@ To render the checkbox in each datagrid row, you need to assign the type as **Ch
 ```
 
 The following screenshot shows CheckBox Selection
-![CheckBox Selection](./images/checkbox-selection.png)
+![CheckBox Selection in Blazor DataGrid](./images/blazor-datagrid-checkbox-selection.png)
 
 > By default, selection is allowed by clicking a datagrid row or checkbox in that row. To allow selection only through checkbox, you can set the
 [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_CheckboxOnly) property of **GridSelectionSettings** as true.
@@ -294,9 +294,57 @@ The Toggle selection allows to perform selection and unselection of the particul
 ```
 
 The following shows selection and deselection of row
-![Enable Toggle](images/enable-toggle.gif)
+![Blazor DataGrid with Toggle Selection](images/blazor-datagrid-toggle-selection.gif)
 
 > If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
+
+## Perform Toggle selection programmatically
+
+You can perform toggle selection programmatically by using the **SelectRowAsync** method by passing **true** value as the second argument. In the below code example, we have programmatically toggle the row index 2.
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Perform Toggle Selection programmatically for RowIndex 3" @onclick="Click"></SfButton>
+
+<SfGrid @ref="Grid" DataSource="@Orders" AllowSelection="true" AllowPaging="true">
+    <GridSelectionSettings EnableToggle="true"></GridSelectionSettings>
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    SfGrid<Order> Grid;
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 75).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+    private async Task Click(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        await Grid.SelectRowAsync(2, true);
+    }
+}
+```
 
 ## Select row at initial rendering
 
@@ -340,7 +388,7 @@ To select a row at initial rendering, set the [SelectedRowIndex](https://help.sy
 ```
 
 The following image will be displayed with row selected in initial Rendering  
-![Initial Selection](./images/initial-selection.png)
+![Blazor DataGrid with Initial Selection](./images/blazor-datagrid-initial-selection.png)
 
 ## Get selected row indexes
 
@@ -405,7 +453,7 @@ You can get the selected row indexes by using [GetSelectedRowIndexes](https://he
 ```
 
 The following image will be displayed with selected row and its indexes  
-![Selected row index](./images/rowindex.PNG)
+![Blazor DataGrid Selection based on Row Index](./images/blazor-datagrid-selection-based-on-row-index.PNG)
 
 ## Touch interaction
 
@@ -417,7 +465,7 @@ To select multiple rows or cells, tap the popup![Multi Row or Cells](images/msel
 
 The following screenshot represents a datagrid touch selection in the device.
 
-![Touch interaction](./images/touch-selection.jpg)
+![Touch Selection in Blazor DataGrid](./images/blazor-datagrid-touch-selection.jpg)
 
 ## Multiple selection based on condition
 
@@ -481,7 +529,7 @@ You can select multiple rows at the initial rendering of the datagrid by using [
 ```
 
 The following image will be displayed with Multiple selection  
-![Multiple selection](./images/initialselect.PNG)
+![Blazor DataGrid with Multiple Selection based on Condition](./images/blazor-datagrid-multiple-selection.PNG)
 
 ## Simple multiple row selection
 

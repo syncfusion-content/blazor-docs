@@ -51,7 +51,7 @@ The HTML tags can be displayed in the DataGrid header and content by enabling th
 
 The following screenshot represents a DataGrid displaying the HTML content.
 
-![disable html encode](./images/disable-html-encode.png)
+![Displaying HTML Content in Blazor DataGrid](./images/blazor-datagrid-with-html-content.png)
 
 ## Customize cell styles
 
@@ -132,7 +132,7 @@ The appearance of cells can be customized by using the [QueryCellInfo](https://h
 
 The following screenshot represents a DataGrid with customized cell styles.
 
-![customize cell styles](./images/customize-cell-styles.png)
+![Customizing Cell Styles in Blazor DataGrid](./images/blazor-datagrid-cell-style-customization.png)
 
 ## Auto wrap
 
@@ -190,11 +190,11 @@ In the following example, the [TextWrapSettings.WrapMode](https://help.syncfusio
 
 The following screenshot represents a DataGrid with auto wrap.
 
-![autowrap](./images/autowrap.png)
+![Blazor DataGrid with AutoWrap](./images/blazor-datagrid-autowrap.png)
 
 ## Custom Attributes
 
-You can customize the DataGrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.ColumnModel.html#Syncfusion_Blazor_Gantt_ColumnModel_CustomAttributes) property of the column.
+You can customize the DataGrid cells by adding a CSS class to the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_CustomAttributes) property of the column.
 
 In the following example, the cells of the **OrderID** and **ShipCity** columns are customized.
 
@@ -345,6 +345,6 @@ There are three types of [ClipMode](https://help.syncfusion.com/cr/blazor/Syncfu
 
 The following screenshot represents a clip mode in DataGrid
 
-![clipmode](./images/clipmode.png)
+![Clip Mode in Blazor DataGrid](./images/blazor-datagrid-clip-mode.png)
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template Studio in Blazor - Syncfusion
-description: Learn here about that how to create the Essential Syncusion Blazor Components for the template studio.
+description: Learn here about how to create the Blazor application using Syncusion Blazor Components with the help of template studio.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Template Studio in Blazor
 
-Syncfusion provides the Blazor Template Studio to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor application is created with the required Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that teaches you how to create an application with Syncfusion components.
+Syncfusion provides the Blazor Template Studio to create a Syncfusion Blazor application with Syncfusion components. The Syncfusion Blazor application is created with the required Syncfusion NuGet references, namespaces, styles, and component render code. The Template Studio provides an easy-to-use project wizard that teaches how to create an application with Syncfusion components.
 
-The following steps will help you create your **Syncfusion Blazor Application** through **Visual Studio 2019**:
+The following steps will helps to create **Syncfusion Blazor Application** through **Visual Studio 2019**:
 
 > Before using the Syncfusion Blazor Project Template, check whether the Syncfusion Blazor Template Studio Extension is installed or not in Visual Studio Extension Manager by clicking on the Extensions -> Manage Extensions -> Installed.
 
@@ -45,13 +45,13 @@ The following steps will help you create your **Syncfusion Blazor Application** 
    * Syncfusion Blazor Server App
    * Syncfusion Blazor WebAssembly App
 
-   In the Syncfusion Blazor WebAssembly App project type, we can choose **ASP.NET Core hosted**, **Progressive Web Application**, or both.
+   In the Syncfusion Blazor WebAssembly App project type, choose **ASP.NET Core hosted**, **Progressive Web Application** or both.
 
    ![ProjectTypeWizard](../images/ProjectTypeWizard.png)
 
    > The Progressive Web Application will be enabled if .NET Core version 3.1.200 or higher is installed.
 
-5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components you can add to the application are listed.
+5. Click either **Next** or the **Controls** tab. The Syncfusion Blazor components that can be added to the application are listed.
 
    ![Controls Section](../images/ControlsSection1.png)
 
@@ -69,9 +69,9 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
    > Choose at least one control to enable the Features and Configuration tab.
 
-6. Click either **Next** or the **Features** tab, and you will see the features listed for the selected controls. You can choose the required features.
+6. Click either **Next** or the **Features** tab, and see the features listed for the selected controls. The required features can be chosen.
 
-7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. You can choose the required (.NET 5.0 and ASP NET Core 3.1), themes, https configuration, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly project types (ASP.NET Core hosted and Progressive Web Application).
+7. Click either **Next** or the **Configuration** tab, and the Configuration section will be loaded. Choose the required (.NET 5.0 and ASP NET Core 3.1), themes, https configuration, authentication type (None, Individual Accounts, Microsoft Identity Platform, and Windows), and Blazor Web Assembly project types (ASP.NET Core hosted and Progressive Web Application).
 
    > ASP.NET Core hosted and Progressive Web Application options are only visible for the Blazor Web Assembly App project type.
 
@@ -79,7 +79,7 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
    **Project details section**
 
-   You can change the configuration details below in the Project Details section to change the project type, delete controls, or change the configurations.
+   The configuration details below in the Project Details section can be changed to change the project type, delete controls, or change the configurations.
 
    ![Configure required Project details](../images/ProjectDetails.png)
 
@@ -87,7 +87,7 @@ The following steps will help you create your **Syncfusion Blazor Application** 
 
     ![BlazorReadme](../images/readme-file.PNG)
 
-9. If you installed the trial setup or NuGet packages from nuget.org you have to register the Syncfusion license key to your project since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to your project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
+9. If the trial setup or NuGet packages are installed from nuget.org, register the Syncfusion license key to the project since Syncfusion introduced the licensing system from 2018 Volume 2 (v16.2.0.41) Essential Studio release. Navigate to the [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#how-to-generate-syncfusion-license-key) to generate and register the Syncfusion license key to the project. Refer to this [blog](https://blog.syncfusion.com/post/Whats-New-in-2018-Volume-2-Licensing-Changes-in-the-1620x-Version-of-Essential-Studio.aspx?_ga=2.11237684.1233358434.1587355730-230058891.1567654773) post for understanding the licensing changes introduced in Essential Studio.
 
 ## Syncfusion integration
 
@@ -103,13 +103,13 @@ The following NuGet packages can be added as NuGet references based on applicati
 | `Syncfusion.Blazor.PdfViewerServer.Windows`  | Syncfusion Blazor Server App  |
 | `Syncfusion.Blazor.WordProcessor`  | Syncfusion Blazor Server App <br/> Syncfusion Blazor WebAssembly App <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted) <br> Syncfusion Blazor WebAssembly App (Progressive Web Application) <br/> Syncfusion Blazor WebAssembly App (ASPNET Core hosted and Progressive Web Application)|
 
-> The installed Syncfusion extension version of a NuGet package will be added as reference entry if there is no internet connection. You have to restore the NuGet packages when internet becomes available.
+> The installed Syncfusion extension version of a NuGet package will be added as reference entry if there is no internet connection. Restore the NuGet packages when internet becomes available.
 
 ![NuGetPackage](../images/NuGetPackage.png)
 
 ### Style
 
-The selected theme is added from Syncfusion NuGet and its reference at these applications locations in Blazor.
+The selected theme is added from Syncfusion NuGet and its reference at these applications' locations in Blazor.
 
 | Application type  | File location  |
 |---|---|
@@ -133,7 +133,7 @@ The selected Syncfusion Blazor components and features render code added as .raz
 
 ### Authentication Configuration
 
-We need to register the created application in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration we can get the client id for Individual Accounts. From Azure Active Directory registrations we can get the tenant id and project client id for Microsoft Identity Platform. We need to configure these id values in created applications then only the project will run correctly with authentication support.
+The created application has to be registered in Google Platform API Console for Individual Accounts and Azure Active Directory for Microsoft Identity Platform. From Google Platform API Console registration, get the client id for Individual Accounts. From Azure Active Directory registrations, get the tenant id and project client id for Microsoft Identity Platform. These id values must be configured in created applications then only the project will run correctly with authentication support.
 
 ### Individual Accounts Authentication
 
@@ -153,15 +153,15 @@ We need to register the created application in Google Platform API Console for I
 
     ![ApplicationType](../images/ClientIdApplicationtype.PNG)
 
-4. Add your publish URL link as an Authorized URI and login URL as Redirected URI.
+4. Add the published URL link as an Authorized URI and login URL as Redirected URI.
 
     ![RedirectedURI](../images/RedirectedURI.png)
 
-5. Click save then o-auth client id will be created and copy that credentials.
+5. Click save, then o-auth client id will be created and copy that credentials.
 
     ![ClientIdCreation](../images/ClientIdCreation.PNG)
 
-6. Add that Client Id, and RedirectUri in appsettings.json file of your project.
+6. Add that Client Id, and RedirectUri in appsettings.json file of the project.
 
     ![ClinetIdConfiguration](../images/ClinetIdConfiguration.PNG)
 
@@ -185,7 +185,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Name and supported Account type](../images/NameSupportedAccountType.PNG)
 
-4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
+4. Dropdown the page, select platform as web and give the application Redirect URI and click Register.
 
     ![Platform and Redirect URI](../images/AADRedirectedURI.png)
 
@@ -197,7 +197,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Clinet tenat id](../images/ClinetTenantId.PNG)
 
-7. Configure those client tenant id, application id, and domain in your project appsettings.json file.
+7. Configure those client tenant id, application id, and domain in the project appsettings.json file.
 
     ![Project configuration](../images/Configuration1.png)
 
@@ -215,7 +215,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Name and supported Account type](../images/NameSupportedAccountType.PNG)
 
-4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
+4. Dropdown the page, select platform as web and give the application Redirect URI and click Register.
 
     ![Platform and Redirect URI](../images/AADRedirectedURI.png)
 
@@ -223,7 +223,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Access token and Id token](../images/AuthenticationCheckBox.PNG)
 
-6. Migrate the API by clicking the highlighted arrow like in below image.
+6. Migrate the API by clicking the highlighted arrow.
 
     ![API Migration](../images/Migration1.PNG)
 
@@ -233,7 +233,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Clinet tenat id](../images/ClinetTenantId.PNG)
 
-8. Configure those client tenant id and application id in your project appsettings.json file.
+8. Configure those client tenant id and application id in the project appsettings.json file.
 
     ![Clinet ID and Tenant ID configuration](../images/ClinetTenantIdConfiguration.PNG)
 
@@ -253,7 +253,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Name and supported Account type](../images/NameSupportedAccountType.PNG)
 
-4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
+4. Dropdown the page, select platform as web and give the application Redirect URI and click Register.
 
     ![Platform and Redirect URI](../images/AADRedirectedURI.png)
 
@@ -261,7 +261,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Access token and Id token](../images/AuthenticationCheckBox.PNG)
 
-6. Migrate the API by clicking the highlighted arrow like in below image.
+6. Migrate the API by clicking the highlighted arrow.
 
     ![API Migration](../images/Migration1.PNG)
 
@@ -271,13 +271,13 @@ We need to register the created application in Google Platform API Console for I
 
     ![Clinet tenat id](../images/ClinetTenantId.PNG)
 
-8. Configure those client tenant id and application id in your project appsettings.json file.
+8. Configure those client tenant id and application id in the project appsettings.json file.
 
     ![Clinet ID and Tenant ID configuration](../images/ClinetTenantIdConfiguration.PNG)
 
 ##### Server project Registration and configuration
 
-1. Go to below Azure Active Directory App Registration page.
+1. Go to Azure Active Directory App Registration page.
 
     <https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps>
 
@@ -289,7 +289,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Name and supported Account type](../images/NameSupportedAccountType.PNG)
 
-4. Dropdown the page, select platform as web and give your application Redirect URI and click Register.
+4. Dropdown the page, select platform as web and give the application Redirect URI and click Register.
 
     ![Server Platform and Redirect URI](../images/AADRedirectedURI.png)
 
@@ -297,7 +297,7 @@ We need to register the created application in Google Platform API Console for I
 
     ![Access token and Id token](../images/AuthenticationCheckBox.PNG)
 
-6. Migrate the API by clicking the highlighted arrow like in below image.
+6. Migrate the API by clicking the highlighted arrow.
 
     ![API Migration](../images/Migration1.PNG)
 
@@ -315,21 +315,21 @@ We need to register the created application in Google Platform API Console for I
 
     ![Clinet tenat id](../images/ClinetTenantId.PNG)
 
-10. Configure those client tenant id, application id, and domain in your project appsettings.json file.
+10. Configure those client tenant id, application id, and domain in the project appsettings.json file.
 
     ![Project configuration](../images/Configuration1.png)
 
-11. Configure the scope API in client project program.cs file below highlighted place.
+11. Configure the scope API in client project program.cs file.
 
     ![Scope API configuration](../images/ScopeAPIConfiguration.PNG)
 
 ### Run application
 
-You can run the application and see the Syncfusion components you selected. Select a component to see component output.
+Run the application and see the Syncfusion components that are selected. Select a component to see component output.
 
 ![Blazor Template output page](../images/HomePage.png)
 
-You can select a culture language in combobox at top right on the page to apply the culture in the application.
+Select a culture language in combobox at top right on the page to apply the culture in the application.
 
 ![Blazor Template output page](../images/Localization.png)
 
@@ -343,7 +343,7 @@ You can select a culture language in combobox at top right on the page to apply 
 
     ![Register the application](../images/RegisterApplication.png)
 
-2. Confirming registration by clicking **Click here to confirm your account.**
+2. Confirm registration by clicking **Click here to confirm your account.**
 
     ![Register the confirmation](../images/RegisterConfirmation.png)
 

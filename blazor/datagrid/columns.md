@@ -17,7 +17,7 @@ The column definitions are used as the **DataSource** schema in the DataGrid. Th
 
 ## Auto generation
 
-The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) are automatically generated when [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.SfGrid%601~Columns.html) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
+The [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Columns) are automatically generated when [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_Columns) declaration is empty or undefined while initializing the datagrid. All the columns in the **DataSource** are bound as datagrid columns.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -85,7 +85,7 @@ You can refer the following code example to achieve this.
 ```
 
 The following image represents DataGrid with dynamically build columns,
-![Dynamic Column](./images/dynamic-column-building.png)
+![Blazor DataGrid with Dynamic Column](./images/blazor-datagrid-dynamic-column.png)
 
 ## Complex data binding
 
@@ -136,7 +136,7 @@ You can achieve complex data binding in the DataGrid by using the dot(.) operato
 ```
 
 The following image represents complex data binding
-![Complex Data](./images/complexdata.png)
+![Binding Complex Data in Blazor DataGrid](./images/blazor-datagrid-complex-data.png)
 
 >For OData and ODataV4 adaptors, you need to add expand query to the query property (of DataGrid) to load the complex data.
 
@@ -190,7 +190,7 @@ Before proceeding this, learn about [ExpandoObject Binding](https://blazor.syncf
 > * you can perform the Data operations and CRUD operations for Complex ExpandoObject binding fields too.
 
 The following image represents ExpandoObject complex data binding
-![ExpandoObject Complex Data](./images/expandocomplexdata.png)
+![Binding ExpandObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-expand-complex-data.png)
 
 ### DynamicObject Complex data binding
 
@@ -257,7 +257,7 @@ Before proceeding this, learn about [DynamicObject Binding](https://blazor.syncf
 > * you can perform the Data operations and CRUD operations for Complex DynamicObject binding fields too.
 
 The following image represents DynamicObject complex data binding
-![DynamicObject Complex Data](./images/dynamiccomplexdata.png)
+![Binding DynamicObject with Complex Data in Blazor DataGrid](./images/blazor-datagrid-dynamic-complex-data.png)
 
 ## Foreign key column
 
@@ -374,7 +374,7 @@ In the following example, **Employee Name** is a foreign column which shows **Fi
 ```
 
 The following image represents foreign key column
-![Foreignkey Column](./images/foreignkey-value.png)
+![Blazor DataGrid with Foreignkey Column](./images/blazor-datagrid-foreignkey-column.png)
 
 > * For remote data, the sorting and grouping is done based on [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) instead of [ForeignKeyValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyValue).
 > * If [ForeignKeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ForeignKeyField) is not defined, then the column uses [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_StackingGroup) property of **GridColumn** tag helper.
@@ -419,7 +419,7 @@ By default, column header title is displayed from column [Field](https://help.sy
 ```
 
 The Output image for header text is as follows
-![Header Text](./images/header-text.png)
+![Blazor DataGrid with Header Text](./images/blazor-datagrid-header-text.png)
 
 > * If both the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Field) and [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_HeaderText)
 are not defined in the column, the column renders with “empty” header text.
@@ -509,7 +509,7 @@ The Header Template has options to display custom element value or content in th
 ```
 
 The following screenshot represents the Header Template.
-![Header template](./images/header-template.png)
+![Blazor DataGrid with Header Template](./images/blazor-datagrid-header-template.png)
 
 ## Column template
 
@@ -581,7 +581,7 @@ The Column template has options to display custom element value or content in th
 ```
 
 The following screenshot represents the column Template.
-![Column template](./images/column-template.png)
+![Blazor DataGrid with Column template](./images/blazor-datagrid-column-template.png)
 
 ### Using conditions inside template
 
@@ -649,7 +649,7 @@ In the following code, checkbox is rendered based on Discontinued field value in
 ```
 
 The following screenshot represents the Conditional Template.
-![Conditional Template](./images/conditional-template.png)
+![Blazor DataGrid with Conditional Template](./images/blazor-datagrid-conditional-template.png)
 
 ### Using image inside template
 
@@ -712,7 +712,7 @@ This can be achieved using the Column template property as it has options to dis
 ```
 
 The following screenshot represents the Image Template.
-![Image Template](./images/image-template.png)
+![Blazor DataGrid with Image Template](./images/blazor-datagrid-image-template.png)
 
 ### Using hyperlink column and performing routing on click
 
@@ -798,7 +798,7 @@ After that, add new razor page for routing with routing url along with the param
 ```
 
 The following GIF represents template routing in DataGrid
-![Grid with routing template](./images/template-routing.gif)
+![Blazor DataGrid with Routing Template](./images/blazor-datagrid-template-routing.gif)
 
 ## Column type
 
@@ -815,8 +815,8 @@ DataGrid column supports the following types:
 * DateTime
 * CheckBox
 
-> If the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Incase, if the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) is null/blank value for a column then it is necessary to define the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) for that column.
-
+> If the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Incase if the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) is null/blank value for a column then it is necessary to define the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) for that column.
+> If the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) is not defined, it will be determined from the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html). Incase if the first record of the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html) is null/blank value for a column then it is necessary to define the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) for that column.
 ### Difference between Boolean type and CheckBox type column
 
 * Use GridColumn [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_Type) as Boolean if you want to bind boolean values from your datasource and/or edit Boolean property value from your Type.
@@ -873,7 +873,7 @@ The column chooser has options to show or hide columns dynamically. It can be en
 > You can hide the column names in column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_ShowInColumnChooser) property as false.
 
 The following GIF represents the column chooser functionality in DataGrid
-![Grid with column chooser](./images/column-chooser.gif)
+![Show or Hide Columns in Blazor DataGrid](./images/blazor-datagrid-show-or-hide-column.gif)
 
 ### Open column chooser by external button
 
@@ -934,7 +934,7 @@ In this following example, we have opened column chooser using external button c
 ```
 
 The following GIF represents opening column chooser functionality in DataGrid using external button.
-![Grid with open column chooser](./images/opencolumn-chooser.gif)
+![Opening Column Chooser in Blazor DataGrid](./images/blazor-datagrid-open-column-chooser.gif)
 
 ## Format
 
@@ -1035,7 +1035,7 @@ You can hide any particular column in DataGrid before rendering by defining the 
 ```
 
 The following screenshot represents the DataGrid with Freight column set to visible false.
-![Visible False](./images/visible-false.png)
+![Hiding Specific Column in Blazor DataGrid](./images/blazor-datagrid-hide-specific-column.png)
 
 ## Width
 
@@ -1093,7 +1093,7 @@ You can auto fit a column interactively by double clicking the right border of t
 ```
 
 In the  following Image, **Autofit** Property is set to true for CustomerName and OrderDate.
-![Autofit Columns](./images/autofit-column.png)
+![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-column.png)
 
 ### Autofit columns by method
 
@@ -1144,7 +1144,7 @@ The **AutoFitColumns** method resizes the column to fit the widest cell's conten
 ```
 
 The following image represents AutoFit column by method
-![Autofit Method](./images/autofit-methods.png)
+![Blazor DataGrid with Autofit Columns](./images/blazor-datagrid-autofit-methods.png)
 
 > You can autofit all the columns by invoking the **AutoFitColumns** method without column names.
 
@@ -1188,7 +1188,7 @@ Reordering can be done by drag and drop of a particular column header from one i
 ```
 
 The following represents Reordering of columns
-![Reorder Column](images/reorder.gif)
+![Reordering Columns in Blazor DataGrid](images/blazor-datagrid-reorder-column.gif)
 
 > You can disable reordering a particular column by setting the [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering) property of **GridColumn** as false.
 
@@ -1242,7 +1242,7 @@ DataGrid has option to reorder single column either by Interaction or by using t
 ```
 
 The following GIF represents Reordering column **Freight** by using method,
-![Reorder method](images/reordermethod.gif)
+![Reordering Single Column in Blazor DataGrid](images/blazor-datagrid-reorder-single-column.gif)
 
 ### Reorder multiple columns
 
@@ -1295,7 +1295,7 @@ In the following sample, **Customer Name** and **Freight** columns are reordered
 ```
 
 The following GIF represents Reordering Columns **Freight** and **OrderDate** by using method
-![Reorder multiple columns](images/reorder-multiple-columns.gif)
+![Reordering Multiple Columns in Blazor DataGrid](images/blazor-datagrid-reorder-multiple-columns.gif)
 
 <!-- Reorder events
 
@@ -1432,7 +1432,7 @@ Column width can be resized by clicking and dragging the right edge of the colum
 ```
 
 The following GIF represents column resizing, 
-![Resizing](images/resizing.gif)
+![Resizing Column in Blazor DataGrid](images/blazor-datagrid-column-resizing.gif)
 
 > You can disable resizing for a particular column by setting the [AllowResizing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowResizing) property of **GridColumn** component to false.
 > In RTL mode, you can click and drag the left edge of the header cell to resize the column.
@@ -1522,7 +1522,7 @@ Stacked columns can be resized by clicking and dragging the right edge of the st
 ```
 
 Resizing of stacked header is shown below
-![Resize Stacked](images/resize-stacked.gif)
+![Resizing Stacked Column in Blazor DataGrid](images/blazor-datagrid-resize-stacked-column.gif)
 
 ### Touch interaction
 
@@ -1530,7 +1530,7 @@ When the right edge of the header cell is tapped, a floating handler will be vis
 
 The following screenshot represents the column resizing in touch device.
 
-![Touch interaction](./images/column-resizing.jpg)
+![Blazor DataGrid Column Resizing in Touch Interaction](./images/blazor-datagrid-column-resizing.jpg)
 
 <!-- Resize events
 
@@ -1650,7 +1650,7 @@ The default menu items are displayed in the following table,
 > * You can customize the default menu items by defining the [ColumnMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) with the required items.
 
 The following image represents DataGrid with column menu property enabled,
-![Column Menu](images/column-menu.gif)
+![Blazor DataGrid with Column Menu](images/blazor-datagrid-column-menu.gif)
 
 <!-- Column menu events
 
@@ -2057,9 +2057,8 @@ In the following sample code, for OrderID column - HideAtMedia property value is
 }
 ```
 
-The following GIF shows the responsive columns behaviour when the window is resized,
-![Responsive columns](images/responsive-columns.gif)
-
+The following GIF shows the responsive columns behavior when the window is resized,
+![Blazor DataGrid displays Responsive columns](images/blazor-datagrid-responsive-columns.gif)
 ## Controlling datagrid actions
 
 You can enable or disable datagrid action for a particular column by using the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowFiltering), [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowGrouping), [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowSorting), [AllowReordering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowReordering), and [AllowEditing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumn.html#Syncfusion_Blazor_Grids_GridColumn_AllowEditing) properties.
@@ -2104,7 +2103,7 @@ The following sample code shows DataGrid actions disabled for particular columns
 ```
 
 The following GIF shows the DataGrid actions for different columns,
-![Responsive columns](images/grid-actions.gif)
+![Handling Blazor DataGrid Actions](images/blazor-datagrid-actions.gif)
 
 ## Show/hide columns by external button
 
@@ -2168,7 +2167,7 @@ The following sample code demonstrates showing and hiding of columns using their
 ```
 
 The following GIF represents the showing/hiding DataGrid columns on button click,
-![Show/Hide columns](images/show-hide-columns.gif)
+![Show or Hide Blazor DataGrid Columns](images/blazor-datagrid-show-hide-columns.gif)
 
 <!-- ValueAccessor
 
@@ -2375,6 +2374,6 @@ The following sample code demonstrates [DisplayAsCheckBox](https://help.syncfusi
 ```
 
 The following image represents the DisplayAsCheckBox enabled for a DataGrid column,
-![Display as checkbox](./images/checkbox-boolean-values.png)
+![Displaying CheckBox in Blazor DataGrid Column](./images/blazor-datagrid-column-with-checkbox.png)
 
 > You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
