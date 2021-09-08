@@ -100,7 +100,7 @@ public void Remove(IList<IFormFile> UploadFiles)
 
 The output will be as follows.
 
-![uploader](./images/uploader-chunk.png)
+![Blazor FileUpload with Chunk Upload](./images/blazor-fileupload-with-chunk-upload.png)
 
 The chunk upload functionality separates the selected files into blobs of the data or chunks. These chunks are transmitted to the server using an AJAX request. The chunks are sent in **sequential** order, and the next chunk can be sent to the server according to the success of the previous chunk. If any one of the chunk failed, then the remaining chunk cannot be sent to the server. The [ChunkSuccess](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkSuccess) or [ChunkFailure](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderModel.html#Syncfusion_Blazor_Inputs_UploaderModel_ChunkFailure) event will be triggered when the chunk is sent to the server successfully or failed. If all the chunks are sent to the server successfully, the uploader success event is triggered.
 
@@ -188,7 +188,7 @@ Allows you to resume an upload operation after a network failure or manually int
 
 The output will be as follows.
 
-![uploader](./images/uploader-resume.png)
+![Resuming File Uploads in Blazor FileUpload](./images/blazor-fileupload-resume-file-upload.png)
 
 ## Cancel upload
 
@@ -211,7 +211,7 @@ The following example explains about chunk upload with cancel support.
 
 The output will be as follows.
 
-![uploader](./images/uploader-cancel.png)
+![Canceling File Uploads in Blazor FileUpload](./images/blazor-fileupload-cancel-file-upload.png)
 
 > The retry action has different working behavior for chunk upload and default upload.
 > * Chunk upload: Retries to upload the failed request where it is failed previously.

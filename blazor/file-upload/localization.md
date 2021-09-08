@@ -245,4 +245,4 @@ namespace WebAssemblyLocale
 
 The output will be as follows.
 
-![Uploader globalize](./images/Globalize.png)
+![Localization in Blazor FileUpload](./images/blazor-fileupload-localization.png)
