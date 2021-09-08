@@ -252,7 +252,7 @@ When the legend items exceed legend bounds, paging will be enabled by default. E
 
 ![Paging for Legend in Blazor Accumulation Chart](images/legend/blazor-accumulation-chart-legend-paging.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 * [Grouping](./grouping/)
 * [Data label](./data-label/)

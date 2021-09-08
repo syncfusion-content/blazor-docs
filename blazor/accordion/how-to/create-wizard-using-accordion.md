@@ -11,7 +11,7 @@ documentation: ug
 
 Accordion items can be disabled and expanded dynamically using the accordion item's [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Disabled) and [Expanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.AccordionItem.html#Syncfusion_Blazor_Navigations_AccordionItem_Expanded) property.
 
-The following demo is designed for simple payment module that Enable/Disable Accordion based on the sequential validation of each Accordion content.
+The following demo is designed for simple payment module that enable or disable Accordion based on the sequential validation of each Accordion content.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
