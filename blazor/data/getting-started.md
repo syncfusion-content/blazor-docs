@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DataManager Component | Syncfusion
-description: Checkout and learn more about getting started with Blazor DataManager component of Syncfusion.
+description: Checkout and learn more details about getting started with the Blazor DataManager component of Syncfusion.
 platform: Blazor
 control: DataManager
 documentation: ug
