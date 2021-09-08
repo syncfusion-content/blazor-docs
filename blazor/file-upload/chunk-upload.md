@@ -106,9 +106,9 @@ The chunk upload functionality separates the selected files into blobs of the da
 
 > Chunk upload will work when the selected file size is greater than the specified chunk size. otherwise, it upload the files normally.
 
-## Save action configration in server-side blazor
+## Save action configuration in server-side blazor
 
-The uploader save action configration in server-side blazor application, using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside **Startup.cs** page. This is required because MVC must know whether it can rely on the authorization and CORS Middleware during initialization.
+The uploader save action configuration in server-side blazor application, using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside **Startup.cs** page. This is required because MVC must know whether it can rely on the authorization and CORS Middle ware during initialization.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;

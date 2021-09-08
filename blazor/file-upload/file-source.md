@@ -21,9 +21,9 @@ The [Blazor File Upload](https://www.syncfusion.com/blazor-components/blazor-fil
 </SfUploader>
 ```
 
-### Save action configration in server-side blazor
+### Save action configuration in server-side blazor
 
-The uploader save action configration in server-side blazor application, using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside **Startup.cs** page. This is required because MVC must know whether it can rely on the authorization and CORS Middleware during initialization.
+The uploader save action configuration in server-side blazor application, using MVC via `UseMvcWithDefaultRoute` in ASP.NET Core 3.0 and `services.AddMvc(option => option.EnableEndpointRouting = false).SetCompatibilityVersion(CompatibilityVersion.Version_3_0)` on IServiceCollection requires an explicit opt-in inside **Startup.cs** page. This is required because MVC must know whether it can rely on the authorization and CORS Middle ware during initialization.
 
 ```csharp
 using Microsoft.AspNetCore.Mvc;
