@@ -313,7 +313,7 @@ Gantt Chart has an option to define columns as an array. You can customize the G
 }
 ```
 
-For further details regarding Columns, Please refer [here](/columns/)
+For further details regarding Columns, Please refer [here](https://blazor.syncfusion.com/documentation/gantt-chart/columns/)
 
 ## Enable Editing
 
@@ -378,7 +378,7 @@ The editing feature enables you to edit the tasks in the Gantt Chart component. 
 
 > When the edit mode is set to `Auto`, you can change the cells to editable mode by double-clicking anywhere at the Tree Grid and edit the task details in the edit dialog by double-clicking anywhere at the chart.
 
-You can find the full information regarding Editing from [here](/managing-tasks/)
+You can find the full information regarding Editing from [here](https://blazor.syncfusion.com/documentation/gantt-chart/managing-tasks/)
 
 ## Enable Filtering
 
@@ -441,8 +441,7 @@ The filtering feature enables you to view the reduced amount of records based on
 }
 ```
 
-You can find the full information regarding Filtering from [here](/filtering/)
-
+You can find the full information regarding Filtering from [here](https://blazor.syncfusion.com/documentation/gantt-chart/filtering/)
 ## Enable Sorting
 
 The sorting feature enables you to order the records. It can be enabled by setting the `AllowSorting` property to `true`. The sorting feature can be customized using the `SortSettings` property.
@@ -503,7 +502,8 @@ The sorting feature enables you to order the records. It can be enabled by setti
 }
 ```
 
-You can find the full information regarding Sorting from [here](/sorting/)
+You can find the full information regarding Sorting from [here](https://blazor.syncfusion.com/documentation/gantt-chart/sorting/)
+
 
 ## Enabling Predecessors or Task Relationships
 
