@@ -197,7 +197,6 @@ In the client Blazor application, go to the `wwwroot/index.html` file and replac
 
 In the Blazor application, the application theme can be changed dynamically by changing its style sheet reference in code. 
 
-
 ### Change theme dynamically in blazor server app
 
 The following example demonstrates how to change a theme dynamically in Blazor Server application using Syncfusion Blazor themes using Syncfusion Dropdown component.
