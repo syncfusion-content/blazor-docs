@@ -11,7 +11,7 @@ documentation: ug
 
 # Adaptors in Blazor DataManager Component
 
-Each data source or remote service uses different way for accepting request and sending back the response. The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) cannot anticipate every way a data source works. To tackle this problem the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses adaptor concept to communicate with particular data source.
+Each data source or remote service uses different way for accepting request and sending back the response. The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) cannot anticipate every way a data source works. To tackle this problem the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses adaptor concept to communicate with the particular data source.
 
 * For local data sources, the role of the data adaptor is to query the object array based on the Query object and manipulate them.
 
@@ -93,7 +93,7 @@ The following sample code demonstrates binding data to the DataGrid component th
 }
 ```
 
-> The above provided url is given for reference purpose. In that place you can provide your service url.
+> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
 
 `UrlAdaptor` expects response as a JSON object with properties `result` and `count` which contains the collection of entities and the total number of records respectively.
 
@@ -247,7 +247,7 @@ The following sample code demonstrates binding remote data to the DataGrid compo
 }
 ```
 
-> The above provided url is given for reference purpose. In that place you can provide your service url.
+> The above mentioned URL is given for reference purposes. In that place, you can provide your service URL.
 
 `WebMethodAdaptor` expects JSON response from the server and the response object should contain properties `result` and `count` whose values are collection of entities and total count of the entities respectively.
 
