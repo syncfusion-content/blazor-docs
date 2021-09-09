@@ -26,7 +26,7 @@ Any one of the following standards can be used to install the Syncfusion Blazor 
 
 1. Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) NuGet package to the application using the `NuGet Package Manager`.
 
-2. Add the client-side style resources from the NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side style resources from the [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>

@@ -15,7 +15,7 @@ This section briefly explains how to include a Maps component in your Blazor ser
 
 1. Install **Syncfusion.Blazor.Maps** NuGet package in the application using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>

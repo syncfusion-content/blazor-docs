@@ -26,7 +26,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Install **Syncfusion.Blazor.Schedule** NuGet package to the application using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>

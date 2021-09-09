@@ -17,7 +17,7 @@ This section briefly explains how to include a Splitter component in your Blazor
 
 * Install **Syncfusion.Blazor.Layouts** NuGet package to the application by using the **NuGet Package Manager**.
 
-* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml
 

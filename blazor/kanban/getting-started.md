@@ -17,7 +17,7 @@ This section briefly explains how to include a Kanban component in your Blazor S
 
 1. Install **Syncfusion.Blazor.Kanban** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side style resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>

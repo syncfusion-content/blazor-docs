@@ -22,7 +22,7 @@ To get start quickly with Blazor DataGrid component, you can check on this video
 
  1. Install the **Syncfusion.Blazor.Grid**  NuGet package to the application by using the **NuGet Package Manager**.
 
- 2. You can add the client-side resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+ 2. You can add the client-side resources from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
