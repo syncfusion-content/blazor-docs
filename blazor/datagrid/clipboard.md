@@ -154,7 +154,6 @@ AutoFill Feature allows to copy the data of selected cells and paste it to anoth
 ```
 
 The following represents Autofill in DataGrid
-![Grid Autofill](images/autofill.gif)
 ![Autofill in Blazor DataGrid](images/blazor-datagrid-autofill.gif)
 
 > * If [EnableAutoFill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EnableAutoFill) is set to true, then the autofill icon will be displayed on cell selection to copy cells.
