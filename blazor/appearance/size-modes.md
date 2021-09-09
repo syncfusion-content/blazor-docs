@@ -9,7 +9,7 @@ documentation: ug
 
 # Size Mode for Blazor Components
 
-Syncfusion blazor components supports touch (bigger theme) and normal size modes.Below topics explains how to enable the same in your application.
+Syncfusion blazor components supports touch (bigger theme) and normal size modes. Below topics explains how to enable the same in your application.
 
 ## Size mode for application
 
@@ -43,11 +43,6 @@ You can enable touch mode (bigger theme) for a control by adding `.e-bigger` cla
 
 <div class="e-bigger">
     <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
-
-    @code
-    {
-        private bool isChecked = true;
-    }
 </div>
 
 <style>
@@ -57,7 +52,7 @@ You can enable touch mode (bigger theme) for a control by adding `.e-bigger` cla
 </style>
 
 @code {
-
+    private bool isChecked = true;
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
 }
 ```
@@ -76,7 +71,7 @@ Follow below steps to change the size mode for an application at runtime.
     }
     ```
 
-2. Add the following javascript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Host.cshtml` (Blazor Server App) to switch between touch and mouse mode using `e-bigger` class.
+2. Add the following JavaScript methods inside the script tag of `wwwroot/index.html` (Blazor WebAssembly App) or `Pages/_Host.cshtml` (Blazor Server App) to switch between touch and mouse mode using `e-bigger` class.
 
     ```cshtml
     <script>
@@ -90,7 +85,7 @@ Follow below steps to change the size mode for an application at runtime.
      </script>
     ```
 
-2. To call javascript method from .NET, inject the `IJSRuntime` abstraction and call `InvokeAsync` method as given in the below code,
+2. To call JavaScript method from .NET, inject the `IJSRuntime` abstraction and call `InvokeAsync` method as given in the below code,
     
     ```cshtml
     @page "/"
@@ -115,16 +110,10 @@ Follow below steps to change the size mode for an application at runtime.
     
     <div>
         <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
-    
-        @code
-        {
-            private bool isChecked = true;
-        }
-    </div>
+     </div>
     
     @code {
-        ………………..
-    
+        private bool isChecked = true;
         private async void callOnTouch(MouseEventArgs args)
         {
            await jsRuntime.InvokeAsync<string>("onTouch");
@@ -136,11 +125,11 @@ Follow below steps to change the size mode for an application at runtime.
     }
     ```
     
-    ![size-mode-for-application](images/size-mode-for-application.gif)
+    ![change-size-mode-for-application-at-runtime](images/change-size-mode-for-application-at-runtime.gif)
     
     > [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
-## Change size mode for a conrol at runtime
+## Change size mode for a control at runtime
 
 You can change the size mode of a control between touch and normal (mouse) mode at runtime by setting `.e-bigger` CSS class.  
 
@@ -156,18 +145,18 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 <h2>Syncfusion Component Size-Modes</h2>
 
-<button @onclick="ontouch">Touch Mode</button> 
-<button @onclick="onmouse">Mouse Mode</button>
+<button @onclick="OnTouch">Touch Mode</button> 
+<button @onclick="OnMouse">Mouse Mode</button>
 
-<div class="@check">
+<div class="@touchCSS">
     <SfCalendar TValue="DateTime?" Value="@DateValue"></SfCalendar>
 </div>
 
-<div class="@check">
+<div class="@touchCSS">
     <SfButton> Button </SfButton>
 </div>
 
-<div class="@check">
+<div class="@touchCSS">
     <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
 
     @code
@@ -186,21 +175,21 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
 
-    public string check { get; set; }
+    public string touchCSS { get; set; }
 
-    public void ontouch()
+    public void OnTouch()
     {
-        check = "e-bigger";
+        touchCSS = "e-bigger";
     }
 
-    public void onmouse()
+    public void OnMouse()
     {
-        check = "";
+        touchCSS = "";
     }
 }
 ```
 
-![size-mode-for-control](images/size-mode-for-control.gif)
+![change-size-mode-for-a-control-at-runtime](images/change-size-mode-for-a-control-at-runtime.gif)
 
 > [View sample in GitHub](https://github.com/SyncfusionExamples/size-mode-in-blazor-application)
 
