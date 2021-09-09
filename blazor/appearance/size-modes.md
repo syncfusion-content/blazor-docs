@@ -158,11 +158,6 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 <div class="@touchCSS">
     <SfCheckBox Label="checked" @bind-Checked="isChecked"></SfCheckBox>
-
-    @code
-    {
-        private bool isChecked = true;
-    }
 </div>
 
 <style>
@@ -172,6 +167,7 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 </style>
 
 @code {
+    private bool isChecked = true;
 
     public DateTime? DateValue { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 28);
 
