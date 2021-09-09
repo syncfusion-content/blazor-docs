@@ -209,10 +209,10 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 Refer below topics to learn about responsiveness components based on available size in Syncfusion Blazor Components.
 
-[Sidebar Responsiveness](https://blazor.syncfusion.com/documentation/sidebar/auto-close)
-[DataGrid Responsiveness](https://blazor.syncfusion.com/documentation/datagrid/columns#responsive-columns)
-[TreeGrid Responsiveness](https://blazor.syncfusion.com/documentation/treegrid/scrolling#responsive-with-parent-container)
-[Dashboard Layout Responsiveness](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive)
-[Kanban Responsiveness](https://blazor.syncfusion.com/documentation/kanban/responsive-mode)
-[Toolbar Responsiveness](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode)
-[Tab Responsiveness](https://blazor.syncfusion.com/documentation/tabs/responsive-modes)
+* [Sidebar Responsiveness](https://blazor.syncfusion.com/documentation/sidebar/auto-close)
+* [DataGrid Responsiveness](https://blazor.syncfusion.com/documentation/datagrid/columns#responsive-columns)
+* [TreeGrid Responsiveness](https://blazor.syncfusion.com/documentation/treegrid/scrolling#responsive-with-parent-container)
+* [Dashboard Layout Responsiveness](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive)
+* [Kanban Responsiveness](https://blazor.syncfusion.com/documentation/kanban/responsive-mode)
+* [Toolbar Responsiveness](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode)
+* [Tab Responsiveness](https://blazor.syncfusion.com/documentation/tabs/responsive-modes)
