@@ -477,7 +477,7 @@ Output be like the below.
 
 ![output](./images/navigation.png)
 
-# Blazor Sidebar vs native sidebar
+## Blazor Sidebar vs native sidebar
 
 1. Simply customizable and responsive design.
 2. Different sliding types provides the user to adjust the main content by pushing, overlaying or sliding the content.

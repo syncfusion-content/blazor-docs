@@ -135,7 +135,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Tab provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
 
-> `ContentTemplate` property supports `RenderFrgament` type to render content.
+> `ContentTemplate` property supports `RenderFragment` type to render content.
 
 The following code explains how to initialize tab content using `ContentTemplate`.
 
