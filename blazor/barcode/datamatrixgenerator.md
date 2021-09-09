@@ -16,7 +16,7 @@ documentation: ug
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
-<SfDataMatrixGenerator Width="200" Height="150"  Value="SYNCFUSION"></SfDataMatrixGenerator>
+<SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION"></SfDataMatrixGenerator>
 
 ```
 
@@ -54,7 +54,7 @@ In barcode generators you can customize the barcode text by using the display [T
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfDataMatrixGenerator Width="200" Height="150" Value="SYNCFUSION">
-    <DataMatrixGeneratorDisplayText Text="Text" ></DataMatrixGeneratorDisplayText>
+    <DataMatrixGeneratorDisplayText Text="Text"></DataMatrixGeneratorDisplayText>
 </SfDataMatrixGenerator>
 
 ```
@@ -70,11 +70,11 @@ In barcode generators you can customize the barcode text by using the display [T
 
 <SfDataMatrixGenerator Width="200px" Height="150px" Value="SYNCFUSION" OnValidationFailed="@OnValidationFailed"></SfDataMatrixGenerator>
 
-@code 
-{ 
+@code
+{
     public void OnValidationFailed(ValidationFailedEventArgs args)
     {
-    } 
+    }
 }
 
 ```

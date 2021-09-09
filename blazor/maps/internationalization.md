@@ -55,11 +55,11 @@ Maps component using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 ```
 
-![Maps Sample](./images/Internationalization/Globalization.PNG)
+![Maps Sample](./images/Internationalization/International.PNG)
 
 ## Numeric Format
 
-The numeric formats such as currency, percentage and so on can be displayed in the tooltip and data labels of the Maps using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property in the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) class. In the below example, the tooltip is globalized to "**German**" culture. When setting the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_UseGroupingSeparator) property as "**true**", the numeric text in the Maps separates with the comma separator.
+The numeric formats such as currency, percentage and so on can be displayed in the tooltip and data labels of the Maps using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Format) property in the [SfMaps](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html) class. In the below example, the tooltip is globalized to **German** culture. When setting the [UseGroupingSeparator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_UseGroupingSeparator) property as **true**, the numeric text in the Maps separates with the comma separator.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

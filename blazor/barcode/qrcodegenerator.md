@@ -16,7 +16,7 @@ A QR Code is a two-dimensional barcode that consists of a grid of dark and light
 ```cshtml
 @using Syncfusion.Blazor.BarcodeGenerator
 
-<SfQRCodeGenerator Width="200px" Height="150px"  Value="Syncfusion"></SfQRCodeGenerator>
+<SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion"></SfQRCodeGenerator>
 
 ```
 
@@ -54,7 +54,7 @@ In barcode generators You can customize the barcode text by using display [Text]
 @using Syncfusion.Blazor.BarcodeGenerator
 
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion">
-    <QRCodeGeneratorDisplayText text="Text" ></QRCodeGeneratorDisplayText>
+    <QRCodeGeneratorDisplayText text="Text"></QRCodeGeneratorDisplayText>
 </SfQRCodeGenerator>
 
 ```
@@ -70,8 +70,8 @@ In barcode generators You can customize the barcode text by using display [Text]
 
 <SfQRCodeGenerator Width="200px" Height="150px" Value="Syncfusion" OnValidationFailed="@OnValidationFailed"></SfQRCodeGenerator>
 
-@code 
-{ 
+@code
+{
     public void OnValidationFailed(ValidationFailedEventArgs args)
     {
     }
