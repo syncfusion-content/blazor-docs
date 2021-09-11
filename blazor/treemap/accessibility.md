@@ -11,7 +11,7 @@ documentation: ug
 
 The TreeMap component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about the elements in a document for assistive technology.
 
-**Aria-label:**
+**Aria-label**
 
 This attribute provides text label with some default description for the following elements in the TreeMap.
 

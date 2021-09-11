@@ -273,8 +273,6 @@ To interact with the remote data source, provide the endpoint [Url](https://help
 
 [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
-Refer to the following code example for remote data binding using OData service.
-
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
 @using Syncfusion.Blazor.Data
