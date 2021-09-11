@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Theme Studio in Blazor - Syncfusion
-description: Check out the documentation for Theme Studio in Blazor
+description: Check out and learn here all about Theme Studio for Syncfusion Blazor Components and how touse theme studio.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Overview
+# Theme Studio in Blazor Components
 
 Theme Studio for Syncfusion Blazor can be used to customize a new theme from an existing theme. It does not support data visualization controls such as Chart, Diagram, Gauge, Range Navigator, and Maps. Since Syncfusion Blazor components follow the same UI pattern as Syncfusion's EJ2 components, you can use the [Syncfusion EJ2 Theme studio](https://ej2.syncfusion.com/themestudio/) for customizing Syncfusion Blazor components appearance.
 
