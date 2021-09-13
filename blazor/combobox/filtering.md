@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor ComboBox component and much more.
+description: Checkout and learn here all about Filtering in the Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
