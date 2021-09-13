@@ -43,7 +43,7 @@ public abstract class DataAdaptor
     public virtual object Remove(DataManager dataManager, object data, string keyField, string key)
 
     /// <summary>
-    /// Performs Remove operation asynchronously..
+    /// Performs Remove operation asynchronously.
     /// </summary>
     public virtual Task<object> RemoveAsync(DataManager dataManager, object data, string keyField, string key)
 
@@ -162,13 +162,13 @@ The following sample code demonstrates implementing custom data binding using cu
 The following image shows the custom bound data displayed in the DataGrid component,
 ![Custom Binding in Blazor DataGrid](./images/blazor-datagrid-custom-binding.png)
 
-> If the Read/ReadAsync method is not overridden in the custom adaptor then it will be handled by the default read handler.
+> If the Read/ReadAsync method is not overridden in the custom adaptor, then it will be handled by the default read handler.
 
 ## Inject service into Custom Adaptor
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
+Initially, you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -201,7 +201,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
     public class CustomAdaptor : DataAdaptor
     {
-        //here you can inject your service
+        //Here, you can inject your service
         public OrderDataAccessLayer context { get; set; };
         public CustomAdaptor(OrderDataAccessLayer _context)
         {
@@ -408,16 +408,16 @@ The following sample code demonstrates `DataAdaptor` extended from `OwningCompon
 
 ## CRUD operation
 
-The CRUD operations for the custom bounded data in the DataGrid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
+The CRUD operations for the custom bound data in the DataGrid component can be implemented by overriding the following CRUD methods of the **DataAdaptor** abstract class,
 
 * **Insert/InsertAsync**
 * **Remove/RemoveAsync**
 * **Update/UpdateAsync**
 * **BatchUpdate/BatchUpdateAsync**
 
-> While using batch editing in datagrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation
+> While using batch editing in DataGrid, use BatchUpdate/BatchUpdateAsync method to handle the corresponding CRUD operation.
 
-The following sample code demonstrates implementing CRUD operations for the custom bounded data,
+The following sample code demonstrates implementing CRUD operations for the custom bound data,
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -553,16 +553,16 @@ The following sample code demonstrates implementing CRUD operations for the cust
 }
 ```
 
-The following GIF displays the CRUD operations performed on the custom bounded data displayed in the DataGrid component,
+The following GIF displays the CRUD operations performed on the custom bound data displayed in the DataGrid component,
 ![Editing Custom Data in Blazor DataGrid](./images/blazor-datagrid-editing-custom-data.gif)
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## Handling Aggregates in Custom Adaptor
 
-When using Custom Adaptor, the aggregates has to be handled in the Read/ReadAsync method of Custom adaptor.
+When using Custom Adaptor, the aggregates must be handled in the Read/ReadAsync method of Custom adaptor.
 
-The following sample code demonstrates implementing the aggregates for the custom bounded data,
+The following sample code demonstrates implementing the aggregates for the custom bound data,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

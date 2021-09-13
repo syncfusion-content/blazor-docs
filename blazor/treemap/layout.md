@@ -22,7 +22,7 @@ The available layout types are,
 
 ### Squarified
 
-The [Squarified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html#Syncfusion_Blazor_TreeMap_LayoutMode_Squarified) layout displays the nested rectangles based on aspect ratio in the TreeMap. The rectangles will be split based on the height and width of the parent. The default rendering type of layout is [Squarified](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html).
+The [Squarified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html#Syncfusion_Blazor_TreeMap_LayoutMode_Squarified) layout displays the nested rectangles based on aspect ratio in the TreeMap. The rectangles will be split based on the height and width of the parent. The default rendering type of the layout is [Squarified](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -66,7 +66,7 @@ The [SliceAndDiceVertical](https://help.syncfusion.com/cr/aspnetcore-blazor/Sync
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#squarified) to know about the property value of **GrowthReports**.
+> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
 ![TreeMap with slice and dice vertical layout](images/Layout/SliceAndDiceVertical.png)
 
@@ -81,13 +81,13 @@ The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/aspnetcore-blazor/Sy
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#squarified) to know about the property value of **GrowthReports**.
+> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
 ![TreeMap with slice and dice horizontal](images/Layout/SliceandDiceHorizontal.png)
 
 ### Slice and dice auto
 
-The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and display items sorted both horizontally and vertically.
+The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.LayoutMode.html) layout creates rectangles with high aspect ratio and displays items sorted both horizontally and vertically.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
@@ -96,13 +96,13 @@ The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusi
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#squarified) to know about the property value of **GrowthReports**.
+> Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
 ![TreeMap with slice and dice auto layout](images/Layout/SliceAndDiceAuto.png)
 
 ## Rendering direction
 
-The direction of TreeMap item is [TopLeftBottomRight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html) by default and customize the rendering direction of the TreeMap item by setting the [RenderDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RenderDirection) property.
+The direction of the TreeMap item is [TopLeftBottomRight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html) by default and customize the rendering direction of the TreeMap item by setting the [RenderDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RenderDirection) property.
 
 The TreeMap can be rendered in the following directions:
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Dashboard Layout component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor Dashboard Layout component of Syncfusion.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -35,7 +35,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
     </head>
     ```
 
-* For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+* For `Internet Explorer 11`, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
     <head>
@@ -145,7 +145,7 @@ It is easy to initialize a dashboard layout component with panel. To render a da
 
 ```
 
-> There is no need to assign default  value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
+> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
 
 ## Run the application
 
