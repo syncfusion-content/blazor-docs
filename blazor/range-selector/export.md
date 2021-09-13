@@ -29,7 +29,6 @@ The rendered Range Selector can be printed directly from the browser by calling 
 </SfButton>
 
 @code {
-
     public SfRangeNavigator RangeObj;
 
     public class StockDetails
@@ -82,7 +81,6 @@ The rendered Range Selector can be exported to **JPEG**, **PNG**, **SVG**, or **
 </SfButton>
 
 @code {
-
     public SfRangeNavigator RangeObj;
 
     public class StockDetails
