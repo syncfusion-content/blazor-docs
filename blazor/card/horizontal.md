@@ -13,7 +13,7 @@ By default, all the card elements are aligned vertically one after the other as 
 
 ## Stacked cards
 
-An horizontally aligned card can push a specific column to align vertical using `CardStacked` component. This will align the stacked section vertically aligned differentiating from horizontal layout.
+A horizontally aligned card can push a specific column to align vertically using the `CardStacked` component. This will align the stacked section vertically to differentiate from horizontal layout.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards

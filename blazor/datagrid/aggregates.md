@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Aggregates in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Aggregates in Syncfusion Blazor DataGrid component and much more details.
+description: Checkout and learn here all about Aggregates in the Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -182,7 +182,7 @@ To access the aggregate values inside the **FooterTemplate**, you can use the im
 
 ## Group and caption aggregate
 
-Group and caption aggregate values are calculated from the current group items. If **GroupFooterTemplate** is provided, the aggregate values are displayed in the group footer cells and if **GroupCaptionTemplate** is provided, aggregate values are displayed in the group caption cells.
+Group and caption aggregate values are calculated from the current group items. If **GroupFooterTemplate** is provided, the aggregate values will be displayed in the group footer cells and if **GroupCaptionTemplate** is provided, aggregate values will be displayed in the group caption cells.
 
 Both **GroupCaptionTemplate** and **GroupFooterTemplate** should be provided within the **GridAggregateColumn** directive.
 
@@ -331,7 +331,7 @@ To use Custom aggregate, specify the **AggregateType** as **Custom** in **GridAg
 }
 ```
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to the [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
 
 ## Handling Aggregates in Custom Adaptor
 
@@ -456,7 +456,7 @@ The following sample code demonstrates implementing the aggregates for the custo
 
 When using batch editing, the aggregate values will be refreshed on every cell save. The footer, group footer, and group caption aggregate values will be refreshed.
 
-> Adding a new record to the grouped datagrid will not refresh the aggregate values.
+> Adding a new record to the grouped DataGrid will not refresh the aggregate values.
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

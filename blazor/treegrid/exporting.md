@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Pdf Export in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Pdf Export in Syncfusion Blazor TreeGrid component and much more details.
+title: PDF Export in Blazor TreeGrid Component | Syncfusion
+description: Checkout and learn here all about PDF Export in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Pdf Export in Blazor TreeGrid Component
+# PDF Export in Blazor TreeGrid Component
 
 PDF export allows exporting Tree Grid data to PDF document. You need to use the
  **PdfExport** method for exporting. To enable PDF export in the Tree Grid, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Grids.EjsGrid~AllowPdfExport.html) as true.
@@ -95,7 +95,7 @@ PDF export provides an option to customize mapping of Tree Grid to exported PDF 
 
 ### File name for exported document
 
-You can assign the file name for the exported document by defining **fileName** property in **PdfExportProperties**.
+The file name can be assigned for the exported document by defining **fileName** property in **PdfExportProperties**.
 
 {% tabs %}
 
@@ -457,7 +457,7 @@ public class TreeData
 
 ### Export hidden columns
 
-PDF export provides an option to export hidden columns of Tree Grid by defining the **includeHiddenColumn** as **true**.
+PDF export provides an option to export hidden columns of the Tree Grid by defining the **includeHiddenColumn** as **true**.
 
 {% tabs %}
 
