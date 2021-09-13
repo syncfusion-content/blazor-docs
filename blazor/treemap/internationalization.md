@@ -16,7 +16,7 @@ The TreeMap component supports globalization for the following elements:
 
 Globalization is the process of designing and developing a component that works in different cultures or locales. The [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Format) property is used to globalize number, date, and time values in the TreeMap component.
 
-In the following code example, tooltip and Data Label is globalized to currency format in deutsch culture.
+In the following code example, tooltip and Data Label is globalized to currency format in Deutsch culture.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

@@ -227,7 +227,7 @@ The following code example shows, how to bind a `IEnumerable` object to the Tree
 
 Read the JSON file data and it can be converted to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of the TreeMap component.
 
-The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load the JSON file data.
+The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle method to load the JSON file data.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -272,8 +272,6 @@ To interact with the remote data source, provide the endpoint [Url](https://help
 ### Binding with OData services
 
 [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
-
-Refer to the following code example for remote data binding using OData service.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -458,7 +456,7 @@ Now create a class called **OrderDataAccessLayer**, which acts as a data access 
 
 ### Creating Web API Controller
 
-A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity framework.
+A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity Framework.
 
 ```csharp
     using System;

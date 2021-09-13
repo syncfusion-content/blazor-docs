@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Column Styles in Blazor TreeGrid Component
 
-You can customise the appearance of the header and content of a particular column using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
+ The appearance of the header and content of a particular column can be customised using the [CustomAttributes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_CustomAttributes) property.
 
 To customize the Tree Grid column, follow the given steps:
 
@@ -105,7 +105,5 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
-
-Output be like the below.
 
 ![Final output](../images/changecolumnstyle.PNG)
