@@ -15,8 +15,6 @@ The TreeMap component supports drill-down to expose the hierarchy, achieved by c
 
 The TreeMap items can be drilled by setting the [EnableDrillDown](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableDrillDown) property to **true**.
 
-The drill-down concepts are shown in the following code example.
-
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
 
@@ -66,8 +64,6 @@ The drill-down concepts are shown in the following code example.
 
 All the child items are rendered during the normal drill-down process, and visible at the initial rendering of the TreeMap. But on-demand data loading, it will not render child items at initial rendering, and child nodes will be rendered during the drill-down process by setting the [DrillDownView](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DrillDownView) property to **true**.
 
-The on-demand loading concepts are shown in the following code example.
-
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
 
@@ -97,8 +93,6 @@ The on-demand loading concepts are shown in the following code example.
 
 TreeMap items are drilled, up to any level of parent using breadcrumb navigation and the level from root parent to current level is displayed at the top of item layout. It can be enabled by using the [EnableBreadcrumb](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_EnableBreadcrumb) property to **true** and customize the breadcrumb connector using the [BreadcrumbConnector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_BreadcrumbConnector) property. By default, **-**(hyphen) is the connector.
 
-The breadcrumb concepts are shown in the following code example.
-
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
 
@@ -127,8 +121,6 @@ The breadcrumb concepts are shown in the following code example.
 ## Initial drill-down
 
 TreeMap items can be drilled on initial rendering and it can be enabled by specifying the item index in the [GroupIndex](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupIndex) property and level order name in the [GroupName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html#Syncfusion_Blazor_TreeMap_TreeMapInitialDrillSettings_GroupName) property of the [TreeMapInitialDrillSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapInitialDrillSettings.html).
-
-The initial drill-down concepts are shown in the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

@@ -49,8 +49,6 @@ In the following code example, tooltip and Data Label is globalized to currency 
 }
 ```
 
-> Refer  [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) to configure localization for the Blazor server application, and [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for the Blazor web assembly application.
-
-On successful configuration of localization the TreeMap will be rendered, as following.
+> Refer  [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-server-application) to configure localization for the Blazor server application, and refer [here](https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) for the Blazor web assembly application.
 
 ![TreeMap with internationalization](images/Internationalization/NumericFormat.png)

@@ -93,7 +93,7 @@ The [GroupGap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.T
 
 ## Header height and style
 
-Customize the font color, family, weight, opacity and size using the [TreeMapHeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHeaderStyle.html). Based on the font settings, the header height is given using the [HeaderHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in [TreeMapLevel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
+Customize the font color, family, weight, opacity and size using the [TreeMapHeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHeaderStyle.html). Based on the font settings, the header height is given using the [HeaderHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in the [TreeMapLevel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

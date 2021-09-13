@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor TreeMap Component
 
-Tooltip is used to display details about the items in the TreeMap. When space constraints prevent us from displaying the information using Data Labels, the tooltip comes in handy.
+Tooltip is used to display details about the items in the TreeMap. When space constraints prevents from displaying the information using Data Labels, the tooltip comes in handy.
 
 ## Default tooltip
 
