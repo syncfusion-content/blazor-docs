@@ -28,7 +28,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 
 The output will be as follows,
 
-![uploader](./images/uploader-valid-file.png)
+![Validation in Blazor FileUpload](./images/blazor-fileupload-validation.png)
 
 ## File size
 
@@ -47,4 +47,4 @@ The uploader component allows you to validate the files based on its size. The v
 
 The output will be as follows,
 
-![uploader](./images/uploader-valid-size.png)
+![Validating File Size in Blazor FileUpload](./images/blazor-fileupload-size-validation.png)

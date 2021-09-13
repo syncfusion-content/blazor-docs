@@ -89,7 +89,7 @@ To initialize the DropDownList component add the below code to your `Index.razor
 
 Output be like below
 
-![DropDownList](./images/default.png)
+![Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)
 
 ## Binding data source
 
@@ -123,7 +123,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 
 The output will be as follows.
 
-![DropdownList](./images/data_binding.png)
+![Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)
 
 ## Configure the popup list
 
@@ -159,7 +159,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![DropdownList](./images/width_height.png)
+![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
 
 ## See Also
 

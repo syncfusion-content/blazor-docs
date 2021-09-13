@@ -37,4 +37,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Drag and drop](images/drag-and-drop.gif)
+![Drag and Drop in Blazor FileManager](images/blazor-filemanager-drag-and-drop.gif)

@@ -31,4 +31,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Multiple Selection](images/multi-select.png)
+![Blazor FileManager with Multiple Selection](images/blazor-filemanager-multi-selection.png)
