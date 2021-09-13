@@ -13,7 +13,6 @@ Color mapping is used to customize the color for each group or item based on the
 
 ## Range color mapping
 
-Range color mapping is used to apply color to the items by giving specific ranges in the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource), and it should be specifying the data source properties to the [RangeColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_RangeColorValuePath). The color mapping ranges to be specified in the [StartRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_StartRange) and [EndRange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.ColorMapping.html#Syncfusion_Blazor_TreeMap_ColorMapping_EndRange) properties of the [TreeMapLeafColorMappings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafColorMapping.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -129,7 +128,6 @@ Multiple colors are used to provide gradient effect to the TreeMap items based o
 
 ## Palette color mapping
 
-The palette color mapping is used to fill the color to each group or leaf item by given colors in the [Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Palette) property.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -168,7 +166,6 @@ Get the excluded ranges from data source using the color mapping and apply the s
 
 ## Bind the colors to items from the data source
 
-To set the color for each item from the data source, bind the data source property to the [ColorValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_ColorValuePath).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

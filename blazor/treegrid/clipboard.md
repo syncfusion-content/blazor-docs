@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Clipboard in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Clipboard in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about clipboard in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -83,7 +83,7 @@ namespace TreeGridComponent.Data {
 
 ## Copy to clipboard by external buttons
 
-To copy selected rows or cells data into the clipboard with help of external buttons, you need to invoke the `copy` method.
+To copy the data of the selected rows or cells into the clipboard with help of external buttons, invoke the `copy` method.
 
 {% tabs %}
 
@@ -167,15 +167,15 @@ namespace TreeGridComponent.Data {
 
 ## Copy Hierarchy Modes
 
-Tree Grid provides support for a set of copy modes with `CopyHierarchyMode` property. The below are the type of filter mode available in Tree Grid.
+Tree Grid provides support for a set of copy modes with `CopyHierarchyMode` property. The below are the type of filter mode available in the Tree Grid.
 
-* **Parent** : This is the default copy hierarchy mode in Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records not have any parent record then the selected record will be in clipboard.
+* **Parent** : This is the default copy hierarchy mode in the Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
 
 * **Child** : Clipboard value will have the selected records with its child record. If the selected records do not have any child record then the selected records will be in clipboard.
 
-* **Both** : Clipboard value will have the selected records with its both parent and child record. If the selected records do not have any parent and child record then the selected records alone are copied to clipboard.
+* **Both** : Clipboard value will have the selected records with its both parent and child record. If the selected records do not have any parent and child record then the selected records alone are copied to the clipboard.
 
-* **None** : Only the Selected records will be in clipboard.
+* **None** : Only the selected records will be in the clipboard.
 
 {% tabs %}
 
@@ -290,7 +290,7 @@ namespace TreeGridComponent.Data {
 
 ## AutoFill
 
-AutoFill Feature allows you to copy the data of selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to required cells. This feature is enabled by defining `EnableAutoFill` property as true.
+AutoFill Feature allows to copy the data of the selected cells and paste it to another cells by just dragging the autofill icon of the selected cells up to the required cells. This feature is enabled by defining `EnableAutoFill` property as true.
 
 {% tabs %}
 
@@ -363,12 +363,12 @@ namespace TreeGridComponent.Data {
 
 ### Limitations of AutoFill
 
-* Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to number type cells then it will display as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will display as an **empty cell**.
+* Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to the number type cells then it will be displayed as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will be displayed as an **empty cell**.
 * Linear series and the sequential data generations are not supported in this autofill feature.
 
 ## Paste
 
-You can able to copy the content of a cell or a group of cells by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key and paste it to another set of cells by selecting the cells and pressing <kbd>Ctrl + V</kbd> shortcut key.
+The content of a cell or a group of cells can be copied by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key and paste it to another set of cells by selecting the cells, and pressing <kbd>Ctrl + V</kbd> shortcut key.
 
 {% tabs %}
 
@@ -436,8 +436,8 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-> To perform paste functionality, it requires the selection `Mode` to be `Cell`,  `cellSelectionMode` to be `Box` and also Batch Editing should be enabled.
+> To perform paste functionality, it requires the selection `Mode` to be `Cell`, `cellSelectionMode` to be `Box` and also Batch Editing should be enabled.
 
 ### Limitations of Paste Functionality
 
-* Since the string values are not parsed to number and date type, so when the copied string type cells are pasted to number type cells then it will display as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells then it will display as an **empty cell**.
+* Since the string values are not parsed to number and date type, so when the copied string type cells are pasted to number type cells then it will be displayed as **NaN**. For date type cells, when the copied string format cells are pasted to date type cells then it will be displayed as an **empty cell**.
