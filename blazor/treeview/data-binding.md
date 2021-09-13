@@ -9,15 +9,15 @@ documentation: ug
 
 # Data Binding in Blazor TreeView Component
 
-The Blazor TreeView component provides the option to load data either from local data sources or from remote data services. This can be done through `DataSource` property that is a member of the `Fields` property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
+The Blazor TreeView component provides the option to load data either from the local data sources or from remote data services. This can be done through `DataSource` property that is a member of the `Fields` property. The `DataSource` property supports list of objects and `DataManager`. It also supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors.
 
-Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded,  loads the child nodes based on the `ParentID/Child` member.
+Blazor TreeView has `load on demand` (Lazy load), by default. It reduces the bandwidth size when consuming huge data. It loads first level nodes initially, and when parent node is expanded, loads the child nodes based on the `ParentID/Child` member.
 
-By default, the `LoadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself. You can use the `DataBound` event to perform actions. This event will be triggered once the data source is populated in the TreeView.
+By default, the `LoadOnDemand` is set to true. By disabling this property, all the tree nodes are rendered at the beginning itself. The `DataBound` event can be used to perform actions. This event will be triggered once the data source is populated in the TreeView.
 
 ## Local data
 
-To bind local data to the Blazor TreeView, you can assign a list of objects to the `DataSource` property. The Blazor TreeView component requires three  fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
+To bind local data to the Blazor TreeView, assign a list of objects to the `DataSource` property. The Blazor TreeView component requires three fields (Id, Text, and ParentID) to render local data source. When mapper fields are not specified, it takes the default values as the mapping fields. Local data source can also be provided as an instance of the `DataManager`. It supports two kinds of local data binding methods.
 
 * Hierarchical data
 
@@ -25,7 +25,7 @@ To bind local data to the Blazor TreeView, you can assign a list of objects to t
 
 ### Hierarchical data
 
-Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. You can directly assign hierarchical data to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to `Fields` property.
+Blazor TreeView can be populated with hierarchical data source that contains nested list of objects. A hierarchical data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from the hierarchical data to `Fields` property.
 
 In the following example, **Id**, **FolderName**, and **SubFolders** columns from hierarchical data have been mapped to **Id**, **Text**, and **Child** fields, respectively.
 
@@ -113,13 +113,11 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ```
 
-Output be like the below.
-
 ![TreeView Sample](./images/local-data.png)
 
 ### Self-referential data
 
-Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. You can directly assign self-referential data to the `DataSource` property, and map all the field members with corresponding keys from self-referential data to `Fields` property.
+Blazor TreeView can be populated from self-referential data structure that contains list of objects with `ParentID` mapping. The self-referential data can be directly assigned to the `DataSource` property, and map all the field members with corresponding keys from self-referential data to `Fields` property.
 
 To render the root level nodes, specify the ParentID as null or no need to specify the ParentID in `DataSource`. In the following example, **Id**, **Pid**, **HasSubFolders**, and **FolderName** columns from self-referential data have been mapped to **Id**, **ParentId**, **HasChildren**, and **Text** fields, respectively.
 
@@ -210,13 +208,11 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ```
 
-Output be like the below.
-
 ![TreeView Sample](./images/local-data.png)
 
 ## Remote data
 
-Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. You can assign service data as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, you have to provide the endpoint `url`.
+Blazor TreeView can also be populated from a remote data service with the help of `DataManager` component and `Query` property. It supports different kinds of data services such as OData, OData V4, Web API, URL, and JSON with the help of `DataManager` adaptors. A service data can be assigned as an instance of `DataManager` to the `DataSource` property. To interact with remote data source, provide the endpoint `url`.
 
 The `DataManager` that acts as an interface between the service endpoint and the TreeView requires the following information to interact with service endpoint properly.
 
@@ -224,7 +220,7 @@ The `DataManager` that acts as an interface between the service endpoint and the
 
 * `DataManager->adaptor`: Defines the adaptor option. By default, ODataAdaptor is used for remote binding.
 
-Adaptor is responsible for processing response and request from/to the service endpoint. The `Syncfusion.Blazor.Data` provides some predefined adaptors  designed to interact with service endpoints. They are,
+Adaptor is responsible for processing response and request from/to the service endpoint. The `Syncfusion.Blazor.Data` provides some predefined adaptors designed to interact with service endpoints. They are,
 
 * `UrlAdaptor`: Used to interact with remote services. This is the base adaptor for all remote based adaptors.
 
@@ -266,13 +262,11 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 
 ```
 
-Output be like the below.
-
 ![TreeView Sample](./images/remote-data.png)
 
 ## Entity Framework
 
-You need to follow the following steps to consume data from the **Entity Framework** in the TreeView component.
+The following steps must be followed to consume data from the **Entity Framework** in the TreeView component.
 
 ### Create DBContext class
 
@@ -308,7 +302,7 @@ namespace SQLTreeView.Shared.DataAccess
 
 ### Create data access layer to perform CRUD operation
 
-Now, you need to create a class named **OrganizationDataAccessLayer**, which act as the data access layer for retrieving the records from the database table. Also, you need to add methods such as **AddEmployee**, **UpdateEmployee**, **DeleteEmployee** in the **“OrganizationDataAccessLayer.cs”** to handle the insert, update, and remove operations respectively.
+Now, create a class named **OrganizationDataAccessLayer**, which act as the data access layer for retrieving the records from the database table. Also, add methods such as **AddEmployee**, **UpdateEmployee**, **DeleteEmployee** in the **“OrganizationDataAccessLayer.cs”** to handle the insert, update, and remove operations respectively.
 
 ```csharp
 
@@ -419,7 +413,7 @@ namespace SQLTreeView.Shared.DataAccess
 
 ### Creating Web API Controller
 
-A Web API Controller should be created which allows the TreeView directly to consume data from the Entity framework. Also, you must create a new **Post**, **Put**, **Delete** method in the web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **‘SfDataManager’** will make requests to this action based on the route name.
+A Web API Controller should be created which allows the TreeView directly to consume data from the Entity Framework. Also, create a new **Post**, **Put**, **Delete** method in the web API controller which will perform the CRUD operations and returns the appropriate resultant data. The **‘SfDataManager’** will make requests to this action based on the route name.
 
 ```csharp
 
@@ -505,9 +499,9 @@ namespace WebApplication1.Server.Controllers
 
 ### Configure Blazor TreeView component using Web API adaptor
 
-Now, you can configure the Blazor TreeView using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, you need to use web Api adaptor.
+Now, the Blazor TreeView can be configured using the **‘SfDataManager’** to interact with the created Web API and consume the data appropriately. To interact with web API, use web API adaptor.
 
-> We have performed the CRUD operation in the TreeView component using the context menu.
+> The CRUD operation has been performed in the TreeView component using the context menu.
 
 ```csharp
 
@@ -628,4 +622,4 @@ Now, you can configure the Blazor TreeView using the **‘SfDataManager’** to 
 
 ```
 
-> You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).
+> The fully working sample can be found [here](https://github.com/SyncfusionExamples/Blazor-treeview-entity-framework).
