@@ -51,7 +51,7 @@ In the following sample, each list item is split into two columns to display rel
 
 The output will be as follows.
 
-![DropDownList](./images/item_template.png)
+![Blazor DropDownList with ItemTemplate](./images/blazor-dropdownlist-item-template.png)
 
 ## Value template
 
@@ -95,7 +95,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 The output will be as follows.
 
-![DropDownList](./images/value_template.png)
+![Blazor DropDownList with ValueTemplate](./images/blazor-dropdownlist-value-template.png)
 
 ## Group template
 
@@ -137,7 +137,7 @@ In the following sample, employees are grouped according to their city.
 
 The output will be as follows.
 
-![DropDownList](./images/group_template.png)
+![Blazor DropDownList with GroupTemplate](./images/blazor-dropdownlist-group-template.png)
 
 ## Header template
 
@@ -202,7 +202,7 @@ In the following sample, the list items and its headers are designed and display
 
 The output will be as follows.
 
-![DropDownList](./images/header_template.png)
+![Blazor DropDownList with HeaderTemplate](./images/blazor-dropdownlist-header-template.png)
 
 ## Footer template
 
@@ -246,7 +246,7 @@ In the following sample, footer element displays the total number of list items 
 
 The output will be as follows.
 
-![DropDownList](./images/footer_template.png)
+![Blazor DropDownList with Footer Template](./images/blazor-dropdownlist-footer-template.png)
 
 ## No records template
 
@@ -274,7 +274,7 @@ In the following sample, popup list content displays the notification of no data
 
 The output will be as follows.
 
-![DropDownList](./images/data_template.png)
+![Blazor DropDownList without Data](./images/blazor-dropdownlist-without-data.png)
 
 ## Action failure template
 
@@ -307,4 +307,4 @@ In the following sample, when the data fetch request fails, the DropDownList dis
 
 The output will be as follows,
 
-![DropDownList](./images/action_template.png)
+![Blazor DropDownList with Action Failure Template](./images/blazor-dropdownlist-action-failure-template.png)
