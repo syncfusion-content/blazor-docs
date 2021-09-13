@@ -80,7 +80,7 @@ The following sample code demonstrates enabling context menu with its default it
 }
 ```
 
-![Tree Grid with context menu](images/context-menu.gif)
+![Tree Grid with context menu](images/context-menu.png)
 
 ## Custom context menu items
 
