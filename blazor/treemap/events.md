@@ -51,7 +51,7 @@ Triggers, before rendering each of the legend item.
 |   Argument name      |   Description                                                    |
 |----------------------| -----------------------------------------------------------------|
 |   Fill               |   Specifies the legend shape color.                               |
-|   ImageUrl           |   Specifies the image url.                                        |
+|   ImageUrl           |   Specifies the image URL.                                        |
 |   Shape              |   Specifies the legend shape.                     |
 |   ShapeBorder              |   Specifies the legend border color and width.                     |
 |   Cancel             |   Specifies the event cancel status        .                      |
@@ -78,7 +78,7 @@ Triggers, before the print operation gets started.
 
 ## OnClick
 
-Description: Triggers, when clicking on the treemap.
+Triggers, when clicking on the treemap.
 
 |   Argument name      |   Description                                 |
 |----------------------| ----------------------------------------------|

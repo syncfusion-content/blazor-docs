@@ -35,7 +35,7 @@ The ComboBox has built-in support to filter data items when [AllowFiltering](htt
 
 The output will be as follows.
 
-![ComboBox](./images/filter.png)
+![Filtering in Blazor ComboBox](./images/blazor-combobox-filtering.png)
 
 ## Custom Filtering
 

@@ -52,4 +52,4 @@ In the following sample, vegetables are grouped according on its category using 
 
 The output will be as follows.
 
-![ComboBox](./images/grouping.png)
+![Grouping in Blazor ComboBox](./images/blazor-combobox-grouping.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize Blazor TreeView nodes based on levels | Syncfusion
-description: Learn here all about Customize the tree nodes based on levels in Syncfusion Blazor TreeView component and more.
+description: Learn here all about how to customize the tree nodes based on levels in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the tree nodes based on levels in Blazor TreeView Component
 
-You can customize the tree nodes level wise by adding custom CssClass to the component and enabling styles.
+The tree nodes can be customized level wise by adding custom CssClass to the component and enabling styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -136,7 +136,5 @@ You can customize the tree nodes level wise by adding custom CssClass to the com
 </style>
 
 ```
-
-Output be like the below.
 
 ![TreeView Sample](../images/customize-level.png)

@@ -306,6 +306,25 @@ The output will be as follows.
 
 ![MultiSelect](./images/api_data.png)
 
+### ValueTuple data binding
+
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the MultiSelect component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfMultiSelect TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek[]"
+               DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <MultiSelectFieldSettings Value="Item1" Text="Item2" />
+</SfMultiSelect>
+
+```
+
+The output will shown as follows,
+
+![Blazor MultiSelect ValueTuple Data](./images/blazor_multiselect_valuetuple.png)
+
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the MultiSelect component.

@@ -8,8 +8,8 @@ documentation: ug
 ---
 
 # Events in Blazor Maps Component
-
-This section explains the list of events that will be triggered for appropriate actions in Maps. The events should be provided to the Maps using the [MapsEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html) class.
+ 
+This section explains the list of events that will be triggered for appropriate actions in Maps. The events should be provided to the Maps using the [MapsEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsEvents.html).
 
 ## AnimationCompleted
 

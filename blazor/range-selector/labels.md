@@ -17,13 +17,12 @@ The multi-level labels for the Range Selector can be enabled by setting the [Ena
 
 @using Syncfusion.Blazor.Charts
 
-<SfRangeNavigator DataSource="@StockInfo" XName="X" YName="Y" LabelPosition="AxisPosition.Outside"
+<SfRangeNavigator DataSource="@StockInfo" XName="X" YName="Y"      LabelPosition="AxisPosition.Outside"
                   EnableGrouping="true" IntervalType="RangeIntervalType.Quarter" Value="@Value" ValueType="RangeValueType.DateTime">
     <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
 </SfRangeNavigator>
 
 @code {
-
     public class StockDetails
     {
         public DateTime X { get; set; }

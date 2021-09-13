@@ -23,7 +23,6 @@ The Range Selector supports right-to-left (RTL), which can be enabled with the [
 </SfRangeNavigator>
 
 @code {
-
     public class StockDetails
     {
         public DateTime Date { get; set; }

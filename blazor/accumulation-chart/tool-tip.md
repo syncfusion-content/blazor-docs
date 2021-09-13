@@ -94,7 +94,7 @@ The [Header](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Accu
 
 ## Tooltip Format
 
-By default, tooltip shows information about x and y value in points. In addition, further customization can be done in the tooltip. For example the format `${point.x} : <b>${point.y}%</b>` shows point x value and customized point y value.
+By default, tooltip shows information about x and y value in points. In addition, further customization can be done in the tooltip. For example, the format `${point.x} : <b>${point.y}%</b>` shows point x value and customized point y value.
 
 ```cshtml 
 
@@ -228,7 +228,7 @@ By default, tooltip shows information of x and y value in points. In addition, b
 
 ![ToolTip Text Mapping in Blazor Accumulation Chart](images/tool-tip/blazor-accumulation-chart-tooltip-mapping.png)
 
-> Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know various features of accumulation charts and how it is used to represent numeric proportional data.
+> Refer to the [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore the [Blazor Accumulation Chart Example](https://blazor.syncfusion.com/demos/chart/pie?theme=bootstrap4) to know about the various features of accumulation charts and how it is used to represent numeric proportional data.
 
 ## See Also
 

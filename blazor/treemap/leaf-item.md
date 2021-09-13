@@ -17,7 +17,7 @@ The following properties are available to customize the leaf item in the [TreeMa
 * [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Represents the item name, which is available in the data source.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the fill color for the leaf items.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the opacity of leaf item fill color.
-* [ShowLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ShowLabels) - Specifies to visibility of the leaf item label.
+* [ShowLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_ShowLabels) - Specifies the visibility of the leaf item label.
 * [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html) - Specifies the padding of leaf items
 * [LabelTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_LabelTemplate) - Specifies the template of leaf item label and the position of the template to be customized using the [TemplatePosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafItemSettings.html#Syncfusion_Blazor_TreeMap_TreeMapLeafItemSettings_TemplatePosition) property.
 * [TreeMapLeafLabelStyle](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLeafLabelStyle.html) - To customize the label color, opacity, font size, font family, font weight and font style.
@@ -75,7 +75,7 @@ Positioning the leaf item label using the [LabelPosition](https://help.syncfusio
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#customization) to know about the property value of **GrowthReports**.
+> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
 ![TreeMap with label position and format](images/LeafItem/LabelFormat.png)
 
@@ -92,6 +92,6 @@ The [Gap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMa
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#customization) to know about the property value of **GrowthReports**.
+> Refer to the [code block](#customization) to know about the property value of the **GrowthReports**.
 
 ![Gap in TreeMap item](images/LeafItem/itemgap.png)
