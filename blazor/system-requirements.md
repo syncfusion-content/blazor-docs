@@ -13,10 +13,11 @@ To get started with the Blazor application, it has to be ensured that the follow
 
 ## Integrated Development Environment
 
-By using the following IDEs, the Blazor applications can be developed.
+Blazor applications can be developed using one of the following IDEs.
 
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/download)
+* [JetBrains Rider](https://www.jetbrains.com/rider/)
 
 ## Framework & SDK
 

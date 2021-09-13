@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Context Menu in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Context Menu in Syncfusion Blazor TreeGrid component and much more.
+description: Checkout and learn here all about context menu in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Context Menu in Blazor TreeGrid Component
 
-The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, you need to define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~ContextMenuItems.html) property.
+The Tree Grid has options to show the context menu when right clicked on it. To enable this feature, define either default or custom item in the [ContextMenuItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~ContextMenuItems.html) property.
 
 The following table lists the default context menu items,
 
@@ -80,8 +80,7 @@ The following sample code demonstrates enabling context menu with its default it
 }
 ```
 
-The following GIF represents the Tree Grid enabled with default context menu items,
-![Tree Grid with context menu](images/context-menu.gif)
+![Tree Grid with context menu](images/context-menu.png)
 
 ## Custom context menu items
 
@@ -142,5 +141,4 @@ The following sample code demonstrates defining custom context menu item and its
 }
 ```
 
-The following image represents the Tree Grid enabled with custom context menu item,
 ![Tree Grid with custom context menu item](images/custom-context.png)

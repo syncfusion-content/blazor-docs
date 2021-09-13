@@ -39,7 +39,7 @@ The output will be as follows.
 
 ## View Restriction
 
-By defining the Start and Depth property with the different view, drill-down and drill-up views navigation can be limited to the users. Calendar views will be drill-down up to the view which is set in [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property and drill-up up to the view which is set in [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property.
+By defining the Start and Depth property with the different view, drill-down and drill-up views navigation can be limited to the users. Calendar views will be drill-down upto the view which is set in [Depth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html#Syncfusion_Blazor_Calendars_CalendarBase_1_Depth) property and drill-up upto the view which is set in [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfCalendar-1.html) property.
 
 The following example displays the Calendar in `Decade` view, and allows you to select a date in `Month` view.
 

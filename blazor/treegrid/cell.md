@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Cell in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Cell in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about cell in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -70,8 +70,6 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ![Display HTML Content](images/disphtml.png)
 
@@ -169,8 +167,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Customize cell styles](images/cell-styling.png)
 
 ## Auto wrap
@@ -239,8 +235,6 @@ public class TreeData
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ![Auto Wrap](images/autowrap.png)
 
@@ -319,8 +313,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Grid Lines](images/gridlines.png)
 
 > By default, the tree grid renders with **Default** mode.
@@ -396,7 +388,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
 
 ![Clip Mode](images/clipmode.png)
 
