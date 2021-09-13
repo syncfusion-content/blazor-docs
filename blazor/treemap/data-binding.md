@@ -227,7 +227,7 @@ The following code example shows, how to bind a `IEnumerable` object to the Tree
 
 Read the JSON file data and it can be convert to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of the TreeMap component.
 
-The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load the JSON file data.
+The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle method to load the JSON file data.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -272,8 +272,6 @@ To interact with the remote data source, provide the endpoint [Url](https://help
 ### Binding with OData services
 
 [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
-
-Refer to the following code example for remote data binding using OData service.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -458,7 +456,7 @@ Now create a class called **OrderDataAccessLayer**, which acts as a data access 
 
 ### Creating Web API Controller
 
-A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity framework.
+A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity Framework.
 
 ```csharp
     using System;
@@ -570,7 +568,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
     }
 ```
 
-On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

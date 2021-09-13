@@ -13,8 +13,6 @@ documentation: ug
 
 The `PrintAsync` method can be used to print a rendered TreeMap directly from the browser and the it can be enabled by setting the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**.
 
-The following code example shows the print method.
-
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;
 
