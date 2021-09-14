@@ -42,4 +42,4 @@ The following UI can be achieved by setting [IconPosition](https://help.syncfusi
 
 Output be like
 
-![Button Sample](./../images/ddb-custom.png)
+![Customizing Blazor DropDownMenu Icon](./../images/blazor-dropdownmenu-icon-customization.png)
