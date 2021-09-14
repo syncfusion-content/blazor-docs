@@ -11,83 +11,101 @@ documentation: ug
 
 The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in the web application also as needed.
 
-## Steps to use Icon
+## Standalone Icon Component
 
-1. Add a class `e-icons` to the HTML element that shows the icon. This class contains the font-family and common property of the font icons.
+Syncfusion provides support to render icons as a standalone icon component. Add the client-side resources through CDN or from NuGet package in the `<head>` element of the `~/wwwroot/index.html` in Blazor WebAssembly app or `~/Pages/_Host.cshtml` in Blazor server app.
 
-2. Add the icon class with corresponding icon content from the [available icons](#available-icons). For example, the following code snippet represents the search icon class.
+```html
+<head>
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    @*<link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/bootstrap4.css" rel="stylesheet" />*@
+</head>
+```
 
-    ```css
-    .e-search:before{
-        content:'\e993';
-    }
-    ```
+The following code snippet represents the complete example of standalone icon component usage by defining the icons using `SfIcon` tag in `~/Pages/Index.razor`.
 
-3. Add `e-icons` and `e-search` class to the HTML element.
+```csharp
+@using Syncfusion.Blazor.Buttons
 
-    ```html
-    <span class="e-icons e-search"></span>
-    ```
+<SfIcon Name="IconName.Cut"></SfIcon>
+<SfIcon Name="IconName.Copy"></SfIcon>
+<SfIcon Name="IconName.Paste"></SfIcon>
+```
 
-4. Add the client-side resources through CDN in the `<head>` element of the `~/wwwroot/index.html` in Blazor WebAssembly app or `~/Pages/_Host.cshtml` in Blazor server app.
+![Icons](./images/icons/icon.png)
 
-    ```html
-    <head>
-        <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/bootstrap4.css" rel="stylesheet" />
-    </head>
-    ```
+## Initialize icons with IconCss
 
-    The following code snippet represents the complete example of icon usage in `~/Pages/Index.razor`.
+The Icon component provides support to render [available icons](#available-icons) and third-party icons using `IconCss` property. Add a class `e-icons` to the IconCss property that contains the font-family and common property of the font icons. Add the icon class with corresponding icon name from the available icons with `e-` prefix.
 
-    ```cshtml
-        <div class="icons">
-            <ul>
-                <li><span class="e-icons e-search"></span></li>
-                <li><span class="e-icons e-upload"></span></li>
-                <li><span class="e-icons e-font"></span></li>
-            </ul>
-        </div>
-        <style>
-            .e-search:before{
-                content:'\e993';
-            }
-            .e-upload:before{
-                content: '\e725';
-            }
-            .e-font:before{
-                content: '\e34c';
-            }
-        </style>
-    ```
+The following code explains how to render icons using `IconCss`. here search icon rendered with `e-icons e-search` class name.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfIcon IconCss="e-icons e-search"></SfIcon> //render search icon from available icons
+<SfIcon IconCss="oi oi-home"></SfIcon> //home icon from open-iconic
+<SfIcon IconCss="oi oi-plus"></SfIcon> //plus icon from open-iconic
+```
+
+![Third party icons](./images/icons/icon-css.png)
+
+## Set Icon size
+
+The font size of the icon can be changed using the `Size` property. The icon displays `Medium` size by default. To change the default size, define the applicable `IconSize` to Size property. The applicable IconSize are,
+
+* Small
+* Medium
+* Large
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfIcon Name="IconName.Bold" Size="IconSize.Small"></SfIcon>
+<SfIcon Name="IconName.Underline" Size="IconSize.Medium"></SfIcon>
+<SfIcon Name="IconName.Italic" Size="IconSize.Large"></SfIcon>
+```
+
+![Icon size](./images/icons/icon-size.png)
+
+> The `Size` property will be applicable only when defining the icon using `Name` property. Other customizations were made using `IconCss` property.
+
+## Display tooltip for icons
+
+Tooltip can be shown on icon hover and it can be achieved by setting tooltip text for `Title` property.
+
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfIcon Name="IconName.Upload" Title="Upload"></SfIcon>
+<SfIcon Name="IconName.Download" Title="Download"></SfIcon>
+<SfIcon Name="IconName.Undo" Title="Undo"></SfIcon>
+<SfIcon Name="IconName.Redo" Title="Redo"></SfIcon>
+```
+
+![Icon size](./images/icons/icon-title.png)
 
 ## Customize Icon
 
 The Syncfusion Blazor icon library can customize its color and size by overriding the `e-icons` class.
 
-```cshtml
-    <style>
-        .e-icons{
-            color: #00ffff;
-            font-size: 26px;
-        }
-        .e-search:before{
-            content: '\e993';
-        }
-        .e-upload:before{
-            content: '\e725';
-        }
-        .e-font:before{
-            content: '\e34c';
-        }
-    </style>
-    <div class="icons">
-        <ul>
-            <li><span class="e-icons e-search"></span></li>
-            <li><span class="e-icons e-upload"></span></li>
-            <li><span class="e-icons e-font"></span></li>
-            </ul>
-    </div>
+```csharp
+@using Syncfusion.Blazor.Buttons
+
+<SfIcon Name="IconName.AlignLeft"></SfIcon>
+<SfIcon Name="IconName.AlignRight"></SfIcon>
+<SfIcon Name="IconName.AlignCenter"></SfIcon>
+<SfIcon Name="IconName.Justify"></SfIcon>
+
+<style>
+    .e-icons{
+        color: #ff0000;
+        font-size: 26px !important;
+    }
+</style>
 ```
+
+![Customize Icon](./images/icons/custom-icon.png)
 
 ## Available Icons
 
