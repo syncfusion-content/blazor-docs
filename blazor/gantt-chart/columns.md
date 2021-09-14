@@ -588,7 +588,7 @@ The column reordering can be done by dragging a column header from one index to 
 }
 ```
 
-![Reordering Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-reorder.gif)
+![Reordering Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-reorder.png)
 
 > You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
 
@@ -704,7 +704,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
 }
 ```
 
-![Reordering Multiple Columns in Blazor Gantt Chart](images/blazor-gantt-chart-reorder-multiple-columns.gif)
+![Reordering Multiple Columns in Blazor Gantt Chart](images/blazor-gantt-chart-reorder-multiple-columns.png)
 
 ## Resizing
 
@@ -804,7 +804,7 @@ The column width can be resized by clicking and dragging the right edge of the c
 }
 ```
 
-![Resizing Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-resize.gif)
+![Resizing Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-resize.png)
 
 > You can disable resizing for a particular column by setting the `GanttColumn.AllowResizing` to `false`.
 

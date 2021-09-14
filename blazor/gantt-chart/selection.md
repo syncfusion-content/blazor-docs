@@ -417,7 +417,7 @@ You can also select a row dynamically using the `SelectRowAsync` method. The fol
 }
 ```
 
-![Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-row-selection.gif)
+![Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-row-selection.png)
 
 ### Multiple Row Selection
 
@@ -623,7 +623,7 @@ You can also select rows dynamically using the `SelectRowsAsync` method. The fol
 }
 ```
 
-![Selecting Multiple Rows Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-multi-row-selection.gif)
+![Selecting Multiple Rows Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-row-selection.png)
 
 ## Cell
 
@@ -931,7 +931,7 @@ You can select a cell dynamically using the `SelectCellAsync` method. Refer to t
 }
 ```
 
-![Selecting Cells Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-cell-selection.gif)
+![Selecting Cells Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-single-cell-selection.png)
 
 ### Customize Cell Selection action
 

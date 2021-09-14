@@ -545,7 +545,7 @@ You can filter the columns dynamically by using the `FilterByColumnAsync` method
 }
 ```
 
-![Filtering Specific Column in Blazor Gantt Chart](images/blazor-gantt-chart-filter-column.gif)
+![Filtering Specific Column in Blazor Gantt Chart](images/blazor-gantt-chart-filter-column.png)
 
 ### Clear Filtered Columns
 
@@ -659,7 +659,7 @@ The following code snippet explains the above behaviour.
 }
 ```
 
-![Clearing Column Filter in Blazor Gantt Chart](images/blazor-gantt-chart-clear-filter.gif)
+![Clearing Column Filter in Blazor Gantt Chart](images/blazor-gantt-chart-clear-filter.png)
 
 ## Search
 
@@ -979,7 +979,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 }
 ```
 
-![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-search.gif)
+![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-search.png)
 
 > You should set the `AllowFiltering` property to `true` for searching the content externally.
 
