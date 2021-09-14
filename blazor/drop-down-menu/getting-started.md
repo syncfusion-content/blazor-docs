@@ -107,7 +107,7 @@ Now, add the Syncfusion Blazor Dropdown Menu component in `razor` page in the `P
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Dropdown Menu component will render in the web browser as shown below
 
-![DropDownButton Sample](./images/drop-down-button.png)
+![Blazot DropDownMenu Component](./images/blazor-dropdownmenu-component.png)
 
 ## See Also
 

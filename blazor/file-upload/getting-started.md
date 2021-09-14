@@ -88,7 +88,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![Uploader Sample](./images/uploader_getting_started.png)
+![Blazor FileUpload Component](./images/blazor-fileupload-component.png)
 
 ## Without server-side API endpoint
 
@@ -123,7 +123,7 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 
 The output will be as follows.
 
-![Uploader Output](./images/uploader_output.png)
+![Blazor FileUpload displays Updated Files](./images/blazor-fileupload-with-updated-files.png)
 
 While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Please find the remove action code on below.
 
@@ -233,7 +233,7 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 
 The output will be as follows,
 
-![Uploader AllowedExtensions](./images/uploader_file_not_allowed.png)
+![Allowing Specific Files in Blazor FileUpload](./images/blazor-fileupload-allow-specific-file.png)
 
 > You can also explore our [Blazor File Upload example](https://blazor.syncfusion.com/demos/file-upload/default-functionalities/) to understand how to browse the files which you want to upload to the server.
 

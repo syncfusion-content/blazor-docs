@@ -35,4 +35,4 @@ In the following example, the `Top` position of the popup element.
 
 Output be like
 
-![Button Sample](./../images/ddb-position.png)
+![Changing Popup Position in Blazor DropDownMenu](./../images/blazor-dropdownmenu-popup-position.png)
