@@ -13,7 +13,7 @@ Theme Studio for Syncfusion Blazor can be used to customize a new theme from an 
 
 The Theme Studio application page can be divided into two sections: the controls preview section on the left, and the theme customization section on the right.
 
-![blazor-theme-studio-section](images/blazor-theme-studio-section.png)
+![blazor-theme-studio-sections](images/blazor-theme-studio-sections.png)
 
 ## Customizing Existing Theme from theme studio
 
