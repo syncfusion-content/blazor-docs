@@ -13,12 +13,16 @@ Syncfusion blazor components supports touch (bigger theme) and normal size modes
 
 ## Size mode for application
 
-You can enable touch mode (bigger theme) for an application by adding `.e-bigger` class in `~/wwwroot/css/site.css` file.
+You can enable touch mode (bigger theme) for an application by adding `.e-bigger` class in `~/wwwroot/css/site.css` file and assign to the `body` element in `Pages/_Host.cshtml` (Blazor Server App) or `wwwroot/index.html` (Blazor WebAssembly App).
 
 ```css
 .e-bigger {
     font-size: x-large;
 }
+```
+
+```cshtml
+<body class="e-bigger">...</body>
 ```
 
 ## Size mode for a control
