@@ -124,7 +124,7 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
 
 After successful compilation of your application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser as shown below
 
-![QueryBuilder Sample](https://ej2.syncfusion.com/products/images/querybuilder/readme.gif)
+![QueryBuilder Sample](./images/readme.png)
 
 ## See Also
 
