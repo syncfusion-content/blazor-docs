@@ -453,7 +453,7 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 }
 ```
 
-![Alt text](images/remote-data.png)
+![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
 
 ### Sending Additional Parameters to the Server
 

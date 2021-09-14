@@ -313,7 +313,7 @@ You can select a row at the time of loading by setting the index of the row to t
 }
 ```
 
-![Alt text](images/initialLoadSelection.png)
+![Initial Selection in Blazor Gantt Chart](images/blazor-gantt-chart-initial-selection.png)
 
 ### Selecting a Row dynamically
 
@@ -417,7 +417,7 @@ You can also select a row dynamically using the `SelectRowAsync` method. The fol
 }
 ```
 
-![Alt text](images/selectRow.gif)
+![Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-row-selection.png)
 
 ### Multiple Row Selection
 
@@ -517,7 +517,7 @@ You can select multiple rows by setting the `SelectionSettings.Type` property to
 }
 ```
 
-![Alt text](images/multiRow.png)
+![Multiple Row Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-row-selection.png)
 
 ### Selecting Multiple Rows dynamically
 
@@ -623,7 +623,7 @@ You can also select rows dynamically using the `SelectRowsAsync` method. The fol
 }
 ```
 
-![Alt text](images/multiRow.gif)
+![Selecting Multiple Rows Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-multiple-row-selection.png)
 
 ## Cell
 
@@ -725,7 +725,7 @@ Find the code example below to enable the cell selection in Gantt Chart.
 }
 ```
 
-![Alt text](images/singleCell.png)
+![Cell Selection in Blazor Gantt Chart](images/blazor-gantt-chart-cell-selection.png)
 
 ### Selecting Multiple Cells
 
@@ -825,7 +825,7 @@ You can select multiple cells by setting the `SelectionSettings.Type` property t
 }
 ```
 
-![Alt text](images/multiCell.png)
+![Multiple Cell Selection in Blazor Gantt Chart](images/blazor-gantt-chart-multi-cell-selection.png)
 
 ### Selecting a Cell dynamically
 
@@ -931,7 +931,7 @@ You can select a cell dynamically using the `SelectCellAsync` method. Refer to t
 }
 ```
 
-![Alt text](images/selectCelldynamic.gif)
+![Selecting Cells Dynamically in Blazor Gantt Chart](images/blazor-gantt-chart-single-cell-selection.png)
 
 ### Customize Cell Selection action
 

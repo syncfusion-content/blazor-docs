@@ -107,7 +107,7 @@ The [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gan
 }
 ```
 
-![Alt text](images/menuFilter.png)
+![Blazor Gantt Chart with Menu Filter](images/blazor-gantt-chart-menu-filter.png)
 
 > The `AllowFiltering` property should be set to `true` to enable the filter menu. Setting the `GanttColumn.AllowFiltering` property to `false` prevents rendering the filter menu for a particular column.
 
@@ -320,7 +320,7 @@ To apply the filter at initial rendering, set the filter `Predicate` collections
 }
 ```
 
-![Alt text](images/initialFilter.png)
+![Blazor Gantt Chart with Initial Filter](images/blazor-gantt-chart-initial-filter.png)
 
 ### Filter Operators
 
@@ -441,7 +441,7 @@ In the following sample, type **Perform** in the **TaskName** column to filter d
 }
 ```
 
-![Alt text](images/diacritics.png)
+![Filtering Diacritic Characters in Blazor Gantt Chart](images/blazor-gantt-chart-filter-diacritic-charater.png)
 
 ### Filtering a Specific Column by Method
 
@@ -545,7 +545,7 @@ You can filter the columns dynamically by using the `FilterByColumnAsync` method
 }
 ```
 
-![Alt text](images/filterColumn.gif)
+![Filtering Specific Column in Blazor Gantt Chart](images/blazor-gantt-chart-filter-column.png)
 
 ### Clear Filtered Columns
 
@@ -659,7 +659,7 @@ The following code snippet explains the above behaviour.
 }
 ```
 
-![Alt text](images/clearFilter.gif)
+![Clearing Column Filter in Blazor Gantt Chart](images/blazor-gantt-chart-clear-filter.png)
 
 ## Search
 
@@ -759,7 +759,7 @@ You can search for records in the Gantt Chart component by using the `SearchAsyn
 
 The following screenshot shows the output of searching for string in Gantt Chart component.
 
-![Alt text](images/Searching.png)
+![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-searching.png)
 
 ### Initial Search
 
@@ -859,7 +859,7 @@ In the Gantt Chart component, you can load a task with some search criteria by u
 }
 ```
 
-![Alt text](images/initialLoadSearch.png)
+![Blazor Gantt Chart with Initial Search](images/blazor-gantt-chart-initial-search.png)
 
 ### Search Operators
 
@@ -979,7 +979,7 @@ To search the Gantt Chart records from an external button, invoke the `SearchAsy
 }
 ```
 
-![Alt text](images/search.gif)
+![Searching in Blazor Gantt Chart](images/blazor-gantt-chart-search.png)
 
 > You should set the `AllowFiltering` property to `true` for searching the content externally.
 
