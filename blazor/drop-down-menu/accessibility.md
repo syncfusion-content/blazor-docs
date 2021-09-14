@@ -76,4 +76,4 @@ Opens the popup</td></tr>
 ```
 
 Output be like
-![DropDownButton Sample](./images/drop-down-button.png)
+![Accessibility in Blazor DropDownMenu](./images/blazor-dropdownmenu-component.png)
