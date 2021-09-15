@@ -116,7 +116,7 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 }
 ```
 
-![Alt text](images/definingColumns.png)
+![Blazor Gantt Chart with Columns](images/blazor-gantt-chart-columns.png)
 
 <!-- Custom column header
 
@@ -359,7 +359,7 @@ To format the cell values based on a specific culture, use the `GanttColumn.Form
 }
 ```
 
-![Alt text](images/formatColumn.png)
+![Blazor Gantt Chart with Column Formatting](images/blazor-gantt-chart-format-column.png)
 
 > By default, the `number` and `date` values are formatted in `en-US` culture.
 
@@ -488,7 +488,7 @@ Format | Formatted value
 }
 ```
 
-![Alt text](images/dateformat.png)
+![Blazor Gantt Chart with Date Format](images/blazor-gantt-chart-date-format.png)
 
 ## Reordering
 
@@ -588,7 +588,7 @@ The column reordering can be done by dragging a column header from one index to 
 }
 ```
 
-![Alt text](images/columnReorder.gif)
+![Reordering Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-reorder.png)
 
 > You can disable the reordering of a particular column by setting the `GanttColumn.AllowReordering` property to `false`.
 
@@ -704,7 +704,7 @@ Multiple columns can be reordered at a time by using the `ReorderColumnsAsync` m
 }
 ```
 
-![Alt text](images/reorderMethods.gif)
+![Reordering Multiple Columns in Blazor Gantt Chart](images/blazor-gantt-chart-reorder-multiple-columns.png)
 
 ## Resizing
 
@@ -804,7 +804,7 @@ The column width can be resized by clicking and dragging the right edge of the c
 }
 ```
 
-![Alt text](images/columnResize.gif)
+![Resizing Column in Blazor Gantt Chart](images/blazor-gantt-chart-column-resize.png)
 
 > You can disable resizing for a particular column by setting the `GanttColumn.AllowResizing` to `false`.
 
@@ -1032,7 +1032,7 @@ A column template is used to customize the column’s look. The following code e
 }
 ```
 
-![Alt text](images/columnTemplate.png)
+![Blazor Gantt Chart with Column Template](images/blazor-gantt-chart-column-template.png)
 
 ## Column Menu
 
@@ -1142,7 +1142,7 @@ The default items are displayed in the following table:
 }
 ```
 
-![Alt text](images/columnMenu.png)
+![Blazor Gantt Chart with Column Menu](images/blazor-gantt-chart-column-menu.png)
 
 > You can disable the column menu for a particular column by setting the `GanttColumn.ShowColumnMenu` to `false`.
 
@@ -1344,7 +1344,7 @@ The tree/expander column is a column in the Gantt Chart component, that has icon
 }
 ```
 
-![Alt text](images/treeColumnIndex.png)
+![Changing Expander Column in Blazor Gantt Chart](images/blazor-gantt-chart-expander-column.png)
 
 ## Show or Hide Columns dynamically
 
@@ -1710,7 +1710,7 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
 }
 ```
 
-![Alt text](images/CustomColumn.png)
+![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-custom-column.png)
 
 <!-- Column Spanning
 
