@@ -38,4 +38,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Custom Context Menu](../images/custom-context.png)
+![Blazor FileManager with Custom Context Menu](../images/blazor-filemanager-custom-context-menu.png)

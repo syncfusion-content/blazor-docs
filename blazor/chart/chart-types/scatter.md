@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scatter in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about the Scatter Chart in Syncfusion Blazor Charts component and muchmore.
+description: Checkout and learn here all about the Scatter Chart in Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## Scatter
 
-[Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) used to visualize the relationship between two Cartesian parameters. To render a [Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter).
+[Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) is used to visualize the relationship between two Cartesian parameters. To render a [Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart), set the series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) as [Scatter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeriesType.html#Syncfusion_Blazor_Charts_ChartSeriesType_Scatter).
 
 ```cshtml
 

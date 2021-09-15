@@ -54,7 +54,7 @@ In the above sample, width of the parent element is divided into five equal cell
 
 The height of these cells will be 50px based on the CellAspectRatio value 100/50 (that is for every 100px of width, 50px will be the height of the cell).
 
-The following output demonstrates the setting of `cellAspectRatio` and `Columns` property in dashboard component.
+The following output demonstrates the setting of `cellAspectRatio` and `Columns` properties in the dashboard component.
 
 ![Changing Cell Size of Blazor Dashboard Layout](images/blazor-dashboard-layout-cell-size.png)
 
@@ -98,7 +98,7 @@ The following output demonstrates the neat and clear representation of data by s
 
 ## Graphical representation of grid layout
 
-These cells combinedly forms a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the `ShowGridLines` property, which clearly pictures the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
+These cells combinedly forms a grid-structured layout, which will be hidden initially. This grid-structured layout can be made visible by enabling the `ShowGridLines` property, which clearly shows the cells split-up within the layout. These gridlines are helpful in panels sizing and placement within the layout during initial designing of a dashboard.
 
 ```cshtml
 
@@ -130,6 +130,6 @@ These cells combinedly forms a grid-structured layout, which will be hidden init
 
 ```
 
-The following output demonstrates the gridlines indicate the cells split-up of the layout and the data containers placed over these cells are known as panels.
+The following output demonstrates the gridlines indicating the cells split-up of the layout and the data containers placed over these cells are known as panels.
 
 ![Blazor DashboardLayout with GridLines](images/blazor-dashboard-layout-gridlines.png)

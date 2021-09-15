@@ -22,9 +22,9 @@ Items |Description
 `Save` | Save the edited record.
 `Cancel` | Cancel the edited state.
 `Copy` | Copy the selected records.
-`PdfExport` | Export the datagrid data as Pdf document.
-`ExcelExport` | Export the datagrid data as Excel document.
-`CsvExport` | Export the datagrid data as CSV document.
+`PdfExport` | Export the DataGrid data as Pdf document.
+`ExcelExport` | Export the DataGrid data as Excel document.
+`CsvExport` | Export the DataGrid data as CSV document.
 `Group` | Group the current column.
 `Ungroup` | Ungroup the current column.
 `SortAscending` | Sort the current column in ascending order.
@@ -159,7 +159,7 @@ The following image represents the DataGrid enabled with custom context menu ite
 
 ## Built-in and Custom context menu items
 
-DataGrid have an option to use both built-in and custom context menu items at same time.
+DataGrid has an option to use both built-in and custom context menu items at same time.
 
 The following sample code demonstrates defining built-in and custom context menu items and custom context menu item corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
@@ -213,7 +213,7 @@ The following sample code demonstrates defining built-in and custom context menu
 
 ## Sub context menu items in DataGrid
 
-The sub context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html) Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
+The sub context menu items can be added by defining the collection of **MenuItems** for **Items** Property in [ContextMenuItems](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.ContextMenuItemModel.html). Actions for these customized items can be defined in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event.
 
 The following sample code demonstrates defining sub context menu item and its corresponding action in the [ContextMenuItemClicked](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ContextMenuClickEventArgs-1.html) event,
 
@@ -273,9 +273,9 @@ The following sample code demonstrates defining sub context menu item and its co
 
 ## Disable the Context menu for specific columns in DataGrid
 
-Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This is event will be triggered before opening the ContextMenu. We can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
+Context Menu can be prevented for specific columns using [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. We can prevent the context menu from opening by defining the **Cancel** arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) to **false**.
 
-The following sample code demonstrates the disabling the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
+The following sample code demonstrates how to disable the context for specific column using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -319,7 +319,7 @@ The following sample code demonstrates the disabling the context for specific co
     {
         if (Args.Column.Field == "OrderDate")
         {
-            Args.Cancel = true; // to prevent the context  menu from opening
+            Args.Cancel = true; // To prevent the context menu from opening
         }
     }
 
@@ -335,7 +335,7 @@ The following sample code demonstrates the disabling the context for specific co
 
 ## Disable context menu items dynamically in DataGrid
 
-You can enable or disable context menu items using the **Disabled** property. Here, we enable and disable the **Edit** context menu items in [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This is event will be triggered before opening the ContextMenu. We can disabled the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
+You can enable or disable context menu items using the **Disabled** property. Here, you can enable and disable the **Edit** context menu items in [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event of DataGrid. This event will be triggered before opening the ContextMenu. You can disable the context menu item by defining the corresponding context menu items **Disabled** property as **true**.
 
 The following sample code demonstrates how to enable or disable context menu items dynamically in Grid using event arguments of [ContextMenuOpen](https://blazor.syncfusion.com/documentation/datagrid/events/#contextmenuopen) event,
 
@@ -371,13 +371,13 @@ The following sample code demonstrates how to enable or disable context menu ite
     public void OnContextMenuOpen(ContextMenuOpenEventArgs<Order> Args)
     {
 #pragma warning disable BL0005
-        if (Args.Column.Field == "OrderDate")  // you can check condition based on your requirement
+        if (Args.Column.Field == "OrderDate")  // You can check condition based on your requirement
         {
-            Args.ContextMenuObj.Items[0].Disabled = true; // to disable edit context menu item
+            Args.ContextMenuObj.Items[0].Disabled = true; // To disable edit context menu item
         }
         else
         {
-            Args.ContextMenuObj.Items[0].Disabled = false; // to enable edit context menu item
+            Args.ContextMenuObj.Items[0].Disabled = false; // To enable edit context menu item
         }
 #pragma warning restore BL0005
     }
@@ -392,4 +392,4 @@ The following sample code demonstrates how to enable or disable context menu ite
 }
 ```
 
-> You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.
+> You can refer to [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

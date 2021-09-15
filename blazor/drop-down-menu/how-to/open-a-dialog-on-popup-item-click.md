@@ -68,4 +68,4 @@ In the following example, Dialog will open while selecting `Other Folder...` ite
 
 Output be like
 
-![Button Sample](./../images/ddb-dialog.png)
+![Displaying Dialog while Clicking in Blazor DropDownMenu Item](./../images/blazor-dropdownmenu-with-dialog.png)

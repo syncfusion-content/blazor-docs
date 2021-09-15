@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Excel Export in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Excel Export in Syncfusion Blazor TreeGrid component and much more.
+description: Checkout and learn here all about excel export in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Excel Export in Blazor TreeGrid Component
 
-The excel export allows exporting Tree Grid data to Excel document. You need to use the
+The excel export allows exporting Tree Grid data to Excel document. Use the
  **ExcelExport** method for exporting. To enable Excel export in the Tree Grid, set the [AllowExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid%601~AllowExcelExport.html) property as true.
 
 {% tabs %}
@@ -359,7 +359,7 @@ public class TreeData
 
 ### File name for exported document
 
-You can assign the file name for the exported document by defining **fileName** property in excel export properties.
+The file name can be assigned for the exported document by defining **fileName** property in excel export properties.
 
 {% tabs %}
 
@@ -402,7 +402,6 @@ You can assign the file name for the exported document by defining **fileName** 
 }
 
 
-
 {% endhighlight %}
 
 {% highlight c# %}
@@ -442,7 +441,7 @@ public class TreeData
 
 ### To persist collapsed state
 
-You can persist the collapsed state in the exported document by defining **IsCollapsedStatePersist** property as true in **TreeGridExcelExportProperties** parameter of [ExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExcelExport_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
+The collapsed state can be persisted in the exported document by defining **IsCollapsedStatePersist** property as true in the **TreeGridExcelExportProperties** parameter of the [ExcelExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_ExcelExport_Syncfusion_Blazor_Grids_ExcelExportProperties_System_Nullable_System_Boolean__System_Object_System_Nullable_System_Boolean__) method.
 
 {% tabs %}
 
@@ -525,4 +524,4 @@ public class TreeData
 
 ### Limitations
 
-Microsoft Excel permits up to seven nested levels in outlines. So that in the Tree Grid we can able to provide only up to seven nested levels and if it exceeds more than seven levels then the document will be exported without outline option. Please refer the [Microsoft Limitation](https://docs.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations)
+Microsoft Excel permits up to seven nested levels in outlines. So that in the Tree Grid we can able to provide only up to seven nested levels and if it exceeds more than seven levels then the document will be exported without outline option. Please refer the [Microsoft Limitation](https://docs.microsoft.com/en-us/sql/reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs?view=sql-server-2017#ExcelLimitations).
