@@ -115,6 +115,6 @@ The event markers in the Gantt Chart component is used to highlight the importan
 </style>
 ```
 
-![Alt text](images/eventmarkers.png)
+![Blazor Gantt Chart with Event Markers](images/blazor-gantt-chart-event-markers.png)
 
-> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.
+> You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities) to knows how to render and configure the gantt.
