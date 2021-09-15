@@ -19,8 +19,6 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
 * You can add the client-side style resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
-    > You can also add the client-side style resources through CDN.
-
     ```html
     <head>
         ....

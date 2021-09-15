@@ -64,7 +64,6 @@ W> If the above new standard (individual NuGet packages) is preferred, then skip
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
 4. Add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-    > The client-side style resources can also be added through CDN.
 
 ```html
 <head>

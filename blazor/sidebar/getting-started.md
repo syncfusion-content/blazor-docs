@@ -59,8 +59,6 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
-    > You can also add the client-side style resources through CDN.
-
     ```cshtml
     <head>
         <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />

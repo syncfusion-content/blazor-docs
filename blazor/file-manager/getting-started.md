@@ -45,8 +45,6 @@ This section briefly explains how to include a `File Manager` in your Blazor Ser
 ![Select Blazor NuGet Package](images/blazor-nuget-selection.png)
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
-    > You can also add the client-side style resources through CDN.
-
     ```html
     <head>
         ....
