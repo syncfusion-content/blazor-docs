@@ -112,7 +112,7 @@ A row can be added to the Gantt Chart component from the toolbar while the `Gant
 }
 ```
 
-![Alt text](images/addingRow.png)
+![Adding New Task in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-row.png)
 
 > By default, a new row will be added to the top most row in the Gantt Chart component.
 
@@ -330,7 +330,7 @@ You can add rows to the Gantt Chart component dynamically using the `AddRecordAs
 }
 ```
 
-![Alt text](images/addRecord.gif)
+![Adding New Record in Blazor Gantt Chart](images/blazor-gantt-chart-add-new-record.png)
 
 ## Editing Tasks
 
@@ -444,11 +444,11 @@ The following code example shows you how to enable the cell editing in Gantt Cha
 
 double click action on Tree Grid side
 
-![Alt text](images/enableCellEditing1.png)
+![Blazor Gantt Chart displays Cell Editing in TreeGrid](images/blazor-gantt-chart-cell-editing-in-treegrid.png)
 
 double click action on chart side
 
-![Alt text](images/enableCellEditing2.png)
+![Blazor Gantt Chart displays Editing in Chart](images/blazor-gantt-chart-editing-in-chart.png)
 
 ### Dialog Editing
 
@@ -549,7 +549,7 @@ Modify the task details through the edit dialog by setting the `GanttEditSetting
 
 `Note:` In dialog editing mode, the edit dialog appears when the Tree Grid or Gantt chart sides are double-clicked.
 
-![Alt text](images/enableDialogEditing.png)
+![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-dialog-editing.png)
 
 #### Sections or Tabs in Dialog
 
@@ -713,11 +713,11 @@ In the Gantt Chart dialog, you can define the required tabs or editing sections 
 
 Tabs in Edit Dialog
 
-![Alt text](images/add-edit-dialogtab.png)
+![Blazor Gantt Chart displays Editing in DialogTabs](images/blazor-gantt-chart-edit-dialogtab.png)
 
 Tabs in Add Dialog
 
-![Alt text](images/add-dialogtab.png)
+![Adding New DialogTabs in Blazor Gantt Chart](images/blazor-gantt-chart-add-dialogtab.png)
 
 #### Limiting Data Fields in General Tab
 
@@ -888,7 +888,7 @@ In the Gantt Chart dialog, you can make only specific data source fields visible
 
 The following screenshot show the output of above code example.
 
-![Alt text](images/customfields.png)
+![Blazor Gantt Chart with Custom Fields](images/blazor-gantt-chart-custom-fields.png)
 
 ### Taskbar Editing
 
@@ -1100,11 +1100,11 @@ The following code example demonstrates how to enable task dependency editing in
 
 Updating with cell Edit
 
-![Alt text](images/cell-editing.png)
+![Cell Editing in Blazor Gantt Chart](images/blazor-gantt-chart-cell-editing.png)
 
 Updating with Dialog
 
-![Alt text](images/edit-dialog.png)
+![Dialog Editing in Blazor Gantt Chart](images/blazor-gantt-chart-edit-dialog.png)
 
 ### Update Task Values using Method
 
@@ -1211,7 +1211,7 @@ Tasks' value can be dynamically updated by using the `UpdateRecordByIDAsync` met
 }
 ```
 
-![Alt text](images/updateRecord.gif)
+![Updating Record in Blazor Gantt Chart](images/blazor-gantt-chart-update-record.png)
 
 ## Cell Edit Type and its Params
 
@@ -1691,7 +1691,7 @@ A task delete option in the Gantt Chart component can be enabled by enabling the
 }
 ```
 
-![Alt text](images/deleteRecord.gif)
+![Deleting Record in Blazor Gantt Chart](images/blazor-gantt-chart-delete-record.png)
 
 > You should set the `AllowDeleting` value to `true` to delete the record dynamically.
 
@@ -1794,7 +1794,7 @@ The following code snippet explains how to enable the delete confirmation messag
 }
 ```
 
-![Alt text](images/deleteConfirmationDialog.png)
+![Blazor Gantt Chart displays Delete Confirmation Dialog](images/blazor-gantt-chart-delete-confirmation-dialog.png)
 
 ## Entity FrameWork
 
