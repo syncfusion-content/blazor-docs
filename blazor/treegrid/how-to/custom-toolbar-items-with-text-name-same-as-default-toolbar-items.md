@@ -11,7 +11,7 @@ documentation: ug
 
 The Custom toolbar items can be created with text name same as default toolbar items (Add,Edit,Delete,etc.). But while creating them, they will be considered as default toolbar items which will cause some issues while clicking on it. To overcome this behavior, it is suggested to define the **Id** property for custom toolbar items.
 
-This is demonstrated in the below sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when TreeGridEditSettings is defined in TreeGrid. So custom toolbar will be in disabled state considering it as default toolbar item. That behaviour must be overcomed by defining the Id property.
+This is demonstrated in the below sample code where there are custom toolbar items with text same as **Add** and **Delete** buttons. These toolbar buttons will be enabled only when TreeGridEditSettings is defined in TreeGrid. So custom toolbar will be in disabled state considering it as default toolbar item. That behavior must be overcame by defining the Id property.
 
 {% tabs %}
 

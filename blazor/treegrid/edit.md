@@ -1160,7 +1160,7 @@ In the below demo, custom validation applied for **Priority** column.
 
 ## Entity Framework
 
-This section uses and follows the code explained in the [Entity Framework data binding](./data-binding/#entity-framework) section hence it is recommended to refer Entity framework data binding section before continue this section.
+This section uses and follows the code explained in the [Entity Framework data binding](./data-binding/#entity-framework) section hence it is recommended to refer Entity Framework data binding section before continue this section.
 
 ### Handle CRUD in data access layer class
 

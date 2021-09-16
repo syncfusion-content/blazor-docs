@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Calculate column value based on other columns - Blazor TreeGrid | Syncfusion
+title: Calculate column value in Blazor TreeGrid | Syncfusion
 description: Learn here all about how to calculate column value based on other columns in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid

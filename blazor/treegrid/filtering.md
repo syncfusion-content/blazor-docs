@@ -191,7 +191,7 @@ greaterthanorequal|Checks whether a value is greater than or equal to the specif
 lessthan |Checks whether the value is lesser than the specified value. |Number &#124; Date
 lessthanorequal |Checks whether the value is lesser than or equal to the specified value. |Number &#124; Date
 
-> By default, the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings~Operators.html) value is **equal**.
+> By default, the [Operator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridFilterSettings.html#Syncfusion_Blazor_TreeGrid_TreeGridFilterSettings_Operators) value is **equal**.
 
 ## Filter bar
 
@@ -280,7 +280,7 @@ namespace TreeGridComponent.Data {
 
 ## Filter bar template with custom component
 
-The [FilterBarTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~FilterBarTemplate.html) is used to add custom components to a particular column.
+The [FilterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property is used to add custom components to a particular column. To access the filtered values inside the `FilterTemplate`, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
 In the following sample, the dropdown is used as a custom component in the Duration column.
 
@@ -301,6 +301,8 @@ In the following sample, the dropdown is used as a custom component in the Durat
             <FilterTemplate>
                 <SfDropDownList TValue="string" DataSource="@DropDownData" TItem="string">
                     <DropDownListEvents ValueChange="change" TValue="string"></DropDownListEvents>
+                <SfDropDownList TValue="string"c DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
+                    <DropDownListEvents ValueChange="change" TValue="string" ></DropDownListEvents>
                 </SfDropDownList>
             </FilterTemplate>
         </TreeGridColumn>
@@ -452,12 +454,12 @@ namespace TreeGridComponent.Data {
 
 ![Filter Menu](images/filtermenu.png)
 
-> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowFiltering.html) must be set as true to enable filter menu.
-> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowFiltering.html) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as false will prevent filter menu rendering for a particular column.
+> * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) must be set as true to enable filter menu.
+> * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as false will prevent filter menu rendering for a particular column.
 
 ## Custom component in filter menu
 
-The `FilterTemplate` property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~FilterTemplate.html) is used to add custom filter components to a particular column.
+The [`FilterTemplate`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_FilterTemplate) property of [`Column`] is used to add custom filter components to a particular column. In the following sample the FilterTemplate property is used to add custom components to a particular column. To access the filtered values inside the FilterTemplate, you can use the implicit named parameter context. You can type cast the context as `PredicateModel<T>` to get filter values inside template.
 
 In the following sample, dropdown is used as custom component in the duration column.
 
@@ -477,8 +479,8 @@ In the following sample, dropdown is used as custom component in the duration co
         <TreeGridColumn Field="StartDate" HeaderText="Start Date" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
             <FilterTemplate>
-                <SfDropDownList TValue="int?" DataSource="@TreeGridData" TItem="BusinessObject">
-                <DropDownListFieldSettings Value="Duration"></DropDownListFieldSettings>
+                <SfDropDownList TValue="string"c DataSource="@DropDownData" TItem="string" Value="@((string)(context as PredicateModel).Value)">
+                    <DropDownListEvents ValueChange="change" TValue="string" ></DropDownListEvents>
                 </SfDropDownList>
             </FilterTemplate>
         </TreeGridColumn>
@@ -543,7 +545,7 @@ namespace TreeGridComponent.Data {
 
 Both the **Menu** and **Excel** filter can be used in a same Tree Grid. To do so, set the type as **Menu** or **Excel** using the [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Filter.html) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
 
-In the following sample menu filter is enabled by default and excel filter is enabled for the Task Name column using the  [Filter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Filter.html)  property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
+In the following sample menu filter is enabled by default and excel filter is enabled for the Task Name column using the  [Filter] property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
 
 {% tabs %}
 

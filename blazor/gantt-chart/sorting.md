@@ -107,7 +107,7 @@ To enable sorting in the Gantt Chart component, set the `AllowSorting` property 
 
 The following screenshot shows the output of multicolumn sorting in Gantt Chart component.
 
-![Alt text](images/multiSorting.png)
+![MultiColumn Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-multi-column-sorting.png)
 
 > * Gantt Chart columns are sorted in the ascending order. If you click the already sorted column, the sort direction toggles.
 > * To disable sorting for a particular column, set the `GanttColumn.AllowSorting` property to false.
@@ -316,7 +316,7 @@ Columns in the Gantt Chart component can be sorted dynamically using the `SortBy
 }
 ```
 
-![Alt text](images/sortColumn.gif)
+![Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-sorting.png)
 
 ## Clear all the Sorted Columns dynamically
 
@@ -426,7 +426,7 @@ In the Gantt Chart component, you can clear all the sorted columns and return to
 }
 ```
 
-![Alt text](images/clearSort.gif)
+![Clear Sorting in Blazor Gantt Chart](images/blazor-gantt-chart-clear-sorting.png)
 
 ## Sorting Events
 

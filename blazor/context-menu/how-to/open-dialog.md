@@ -65,5 +65,5 @@ In the following sample, Dialog will open while clicking `Save As...` item.
 
 ```
 
-Output be like
+Output will be as follows
 ![Blazor ContextMenu](./../images/blazor-contextmenu.png)

@@ -568,7 +568,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
     }
 ```
 
-On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
