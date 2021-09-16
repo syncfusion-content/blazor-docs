@@ -258,7 +258,7 @@ public class TreeData
 
 ## Row template
 
-The **RowTemplate** has an option to customise the look and behavior of the tree grid rows. The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) property accepts either
+The **RowTemplate** has an option to customize the look and behavior of the tree grid rows. The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) property accepts either
 the **template** string or HTML elements.
 
 {% tabs %}
