@@ -42,7 +42,7 @@ The **Localization** library allows to localize default text content of the Tree
 
 In the following examples, demonstrate how to enable **Localization** for Tree Grid in server side Blazor samples. Here, the Resource file is used to translate the static text of the Tree Grid.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different language. Refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different language. Refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -313,7 +313,7 @@ Excelexport | Excel Export
 Wordexport | Word Export
 Csvexport | CSV Export
 Search | Search
-Columnchooser | Columns
+Column chooser | Columns
 Save | Save
 Item | item
 Items | items
@@ -348,7 +348,7 @@ Copy | Copy
 Group | Group by this column
 Ungroup | Ungroup by this column
 autoFitAll | AutoFit all columns
-autoFit | AutoFit this column
+AutoFit | AutoFit this column
 Export | Export
 FirstPage | First Page
 LastPage | Last Page
