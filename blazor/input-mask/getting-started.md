@@ -22,7 +22,7 @@ To get start quickly with Blazor MaskedTextBox component, you can check on this 
 
     > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
     ```html
     <head>

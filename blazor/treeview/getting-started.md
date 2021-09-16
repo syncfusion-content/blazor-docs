@@ -37,7 +37,7 @@ Use any one of the below standards to install the Syncfusion Blazor library in t
 3. Once the installation process is completed, the Syncfusion Blazor Navigation package will be installed in the project.
 
 
-4. Add the client-side style resources from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+4. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>

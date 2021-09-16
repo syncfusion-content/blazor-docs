@@ -15,7 +15,7 @@ This section briefly explains how to include a Sparkline component in the Blazor
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. Add the client-side resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>

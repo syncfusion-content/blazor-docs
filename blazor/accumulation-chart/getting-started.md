@@ -17,7 +17,7 @@ This section briefly explains about how to include a [Accumulation Chart](https:
 
 1. Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor)  NuGet package to the application by using the [NuGet Package Manager](https://blazor.syncfusion.com/documentation/nuget-packages/).
 
-2. Add the client-side resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page. For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
     <head>

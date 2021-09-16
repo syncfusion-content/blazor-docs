@@ -18,7 +18,7 @@ This section briefly explains about how to include a **Tree Grid** Component in 
 <!-- markdownlint-disable MD033 -->
 
 1. Install **Syncfusion.Blazor.TreeGrid** NuGet package to the application by using the **NuGet Package Manager**. Please ensure to check the **Include prerelease** option.
-2. You can add the client-side resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>

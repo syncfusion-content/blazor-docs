@@ -17,7 +17,7 @@ This section briefly explains about how to include a [Blazor File Upload](https:
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
 <head>
