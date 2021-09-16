@@ -124,7 +124,7 @@ In the `Week` timeline mode, top tier of the schedule header displays the weeks,
 }
 ```
 
-![Alt text](images/weekMode.png)
+![Blazor Gantt Chart with Week Mode](images/blazor-gantt-chart-week-mode.png)
 
 ### Month Timeline Mode
 
@@ -218,7 +218,7 @@ In the `Month` timeline mode, top tier of the schedule header displays the month
 }
 ```
 
-![Alt text](images/monthMode.png)
+![Blazor Gantt Chart with Month Timeline Mode](images/blazor-gantt-chart-month-mode.png)
 
 ### Year Timeline Mode
 
@@ -313,7 +313,7 @@ In the `Year` timeline mode, top tier of the schedule header displays the years,
 }
 ```
 
-![Alt text](images/yearMode.png)
+![Blazor Gantt Chart with Year Timeline Mode](images/blazor-gantt-chart-year-mode.png)
 
 ### Day Timeline Mode
 
@@ -408,7 +408,7 @@ In the `Day` timeline mode, top tier of the schedule header displays the days, w
 
 ```
 
-![Alt text](images/dayMode.png)
+![Blazor Gantt Chart with Day Timeline Mode](images/blazor-gantt-chart-day-mode.png)
 
 ### Hour Timeline Mode
 
@@ -502,7 +502,7 @@ An `Hour` timeline mode tracks the tasks in minutes scale. In this mode, the top
 }
 ```
 
-![Alt text](images/hourMode.png)
+![Blazor Gantt Chart with Hour Timeline Mode](images/blazor-gantt-chart-hour-mode.png)
 
 ## Top Tier and Bottom Tier
 
@@ -605,7 +605,7 @@ Gantt Chart component contains two tier layout in timeline, we can customize the
 }
 ```
 
-![Alt text](images/topBottomTier.png)
+![Blazor Gantt Chart with Top and Bottom Tier](images/blazor-gantt-chart-top-bottom-tier.png)
 
 ### Combining Timeline Cells
 
@@ -701,7 +701,7 @@ In Gantt Chart, timeline cells in top tier and bottom tier can be combined with 
 }
 ```
 
-![Alt text](images/combineCells.png)
+![Combining Timeline Cells in Blazor Gantt Chart](images/blazor-gantt-chart-combine-cells.png)
 
 ### Customize Header Timeline Cells
 
@@ -925,7 +925,7 @@ In the Gantt Chart component, you can define the width value of timeline cell us
 }
 ```
 
-![Alt text](images/timelineWidth.png)
+![Customizing Timeline Width in Blazor Gantt Chart](images/blazor-gantt-chart-time-line-width.png)
 
 ## Week Start Day Customization
 
@@ -1025,7 +1025,7 @@ In the Gantt Chart component, you can customize the week start day using the `Ga
 }
 ```
 
-![Alt text](images/weekStartDay.png)
+![Customizing Week Start Day in Blazor Gantt Chart](images/blazor-gantt-chart-week-start-day.png)
 
 ## Customize Automatic Timescale Update action
 
@@ -1242,7 +1242,7 @@ This support is used to view all the tasks available in a project to specific ti
 }
 ```
 
-![Alt text](images/zooming.png)
+![Zooming in Blazor Gantt Chart](images/blazor-gantt-chart-zooming.png)
 
 ## Zoom action by methods
 
@@ -1363,4 +1363,4 @@ Zooming action also can be performed on external actions such as button click us
 }
 ``` -->
 
-![Alt text](images/zoomMethods.gif)
+![Zooming in Blazor Gantt Chart](images/blazor-gantt-chart-zooming.png)

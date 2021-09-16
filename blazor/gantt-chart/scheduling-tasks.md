@@ -214,7 +214,7 @@ When the `TaskMode` property is set as `Manual`, the start date and end date of 
 }
 ```
 
-![Alt text](images/manual.png)
+![Blazor Gantt Chart displays Manual Schedule Task](images/blazor-gantt-chart-manual-schedule-task.png)
 
 ## Custom
 
@@ -319,7 +319,7 @@ If we want to use some specific task mode for specific tasks, then we can set th
 
 ```
 
-![Alt text](images/custom.png)
+![Blazor Gantt Chart with Custom Scheduled Task](images/blazor-gantt-chart-custom-schedule-task.png)
 
 ## Unscheduled Tasks
 
@@ -327,21 +327,21 @@ Unscheduled tasks are planned for a project without any definite schedule dates.
 
 ### Start Date Only
 
-![Alt text](images/startDate-only.png)
+![Blazor Gantt Chart with Start Date Task](images/blazor-gantt-chart-start-date-task.png)
 
 ### End Date Only
 
-![Alt text](images/endDate-only.png)
+![Blazor Gantt Chart with End Date Task](images/blazor-gantt-chart-end-date-task.png)
 
 ### Duration Only
 
-![Alt text](images/duration-only.png)
+![Blazot Gantt Chart with Duration Task](images/blazor-gantt-chart-duration-task.png)
 
 ### Milestone
 
 A milestone is a task that has no start and end dates, but it has a duration value of zero. It is represented as follows.
 
-![Alt text](images/milestone.png)
+![Blazor Gantt Chart with Milestone Task](images/blazor-gantt-chart-milestone-task.png)
 
 ## Define Unscheduled Tasks in Data Source
 
@@ -408,7 +408,7 @@ You can define the various types of unscheduled tasks in the data source as foll
 }
 ```
 
-![Alt text](images/unscheduledTasks.png)
+![Blazor Gantt Chart displays Unscheduled Task](images/blazor-gantt-chart-unscheduled-tasks.png)
 
 > If the `AllowUnscheduledTasks` property is set to false, then the Gantt Chart component automatically calculates the scheduled date values with a default value of duration 1 and the project start date is considered as the start date for the task.
 
@@ -513,7 +513,7 @@ The following code snippet explains how to define the working time range for the
 
 The following screen shot shows working time range in Gantt Chart component.
 
-![Alt text](images/working-time-range.png)
+![Blazor Gantt Chart displays Working Time Range](images/blazor-gantt-chart-working-time-range.png)
 
 >* Individual tasks can lie between any time within the defined working time range of the project.
 >* The `GanttDayWorkingTime` property is used to define the working time for the whole project.
@@ -616,7 +616,7 @@ Non-working days/weekends are used to represent the non-productive days in a pro
 }
 ```
 
-![Alt text](images/changeWorkweek.png)
+![Changing Work Week Schedule in Blazor Gantt Chart](images/blazor-gantt-chart-change-work-week.png)
 
 > By default, Saturdays and Sundays are considered as non-working days/weekend in a project.
 > In the Gantt Chart component, you can make weekend as working day by setting the `IncludeWeekend` property to `true`.
