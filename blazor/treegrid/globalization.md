@@ -36,13 +36,13 @@ namespace BlazorApplication
 
 ## Localization
 
-The **Localization** library allows you to localize default text content of the Tree Grid. The Tree Grid component has static text on some features (like pager information text, context menu options text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.).
+The **Localization** library allows to localize default text content of the Tree Grid. The Tree Grid component has static text on some features (like pager information text, context menu options text, etc.) that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
 ### Blazor Server Side
 
-In the following examples, demonstrate how to enable **Localization** for Tree Grid in server side Blazor samples. Here, we have used Resource file to translate the static text of the Tree Grid.
+In the following examples, demonstrate how to enable **Localization** for Tree Grid in server side Blazor samples. Here, the Resource file is used to translate the static text of the Tree Grid.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different language. Refer [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link to know more about how to configure and use localization in the ASP.Net Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -287,7 +287,7 @@ public class TreeData
 
 ### Blazor WebAssembly
 
-For Blazor WebAssembly, we use **JSON** file which contains translated text of the culture.
+For Blazor WebAssembly, use **JSON** file which contains translated text of the culture.
 
 The following list of properties and its values are used in the Tree Grid.
 
@@ -329,7 +329,7 @@ BatchSaveLostChanges | Unsaved changes will be lost. Are you sure you want to co
 ConfirmDelete | Are you sure you want to Delete Record?
 CancelEdit | Are you sure you want to Cancel the changes?
 ChooseColumns | Choose Column
-SearchColumns | search columns
+SearchColumns | Search columns
 Matchs | No Matches Found
 FilterButton | Filter
 ClearButton | Clear
@@ -390,7 +390,7 @@ All | All
 
 ### Loading translations
 
-The following example demonstrates the Tree Grid in **Deutsch** culture. Here we use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the Tree Grid.
+The following example demonstrates the Tree Grid in **Deutsch** culture. Here use **LoadLocaleData** method to load the **locale.json** file and **SetCulture** method to set the culture of the Tree Grid.
 
 {% tabs %}
 
@@ -518,7 +518,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
 
 ![Localization](images/localization.png)
 
@@ -2752,16 +2751,14 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Internationalization](images/international.png)
 
 > * In the above sample, **Duration** column is formatted by **NumberFormatOptions**.
-> * By default, **locale** value is **en-US**. If you want to change the **en-US** culture to a different culture, you have to set accordingly in **SetCulture** method.
+> * By default, **locale** value is **en-US**. In order to change the **en-US** culture to a different culture, set the **SetCulture** method accordingly.
 
 ## Right to left (RTL)
 
-RTL provides an option to switch the text direction and layout of the Tree Grid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the Below sample **EnableRtl** method is used to enable RTL in the Tree Grid.
+RTL provides an option to switch the text direction and layout of the Tree Grid component from right to left. It improves the user experiences and accessibility for users who use right-to-left languages (Arabic, Farsi, Urdu, etc.). In the below sample **EnableRtl** method is used to enable RTL in the Tree Grid.
 
 {% tabs %}
 
@@ -2885,6 +2882,5 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
 
 ![RTL](images/rtl.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Print in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about print in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Print in Blazor TreeGrid Component
 
-To print the Tree Grid, use the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method from tree grid instance. The print option can be displayed on the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.
+To print the Tree Grid, use the [Print](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Print.html) method from the tree grid instance. The print option can be displayed on the [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) by adding the **Print** toolbar item.
 
 {% tabs %}
 
@@ -75,13 +75,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Print](images/printing.png)
 
 ## Page setup
 
-Some of the print options cannot be configured through JavaScript code. So, you have to customize the layout, paper size, and margin options using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
+Some of the print options cannot be configured through JavaScript code. So the layout, paper size, and margin options have to customized using the browser page setup dialog. Please refer to the following links to know more about the browser page setup:
 
 * [Chrome](https://support.google.com/chrome/answer/1069693?hl=en&visit_id=1-636335333734668335-3165046395&rd=1)
 * [Firefox](https://support.mozilla.org/en-US/kb/how-print-web-pages-firefox)
@@ -163,8 +161,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Print Button](images/printbutton.png)
 
 ## Print the visible page
@@ -236,7 +232,6 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
 
 ![Print visible Page](images/visiblepage.png)
 
@@ -244,7 +239,7 @@ The following output is displayed as a result of the above code example.
 
 By default, the browser uses A4 as page size option to print pages and to adapt the size of the page the browser print preview will auto-hide the overflowed contents. Hence tree grid with large number of columns will cut off to adapt the print page.
 
-To show large number of columns when printing, adjust the scale option from print option panel based on your content size.
+To show large number of columns when printing, adjust the scale option from the print option panel based on the content size.
 
 ![Scale Option Setting](./images/print-preview.png)
 
