@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn more about getting started with Blazor Circular Gauge component of Syncfusion.
+description: Checkout and learn more about getting started with the Blazor Circular Gauge component of Syncfusion.
 platform: Blazor
 control: Circular Gauge
 documentation: ug

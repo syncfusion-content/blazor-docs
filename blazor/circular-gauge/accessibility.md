@@ -10,7 +10,7 @@ documentation: ug
 
 # Accessibility in Blazor Circular Gauge Component
 
-The Circular Gauge provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved through the attributes such as `aria-label`. It helps to provide information about elements in a document for assistive technology.
+The Circular Gauge provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved through the attributes such as `aria-label`. It helps to provide information about elements in a document for assistive technology.
 
 **Aria-label:** Provides the text label with some default description for the following elements in gauge.
 

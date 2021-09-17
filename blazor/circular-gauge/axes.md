@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axes in Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn here all about Axes in Syncfusion Blazor Circular Gauge component and much more.
+description: Checkout and learn here all about Axes in the Syncfusion Blazor Circular Gauge component and much more.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
