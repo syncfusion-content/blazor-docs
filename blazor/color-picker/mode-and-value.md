@@ -22,14 +22,14 @@ In the following sample, it will render the `Palette` at initial load.
 <SfColorPicker Mode="ColorPickerMode.Palette"></SfColorPicker>
 ```
 
-Output be like
+Output will be like
 ![Blazor ColorPicker with Palette](./images/blazor-colorpicker-with-palette.png)
 
 ## Color value
 
 The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property can be used to specify the color value to the Color Picker. It supports either `three` or `six` digit hex codes. To include `opacity`, set the color value as `four` or `eight` digit hex code.
 
-In the following sample, the color value sets as `four` digit hex code, the last digit represents the `opacity` value.
+In the following sample, the color value is set as `four` digit hex code, the last digit represents the `opacity` value.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -38,7 +38,7 @@ In the following sample, the color value sets as `four` digit hex code, the last
 <SfColorPicker Value="035a" ModeSwitcher="false"></SfColorPicker>
 ```
 
-Output be like below,
+Output will be like below,
 ![Changing Blazor ColorPicker value](./images/blazor-colorpicker-value.png)
 
 > The [Value](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_Value) property supports hex code with or without `#` prefix.

@@ -9,14 +9,14 @@ documentation: ug
 
 # Overview of Blazor Extension for Visual Studio
 
-The [Syncfusion Blazor Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) makes it easier to use the Syncfusion component by creating Syncfusion Blazor application in Visual Studio and updating the Syncfusion version from the application.
+The [Syncfusion Blazor Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) simplifies the use of the Syncfusion Blazor components by configuring the Syncfusion Blazor NuGet packages and themes.
 
-The following Extensions supports are provided by Syncfusion Blazor in Visual Studio:
+The Syncfusion Blazor extensions provides the following add-ins in Visual Studio:
 
-[Project-Template](./visual-studio-extensions/template-studio):  Creates a Syncfusion Blazor application by adding the required Syncfusion Blazor components.
+[Project-Template](./visual-studio-extensions/template-studio):  Creates Syncfusion Blazor applications with required configuration for development with Syncfusion Blazor component.
 
-[Code Generator](./visual-studio-extensions/code-generator):  Add Syncfusion Blazor component code in razor file at required place.
+[Code Generator](./visual-studio-extensions/code-generator):  Adds Syncfusion Blazor component code in razor file at required place.
 
-[Convert project](./visual-studio-extensions/convert-project):  Converts the existing Blazor application to the Syncfusion Blazor application by adding the required NuGet Syncfusion and CDN links.
+[Convert project](./visual-studio-extensions/convert-project):  Converts an existing Blazor Web Application to a Syncfusion Blazor Web Application by importing the necessary Syncfusion NuGet packages.
 
-[Upgrade project](./visual-studio-extensions/upgrade-project):  Upgrades the existing Syncfusion Blazor application from one version of Essential Studio to another.
+[Upgrade project](./visual-studio-extensions/upgrade-project):  Upgrades the existing Syncfusion Blazor Web Application from one Essential Studio version to another version.

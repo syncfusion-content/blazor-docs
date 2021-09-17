@@ -578,5 +578,4 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-
 ![Blazor Gantt Chart](../images/blazor-gantt-chart.gif)

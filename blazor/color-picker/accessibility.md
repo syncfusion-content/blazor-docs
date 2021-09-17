@@ -13,7 +13,7 @@ documentation: ug
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies. It helps to provide information about the widget for assistive technology to the disabled person in screen reader.
 
-Color Picker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. WAI-ARIA supports is achieved through the attributes like `aria-label`and `aria-selected` applied to the color palette tiles.
+Color Picker provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. WAI-ARIA support is achieved through the attributes like `aria-label`and `aria-selected` applied to the color palette tiles.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
