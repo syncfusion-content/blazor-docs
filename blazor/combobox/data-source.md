@@ -130,7 +130,7 @@ The output will be as follows.
 
 The ComboBox supports retrieval of data from remote data services with the help of [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_Query) property is used to fetch data from the database and bind it to the ComboBox.
 
-In the following sample, displayed first 6 contacts from the **Customers** table of `Northwind` Data Service.
+In the following sample, First 6 contacts are displayed from the **Customers** table of `Northwind` Data Service.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -191,7 +191,7 @@ Use the `WebApiAdaptor` to bind ComboBox with Web API created using OData.
 }
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Blazor ComboBox with Web API Data](./images/blazor-combobox-web-api-data.png)
 
@@ -382,7 +382,7 @@ namespace EFDropDown.Shared.DataAccess
 
 ### Create data access layer to perform data operation
 
-Now you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
+Now, you need to create a class named **OrderDataAccessLayer**, which act as data access layer for retrieving the records from the database table.
 
 ```csharp
 using Microsoft.EntityFrameworkCore;
@@ -463,7 +463,7 @@ namespace EFDropDown.Controllers
 
 ### Configure ComboBox component using Web API adaptor
 
-Now you can configure the ComboBox using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
+Now, you can configure the ComboBox using the **'SfDataManager'** to interact with the created Web API and consume the data appropriately. To interact with web api, you need to use WebApiAdaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
