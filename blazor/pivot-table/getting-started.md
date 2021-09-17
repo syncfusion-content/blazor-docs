@@ -24,7 +24,7 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
 ## Importing Syncfusion Blazor Pivot Table component in the application
 
 1. Install the **Syncfusion.Blazor.PivotTable** NuGet package to the application by using the **NuGet Package Manager**.
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
  ```html
 <head>
@@ -454,11 +454,11 @@ The filter axis contains collection of fields that would act as master filter ov
 
 ```
 
-![output](images/gs_slicer_fieldlist.png "Filter axis in field list")
+![output](images/gs_slicer_fieldlist.png)
 <br/>
 <br/>
 <br/>
-![output](images/gs_slicer.png "Filter axis in grouping bar")
+![output](images/gs_slicer.png)
 
 ## Calculated Field
 
@@ -504,11 +504,11 @@ The calculated field feature allows user to insert or add a new calculated field
 
 ```
 
-![output](images/gs_calc_button.png "Enabling calculated field in field list UI")
+![output](images/gs_calc_button.png)
 <br/>
-![output](images/gs_calc_dialog.png "Creating new calculated field through dialog")
+![output](images/gs_calc_dialog.png)
 <br/>
-![output](images/gs_calc_grid.png "New calculated field 'Total Amount' added in pivot table")
+![output](images/gs_calc_grid.png)
 
 > You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
 
