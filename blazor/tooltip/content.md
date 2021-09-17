@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about Content in Syncfusion Blazor Tooltip component and much more details.
+description: Checkout and learn here all about content in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
