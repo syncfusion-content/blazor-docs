@@ -1132,7 +1132,7 @@ public class WrapData
 
 {% endtabs %}
 
-![Drag and drop within TreeGrid](images/draganddrop.gif)
+![Drag and drop within TreeGrid](images/draganddrop.png)
 
 > Selection feature must be enabled for row drag and drop.
 > For multiple row selection, the type property must be set to multiple.
@@ -1667,7 +1667,7 @@ public class WrapData
 
 {% endtabs %}
 
-![ Drag and drop to another TreeGrid](images/dragdropanothergrid.gif)
+![ Drag and drop to another TreeGrid](images/dragdropanothergrid.png)
 
 ### Drag and drop events
 

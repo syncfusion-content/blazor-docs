@@ -192,7 +192,7 @@ The tool bar items can be enabled or disabled by using the [EnableToolbarItems](
 ```
 
 The following screenshots represent a Tree Grid with Enable/disable toolbar items,
-![Enable/disable Toolbar items](images/enabledisable.gif)
+![Enable/disable Toolbar items](images/enabledisable.png)
 
 <!--
 Custom toolbar items
