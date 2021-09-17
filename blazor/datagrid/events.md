@@ -2179,7 +2179,7 @@ The events should be provided to the datagrid using **GridEvents** component. Wh
         await this.Grid.ExcelExport();
     }
 
-    public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs<Order> args)
+    public void ExcelAggregateTemplateInfoHandler(ExcelAggregateEventArgs args)
     {
         // Here you can customize your code
     }

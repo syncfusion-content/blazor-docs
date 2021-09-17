@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Filtering in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Filtering in Syncfusion Blazor ComboBox component and much more details.
+description: Checkout and learn here all about Filtering in the Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -35,7 +35,7 @@ The ComboBox has built-in support to filter data items when [AllowFiltering](htt
 
 The output will be as follows.
 
-![ComboBox](./images/filter.png)
+![Filtering in Blazor ComboBox](./images/blazor-combobox-filtering.png)
 
 ## Custom Filtering
 

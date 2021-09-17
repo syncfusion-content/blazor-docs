@@ -13,7 +13,7 @@ The localization library allows localizing the default text content of the Maps 
 
 <!-- markdownlint-disable MD033 -->
 
-The following is the list of properties that is available in the "**.resx**" file under the **Resource** folder and its values used in the Maps component.
+The following is the list of properties that is available in the **.resx** file under the **Resource** folder and its values used in the Maps component.
 
 <table>
 <tr>

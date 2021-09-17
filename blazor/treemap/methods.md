@@ -13,7 +13,7 @@ Create an object for the TreeMap component using `@ref` property and call the de
 
 ## Print
 
-To print the rendered TreeMap component by setting the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true**.
+To print the rendered TreeMap component by setting the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_AllowPrint) property to **true** and using the `PrintAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap;

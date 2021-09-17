@@ -45,14 +45,14 @@ The [ShapeSelectionAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-## RefreshAsync
+## Refresh
 
-The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#methods) method can be used to change the state of the component and render it again. In the following example, the Maps is rendered again using the [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method.
+The [Refresh](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Refresh) method can be used to change the state of the component and render it again.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
-<button @onclick="RefreshAsync">Refresh</button>
+<button @onclick="Refresh">Refresh</button>
 <SfMaps @ref="maps">
     <MapsZoomSettings Enable="true" EnablePanning="true">
     </MapsZoomSettings>
@@ -64,9 +64,9 @@ The [RefreshAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.
 
 @code {
     SfMaps maps;
-    public async Task RefreshAsync()
+    public void Refresh()
     {
-        await maps.RefreshAsync();
+        await maps.Refresh();
     }
 }
 ```

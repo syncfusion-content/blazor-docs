@@ -13,6 +13,8 @@ The uploader component allows you to upload the files asynchronously. The upload
 *  The save action is necessary to handle the upload operation.
 *  The remove action is optional, one can handle the removed files from server.
 
+>The name attribute must match the name of a parameter in the POST method. For more information, refer [here](https://docs.microsoft.com/en-us/aspnet/core/mvc/models/file-uploads?view=aspnetcore-3.1#match-name-attribute-value-to-parameter-name-of-post-method). The name attribute is automatically generated from the control’s ID property. If the name attribute differs from the ID property, then you can use the htmlAttributes property to set the name attribute directly to the input element. For more information refer [here](./how-to/html-attributes).
+
 The file can be uploaded automatically or manually. For more information, you can refer to the [Auto Upload](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_AutoUpload) section from the documentation.
 
 ## Multiple file upload
@@ -64,11 +66,11 @@ By default, the uploader processes the files to upload once the files are select
 
 The auto upload output will be as follows.
 
-![uploader](./images/Auto_Upload.png)
+![Auto Uploading File in Blazor FileUpload](./images/blazor-fileupload-with-auto-upload-file.png)
 
 The auto upload false output will be as follows.
 
-![uploader](./images/Auto_Upload_false.png)
+![Failing Auto Upload File in Blazor Upload](./images/blazor-fileupload-failed-auto-upload-file.png)
 
 ## Sequential upload
 
@@ -85,9 +87,9 @@ By default, the uploader component process multiple files to upload simultaneous
 </SfUploader>
 ```
 
-## Preload files
+## Preloaded files
 
-The uploader component allows you to preload the list of files that are uploaded in the server. The preloaded files are useful to view and remove the files from server that can be achieved by the [Files](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Files) property. By default, the files are configured with uploaded successfully state on rendering file list. The following properties are mandatory to configure the preloaded files:
+The uploader component allows you to pre load the list of files that are uploaded in the server. The preloaded files are useful to view and remove the files from server that can be achieved by the [Files](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfUploader.html#Syncfusion_Blazor_Inputs_SfUploader_Files) property. By default, the files are configured with uploaded successfully state on rendering file list. The following properties are mandatory to configure the preloaded files:
 
 * Name
 * Size
@@ -111,4 +113,4 @@ The uploader component allows you to preload the list of files that are uploaded
 
 The output will be as follows.
 
-![uploader](./images/PreloadFiles.png)
+![Blazor FileUpload displays Preloaded Files](./images/blazor-fileupload-with-preload-files.png)

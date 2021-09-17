@@ -9,9 +9,9 @@ documentation: ug
 
 # Process the Blazor TreeView node operations using context menu
 
-You can integrate the context menu with `TreeView` component in order to perform the TreeView related operations like add, remove and renaming node.
+The context menu can be integrated with `TreeView` component in order to perform the TreeView related operations like add, remove and renaming node.
 
-Following is an example which demonstrates the above cases which are used to manipulate TreeView operations in the `ItemSelected` event of context menu.
+Following example demonstrates the above cases which are used to manipulate TreeView operations in the `ItemSelected` event of context menu.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -243,7 +243,5 @@ Following is an example which demonstrates the above cases which are used to man
     }
 }
 ```
-
-Output be like the below.
 
 ![TreeView Sample](../images/context-menu.png)

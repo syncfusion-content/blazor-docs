@@ -113,7 +113,6 @@ To render a Step line series, use series [Type](https://help.syncfusion.com/cr/b
 </SfRangeNavigator>
 
 @code {
-
     public class StockDetails
     {
         public DateTime Date { get; set; }

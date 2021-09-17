@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Source in Blazor DropDown List Component
 
-The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager_members.html).
+The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-js2) adaptors.
 
@@ -75,7 +75,7 @@ In the following example, `Name` column from complex data have been mapped to th
 
 The output will be as follows.
 
-![DropdownList](./images/data_binding_02.png)
+![Binding BLazor DropdownList Items](./images/blazor-dropdownlist-binding-items.png)
 
 ### Array of complex data
 
@@ -125,7 +125,7 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
 
 The output will be as follows.
 
-![DropdownList](./images/complex_data.png)
+![Binding Complex Items with Blazor DropdownList](./images/blazor-dropdownlist-complex-data.png)
 
 ## Binding remote data
 
@@ -164,7 +164,7 @@ The following sample displays the first 6 contacts from **Customers** table of t
 
 The output will be as follows.
 
-![DropdownList](./images/remote_data.png)
+![Blazor DropdownList with Data Binding](./images/blazor-dropdownlist-binding-data.png)
 
 ### Web API Adaptor
 
@@ -194,7 +194,7 @@ Use the `WebApiAdaptor` to bind DropDownList with Web API created using OData.
 
 The output will be as follows.
 
-![DropdownList](./images/api_data.png)
+![Blazor DropdownList with Web API Data](./images/blazor-dropdownlist-web-api-data.png)
 
 ### Custom Adaptor
 
@@ -303,7 +303,7 @@ The following example for remote data binding and enabled offline mode.
 
 The output will be as follows.
 
-![DropdownList](./images/api_data.png)
+![Blazor DropdownList in Offline Mode](./images/blazor-dropdownlist-web-api-data.png)
 
 ### Enum data binding
 
@@ -337,7 +337,26 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 The output will shown as follows,
 
-![Enum data](./images/drop-down-enum-data.png)
+![Blazor DropDownList with Enum Data](./images/blazor-dropdownlist-enum-data.png)
+
+### ValueTuple data binding
+
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfDropDownList TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+                DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <DropDownListFieldSettings Value="Item1" Text="Item2" />
+</SfDropDownList>
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList ValueTuple Data](./images/blazor-dropdown-valuetuple.png)
 
 ## Entity Framework
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Remove checkbox of the parent node in Blazor TreeView | Syncfusion
-description: Learn here all about Remove checkbox of the parent node in Syncfusion Blazor TreeView component and more.
+title: Remove the checkbox of the parent node in Blazor TreeView | Syncfusion
+description: Learn here all about how to remove the checkbox of the parent node in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
 ---
 
-# Remove checkbox of the parent node in Blazor TreeView Component
+# Remove the checkbox of the parent node in Blazor TreeView Component
 
-By enabling the `ShowCheckBox` property, you can render check box before each node of TreeView. However, some application needs to render check box in child nodes alone. In such case, you can remove the check box of the parent node by customizing the CSS.
+By enabling the `ShowCheckBox` property, check box could be rendered before each node of TreeView. However, some application needs to render check box in child nodes alone. In such case, remove the check box of the parent node by customizing the CSS.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -111,7 +111,5 @@ By enabling the `ShowCheckBox` property, you can render check box before each no
     }
 </style>
 ```
-
-Output be like the below.
 
 ![TreeView Sample](../images/remove-parent-checkbox.png)
