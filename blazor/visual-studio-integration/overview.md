@@ -7,7 +7,7 @@ component: Common
 documentation: ug
 ---
 
-## Overview
+# Overview
 
 The [Syncfusion Blazor Extension for Visual Studio](https://marketplace.visualstudio.com/items?itemName=SyncfusionInc.Blazor-Extension) simplifies the use of the Syncfusion Blazor components by configuring the Syncfusion Blazor NuGet packages and themes.
 
