@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started - Syncfusion Blazor Server Side App in .NET Core CLI
+# Getting started with Blazor Server Side App in .NET Core CLI
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
 

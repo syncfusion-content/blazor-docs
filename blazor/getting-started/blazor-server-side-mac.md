@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started - Syncfusion Blazor Server Side App in VS for Mac
+# Getting started with Blazor Server Side App in VS for Mac
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
 

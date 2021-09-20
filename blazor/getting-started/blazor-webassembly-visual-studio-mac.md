@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor WebAssembly App in VS for Mac
+# Getting started with Blazor WebAssembly App in VS for Mac
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor components setup,and also build and run a simple Blazor WebAssembly application using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
 

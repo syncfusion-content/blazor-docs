@@ -8,7 +8,7 @@ documentation: ug
 ---
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor Server Side App in VS 2019
+# Getting started with Blazor Server Side App in VS 2019
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup,and also to build and run a simple Blazor Server Side application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
