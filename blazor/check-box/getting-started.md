@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor CheckBox Component | Syncfusion
-description: Checkout and learn about getting started with Blazor CheckBox component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor CheckBox component of Syncfusion.
 platform: Blazor
 control: Checkbox
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 # Getting Started with Blazor CheckBox Component
 
-This section briefly explains about how to include [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) Component in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
-To get start quickly with CheckBox Component using Blazor, you can check on this video:
+To get started quickly with the CheckBox Component using Blazor, you can check out this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=a6HR1QGAvLo"%}
@@ -72,7 +72,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -85,7 +85,7 @@ namespace BlazorApplication
 
 ## Adding component package to the application
 
-Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages otherwise import these packages in the individual `razor` pages.
+Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages. Otherwise, import these packages in the individual `razor` pages.
 
 ```cshtml
 @using Syncfusion.Blazor
