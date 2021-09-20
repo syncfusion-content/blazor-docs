@@ -42,7 +42,7 @@ This section briefly explains how to include a Spinner component in your Blazor 
     </environment>
     </head>
 
-```
+    ```
 
 ## Adding component package to the application
 
