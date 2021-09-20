@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor Server Side App in Visual Studio 2019
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Getting started with Syncfusion Blazor Server Side App in VS 2019
+description: Check out the documentation for Getting started with Syncfusion Blazor, its elements, features, and more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor Components in Blazor Server Side App in Visual Studio 2019
+# Getting started with Syncfusion Blazor Server Side App in VS 2019
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup,and also to build and run a simple Blazor Server Side application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
