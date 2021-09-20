@@ -16,9 +16,9 @@ This section briefly explains how to include a `HeatMap Chart` in your Blazor Se
 ### Using Syncfusion.Blazor NuGet Package [New standard]
 
 1. Install **Syncfusion.Blazor.HeatMap** NuGet package to the application by using the `NuGet Package Manager`. Refer to the Individual NuGet Packages section for the available NuGet packages.
-    ![nuget explorer](images/nuget-explorer1.png)
+    ![Blazor HeatMap Chart NuGet Explorer](images/blazor-heatmap-chart-nuget-explorer.png)
 2. Search Syncfusion.Blazor.HeatMap keyword in the Browse tab and install Syncfusion.Blazor.HeatMap NuGet package in the application.
-    ![nuget-heatmapchart](images/nuget-heatmapchart.png)
+    ![Searching Blazor HeatMap Chart NuGet Package](images/blazor-heatmap-chart-nuget-package.png)
 3. Once the installation process is completed, the Syncfusion Blazor HeatMap package will be installed in the project.
 
     W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
@@ -38,9 +38,9 @@ This section briefly explains how to include a `HeatMap Chart` in your Blazor Se
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.Right-click the project and then select Manage NuGet Packages.
-    ![nuget explorer](images/nuget-explorer1.png)
+    ![Blazor HeatMap Chart NuGet Explorer](images/blazor-heatmap-chart-nuget-explorer.png)
 2. Search Syncfusion.Blazor keyword in the Browse tab and install Syncfusion.Blazor NuGet package in the application.
-    ![select-nuget](images/select-nuget1.png)
+    ![Searching Blazor NuGet Package](images/blazor-nuget-package.png)
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
