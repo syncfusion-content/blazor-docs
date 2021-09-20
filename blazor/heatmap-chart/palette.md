@@ -162,5 +162,4 @@ You can define the colors ranges or color stops for data values in both gradient
 }
 
 ```
-
-![Heatmap Sample](images/palette/colorStops.gif) -->
+ -->

@@ -373,7 +373,7 @@ The following are the legend label display types:
 
 ```
 
-![Heatmap Sample](images/legend/smartLegend.gif)
+
 
 ## Legend Selection
 
