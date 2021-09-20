@@ -50,7 +50,7 @@ The following example demonstrates the usage of standard mask elements.
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/MaskAPI.png)
+![Blazor MaskedTextBox with Standard Mask Elements](./images/blazor-maskedtextbox-with-standard-mask.png)
 
 ## Custom mask elements
 
@@ -78,7 +78,7 @@ In the following example, non-mask element `P` accepts the values `P, A, p, a`, 
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/CustomMask.png)
+![Blazor MaskedTextBox with Custom Mask Elements](./images/blazor-maskedtextbox-with-custom-mask.png)
 
 ### Regular expression
 
@@ -94,7 +94,7 @@ In the following example, regular expression has been set for each input places.
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/RegularExpression.png)
+![Blazor MaskedTextBox with Regular Expression](./images/blazor-maskedtextbox-regular-expression.png)
 
 ## Prompt character
 
@@ -114,4 +114,4 @@ The following example demonstrates the MaskedTextBox with customized prompt char
 
 The output will be as follows,
 
-![MaskedTextBox Sample](./images/Prompt.png)
+![Blazor MaskedTextBox with Prompt Character](./images/blazor-maskedtextbox-with-prompt-char.png)
