@@ -65,7 +65,7 @@ The legend is used to provide the information about the heat map cell. You can e
 
 ```
 
-![Heatmap Sample](images/legend/Visible.png)
+![Legend in Blazor HeatMap Chart](images/legend/blazor-heatmap-chart-legend.png)
 
 ## Legend types
 
@@ -115,7 +115,7 @@ You can change the legend type by using the `Type` property in the `HeatMapPalet
 
 ```
 
-![Heatmap Sample](images/legend/legendTypes.gif)
+![Blazor HeatMap Chart with Fixed Legend](images/legend/blazor-heatmap-chart-fixed-legend.gif)
 
 ## Placement
 
@@ -160,7 +160,7 @@ You can place the legend at left, right, top, or bottom to the heat map layout b
 
 ```
 
-![Heatmap Sample](images/legend/Placement.png)
+![Changing Legend Position in Blazor HeatMap Chart](images/legend/blazor-heatmap-chart-legend-position.png)
 
 ## Alignment
 
@@ -204,7 +204,7 @@ You can align the legend as center, far, or near to the heat map using the `Alig
 
 ```
 
-![Heatmap Sample](images/legend/Alignment.png)
+![Changing Legend Alignment in Blazor HeatMap Chart](images/legend/blazor-heatmap-chart-legend-alignment.png)
 
 ## Legend dimensions
 
@@ -248,7 +248,7 @@ You can change the legend dimensions with values in pixels or percentage by usin
 
 ```
 
-![Heatmap Sample](images/legend/Dimension.png)
+![Changing Legend Dimensions in Blazor HeatMap Chart](images/legend/blazor-heatmap-chart-legend-dimension.png)
 
 <!-- ## Paging for legend
 

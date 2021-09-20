@@ -162,7 +162,7 @@ Now, add the Syncfusion Blazor HeatMap component in any web page `razor` in the 
 }
 ```
 
-![Heatmap Sample](images/heatmap.gif)
+![Blazor HeatMap Chart](images/blazor-heatmap-chart.gif)
 
 ## Run the application
 

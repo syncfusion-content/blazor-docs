@@ -63,7 +63,7 @@ The smooth transition between the given palette colors can be applied for the he
 
 ```
 
-![Heatmap Sample](images/palette/Gradient.png)
+![Blazor HeatMap Chart with Gradient Palette](images/palette/blazor-heatmap-chart-gradient-palette.png)
 
 ### Fixed
 
@@ -113,7 +113,7 @@ In fixed palette type, solid colors are applied to the heat map cells. The data 
 
 ```
 
-![Heatmap Sample](images/palette/fixed.gif)
+![Blazor HeatMap Chart with Fixed Palette](images/palette/blazor-heatmap-chart-fixed-palette.png)
 
 <!-- ## Defining color stops
 
