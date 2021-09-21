@@ -85,4 +85,4 @@ The `MaxCount` property is used to specify the maximum cards hold on particular 
 
 Output be like the below.
 
-![validation](./images/validation.png)
+![Validation in Blazor Kanban](./images/blazor-kanban-validation.png)
