@@ -113,7 +113,7 @@ After successful compilation of your application, run the application.
 
 The output will be as follows.
 
-![intialize](./images/initialize.png)
+![Blazor Kanban Component](./images/blazor-kanban-component.png)
 
 ## Populating cards
 
@@ -159,7 +159,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 The output will be as follows.
 
-![default](./images/default.png)
+![Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)
 
 ## Enable Swimlane
 
@@ -226,7 +226,7 @@ The output will be as follows.
 
 The output will be as follows.
 
-![swimlane](./images/swimlane.png)
+![Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)
 
 ## See Also
 

@@ -67,7 +67,7 @@ This data type is a collection of one dimensional array objects, at which each i
 
 ```
 
-![Heatmap Sample](images/data/ArrayTabel.png)
+![Data Binding in Blazor HeatMap Chart](images/data/blazor-heatmap-chart-data-binding.png)
 
 ## Empty points
 
@@ -110,4 +110,4 @@ The data points that use the `null` or `""` or `undefined` as value are consider
 
 ```
 
-![Heatmap Sample](images/data/empty.gif)
+![Blazor HeatMap Chart with Empty Points](images/data/blazor-heatmap-chart-empty-points.png)

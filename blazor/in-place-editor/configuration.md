@@ -367,7 +367,7 @@ In the following code block, indicates the intractable and normal display modes 
 
 The output will be as follows.
 
-![Underline](./images/under-line.png)
+![Blazor In-place Editor Text with Underline](./images/blazor-inplace-editor-text-with-under-line.png)
 
 ## See Also
 
