@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Customize the Blazor Components in Blazor - Syncfusion
-description: Check out the documentation for Customize the Blazor Components in Blazor
+description: Check out and learn how to customize the font size and color in Syncfusion Blazor components and more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to customize the font size and color in Syncfusion Blazor components
+# How to customize font size and color in Syncfusion Blazor components
 
 ## Install Web Compiler
 

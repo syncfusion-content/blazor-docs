@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Live Chart in Blazor Charts Component | Syncfusion
-description: Checkout and learn here all about Live Chart in Syncfusion Blazor Charts component and much more.
+description: Checkout and learn here all about Live Chart in the Syncfusion Blazor Charts component and much more.
 platform: Blazor
 control: Chart
 documentation: ug
@@ -24,7 +24,7 @@ Render a chart with the required series using [ChartSeriesCollection](https://he
     </ChartPrimaryXAxis>
     <ChartPrimaryYAxis Title="Usage" Minimum="0" Interval="20" Maximum="100" >
         <ChartAxisLineStyle Width="0" Color="transparent"></ChartAxisLineStyle>
-    </ChartPrimaryYAxis>
+    </ChartPrimaryYAxis>0
     <ChartSeriesCollection>
         <ChartSeries Type="ChartSeriesType.Line" Width="2" DataSource="@DataPoints"
                         XName="Time" YName="CPU_Usage">

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Built-in Themes in Blazor - Syncfusion
-description: Check out the documentation for Built-in Themes in Blazor
+description: Check out and learn here all about Built-in Themes for the Syncfusion Blazor components and more in the Blazor application.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Built-in Themes
+# Built-in Themes in Blazor
 
 The Syncfusion Blazor components library provides the following list of built-in themes:
 
