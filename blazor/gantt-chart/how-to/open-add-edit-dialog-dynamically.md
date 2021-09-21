@@ -115,4 +115,4 @@ Gantt Chart add and edit dialogs can be opened dynamically by using `OpenAddDial
 }
 ```
 
-![Alt text](../images/addedit.gif)
+![Opening Edit Dialog in Blazor Gantt Chart](../images/blazor-gantt-chart-open-edit-dialog.png)

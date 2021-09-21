@@ -26,7 +26,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -135,7 +135,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Tab provides support to render content using `ContentTemplate` property. You can give preferred content inside the `ContentTemplate` element.
 
-> `ContentTemplate` property supports `RenderFrgament` type to render content.
+> `ContentTemplate` property supports `RenderFragment` type to render content.
 
 The following code explains how to initialize tab content using `ContentTemplate`.
 
