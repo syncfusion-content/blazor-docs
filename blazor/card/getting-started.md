@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card Component | Syncfusion
-description: Checkout and learn more about getting started with Blazor Card component of Syncfusion.
+description: Checkout and learn about getting started with the Blazor Card component of Syncfusion and much more.
 platform: Blazor
 control: Card
 documentation: ug

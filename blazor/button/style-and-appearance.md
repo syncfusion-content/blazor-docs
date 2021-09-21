@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearances in Blazor Button Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearances in Syncfusion Blazor Button component.
+description: Checkout and learn here all about the Styles and Appearances in the Syncfusion Blazor Button component.
 platform: Blazor
 control: Button
 documentation: ug

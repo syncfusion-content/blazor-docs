@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Button Component | Syncfusion
-description: Checkout and learn more about getting started with Blazor Button component of Syncfusion.
+description: Checkout and learn more details about getting started with the Blazor Button component of Syncfusion.
 platform: Blazor
 control: Button
 documentation: ug

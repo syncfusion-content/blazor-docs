@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Calendar Component | Syncfusion
-description: Checkout and learn more about getting started with Blazor Calendar component of Syncfusion.
+description: Checkout and learn more details about getting started with the Blazor Calendar component of Syncfusion.
 platform: Blazor
 control: Calendar
 documentation: ug

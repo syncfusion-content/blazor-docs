@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ButtonGroup Component | Syncfusion
-description: Checkout and learn more about getting started with Blazor ButtonGroup component of Syncfusion.
+description: Checkout and learn more details about getting started with the Blazor ButtonGroup component of Syncfusion.
 platform: Blazor
 control: ButtonGroup
 documentation: ug

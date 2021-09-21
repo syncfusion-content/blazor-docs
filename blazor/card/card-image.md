@@ -44,7 +44,7 @@ Card image is supported to include a `Title` property for the image. By default,
 
 ## Divider
 
-Divider is used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set the `EnableSeperator` property to `true` in card content for adding a divider.
+Divider is used to separate the elements inside the card. You can add divider inside the card elements to separate it. Set the `EnableSeparator` property to `true` in card content for adding a divider.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
