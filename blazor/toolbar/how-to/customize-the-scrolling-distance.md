@@ -207,4 +207,4 @@ The toolbar `ScrollStep` property supports to customize the scrolling distance, 
 ```
 
 
-![Toolbar ScrollStep](../images/toolbar_ScrollStep.gif)
+![Toolbar ScrollStep](../images/toolbar_ScrollStep.png)

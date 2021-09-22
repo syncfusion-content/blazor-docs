@@ -184,4 +184,4 @@ The `Visible` property of the Toolbar item is used to show or hide the item by s
 
 ```
 
-![Dynamic Show/Hide ToolbarItems](../images/showHideItem.gif)
+![Dynamic Show/Hide ToolbarItems](../images/showHideItem.png)
