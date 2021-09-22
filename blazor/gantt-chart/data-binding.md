@@ -118,6 +118,8 @@ public static List<TaskData> GetTaskCollection()
 ```
 
 > * Indent/Outdent is not supported for Hierarchy Data.
+> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
+> * Row Drag and Drop feature is not supported for Hierarchy Data.
 
 ### Self-Referential / Flat Data Binding
 
