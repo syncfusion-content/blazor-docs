@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Two-Way binding in Blazor - Syncfusion
-description: Check out the documentation for Two-Way Binding in Blazor
+description: Check out the documentation for Two-Way Data Binding in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Two-Way Binding
+# Two-Way Data Binding
 
 Two-way Binding is a bi-directional data flow. In two-way binding, data passes from the component to the UI and from the UI to the component class. Two-Way Binding support can be enabled for Syncfusion Blazor components by using `bind-Value` attribute. By default, the `bind-value` attribute binds the data value in the `OnChange` event. The `OnChange` event triggers when the element loses its focus.
 

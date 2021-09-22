@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Observable Collection in Blazor - Syncfusion
-description: Check out the documentation for Observable Collection in Blazor
+description: Check out the documentation for Observable Collection in the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 Observable Collection is a dynamic datasource collection, provides notification when the datasource items are added, removed or updated. The Observable collection triggers the [PropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-5.0) event only when their Add, Remove and Clear methods are called.
 
-# How to implement Observable Collection in Syncfusion Blazor Component
+## How to implement Observable Collection in Syncfusion Blazor Component
 
 Implement the [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) interface to model class. The `INotifyPropertyChanged` interface notifies when the property value has been changed through [PropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged.propertychanged?view=net-5.0) event in the client-side and updates its value.
 
