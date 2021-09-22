@@ -117,6 +117,8 @@ public static List<TaskData> GetTaskCollection()
 }
 ```
 
+> * Indent/Outdent is not supported for Hierarchy Data.
+
 ### Self-Referential / Flat Data Binding
 
 The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the `Id` and `ParentID` properties.
