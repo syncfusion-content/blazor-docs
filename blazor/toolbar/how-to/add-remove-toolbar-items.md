@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add/Remove Toolbar items in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about Add/Remove Toolbar items in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about how to add or remove Toolbar items in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Add/Remove Toolbar items in Blazor Toolbar Component
 
-Toolbar items can be added/removed dynamically by iteration of Toolbar Items using conditional **foreach** loop.
+Toolbar items can be added or removed dynamically by iteration of Toolbar Items using conditional **foreach** loop.
 
-In the following demo, initially we have five toolbar as the **ToolbarItems** has five items. On `Add Item` button click, new item is added to **ToolbarItems** results in adding sixth toolbar to the Toolbar component. On clicking the `Remove Item`, the first item of **ToolbarItems** has been removed which results in removing first toolbar of our Toolbar component.
+In the following demo, initially there are five toolbar as the **ToolbarItems** has five items. On clicking the `Add Item` button, a new item is added to the **ToolbarItems** results in adding sixth toolbar to the Toolbar component. On clicking the `Remove Item`, the first item of the **ToolbarItems** has been removed which results in removing the first toolbar of the Toolbar component.
 
 ```csharp
 
@@ -134,7 +134,5 @@ In the following demo, initially we have five toolbar as the **ToolbarItems** ha
 }
 
 ```
-
-Output be like the below.
 
 ![Dynamic Add/Remove ToolbarItems](../images/addRemoveItem.gif)
