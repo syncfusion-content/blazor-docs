@@ -48,12 +48,14 @@ The `Offset` property is used to align the Ports based on fractions. 0 represent
                 new PointPort() 
                 {
                     ID = "port1",
-                    Offset = new Point() { X = 0, Y = 0.5 },
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
                     Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
                     // Sets the shape of the port as Square
-                    Width= 12, Height=12, Shape= PortShapes.Square,
+                    Width= 12,
+                    Height=12, 
+                    Shape= PortShapes.Square,
                 }
             },
         };
@@ -129,12 +131,14 @@ The following code explains how to align ports.
                 new PointPort() 
                 {
                     ID = "port1",
-                    Offset = new Point() { X = 0, Y = 0 },
+                    Offset = new DiagramPoint() { X = 0, Y = 0 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
                     Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
                     // Sets the shape of the port as Square
-                    Width= 12, Height=12, Shape= PortShapes.Square,
+                    Width= 12, 
+                    Height=12, 
+                    Shape= PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Center,
                     VerticalAlignment = VerticalAlignment.Center
                 }
@@ -182,12 +186,14 @@ The following code explains how to align ports.
                 new PointPort() 
                 {
                     ID = "port1",
-                    Offset = new Point() { X = 0.5, Y = 1 },
+                    Offset = new DiagramPoint() { X = 0.5, Y = 1 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
                     Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
                     // Sets the shape of the port as Circle
-                    Width= 12, Height=12, Shape= PortShapes.Square,
+                    Width= 12, 
+                    Height=12, 
+                    Shape= PortShapes.Square,
                     HorizontalAlignment = HorizontalAlignment.Left,
                     VerticalAlignment = VerticalAlignment.Top,
                     Margin=new Margin(){Top=10}

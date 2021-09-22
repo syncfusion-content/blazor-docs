@@ -45,12 +45,18 @@ The following code explains how to draw the connector by using the port constrai
                 new PointPort()
                 {
                     ID = "port1",
-                    Offset = new Point() { X = 0.5, Y = 0.5 },
+                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
-                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
+                    Style= new ShapeStyle()
+                    { 
+                        Fill = "gray", 
+                        StrokeColor = "black"
+                     },
                     // Sets the shape of the port as Circle
-                    Width = 12, Height = 12, Shape = PortShapes.X,
+                    Width = 12, 
+                    Height = 12, 
+                    Shape = PortShapes.Square,
                     // Enable drag operation for Port
                     Constraints = PortConstraints.Default|PortConstraints.Draw
                 }
