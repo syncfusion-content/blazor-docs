@@ -85,7 +85,7 @@ The SortBy `DataSourceOrder` property does not require any `Field` mapping. In t
 
 The output will be as follows.
 
-![data-source-order](./images/data-source-order.png)
+![Sorting in Blazor Kanban](./images/blazor-kanban-sorting.png)
 
 ### Index
 
@@ -193,7 +193,7 @@ For Example,
 
 The output will be as follows.
 
-![Index](./images/index.PNG)
+![Blazor Kanban Card with Index](./images/blazor-kanban-card-index.PNG)
 
 ### Custom
 
@@ -260,7 +260,7 @@ The SortBy `Custom` property must require datasource `Field` mapping. In this be
 
 The output will be as follows.
 
-![Custom](./images/custom-mapping.png)
+![Custom Sorting in Blazor Kanban](./images/blazor-kanban-custom-sorting.png)
 
 ## Change the direction
 
@@ -331,4 +331,4 @@ In the following sample, cards are aligned in `Descending` order.
 
 The output will be as follows.
 
-![Direction](./images/sort-direction.png)
+![Changing Sort Direction in Blazor Kanban](./images/blazor-kanban-sort-direction.png)

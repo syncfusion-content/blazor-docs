@@ -76,7 +76,7 @@ Cards can be grouped based on `KeyField` and displayed in rows, which are separa
 
 Output be like the below.
 
-![kanban](./images/swimlane-row.png)
+![Blazor Kanban with Swimlane Row](./images/blazor-kanban-with-swimlane-row.png)
 
 ## Custom row text
 
@@ -243,7 +243,7 @@ You can customize the Kanban swimlane row by using `Template`, which is specifie
 
 Output be like the below.
 
-![kanban](./images/template.png)
+![Customizing Swimlane Row Text in Blazor Kanban](./images/blazor-kanban-custom-swimlane-row.png)
 
 ## Sorting
 
@@ -310,7 +310,7 @@ Swimlane rows are rendered on descending order when using the `SortDirection` pr
 
 Output be like the below.
 
-![kanban](./images/sorting.png)
+![Sorting in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-sorting.png)
 
 ## Drag-and-drop
 
@@ -444,7 +444,7 @@ In below demo, disabled on `ShowItemCount` property on rendering swimlane row wi
 
 Output be like the below.
 
-![kanban](./images/cards-count.png)
+![Displaying Blazor Kanban Cards Count](./images/blazor-kanban-cards-count.png)
 
 ## Enable frozen rows
 
@@ -515,4 +515,4 @@ By default, the `EnableFrozenRows` property is set as `false`. If you wish to sh
 
 Output be like the below.
 
-![kanban](./images/frozen-rows.png)
+![Blazor Kanban with Frozen Rows](./images/blazor-kanban-frozen-rows.png)
