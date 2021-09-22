@@ -50,10 +50,10 @@ An annotation can be added to a node or connector by defining the annotation obj
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            SourcePoint = new Point() { X = 300, Y = 40 },
-            TargetPoint = new Point() { X = 400, Y = 160 },
-            Type = Segments.Orthogonal,
-            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            SourcePoint = new DiagramPoint() { X = 300, Y = 40 },
+            TargetPoint = new DiagramPoint() { X = 400, Y = 160 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Style = new TextStyle() { StrokeColor = "#6495ED" },
             Annotations = new DiagramObjectCollection<PathAnnotation>()
             {
                 // A annotation is created and stored in Annotations collection of Connector.
@@ -67,7 +67,7 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 ![Annotation](../images/Annotation.png)
 
->* `Id` for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
+>* `ID` for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned center point of its path.
 
@@ -218,7 +218,10 @@ The following code sample shows how the annotation of the node changed at runtim
             Width = 100,
             Height = 100,
             OffsetX = 100,
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() { new ShapeAnnotation { Content = "Node" } },
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+            { 
+                new ShapeAnnotation { Content = "Node" } 
+            },
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };

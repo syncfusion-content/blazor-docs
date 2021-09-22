@@ -9,16 +9,16 @@ documentation: ug
 
 # Events in Blazor Diagram Component
 
-## Text edit
+## Text Change
 
-The TextEdit event will notify the annotation content changes after editing. The `TextEditEventArgs` interface is used to get event arguments.
+The TextChanged event will notify the annotation content changes after editing. The `TextChangeEventArgs` interface is used to get event arguments.
 
 The following code example shows how to register and get the notification from the TextEdit event.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" TextEdit="textedit" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" TextChanged="textedit" Nodes="@nodes" />
 
 @code
 {
@@ -26,7 +26,7 @@ The following code example shows how to register and get the notification from t
     DiagramObjectCollection<Node> nodes;
 
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.
-    private void textedit(TextEditEventArgs args)
+    private void textedit(TextChangeEventArgs args)
     {
         Console.WriteLine("Oldvalue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
