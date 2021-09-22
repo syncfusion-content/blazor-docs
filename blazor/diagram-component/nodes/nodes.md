@@ -107,9 +107,9 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
 Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the `Symbol Palette`.
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
-* When a symbol is dragged into a diagram from symbol palette, the `DragEnter` event gets triggered.
-* When a symbol is dragged over a diagram, the `DragOver` event gets triggered.
-* When a symbol is dragged and dropped from symbol palette to diagram area, the `Drop` event gets triggered.
+* When a symbol is dragged into a diagram from symbol palette, the `DragStart` event gets triggered.
+* When a symbol is dragged over a diagram, the `Dragging` event gets triggered.
+* When a symbol is dragged and dropped from symbol palette to diagram area, the `DragDrop` event gets triggered.
 * When a symbol is dragged outside of the diagram, the `DragLeave` event gets triggered.
 
 ![Node](../images/node-add-palette.gif)

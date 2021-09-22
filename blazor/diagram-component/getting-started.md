@@ -83,7 +83,7 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes"/>
+<SfDiagramComponent @ref="@diagram" Connectors="@connectors" Height="700px" Nodes="@nodes" />
 
 @code
 {
@@ -100,33 +100,33 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
 
     private void InitDiagramModel()
     {
-        CreateNode("Start", 300, 50, FlowShapes.Terminator, "Start");
-        CreateNode("Init", 300, 140, FlowShapes.Process, "var i = 0");
-        CreateNode("Condition", 300, 230, FlowShapes.Decision, "i < 10?");
-        CreateNode("Print", 300, 320, FlowShapes.PreDefinedProcess, "print(\'Hello!!\');");
-        CreateNode("Increment", 300, 410, FlowShapes.Process, "i++;");
-        CreateNode("End", 300, 500, FlowShapes.Terminator, "End");
+        CreateNode("Start", 300, 50, FlowShapeType.Terminator, "Start");
+        CreateNode("Init", 300, 140, FlowShapeType.Process, "var i = 0");
+        CreateNode("Condition", 300, 230, FlowShapeType.Decision, "i < 10?");
+        CreateNode("Print", 300, 320, FlowShapeType.PreDefinedProcess, "print(\'Hello!!\');");
+        CreateNode("Increment", 300, 410, FlowShapeType.Process, "i++;");
+        CreateNode("End", 300, 500, FlowShapeType.Terminator, "End");
         OrthogonalSegment segment1 = new OrthogonalSegment()
         {
-            Type = Segments.Orthogonal,
+            Type = ConnectorSegmentType.Orthogonal,
             Direction = Direction.Right,
             Length = 30,
         };
         OrthogonalSegment segment2 = new OrthogonalSegment()
         {
-            Type = Segments.Orthogonal,
+            Type = ConnectorSegmentType.Orthogonal,
             Length = 300,
             Direction = Direction.Bottom,
         };
         OrthogonalSegment segment3 = new OrthogonalSegment()
         {
-            Type = Segments.Orthogonal,
+            Type = ConnectorSegmentType.Orthogonal,
             Length = 30,
             Direction = Direction.Left,
         };
         OrthogonalSegment segment4 = new OrthogonalSegment()
         {
-            Type = Segments.Orthogonal,
+            Type = ConnectorSegmentType.Orthogonal,
             Length = 200,
             Direction = Direction.Top,
         };
@@ -151,19 +151,19 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
             var annotation = new PathAnnotation()
             {
                 Content = label,
-                Style = new TextShapeStyle() { Fill = "white" }
+                Style = new TextStyle() { Fill = "white" }
             };
             diagramConnector.Annotations = new DiagramObjectCollection<PathAnnotation>() { annotation };
         }
         if (segment1 != null)
         {
-            diagramConnector.Type = Segments.Orthogonal;
+            diagramConnector.Type = ConnectorSegmentType.Orthogonal;
             diagramConnector.Segments = new DiagramObjectCollection<ConnectorSegment> { segment1, segment2 };
         }
         connectors.Add(diagramConnector);
     }
 
-    private void CreateNode(string id, double x, double y, FlowShapes shape, string label)
+    private void CreateNode(string id, double x, double y, FlowShapeType shape, string label)
     {
         Node diagramNode = new Node()
         {
@@ -179,8 +179,8 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
                 new ShapeAnnotation
                 {
                     Content = label,
-                    Style = new TextShapeStyle()
-                    {   
+                    Style = new TextStyle()
+                    {
                         Color="White",
                         Fill = "transparent"
                     }

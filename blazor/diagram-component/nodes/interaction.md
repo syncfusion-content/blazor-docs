@@ -65,7 +65,7 @@ A node can be select at runtime by using the `Select` method and clear the selec
 And also the selection enable during the interaction.
 
 * An element can be selected by clicking that element.
-* When you select the elements in the diagram, the `SelectionChange` event gets triggered and to do customization in this event.
+* When you select the elements in the diagram, the `SelectionChanged` event gets triggered and to do customization in this event.
 
 ![Select](../images/node-select.png)
 
@@ -115,7 +115,7 @@ A node can be drag at runtime by using the `Drag` method. The following code exp
 And also the drag the node during the interaction.
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the `PositionChange` event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the `PositionChanged` event gets triggered and to do customization in this event.
 
 ![Drag](../images/drag.gif)
 
@@ -157,7 +157,7 @@ A node can be resize at runtime by using the `Scale` method. The following code 
     public void OnResize()
     {
         // Resize the node
-        diagram.Scale(diagram.Nodes[0], 0.5, 0.5, new Point() { X = 0, Y = 0 });
+        diagram.Scale(diagram.Nodes[0], 0.5, 0.5, new DiagramPoint() { X = 0, Y = 0 });
     }
 }
 ```
@@ -166,7 +166,7 @@ And also you can resize the node during interaction.
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, the selected items can be resized.
 * When one corner of the selector is dragged, the opposite corner will be in a static position.
-* When a node is resized, the `SizeChange` event gets triggered.
+* When a node is resized, the `SizeChanged` event gets triggered.
 
 ![Resize](../images/resize.gif)
 
@@ -177,8 +177,6 @@ And also you can resize the node during interaction.
 A node can be rotate at runtime by using the `Rotate` method. The following code explains how to rotate the node by using method.
 
 ```cshtml
-@page "/Rotate-Interaction"
-
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Rotate" @onclick="OnRotate">
@@ -212,7 +210,7 @@ A node can be rotate at runtime by using the `Rotate` method. The following code
     public void OnRotate()
     {
         // Rotate the node
-        diagram.Rotate(diagram.Nodes[0], diagram.Nodes[0].RotateAngle + 10);
+        diagram.Rotate(diagram.Nodes[0], diagram.Nodes[0].RotationAngle + 10);
     }
 }
 ```

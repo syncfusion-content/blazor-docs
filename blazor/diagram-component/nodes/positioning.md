@@ -53,7 +53,7 @@ The following code shows how to change the `Pivot` value.
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
             // Pivot of the node
-            Pivot = new Point() { X = 0, Y = 0 }
+            Pivot = new DiagramPoint() { X = 0, Y = 0 }
         };
         nodes.Add(node);
     }
@@ -72,7 +72,7 @@ The following code shows how to change the `Pivot` value.
 
 ![Node Pivot](../images/node_pivot.png)
 
-Rotation of a node is controlled by using the `RotateAngle` property. The following code shows how to change the `RotateAngle` value.
+Rotation of a node is controlled by using the `RotationAngle` property. The following code shows how to change the `RotationAngle` value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -98,8 +98,8 @@ Rotation of a node is controlled by using the `RotateAngle` property. The follow
             Width = 100,
             Height = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-            // RotateAngle of the node
-            RotateAngle = 90
+            // RotationAngle of the node
+            RotationAngle = 90
         };
         nodes.Add(node);
     }
