@@ -23,21 +23,28 @@ The following code example illustrates how to add a connector through connector 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SnapConstraints snapConstraints = SnapConstraints.None;
     //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector() { ID = "connector1",
-        // Set the source and target point of the connector
-         SourcePoint = new Point() { X = 100, Y = 100 },
-         TargetPoint = new Point() { X = 200, Y = 200 },
-        // Type of the connector segemnts
-         Type = Segments.Straight };
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segemnts
+            Type = ConnectorSegmentType.Straight
+        };
         connectors.Add(Connector);
     }
 }
@@ -53,20 +60,37 @@ You can add a connector at runtime by adding connector to the connectors collect
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <input type="button" value="Add Connector" @onclick="@AddConnector">
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
-@code{
+
+@code
+{
 
     //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector() { ID = "connector1", SourcePoint = new Point() { X = 100, Y = 100 }, TargetPoint = new Point() { X = 200, Y = 200 }, Type = Segments.Straight };
+        Connector Connector = new Connector()
+        { 
+            ID = "connector1",
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight
+        };
         connectors.Add(Connector);
     }
+
     public void AddConnector()
     {
-        Connector NewConnector = new Connector() { ID = "connector2", SourcePoint = new Point() { X = 300, Y = 300 }, TargetPoint = new Point() { X = 400, Y = 400 }, Type = Segments.Straight };
+        Connector NewConnector = new Connector()
+        { 
+            ID = "connector2",
+            SourcePoint = new DiagramPoint() { X = 300, Y = 300 },
+            TargetPoint = new DiagramPoint() { X = 400, Y = 400 },
+            Type = ConnectorSegmentType.Straight
+        };
         //Add the connector at the run time.
         connectors.Add(NewConnector);
     }
@@ -79,66 +103,75 @@ Connectors can be predefined and added to the symbol palette. You can drop those
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.SymbolPalette
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
 <div style="width: 200px; float: left">
     <SfSymbolPaletteComponent Height="600px" @ref="@PaletteInstance" Palettes="@Palettes">
     </SfSymbolPaletteComponent>
 </div>
+
 <SfDiagramComponent @ref="@DiagramInstance" Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
-@code{
+
+@code
+{
     SfSymbolPaletteComponent PaletteInstance;
     SfDiagramComponent DiagramInstance;
     //Defines Symbol palette's PaletteConnector collection
     DiagramObjectCollection<NodeBase> PaletteConnector = new DiagramObjectCollection<NodeBase>();
     DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
-        PaletteInstance.DiagramInstances = new DiagramObjectCollection<SfDiagramComponent>() { };
-        PaletteInstance.DiagramInstances.Add(DiagramInstance);
+        PaletteInstance.Targets = new DiagramObjectCollection<SfDiagramComponent>() { };
+        PaletteInstance.Targets.Add(DiagramInstance);
     }
+
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
-        Connector Connector = new Connector() { ID = "connector1",
-        // Set the source and target point of the connector
-        SourcePoint = new Point() { X = 100, Y = 100 }, TargetPoint = new Point() { X = 200, Y = 200 },
-         // Type of the connector segemnts
-        Type = Segments.Straight };
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            // Set the source and target point of the connector
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            // Type of the connector segemnts
+            Type = ConnectorSegmentType.Straight
+        };
         connectors.Add(Connector);
         PaletteConnector = new DiagramObjectCollection<NodeBase>();
         Connector connector = new Connector
         {
             ID = "Link1",
-            Type = Segments.Straight,
-            SourcePoint = new Point() { X = 0, Y = 0 },
-            TargetPoint = new Point() { X = 60, Y = 60 }
-
+            Type = ConnectorSegmentType.Straight,
+            SourcePoint = new DiagramPoint() { X = 0, Y = 0 },
+            TargetPoint = new DiagramPoint() { X = 60, Y = 60 }                                                                                 
         };
         PaletteConnector.Add(connector as NodeBase);
         Connector connector2 = new Connector
         {
             ID = "Link2",
-            Type = Segments.Orthogonal,
-            SourcePoint = new Point() { X = 0, Y = 0 },
-            TargetPoint = new Point() { X = 60, Y = 60 },
-            TargetDecorator = new Decorator() { Shape = DecoratorShapes.OpenArrow},
+            Type = ConnectorSegmentType.Orthogonal,
+            SourcePoint = new DiagramPoint() { X = 0, Y = 0 },
+            TargetPoint = new DiagramPoint() { X = 60, Y = 60 },
+            TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.OpenArrow },
             Style = new ShapeStyle() { StrokeWidth =1}
-
         };
         PaletteConnector.Add(connector2 as NodeBase);
         Connector connector3 = new Connector
         {
             ID = "Link3",
-            Type = Segments.Bezier,
-            SourcePoint = new Point() { X = 0, Y = 0 },
-            TargetPoint = new Point() { X = 60, Y = 60 },
-            TargetDecorator = new Decorator() { Shape = DecoratorShapes.None },
+            Type = ConnectorSegmentType.Bezier,
+            SourcePoint = new DiagramPoint() { X = 0, Y = 0 },
+            TargetPoint = new DiagramPoint() { X = 60, Y = 60 },
+            TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.None },
         };
         PaletteConnector.Add(connector3 as NodeBase);
-        Palettes = new DiagramObjectCollection<Palette>(){
-                new Palette(){Symbols =PaletteConnector,Title="Connectors" ,Expanded = false},
-
-            };
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){ Symbols = PaletteConnector, Title = "Connectors", IsExpanded = true },
+        };
     }
 }
 ```
@@ -158,31 +191,40 @@ A connector can be removed from the diagram at runtime by using the `Remove` met
 The following code shows how to remove a connector at runtime.
 
 ```cshtml
-<input type="button" value="Add Connector" @onclick="@RemoveConnector">
+@using Syncfusion.Blazor.Diagram
+
+<input type="button" value="Remove Connector" @onclick="@RemoveConnector">
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
-@code{
+
+@code 
+{
     SnapConstraints snapConstraints = SnapConstraints.None;
     //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
         {
             ID = "connector1",
             // Set the source and target point of the connector
-            SourcePoint = new Point() { X = 100, Y = 100 },
-            TargetPoint = new Point() { X = 200, Y = 200 },
-            TargetDecorator = new Decorator() { Shape = DecoratorShapes.Arrow,
-            // Style of the connector segment
-            Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 } },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = DecoratorShape.Arrow,
+                // Style of the connector segment
+                Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 }
+            },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             // Type of the connector
-            Type = Segments.Straight,
+            Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
     }
+
     public void RemoveConnector()
     {
         // Remove Node at runtime
@@ -207,29 +249,35 @@ You can change any connector's properties at runtime.
 The following code example explains how to change the connector properties.
 
 ```cshtml
+@using Syncfusion.Blazor.Diagram
+
 <input type="button" value="Update Connector" @onclick="@UpdateConnector">
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     SnapConstraints snapConstraints = SnapConstraints.None;
     //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point() { X = 100, Y = 100 },
-            TargetPoint = new Point() { X = 200, Y = 200 },
-            TargetDecorator = new Decorator() { Shape = DecoratorShapes.Arrow, Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 } },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            TargetDecorator = new DecoratorSettings() { Shape = DecoratorShape.Arrow, Style = new ShapeStyle() { Fill = "#6f409f", StrokeColor = "#6f409f", StrokeWidth = 1 } },
             Style = new ShapeStyle() { StrokeColor = "#6f409f", StrokeWidth = 1 },
             // Type of the connector
-            Type = Segments.Straight,
+            Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
     }
+
     public void UpdateConnector()
     {
         Diagram.BeginUpdate();
@@ -254,41 +302,47 @@ The following code example illustrates how to connect two nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>() {
-          new Node() {  OffsetX = 100,
-            OffsetY = 100,
-            Height = 50,
-            Width = 100,
-            ID = "node1",
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
-          },
-          new Node() {  OffsetX = 300,
-            OffsetY = 300,
-            Height = 50,
-            Width = 100,
-            ID = "node2",
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-           Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
-          }
+        nodes = new DiagramObjectCollection<Node>()
+        {
+            new Node() 
+            {
+                OffsetX = 100,
+                OffsetY = 100,
+                Height = 50,
+                Width = 100,
+                ID = "node1",
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED" },
+                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            },
+            new Node()
+            {
+                OffsetX = 300,
+                OffsetY = 300,
+                Height = 50,
+                Width = 100,
+                ID = "node2",
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED" },
+                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            }
         };
         Connector Connector = new Connector()
         {
             ID = "connector1",
             //Source node id of the connector.
             SourceID = "node1",
-            TargetDecorator = new Decorator()
+            TargetDecorator = new DecoratorSettings()
             {
                 Style = new ShapeStyle()
                 {
@@ -304,7 +358,7 @@ The following code example illustrates how to connect two nodes.
                 StrokeColor = "#6495ED",
             },
             // Type of the connector
-            Type = Segments.Straight,
+            Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
     }
@@ -325,56 +379,62 @@ The following code example illustrates how to create port to port connections.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 
+<SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
-        nodes = new DiagramObjectCollection<Node>() {
-          new Node() {  OffsetX = 100,
-            OffsetY = 100,
-            Height = 50,
-            Ports = new DiagramObjectCollection<PointPort>()
-{
-                        new PointPort()
-                        {
-                            ID="port1",
-                            Visibility = PortVisibility.Visible,
-                            Offset = new Point() { X = 1, Y = 0.5},
-                            Height = 10, Width = 10,
-                            Style =  new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
-                        }
-                    },
-            Width = 100,
-            ID = "node1",
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
-          },
-          new Node() {  OffsetX = 300,
-            OffsetY = 300,
-            Height = 50,
-            Width = 100,
-            ID = "node2",
-            Ports = new DiagramObjectCollection<PointPort>()
+        nodes = new DiagramObjectCollection<Node>() 
+        {
+            new Node()
             {
-                        new PointPort()
-                        {
-                            ID="port2",
-                            Visibility = PortVisibility.Visible,
-                            Offset = new Point() { X = 0, Y = 0.5},
-                            Height = 10, Width = 10,
-                            Style =  new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
-                        }
-                    },
-            Style = new ShapeStyle(){ Fill = "#6495ED",
-                StrokeColor = "#6495ED",},
-           Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
-          }
+                OffsetX = 100,
+                OffsetY = 100,
+                Height = 50,
+                Ports = new DiagramObjectCollection<PointPort>()
+                {
+                    new PointPort()
+                    {
+                        ID="port1",
+                        Visibility = PortVisibility.Visible,
+                        Offset = new DiagramPoint() { X = 1, Y = 0.5},
+                        Height = 10, Width = 10,
+                        Style =  new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
+                    }
+                },
+                Width = 100,
+                ID = "node1",
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED"},
+                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            },
+            new Node()
+            {
+                OffsetX = 300,
+                OffsetY = 300,
+                Height = 50,
+                Width = 100,
+                ID = "node2",
+                Ports = new DiagramObjectCollection<PointPort>()
+                {
+                    new PointPort()
+                    {
+                        ID="port2",
+                        Visibility = PortVisibility.Visible,
+                        Offset = new DiagramPoint() { X = 0, Y = 0.5},
+                        Height = 10, Width = 10,
+                        Style =  new ShapeStyle(){Fill = "yellow", StrokeColor = "yellow"}
+                    }
+                },
+                Style = new ShapeStyle(){ Fill = "#6495ED", StrokeColor = "#6495ED" },
+                Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+              }
         };
         Connector Connector = new Connector()
         {
@@ -387,7 +447,7 @@ The following code example illustrates how to create port to port connections.
             TargetID = "node2",
             //Target node port id.
             TargetPortID = "port2",
-            TargetDecorator = new Decorator()
+            TargetDecorator = new DecoratorSettings()
             {
                 Style = new ShapeStyle()
                 {
@@ -395,14 +455,13 @@ The following code example illustrates how to create port to port connections.
                     StrokeColor = "#6495ED",
                 }
             },
-
             Style = new ShapeStyle()
             {
                 Fill = "#6495ED",
                 StrokeColor = "#6495ED",
             },
             // Type of the connector
-            Type = Segments.Straight,
+            Type = ConnectorSegmentType.Straight,
         };
         connectors.Add(Connector);
     }

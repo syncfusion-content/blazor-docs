@@ -159,7 +159,7 @@ Snapping to gridlines can be enabled/disabled with the `SnapConstraints`. The fo
 {
     //Sets the snap constraints
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToLines;
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
@@ -225,7 +225,7 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 
 The snap to object provides visual cues to assist with aligning and spacing diagram elements. A node can be snapped with its neighboring objects based on certain alignments. Such alignments are visually represented as smart guides.
 
-* The `SnapObjectDistance` property allows you to define minimum distance between the selected object and the nearest object.
+* The `SnapDistance` property allows you to define minimum distance between the selected object and the nearest object.
 
 * The `SnapAngle` property allows you to define the snap angle by which the object needs to be rotated.
 
@@ -235,7 +235,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
-    <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapObjectDistance="10">
+    <SnapSettings Constraints="@snapConstraints" SnapAngle="10" SnapDistance="10">
     </SnapSettings>
 </SfDiagramComponent>
 
@@ -243,7 +243,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 {
     //Sets the Snap to objects constraints...
     public SnapConstraints snapConstraints = SnapConstraints.ShowLines | SnapConstraints.SnapToObject;
-    DiagramObjectCollection<Node> NodeCollection = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
 
     protected override void OnInitialized()
     {
