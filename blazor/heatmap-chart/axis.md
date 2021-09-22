@@ -56,7 +56,7 @@ Category axis type is used to represent the string values in axis labels.
 
 ```
 
-![Heatmap Sample](images/axis/Axis.png)
+![Blazor HeatMap Chart with Axis](images/axis/blazor-heatmap-chart-axis.png)
 
 ### Numeric axis
 
@@ -97,7 +97,7 @@ Numeric axis type is used to represent the numeric values in axis labels.
 
 ```
 
-![Heatmap Sample](images/axis/Numeric.png)
+![Blazor HeatMap Chart with Numeric Axis](images/axis/blazor-heatmap-chart-numeric-axis.png)
 
 ### Date-time axis
 
@@ -141,7 +141,7 @@ Date-time axis type is used to represent the date-time values in axis labels wit
 
 ```
 
-![Heatmap Sample](images/axis/DateTime.png)
+![Blazor HeatMap Chart with DateTime Axis](images/axis/blazor-heatmap-chart-datetime-axis.png)
 
 ## Inversed axis
 
@@ -185,7 +185,7 @@ Heat map supports inversing the axis origin for both axes, where the axis labels
 
 ```
 
-![Heatmap Sample](images/axis/inversed.png)
+![Blazor HeatMap Chart with Inversed Axis](images/axis/blazor-heatmap-chart-inversed-axis.png)
 
 ## Opposed axis
 
@@ -229,7 +229,7 @@ In heat map, you can place the axis label in an opposite position of its default
 
 ```
 
-![Heatmap Sample](images/axis/Opposed.png)
+![Blazor HeatMap Chart with Opposed Axis](images/axis/blazor-heatmap-chart-opposed-axis.png)
 
 ## Label formatting
 
@@ -273,7 +273,7 @@ Heat map supports formatting the axis labels by using the `LabelFormat` property
 
 ```
 
-![Heatmap Sample](images/axis/LabelFormat.png)
+![Foramtting Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-label-format.png)
 
 ## Axis intervals
 
@@ -317,7 +317,7 @@ In heat map, you can define an interval between the axis labels using the `Inter
 
 ```
 
-![Heatmap Sample](images/axis/interval.png)
+![Blazor HeatMap Chart with Axis Intervals](images/axis/blazor-heatmap-chart-axis-interval.png)
 
 ## Axis label increment
 
@@ -359,4 +359,4 @@ Axis label increment in the heat map is used to display the axis labels with reg
 
 ```
 
-![Heatmap Sample](images/axis/increment.png)
+![Incrementing Axis Label in Blazor HeatMap Chart](images/axis/blazor-heatmap-chart-increment-axis-label.png)

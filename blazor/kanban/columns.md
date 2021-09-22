@@ -77,7 +77,7 @@ Kanban columns are categorized by mapping the **key** from the datasource using 
 
 Output be like the below.
 
-![kanban](./images/single-key.png)
+![Blazor Kanban Columns with Single Key](./images/blazor-kanban-columns-with-single-key.png)
 
 ## Multi-key mapping
 
@@ -143,7 +143,7 @@ Kanban board allows to render a single column by mapping multiple keys using `Ke
 
 Output be like the below.
 
-![kanban](./images/multi-key.png)
+![Blazor Kanban Column with Multi Key](./images/blazor-kanban-column-with-multi-key.png)
 
 ## Header text
 
@@ -320,7 +320,7 @@ You can customize the column header with `Template` property as shown in the fol
 
 Output be like the below.
 
-![kanban](./images/header-template.png)
+![Customizing Column Header in Blazor Kanban](./images/blazor-kanban-header-customization.png)
 
 ## Toggle columns
 
@@ -388,7 +388,7 @@ Kanban allows to expand or collapse its columns using `AllowToggle` in `KanbanCo
 
 Output be like the below.
 
-![kanban](./images/toggle-columns.png)
+![Blazor Kanban with Toggle Columns](./images/blazor-kanban-toggle-columns.png)
 
 ### Initially collapsed column
 
@@ -458,7 +458,7 @@ In the following example, the Backlog column is collapsed on initialization of K
 
 Output be like the below.
 
-![kanban](./images/initially-collapsed.png)
+![Blazor Kanban with Collapsed Column](./images/blazor-kanban-collapsed-column.png)
 
 ## Stacked headers
 
@@ -531,4 +531,4 @@ In the following code, the kanban columns 'InProgress, Review' are grouped under
 
 Output be like the below.
 
-![kanban](./images/stacked-header.png)
+![Blazor Kanban with Stacked Header](./images/blazor-kanban-stacked-header.png)
