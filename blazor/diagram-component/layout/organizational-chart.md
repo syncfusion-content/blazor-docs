@@ -106,7 +106,7 @@ Organizational chart layout starts parsing from root and iterate through all its
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set the customizable properties.
-3. **TreeInfo**: Returns an object value to be the customizied.
+3. **TreeInfo**: Returns an object value to be the customized.
 
 ## Customize layout
 
