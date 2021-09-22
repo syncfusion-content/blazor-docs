@@ -88,7 +88,7 @@ To initialize the MaskedTextBox component add the below code to your `Index.razo
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/default.png)
+![Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)
 
 ## Set the mask
 
@@ -102,7 +102,7 @@ The following example demonstrates the usage of mask element `0` that allows any
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/SetMask.png)
+![Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)
 
 ## See Also
 

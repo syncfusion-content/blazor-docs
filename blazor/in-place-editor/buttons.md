@@ -83,7 +83,7 @@ In the following sample, the `Content` and `CssClass` properties of the `Button`
 
 The output will be as follows.
 
-![showButton](./images/show-buttons.png)
+![Blazor In-place Editor with Buttons](./images/blazor-inplace-editor-with-buttons.png)
 
 ## See Also
 

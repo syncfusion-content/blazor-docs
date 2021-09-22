@@ -73,4 +73,4 @@ The tooltip is used to show the card information when the cursor hover over the 
 
 Output be like the below.
 
-![tooltip](./images/tooltip.png)
+![Blazor Kanban displays Tooltip](./images/blazor-kanban-tooltip.png)
