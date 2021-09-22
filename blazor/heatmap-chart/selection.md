@@ -48,4 +48,4 @@ In the HeatMap, the cell selection is used to select the single or multiple heat
 
 ```
 
-![Heatmap Sample](images/Selection.gif)
+![Selection in Blazor HeatMap Chart](images/blazor-heatmap-chart-selection.png)

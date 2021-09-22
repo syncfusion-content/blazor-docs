@@ -48,4 +48,4 @@ Heat map can be displayed using `Scalable Vector Graphics (SVG)` rendering logic
 
 ```
 
-![Heatmap Sample](images/Rendering.png)
+![Rendering Mode in Blazor HeatMap Chart](images/blazor-heatmap-chart-rendering-mode.png)

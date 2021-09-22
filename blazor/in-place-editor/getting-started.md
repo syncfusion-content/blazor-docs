@@ -170,9 +170,9 @@ After successful compilation of your application, run the application.
 
 Output be like the below.
 
-![Inplace-editor inline mode](./images/inline.png)
+![Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)
 
-![Inplace-editor popup mode](./images/popup-mode.png)
+![Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)
 
 ## Configuring DropDownList
 
@@ -331,7 +331,7 @@ In the following code, it is configured to render the `DatePicker`, `Dropdownlis
 
 Output be like the below.
 
-![Inplace-editor components](./images/components.png)
+![Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)
 
 ## Submitting data to the server (save)
 
@@ -438,7 +438,7 @@ The edited data is submitted to the server and you can see the new values gettin
 
 The output will be as follows.
 
-![Getting started](./images/getting-started.png)
+![Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)
 
 ## See Also
 

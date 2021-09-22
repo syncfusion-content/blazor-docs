@@ -70,7 +70,7 @@ To render a bubble heat map with size series, set the `BubbleType` property to `
 
 ```
 
-![Heatmap Sample](images/bubble/Size.png)
+![Changing Bubble Size in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-size.png)
 
 ### Bubble color
 
@@ -122,7 +122,7 @@ To represent the data points with variations in bubble colors, set the `BubbleTy
 
 ```
 
-![Heatmap Sample](images/bubble/Color.png)
+![Changing Bubble Color in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-color.png)
 
 ### Bubble sector
 
@@ -174,4 +174,4 @@ To render the data points with bubble sector, set the `BubbleType` property to `
 
 ```
 
-![Heatmap Sample](images/bubble/Sector.png)
+![Displaying Bubble Sector in Blazor HeatMap Chart](images/bubble/blazor-heatmap-chart-bubble-sector.png)

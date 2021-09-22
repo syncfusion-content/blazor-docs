@@ -57,7 +57,7 @@ Change the width, color, and radius of the heat map cells by using the `HeatMapC
 
 ```
 
-![Heatmap Sample](images/appearance/Border.png)
+![Changing Cell Border Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-border-color.png)
 
 ### Cell highlighting
 
@@ -103,7 +103,7 @@ Enable or disable the cell highlighting while hover over the heat map cells by u
 
 ```
 
-![Heatmap Sample](images/appearance/CellHighlight.png)
+![Enabling Cell Highlighting Color in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-cell-highlight-color.png)
 
 ## Margin
 
@@ -148,7 +148,7 @@ Set the margin for the heat map from its container by using the `HeatMapMargin` 
 
 ```
 
-![Heatmap Sample](images/appearance/Margin.png)
+![Blazor HeatMap Chart with Margin](images/appearance/blazor-heatmap-chart-with-margin.png)
 
 ## Title
 
@@ -194,7 +194,7 @@ The title is used to provide a quick information about the data plotted in heat 
 
 ```
 
-![Heatmap Sample](images/appearance/Title.png)
+![Blazor HeatMap Chart with Title](images/appearance/blazor-heatmap-chart-with-title.png)
 
 ## Data label
 
@@ -238,7 +238,7 @@ You can toggle the visibility of data labels by using the `ShowLabel` property. 
 
 ```
 
-![Heatmap Sample](images/appearance/DataLabel.png)
+![Blazor HeatMap Chart with DataLabel](images/appearance/blazor-heatmap-chart-with-datalabel.png)
 
 ### Text style
 
@@ -285,7 +285,7 @@ You can customize the font family, font size, and color of the data label by usi
 
 ```
 
-![Heatmap Sample](images/appearance/TextStyle.png)
+![Customizing Text Style in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-text-style-customization.png)
 
 ### Format
 
@@ -329,4 +329,4 @@ You can change the format of the data label, such as currency, decimal, percent 
 
 ```
 
-![Heatmap Sample](images/appearance/Format.png)
+![Formatting Data Label in Blazor HeatMap Chart](images/appearance/blazor-heatmap-chart-datalabel-format.png)
