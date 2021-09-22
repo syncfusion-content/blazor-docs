@@ -144,7 +144,7 @@ It specifies where the button text will be displayed on popup mode of the Toolba
 
 3. **Both**: Text will be displayed on popup and Toolbar.
 
-RAefer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
+Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
 
 ## SuffixIcon
 

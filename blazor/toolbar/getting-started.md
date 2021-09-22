@@ -40,7 +40,7 @@ Use any one of the below standards to install the Syncfusion Blazor library in t
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If the above new standard (individual NuGet packages) is prefered, then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+W> If the above new standard (individual NuGet packages) is preferred, then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
 
