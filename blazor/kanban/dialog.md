@@ -91,7 +91,7 @@ KanbanSwimlaneSettings.KeyField (If applicable) | DropDown | -
 
 Output be like the below.
 
-![kanban](./images/default-dialog.png)
+![Card Editing in Blazor Kanban](./images/blazor-kanban-card-editing.png)
 
 ## Dialog Template
 
@@ -242,7 +242,7 @@ Using the dialog template, you can render your own form fields with dialog by us
 
 Output be like the below.
 
-![kanban](./images/dialog-template.png)
+![Blazor Kanban with Dialog Template](./images/blazor-kanban-dialog-template.png)
 
 ## Prevent Dialog
 
