@@ -60,4 +60,4 @@ To bind local data to the Razor components, you can assign an array of object or
 
 The output will be as follows.
 
-![data](./images/data.png)
+![Data Binding in Blazor In-place Editor](./images/blazor-inplace-editor-data-binding.png)
