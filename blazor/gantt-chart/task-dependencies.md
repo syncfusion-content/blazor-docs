@@ -19,25 +19,25 @@ Task relationships are categorized into four types based on the start and finish
 
 You cannot start a task until the dependent task also starts.
 
-![Alt text](images/ss.png)
+![Blazor Gantt Chart displays Start to Start Task Relationship](images/blazor-gantt-chart-start-to-start-relation.png)
 
 ### Start to Finish (SF)
 
 You cannot finish a task until the dependent task is started.
 
-![Alt text](images/sf.png)
+![Blazor Gantt Chart displays Start to Finish Task Relationship](images/blazor-gantt-chart-start-to-finish-relation.png)
 
 ### Finish to Start (FS)
 
 You cannot start a task until the dependent task is completed.
 
-![Alt text](images/fs.png)
+![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.png)
 
 ### Finish to Finish (FF)
 
 You cannot finish a task until the dependent task is completed.
 
-![Alt text](images/ff.png)
+![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.png)
 
 ## Define Task Relationship
 
@@ -143,7 +143,7 @@ Task relationship is defined in the data source as a string value, and this valu
 
 The following screenshot displays the output of the above code.
 
-![Alt text](images/enableDependency.png)
+![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
 ## Predecessor offset with duration units
 
@@ -245,7 +245,7 @@ You can define an offset with various offset duration units for predecessors by 
 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
-![Alt text](images/predecessorWithOffsets.png)
+![Blazor Gantt Chart displays Predecessor Offset](images/blazor-gantt-chart-predecessor-with-offsets.png)
 
 ## Validate predecessor links on editing
 

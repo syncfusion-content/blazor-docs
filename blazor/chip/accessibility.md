@@ -49,6 +49,6 @@ The following shortcut keys are used to access the Chip control without any inte
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
 ![Accessibility in Blazor Chip](./images/blazor-chip-accessibility.gif)

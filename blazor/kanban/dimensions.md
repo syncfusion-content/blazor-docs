@@ -79,7 +79,7 @@ When height and width of the Kanban are set to `auto`, it will try as hard as po
 
 Output be like the below.
 
-![kanban](./images/auto.png)
+![Changing Blazor Kanban Card Height and Width in Automatic](./images/blazor-kanban-change-height-and-width.png)
 
 ## Height and width in pixel
 
@@ -145,7 +145,7 @@ The Kanban height and width will be rendered exactly as per the given pixel valu
 
 Output be like the below.
 
-![kanban](./images/pixel.png)
+![Changing Blazor Kanban Card Height and Width in Pixel](./images/blazor-kanban-change-height-width-in-pixel.png)
 
 ## Height and width in percentage
 
@@ -211,4 +211,4 @@ When height and width of the Kanban are given in percentage, it will make the Ka
 
 Output be like the below.
 
-![kanban](./images/percentage.png)
+![Changing Blazor Kanban Card Height and Width in Percentage](./images/blazor-kanban-change-height-width-in-percentage.png)

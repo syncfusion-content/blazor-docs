@@ -108,7 +108,7 @@ It is possible to change the height of the row in Gantt Chart by setting row hei
 }
 ```
 
-![Alt text](images/rowHeight.png)
+![Changing Row Height in Blazor Gantt Chart](images/blazor-gantt-chart-row-height.png)
 
 ## Expand or Collapse Row
 
@@ -213,7 +213,7 @@ All tasks available in Gantt Chart was rendered in collapsed state by setting `C
 }
 ```
 
-![Alt text](images/enableCollapseAll.png)
+![Blazor Gantt Chart with Collapsed Row](images/blazor-gantt-chart-with-collapse-row.png)
 
 <!-- Define Expand / Collapse Status of Tasks
 
@@ -955,7 +955,7 @@ You can customize the appearance of a row in grid side, by using the `RowDataBou
 }
 ```
 
-![Alt text](images/custom-row.png)
+![Customizing Rows in Blazor Gantt Chart](images/blazor-gantt-chart-row-customization.png)
 
 ## Styling Alternate Rows
 
@@ -1063,6 +1063,6 @@ You can customize the appearance of a row in grid side, by using the `RowDataBou
 }
 ```
 
-![Alt text](images/style-row.png)
+![Changing Row Style in Blazor Gantt Chart](images/blazor-gantt-chart-row-style.png)
 
 > You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

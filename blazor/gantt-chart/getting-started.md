@@ -14,7 +14,7 @@ This section briefly explains about how to include a **Gantt Chart** Component i
 ## Importing Syncfusion Blazor component in the application
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
-2. You can add the client-side style resources through CDN or from NuGet packages in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) packages in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -541,7 +541,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies/)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-![Gantt Features](images/getting-started.gif)
+![Blazor Gantt Chart](images/blazor-gantt-chart.gif)
 
 ## See Also
 

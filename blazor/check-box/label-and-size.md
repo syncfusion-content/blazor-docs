@@ -28,7 +28,7 @@ The Checkbox caption can be defined by using the [Label](https://help.syncfusion
 
 ```
 
-Output be like
+Output will be as follows
 
 ![Blazor CheckBox with Label](./images/blazor-checkbox-label.png)
 
@@ -55,7 +55,7 @@ The different Checkbox sizes available are default and small. To reduce the size
 
 ```
 
-Output be like
+Output will be as follows
 
 ![Changing Blazor CheckBox Size](./images/blazor-checkbox-size.png)
 

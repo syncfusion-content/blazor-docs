@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Circular Gauge component of Syncfusion, and more details.
+description: Checkout and learn more about getting started with the Blazor Circular Gauge component of Syncfusion.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -15,7 +15,7 @@ This section briefly explains how to include a Circular Gauge component in your 
 
 1. Install **Syncfusion.Blazor.CircularGauge** NuGet package in the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -69,7 +69,7 @@ namespace BlazorApplication
 
 ## Adding Circular Gauge component
 
-The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and the following code can be added.
 
 ```cshtml
 @page "/"

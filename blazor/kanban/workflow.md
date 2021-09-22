@@ -58,7 +58,7 @@ Provides restriction on columns when performing drag and drop actions while prov
 
 The output will be as follows.
 
-![transition](./images/transition.png)
+![Dragging Card between Blazor Kanban Columns](./images/blazor-kanban-drag-card-in-columns.png)
 
 ## Prevent Drop actions
 
@@ -109,7 +109,7 @@ In the following code, the `Backlog` column will not allow any card drop action 
 
 The output will be as follows.
 
-![drop](./images/allow-drop.png)
+![Dropping Card in Blazor Kanban Column](./images/blazor-kanban-drop-card-in-column.png)
 
 ## Prevent Drag actions
 
@@ -179,4 +179,4 @@ In the following code, the `Done` column will not allow any card drag action wit
 
 The output will be as follows.
 
-![drag](./images/allow-drag.png)
+![Disabling Drag Card in Blazor Kanban Column](./images/blazor-kanban-disable-drag-action.png)

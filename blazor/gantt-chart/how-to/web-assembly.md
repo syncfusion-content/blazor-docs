@@ -32,19 +32,19 @@ Syncfusion Blazor components are compatible with .NET Core 5.0 Preview 6 and it 
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](../images/new-projectt.png)
+    ![Creating New Project in Blazor ASPNETCore](../images/blazor-gantt-chart-create-new-project.png)
 
 3. Select **Blazor App** from the template, and then click **Next** button.
 
-    ![blazor template](../images/blazor-template.png)
+    ![Blazor Application Template](../images/blazor-template.png)
 
 4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![asp.net core project configuration](../images/project-configuration.png)
+    ![Blazor ASP.NET Core Project Configuration](../images/blazor-aspnet-core-project-configuration.png)
 
 5. Choose **Blazor WebAssembly App** from the dashboard, and then click **Create** button to create a new Blazor WebAssembly application.
 
-    ![wasm template](../images/blazor-client-template.png)
+    ![Blazor Wasm Template](../images/blazor-client-template.png)
 
 **Note**: ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
@@ -575,8 +575,7 @@ You can show the relationship in tasks by using the `Dependency` property as sho
 
 ```
 
-You can find the full information regarding Predecessors from [here](/task-dependencies/)
+You can find the full information regarding Predecessors from [here](https://blazor.syncfusion.com/documentation/gantt-chart/task-dependencies)
 
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
-
-![Gantt Features](../images/enableDependency.png)
+![Blazor Gantt Chart](../images/blazor-gantt-chart.gif)

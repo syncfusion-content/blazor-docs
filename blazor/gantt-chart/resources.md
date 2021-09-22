@@ -340,7 +340,7 @@ The following code snippet shows how to assign the resource for each task and ma
 }
 ```
 
-![Alt text](images/assignResource.png)
+![Assigning Resource in Blazor Gantt Chart](images/blazor-gantt-chart-assign-resource.png)
 
 ## Add / Edit Resource Collection
 
@@ -507,8 +507,8 @@ By using cell editing or dialog editing, we can add/remove the resource for part
 
 Editing resource with cell edit
 
-![Alt text](images/editingResources1.png)
+![Blazor Gantt Chart displays Editing Resource with Cell](images/blazor-gantt-chart-editing-resources-in-cell.png)
 
 Editing resource with edit dialog
 
-![Alt text](images/editingResources2.png)
+![Blazor Gantt Chart displays Editing Resource with Edit Dialog](images/blazor-gantt-chart-editing-resource-in-dialog.png)
