@@ -145,8 +145,8 @@ For more information about dragging , refer [Node Drag](https://blazor.syncfusio
 
 | Events | EventArgs | Description |
 |----------------|--------------|--------------|
-| `SizeChanging` | `PositionChangingEventArgs` | Notify while resizing the elements in the diagram |
-| `SizeChanged` | `PositionChangedEventArgs` | Notify when the element's size has changed in the diagram |
+| `SizeChanging` | `SizeChangingEventArgs` | Notify while resizing the elements in the diagram |
+| `SizeChanged` | `SizeChangedEventArgs` | Notify when the element's size has changed in the diagram |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

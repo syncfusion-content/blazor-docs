@@ -13,7 +13,7 @@ User handles are customizable handles that can be used to perform custom actions
 
 ## Initialization an user handle
 
-The user handle can enables for the selected nodes/connectors by setting a `SelectorConstraints` as `UserHandles` and then use the `UserHandle` class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
+The user handle can enables for the selected nodes/connectors by setting a `SelectorConstraints` as `UserHandle` and then use the `UserHandle` class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -112,7 +112,7 @@ You can change the style of the user handles with the specific properties of Pat
 
 * The user handle `BorderColor`, `BackgroundColor` properties are used to define the background color and border color of the user handle and the `BorderWidth` property is used to define the border width of the user handles.
 
-* The `Visible` property of the user handle enables or disables the visibility of user handle.
+* The `Visible` property indicating whether the user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the user handle.
 
@@ -263,7 +263,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 * The fixed user handle `Stroke` and `Fill` properties are used to define the background color and border color of the user handle and the `StrokeThickness` property is used to define the border width of the fixed user handle.
 
-* The `Visibility` property of the fixed user handle enables or disables the visibility of fixed user handle.
+* The `Visibility` property indicating whether the fixed user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the fixed user handles.
 
