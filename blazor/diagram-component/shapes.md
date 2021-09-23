@@ -11,16 +11,16 @@ documentation: ug
 
 Diagram provides support to add different kind of nodes. They are as follows:
 
-* Image node
-* HTML template shape
-* Path node
-* Basic shapes
-* Flow shapes
-* SVG node
+* Image shape
+* Path shape
+* Basic shape
+* Flow shape
+* SVG shape
+* HTML template 
 
 ## Image node
 
-Diagram allows to add images as `Image` nodes. The shape property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the source property of shape enables you to set the image source.
+Diagram allows to add images as `Image` nodes. The `shape` property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the `source` property of shape enables you to set the image.
 
 The following code illustrates how an image node is created.
 
@@ -104,7 +104,7 @@ The following code illustrates how add Base64 image into image node.
 
 ### Image alignment
 
-Stretch and align the image content anywhere but within the node boundary. The scale property of the node allows to stretch the image as you desired (either to maintain proportion or to stretch). By default, the `Scale` property of the node is set as Meet. The following code illustrates how to scale or stretch the content of the image node.
+Stretch and align the image content anywhere but within the node boundary. The `scale` property of the node allows to stretch the image as you desired (either to maintain proportion or to stretch). By default, the `Scale` property of the node is set as `Meet`. The following code illustrates how to scale or stretch the content of the image node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -141,7 +141,7 @@ Stretch and align the image content anywhere but within the node boundary. The s
 }
 ```
 
-* ImageAlign property of the shape helps to align the image based on the x and y values in the node boundary. The following table illustrates the various image alignments in the node boundary.
+* `ImageAlign` property of the shape helps to align the image based on the x and y values in the node boundary. The following table illustrates the various image alignments in the node boundary.
 
 |Scale Values|Align Values |Result|
 |---|---|---|
@@ -155,7 +155,7 @@ Stretch and align the image content anywhere but within the node boundary. The s
 
 ## HTML template shape
 
-Html elements can be embedded in the diagram through `Html` type node. The shape property of node allows you to set the type of node and to create a HTML node it should be set as `HTML`. The following code illustrates how an Html node is created.
+Html elements can be embedded in the diagram through `Html` type node. The `shape` property of `node` allows you to set the type of node and to create a HTML node it should be set as `HTML`. The following code illustrates how an Html node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -251,7 +251,7 @@ Html elements can be embedded in the diagram through `Html` type node. The shape
 
 ## Basic shapes
 
-The `Basic` shapes are common shapes that are used to represent the geometrical information visually. To create basic shapes, the type of the shape should be set as **Basic**. Its shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as basic and shape as rectangle. Set the `CornerRadius` property to specify the radius of rounded rectangle.
+The `Basic` shapes are common shapes that are used to represent the geometrical information visually. To create basic shapes, the `type` of the `shape` should be set as **Basic**. Its `shape` property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as `basic` and `shape` as rectangle. Set the `CornerRadius` property to specify the radius of rounded rectangle.
 
 The following code example illustrates how to create a basic shape.
 
@@ -291,7 +291,7 @@ The following code example illustrates how to create a basic shape.
 }
 ```
 
-> By default, the `Shape` property of the node is set as **Basic**.Default property for shape is Rectangle.
+> By default, the `Shape` property of the node is set as **Basic**.Default property for `shape` is Rectangle.
 > When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
 > The `CornerRadius` property is applicable only for basic shape.
 
@@ -303,7 +303,7 @@ The list of basic shapes are as follows.
 
 The `Path` node is a commonly used basic shape that allows visually to represent the geometrical information. As node path data, any geometrical data can be provided. You can create your own Geometry and assign it to data if you want anything different from the standard figures. A geometry does not require any dimension specifications, such as width or height, because it specifies its own size. If the node's size is set, the geometry is extended to fit the node's dimensions.
 
-To create a path node, specify the shape as **Path**. The path property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
+To create a path node, specify the shape as **Path**. The `path` property of `node` allows you to define the path to be drawn. The following code illustrates how a path node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -344,7 +344,7 @@ To create a path node, specify the shape as **Path**. The path property of node 
 
 ## Flow Shapes
 
-The `Flow` shapes are used to represent the process flow. It is used for analyzing, designing and managing for documentation process. To create a flow shape, specify the shape type as **Flow**. Flow shapes and by default, it is considered as **Process**. The following code example illustrates how to create a flow shape.
+The `Flow` shapes are used to represent the process flow. It is used for analyzing, designing and managing for documentation process. To create a flow shape, specify the `shape` type as **Flow**. By default, it is considered as **Process**. The following code example illustrates how to create a flow shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -386,7 +386,7 @@ The list of flow shapes are as follows.
 
 ## SVG template shape
 
-Diagram provides support to embed SVG element into a node. The shape property of node allows you to set the type of node. To create a SVG node, it should be set as SVG. The following code illustrates how a SVG node is created.
+Diagram provides support to embed SVG element into a node. The `shape` property of node allows you to set the type of node. To create a SVG node, it should be set as SVG. The following code illustrates how a SVG node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -438,4 +438,4 @@ Diagram provides support to embed SVG element into a node. The shape property of
 
 ![Svg node in Blazor Diagram](images/svgnode.png)
 
-> Like HTML node, the SVG node also cannot be exported to image format. Fill color of svg node can be overridden by the inline style or fill of the SVG element specified in the template.
+> Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.

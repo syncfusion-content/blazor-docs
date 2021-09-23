@@ -75,7 +75,7 @@ To draw a shape, set that shape to the diagram's `DrawingObject` property and us
 
 ## Connectors
 
-To draw connectors, set that connector to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a straight line connector.
+To draw connectors, set the connector to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a straight line connector using.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
