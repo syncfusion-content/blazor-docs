@@ -11,7 +11,7 @@ documentation: ug
 
 A mind map is a diagram that displays the nodes as a spider diagram organizes information around a central concept. To create mind map, the `Type` of layout should be set as `MindMap`. The following code example illustrates how to create a mind map layout.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
@@ -76,7 +76,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
 
 You can also decide the branch for mind map using `GetBranch` method. The following code demonstrates how to set all branches on the right side for mind map layout using `GetBranch` method.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">

@@ -11,7 +11,7 @@ documentation: ug
 
 An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the `Type` of layout should be set as an `OrganizationalChart`. The following code example illustrates how to create an organizational chart.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
@@ -124,7 +124,7 @@ The layout can be aligned anywhere over the layout bounds/viewport using the `Ho
 
 The following code illustrates how to align the layout at the top-left of the layout bounds.
 
-```cshtml
+```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-VerticalAlignment="@verticalAlignment"></Layout>
 </SfDiagramComponent>
@@ -148,7 +148,7 @@ The following table illustrates the different chart orientations and chart types
 
 The following code example illustrates how to set the vertical right arrangement to the leaf level trees.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Diagram
 
@@ -227,17 +227,19 @@ Layout provides support to add space horizontally and vertically between the nod
 
 Layout provides support to add some blank space between the layout bounds/viewport and the layout. The `Margin` property of the layout allows you to set the blank space.
 
-```cshtml
+```csharp
 //Initialize the organizational chart layout with Margin
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px" >
   <Layout Type="LayoutType.HierarchicalTree">
      <LayoutMargin Top="@top" Left="@left"></LayoutMargin>
   </Layout>
 </SfDiagramComponent>
-
-//Initializing the Mergin Top and Left value
-int left = 40;
-int top = 50;
+@code
+{
+    //Initializing the Mergin Top and Left value
+    int left = 40;
+    int top = 50;
+}
 ```
 
 ### Layout orientation
@@ -246,31 +248,35 @@ Diagram provides support to customize the `Orientation` of layout. You can set t
 
 The following code illustrates how to arrange the nodes in a BottomToTop orientation.
 
-```cshtml
+```csharp
 //Initialize the layout with layout orientation as BottomToTop in page
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
-
-//Initializing the orientation value
-LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+@code
+{
+    //Initializing the orientation value
+    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+}
 ```
 
 ### Fixed node
 
 Layout provides support to arrange the nodes with reference to the position of a fixed node and set it to the `FixedNode` of the layout property. This is helpful when you try to expand/collapse a node. It might be expected that the position of the double-clicked node should not be changed.
 
-```cshtml
+```csharp
 //Initialize the organizational chart layout with FixedNode
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.OrganizationalChart" FixedNode="Node1" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
-
-//Initializing the orientation value
-LayoutOrientation orientation = LayoutOrientation.TopToBottom;
-//Initializing the Horizontal and Vertical value
-int HorizontalSpacing = 40;
-int VerticalSpacing = 50;
+@code
+{
+    //Initializing the orientation value
+    LayoutOrientation orientation = LayoutOrientation.TopToBottom;
+    //Initializing the Horizontal and Vertical value
+    int HorizontalSpacing = 40;
+    int VerticalSpacing = 50;
+}
 
 ```
 
@@ -278,7 +284,7 @@ int VerticalSpacing = 50;
 
 Diagram allows to refresh the layout at runtime. Use the below code example to refresh the layout.
 
-```cshtml
+```csharp
 //update the layout at runtime.
 diagram.DoLayout();
 

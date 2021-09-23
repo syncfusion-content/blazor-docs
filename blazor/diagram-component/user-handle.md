@@ -15,7 +15,7 @@ User handles are customizable handles that can be used to perform custom actions
 
 The user handle can enables for the selected nodes/connectors by setting a `SelectorConstraints` as `UserHandles` and then use the `UserHandle` class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
@@ -116,7 +116,7 @@ You can change the style of the user handles with the specific properties of Pat
 
 The following code explains how to customize the appearance of the user handle.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel">
@@ -199,7 +199,7 @@ The following code explains how to customize the appearance of the user handle.
 
 To create the fixed user handles, define and add them to the collection of nodes and connectors property. The following code example used to create an fixed user handles for the  nodes and connectors.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
@@ -267,7 +267,7 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 The following code explains how to customize the appearance of the fixed user handles.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -340,7 +340,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following code explains how to customize the node fixed user handle.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes">
@@ -424,7 +424,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following code explains how to customize the connector fixed user handle.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -476,7 +476,7 @@ The Diagram control provides following event for the fixed user handle.
 | -------- | -------- | -------- |
 | FixedUserHandleClick | FixedUserHandleClickEventArgs | Triggered when the mouse pointer is over the user handle and mouse button is up. |
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"

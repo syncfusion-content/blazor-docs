@@ -11,7 +11,7 @@ documentation: ug
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout `Type` as `HierarchicalTree`. The following example shows how to arrange the nodes in a hierarchical structure.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
@@ -91,7 +91,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 You can change the orientation at runtime. The following code is used to how to change the layout.
 
-```cshtml
+```csharp
 <SfDiagramComponent Height="600px" Width="500px" >
     <Layout Type="LayoutType.HierarchicalTree" @bind-Orientation="@orientation"></Layout>
 </SfDiagramComponent>
@@ -110,7 +110,7 @@ public void UpdateOrientation()
 
 You can change the horizontal and vertical spacing for the diagram layout.
 
-```cshtml
+```csharp
 <SfDiagramComponent @ref="diagram" Width="900px" Height="800px">
     <Layout Type="LayoutType.HierarchicalTree" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing"/>
 </SfDiagramComponent>
