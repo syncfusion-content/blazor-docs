@@ -35,7 +35,13 @@ The following code shows how to customize the appearance of the shape.
             Width = 100,
             Height = 100,
             // Add node
-            Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "Green", 
+                StrokeDashArray = "5,5", 
+                StrokeColor = "red", 
+                StrokeWidth = 2 
+            },
         };
         nodes.Add(node);
     }
@@ -72,7 +78,11 @@ The following code shows how to customize the appearance of the shape.
             OffsetX = 250,
             OffsetY = 250,
             // Shape of the Node
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
+            Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Rectangle 
+            }
         };
         Node node2 = new Node()
         {
@@ -80,7 +90,11 @@ The following code shows how to customize the appearance of the shape.
             OffsetX = 100,
             OffsetY = 100,
             // Shape of the Node
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse }
+            Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Ellipse 
+            }
         };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -265,8 +279,18 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
         }
         else
         {
-            (node as Node).Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F", StrokeWidth = 2 };
-            (node as Node).Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle, CornerRadius = 10 };
+            (node as Node).Style = new ShapeStyle() 
+            { 
+                Fill = "#6F409F", 
+                StrokeColor = "#6F409F", 
+                StrokeWidth = 2 
+            };
+            (node as Node).Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Rectangle, 
+                CornerRadius = 10 
+            };
         }
         return null;
     }
@@ -310,7 +334,11 @@ Diagram provides support to add `Shadow` effect to a node that is disabled, by d
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow
         };
         nodes.Add(node);
@@ -345,7 +373,11 @@ The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
             // Custom Shadow of the node
             Shadow = new Shadow()
@@ -448,7 +480,11 @@ There are two types of gradients as follows:
             // Size of the node
             Width = 100,
             Height = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
+            Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Ellipse 
+            },
             Style = new ShapeStyle()
             {
                 Fill = "37909A#",
@@ -506,7 +542,11 @@ The following code shows how to set the `AdditionalInfo` value.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white"
+            },
             AdditionalInfo = NodeInfo
         };
         // Add node

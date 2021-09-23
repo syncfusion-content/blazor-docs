@@ -51,7 +51,11 @@ The following code shows how to change the `Pivot` value.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
             // Pivot of the node
             Pivot = new DiagramPoint() { X = 0, Y = 0 }
         };
@@ -97,7 +101,11 @@ Rotation of a node is controlled by using the `RotationAngle` property. The foll
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white"
+            },
             // RotationAngle of the node
             RotationAngle = 90
         };
@@ -141,7 +149,11 @@ The `MinWidth` and `MinHeight` properties of node allows you to control the mini
             //Maximum Size of the node
             MaxHeight = 200,
             MaxWidth = 200,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
         };
         nodes.Add(node);
     }

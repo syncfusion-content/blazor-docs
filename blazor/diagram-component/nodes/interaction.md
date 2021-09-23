@@ -42,7 +42,11 @@ A node can be select at runtime by using the `Select` method and clear the selec
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -98,7 +102,11 @@ A node can be drag at runtime by using the `Drag` method. The following code exp
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -148,7 +156,11 @@ A node can be resize at runtime by using the `Scale` method. The following code 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -201,7 +213,11 @@ A node can be rotate at runtime by using the `Rotate` method. The following code
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);

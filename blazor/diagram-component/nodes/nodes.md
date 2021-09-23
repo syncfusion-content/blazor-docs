@@ -43,7 +43,11 @@ To create a node, define the `Node` object and add that to the nodes collection 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -156,7 +160,11 @@ The following code shows how to remove a node at runtime.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -209,7 +217,11 @@ The following code example explains how to change the node properties.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         nodes.Add(node);
     }

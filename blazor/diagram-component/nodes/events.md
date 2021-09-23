@@ -42,7 +42,11 @@ The following code example explains how to get the selection change event in the
             Width = 100,
             Height = 100,
             // Apperence of the node
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -82,7 +86,11 @@ The `PositionChanged` event is triggered when drag the node or connector through
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
             Shape= new Shape() { Type=Shapes.Basic}
         };
         // Add node
@@ -123,7 +131,11 @@ The `SizeChanged` event is triggered when resizing the node during the interacti
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -163,7 +175,11 @@ The `RotateChanged` event is triggered when rotate the node during the interacti
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
