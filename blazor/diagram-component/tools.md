@@ -15,7 +15,7 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 
 ## Shapes
 
-To draw a shape, set that shape to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a rectangle at runtime.
+To draw a shape, set the shape to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a rectangle at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -75,7 +75,7 @@ To draw a shape, set that shape to the diagram's `DrawingObject` property and us
 
 ## Connectors
 
-To draw connectors, set the connector to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a straight line connector using.
+To draw connectors, set the connector to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a straight line connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

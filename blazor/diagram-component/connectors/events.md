@@ -11,14 +11,20 @@ documentation: ug
 
 ## Selection change
 
-The `SelectionChanged` event is triggered when select or unselect the node or connector. The `SelectionChangedEventArgs`interface is used to get selection changed event arguments.
+* While selecting the diagram elements, the following events can be used to do the customization.
+* When selecting/unselecting the diagram elements, the following events are getting triggered and to do customization on those events
 
-The following code example explains how to get the selection changed event in the diagram.
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the select or deselect any objects from the diagram.|
+|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when select or deselect any objects from the diagram.|
+
+The following code example explains how to get the selection change event in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChanged="@SelectionChange"Height="500px" Connectors="@connectors">
+<SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChanging="@OnSelectionChanging" SelectionChanged="@OnSelectionChanged"  Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
@@ -61,22 +67,34 @@ The following code example explains how to get the selection changed event in th
         connectors.Add(Connector);
     }
 
-    // SelectionChanged event for diagram
-    private void SelectionChange(SelectionChangedEventArgs arg)
+    // Event to notify the selection changing event before select/unselect the diagram elements
+    public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-        Console.WriteLine((arg.NewValue[0] as Connector).ID);
+    //sets true to cancel the selection.
+    args.Cancel = true;
+    }
+
+    // Event to notify the selection changed event after select/unselect the diagram elements.
+    private void OnSelectionChanged(SelectionChangedEventArgs arg)
+    {
+        //Action to be performed
     }
 }
 ```
 
 ## Position change
 
-The `PositionChanged` events is triggered when drag the node or connector in interaction. The `PositionChangedEventArgs` interface is used to get position changed event arguments.
+* While dragging the diagram elements, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`PositionChanging`|`PositionChangingEventArgs`|Triggers while before the node or connector is dragging or its position is changing.|
+|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node or connector is dragged or its position is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" PositionChanged="@OnPositionChange" Height="500px" Connectors="@connectors">
+<SfDiagramComponent @ref="Diagram" Width="1000px" PositionChanging="@OnPositionChanging" PositionChanged="@OnPositionChanged" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
 @code
@@ -119,22 +137,34 @@ The `PositionChanged` events is triggered when drag the node or connector in int
         connectors.Add(Connector);
     }
 
-    // Position change event for diagram
-    private void OnPositionChange(PositionChangedEventArgs args)
+    // Event to notify the position changing event before dragging the diagram elements
+    public void OnPositionChanging(PositionChangingEventArgs args)
     {
-        Console.WriteLine((args.NewValue.Connectors[0].ID));
+    //sets true to cancel the dragging.
+    args.Cancel = true;
+    }
+
+    // Event to notify the position changed event after dragged the diagram elements.
+    private void OnPositionChanged(PositionChangedEventArgs arg)
+    {
+        //Action to be performed
     }
 }
 ```
 
 ## Connection change
 
-The `ConnectionChanged` event will notify when the connection is changed. The `ConnectionChangedEventArgs` interface is used to get event arguments.
+* While changing the connection of the connector, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers while before the connector’s source id or target id has changing.|
+|`ConnectionChanged`|`ConnectionChangedEventArgs`|Triggers when the connector’s source id or target id has changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChanged="@OnConnectionChange" Height="500px" Connectors="@connectors" Nodes="@nodes">
+<SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChanging="@OnConnectionChanging" ConnectionChanged="@OnConnectionChange" Height="500px" Connectors="@connectors" Nodes="@nodes">
 </SfDiagramComponent>
 
 @code
@@ -185,11 +215,17 @@ The `ConnectionChanged` event will notify when the connection is changed. The `C
         connectors.Add(Connector);
     }
 
-    // Connection change event for diagram
+    // To notify the  connection changing event before the connection change
+    private void OnConnectionChanging(ConnectionChangingEventArgs args)
+    {
+        //sets true to cancel the connection change.
+        args.Cancel = true;
+    }
+
+    // To notify the  connection changed event after connection has been changed
     private void OnConnectionChange(ConnectionChangedEventArgs args)
     {
-        Console.WriteLine("Oldvalue", args.OldValue);
-        Console.WriteLine("NewValue", args.NewValue);
+        //Action to be performed
     }
 }
 ```

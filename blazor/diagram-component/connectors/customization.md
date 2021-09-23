@@ -11,11 +11,11 @@ documentation: ug
 
 ## Decorator
 
-Diagram allows you to customize the connector appearances . The following topics shows how the customize several properties of the connectors.
+Diagram allows you to customize the connector appearances . The following topics shows how to customize several properties of the connectors.
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the `SourceDecorator` and `TargetDecorator` properties of the connector.
 
-* The `Shape` property of `SourceDecorator` allows to define the shape of the decorators. Similarly, the `Shape` property of `TargetDecorator` allows to define the shape of the decorators.
+* The `Shape` property of `SourceDecorator` allows to define the shape of the source decorator. Similarly, the `Shape` property of `TargetDecorator` allows to define the shape of the target decorator.
 
 * To create custom shape for source decorator, use `PathData` property. Similarly, to create custom shape for target decorator, use `PathData` property.
 
@@ -73,7 +73,7 @@ Diagram allows you to customize the connector appearances . The following topics
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use `StrokeColor`, `StrokeWidth`, and `StrokeDashArray`.
 
-* To set the size for source and target decorator, use width and height property.
+* To set the size for source and target decorator, use `Width` and `Height` property.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
@@ -426,7 +426,7 @@ The following code example illustrates how to customize the segment appearance.
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use `StrokeColor`, `StrokeWidth`, and `StrokeDashArray`.
 
-* To set the size for source and target decorator, use width and height property.
+* To set the size for source and target decorator, use `Width` and `Height` property.
 
 The following code example illustrates how to customize the appearance of the decorator.
 

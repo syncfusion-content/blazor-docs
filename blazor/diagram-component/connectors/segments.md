@@ -60,7 +60,7 @@ To create a straight line, specify the `Type` of the segment as **Straight** and
 
 ## Orthogonal
 
-Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment `Type` as orthogonal to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
+Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment `Type` as **Orthogonal** to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -167,7 +167,7 @@ The `Length` and `Direction` properties allow to define the flow and length of s
 
 ## Bezier
 
-Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the `Type` of the segment is set as bezier and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
+Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the `Type` of the segment is set as **Bezier** and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
