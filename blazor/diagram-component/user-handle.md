@@ -112,7 +112,7 @@ You can change the style of the user handles with the specific properties of Pat
 
 * The user handle `BorderColor`, `BackgroundColor` properties are used to define the background color and border color of the user handle and the `BorderWidth` property is used to define the border width of the user handles.
 
-* The `Visibility` property of the user handle enables or disables the visibility of user handle.
+* The `Visible` property of the user handle enables or disables the visibility of user handle.
 
 The following code explains how to customize the appearance of the user handle.
 
@@ -257,11 +257,11 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ### Style
 
-* You can change the style of the fixed user handles with the specific properties of BorderColor, BorderWidth, and background color using the HandleStrokeColor, HandleStrokeWidth, and Fill properties, and the icon BorderColor, and BorderWidth using the IconStrokeColor and IconStrokeWidth.
+* You can change the style of the fixed user handles with the specific properties of BorderColor, BorderWidth, and background color using the HandleStrokeColor, HandleStrokeWidth, and Fill properties, and the icon BorderColor, and BorderWidth using the IconStrokeColor and IconStrokeThickness.
 
-* The fixed user handle's `IconStrokeColor` and `IconStrokeWidth` property used to change the stroke color and stroke width of the given `PathData`.
+* The fixed user handle's `IconStroke` and `IconStrokeThickness` property used to change the stroke color and stroke width of the given `PathData`.
 
-* The fixed user handle `HandleStrokeColor` and `Fill` properties are used to define the background color and border color of the user handle and the `HandleStrokeWidth` property is used to define the border width of the fixed user handle.
+* The fixed user handle `Stroke` and `Fill` properties are used to define the background color and border color of the user handle and the `StrokeThickness` property is used to define the border width of the fixed user handle.
 
 * The `Visibility` property of the fixed user handle enables or disables the visibility of fixed user handle.
 
@@ -417,8 +417,8 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Displacement | Alignment | Output |
 | -------- | -------- | -------- |
-| y=10 | Before |![fixed user handle for node in blazor diagram](images/ybefore.png)|
-| y=10 | After |![fixed user handle for node in blazor diagram](images/yafter.png)|
+| y = 10 | Before |![fixed user handle for node in blazor diagram](images/ybefore.png)|
+| y = 10 | After |![fixed user handle for node in blazor diagram](images/yafter.png)|
 
 > Displacement will not be done if the alignment is set to be center.
 

@@ -15,7 +15,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <DataSourceSettings Id="Id" ParentId="ParentId" DataSource="@DataSource"></DataSourceSettings>
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.MindMap">
         <LayoutMargin Top="20" Left="20"></LayoutMargin>
     </Layout>
@@ -80,7 +80,7 @@ You can also decide the branch for mind map using `GetBranch` method. The follow
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
-    <DataSourceSettings Id="Id" ParentId="ParentId" DataSource="@DataSource"></DataSourceSettings>
+    <DataSourceSettings ID="Id" ParentID="ParentId" DataSource="@DataSource"></DataSourceSettings>
     <Layout Type="LayoutType.MindMap" GetBranch="@GetBranch">
         <LayoutMargin Top="20" Left="20"></LayoutMargin>
     </Layout>
