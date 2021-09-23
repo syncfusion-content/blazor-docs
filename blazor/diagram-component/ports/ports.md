@@ -54,10 +54,10 @@ To add a connection port, define the port object and add it to node’s ports co
             // Initialize port collection
             Ports = new DiagramObjectCollection<PointPort>()
             {
-               // Sets the position for the port
                new PointPort()
                {
                    Style=new ShapeStyle(){ Fill="gray" }, 
+                   // Sets the position for the port
                    Offset= new DiagramPoint(){X=0.5,Y=0.5}, 
                    Visibility = PortVisibility.Visible
                }
@@ -142,7 +142,7 @@ public async void AddPorts()
 
 ## Add Multiple Ports at runtime
 
-Add Multiple ports at runtime by using the server-side method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
+Add Multiple ports at runtime by using the method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
 
 The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime. If **ID** is not set, then default **ID** is automatically set.
 
@@ -218,7 +218,7 @@ The port’s `ID` property is used to define the unique ID for the port and it i
 
 ## Remove ports at runtime
 
-A collection of ports can be removed from the node by using the native`RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
+A collection of ports can be removed from the node by using the native `RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -258,9 +258,9 @@ A collection of ports can be removed from the node by using the native`RemoveAt`
                             StrokeColor="black", 
                             StrokeWidth=2
                         },
-                    // Sets the shape of the port as Circle
                     Width= 12, 
-                    Height=12, 
+                    Height=12,
+                    // Sets the shape of the port as Circle 
                     Shape= PortShapes.Circle
                 }
             },

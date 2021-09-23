@@ -52,9 +52,9 @@ The `Offset` property is used to align the Ports based on fractions. 0 represent
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
                     Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
-                    // Sets the shape of the port as Square
                     Width= 12,
-                    Height=12, 
+                    Height=12,
+                    // Sets the shape of the port as Square 
                     Shape= PortShapes.Square,
                 }
             },
@@ -66,7 +66,7 @@ The `Offset` property is used to align the Ports based on fractions. 0 represent
 
 ![Offset](../images/port_offset.png)
 
-The following code shows the relationship between the shape port position and path port offset (fraction values).
+The following table shows the relationship between the shape port position and path port offset (fraction values).
 
 | Offset values | Output |
 |---|---|
@@ -81,7 +81,6 @@ The following code shows the relationship between the shape port position and pa
 | (1,1) | ![Left](../images/offset9.png) |
 
 
-> Type of the offset property for node’s shape port is NodePortOffset.
 
 ## Horizontal and vertical alignment
 

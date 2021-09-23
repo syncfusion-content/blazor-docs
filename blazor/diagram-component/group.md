@@ -9,21 +9,21 @@ documentation: ug
 
 # NodeGroup in Blazor Diagram Component
 
-NodeGroup is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, nodegroups, and connectors). Every change made to the group also affects the children. Child elements can be edited individually.
+`NodeGroup` is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, nodegroups, and connectors). Every change made to the node group also affects the children. Child elements can be edited individually.
 
 ## Create NodeGroup
 
 ## Add NodeGroup when initializing diagram
 
-A nodegroup can be added to the diagram model through `Nodes` collection. To define an object as nodegroup, add the child objects to the `Children` collection of the nodegroup. The following code illustrates how to create a nodegroup.
+A node group can be added to the diagram model through `Nodes` collection. To define an object as node group, add the child objects to the `Children` collection of the node group. The following code illustrates how to create a node group.
 
-* While creating nodegroup, its child node needs to be declared before the nodegroup declaration.
+* While creating node group, its child node needs to be declared before the node group declaration.
 
-* Add a node to the existing nodegroup child by using the `diagram.Group` method.
+* Add a node to the existing node group child by using the `Group` method.
 
-* The nodegroup’s `diagram.UnGroup` method is used to define whether the nodegroup can be ungrouped or not.
+* The nodegroup’s `UnGroup` method is used to define whether the node group can be ungrouped or not.
 
-* A nodegroup can be added into a child of another nodegroup.
+* A node group can be added into a child of another node group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -165,11 +165,11 @@ The following code illustrates how a ungroup  at runtime.
 }
 ```
 
-## Add nodegroup at runtime
+## Add NodeGroup at runtime
 
-A nodegroup  can be added at runtime by using Nodes collection of diagram.
+A node group  can be added at runtime by using Nodes collection of diagram.
 
-The following code illustrates how a nodegroup is added at runtime
+The following code illustrates how a node group is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -229,7 +229,7 @@ The following code illustrates how a nodegroup is added at runtime
 }
 ```
 
-* Also, you can add the child to the nodegroup through `AddChild` method. The following code illustrates how to add child to the existing nodegroup through AddChild method.
+* Also, you can add the child to the node group through `AddChild` method. The following code illustrates how to add child to the existing node group through AddChild method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -316,7 +316,7 @@ The following code illustrates how a nodegroup is added at runtime
 
 ## Update position at runtime
 
-You can change the position of the nodegroup similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram-component/nodes/positioning).
+You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram-component/nodes/positioning).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -381,15 +381,15 @@ You can change the position of the nodegroup similar to node. For more informati
 
 ## Appearance
 
-You can change the appearance of the nodegroup similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization).
+You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization).
 
 ## Interaction
 
-You can edit the nodegroup and its children at runtime. We able to interact the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
+You can edit the nodeg roup and its children at runtime. We able to interact the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
 
-### Selecting a nodegroup
+### Selecting a NodeGroup
 
-When a child element of any nodegroup is clicked, its contained nodegroup is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
+When a child element of any node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
 
 ## See Also
 

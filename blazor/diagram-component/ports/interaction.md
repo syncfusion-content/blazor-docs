@@ -9,7 +9,7 @@ documentation: ug
 
 # Interaction in Blazor Diagram Component
 
-The port can be dragged in the diagram area and create the connector over the port by using the `port constraints`.
+The port can be used to create connector by using the `PortConstraints.Draw`.
 
 ## Draw
 
@@ -52,12 +52,12 @@ The following code explains how to draw the connector by using the port constrai
                     { 
                         Fill = "gray", 
                         StrokeColor = "black"
-                     },
-                    // Sets the shape of the port as Circle
+                     }, 
                     Width = 12, 
                     Height = 12, 
+                    // Sets the shape of the port as Square
                     Shape = PortShapes.Square,
-                    // Enable drag operation for Port
+                    // Enable draw operation for Port
                     Constraints = PortConstraints.Default|PortConstraints.Draw
                 }
             },

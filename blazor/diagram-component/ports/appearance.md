@@ -58,9 +58,9 @@ The following code explains how to change the appearance of the port.
                             StrokeColor="black", 
                             StrokeWidth=2
                         },
-                    // Sets the shape of the port as Circle
                     Width= 12, 
-                    Height=12, 
+                    Height=12,
+                    // Sets the shape of the port as Circle 
                     Shape= PortShapes.Circle
                 }
             },
@@ -94,7 +94,7 @@ We have provided some basic built-in `PortShapes` for the port. Please find the 
 
 ### Custom shape
 
- We have provided custom shape support for port. you can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
+ We have provided custom shape support for port. You can able to add the custom path data instead of build-in shapes. Please find the code example that explains how to change the custom shape for port.
 
  ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -128,10 +128,11 @@ We have provided some basic built-in `PortShapes` for the port. Please find the 
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
                     Style= new ShapeStyle(){ Fill="gray", StrokeColor="black"},
-                    // Sets the shape of the port as Circle
                     Width= 12, 
-                    Height=12, 
+                    Height=12,
+                    // Sets the shape of the port as Custom 
                     Shape= PortShapes.Custom,
+                    // Sets the PathData for port
                     PathData="M540.3643,137.9336L546.7973,159.7016L570.3633,159.7296L550.7723,171.9366L558.9053,194.9966L540.3643,179.4996L521.8223,194.9966L529.9553,171.9366L510.3633,159.7296L533.9313,159.7016L540.3643,137.9336z"
                 }
             },
