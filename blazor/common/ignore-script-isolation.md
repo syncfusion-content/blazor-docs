@@ -1,3 +1,12 @@
+---
+layout: post
+title: Ignore script isolation in Blazor - Syncfusion
+description: Learn here about that how to enable the ignore script isolation process in the Syncfusion Blazor Components
+platform: Blazor
+component: Common
+documentation: ug
+---
+
 # Ignore script isolation
 
 The Syncfusion Blazor Provides an optional support to refer the component scripts externally from the application end to increase initial load performance. If `IgnoreScriptIsolation` is set to `true` in `AddSyncfusionBlazor()`, the Syncfusion Blazor components will disable the built-in script isolation and use application-level scripts.
@@ -61,9 +70,9 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
     ```html
     <script src="Path for CRG generated script" type="text/javascript"></script>
     ```
-**External Script Reference for PdfViewer and DocumentEditor Component**
+**External Script Reference for Pdf Viewer and DocumentEditor Component**
 
-PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If we use the Pdfviewer or document editor component refer the below script reference in your application end.
+PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If we use the Pdf viewer or document editor component refer the below script reference in your application end.
 
 
     1. Refer the component Individual package reference, 
