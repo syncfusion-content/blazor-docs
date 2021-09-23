@@ -44,7 +44,7 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 The server-side methods `Select` and `ClearSelection` help to select or clear the selection of the elements at runtime.
 
-Get the current selected items from the `Nodes` and `Connectors` collection of the `SelectedItems` property of the diagram model.
+Get the current selected items from the `Nodes` and `Connectors` collection of the `SelectionSettings` property of the diagram model.
 
 ## Select entire elements in diagram programmatically
 
@@ -53,7 +53,7 @@ The server-side method `SelectAll` used to select all the elements such as nodes
 ## Drag
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move every selected element.
-* When you drag the elements in the diagram, the `OnPositionChange` event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the `PositionChanging` and `PositionChanged` events are triggered and to do customization on those events.
 
 For more information about dragging , refer [Node Drag](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#drag)
 
@@ -61,11 +61,11 @@ For more information about dragging , refer [Node Drag](https://blazor.syncfusio
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, selected items can be resized.
 * When one corner of the selector is dragged, opposite corner is in a static position.
-* When a node is resized, the `OnSizeChange` event gets triggered.
+* When a node is resized, the `SizeChanging` and `SizeChanged` events are gets triggered.
 
 For more information about resizing , refer [Node Resize](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction/#resize)
 
->Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
+>Note:  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to [Snapping](https://blazor.syncfusion.com/documentation/diagram-component/grid-lines#snapping).
 
 ## Rotate
 
@@ -86,7 +86,7 @@ Source and target points of the selected connectors are represented with two han
 For more information , refer [End Point Dragging](https://blazor.syncfusion.com/documentation/diagram-component/connectors/interactions/#end-point-dragging)
 
 * If you drag the connector end points, then the following events can be used to do your customization.
-* When you connect connector with ports/node or disconnect from it, the `ConnectionChange` event gets triggered.
+* When you connect connector with ports/node or disconnect from it, the `ConnectionChanging` and `ConnectionChanged` events are gets triggered.
 
 ## Straight segment editing
 
@@ -165,7 +165,7 @@ The diagram component notifies the mouse button clicked. For example, whenever t
         nodes.Add(node);
     }
 
-    private async void OnClick(ClickEventArgs args)
+    private void OnClick(ClickEventArgs args)
     {
         Console.WriteLine("Button", args.Button);
     }
@@ -204,8 +204,8 @@ The following table illustrates those commands with the associated key values.
 | Left Arrow | Nudge(“left”) | `NudgeLeft`: Moves the selected elements towards left by one pixel.|
 | Right Arrow | Nudge(“right”) | `NudgeRight`: Moves the selected elements towards right by one pixel.|
 | Ctrl + MouseWheel | Zoom | Zoom (Zoom in/Zoom out the diagram).|
-| F2 | `StartLabelEditing` | Starts to edit the label of selected element.|
-| Esc | `EndLabelEditing` | Sets the label mode as view and stops editing.|
+| F2 | `StartTextEdit` | Starts to edit the label of selected element.|
+| Esc | `EndTextEdit` | Sets the label mode as view and stops editing.|
 
 ## See Also
 
