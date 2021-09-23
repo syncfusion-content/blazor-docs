@@ -23,7 +23,7 @@ Undo/redo commands can be executed through shortcut keys. Shortcut key for undo 
 
 The server-side methods `Undo` and `Redo` help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through script.
 
-```csharp
+```cshtml
 SfDiagramComponent Diagram;
 
 // Reverts the last action performed
@@ -33,7 +33,7 @@ diagram.Undo();
 diagram.Redo();
 ```
 
-When a change in the diagram is reverted or restored (undo/redo), the `HistoryChange` event gets triggered.
+When a change in the diagram is reverted or restored (undo/redo), the `HistoryChanged` event gets triggered.
 
 ### Group multiple changes
 
@@ -41,7 +41,7 @@ History list allows to revert or restore multiple changes through a single undo/
 
 The server-side method `StartGroupAction` is used  to notify the diagram to start grouping the changes. The server-side method `EndGroupAction` is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
 
-```csharp
+```cshtml
 SfDiagramComponent diagram;
 
 //Starts grouping the changes
@@ -53,21 +53,28 @@ diagram.EndGroupAction();
 
 ## History change event
 
-The `HistoryChange` event triggers, whenever the interaction of the node and connector is take place.
+The `HistoryChanged` event triggers, whenever the interaction of the node and connector is take place.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent Height="600" HistoryChange="@Onhistorychange">
+<SfDiagramComponent @ref="@diagram" Height="600" HistoryChanged="@Onhistorychange">
 </SfDiagramComponent>
 
 @code
  {
-    public void Onhistorychange(HistoryChangeArgs args)
+    SfDiagramComponent diagram;
+
+    protected override void OnInitialized()
+    {
+           
+    }
+
+    public void Onhistorychange(HistoryChangedEventArgs args)
     {
         //causes of history change
-        var cause = args.Cause;
+        var ActionTrigger = args.ActionTrigger;
     }
 }
 ```
