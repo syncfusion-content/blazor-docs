@@ -17,7 +17,7 @@ documentation: ug
 
 * The `ID` property is used to define the unique field of each JSON data.
 
-* The `ParentID` property is used to defines the parent field which builds the relationship between ID and parent field.
+* The `ParentID` property is used to define the parent field which builds the relationship between ID and parent field.
 
 * The `Root` property is used to define the root node for the diagram populated from the data source.
 
@@ -40,8 +40,8 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 <SfDiagramComponent @ref="@Diagram" 
                     Height="499px"
                     InteractionController="InteractionController.ZoomPan" 
-                    ConnectorCreating="@ConnectorDefaults" 
-                    NodeCreating="@NodeDefaults">
+                    ConnectorCreating="@ConnectorCreating" 
+                    NodeCreating="@NodeCreating">
     <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
     <Layout @bind-Type="type" 
             @bind-HorizontalSpacing="@HorizontalSpacing" 
@@ -64,7 +64,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
     int HorizontalSpacing = 30;
     int VerticalSpacing = 30;
 
-    private void ConnectorDefaults(IDiagramObject connector)
+    private void ConnectorCreating(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
         (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
@@ -80,7 +80,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
         return options;
     }
 
-    private void NodeDefaults(IDiagramObject obj)
+    private void NodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         if (node.Data is System.Text.Json.JsonElement)

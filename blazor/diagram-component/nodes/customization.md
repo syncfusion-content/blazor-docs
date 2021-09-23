@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance of a Node in Blazor Diagram Component
 
-The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties. The `IsVisible` property of the node enables or disables the visibility of the node.
+The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties. The `IsVisible` property of the node indicates whether the node is visible or not.
 
 The following code shows how to customize the appearance of the shape.
 
@@ -113,7 +113,7 @@ The following code shows how to customize the appearance of the shape.
 
 ## NodeTemplate
 
-We can define node style using template in NodeTemplate at tag level. If we want to define separate template for each node , differentiate the nodes by the ID property. The following code explains how to define template for a node.
+We can define node style using template in NodeTemplate at tag level. If we want to define separate template for each node, differentiate the nodes by the ID property. The following code explains how to define template for a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -191,7 +191,7 @@ We can define node style using template in NodeTemplate at tag level. If we want
 }
 ```
 
-> In the above example , node's background color is updated using the click event of the button defined in the template.
+> In the above example, node's background color is updated using the click event of the button defined in the template.
 
 ![Node Template](../images/nodetemplate.gif)
 
@@ -401,9 +401,9 @@ The `Gradient` property of the node allows you to define and apply the gradient 
 
 There are two types of gradients as follows:
 
-* Linear GradientBrush
+* LinearGradientBrush
 
-* Radial GradientBrush
+* RadialGradientBrush
 
 ### Linear gradient brush
 

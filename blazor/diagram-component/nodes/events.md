@@ -20,8 +20,8 @@ Diagram provides some events support for node that triggers when interacting the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers while dragging the elements in the diagram.|
-|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the node's or connector's position is changed.|
+|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the selection is changed in the diagram.|
+|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the node's or connector's selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
 
@@ -30,8 +30,8 @@ The following code example explains how to get the selection change event in the
 
 <SfDiagramComponent Height="600px" 
                     Nodes="@nodes" 
-                    SelectionChanging="@OnSelectionChanging"
-                    SelectionChanged="@OnSelectionChanged" />
+                    SelectionChanging="OnSelectionChanging"
+                    SelectionChanged="OnSelectionChanged" />
 
 @code
 {
@@ -91,9 +91,8 @@ The following code example explains how to get the selection change event in the
 
 <SfDiagramComponent Height="600px" 
                     Nodes="@nodes"
-                    PositionChanging="@OnPositionChanging"
-                    PositionChanged="@OnPositionChanged" 
-                    />
+                    PositionChanging="OnPositionChanging"
+                    PositionChanged="OnPositionChanged" />
 
 @code
 {
@@ -152,7 +151,7 @@ The following code example explains how to get the selection change event in the
 
 <SfDiagramComponent Height="600px" 
                     Nodes="@nodes" 
-                    SizeChanged="@OnSizeChanged" 
+                    SizeChanged="OnSizeChanged" 
                     SizeChanging="OnSizeChanging"/>
 
 @code
@@ -212,8 +211,8 @@ The following code example explains how to get the selection change event in the
 
 <SfDiagramComponent Height="600px" 
                     Nodes="@nodes" 
-                    RotationChanging="@OnRotateChanging"
-                    RotationChanged="@OnRotateChanged" />
+                    RotationChanging="OnRotateChanging"
+                    RotationChanged="OnRotateChanged" />
 
 @code
 {

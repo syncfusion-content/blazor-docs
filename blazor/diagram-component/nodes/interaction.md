@@ -9,11 +9,11 @@ documentation: ug
 
 # Node Interaction in Blazor Diagram Component
 
-Diagram provides the support to drag, resize, or rotate the node interactively.
+Diagram provides the support to select, drag, resize, or rotate the node interactively.
 
 ## Select
 
-A node can be select at runtime by using the `Select` method and clear the selection in the diagram using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
+A node can be select at runtime by using the `Select` method and clear the selection in the diagram by using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -69,7 +69,7 @@ A node can be select at runtime by using the `Select` method and clear the selec
 And also the selection enable during the interaction.
 
 * An element can be selected by clicking that element.
-* When you select the elements in the diagram, the `SelectionChanged` event gets triggered and to do customization in this event.
+* When you select the elements in the diagram, the `SelectionChanging` and `SelectionChanged` event gets triggered and to do customization in those events.
 
 ![Select](../images/node-select.png)
 
@@ -123,7 +123,7 @@ A node can be drag at runtime by using the `Drag` method. The following code exp
 And also the drag the node during the interaction.
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the `PositionChanged` event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the`PositionChanging` and `PositionChanged` event gets triggered and to do customization in this event.
 
 ![Drag](../images/drag.gif)
 
@@ -178,15 +178,13 @@ And also you can resize the node during interaction.
 
 * Selector is surrounded by eight thumbs. When dragging these thumbs, the selected items can be resized.
 * When one corner of the selector is dragged, the opposite corner will be in a static position.
-* When a node is resized, the `SizeChanged` event gets triggered.
+* When a node is resized, the `SizeChanging` and `SizeChanged` event gets triggered.
 
 ![Resize](../images/resize.gif)
 
->  While dragging and resizing, the objects are snapped towards the nearest objects to make better alignments. For better alignments, refer to `Snapping`.
-
 ## Rotate
 
-A node can be rotate at runtime by using the `Rotate` method. The following code explains how to rotate the node by using method.
+A node can be rotate at runtime by using the `Rotate` method. The following code explains how to rotate the node by using the rotate method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -236,6 +234,7 @@ And also the rotate the node during the interaction.
 * A rotate handler is placed above the selector. Clicking and dragging the handler in a circular direction lead to rotate the node.
 * The node is rotated with reference to the static pivot point.
 * Pivot thumb (thumb at the middle of the node) appears when rotating the node to represent the static point.
+* When a node is rotated, the `RotationChanging` and `RotationChanged` events getting triggered.
 
 ![Rotate](../images/rotate.gif)
 

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Size for an annotation
 
-Diagram allows you set size for annotations by using the Height and Width properties. The default value of the `Width`, and `Height` properties are 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
+Diagram allows you set size for annotations by using the Height and Width properties. The default value of the `Width` and `Height` properties are 0, and it takes the node or connector size as default. The following code example shows how the annotation size is customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -381,7 +381,7 @@ Diagram provides support to edit an annotation at runtime, either programmatical
 * By double-clicking the annotation.
 * By selecting the item and pressing the F2 key.
 
-Double-clicking any annotation will enable the editing and the node enables first annotation editing. When the focus of editor is lost, the annotation for the node is updated. When you double-click the node/connector/diagram, the `DoubleClick` event gets triggered.
+Double-clicking any annotation will enable the editing and the node enables first annotation editing. When the focus of editor is lost, the annotation for the node is updated. 
 
 ## Set Annotation to read only
 
