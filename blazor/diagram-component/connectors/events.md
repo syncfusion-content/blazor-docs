@@ -16,7 +16,7 @@ documentation: ug
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the select or deselect any objects from the diagram.|
+|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers the select or deselect any objects from the diagram.|
 |`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when select or deselect any objects from the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
@@ -88,7 +88,7 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`PositionChanging`|`PositionChangingEventArgs`|Triggers while before the node or connector is dragging or its position is changing.|
+|`PositionChanging`|`PositionChangingEventArgs`|Triggers before the node or connector is dragging or its position is changing.|
 |`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node or connector is dragged or its position is changed.|
 
 ```cshtml
@@ -158,7 +158,7 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers while before the connector’s source id or target id has changing.|
+|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers before the connector’s source id or target id has changing.|
 |`ConnectionChanged`|`ConnectionChangedEventArgs`|Triggers when the connector’s source id or target id has changed.|
 
 ```cshtml
