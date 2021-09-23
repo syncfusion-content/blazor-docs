@@ -15,14 +15,23 @@ Diagram provides some events support for node that triggers when interacting the
 
 ## Selection change
 
-The `SelectionChanged` event is triggered when select/unselect the node or connector. The `SelectionChangedEventArgs` interface is used to get selection changed event arguments.
+* While selecting the diagram elements, the following events can be used to do the customization.
+* When selecting or unselecting the diagram elements, the following events are getting triggered. 
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers while dragging the elements in the diagram.|
+|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the node's or connector's position is changed.|
 
 The following code example explains how to get the selection change event in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionChanged="@OnSelectionChange" />
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes" 
+                    SelectionChanging="@OnSelectionChanging"
+                    SelectionChanged="@OnSelectionChanged" />
 
 @code
 {
@@ -52,22 +61,39 @@ The following code example explains how to get the selection change event in the
         nodes.Add(node);
     }
 
-    // SelectionChanged event for diagram
+    // Event to notify the selection changing event before select/unselect the diagram elements
+    public void OnSelectionChanging(SelectionChangingEventArgs args)
+    {
+        //sets true to cancel the selection.
+        args.Cancel = true;
+    }
+
+    // Event to notify the selection changed event after select/unselect the diagram elements.
     public void OnSelectionChange(SelectionChangedEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Count);
+        //Action to be performed
     }
 }
 ```
 
 ## Position change
 
-The `PositionChanged` event is triggered when drag the node or connector through interaction. The `PositionChangedEventArgs` is used to get position changed event arguments.
+* While dragging the node or connector through interaction, the following events can be used to do the customization.
+* When dragging the node, the following events are getting triggered. 
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`PositionChanging`|`PositionChangedEventArgs`|Triggers while dragging the elements in the diagram.|
+|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node's or connector's position is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" PositionChanged="@OnPositionChange"/>
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes"
+                    PositionChanging="@OnPositionChanging"
+                    PositionChanged="@OnPositionChanged" 
+                    />
 
 @code
 {
@@ -97,22 +123,37 @@ The `PositionChanged` event is triggered when drag the node or connector through
         nodes.Add(node);
     }
 
-    // Position changed event for diagram
-    public void OnPositionChange(PositionChangedEventArgs args)
+    // Event to notify the position changing event while dragging the elements in diagram.
+    public void OnPositionChanging(PositionChangingEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Nodes[0].ID);
+        //Sets true to cancel the action.
+        args.Cancel = true;
+    }
+
+    //Event to notify the position changed event when the node's or connector's position is changed.
+    public void OnPositionChanged(PositionChangedEventArgs args)
+    {
+        //Action to be performed.
     }
 }
 ```
 
 ## Size change
+* While resizing the node during the interaction, the following events can be used to do the customization.
+* When resizing the node, the following events are getting triggered. 
 
-The `SizeChanged` event is triggered when resizing the node during the interaction. The `SizeChangedEventArgs` is used to get size changed event arguments.
-
+|Event Name|Arguments|Description|
+|------------|------------|-----------------------|
+|`SizeChanging`|`SizeChangingEventArgs`|Triggers before the node is resized.|
+|`SizeChanged`|`SizeChangedEventArgs`|Triggers when the node is resized.|
+ 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SizeChanged="@OnSizeChange" />
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes" 
+                    SizeChanged="@OnSizeChanged" 
+                    SizeChanging="OnSizeChanging"/>
 
 @code
 {
@@ -141,22 +182,38 @@ The `SizeChanged` event is triggered when resizing the node during the interacti
         nodes.Add(node);
     }
 
-    // Size change event for diagram
-    public void OnSizeChange(SizeChangedEventArgs args)
+    // Event to notify the Size changing event before the digram elements size is changing.
+    public void OnSizeChanging(SizeChangingEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Nodes[0].ID);
+        //Sets true to cancel the resize action
+        args.Cancel = true;
+    }
+
+    // Event to notify the Size change event after the diagram elements size is changed.
+    public void OnSizeChanged(SizeChangedEventArgs args)
+    {
+        //Action to be performed.
     }
 }
 ```
 
 ## Rotate change
 
-The `RotateChanged` event is triggered when rotate the node during the interaction. The `RotationChangedEventArgs` is used to get angle value change event arguments.
+* While rotating the node during the interaction, the following events can be used to do the customization.
+* When rotating the node, the following events are getting triggered. 
+
+|Event Name|Arguments|Description|
+|------------|----------|-------------------------|
+|`RotateChanging`|`RotationChangingEventArgs`|Triggers before the diagram elements are rotate.|
+|`RotationChanged`|`RotationChangedEventArgs` |Triggers when the diagram elements are rotated.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" RotationChanged="@OnRotateChange" />
+<SfDiagramComponent Height="600px" 
+                    Nodes="@nodes" 
+                    RotationChanging="@OnRotateChanging"
+                    RotationChanged="@OnRotateChanged" />
 
 @code
 {
@@ -185,10 +242,17 @@ The `RotateChanged` event is triggered when rotate the node during the interacti
         nodes.Add(node);
     }
 
-    // Rotate change event for diagram
-    public void OnRotateChange(RotationChangedEventArgs args)
+    // Event to notify the rotation changing event before the node is rotate.
+    public void OnRotateChanging(RotationChangingEventArgs args)
     {
-        Console.WriteLine(args.NewValue.Nodes.Count);
+        //Sets true to cancel the rotation
+        args.Cancel = true;
+    }
+
+    // Event to notify the rotation changed event after the node is rotated.
+    public void OnRotateChanged(RotationChangedEventArgs args)
+    {
+        //Action to be performed.
     }
 }
 ```
