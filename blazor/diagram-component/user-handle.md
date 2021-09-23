@@ -31,7 +31,7 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
 {
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    // Defines diagram's SelectedItems
+    // Defines diagram's SelectionSettings
     DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
@@ -130,7 +130,7 @@ The following code explains how to customize the appearance of the user handle.
 {
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    // Defines diagram's SelectedItems
+    // Defines diagram's SelectionSettings
     DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
 
@@ -241,23 +241,23 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ## Customization the fixed user handle
 
-* The id property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
+* The `ID` property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
 
-* The fixed user handle can be positioned relative to the node and connector boundaries. It has offset, padding and cornerRadius settings. It is used to position and customize the fixed user handle.
+* The fixed user handle can be positioned relative to the node and connector boundaries. It has `Offset`, `Padding` and `CornerRadius` settings. It is used to position and customize the fixed user handle.
 
 * The `Padding` is used to leave the space that is inside the fixed user handle between the icon and border.
 
-* The corner radius allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
+* The `CornerRadius` allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
 
-> The PathData needs to be provided to render fixed user handle.
+> The `PathData` needs to be provided to render fixed user handle.
 
 ### Size
 
- Diagram allows you set size for the fixed user handles by using the `Width` and `Height` property. The default value of the width and height property is 10.
+ Diagram allows you set size for the fixed user handles by using the `Width` and `Height` property. The default value of the `Width` and `Height` property is 10.
 
 ### Style
 
-* You can change the style of the fixed user handles with the specific properties of BorderColor, BorderWidth, and background color using the HandleStrokeColor, HandleStrokeWidth, and Fill properties, and the icon BorderColor, and BorderWidth using the IconStrokeColor and IconStrokeThickness.
+* You can change the style of the fixed user handles with the specific properties of `BorderColor`, `BorderWidth`, and `BackgroundColor` using the `Stroke`, `StrokeThickness`, and `Fill` properties, and the icon BorderColor, and BorderWidth using the IconStrokeColor and IconStrokeThickness.
 
 * The fixed user handle's `IconStroke` and `IconStrokeThickness` property used to change the stroke color and stroke width of the given `PathData`.
 
