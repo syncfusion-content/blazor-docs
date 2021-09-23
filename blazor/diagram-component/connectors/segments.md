@@ -212,7 +212,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 ![Connector Bezier Segment](../images/connector-bezier.png)
 
-We have properties called `Point1` and `Point2` which is used to control the points of the bezier connector . And also we have properties called `vector1` and `vector2` which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
+We have properties called `Point1` and `Point2` which is used to control the points of the bezier connector . And also we have properties called `Vector1` and `Vector2` which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
 
 ```cshtml
 Connector Connector1 = new Connector()

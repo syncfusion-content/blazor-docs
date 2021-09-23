@@ -298,7 +298,7 @@ Line bridging creates a bridge for lines to smartly cross over the other lines, 
 }
 ```
 
-The `BridgeSpace` property of connectors can be used to define the width for line bridging.
+The `BridgeSpace` property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
 
 Limitation: `Bezier` segments do not support bridging.
 
@@ -364,9 +364,9 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 * The connector’s `StrokeWidth`, `StrokeColor`, `StrokeDashArray`, and `Opacity` properties are used to customize the appearance of the connector segments.
 
-* The `Visible` property of the connector enables or disables the visibility of connector.
+* The `Visible` property of the connector indicating whether the connector is visible in the user interface
 
-* Default values for all the `Connectors` can be set using the `ConnectorCreating` properties. For example, if all connectors have the same type or having the same property then such properties can be moved into `ConnectorCreating`.
+* Default values for all the `Connectors` can be set by using the `ConnectorCreating` event callback method. For example, if all connectors have the same type or having the same property then such properties can be moved into `ConnectorCreating`.
 
 ### Segment appearance
 
@@ -549,7 +549,7 @@ The following code illustrates how to disable selection.
 
 ## Custom properties
 
-* The `AdditionalInfo` property of connectors allow you to maintain additional information to the connectors.
+* The `AdditionalInfo` property of connector allow you to maintain additional information to the connectors.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

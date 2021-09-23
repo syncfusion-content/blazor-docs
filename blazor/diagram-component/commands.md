@@ -21,7 +21,7 @@ There are several commands available in the diagram as follows.
 
 ## Alignment commands
 
-Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the AlignmentOptions in `SetAlign` commands which shows how to use align methods in the diagram.
+Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the `AlignmentOptions` in `SetAlign` commands which shows how to use align methods in the diagram.
 
 ### Align Left
 The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
@@ -637,7 +637,7 @@ The following code illustrates how to execute the clipboard commands.
 
 `Group` command is used to group the selected nodes and connectors in the diagram.
 
-`Ungroup` command is used to ungroup the selected nodes and connectors in the diagram.
+`UnGroup` command is used to ungroup the selected nodes and connectors in the diagram.
 
 The following code illustrates how to execute the grouping commands.
 

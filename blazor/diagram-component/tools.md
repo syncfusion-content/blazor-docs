@@ -15,7 +15,7 @@ Drawing tool allows you to draw any kind of node/connector during runtime by cli
 
 ## Shapes
 
-To draw a shape, set the shape to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a rectangle at runtime.
+To draw a shape, You have to activate the drawing tool by using the `InteractionController` property and you need to set the shape by using the `DrawingObject` property. The following code example illustrates how to draw a rectangle at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -75,7 +75,7 @@ To draw a shape, set the shape to the diagram's `DrawingObject` property and use
 
 ## Connectors
 
-To draw connectors, set the connector to the diagram's `DrawingObject` property and use the `InteractionController` property to activate the drawing tool. The following code example illustrates how to draw a straight line connector.
+To draw a connector, You have to activate the drawing tool by using the `InteractionController` property and you need to set the connector by using the `DrawingObject` property. The following code example illustrates how to draw a straight line connector.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -218,7 +218,7 @@ There are some functionalities that can be achieved by clicking and dragging on 
 As all the three behaviors are completely different, you can achieve only one behavior at a time based on the interaction controller that you choose.
 When more than one of those interaction controllers are applied, a interaction controller is activated based on the precedence given in the following table.
 
-|Precedence|Interaction Controllers|Description|
+|Precedence|InteractionControllers|Description|
 |----------|-----|-----------|
 |1st|ContinuesDraw|Allows you to draw the nodes or connectors continuously. Once it is activated, you cannot perform any other interaction in the diagram.|
 |2nd|DrawOnce|Allows you to draw a single node or connector. Once you complete the DrawOnce action, SingleSelect, and MultipleSelect interaction controllers are automatically enabled.|

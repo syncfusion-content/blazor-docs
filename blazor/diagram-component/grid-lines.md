@@ -13,7 +13,7 @@ Gridlines are the pattern of lines drawn behind the diagram elements. It provide
 
 ## Customize the Gridlines visibility
 
-The `SnapConstraints` enables you to show/hide the gridlines. The following code example illustrates how to show or hide gridlines.
+The `Constraints` property of SnapSettings class allows you to control the visibility of the gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -229,7 +229,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 
 * The `SnapAngle` property allows you to define the snap angle by which the object needs to be rotated.
 
-* The `SnapConstraints` property allows you to enable or disable the certain features of the snapping, refer to `SnapConstraints`.
+* The `Constraints` property allows you to enable or disable the certain features of the snapping, refer to `SnapConstraints`.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
