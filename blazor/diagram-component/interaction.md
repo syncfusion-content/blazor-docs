@@ -20,7 +20,7 @@ An element can be selected by clicking that element. During single click, all pr
 ![Single Selection in Blazor Diagram](images/selection.gif)
 
 * While selecting the diagram elements, the following events can be used to do your customization.
-* When selecting/unselecting the diagram elements, the `SelectionChanged` event gets triggered.
+* When selecting/unselecting the diagram elements, the `SelectionChanging` and `SelectionChanged` events are gets triggered.
 
 ## Selecting a group
 
