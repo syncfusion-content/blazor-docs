@@ -11,14 +11,17 @@ documentation: ug
 
 ## Text Change
 
-The TextChanged event will notify the annotation content changes after editing. The `TextChangeEventArgs` interface is used to get event arguments.
+* While editing the node's or connector's annotation, this event can be used to do the customization.
+* When the node's or connector's annotation is changed in the diagram, this event is getting triggered. 
 
-The following code example shows how to register and get the notification from the TextEdit event.
+The `TextChangeEventArgs` notifies when the annotation of an element undergoes editing.
+
+The following code example shows how to register and get the notification from the TextChanged event.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" TextChanged="textedit" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" TextChanged="OnTextChanged" Nodes="@nodes" />
 
 @code
 {
@@ -26,7 +29,7 @@ The following code example shows how to register and get the notification from t
     DiagramObjectCollection<Node> nodes;
 
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.
-    private void textedit(TextChangeEventArgs args)
+    private void OnTextChanged(TextChangeEventArgs args)
     {
         Console.WriteLine("Oldvalue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
@@ -54,11 +57,11 @@ The following code example shows how to register and get the notification from t
 
 ## Key down
 
-The keydown event occurs when a keyboard key is pressed down and updated the respective keyboard key pressed.
+The KeyDown event occurs when a keyboard key is pressed down and updated the respective keyboard key pressed.
 
 ## Key up
 
-The keyup event occurs when a keyboard key is released and updated the respective keyboard key pressed.
+The KeyUp event occurs when a keyboard key is released and updated the respective keyboard key pressed.
 
 The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
 
@@ -72,7 +75,7 @@ The following code example shows how to register and get the notification from t
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes;
 
-    // Occurs when  click the annotation and enter the character in key down state
+    // Occurs when click the annotation and enter the character in key down state
     private void OnKeyDown(KeyEventArgs args)
     {
 

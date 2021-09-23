@@ -64,14 +64,14 @@ The following code example explains how to get the selection change event in the
     // Event to notify the selection changing event before select/unselect the diagram elements
     public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-        //sets true to cancel the selection.
+        // sets true to cancel the selection.
         args.Cancel = true;
     }
 
     // Event to notify the selection changed event after select/unselect the diagram elements.
     public void OnSelectionChange(SelectionChangedEventArgs args)
     {
-        //Action to be performed
+        // Action to be performed
     }
 }
 ```
@@ -116,7 +116,7 @@ The following code example explains how to get the selection change event in the
                 Fill = "#6495ED", 
                 StrokeColor = "white" 
             },
-            Shape= new Shape() { Type=Shapes.Basic}
+            Shape = new Shape() { Type = Shapes.Basic}
         };
         // Add node
         nodes.Add(node);
@@ -125,14 +125,14 @@ The following code example explains how to get the selection change event in the
     // Event to notify the position changing event while dragging the elements in diagram.
     public void OnPositionChanging(PositionChangingEventArgs args)
     {
-        //Sets true to cancel the action.
+        // Sets true to cancel the action.
         args.Cancel = true;
     }
 
     //Event to notify the position changed event when the node's or connector's position is changed.
     public void OnPositionChanged(PositionChangedEventArgs args)
     {
-        //Action to be performed.
+        // Action to be performed.
     }
 }
 ```
@@ -184,14 +184,14 @@ The following code example explains how to get the selection change event in the
     // Event to notify the Size changing event before the digram elements size is changing.
     public void OnSizeChanging(SizeChangingEventArgs args)
     {
-        //Sets true to cancel the resize action
+        // Sets true to cancel the resize action
         args.Cancel = true;
     }
 
     // Event to notify the Size change event after the diagram elements size is changed.
     public void OnSizeChanged(SizeChangedEventArgs args)
     {
-        //Action to be performed.
+        // Action to be performed.
     }
 }
 ```
@@ -244,14 +244,14 @@ The following code example explains how to get the selection change event in the
     // Event to notify the rotation changing event before the node is rotate.
     public void OnRotateChanging(RotationChangingEventArgs args)
     {
-        //Sets true to cancel the rotation
+        // Sets true to cancel the rotation
         args.Cancel = true;
     }
 
     // Event to notify the rotation changed event after the node is rotated.
     public void OnRotateChanged(RotationChangedEventArgs args)
     {
-        //Action to be performed.
+        // Action to be performed.
     }
 }
 ```

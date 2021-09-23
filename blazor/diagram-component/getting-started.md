@@ -148,7 +148,7 @@ Let us create and add a `Nodes` with specific position, size, label and shape. C
         };
         if (label != default(string))
         {
-            var annotation = new PathAnnotation()
+            PathAnnotation annotation = new PathAnnotation()
             {
                 Content = label,
                 Style = new TextStyle() { Fill = "white" }

@@ -51,7 +51,7 @@ Diagram allows you set size for annotations by using the Height and Width proper
 
 ## Hyperlink
 
-Diagram provides support to add a `Hyperlink` to the nodes or connectors annotation. It can also be customized.
+Diagram provides support to add a `Hyperlink` to the node's or connector's annotation. It can also be customized.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -138,9 +138,9 @@ Diagram provides support to add a `Hyperlink` to the nodes or connectors annotat
 
 ![HyperLink with content](../images/hyperlink-content.png)
 
-## Wrapping
+## Text wrapping
 
-When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. The following code explains how to wrap a text in a node.
+The TextWrapping property of the annotation defines how the text should be wrapped. When text overflows node boundaries, you can control it by using the `TextWrapping`. So, it is wrapped into multiple lines. The following code explains how to wrap a text in a node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -181,7 +181,7 @@ When text overflows node boundaries, you can control it by using the `TextWrappi
 }
 ```
 
-| Value | Description | Image |
+| TextWrapping | Description | Image |
 | -------- | -------- | -------- |
 | No Wrap | Text will not be wrapped. | ![Label No Wrap](../images/Wrap1.png) |
 | Wrap | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Label Wrap](../images/Wrap2.png) |
@@ -226,7 +226,7 @@ The following code sample shows how the different types of overflow property wor
                     Style = new TextStyle()
                     { 
                         TextOverflow = TextOverflow.Wrap,
-                        TextWrapping=TextWrap.NoWrap 
+                        TextWrapping = TextWrap.NoWrap 
                     }
                 },
             },
@@ -255,13 +255,13 @@ The following code sample shows how the different types of overflow property wor
 
 You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, Color). The following code explains how to customize the appearance of the annotation.
 
-* The label’s `Bold`, `Italic`, and `TextDecoration` properties are used to style the label’s text.
+* The annotation’s `Bold`, `Italic`, and `TextDecoration` properties are used to style the annotation’s text.
 
-* The label’s `Fill`, `StrokeColor`, and `StrokeWidth` properties are used to define the background color and border color of the annotation and the `Opacity` property is used to define the transparency of the annotations.
+* The annotation’s `Fill`, `StrokeColor`, and `StrokeWidth` properties are used to define the background color and border color of the annotation and the `Opacity` property is used to define the transparency of the annotations.
 
 * The `Visibility` property of the annotation enables or disables the visibility of annotation.
 
-The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize Background, Opacity, and Border of the annotation.
+The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize the appaearance of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -294,7 +294,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
                         Color="black",
                         Bold = true,
                         Italic = true,
-                        TextDecoration=TextDecoration.Underline,
+                        TextDecoration = TextDecoration.Underline,
                         FontSize = 12,
                         FontFamily = "TimesNewRoman"  
                     } 
@@ -311,7 +311,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 
 ## Update the annotation style at runtime
 
-You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the appearance of the annotation.
+You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the font style of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -376,7 +376,7 @@ You can change the font style of the annotations with the font specific properti
 
 Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. But it can be brought to edit mode in two ways.
 
-* You can edit the annotation Programmatically by using the `StartTextEdit` method.
+* You can edit the annotation programmatically by using the `StartTextEdit` method.
 * Also, you can edit the annotation interactively.
 * By double-clicking the annotation.
 * By selecting the item and pressing the F2 key.
@@ -425,7 +425,7 @@ Diagram allows to create read-only annotations. You have to set the read-only pr
 
 ## Create Multiple Annotations
 
-You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. Different labels by position is same or different point of the shapes of connector depends upon the offset values specified.
+You can add any number of annotations to a node or connector. The following code example shows how to add multiple annotations to a node. 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -484,17 +484,17 @@ You can add any number of annotations to a node or connector. The following code
                 new PathAnnotation 
                 { 
                     Content = "Offset as 0",
-                    Offset=0 
+                    Offset = 0 
                 },
                 new PathAnnotation 
                 { 
                     Content = "Offset as 0.5",
-                    Offset=0.5
+                    Offset = 0.5
                 },
                 new PathAnnotation 
                 {
                     Content = "Offset as 1",
-                    Offset=1 
+                    Offset = 1 
                 },
             }
         };
@@ -520,6 +520,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 |---|---|
 | ReadOnly | Enables or disables whether the annotation to be read only or not. |
 | None | Disables all behaviors of Annotation. |
+|InheritReadOnly |Enables or disables to inherit the ReadOnly option from the parent object.|
 
 > The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
 

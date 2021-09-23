@@ -21,7 +21,7 @@ Undo/redo commands can be executed through shortcut keys. Shortcut key for undo 
 
 ## Undo/redo through public APIs
 
-The server-side methods `Undo` and `Redo` help you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through script.
+The `Undo` and `Redo` methods helps you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through code.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -39,7 +39,7 @@ When a change in the diagram is reverted or restored (undo/redo), the `HistoryCh
 
 History list allows to revert or restore multiple changes through a single undo/redo command. For example, revert/restore the fill color change of multiple elements at a time.
 
-The server-side method `StartGroupAction` is used  to notify the diagram to start grouping the changes. The server-side method `EndGroupAction` is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
+`StartGroupAction` is used to notify the diagram to start grouping the changes. `EndGroupAction` is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
 
 ```cshtml
 SfDiagramComponent diagram;
@@ -53,7 +53,10 @@ diagram.EndGroupAction();
 
 ## History change event
 
-The `HistoryChanged` event triggers, whenever the interaction of the node and connector is take place.
+* While interacting the elements in the diagram, this event can be used to do the customization.
+* When interacting the node or connector, the entries getting added to the history list to trigger this event.
+
+The `HistoryChangedEventArgs` notifies while the changes occurs during undo/redo process.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -74,7 +77,7 @@ The `HistoryChanged` event triggers, whenever the interaction of the node and co
     public void Onhistorychange(HistoryChangedEventArgs args)
     {
         //causes of history change
-        var ActionTrigger = args.ActionTrigger;
+        HistoryChangedAction ActionTrigger = args.ActionTrigger;
     }
 }
 ```

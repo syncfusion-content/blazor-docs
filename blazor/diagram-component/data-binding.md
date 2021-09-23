@@ -97,7 +97,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
             new ShapeAnnotation()
             {
                 Content = hierarchicalData.Name,
-                Style =new TextStyle(){Color = "white"}
+                Style = new TextStyle(){Color = "white"}
             }
         };
     }

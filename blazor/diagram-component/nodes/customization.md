@@ -242,31 +242,31 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
     {
         if ((node as Node).ID == "node6")
         {
-            var table = new StackPanel();
+            StackPanel table = new StackPanel();
             table.Style = new ShapeStyle() { Fill = "#e6e0eb", StrokeColor = "#e6e0eb" };
             table.Orientation = Orientation.Horizontal;
-            var column1 = new StackPanel();
+            StackPanel column1 = new StackPanel();
             column1.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
             column1.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column1.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column1.Children = new ObservableCollection<ICommonElement>();
             column1.Children.Add(getTextElement("Events"));
 
-            var column2 = new StackPanel();
+            StackPanel column2 = new StackPanel();
             column2.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column2.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column2.Children = new ObservableCollection<ICommonElement>();
             column2.Children.Add(getTextElement("Emails"));
             column2.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
-            var column3 = new StackPanel();
+            StackPanel column3 = new StackPanel();
             column3.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column3.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column3.Children = new ObservableCollection<ICommonElement>();
             column3.Children.Add(getTextElement("Calls"));
             column3.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
-            var column4 = new StackPanel();
+            StackPanel column4 = new StackPanel();
             column4.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column4.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column4.Children = new ObservableCollection<ICommonElement>();
@@ -297,7 +297,7 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
 
     private TextElement getTextElement(string text)
     {
-        var textElement = new TextElement();
+        TextElement textElement = new TextElement();
         textElement.Width = 60;
         textElement.Height = 20;
         textElement.Content = text;
@@ -434,10 +434,10 @@ There are two types of gradients as follows:
             {
                 Gradient = new LinearGradientBrush()
                 {
-                    //Start point of linear gradient
+                    // Start point of linear gradient
                     X1 = 0,
                     Y1 = 0,
-                    ////End point of linear gradient
+                    // End point of linear gradient
                     X2 = 50,
                     Y2 = 50,
                     //Sets an array of stop objects
@@ -491,10 +491,10 @@ There are two types of gradients as follows:
                 StrokeColor = "#024249",
                 Gradient = new RadialGradientBrush()
                 {
-                    //Center point of outer circle
+                    // Center point of outer circle
                     CX = 50,
                     CY = 50,
-                    //Center point of inner circle
+                    // Center point of inner circle
                     FX = 50,
                     FY = 50,
                     GradientStops = new DiagramObjectCollection<GradientStop>()
