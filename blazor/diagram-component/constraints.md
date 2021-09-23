@@ -30,7 +30,6 @@ Diagram constraints allow you to enable or disable the following behaviors. By d
 |PanY|Enables or Disable Paning Y coordinate support for the diagram|
 |Pan|Enables or Disable panning both X and Y coordinates support for the diagram|
 |ZoomTextEdit|Enables or Disables zooming the text box while editing the text|
-|Virtualization|Enables or Disable Virtualization support the diagram|
 |Default|Enables or Disable all constraints in diagram|
 
 The following example shows how to disable PageEditable constraint from default diagram constraints.
@@ -39,7 +38,8 @@ The following example shows how to disable PageEditable constraint from default 
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with constraints *@
-<SfDiagramComponent Height="600px" Nodes="@nodes" Constraints="@DiagramConstraints" />
+<SfDiagramComponent Height="600px" Nodes="@nodes" 
+Constraints="@DiagramConstraints" />
 
 @code
 {
@@ -200,9 +200,9 @@ The following code shows how to disable select constraint from the default const
         Connector connector = new Connector()
         {
             ID = "connector1",
-            Type = Segments.Straight,
-            SourcePoint = new Point() { X = 100, Y = 100 },
-            TargetPoint = new Point() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Straight,
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             //sets the ConnectorConstraints...
             Constraints = ConnectorConstraints.Default & ~ConnectorConstraints.Select
         };
@@ -267,7 +267,7 @@ The following code shows how to disable creating connections with a port.
             new PointPort()
             {
                 ID="port1",
-                Offset=new Point(){X=0,Y=0.5},
+                Offset=new DiagramPoint(){X=0,Y=0.5},
                 Shape=PortShapes.Circle,
                 Visibility=PortVisibility.Visible,
                 // Sets the PortConstraints...
@@ -337,7 +337,7 @@ The following code shows how to enable read-only mode for the annotations.
                 Content="Annotation Text Wrapping",
                 // Sets the Constraints for Annotation...
                 Constraints=AnnotationConstraints.ReadOnly,
-                Style= new TextShapeStyle()
+                Style= new TextStyle()
                 {
                     Color="#000000",
                     Fill="Transparent",
@@ -382,12 +382,12 @@ The following code shows how to hide rotator.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SelectedItems="@selectedItems"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectedItems"/>
 
 @code
 {
-    DiagramObjectCollection<Node> NodeCollection;
-    public Selector selectedItems = new Selector() 
+    DiagramObjectCollection<Node> nodes;
+    public DiagramSelectionSettings selectedItems = new DiagramSelectionSettings() 
     { 
         Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate 
     };
@@ -558,16 +558,16 @@ The following code example shows how to inherit the line bridging behavior from 
         Connector connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point() { X = 100, Y = 100 },
-            TargetPoint = new Point() { X = 200, Y = 200 },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
             //sets the ConnectorConstraints...
             Constraints = ConnectorConstraints.Default | ConnectorConstraints.InheritBridging
         };
         Connector connector1 = new Connector()
         {
             ID = "connector2",
-            SourcePoint = new Point() { X = 200, Y = 100 },
-            TargetPoint = new Point() { X = 100, Y = 200 },
+            SourcePoint = new DiagramPoint() { X = 200, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 100, Y = 200 },
         };
         connectors.Add(connector);
         connectors.Add(connector1);
