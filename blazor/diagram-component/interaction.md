@@ -11,7 +11,7 @@ documentation: ug
 
 ## Selection
 
-Selector provides a visual representation of selected elements. It behaves like a container and allows to update the size, position, and rotation angle of the selected elements through interaction and by using program. Single or multiple elements can be selected at a time.
+`DiagramSelectionSettings` provides a visual representation of selected elements. It behaves like a container and allows to update the size, position, and rotation angle of the selected elements through interaction and by using program. Single or multiple elements can be selected at a time.
 
 ## Single selection
 
@@ -42,13 +42,13 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 ## Select/Unselect elements using program
 
-The server-side methods `Select` and `ClearSelection` help to select or clear the selection of the elements at runtime.
+The `Select` and `ClearSelection` methods help to select or clear the selection of the elements at runtime.
 
 Get the current selected items from the `Nodes` and `Connectors` collection of the `SelectionSettings` property of the diagram model.
 
 ## Select entire elements in diagram programmatically
 
-The server-side method `SelectAll` used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use `SelectAll` method on the diagram.
+The `SelectAll` method used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use `SelectAll` method on the diagram.
 
 ## Drag
 
