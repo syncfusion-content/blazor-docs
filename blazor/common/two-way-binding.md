@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Two-Way binding in Blazor - Syncfusion
-description: Check out the documentation for Two-Way Data Binding in the Syncfusion Blazor Components.
+description: Check out the documentation for Two-Way Data Binding support by using the Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
