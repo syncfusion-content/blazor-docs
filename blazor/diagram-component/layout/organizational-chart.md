@@ -14,13 +14,13 @@ An organizational chart is a diagram that displays the structure of an organizat
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@connectors" NodeDefaults="@NodeDefaults" ConnectorDefaults="@ConnectorDefaults">
+<SfDiagramComponent Height="600px" Nodes="@NodeCollection" Connectors="@connectors" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <Layout Type="LayoutType.OrganizationalChart" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-VerticalSpacing="@VerticalSpacing">
     </Layout>
 </SfDiagramComponent>
 
-@code {
-
+@code 
+{
     //Defines diagram's connector collection
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
     //Defines diagram's node collection
@@ -29,7 +29,7 @@ An organizational chart is a diagram that displays the structure of an organizat
     int HorizontalSpacing = 40;
     int VerticalSpacing = 40;
 
-    private void NodeDefaults(IDiagramObject obj)
+    private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.Height = 40;
@@ -37,75 +37,76 @@ An organizational chart is a diagram that displays the structure of an organizat
         //Initializing the default node's shape style
         node.Style = new ShapeStyle() { Fill = "darkcyan", StrokeWidth = 3, StrokeColor = "Black" };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-    {
-    new ShapeAnnotation { Style = new TextShapeStyle() { Color = "white", Bold = true },Content = node.Annotations[0].Content }
-    };
+        {
+            new ShapeAnnotation { Style = new TextStyle() { Color = "white", Bold = true },Content = node.Annotations[0].Content }
+        };
     }
 
-    private void ConnectorDefaults(IDiagramObject connector)
+    private void OnConnectorCreating(IDiagramObject connector)
     {
-        (connector as Connector).Type = Segments.Orthogonal;
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
     }
 
     protected override void OnInitialized()
     {
         NodeCollection = new DiagramObjectCollection<Node>()
-    {
-    new Node(){ID="node1",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Project Management"}}},
-    new Node(){ID="node2",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="R&D Team"}}},
-    new Node(){ID="node3",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Philosophy"}}},
-    new Node(){ID="node4",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Organization"}}},
-    new Node(){ID="node5",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Technology"}}},
-    new Node(){ID="node6",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Funding"}}},
-    new Node(){ID="node7",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Resource-Allocation"}}},
-    new Node(){ID="node8",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Targeting"}}},
-    new Node(){ID="node9",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Evaluation"}}},
-    new Node(){ID="node10",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="HR-Team"}}},
-    new Node(){ID="node11",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Recruiment"}}},
-    new Node(){ID="node12",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Employee-Relation"}}},
-    new Node(){ID="node13",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Production & Sales Team"}}},
-    new Node(){ID="node14",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Design"}}},
-    new Node(){ID="node15",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Operation"}}},
-    new Node(){ID="node16",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Support"}}},
-    new Node(){ID="node17",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Quality Assurance"}}},
-    new Node(){ID="node18",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Customer Interaction"}}},
-    new Node(){ID="node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Support and Maintenance"}}},
-    new Node(){ID="node20",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Task Coordination"}}},
-    };
+        {
+            new Node(){ID="node1",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Project Management"}}},
+            new Node(){ID="node2",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="R&D Team"}}},
+            new Node(){ID="node3",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Philosophy"}}},
+            new Node(){ID="node4",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Organization"}}},
+            new Node(){ID="node5",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Technology"}}},
+            new Node(){ID="node6",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Funding"}}},
+            new Node(){ID="node7",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Resource-Allocation"}}},
+            new Node(){ID="node8",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Targeting"}}},
+            new Node(){ID="node9",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Evaluation"}}},
+            new Node(){ID="node10",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="HR-Team"}}},
+            new Node(){ID="node11",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Recruiment"}}},
+            new Node(){ID="node12",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Employee-Relation"}}},
+            new Node(){ID="node13",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Production & Sales Team"}}},
+            new Node(){ID="node14",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Design"}}},
+            new Node(){ID="node15",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Operation"}}},
+            new Node(){ID="node16",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Support"}}},
+            new Node(){ID="node17",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Quality Assurance"}}},
+            new Node(){ID="node18",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Customer Interaction"}}},
+            new Node(){ID="node19",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Support and Maintenance"}}},
+            new Node(){ID="node20",Annotations = new DiagramObjectCollection<ShapeAnnotation>(){new ShapeAnnotation{Content="Task Coordination"}}},
+        };
         connectors = new DiagramObjectCollection<Connector>()
-    {
-    new Connector(){ID="connector1",SourceID="node1",TargetID="node2"},
-    new Connector(){ID="connector2",SourceID="node1",TargetID="node10"},
-    new Connector(){ID="connector3",SourceID="node1",TargetID="node13"},
-    new Connector(){ID="connector4",SourceID="node2",TargetID="node3"},
-    new Connector(){ID="connector5",SourceID="node2",TargetID="node4"},
-    new Connector(){ID="connector6",SourceID="node2",TargetID="node5"},
-    new Connector(){ID="connector7",SourceID="node2",TargetID="node6"},
-    new Connector(){ID="connector8",SourceID="node2",TargetID="node7"},
-    new Connector(){ID="connector9",SourceID="node2",TargetID="node8"},
-    new Connector(){ID="connector10",SourceID="node2",TargetID="node9"},
-    new Connector(){ID="connector11",SourceID="node2",TargetID="node11"},
-    new Connector(){ID="connector12",SourceID="node10",TargetID="node12"},
-    new Connector(){ID="connector13",SourceID="node10",TargetID="node14"},
-    new Connector(){ID="connector14",SourceID="node13",TargetID="node15"},
-    new Connector(){ID="connector15",SourceID="node13",TargetID="node16"},
-    new Connector(){ID="connector16",SourceID="node13",TargetID="node17"},
-    new Connector(){ID="connector17",SourceID="node13",TargetID="node18"},
-    new Connector(){ID="connector18",SourceID="node13",TargetID="node19"},
-    new Connector(){ID="connector19",SourceID="node13",TargetID="node20"},
-    };
+        {
+            new Connector(){ID="connector1",SourceID="node1",TargetID="node2"},
+            new Connector(){ID="connector2",SourceID="node1",TargetID="node10"},
+            new Connector(){ID="connector3",SourceID="node1",TargetID="node13"},
+            new Connector(){ID="connector4",SourceID="node2",TargetID="node3"},
+            new Connector(){ID="connector5",SourceID="node2",TargetID="node4"},
+            new Connector(){ID="connector6",SourceID="node2",TargetID="node5"},
+            new Connector(){ID="connector7",SourceID="node2",TargetID="node6"},
+            new Connector(){ID="connector8",SourceID="node2",TargetID="node7"},
+            new Connector(){ID="connector9",SourceID="node2",TargetID="node8"},
+            new Connector(){ID="connector10",SourceID="node2",TargetID="node9"},
+            new Connector(){ID="connector11",SourceID="node2",TargetID="node11"},
+            new Connector(){ID="connector12",SourceID="node10",TargetID="node12"},
+            new Connector(){ID="connector13",SourceID="node10",TargetID="node14"},
+            new Connector(){ID="connector14",SourceID="node13",TargetID="node15"},
+            new Connector(){ID="connector15",SourceID="node13",TargetID="node16"},
+            new Connector(){ID="connector16",SourceID="node13",TargetID="node17"},
+            new Connector(){ID="connector17",SourceID="node13",TargetID="node18"},
+            new Connector(){ID="connector18",SourceID="node13",TargetID="node19"},
+            new Connector(){ID="connector19",SourceID="node13",TargetID="node20"},
+        };
     }
 }
 ```
 
 ![OrgChart layout manager](../images/Orgchart.png)
 
-Organizational chart layout starts parsing from root and iterate through all its child elements. The `LayoutInfo` property provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.)them. The arrangements can be customized by overriding this function as explained.
+Organizational chart layout starts parsing from root and iterate through all its child elements. The `GetLayoutInfo` event callback method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.)them. The arrangements can be customized by overriding this function as explained.
 
-Node **LayoutInfo** property to set chart orientations, chart types, and offset to be left between parent and child nodes. The `LayoutInfo` property is called to configure every subtree of the organizational chart. It takes the following arguments.
+**GetLayoutInfo** set chart orientations, chart types, and offset to be left between parent and child nodes. The `GetLayoutInfo` property is called to configure every subtree of the organizational chart. It takes the following arguments.
 
-1. **Node**: Parent node to that options are to be customized.
-2. **Options**: Object to set the customizable properties.
+1. **IDiagramObject**: Parent node to that options are to be customized.
+2. **TreeInfo**: Object to set the customizable properties.
+3. **TreeInfo**: Returns an object value to be the customized.
 
 ## Customize layout
 
@@ -150,9 +151,8 @@ The following code example illustrates how to set the vertical right arrangement
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Diagram.Internal
 
-<SfDiagramComponent Height="600px" NodeDefaults="@NodeDefaults" ConnectorDefaults="@ConnectorDefaults">
+<SfDiagramComponent Height="600px" NodeCreating="@OnNodeCreating" ConnectorCreating="@OnConnectorCreating">
     <DataSourceSettings Id="Id" ParentId="Team" DataSource="@DataSource"></DataSourceSettings>
     <SnapSettings>
         <HorizontalGridLines LineColor="white" LineDashArray="2,2">
@@ -164,19 +164,22 @@ The following code example illustrates how to set the vertical right arrangement
     </Layout>
 </SfDiagramComponent>
 
-@code {
+@code
+{
     //Initializing layout
-
     int HorizontalSpacing = 40;
     int VerticalSpacing = 50;
+
+    //To configure every subtree of the organizational chart
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
-        options.Type = SubTreeAlignments.Right;
-        options.Orientation = SubTreeOrientation.Vertical;
+        options.AlignmentType = SubTreeAlignmentType.Right;
+        options.Orientation = Orientation.Vertical;
         return options;
     }
 
-    private void NodeDefaults(IDiagramObject obj)
+    //Creates node with some default values
+    private void OnNodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.Height = 50;
@@ -184,15 +187,16 @@ The following code example illustrates how to set the vertical right arrangement
         node.Style = new ShapeStyle() { Fill = "#6495ED", StrokeWidth = 1, StrokeColor = "Black" };
     }
 
-    private void ConnectorDefaults(IDiagramObject connector)
+    //Creates connectors with some default values
+    private void OnConnectorCreating(IDiagramObject connector)
     {
         Connector connectors = connector as Connector;
-        connectors.Type = Segments.Orthogonal;
-        connectors.Style = new TextShapeStyle() { StrokeColor = "#6495ED", StrokeWidth = 1 };
-        connectors.TargetDecorator = new Decorator
+        connectors.Type = ConnectorSegmentType.Orthogonal;
+        connectors.Style = new TextStyle() { StrokeColor = "#6495ED", StrokeWidth = 1 };
+        connectors.TargetDecorator = new DecoratorSettings
         {
-            Shape = DecoratorShapes.None,
-            Style = new TextShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED", }
+            Shape = DecoratorShape.None,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED", }
         };
     }
 
@@ -203,13 +207,13 @@ The following code example illustrates how to set the vertical right arrangement
         public string Role { get; set; }
     }
     public object DataSource = new List<object>()
-{
-    new OrgChartDataModel() { Id= "1", Role= "General Manager" },
-    new OrgChartDataModel() { Id= "2", Role= "Human Resource Manager", Team= "1" },
-    new OrgChartDataModel() { Id= "3", Role= "Design Manager", Team= "1" },
-    new OrgChartDataModel() { Id= "4", Role= "Operation Manager", Team= "1" },
-    new OrgChartDataModel() { Id= "5", Role= "Marketing Manager", Team= "1" }
-};
+    {
+        new OrgChartDataModel() { Id= "1", Role= "General Manager" },
+        new OrgChartDataModel() { Id= "2", Role= "Human Resource Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "3", Role= "Design Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "4", Role= "Operation Manager", Team= "1" },
+        new OrgChartDataModel() { Id= "5", Role= "Marketing Manager", Team= "1" }
+    };
 }
 ```
 
