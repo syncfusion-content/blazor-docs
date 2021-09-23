@@ -70,9 +70,9 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
     ```html
     <script src="Path for CRG generated script" type="text/javascript"></script>
     ```
-**External Script Reference for Pdf Viewer and DocumentEditor Component**
+**External Script Reference for PDF Viewer and DocumentEditor Component**
 
-PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If we use the Pdf viewer or document editor component refer the below script reference in your application end.
+PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If we use the PDF viewer or document editor component refer the below script reference in your application end.
 
 
     1. Refer the component Individual package reference, 
