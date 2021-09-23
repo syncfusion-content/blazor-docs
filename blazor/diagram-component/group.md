@@ -385,7 +385,7 @@ You can change the appearance of the node group similar to node. For more inform
 
 ## Interaction
 
-You can edit the nodeg roup and its children at runtime. We able to interact the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
+You can edit the node group and its children at runtime. We able to interact the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
 
 ### Selecting a NodeGroup
 
