@@ -26,7 +26,7 @@ Alignment commands enable you to align the selected or defined objects such as n
 ### Align Left
 The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Left" @onclick="@OnAlignLeft" />
@@ -84,7 +84,7 @@ The following code example illustrates how to align all the selected objects at 
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Right" @onclick="@OnAlignRight" />
@@ -139,9 +139,9 @@ The following code example illustrates how to align all the selected objects at 
 ```
 
 ### Align Top
-The following code example illustrates how to align all the selected objects at the top side of the selection boundary.
+The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Top" @onclick="@OnAlignTop" />
@@ -196,9 +196,9 @@ The following code example illustrates how to align all the selected objects at 
 ```
 
 ### Align Bottom
-The following code example illustrates how to align all the selected objects at the bottom side of the selection boundary.
+The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Bottom" @onclick="@OnAlignBottom" />
@@ -255,7 +255,7 @@ The following code example illustrates how to align all the selected objects at 
 ### Align Middle
 The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Middle" @onclick="@OnAlignMiddle" />
@@ -313,7 +313,7 @@ The following code example illustrates how to align all the selected objects at 
 
 The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Center" @onclick="@OnAlignCenter" />
@@ -383,7 +383,7 @@ The factor to distribute the shapes `DistributeOptions` are listed as follows:
 
 The following code example illustrates how to execute the space commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Left" @onclick="@OnDistributeLeft" />
@@ -491,7 +491,7 @@ The following code example illustrates how to execute the space commands.
 
 The following code example illustrates how to execute the size commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="SameSize" @onclick="@OnSameSize" />
@@ -572,7 +572,7 @@ Clipboard commands are used to cut, copy, or paste the selected elements.
 
 The following code illustrates how to execute the clipboard commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Cut" @onclick="@OnCut" />
@@ -633,15 +633,15 @@ The following code illustrates how to execute the clipboard commands.
 
 ## Grouping
 
-**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using select all command and ungroup the selected group.
+**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using select all command and group the selected elements.
 
-`Group` the selected nodes and connectors in the diagram.
+`Group` command is used to group the selected nodes and connectors in the diagram.
 
-`Ungroup` the selected nodes and connectors in the diagram.
+`Ungroup` command is used to ungroup the selected nodes and connectors in the diagram.
 
 The following code illustrates how to execute the grouping commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Group" @onclick="@OnGroup" />
@@ -706,7 +706,7 @@ The `Zoom` command is used to zoom-in and zoom-out the diagram view.
 
 The following code illustrates how to zoom-in/zoom out the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Zoom" @onclick="@OnZoom" />
@@ -749,7 +749,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 The `Undo` and `Redo` commands help you to revert/restore the changes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px">
@@ -791,7 +791,7 @@ To define a custom command, specify the following properties:
 
 The following code example shows how to define a custom command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
@@ -891,7 +891,7 @@ When any one of the default commands is not desired, they can be disabled. To ch
 
 The following code example shows how to disable a command and how to modify the built-in commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
