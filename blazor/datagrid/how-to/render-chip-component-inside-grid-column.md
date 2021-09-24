@@ -19,7 +19,7 @@ This is demonstrated in the below sample code where Chip component is rendered i
 @using Syncfusion.Blazor.Buttons
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="blogs" AllowTextWrap="true" AllowPaging="true">
+<SfGrid DataSource="BlogLists" AllowTextWrap="true" AllowPaging="true">
     <GridColumns>
         <GridColumn Field="@nameof(Blog.BlogId)" HeaderText="Blog ID" TextAlign="TextAlign.Left" IsPrimaryKey="true" Width="110"></GridColumn>
         <GridColumn Field="@nameof(Blog.AuthorName)" HeaderText="Author Name" TextAlign="TextAlign.Left" Width="120"></GridColumn>
@@ -110,12 +110,12 @@ This is demonstrated in the below sample code where Chip component is rendered i
 
 @code
 {
-    public List<Blog> blogs { get; set; }
+    public List<Blog> BlogLists { get; set; }
 
     protected override void OnInitialized()
     {
         base.OnInitialized();
-        blogs = Enumerable.Range(1, 50).Select((x) => new Blog()
+        BlogLists = Enumerable.Range(1, 50).Select((x) => new Blog()
         {
             AuthorName = (new string[] { "ALFKI", "ANTON", "BOLID", "BLONP", "ANATR" })[new Random().Next(5)],
             Status = (new string[] { "Published", "Draft" })[new Random().Next(2)],
