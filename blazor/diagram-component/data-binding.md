@@ -17,7 +17,7 @@ documentation: ug
 
 * The `ID` property is used to define the unique field of each JSON data.
 
-* The `ParentId` property is used to defines the parent field which builds the relationship between ID and parent field.
+* The `ParentID` property is used to define the parent field which builds the relationship between ID and parent field.
 
 * The `Root` property is used to define the root node for the diagram populated from the data source.
 
@@ -34,35 +34,40 @@ Diagram can be populated based on the user defined JSON data (Local Data) by map
 
 To map the user defined JSON data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind local data with the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Diagram.Internal
 
-<SfDiagramComponent @ref="@Diagram" Height="499px" Tool="@DiagramTools.ZoomPan" ConnectorDefaults="@ConnectorDefaults" NodeDefaults="@NodeDefaults">
-    <DataSourceSettings Id="Name" ParentId="Category" DataSource="DataSource"> </DataSourceSettings>
-    <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-Orientation="@orientation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
-        <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>
+<SfDiagramComponent @ref="@Diagram" 
+                    Height="499px"
+                    InteractionController="InteractionController.ZoomPan" 
+                    ConnectorCreating="@ConnectorCreating" 
+                    NodeCreating="@NodeCreating">
+    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
+    <Layout @bind-Type="type" 
+            @bind-HorizontalSpacing="@HorizontalSpacing" 
+            @bind-Orientation="@orientation" 
+            @bind-VerticalSpacing="@VerticalSpacing" 
+            @bind-HorizontalAlignment="@horizontalAlignment" 
+            @bind-VerticalAlignment="@verticalAlignment" 
+            GetLayoutInfo="GetLayoutInfo">
+        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"/>
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
     SfDiagramComponent Diagram;
-    double top = 50;
-    double bottom = 50;
-    double right = 50;
-    double left = 50;
     LayoutType type = LayoutType.HierarchicalTree;
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
     HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
+    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;    
     int HorizontalSpacing = 30;
     int VerticalSpacing = 30;
 
-    private void ConnectorDefaults(IDiagramObject connector)
+    private void ConnectorCreating(IDiagramObject connector)
     {
-        (connector as Connector).Type = Segments.Orthogonal;
-        (connector as Connector).TargetDecorator.Shape = DecoratorShapes.None;
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
         (connector as Connector).Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
         (connector as Connector).Constraints = 0;
         (connector as Connector).CornerRadius = 5;
@@ -70,12 +75,12 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
-        options.CanEnableSubTree = true;
-        options.Orientation = SubTreeOrientation.Horizontal;
+        options.EnableSubTree = true;
+        options.Orientation = Orientation.Horizontal;
         return options;
     }
 
-    private void NodeDefaults(IDiagramObject obj)
+    private void NodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         if (node.Data is System.Text.Json.JsonElement)
@@ -92,7 +97,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
             new ShapeAnnotation()
             {
                 Content = hierarchicalData.Name,
-                Style =new TextShapeStyle(){Color = "white"}
+                Style = new TextStyle(){Color = "white"}
             }
         };
     }
@@ -128,13 +133,13 @@ Local JSON data can be bound to the Diagram component by assigning the array of 
 
 The following sample code demonstrates binding local data through the SfDataManager to the Diagram component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
-                    NodeDefaults="NodeDefaults" SetNodeTemplate="SetTemplate">
-    <DataSourceSettings Id="Name" ParentId="Category">
+                    NodeCreating="NodeDefaults" SetNodeTemplate="SetTemplate">
+    <DataSourceSettings ID="Name" ParentID="Category">
         <SfDataManager Json="DataSource" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor"></SfDataManager>
     </DataSourceSettings>
     <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
@@ -197,16 +202,17 @@ When using SfDataManager for data binding then the TValue must be provided expli
 
 The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the OData documentation. To bind OData v4 service, use the ODataV4Adaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 
 <div style="width:100%">
     <div style="width:70%">
         <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
-                            NodeDefaults="NodeDefaults"  SetNodeTemplate="SetTemplate">
-            <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"/>
+                            NodeCreating="NodeDefaults"  SetNodeTemplate="SetTemplate">
+            <DataSourceSettings ID="EmployeeID" ParentID="ReportsTo">
+                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" 
+                               Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"/>
             </DataSourceSettings>
             <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"/>
         </SfDiagramComponent>
