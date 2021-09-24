@@ -430,7 +430,7 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 The output will shown as follows,
 
-![Blazor ComboBox ExpandoObject data binding](./images/blazor_combobox_dynamic-object.png)
+![Blazor ComboBox DynamicObject data binding](./images/blazor_combobox_dynamic-object.png)
 
 ### ObservableCollection data binding
 
@@ -475,7 +475,7 @@ You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/a
 
 The output will shown as follows,
 
-![Blazor ComboBox ExpandoObject data binding](./images/blazor_combobox_observable-collection.png)
+![Blazor ComboBox ObservableCollection data binding](./images/blazor_combobox_observable-collection.png)
 
 ## Entity Framework
 

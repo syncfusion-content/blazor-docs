@@ -18,30 +18,25 @@ In the following code 150 items bound to the component, but only 6 items will lo
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data 
 
-<SfDropDownList TValue="string" TItem="OrderDetails" EnableVirtualization="true"  Placeholder="Select a name" Query="@RemoteDataQuery">
-    <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
-    <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
+<SfDropDownList TValue="string" TItem="Record" Placeholder="Select an item" DataSource="@Records" Query="@LocalDataQuery" PopupHeight="130px" EnableVirtualization="true">
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
 </SfDropDownList>
 
 @code{
-
-    public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(10);
-    public class OrderDetails
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public int? EmployeeID { get; set; }
-        public double? Freight { get; set; }
-        public string ShipCity { get; set; }
-        public bool Verified { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public string ShipName { get; set; }
-        public string ShipCountry { get; set; }
-        public DateTime? ShippedDate { get; set; }
-        public string ShipAddress { get; set; }
-    }
+    public Query LocalDataQuery = new Query().Take(6); 
+    public class Record 
+    { 
+        public string ID { get; set; } 
+        public string Text { get; set; } 
+    } 
+    public List<Record> Records { get; set; } 
+    protected override void OnInitialized()
+    { 
+        this.Records = Enumerable.Range(1, 150).Select(i => new Record() 
+        { 
+            ID = i.ToString(), 
+            Text = "Item " + i, 
+        }).ToList(); 
+    } 
 }
 ```
-
-
-
