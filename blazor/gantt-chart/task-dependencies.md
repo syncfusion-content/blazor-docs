@@ -11,7 +11,7 @@ documentation: ug
 
 Task dependency or task relationship can be established between two tasks in Gantt Chart. This dependency affects the project schedule. If you change the predecessor of a task, it will affect the successor task, which will affect the next task, and so on.
 
-## Task Relationship Types
+## Task relationship types
 
 Task relationships are categorized into four types based on the start and finish dates of the task.
 
@@ -39,7 +39,7 @@ You cannot finish a task until the dependent task is completed.
 
 ![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.png)
 
-## Define Task Relationship
+## Define task relationship
 
 Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the `GanttTaskFields.Dependency` property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
