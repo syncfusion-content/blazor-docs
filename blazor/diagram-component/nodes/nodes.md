@@ -43,7 +43,11 @@ To create a node, define the `Node` object and add that to the nodes collection 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -55,7 +59,7 @@ To create a node, define the `Node` object and add that to the nodes collection 
 
 ## Add nodes at runtime
 
-You can add a Node at runtime by adding node to the nodes collection in the Diagram component.  The following code explains how to add nodes at runtime.
+You can add a Node at runtime by adding it to the nodes collection of the Diagram component. The following code explains how to add a node at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -107,10 +111,10 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
 Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the `Symbol Palette`.
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
-* When a symbol is dragged into a diagram from symbol palette, the `DragEnter` event gets triggered.
-* When a symbol is dragged over a diagram, the `DragOver` event gets triggered.
-* When a symbol is dragged and dropped from symbol palette to diagram area, the `Drop` event gets triggered.
-* When a symbol is dragged outside of the diagram, the `DragLeave` event gets triggered.
+* When a symbol is dragged into a diagram from symbol palette, the `DragStart` event gets triggered. `DragStartEventArgs` notifies when the element enters into the diagram from the symbol palette.
+* When a symbol is dragged over a diagram, the `Dragging` event gets triggered. `DraggingEventArgs` notifies when an element drags over another diagram element.
+* When a symbol is dragged and dropped from symbol palette to diagram area, the `DragDrop` event gets triggered. `DropEventArgs` notifies when the element is dropped on the diagram.
+* When a symbol is dragged outside of the diagram, the `DragLeave` event gets triggered. `DragLeaveEventArgs` notifies when the element leaves the diagram.
 
 ![Node](../images/node-add-palette.gif)
 
@@ -156,7 +160,11 @@ The following code shows how to remove a node at runtime.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -209,7 +217,11 @@ The following code example explains how to change the node properties.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         nodes.Add(node);
     }
