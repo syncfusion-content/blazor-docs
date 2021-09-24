@@ -9,7 +9,7 @@ documentation: ug
 
 # Organizational Chart in Blazor Diagram Component
 
-An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html). The following code example illustrates how to create an organizational chart.
+An organizational chart is a diagram that displays the structure of an organization and relationships. To create an organizational chart, the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_Type) of layout should be set as an [OrganizationalChart](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.LayoutType.html#Syncfusion_Blazor_Diagram_LayoutType_OrganizationalChart). The following code example illustrates how to create an organizational chart.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -102,7 +102,7 @@ An organizational chart is a diagram that displays the structure of an organizat
 
 Organizational chart layout starts parsing from root and iterate through all its child elements. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method provides necessary information of a node’s children and the way to arrange (direction, orientation, offsets, etc.)them. The arrangements can be customized by overriding this function as explained.
 
-**GetLayoutInfo** set chart orientations, chart types, and offset to be left between parent and child nodes. The [GetLayoutInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetLayoutInfo) event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
+**GetLayoutInfo** set chart orientations, chart types, and offset to be left between parent and child nodes. The GetLayoutInfo event callback method is called to configure every subtree of the organizational chart. It takes the following arguments.
 
 1. **IDiagramObject**: Parent node to that options are to be customized.
 2. **TreeInfo**: Object to set the customizable properties.

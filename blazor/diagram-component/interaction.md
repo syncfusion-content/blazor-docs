@@ -87,7 +87,7 @@ Get the current selected items from the [Nodes](https://help.syncfusion.com/cr/b
 
 ## Select entire elements in diagram programmatically
 
-The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method on the diagram.
+The [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) method used to select all the elements such as nodes/connectors in the diagram. Refer to the following link which shows how to use SelectAll method on the diagram.
 
 ## Drag
 
@@ -502,21 +502,21 @@ The following table illustrates those commands with the associated key values.
 
 | Shortcut Key | Command | Description|
 |--------------|---------|------------|
-| Ctrl + A | [SelectAll](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) | Select all nodes/connectors in the diagram.|
-| Ctrl + C | Copy | Copy the diagram selected elements.|
-| Ctrl + V | Paste | Pastes the copied elements.|
-| Ctrl + X | Cut | Cuts the selected elements.|
-| Ctrl + Z | Undo | Reverses the last editing action performed on the diagram.|
-| Ctrl + Y | Redo | Restores the last editing action when no other actions have occurred since the last undo on the diagram.|
+| Ctrl + A | [SelectAll](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectAll) | Select all nodes/connectors in the diagram.|
+| Ctrl + C | [Copy](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) | Copy the diagram selected elements.|
+| Ctrl + V | [Paste](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste) | Pastes the copied elements.|
+| Ctrl + X | [Cut](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Cut) | Cuts the selected elements.|
+| Ctrl + Z | [Undo](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) | Reverses the last editing action performed on the diagram.|
+| Ctrl + Y | [Redo](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) | Restores the last editing action when no other actions have occurred since the last undo on the diagram.|
 | Delete | Delete | Deletes the selected elements.|
 | Ctrl/Shift + Click on object |  | Multiple selection (Selector binds all selected nodes/connectors).|
-| Up Arrow | Nudge(“up”) | `NudgeUp`: Moves the selected elements towards up by one pixel.|
-| Down Arrow | Nudge(“down”) | `NudgeDown`: Moves the selected elements towards down by one pixel.|
-| Left Arrow | Nudge(“left”) | `NudgeLeft`: Moves the selected elements towards left by one pixel.|
-| Right Arrow | Nudge(“right”) | `NudgeRight`: Moves the selected elements towards right by one pixel.|
-| Ctrl + MouseWheel | Zoom | Zoom (Zoom in/Zoom out the diagram).|
-| F2 | [StartTextEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartTextEdit_Syncfusion_Blazor_Diagram_IDiagramObject_System_String_) | Starts to edit the label of selected element.|
-| Esc | `EndTextEdit` | Sets the label mode as view and stops editing.|
+| Up Arrow | [Nudge(Direction.Up)](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) | `NudgeUp`: Moves the selected elements towards up by one pixel.|
+| Down Arrow | [Nudge(Direction.Down)](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) | `NudgeDown`: Moves the selected elements towards down by one pixel.|
+| Left Arrow | [Nudge(Direction.Left)](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) | `NudgeLeft`: Moves the selected elements towards left by one pixel.|
+| Right Arrow | [Nudge(Direction.Right)](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) | `NudgeRight`: Moves the selected elements towards right by one pixel.|
+| Ctrl + MouseWheel | [Zoom](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) | Zoom (Zoom in/Zoom out the diagram).|
+| F2 | [StartTextEdit](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartTextEdit_Syncfusion_Blazor_Diagram_IDiagramObject_System_String_) | Starts to edit the label of selected element.|
+| Esc |  | Sets the label mode as view and stops editing.|
 
 ## See Also
 
