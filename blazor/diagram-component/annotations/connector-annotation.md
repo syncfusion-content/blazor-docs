@@ -18,7 +18,7 @@ Annotations of a connector can be positioned using the following properties of A
 
 ## Offset
 
-The `Offset` property of annotation is used to align the annotations based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
+The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Offset) property of annotation is used to align the annotations based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width/Height.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -59,7 +59,7 @@ The following image shows the relationship between the annotation position and o
 
 ## Alignment
 
-The connector’s annotation can be aligned over its segment path using the `Alignment` property of annotation.
+The connector’s annotation can be aligned over its segment path using the [Alignment](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_Alignment) property of annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -99,7 +99,7 @@ The following screenshot shows how the annotation of the connector aligned over 
 
 ## Segment angle
 
-The `SegmentAngle` property is used to rotate the annotation based on the connectors segment direction. By default, annotation will be in rotated in the connector path. When you assign value to the SegmentPath property, annotation will be rotated from its position based on the annotation direction.
+The [SegmentAngle](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathAnnotation.html#Syncfusion_Blazor_Diagram_PathAnnotation_SegmentAngle) property is used to rotate the annotation based on the connectors segment direction. By default, annotation will be in rotated in the connector path. When you assign value to the SegmentPath property, annotation will be rotated from its position based on the annotation direction.
 
 The following code example shows how the connector annotation rotated in its path direction.
 
