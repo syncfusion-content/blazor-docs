@@ -9,7 +9,7 @@ documentation: ug
 
 # Render the Blazor DatePicker Component with highlighted Special Dates
 
-You can customize specific dates in a calendar by using the  [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the calendar. Here, list of dates in the current month are customized with custom styles by adding the personal-appointment and official-appointment class.
+You can customize specific dates in a DatePicker by using the [OnRenderDayCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.DatePickerEvents-1.html#Syncfusion_Blazor_Calendars_DatePickerEvents_1_OnRenderDayCell) event. This event gets triggered on each day cell element creation that allows you to customize or disable the specific dates in the DatePicker. Here, list of dates in the current month are customized with custom styles by adding the personal-appointment and official-appointment class.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -89,4 +89,4 @@ You can customize specific dates in a calendar by using the  [OnRenderDayCell](h
 
 The output will be as follows.
 
-![Blazor DatePicker Special Dates](./images/blazor_datepicker_special_dates.png)
+![Blazor DatePicker with special dates](./images/blazor_datepicker_special_dates.png)

@@ -366,7 +366,7 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 The output will shown as follows,
 
-![Blazor AutoComplete ExpandoObject data binding](./images/blazor_autocomplete_expando-object.png)
+![Blazor AutoComplete with expando object data binding](./images/blazor_autocomplete_expando-object.png)
 
 ### DynamicObject data binding
 
@@ -418,7 +418,7 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 The output will shown as follows,
 
-![Blazor AutoComplete DynamicObject data binding](./images/blazor_autocomplete_dynamic-object.png)
+![Blazor AutoComplete with dynamic object data binding](./images/blazor_autocomplete_dynamic-object.png)
 
 ### ObservableCollection data binding
 
@@ -462,7 +462,7 @@ You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/a
 
 The output will shown as follows,
 
-![Blazor AutoComplete ObservableCollection data binding](./images/blazor_autocomplete_observable-collection.png)
+![Blazor AutoComplete with observable collection data binding](./images/blazor_autocomplete_observable-collection.png)
 
 ## Entity Framework
 

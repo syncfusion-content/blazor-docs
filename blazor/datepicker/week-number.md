@@ -20,4 +20,4 @@ You can enable WeekNumber in the DatePicker by using the [WeekNumber](https://he
 
 The output will be as follows.
 
-![Blazor DatePicker Week Number](./images/blazor_datepicker_weeknumber.png)
+![Blazor DatePicker with week numbers](./images/blazor_datepicker_weeknumber.png)

@@ -31,7 +31,7 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
         public string ID { get; set; }
     }
     List<Vegetables> VegetablesList = new List<Vegetables>()
-{
+    {
         new Vegetables() { Vegetable = "Cabbage", Category = "Leafy and Salad", ID = "item1" },
         new Vegetables() { Vegetable = "Chickpea", Category = "Beans", ID = "item2" },
         new Vegetables() { Vegetable = "Garlic", Category = "Bulb and Stem", ID = "item3" },
@@ -47,4 +47,7 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
 }
 
 ```
-![Blazor MultiSelect Grouping with CheckBox](./images/blazor-multiselect-checkbox-with-grouping.png)
+
+The output will be as follows.
+
+![Blazor MultiSelect with checkbox grouping](./images/blazor-multiselect-checkbox-with-grouping.png)

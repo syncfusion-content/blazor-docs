@@ -389,7 +389,7 @@ You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 The output will shown as follows,
 
-![Blazor DropDownList ExpandoObject data binding](./images/blazor_dropdown_expando-object.png)
+![Blazor DropDownList with expando object data binding](./images/blazor_dropdown_expando-object.png)
 
 ### DynamicObject data binding
 
@@ -441,7 +441,7 @@ You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.
 
 The output will shown as follows,
 
-![Blazor DropDownList DynamicObject data binding](./images/blazor_dropdown_dynamic-object.png)
+![Blazor DropDownList with dynamic object data binding](./images/blazor_dropdown_dynamic-object.png)
 
 ### ObservableCollection data binding
 
@@ -486,7 +486,7 @@ public class Colors
 
 The output will shown as follows,
 
-![Blazor DropDownList ObservableCollection data binding](./images/blazor_dropdown_observable-collection.png)
+![Blazor DropDownList with observable collection data binding](./images/blazor_dropdown_observable-collection.png)
 
 ## Entity Framework
 
