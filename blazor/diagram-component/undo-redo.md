@@ -69,11 +69,6 @@ The `HistoryChangedEventArgs` notifies while the changes occurs during undo/redo
  {
     SfDiagramComponent diagram;
 
-    protected override void OnInitialized()
-    {
-           
-    }
-
     public void Onhistorychange(HistoryChangedEventArgs args)
     {
         //causes of history change
@@ -88,6 +83,8 @@ Diagram provides options to track the changes that are made to custom properties
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
+<input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">    
@@ -118,7 +115,10 @@ Diagram provides options to track the changes that are made to custom properties
         };
         // Add node
         nodes.Add(node);
+    }
 
+    private void OnCustomEntry()
+    {
         HistoryEntry entry = new HistoryEntry();
         entry.UndoObject = diagram.Nodes[0];
         diagram.AddHistoryEntry(entry);
@@ -135,7 +135,7 @@ HistoryAdding in the DiagramHistoryManager, which takes a history entry as argum
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">
-    <DiagramHistoryManager HistoryAdding="@OnHistoryAdding"></DiagramHistoryManager>
+    <DiagramHistoryManager HistoryAdding="@OnHistoryAdding"/>
 </SfDiagramComponent>
 
 @code
@@ -160,7 +160,6 @@ HistoryAdding in the DiagramHistoryManager, which takes a history entry as argum
         };
         // Add node
         nodes.Add(node);
-
     }
 
     private void OnHistoryAdding(HistoryAddingEventArgs entry)
@@ -176,6 +175,8 @@ Undo method in DiagramHistoryManager get called when the custom entry is in undo
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
+<input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">
@@ -205,7 +206,13 @@ Undo method in DiagramHistoryManager get called when the custom entry is in undo
         };
         // Add node
         nodes.Add(node);
+    }
 
+    private void OnCustomEntry()
+    {
+        HistoryEntry entry = new HistoryEntry();
+        entry.UndoObject = diagram.Nodes[0];
+        diagram.AddHistoryEntry(entry);
     }
 
     private void onCustomUndo(HistoryEntryBase entry)
