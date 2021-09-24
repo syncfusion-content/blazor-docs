@@ -28,7 +28,7 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
 ### Add node to palette
 `SymbolWidth` and `SymbolHeight` properties of the SfSymbolPaletteComponent should be defined to render the symbol(node, connector or nodegroup) in the palette. The following code example illustrates how to add node to a palette.
 
-* To render a node in a palette , first create SymbolPalette and initialize palettes collection.
+* To render a node in a palette, first create SymbolPalette and initialize palettes collection.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -59,7 +59,7 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
 }
 ```
 
-* Create node and add that node to the DiagramObjectCollection<NodeBase> .
+* Create node and add that node to the DiagramObjectCollection<NodeBase>.
 
 ```csharp
    // Defines palette's flow-shape collection
@@ -81,7 +81,7 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
         {
             ID = id,
             Shape = new FlowShape() { Type = Shapes.Flow, Shape = flowShape },
-            Style = new ShapeStyle() {Fill="#6495ED",StrokeColor = "#757575" },
+            Style = new ShapeStyle() {Fill="#6495ED", StrokeColor = "#757575" },
         };
         PaletteNodes.Add(node);
     }
@@ -129,10 +129,9 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
     private void InitPaletteModel()
     {
         CreatePaletteNode(FlowShapeType.Terminator, "Terminator");
-
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols =PaletteNodes,Title="Flow Shapes",ID="Flow Shapes" },
+           new Palette(){Symbols =PaletteNodes, Title="Flow Shapes", ID="Flow Shapes" },
         };
     }
     private void CreatePaletteNode(FlowShapeType flowShape, string id)
@@ -171,7 +170,6 @@ The following code example illustrates how to add connector to a palette.
 
 @code
 {
-
     SfSymbolPaletteComponent symbolpalette;
 
     //Define palattes collection
@@ -191,10 +189,9 @@ The following code example illustrates how to add connector to a palette.
     private void InitPaletteModel()
     {
         CreatePaletteConnector("Link1", ConnectorSegmentType.Orthogonal, DecoratorShape.Arrow);
-
         Palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =PaletteConnectors,Title="Connectors" ,IsExpanded = true},
+            new Palette(){Symbols = PaletteConnectors, Title = "Connectors" , IsExpanded = true},
         };
     }
 
@@ -228,7 +225,6 @@ The following code example illustrates how to add nodegroup to a palette.
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-
 
 <div class="control-section">
     <div style="width:20%">
@@ -266,10 +262,9 @@ The following code example illustrates how to add nodegroup to a palette.
     private void InitPaletteModel()
     {
         CreatePaletteGroup();
-
         Palettes = new DiagramObjectCollection<Palette>()
         {
-             new Palette(){Symbols=PaletteGroup,Title="Group Shapes",IsExpanded=true}
+             new Palette(){Symbols = PaletteGroup,Title = "Group Shapes", IsExpanded = true}
         };
     }
 
@@ -342,9 +337,9 @@ The following code example illustrates how to add nodes, connectors, nodegroups 
 ```csharp
 Palettes = new DiagramObjectCollection<Palette>()
 {
-    new Palette(){Symbols = PaletteNodes,Title="Flow Shapes",ID="Flow Shapes" },
-    new Palette(){Symbols = PaletteConnectors,Title="Connectors" ,IsExpanded = true},
-    new Palette(){Symbols = PaletteGroup,Title="Group Shapes",IsExpanded=true}
+    new Palette(){Symbols = PaletteNodes, Title = "Flow Shapes", ID = "Flow Shapes" },
+    new Palette(){Symbols = PaletteConnectors, Title = "Connectors", IsExpanded = true},
+    new Palette(){Symbols = PaletteGroup, Title = "Group Shapes", IsExpanded = true}
 };                  
 ```
 
@@ -395,9 +390,9 @@ Palettes = new DiagramObjectCollection<Palette>()
         CreatePaletteGroup();
         Palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =PaletteNodes,Title="Flow Shapes",ID="Flow Shapes" },
-            new Palette(){Symbols =PaletteConnectors,Title="Connectors" ,IsExpanded = true},
-            new Palette(){Symbols=PaletteGroup,Title="Group Shapes",IsExpanded=true}
+            new Palette(){Symbols = PaletteNodes,Title = "Flow Shapes", ID = "Flow Shapes" },
+            new Palette(){Symbols = PaletteConnectors,Title = "Connectors", IsExpanded = true},
+            new Palette(){Symbols = PaletteGroup,Title = "Group Shapes", IsExpanded = true}
         };
     }
 
@@ -407,7 +402,7 @@ Palettes = new DiagramObjectCollection<Palette>()
         {
             ID = id,
             Shape = new FlowShape() { Type = Shapes.Flow, Shape = flowShape },
-            Style = new ShapeStyle() { Fill= "#6495ED", StrokeColor = "#6495ED" },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
         };
         PaletteNodes.Add(node);
     }
@@ -468,7 +463,7 @@ Palettes = new DiagramObjectCollection<Palette>()
 
 ## How to drag and drop symbols from palette to diagram
 
-To initialize drag and drop , you must add the diagram to the `Targets` collection of the symbol palette.The below code illustrates how to add diagram to the Targets collection.
+To initialize drag and drop, you must add the diagram to the `Targets` collection of the symbol palette. The below code illustrates how to add diagram to the Targets collection.
 
 ```csharp
 @code
@@ -549,9 +544,9 @@ To initialize drag and drop , you must add the diagram to the `Targets` collecti
         CreatePaletteGroup();
         Palettes = new DiagramObjectCollection<Palette>()
         {
-            new Palette(){Symbols =PaletteNodes,Title="Flow Shapes",ID="Flow Shapes" },
-            new Palette(){Symbols =PaletteConnectors,Title="Connectors" ,IsExpanded = true},
-            new Palette(){Symbols=PaletteGroup,Title="Group Shapes",IsExpanded=true}
+            new Palette(){Symbols = PaletteNodes,Title = "Flow Shapes", ID = "Flow Shapes" },
+            new Palette(){Symbols = PaletteConnectors,Title = "Connectors", IsExpanded = true},
+            new Palette(){Symbols = PaletteGroup,Title = "Group Shapes", IsExpanded = true}
         };
     }
 
@@ -681,7 +676,7 @@ Node newNode = new Node()
 newNodes.Add(newNode as NodeBase);           
 DiagramObjectCollection<Palette> newPalettes = new DiagramObjectCollection<Palette>()
 {
-    new Palette(){Symbols =newNodes,Title="FlowShapes",ID="FlowShapes" },                
+    new Palette(){Symbols = newNodes,Title = "FlowShapes",ID = "FlowShapes" },                
 };
 symbolpalette.AddPalettes(newPalettes);
 ```
@@ -716,7 +711,7 @@ symbolpalette.Palettes.Add(newpalette);
 
 The size of the individual symbol can be customized. The `SymbolWidth` and `SymbolHeight` properties of symbol palette enables you to define the size of the symbols.
 
-* Also , you can update the size of the symbols at runtime.
+* Also, you can update the size of the symbols at runtime.
 
 The following code example illustrates how to change the size of a symbol and how to update the size at runtime.
 
@@ -790,7 +785,7 @@ The following code example illustrates how to change the size of a symbol and ho
 
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols =PaletteNodes,Title="Basic Shapes",ID="Basic Shapes" },
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes",ID = "Basic Shapes" },
         };
     }
 
@@ -821,7 +816,7 @@ The following code example illustrates how to change the preview size of a palet
             <div id="palette-icon" style="float: right;" role="button" class="e-ddb-icons1 e-toggle-palette"></div>
         </div>
         <div id="palette-space" class="sb-mobile-palette">
-            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px" SymbolDragPreviewSize="@SymbolPreview"
+            <SfSymbolPaletteComponent @ref="@symbolpalette" Height="300px" Width="200px" SymbolDragPreviewSize="@symbolDragPreviewSize"
                                       Palettes="@Palettes" SymbolHeight="60" SymbolWidth="60" SymbolMargin="@SymbolMargin">
             </SfSymbolPaletteComponent>
         </div>
@@ -836,7 +831,7 @@ The following code example illustrates how to change the preview size of a palet
 
 @code
 {
-    Size SymbolPreview;
+    Size symbolDragPreviewSize;
     SymbolMargin SymbolMargin = new SymbolMargin 
     { 
         Left = 15, 
@@ -866,13 +861,13 @@ The following code example illustrates how to change the preview size of a palet
 
     private void InitPaletteModel()
     {
-        SymbolPreview = new DiagramSize();
-        SymbolPreview.Width = 100;
-        SymbolPreview.Height = 100;
+        symbolDragPreviewSize = new DiagramSize();
+        symbolDragPreviewSize.Width = 100;
+        symbolDragPreviewSize.Height = 100;
         CreatePaletteNode(BasicShapeType.Rectangle, "Rectangle");
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols =PaletteNodes,Title="Basic Shapes",ID="Basic Shapes" },
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
 
@@ -938,11 +933,10 @@ The diagram provides support to add symbol description below each symbol of a pa
         
     private void InitPaletteModel()
     {
-
         CreatePaletteNode(BasicShapeType.Rectangle, "Rectangle");
         Palettes = new DiagramObjectCollection<Palette>()
         {
-           new Palette(){Symbols =PaletteNodes,Title="Basic Shapes",ID="Basic Shapes" },
+           new Palette(){Symbols = PaletteNodes,Title = "Basic Shapes", ID = "Basic Shapes" },
         };
     }
         

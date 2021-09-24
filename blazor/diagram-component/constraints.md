@@ -382,12 +382,12 @@ The following code shows how to hide rotator.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectedItems"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@selectionSettings"/>
 
 @code
 {
     DiagramObjectCollection<Node> nodes;
-    public DiagramSelectionSettings selectedItems = new DiagramSelectionSettings() 
+    public DiagramSelectionSettings selectionSettings = new DiagramSelectionSettings() 
     { 
         Constraints = SelectorConstraints.All & ~SelectorConstraints.Rotate 
     };
