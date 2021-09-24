@@ -13,7 +13,7 @@ Syncfusion Blazor Chip component can be rendered inside the Grid column using [`
 
 This is demonstrated in the below sample code where Chip component is rendered inside Grid Column which has multiple values.
 
-> GridColumn Template will be instantiated multiple times (i.e. for each template cell) which might make the component inside it to refresh unwantedly. So we have used @ref variable to SfChip component to indicate when to refresh the child components (ChipItem).
+> GridColumn Template will be instantiated multiple times (i.e. for each template cell) which might make the component inside GridColumn to refresh unnecessary. So we have used @ref variable to SfChip component to indicate when to refresh the child components (ChipItem).
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
