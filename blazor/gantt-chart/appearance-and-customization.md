@@ -42,62 +42,20 @@ Height of child taskbars and parent taskbars can be customized by using `Taskbar
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
+                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40 },
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
             })
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30
-                }
+                new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30 },
+                new TaskData() { TaskId = 7, TaskName = "List materials",StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40 },
+                new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "0", Progress = 30 }
             })
         }
     };
@@ -113,30 +71,31 @@ Height of child taskbars and parent taskbars can be customized by using `Taskbar
 
 ### Taskbar Background
 
-The default taskbar UI can be replaced with custom styles. The following code example shows customizing the taskbar UI in the Gantt Chart component.
+In the Gantt Chart component, you can customize the appearance based on Hierarchy using `GetHierarchicalData` method with custom styles. The following code example shows how to customize Gantt Chart Rows using `GetHierarchicalData` method in `QueryChartRowInfo` event of Gantt.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="900px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate"
-           Duration="Duration" Progress="Progress" Child="SubTasks">
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="700px">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="ParentId">
     </GanttTaskFields>
+    <GanttEvents TValue="TaskData" QueryChartRowInfo="GanttChartRowInfo"></GanttEvents>
 </SfGantt>
-<style>
-    .e-gantt-child-taskbar {
-        background-color: red !important;
-    }
-    .e-gantt-parent-taskbar {
-        background-color: green !important;
-    }
-</style>
+
 @code{
+    SfGantt<TaskData> Gantt;
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
     }
-
+    private void GanttChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
+    {
+        dynamic data = Gantt.GetHierarchicalData(args.Data.TaskId);
+        if (data.level == 0)
+        {
+            args.Row.AddClass(new string[] { "customize-parent" });
+        }
+    }
     public class TaskData
     {
         public int TaskId { get; set; }
@@ -145,74 +104,29 @@ The default taskbar UI can be replaced with custom styles. The following code ex
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? ParentId { get; set; }
     }
-
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "3",
-                    Progress = 30,
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30
-                }
-            })
-        }
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21) },
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 1 },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21) },
+        new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, ParentId = 5 },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "0", Progress = 30, ParentId = 5 }
     };
+        return Tasks;
+    }
+}
 
-    return Tasks;
-}
-}
+<style>
+    .customize-parent .e-gantt-parent-taskbar {
+        background-color: green !important;
+    }
+</style>
 ```
 
 ![Changing Taskbar Background in Blazor Gantt Chart](images/blazor-gantt-chart-taskbar-background.png)
@@ -342,84 +256,14 @@ You can design your own taskbars to view the tasks in Gantt Chart Chart by using
         public static List<TaskbarData> TaskTemplateData()
         {
             List<TaskbarData> TaskDataCollection = new List<TaskbarData> {
-             new TaskbarData()
-            {
-                TaskId = 1,
-                TaskName = "Product concept",
-                StartDate = new DateTime(2018, 03, 05, 18, 0, 0),
-                EndDate = new DateTime(2018, 03, 05, 18, 15, 0),
-            },
-             new TaskbarData()
-            {
-                TaskId = 2,
-                TaskName = "Oscar moments",
-                StartDate = new DateTime(2018, 03, 05, 18, 30, 0),
-                EndDate = new DateTime(2018, 03, 05, 18, 45, 0),
-                Winner = "",
-                Performance = "90th Academy awards kicks-off and Jimmy kimmel hosts the show",
-                ParentId=1
-            },
-            new TaskbarData()
-            {
-                TaskId = 3,
-                TaskName = "Actor in a supporting role",
-                StartDate = new DateTime(2018, 03, 05, 18, 36, 0),
-                EndDate = new DateTime(2018, 03, 05, 18, 42, 0),
-                Predecessor = "1",
-                Winner = "Sam Rockwell",
-                Movie = "Three Billboards Outside Ebbing, Missouri.",
-                ParentId=1
-            },
-             new TaskbarData()
-            {
-                TaskId = 4,
-                TaskName = "Hair and makeup",
-                StartDate = new DateTime(2018, 03, 05, 18, 33, 0),
-                EndDate = new DateTime(2018, 03, 05, 18, 40, 0),
-                Predecessor = "2",
-                Movie = "Darkest Hour",
-                ParentId=1
-            },
-            new TaskbarData()
-            {
-                 TaskId = 5,
-                TaskName = "Product release",
-                StartDate = new DateTime(2018, 03, 05, 18, 41, 0),
-                EndDate = new DateTime(2018, 03, 05, 18, 52, 0),
-            },
-            new TaskbarData()
-            {
-                TaskId = 6,
-                TaskName = "Costume design",
-                StartDate = new DateTime(2018, 03, 05, 18, 59, 0),
-                EndDate = new DateTime(2018, 03, 05, 19, 10, 0),
-                Predecessor = "3",
-                Winner = "Mark Bridges",
-                Movie = "Phantom Thread",
-                ParentId = 5
-            },
-            new TaskbarData()
-            {
-                TaskId = 7,
-                TaskName = "Documentary feature",
-                StartDate = new DateTime(2018, 03, 05, 19, 11, 0),
-                EndDate = new DateTime(2018, 03, 05, 19, 15, 0),
-                Predecessor = "4",
-                Winner = "Bryan Fogel",
-                Movie = "Icarus",
-                ParentId = 5
-            },
-             new TaskbarData()
-             {
-                 TaskId = 8,
-                 TaskName = "Best sound editing and sound mixing",
-                  StartDate = new DateTime(2018, 03, 05, 19, 16, 0),
-                EndDate = new DateTime(2018, 03, 05, 19, 23, 0),
-                 Predecessor = "5",
-                 Winner = "Richard King and Alex Gibson",
-                 Movie = "Dunkirk",
-                 ParentId = 5
-             },
+             new TaskbarData() { TaskId = 1, TaskName = "Product concept", StartDate = new DateTime(2018, 03, 05, 18, 0, 0), EndDate = new DateTime(2018, 03, 05, 18, 15, 0) },
+             new TaskbarData() { TaskId = 2, TaskName = "Oscar moments", StartDate = new DateTime(2018, 03, 05, 18, 30, 0), EndDate = new DateTime(2018, 03, 05, 18, 45, 0), Winner = "", Performance = "90th Academy awards kicks-off and Jimmy kimmel hosts the show", ParentId=1 },
+            new TaskbarData() { TaskId = 3, TaskName = "Actor in a supporting role", StartDate = new DateTime(2018, 03, 05, 18, 36, 0), EndDate = new DateTime(2018, 03, 05, 18, 42, 0), Predecessor = "1",Winner = "Sam Rockwell", Movie = "Three Billboards Outside Ebbing, Missouri.", ParentId=1 },
+             new TaskbarData() { TaskId = 4, TaskName = "Hair and makeup", StartDate = new DateTime(2018, 03, 05, 18, 33, 0), EndDate = new DateTime(2018, 03, 05, 18, 40, 0), Predecessor = "2", Movie = "Darkest Hour", ParentId=1 },
+            new TaskbarData() { TaskId = 5, TaskName = "Product release", StartDate = new DateTime(2018, 03, 05, 18, 41, 0), EndDate = new DateTime(2018, 03, 05, 18, 52, 0) },
+            new TaskbarData() { TaskId = 6, TaskName = "Costume design", StartDate = new DateTime(2018, 03, 05, 18, 59, 0), EndDate = new DateTime(2018, 03, 05, 19, 10, 0), Predecessor = "3", Winner = "Mark Bridges", Movie = "Phantom Thread", ParentId = 5 },
+            new TaskbarData() { TaskId = 7, TaskName = "Documentary feature", StartDate = new DateTime(2018, 03, 05, 19, 11, 0), EndDate = new DateTime(2018, 03, 05, 19, 15, 0), Predecessor = "4", Winner = "Bryan Fogel", Movie = "Icarus", ParentId = 5 },
+             new TaskbarData() { TaskId = 8, TaskName = "Best sound editing and sound mixing", StartDate = new DateTime(2018, 03, 05, 19, 16, 0), EndDate = new DateTime(2018, 03, 05, 19, 23, 0), Predecessor = "5", Winner = "Richard King and Alex Gibson", Movie = "Dunkirk", ParentId = 5 }
              };
             return TaskDataCollection;
         }
@@ -458,7 +302,7 @@ You can design your own taskbars to view the tasks in Gantt Chart Chart by using
 
 ![Blazor Gantt Chart with Taskbar Template](images/blazor-gantt-chart-taskbar-template.png)
 
-## Task Labels
+## Task labels
 
 The Gantt Chart component maps any data source fields to task labels using the `GanttLabelSettings.LeftLabel`, `GanttLabelSettings.RightLabel`, and `GanttLabelSettings.TaskLabel` properties. You can customize the task labels with templates using `GanttLabelSettings.LeftLabelTemplate`, `GanttLabelSettings.RightLabelTemplate` and `GanttLabelSettings.TaskLabelTemplate`
 
@@ -501,62 +345,20 @@ The Gantt Chart component maps any data source fields to task labels using the `
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
+                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30 },
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40 },
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
             })
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30
-                }
+                new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30 },
+                new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04),Duration = "3", Progress = 40 },
+                new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "0", Progress = 30 }
             })
         }
     };
@@ -605,67 +407,20 @@ The width and background color of connector lines in Gantt Chart can be customiz
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                    Predecessor = "2"
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                    Predecessor = "3"
-                },
+                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, Predecessor = "2" },
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, Predecessor = "3" },
             })
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                    Predecessor = "4"
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                    Predecessor = "6"
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                    Predecessor = "7"
-                },
+                new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, Predecessor = "4" },
+                new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04),Duration = "3", Progress = 40, Predecessor = "6" },
+                new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "0", Progress = 30, Predecessor = "7" }
             })
         }
     };
@@ -748,62 +503,19 @@ While rendering the Tree Grid part in Gantt Chart, the `RowDataBound` and `Query
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
+                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40 },
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
             })
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30
-                }
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21),
+        SubTasks = (new List <TaskData> () {
+            new TaskData() { TaskId = 6,TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04),Duration = "3",Progress = 30 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04),Duration = "3", Progress = 40 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval",StartDate = new DateTime(2019, 04, 04),Duration = "0", Progress = 30 }
             })
         }
     };
@@ -855,63 +567,15 @@ The following options are available in the Gantt Chart component for rendering t
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),EndDate = new DateTime(2019, 04, 21), SubTasks = (new List <TaskData> () {
+        new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02),Duration = "0", Progress = 30 },
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02),Duration = "4", Progress = 40 },
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02),Duration = "0", Progress = 30 }})
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+        new TaskData() {TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02),EndDate = new DateTime(2019, 04, 21), 
+        SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30 }, 
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04),Duration = "3", Progress = 40 },
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04),Duration = "0", Progress = 30 }})
         }
     };
 
@@ -960,63 +624,15 @@ Gantt Chart component consists of both Tree Grid part and Chart part. Splitter i
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),EndDate = new DateTime(2019, 04, 21), 
+        SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 2, TaskName = "Identify Site location",StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 }, 
+        new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02),Duration = "4", Progress = 40 }, 
+        new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02),Duration = "0", Progress = 30 }})
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02),EndDate = new DateTime(2019, 04, 21), 
+        SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30 }, 
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04),Duration = "3", Progress = 40 }, 
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04),Duration = "0", Progress = 30 }})
         }
     };
 
@@ -1097,63 +713,17 @@ The following code example shows how to use this method.
 
     public static List <TaskData> GetTaskCollection() {
     List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02),
             EndDate = new DateTime(2019, 04, 21),
             SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 },
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40 },
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30 }})
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02),EndDate = new DateTime(2019, 04, 21), 
+        SubTasks = (new List <TaskData> () { new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30 }, 
+        new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04),Duration = "3", Progress = 40 }, 
+        new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04),Duration = "0", Progress = 30 }})
         }
     };
 
