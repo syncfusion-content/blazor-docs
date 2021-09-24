@@ -119,7 +119,7 @@ Output be like the below.
 
 ### DynamicObject binding
 
-DynamicObject can be bound to Kanban by assigning DyanamicObject to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in **DynamicObject**.
+DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in **DynamicObject**.
 
 > The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operations and editing while using DynamicObject.
 
