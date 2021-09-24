@@ -16,8 +16,8 @@ documentation: ug
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers the select or deselect any objects from the diagram.|
-|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when select or deselect any objects from the diagram.|
+|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the selection is changed in the diagram.|
+|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
 
@@ -67,14 +67,14 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // Event to notify the selection changing event before select/unselect the diagram elements
+    // To notify the selection changing event before select/unselect the diagram elements
     public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
     //sets true to cancel the selection.
     args.Cancel = true;
     }
 
-    // Event to notify the selection changed event after select/unselect the diagram elements.
+    // To notify the selection is changed in the diagram.
     private void OnSelectionChanged(SelectionChangedEventArgs arg)
     {
         //Action to be performed
@@ -88,8 +88,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`PositionChanging`|`PositionChangingEventArgs`|Triggers before the node or connector is dragging or its position is changing.|
-|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node or connector is dragged or its position is changed.|
+|`PositionChanging`|`PositionChangingEventArgs`|Triggers while dragging the elements in the diagram.|
+|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node's/connector's position is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -137,14 +137,14 @@ The following code example explains how to get the selection change event in the
         connectors.Add(Connector);
     }
 
-    // Event to notify the position changing event before dragging the diagram elements
+    // To notify the position changing event before dragging the diagram elements
     public void OnPositionChanging(PositionChangingEventArgs args)
     {
     //sets true to cancel the dragging.
     args.Cancel = true;
     }
 
-    // Event to notify the position changed event after dragged the diagram elements.
+    // To notify the position changed event after dragged the diagram elements.
     private void OnPositionChanged(PositionChangedEventArgs arg)
     {
         //Action to be performed
@@ -158,8 +158,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers before the connector’s source id or target id has changing.|
-|`ConnectionChanged`|`ConnectionChangedEventArgs`|Triggers when the connector’s source id or target id has changed.|
+|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers before the connector’s source or target point is connect or disconnect from the source or target.|
+|`ConnectionChanged`|`ConnectionChangedEventArgs`|Triggers when the connector’s source or target point is connected or disconnected from the source or target.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -222,7 +222,7 @@ The following code example explains how to get the selection change event in the
         args.Cancel = true;
     }
 
-    // To notify the  connection changed event after connection has been changed
+    // To notify the  connection changed event after connection has changed
     private void OnConnectionChange(ConnectionChangedEventArgs args)
     {
         //Action to be performed
