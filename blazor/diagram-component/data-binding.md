@@ -9,19 +9,19 @@ documentation: ug
 
 # Data Binding in Blazor Diagram Component
 
-* Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.
+* [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) based on the information provided from an external data source.
 
 * Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
 
-* The `DataSource` property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
+* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
 
-* The `ID` property is used to define the unique field of each JSON data.
+* The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) property is used to define the unique field of each JSON data.
 
-* The `ParentID` property is used to define the parent field which builds the relationship between ID and parent field.
+* The [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) property is used to define the parent field which builds the relationship between ID and parent field.
 
-* The `Root` property is used to define the root node for the diagram populated from the data source.
+* The [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_Root) property is used to define the root node for the diagram populated from the data source.
 
-* To explore those properties, see `DataSourceSettings`.
+* To explore those properties, see [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 
 * Diagram supports two types of data binding. They are:
 
@@ -194,13 +194,13 @@ The following sample code demonstrates binding local data through the SfDataMana
 
 ## Remote Data
 
-To bind remote data to Diagram component, assign service data as an instance of SfDataManager to the DataSource property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
+To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
 
 When using SfDataManager for data binding then the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the OData documentation. To bind OData v4 service, use the ODataV4Adaptor.
+The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the ODataV4Adaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

@@ -68,7 +68,7 @@ namespace BlazorApplication
 
 ## Adding Diagram component to the Application
 
-Diagram component can be rendered by using the `SfDiagramComponent` tag helper in ASP.NET Core Blazor application. Add the Diagram component in any web page `razor` in the `Pages` folder. For example, the Diagram component is added in the `~/Pages/Index.razor` page.
+Diagram component can be rendered by using the [SfDiagramComponent](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) tag helper in ASP.NET Core Blazor application. Add the Diagram component in any web page `razor` in the `Pages` folder. For example, the Diagram component is added in the `~/Pages/Index.razor` page.
 
 The following example shows a basic Diagram component.
 
@@ -78,7 +78,7 @@ The following example shows a basic Diagram component.
 
 ## Adding Nodes and Connectors
 
-Let us create and add a `Nodes` with specific position, size, label and shape. Connect two or more nodes by using a `Connectors`.
+Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) with specific position, size, label and shape. Connect two or more nodes by using a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
