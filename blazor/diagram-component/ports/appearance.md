@@ -53,11 +53,11 @@ The following code explains how to change the appearance of the port.
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
                     Style= new ShapeStyle()
-                        { 
-                            Fill="red", 
-                            StrokeColor="black", 
-                            StrokeWidth=2
-                        },
+                    { 
+                        Fill="red", 
+                        StrokeColor="black", 
+                        StrokeWidth=2
+                    },
                     Width= 12, 
                     Height=12,
                     // Sets the shape of the port as Circle 

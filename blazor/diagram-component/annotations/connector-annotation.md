@@ -11,13 +11,13 @@ documentation: ug
 
 Annotations of a connector can be positioned using the following properties of Annotation class.
 
-* `Offset`
-* `Alignment`
-* `Displacement`
-* `SegmentAngle`
-* `HorizontalAlignment`
-* `VerticalAlignment`
-* `Margin`
+* Offset
+* Alignment
+* Displacement
+* SegmentAngle
+* HorizontalAlignment
+* VerticalAlignment
+* Margin
 
 ## Offset
 

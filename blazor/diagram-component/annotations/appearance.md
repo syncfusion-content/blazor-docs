@@ -257,7 +257,7 @@ You can change the font style of the annotations with the font specific properti
 
 * The annotation’s [Bold](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Bold), [Italic](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Italic), and [TextDecoration](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextDecoration) properties are used to style the annotation’s text.
 
-* The annotation’s [Fill](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill), [StrokeColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), and [StrokeWidth](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth) properties are used to define the background color and border color of the annotation and the `Opacity` property is used to define the transparency of the annotations.
+* The annotation’s [Fill](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Fill), [StrokeColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), and [StrokeWidth](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth) properties are used to define the background color and border color of the annotation and the [Opacity](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) property is used to define the transparency of the annotations.
 
 * The [Visibility](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Visibility) property of the annotation enables or disables the visibility of annotation.
 
@@ -311,7 +311,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 
 ## Update the annotation style at runtime
 
-You can change the font style of the annotations with the font specific properties (FontSize, FontFamily, and Color). The following code explains how to update the font style of the annotation.
+You can change the font style of the annotations with the font specific properties ([FontSize](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontSize), [FontFamily](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_FontFamily), and [Color](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_Color)). The following code explains how to update the font style of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -522,7 +522,7 @@ AnnotationConstraints may have multiple behaviors as follows:
 | None | Disables all behaviors of Annotation. |
 |InheritReadOnly |Enables or disables to inherit the ReadOnly option from the parent object.|
 
-> The default value is AnnotationConstraints.InheritReadOnly for constraints property of the annotation.
+> The default value is [InheritReadOnly](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html#Syncfusion_Blazor_Diagram_AnnotationConstraints_InheritReadOnly) for constraints property of the annotation.
 
 Refer to [Constraints](https://blazor.syncfusion.com/documentation/diagram-component/constraints) to learn about how to enable or disable the annotation constraints.
 
