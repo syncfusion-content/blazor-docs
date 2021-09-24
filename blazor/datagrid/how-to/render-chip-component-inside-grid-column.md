@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# Render Chip control inside the Grid Column
+# Render Chip component inside the Grid Column
 
 Syncfusion Blazor Chip component can be rendered inside the Grid column using [`Column Template`](https://blazor.syncfusion.com/documentation/datagrid/columns#column-template) feature of the Grid. Chip component is used to display the multiple value separately.
 
