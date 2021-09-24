@@ -171,7 +171,10 @@ HistoryAdding in the DiagramHistoryManager, which takes a history entry as argum
 ```
 
 ### Custom undo redo
-Undo method in DiagramHistoryManager get called when the custom entry is in undo stage and Redo method in DiagramHistoryManager get called when the custom entry is in redo stage.
+
+The purpose of custom undo redo process is to store actions which are not done through default undo redo history list.
+
+Undo method in DiagramHistoryManager is getting triggered when the custom entry is in undo stage and Redo method in DiagramHistoryManager is getting triggered when the custom entry is in redo stage.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
