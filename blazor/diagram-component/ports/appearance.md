@@ -127,7 +127,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
                     Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
-                    Style = new ShapeStyle(){ Fill="gray", StrokeColor="black"},
+                    Style = new ShapeStyle() { Fill = "gray", StrokeColor = "black" },
                     Width = 12, 
                     Height = 12,
                     // Sets the shape of the port as Custom 
@@ -146,7 +146,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 
 ## Constraints
 
-The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to learn how to enable or disable the port constraints.
+The constraints property allows you to enable or disable certain behaviors of ports. For more information about port constraints, refer to [Port Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html). You can verify the [Constraints](https://blazor.syncfusion.com/documentation/diagram-component/constraints) to learn how to enable or disable the port constraints.
 
 The PortConstraints may have multiple behaviors listed as follows:
 

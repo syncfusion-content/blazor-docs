@@ -297,7 +297,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
                         // Sets the style for the annotation
                         Color="black",
                         Bold = true,
-                        Italic = true,                        
+                        Italic = true,
                         TextDecoration = TextDecoration.Underline,
                         FontSize = 12,
                         FontFamily = "TimesNewRoman"  
