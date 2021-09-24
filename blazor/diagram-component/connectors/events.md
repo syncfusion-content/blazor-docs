@@ -11,36 +11,46 @@ documentation: ug
 
 ## Selection change
 
-The `SelectionChange` event is triggered when select or unselect the node or connector. The `SelectionChangeEventArgs`interface is used to get selection change event arguments.
+* While selecting the diagram elements, the following events can be used to do the customization.
+* When selecting/unselecting the diagram elements, the following events are getting triggered and to do customization on those events
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the selection is changed in the diagram.|
+|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChange="@SelectionChange"Height="500px" Connectors="@connectors">
+
+<SfDiagramComponent @ref="Diagram" Width="1000px" SelectionChanging="@OnSelectionChanging" SelectionChanged="@OnSelectionChanged"  Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point()
+            SourcePoint = new DiagramPoint()
             {
                 X = 100,
                 Y = 100
             },
-            TargetPoint = new Point()
+            TargetPoint = new DiagramPoint()
             {
                 X = 200,
                 Y = 200
             },
-            Type = Segments.Orthogonal,
-            TargetDecorator = new Decorator()
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShapes.Arrow,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "black",
@@ -56,44 +66,61 @@ The following code example explains how to get the selection change event in the
         };
         connectors.Add(Connector);
     }
-    // SelectionChange event for diagram
-    private void SelectionChange(SelectionChangeEventArgs arg)
+
+    // To notify the selection changing event before select/unselect the diagram elements
+    public void OnSelectionChanging(SelectionChangingEventArgs args)
     {
-        Console.WriteLine((arg.NewValue[0] as Connector).ID);
+    //sets true to cancel the selection.
+    args.Cancel = true;
+    }
+
+    // To notify the selection is changed in the diagram.
+    private void OnSelectionChanged(SelectionChangedEventArgs arg)
+    {
+        //Action to be performed
     }
 }
 ```
 
 ## Position change
 
-The `PositionChange` events is triggered when drag the node or connector in interaction. The `DraggingEventArgs` interface is used to get position change event arguments.
+* While dragging the diagram elements, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`PositionChanging`|`PositionChangingEventArgs`|Triggers while dragging the elements in the diagram.|
+|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node's/connector's position is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px" PositionChange="@OnPositionChange" Height="500px" Connectors="@connectors">
+
+<SfDiagramComponent @ref="Diagram" Width="1000px" PositionChanging="@OnPositionChanging" PositionChanged="@OnPositionChanged" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point()
+            SourcePoint = new DiagramPoint()
             {
                 X = 100,
                 Y = 100
             },
-            TargetPoint = new Point()
+            TargetPoint = new DiagramPoint()
             {
                 X = 200,
                 Y = 200
             },
-            Type = Segments.Orthogonal,
-            TargetDecorator = new Decorator()
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShapes.Arrow,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "black",
@@ -109,44 +136,69 @@ The `PositionChange` events is triggered when drag the node or connector in inte
         };
         connectors.Add(Connector);
     }
-    // Position change event for diagram
-    private void OnPositionChange(DraggingEventArgs args)
+
+    // To notify the position changing event before dragging the diagram elements
+    public void OnPositionChanging(PositionChangingEventArgs args)
     {
-        Console.WriteLine((args.NewValue.Connectors[0].ID));
+    //sets true to cancel the dragging.
+    args.Cancel = true;
+    }
+
+    // To notify the position changed event after dragged the diagram elements.
+    private void OnPositionChanged(PositionChangedEventArgs arg)
+    {
+        //Action to be performed
     }
 }
 ```
 
 ## Connection change
 
-The `ConnectionChange` event will notify when the connection is changed. The `ConnectionChangeEventArgs` interface is used to get event arguments.
+* While changing the connection of the connector, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers before the connector’s source or target point is connect or disconnect from the source or target.|
+|`ConnectionChanged`|`ConnectionChangedEventArgs`|Triggers when the connector’s source or target point is connected or disconnected from the source or target.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChange="@OnConnectionChange" Height="500px" Connectors="@connectors">
+
+<SfDiagramComponent @ref="Diagram" Width="1000px" ConnectionChanging="@OnConnectionChanging" ConnectionChanged="@OnConnectionChange" Height="500px" Connectors="@connectors" Nodes="@nodes">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
     protected override void OnInitialized()
     {
+        nodes = new DiagramObjectCollection<Node>()
+       {
+          new Node() 
+          {
+            OffsetX = 100,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            ID = "node1",
+          },
+        };
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point()
-            {
-                X = 100,
-                Y = 100
-            },
-            TargetPoint = new Point()
+            SourcePoint = new DiagramPoint()
             {
                 X = 200,
                 Y = 200
             },
-            Type = Segments.Orthogonal,
-            TargetDecorator = new Decorator()
+            TargetID = "node1",
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShapes.Arrow,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "black",
@@ -162,11 +214,18 @@ The `ConnectionChange` event will notify when the connection is changed. The `Co
         };
         connectors.Add(Connector);
     }
-    // Connection change event for diagram
-    private void OnConnectionChange(ConnectionChangeEventArgs args)
+
+    // To notify the  connection changing event before the connection change
+    private void OnConnectionChanging(ConnectionChangingEventArgs args)
     {
-        Console.WriteLine("Oldvalue", args.OldValue);
-        Console.WriteLine("NewValue", args.NewValue);
+        //sets true to cancel the connection change.
+        args.Cancel = true;
+    }
+
+    // To notify the  connection changed event after connection has changed
+    private void OnConnectionChange(ConnectionChangedEventArgs args)
+    {
+        //Action to be performed
     }
 }
 ```
