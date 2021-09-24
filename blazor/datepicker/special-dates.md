@@ -90,6 +90,3 @@ You can customize specific dates in a calendar by using the  [OnRenderDayCell](h
 The output will be as follows.
 
 ![Blazor DatePicker Special Dates](./images/blazor_datepicker_special_dates.png)
-
-
-

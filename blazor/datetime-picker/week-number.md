@@ -22,6 +22,3 @@ You can enable WeekNumber in the DateTimePicker by using the [WeekNumber](https:
 The output will be as follows.
 
 ![Blazor DateTimePicker Week Number](./images/blazor_datetimepicker_weeknumber.png)
-
-
-
