@@ -362,7 +362,7 @@ namespace TreeGridComponent.Data {
 > * It requires the selection `Mode` to be `Cell`,  `CellSelectionMode` to be `Box` and also Batch Editing should be enabled.
 
 The following GIF represent a Tree Grid with AutoFill.
-![Column virtualization](./images/virtualColumn.gif)
+![Column virtualization](./images/AutoFill.gif)
 
 ### Limitations of AutoFill
 
