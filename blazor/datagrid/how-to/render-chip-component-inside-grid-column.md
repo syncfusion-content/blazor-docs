@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Render Chip control inside Grid Column | Syncfusion
+title: Render Chip Component inside Grid Column | Syncfusion
 description: Learn here how to render the Syncfusion Blazor Chip component inside the Syncfusion DataGrid column using Column Template.
 platform: Blazor
 control: DataGrid
