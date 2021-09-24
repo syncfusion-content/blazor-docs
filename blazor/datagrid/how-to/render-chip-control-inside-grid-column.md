@@ -9,9 +9,9 @@ documentation: ug
 
 # Render Chip control inside the Grid Column
 
-Syncfusion Blazor Chip commponent can be rendered inside the Grid column using [`Column Template`](https://blazor.syncfusion.com/documentation/datagrid/columns#column-template) feature of the Grid. Chip component is used to display the multiple value separately.
+Syncfusion Blazor Chip component can be rendered inside the Grid column using [`Column Template`](https://blazor.syncfusion.com/documentation/datagrid/columns#column-template) feature of the Grid. Chip component is used to display the multiple value separately.
 
-This is demonstrated in the below sample code where Chip component is rendered inside Grid Column which has mulitple values.
+This is demonstrated in the below sample code where Chip component is rendered inside Grid Column which has multiple values.
 
 > Since Column Template needs to triggered for several times (i.e. for each cell), we have used @ref variable to SfChip component to indicate when to refresh the child components (ChipItem).
 
