@@ -9,7 +9,7 @@ documentation: ug
 
 # Appearance of a Node in Blazor Diagram Component
 
-The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties. The `Visible` property of the node enables or disables the visibility of the node.
+The appearance of a node can be customized by changing its `Fill`, `StrokeDashArray`, `StrokeColor`, `StrokeWidth`, and `Shadow` properties. The `IsVisible` property of the node indicates whether the node is visible or not.
 
 The following code shows how to customize the appearance of the shape.
 
@@ -26,7 +26,7 @@ The following code shows how to customize the appearance of the shape.
     {
         nodes = new DiagramObjectCollection<Node>();
         // A node is created and stored in nodes array.
-        Node node1 = new Node()
+        Node node = new Node()
         {
             // Position of the node
             OffsetX = 250,
@@ -35,9 +35,15 @@ The following code shows how to customize the appearance of the shape.
             Width = 100,
             Height = 100,
             // Add node
-            Style = new ShapeStyle() { Fill = "Green", StrokeDashArray = "5,5", StrokeColor = "red", StrokeWidth = 2 },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "Green", 
+                StrokeDashArray = "5,5", 
+                StrokeColor = "red", 
+                StrokeWidth = 2 
+            },
         };
-        nodes.Add(node1);
+        nodes.Add(node);
     }
 }
 ```
@@ -46,16 +52,16 @@ The following code shows how to customize the appearance of the shape.
 
 > `ID` for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
-## NodeDefaults
+## NodeCreating
 
-Default values for all the Nodes can be set using the NodeDefaults method. For example, if all nodes have the same type or having the same property then such properties can be moved into NodeDefaults method.
+Default values for all the Nodes can be set using the NodeCreating method. For example, if all nodes have the same type or having the same property then such properties can be moved into NodeCreating method.
 
 The following code shows how to customize the appearance of the shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes" NodeDefaults="@NodeDefaults" />
+<SfDiagramComponent Height="600px" Nodes="@nodes" NodeCreating="@NodeCreating" />
 
 @code
 {
@@ -72,7 +78,11 @@ The following code shows how to customize the appearance of the shape.
             OffsetX = 250,
             OffsetY = 250,
             // Shape of the Node
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Rectangle 
+            }
         };
         Node node2 = new Node()
         {
@@ -80,13 +90,17 @@ The following code shows how to customize the appearance of the shape.
             OffsetX = 100,
             OffsetY = 100,
             // Shape of the Node
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Ellipse }
+            Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Ellipse 
+            }
         };
         nodes.Add(node1);
         nodes.Add(node2);
     }
 
-    private void NodeDefaults(IDiagramObject obj)
+    private void NodeCreating(IDiagramObject obj)
     {
         Node node = obj as Node;
         node.Style = new ShapeStyle() { Fill = "#6495ED" };
@@ -99,11 +113,9 @@ The following code shows how to customize the appearance of the shape.
 
 ## NodeTemplate
 
-We can define node style using template in NodeTemplate at tag level. If we want to define separate template for each node , differentiate the nodes by the ID property. The following code explains how to define template for a node.
+We can define node style using template in NodeTemplate at tag level. If we want to define separate template for each node, differentiate the nodes by the ID property. The following code explains how to define template for a node.
 
 ```cshtml
-@page "/Nodetemplatesample"
-
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="diagram" Width="1200px" Height="1000px" Nodes="@nodes">
@@ -179,7 +191,7 @@ We can define node style using template in NodeTemplate at tag level. If we want
 }
 ```
 
-> In the above example , node's background color is updated using the click event of the button defined in the template.
+> In the above example, node's background color is updated using the click event of the button defined in the template.
 
 ![Node Template](../images/nodetemplate.gif)
 
@@ -188,8 +200,6 @@ We can define node style using template in NodeTemplate at tag level. If we want
 The `SetNodeTemplate` method of diagram allows you to define the style for the Node. The following code demonstrates how to set different style for different node through SetNodeTemplate method.
 
 ```cshtml
-@page "/settemplate"
-
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
 
@@ -232,31 +242,31 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
     {
         if ((node as Node).ID == "node6")
         {
-            var table = new StackPanel();
+            StackPanel table = new StackPanel();
             table.Style = new ShapeStyle() { Fill = "#e6e0eb", StrokeColor = "#e6e0eb" };
             table.Orientation = Orientation.Horizontal;
-            var column1 = new StackPanel();
+            StackPanel column1 = new StackPanel();
             column1.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
             column1.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column1.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column1.Children = new ObservableCollection<ICommonElement>();
             column1.Children.Add(getTextElement("Events"));
 
-            var column2 = new StackPanel();
+            StackPanel column2 = new StackPanel();
             column2.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column2.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column2.Children = new ObservableCollection<ICommonElement>();
             column2.Children.Add(getTextElement("Emails"));
             column2.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
-            var column3 = new StackPanel();
+            StackPanel column3 = new StackPanel();
             column3.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column3.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column3.Children = new ObservableCollection<ICommonElement>();
             column3.Children.Add(getTextElement("Calls"));
             column3.Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F" };
 
-            var column4 = new StackPanel();
+            StackPanel column4 = new StackPanel();
             column4.Margin = new Margin() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column4.Padding = new Thickness() { Bottom = 10, Left = 10, Right = 10, Top = 10 };
             column4.Children = new ObservableCollection<ICommonElement>();
@@ -269,19 +279,29 @@ The `SetNodeTemplate` method of diagram allows you to define the style for the N
         }
         else
         {
-            (node as Node).Style = new ShapeStyle() { Fill = "#6F409F", StrokeColor = "#6F409F", StrokeWidth = 2 };
-            (node as Node).Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle, CornerRadius = 10 };
+            (node as Node).Style = new ShapeStyle() 
+            { 
+                Fill = "#6F409F", 
+                StrokeColor = "#6F409F", 
+                StrokeWidth = 2 
+            };
+            (node as Node).Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Rectangle, 
+                CornerRadius = 10 
+            };
         }
         return null;
     }
 
     private TextElement getTextElement(string text)
     {
-        var textElement = new TextElement();
+        TextElement textElement = new TextElement();
         textElement.Width = 60;
         textElement.Height = 20;
         textElement.Content = text;
-        textElement.Style = new TextShapeStyle() { Color = "white" };
+        textElement.Style = new TextStyle() { Color = "white" };
         return textElement;
     }
 }
@@ -314,7 +334,11 @@ Diagram provides support to add `Shadow` effect to a node that is disabled, by d
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow
         };
         nodes.Add(node);
@@ -333,8 +357,8 @@ The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the 
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-
+@code
+{
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -349,7 +373,11 @@ The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            },
             Constraints = NodeConstraints.Default | NodeConstraints.Shadow,
             // Custom Shadow of the node
             Shadow = new Shadow()
@@ -369,21 +397,19 @@ The `Angle`, `Distance`, and `Opacity` of the shadow can be customized with the 
 
 ## Gradient
 
-The `Gradient` property of the node allows you to define and apply the gradient effect to the node. The gradient stop property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
+The `Gradient` property of the node allows you to define and apply the gradient effect to the node. The gradient stops property defines the color and a position, where the previous color transition ends and a new color transition starts. The gradient stop’s opacity property defines the transparency level of the region.
 
 There are two types of gradients as follows:
 
-* Linear Gradient
+* LinearGradientBrush
 
-* Radial Gradient
+* RadialGradientBrush
 
-### Linear gradient
+### Linear gradient brush
 
-`LinearGradient` defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
+`LinearGradientBrush` defines a smooth transition between a set of colors (so-called stops) in a line. A linear gradient’s X1, Y1, X2, Y2 properties are used to define the position (relative to the node) of the rectangular region that needs to be painted.
 
 ```cshtml
-@page "/lineargradient"
-
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
@@ -406,21 +432,20 @@ There are two types of gradients as follows:
             Height = 100,
             Style = new ShapeStyle()
             {
-                Gradient = new LinearGradient()
+                Gradient = new LinearGradientBrush()
                 {
-                    //Start point of linear gradient
+                    // Start point of linear gradient
                     X1 = 0,
                     Y1 = 0,
-                    ////End point of linear gradient
+                    // End point of linear gradient
                     X2 = 50,
                     Y2 = 50,
                     //Sets an array of stop objects
-                    Stops = new DiagramObjectCollection<GradientStop>()
+                    GradientStops = new DiagramObjectCollection<GradientStop>()
                     {
                         new GradientStop(){ Color = "white", Offset = 0},
                         new GradientStop(){ Color = "#6495ED", Offset = 100}
-                    },
-                    Type = GradientType.Linear
+                    },                    
                 }
             },
         };
@@ -431,18 +456,17 @@ There are two types of gradients as follows:
 
 ![Node LinearGradient](../images/node_lineargradient.png)
 
-### Radial gradient
+### Radial gradient brush
 
-`RadialGradient` defines a smooth transition between stops on a circle. A radial gradient properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
+`RadialGradientBrush` defines a smooth transition between stops on a circle. The radial gradient brush properties are used to define the position (relative to the node) of the outermost or the innermost circle of the radial gradient.
 
 ```cshtml
-@page "/radialgradient"
-
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
+@code
+{
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -456,25 +480,28 @@ There are two types of gradients as follows:
             // Size of the node
             Width = 100,
             Height = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Ellipse },
+            Shape = new BasicShape() 
+            { 
+                Type = Shapes.Basic, 
+                Shape = BasicShapeType.Ellipse 
+            },
             Style = new ShapeStyle()
             {
                 Fill = "37909A#",
                 StrokeColor = "#024249",
-                Gradient = new RadialGradient()
+                Gradient = new RadialGradientBrush()
                 {
-                    //Center point of outer circle
-                    Cx = 50,
-                    Cy = 50,
-                    //Center point of inner circle
-                    Fx = 50,
-                    Fy = 50,
-                    Stops = new DiagramObjectCollection<GradientStop>()
+                    // Center point of outer circle
+                    CX = 50,
+                    CY = 50,
+                    // Center point of inner circle
+                    FX = 50,
+                    FY = 50,
+                    GradientStops = new DiagramObjectCollection<GradientStop>()
                     {
                         new GradientStop() { Color = "#00555b", Offset = 45 },
                         new GradientStop() { Color= "#37909A", Offset= 90 }
-                    },
-                    Type = GradientType.Radial
+                    },                    
                 }
             },
         };
@@ -488,17 +515,17 @@ There are two types of gradients as follows:
 
 ## Custom properties
 
-The `AddInfo` property of the node allows you to maintain additional information to the node.
+The `AdditionalInfo` property of the node allows you to maintain additional information to the node.
 
-The following code shows how to set the `AddInfo` value.
+The following code shows how to set the `AdditionalInfo` value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
-@code{
-
+@code
+{
     DiagramObjectCollection<Node> nodes;
 
     protected override void OnInitialized()
@@ -515,8 +542,12 @@ The following code shows how to set the `AddInfo` value.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-            AddInfo = NodeInfo
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6BA5D7", 
+                StrokeColor = "white"
+            },
+            AdditionalInfo = NodeInfo
         };
         // Add node
         nodes.Add(node);
@@ -524,7 +555,7 @@ The following code shows how to set the `AddInfo` value.
 }
 ```
 
-**Note:** We can set any type of value for the AddInfo property.
+**Note:** We can set any type of value for the AdditionalInfo property.
 
 ## See also
 
