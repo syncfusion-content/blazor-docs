@@ -370,7 +370,8 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
         <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
     </KanbanColumns>
     <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
-    <KanbanSwimlaneSettings KeyField="Assignee" TextField="AssigneeName" SortDirection="SortDirection.Descending"></KanbanSwimlaneSettings>
+    <KanbanSwimlaneSettings KeyField="Assignee" TextField="AssigneeName"></KanbanSwimlaneSettings>
+    <KanbanEvents TValue="TasksModel" SwimlaneSorting="@OnSorting"></KanbanEvents>
 </SfKanban>
 
 @code {
@@ -384,15 +385,23 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
         public string AssigneeName { get; set; }
     }
 
-
     public List<TasksModel> Tasks = new List<TasksModel>()
     {
         new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
         new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller", AssigneeName = "Andrew" },
-        new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "InProgress", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
+        new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "InProgress", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Janet Leverling", AssigneeName = "Janet" },
         new TasksModel { Id = "Task 4", Title = "BLAZ-29004", Status = "Close", Summary = "Fix the issues reported in the IE browser.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
-        new TasksModel { Id = "Task 5", Title = "BLAZ-29005", Status = "Close", Summary = "Fix the issues reported by the customer.", Assignee = "Andrew Fuller", AssigneeName = "Andrew" }
+        new TasksModel { Id = "Task 5", Title = "BLAZ-29005", Status = "Close", Summary = "Fix the issues reported by the customer.", Assignee = "Steven walker", AssigneeName = "Steven" }
     };
+
+    public void OnSorting(SwimlaneSortEventArgs args)
+    {
+        if (args.SwimlaneRows.Count > 0)
+        {
+            var order = new List<int> { 2, 0, 1, 3 };
+            args.SwimlaneRows = order.Select(i => args.SwimlaneRows[i]).ToList();
+        }
+    }
 }
 
 ```
