@@ -40,3 +40,7 @@ In the following code 150 items bound to the component, but only 6 items will lo
     }
 }
 ```
+
+The output will shown as follows,
+
+![Blazor AutoComplete with virtualization](./images/blazor_autocomplete_virtualization.gif)
