@@ -165,7 +165,8 @@ HistoryAdding in the DiagramHistoryManager, which takes a history entry as argum
 
     private void OnHistoryAdding(HistoryAddingEventArgs entry)
     {
-        entry.Cancel = false;
+        // Sets true to cancel undo/redo action.
+        entry.Cancel = true;
     }
 }
 ```
