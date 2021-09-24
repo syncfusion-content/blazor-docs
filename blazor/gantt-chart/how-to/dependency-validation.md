@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Restricting dependency validation in Blazor Gantt Chart Component | Syncfusion
-description: Checkout and learn here all about how to enable/disable predecessor validation.
+title: Dependency validation in Blazor Gantt Chart Component | Syncfusion
+description: Checkout and learn here all about how to enable or disable predecessor validation on predecessor drawing.
 platform: Blazor
 control: Gantt Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Restricting dependency validation using OnActionBegin event 
 
-When the connector lines are drawn between tasks, the task date gets validated based on predecessor values. We can restrict this validation on predecessor drawing using the `OnActionBegin` event which gets triggered with the `Action` argument as `DrawConnectorLine`. You can enable/disable the validation using `EnableAutoLinkValidation` event argument.
+When the connector lines are drawn between tasks, the task date gets validated based on predecessor values. We can restrict this validation on predecessor drawing using the `OnActionBegin` event which gets triggered with the `Action` argument as `DrawConnectorLine`. You can enable/disable the validation using `EnableAutoLinkValidation` event argument. By default `EnableAutoLinkValidation` is true.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -23,7 +23,7 @@ When the connector lines are drawn between tasks, the task date gets validated b
 	<GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"
 		AllowDeleting="true" ShowDeleteConfirmDialog="true">
 	</GanttEditSettings>
-    <GanttEvents OnActionBegin="actionBegin" TValue="TaskData"></GanttEvents>
+    <GanttEvents OnActionBegin="ActionBegin" TValue="TaskData"></GanttEvents>
 </SfGantt>
 
 @code {
@@ -36,7 +36,7 @@ When the connector lines are drawn between tasks, the task date gets validated b
 		this.TaskCollection = GetTaskCollection();
 	}
 	
-    public void actionBegin(GanttActionEventArgs<TaskData> args)
+    public void ActionBegin(GanttActionEventArgs<TaskData> args)
     {
         if(args.Action != null && args.Action.Equals("DrawConnectorLine", StringComparison.Ordinal)){
 			args.EnableAutoLinkValidation = false;
@@ -70,3 +70,5 @@ When the connector lines are drawn between tasks, the task date gets validated b
 	}
 }
 ```
+
+`Note:` `EnablePredecessorValidation` is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, `EnableAutoLinkValidation` event argument is used to enable/disable validation only on predecessor drawing. 
