@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keyboard Shortcuts | Syncfusion
-description: Learn more about the keyboard shortcuts supported in the Blazor Splitter.
+description: Checkout and learn here all about Keyboard shortcuts in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
