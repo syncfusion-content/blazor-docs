@@ -54,7 +54,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ![Gridlinesdefault in Blazor Diagram](images/Gridlinesdefault.png)
 
-To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
+To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](constraints).
 
 ## Appearance
 
@@ -89,6 +89,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Width="1000px" Height="500px">
+    @* Customizes the appearance of the gridlines *@
     <SnapSettings GridType="GridType.Dots">
         <HorizontalGridLines LineColor="Blue" @bind-LineIntervals="@HInterval" 
                              @bind-DotIntervals="@HDotInterval"></HorizontalGridLines>
@@ -180,7 +181,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 
 ### Customization of snap intervals
 
-By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) and the vertical gridline’s [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) properties.
+By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) and the vertical gridline’s `SnapIntervals` properties.
 
 ```cshtml
 @page "/CustomSnapLineInterval Sample"
@@ -229,7 +230,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 
 * The [SnapAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapAngle) property allows you to define the snap angle by which the object needs to be rotated.
 
-* The `Constraints` property of SnapSettings class allows you to enable or disable the certain features of the snapping, refer to [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
+* The `Constraints` property of SnapSettings class allows you to enable or disable the certain features of the snapping, refer to [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

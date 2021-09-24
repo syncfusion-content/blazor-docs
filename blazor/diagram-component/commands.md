@@ -75,6 +75,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignLeft()
     {
+        //Aligns the selected objects at the left side of the selection boundary
         diagram.SetAlign(AlignmentOptions.Left);
     }      
 }
@@ -133,6 +134,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignRight()
     {
+        //Aligns the selected objects at the right side of the selection boundary
         diagram.SetAlign(AlignmentOptions.Right);
     }     
 }
@@ -190,6 +192,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignTop()
     {
+        //Aligns the selected objects at the top of the selection boundary
         diagram.SetAlign(AlignmentOptions.Top);
     }       
 }
@@ -247,6 +250,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignBottom()
     {
+        //Aligns the selected objects at the bottom of the selection boundary
         diagram.SetAlign(AlignmentOptions.Bottom);
     }     
 }
@@ -304,6 +308,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignMiddle()
     {
+        //Aligns the selected objects at the middle of the selection boundary
         diagram.SetAlign(AlignmentOptions.Middle);
     }         
 }
@@ -362,6 +367,7 @@ The following code example illustrates how to align all the selected objects at 
 
     private void OnAlignCenter()
     {
+        //Aligns the selected objects at the center of the selection boundary
         diagram.SetAlign(AlignmentOptions.Center);
     }        
 }
@@ -439,41 +445,49 @@ The following code example illustrates how to execute the space commands.
 
     private void OnDistributeLeft()
     {
+        //distributes the objects based on the distance between the left sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Left);
     }
 
     private void OnDistributeRight()
     {
+        //distributes the objects based on the distance between the right sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Right);
     }
 
     private void OnDistributeTop()
     {
+        //distributes the objects based on the distance between the top sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Top);
     }
 
     private void OnDistributeBottom()
     {
+        //distributes the objects based on the distance between the bottom sides of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Bottom);
     }
 
     private void OnDistributeMiddle()
     {
+        //distributes the objects based on the distance between vertical centers of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Middle);
     }
 
     private void OnDistributeCenter()
     {
+        //distributes the objects based on the distance between the centers of the adjacent objects.
         diagram.SetDistribute(DistributeOptions.Center);
     }
 
     private void OnDistributeBottomToTop()
     {
+        //distributes the objects based on the distance between bottom and top sides of adjacent objects.
         diagram.SetDistribute(DistributeOptions.BottomToTop);
     }
 
     private void OnDistributeRightToLeft()
     {
+        //distributes the objects based on the distance between right and left sides of adjacent objects.
         diagram.SetDistribute(DistributeOptions.RightToLeft);
     }
 }
@@ -481,7 +495,7 @@ The following code example illustrates how to execute the space commands.
 
 ## Sizing Commands
 
- Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
+Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
 
 [SizingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html) are as follows:
 
@@ -546,16 +560,19 @@ The following code example illustrates how to execute the size commands.
 
     private void OnSameSize()
     {
+        //Scales the selected objects both vertically and horizontally.
         diagram.SetSameSize(SizingMode.Size);
     }
 
     private void OnSameWidth()
     {
+        //Scales the width of the selected objects.
         diagram.SetSameSize(SizingMode.Width);
     }
 
     private void OnSameHeight()
     {
+        //Scales the height of the selected objects.
         diagram.SetSameSize(SizingMode.Height);
     }
 ```
@@ -616,16 +633,19 @@ The following code illustrates how to execute the clipboard commands.
 
     private void OnCut()
     {
+        //Removes the selected objecte
         diagram.Cut();
     }
 
     private void OnCopy()
     {
+        //copies the selected object
         diagram.Copy();
     }
 
     private void OnPaste()
     {
+        //pastes the copied object
         diagram.Paste();
     }
 }
@@ -685,16 +705,19 @@ The following code illustrates how to execute the grouping commands.
 
     private void OnGroup()
     {
+        //group the selected items in the diagram
         diagram.Group();
     }
 
     private void OnUnGroup()
     {
+        //ungroup the selected items in the diagram
         diagram.UnGroup();
     }
 
     private void OnSelectAll()
     {
+        //select all the items in the diagram
         diagram.SelectAll();
     }
 }
@@ -747,7 +770,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 ## Nudge command
 
-The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) commands move the selected elements towards up, down, left, or right by 1 pixel.
+The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) commands repositions the selected object by the specified delta in the given direction.
 
 [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html) nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
 
@@ -771,7 +794,7 @@ The following code illustrates how to execute nudge command.
 
     private void NudgeLeft()
     {
-        //Nudges to Left
+        //Repositions the selected objects by 50 towards left direction.
         diagram.Nudge(Direction.Left, 50);
     }
 }
@@ -821,7 +844,9 @@ The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Dia
 
 ### Command Execution
 
-The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when execute the custom command in diagram.
+The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when execute the custom command in the diagram.
+
+The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
 
 ### Custom command
 
@@ -839,7 +864,7 @@ The following code example shows how to define a custom command.
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
-        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@canexe">
+        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@Canexe">
         </CommandManager>
     </CommandManager>
 </SfDiagramComponent>
@@ -896,13 +921,13 @@ The following code example shows how to define a custom command.
         nodes.Add(node2);
     }
 
-    public void canexe(CommandKeyArgs args)
+    public void Canexe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
 
     /// <summary>
-    /// Custom command execution event
+    /// Custom command execution
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
@@ -939,7 +964,7 @@ The following code example shows how to disable a command and how to modify the 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
-        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@canexe">
+        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@Canexe">
         </CommandManager>
     </CommandManager>
 </SfDiagramComponent>
@@ -996,7 +1021,7 @@ The following code example shows how to disable a command and how to modify the 
         nodes.Add(node2);
     }
 
-    public void canexe(CommandKeyArgs args)
+    public void Canexe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
