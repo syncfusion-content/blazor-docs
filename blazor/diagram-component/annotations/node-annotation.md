@@ -42,7 +42,11 @@ The following code shows the relationship between the shape annotation position 
             OffsetX = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Offset(0,0)", Offset = new Point() { X = 0, Y = 0 } }
+                new ShapeAnnotation 
+                { 
+                    Content = "Offset(0,0)", 
+                    Offset = new DiagramPoint() { X = 0, Y = 0 } 
+                }
             },
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -65,7 +69,7 @@ The following code shows the relationship between the shape annotation position 
 | (1,1) | ![Left](../images/Offset1,1.png) |
 
 
->* Type of the offset property for node’s shape annotation is NodeAnnotationOffset.
+>* Type of the offset property for node’s shape annotation is DiagramPoint.
 >* Type of the offset property for connector’s path annotation is double.
 
 ## Horizontal and vertical alignment
@@ -91,7 +95,7 @@ The following code explains how to align annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
@@ -108,9 +112,14 @@ The following code explains how to align annotations.
             Height = 100,
             OffsetX = 250,
             OffsetY = 250,
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Annotation", HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Center}
+                new ShapeAnnotation 
+                { 
+                    Content = "Annotation", 
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
@@ -128,7 +137,7 @@ The following code explains how to align annotations.
 `Margin` is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
 ```cshtml
-@@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
@@ -150,7 +159,14 @@ The following code explains how to align annotations.
             // Sets the margin for the content
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Task1",Margin = new Margin() { Top = 10},HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Top,Offset = new Point(){ X = .5 ,Y = 1} }
+                new ShapeAnnotation 
+                { 
+                    Content = "Task1",
+                    Margin = new Margin() { Top = 10},
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Offset = new DiagramPoint(){ X = 0.5 ,Y = 1}
+                }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
@@ -161,7 +177,7 @@ The following code explains how to align annotations.
 
 ## Text align
 
-The `TextAlign` inside the text block. The following code explains how to set TextAlign for an annotation.
+The `TextAlign`property of annotation allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set TextAlign for an annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -186,7 +202,14 @@ The `TextAlign` inside the text block. The following code explains how to set Te
             // Sets the textAlign as left for the content
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Text align is set as Left",Style = new TextShapeStyle(){ TextAlign = TextAlign.Left} }
+                new ShapeAnnotation 
+                { 
+                    Content = "Text align is set as Left",
+                    Style = new TextStyle()
+                    { 
+                        TextAlign = TextAlign.Left
+                    } 
+                }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
