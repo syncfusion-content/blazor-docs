@@ -13,7 +13,7 @@ The path of the connector is defined with a collection of segments. There are th
 
 ## Straight
 
-To create a straight line, specify the [Type](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment as **Straight** and add a straight segment to [Segments](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify `Type` for the connector. The following code example illustrates how to create a default straight segment.
+To create a straight line, specify the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Type) of the segment as [Straight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Straight) and add a straight segment to [Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Segments) collection and need to specify Type for the connector. The following code example illustrates how to create a default straight segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -60,7 +60,7 @@ To create a straight line, specify the [Type](https://helpstaging.syncfusion.com
 
 ## Orthogonal
 
-Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment `Type` as **Orthogonal** to create a default orthogonal segment and need to specify `Type`. The following code example illustrates how to create a default orthogonal segment.
+Orthogonal segments are used to create segments that are perpendicular to each other. Set the segment Type as [Orthogonal](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Orthogonal) to create a default orthogonal segment and need to specify Type. The following code example illustrates how to create a default orthogonal segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -103,7 +103,7 @@ Orthogonal segments are used to create segments that are perpendicular to each o
 }
 ```
 
-The [Length](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
+The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Length) and [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html#Syncfusion_Blazor_Diagram_OrthogonalSegment_Direction) properties allow to define the flow and length of segment. The following code example illustrates how to create customized orthogonal segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -167,7 +167,7 @@ The [Length](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diag
 
 ## Bezier
 
-Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the `Type` of the segment is set as **Bezier** and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
+Bezier segments are used to create curve segments and the curves are configurable either with the control points or with vectors. To create a bezier segment, the Type of the segment is set as [Bezier](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegmentType.html#Syncfusion_Blazor_Diagram_ConnectorSegmentType_Bezier) and need to specify type for the connector. The following code example illustrates how to create a default bezier segment.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -212,7 +212,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 
 ![Connector Bezier Segment](../images/connector-bezier.png)
 
-We have properties called [Point1](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) which is used to control the points of the bezier connector . And also we have properties called [vector1](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
+We have properties called [Point1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) which is used to control the points of the bezier connector . And also we have properties called [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
 
 ```cshtml
 Connector Connector1 = new Connector()
@@ -253,7 +253,7 @@ Connector Connector1 = new Connector()
 
 ## How to create multiple segments
 
-Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [connector.Segments](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
+Multiple segments can be defined one after another. To create a connector with multiple segments, define and add the segments to [connector.Segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorSegment.html) collection. The following code example illustrates how to create a connector with multiple segments.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -387,7 +387,7 @@ Multiple segments can be defined one after another. To create a connector with m
 
 * A segment control point of the Bezier connector is used to change the bezier vectors, points of the connector.
 
-![Bezier](images/bezieredit.gif)
+![Bezier](../images/bezieredit.gif)
 
 ## See also
 
