@@ -361,6 +361,9 @@ namespace TreeGridComponent.Data {
 > * If `EnableAutoFill` is set to true, then the autofill icon will be displayed on cell selection to copy cells.
 > * It requires the selection `Mode` to be `Cell`,  `CellSelectionMode` to be `Box` and also Batch Editing should be enabled.
 
+The following GIF represent a Tree Grid with AutoFill.
+![Column virtualization](./images/virtualColumn.gif)
+
 ### Limitations of AutoFill
 
 * Since the string values are not parsed to number and date type, so when the selected string type cells are dragged to the number type cells then it will be displayed as **NaN**. For date type cells, when the selected string type cells are dragged to date type cells then it will be displayed as an **empty cell**.
