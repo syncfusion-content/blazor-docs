@@ -9,7 +9,7 @@ documentation: ug
 
 # Interaction in Blazor Diagram Component
 
-The port can be dragged in the diagram area and create the connector over the port by using the [port constraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
+The port can be used to create connector by enable the `Draw` in the [port constraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
 ## Draw
 
@@ -45,13 +45,19 @@ The following code explains how to draw the connector by using the port constrai
                 new PointPort()
                 {
                     ID = "port1",
-                    Offset = new Point() { X = 0.5, Y = 0.5 },
+                    Offset = new DiagramPoint() { X = 0.5, Y = 0.5 },
                     Visibility = PortVisibility.Visible,
                     //Set the style for the port
-                    Style= new ShapeStyle(){ Fill = "gray", StrokeColor = "black"},
-                    // Sets the shape of the port as Circle
-                    Width = 12, Height = 12, Shape = PortShapes.X,
-                    // Enable drag operation for Port
+                    Style= new ShapeStyle()
+                    { 
+                        Fill = "gray", 
+                        StrokeColor = "black"
+                     }, 
+                    Width = 12, 
+                    Height = 12, 
+                    // Sets the shape of the port as Square
+                    Shape = PortShapes.Square,
+                    // Enable draw operation for Port
                     Constraints = PortConstraints.Default|PortConstraints.Draw
                 }
             },
