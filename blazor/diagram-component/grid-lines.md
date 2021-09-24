@@ -9,11 +9,11 @@ documentation: ug
 
 # Gridlines in Blazor Diagram Component
 
-Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface. The `SnapSettings` property is used to customize the gridlines and control the snapping behavior in the diagram.
+Gridlines are the pattern of lines drawn behind the diagram elements. It provides a visual guidance while dragging or arranging the objects on the diagram surface. The [SnapSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html) property is used to customize the gridlines and control the snapping behavior in the diagram.
 
 ## Customize the Gridlines visibility
 
-The `Constraints` property of SnapSettings class allows you to control the visibility of the gridlines.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of SnapSettings class allows you to control the visibility of the gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -54,17 +54,17 @@ The `Constraints` property of SnapSettings class allows you to control the visib
 
 ![Gridlinesdefault in Blazor Diagram](images/Gridlinesdefault.png)
 
-To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](./constraints).
+To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
 
 ## Appearance
 
 The appearance of the gridlines can be customized by using a set of predefined properties.
 
-* The `HorizontalGridLines` and the `VerticalGridLines` properties allow to customize the appearance of the horizontal and vertical gridlines respectively.
+* The [HorizontalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_HorizontalGridLines) and the [VerticalGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_VerticalGridLines) properties allow to customize the appearance of the horizontal and vertical gridlines respectively.
 
-* The horizontal gridlines `LineColor` and `LineDashArray` properties are used to customizes the line color and line style of the horizontal gridlines.
+* The horizontal gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineDashArray) properties are used to customizes the line color and line style of the horizontal gridlines.
 
-* The vertical gridlines `LineColor` and `LineDashArray` properties are used to customizes the line color and line style of the vertical gridlines.
+* The vertical gridlines [LineColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineColor) and [LineDashArray](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineDashArray) properties are used to customizes the line color and line style of the vertical gridlines.
 
 The following code example illustrates how to customize the appearance of gridlines.
 
@@ -83,7 +83,7 @@ The following code example illustrates how to customize the appearance of gridli
 
 ## How to create dot grid patterns
 
-The appearance of the grid lines can be changed into dots by using the `GridType` as Dots. The following code illustrates how to render grid patterns as Dots.
+The appearance of the grid lines can be changed into dots by using the [GridType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_GridType) as Dots. The following code illustrates how to render grid patterns as Dots.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -111,7 +111,7 @@ The appearance of the grid lines can be changed into dots by using the `GridType
 
 ## Line intervals
 
-Thickness and the space between gridlines can be customized by using horizontal gridline’s `LinesIntervals` and vertical gridline’s `LinesIntervals` properties. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
+Thickness and the space between gridlines can be customized by using horizontal gridline’s [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) and vertical gridline’s [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) properties. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
@@ -146,7 +146,7 @@ The following code example illustrates how to customize the thickness of lines a
 
 This feature allows the diagram objects to snap to the nearest intersection of gridlines while being dragged or resized. This feature enables easier alignment during layout or design.
 
-Snapping to gridlines can be enabled/disabled with the `SnapConstraints`. The following code example illustrates how to enable/disable the snapping to gridlines.
+Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html). The following code example illustrates how to enable/disable the snapping to gridlines.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -180,7 +180,7 @@ Snapping to gridlines can be enabled/disabled with the `SnapConstraints`. The fo
 
 ### Customization of snap intervals
 
-By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s `SnapIntervals` and the vertical gridline’s `SnapIntervals` properties.
+By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) and the vertical gridline’s [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) properties.
 
 ```cshtml
 @page "/CustomSnapLineInterval Sample"
@@ -225,11 +225,11 @@ By default, the objects are snapped towards the nearest gridline. The gridline o
 
 The snap to object provides visual cues to assist with aligning and spacing diagram elements. A node can be snapped with its neighboring objects based on certain alignments. Such alignments are visually represented as smart guides.
 
-* The `SnapDistance` property allows you to define minimum distance between the selected object and the nearest object.
+* The [SnapDistance](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapDistance) property allows you to define minimum distance between the selected object and the nearest object.
 
-* The `SnapAngle` property allows you to define the snap angle by which the object needs to be rotated.
+* The [SnapAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapAngle) property allows you to define the snap angle by which the object needs to be rotated.
 
-* The `Constraints` property allows you to enable or disable the certain features of the snapping, refer to `SnapConstraints`.
+* The `Constraints` property of SnapSettings class allows you to enable or disable the certain features of the snapping, refer to [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
