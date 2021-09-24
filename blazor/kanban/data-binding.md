@@ -16,7 +16,7 @@ It supports the following types of data binding:
 * Local Data
 * Remote data
 
-> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the **TValue** must be provided explicitly in the Kanban component.
+> When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the Kanban component.
 
 ## Local Data
 
@@ -66,13 +66,13 @@ In list binding, you can assign an IEnumerable object to the [DataSource](https:
 
 ```
 
-> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
+> By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses BlazorAdaptor for list data-binding.
 
 ### ExpandoObject binding
 
-Kanban is a generic component that is strongly bound to a model type.  In some cases, the model type may be unknown during compile time. In such cases, you can bind data to the Kanban as a list of **ExpandoObject**.
+Kanban is a generic component that is strongly bound to a model type.  In some cases, the model type may be unknown during compile time. In such cases, you can bind data to the Kanban as a list of ExpandoObject.
 
-**ExpandoObject** can be bound to Kanban by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in ExpandoObject.
+ExpandoObject can be bound to Kanban by assigning to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in ExpandoObject.
 
 ```cshtml
 @using Syncfusion.Blazor.Kanban
@@ -113,13 +113,11 @@ Kanban is a generic component that is strongly bound to a model type.  In some c
 
 ```
 
-Output be like the below.
-
 ![Expando object in Blazor Kanban](./images/blazor-kanban-expando-object.png)
 
 ### DynamicObject binding
 
-DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in **DynamicObject**.
+DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. Kanban can also perform all kinds of supported data operations and editing in DynamicObject.
 
 > The [GetDynamicMemberNames](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operations and editing while using DynamicObject.
 
@@ -181,8 +179,6 @@ DynamicObject can be bound to Kanban by assigning DynamicObject to the [DataSour
 
 ```
 
-Output be like the below.
-
 ![Dynamic object in Blazor Kanban](./images/blazor-kanban-dynamic-object.png)
 
 ## Remote data
@@ -194,7 +190,7 @@ Bind the remote data services to Kanban component by assigning service data as a
 
 ### Binding with OData services
 
-[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote Data binding using the **OData** service.
+[OData](https://www.odata.org/documentation/odata-version-3-0/) is a standardized protocol for creating and consuming data. You can retrieve data from the OData service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html). Refer to the following code example for remote Data binding using the OData service.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -232,7 +228,7 @@ Bind the remote data services to Kanban component by assigning service data as a
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols to retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData Documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the **ODataV4Adaptor**.
+The ODataV4 is an improved version of OData protocols to retrieve and consume OData V4 services. For more details on OData V4 services, refer to the [OData Documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData V4 service, use the ODataV4Adaptor.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -269,7 +265,7 @@ The ODataV4 is an improved version of OData protocols to retrieve and consume OD
 
 ### Web API
 
-You can use **WebApiAdaptor** to bind Kanban with Web API created using **OData** endpoint.
+You can use WebApiAdaptor to bind Kanban with Web API created using OData endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.Data
@@ -357,8 +353,6 @@ The following sample code demonstrates enabling data manager condition in the Ka
 }
 
 ```
-
-Output be like the below.
 
 **Before Button click**
 ![Dynamic data manager before button click in Blazor Kanban](./images/blazor-kanban-dynamic-before-data-manager.png)
@@ -463,8 +457,6 @@ The following sample code demonstrates achieving this,
 }
 
 ```
-
-Output be like the below.
 
 **Before button Click**
 ![Dynamic query before button click in Blazor Kanban](./images/blazor-kanban-before-dynamic-query.png)
@@ -704,7 +696,5 @@ SfToast ToastObj;
     } }
 
 ```
-
-Output be like the below.
 
 ![Observable object binding in Blazor Kanban](./images/blazor-kanban-observable-object.png)

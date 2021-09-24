@@ -299,8 +299,6 @@ Swimlane sorting will arrange the rows in Ascending order on the Kanban board wh
 
 ```
 
-Output be like the below.
-
 ![Swimlane Ascending Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-ascending.png)
 
 ### Descending Order
@@ -346,8 +344,6 @@ The following sample code demonstrates achieving this,
 }
 
 ```
-
-Output be like the below.
 
 ![Swimlane Descending Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-descending.png)
 
@@ -405,8 +401,6 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
 }
 
 ```
-
-Output be like the below.
 
 ![Swimlane Custom Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-custom.png)
 
