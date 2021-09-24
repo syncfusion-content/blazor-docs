@@ -81,7 +81,7 @@ For more information about diagram constraints, refer to the [Diagram constraint
 
 ## Node constraints
 
-Node constraints allows you to enable or disable the following behaviors of node.  By default, [Select](https://help.syncfusion.com.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Select), [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Drag), [Resize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Resize), [Rotate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Rotate), [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Delete),[InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect), [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) constraints are enabled for the node.
+Node constraints allows you to enable or disable the following behaviors of node.  By default, [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Select), [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Drag), [Resize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Resize), [Rotate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Rotate), [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Delete),[InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect), [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) constraints are enabled for the node.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -110,7 +110,7 @@ Node constraints allows you to enable or disable the following behaviors of node
 |Inherit|Enables the node to inherit the interaction option from the parent object|
 |Default|Enables all default constraints for the node|
 
-The following example shows how to disable rotate constraint from the default [Node constraints](https://help.syncfusion.com.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) .
+The following example shows how to disable rotate constraint from the default [Node constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) .
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -160,7 +160,7 @@ For more information about node constraints, refer to the `NodeConstraints`.
 
 ## Connector constraints
 
-Connector constraints allow you to enable or disable the following behaviors of connectors. By default, [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Select), [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Drag), [DragSourceEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSourceEnd), [DragTargetEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragTargetEnd), [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Delete), [InheritBridging](https://help.syncfusion.com.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritBridging), [PointerEvents](https://help.syncfusion.com.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_PointerEvents) constraints are enabled for the connector.
+Connector constraints allow you to enable or disable the following behaviors of connectors. By default, [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Select), [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Drag), [DragSourceEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragSourceEnd), [DragTargetEnd](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_DragTargetEnd), [Delete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_Delete), [InheritBridging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_InheritBridging), [PointerEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html#Syncfusion_Blazor_Diagram_ConnectorConstraints_PointerEvents) constraints are enabled for the connector.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -224,7 +224,7 @@ The connector constraints are provided as flagged enumerations, so that multiple
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
 ```
 
-For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
+For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
 
 ## Port constraints
 
@@ -484,7 +484,7 @@ The snap constraints are provided as flagged enumerations, so that multiple beha
 snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;
 ```
 
-For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
+For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
 
 ## Boundary constraints
 
