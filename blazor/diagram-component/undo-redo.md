@@ -81,3 +81,145 @@ The `HistoryChangedEventArgs` notifies while the changes occurs during undo/redo
     }
 }
 ```
+
+## Track custom entry
+
+Diagram provides options to track the changes that are made to custom properties. The following example illustrates how to track such custom property changes.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+<SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">    
+</SfDiagramComponent>
+
+@code
+ {
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Dictionary<string, object> NodeInfo = new Dictionary<string, object>();
+        NodeInfo.Add("nodeInfo", "Central Node");
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+            AdditionalInfo = NodeInfo
+        };
+        // Add node
+        nodes.Add(node);
+
+        HistoryEntry entry = new HistoryEntry();
+        entry.UndoObject = diagram.Nodes[0];
+        diagram.AddHistoryEntry(entry);
+    }
+}
+```
+
+### HistoryAdding
+
+HistoryAdding in the DiagramHistoryManager, which takes a history entry as argument and returns whether the specific entry can be added or not.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+<SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">
+    <DiagramHistoryManager HistoryAdding="@OnHistoryAdding"></DiagramHistoryManager>
+</SfDiagramComponent>
+
+@code
+ {
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
+        // Add node
+        nodes.Add(node);
+
+    }
+
+    private void OnHistoryAdding(HistoryAddingEventArgs entry)
+    {
+        entry.Cancel = false;
+    }
+}
+```
+
+### Custom undo redo
+Undo method in DiagramHistoryManager get called when the custom entry is in undo stage and Redo method in DiagramHistoryManager get called when the custom entry is in redo stage.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+@* Initialize Diagram *@
+<SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">
+    <DiagramHistoryManager Undo="@onCustomUndo" Redo="@onCustomRedo"/>
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    string EventValue = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        // A node is created and stored in the nodes collection.
+        Node node = new Node()
+        {
+            ID = "node1",
+            // Position of the node
+            OffsetX = 250,
+            OffsetY = 250,
+            // Size of the node
+            Width = 100,
+            Height = 100,
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+        };
+        // Add node
+        nodes.Add(node);
+
+    }
+
+    private void onCustomUndo(HistoryEntryBase entry)
+    {
+        (entry.RedoObject) = entry.UndoObject.Clone() as Node;
+        (entry.UndoObject as Node).AdditionalInfo[(entry.UndoObject as Node).ID] = "Start";
+        EventValue += "UndoObject:" + (entry.UndoObject as Node).AdditionalInfo[(entry.UndoObject as Node).ID];
+    }
+
+    private void onCustomRedo(HistoryEntryBase entry)
+    {
+        EventValue += "RedoObject:" + (entry.RedoObject as Node).AdditionalInfo[(entry.RedoObject as Node).ID];
+        var current = entry.UndoObject.Clone() as Node;
+        (entry.UndoObject as Node).AdditionalInfo[(entry.UndoObject as Node).ID] = "Description";
+        entry.RedoObject = current;
+    }
+}
+```

@@ -55,58 +55,6 @@ The following code example shows how to register and get the notification from t
 }
 ```
 
-## Key down
-
-The KeyDown event occurs when a keyboard key is pressed down and updated the respective keyboard key pressed.
-
-## Key up
-
-The KeyUp event occurs when a keyboard key is released and updated the respective keyboard key pressed.
-
-The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" KeyDown="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@nodes" />
-
-@code
-{
-    // Defines diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
-
-    // Occurs when click the annotation and enter the character in key down state
-    private void OnKeyDown(KeyEventArgs args)
-    {
-
-    }
-
-    // Occurs when click the annotation and enter the character in key release state
-    private void OnKeyUp(KeyEventArgs args)
-    {
-
-    }
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-            Width = 100,
-            Height = 100,
-            OffsetX = 100,
-            OffsetY = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-        };
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation {Content = "Annotation" }
-        };
-        nodes.Add(node);
-    }
-}
-```
-
 ## See also
 
 * [How to add or remove annotation constraints](../constraints/#annotation-constraints)
