@@ -9,11 +9,11 @@ documentation: ug
 
 # User Handles for node, connector in Blazor Diagram Component
 
-The [UserHandles](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_UserHandles) are customizable handles that can be used to perform custom actions and default clipboard actions.
+The [UserHandles](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramSelectionSettings.html#Syncfusion_Blazor_Diagram_DiagramSelectionSettings_UserHandles) are customizable handles that can be used to perform custom actions and default clipboard actions.
 
 ## Initialization an user handle
 
-The user handle can enables for the selected nodes/connectors by setting a [SelectorConstraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html) as [UserHandle](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle) and then use the [UserHandle](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
+The user handle can enables for the selected nodes/connectors by setting a [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html) as [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html#Syncfusion_Blazor_Diagram_SelectorConstraints_UserHandle) and then use the [UserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html) class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram
@@ -59,7 +59,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
         };
         SelectedModel = new DiagramSelectionSettings()
         {
-            //Enable userhandle for selected items...
+            //Enable userhandle for selected model...
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -85,7 +85,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
 
 ### Position
 
-The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of user handle is used to align the user handles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height. The [Side](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property is used to set how the user handle is aligned based on the given `Offset`.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Offset) property of user handle is used to align the user handles based on fractions. 0 represents Top-Left corner, 1 represents Bottom-Right corner, and 0.5 represents half of Width or Height. The [Side](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Side) property is used to set how the user handle is aligned based on the given `Offset`.
 
 The following table shows all the possible alignments visually shows the user handle positions.
 
@@ -102,17 +102,17 @@ The following table shows all the possible alignments visually shows the user ha
 
 ### Size
 
-Diagram allows you set size for user handles by using the [Size](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. The default value of the `Size` property is 25.
+Diagram allows you set size for user handles by using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Size) property. The default value of the `Size` property is 25.
 
 ### Style
 
 You can change the style of the user handles with the specific properties of PathColor, BorderColor, BackgroundColor and BorderWidth. The following code explains how to customize the appearance of the user handles.
 
-* The user handle's [PathColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathColor) property used to change the color of the given [PathData](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathData) of the user handle.
+* The user handle's [PathColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathColor) property used to change the color of the given [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_PathData) of the user handle.
 
-* The user handle [BorderColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor), [BackgroundColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor) properties are used to define the background color and border color of the user handle and the [BorderWidth](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderWidth) property is used to define the border width of the user handles.
+* The user handle [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderColor), [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BackgroundColor) properties are used to define the background color and border color of the user handle and the [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_BorderWidth) property is used to define the border width of the user handles.
 
-* The [Visible](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property indicating whether the user handle is visible in the user interface.
+* The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.UserHandle.html#Syncfusion_Blazor_Diagram_UserHandle_Visible) property indicating whether the user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the user handle.
 
@@ -169,7 +169,7 @@ The following code explains how to customize the appearance of the user handle.
         };
         SelectedModel = new DiagramSelectionSettings()
         {
-            //Enable userhandle for selected items...
+            //Enable userhandle for selected model...
             Constraints = SelectorConstraints.UserHandle,
             UserHandles = this.UserHandles
         };
@@ -193,7 +193,7 @@ The following code explains how to customize the appearance of the user handle.
 
 ## Fixed user handles
 
-The [FixedUserHandle](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) is used to add some frequently used commands around the node and connector even without selecting it.
+The [FixedUserHandle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html) is used to add some frequently used commands around the node and connector even without selecting it.
 
 ## Initialization an fixed user handles
 
@@ -241,29 +241,29 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ## Customization the fixed user handle
 
-* The [ID](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_ID) property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
+* The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_ID) property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
 
 * The fixed user handle can be positioned relative to the node and connector boundaries. It has `Offset`, `Padding` and `CornerRadius` settings. It is used to position and customize the fixed user handle.
 
-* The [Padding](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Padding) is used to leave the space that is inside the fixed user handle between the icon and border.
+* The [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Padding) is used to leave the space that is inside the fixed user handle between the icon and border.
 
-* The [CornerRadius](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_CornerRadius) allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
+* The [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_CornerRadius) allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
 
-> The `PathData` needs to be provided to render fixed user handle.
+> The [PathData](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_PathData) needs to be provided to render fixed user handle.
 
 ### Size
 
-Diagram allows you set size for the fixed user handles by using the [Width](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Width) and [Height](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Height) property. The default value of the `Width` and `Height` property is 10.
+Diagram allows you set size for the fixed user handles by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Height) property. The default value of the `Width` and `Height` property is 10.
 
 ### Style
 
-* You can change the style of the fixed user handles with the specific properties of borderColor, borderWidth, and backgroundColor by using the [Stroke](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Stroke), [StrokeThickness](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_StrokeThickness), and [Fill](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Fill) properties, and the icon BorderColor, and BorderWidth by using the `IconStroke` and `IconStrokeThickness` properties.
+* You can change the style of the fixed user handles with the specific properties of borderColor, borderWidth, and backgroundColor by using the [Stroke](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Stroke), [StrokeThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_StrokeThickness), and [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Fill) properties, and the icon BorderColor, and BorderWidth by using the `IconStroke` and `IconStrokeThickness` properties.
 
-* The fixed user handle's [IconStroke](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStroke) and [IconStrokeThickness](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStrokeThickness) property used to change the stroke color and stroke width of the given [PathData](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_PathData).
+* The fixed user handle's [IconStroke](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStroke) and [IconStrokeThickness](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_IconStrokeThickness) property used to change the stroke color and stroke width of the given `PathData`.
 
 * The fixed user handle `Stroke` and `Fill` properties are used to define the background color and border color of the user handle and the `StrokeThickness` property is used to define the border width of the fixed user handle.
 
-* The [Visibility](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Visibility) property indicating whether the fixed user handle is visible in the user interface.
+* The [Visibility](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandle.html#Syncfusion_Blazor_Diagram_FixedUserHandle_Visibility) property indicating whether the fixed user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the fixed user handles.
 
@@ -315,15 +315,15 @@ The following code explains how to customize the appearance of the fixed user ha
 
 ## Customizing the node fixed user handle
 
-The node fixed user handle can be aligned relative to the node boundaries. It has [Margin](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Margin) and [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Offset) settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
+The node fixed user handle can be aligned relative to the node boundaries. It has [Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Margin) and [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Offset) settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
 
 ### Margin for the node fixed user handle
 
-[Margin](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Margin) is an absolute value used to add some blank space in any one of its four sides. The fixed user handle can be displaced with the `Margin` property.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Margin) is an absolute value used to add some blank space in any one of its four sides. The fixed user handle can be displaced with the `Margin` property.
 
 ### Offset for the node fixed user handle
 
-The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Offset) property of fixed user handle is used to align the user handle based on the `X` and `Y` points. (0,0) represents the top-left corner and (1,1) represents the bottom-right corner.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeFixedUserHandle.html#Syncfusion_Blazor_Diagram_NodeFixedUserHandle_Offset) property of fixed user handle is used to align the user handle based on the `X` and `Y` points. (0,0) represents the top-left corner and (1,1) represents the bottom-right corner.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
@@ -391,15 +391,15 @@ The following code explains how to customize the node fixed user handle.
 
 * The connector fixed user handle can be aligned relative to the connector boundaries. It has alignment, displacement and offset settings. It is useful to position the connector fixed user handle and used together and gives you more control over the connector fixed user handle positioning.
 
-* The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Offset) and [Alignment](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Alignment) properties of fixed user handle allows you to align the connector fixed user handles to the segments.
+* The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Offset) and [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Alignment) properties of fixed user handle allows you to align the connector fixed user handles to the segments.
 
 ### Offset for the connector fixed user handle
 
-The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Offset) property of connector fixed user handle is used to align the user handle based on fractions. 0 represents the connector source point, 1 represents the connector target point, and 0.5 represents the center point of the connector segment.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Offset) property of connector fixed user handle is used to align the user handle based on fractions. 0 represents the connector source point, 1 represents the connector target point, and 0.5 represents the center point of the connector segment.
 
 ### Alignment
 
-The connector’s fixed user handle can be aligned over its segment path using the [Alignment](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Alignment) property of fixed user handle.
+The connector’s fixed user handle can be aligned over its segment path using the [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Alignment) property of fixed user handle.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
@@ -411,7 +411,7 @@ The following table shows all the possible alignments visually shows the fixed u
 
 ### Displacement
 
-* The [Displacement](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Displacement) property allows you to specify the space to be left from the connector segment based on the x and y value provided.
+* The [Displacement](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorFixedUserHandle.html#Syncfusion_Blazor_Diagram_ConnectorFixedUserHandle_Displacement) property allows you to specify the space to be left from the connector segment based on the x and y value provided.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
@@ -474,7 +474,7 @@ The Diagram control provides following event for the fixed user handle.
 
 | Event Name | Event Type | Description |
 | -------- | -------- | -------- |
-| [FixedUserHandleClick](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_FixedUserHandleClick) | [FixedUserHandleClickEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html) | Triggered when the mouse pointer is over the user handle and mouse button is up. |
+| [FixedUserHandleClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_FixedUserHandleClick) | [FixedUserHandleClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FixedUserHandleClickEventArgs.html) | Triggered when the mouse pointer is over the user handle and mouse button is up. |
 
 ```csharp
 @using Syncfusion.Blazor.Diagram

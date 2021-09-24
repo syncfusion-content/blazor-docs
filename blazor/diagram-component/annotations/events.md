@@ -11,10 +11,10 @@ documentation: ug
 
 ## Text Change
 
-* While editing the node's or connector's annotation, [TextChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged) event can be used to do the customization.
+* While editing the node's or connector's annotation, [TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged) event can be used to do the customization.
 * When the node's or connector's annotation is changed in the diagram, this event is getting triggered. 
 
-The [TextChangeEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html) notifies when the annotation of an element undergoes editing.
+The [TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html) notifies when the annotation of an element undergoes editing.
 
 The following code example shows how to register and get the notification from the TextChanged event.
 
@@ -48,7 +48,7 @@ The following code example shows how to register and get the notification from t
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new ShapeAnnotation {Content = "Annotation" }
+            new ShapeAnnotation { Content = "Annotation" }
         };
         nodes.Add(node);
     }
