@@ -20,8 +20,8 @@ Diagram provides some events support for node that triggers when interacting the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the selection is changed in the diagram.|
-|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the node's or connector's selection is changed in the diagram.|
+|[SelectionChanging](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the selection is changed in the diagram.|
+|[SelectionChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the node's or connector's selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
 
@@ -83,8 +83,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`PositionChanging`|`PositionChangedEventArgs`|Triggers while dragging the elements in the diagram.|
-|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node's or connector's position is changed.|
+|[PositionChanging](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the elements in the diagram.|
+|[PositionChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the node's or connector's position is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -143,8 +143,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|------------|-----------------------|
-|`SizeChanging`|`SizeChangingEventArgs`|Triggers before the node is resized.|
-|`SizeChanged`|`SizeChangedEventArgs`|Triggers when the node is resized.|
+|[SizeChanging](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanging)|[SizeChangingEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangingEventArgs.html)|Triggers before the node is resized.|
+|[SizeChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SizeChanged)|[SizeChangedEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizeChangedEventArgs.html)|Triggers when the node is resized.|
  
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -203,8 +203,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|----------|-------------------------|
-|`RotateChanging`|`RotationChangingEventArgs`|Triggers before the diagram elements are rotate.|
-|`RotationChanged`|`RotationChangedEventArgs` |Triggers when the diagram elements are rotated.|
+|[RotationChanging](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanging)|[RotationChangingEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangingEventArgs.html)|Triggers before the diagram elements are rotate.|
+|[RotationChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_RotationChanged)|[RotationChangedEventArgs](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.RotationChangedEventArgs.html)|Triggers when the diagram elements are rotated.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

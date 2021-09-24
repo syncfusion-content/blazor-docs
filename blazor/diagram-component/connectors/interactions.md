@@ -13,7 +13,7 @@ Connectors can be selected, dragged, and routed over the diagram page.
 
 ## Select
 
-A connector can be selected at runtime by using the `Select` method and clear the selection in the diagram using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
+A connector can be selected at runtime by using the [Select](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram using the [ClearSelection](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection). The following code explains how to select and clear selection in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -84,13 +84,13 @@ A connector can be selected at runtime by using the `Select` method and clear th
 And also the selection can be enabled during the interaction.
 
 * An element can be selected by clicking that element.
-* When you select the elements in the diagram, the `SelectionChanged` event gets triggered and do customization in this event.
+* When you select the elements in the diagram, the [SelectionChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) event gets triggered and do customization in this event.
 
 ![Select](../images/connector-select.gif)
 
 ## Drag
 
-A connector can be dragged at runtime by using the `Drag` method. The following code explains how to drag the connector by using the drag method.
+A connector can be dragged at runtime by using the [Drag](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the connector by using the drag method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -153,7 +153,7 @@ A connector can be dragged at runtime by using the `Drag` method. The following 
 And also drag the connector during the interaction.
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the `PositionChanged` event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [PositionChanged](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) event gets triggered and to do customization in this event.
 
 ![Drag](../images/connector-drag.gif)
 

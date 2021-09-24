@@ -13,11 +13,11 @@ documentation: ug
 
 Diagram allows you to customize the connector appearances . The following topics shows how to customize several properties of the connectors.
 
-* Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the `SourceDecorator` and `TargetDecorator` properties of the connector.
+* Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [SourceDecorator](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceDecorator) and [TargetDecorator](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetDecorator) properties of the connector.
 
-* The `Shape` property of `SourceDecorator` allows to define the shape of the source decorator. Similarly, the `Shape` property of `TargetDecorator` allows to define the shape of the target decorator.
+* The [Shape](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Shape) property of `SourceDecorator` allows to define the shape of the source decorator. Similarly, the `Shape` property of `TargetDecorator` allows to define the shape of the target decorator.
 
-* To create custom shape for source decorator, use `PathData` property. Similarly, to create custom shape for target decorator, use `PathData` property.
+* To create custom shape for source decorator, use [PathData](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_PathData) property. Similarly, to create custom shape for target decorator, use `PathData` property.
 
 * The following code example illustrates how to create decorators of various shapes.
 
@@ -69,11 +69,11 @@ Diagram allows you to customize the connector appearances . The following topics
 
 ### Decorator appearance
 
-* The source decorator’s `StrokeColor`, `StrokeWidth` and `StrokeDashArray` properties are used to customize the color, width, and appearance of the decorator.
+* The source decorator’s [StrokeColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth) and [StrokeDashArray](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use `StrokeColor`, `StrokeWidth`, and `StrokeDashArray`.
 
-* To set the size for source and target decorator, use `Width` and `Height` property.
+* To set the size for source and target decorator, use [Width](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) property.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
@@ -141,9 +141,9 @@ The following code example illustrates how to customize the appearance of the de
 
 Padding is used to leave the space between the Connector's end point and the object to where it is connected.
 
-* The `SourcePadding` property of connector defines space between the source point and the source node of the connector.
+* The [SourcePadding](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePadding) property of connector defines space between the source point and the source node of the connector.
 
-* The `TargetPadding` property of connector defines space between the end point and the target node of the connector.
+* The [TargetPadding](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPadding) property of connector defines space between the end point and the target node of the connector.
 
 * The following code example illustrates how to leave space between the connection end points and source, target nodes.
 
@@ -214,7 +214,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 
 ## Bridging
 
-Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default,`BridgeDirection` is set to `Top`. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. The following code example illustrates how to enable line bridging.
+Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default,[BridgeDirection](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BridgeDirection) is set to `Top`. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the [Connector.Constraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) or [Diagram.Constraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html). The following code example illustrates how to enable line bridging.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -298,15 +298,15 @@ Line bridging creates a bridge for lines to smartly cross over the other lines, 
 }
 ```
 
-The `BridgeSpace` property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
+The [BridgeSpace](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_BridgeSpace) property of connectors can be used to define the width for line bridging. By default, the BridgeSpace value is 10px.
 
-Limitation: `Bezier` segments do not support bridging.
+Limitation: [Bezier](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) segments do not support bridging.
 
 ![Connector Corner Radius](../images/Bridging.png)
 
 ## Corner radius
 
-Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with the `CornerRadius`property.
+Corner radius allows to create connectors with rounded corners. The radius of the rounded corner is set with the [CornerRadius](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_CornerRadius) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -362,11 +362,11 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 
 ## Appearance
 
-* The connector’s `StrokeWidth`, `StrokeColor`, `StrokeDashArray`, and `Opacity` properties are used to customize the appearance of the connector segments.
+* The connector’s [StrokeWidth](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth), [StrokeColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeDashArray](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray), and [Opacity](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_Opacity) properties are used to customize the appearance of the connector segments.
 
-* The `Visible` property of the connector indicating whether the connector is visible in the user interface
+* The [IsVisible](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_IsVisible) property of the connector indicating whether the connector is visible in the user interface
 
-* Default values for all the `Connectors` can be set by using the `ConnectorCreating` event callback method. For example, if all connectors have the same type or having the same property then such properties can be moved into `ConnectorCreating`.
+* Default values for all the [Connectors](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) can be set by using the [ConnectorCreating](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectorCreating) event callback method. For example, if all connectors have the same type or having the same property then such properties can be moved into `ConnectorCreating`.
 
 ### Segment appearance
 
@@ -422,11 +422,11 @@ The following code example illustrates how to customize the segment appearance.
 
 ### Decorator appearance
 
-* The source decorator’s `StrokeColor`, `StrokeWidth` and `StrokeDashArray` properties are used to customize the color, width, and appearance of the decorator.
+* The source decorator’s [StrokeColor](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeColor), [StrokeWidth](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeWidth) and [StrokeDashArray](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeStyle.html#Syncfusion_Blazor_Diagram_ShapeStyle_StrokeDashArray) properties are used to customize the color, width, and appearance of the decorator.
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use `StrokeColor`, `StrokeWidth`, and `StrokeDashArray`.
 
-* To set the size for source and target decorator, use `Width` and `Height` property.
+* To set the size for source and target decorator, use [Width](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Width) and [Height](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DecoratorSettings.html#Syncfusion_Blazor_Diagram_DecoratorSettings_Height) property.
 
 The following code example illustrates how to customize the appearance of the decorator.
 
@@ -492,7 +492,7 @@ The following code example illustrates how to customize the appearance of the de
 
 ## Constraints
 
-* The `Constraints` property of connector allows to enable/disable certain features of connectors.
+* The [Constraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html) property of connector allows to enable/disable certain features of connectors.
 
 * To enable or disable the constraints, refer [Connector Constraints](./constraints).
 
@@ -549,7 +549,7 @@ The following code illustrates how to disable selection.
 
 ## Custom properties
 
-* The `AdditionalInfo` property of connector allow you to maintain additional information to the connectors.
+* The [AdditionalInfo](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_AdditionalInfo) property of connector allow you to maintain additional information to the connectors.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
