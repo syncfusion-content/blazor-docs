@@ -9,7 +9,7 @@ documentation: ug
 
 # Interaction in Blazor Diagram Component
 
-The port can be dragged in the diagram area and create the connector over the port by using the `port constraints`.
+The port can be dragged in the diagram area and create the connector over the port by using the [port constraints](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
 
 ## Draw
 

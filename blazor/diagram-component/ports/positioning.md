@@ -9,7 +9,7 @@ documentation: ug
 
 # How to position node’s port
 
-Diagram allows you to customize the position and appearance of the port efficiently. Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `PointPort` class. Ports of a node can be positioned using the following properties of `PointPort`.
+Diagram allows you to customize the position and appearance of the port efficiently. Port can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [PointPort](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html) class. Ports of a node can be positioned using the following properties of [PointPort](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html).
 
 * `Offset`
 * `HorizontalAlignment`
@@ -18,7 +18,7 @@ Diagram allows you to customize the position and appearance of the port efficien
 
 ## Offset
 
-The `Offset` property is used to align the Ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property is used to align the Ports based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -83,7 +83,7 @@ The following code shows the relationship between the shape port position and pa
 
 ## Horizontal and vertical alignment
 
-The `HorizontalAlignment` property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The `VerticalAlignment` property is used to set how the port is vertically aligned at the port position.
+The [HorizontalAlignment](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_HorizontalAlignment) property of the port is used to set how the port is horizontally aligned at the port position determined from the fraction values. The [VerticalAlignment](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_VerticalAlignment) property is used to set how the port is vertically aligned at the port position.
 
 The following table shows all the possible alignments visually with `offset (0, 0)`.
 

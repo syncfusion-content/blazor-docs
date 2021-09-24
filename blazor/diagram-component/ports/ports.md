@@ -27,7 +27,7 @@ Ports act as the connection points of the node and allows creating connections w
 
 ## Create Ports
 
-To add a connection port, define the port object and add it to node’s ports collection. The `Offset` property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
+To add a connection port, define the port object and add it to node’s ports collection. The [Offset](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PointPort.html#Syncfusion_Blazor_Diagram_PointPort_Offset) property of the port accepts an object of fractions and used to determine the position of ports. The following code explains how to add ports when initializing the node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -69,7 +69,7 @@ To add a connection port, define the port object and add it to node’s ports co
 
 You can add Ports at runtime to the nodes collection in the Diagram component by using the `Add` method.
 
-The following code explains how to add ports to node at runtime by using `Add` method. The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime.
+The following code explains how to add ports to node at runtime by using `Add` method. The port’s [ID](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property is used to define the unique ID for the port and it is further used to find the port at runtime.
 If **ID** is not set, then default **ID** is automatically set.
 
 ```cshtml
@@ -138,7 +138,7 @@ public async void AddPorts()
 
 Add Multiple ports at runtime by using the server-side method `Add` in the port collection. The following code explains how to add two or more ports to node at runtime.
 
-The port’s `ID` property is used to define the unique ID for the port and it is further used to find the port at runtime. If **ID** is not set, then default **ID** is automatically set.
+The port’s [ID](https://helpstaging.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_ID) property is used to define the unique ID for the port and it is further used to find the port at runtime. If **ID** is not set, then default **ID** is automatically set.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -186,7 +186,7 @@ The port’s `ID` property is used to define the unique ID for the port and it i
 
 ## Remove ports at runtime
 
-A collection of ports can be removed from the node by using the native`RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
+A collection of ports can be removed from the node by using the native `RemoveAt` method. Refer to the following example that shows how to remove ports at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
