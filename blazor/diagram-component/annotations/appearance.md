@@ -261,7 +261,7 @@ You can change the font style of the annotations with the font specific properti
 
 * The `Visibility` property of the annotation enables or disables the visibility of annotation.
 
-The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize the appaearance of the annotation.
+The Fill, Border, and Opacity appearances of the text can also be customized with appearance specific properties of annotation. The following code explains how to customize the appearance of the annotation.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
