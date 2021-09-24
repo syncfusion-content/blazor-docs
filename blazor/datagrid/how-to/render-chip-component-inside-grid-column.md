@@ -13,7 +13,7 @@ Syncfusion Blazor Chip component can be rendered inside the Grid column using [`
 
 This is demonstrated in the below sample code where Chip component is rendered inside Grid Column which has multiple values.
 
-> Since Column Template needs to triggered for several times (i.e. for each cell), we have used @ref variable to SfChip component to indicate when to refresh the child components (ChipItem).
+> GridColumn Template will be instantiated multiple times (i.e. for each template cell) which might make the component inside it to refresh unwantedly. So we have used @ref variable to SfChip component to indicate when to refresh the child components (ChipItem).
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -54,7 +54,7 @@ This is demonstrated in the below sample code where Chip component is rendered i
                         <ChipItems>
                             @foreach (var tag in process.Tags)
                             {
-                                <ChipItem Text="@tag" CssClass=@("e-"+tag)></ChipItem>
+                                <ChipItem Text="@tag" CssClass=@("e-"+tag.ToLower())></ChipItem>
                             }
                         </ChipItems>
                     </SfChip>
@@ -75,35 +75,35 @@ This is demonstrated in the below sample code where Chip component is rendered i
 </SfGrid>
 
 <style>
-    .e-chip.title-published {
+    .e-grid .e-rowcell .e-chip.title-published {
         background: #90F0BD;
     }
 
-    .e-chip.title-draft {
+    .e-grid .e-rowcell .e-chip.title-draft {
         background: #FFE87F;
     }
 
-    .e-chip.title-review {
+    .e-grid .e-rowcell .e-chip.title-review {
         background: #A8E9F7;
     }
 
-    .e-chip.e-Blazor {
+    .e-grid .e-rowcell .e-chip.e-blazor {
         background: #F35E3E;
     }
 
-    .e-chip.e-JavaScript {
+    .e-grid .e-rowcell .e-chip.e-javascript {
         background: #F4BD37;
     }
 
-    .e-chip.e-ASPNETCORE {
+    .e-grid .e-rowcell .e-chip.e-aspnetcore {
         background: #CCF437;
     }
 
-    .e-chip.e-Flutter {
+    .e-grid .e-rowcell .e-chip.e-flutter {
         background: #37F4BF;
     }
 
-    .e-chip.e-Xamarin {
+    .e-grid .e-rowcell .e-chip.e-xamarin {
         background: #C437F4;
     }
 </style>
