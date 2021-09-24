@@ -628,7 +628,7 @@ The `Title` displayed as the header text of palette.
 
 The `IsExpanded` property of palette allows to expand/collapse its palette items.
 
-The following code illustrates how to change the title and isexpanded properties at runtime.
+The following code illustrates how to change the Title and IsExpanded properties at runtime.
 
 ```csharp
 symbolpalette.Palettes[0].Title = "NewTitle";
