@@ -60,7 +60,7 @@ Once we set the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Servi
     ```html
        <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
     ```    
-3. The same script files can be referred through the CDN version. This can be available in both version specific and unversioned files.
+3. The same script files can be referred through the CDN version. This can be available in both version specific and un versioned files.
  
    **Version specified script file**
    		
@@ -87,7 +87,7 @@ PDF Viewer and Document Editor component scripts are not available in `syncfusio
        <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
        <script  src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
     ```    
-2. The same script files can be referred through the CDN version. This can be available in both version specific and unversioned files.
+2. The same script files can be referred through the CDN version. This can be available in both version specific and un versioned files.
 
   **Version specified script file**
 
