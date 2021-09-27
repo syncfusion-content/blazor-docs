@@ -15,7 +15,7 @@ The Syncfusion Blazor Provides an alternative support to refer the component scr
 
 Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
-    **Blazor Server App (~/Startup.cs)**
+   **Blazor Server App (~/Startup.cs)**  
     ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
@@ -31,7 +31,7 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
     }
     ```
 
-    **Blazor WebAssembly App (~/Program.cs)**
+   **Blazor WebAssembly App (~/Program.cs)**
     ```csharp
     public static async Task Main(string[] args)
     {
@@ -64,12 +64,13 @@ Once we set the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Servi
        ```    
 	3. The same script files can be referred through the CDN version. This can be available in both version specific and unversioned files.
  
-        **version specified script file**
+
+   **Version specified script file**
 		```html
 		<script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"  type="text/javascript"></script>
 		```
 
-        **Version not specified script file**
+   **Version not specified script file**
         ```html
 		<script  src="https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js"  type="text/javascript"></script>
 		```
@@ -93,17 +94,17 @@ PDF Viewer and Document Editor component scripts are not available in `syncfusio
        ```    
 	2. The same script files can be referred through the CDN version. This can be available in both version specific and unversioned files.
 
-       **Version specified script file**
+  **Version specified script file**
 		```html
-		<script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"><script>
-        <script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
-        ```
-    
-        **Version not specified script file**
+       <script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
+       <script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
+		```
+
+   **Version not specified script file**
         ```html
-		<script  src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"><script>
-        <script  src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
-        ```
+          <script  src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
+          <script  src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
+		```
     3. CRG script reference support also provided for PDF Viewer and Document editor components from `19.3.*` version. Select the required component resources and download the custom script from the [CRG](https://crg.syncfusion.com/) site and refer the custom script reference in  your application.
 
         ```html
