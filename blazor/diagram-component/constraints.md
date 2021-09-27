@@ -9,7 +9,7 @@ documentation: ug
 
 # Constraints in Blazor Diagram Component
 
-[Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Constraints) are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
+Constraints are used to enable or disable certain behaviors of the diagram, nodes, and connectors. Constraints are provided as flagged enumerations, so that multiple behaviors can be enabled or disabled using the Bitwise operators `(&, |, ~, <<, etc.)`.
 
 To know more about Bitwise operators, refer to the [Bitwise Operations](#bitwise-operations).
 
@@ -96,7 +96,7 @@ For more information about diagram constraints, refer to the [Diagram constraint
 
 ## Node constraints
 
-The [Constraints](.../nodes/events/##Constraints) property of the Node, allows you to enable or disable the following behaviors. 
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property of the Node, allows you to enable or disable the following behaviors. 
 
 * Select
 * Drag
@@ -201,7 +201,7 @@ For more information about node constraints, refer to the [NodeConstraints](http
 
 ## Connector constraints
 
-The [Constraints](.../connectors/customization/##Constraints) property of the Connector, allow you to enable or disable the following behaviors of connectors. 
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the Connector, allow you to enable or disable the following behaviors of connectors. 
 
 * Select
 * Drag
@@ -289,7 +289,7 @@ For more information about connector constraints, refer to the [ConnectorConstra
 
 ## Port constraints
 
-The [Constraints](.../ports/appearance/##Constraints) property of the Port,allow you can enable or disable the following behaviors of port. 
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Constraints) property of the Port,allow you can enable or disable the following behaviors of port. 
 
 * InConnect
 * OutConnect
@@ -365,7 +365,7 @@ For more information about port constraints, refer to the [PortConstraints](http
 
 ## Annotation constraints
 
-The [Constraints](.../annotations/appearance/##Constraints) property of the Annotations,allow you can enable or disable read-only mode for the annotations by using the annotation constraints.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the Annotations,allow you can enable or disable read-only mode for the annotations by using the annotation constraints.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -507,7 +507,7 @@ For more information about selector constraints, refer to the [SelectorConstrain
 
 ## Snap constraints
 
-[Snap Constraints](../grid-lines/##CustomizetheGridlinesvisibility) control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of the SnapConstraints control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
 
 * Show only horizontal or vertical gridlines.
 * Show both horizontal and vertical gridlines.
