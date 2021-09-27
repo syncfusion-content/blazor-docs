@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Toast component and much more details.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -43,7 +43,5 @@ The toast component implements the keyboard navigation support by using the foll
 }
 
 ```
-
-The output will be as follows.
 
 ![Accessibility](./images/accessibility.png)
