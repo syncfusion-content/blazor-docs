@@ -53,13 +53,13 @@ Zooming can be performed in the following types:
 
 #### Zooming toolbar
 
-A toolbar is available in the Maps component to perform the zooming operation. The zooming toolbar will be enabled when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
+A toolbar is available in the Maps component to perform the zooming operation. The zooming toolbar is enabled when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
 
 The following options are available in toolbar.
 
 1. Zoom - Performs selection zooming.
-2. ZoomIn - Zooms in the Maps.
-3. ZoomOut - Zooms out the Maps.
+2. Zoom In - Zooms in the Maps.
+3. Zoom Out - Zooms out the Maps.
 4. Pan - Switches to panning if selection zoom is enabled.
 5. Reset -  Restores the Maps to the default view.
 
