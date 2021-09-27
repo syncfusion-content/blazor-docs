@@ -11,11 +11,11 @@ documentation: ug
 
 ## Arrange the nodes
 
-* Position of a node is controlled by using the `OffsetX` and `OffsetY` properties. By default, these offset properties represent the distance between the origin of the diagram’s page and node’s center point.
+* Position of a node is controlled by using the [OffsetX](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetX) and [OffsetY](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_OffsetY) properties. By default, these offset properties represent the distance between the origin of the diagram’s page and node’s center point.
 
-* You may expect this offset values to represent the distance between page origin and node’s top-left corner instead of center. The Pivot property helps to solve this problem. Default value of node’s `Pivot` point is (0.5, 0.5) that means center of the node.
+* You may expect this offset values to represent the distance between page origin and node’s top-left corner instead of center. The Pivot property helps to solve this problem. Default value of node’s [Pivot](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Pivot) point is (0.5, 0.5) that means center of the node.
 
-* The size of the node can be controlled by using the `Width` and `Height` properties.
+* The size of the node can be controlled by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Height) properties.
 
 The following table shows how pivot relates offset values with node boundaries.
 
@@ -25,7 +25,7 @@ The following table shows how pivot relates offset values with node boundaries.
 | (0,0) | OffsetX and OffsetY values are considered as the top-left corner of the node. |
 | (1,1) | OffsetX and OffsetY values are considered as the bottom-right corner of the node. |
 
-The following code shows how to change the `Pivot` value.
+The following code shows how to change the Pivot value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -76,7 +76,7 @@ The following code shows how to change the `Pivot` value.
 
 ![Node Pivot](../images/node_pivot.png)
 
-Rotation of a node is controlled by using the `RotationAngle` property. The following code shows how to change the `RotationAngle` value.
+Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -114,11 +114,11 @@ Rotation of a node is controlled by using the `RotationAngle` property. The foll
 }
 ```
 
-![RotateAngle](images/NodeRotateAngle.png)
+![RotateAngle](../images/NodeRotateAngle.png)
 
 ## Minimum Size and Maximum Size
 
-The `MinWidth` and `MinHeight` properties of node allows you to control the minimum size of the node while resizing. Similarly, the `MaxWidth` and `MaxHeight` properties of node allows you to control the maximum size of the node while resizing. The below gif explains how minimum and maximum size is controlled.
+The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinWidth) and [MinHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MinHeight) properties of node allows you to control the minimum size of the node while resizing. Similarly, the [MaxWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxWidth) and [MaxHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_MaxHeight) properties of node allows you to control the maximum size of the node while resizing. The below gif explains how minimum and maximum size is controlled.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

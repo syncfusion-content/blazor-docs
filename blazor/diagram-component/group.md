@@ -9,19 +9,19 @@ documentation: ug
 
 # NodeGroup in Blazor Diagram Component
 
-`NodeGroup` is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, nodegroups, and connectors). Every change made to the node group also affects the children. Child elements can be edited individually.
+[NodeGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html) is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, nodegroups, and connectors). Every change made to the node group also affects the children. Child elements can be edited individually.
 
 ## Create NodeGroup
 
 ## Add NodeGroup when initializing diagram
 
-A node group can be added to the diagram model through `Nodes` collection. To define an object as node group, add the child objects to the `Children` collection of the node group. The following code illustrates how to create a node group.
+A node group can be added to the diagram model through [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) collection. To define an object as node group, add the child objects to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Children) collection of the node group. The following code illustrates how to create a node group.
 
 * While creating node group, its child node needs to be declared before the node group declaration.
 
-* Add a node to the existing node group child by using the `Group` method.
+* Add a node to the existing node group child by using the [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) method.
 
-* The nodegroup’s `UnGroup` method is used to define whether the node group can be ungrouped or not.
+* The nodegroup’s [UnGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnGroup) method is used to define whether the node group can be ungrouped or not.
 
 * A node group can be added into a child of another node group.
 
@@ -167,7 +167,7 @@ The following code illustrates how a ungroup  at runtime.
 
 ## Add NodeGroup at runtime
 
-A node group  can be added at runtime by using Nodes collection of diagram.
+A node group can be added at runtime by using Nodes collection of diagram.
 
 The following code illustrates how a node group is added at runtime
 
@@ -229,7 +229,7 @@ The following code illustrates how a node group is added at runtime
 }
 ```
 
-* Also, you can add the child to the node group through `AddChild` method. The following code illustrates how to add child to the existing node group through AddChild method.
+* Also, you can add the child to the node group through [AddChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChild_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through AddChild method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

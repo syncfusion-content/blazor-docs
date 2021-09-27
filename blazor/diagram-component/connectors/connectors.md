@@ -17,7 +17,7 @@ Connector can be created by defining the source and target point of the connecto
 
 ## Add connectors through connectors collection
 
-The `SourcePoint` and `TargetPoint` properties of connector allow you to define the end points of a connector.
+The [SourcePoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePoint) and [TargetPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPoint) properties of connector allow you to define the end points of a connector.
 
 The following code example illustrates how to add a connector through connector collection,
 
@@ -52,7 +52,7 @@ The following code example illustrates how to add a connector through connector 
 
 ![Connector default](../images/connector-default.png)
 
-> `ID` for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
 
 ## Add connectors at runtime
 
@@ -180,7 +180,7 @@ Connectors can be predefined and added to the symbol palette. You can drop those
 
 ## Draw connectors using drawing object
 
-Connectors can be interactively drawn by clicking and dragging on the diagram surface by using `DrawingObject`.
+Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
 ![Drawing Connector](../images/connectorDrawing.gif)
 
@@ -296,7 +296,7 @@ A connectors are used to create a link between two points, nodes or ports to rep
 
 ### Connections with nodes
 
-The `SourceID` and `TargetID`properties allow to define the nodes to be connected.
+The [SourceID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourceID) and [TargetID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetID) properties allow to define the nodes to be connected.
 
 The following code example illustrates how to connect two nodes.
 
@@ -367,13 +367,13 @@ The following code example illustrates how to connect two nodes.
 
 ![Node to Node Connection](../images/NodeToNodeConnection.png)
 
-* When you remove `NodeConstraints.InConnect` from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove `NodeConstraints.OutConnect` from Default, the node accepts only an incoming connection to dock in it.
+* When you remove [NodeConstraints.InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [NodeConstraints.OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) from Default, the node accepts only an incoming connection to dock in it.
 
-* When you remove both InConnect and OutConnect `NodeConstraints` from `Default`, the node restricts connector to establish connection in it.
+* When you remove both InConnect and OutConnect [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html) from [Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_Default), the node restricts connector to establish connection in it.
 
 ### Connections with ports
 
-The `SourcePortID` and `TargetPortID` properties allow to create connections between some specific points of source/target nodes.
+The [SourcePortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_SourcePortID) and [TargetPortID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_TargetPortID) properties allow to create connections between some specific points of source/target nodes.
 
 The following code example illustrates how to create port to port connections.
 
@@ -470,8 +470,8 @@ The following code example illustrates how to create port to port connections.
 
 ![Port to Port Connection](../images/PortToPortConnection.png)
 
-* When you set `PortConstraints` to `InConnect`, the port accepts only an incoming connection to dock in it. Similarly, when you set `PortConstraints` to `OutConnect`, the port accepts only an outgoing connection to dock in it.
-* When you set `PortConstraints` to `None`, the port restricts connector to establish connection in it.
+* When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect), the port accepts only an outgoing connection to dock in it.
+* When you set PortConstraints to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None), the port restricts connector to establish connection in it.
 
 ## See also
 
