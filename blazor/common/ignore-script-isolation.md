@@ -9,7 +9,7 @@ documentation: ug
 
 # Ignore script isolation
 
-The Syncfusion Blazor Provides an optional support to refer the component scripts externally from the application end to increase initial load performance. If `IgnoreScriptIsolation` is set to `true` in `AddSyncfusionBlazor()`, the Syncfusion Blazor components will disable the built-in script isolation and use application-level scripts.
+The Syncfusion Blazor Provides an alternative support to refer the component scripts externally from the application. It is used to increase initial load performance. This support is applicable from 19.2.* version. If `IgnoreScriptIsolation` is set to `true` in `AddSyncfusionBlazor()`, the Syncfusion Blazor components will disable the dynamic script loading, instead of this it uses the external scripts reference from the application.
 
 ## How to refer the component scripts externally on Blazor Application
 
@@ -48,6 +48,8 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
     }
     ```
 
+Once we set the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service, manually add the external script reference in `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
+
 **Ways of adding external script references**
   
 	1. The Syncfusion provides a combined script with all tools and major Blazor components by excluding PDF Viewer, and Document Editor components
@@ -60,7 +62,8 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
        ```html
        <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
        ```    
-	3. Refer to the CDN script reference below.
+	3.The same script files can be referred through the CDN version, Select the required component resources and download the custom
+    script from the [CRG](https://crg.syncfusion.com/) site. For more details refer [this CRG documentation](https://blazor.syncfusion.com/documentation/common/custom-resource-generator#how-to-use-custom-resources-in-the-blazor-application).
  
 		```html
 		<script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"  type="text/javascript"></script>
@@ -74,6 +77,7 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
 
 PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If we use the PDF viewer or document editor component refer the below script reference in your application end.
 
+> PDF Viewer and Document Editor component scripts are only available after 19.3.* version. Incase if you use PDF Viewer or Document Editor component in your application using 19.2.* version, it automatically refer the dynamic script in our application end.
 
     1. Refer the component Individual package reference, 
 
@@ -87,3 +91,4 @@ PDF Viewer and Document Editor component scripts are not available in `syncfusio
 		<script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"><script>
         <script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
         ```
+
