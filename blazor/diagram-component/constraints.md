@@ -133,7 +133,7 @@ The [Constraints](.../nodes/events/##Constraints) property of the Node, allows y
 |Inherit|Enables the node to inherit the interaction option from the parent object|
 |Default|Enables all default constraints for the node|
 
-The following example shows how to disable rotate constraint from the default `Node constraints`.
+The following example shows how to disable rotate constraint from the default node constraints.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
