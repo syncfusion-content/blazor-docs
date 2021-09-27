@@ -20,7 +20,7 @@ Diagram provides support to add different kind of nodes. They are as follows:
 
 ## Image node
 
-Diagram allows to add images as [Image](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html) nodes. The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Source) property of shape enables you to set the image.
+Diagram allows to add images as [ImageShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html). The [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of node allows you to set the type of node and for image nodes, it should be set as **Image**. In addition, the [Source](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Source) property of shape enables you to set the image.
 
 The following code illustrates how an image node is created.
 
@@ -106,7 +106,7 @@ The following code illustrates how add Base64 image into image node.
 
 ### Image alignment
 
-Stretch and align the image content anywhere but within the node boundary. The **Scale** property of the node allows you to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node is set as **Meet**. The following code illustrates how to scale or stretch the content of the image node.
+Stretch and align the image content anywhere but within the node boundary. The [Scale](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_Scale) property of the node allows you to stretch the image as you desire. (either to maintain proportion or to stretch). By default, the Scale property of the node is set as [Meet](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Scale.html#Syncfusion_Blazor_Diagram_Scale_Meet). The following code illustrates how to scale or stretch the content of the image node.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -147,7 +147,7 @@ Stretch and align the image content anywhere but within the node boundary. The *
 
 * [ImageAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ImageShape.html#Syncfusion_Blazor_Diagram_ImageShape_ImageAlign) property of the shape helps to align the image based on the x and y values in the node boundary. The following table illustrates the various image alignments in the node boundary.
 
-|Scale Values|Align Values |Result|
+|Scale |ImageAlign |Result|
 |---|---|---|
 |   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/MeetXminYmax.png)|
 |Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/MeetXinYmin.png)|
@@ -255,7 +255,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 
 ## Basic shapes
 
-The [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) shapes are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
+The [BasicShapes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html) are common shapes that are used to represent the geometrical information visually. To create basic shapes, the **Type** of the shape should be set as [Basic](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_Basic). Its Shape property can be set with any one of the built-in shapes. To render a rounded rectangle, you need to set the type as **Basic** and shape as **Rectangle**. Set the [CornerRadius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShape.html#Syncfusion_Blazor_Diagram_BasicShape_CornerRadius) property to specify the radius of rounded rectangle.
 
 The following code example illustrates how to create a basic shape.
 
@@ -296,7 +296,7 @@ The following code example illustrates how to create a basic shape.
 }
 ```
 
-> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node is set as **Basic**.Default property for Shape is Rectangle.
+> By default, the [Shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html) property of the node is set as **Basic**. Default property for Shape is Rectangle.
 > When the `Shape` is not set for a basic shape, it is considered as a **Rectangle**.
 > The `CornerRadius` property is applicable only for basic shape.
 
@@ -306,9 +306,9 @@ The list of basic shapes are as follows.
 
 ## Path shape
 
-The [Path](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathShape.html) node is a commonly used basic shape that allows visually to represent the geometrical information. As node path data, any geometrical data can be provided. You can create your own Geometry and assign it to data if you want anything different from the standard figures. A geometry does not require any dimension specifications, such as width or height, because it specifies its own size. If the node's size is set, the geometry is extended to fit the node's dimensions.
+The [PathShape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathShape.html) is a commonly used basic shape that allows visually to represent the geometrical information. As node path data, any geometrical data can be provided. You can create your own Geometry and assign it to data if you want anything different from the standard figures. A geometry does not require any dimension specifications, such as width or height, because it specifies its own size. If the node's size is set, the geometry is extended to fit the node's dimensions.
 
-To create a path node, specify the shape as **Path**. The `Path` property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
+To create a path node, specify the shape as **Path**. The [Data](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PathShape.html#Syncfusion_Blazor_Diagram_PathShape_Data) property of node allows you to define the path to be drawn. The following code illustrates how a path node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -391,7 +391,7 @@ The list of flow shapes are as follows.
 
 ## SVG template shape
 
-Diagram provides support to embed SVG element into a node. The `Shape` property of node allows you to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
+Diagram provides support to embed SVG element into a node. The Shape property of node allows you to set the type of node. To create a SVG node, it should be set as [SVG](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shapes.html#Syncfusion_Blazor_Diagram_Shapes_SVG). The following code illustrates how a SVG node is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram

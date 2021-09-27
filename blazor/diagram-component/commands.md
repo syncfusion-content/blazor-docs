@@ -774,7 +774,7 @@ The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDi
 
 [Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html) nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
 
-The accepted values of the argument `direction` are as follows:
+The accepted values of the argument direction are as follows:
 
 * Up: Moves the selected elements towards up by the specified delta value.
 * Down: Moves the selected elements towards down by the specified delta value.

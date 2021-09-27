@@ -54,7 +54,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ![Gridlinesdefault in Blazor Diagram](images/Gridlinesdefault.png)
 
-To show only horizontal/vertical gridlines or to hide gridlines, refer to [Constraints](constraints).
+To show only horizontal/vertical gridlines or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
 ## Appearance
 
@@ -112,7 +112,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 
 ## Line intervals
 
-Thickness and the space between gridlines can be customized by using horizontal gridline’s [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) and vertical gridline’s [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) properties. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
+Thickness and the space between gridlines can be customized by using [LinesIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_LineIntervals) property of the HorizontalGridLines and VerticalGridLines. In the line intervals collections, values at the odd places are referred as the thickness of lines and values at the even places are referred as the space between gridlines.
 
 The following code example illustrates how to customize the thickness of lines and the line intervals.
 
@@ -181,7 +181,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 
 ### Customization of snap intervals
 
-By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized with the horizontal gridline’s [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) and the vertical gridline’s `SnapIntervals` properties.
+By default, the objects are snapped towards the nearest gridline. The gridline or position towards where the diagram object snaps can be customized by using [SnapIntervals](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.GridLines.html#Syncfusion_Blazor_Diagram_GridLines_SnapIntervals) property of the HorizontalGridLines and VerticalGridLines.
 
 ```cshtml
 @page "/CustomSnapLineInterval Sample"
@@ -230,7 +230,7 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 
 * The [SnapAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_SnapAngle) property allows you to define the snap angle by which the object needs to be rotated.
 
-* The `Constraints` property of SnapSettings class allows you to enable or disable the certain features of the snapping, refer to [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints).
+* The Constraints property of SnapSettings class allows you to enable or disable the certain features of the snapping, refer to [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
