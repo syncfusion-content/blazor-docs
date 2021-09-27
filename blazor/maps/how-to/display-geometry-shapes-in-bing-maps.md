@@ -20,11 +20,17 @@ To render Bing Maps in the Maps component, set `LayerType` as Bing and provide t
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string"
-                   Key="">
-        </MapsLayer>
+        <MapsLayer UrlTemplate="@UrlTemplate" TValue="string"></MapsLayer>
     </MapsLayers>
 </SfMaps>
+
+@code {
+    public string UrlTemplate;
+    protected override async Task OnInitializedAsync()
+    {
+        UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/CanvasGray?output=json&uriScheme=https&key=");
+    }
+}
 ```
 
 > Specify the Bing Maps key in the `Key` property.
@@ -40,9 +46,7 @@ Add geometry shape in the Bing Maps using sublayer concept. To add geometry shap
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.Bing" TValue="string"
-                   Key="">
-        </MapsLayer>
+        <MapsLayer UrlTemplate="@UrlTemplate" TValue="string"></MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'
                    Type="Syncfusion.Blazor.Maps.Type.SubLayer" TValue="string">
@@ -51,6 +55,13 @@ Add geometry shape in the Bing Maps using sublayer concept. To add geometry shap
     </MapsLayers>
 </SfMaps>
 
+@code {
+    public string UrlTemplate;
+    protected override async Task OnInitializedAsync()
+    {
+        UrlTemplate = await SfMaps.GetBingUrlTemplate("https://dev.virtualearth.net/REST/V1/Imagery/Metadata/CanvasGray?output=json&uriScheme=https&key=");
+    }
+}
 ```
 
 > Specify the Bing Maps key in the `Key` property.

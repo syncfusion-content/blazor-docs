@@ -53,32 +53,115 @@ Zooming can be performed in the following types:
 
 #### Zooming toolbar
 
-By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset** options when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
+A toolbar is available in the Maps component to perform the zooming operation. The zooming toolbar will be enabled when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
 
 The following options are available in toolbar.
 
-1. Zoom - Provides selection zoom support.
+1. Zoom - Performs selection zooming.
 2. ZoomIn - Zooms in the Maps.
 3. ZoomOut - Zooms out the Maps.
 4. Pan - Switches to panning if selection zoom is enabled.
 5. Reset -  Restores the Maps to the default view.
 
-The following properties are available in toolbars to customize the zooming toolbars.
-
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Color) - To apply the color for toolbars in Maps.
-* [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_HighlightColor) - To apply the color for the zooming toolbar when the mouse has hovered on the toolbar element in Maps.
-* [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_HorizontalAlignment) - To customize the position type of toolbar when it is placed horizontally.
-* [SelectionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_SelectionColor) - To apply the color for the zooming toolbar when clicking the zooming toolbar in Maps.
-* [ToolBarOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ToolBarOrientation) - To customize the orientation of the zooming toolbar.
-* [Toolbars](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Toolbars) - To customize the items that are to be shown in the zooming toolbar in Maps.
-* [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_VerticalAlignment) - To customize the position type of toolbar when it is placed vertically.
+By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset** options.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
-    <MapsZoomSettings Enable="true" Color="green" HighlightColor="blue" SelectionColor="orange" HorizontalAlignment="Alignment.Center"
-                      ToolBarOrientation="Orientation.Vertical" Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true">
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+##### Customization of zooming toolbar
+
+The zooming toolbar can be customized using `MapsZoomToolbarSettings` class. The following properties are available in `MapsZoomToolbarSettings` class to customize the zooming toolbars.
+
+* [HorizontalAlignment]() - To customize the position type of toolbar when it is placed horizontally.
+* [Orientation]() - To customize the orientation of the zooming toolbar.
+* [VerticalAlignment]() - To customize the position type of toolbar when it is placed vertically.
+* [BackgroundColor]() - To customize the background color of the zooming toolbar.
+* [BorderColor]() - To apply the border color to the zooming toolbar.
+* [BorderWidth]() - To set width to the border of the zooming toolbar.
+* [BorderOpacity]() - To set opacity to the border of the zooming toolbar.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings BackgroundColor="black" BorderColor="red" BorderOpacity="1" BorderWidth="3" Orientation="Orientation.Horizontal"
+                                 HorizontalAlignment="Alignment.Far" VerticalAlignment="Alignment.Near"></MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+The buttons in the zooming toolbar can be customized using `MapsZoomToolbarButton` class. The following properties are available in `MapsZoomToolbarButton` class.
+
+* [BorderColor]() - To set the color in the border of the buttons in the zooming toolbars.
+* [BorderWidth]() - To set the width of the border of the buttons in the zooming toolbars.
+* [BorderOpacity]() - To set the opacity in the border of the buttons in the zooming toolbars.
+* [Radius]() - To set the radius for the buttons in the zooming toolbars.
+* [Padding]() - To set the spacing between the buttons in the zooming toolbars.
+* [Opacity]() - To apply the opacity for the buttons in the zooming toolbars in Maps.
+* [Fill]() - To apply the fill color to the buttons in the zooming toolbars in Maps.
+* [Color]() - To apply the color to the icons in the buttons in the zooming toolbars in Maps.
+* [HighlightColor]() - To apply the color for the buttons in the zooming toolbar when the mouse has hovered on the toolbar element in Maps.
+* [SelectionColor]() - To apply the color for the buttons in the zooming toolbar when clicking the zooming toolbar in Maps.
+* [ToolbarItems]() - To customize the items that are to be shown in the zooming toolbar in Maps.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton BorderColor="yellow" BorderOpacity="1" BorderWidth="3" Color="yellow" Fill="green" HighlightColor="red" Opacity="1"
+                                   Padding="5" Radius="30" SelectionColor="red" ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+                                       ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+The tooltip in the zooming toolbar can be customized using `MapsZoomToolbarTooltipSettings` class. The following properties are available in `MapsZoomToolbarTooltipSettings` class.
+
+* [Fill]() - To set the fill color to the tooltip in the zooming toolbar.
+* [Visible]() - To enable or disable the tooltip in the zooming toolbar.
+* [BorderColor]() - To set the color in the border of the tooltip in the zooming toolbar.
+* [BorderWidth]() - To set the width of the border of the tooltip in the zooming toolbar.
+* [BorderOpacity]() - To set the opacity in the border of the tooltip in the zooming toolbar.
+* [FontColor]() - To set the text color in the tooltip of the zooming toolbar.
+* [FontFamily]() - To set the font family in the tooltip of the zooming toolbar.
+* [FontStyle]() - To set the font style in the tooltip of the zooming toolbar.
+* [FontWeight]() - To set the font weight in the tooltip of the zooming toolbar.
+* [FontSize]() - To set the font size in the tooltip of the zooming toolbar.
+* [FontOpacity]() - To set the font opacity in the tooltip of the zooming toolbar.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+                              ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+            <MapsZoomToolbarTooltipSettings Visible="true" BorderColor="red" BorderOpacity="1" BorderWidth="3" Fill="black" FontColor="red" FontFamily="Segoe UI"
+                                            FontOpacity="1" FontSize="12px" FontStyle="normal" FontWeight="normal"></MapsZoomToolbarTooltipSettings>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
