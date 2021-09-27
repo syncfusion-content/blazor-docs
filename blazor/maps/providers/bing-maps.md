@@ -39,7 +39,7 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 
 ## Types of Bing Maps
 
-Bing Maps provides different types of Maps and it is viewed in the Maps component.
+Bing Maps provides different types of Maps and it can be viewed in the Maps component.
 
 * **Aerial** - Displays satellite images to highlight roads and major landmarks for easy identification.
 * **AerialWithLabelsOnDemand** - Displays aerial Maps with labels for the continent, country, ocean, etc.
@@ -48,7 +48,7 @@ Bing Maps provides different types of Maps and it is viewed in the Maps componen
 * **CanvasLight** - Displays light version of the road Maps.
 * **CanvasGray** - Displays grayscale version of the road Maps.
 
-The above types can also be rendered in the Maps component by specifing their URL in the `UrlTemplate` property in the `MapsLayer` class. You can check the official websites of the Bing Maps to know about the available types and the URL for it.
+The above types can also be rendered in the Maps component by specifying their URL in the `UrlTemplate` property in the `MapsLayer` class. You can check the official websites of the Bing Maps to know about the available types and the URL for it.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
