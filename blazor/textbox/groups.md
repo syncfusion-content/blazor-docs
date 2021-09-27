@@ -124,6 +124,76 @@ The output will be as follows.
 
 ![textbox](./images/float_with_icons.png)
 
+## Binding events to icons
+
+**Add the Icon with single Event in Blazor TextBox Component**
+
+Add the icon to TextBox by `addicon` public method. Using public method we can add the events to the component by adding the third parameter value. 
+
+In the following example, the addicon method is called with single `touchstart` event binding on textbox `e-icon-pan` icon.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfTextBox @ref="@TouchIcon" Created="@onCreateTouchIcon"></SfTextBox>
+@code {
+    SfTextBox TouchIcon;
+    public async Task onCreateTouchIcon()
+	{
+        // Event creation with event handler
+		var touchStart = EventCallback.Factory.Create<TouchEventArgs>(this, touchIconStart);
+
+        // Touchstart event binding with addicon public method third argument 
+		await TouchIcon.AddIcon("prepend", "e-icon-pan", new Dictionary<string, object>() { { "ontouchstart", touchStart } });
+	}
+
+    public void touchIconStart()
+	{
+		// Icon touch start Event triggered
+	}
+}
+```
+
+**Add the Icon with multiple Event in Blazor TextBox Component**
+
+We can add the single icon with multiple event and multiple icons with multiple event support to the textbox component.
+
+In the following example, the addicon method is called with multiple `touchstart`, `mouseover` and `mouseleave` event binding on textbox `e-icon-pan` icon.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<SfTextBox @ref="@TouchIcon" Created="@onCreateTouchIcon"></SfTextBox>
+@code {
+    SfTextBox TouchIcon;
+    public async Task onCreateTouchIcon()
+	{
+        // Event creation with event handler
+		var touchStart = EventCallback.Factory.Create<TouchEventArgs>(this, touchIconStart);
+        var touchHover = EventCallback.Factory.Create<MouseEventArgs>(this, touchIconMouseHover);
+		var touchLeave = EventCallback.Factory.Create<MouseEventArgs>(this, touchIconLeave);\
+
+        // Event binding with addicon public method third argument 
+		await TouchIcon.AddIcon("prepend", "e-icon-pan", new Dictionary<string, object>() { { "ontouchstart", touchStart }, { "onmouseover", touchHover }, { "onmouseleave", touchLeave }, });
+	}
+
+    public void touchIconStart()
+	{
+		// Icon touch start Event triggered
+	}
+
+    public void touchIconMouseHover()
+	{
+		// Icon mouse hover Event triggered
+	}
+
+	public void touchIconLeave()
+	{
+		// Icon mouse leave Event triggered
+	}
+}
+```
+
 ## With clear button and floating label
 
 The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
