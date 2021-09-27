@@ -16,6 +16,7 @@ The Syncfusion Blazor Provides an alternative support to refer the component scr
 Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
    **Blazor Server App (~/Startup.cs)**  
+   
     ```csharp
     public void ConfigureServices(IServiceCollection services)
     {
@@ -32,6 +33,7 @@ Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Start
     ```
 
    **Blazor WebAssembly App (~/Program.cs)**
+
     ```csharp
     public static async Task Main(string[] args)
     {
@@ -66,8 +68,8 @@ Once we set the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Servi
  
 
    **Version specified script file**
-		```html
-		<script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"  type="text/javascript"></script>
+   		```html
+		  <script  src="https://cdn.syncfusion.com/blazor/{:version:}/syncfusion-blazor.min.js"  type="text/javascript"></script>
 		```
 
    **Version not specified script file**
