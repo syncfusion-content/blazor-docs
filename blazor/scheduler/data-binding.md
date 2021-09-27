@@ -337,7 +337,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 ## Binding ObservableCollection
 
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
-Here, ObservableDatas class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
+Here, AppointmentData class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -349,7 +349,7 @@ Here, ObservableDatas class implements the interface of **INotifyPropertyChanged
 <SfButton @onclick="UpdateRecord" Disabled="ObservableData.Count == 0">Update Data</SfButton>
 <SfButton @onclick="DeleteRecord" Disabled="ObservableData.Count == 0">Delete Data</SfButton>
             
-<SfSchedule TValue="ObservableDatas" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+<SfSchedule TValue="AppointmentData" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
     <ScheduleEventSettings DataSource="@ObservableData"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
@@ -362,24 +362,24 @@ Here, ObservableDatas class implements the interface of **INotifyPropertyChanged
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);
-    public ObservableCollection<ObservableDatas> ObservableData { get; set; }
-    List<ObservableDatas> EventsCollection = new List<ObservableDatas>();
+    public ObservableCollection<AppointmentData> ObservableData { get; set; }
+    List<AppointmentData> EventsCollection = new List<AppointmentData>();
     int uniqueid = 1;
     protected override void OnInitialized()
     {
-        EventsCollection = Enumerable.Range(1, 4).Select(x => new ObservableDatas()
+        EventsCollection = Enumerable.Range(1, 4).Select(x => new AppointmentData()
         {
             Id = x,
             Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)],
             StartTime = new DateTime(2020, 3, 8 + x, 9, 0, 0),
             EndTime = new DateTime(2020, 3, 8 + x, 11, 0, 0)
         }).ToList();
-        ObservableData = new ObservableCollection<ObservableDatas>(EventsCollection);
+        ObservableData = new ObservableCollection<AppointmentData>(EventsCollection);
     }
     public void AddRecord()
     {
         uniqueid++;
-        ObservableData.Add(new ObservableDatas() { Id = uniqueid, Subject = "Meeting", StartTime = new DateTime(2020, 3, 13, 9, 0, 0), EndTime = new DateTime(2020, 3, 13, 11, 0, 0) });
+        ObservableData.Add(new AppointmentData() { Id = uniqueid, Subject = "Meeting", StartTime = new DateTime(2020, 3, 13, 9, 0, 0), EndTime = new DateTime(2020, 3, 13, 11, 0, 0) });
     }
     public void DeleteRecord()
     {
@@ -396,7 +396,7 @@ Here, ObservableDatas class implements the interface of **INotifyPropertyChanged
             data.Subject = "Event Updated";
         }
     }
-    public class ObservableDatas : INotifyPropertyChanged
+    public class AppointmentData : INotifyPropertyChanged
     {
         public int Id { get; set; }
         private string subject { get; set; }
