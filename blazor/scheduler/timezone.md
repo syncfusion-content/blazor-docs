@@ -36,7 +36,6 @@ You can create appointments at different time zones using the `StartTimeZone` an
     </ScheduleViews>
 </SfSchedule>
 
-
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -88,7 +87,6 @@ You can display the appointments based on the client’s local time zone in sche
     </ScheduleViews>
 </SfSchedule>
 
-
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);
     List<AppointmentData> DataSource = new List<AppointmentData>
@@ -138,7 +136,6 @@ You can set specific time zone to schedule using the `TimeZone` property of sche
     </ScheduleViews>
 </SfSchedule>
 
-
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);
     string TimezoneValue = "Europe/Moscow";
@@ -181,7 +178,6 @@ You can display appointments at the same time everywhere without considering the
         <ScheduleView Option="View.Agenda"></ScheduleView>
     </ScheduleViews>
 </SfSchedule>
-
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);
