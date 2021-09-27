@@ -7,7 +7,7 @@ control: Scheduler
 documentation: ug
 ---
 
-# Timezone
+# Timezone in Scheduler
 
 The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the `Timezone` property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties `StartTimezone` and `EndTimezone` which can be defined as separate fields within the event fields collection.
 
