@@ -40,8 +40,8 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 <SfDiagramComponent @ref="@Diagram" 
                     Height="499px"
                     InteractionController="InteractionController.ZoomPan" 
-                    ConnectorCreating="@ConnectorCreating" 
-                    NodeCreating="@NodeCreating">
+                    ConnectorCreating="@ConnectorDefaults" 
+                    NodeCreating="@NodeDefaults">
     <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
     <Layout @bind-Type="type" 
             @bind-HorizontalSpacing="@HorizontalSpacing" 
@@ -57,14 +57,17 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
 @code
 {
     SfDiagramComponent Diagram;
+    // Specify the layout type.
     LayoutType type = LayoutType.HierarchicalTree;
+    // Specify the orientation of the layout.
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
     HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
-    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;    
+    VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
     int HorizontalSpacing = 30;
     int VerticalSpacing = 30;
 
-    private void ConnectorCreating(IDiagramObject connector)
+    // Defines the connector's default values.
+    private void ConnectorDefaults(IDiagramObject connector)
     {
         (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
         (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
@@ -73,14 +76,18 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
         (connector as Connector).CornerRadius = 5;
     }
 
+    // Create the layout info
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
+        // Enable the sub-tree.
         options.EnableSubTree = true;
+        // Specify the subtree orientation.
         options.Orientation = Orientation.Horizontal;
         return options;
     }
 
-    private void NodeCreating(IDiagramObject obj)
+    // Defines the node's default values.
+    private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;
         if (node.Data is System.Text.Json.JsonElement)
@@ -97,11 +104,12 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
             new ShapeAnnotation()
             {
                 Content = hierarchicalData.Name,
-                Style = new TextStyle(){Color = "white"}
+                Style =new TextStyle(){Color = "white"}
             }
         };
     }
 
+    // Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
         public string Name { get; set; }
@@ -109,6 +117,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
         public string Category { get; set; }
     }
 
+    // Create the data source with node name and fill color values.
     public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
@@ -152,6 +161,7 @@ The following sample code demonstrates binding local data through the SfDataMana
     float y = 100;
     Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
+    // Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
         public string Name { get; set; }
@@ -159,6 +169,7 @@ The following sample code demonstrates binding local data through the SfDataMana
         public string Category { get; set; }
     }
 
+    // Create the data source with node name and fill color values.
     public HierarchicalDetails[] DataSource = new HierarchicalDetails[]
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
@@ -167,7 +178,8 @@ The following sample code demonstrates binding local data through the SfDataMana
         new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
         new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
     };
-
+    
+    // Defines the node's default values.
     private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -225,6 +237,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
     float x = 100;
     float y = 100;
 
+    // Create the employee details with needed properties.
     public class Employee
     {
         public int? EmployeeID { get; set; }
@@ -233,7 +246,8 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
     }
     
     Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
-   
+    
+    // Defines the node's default values.
     private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;

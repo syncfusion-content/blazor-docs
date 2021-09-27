@@ -228,7 +228,7 @@ The purpose of custom undo redo process is to store actions which are not done t
     private void onCustomRedo(HistoryEntryBase entry)
     {
         EventValue += "RedoObject:" + (entry.RedoObject as Node).AdditionalInfo[(entry.RedoObject as Node).ID];
-        var current = entry.UndoObject.Clone() as Node;
+        Node current = entry.UndoObject.Clone() as Node;
         (entry.UndoObject as Node).AdditionalInfo[(entry.UndoObject as Node).ID] = "Description";
         entry.RedoObject = current;
     }
