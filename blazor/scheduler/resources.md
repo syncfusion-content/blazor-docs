@@ -88,6 +88,271 @@ The following code example depicts how to bind the list of object collection to 
 }
 ```
 
+### Binding ExpandoObject
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **ExpandoObject**.
+
+**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
+
+```csharp
+@using System.Dynamic
+@using Syncfusion.Blazor.Schedule
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleResources>
+        <ScheduleResource TItem="ExpandoObject" TValue="int" DataSource="@ResourceCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2020, 3, 9);
+    public List<ExpandoObject> ResourceCollection = new List<ExpandoObject>() { };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+{
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1001  }
+};
+    protected override void OnInitialized()
+    {
+        ResourceCollection = Enumerable.Range(1, 3).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.Id = 1000 + x;
+            d.OwnerText = (new string[] { "ALFKI", "ANANTR", "ANTON" })[new Random().Next(3)];
+            d.OwnerColor = (new string[] { "#ffaa00", "#f8a398", "#7499e1" })[new Random().Next(3)];
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
+        public int OwnerId { get; set; }
+    }
+}
+```
+
+## DynamicObject binding
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **DynamicObject**.
+
+**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in DynamicObject.
+
+> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+
+```csharp
+@using System.Dynamic
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleResources>
+        <ScheduleResource TItem="DynamicDictionary" TValue="int" DataSource="@EventsCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1001  }
+    };
+    public List<DynamicDictionary> EventsCollection = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        EventsCollection = Enumerable.Range(1, 3).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.Id = 1000 + x;
+            d.OwnerText = (new string[] { "ALFKI", "ANANTR", "ANTON" })[new Random().Next(3)];
+            d.OwnerColor = (new string[] { "#ffaa00", "#f8a398", "#7499e1" })[new Random().Next(3)];
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+    }
+}
+```
+
+## Binding ObservableCollection
+
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionchanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+Here, Order class implements the interface of **INotifyPropertyChanged** and it raises the event when CustomerID property value was changed.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel;
+@using System.ComponentModel;
+
+<div class="col-lg-12 control-section">
+    <div class="content-wrapper">
+        <div class="row">
+            <div style="margin: 0 0 7px 7px;">
+                <SfButton @onclick="AddRecord">Add Data</SfButton>
+                <SfButton @onclick="DeleteRecord">Delete Data</SfButton>
+                <SfButton @onclick="UpdateRecord">Update Data</SfButton>
+            </div>
+            <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+                <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+                <ScheduleResources>
+                    <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ObservableOwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor"></ScheduleResource>
+                </ScheduleResources>
+                <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+                <ScheduleViews>
+                    <ScheduleView Option="View.Day"></ScheduleView>
+                    <ScheduleView Option="View.Week"></ScheduleView>
+                    <ScheduleView Option="View.WorkWeek"></ScheduleView>
+                    <ScheduleView Option="View.Month"></ScheduleView>
+                    <ScheduleView Option="View.Agenda"></ScheduleView>
+                </ScheduleViews>
+            </SfSchedule>
+        </div>
+    </div>
+</div>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    int ownerId = 3;
+    public string[] Resources { get; set; } = { "Owners" };
+    public ObservableCollection<ResourceData> ObservableOwnersData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ObservableOwnersData = new ObservableCollection<ResourceData>(GetOwnersData());
+    }
+
+    private static List<ResourceData> GetOwnersData()
+    {
+        List<ResourceData> ownersData = new List<ResourceData>
+    {
+            new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerColor = "#ffaa00" },
+            new ResourceData{ OwnerText = "Steven", Id = 2, OwnerColor = "#f8a398" },
+            new ResourceData{ OwnerText = "Michael", Id = 3, OwnerColor = "#7499e1" }
+        };
+        return ownersData;
+    }
+
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
+    };
+
+    public void AddRecord()
+    {
+        ownerId++;
+        ObservableOwnersData.Add(new ResourceData() { OwnerText = "Nancy", Id = ownerId, OwnerGroupId = 1, OwnerColor = "#ffaa00" });
+    }
+    public void DeleteRecord()
+    {
+        if (ObservableOwnersData.Count() != 0)
+        {
+            ObservableOwnersData.Remove(ObservableOwnersData.First());
+        }
+    }
+    public void UpdateRecord()
+    {
+        if (ObservableOwnersData.Count() != 0)
+        {
+            var data = ObservableOwnersData.First();
+            data.OwnerText = "Updated Name";
+        }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+    }
+    public class ResourceData : INotifyPropertyChanged
+    {
+        public int Id { get; set; }
+        private string ownerText { get; set; }
+        public string OwnerText
+        {
+            get { return ownerText; }
+            set
+            {
+                this.ownerText = value;
+                NotifyPropertyChanged("OwnerText");
+            }
+        }
+        public string OwnerColor { get; set; }
+        public int OwnerGroupId { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+}
+```
+
 ## Scheduler with multiple resources
 
 It is possible to display the Scheduler in default mode without visually showcasing all the resources in it, but allowing to assign the required resources to the appointments through the event editor resource options.
