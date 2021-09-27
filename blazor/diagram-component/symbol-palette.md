@@ -9,11 +9,11 @@ documentation: ug
 
 # Symbol Palette in Blazor Diagram Component
 
-The **SymbolPalette** displays a collection of palettes. The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
+The [SymbolPalette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.html) displays a collection of [Palettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Palettes). The palette shows a set of nodes and connectors. It allows to drag and drop the nodes and connectors into the diagram.
 
 ## Create symbol palette
 
-The `Width` and `Height` properties of the symbol palette allows to define the size of the symbol palette.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of the symbol palette allows to define the size of the symbol palette.
 
 ```csharp
 @using Syncfusion.Blazor.Diagram.SymbolPalette
@@ -26,7 +26,7 @@ The `Width` and `Height` properties of the symbol palette allows to define the s
 ```
 
 ### Add node to palette
-`SymbolWidth` and `SymbolHeight` properties of the SfSymbolPaletteComponent should be defined to render the symbol(node, connector or nodegroup) in the palette. The following code example illustrates how to add node to a palette.
+[SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolWidth) and [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolHeight) properties of the SfSymbolPaletteComponent should be defined to render the symbol(node, connector or nodegroup) in the palette. The following code example illustrates how to add node to a palette.
 
 * To render a node in a palette, first create SymbolPalette and initialize palettes collection.
 
@@ -308,11 +308,11 @@ The following code example illustrates how to add nodegroup to a palette.
 ## Add palette to SymbolPalette
 
 A palette allows to display a group of related symbols and it textually annotates the group with its header.
-A `Palette` can be added as a collection of symbol groups.
+A [Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html) can be added as a collection of symbol groups.
 
-The collection of predefined symbols can be added in palettes using the `Symbols` property.
+The collection of predefined symbols can be added in palettes using the [Symbols](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_Symbols) property.
 
-To initialize a palette, define a JSON object with the property `ID` that is unique ID is set to the palettes.
+To initialize a palette, define a JSON object with the property [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_ID) that is unique ID is set to the palettes.
 
 The following code example illustrates how to define a palette.
 
@@ -463,7 +463,7 @@ Palettes = new DiagramObjectCollection<Palette>()
 
 ## How to drag and drop symbols from palette to diagram
 
-To initialize drag and drop, you must add the diagram to the `Targets` collection of the symbol palette. The below code illustrates how to add diagram to the Targets collection.
+To initialize drag and drop, you must add the diagram to the [Targets](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Targets) collection of the symbol palette. The below code illustrates how to add diagram to the Targets collection.
 
 ```csharp
 @code
@@ -619,9 +619,9 @@ To initialize drag and drop, you must add the diagram to the `Targets` collectio
 
 Palettes can be annotated with its header texts.
 
-The `Title` displayed as the header text of palette.
+The [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_Title) displayed as the header text of palette.
 
-The `IsExpanded` property of palette allows to expand/collapse its palette items.
+The [IsExpanded](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.Palette.html#Syncfusion_Blazor_Diagram_SymbolPalette_Palette_IsExpanded) property of palette allows to expand/collapse its palette items.
 
 The following code illustrates how to change the Title and IsExpanded properties at runtime.
 
@@ -632,7 +632,7 @@ symbolpalette.Palettes[0].IsExpanded = false;
 
 ## Add/Remove symbols to palette at runtime
 
-* Symbols can be added to palette at runtime by using public method, `AddPaletteItem`. The following code sample illustrates how to add symbol using AddPaletteItem method.
+* Symbols can be added to palette at runtime by using public method, [AddPaletteItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AddPaletteItem_System_String_Syncfusion_Blazor_Diagram_NodeBase_System_Boolean_). The following code sample illustrates how to add symbol using AddPaletteItem method.
 
 ```csharp
 Node decision = new Node()
@@ -655,7 +655,7 @@ Node decision = new Node()
 symbolpalette.Palettes[0].Symbols.Add(Tnode2);
 ```
 
-* Symbols can be removed from palette at runtime by using public method, `RemovePaletteItem`.The following code sample illustrates how to remove symbol using RemovePaletteItem method.
+* Symbols can be removed from palette at runtime by using public method, [RemovePaletteItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RemovePaletteItem_System_String_System_String_).The following code sample illustrates how to remove symbol using RemovePaletteItem method.
 
 
 ```csharp
@@ -664,7 +664,7 @@ symbolpalette.RemovePaletteItem("Flow Shapes", "Decision");
 
 ## Add/Remove palettes at runtime
 
-* Palettes can be added to the symbol palette at runtime by using public method, `AddPalettes`. The following code sample illustrates how to add palette using AddPalettes method.
+* Palettes can be added to the symbol palette at runtime by using public method, [AddPalettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_AddPalettes_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_SymbolPalette_Palette__). The following code sample illustrates how to add palette using AddPalettes method.
 
 ```csharp
 DiagramObjectCollection<NodeBase> newNodes = new DiagramObjectCollection<NodeBase>();            
@@ -701,7 +701,7 @@ Palette newpalette = new Palette()
 symbolpalette.Palettes.Add(newpalette);
 ```
 
-* Palettes can be removed from the symbol palette at runtime by using public method, `RemovePalettes`. The following code sample illustrates how to remove palette using RemovePalettes method.
+* Palettes can be removed from the symbol palette at runtime by using public method, [RemovePalettes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_RemovePalettes_System_String_). The following code sample illustrates how to remove palette using RemovePalettes method.
 
 ```csharp
  symbolpalette.RemovePalettes("Basic Shapes");
@@ -709,7 +709,7 @@ symbolpalette.Palettes.Add(newpalette);
 
 ## Customize the size of symbols
 
-The size of the individual symbol can be customized. The `SymbolWidth` and `SymbolHeight` properties of symbol palette enables you to define the size of the symbols.
+The size of the individual symbol can be customized. The [SymbolWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolWidth) and [SymbolHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolHeight) properties of symbol palette enables you to define the size of the symbols.
 
 * Also, you can update the size of the symbols at runtime.
 
@@ -797,12 +797,12 @@ The following code example illustrates how to change the size of a symbol and ho
 }
 ```
 
-The `SymbolMargin` property is used to create the space around the elements, outside of any defined borders.
+The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property is used to create the space around the elements, outside of any defined borders.
 
 ## SymbolDragPreviewSize
 
-The symbol preview size of the palette items can be customized using `SymbolDragPreviewSize` property.
-The `Width` and `Height` properties of SymbolDragPreviewSize enables you to define the preview size to all the symbol palette items.
+The symbol preview size of the palette items can be customized using [SymbolDragPreviewSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolDiagramPreviewSize) property.
+The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of SymbolDragPreviewSize enables you to define the preview size to all the symbol palette items.
 
 The following code example illustrates how to change the preview size of a palette item.
 
@@ -888,12 +888,12 @@ The following code example illustrates how to change the preview size of a palet
 
 ## Default settings
 
-While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [NodeCreating](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization/#nodedefaults) and the [ConnectorCreating](https://blazor.syncfusion.com/documentation/diagram-component/connectors/customization/#appearance) properties of diagram allows to define the default settings for nodes and connectors.
+While adding more number of symbols such as nodes and connectors to the palette, define the default settings for those objects through the [NodeCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_NodeCreating) and the [ConnectorCreating](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_ConnectorCreating) properties of diagram allows to define the default settings for nodes and connectors.
 
 ## Adding symbol description for symbols in the palette
 
 The diagram provides support to add symbol description below each symbol of a palette. This descriptive representation of each symbol will enhance the details of the symbol visually. The height and width of the symbol description can also be set individually.
-* The method `GetSymbolInfo`, can be used to add the symbol description at runtime.
+* The method [GetSymbolInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_GetSymbolInfo), can be used to add the symbol description at runtime.
  The following code is an example to set a symbol description for symbols in the palette.
 
 ```csharp
