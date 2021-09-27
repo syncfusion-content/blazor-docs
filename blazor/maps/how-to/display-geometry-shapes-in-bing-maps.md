@@ -13,7 +13,7 @@ Usually, the Bing Maps displays the maps in satellite view, in which you cannot 
 
 <b>Step 1</b>
 
-To render Bing Maps in the Maps component, set `LayerType` as Bing and provide the Bing Maps key.
+To render Bing Maps in the Maps component, set `UrlTemplate` property with the Bing Maps URL link from the `GetBingUrlTemplate` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -33,7 +33,7 @@ To render Bing Maps in the Maps component, set `LayerType` as Bing and provide t
 }
 ```
 
-> Specify the Bing Maps key in the `Key` property.
+> Specify the Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
 
 ![Bing Maps](../images/bingmap.PNG)
 
@@ -64,7 +64,7 @@ Add geometry shape in the Bing Maps using sublayer concept. To add geometry shap
 }
 ```
 
-> Specify the Bing Maps key in the `Key` property.
+> Specify the Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
 
 The above code renders Africa continent as sublayer in the Bing Maps.
 

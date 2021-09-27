@@ -33,7 +33,7 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 }
 ```
 
->Specify Bing Maps key in the `Key` property.
+>Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
 
 ![Bing Maps](../images/MapProviders/Bing-map.png)
 
@@ -68,7 +68,7 @@ The above types can also be rendered in the Maps component by specifying their U
 }
 ```
 
-> Specify Bing Maps key in the `Key` property.
+> Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
 
 ![Bing Maps with CanvasLight](../images/MapProviders/Bing-map-with-canvas.png)
 
@@ -101,7 +101,7 @@ Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 }
 ```
 
->Specify Bing Maps key in the `Key` property.
+>Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
 
 ![Bing Maps with zooming](../images/MapProviders/bing-zooming.png)
 
@@ -151,7 +151,7 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 }
 ```
 
->Specify Bing Maps key in the `Key` property.
+>Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
 
 ![Bing Maps with markers and navigation line](../images/MapProviders/bing-marker-and-line.png)
 
