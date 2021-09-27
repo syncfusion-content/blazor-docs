@@ -337,7 +337,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 ## Binding ObservableCollection
 
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
-Here, Order class implements the interface of **INotifyPropertyChanged** and it raises the event when CustomerID property value was changed.
+Here, ObservableDatas class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -345,27 +345,20 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 @using System.Collections.ObjectModel
 @using System.ComponentModel
 
-<div class="col-lg-12 control-section">
-    <div class="content-wrapper">
-        <div class="row">
-            <div class="btn" style="margin: 0 0 7px 7px;">
-                <SfButton ID="add" @onclick="AddRecord">Add Data</SfButton>
-                <SfButton ID="update" @onclick="UpdateRecord" Disabled="ObservableData.Count == 0">Update Data</SfButton>
-                <SfButton ID="del" @onclick="DeleteRecord" Disabled="ObservableData.Count == 0">Delete Data</SfButton>
-            </div>
-            <SfSchedule TValue="ObservableDatas" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
-                <ScheduleEventSettings DataSource="@ObservableData"></ScheduleEventSettings>
-                <ScheduleViews>
-                    <ScheduleView Option="View.Day"></ScheduleView>
-                    <ScheduleView Option="View.Week"></ScheduleView>
-                    <ScheduleView Option="View.WorkWeek"></ScheduleView>
-                    <ScheduleView Option="View.Month"></ScheduleView>
-                    <ScheduleView Option="View.Agenda"></ScheduleView>
-                </ScheduleViews>
-            </SfSchedule>
-        </div>
-    </div>
-</div>
+<SfButton @onclick="AddRecord">Add Data</SfButton>
+<SfButton @onclick="UpdateRecord" Disabled="ObservableData.Count == 0">Update Data</SfButton>
+<SfButton @onclick="DeleteRecord" Disabled="ObservableData.Count == 0">Delete Data</SfButton>
+            
+<SfSchedule TValue="ObservableDatas" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+    <ScheduleEventSettings DataSource="@ObservableData"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);

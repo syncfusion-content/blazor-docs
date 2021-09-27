@@ -98,6 +98,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 @using System.Dynamic
 @using Syncfusion.Blazor.Schedule
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
         <ScheduleResource TItem="ExpandoObject" TValue="int" DataSource="@ResourceCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
     </ScheduleResources>
@@ -112,21 +113,23 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 </SfSchedule>
 @code {
     DateTime CurrentDate = new DateTime(2020, 3, 9);
+    public string[] Resources { get; set; } = { "Owners" };
     public List<ExpandoObject> ResourceCollection = new List<ExpandoObject>() { };
     List<AppointmentData> DataSource = new List<AppointmentData>
-{
-    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1001  }
-};
+    {
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1  }
+    };
     protected override void OnInitialized()
     {
-        ResourceCollection = Enumerable.Range(1, 3).Select((x) =>
+        var colors = new string[] { "#ff8787", "#9775fa", "#748ffc" };
+        for (int a = 1; a <= 3; a++)
         {
             dynamic d = new ExpandoObject();
-            d.Id = 1000 + x;
-            d.OwnerText = (new string[] { "ALFKI", "ANANTR", "ANTON" })[new Random().Next(3)];
-            d.OwnerColor = (new string[] { "#ffaa00", "#f8a398", "#7499e1" })[new Random().Next(3)];
-            return d;
-        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+            d.Id = a;
+            d.OwnerText = "Resource" + a;
+            d.OwnerColor = colors[a - 1];
+            ResourceCollection.Add(d);
+        }
     }
 
     public class AppointmentData
@@ -161,8 +164,9 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
     <ScheduleResources>
-        <ScheduleResource TItem="DynamicDictionary" TValue="int" DataSource="@EventsCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="DynamicDictionary" TValue="int" DataSource="@ResourceCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
     </ScheduleResources>
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
@@ -175,21 +179,23 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 </SfSchedule>
 @code {
     DateTime CurrentDate = new DateTime(2020, 3, 10);
-    List<AppointmentData> DataSource = new List<AppointmentData>
+    public string[] Resources { get; set; } = { "Owners" };
+    List<AppointmentData> DataSource = new List<AppointmentData> 
     {
-    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1001  }
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1  }
     };
-    public List<DynamicDictionary> EventsCollection = new List<DynamicDictionary>() { };
+    public List<DynamicDictionary> ResourceCollection = new List<DynamicDictionary>() { };
     protected override void OnInitialized()
     {
-        EventsCollection = Enumerable.Range(1, 3).Select((x) =>
+        var colors = new string[] { "#ff8787", "#9775fa", "#748ffc" };
+        for (int a = 1; a <= 3; a++)
         {
             dynamic d = new DynamicDictionary();
-            d.Id = 1000 + x;
-            d.OwnerText = (new string[] { "ALFKI", "ANANTR", "ANTON" })[new Random().Next(3)];
-            d.OwnerColor = (new string[] { "#ffaa00", "#f8a398", "#7499e1" })[new Random().Next(3)];
-            return d;
-        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+            d.Id = a;
+            d.OwnerText = "Resource" + a;
+            d.OwnerColor = colors[a - 1];
+            ResourceCollection.Add(d);
+        }
     }
     public class DynamicDictionary : System.Dynamic.DynamicObject
     {
@@ -229,7 +235,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 ## Binding ObservableCollection
 
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
-Here, Order class implements the interface of **INotifyPropertyChanged** and it raises the event when CustomerID property value was changed.
+Here, ResourceData class implements the interface of **INotifyPropertyChanged** and it raises the event when RoomText and OwnerText property value was changed.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -237,57 +243,64 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
 @using System.Collections.ObjectModel;
 @using System.ComponentModel;
 
-<div class="col-lg-12 control-section">
-    <div class="content-wrapper">
-        <div class="row">
-            <div style="margin: 0 0 7px 7px;">
-                <SfButton @onclick="AddRecord">Add Data</SfButton>
-                <SfButton @onclick="DeleteRecord">Delete Data</SfButton>
-                <SfButton @onclick="UpdateRecord">Update Data</SfButton>
-            </div>
-            <SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
-                <ScheduleGroup Resources="@Resources"></ScheduleGroup>
-                <ScheduleResources>
-                    <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ObservableOwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor"></ScheduleResource>
-                </ScheduleResources>
-                <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
-                <ScheduleViews>
-                    <ScheduleView Option="View.Day"></ScheduleView>
-                    <ScheduleView Option="View.Week"></ScheduleView>
-                    <ScheduleView Option="View.WorkWeek"></ScheduleView>
-                    <ScheduleView Option="View.Month"></ScheduleView>
-                    <ScheduleView Option="View.Agenda"></ScheduleView>
-                </ScheduleViews>
-            </SfSchedule>
-        </div>
-    </div>
-</div>
+<SfButton @onclick="AddRecord">Add Data</SfButton>
+<SfButton @onclick="DeleteRecord">Delete Data</SfButton>
+<SfButton @onclick="UpdateRecord">Update Data</SfButton>
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ObservableRoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@ObservableOwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 1, 31);
+    int roomId = 2;
     int ownerId = 3;
-    public string[] Resources { get; set; } = { "Owners" };
+    public string[] Resources { get; set; } = { "Rooms", "Owners" };
+    public ObservableCollection<ResourceData> ObservableRoomData { get; set; }
     public ObservableCollection<ResourceData> ObservableOwnersData { get; set; }
 
     protected override void OnInitialized()
     {
+        ObservableRoomData = new ObservableCollection<ResourceData>(GetRoomData());
         ObservableOwnersData = new ObservableCollection<ResourceData>(GetOwnersData());
+    }
+    private static List<ResourceData> GetRoomData()
+    {
+        List<ResourceData> roomData = new List<ResourceData>
+        {
+            new ResourceData{ RoomText = "ROOM 1", Id = 1, RoomColor = "#cb6bb2" },
+            new ResourceData{ RoomText = "ROOM 2", Id = 2, RoomColor = "#56ca85" }
+        };
+        return roomData;
     }
 
     private static List<ResourceData> GetOwnersData()
     {
         List<ResourceData> ownersData = new List<ResourceData>
-    {
-            new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerColor = "#ffaa00" },
-            new ResourceData{ OwnerText = "Steven", Id = 2, OwnerColor = "#f8a398" },
-            new ResourceData{ OwnerText = "Michael", Id = 3, OwnerColor = "#7499e1" }
+        {
+            new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerGroupId = 1, OwnerColor = "#ffaa00" },
+            new ResourceData{ OwnerText = "Steven", Id = 2, OwnerGroupId = 2, OwnerColor = "#f8a398" },
+            new ResourceData{ OwnerText = "Michael", Id = 3, OwnerGroupId = 1, OwnerColor = "#7499e1" }
         };
         return ownersData;
     }
 
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
-        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1 }
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
     };
 
     public void AddRecord()
@@ -310,6 +323,7 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
             data.OwnerText = "Updated Name";
         }
     }
+
     public class AppointmentData
     {
         public int Id { get; set; }
@@ -323,10 +337,22 @@ Here, Order class implements the interface of **INotifyPropertyChanged** and it 
         public string RecurrenceException { get; set; }
         public Nullable<int> RecurrenceID { get; set; }
         public int OwnerId { get; set; }
+        public int RoomId { get; set; }
     }
     public class ResourceData : INotifyPropertyChanged
     {
         public int Id { get; set; }
+        private string roomText { get; set; }
+        public string RoomText
+        {
+            get { return roomText; }
+            set
+            {
+                this.roomText = value;
+                NotifyPropertyChanged("RoomText");
+            }
+        }
+        public string RoomColor { get; set; }
         private string ownerText { get; set; }
         public string OwnerText
         {
