@@ -11,7 +11,7 @@ documentation: ug
 
 ## Drawing tools
 
-Drawing tool allows you to draw any kind of [node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
+Drawing tool allows you to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
 
 ## Shapes
 
@@ -75,7 +75,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ## Connectors
 
-To draw a [connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) property and you need to set the connector by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
+To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) property and you need to set the connector by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -135,7 +135,7 @@ To draw a [connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ## Polygon shape
 
-Diagram allows to create the [polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShapeType.html#Syncfusion_Blazor_Diagram_BasicShapeType_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
+Diagram allows to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShapeType.html#Syncfusion_Blazor_Diagram_BasicShapeType_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
 
 The following code illustrates how to draw a polygon shape.
 

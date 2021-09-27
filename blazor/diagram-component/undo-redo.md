@@ -9,7 +9,7 @@ documentation: ug
 
 # Undo Redo support in Blazor Diagram Component
 
-[Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.
+Diagram tracks the history of actions that are performed after initializing the diagram and provides support to reverse and restore those changes.
 
 ## Undo and redo
 
