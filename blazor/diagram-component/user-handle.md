@@ -13,14 +13,14 @@ User handles are customizable handles that can be used to perform custom actions
 
 ## Initialization an user handle
 
-The user handle can enables for the selected nodes/connectors by setting a `SelectorConstraints` as `UserHandles` and then use the `UserHandle` class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
+The user handle can enables for the selected nodes/connectors by setting a `SelectorConstraints` as `UserHandle` and then use the `UserHandle` class to create an object for the user handles. The following code example used to enable and create an user handles for the diagram nodes/connectors.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px"
-                    Nodes="@NodeCollection"
-                    SelectedItems="@SelectedModel">
+                    Nodes="@nodes"
+                    SelectionSettings="@SelectedModel">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2" />
         <VerticalGridLines LineColor="White" LineDashArray="2,2" />
@@ -31,8 +31,8 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
 {
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    // Defines diagram's SelectedItems
-    Selector SelectedModel = new Selector();
+    // Defines diagram's SelectionSettings
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
     protected override void OnInitialized()
     {
@@ -48,7 +48,7 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
             //Set the position for the user handle
             Offset = 0,
             //Set side based on the given offset
-            Side = Side.Bottom,
+            Side = Direction.Bottom,
             //set margin for the user handle
             Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 }
         };
@@ -57,7 +57,7 @@ The user handle can enables for the selected nodes/connectors by setting a `Sele
         {
             cloneHandle
         };
-        SelectedModel = new Selector()
+        SelectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected items...
             Constraints = SelectorConstraints.UserHandle,
@@ -112,16 +112,14 @@ You can change the style of the user handles with the specific properties of Pat
 
 * The user handle `BorderColor`, `BackgroundColor` properties are used to define the background color and border color of the user handle and the `BorderWidth` property is used to define the border width of the user handles.
 
-* The `Visible` property of the user handle enables or disables the visibility of user handle.
+* The `Visible` property indicating whether the user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the user handle.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px"
-                    Nodes="@nodes"
-                    SelectedItems="@SelectedModel">
+<SfDiagramComponent Height="600px" Nodes="@nodes" SelectionSettings="@SelectedModel">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
         <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
@@ -132,8 +130,8 @@ The following code explains how to customize the appearance of the user handle.
 {
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    // Defines diagram's SelectedItems
-    Selector SelectedModel = new Selector();
+    // Defines diagram's SelectionSettings
+    DiagramSelectionSettings SelectedModel = new DiagramSelectionSettings();
     DiagramObjectCollection<UserHandle> UserHandles = new DiagramObjectCollection<UserHandle>();
 
     protected override void OnInitialized()
@@ -150,7 +148,7 @@ The following code explains how to customize the appearance of the user handle.
             //Set the position for the user handle
             Offset = 1,
             //Set side based on the given offset
-            Side = Side.Bottom,
+            Side = Direction.Bottom,
             //set margin for the user handle
             Margin = new Margin() { Top = 0, Bottom = 0, Left = 0, Right = 0 },
             //Set size of the user handle
@@ -169,7 +167,7 @@ The following code explains how to customize the appearance of the user handle.
         {
             cloneHandle
         };
-        SelectedModel = new Selector()
+        SelectedModel = new DiagramSelectionSettings()
         {
             //Enable userhandle for selected items...
             Constraints = SelectorConstraints.UserHandle,
@@ -201,7 +199,7 @@ The following code explains how to customize the appearance of the user handle.
 
 To create the fixed user handles, define and add them to the collection of nodes and connectors property. The following code example used to create an fixed user handles for the  nodes and connectors.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
@@ -230,8 +228,8 @@ To create the fixed user handles, define and add them to the collection of nodes
                     Height = 20, 
                     Width = 20, 
                     Visibility = true,
-                    Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, 
-                    Margin = new Margin(){ Right = 20},Offset = new Point() { X =0 , Y = 0 }, 
+                    Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 }, 
+                    Margin = new Margin() { Right = 20 }, Offset = new DiagramPoint() { X = 0 , Y = 0 }, 
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" 
                 },
             }
@@ -243,33 +241,33 @@ To create the fixed user handles, define and add them to the collection of nodes
 
 ## Customization the fixed user handle
 
-* The id property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
+* The `ID` property of fixed user handle is used to define the unique identification of the fixed user handle and it is further used to add custom events to the fixed user handle.
 
-* The fixed user handle can be positioned relative to the node and connector boundaries. It has offset, padding and cornerRadius settings. It is used to position and customize the fixed user handle.
+* The fixed user handle can be positioned relative to the node and connector boundaries. It has `Offset`, `Padding` and `CornerRadius` settings. It is used to position and customize the fixed user handle.
 
 * The `Padding` is used to leave the space that is inside the fixed user handle between the icon and border.
 
-* The corner radius allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `cornerRadius` property.
+* The `CornerRadius` allows to create fixed user handles with rounded corners. The radius of the rounded corner is set with the `CornerRadius` property.
 
-> The PathData needs to be provided to render fixed user handle.
+> The `PathData` needs to be provided to render fixed user handle.
 
 ### Size
 
- Diagram allows you set size for the fixed user handles by using the `width` and `height` property. The default value of the width and height property is 10.
+ Diagram allows you set size for the fixed user handles by using the `Width` and `Height` property. The default value of the `Width` and `Height` property is 10.
 
 ### Style
 
-* You can change the style of the fixed user handles with the specific properties of borderColor, borderWidth, and background color using the handleStrokeColor, handleStrokeWidth, and fill properties, and the icon borderColor, and borderWidth using the iconStrokeColor and iconStrokeWidth.
+* You can change the style of the fixed user handles with the specific properties of `BorderColor`, `BorderWidth`, and `BackgroundColor` using the `Stroke`, `StrokeThickness`, and `Fill` properties, and the icon BorderColor, and BorderWidth using the IconStrokeColor and IconStrokeThickness.
 
-* The fixed user handle's `iconStrokeColor` and `iconStrokeWidth` property used to change the stroke color and stroke width of the given `pathData`.
+* The fixed user handle's `IconStroke` and `IconStrokeThickness` property used to change the stroke color and stroke width of the given `PathData`.
 
-* The fixed user handle `handleStrokeColor` and `fill` properties are used to define the background color and border color of the user handle and the `handleStrokeWidth` property is used to define the border width of the fixed user handle.
+* The fixed user handle `Stroke` and `Fill` properties are used to define the background color and border color of the user handle and the `StrokeThickness` property is used to define the border width of the fixed user handle.
 
-* The `visible` property of the fixed user handle enables or disables the visibility of fixed user handle.
+* The `Visibility` property indicating whether the fixed user handle is visible in the user interface.
 
 The following code explains how to customize the appearance of the fixed user handles.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -288,10 +286,10 @@ The following code explains how to customize the appearance of the fixed user ha
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            SourcePoint = new Point() { X = 100, Y = 100 },
-            TargetPoint = new Point() { X = 200, Y = 200 },
-            Type = Segments.Orthogonal,
-            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
             // A fixed user handle is created and stored in fixed user handle collection of Connector.
             FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>()
             {
@@ -302,8 +300,8 @@ The following code explains how to customize the appearance of the fixed user ha
                     Width = 25,
                     Offset = 0.5,
                     Alignment = FixedUserHandleAlignment.After,
-                    Displacement = new Point{Y= 10},
-                    Visibility = true,Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 },
+                    Displacement = new DiagramPoint() { Y = 10 },
+                    Visibility = true, Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 }
             },
@@ -317,15 +315,15 @@ The following code explains how to customize the appearance of the fixed user ha
 
 ## Customizing the node fixed user handle
 
-The node fixed user handle can be aligned relative to the node boundaries. It has `margin` and `offset` settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
+The node fixed user handle can be aligned relative to the node boundaries. It has `Margin` and `Offset` settings. It is quite useful to position the node fixed user handle and used together and gives you more control over the node fixed user handle positioning.
 
 ### Margin for the node fixed user handle
 
-Margin is an absolute value used to add some blank space in any one of its four sides. The fixed user handle can be displaced with the `margin` property.
+Margin is an absolute value used to add some blank space in any one of its four sides. The fixed user handle can be displaced with the `Margin` property.
 
 ### Offset for the node fixed user handle
 
-The `offset` property of fixed user handle is used to align the user handle based on the `x` and `y` points. (0,0) represents the top or left corner and (1,1) represents the bottom or right corner.
+The `Offset` property of fixed user handle is used to align the user handle based on the `X` and `Y` points. (0,0) represents the top or left corner and (1,1) represents the bottom or right corner.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
@@ -342,11 +340,10 @@ The following table shows all the possible alignments visually shows the fixed u
 
 The following code explains how to customize the node fixed user handle.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px"
-                    Nodes="@nodes">
+<SfDiagramComponent Height="600px" Nodes="@nodes">
     <SnapSettings>
         <HorizontalGridLines LineColor="White" LineDashArray="2,2"/>
         <VerticalGridLines LineColor="White" LineDashArray="2,2"/>
@@ -378,10 +375,10 @@ The following code explains how to customize the node fixed user handle.
                     Height = 20, 
                     Width = 20, 
                     Visibility = true,
-                    Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 },
-                    Margin = new Margin(){ Left = 20},
-                    Offset = new Point() { Y = 0},
-                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
+                    Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Margin = new Margin() { Left = 20 },
+                    Offset = new DiagramPoint() { Y = 0 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"  
                 },
             }
         };
@@ -394,15 +391,15 @@ The following code explains how to customize the node fixed user handle.
 
 * The connector fixed user handle can be aligned relative to the connector boundaries. It has alignment, displacement and offset settings. It is useful to position the connector fixed user handle and used together and gives you more control over the connector fixed user handle positioning.
 
-* The `offset` and `alignment` properties of fixed user handle allows you to align the connector fixed user handles to the segments.
+* The `Offset` and `Alignment` properties of fixed user handle allows you to align the connector fixed user handles to the segments.
 
 ### Offset for the connector fixed user handle
 
-The `offset` property of connector fixed user handle is used to align the user handle based on fractions. 0 represents the connector source point, 1 represents the connector target point, and 0.5 represents the center point of the connector segment.
+The `Offset` property of connector fixed user handle is used to align the user handle based on fractions. 0 represents the connector source point, 1 represents the connector target point, and 0.5 represents the center point of the connector segment.
 
 ### Alignment
 
-The connector’s fixed user handle can be aligned over its segment path using the `alignment` property of fixed user handle.
+The connector’s fixed user handle can be aligned over its segment path using the `Alignment` property of fixed user handle.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
@@ -414,20 +411,20 @@ The following table shows all the possible alignments visually shows the fixed u
 
 ### Displacement
 
-* The `displacement` property allows you to specify the space to be left from the connector segment based on the x and y value provided.
+* The `Displacement` property allows you to specify the space to be left from the connector segment based on the x and y value provided.
 
 The following table shows all the possible alignments visually shows the fixed user handle positions.
 
 | Displacement | Alignment | Output |
 | -------- | -------- | -------- |
-| y=10 | Before |![fixed user handle for node in blazor diagram](images/ybefore.png)|
-| y=10 | After |![fixed user handle for node in blazor diagram](images/yafter.png)|
+| y = 10 | Before |![fixed user handle for node in blazor diagram](images/ybefore.png)|
+| y = 10 | After |![fixed user handle for node in blazor diagram](images/yafter.png)|
 
 > Displacement will not be done if the alignment is set to be center.
 
 The following code explains how to customize the connector fixed user handle.
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent Height="600px" Connectors="@connectors">
@@ -446,10 +443,10 @@ The following code explains how to customize the connector fixed user handle.
         connectors = new DiagramObjectCollection<Connector>();
         Connector connector = new Connector()
         {
-            SourcePoint = new Point() { X = 100, Y = 100 },
-            TargetPoint = new Point() { X = 200, Y = 200 },
-            Type = Segments.Orthogonal,
-            Style = new TextShapeStyle() { StrokeColor = "#6495ED" },
+            SourcePoint = new DiagramPoint() { X = 100, Y = 100 },
+            TargetPoint = new DiagramPoint() { X = 200, Y = 200 },
+            Type = ConnectorSegmentType.Orthogonal,
+            Style = new ShapeStyle() { StrokeColor = "#6495ED" },
             // A fixed user handle is created and stored in fixed user handle collection of Connector.
             FixedUserHandles = new DiagramObjectCollection<ConnectorFixedUserHandle>()
             {
@@ -460,7 +457,7 @@ The following code explains how to customize the connector fixed user handle.
                     Width = 25,
                     Offset = 0.5,
                     Alignment = FixedUserHandleAlignment.After,
-                    Displacement = new Point { Y = 10 },
+                    Displacement = new DiagramPoint { Y = 10 },
                     Visibility = true, Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
                     PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 }
@@ -479,9 +476,8 @@ The Diagram control provides following event for the fixed user handle.
 | -------- | -------- | -------- |
 | FixedUserHandleClick | FixedUserHandleClickEventArgs | Triggered when the mouse pointer is over the user handle and mouse button is up. |
 
-```cshtml
+```csharp
 @using Syncfusion.Blazor.Diagram
-@using System.Collections.ObjectModel
 
 <SfDiagramComponent Height="600px"
                     FixedUserHandleClick="Changed" Nodes="@nodes" @ref="diagram">
@@ -491,7 +487,7 @@ The Diagram control provides following event for the fixed user handle.
 {
     SfDiagramComponent diagram;
 
-    public async void Changed(FixedUserHandleClickEventArgs args)
+    public void Changed(FixedUserHandleClickEventArgs args)
     {
         if ((args.Element as Node).ID == "node1" && args.FixedUserHandle.ID == "user1")
         {
@@ -519,13 +515,13 @@ The Diagram control provides following event for the fixed user handle.
                 new NodeFixedUserHandle()
                 {
                     ID = "user1",
-                    Height = 20, 
-                    Width = 20, 
+                    Height = 20,
+                    Width = 20,
                     Visibility = true,
-                    Padding = new Margin(){Bottom=1,Left=1,Right=1,Top=1 }, 
-                    Margin = new Margin(){ Right = 20},
-                    Offset = new Point() { X =0 , Y = 0 }, 
-                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z" 
+                    Padding = new Margin() { Bottom = 1, Left = 1, Right = 1, Top = 1 },
+                    Margin = new Margin() { Right = 20 },
+                    Offset = new DiagramPoint() { X = 0 , Y = 0 },
+                    PathData = "M60.3,18H27.5c-3,0-5.5,2.4-5.5,5.5v38.2h5.5V23.5h32.7V18z M68.5,28.9h-30c-3,0-5.5,2.4-5.5,5.5v38.2c0,3,2.4,5.5,5.5,5.5h30c3,0,5.5-2.4,5.5-5.5V34.4C73.9,31.4,71.5,28.9,68.5,28.9z M68.5,72.5h-30V34.4h30V72.5z"
                 },
             }
         };
