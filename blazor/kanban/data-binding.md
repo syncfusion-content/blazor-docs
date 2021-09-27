@@ -13,20 +13,12 @@ The Kanban uses [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion
 
 It supports the following types of data binding:
 
-* Local Data
+* List binding
 * Remote data
 
 > When using [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) as `IEnumerable<T>`, component type(TValue) will be inferred from its value. When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) for data binding, the TValue must be provided explicitly in the Kanban component.
 
-## Local Data
-
-Kanban local data binding can be done in the following ways:
-
-* List Binding
-* Expando Object
-* Dynamic Object
-
-### List binding
+## List binding
 
 In list binding, you can assign an IEnumerable object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SfKanban-1.html#Syncfusion_Blazor_Kanban_SfKanban_1_DataSource) property. The list data source can also be provided as an instance of the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) or by using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) component.
 
@@ -578,7 +570,7 @@ The following example demonstrates the custom adaptor usage and how to bind the 
 
 You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-kanban-crud-custom-adaptor).
 
-### Observable Collection
+## Observable Collection
 
 This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) shows notifications when the items are added, removed, and moved. Implementing the [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) will notify when there is any dynamic change (add, remove, move, and clear) in the collection. Implementing  the [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) will notify when the property value has been changed on the client side.
 
