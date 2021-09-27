@@ -16,8 +16,8 @@ documentation: ug
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`SelectionChanging`|`SelectionChangingEventArgs`|Triggers before the selection is changed in the diagram.|
-|`SelectionChanged`|`SelectionChangedEventArgs`|Triggers when the selection is changed in the diagram.|
+|[SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging)|[SelectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangingEventArgs.html)|Triggers before the selection is changed in the diagram.|
+|[SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged)|[SelectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectionChangedEventArgs.html)|Triggers when the selection is changed in the diagram.|
 
 The following code example explains how to get the selection change event in the diagram.
 
@@ -88,8 +88,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`PositionChanging`|`PositionChangingEventArgs`|Triggers while dragging the elements in the diagram.|
-|`PositionChanged`|`PositionChangedEventArgs`|Triggers when the node's/connector's position is changed.|
+|[PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging)|[PositionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangingEventArgs.html)|Triggers while dragging the elements in the diagram.|
+|[PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged)|[PositionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PositionChangedEventArgs.html)|Triggers when the node's/connector's position is changed.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -158,8 +158,8 @@ The following code example explains how to get the selection change event in the
 
 |Event Name|Arguments|Description|
 |------------|-----------|------------------------|
-|`ConnectionChanging`|`ConnectionChangingEventArgs`|Triggers before the connector’s source or target point is connect or disconnect from the source or target.|
-|`ConnectionChanged`|`ConnectionChangedEventArgs`|Triggers when the connector’s source or target point is connected or disconnected from the source or target.|
+|[ConnectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanging)|[ConnectionChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangingEventArgs.html)|Triggers before the connector’s source or target point is connect or disconnect from the source or target.|
+|[ConnectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ConnectionChanged)|[ConnectionChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectionChangedEventArgs.html)|Triggers when the connector’s source or target point is connected or disconnected from the source or target.|
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
