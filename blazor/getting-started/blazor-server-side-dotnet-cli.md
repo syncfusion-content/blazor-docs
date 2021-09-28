@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor Server Side App in .NET Core CLI
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Getting started - Syncfusion Blazor Server Side App in .NET Core CLI
+description: Check out the documentation for Getting started with Syncfusion Blazor, its elements, features, and more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor components in Blazor Server Side App using .NET Core CLI
+# Getting started with Blazor Server Side App in .NET Core CLI
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using the [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/).
 
@@ -110,7 +110,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     }
     ```
 
-    > We can disable the dynamic script redering and refer the scripts from application end by using `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at `startup.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+    > We can disable the dynamic script rendering and refer the scripts from application end by using `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at `startup.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
 

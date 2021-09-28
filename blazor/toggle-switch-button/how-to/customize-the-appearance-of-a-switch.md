@@ -9,13 +9,13 @@ documentation: ug
 
 # Customize the appearance of a Blazor Toggle Switch Button Component
 
-You can customize the appearance of the Toggle Switch Button component using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property.
+The appearance of the Toggle Switch Button component can be customized using the CSS rules. Define your own CSS rules according to your requirement and assign the class name to the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property.
 
 ## Customize Toggle Switch Button bar and handle
 
 Toggle Switch Button bar and handle can be customized as per requirement using CSS rules. Toggle Switch Button bar and handle customized using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property. In the following sample, the `border-radius` CSS property for `e-switch-inner` and `e-switch-handle` elements was changed border radius circle to square shape.
 
-> For this customization you need to refer the `fabric.css` file. You can find this from our [CDN](https://cdn.syncfusion.com/ej2/fabric.css) link.
+> For this customization, refer the `fabric.css` file. This could be found from our [CDN](https://cdn.syncfusion.com/ej2/fabric.css) link.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -128,15 +128,13 @@ Toggle Switch Button bar and handle can be customized as per requirement using C
 </style>
   ```
 
-Output be like
-
 ![Switch Sample](./../images/switch-custom.png)
 
 ## Color the Toggle Switch Button
 
 Toggle Switch Button colors can be customized as per the requirement using CSS rules. Toggle Switch Button bar and handle colors customized using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) property. In the following sample, the `e-switch-inner` and `e-switch-off` elements background and border colors were changed from default colors.
 
-> For this customization you need to refer the `bootstrap.css` file. You can find this from our [CDN](https://cdn.syncfusion.com/ej2/bootstrap.css) link.
+> For this customization you need to refer the `bootstrap.css` file. This could be found from our [CDN](https://cdn.syncfusion.com/ej2/bootstrap.css) link.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -213,7 +211,5 @@ Toggle Switch Button colors can be customized as per the requirement using CSS r
 </style>
 
 ```
-
-Output be like
 
 ![Switch Sample](./../images/switch-color.png)

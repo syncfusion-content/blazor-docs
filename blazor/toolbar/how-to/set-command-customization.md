@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set command customization in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about Set command customization in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about how to set command customization in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -48,7 +48,5 @@ Single or multiple CSS classes can be added to the Toolbar commands using the To
 </style>
 
 ```
-
-Output be like the below.
 
 ![Toolbar command customization](../images/toolbar_command.png)

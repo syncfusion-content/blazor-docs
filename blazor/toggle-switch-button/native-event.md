@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Toggle Switch Button Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Toggle Switch Button component and more.
+description: Checkout and learn here all about events in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 ## ValueChange Event
 
-The ValueChange event will triggers when Switch state has been changed by user interaction.
+The ValueChange event will trigger when switch state has been changed by user interaction.
 
 ```csharp
 
@@ -33,7 +33,7 @@ The ValueChange event will triggers when Switch state has been changed by user i
 
 ## Native Events
 
-You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+The native event can be defined using `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
 The different event argument types for each event are,
 
@@ -44,7 +44,7 @@ The different event argument types for each event are,
 
 ## List of Native events supported
 
-We have provided the following native event support to the Toggle Switch Button component:
+The following native event support has been provided to the Toggle Switch Button component:
 
 | List of Native events |  |  | | | |
 | --- | --- | --- | --- | --- | --- |

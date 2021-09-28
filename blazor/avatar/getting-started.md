@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component
 
-This section briefly explains about how to include a `Avatar` in your Blazor application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Avatar` in your Blazor application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
