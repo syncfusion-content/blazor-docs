@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animation in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about Animation in Syncfusion Blazor Toast component and much more details.
+description: Checkout and learn here all about animation in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The toast component supports custom animations for both show and hide actions from the provided `ToastHideAnimationSettings` and  `ToastShowAnimationSettings` option of the `Animation` library. The default animation is given as `FadeIn` for showing the toast and `FadeOut` for hiding the toast.
 
-The following sample demonstrates some types of animations that suit toast. You can check all the animation effects here.
+The following sample demonstrates some types of animations that suit toast.
 
 ```cshtml
 
