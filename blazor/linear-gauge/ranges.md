@@ -29,7 +29,7 @@ Range is the set of values in the axis. The range can be defined using the [Star
 </SfLinearGauge>
 ```
 
-![Linear Gauge with range](images/range.png)
+![Blazor Linear Gauge with Range](images/blazor-linear-gauge-with-range.png)
 
 ## Customizing the range
 
@@ -64,7 +64,7 @@ Ranges can be customized using the following properties in [LinearGaugeRange](ht
 </SfLinearGauge>
 ```
 
-![Linear Gauge with range customization](images/range-custom.png)
+![Blazor Linear Gauge with Custom Range](images/blazor-linear-gauge-custom-range.png)
 
 ## Setting the range color for the labels
 
@@ -87,7 +87,7 @@ To set the color of the labels like the range color, set the [UseRangeColor](htt
 </SfLinearGauge>
 ```
 
-![Linear Gauge with label color as range color](images/userangecolor.png)
+![Changing Label Color as Range Color in Blazor Linear Gauge](images/blazor-linear-gauge-range-color.png)
 
 ## Multiple ranges
 
@@ -118,7 +118,7 @@ Multiple ranges can be added to the Linear Gauge by adding collections of [Linea
 </SfLinearGauge>
 ```
 
-![Linear Gauge with multiple ranges](images/multiple-range.png)
+![Blazor Linear Gauge with Multiple Ranges](images/blazor-linear-gauge-multiple-range.png)
 
 ## Gradient Color
 
@@ -170,7 +170,7 @@ Using linear-gradient, colors will be applied in a linear progression. The start
 </SfLinearGauge>
 ```
 
-![Linear Gauge with linear gradient ranges](images/linear-range.png)
+![Blazor Linear Gauge Range with Linear Gradient Color](images/blazor-linear-gauge-with-linear-gradient.png)
 
 ### Radial Gradient
 
@@ -217,6 +217,6 @@ Using radial gradient, colors will be applied in circular progression. The inner
 </SfLinearGauge>
 ```
 
-![Linear Gauge with radial gradient ranges](images/radial-range.png)
+![Blazor Linear Gauge Range with Radial Gradient Color](images/blazor-linear-gauge-with-radial-gradient.png)
 
 >If we set both gradients for the range, only the linear gradient gets rendered. If we set the [StartValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient.html#Syncfusion_Blazor_LinearGauge_LinearGaugeLinearGradient_StartValue) and [EndValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient.html#Syncfusion_Blazor_LinearGauge_LinearGaugeLinearGradient_EndValue) of the [LinearGradient](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeLinearGradient.html) as empty strings, then the radial gradient gets rendered in the range of the Linear Gauge.
