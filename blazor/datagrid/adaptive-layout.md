@@ -13,7 +13,7 @@ The DataGrid user interface (UI) was redesigned to provide an optimal viewing ex
 
 ## Render adaptive dialog
 
-To render adaptive dialog UI in the DataGrid, set the EnableAdaptiveUI property to true. The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
+To render adaptive dialog UI in the DataGrid, set the <code>EnableAdaptiveUI</code> property to true. The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
 
 ```csharp
 
@@ -160,16 +160,10 @@ To render adaptive dialog UI in the DataGrid, set the EnableAdaptiveUI property 
                 width: calc(60% - 48px);
             }
 
-            .e-adaptive-demo .e-pager .e-pagesizes {
-                display: none;
-            }
-
-            .e-adaptive-demo .e-pager .e-pagecountmsg {
-                display: none;
-            }
-
+            .e-adaptive-demo .e-pager .e-pagecountmsg,
+            .e-adaptive-demo .e-pager .e-pagesizes,
             .e-adaptive-demo .e-pager .e-pagercontainer {
-                display: none;
+                    display: none;
             }
 
             .e-adaptive-demo .e-pager .e-icons {
@@ -388,16 +382,10 @@ The DataGrid will render the row elements vertically while setting the RowRender
                 width: calc(60% - 48px);
             }
 
-            .e-adaptive-demo .e-pager .e-pagesizes {
-                display: none;
-            }
-
-            .e-adaptive-demo .e-pager .e-pagecountmsg {
-                display: none;
-            }
-
+            .e-adaptive-demo .e-pager .e-pagecountmsg,
+            .e-adaptive-demo .e-pager .e-pagesizes,
             .e-adaptive-demo .e-pager .e-pagercontainer {
-                display: none;
+                    display: none;
             }
 
             .e-adaptive-demo .e-pager .e-icons {
