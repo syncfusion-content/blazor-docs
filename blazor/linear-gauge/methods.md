@@ -45,7 +45,7 @@ To change the pointer value dynamically, use the [SetPointerValue](https://help.
 }
 ```
 
-![Calling methods in linear gauge](./images/gauge-method.png)
+![Blazor Linear Gauge with Methods](./images/blazor-linear-gauge-method.png)
 
 ## SetAnnotationValue
 
