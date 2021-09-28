@@ -11,11 +11,11 @@ documentation: ug
 
 The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in the web application also as needed.
 
-## Standalone Icon Component
+## Icon Component
 
-Syncfusion provides support to render icons as a standalone component. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+Syncfusion Icon component provides support to render predefined Syncfusion icons or custom font icons. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
-The following code snippet represents the complete example of standalone icon component usage by defining the icons using the `SfIcon` tag.
+The following code example shows the rendering of built-in syncfusion icons from Predefined `IconName` options using `Name` property by defining them in `SfIcon` tag.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -30,85 +30,38 @@ The following code snippet represents the complete example of standalone icon co
 
 ![Icons](./images/icons/icon.png)
 
-## Initialize icons with IconCss
-
-The Icon component provides support to render [available icons](#available-icons) and third-party icons using the `IconCss` property.
-
-To use syncfusion icons, add `e-icons` class to the IconCss property that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the available icons with `e-` prefix. The following code explains how to render syncfusion icons using icon class
-
-```csharp
-@using Syncfusion.Blazor.Buttons
-
-<SfIcon IconCss="e-icons e-arrow-down"></SfIcon>
-<SfIcon IconCss="e-icons e-chevron-down-double"></SfIcon>
-<SfIcon IconCss="e-icons e-arrow-up"></SfIcon>
-<SfIcon IconCss="e-icons e-chevron-up-double"></SfIcon>
-<SfIcon IconCss="e-icons e-arrow-left"></SfIcon>
-<SfIcon IconCss="e-icons e-chevron-left-double"></SfIcon>
-<SfIcon IconCss="e-icons e-arrow-right"></SfIcon>
-<SfIcon IconCss="e-icons e-chevron-right-double">
-```
-
-![Icons Css](./images/icons/icon-css.png)
-
-To render third-party icons define the CSS class that provides the required font name, font size, and content for the icon.
-The following code explains how to render `open-iconic`(third-party) icons using `IconCss` property.
-
-```cSharp
-@using Syncfusion.Blazor.Buttons
-
-<SfIcon IconCss="oi oi-list-rich"></SfIcon>
-<SfIcon IconCss="oi oi-account-login"></SfIcon>
-<SfIcon IconCss="oi oi-account-logout"></SfIcon>
-<SfIcon IconCss="oi oi-action-redo"></SfIcon>
-<SfIcon IconCss="oi oi-action-undo"></SfIcon>
-<SfIcon IconCss="oi oi-clock"></SfIcon>
-<SfIcon IconCss="oi oi-audio"></SfIcon>
-<SfIcon IconCss="oi oi-bluetooth"></SfIcon>
-```
-
-![Third party icons](./images/icons/third-party-icons.png)
-
 ## Set Icon size
 
-The font size of the icon can be changed using the `Size` property. The icon displays `Medium` size by default. To change the default size, define the applicable `IconSize` to Size property. The applicable IconSize are,
+The font size of the icon can be changed using the `Size` property. The icon displays `Medium` size by default. To change the default size, define the applicable `IconSize` to Size property.
 
-* Small
-* Medium
-* Large
-
-The following code example represents the smaller size of the icon using `Size` property by setting Icon `IconSize.Small` to the size property.
+* When IconSize set to Small, the font size will be `8px`.
+* When IconSize set to Medium, the font size will be `16px`.
+* When IconSize set to Large, the font size will be `24px`.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
 
-<div style="padding: 5px;">
-    <p>Smaller icons</p>
-    <SfIcon Name="IconName.Cut" Size="IconSize.Small"></SfIcon>
-    <SfIcon Name="IconName.Copy" Size="IconSize.Small"></SfIcon>
-    <SfIcon Name="IconName.Paste" Size="IconSize.Small"></SfIcon>
-    <SfIcon Name="IconName.Bold" Size="IconSize.Small"></SfIcon>
-    <SfIcon Name="IconName.Underline" Size="IconSize.Small"></SfIcon>
-    <SfIcon Name="IconName.Italic" Size="IconSize.Small"></SfIcon>
-</div>
-<div style="padding: 5px;">
-    <p>Medium icons</p>
-    <SfIcon Name="IconName.Cut" Size="IconSize.Medium"></SfIcon>
-    <SfIcon Name="IconName.Copy" Size="IconSize.Medium"></SfIcon>
-    <SfIcon Name="IconName.Paste" Size="IconSize.Medium"></SfIcon>
-    <SfIcon Name="IconName.Bold" Size="IconSize.Medium"></SfIcon>
-    <SfIcon Name="IconName.Underline" Size="IconSize.Medium"></SfIcon>
-    <SfIcon Name="IconName.Italic" Size="IconSize.Medium"></SfIcon>
-</div>
-<div style="padding: 5px;">
-    <p>Larger icons</p>
-    <SfIcon Name="IconName.Cut" Size="IconSize.Large"></SfIcon>
-    <SfIcon Name="IconName.Copy" Size="IconSize.Large"></SfIcon>
-    <SfIcon Name="IconName.Paste" Size="IconSize.Large"></SfIcon>
-    <SfIcon Name="IconName.Bold" Size="IconSize.Large"></SfIcon>
-    <SfIcon Name="IconName.Underline" Size="IconSize.Large"></SfIcon>
-    <SfIcon Name="IconName.Italic" Size="IconSize.Large"></SfIcon>
-</div>
+<p>Smaller icons</p>
+<SfIcon Name="IconName.Cut" Size="IconSize.Small"></SfIcon>
+<SfIcon Name="IconName.Copy" Size="IconSize.Small"></SfIcon>
+<SfIcon Name="IconName.Paste" Size="IconSize.Small"></SfIcon>
+<SfIcon Name="IconName.Bold" Size="IconSize.Small"></SfIcon>
+<SfIcon Name="IconName.Underline" Size="IconSize.Small"></SfIcon>
+<SfIcon Name="IconName.Italic" Size="IconSize.Small"></SfIcon>
+<p>Medium icons</p>
+<SfIcon Name="IconName.Cut" Size="IconSize.Medium"></SfIcon>
+<SfIcon Name="IconName.Copy" Size="IconSize.Medium"></SfIcon>
+<SfIcon Name="IconName.Paste" Size="IconSize.Medium"></SfIcon>
+<SfIcon Name="IconName.Bold" Size="IconSize.Medium"></SfIcon>
+<SfIcon Name="IconName.Underline" Size="IconSize.Medium"></SfIcon>
+<SfIcon Name="IconName.Italic" Size="IconSize.Medium"></SfIcon>
+<p>Larger icons</p>
+<SfIcon Name="IconName.Cut" Size="IconSize.Large"></SfIcon>
+<SfIcon Name="IconName.Copy" Size="IconSize.Large"></SfIcon>
+<SfIcon Name="IconName.Paste" Size="IconSize.Large"></SfIcon>
+<SfIcon Name="IconName.Bold" Size="IconSize.Large"></SfIcon>
+<SfIcon Name="IconName.Underline" Size="IconSize.Large"></SfIcon>
+<SfIcon Name="IconName.Italic" Size="IconSize.Large"></SfIcon>
 ```
 
 ![Icon size](./images/icons/icon-size.png)
@@ -135,7 +88,7 @@ The following code example represents the smaller size of the icon using `Size` 
 
 ## Customize Icon
 
-The Syncfusion Blazor icon library can customize its color and size by overriding the `e-icons` class. The following example code demonstrates the custom font-size and color for icons.
+The Syncfusion Blazor icons can customize its color and size by overriding the `e-icons` class. The following example code demonstrates the custom font-size and color for icons.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -157,9 +110,40 @@ The Syncfusion Blazor icon library can customize its color and size by overridin
 
 ![Customize Icon](./images/icons/custom-icon.png)
 
+## Initialize icons with IconCss
+
+The Icon component provides support to render custom font icons using the `IconCss` property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
+The following code explains how to render `open-iconic` and `font-awesome` icons using `IconCss` property.
+
+```cSharp
+@using Syncfusion.Blazor.Buttons
+
+<p>Open iconic icons</p>
+<SfIcon IconCss="oi oi-list-rich"></SfIcon>
+<SfIcon IconCss="oi oi-account-login"></SfIcon>
+<SfIcon IconCss="oi oi-account-logout"></SfIcon>
+<SfIcon IconCss="oi oi-action-redo"></SfIcon>
+<SfIcon IconCss="oi oi-action-undo"></SfIcon>
+<SfIcon IconCss="oi oi-clock"></SfIcon>
+<SfIcon IconCss="oi oi-audio"></SfIcon>
+<SfIcon IconCss="oi oi-bluetooth"></SfIcon>
+<p>Font awesome icons</p>
+<SfIcon IconCss="fas fa-list"></SfIcon>
+<SfIcon IconCss="fas fa-sign-in-alt"></SfIcon>
+<SfIcon IconCss="fas fa-sign-out-alt"></SfIcon>
+<SfIcon IconCss="fas fa-redo"></SfIcon>
+<SfIcon IconCss="fas fa-undo"></SfIcon>
+<SfIcon IconCss="fas fa-clock"></SfIcon>
+<SfIcon IconCss="fas fa-cog"></SfIcon>
+```
+
+![Icon Css](./images/icons/icon-css.png)
+
 ## Icon integration in Button component
 
-The syncfusion icons will integrate on blazor components without defining the `<SfIcon>`. The following example explains how to integrate the icons in syncfusion button component by defining the icon class in the `IconCss` property. Refer icons usage from this [link](#initialize-icons-with-iconcss).
+The syncfusion icons will integrate on blazor components without defining the `<SfIcon>` tag. To use syncfusion icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#available-icons) with `e-` prefix.
+
+The following example explains how to integrate the icons in syncfusion button component by defining the icon class in the `IconCss` property.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -172,7 +156,7 @@ The syncfusion icons will integrate on blazor components without defining the `<
 
 ## Direct usage of icons
 
-The Syncfusion icons can render directly in the HTML tag. This can be achieved by defining the [available icon's](#available-icons) class with `e-` prefix. The following code example explains the direct rendering of syncfusion `search` icon in the span element.
+The Syncfusion icons can render directly in the HTML element. This can be achieved by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#available-icons) class with `e-` prefix. The following code example explains the direct rendering of syncfusion `search` icon in the span element.
 
 ```cshtml
 <span class="e-icons e-search"></span>
