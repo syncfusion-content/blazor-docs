@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Columns in Blazor DataGrid Component | Syncfusion
+title: Adaptive Layout in Blazor DataGrid Component | Syncfusion
 description: Checkout and learn here all about Adaptive UI in the Syncfusion Blazor DataGrid component and much more.
 platform: Blazor
 control: DataGrid
