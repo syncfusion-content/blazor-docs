@@ -195,9 +195,9 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 }
 ```
 
-## Custom sort comparer
+## Custom Sort Comparer
 
-You can customize the default sort action for a specific Gird column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer class has implemented the Interface [IComparer<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5.).
+You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer class has been implemented by using the Interface [IComparer<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5.).
 
 In the following code example, custom SortComparer class was defined in the CustomerID Column.
 
@@ -238,17 +238,17 @@ In the following code example, custom SortComparer class was defined in the Cust
 
     public class CustomComparer : IComparer<Object>
     {
-        public int Compare(object X, object Y)
+        public int Compare(object XRowDataToCompare, object YRowDataToCompare)
         {
-            Order XData = X as Order;
-            Order YData = Y as Order;
-            int XcustomerID = (int)XData.OrderID;
-            int YcustomerID = (int)YData.OrderID;
-            if (XcustomerID < YcustomerID)
+            Order XRowData = XRowDataToCompare as Order;
+            Order YRowData = YRowDataToCompare as Order;
+            int XRowDataOrderID = (int)XRowData.OrderID;
+            int YRowDataOrderID = (int)YRowData.OrderID;
+            if (XRowDataOrderID < YRowDataOrderID)
             {
                 return -1;
             }
-            else if (XcustomerID > YcustomerID)
+            else if (XRowDataOrderID > YRowDataOrderID)
             {
                 return 1;
             }
@@ -261,11 +261,11 @@ In the following code example, custom SortComparer class was defined in the Cust
 }
 ```
 
-The following GIF represents custom SortComparer for CustomerID column. When the user clicks the CustomerID column's header, the custom SortComparer will sort the data according to the OrderID Field value. So that custom SortComparer class sort the column data by using another Column's value.
+The following GIF represents custom SortComparer for CustomerID column. When the user clicks the CustomerID column's header, the custom SortComparer will sort the data according to the OrderID field value. So that custom SortComparer class sort the column data by using another column's value.
 
 ![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
 
-> The SortComparer Property will work only for local data.
+> The SortComparer property will work only for local data.
 
 ## Touch interaction
 
