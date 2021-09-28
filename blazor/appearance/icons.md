@@ -13,9 +13,11 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 ## Icon Component
 
-Syncfusion Icon component provides support to render predefined Syncfusion icons or custom font icons. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+Syncfusion Icon component provides support to render predefined Syncfusion icons or custom font icons.
 
-The following code example shows the rendering of built-in syncfusion icons from Predefined `IconName` options using `Name` property by defining them in `SfIcon` tag.
+You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+
+The following code example shows the rendering of [built-in](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) syncfusion icons from predefined `IconName` options using `Name` property by defining them in `SfIcon` tag.
 
 ```csharp
 @using Syncfusion.Blazor.Buttons
@@ -113,12 +115,11 @@ The Syncfusion Blazor icons can customize its color and size by overriding the `
 ## Initialize icons with IconCss
 
 The Icon component provides support to render custom font icons using the `IconCss` property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
-The following code explains how to render `open-iconic` and `font-awesome` icons using `IconCss` property.
+The following code explains how to render `open-iconic` icons using `IconCss` property.
 
 ```cSharp
 @using Syncfusion.Blazor.Buttons
 
-<p>Open iconic icons</p>
 <SfIcon IconCss="oi oi-list-rich"></SfIcon>
 <SfIcon IconCss="oi oi-account-login"></SfIcon>
 <SfIcon IconCss="oi oi-account-logout"></SfIcon>
@@ -127,14 +128,6 @@ The following code explains how to render `open-iconic` and `font-awesome` icons
 <SfIcon IconCss="oi oi-clock"></SfIcon>
 <SfIcon IconCss="oi oi-audio"></SfIcon>
 <SfIcon IconCss="oi oi-bluetooth"></SfIcon>
-<p>Font awesome icons</p>
-<SfIcon IconCss="fas fa-list"></SfIcon>
-<SfIcon IconCss="fas fa-sign-in-alt"></SfIcon>
-<SfIcon IconCss="fas fa-sign-out-alt"></SfIcon>
-<SfIcon IconCss="fas fa-redo"></SfIcon>
-<SfIcon IconCss="fas fa-undo"></SfIcon>
-<SfIcon IconCss="fas fa-clock"></SfIcon>
-<SfIcon IconCss="fas fa-cog"></SfIcon>
 ```
 
 ![Icon Css](./images/icons/icon-css.png)
