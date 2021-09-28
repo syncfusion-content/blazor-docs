@@ -519,7 +519,7 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 }
 ```
 
-## Dynamic sorting of the appointments
+## Custom sorting of the appointments rendering
 
 Apart from the default arrangement of the Scheduler events, the user can cusomly sorting the events based on the custom fields for appointments. The following code example shows how to sort the appointments based on the custom field **RankId** assigned to the `SortBy` property.
 
