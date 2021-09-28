@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor WebAssembly App in Visual Studio 2019
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Getting started with Syncfusion Blazor WebAssembly App in VS 2019
+description: Check out the documentation for Getting started with Syncfusion Blazor, its elements, features, and more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor components in Blazor WebAssembly App using Visual Studio 2019
+# Getting started with Blazor WebAssembly App in VS 2019
 
 This article provides a step-by-step instructions about how to create Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) with Syncfusion Blazor components setup pre-configured in it.
 

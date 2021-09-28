@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Responsive Mode in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about Responsive Mode in Syncfusion Blazor Toolbar component and much more.
+description: Checkout and learn here all about responsive mode in Syncfusion Blazor Toolbar component and much more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -21,20 +21,15 @@ This section explains the supported display modes of the Toolbar when the conten
 The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfToolbar.html#Syncfusion_Blazor_Navigations_SfToolbar_OverflowMode) of the Toolbar is `Scrollable`. Scrollable display mode supports display of commands in a single line with horizontal scrolling enabled when commands overflow to available space.
 
 * The right and left navigation arrows are added to the start and end of the Toolbar to navigate to hidden commands.
-* You can also see the hidden commands using touch swipe action.
-* By default, if navigation icon in the `left` side is disabled, you can see the hidden commands by moving to the `right`.
+* The hidden commands can also be seen using touch swipe action.
+* By default, if navigation icon in the `left` side is disabled, see the hidden commands by moving to the `right`.
 * By clicking the arrow or by holding the arrow continuously,  hidden commands will become visible.
-* If device navigation icons are not available, you can touch swipe to see the hidden commands of the Toolbar.
-
-![Scrollable](images/scrolling.gif)
-
-* Once the Toolbar reaches the last or first command, the  corresponding navigation icon will be disabled and you can move to the opposite direction.
+* If device navigation icons are not available, touch swipe to see the hidden commands of the Toolbar.
+* Once the Toolbar reaches the last or first command, the  corresponding navigation icon will be disabled and it can be moved to the opposite direction.
 
 ![Touch scroll](images/scrolling_touch.gif)
 
-![Swipe scroll](images/scrolling_swipe.gif)
-
-* You can continuously scroll the Toolbar content by holding the navigation icon.
+* The Toolbar content can be continuously scrolled by holding the navigation icon.
 
 ![Long press scroll](images/scrolling_long_press.gif)
 
@@ -176,8 +171,6 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-Output be like the below.
-
 ![Toolbar Scrollable Mode](./images/toolbar_scrollable_mode.png)
 
 ## Popup
@@ -187,7 +180,7 @@ the viewing area moves to the overflow popup container.
 
 The commands placed in the popup can be viewed by opening the popup using the drop down icon given at the end of the Toolbar.
 
-![Toolbar popup](./images/popup.gif)
+![Blazor Toolbar with overflow dropdown popup](./images/blazor-toolbar-with-overflow-dropdown-popup.png)
 
 > If the popup content overflows the height of the page, then the rest of the commands will be hidden.
 
@@ -282,15 +275,13 @@ The commands placed in the popup can be viewed by opening the popup using the dr
 
 ```
 
-Output be like the below.
-
 ![Toolbar Popup Mode](./images/toolbar_popup_mode.png)
 
 ### Priority of commands
 
 Default popup priority is set as `None`, and when the commands of the Toolbar overflow, the ones listed last will be moved to the popup.
 
-You can customize the priority of commands to be displayed on the Toolbar and popup by using the `Overflow` property.
+The priority of commands can be customized to be displayed on the Toolbar and popup by using the `Overflow` property.
 
 Property     | Description
 ------------ | -------------
@@ -298,9 +289,9 @@ Property     | Description
   Hide       | Always shows items in the `popup with secondary` priority.
   None       | No priority display, and as per the `normal order` commands are moved to popup when content exceeds viewing area.
 
-If primary priority commands also exceed available space, they are moved to the popup container at top order position and placed before the secondary priority commands.
+If primary priority commands also exceed the available space, they are moved to the popup container at the top order position and placed before the secondary priority commands.
 
-> You can maintain toolbar item on popup always by using the [ShowAlwaysInPopup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property as 'Show'.
+> The toolbar item can be maintained on popup always by using the [ShowAlwaysInPopup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_ShowAlwaysInPopup) property, and this behavior is not applicable for toolbar items with [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_Overflow) property as 'Show'.
 
 ### Text mode for buttons
 
@@ -409,8 +400,6 @@ In the following code sample, text is only visible in the popup container and no
 
 ```
 
-Output be like the below.
-
 ![Toolbar Item Overflow and ShowTextOn](./images/item_overflow_property.png)
 
 ## MultiRow
@@ -509,8 +498,6 @@ Output be like the below.
 
 ```
 
-Output be like the below.
-
 ![Toolbar MultiRow Mode](./images/toolbar_multirow_mode.png)
 
 ## Extended
@@ -608,7 +595,5 @@ Output be like the below.
 </style>
 
 ```
-
-Output be like the below.
 
 ![Toolbar Extended Mode](./images/toolbar_extended_mode.gif)

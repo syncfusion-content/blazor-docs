@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Access specific toast in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about Access specific toast in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about access specific toast in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Access specific toast in Blazor Toast Component
 
-In the toast, we can access the particular toast by passing the `Key` value in `ShowModels`, and the `Key` should be unique in `ShowModels`. To close the specific toast, you also need to pass the corresponding toast `Key` value in the `Hide` method. You can get the added `Key` value in the toast `Opened` and `Closed` event.
+In the toast, the particular toast can be accessed by passing the `Key` value in `ShowModes`, and the `Key` should be unique in `ShowModels`. To close the specific toast, you also need to pass the corresponding toast `Key` value in the `Hide` method. The added `Key` value can be got in the toast `Opened` and `Closed` event.
 
 In the following example, Toast is closed by calling the `Hide` method with the key value that is returned in the `Opened` event
 
