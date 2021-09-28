@@ -519,9 +519,9 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 }
 ```
 
-## Custom sorting to render appointments
+## Customize the order of the overlapping events
 
-By default, the scheduler can render the events based on the start and end time sorting. Now we can customize the sorting based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
+By default, the scheduler will render the overlapping events based on the start and end time. Now we can customize the order of the overlapping events based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -543,7 +543,6 @@ By default, the scheduler can render the events based on the start and end time 
 @code{
     DateTime CurrentDate = new DateTime(2020, 2, 14);
     View SelectedView = View.Week;
-    List<AppointmentSortData>
     DataSource = new List<AppointmentSortData>
     {
         new AppointmentSortData { Id = 1, Subject = "Rank A", RankId="A", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
@@ -551,11 +550,7 @@ By default, the scheduler can render the events based on the start and end time 
         new AppointmentSortData { Id = 3, Subject = "Rank C", RankId="C", StartTime = new DateTime(2020, 2, 13, 9, 0, 0) , EndTime = new DateTime(2020, 2, 13, 10, 30, 0) },
         new AppointmentSortData { Id = 4, Subject = "Rank D", RankId="D", StartTime = new DateTime(2020, 2, 13, 9, 30, 0) , EndTime = new DateTime(2020, 2, 13, 14, 0, 0) }
     };
-    public class AppointmentSortData : AppointmentData
-    {
-        public string RankId { get; set; }
-    }
-    public class AppointmentData
+    public class AppointmentSortData
     {
         public int Id { get; set; }
         public string Subject { get; set; }
@@ -571,6 +566,7 @@ By default, the scheduler can render the events based on the start and end time 
     }
 }
 ```
+![Order of the overlapping events](images/customized-overlapping-events.png)
 
 ## Drag and drop appointments
 
