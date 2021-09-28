@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in Visual Studio 2022
+title: Getting started with Syncfusion Blazor ASP.NET Core Hosted App in Visual Studio 2022
 description: Check out the documentation for Getting started with the Syncfusion Blazor using Visual Studio 2022 IDE.
 platform: Blazor
 component: Common
