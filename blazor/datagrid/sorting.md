@@ -265,6 +265,7 @@ The following GIF represents custom SortComparer for CustomerID column. When the
 
 ![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
 
+> The SortComparer Property will work only for local data.
 
 ## Touch interaction
 
