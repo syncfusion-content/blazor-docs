@@ -9,16 +9,16 @@ documentation: ug
 
 # How to position node’s annotation
 
-Diagram allows you to customize the position and appearance of the annotation efficiently. Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the `ShapeAnnotation` class. Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
+Diagram allows you to customize the position and appearance of the annotation efficiently. Annotation can be aligned relative to the node boundaries. It has Margin, Offset, Horizontal, and Vertical alignment settings. It is quite tricky when all four alignments are used together but gives more control over alignments properties of the [ShapeAnnotation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html) class. Annotations of a node can be positioned using the following properties of `ShapeAnnotation`.
 
-* `Offset`
-* `HorizontalAlignment`
-* `VerticalAlignment`
-* `Margin`
+* Offset
+* HorizontalAlignment
+* VerticalAlignment
+* Margin
 
 ## Offset
 
-The `Offset` property of an annotation is used to align the annotations based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
+The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ShapeAnnotation.html#Syncfusion_Blazor_Diagram_ShapeAnnotation_Offset) property of an annotation is used to align the annotations based on fractions. 0 represents top/left corner, 1 represents bottom/right corner, and 0.5 represents half of width/height.
 
 The following code shows the relationship between the shape annotation position and path annotation offset (fraction values).
 
@@ -42,7 +42,12 @@ The following code shows the relationship between the shape annotation position 
             OffsetX = 100,
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Offset(0,0)", Offset = new Point() { X = 0, Y = 0 } }
+                new ShapeAnnotation 
+                { 
+                    Content = "Offset(0,0)", 
+                    // Sets the offset for an annotation's content
+                    Offset = new DiagramPoint() { X = 0, Y = 0 } 
+                }
             },
             OffsetY = 100,
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
@@ -65,12 +70,12 @@ The following code shows the relationship between the shape annotation position 
 | (1,1) | ![Left](../images/Offset1,1.png) |
 
 
->* Type of the offset property for node’s shape annotation is NodeAnnotationOffset.
+>* Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
 >* Type of the offset property for connector’s path annotation is double.
 
 ## Horizontal and vertical alignment
 
-The `HorizontalAlignment` property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The `VerticalAlignment` property is used to set how the annotation is vertically aligned at the annotation position.
+The [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_HorizontalAlignment) property of annotation is used to set how the annotation is horizontally aligned at the annotation position determined from the fraction values. The [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_VerticalAlignment) property is used to set how the annotation is vertically aligned at the annotation position.
 
 The following table shows all the possible alignments visually with 'offset (0, 0)'.
 
@@ -91,7 +96,7 @@ The following code explains how to align annotations.
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" Nodes="@nodes"/>
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
 {
@@ -108,9 +113,15 @@ The following code explains how to align annotations.
             Height = 100,
             OffsetX = 250,
             OffsetY = 250,
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>() 
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Annotation", HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Center}
+                new ShapeAnnotation 
+                { 
+                    Content = "Annotation",
+                    // Sets the HorizontalAlignment and VerticalAlignment for the content
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Center
+                }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
@@ -119,49 +130,13 @@ The following code explains how to align annotations.
 }
 ```
 
->* The value of the `HorizontalAlignment` is `Center` by default.
->* The value of the `VerticalAlignment` is `Center` by default.
+>* The value of the `HorizontalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HorizontalAlignment.html#Syncfusion_Blazor_Diagram_HorizontalAlignment_Center) by default.
+>* The value of the `VerticalAlignment` is [Center](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.VerticalAlignment.html#Syncfusion_Blazor_Diagram_VerticalAlignment_Center) by default.
 >* Alignment positioned based on the offset value.
 
 ## Margin
 
-`Margin` is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
-
-```cshtml
-@@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" Nodes="@nodes" />
-
-@code
-{
-    // Defines diagram's node collection
-    DiagramObjectCollection<Node> nodes;
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-            ID = "node1",
-            Width = 100,
-            Height = 100,
-            OffsetX = 100,
-            OffsetY = 100,
-            // Sets the margin for the content
-            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-            {
-                new ShapeAnnotation { Content = "Task1",Margin = new Margin() { Top = 10},HorizontalAlignment = HorizontalAlignment.Center,VerticalAlignment = VerticalAlignment.Top,Offset = new Point(){ X = .5 ,Y = 1} }
-            },
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
-        };
-        nodes.Add(node);
-    }
-}
-```
-
-## Text align
-
-The `TextAlign` inside the text block. The following code explains how to set TextAlign for an annotation.
+[Margin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Margin) is an absolute value used to add some blank space to any one of its four sides. The annotations can be displaced with the margin property. The following code example explains how to align an annotation based on its Offset, HorizontalAlignment, VerticalAlignment, and Margin values.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -183,10 +158,60 @@ The `TextAlign` inside the text block. The following code explains how to set Te
             Height = 100,
             OffsetX = 100,
             OffsetY = 100,
-            // Sets the textAlign as left for the content
             Annotations = new DiagramObjectCollection<ShapeAnnotation>()
             {
-                new ShapeAnnotation { Content = "Text align is set as Left",Style = new TextShapeStyle(){ TextAlign = TextAlign.Left} }
+                new ShapeAnnotation 
+                { 
+                    Content = "Task1",
+                    // Sets the margin for the content
+                    Margin = new Margin() { Top = 10},
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    VerticalAlignment = VerticalAlignment.Top,
+                    Offset = new DiagramPoint(){ X = 0.5 ,Y = 1}
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
+        };
+        nodes.Add(node);
+    }
+}
+```
+
+## Text align
+
+The [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextStyle.html#Syncfusion_Blazor_Diagram_TextStyle_TextAlign) property of annotation allows you to set how the text should be aligned (Left, Right, Center, or Justify) inside the text block. The following code explains how to set TextAlign for an annotation.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent Height="600px" Nodes="@nodes" />
+
+@code
+{
+    // Defines diagram's node collection
+    DiagramObjectCollection<Node> nodes;
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>();
+        Node node = new Node()
+        {
+            ID = "node1",
+            Width = 100,
+            Height = 100,
+            OffsetX = 100,
+            OffsetY = 100,
+            Annotations = new DiagramObjectCollection<ShapeAnnotation>()
+            {
+                new ShapeAnnotation 
+                { 
+                    Content = "Text align is set as Left",
+                    Style = new TextStyle()
+                    { 
+                        // Sets the textAlign as left for the content
+                        TextAlign = TextAlign.Left
+                    } 
+                }
             },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" },
         };
