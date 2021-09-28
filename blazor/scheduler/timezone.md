@@ -19,7 +19,7 @@ You can use a time zone in the following four different ways:
 
 > The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA]https://www.iana.org/time-zones) format.
 
-## Scheduler with no timezone 
+## Scheduler with no timezone
 
 When no specific time zone is set to Scheduler, appointments will be displayed based on the server system’s timezone which is the default behavior. Here, the same appointment when viewed from different timezone will have different start and end times.
 
@@ -63,7 +63,7 @@ The appointments will be displayed based on the given `StartTime` and `EndTime` 
 }
 ```
 
-## Scheduler set to specific timezone
+## Setting specific timezone to scheduler
 
 You can set specific time zone to schedule using the `TimeZone` property of schedule. On this scenario, the appointments will be displayed exactly based on the Scheduler timezone regardless of its server timezone.
 
@@ -108,7 +108,7 @@ In the following code example, appointments will be displayed based on Europe Ti
 }
 ```
 
-## Set specific timezone for events
+## Setting specific timezone to events
 
 You can create appointments at different time zones using the `StartTimeZone` and `EndTimeZone` properties. An appointment’s start time and end time are calculated based on the given time zone information for the start time and end time. You can set different time zones to the `StartTimeZone` and `EndTimeZone` properties.
 
