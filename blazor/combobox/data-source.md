@@ -347,6 +347,136 @@ The output will shown as follows,
 
 ![Blazor ComboBox ValueTuple Data](./images/blazor_combobox_valuetuple.png)
 
+### ExpandoObject data binding
+
+You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the ComboBox component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfComboBox TItem="ExpandoObject" TValue="string" PopupHeight="230px" Placeholder="Select a vehicle" DataSource="@VehicleData">
+    <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code{
+    public List<ExpandoObject> VehicleData { get; set; } = new List<ExpandoObject>();
+    protected override void OnInitialized()
+    {
+        VehicleData = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.ID = (1000 + x).ToString();
+            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1", "Aston Martin One- 77", "Jaguar XJ220", "McLaren P1", "Ferrari LaFerrari", "Mahindra Jaguar", "Hyundai Toyota", "Jeep Volkswagen", "Tata Maruti Suzuki", "Audi Mercedes Benz" }[x - 1]);
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+
+```
+
+The output will shown as follows,
+
+![Blazor ComboBox with expando object data binding](./images/blazor_combobox_expando-object.png)
+
+### DynamicObject data binding
+
+You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the ComboBox component. The following example `DynamicObject` is bound to the collection of customers data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfComboBox TValue="string" TItem="DynamicDictionary" Placeholder="Select a name" DataSource="@Orders">
+    <ComboBoxFieldSettings Text="CustomerName" Value="CustomerName"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code{
+    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.OrderID = 1000 + x;
+            d.CustomerName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Anne", "Nige", "Fuller", "Dodsworth", "Leverling", "Callahan", "Suyama", "Davolio" }[x - 1]);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        //The GetDynamicMemberNames method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+
+```
+
+The output will shown as follows,
+
+![Blazor ComboBox with dynamic object data binding](./images/blazor_combobox_dynamic-object.png)
+
+### ObservableCollection data binding
+
+You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Collections.ObjectModel;
+
+<SfComboBox TValue="string" TItem="Colors" PopupHeight="230px" Placeholder="Select a color" DataSource="@ColorsData">
+    <ComboBoxFieldSettings Text="Color" Value="Code"></ComboBoxFieldSettings>
+</SfComboBox>
+
+@code{
+    public class Colors
+    {
+        public string Code { get; set; }
+        public string Color { get; set; }
+    }
+    private ObservableCollection<Colors> ColorsData = new ObservableCollection<Colors>()
+    {
+        new Colors() { Color = "Chocolate", Code = "#75523C" },
+        new Colors() { Color = "CadetBlue", Code = "#3B8289" },
+        new Colors() { Color = "DarkOrange", Code = "#FF843D" },
+        new Colors() { Color = "DarkRed", Code = "#CA3832"},
+        new Colors() { Color = "Fuchsia", Code = "#D44FA3" },
+        new Colors() { Color = "HotPink", Code = "#F23F82" },
+        new Colors() { Color = "Indigo", Code = "#2F5D81" },
+        new Colors() { Color = "LimeGreen", Code = "#4CD242" },
+        new Colors() { Color = "OrangeRed", Code = "#FE2A00" },
+        new Colors() { Color = "Tomato", Code = "#FF745C" },
+        new Colors() { Color = "Brown", Code = "#A52A2A" },
+        new Colors() { Color = "Maroon", Code = "#800000" },
+        new Colors() { Color = "Green", Code = "#008000" },
+        new Colors() { Color = "Pink", Code = "#FFC0CB" },
+        new Colors() { Color = "Purple", Code = "#800080" }
+    };
+}
+
+```
+
+The output will shown as follows,
+
+![Blazor ComboBox with observable collection data binding](./images/blazor_combobox_observable-collection.png)
+
 ## Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in the ComboBox component.
