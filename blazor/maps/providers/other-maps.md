@@ -13,9 +13,9 @@ Apart from the OpenStreetMap and Bing Maps, you can also render the Maps from ot
 
 Sample Template: https://<domain_name>/maps/basic/{z}/{x}/{y}.png
 
-"${z}" - It represents zoom factor (level).
-"${x}" - It indicates tile image x-position (tileX).
-"${y}" - It indicates tile image y-position (tileY).
+* "${z}" - It represents zoom factor (level).
+* "${x}" - It indicates tile image x-position (tileX).
+* "${y}" - It indicates tile image y-position (tileY).
 
 In this case, the key generated for those online map service providers can also be appended to the URL. Here, Google Maps is rendered. This provides customizable Maps with your own content and imagery.
 
