@@ -195,9 +195,9 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 }
 ```
 
-## Custom Sort Comparer
+## Custom sort comparer
 
-You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer class has been implemented by using the Interface [IComparer<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5.).
+You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer DataType was the IComparer interface, so the custom sort comparer class should be implemented in the interface [IComparer<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5.).
 
 In the following code example, custom SortComparer class was defined in the CustomerID Column.
 
