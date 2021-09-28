@@ -15,7 +15,13 @@ To know more about Bitwise operators, refer to the [Bitwise Operations](#bitwise
 
 ## Diagram constraints
 
-Diagram constraints allow you to enable or disable the following behaviors. By default, `UndoRedo`, `UserInteraction`, `ApiUpdate`, `PageEditable`, `Zoom`, `Pan` constraints are enabled for diagram.
+[DiagramConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html#Syncfusion_Blazor_Diagram_DiagramConstraints) allow you to enable or disable the following behaviors. 
+
+* PageEditable
+* Bridging
+* Zoom
+* UndoRedo
+* UserInteraction
 
 | Constraints | Description |
 | -------- | -------- |
@@ -77,11 +83,28 @@ The diagram constraints are provided as flagged enumerations, so that multiple b
 DiagramConstraints DiagramConstraints = DiagramConstraints.Default & ~(DiagramConstraints.PageEditable|DiagramConstraints.Zoom);
 ```
 
-For more information about diagram constraints, refer to the `DiagramConstraints`.
+For more information about diagram constraints, refer to the [Diagram constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramConstraints.html).
+
+> By default, the following constraints are enabled in the diagram,
+>* ApiUpdate
+>* PanX
+>* PanY
+>* Pan
+>* ZoomTextEdit
+>* Default
+>* None
 
 ## Node constraints
 
-Node constraints allows you to enable or disable the following behaviors of node.  By default, `Select`, `Drag`, `Resize`, `Rotate`, `Delete`,`InConnect`, `OutConnect` constraints are enabled for the node.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_Constraints) property of the Node, allows you to enable or disable the following behaviors. 
+
+* Select
+* Drag
+* Resize
+* Rotate
+* Delete
+* InConnect
+* OutConnect
 
 | Constraints | Description |
 | -------- | -------- |
@@ -156,11 +179,37 @@ The node constraints are provided as flagged enumerations, so that multiple beha
 NodeConstraints NodeConstraints = NodeConstraints.Default & ~ (NodeConstraints.Select | NodeConstraints.Drag);
 ```
 
-For more information about node constraints, refer to the `NodeConstraints`.
+For more information about node constraints, refer to the [NodeConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html).
+
+>**Note** : By default, the following constraints are enabled for the node,
+>* Shadow
+>* PointerEvents
+>* AllowDrop
+>* ResizeNorthEast
+>* ResizeEast
+>* ResizeSouthEast
+>* ResizeSouth
+>* ResizeSouthWest
+>* ResizeWest
+>* ResizeNorthWest
+>* ResizeNorth
+>* AspectRatio
+>* ReadOnly
+>* HideThumbs
+>* Inherit
+>* Default
 
 ## Connector constraints
 
-Connector constraints allow you to enable or disable the following behaviors of connectors. By default, `Select`, `Drag`, `DragSourceEnd`, `DragTargetEnd`, `Delete`, `InheritBridging`, `PointerEvents` constraints are enabled for the connector.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html#Syncfusion_Blazor_Diagram_Connector_Constraints) property of the Connector, allow you to enable or disable the following behaviors of connectors. 
+
+* Select
+* Drag
+* DragSourceEnd
+* DragTargetEnd
+* Delete
+* InheritBridging
+* PointerEvents
 
 | Constraints | Description |
 | -------- | -------- |
@@ -224,11 +273,26 @@ The connector constraints are provided as flagged enumerations, so that multiple
 ConnectorConstraints ConnectorConstraints = ConnectorConstraints.Default & ~ (ConnectorConstraints.Select | ConnectorConstraints.Drag);
 ```
 
-For more information about connector constraints, refer to the `ConnectorConstraints`.
+For more information about connector constraints, refer to the [ConnectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.ConnectorConstraints.html).
+
+>By default, the following constraints are enabled for the connector,
+>* DragSegmentThumb
+>* Interaction
+>* AllowDrop
+>* Bridging
+>* InheritBridging
+>* ConnectToNearByNode
+>* ConnectToNearByPort
+>* ConnectToNearByElement
+>* ReadOnly
+>* Default
 
 ## Port constraints
 
-You can enable or disable the following behaviors of port. By default, `InConnect` , `OutConnect` constraints are enabled for the port.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Port.html#Syncfusion_Blazor_Diagram_Port_Constraints) property of the Port,allow you can enable or disable the following behaviors of port. 
+
+* InConnect
+* OutConnect
 
 | Constraints | Description |
 | -------- | -------- |
@@ -293,11 +357,15 @@ The port constraints are provided as flagged enumerations, so that multiple beha
 port.Constraints = PortConstraints.Default | PortConstraints.Draw;
 ```
 
-For more information about port constraints, refer to the `PortConstraints`.
+For more information about port constraints, refer to the [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html).
+
+> By default, the following constraints are enabled for the port,
+>* Draw
+>* Default
 
 ## Annotation constraints
 
-You can enable or disable read-only mode for the annotations by using the annotation constraints.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_Constraints) property of the Annotations,allow you can enable or disable read-only mode for the annotations by using the annotation constraints.
 
 | Constraints | Description |
 | -------- | -------- |
@@ -353,11 +421,15 @@ The following code shows how to enable read-only mode for the annotations.
 }
 ```
 
-For more details about annotation constraints, refer to the `AnnotationConstraints`.
+For more details about annotation constraints, refer to the [AnnotationConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AnnotationConstraints.html).
 
 ## Selector constraints
 
-Selector visually represents the selected elements with certain editable thumbs. The visibility of the thumbs can be controlled with selector constraints. By default, `ResizeAll`, `UserHandle`, `Rotate` constraints are enabled for the selected items.
+Selector visually represents the selected elements with certain editable thumbs. The visibility of the thumbs can be controlled with selector constraints.  The part of selector is categorized as follows:
+
+* ResizeAll
+* UserHandle
+* Rotate
 
 | Constraints | Description |
 | -------- | -------- |
@@ -420,18 +492,27 @@ The following another code example shows how to disable the userhandle functiona
 selectedItems.Constraints = SelectorConstraints.All &~ SelectorConstraints.UserHandle;
 ```
 
-For more information about selector constraints, refer to the `SelectorConstraints`
+For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html).
+
+> By default, the following constraints are enabled for the selected items,
+>* ConnectorSourceThumb
+>* ConnectorTargetThumb
+>* ResizeSouthEast
+>* ResizeSouthWest
+>* ResizeEast
+>* ResizeWest
+>* ResizeSouth
+>* ResizeNorth
+>* All
 
 ## Snap constraints
 
-Snap constraints control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
+The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapSettings.html#Syncfusion_Blazor_Diagram_SnapSettings_Constraints) property of the SnapConstraints control the visibility of gridlines and enable or disable snapping. Snap constraints allow to set the following behaviors.
 
 * Show only horizontal or vertical gridlines.
 * Show both horizontal and vertical gridlines.
 * Snap to either horizontal or vertical gridlines.
 * Snap to both horizontal and vertical gridlines.
-
-By default, `ShowLines`, `SnapToLines` constraints are enabled for the snap functionality in the diagram.
 
 The following list of snapping constraints are used to Enables or Disables certain features of snapping.
 
@@ -484,11 +565,23 @@ The snap constraints are provided as flagged enumerations, so that multiple beha
 snapconstraints = SnapConstraints.ShowHorizontalLines | SnapConstraints.ShowVerticalLines | SnapConstraints.ShowLines;
 ```
 
-For more information about snap constraints, refer to the `SnapConstraints`.
+For more information about snap constraints, refer to the [SnapConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SnapConstraints.html).
+
+> By default, the following constraints are enabled for the snap functionality in the diagram,
+>* ShowLines
+>* ShowVerticalLines
+>* ShowHorizontalLines
+>* SnapToHorizontalLines
+>* SnapToObject
+>* All
 
 ## Boundary constraints
 
-Boundary constraints defines a boundary for the diagram inside that the interaction should be done. By default, Diagram constraint is enabled for the boundary constraints in the diagram.
+Boundary constraints defines a boundary for the diagram inside that the interaction should be done. Boundary constraints allow to set the following behaviors.
+
+* Infinity
+* Diagram
+* Page
 
 The following list of constraints are used to Enables or Disables certain features of boundary interactions of the diagram.
 
@@ -529,7 +622,10 @@ The following code shows how to limit the interaction done inside a diagram with
 }
 ```
 
-For more information about selector constraints, refer to the `BoundaryConstraints`
+For more information about selector constraints, refer to the [BoundaryConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BoundaryConstraints.html).
+
+> By default, the following boundary constraints are enabled for the snap functionality in the diagram,
+>* Diagram
 
 ## Inherit behaviors
 

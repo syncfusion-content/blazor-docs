@@ -13,7 +13,7 @@ Diagram tracks the history of actions that are performed after initializing the 
 
 ## Undo and redo
 
-Diagram provides built-in support to track the changes that are made through interaction and through public APIs. The changes can be reverted or restored either through shortcut keys or through commands.
+[Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) provides built-in support to track the changes that are made through interaction and through public APIs. The changes can be reverted or restored either through shortcut keys or through commands.
 
 ## Undo/redo through shortcut keys
 
@@ -21,7 +21,7 @@ Undo/redo commands can be executed through shortcut keys. Shortcut key for undo 
 
 ## Undo/redo through public APIs
 
-The `Undo` and `Redo` methods helps you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through code.
+The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) methods helps you to revert/restore the changes. The following code example illustrates how to undo/redo the changes through code.
 
 ```cshtml
 SfDiagramComponent Diagram;
@@ -33,13 +33,13 @@ diagram.Undo();
 diagram.Redo();
 ```
 
-When a change in the diagram is reverted or restored (undo/redo), the `HistoryChanged` event gets triggered.
+When a change in the diagram is reverted or restored (undo/redo), the [HistoryChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_HistoryChanged) event gets triggered.
 
 ### Group multiple changes
 
 History list allows to revert or restore multiple changes through a single undo/redo command. For example, revert/restore the fill color change of multiple elements at a time.
 
-`StartGroupAction` is used to notify the diagram to start grouping the changes. `EndGroupAction` is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
+[StartGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_StartGroupAction) is used to notify the diagram to start grouping the changes. [EndGroupAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndGroupAction) is used to notify to stop grouping the changes. The following code illustrates how to undo/redo to change of multiple elements at a time.
 
 ```cshtml
 SfDiagramComponent diagram;
@@ -56,7 +56,7 @@ diagram.EndGroupAction();
 * While interacting the elements in the diagram, this event can be used to do the customization.
 * When interacting the node or connector, the entries getting added to the history list to trigger this event.
 
-The `HistoryChangedEventArgs` notifies while the changes occurs during undo/redo process.
+The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.HistoryChangedEventArgs.html) notifies while the changes occurs during undo/redo process.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -79,7 +79,7 @@ The `HistoryChangedEventArgs` notifies while the changes occurs during undo/redo
 
 ## Track custom entry
 
-Diagram provides options to track the changes that are made to custom properties. The following example illustrates how to track such custom property changes.
+[Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) provides options to track the changes that are made to custom properties. The following example illustrates how to track such custom property changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -128,7 +128,7 @@ Diagram provides options to track the changes that are made to custom properties
 
 ### HistoryAdding
 
-HistoryAdding in the DiagramHistoryManager, which takes a history entry as argument and returns whether the specific entry can be added or not.
+[HistoryAdding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_HistoryAdding) in the [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html), which takes a history entry as argument and returns whether the specific entry can be added or not.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -174,7 +174,7 @@ HistoryAdding in the DiagramHistoryManager, which takes a history entry as argum
 
 The purpose of custom undo redo process is to store actions which are not done through default undo redo history list.
 
-Undo method in DiagramHistoryManager is getting triggered when the custom entry is in undo stage and Redo method in DiagramHistoryManager is getting triggered when the custom entry is in redo stage.
+[Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_Undo) method in [DiagramHistoryManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html) is getting triggered when the custom entry is in undo stage and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramHistoryManager.html#Syncfusion_Blazor_Diagram_DiagramHistoryManager_Redo) method in DiagramHistoryManager is getting triggered when the custom entry is in redo stage.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -228,7 +228,7 @@ Undo method in DiagramHistoryManager is getting triggered when the custom entry 
     private void onCustomRedo(HistoryEntryBase entry)
     {
         EventValue += "RedoObject:" + (entry.RedoObject as Node).AdditionalInfo[(entry.RedoObject as Node).ID];
-        var current = entry.UndoObject.Clone() as Node;
+        Node current = entry.UndoObject.Clone() as Node;
         (entry.UndoObject as Node).AdditionalInfo[(entry.UndoObject as Node).ID] = "Description";
         entry.RedoObject = current;
     }
