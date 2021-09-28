@@ -105,6 +105,8 @@ The zooming toolbar can be customized using `MapsZoomToolbarSettings` class. The
 </SfMaps>
 ```
 
+![Maps with custom zoom toolbar](./images/UserInteraction/custom-toolbar.png)
+
 The buttons in the zooming toolbar can be customized using `MapsZoomToolbarButton` class. The following properties are available in `MapsZoomToolbarButton` class.
 
 * [BorderColor]() - To set the color in the border of the buttons in the zooming toolbars.
@@ -136,6 +138,8 @@ The buttons in the zooming toolbar can be customized using `MapsZoomToolbarButto
     </MapsLayers>
 </SfMaps>
 ```
+
+![Maps with custom zoom toolbar buttons](./images/UserInteraction/custom-toolbar-buttons.png)
 
 The tooltip in the zooming toolbar can be customized using `MapsZoomToolbarTooltipSettings` class. The following properties are available in `MapsZoomToolbarTooltipSettings` class.
 
@@ -169,6 +173,8 @@ The tooltip in the zooming toolbar can be customized using `MapsZoomToolbarToolt
     </MapsLayers>
 </SfMaps>
 ```
+
+![Maps with custom tooltip in zoom toolbar](./images/UserInteraction/custom-tooltip.png)
 
 #### Pinch zooming
 

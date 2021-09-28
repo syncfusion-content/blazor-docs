@@ -136,12 +136,19 @@ The following map providers can also be rendered in the Maps component.
 
 <SfMaps>
     <MapsLayers>
+        @* Renders map from Mapbox  *@
         <MapsLayer UrlTemplate="https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/level/tileX/tileY?access_token=" TValue="string">
         </MapsLayer>
-        @*<MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=" TValue="string">
-        </MapsLayer>
-        <MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=" TValue="string">
-        </MapsLayer>*@
+        @* Renders map from TomTom  *@
+        <!--<MapsLayer UrlTemplate="http://api.tomtom.com/map/1/tile/basic/main/level/tileX/tileY.png?key=zzVjM8webeABaPadifIf9hFpmdC9XzmG" TValue="string">
+        </MapsLayer>-->
+        @* Renders map from ESRI *@
+        <!--<MapsLayer UrlTemplate="https://ibasemaps-api.arcgis.com/arcgis/rest/services/World_Imagery/MapServer/tile/level/tileY/tileX?apiKey=AAPK04316d918e224b339f72d107b5aef880I2MT0hI3L2xIX4DMcuEELiOcb4DRmxeGp_-hqlsFhziOvqBwel-uIA-87Dp9h3eI" TValue="string">
+        </MapsLayer>-->
     </MapsLayers>
 </SfMaps>
 ```
+
+![MapBox map](../images/MapProviders/mapbox.png)
+
+![TomTom map](../images/MapProviders/tomtom.png)
