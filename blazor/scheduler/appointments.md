@@ -521,7 +521,7 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 
 ## Custom sorting of the appointments rendering
 
-Apart from the default arrangement of the Scheduler events, the user can custom sorting the events based on the custom fields for appointments. The following code example shows how to sort the appointments based on the custom field **RankId** assigned to the `SortBy` property.
+By default, the scheduler can render the events based on the start and end time sorting. Now we can customize the sorting based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
