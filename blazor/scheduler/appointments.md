@@ -519,7 +519,7 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 }
 ```
 
-## Custom sorting of the appointments rendering
+## Custom sorting to render appointments
 
 By default, the scheduler can render the events based on the start and end time sorting. Now we can customize the sorting based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
 
