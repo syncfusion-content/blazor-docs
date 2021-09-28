@@ -799,7 +799,145 @@ The following code example illustrates how to change the size of a symbol and ho
 
 The [SymbolMargin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolMargin) property is used to create the space around the elements, outside of any defined borders.
 
-## SymbolDragPreviewSize
+## Restrict expansion of the palette panel
+
+The symbol palette panel can be restricted from getting expanded. The [Cancel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteExpandingEventArgs.html#Syncfusion_Blazor_Diagram_SymbolPalette_PaletteExpandingEventArgs_Cancel) argument of the [PaletteExpandingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.PaletteExpandingEventArgs.html) property defines whether the palette’s panel should be expanded or collapsed. By default, the panel is expanded. This restriction can be done for each of the palettes in the symbol palette as desired. In the following code example the flow shapes palette is restricted from getting collapsed whereas the group shapes palette can be expanded or collapsed.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Diagram.SymbolPalette
+
+<div class="control-section">
+    <div style="width:20%">       
+        <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
+            <SfSymbolPaletteComponent @ref="@symbolpalette"
+                                      Height="300px" 
+                                      Width="200px"
+                                      Palettes="@Palettes" 
+                                      SymbolHeight="60" 
+                                      SymbolWidth="60" 
+                                      SymbolMargin="@SymbolMargin"
+                                      Expanding="@OnPaletteExpanding">
+            </SfSymbolPaletteComponent>
+        </div>
+    </div>
+</div>
+
+@code
+{
+    SymbolMargin SymbolMargin = new SymbolMargin 
+    { 
+        Left = 15, 
+        Right = 15, 
+        Top = 15, 
+        Bottom = 15 
+    };
+    SfSymbolPaletteComponent symbolpalette;
+    //Define palattes collection
+    DiagramObjectCollection<Palette> Palettes = new DiagramObjectCollection<Palette>();
+    // Defines palette's flow-shape collection
+    DiagramObjectCollection<NodeBase> PaletteNodes = new DiagramObjectCollection<NodeBase>();
+    // Defines palette's group collection
+    DiagramObjectCollection<NodeBase> PaletteGroup = new DiagramObjectCollection<NodeBase>();
+    // Defines palette's connector collection
+    DiagramObjectCollection<NodeBase> PaletteConnectors = new DiagramObjectCollection<NodeBase>();
+
+    protected override void OnInitialized()
+    {
+        InitPaletteModel();
+    }
+
+    private void InitPaletteModel()
+    {
+        CreatePaletteNode(FlowShapeType.Terminator, "Terminator");
+        CreatePaletteConnector("Link1", ConnectorSegmentType.Orthogonal, DecoratorShape.Arrow);
+        CreatePaletteGroup();
+        Palettes = new DiagramObjectCollection<Palette>()
+        {
+            new Palette(){Symbols = PaletteNodes,Title = "Flow Shapes", ID = "Flow Shapes" },
+            new Palette(){Symbols = PaletteConnectors,Title = "Connectors", ID = "Connectors"},
+            new Palette(){Symbols = PaletteGroup,Title = "Group Shapes", ID = "Group Shapes"}
+        };
+    }
+
+    private void CreatePaletteNode(FlowShapeType flowShape, string id)
+    {
+        Node node = new Node()
+        {
+            ID = id,
+            Shape = new FlowShape() { Type = Shapes.Flow, Shape = flowShape },
+            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" },
+        };
+        PaletteNodes.Add(node);
+    }
+
+    private void CreatePaletteConnector(string id, ConnectorSegmentType type, DecoratorShape decoratorShape)
+    {
+        Connector connector = new Connector()
+        {
+            ID = id,
+            Type = type,
+            SourcePoint = new DiagramPoint() { X = 0, Y = 0 },
+            TargetPoint = new DiagramPoint() { X = 60, Y = 60 },
+            Style = new ShapeStyle() { StrokeWidth = 1, StrokeColor = "#757575" },
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = decoratorShape,
+                Style = new ShapeStyle() { StrokeColor = "#757575", Fill = "#757575" }
+            }
+        };
+        PaletteConnectors.Add(connector);
+    }
+
+    private void CreatePaletteGroup()
+    {
+        Node node1 = new Node()
+        {
+            ID = "node1",
+            Width = 50,
+            Height = 50,
+            OffsetX = 100,
+            OffsetY = 100,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
+            Style = new ShapeStyle() { Fill = "#6495ed" },
+        };
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            Width = 50,
+            Height = 50,
+            OffsetX = 100,
+            OffsetY = 200,
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Ellipse },
+            Style = new ShapeStyle() { Fill = "#6495ed" },
+        };
+        PaletteGroup.Add(node1);
+        PaletteGroup.Add(node2);
+        NodeGroup group = new NodeGroup()
+        {
+            ID = "group1",
+            Children = new string[] { "node1", "node2" }
+        };
+        PaletteGroup.Add(group);
+    }
+
+    private void OnPaletteExpanding(PaletteExpandingEventArgs args)
+    {
+        if(args.Palette.ID=="Flow Shapes")
+        {
+            // Flow shapes panel does not collapse
+            args.Cancel = true;
+        }
+        else
+        {
+            // Group shapes panel collapse and expand
+            args.Cancel = false;
+        }
+    }
+}
+```
+
+## Symbol preview size
 
 The symbol preview size of the palette items can be customized using [SymbolDragPreviewSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_SymbolDiagramPreviewSize) property.
 The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html#Syncfusion_Blazor_Diagram_SymbolPalette_SfSymbolPaletteComponent_Height) properties of SymbolDragPreviewSize enables you to define the preview size to all the symbol palette items.
@@ -967,6 +1105,18 @@ The diagram provides support to add symbol description below each symbol of a pa
 ## Palette interaction
 
 Palette interaction notifies the element enter, leave, and dragging of the symbols into the diagram.
+
+### DragStart
+
+* When a symbol is dragged into a diagram from symbol palette, the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event gets triggered. [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html) notifies when the element enters into the diagram from the symbol palette.
+
+### Dragging
+
+* When a symbol is dragged over a diagram, the [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event gets triggered. [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html) notifies when an element drags over another diagram element.
+
+### DragLeave
+
+* When a symbol is dragged outside of the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event gets triggered. [DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html) notifies when the element leaves the diagram.
 
 ## Escape Key function
 

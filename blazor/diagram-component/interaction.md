@@ -79,7 +79,7 @@ Clicking and dragging the diagram area allows to create a rectangular region. Th
 
 ![Multiple Selection in Blazor Diagram](images/multiselect.gif)
 
-## Select/Unselect elements using program
+## Select/Unselect elements using API methods
 
 The [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) and [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection) methods help to select or clear the selection of the elements at runtime.
 

@@ -489,7 +489,7 @@ The following another code example shows how to disable the userhandle functiona
 
 ```csharp
 //Enable userhandle constraint for the selected item.
-selectedItems.Constraints = SelectorConstraints.All &~ SelectorConstraints.UserHandle;
+selectionSettings.Constraints = SelectorConstraints.All &~ SelectorConstraints.UserHandle;
 ```
 
 For more information about selector constraints, refer to the [SelectorConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SelectorConstraints.html).
