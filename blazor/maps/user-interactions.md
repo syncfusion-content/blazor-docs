@@ -53,7 +53,7 @@ Zooming can be performed in the following types:
 
 #### Zooming toolbar
 
-A toolbar is available in the Maps component to perform the zooming operation. The zooming toolbar is enabled when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
+A toolbar is available in the Maps component to perform zooming and panning operation. The zooming toolbar appears when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
 
 The following options are available in toolbar.
 
@@ -80,10 +80,10 @@ By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset*
 
 ##### Customization of zooming toolbar
 
-The zooming toolbar can be customized using `MapsZoomToolbarSettings` class. The following properties are available in `MapsZoomToolbarSettings` class to customize the zooming toolbars.
+The `MapsZoomToolbarSettings` class can be used to customize the zooming toolbar. The following properties are available for customization in the `MapsZoomToolbarSettings` class.
 
-* [HorizontalAlignment]() - To customize the position type of toolbar when it is placed horizontally.
 * [Orientation]() - To customize the orientation of the zooming toolbar.
+* [HorizontalAlignment]() - To customize the position type of toolbar when it is placed horizontally.
 * [VerticalAlignment]() - To customize the position type of toolbar when it is placed vertically.
 * [BackgroundColor]() - To customize the background color of the zooming toolbar.
 * [BorderColor]() - To apply the border color to the zooming toolbar.
@@ -107,19 +107,19 @@ The zooming toolbar can be customized using `MapsZoomToolbarSettings` class. The
 
 ![Maps with custom zoom toolbar](./images/UserInteraction/custom-toolbar.png)
 
-The buttons in the zooming toolbar can be customized using `MapsZoomToolbarButton` class. The following properties are available in `MapsZoomToolbarButton` class.
+The `MapsZoomToolbarButton` class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
 
-* [BorderColor]() - To set the color in the border of the buttons in the zooming toolbars.
-* [BorderWidth]() - To set the width of the border of the buttons in the zooming toolbars.
-* [BorderOpacity]() - To set the opacity in the border of the buttons in the zooming toolbars.
+* [ToolbarItems]() - To customize the items that are to be shown in the zooming toolbar.
+* [Color]() - To apply the color to the icons in the buttons in the zooming toolbars.
+* [Fill]() - To apply the fill color to the buttons in the zooming toolbars.
+* [Opacity]() - To apply the opacity for the buttons in the zooming toolbars.
+* [HighlightColor]() - To apply the color for the buttons in the zooming toolbar when the mouse has hovered on the toolbar element.
+* [SelectionColor]() - To apply the color for the buttons in the zooming toolbar when clicking the zooming toolbar.
 * [Radius]() - To set the radius for the buttons in the zooming toolbars.
 * [Padding]() - To set the spacing between the buttons in the zooming toolbars.
-* [Opacity]() - To apply the opacity for the buttons in the zooming toolbars in Maps.
-* [Fill]() - To apply the fill color to the buttons in the zooming toolbars in Maps.
-* [Color]() - To apply the color to the icons in the buttons in the zooming toolbars in Maps.
-* [HighlightColor]() - To apply the color for the buttons in the zooming toolbar when the mouse has hovered on the toolbar element in Maps.
-* [SelectionColor]() - To apply the color for the buttons in the zooming toolbar when clicking the zooming toolbar in Maps.
-* [ToolbarItems]() - To customize the items that are to be shown in the zooming toolbar in Maps.
+* [BorderColor]() - To set the color in the border of the buttons in the zooming toolbars.
+* [BorderOpacity]() - To set the opacity in the border of the buttons in the zooming toolbars.
+* [BorderWidth]() - To set the width of the border of the buttons in the zooming toolbars.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -141,13 +141,13 @@ The buttons in the zooming toolbar can be customized using `MapsZoomToolbarButto
 
 ![Maps with custom zoom toolbar buttons](./images/UserInteraction/custom-toolbar-buttons.png)
 
-The tooltip in the zooming toolbar can be customized using `MapsZoomToolbarTooltipSettings` class. The following properties are available in `MapsZoomToolbarTooltipSettings` class.
+The `MapsZoomToolbarTooltipSettings` class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
 
-* [Fill]() - To set the fill color to the tooltip in the zooming toolbar.
 * [Visible]() - To enable or disable the tooltip in the zooming toolbar.
+* [Fill]() - To set the fill color to the tooltip in the zooming toolbar.
 * [BorderColor]() - To set the color in the border of the tooltip in the zooming toolbar.
-* [BorderWidth]() - To set the width of the border of the tooltip in the zooming toolbar.
 * [BorderOpacity]() - To set the opacity in the border of the tooltip in the zooming toolbar.
+* [BorderWidth]() - To set the width of the border of the tooltip in the zooming toolbar.
 * [FontColor]() - To set the text color in the tooltip of the zooming toolbar.
 * [FontFamily]() - To set the font family in the tooltip of the zooming toolbar.
 * [FontStyle]() - To set the font style in the tooltip of the zooming toolbar.

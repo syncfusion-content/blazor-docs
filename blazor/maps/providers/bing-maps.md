@@ -13,7 +13,7 @@ Bing Maps is a online Maps provider, owned by Microsoft, for accessing the exter
 
 ## Adding Bing Maps
 
-The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the value from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from the other tile services. Hence, we have added a top-level `GetBingUrlTemplate` method which returns the URL in the required format. The subscription key is needed for bing maps. An API key can be created by following the steps mentioned in this [link](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key) and append this key to the Bing map URL before pass it to the `GetBingUrlTemplate` method. The URL returned from this method must be passed to the `UrlTemplate` property.
+The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the URL generated from the `GetBingUrlTemplate` method in the Maps component. The format of the required URL of Bing Maps varies from other map providers. As a result, we have included a built-in `GetBingUrlTemplate` method that returns the URL in a generic format. In the meantime, a subscription key is required for Bing Maps. Follow the steps in this [link](https://www.microsoft.com/en-us/maps/create-a-bing-maps-key) to generate an API key, then append it to the Bing Maps URL before passing it to the `GetBingUrlTemplate` method. The URL returned by this method must be passed to the `UrlTemplate` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -33,7 +33,7 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 }
 ```
 
->Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Bing Maps](../images/MapProviders/Bing-map.png)
 
@@ -48,7 +48,7 @@ Bing Maps provides different types of Maps and it can be viewed in the Maps comp
 * **CanvasLight** - Displays light version of the road Maps.
 * **CanvasGray** - Displays grayscale version of the road Maps.
 
-The above types can also be rendered in the Maps component by specifying their URL in the `UrlTemplate` property in the `MapsLayer` class. You can check the official websites of the Bing Maps to know about the available types and the URL for it.
+The above types can also be rendered in the Maps component by specifying their URL in the `UrlTemplate` property in the `MapsLayer` class. You can learn more about the available types and the URL for it by visiting the official websites of Bing Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -68,13 +68,13 @@ The above types can also be rendered in the Maps component by specifying their U
 }
 ```
 
-> Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Bing Maps with CanvasLight](../images/MapProviders/Bing-map-with-canvas.png)
 
 ## Zooming and Panning
 
-Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
+Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on Maps for in-depth analysis. Panning helps to move Maps around to focus the targeted area.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -101,7 +101,7 @@ Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 }
 ```
 
->Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Bing Maps with zooming](../images/MapProviders/bing-zooming.png)
 
@@ -151,7 +151,7 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 }
 ```
 
->Specify Bing Maps key in the above link passed in the `GetBingUrlTemplate` method.
+> In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
 ![Bing Maps with markers and navigation line](../images/MapProviders/bing-marker-and-line.png)
 
