@@ -195,6 +195,77 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 }
 ```
 
+## Custom sort comparer
+
+You can customize the default sort action for a specific Gird column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer class has implemented the Interface [IComparer<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5.).
+
+In the following code example, custom SortComparer class was defined in the CustomerID Column.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="270">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name" Width="150"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+    }
+
+    public class CustomComparer : IComparer<Object>
+    {
+        public int Compare(object X, object Y)
+        {
+            Order XData = X as Order;
+            Order YData = Y as Order;
+            int XcustomerID = (int)XData.OrderID;
+            int YcustomerID = (int)YData.OrderID;
+            if (XcustomerID < YcustomerID)
+            {
+                return -1;
+            }
+            else if (XcustomerID > YcustomerID)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
+}
+```
+
+The following GIF represents custom SortComparer for CustomerID column. When the user clicks the CustomerID column's header, the custom SortComparer will sort the data according to the OrderID Field value. So that custom SortComparer class sort the column data by using another Column's value.
+
+![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
+
+
 ## Touch interaction
 
 When you tap the datagrid header on touchscreen devices, the selected column header is sorted. A popup ![sorting](./images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![msorting](./images/msorting.jpg), and then tap the desired datagrid headers.
