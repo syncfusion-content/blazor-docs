@@ -25,14 +25,9 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * By default, if navigation icon in the `left` side is disabled, see the hidden commands by moving to the `right`.
 * By clicking the arrow or by holding the arrow continuously,  hidden commands will become visible.
 * If device navigation icons are not available, touch swipe to see the hidden commands of the Toolbar.
-
-![Scrollable](images/scrolling.gif)
-
 * Once the Toolbar reaches the last or first command, the  corresponding navigation icon will be disabled and it can be moved to the opposite direction.
 
 ![Touch scroll](images/scrolling_touch.gif)
-
-![Swipe scroll](images/scrolling_swipe.gif)
 
 * The Toolbar content can be continuously scrolled by holding the navigation icon.
 
@@ -185,7 +180,7 @@ the viewing area moves to the overflow popup container.
 
 The commands placed in the popup can be viewed by opening the popup using the drop down icon given at the end of the Toolbar.
 
-![Toolbar popup](./images/popup.gif)
+![Blazor Toolbar with overflow dropdown popup](./images/blazor-toolbar-with-overflow-dropdown-popup.png)
 
 > If the popup content overflows the height of the page, then the rest of the commands will be hidden.
 
