@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adaptive Layout in Blazor DataGrid Component | Syncfusion
-description: Checkout and learn here all about Adaptive UI in the Syncfusion Blazor DataGrid component and much more.
+description: The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
 
-## Render adaptive dialogs
+## Render adaptive dialog
 
 To render adaptive dialog UI in the DataGrid, set the EnableAdaptiveUI property to true. The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
 
@@ -43,8 +43,8 @@ To render adaptive dialog UI in the DataGrid, set the EnableAdaptiveUI property 
                     </GridAggregate>
                 </GridAggregates>
                 <GridColumns>
-                    <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
-                    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+                    <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80"></GridColumn>
+                    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
                     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
                     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
                 </GridColumns>
@@ -234,13 +234,14 @@ To render adaptive dialog UI in the DataGrid, set the EnableAdaptiveUI property 
 
 ```
 
-![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-adaptive-rendering-dialog.gif)
+![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-adaptive-dialog-rendering.gif)
 
-> This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled. 
+> 1. This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled.
+> 2. CSS part code snippets are not needed when the adaptive dialog is rendered on small screen. For demo purpose adaptive rendering is shown in mobile layout by using customized CSS code snippet. 
 
 ## Vertical Mode
 
-The DataGrid will render the row elements in vertical order while setting the RowRenderingMode property value as **Vertical**.
+The DataGrid will render the row elements vertically while setting the RowRenderingMode property value as **Vertical**.
 
 ```csharp
 
@@ -270,8 +271,8 @@ The DataGrid will render the row elements in vertical order while setting the Ro
                     </GridAggregate>
                 </GridAggregates>
                 <GridColumns>
-                    <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="120"></GridColumn>
-                    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
+                    <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="100"></GridColumn>
+                    <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
                     <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="130"></GridColumn>
                     <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="120"></GridColumn>
                 </GridColumns>
