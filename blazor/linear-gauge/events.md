@@ -344,4 +344,4 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linear
 }
 ```
 
-![Bind event to linear gauge](./images/l-gauge-events.png)
+![Blazor Linear Gauge with Binding Events](./images/blazor-linear-gauge-events.png)
