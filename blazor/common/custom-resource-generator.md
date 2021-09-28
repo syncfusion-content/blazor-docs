@@ -90,6 +90,13 @@ Refer to the following steps to download the custom resources in CRG:
     }
     ```
 
+    > If you are using Blazor Server App with net6.0 SDK, the **Startup.cs** file is not available in the Application. Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Program.cs` file for Blazor Server app.
+
+    ```c#
+    using Syncfusion.Blazor;
+    builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+    ```
+
 3. Now, manually add the custom interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
 
     ```html
@@ -114,6 +121,8 @@ Refer to the following steps to download the custom resources in CRG:
         <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
+
+    > If you are using Blazor Server App with net6.0 SDK, add the script and style reference in the `~/Pages/_Layout.cshtml` page.
 
 4. Run the application and it will load the resources with application required components.
 

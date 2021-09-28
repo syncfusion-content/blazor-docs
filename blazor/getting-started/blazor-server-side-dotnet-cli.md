@@ -17,7 +17,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ## Create a Blazor Server side project using .NET Core CLI
 

@@ -16,7 +16,7 @@ This article provides step-by-step instructions about how to create Blazor ASP.N
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ## Create a Blazor ASP.NET Core Hosted project using .NET Core CLI
 
