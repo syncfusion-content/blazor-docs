@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor Server Side App in Visual Studio for Mac
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Getting started - Syncfusion Blazor Server Side App in VS for Mac
+description: Check out the documentation for Getting started with Syncfusion Blazor, its elements, features, and more.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor Components in Blazor Server Side App using Visual Studio for Mac
+# Getting started with Blazor Server Side App in VS for Mac
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/).
 
