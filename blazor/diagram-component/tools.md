@@ -11,11 +11,11 @@ documentation: ug
 
 ## Drawing tools
 
-Drawing tool allows you to draw any kind of node/connector during runtime by clicking and dragging on the diagram page.
+Drawing tool allows you to draw any kind of [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) or [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html) during runtime by clicking and dragging on the diagram page.
 
 ## Shapes
 
-To draw a shape, You have to activate the drawing tool by using the `InteractionController` property and you need to set the shape by using the `DrawingObject` property. The following code example illustrates how to draw a rectangle at runtime.
+To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shape.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) property and you need to set the shape by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a rectangle at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -75,7 +75,7 @@ To draw a shape, You have to activate the drawing tool by using the `Interaction
 
 ## Connectors
 
-To draw a connector, You have to activate the drawing tool by using the `InteractionController` property and you need to set the connector by using the `DrawingObject` property. The following code example illustrates how to draw a straight line connector.
+To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Connector.html), you have to activate the drawing tool by using the [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) property and you need to set the connector by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject) property. The following code example illustrates how to draw a [StraightSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.StraightSegment.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -125,14 +125,7 @@ To draw a connector, You have to activate the drawing tool by using the `Interac
         diagram.DrawingObject = new Connector()
         {
             ID = "connector1",
-            Type = ConnectorSegmentType.Straight,
-            Segments = new DiagramObjectCollection<ConnectorSegment>()
-            {
-                new ConnectorSegment()
-                {
-                    Type = ConnectorSegmentType.Polyline,
-                }
-            },
+            Type = ConnectorSegmentType.Straight,            
         };
     }
 }
@@ -142,7 +135,7 @@ To draw a connector, You have to activate the drawing tool by using the `Interac
 
 ## Polygon shape
 
-Diagram allows to create the polygon shape by clicking and moving the mouse at runtime on the diagram page.
+Diagram allows to create the [Polygon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BasicShapeType.html#Syncfusion_Blazor_Diagram_BasicShapeType_Polygon) shape by clicking and moving the mouse at runtime on the diagram page.
 
 The following code illustrates how to draw a polygon shape.
 
@@ -220,14 +213,15 @@ When more than one of those interaction controllers are applied, a interaction c
 
 |Precedence|InteractionControllers|Description|
 |----------|-----|-----------|
-|1st|ContinuesDraw|Allows you to draw the nodes or connectors continuously. Once it is activated, you cannot perform any other interaction in the diagram.|
-|2nd|DrawOnce|Allows you to draw a single node or connector. Once you complete the DrawOnce action, SingleSelect, and MultipleSelect interaction controllers are automatically enabled.|
-|3rd|ZoomPan|Allows you to pan the diagram. When you enable both the SingleSelect and ZoomPan interaction controllers, you can perform the basic interaction as the cursor hovers node/connector. Panning is enabled when cursor hovers the diagram.|
-|4th|MultipleSelect|Allows you to select multiple nodes and connectors. When you enable both the MultipleSelect and ZoomPan interaction controllers, cursor hovers the diagram. When panning is enabled, you cannot select multiple nodes.|
-|5th|SingleSelect|Allows you to select individual nodes or connectors.|
+|1st|[ContinuesDraw](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html#Syncfusion_Blazor_Diagram_InteractionController_ContinuousDraw)|Allows you to draw the nodes or connectors continuously. Once it is activated, you cannot perform any other interaction in the diagram.|
+|2nd|[DrawOnce](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html#Syncfusion_Blazor_Diagram_InteractionController_DrawOnce)|Allows you to draw a single node or connector. Once you complete the DrawOnce action, SingleSelect, and MultipleSelect interaction controllers are automatically enabled.|
+|3rd|[ZoomPan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html#Syncfusion_Blazor_Diagram_InteractionController_ZoomPan)|Allows you to pan the diagram. When you enable both the SingleSelect and ZoomPan interaction controllers, you can perform the basic interaction as the cursor hovers node/connector. Panning is enabled when cursor hovers the diagram.|
+|4th|[MultipleSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html#Syncfusion_Blazor_Diagram_InteractionController_MultipleSelect)|Allows you to select multiple nodes and connectors. When you enable both the MultipleSelect and ZoomPan interaction controllers, cursor hovers the diagram. When panning is enabled, you cannot select multiple nodes.|
+|5th|[SingleSelect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html#Syncfusion_Blazor_Diagram_InteractionController_SingleSelect)|Allows you to select individual nodes or connectors.|
 |6th|None|Disables all interaction controllers.|
+|7th|[Default](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html#Syncfusion_Blazor_Diagram_InteractionController_Default)|Allows users to select an individual as well as multiple nodes and connectors.|
 
-Set the desired `InteractionController` to the diagram.
+Set the desired [InteractionController](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.InteractionController.html) to the diagram.
 
 The following code illustrates how to enable single interaction controller,
 

@@ -270,7 +270,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 }
 ```
 
-## DynamicObject binding
+## Binding DynamicObject
 
 Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **DynamicObject**.
 
