@@ -97,7 +97,7 @@ In the following example, the `Europe` menu items are added before the Oceania i
 
 Output be like
 
-![Menu Sample](./../images/menu-insertbefore.png)
+![Add or Remove Items in Blazor MenuBar](./../images/blazor-menubar-add-remove-items.png)
 
 ## Enable or Disable Menu Items
 
@@ -160,7 +160,7 @@ In the following example, the Directory header item, Conferences, and Music sub 
 
 Output be like
 
-![Menu Sample](./../images/menu-enable.png)
+![Disabling Menu Items in Blazor MenuBar](./../images/blazor-menubar-disable-item.png)
 
 ## Show or Hide Menu Items
 
@@ -224,4 +224,4 @@ In the following example, the Movies header item, Workshops, and Music sub menu 
 
 Output be like
 
-![Menu Sample](./../images/menu-show.png)
+![Disaplying Menu Items in Blazor MenuBar](./../images/blazor-menubar-show-menu-item.png)
