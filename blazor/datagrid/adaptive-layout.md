@@ -9,11 +9,11 @@ documentation: ug
 
 # Adaptive UI Layout in Blazor DataGrid Component
 
-The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the datagrid row elements in the vertical direction.
+The DataGrid user interface (UI) was redesigned to provide an optimal viewing experience and improve usability on small screens. This interface will render the filter, sort, and edit dialogs adaptively and have an option to render the DataGrid row elements in the vertical direction.
 
 ## Render adaptive dialogs
 
-To enable adaptive UI in the datagrid, set the EnableAdaptiveUI property to true. The datagrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
+To render adaptive dialog UI in the DataGrid, set the EnableAdaptiveUI property to true. The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
 
 ```csharp
 
@@ -233,8 +233,6 @@ To enable adaptive UI in the datagrid, set the EnableAdaptiveUI property to true
 
 
 ```
-
-The following screenshot represents a DataGrid with adaptive dialog.
 
 ![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-adaptive-rendering-dialog.gif)
 
@@ -461,8 +459,6 @@ The DataGrid will render the row elements in vertical order while setting the Ro
 </style>
 
 ```
-
-The following GIF represent a datagrid with vertical row rendering.
 
 ![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-mode.gif)
 
