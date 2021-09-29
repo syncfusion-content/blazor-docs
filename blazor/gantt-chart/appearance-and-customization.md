@@ -71,7 +71,7 @@ Height of child taskbars and parent taskbars can be customized by using `Taskbar
 
 ### Taskbar Background
 
-In the Gantt Chart component, you can customize the appearance based on Hierarchy using `GetHierarchicalData` method with custom styles. The following code example shows how to customize Gantt Chart Rows using `GetHierarchicalData` method in `QueryChartRowInfo` event of Gantt.
+In the Gantt Chart component, you can customize the appearance based on Hierarchy using `GetHierarchicalData` method with custom styles. So, the method `GetHierarchicalData` which helps user to do the customization and access the internal properties of Gantt. The following code example shows how to customize Gantt Chart Rows using Gantt properties as `level` and `hasChildRecords` from `GetHierarchicalData` method in `QueryChartRowInfo` event of Gantt.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -91,7 +91,7 @@ In the Gantt Chart component, you can customize the appearance based on Hierarch
     private void GanttChartRowInfo(QueryChartRowInfoEventArgs<TaskData> args)
     {
         dynamic data = Gantt.GetHierarchicalData(args.Data.TaskId);
-        if (data.level == 0)
+        if (data.level == 0 && data.hasChildRecords == true)
         {
             args.Row.AddClass(new string[] { "customize-parent" });
         }
@@ -123,7 +123,7 @@ In the Gantt Chart component, you can customize the appearance based on Hierarch
 }
 
 <style>
-    .customize-parent .e-gantt-parent-taskbar {
+    .customize-parent {
         background-color: green !important;
     }
 </style>
