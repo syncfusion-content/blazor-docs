@@ -13,34 +13,22 @@ The following section explains you the steps required to create TextBox with `ic
 
 **TextBox:**
 
-* Create a parent div element with the class `e-input-group`.
+Create a TextBox component.
 
-* Place input element with the class `e-input` inside the parent div element.
+```cshtml
+@using Syncfusion.Blazor.Inputs
 
-```html
-<div class="e-input-group">
-    <input class="e-input" name='input' type="text" Placeholder="Enter Date"/>
-</div>
+<SfTextBox Placeholder="Enter your name"></SfTextBox>
 ```
 
 **Floating label:**
 
-* Add the `e-float-input` class to the parent div element.
+Creating the Floating label TextBox, you have to set the `required` attribute to the Input element to achieve the floating label functionality which is used for validating the value existence in TextBox.
 
-* Remove the e-input class and add `required` attribute to the input element.
+```cshtml
+@using Syncfusion.Blazor.Inputs
 
-* Place the span element with class `e-float-line` after the input element.
-
-* Place the label element with class `e-float-text` after the above created span element. When you focus or filled with value in the TextBox, the label floats above the TextBox.
-
-> Creating the Floating label TextBox, you have to set the `required` attribute to the Input element to achieve the floating label functionality which is used for validating the value existence in TextBox.
-
-```html
-<div class="e-float-input e-input-group">
-    <input type="text" required/>
-    <span class="e-float-line"></span>
-    <label class="e-float-text">Enter Name </label>
-</div>
+<SfTextBox Placeholder="Enter your name" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
 Refer to the following sections to add the icons to the TextBox.
@@ -54,70 +42,47 @@ For the floating label enabled TextBox add the icon element as first or last ele
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<label> Input with icons </label>
-<div class="@(TextClass)">
-    <div class="e-input-in-wrap">
-        <input class="e-input" type="text" Placeholder="Enter Date" @onfocus="@Focus" @onblur="@Blur" />
-        <span class="e-input-group-icon e-input-date"></span>
-    </div>
+<div id="wrapper">
+    <label>TextBox with icon</label>
+    <SfTextBox @ref="TextBoxDateObj" Placeholder="Enter date" Created="@OnCreateDate"></SfTextBox>
+    <SfTextBox @ref="TextBoxSearchObj" Placeholder="Search here" Created="@OnCreateSearch"></SfTextBox>
+
+    <label>Floating TextBox with icon</label>
+    <SfTextBox @ref="FloatTextBoxDateObj" Placeholder="Enter date" FloatLabelType="@FloatLabelType.Auto" Created="@OnFloatCreateDate"></SfTextBox>
+    <SfTextBox @ref="FloatTextBoxSearchObj" Placeholder="Search here" FloatLabelType="@FloatLabelType.Auto" Created="@OnFloatCreateSearch"></SfTextBox>
 </div>
 
-<label> Floating label with icons </label>
-<div class="@(FloatTextClass) e-input-group e-float-icon-left">
-    <div class="e-input-in-wrap">
-        <input required type="text" @onfocus="@FlaotFocus" @onblur="@FloatBlur" />
-        <span class="e-float-line"></span>
-        <label class="e-float-text"> Enter Date </label>
-        <span class="e-input-group-icon e-input-date"></span>
-    </div>
-</div>
-
+@code{
+    SfTextBox TextBoxDateObj;
+    SfTextBox TextBoxSearchObj;
+    SfTextBox FloatTextBoxDateObj;
+    SfTextBox FloatTextBoxSearchObj;
+    public void OnCreateDate()
+    {
+        this.TextBoxDateObj.AddIconAsync("append", "e-date-icon");
+    }
+    public void OnCreateSearch()
+    {
+        this.TextBoxSearchObj.AddIconAsync("prepand", "e-search");
+    }
+    public void OnFloatCreateDate()
+    {
+        this.FloatTextBoxDateObj.AddIconAsync("append", "e-date-icon");
+    }
+    public void OnFloatCreateSearch()
+    {
+        this.FloatTextBoxSearchObj.AddIconAsync("prepand", "e-search");
+    }
+}
 <style>
-.e-input-group-icon:before {
-  font-family: e-icons;
-}
-
-.e-input-group .e-input-group-icon.e-input-date {
-  font-size:16px;
-}
-
-.e-input-group-icon.e-input-date:before {
-  content: "";
-}
+    .e-search::before {
+        content: '\e993';
+        font-family: e-icons;
+    }
+    #wrapper {
+        width: 30%;
+    }
 </style>
-
-@code {
-    private string FocusClass { get; set; } = " e-input-focus";
-    private string TextClass { get; set; } = "e-input-group";
-    private string FloatTextClass { get; set; } = "e-float-input";
-    private void Focus(FocusEventArgs args)
-    {
-        this.TextClass = this.TextClass + FocusClass;
-        StateHasChanged();
-    }
-
-    private void FlaotFocus(FocusEventArgs args)
-    {
-        this.FloatTextClass = this.FloatTextClass + FocusClass;
-        StateHasChanged();
-    }
-
-    private void Blur(FocusEventArgs args)
-    {
-       if (this.TextClass.Contains(FocusClass)) {
-            this.TextClass = this.TextClass.Replace(FocusClass, "");
-        }
-        StateHasChanged();
-    }
-
-    private void FloatBlur(FocusEventArgs args)
-    {
-       if (this.FloatTextClass.Contains(FocusClass)) {
-            this.FloatTextClass = this.FloatTextClass.Replace(FocusClass, "");
-        }
-        StateHasChanged();
-    }
-}
 ```
 
 The output will be as follows.
