@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Adaptive Layout in Blazor DataGrid Component | Syncfusion
-description: The DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
+description: The Blazor DataGrid will render the filter, sort, and edit dialogs in full screen for a better user experience.
 platform: Blazor
 control: DataGrid
 documentation: ug
