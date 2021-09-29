@@ -63,8 +63,9 @@ You can add a Node at runtime by adding it to the nodes collection of the Diagra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Add Node" @onclick="@AddNode">
+<SfButton Content="Add Node" OnClick="@AddNode" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
 @code
@@ -138,8 +139,9 @@ The following code shows how to remove a node at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Remove Node" @onclick="@RemoveNodes">
+<SfButton Content="Remove Node" OnClick="@RemoveNodes" />
 
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
@@ -195,8 +197,9 @@ The following code example explains how to change the node properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Update Node" @onclick="@UpdateNodes">
+<SfButton Content="Update Node" OnClick="@UpdateNodes" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes"/>
 
 @code

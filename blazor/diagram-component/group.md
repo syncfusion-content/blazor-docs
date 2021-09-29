@@ -173,8 +173,9 @@ The following code illustrates how a node group is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="AddGroup" @onclick="@AddGroup" />
+<SfButton Content="AddGroup" OnClick="@AddGroup" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 
@@ -233,8 +234,9 @@ The following code illustrates how a node group is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="AddChildToGroup" @onclick="@AddChildToGroup" />
+<SfButton Content="AddChildToGroup" OnClick="@AddChildToGroup" />
 @* Initialize the diagram with nodes *@
 <SfDiagramComponent @ref="@diagram" Height="500px" Nodes="@nodes"/>
 
@@ -320,8 +322,9 @@ You can change the position of the node group similar to node. For more informat
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="UpdatePosition" @onclick="@UpdatePosition" />
+<SfButton Content="UpdatePosition" OnClick="@UpdatePosition" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 
