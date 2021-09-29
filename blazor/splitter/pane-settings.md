@@ -1,13 +1,17 @@
 ---
 layout: post
-title: Binding the visible property on Blazor Splitter Component | Syncfusion
-description: Learn here all about how to show or hide the SplitterPane using visible property in the Syncfusion Blazor Splitter component and more.
+title: Pane Settings in Blazor Splitter Component | Syncfusion
+description: Checkout and learn here all about Pane Settings in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
 ---
 
-# Dynamically show or hide the panes in the Blazor Splitter Component
+# Pane Settings in Blazor Splitter Component
+
+This section explain pane settings behaviors.
+
+## Pane visibility
 
 The `Visible` property is enabled by default in the Blazor splitter. By using this property, you can show or hide the panes on initial load and in dynamic use case scenarios.
 
