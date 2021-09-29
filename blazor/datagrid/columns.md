@@ -1020,8 +1020,6 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 ```
 
-Rendering the SfTextBox and SfListView in the column chooser dialog using the external component.
-
 ```csharp
 <SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
 <SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@DataSourceCopy">
@@ -1107,6 +1105,8 @@ Rendering the SfTextBox and SfListView in the column chooser dialog using the ex
     }
 }
 ```
+
+In above external component is used to define the list view component in the column chooser content template to show/hide columns
 
 ![Blazor datagrid customize content](./images/blazor-datagrid-customize-the-content.gif)
 
