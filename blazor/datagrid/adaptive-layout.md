@@ -26,22 +26,6 @@ To render adaptive dialog UI in the DataGrid, set the <code>EnableAdaptiveUI</co
             <SfGrid DataSource="@Orders" AllowSorting="true" AllowFiltering="true" EnableAdaptiveUI="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update", "Search" })" Height="100%" Width="100%" AllowPaging="true">
                 <GridFilterSettings Type="@FilterType.Excel"></GridFilterSettings>
                 <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
-                <GridAggregates>
-                    <GridAggregate>
-                        <GridAggregateColumns>
-                            <GridAggregateColumn Field=@nameof(Order.Freight) Type="AggregateType.Sum" Format="C2">
-                                <FooterTemplate>
-                                    @{
-                                        var aggregate = (context as AggregateTemplateContext);
-                                        <div>
-                                            <p>Sum: @aggregate.Sum</p>
-                                        </div>
-                                    }
-                                </FooterTemplate>
-                            </GridAggregateColumn>
-                        </GridAggregateColumns>
-                    </GridAggregate>
-                </GridAggregates>
                 <GridColumns>
                     <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" Width="80"></GridColumn>
                     <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
@@ -208,12 +192,6 @@ To render adaptive dialog UI in the DataGrid, set the <code>EnableAdaptiveUI</co
             .e-adaptive-demo .e-pager.e-bigger {
                 padding: 19px 0;
             }
-
-                .e-adaptive-demo .e-bigger .e-pager.e-rtl div.e-parentmsgbar,
-                .e-adaptive-demo .e-pager.e-bigger.e-rtl div.e-parentmsgbar {
-                    margin-right: 0;
-                }
-
                 .e-adaptive-demo .e-bigger .e-pager div.e-parentmsgbar,
                 .e-adaptive-demo .e-pager.e-bigger div.e-parentmsgbar {
                     padding: 0;
@@ -228,7 +206,7 @@ To render adaptive dialog UI in the DataGrid, set the <code>EnableAdaptiveUI</co
 
 ```
 
-![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-adaptive-dialog-rendering.gif)
+![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-render-adaptive-dialog.gif)
 
 > 1. This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled.
 > 2. CSS part code snippets are not needed when the adaptive dialog is rendered on small screen. For demo purpose adaptive rendering is shown in mobile layout by using customized CSS code snippet. 
@@ -430,26 +408,21 @@ The DataGrid will render the row elements vertically while setting the RowRender
             .e-adaptive-demo .e-pager.e-bigger {
                 padding: 19px 0;
             }
-
-                .e-adaptive-demo .e-bigger .e-pager.e-rtl div.e-parentmsgbar,
-                .e-adaptive-demo .e-pager.e-bigger.e-rtl div.e-parentmsgbar {
-                    margin-right: 0;
-                }
-
-                .e-adaptive-demo .e-bigger .e-pager div.e-parentmsgbar,
-                .e-adaptive-demo .e-pager.e-bigger div.e-parentmsgbar {
+            
+            .e-adaptive-demo .e-bigger .e-pager div.e-parentmsgbar,
+            .e-adaptive-demo .e-pager.e-bigger div.e-parentmsgbar {
                     padding: 0;
-                }
-
-        .e-mobile-layout .e-searchclear {
-            pointer-events: none;
-        }
+                    }
+                    
+                    .e-mobile-layout .e-searchclear {
+                    pointer-events: none;
+                    }
     }
 </style>
 
 ```
 
-![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-mode.gif)
+![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-rendering.gif)
 
 ### Supported features in vertical mode 
 
