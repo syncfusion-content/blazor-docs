@@ -104,6 +104,8 @@ In the following example:
 }
 ```
 
+![Blazor Gantt Chart with PreventRender](images/preventrender.gif)
+
 ### Notes
 
 * **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
