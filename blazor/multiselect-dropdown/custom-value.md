@@ -80,7 +80,7 @@ The following sample demonstrates configuration of custom value in `CustomValueS
         new Games() { ID= 9, Text= "Snooker" },
         new Games() { ID= 10, Text= "Tennis"},
     };
-    private void CustomValueHandler(CustomValueSpecifier<Games> args)
+    private void CustomValueHandler(CustomValueEventArgs<Games> args)
     {
         System.Random random = new System.Random();
         args.NewData = new Games() { ID = random.Next(100), Text = args.Text };
