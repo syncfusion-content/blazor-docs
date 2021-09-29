@@ -19,4 +19,4 @@ The spin buttons allows you to increase or decrease the value with the predefine
 
 The output will be as follows.
 
-![NumericTextBox Sample](../images/icon_disable.png)
+![Hiding Spin Button in Blazor NumericTextBox](../images/blazor-numerictextbox-hide-spin-button.png)

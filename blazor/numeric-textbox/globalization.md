@@ -196,7 +196,7 @@ The following steps explain how to render the NumericTextBox in German culture (
 
     The output will be as follows.
 
-    ![NumericTextBox Sample](./images/de_culture.png)
+    ![Localization in Blazor NumericTextBox](./images/blazor-numerictextbox-localization.png)
 
 ## Customize the localized text
 
@@ -217,7 +217,7 @@ The following steps explain how to render the NumericTextBox in German culture (
 
     The output will be as follows.
 
-    ![NumericTextBox Sample](./images/de_culture_02.png)
+    ![Customizing Localized Text in Blazor NumericTextBox](./images/blazor-numerictextbox-localize-text.png)
 
 ## Right to Left
 
@@ -243,4 +243,4 @@ The following code example initializes the NumericTextBox component in `Chinese`
 
 The output will be as follows.
 
-![Numerictextbox](./images/zh_culture.png)
+![Right to Left in Blazor NumericTextBox](./images/blazor-numerictextbox-right-to-left.png)

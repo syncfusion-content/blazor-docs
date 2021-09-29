@@ -43,4 +43,4 @@ The following table shows shortcut keys and its corresponding usage.
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/numeric_getting_started.png)
+![Accessibility in Blazor NumericTextBox](./images/blazor-numerictextbox-component.png)
