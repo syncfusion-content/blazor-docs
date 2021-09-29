@@ -23,7 +23,7 @@ Divide a progress bar into multiple segments by using the [SegmentCount](https:/
 </SfProgressBar>
 ```
 
-![Progress Bar with Segments](images/segment.png)
+![Blazor ProgressBar with Segments](images/blazor-progressbar-with-segments.png)
 
 ## Thickness
 
@@ -36,7 +36,7 @@ The thickness of the track can be customized using the [TrackThickness](https://
 </SfProgressBar>
 ```
 
-![Progress Bar with Thickness](images/thickness.png)
+![Blazor ProgressBar with Thickness](images/blazor-progressbar-with-thickness.png)
 
 ## Radius
 
@@ -49,7 +49,7 @@ The radius of the progress bar can be customized using the [Radius](https://help
 </SfProgressBar>
 ```
 
-![Progress Bar with Radius](images/radius.png)
+![Blazor ProgressBar with Radius](images/blazor-progressbar-with-radius.png)
 
 ## Inner Radius
 
@@ -63,7 +63,7 @@ The inner radius of the progress bar can be customized using the [InnerRadius](h
 </SfProgressBar>
 ```
 
-![Progress Bar with Inner Radius](images/innerRadius.png)
+![Blazor ProgressBar with Inner Radius](images/blazor-progressbar-with-inner-radius.png)
 
 ## Progress Color and Track Color
 
@@ -78,7 +78,7 @@ The color of progress and track can be customized using the [ProgressColor](http
 </SfProgressBar>
 ```
 
-![Progress Bar and Track Bar - Color Customization](images/trackThickness.png)
+![Customizing Blazor ProgressBar and TrackBar Color](images/blazor-progressbar-and-trackbar-with-custom-color.png)
 
 ## Range Colors
 
@@ -99,7 +99,7 @@ The [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.ProgressBar.
 </SfProgressBar>
 ```
 
-![Progress Bar with Range Colors](images/range-colors.png)
+![Changing Range Color in Blazor ProgressBar](images/blazor-progressbar-change-range-color.png)
 
 ## RTL
 
@@ -115,4 +115,4 @@ The progress bar supports right-to-left (RTL) rendering, which can be enabled by
 </SfProgressBar>
 ```
 
-![Progress Bar - Right-to-Left - RTL](images/rtl.png)
+![Right to Left in Blazor ProgressBar](images/blazor-progressbar-right-to-left.png)
