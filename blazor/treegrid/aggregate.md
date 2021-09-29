@@ -26,9 +26,6 @@ The built-in aggregates are,
 * Truecount
 * Falsecount
 
-> * Multiple aggregates can be used for an aggregate column by setting the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn~Type.html) property with an array of aggregate types.
-> * Multiple types for a column is supported only when one of the aggregate templates is used.
-
 ## Footer aggregate
 
 Footer aggregate value is calculated for all the rows, and it is displayed in the footer cells. Use the [FooterTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridAggregateColumn~FooterTemplate.html) to render the aggregate value in footer cells.
