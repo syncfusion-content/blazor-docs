@@ -70,7 +70,7 @@ You can create appointments at different time zones using the `StartTimeZone` an
 
 ## Display Appointments based on client’s time zone
 
-Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 8.30 P.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones. It can be achieved by getting browser's timezone and set it's value to the scheduer time zone and appointment’s time zone to Eastern Standard Time (North Carolina) [as you are in North Carolina and it’s time zone is Eastern Standard Time].
+Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 8.30 P.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones. It can be achieved by getting browser's timezone and set it's value to the scheduler time zone and appointment’s time zone to Eastern Standard Time (North Carolina) [as you are in North Carolina and it’s time zone is Eastern Standard Time].
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
