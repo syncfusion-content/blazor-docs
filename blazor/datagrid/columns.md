@@ -1174,7 +1174,7 @@ In above external component is used to define the list view component in the col
 }
 ```
 
-![blazor-datagrid-footer-template](./images/blazor-datagrid-footer-template.gif)
+![blazor-datagrid-footer-template](./images/blazor-datagrid-footer-template.png)
 
 #### How to group the column chooser items
 
