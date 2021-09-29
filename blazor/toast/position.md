@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Positioning in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about Positioning in Syncfusion Blazor Toast component and much more details.
+description: Checkout and learn here all about positioning in Syncfusion Blazor Toast component and much more details.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -24,7 +24,7 @@ The toast position can be updated based on predefined positions or customizable 
 * Top
 * Bottom
 
-> In multiple toast display, the new toast position will not be updated on dynamic change of property values until the old toast messages removed. The toast occupies full width when you set the width to '100%', so the X positions will not affect the changes when the width is '100%'.
+> In multiple toast display, the new toast position will not be updated on dynamic change of property values until the old toast messages removed. The toast occupies full width when the width is set to '100%', so the X positions will not affect the changes when the width is '100%'.
 
 ## Custom
 

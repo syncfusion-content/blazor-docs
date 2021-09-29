@@ -93,6 +93,63 @@ Output be like the below.
 
 ![Card Editing in Blazor Kanban](./images/blazor-kanban-card-editing.png)
 
+## Custom Fields
+
+You can change the default fields of dialog using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanDialogSettingsField.html#Syncfusion_Blazor_Kanban_KanbanDialogSettingsField_Type) property inside the [KanbanDialogSettingsField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanDialogSettingsField.html#properties) property. The [Key](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanDialogSettingsField.html#Syncfusion_Blazor_Kanban_KanbanDialogSettingsField_Key) property is used to map the data source value and render the corresponding component based on the specified `Type` property.
+
+The following types are available in dialog fields.
+
+* TextBox
+* DropDown
+* Numeric
+* TextArea
+
+> The above types can only be used once in the Custom dialog. The dialog template can be used to render many multiple drop-down lists within a dialog.
+
+```cshtml
+@using Syncfusion.Blazor.Kanban
+
+<SfKanban KeyField="Status" DataSource="@Tasks">
+    <KanbanColumns>
+        <KanbanColumn HeaderText="To Do" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
+        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
+        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
+    <KanbanDialogSettings>
+        <KanbanDialogSettingsFields>
+            <KanbanDialogSettingsField Text="Status" Key="Status" Type=DialogFieldType.DropDown></KanbanDialogSettingsField>
+            <KanbanDialogSettingsField Text="Summary" Key="Summary" Type=DialogFieldType.TextArea></KanbanDialogSettingsField>
+            <KanbanDialogSettingsField Text="ID" Key="Id" Type=DialogFieldType.TextBox></KanbanDialogSettingsField>
+        </KanbanDialogSettingsFields>
+    </KanbanDialogSettings>
+</SfKanban>
+
+@code {
+    public class TasksModel
+    {
+        public string Id { get; set; }
+        public string Title { get; set; }
+        public string Status { get; set; }
+        public string Summary { get; set; }
+        public string Assignee { get; set; }
+        public string AssigneeName { get; set; }
+    }
+
+
+    public List<TasksModel> Tasks = new List<TasksModel>()
+    {
+        new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
+        new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller", AssigneeName = "Andrew" },
+        new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "InProgress", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
+        new TasksModel { Id = "Task 4", Title = "BLAZ-29004", Status = "Close", Summary = "Fix the issues reported in the IE browser.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
+        new TasksModel { Id = "Task 5", Title = "BLAZ-29005", Status = "Close", Summary = "Fix the issues reported by the customer.", Assignee = "Andrew Fuller", AssigneeName = "Andrew" }
+    };
+}
+```
+
+![Card Editing Custom fields dialog in Blazor Kanban](./images/blazor-kanban-dialog-custom-fields.png)
+
 ## Dialog Template
 
 Using the dialog template, you can render your own form fields with dialog by using the `Template`.
@@ -311,3 +368,272 @@ The Kanban allows to prevent to open a dialog on card double-click by enabling `
 }
 
 ```
+
+## Persisting data in server
+
+The modified card data can be persisted in the database using the RESTful web services. All the CRUD operations in the Kanban are done through SfDataManager. The SfDataManager has an option to bind all the CRUD related data on the server-side.
+
+The following section covers how to get the edited data details on the server-side using the [UrlAdaptor](../../data/adaptors#url-adaptor).
+
+### URL adaptor
+
+You can use the [UrlAdaptor](../../data/adaptors#url-adaptor) of `SfDataManager` when binding data source for remote data. During the initial load of Kanban, data are fetched from remote data and bound to the Kanban using the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) property of `SfDataManager`.
+
+CRUD operations in Kanban can be mapped to server-side controller actions by using the properties [InsertUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_InsertUrl), [RemoveUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_RemoveUrl), [UpdateUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_UpdateUrl), and [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl).
+
+* `InsertUrl` – You can perform a single insertion operation on the server-side.
+* `UpdateUrl` – You can update single data on the server-side.
+* `RemoveUrl` – You can remove single data on the server-side.
+* `CrudUrl` – You can perform bulk data operation on the server-side.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor.Kanban
+<SfKanban ID="Kanban" TValue="Order" KeyField="ShipCity">
+    <SfDataManager Url="/api/Default" UpdateUrl="/api/Default/Update" RemoveUrl="/api/Default/Delete" InsertUrl="/api/Default/Add" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <KanbanColumns>
+        <KanbanColumn HeaderText="Brazil" KeyField=@(new List<string>{"Brazil"}) AllowAdding=true></KanbanColumn>
+        <KanbanColumn HeaderText="Sweden" KeyField=@(new List<string>{"Sweden"})></KanbanColumn>
+        <KanbanColumn HeaderText="India" KeyField=@(new List<string>{"India"})></KanbanColumn>
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="EmployeeID" ContentField="ShipName"></KanbanCardSettings>
+</SfKanban>
+```
+
+The server-side controller code to handle the CRUD operations is as follows.
+
+```cshtml
+namespace Blazor_Kanban_Crud_UrlAdaptor.Controllers
+{
+    [ApiController]
+    public class DefaultController : ControllerBase
+    {
+        OrderDataAccessLayer db = new OrderDataAccessLayer();
+        //    OrderContext db = new OrderContext();
+        // GET: api/Default
+        [HttpPost]
+        [Route("api/[controller]")]
+        public object Post([FromBody] DataManagerRequest dm)
+        {
+            IEnumerable data = db.GetAllOrders();   //call the method to fetch data from db and return to client
+            int count = data.Cast<Order>().Count();
+            return dm.RequiresCounts ? new DataResult() { Result = data, Count = count } : (object)data;
+        }
+
+        [HttpPost]
+        [Route("api/Default/Add")]
+        public void Add([FromBody] CRUDModel<Order> value)
+        {
+            db.AddOrder(value.Value);        
+        }
+
+        [HttpPost]
+        [Route("api/Default/Update")]
+        public void Update([FromBody] CRUDModel<Order> value)
+        {
+             db.UpdateOrder(value.Value);
+        }
+
+        [HttpPost]
+        [Route("api/Default/Delete")]
+        public void Delete([FromBody] CRUDModel<Order> value)
+        {
+            db.DeleteOrder(Convert.ToInt32(Convert.ToString(value.Key)));
+        }
+
+        public class CRUDModel<T> where T : class
+        {
+
+            [JsonProperty("action")]
+            public string Action { get; set; }
+            [JsonProperty("table")]
+            public string Table { get; set; }
+            [JsonProperty("keyColumn")]
+            public string KeyColumn { get; set; }
+            [JsonProperty("key")]
+            public object Key { get; set; }
+            [JsonProperty("value")]
+            public T Value { get; set; }
+            [JsonProperty("added")]
+            public List<T> Added { get; set; }
+            [JsonProperty("changed")]
+            public List<T> Changed { get; set; }
+            [JsonProperty("deleted")]
+            public List<T> Deleted { get; set; }
+            [JsonProperty("params")]
+            public IDictionary<string, object> Params { get; set; }
+        }
+    }
+}
+
+```
+
+### Insert card
+
+Using the `InsertUrl` property, you can specify the controller action mapping URL to perform insert operation on the server-side.
+
+The following code example describes the above behavior.
+
+```cshtml
+        [HttpPost]
+        [Route("api/Default/Add")]
+        public void Add([FromBody] CRUDModel<Order> value)
+        {
+            db.AddOrder(value.Value);        
+        }
+```
+
+The newly added card details are bound to the `value` parameter.
+
+### Update card
+
+Using the `UpdateUrl` property, the controller action mapping URL can be specified to perform save/update operation on the server-side.
+
+The following code example describes the above behavior.
+
+```cshtml
+        [HttpPost]
+        [Route("api/Default/Update")]
+        public void Update([FromBody] CRUDModel<Order> value)
+        {
+             db.UpdateOrder(value.Value);
+        }
+```
+
+The updated card details are bound to the `value` parameter.
+
+### Delete card
+
+Using the `RemoveUrl` property, the controller action mapping URL can be specified to perform a delete operation on the server-side.
+
+The following code example describes the above behavior.
+
+```cshtml
+        [HttpPost]
+        [Route("api/Default/Delete")]
+        public void Delete([FromBody] CRUDModel<Order> value)
+        {
+            db.DeleteOrder(Convert.ToInt32(Convert.ToString(value.Key)));
+        }
+```
+
+The primary key value of the card to be deleted will be bound to the `Key` parameter.
+
+### Bulk update
+
+Using the [CrudUrl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_CrudUrl) property, the controller action mapping URL can be specified to perform all the CRUD operations at the server-side using a single method instead of specifying a separate controller action method for CRUD (insert, update, and delete) operations.
+
+The action parameter of `CrudUrl` is used to get the corresponding CRUD action.
+
+The following code example describes the above behavior.
+
+> The `CrudUrl` is used to update the bulk data sent to the server-side. Multiple selections and [SortBy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanSortSettings.html#Syncfusion_Blazor_Kanban_KanbanSortSettings_SortBy) as [Index](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortOrderBy.html#Syncfusion_Blazor_Kanban_SortOrderBy_Index) properties are used for `CrudUrl` properties to update the modified bulk data to the server-side.
+
+```cshtml
+@using Syncfusion.Blazor.Data
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Kanban
+<SfKanban ID="Kanban" TValue="Order" KeyField="ShipCity">
+    <SfDataManager Url="/api/Default" UpdateUrl="/api/Default/Update" RemoveUrl="/api/Default/Delete" InsertUrl="/api/Default/Add" CrudUrl="/api/Default/Batch" Adaptor="Adaptors.UrlAdaptor"></SfDataManager>
+    <KanbanColumns>
+        <KanbanColumn HeaderText="Brazil" KeyField=@(new List<string>{"Brazil"}) AllowAdding=true></KanbanColumn>
+        <KanbanColumn HeaderText="Sweden" KeyField=@(new List<string>{"Sweden"})></KanbanColumn>
+        <KanbanColumn HeaderText="India" KeyField=@(new List<string>{"India"})></KanbanColumn>
+    </KanbanColumns>
+    <KanbanCardSettings HeaderField="EmployeeID" ContentField="ShipName"></KanbanCardSettings>
+</SfKanban>
+```
+
+```cshtml
+namespace Blazor_Kanban_Crud_UrlAdaptor.Controllers
+{
+    [ApiController]
+    public class DefaultController : ControllerBase
+    {
+        OrderDataAccessLayer db = new OrderDataAccessLayer();
+        //    OrderContext db = new OrderContext();
+        // GET: api/Default
+        [HttpPost]
+        [Route("api/[controller]")]
+        public object Post([FromBody] DataManagerRequest dm)
+        {
+            IEnumerable data = db.GetAllOrders();   //call the method to fetch data from db and return to client
+            int count = data.Cast<Order>().Count();
+            return dm.RequiresCounts ? new DataResult() { Result = data, Count = count } : (object)data;
+        }
+
+        [HttpPost]
+        [Route("api/Default/Add")]
+        public void Add([FromBody] CRUDModel<Order> value)
+        {
+            db.AddOrder(value.Value);        
+        }
+
+        [HttpPost]
+        [Route("api/Default/Update")]
+        public void Update([FromBody] CRUDModel<Order> value)
+        {
+             db.UpdateOrder(value.Value);
+        }
+
+        [HttpPost]
+        [Route("api/Default/Delete")]
+        public void Delete([FromBody] CRUDModel<Order> value)
+        {
+            db.DeleteOrder(Convert.ToInt32(Convert.ToString(value.Key)));
+        }
+
+        [HttpPost]
+        [Route("api/Default/Batch")]
+        public void Batch([FromBody] CRUDModel<Order> value)
+        {
+            if (value.Changed.Count > 0)
+            {
+                foreach (Order rec in value.Changed)
+                {
+                    db.UpdateOrder(rec);
+                }
+            }
+            if (value.Added.Count > 0)
+            {
+                foreach (Order rec in value.Added)
+                {
+                    db.AddOrder(rec);
+                }
+            }
+            if (value.Deleted.Count > 0)
+            {
+                foreach (Order rec in value.Deleted)
+                {
+                    db.DeleteOrder(rec.EmployeeID);
+                }
+            }
+        }
+
+        public class CRUDModel<T> where T : class
+        {
+
+            [JsonProperty("action")]
+            public string Action { get; set; }
+            [JsonProperty("table")]
+            public string Table { get; set; }
+            [JsonProperty("keyColumn")]
+            public string KeyColumn { get; set; }
+            [JsonProperty("key")]
+            public object Key { get; set; }
+            [JsonProperty("value")]
+            public T Value { get; set; }
+            [JsonProperty("added")]
+            public List<T> Added { get; set; }
+            [JsonProperty("changed")]
+            public List<T> Changed { get; set; }
+            [JsonProperty("deleted")]
+            public List<T> Deleted { get; set; }
+            [JsonProperty("params")]
+            public IDictionary<string, object> Params { get; set; }
+        }
+    }
+}
+```
+
+You can find the fully working sample [here](https://github.com/SyncfusionExamples/blazor-kanban-crud-url-adaptor).
