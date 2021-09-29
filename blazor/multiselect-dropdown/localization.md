@@ -239,4 +239,4 @@ In the following sample, French culture is set to the MultiSelect and no data is
 
 The output will be as follows.
 
-![DropDownList](./images/localization.png)
+![Localization in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-localization.png)

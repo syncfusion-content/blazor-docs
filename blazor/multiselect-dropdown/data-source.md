@@ -75,7 +75,7 @@ In the following example, `Name` column from complex data have been mapped to th
 
 The output will be as follows.
 
-![MultiSelect](./images/data_binding_02.png)
+![Binding Blazor MultiSelect DropDown Items](./images/blazor-multiselect-dropdown-binding-items.png)
 
 ### 2. Array of complex object
 
@@ -124,7 +124,7 @@ public List<Complex> LocalData { get; set; } = new Complex().GetData();
 
 The output will be as follows.
 
-![MultiSelect](./images/complex_data.png)
+![Binding Complext Items with Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-complex-item.png)
 
 ## Binding remote data
 
@@ -163,7 +163,7 @@ The following sample displays the first 6 contacts from **Customers** table of t
 
 The output will be as follows.
 
-![MultiSelect](./images/remote_data.png)
+![Blazor MultiSelect DropDown with Data Binding](./images/blazor-multiselect-dropdown-with-data-binding.png)
 
 ### Web API Adaptor
 
@@ -193,7 +193,7 @@ Use the `WebApiAdaptor` to bind MultiSelect with Web API created using OData.
 
 The output will be as follows.
 
-![MultiSelect](./images/api_data.png)
+![Blazor MultiSelect DropDown with Web API Data](./images/blazor-multiselect-dropdown-web-api-data.png)
 
 ### Custom Adaptor
 
@@ -304,7 +304,7 @@ The following example for remote data binding and enabled offline mode.
 
 The output will be as follows.
 
-![MultiSelect](./images/api_data.png)
+![Blazor MultiSelect DropDown in Offline Mode](./images/blazor-multiselect-dropdown-web-api-data.png)
 
 ### ValueTuple data binding
 
@@ -323,7 +323,7 @@ You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.val
 
 The output will shown as follows,
 
-![Blazor MultiSelect ValueTuple Data](./images/blazor_multiselect_valuetuple.png)
+![Blazor MultiSelect DropDown ValueTuple Data](./images/blazor-multiselect-dropdown-valuetuple.png)
 
 ## Entity Framework
 
