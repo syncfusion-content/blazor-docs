@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Item Configuration in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about Item Configuration in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about item configuration in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -53,25 +53,23 @@ It specifies the location for aligning Toolbar items on the Toolbar. Each comman
 
 ```
 
-Output be like the below.
-
 ![Item Align](./images/item_align.png)
 
 ## CssClass
 
-Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. You can refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
+Single or multiple CSS classes can be added to the Toolbar commands using the Toolbar item `CssClass` property. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
 
 ## Disabled
 
-It specifies whether an item should be disabled or not. You can refer [Enable/Disable Toolbar item](https://blazor.syncfusion.com/documentation/toolbar/how-to/enable-or-disable-toolbar-item/) for snippet and output.
+It specifies whether an item should be disabled or not. Refer [Enable/Disable Toolbar item](https://blazor.syncfusion.com/documentation/toolbar/how-to/enable-or-disable-toolbar-item/) for snippet and output.
 
 ## HtmlAttributes
 
-It is used to add custom attributes to Toolbar command. Supports HTML attributes such as style, class, etc. You can refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
+It is used to add custom attributes to the Toolbar command. Supports HTML attributes such as style, class, etc. Refer [Set command customization](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-command-customization/) for snippet and output.
 
 ## Id
 
-It specifies the unique ID to be used with button or input element of Toolbar items.
+It specifies the unique ID to be used with button or input element of the Toolbar items.
 
 ```cshtml
 
@@ -88,8 +86,6 @@ It specifies the unique ID to be used with button or input element of Toolbar it
 
 ```
 
-Output be like the below.
-
 ![Item Id](./images/item_align.png)
 
 ## Overflow
@@ -102,15 +98,15 @@ It Specifies the Toolbar command display area when an element’s content is too
 
 3. **None**: No priority for display, and as per normal order moves to popup when content exceeds.
 
-You can refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
+Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
 
 ## PrefixIcon
 
-It defines single/multiple classes separated by space used to specify an icon for the button. The icon will be positioned before the text content if text is available, otherwise the icon alone will be rendered. You can refer [Customize the Scrolling distance](https://blazor.syncfusion.com/documentation/toolbar/how-to/customize-the-scrolling-distance/) for snippet and output.
+It defines single or multiple classes separated by space used to specify an icon for the button. The icon will be positioned before the text content if the text is available, otherwise the icon alone will be rendered. Refer [Customize the Scrolling distance](https://blazor.syncfusion.com/documentation/toolbar/how-to/customize-the-scrolling-distance/) for snippet and output.
 
 ## ShowAlwaysInPopup
 
-It defines the priority of items to display it in popup always. It allows to maintain toolbar item on popup always but it does not work for toolbar priority items.
+It defines the priority of items to display it in popup always. It allows to maintain toolbar item on popup always but it does not work for the toolbar priority items.
 
 ```cshtml
 
@@ -136,8 +132,6 @@ It defines the priority of items to display it in popup always. It allows to mai
 
 ```
 
-Output be like the below.
-
 ![Item ShowAlwaysInPopup](./images/item_alwaysinpopup.png)
 
 ## ShowTextOn
@@ -150,7 +144,7 @@ It specifies where the button text will be displayed on popup mode of the Toolba
 
 3. **Both**: Text will be displayed on popup and Toolbar.
 
-You can refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
+Refer [Responsive Mode](https://blazor.syncfusion.com/documentation/toolbar/responsive-mode/#text-mode-for-buttons) for snippet and output.
 
 ## SuffixIcon
 
@@ -294,17 +288,15 @@ It defines single/multiple classes separated by space used to specify an icon fo
 
 ```
 
-Output be like the below.
-
 ![Item SuffixIcon](./images/item_suffixicon.png)
 
 ## Template
 
-The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`. You can refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template/) for snippet and output.
+The Toolbar supports adding template commands using the  `Template` property. Template property can be given as the `HTML element` or `RenderFragment`. Refer [Set item-wise custom template](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-item-wise-custom-template/) for snippet and output.
 
 ## Text
 
-It is used to specify the text to be displayed on the Toolbar button. You can refer [Getting Started](https://blazor.syncfusion.com/documentation/toolbar/getting-started/#adding-toolbar-component-to-the-application) for snippet and output.
+It is used to specify the text to be displayed on the Toolbar button. Refer [Getting Started](https://blazor.syncfusion.com/documentation/toolbar/getting-started/#adding-toolbar-component-to-the-application) for the snippet and output.
 
 ## TooltipText
 
@@ -330,8 +322,6 @@ It is used to specify the text to be displayed on hovering the Toolbar button.
 
 ```
 
-Output be like the below.
-
 ![Item TooltipText](./images/item_tooltiptext.png)
 
 ## Type
@@ -351,13 +341,13 @@ Properties of the button command type:
 
   Property   | Description
 ------------ | -------------
-  Text       | The text to be displayed for button.
+  Text       | The text to be displayed for the button.
  ID         | The ID of the button to be rendered. If the ID is not given, auto ID is generated.
-  PrefixIcon | Defines the class used to specify an icon for the button. The icon is `positioned before` the text if text is available or the icon alone button is rendered.
-SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [PrefixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) and [SuffixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) are specified, only `PrefixIcon` is considered.
+  PrefixIcon | Defines the class used to specify an icon for the button. The icon is `positioned before` the text if the text is available or the icon alone button is rendered.
+SuffixIcon | Defines the class used to specify an icon for the button. The icon is `positioned after` the text if text is available. If both [PrefixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_PrefixIcon) and [SuffixIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.ToolbarItem.html#Syncfusion_Blazor_Navigations_ToolbarItem_SuffixIcon) are specified, only the `PrefixIcon` is considered.
   Width      | Used to set the width of the button.
 
-You can refer [Set Blazor Tooltip to the commands](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-tool-tip-to-the-commands/) for snippet and output.
+Refer [Set Blazor Tooltip to the commands](https://blazor.syncfusion.com/documentation/toolbar/how-to/set-tool-tip-to-the-commands/) for snippet and output.
 
 ### Separator
 
@@ -381,13 +371,11 @@ The `Separator` type adds a vertical separation between the Toolbar's Single/Mul
 
 > If `Separator` is added as the first or the last item, it will not be visible.
 
-Output be like the below.
-
 ![Item Separator](./images/item_separator.png)
 
 ### Input
 
-The `Input` type is only applicable for adding `Template` elements when the  `Template` property is defined as an `object`. Input type creates an `input element` internally that acts as the container for `Syncfusion` input based components.
+The `Input` type is only applicable for adding `Template` elements when the `Template` property is defined as an `object`. Input type creates an `input element` internally that acts as the container for `Syncfusion` input based components.
 
 #### NumericTextBox
 
@@ -486,8 +474,6 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 }
 ```
 
-Output be like the below.
-
 ![Toolbar Control with item configuration](./images/toolbar_template.png)
 
 ## Visible
@@ -512,8 +498,6 @@ It specifies whether an item should be hidden or not.
 
 ```
 
-Output be like the below.
-
 ![Item Visible](./images/item_visible.png)
 
 ## Width
@@ -537,7 +521,5 @@ It specifies the width of the Toolbar button commands.
 </SfToolbar>
 
 ```
-
-Output be like the below.
 
 ![Item Width](./images/item_width.png)
