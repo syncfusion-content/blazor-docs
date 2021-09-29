@@ -9,17 +9,19 @@ documentation: ug
 
 # Timezone in Blazor Scheduler
 
-The Scheduler makes use of the current system time zone by default. If it needs to follow some other user-specific time zone, then the [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property needs to be used. Apart from the default action of applying specific timezone to the Scheduler, it is also possible to set different time zone values for each appointments through the properties `StartTimezone` and `EndTimezone` which can be defined as separate fields within the event fields collection.
+The Scheduler renders events based on current system time zone of server in server side application and in WASM application the events are rendered based on UTC timezone by default.
 
-When no specific time zone is set to Scheduler, appointments will be displayed based on the server system’s timezone which is the default behavior. Here, the same appointment when viewed from different timezone will have different start and end times.
+You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property.  You can also set timezone for each appointment (events) through [StartTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html)  properties which can be defined as separate fields within the event fields collection. If the timezone is not specified for the appointment, the appointments are rendered only based on time *regardless of server or scheduler timezone. 
 
-The appointments will be displayed based on the given `StartTime` and `EndTime` of appointment everywhere without considering the time zone.
+When no specific time zone is set to Scheduler, appointments will be displayed based on the server system’s timezone which is the default behavior. The appointments will be displayed based on the given `StartTime` and `EndTime` of appointment everywhere without considering the time zone.
 
 > The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA](https://www.iana.org/time-zones) format. 
 
 ## Create appointments in different time zones
 
 You can create appointments at different time zones using the `StartTimeZone` and `EndTimeZone` properties. An appointment’s start time and end time are calculated based on the given time zone information.
+
+In the following code example, the appointments time zone is Europe Time (UTC+03:00), and consider the local time zone is India Standard Time (UTC+05:30). In this scenario, the appointment will be displayed at 11.30 AM.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -66,11 +68,16 @@ You can create appointments at different time zones using the `StartTimeZone` an
 }
 ```
 
-> If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information. <br /> If an all-day appointment is created, it’s start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments. <br /> Scheduler supports daylight saving time. <br /> The time zone support is applicable for custom appointments too, so map the corresponding property. <br /> Use `TimeZone` for custom appointments by mapping the `StartTimeZone` and `EndTimeZone` custom properties.
+>**NOTE**
+* If the recurring appointment is converted to another time zone, then the whole sequence will be recalculated according to the new time zone information.
+* If an all-day appointment is created, it's start time and end time will be set to 12 A.M. and 12 A.M. by default, so time zone is not applicable for all-day appointments.
+* Scheduler supports daylight saving time.
+* The time zone support is applicable for custom appointments too, so map the corresponding property.
+* Use [TimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) for custom appointments by mapping the [StartTimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimeZone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html) custom properties.
 
 ## Display Appointments based on client’s time zone
 
-Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 8.30 P.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones. It can be achieved by getting browser's timezone and set it's value to the scheduler time zone and appointment’s time zone to Eastern Standard Time (North Carolina) [as you are in North Carolina and it’s time zone is Eastern Standard Time].
+Display the appointments based on the client’s local time zone in scheduler. For example, consider a scenario that you are in North Carolina(America/New_York) and you want to set up a meeting at 10 A.M. on North Carolina time. You have colleagues in London and Chennai, and they also need to participate. The time for this meeting will be 3 P.M. (15:00) in London and 8.30 P.M. in Chennai. When each view your Scheduler, you need to see the appointment displayed relative to your local time zones. It can be achieved by getting browser's timezone and set it's value to the scheduler time zone and appointment’s time zone to Eastern Standard Time (America/New_York) [as you are in North Carolina(America/New_York) and it’s time zone is Eastern Standard Time].
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -130,7 +137,7 @@ In the following code example, appointments will be displayed based on Europe Ti
 ```csharp
 @using Syncfusion.Blazor.Schedule
 
-<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate" Timezone="@TimezoneValue">
+<SfSchedule TValue="AppointmentData" Width="100%" Height="550px" @bind-SelectedDate="@CurrentDate" Timezone="Europe/Moscow">
     <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
     <ScheduleViews>
         <ScheduleView Option="View.Day"></ScheduleView>
@@ -143,7 +150,6 @@ In the following code example, appointments will be displayed based on Europe Ti
 
 @code{
     DateTime CurrentDate = new DateTime(2020, 3, 10);
-    string TimezoneValue = "Europe/Moscow";
     List<AppointmentData> DataSource = new List<AppointmentData>
     {
         new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0) }
@@ -170,7 +176,7 @@ In the following code example, appointments will be displayed based on Europe Ti
 
 Display the appointments at the same time everywhere without considering the time zone while setting the `TimeZone` property of the scheduler, the `StartTimeZone` and `EndTimeZone` properties to null. The appointments will be displayed based on the given `StartTime` and `EndTime` of appointment everywhere without considering the time zone.
 
-## Updating StartTime and EndTime after drag and drop appointment based on time zone.
+## Updating StartTime and EndTime after drag and drop appointment based on time zone
 
 After rescheduling an appointment using drag and drop, appointment’s start and end time value will be updated based on scheduler time zone and appointment’s time zone.
 
