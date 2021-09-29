@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor TextBox component and much more.
+description: Checkout and learn here all about Events in Syncfusion Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
