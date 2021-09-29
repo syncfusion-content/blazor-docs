@@ -207,10 +207,12 @@ In the following code example, custom SortComparer class was defined in the Cust
 
 <SfGrid DataSource="@Orders" AllowSorting="true" Height="270">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name" Width="150"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Title) HeaderText="Title" Format="C2"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date"  Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Format="C2"  Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
 
@@ -223,8 +225,11 @@ In the following code example, custom SortComparer class was defined in the Cust
         {
             OrderID = 1000 + x,
             CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Title = (new string[] { "Sales Representative", "Vice President", "Sales", "Sales Manager",
+                                    "Inside Sales Coordinator" })[new Random().Next(5)],
             Freight = 2.1 * x,
             OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] {"USA","UK","INDIA","CHINA","ENGLAND"})[new Random().Next(5)],
         }).ToList();
     }
 
@@ -232,8 +237,10 @@ In the following code example, custom SortComparer class was defined in the Cust
     {
         public int? OrderID { get; set; }
         public string CustomerID { get; set; }
+        public string Title { get; set; }
         public DateTime? OrderDate { get; set; }
         public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
     }
 
     public class CustomComparer : IComparer<Object>
