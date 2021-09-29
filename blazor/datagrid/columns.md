@@ -1108,7 +1108,7 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 In above external component is used to define the list view component in the column chooser content template to show/hide columns
 
-![Blazor datagrid customize content](./images/blazor-datagrid-customize-the-content.gif)
+![Blazor datagrid customize content](./images/blazor-datagrid-customize-the-content.png)
 
 #### Customize the footer of column chooser
 
