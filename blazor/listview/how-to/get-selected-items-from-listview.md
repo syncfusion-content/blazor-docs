@@ -104,4 +104,4 @@ Single or many items can be selected by users in the ListView control. An API is
 </style>
 ```
 
-![ListView - Get Selected](../images/list/get-selected-items-from-listview.png)
+![Getting Selected Item in Blazor ListView](../images/list/get-selected-items-from-listview.png)

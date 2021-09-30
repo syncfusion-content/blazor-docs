@@ -39,7 +39,7 @@ public string[] Games = new string[] { "Badminton", "Cricket", "Football", "Golf
 
 Output will be shown as
 
-![ListBox](images/local-data.png)
+![Data Binding in Blazor ListBox](images/blazor-listbox-data-binding.png)
 
 ### Array of object
 
@@ -75,7 +75,7 @@ In the following example, `id` and `sports` column from complex data have been m
 
 Output will be shown as
 
-![ListBox](images/local-data2.png)
+![Binding Blazor ListBox Items](images/blazor-listbox-binding-items.png)
 
 ### Array of complex object
 
@@ -115,7 +115,7 @@ In the following example, `sports.Name` column from complex data have been mappe
 
 Output will be shown as
 
-![ListBox](images/local-data3.png)
+![Binding Complex Items with Blazor ListBox](images/blazor-listbox-bind-complex-items.png)
 
 ## Remote Data
 
@@ -155,4 +155,4 @@ The following sample displays the employee names from `Employee` table.
 
 Output will be shown as
 
-![ListBox](images/remote-binding.png)
+![Blazor ListBox with Data Binding](images/blazor-listbox-with-data-binding.png)

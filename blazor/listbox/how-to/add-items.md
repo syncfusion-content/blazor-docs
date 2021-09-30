@@ -51,7 +51,7 @@ To add an item or multiple items, `AddItem` method can be used. In the following
 
 Output will be shown as
 
-![ListBox](./../images/additems.png)
+![Adding Items in Blazor ListBox](./../images/blazor-listbox-add-items.png)
 
 ## Remove items from the listbox
 
@@ -99,4 +99,4 @@ To remove an item or multiple items, [RemoveItem](https://help.syncfusion.com/cr
 
 Output will be shown as
 
-![ListBox](./../images/remitems.png)
+![Removing Items in Blazor ListBox](./../images/blazor-listbox-remove-items.png)

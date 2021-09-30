@@ -345,4 +345,4 @@ void OnSend()
 
 ```
 
-![ListView - chat window](../images/list/chat-window-user-interface-using-listview.png)
+![Blazor ListView with Chat Window](../images/list/blazor-listview-with-chat-window.png)

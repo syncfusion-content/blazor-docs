@@ -133,7 +133,7 @@ The following example illustrates the output in your browser.
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor ListBox component will render in the web browser as shown below.
 
-![ListBox](./images/listbox.png)
+![Blazor ListBox Component](./images/blazor-listbox.png)
 
 ## See Also
 
