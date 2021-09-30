@@ -18,9 +18,10 @@ A node can be select at runtime by using the [Select](https://help.syncfusion.co
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Select" @onclick="OnSelect">
-<input type="button" value="UnSelect" @onclick="@UnSelect" />
+<SfButton Content="Select" OnClick="@OnSelect" />
+<SfButton Content="UnSelect" OnClick="@UnSelect" />
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
@@ -79,8 +80,9 @@ A node can be drag at runtime by using the [Drag](https://help.syncfusion.com/cr
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Drag" @onclick="OnDrag">
+<SfButton Content="Drag" OnClick="@OnDrag" />
 <SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
 
 @code
@@ -133,8 +135,9 @@ A node can be resize at runtime by using the [Scale](https://help.syncfusion.com
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Resize" @onclick="OnResize">
+<SfButton Content="Resize" OnClick="@OnResize" />
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code
@@ -188,8 +191,9 @@ A node can be rotate at runtime by using the [Rotate](https://help.syncfusion.co
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Rotate" @onclick="OnRotate">
+<SfButton Content="Rotate" OnClick="@OnRotate" />
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" />
 
 @code

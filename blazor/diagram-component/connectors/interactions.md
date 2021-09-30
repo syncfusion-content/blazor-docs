@@ -18,9 +18,10 @@ A connector can be selected at runtime by using the [Select](https://help.syncfu
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Select" @onclick="OnSelect">
-<input type="button" value="UnSelect" @onclick="@UnSelect" />
+<SfButton Content="Select" OnClick="@OnSelect" />
+<SfButton Content="UnSelect" OnClick="@UnSelect" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
@@ -94,8 +95,9 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Drag" @onclick="OnDrag">
+<SfButton Content="Drag" OnClick="@OnDrag" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
 
