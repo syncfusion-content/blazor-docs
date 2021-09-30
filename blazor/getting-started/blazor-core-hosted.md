@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in Visual Studio 2019
+title: Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in Visual Studio
 description: Check out the documentation for Getting started with Syncfusion Blazor
 platform: Blazor
 component: Common
@@ -9,18 +9,18 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor components in Blazor ASP.NET Core Hosted App using Visual Studio 2019
+# Getting started with Syncfusion Blazor components in Blazor ASP.NET Core Hosted App using Visual Studio
 
-This article provides step-by-step instructions about how to create Blazor ASP.NET Core Hosted application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) with Syncfusion Blazor components setup pre-configured in it.
+This article provides step-by-step instructions about how to create Blazor ASP.NET Core Hosted application using [Visual Studio](https://visualstudio.microsoft.com/vs/) with Syncfusion Blazor components setup pre-configured in it.
 
 > Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) / [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br/> **.NET 5.0** requires Visual Studio 2019 16.8 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5.0** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6.0** requires Visual Studio 2022 Preview 4.1 or later.
 
 ## Create a Blazor ASP.NET Core Hosted project in Visual Studio 2019
 
@@ -47,6 +47,32 @@ This article provides step-by-step instructions about how to create Blazor ASP.N
 6. The application will have the following structure once project is created.
 
     ![project structure](images/core-hosted/core-hosted-structure.png)
+
+## Create a Blazor ASP.NET Core Hosted project in Visual Studio 2022
+
+1. Choose **Create a new project** from the Visual Studio dashboard.
+
+    ![new project in aspnetcore blazor](images/VS2022/new-project-2022.png)
+
+2. Choose **Blazor WebAssembly App** from the dashboard, and then click the **Next** button to create a new Blazor WebAssembly application.
+
+    ![wasm template](images/VS2022/blazor-template-wasm-2022.png)
+
+3. Now, the project configuration window will popup. Click the **Next** button to create a new project with the default project configuration.
+
+    ![project configuration](images/VS2022/project-configuration-host-2022.png)
+
+4. Select the target Framework **.NET 6.0** at the top of the Application based on your required target.
+
+    ![select framework](images/VS2022/blazor-select-template-wasm-2022.png)
+
+5. Then check the **ASP.NET Core Hosted** option and click **Create** button to create a new Blazor ASP.NET Core Hosted application.
+
+    ![select framework](images/VS2022/core-hosted-2022.png)
+
+6. The application will have the following structure once project is created.
+
+    ![project structure](images/VS2022/core-hosted-structure-2022.png)
 
 ## Installing Syncfusion Blazor packages in the application
 
@@ -117,6 +143,22 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 2. Open the **~/Program.cs** file in the **`Client`[BlazorWasmHosted.Client]** project and register the Syncfusion Blazor Service.
 
     ```c#
+    // For .NET 6.0 project.
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    ....
+    builder.Services.AddSyncfusionBlazor();
+    var app = builder.Build();
+    ....
+    ....
+
+    // For .NET 5.0 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
 
     namespace BlazorWasmHosted.Client
@@ -134,7 +176,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     }
     ```
 
-    > We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+    > We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 3. Now, add the Syncfusion Blazor component in any web page (razor) in the `Pages` folder of **`Client`[BlazorWasmHosted.Client]** project. For example, the calendar component is added to the **~/Pages/Index.razor** page.
 
