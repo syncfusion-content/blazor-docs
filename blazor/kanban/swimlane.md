@@ -247,67 +247,9 @@ Output be like the below.
 
 ## Sorting
 
-Swimlane sorting determines the order of rows in the Kanban board based on the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property.
+Kanban support to sort the swimlane rows in kanban board based on the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property by setting [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_SortDirection) property.
 
 > If the [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) property is not provided, sorting will be performed based on the [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_KeyField) property.
-
-There are three types of Swimlane sorting available on the Kanban board.
-
-* Ascending Order
-* Descending Order
-* Custom Order
-
-### Ascending Order
-
-Swimlane sorting will arrange the rows in Ascending order on the Kanban board when setting [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_SortDirection) as [SortDirection.Ascending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortDirection.html#Syncfusion_Blazor_Kanban_SortDirection_Ascending). By default, Kanban swimlane rows are aligned in Ascending order based on the provided [TextField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_TextField) or [KeyField](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_KeyField) property.
-
-```cshtmls
-
-@using Syncfusion.Blazor.Kanban
-
-<SfKanban KeyField="Status" DataSource="@Tasks">
-    <KanbanColumns>
-        <KanbanColumn HeaderText="To Do" KeyField="@(new List<string>() {"Open"})"></KanbanColumn>
-        <KanbanColumn HeaderText="In Progress" KeyField="@(new List<string>() {"InProgress"})"></KanbanColumn>
-        <KanbanColumn HeaderText="Done" KeyField="@(new List<string>() {"Close"})"></KanbanColumn>
-    </KanbanColumns>
-    <KanbanCardSettings HeaderField="Id" ContentField="Summary"></KanbanCardSettings>
-    <KanbanSwimlaneSettings KeyField="Assignee" TextField="AssigneeName" SortDirection="SortDirection.Ascending"></KanbanSwimlaneSettings>
-</SfKanban>
-
-@code {
-    public class TasksModel
-    {
-        public string Id { get; set; }
-        public string Title { get; set; }
-        public string Status { get; set; }
-        public string Summary { get; set; }
-        public string Assignee { get; set; }
-        public string AssigneeName { get; set; }
-    }
-
-
-    public List<TasksModel> Tasks = new List<TasksModel>()
-    {
-        new TasksModel { Id = "Task 1", Title = "BLAZ-29001", Status = "Open", Summary = "Analyze the new requirements gathered from the customer.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
-        new TasksModel { Id = "Task 2", Title = "BLAZ-29002", Status = "InProgress", Summary = "Improve application performance", Assignee = "Andrew Fuller", AssigneeName = "Andrew" },
-        new TasksModel { Id = "Task 3", Title = "BLAZ-29003", Status = "InProgress", Summary = "Arrange a web meeting with the customer to get new requirements.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
-        new TasksModel { Id = "Task 4", Title = "BLAZ-29004", Status = "Close", Summary = "Fix the issues reported in the IE browser.", Assignee = "Nancy Davloio", AssigneeName = "Nancy" },
-        new TasksModel { Id = "Task 5", Title = "BLAZ-29005", Status = "Close", Summary = "Fix the issues reported by the customer.", Assignee = "Andrew Fuller", AssigneeName = "Andrew" }
-    };
-}
-
-```
-
-Output be like the below.
-
-![Swimlane Ascending Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-ascending.png)
-
-### Descending Order
-
-It is possible to align the swimlane rows in descending order when the [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSettingsModel.html#Syncfusion_Blazor_Kanban_SwimlaneSettingsModel_SortDirection) property is set as [SortDirection.Descending](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortDirection.html#Syncfusion_Blazor_Kanban_SortDirection_Descending) order.
-
-The following sample code demonstrates achieving this,
 
 ```cshtml
 
@@ -347,13 +289,12 @@ The following sample code demonstrates achieving this,
 
 ```
 
-Output be like the below.
+![Sorting in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-sorting.png)
+### Custom order
 
-![Swimlane Descending Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-descending.png)
+Kanban supports to sort the swimlane rows using custom sort logic by handling [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event.
 
-### Custom Order
-
-Swimlane Custom order provides support to change the customized order of the swimlane rows before appending the Kanban board element to the DOM element. It can be achieved through the [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event. In this event, you can get the argument of [SwimlaneRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SwimlaneSortEventArgs.html#Syncfusion_Blazor_Kanban_SwimlaneSortEventArgs_SwimlaneRows) which contains the list of SwimlaneSettingsModel and it will align based on the [SortDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.SortDirection.html) property. You can change the List of SwimlaneSettingsModel as per your wish and assign the changed list to it.
+In this event, you can get the argument of SwimlaneRows which contains the list of SwimlaneSettingsModel and it will align based on the SortDirection property. You can change the List of SwimlaneSettingsModel as per your wish and assign the changed list to it.
 
 > When you refresh the page, the [SwimlaneSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Kanban.KanbanEvents-1.html#Syncfusion_Blazor_Kanban_KanbanEvents_1_SwimlaneSorting) event will be triggered before Kanban elements append to the DOM element.
 
@@ -405,8 +346,6 @@ In the following code, changed the order of the swimlane rows at positions 2, 0,
 }
 
 ```
-
-Output be like the below.
 
 ![Swimlane Custom Order in Blazor Kanban Swimlane Row](./images/blazor-kanban-swimlane-row-custom.png)
 

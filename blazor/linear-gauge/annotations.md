@@ -48,7 +48,7 @@ To render the custom HTML elements in the Linear Gauge component, use the [Conte
 </style>
 ```
 
-![Linear Gauge with annotation](images/annotation.png)
+![Blazor Linear Gauge with Annotation](images/blazor-linear-gauge-annotation.png)
 
 ## Customization
 
@@ -100,7 +100,7 @@ To change the stack order of an annotation element, the [ZIndex](https://help.sy
 </style>
 ```
 
-![Linear Gauge with annotation in ZIndex](images/annotation.png)
+![Blazor Linear Gauge with Annotation in Z Index](images/blazor-linear-gauge-annotation.png)
 <!-- markdownlint-disable MD036 -->
 
 ### Positioning an annotation
@@ -140,7 +140,7 @@ The annotation can be placed anywhere in the Linear Gauge by setting the pixel v
 </style>
 ```
 
-![Linear Gauge with annotation in customer position](images/annotation-position.png)
+![Blazor Linear Gauge with Annotation in Custom Position](images/blazor-linear-gauge-annotation-in-custom-position.png)
 
 ### Alignment of annotation
 
@@ -181,7 +181,7 @@ The annotation can be aligned horizontally and vertically by using the [Horizont
 </style>
 ```
 
-![Linear Gauge with annotation alignment](images/annotation-alignment.png)
+![Changing Annotation Alignment in Blazor Linear Gauge](images/blazor-linear-gauge-annotation-alignment.png)
 
 ## Multiple annotations
 
@@ -232,4 +232,4 @@ Multiple annotations can be added to the Linear Gauge component by adding the mu
 </style>
 ```
 
-![Linear Gauge with multiple annotations](images/multiple-annotation.png)
+![Blazor Linear Gauge with Multiple Annotations](images/blazor-linear-gauge-multiple-annotations.png)
