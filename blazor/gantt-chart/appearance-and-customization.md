@@ -95,6 +95,10 @@ In the Gantt Chart component, you can customize the appearance based on Hierarch
         {
             args.Row.AddClass(new string[] { "customize-parent" });
         }
+        else
+        {
+            args.Row.AddClass(new string[] { "customize-child" });
+        }
     }
     public class TaskData
     {
@@ -123,8 +127,11 @@ In the Gantt Chart component, you can customize the appearance based on Hierarch
 }
 
 <style>
-    .customize-parent {
+    .customize-parent .e-gantt-parent-taskbar {
         background-color: green !important;
+    }
+    .customize-child .e-gantt-child-taskbar {
+        background-color: red !important;
     }
 </style>
 ```
