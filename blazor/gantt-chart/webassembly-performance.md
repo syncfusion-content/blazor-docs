@@ -19,9 +19,9 @@ This section provides performance guidelines for using Syncfusion Gantt componen
 
 In the following example:
 
-* **PreventRender** method is called in the **ButtonHandler** Method.Able to change the prevent render value by clicking button.
+* **PreventRender** method is called in the **ButtonHandler**. Able to change the value by clicking **Prevent Render** button.
 
-* Now Gantt chart component will not re-render if prevent render value as true while doing zooming action. chart will get updated if prevent render as false.
+* While doing zooming action, Gantt chart component will not re-render if prevent render value as true. Chart will get updated if prevent render as false.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt

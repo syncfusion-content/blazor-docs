@@ -11,17 +11,23 @@ documentation: ug
 
 The Scheduler renders events based on current system time zone of server in server side application and in WASM application the events are rendered based on UTC timezone by default.
 
-You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property.  You can also set timezone for each appointment (events) through [StartTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html)  properties which can be defined as separate fields within the event fields collection. If the timezone is not specified for the appointment, the appointments are rendered only based on time *regardless of server or scheduler timezone. 
+You can change the timezone of the scheduler by setting [Timezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_Timezone) property. For more information, please refer to the [section](#display-appointments-based-on-Scheduler-time-zone)
+.
 
-When no specific time zone is set to Scheduler, appointments will be displayed based on the server system’s timezone which is the default behavior. The appointments will be displayed based on the given `StartTime` and `EndTime` of appointment everywhere without considering the time zone.
+You can also set timezone for each appointment (events) through [StartTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldStartTimezone.html) and [EndTimezone](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.FieldEndTimezone.html)  properties which can be defined as separate fields within the event fields collection. For more information, please refer to the [section](#create-appointments-in-different-time-zones).
 
-> The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA](https://www.iana.org/time-zones) format. 
+You can also set the timezone for both the scheduler `Timezone` property and as well as the event's `StartTimezone` and `EndTimezone` properties. For more information, please refer to the [section](#display-appointments-based-on-client’s-time-zone).
+
+
+>**NOTE**
+* The given value for the Timezone property for both the Scheduler and the appointments should be in the [IANA](https://www.iana.org/time-zones) format.
+* The WASM application has supported the limited [time zones](https://github.com/dotnet/runtime/issues/44840#issuecomment-764991667) in .Net5. But in .Net6, it supported the all [time zones](https://github.com/dotnet/runtime/pull/50650).
 
 ## Create appointments in different time zones
 
 You can create appointments at different time zones using the `StartTimeZone` and `EndTimeZone` properties. An appointment’s start time and end time are calculated based on the given time zone information.
 
-In the following code example, the appointments time zone is Europe Time (UTC+03:00), and consider the local time zone is India Standard Time (UTC+05:30). In this scenario, the appointment will be displayed at 11.30 AM.
+In the following code example, the appointments time zone is Europe Time (UTC+03:00), and the application is running in UTC time zone(here the Blazor Server application is hosted in UTC time zone and the Blazor WASM application's default time zone is UTC). In this scenario, the appointment will be displayed at 6 AM.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
@@ -132,7 +138,7 @@ Display the appointments based on the client’s local time zone in scheduler. F
 
 Set the specific time zone to schedule using the `TimeZone` property of scheduler. On this scenario, the appointments will be displayed in UTC time when the `StartTimeZone` and `EndTimeZone` properties are set to null. The appointments will be displayed in UTC time based on the given scheduler time zone.
 
-In the following code example, appointments will be displayed based on Europe Time (UTC+03:00).
+In the following code example, the Scheduler time zone is Europe Time (UTC+03:00), and the application is running in UTC time zone(here the Blazor Server application is hosted in UTC time zone and the Blazor WASM application's default time zone is UTC). In this scenario, the appointment will be displayed at 12 PM.
 
 ```csharp
 @using Syncfusion.Blazor.Schedule
