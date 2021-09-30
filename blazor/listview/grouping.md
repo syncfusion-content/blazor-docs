@@ -41,4 +41,4 @@ In the following sample, The cars are grouped based on its category by using the
 
 ```
 
-![ListView - Grouping](./images/list/grouping-simple.png)
+![Grouping in Blazor ListView](./images/list/blazor-listview-grouping.png)

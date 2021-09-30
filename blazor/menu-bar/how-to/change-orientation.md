@@ -49,4 +49,4 @@ Orientation in menu items can be changed horizontally or vertically using the [O
 
 Output be like
 
-![Menu Sample](./../images/orientation.png)
+![Blazor MenuBar with Vertical Orientation](./../images/blazor-menubar-vertical-orientation.png)

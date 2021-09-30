@@ -114,4 +114,4 @@ The ListView control triggers events based on its actions. The events can be use
 </style>
 ```
 
-![ListView - Events](../images/list/trace-events-of-listview.png)
+![Displaying Event Action in Blazor ListView](../images/list/blazor-listview-trace-events.png)
