@@ -70,7 +70,7 @@ Output will be shown as
 
 You can set the conditions from SQL query through the [SetRulesFromSql](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_SetRulesFromSql_System_String_) method.
 
-In the following sample sql rules binding on querybuilder on button click.
+In the following sample sql rules binding on query builder on button click.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
