@@ -54,4 +54,4 @@ RTL provides an option to switch the text direction and layout of the Query Buil
 
 Output will shown as
 
-![Query Builder Sample](./../images/right-left.png)
+![Right to Left in Blazor QueryBuilder](./../images/blazor-querybuilder-right-to-left.png)

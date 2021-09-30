@@ -60,4 +60,4 @@ In the following sample columns are sorted in ascending order.
 
 Output will be shown as
 
-![Query Builder Sample](./../images/qb-sort.png)
+![Sorting in Blazor QueryBuilder](./../images/blazor-querybuilder-sorting.png)

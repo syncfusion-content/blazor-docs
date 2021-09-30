@@ -62,7 +62,7 @@ To apply conditions initially, you can define the condition and rules in **Query
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-databinding.png)
+![Blazor QueryBuilder with Data Binding](./images/blazor-querybuilder-binding-data.png)
 
 ## Post rendering
 
@@ -119,7 +119,7 @@ In the following sample sql rules binding on querybuilder on button click.
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-sql.png)
+![Importing from SQL in Blazor QueryBuilder](./images/blazor-querybuilder-import-from-sql.png)
 
 ## Exporting
 

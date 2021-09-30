@@ -154,7 +154,7 @@ In the following sample, the date field is formatted as MM/yyyy/dd and number fi
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-format.png)
+![Formatting in Blazor QueryBuilder](./images/blazor-querybuilder-format.png)
 
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
 
@@ -198,4 +198,4 @@ Validation allows you to validate the conditions and it display errors for inval
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-validate.png)
+![Validation in Blazor QueryBuilder](./images/blazor-querybuilder-validation.png)

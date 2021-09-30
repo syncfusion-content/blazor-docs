@@ -57,6 +57,6 @@ In the following sample the display option is set as vertical.
 
 Output will be shown as
 
-![Query Builder Sample](./../images/display.png)
+![Changing Display Mode in Blazor QueryBuilder](./../images/blazor-querybuilder-display-mode.png)
 
 > The default view in the desktop mode is Horizontal. The default view in the mobile mode is Vertical.

@@ -87,7 +87,7 @@ In the following sample, SFDropdownlist is used as value template.
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-value-template.png)
+![Blazor QueryBuilder with Value Template](./images/blazor-querybuilder-value-template.png)
 
 ## Column Template
 
@@ -239,7 +239,7 @@ In the following sample, the SFDropdownlist component is used as the custom comp
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-column-template.png)
+![Blazor QueryBuilder with Column Template](./images/blazor-querybuilder-column-template.png)
 
 ## Header Template
 
@@ -362,6 +362,6 @@ In the following sample, the SFDropdownlist component is used as the custom comp
 
 Output will be shown as
 
-![Query Builder Header template Sample](./images/header-template.png)
+![Blazor QueryBuilder with Header Template](./images/blazor-querybuilder-header-template.png)
 
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.
