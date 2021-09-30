@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Group Column chooser items in Blazor DataGrid Component | Syncfusion
-description: Learn here all about group column chooser items in DataGrid in Syncfusion Blazor DataGrid component and more.
+title: Group Column chooser template in Blazor DataGrid Component | Syncfusion
+description: Learn here all about group column chooser template in DataGrid in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug

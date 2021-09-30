@@ -944,12 +944,12 @@ Using the column chooser template, you can customize the column chooser dialog u
  The Template tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) directive is used to customize the content in the column chooser dialog. You can type cast the context as <code>ColumnChooserTemplateContext</code> to get Columns inside content Template.
 
  ```csharp
-<SfGrid ID="Grid" @ref="Grid" AllowReordering="true" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
+<SfGrid ID="Grid" @ref="Grid" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
     <GridColumnChooserSettings>
         <Template>
             @{
                 var ct = context as ColumnChooserTemplateContext;
-                <CustomComponent ActionCompleted="AfterCompletion" @key="ct.Columns.Count" ColumnContext="ct"></CCComp>
+                <CustomComponent @key="ct.Columns.Count" ColumnContext="ct"></CCComp>
             }
         </Template>
     </GridColumnChooserSettings>
@@ -967,25 +967,17 @@ Using the column chooser template, you can customize the column chooser dialog u
 </SfGrid>
    
 <style>
-    #Grid.e-grid .e-ccdlg .e-cc-searchdiv {            
+    #Grid.e-grid .e-ccdlg .e-cc-searchdiv, #Grid_ccdlg div.e-footer-content {
         display: none;
     }
     #Grid.e-grid .e-ccdlg .e-dlg-content{
         margin-top: 0px;
     }
-    #Grid_ccdlg div.e-footer-content {
-        display: none;
-    }
-
     .e-list-item.e-level-1.e-checklist.e-focused{
         background-color: none;
     }
     #Grid_ccdlg .e-content {
         overflow-y: unset;
-    }
-
-    .e-plus-icon::before {
-        content: '\e759';
     }
 </style>
 
@@ -994,12 +986,6 @@ Using the column chooser template, you can customize the column chooser dialog u
     public SfGrid<Order> Grid { get; set; }
     public string[] ToolbarItems = new string[] { "ColumnChooser" };
     public List<Order> Orders { get; set; }
-    public double currentColIndex;
-
-    public async void AfterCompletion(string col)
-    {
-        await this.Grid.ReorderColumnByTargetIndex(col, currentColIndex);
-    }
 
     protected override void OnInitialized()
     {
@@ -1020,7 +1006,6 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 ```
 
-> * In above external component is used to define the list view component in the column chooser content template to show/hide columns.
 > * You can build reusable custom component for your customization as like above code example.
 > * Here custom component is used to define the Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the content template to show/hide column's
 
@@ -1031,14 +1016,12 @@ Using the column chooser template, you can customize the column chooser dialog u
     <ListViewEvents Clicked="OnClicked" Created="@(()=>OnCreated(ColumnContext.Columns))" TValue="DataModel"></ListViewEvents>
 </SfListView>
 
-@code{
+@code
+{
     public List<DataModel> DataSourceCopy { get; set; } = new List<DataModel>();
 
     [CascadingParameter]
     public SfGrid<Order> Grid { get; set; }
-
-    [Parameter]
-    public Action<string> ActionCompleted { get; set; }
 
     [Parameter]
     public ColumnChooserTemplateContext ColumnContext { get; set; }
@@ -1104,8 +1087,6 @@ Using the column chooser template, you can customize the column chooser dialog u
         {
             await Grid.ShowColumnAsync(args.Text);
         }
-        await Task.Delay(500);
-        ActionCompleted.Invoke(args.Text);
     }
 }
 ```
