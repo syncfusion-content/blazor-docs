@@ -52,7 +52,7 @@ The following code example illustrates how to add a connector through connector 
 
 ![Connector default](../images/connector-default.png)
 
-> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
+> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization. Don't use `_` when assigning connector ID.
 
 ## Add connectors at runtime
 
@@ -60,8 +60,9 @@ You can add a connector at runtime by adding connector to the connectors collect
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Add Connector" @onclick="@AddConnector">
+<SfButton Content="Add Connector" OnClick="@AddConnector" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
 
 @code
@@ -192,8 +193,9 @@ The following code shows how to remove a connector at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Remove Connector" @onclick="@RemoveConnector">
+<SfButton Content="Remove Connector" OnClick="@RemoveConnector" />
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
@@ -250,8 +252,9 @@ The following code example explains how to change the connector properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Update Connector" @onclick="@UpdateConnector">
+<SfButton Content="Update Connector" OnClick="@UpdateConnector" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>

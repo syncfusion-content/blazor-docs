@@ -718,12 +718,11 @@ The following code example illustrates how to change the size of a symbol and ho
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
+@using Syncfusion.Blazor.Buttons
 
 <div class="control-section">
     <div class="properties">
-        <button @onclick="UpdateSize">
-            UpdateSize
-        </button>
+       <SfButton Content="UpdateSize" OnClick="@UpdateSize" />
     </div>
     <div style="width:20%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">

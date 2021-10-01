@@ -9,19 +9,19 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Gantt Component
 
-This section provides performance guidelines for using Syncfusion Gantt component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
+This section provides performance guidelines for using the Syncfusion Gantt component efficiently in the Blazor WebAssembly application. The general framework Blazor WebAssembly performance guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
-> You can refer to our Getting Started with [Blazor Server-Side Gantt](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Gantt](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/blazor-webassembly-gantt-using-visual-studio/) documentation pages for configuration specifications.
+> Refer to the Getting Started with [Blazor Server-Side Gantt](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Gantt](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/blazor-webassembly-gantt-using-visual-studio/) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
- **PreventRender** method help you to avoid unnecessary re-rendering of the Gantt component. This method internally overrides the **ShouldRender** method of the gantt to prevent rendering.
+ **PreventRender** method helps to avoid unnecessary re-rendering of the Gantt component. This method internally overrides the **ShouldRender** method of the Gantt to prevent rendering.
 
 In the following example:
 
-* **PreventRender** method is called in the **ButtonHandler** Method.Able to change the prevent render value by clicking button.
+* The **PreventRender** method is called in the **ButtonHandler**. The value can be changed by clicking  the**Prevent Render** button.
 
-* Now Gantt chart component will not re-render if prevent render value as true while doing zooming action. chart will get updated if prevent render as false.
+* While zooming, the Gantt chart component will not re-render if the prevent render value is true. Chart will get updated if prevent render is false.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
@@ -108,6 +108,6 @@ In the following example:
 
 ### Notes
 
-* **PreventRender** method accepts boolean argument that accepts true or false to disable or enable rendering respectively.
-* **PreventRender** method can be used only after gantt component completed initial rendering. Calling this method during initial rendering will not have any effect.
+* The **PreventRender** method accepts Boolean argument that accepts true or false to disable or enable rendering respectively.
+* The **PreventRender** method can be used only after the Gantt component completed initial rendering. Calling this method during initial rendering will not have any effect.
 

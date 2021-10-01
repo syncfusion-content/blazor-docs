@@ -65,7 +65,7 @@ An annotation can be added to a node or connector by defining the annotation obj
 
 ![Annotation](../images/Annotation.png)
 
->* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
+>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization. Don't use `_` when assigning annotation ID.
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned in center point of its path.
 
@@ -77,8 +77,9 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
+<SfButton Content="Addlabel" OnClick="@AddLabel"/>
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
@@ -134,8 +135,9 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
+<SfButton Content="Removelabel" OnClick="@RemoveLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -195,8 +197,9 @@ The following code sample shows how the annotation of the node changed at runtim
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="Updatelabel" type="button" @onclick="@UpdateLabel" name="Updatelabel" />
+<SfButton Content="Updatelabel" OnClick="@UpdateLabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
