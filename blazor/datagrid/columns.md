@@ -937,45 +937,50 @@ The following GIF represents opening column chooser functionality in DataGrid us
 
 ### Column Chooser Template
 
-Using the column chooser template, you can customize the column chooser dialog using <code>Template</code> and <code>FooterTemplate</code> of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) directive. You can access the parameters passed to the templates using implicit parameter named context.
+Using the column chooser template, you can customize the column chooser dialog using <code>Template</code> and <code>FooterTemplate</code> of the [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component. You can access the parameters passed to the templates using implicit parameter named context.
 
-#### Customize the content of column chooser
+#### Customize the Content of Column Chooser
 
- The Template tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) directive is used to customize the content in the column chooser dialog. You can type cast the context as <code>ColumnChooserTemplateContext</code> to get Columns inside content Template.
+ The <code>Template</code> tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the content in the column chooser dialog. You can type cast the context as <code>ColumnChooserTemplateContext</code> to get columns inside content template.
 
  ```csharp
+@using Syncfusion.Blazor.Grids;
+
 <SfGrid ID="Grid" @ref="Grid" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
     <GridColumnChooserSettings>
         <Template>
-            @{
-                var ct = context as ColumnChooserTemplateContext;
-                <CustomComponent @key="ct.Columns.Count" ColumnContext="ct"></CCComp>
-            }
+                @{
+                    var ContextData = context as ColumnChooserTemplateContext;
+                    <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
+                }
         </Template>
     </GridColumnChooserSettings>
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="OrderID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="CustomerID" Width="150"> </GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="OrderDate" Visible="false" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer ID" Width="150"> </GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText="Order Date" Visible="false" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
         <GridColumn Field=@nameof(Order.Freight) Visible="false" HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.EmployeeID) Visible="false" HeaderText="EmployeeID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-        <GridColumn Field=@nameof(Order.FirstName) Visible="false" HeaderText="FirstName" Width="150"> </GridColumn>
-        <GridColumn Field=@nameof(Order.LastName) HeaderText="LastName" Visible="false" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"> </GridColumn>
-        <GridColumn Field=@nameof(Order.Title) HeaderText="Title" Visible="false" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
-        <GridColumn Field=@nameof(Order.HireDate) HeaderText="HireDate" TextAlign="TextAlign.Right" Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.EmployeeID) Visible="false" HeaderText="Employee ID" TextAlign="TextAlign.Right" Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(Order.FirstName) Visible="false" HeaderText="First Name" Width="150"> </GridColumn>
+        <GridColumn Field=@nameof(Order.LastName) HeaderText="Last Name" Visible="false" Format="d" Type="ColumnType.Date" Width="130"> </GridColumn>
+        <GridColumn Field=@nameof(Order.Title) HeaderText="Title" Visible="false"  Width="120"> </GridColumn>
+        <GridColumn Field=@nameof(Order.HireDate) HeaderText="Hire Date" TextAlign="TextAlign.Right" Width="120"></GridColumn>
     </GridColumns>
 </SfGrid>
-   
+
 <style>
     #Grid.e-grid .e-ccdlg .e-cc-searchdiv, #Grid_ccdlg div.e-footer-content {
         display: none;
     }
-    #Grid.e-grid .e-ccdlg .e-dlg-content{
+
+    #Grid.e-grid .e-ccdlg .e-dlg-content {
         margin-top: 0px;
     }
-    .e-list-item.e-level-1.e-checklist.e-focused{
+
+    .e-list-item.e-level-1.e-checklist.e-focused {
         background-color: none;
     }
+
     #Grid_ccdlg .e-content {
         overflow-y: unset;
     }
@@ -998,7 +1003,7 @@ Using the column chooser template, you can customize the column chooser dialog u
             EmployeeID = x,
             FirstName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven" })[new Random().Next(5)],
             LastName = (new string[] { "Davolio", "Fuller", "Leverling", "Peacock", "Buchanan" })[new Random().Next(5)],
-            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager","Inside Sales Coordinator" })[new Random().Next(4)],
+            Title = (new string[] { "Sales Representative", "Vice President, Sales", "Sales Manager", "Inside Sales Coordinator" })[new Random().Next(4)],
             HireDate = DateTime.Now.AddDays(-x),
         }).ToList();
     }
@@ -1006,19 +1011,31 @@ Using the column chooser template, you can customize the column chooser dialog u
 
 ```
 
-> * You can build reusable custom component for your customization as like above code example.
-> * Here custom component is used to define the Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component in the content template to show/hide column's
+> * You can build reusable custom component based on your customization need as like above code example.
+> * In the above example, Syncfusion [ListView](https://blazor.syncfusion.com/documentation/listview/getting-started) component is used as custom component in the content template to show/hide column's.
 
 ```csharp
-<SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
-<SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@DataSourceCopy">
+@using Syncfusion.Blazor.Lists;
+@using Syncfusion.Blazor.Inputs;
+
+<div class="setMargin">
+    <SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
+</div>
+
+<SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@CloneData">
     <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" ></ListViewFieldSettings>
     <ListViewEvents Clicked="OnClicked" Created="@(()=>OnCreated(ColumnContext.Columns))" TValue="DataModel"></ListViewEvents>
 </SfListView>
 
+<style>
+    .setMargin{
+        margin-bottom: 10px;
+    }
+</style>
+
 @code
 {
-    public List<DataModel> DataSourceCopy { get; set; } = new List<DataModel>();
+    public List<DataModel> CloneData { get; set; } = new List<DataModel>();
 
     [CascadingParameter]
     public SfGrid<Order> Grid { get; set; }
@@ -1030,29 +1047,29 @@ Using the column chooser template, you can customize the column chooser dialog u
 
     async Task OnInput(InputEventArgs eventArgs)
     {
-        DataSourceCopy = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value.ToLower()));
+        CloneData = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value.ToLower()));
         await Task.Delay(100);
         await Preselect();
     }
 
     protected override async Task OnInitializedAsync()
     {
-        DataSourceCopy = DataSource;
+        CloneData = DataSource;
         await Task.Delay(100);
         await Preselect();
     }
 
-    static List<DataModel> DataSource = new List<DataModel>
+    List<DataModel> DataSource = new List<DataModel>
     {
-        new DataModel() { Text = nameof(Order.OrderID), Id = nameof(Order.OrderID) },
-        new DataModel() { Text = nameof(Order.CustomerID), Id =nameof(Order.CustomerID)},
-        new DataModel() { Text = nameof(Order.EmployeeID), Id = nameof(Order.EmployeeID) },
-        new DataModel() { Text = nameof(Order.FirstName), Id = nameof(Order.FirstName)},
-        new DataModel() { Text = nameof(Order.OrderDate), Id = nameof(Order.OrderDate) },
-        new DataModel() { Text = nameof(Order.LastName), Id = nameof(Order.LastName) },
-        new DataModel() { Text = nameof(Order.HireDate), Id = nameof(Order.HireDate)},
-        new DataModel() { Text = nameof(Order.Title), Id = nameof(Order.Title)},
-        new DataModel() { Text = nameof(Order.Freight), Id = nameof(Order.Freight)},
+        new DataModel() { Text = "Order ID", Id = "OrderID" },
+        new DataModel() { Text = "Customer ID", Id ="CustomerID"},
+        new DataModel() { Text = "Employee ID", Id = "EmployeeID" },
+        new DataModel() { Text = "First Name", Id = "FirstName"},
+        new DataModel() { Text = "Order Date", Id = "OrderDate" },
+        new DataModel() { Text = "Last Name", Id = "LastName" },
+        new DataModel() { Text = "Hire Date", Id = "HireDate"},
+        new DataModel() { Text = "Title", Id = "Title"},
+        new DataModel() { Text = "Freight", Id = "Freight"},
     };
 
     public async Task Preselect()
@@ -1061,7 +1078,7 @@ Using the column chooser template, you can customize the column chooser dialog u
         var selectlist = new List<DataModel>();
         foreach (var column in cols)
         {
-            selectlist.Add(DataSource.Where(x => x.Text == column.Field).FirstOrDefault());
+            selectlist.Add(DataSource.Where(x => x.Text == column.HeaderText).FirstOrDefault());
         }
         if (selectlist.Count > 0)
         {
@@ -1091,11 +1108,11 @@ Using the column chooser template, you can customize the column chooser dialog u
 }
 ```
 
-![Blazor datagrid customize content](./images/blazor-datagrid-customize-the-content.png)
+![Blazor DataGrid with ListView in Column Chooser](./images/blazor-datagrid-column-chooser-content-template.png)
 
-#### Customize the footer of column chooser
+#### Customize the Footer of Column Chooser
 
- The <code>FooterTemplate</code> tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) directive is used to customize the footer in the column chooser dialog. You can type cast the context as <code>ColumnChooserFooterTemplateContext</code> to get columns inside FooterTemplate.
+ The <code>FooterTemplate</code> tag in the  [GridColumnChooserSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserSettings.html) component is used to customize the footer in the column chooser dialog. You can type cast the context as <code>ColumnChooserFooterTemplateContext</code> to get columns inside FooterTemplate.
 
 ```csharp
 @using Syncfusion.Blazor.Grids
@@ -1105,14 +1122,14 @@ Using the column chooser template, you can customize the column chooser dialog u
     <GridColumnChooserSettings>
         <FooterTemplate>
             @{
-                var cxt = context as ColumnChooserFooterTemplateContext;
-                var visibles = cxt.Columns.Where(x => x.Visible).Select(x => x.HeaderText).ToArray();
-                var hiddens = cxt.Columns.Where(x => !x.Visible).Select(x => x.HeaderText).ToArray();
+                var ContextData = context as ColumnChooserFooterTemplateContext;
+                var visibles = ContextData.Columns.Where(x => x.Visible).Select(x => x.HeaderText).ToArray();
+                var hiddens = ContextData.Columns.Where(x => !x.Visible).Select(x => x.HeaderText).ToArray();
             }
             <SfButton IsPrimary="true" OnClick="@(async () => {
             await grid.ShowColumnsAsync(visibles);
-            await grid.HideColumnsAsync(hiddens); })">Enter</SfButton>
-            <SfButton @onclick="@(async () => await cxt.CancelAsync())">Abort</SfButton>
+            await grid.HideColumnsAsync(hiddens); })">Submit</SfButton>
+            <SfButton @onclick="@(async () => await ContextData.CancelAsync())">Abort</SfButton>
         </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>

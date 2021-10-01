@@ -7,7 +7,7 @@ control: DataGrid
 documentation: ug
 ---
 
-# How to group the Column Chooser items
+# How to Group the Column Chooser Items
 
 The <code>GridColumnChooserItemGroup</code> component helps to segregate the column chooser items as group. You can define column's group name by using the <code>Title</code> property of GridColumnChooserItemGroup directive.
 
@@ -21,30 +21,30 @@ The following code example demonstrates the default column chooser items as grou
     <GridColumnChooserSettings>
         <Template>
             @{
-                var cxt = context as ColumnChooserTemplateContext;
+                var ContextData = context as ColumnChooserTemplateContext;
             }
-            @if (ShouldRenderGroup("Order Details", cxt.Columns))
+            @if (ShouldRenderGroup("Order Details", ContextData.Columns))
             {
                 <GridColumnChooserItemGroup Title="Order Details">
-                    @foreach (var column in GetGroupColumns("Order Details", cxt.Columns))
+                    @foreach (var column in GetGroupColumns("Order Details", ContextData.Columns))
                     {
                         <GridColumnChooserItem Column="column"></GridColumnChooserItem>
                     }
                 </GridColumnChooserItemGroup>
             }
-            @if (ShouldRenderGroup("Ship Details", cxt.Columns))
+            @if (ShouldRenderGroup("Ship Details", ContextData.Columns))
             {
                 <GridColumnChooserItemGroup Title="Ship Details">
-                    @foreach (var column in GetGroupColumns("Ship Details", cxt.Columns))
+                    @foreach (var column in GetGroupColumns("Ship Details", ContextData.Columns))
                     {
                         <GridColumnChooserItem Column="column"></GridColumnChooserItem>
                     }
                 </GridColumnChooserItemGroup>
             }
-            @if (ShouldRenderGroup("Date Details", cxt.Columns))
+            @if (ShouldRenderGroup("Date Details", ContextData.Columns))
             {
                 <GridColumnChooserItemGroup Title="Date Details">
-                    @foreach (var column in GetGroupColumns("Date Details", cxt.Columns))
+                    @foreach (var column in GetGroupColumns("Date Details", ContextData.Columns))
                     {
                         <GridColumnChooserItem Column="column"></GridColumnChooserItem>
                     }
@@ -53,15 +53,16 @@ The following code example demonstrates the default column chooser items as grou
         </Template>
         <FooterTemplate>
             @{
-                var cxt = context as ColumnChooserFooterTemplateContext;
-                var visibles = cxt.Columns.Where(x => x.Visible).Select(x => x.HeaderText).ToArray();
-                var hiddens = cxt.Columns.Where(x => !x.Visible).Select(x => x.HeaderText).ToArray();
+                var ContextFooterData = context as ColumnChooserFooterTemplateContext;
+                var visibles = ContextFooterData.Columns.Where(x => x.Visible).Select(x => x.HeaderText).ToArray();
+                var hiddens = ContextFooterData.Columns.Where(x => !x.Visible).Select(x => x.HeaderText).ToArray();
             }
             <SfButton IsPrimary="true" OnClick="@(async () => {
             await grid.ShowColumnsAsync(visibles);
-            await grid.HideColumnsAsync(hiddens); })">Enter
+            await grid.HideColumnsAsync(hiddens); })">
+                Submit
             </SfButton>
-            <SfButton @onclick="@(async () => await cxt.CancelAsync())">Abort</SfButton>
+            <SfButton @onclick="@(async () => await ContextFooterData.CancelAsync())">Abort</SfButton>
         </FooterTemplate>
     </GridColumnChooserSettings>
     <GridColumns>
@@ -80,7 +81,7 @@ The following code example demonstrates the default column chooser items as grou
     public List<OrdersDetails> GridData { get; set; }
     SfGrid<OrdersDetails> grid { get; set; }
     IDictionary<string, string[]> groups = new Dictionary<string, string[]>()
-    {
+{
         { "Order Details", new string[] { "OrderID", "CustomerID", "Freight" } }, { "Ship Details", new string[]{ "ShipCountry", "ShipCity" } }, {"Date Details", new string[]{"OrderDate", "ShippedDate"}}
     };
     private GridColumn GetColumn(string field, List<GridColumn> columns)
@@ -129,4 +130,4 @@ The following code example demonstrates the default column chooser items as grou
 
 ```
 
-![blazor-datagrid-how-to-group](./images/blazor-datagrid-how-to-group.gif)
+![Group column chooser items in Blazor DataGrid](../images/blazor-datagrid-group-items.gif)
