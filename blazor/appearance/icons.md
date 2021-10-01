@@ -30,7 +30,7 @@ The following code example shows the rendering of built-in syncfusion icons from
 <SfIcon Name="IconName.Italic"></SfIcon>
 ```
 
-![Icons](./images/icons/icon.png)
+![Blaozr Icon Component](./images/icons/icon.png)
 
 ## Set icon size
 
@@ -66,7 +66,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 <SfIcon Name="IconName.Italic" Size="IconSize.Large"></SfIcon>
 ```
 
-![Icon size](./images/icons/icon-size.png)
+![Icon size customization Blaozr Icon Component](./images/icons/icon-size.png)
 
 > The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
@@ -86,7 +86,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 <SfIcon Name="IconName.AlignMiddle" Title="AlignMiddle"></SfIcon>
 ```
 
-![Icon size](./images/icons/icon-title.png)
+![ToolTip for Blaozr Icon Component](./images/icons/icon-title.png)
 
 ## Customize icon
 
@@ -112,7 +112,7 @@ The following example code demonstrates the custom font-size and color for icons
 </style>
 ```
 
-![Customize Icon](./images/icons/custom-icon.png)
+![Blaozr Icon Component Customization](./images/icons/custom-icon.png)
 
 ## Initialize icons with IconCss
 
@@ -133,7 +133,7 @@ The following code explains how to render `open-iconic` icons using `IconCss` pr
 <SfIcon IconCss="oi oi-bluetooth"></SfIcon>
 ```
 
-![Icon Css](./images/icons/icon-css.png)
+![Load custom icon in Blaozr Icon Component](./images/icons/icon-css.png)
 
 ## Icon integration in Button component
 
@@ -147,7 +147,7 @@ The following example shows how to integrate the icons with syncfusion button co
 <SfButton IconCss="e-icons e-chevron-down-fill" Content="Show dropdown" IconPosition="IconPosition.Right"></SfButton>
 ```
 
-![Button Integration](./images/icons/button-integration.png)
+![Using Icons with Blazor Button Component](./images/icons/button-integration.png)
 
 
 ## Direct usage of icons
