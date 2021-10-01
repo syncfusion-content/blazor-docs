@@ -72,7 +72,7 @@ The above types can also be rendered in the Maps component by specifying their U
 
 ![Bing Maps with CanvasLight](../images/MapProviders/Bing-map-with-canvas.png)
 
-## Zooming and Panning
+## Enable zooming and panning
 
 Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on Maps for in-depth analysis. Panning helps to move Maps around to focus the targeted area.
 
@@ -155,7 +155,7 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 
 ![Bing Maps with markers and navigation line](../images/MapProviders/bing-marker-and-line.png)
 
-## Sublayer
+## Adding sublayer
 
 Any GeoJSON shape can be rendered as a sublayer on top of the Bing Maps layer for highlighting a particular continent or country in Bing Maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
