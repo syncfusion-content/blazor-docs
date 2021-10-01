@@ -26,4 +26,4 @@ Radio Button component can be enabled/disabled by giving [Disabled](https://help
 
 Output be like
 
-![Radio Button Sample](./../images/rb-disabled.png)
+![Blazor RadioButton in Disable State](./../images/blazor-radiobutton-disable-state.png)
