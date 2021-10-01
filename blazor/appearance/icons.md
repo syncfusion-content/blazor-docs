@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor Icons Library
 
-The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in the web application also as needed.
+The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These icons can be utilized in the web applications using `SfIcon` component or `e-icons` class.
 
 ## Icon component
 
@@ -114,7 +114,7 @@ The following example code demonstrates the custom font-size and color for icons
 
 ![Blaozr Icon Component Customization](./images/icons/custom-icon.png)
 
-### Initialize icons using IconCss
+### Initialize icons using e-icons class
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to render custom font icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
 
