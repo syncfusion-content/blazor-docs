@@ -908,6 +908,62 @@ User can customize series of the pivot chart using [PivotChartSeries](https://he
 
 ![output](images/chart-series.png)
 
+## Data Label Customization
+
+User can customize data label of the pivot chart markers in terms of angle, alignment, border, color, margin, position, visibility, and more using [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html#Syncfusion_Blazor_PivotView_PivotChartMarkerSettings_DataLabel) in [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Marker) class. The changes handled in the property will be reflected commonly in all chart series.
+
+```cshtml
+    @using Syncfusion.Blazor.PivotView
+
+    <SfPivotView TValue="ProductDetails" Width="800px" Height="450px">
+        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+        <PivotViewDataSourceSettings DataSource="@data">
+            <PivotViewColumns>
+                <PivotViewColumn Name="Country"></PivotViewColumn>
+                <PivotViewColumn Name="Products"></PivotViewColumn>
+            </PivotViewColumns>
+            <PivotViewRows>
+                <PivotViewRow Name="Year"></PivotViewRow>
+                <PivotViewRow Name="Quarter"></PivotViewRow>
+            </PivotViewRows>
+            <PivotViewValues>
+                <PivotViewValue Name="Sold" Caption="Unit Sold"></PivotViewValue>
+                <PivotViewValue Name="Amount" Caption="Sold Amount"></PivotViewValue>
+            </PivotViewValues>
+            <PivotViewFormatSettings>
+                <PivotViewFormatSetting Name="Amount" Format="C"></PivotViewFormatSetting>
+            </PivotViewFormatSettings>
+        </PivotViewDataSourceSettings>
+        <PivotViewDisplayOption View=View.Chart></PivotViewDisplayOption>
+        <PivotChartSettings Title="Sales Analysis">
+            <PivotChartSeries Type="ChartSeriesType.Column">
+                <PivotChartMarkerSettings>
+                    <PivotChartMarkerDataLabel Visible="true" Fill="white" Position="Syncfusion.Blazor.PivotView.LabelPosition.Auto" Rx="5" Ry="5">
+                        <PivotChartMarkerDataLabelBorder Width="2" Color="red"></PivotChartMarkerDataLabelBorder>
+                        <PivotChartMarkerDataLabelFont Size="12px"></PivotChartMarkerDataLabelFont>
+                        <PivotChartMarkerDataLabelMargin Top="5" Bottom="5" Right="5" Left="5"></PivotChartMarkerDataLabelMargin>
+                    </PivotChartMarkerDataLabel>
+                </PivotChartMarkerSettings>
+            </PivotChartSeries>
+            <PivotChartPrimaryYAxis>
+                <PivotChartPrimaryYAxisBorder Width="0"></PivotChartPrimaryYAxisBorder>
+            </PivotChartPrimaryYAxis>
+        </PivotChartSettings>
+    </SfPivotView>
+
+    @code{
+        public List<ProductDetails> data { get; set; }
+        protected override void OnInitialized()
+        {
+            this.data = ProductDetails.GetProductData().ToList();
+           //Bind the data source collection here. Refer "Assigning sample data to the pivot table" section in getting started for more details.
+        }
+    }
+
+```
+
+![Data Label Customization](images/data-label.png)
+
 ## Axis Customization
 
 User can customize axis of the pivot chart using [PivotChartPrimaryXAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryXAxis.html) and [PivotChartPrimaryYAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartPrimaryYAxis.html) properties in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) class.

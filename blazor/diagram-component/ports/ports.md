@@ -79,8 +79,9 @@ If **ID** is not set, then default **ID** is automatically set.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="AddPorts" @onclick="@AddPorts" />
+<SfButton Content="AddPorts" OnClick="@AddPorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
@@ -148,8 +149,9 @@ The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="AddPorts" @onclick="@AddPorts" />
+<SfButton Content="AddPorts" OnClick="@AddPorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
@@ -223,8 +225,9 @@ A collection of ports can be removed from the node by using the native `RemoveAt
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="RemovePorts" @onclick="@RemovePorts" />
+<SfButton Content="RemovePorts" OnClick="@RemovePorts" />
 <SfDiagramComponent Height="600px" Nodes="@nodes" />
 
 @code
@@ -284,8 +287,9 @@ The following code example explains how to change the port properties at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Update Port" @onclick="@UpdatePort" />
+<SfButton Content="Update Port" OnClick="@UpdatePort" />
 <SfDiagramComponent @ref="diagram" Height="600px" Nodes="@nodes" />
 
 @code
