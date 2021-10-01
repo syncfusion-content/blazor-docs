@@ -11,15 +11,15 @@ documentation: ug
 
 The Syncfusion Blazor library provides the set of `base64` formatted font icons which are being used in the Syncfusion Blazor components. These can be utilized in the web application also as needed.
 
-## Icon Component
+## Icon component
 
 Syncfusion Icon component provides support to render predefined Syncfusion icons or custom font icons.
 
 You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
-The following code example shows the rendering of [built-in](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) syncfusion icons from predefined `IconName` options using `Name` property by defining them in `SfIcon` tag.
+The following code example shows the rendering of built-in syncfusion icons from predefined [IconName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) options using [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property by defining them in `SfIcon` tag.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfIcon Name="IconName.Cut"></SfIcon>
@@ -32,15 +32,15 @@ The following code example shows the rendering of [built-in](https://help.syncfu
 
 ![Icons](./images/icons/icon.png)
 
-## Set Icon size
+## Set icon size
 
-The font size of the icon can be changed using the `Size` property. The icon displays `Medium` size by default. To change the default size, define the applicable `IconSize` to Size property.
+The font size of the icon can be changed using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Size) property. The icon displays `Medium` size by default. 
 
 * When IconSize set to Small, the font size will be `8px`.
 * When IconSize set to Medium, the font size will be `16px`.
 * When IconSize set to Large, the font size will be `24px`.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <p>Smaller icons</p>
@@ -68,13 +68,13 @@ The font size of the icon can be changed using the `Size` property. The icon dis
 
 ![Icon size](./images/icons/icon-size.png)
 
-> The `Size` property will be applicable only when defining the icon using `Name` property. Other customizations were made using `IconCss` property.
+> The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
 ## Display tooltip for icons
 
 `Title` property used to set title attribute for the icon to improve accessibility with screen readers and shows a tooltip on mouseover. The following example code displays tooltip text for appropriate icons.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfIcon Name="IconName.Upload" Title="Upload"></SfIcon>
@@ -88,11 +88,13 @@ The font size of the icon can be changed using the `Size` property. The icon dis
 
 ![Icon size](./images/icons/icon-title.png)
 
-## Customize Icon
+## Customize icon
 
-The Syncfusion Blazor icons can customize its color and size by overriding the `e-icons` class. The following example code demonstrates the custom font-size and color for icons.
+The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to customize color and size by overriding the `e-icons` class. 
 
-```csharp
+The following example code demonstrates the custom font-size and color for icons.
+
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfIcon Name="IconName.AlignLeft"></SfIcon>
@@ -114,10 +116,11 @@ The Syncfusion Blazor icons can customize its color and size by overriding the `
 
 ## Initialize icons with IconCss
 
-The Icon component provides support to render custom font icons using the `IconCss` property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
+The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to render custom font icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
+
 The following code explains how to render `open-iconic` icons using `IconCss` property.
 
-```cSharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfIcon IconCss="oi oi-list-rich"></SfIcon>
@@ -134,11 +137,11 @@ The following code explains how to render `open-iconic` icons using `IconCss` pr
 
 ## Icon integration in Button component
 
-The syncfusion icons will integrate on blazor components without defining the `<SfIcon>` tag. To use syncfusion icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#available-icons) with `e-` prefix.
+The built-in syncfusion icons can be integrated with other blazor components without defining the `<SfIcon>` tag. To use syncfusion icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#available-icons) with `e-` prefix.
 
-The following example explains how to integrate the icons in syncfusion button component by defining the icon class in the `IconCss` property.
+The following example shows how to integrate the icons with syncfusion button component by defining the icon class in the `IconCss` property of button.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Buttons
 
 <SfButton IconCss="e-icons e-chevron-down-fill" Content="Show dropdown" IconPosition="IconPosition.Right"></SfButton>
@@ -149,13 +152,15 @@ The following example explains how to integrate the icons in syncfusion button c
 
 ## Direct usage of icons
 
-The Syncfusion icons can render directly in the HTML element. This can be achieved by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#available-icons) class with `e-` prefix. The following code example explains the direct rendering of syncfusion `search` icon in the span element.
+The built-in syncfusion icons can be rendered directly in the HTML element by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#available-icons) class with `e-` prefix. 
+
+The following code example explains the direct rendering of syncfusion `search` icon in the span element.
 
 ```cshtml
 <span class="e-icons e-search"></span>
 ```
 
-## Available Icons
+## Available icons
 
 The complete pack of Syncfusion Blazor icons is listed in the following table. The corresponding icon content can be referred to the content section.
 
@@ -177,6 +182,10 @@ The complete pack of Syncfusion Blazor icons is listed in the following table. T
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/material/demo.html" style="height:1000px;width:100%;"></iframe>
 
+### Tailwind CSS
+
+<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;width:100%;"></iframe>
+
 ### Office Fabric
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/fabric/demo.html" style="height:1000px;width:100%;"></iframe>
@@ -185,6 +194,4 @@ The complete pack of Syncfusion Blazor icons is listed in the following table. T
 
 <iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/highcontrast/demo.html" style="height:1000px;width:100%;"></iframe>
 
-### Tailwind CSS
 
-<iframe class="doc-sample-frame" src="https://ej2.syncfusion.com/products/icons/tailwind/demo.html" style="height:1000px;width:100%;"></iframe>
