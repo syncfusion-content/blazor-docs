@@ -230,6 +230,178 @@ The following code example explains how to get the selection change event in the
 }
 ```
 
+## Source change
+
+* While changing the source point of the connector, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|[SourcePointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers while dragging the connector’s source end in the diagram.|
+|[SourcePointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SourcePointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers when the connector’s source point is changed.|
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="Diagram" 
+                    Width="1000px" 
+                    SourcePointChanging="@OnSourcePointChanging" 
+                    SourcePointChanged="@OnSourcePointChanged" 
+                    Height="500px" 
+                    Connectors="@connectors" 
+                    Nodes="@nodes">
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+       {
+          new Node() 
+          {
+            OffsetX = 100,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            ID = "node1",
+          },
+        };
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint()
+            {
+                X = 200,
+                Y = 200
+            },
+            TargetID = "node1",
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle()
+                {
+                    Fill = "black",
+                    StrokeColor = "black",
+                    StrokeWidth = 1
+                }
+            },
+            Style = new ShapeStyle()
+            {
+                StrokeColor = "black",
+                StrokeWidth = 1
+            },
+        };
+        connectors.Add(Connector);
+    }
+
+    // To notify the source point changing event before the source point change
+    private void OnSourcePointChanging(EndPointChangingEventArgs args)
+    {
+        //sets true to cancel the source point change.
+        args.Cancel = true;
+    }
+
+    // To notify the source point changed event after source point has changed
+    private void OnSourcePointChanged(EndPointChangedEventArgs args)
+    {
+        //Action to be performed
+    }
+}
+```
+
+## Target change
+
+* While changing the target point of the connector, the following events can be used to do the customization.
+
+|Event Name|Arguments|Description|
+|------------|-----------|------------------------|
+|[TargetPointChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanging)|[EndPointChangingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangingEventArgs.html)|Triggers while dragging the connector’s target end in the diagram.|
+|[TargetPointChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TargetPointChanged)|[EndPointChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.EndPointChangedEventArgs.html)|Triggers when the connector’s target point is changed.|
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="Diagram" 
+                    Width="1000px" 
+                    TargetPointChanging="@OnTargetPointChanging" 
+                    TargetPointChanged="@OnTargetPointChanged" 
+                    Height="500px" 
+                    Connectors="@connectors" 
+                    Nodes="@nodes">
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent Diagram;
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+
+    protected override void OnInitialized()
+    {
+        nodes = new DiagramObjectCollection<Node>()
+       {
+          new Node() 
+          {
+            OffsetX = 100,
+            OffsetY = 100,
+            Height = 50,
+            Width = 100,
+            ID = "node1",
+          },
+        };
+        Connector Connector = new Connector()
+        {
+            ID = "connector1",
+            SourcePoint = new DiagramPoint()
+            {
+                X = 200,
+                Y = 200
+            },
+            TargetPoint = new DiagramPoint()
+            {
+                X = 200,
+                Y = 400
+            },
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
+            {
+                Shape = DecoratorShape.Arrow,
+                Style = new ShapeStyle()
+                {
+                    Fill = "black",
+                    StrokeColor = "black",
+                    StrokeWidth = 1
+                }
+            },
+            Style = new ShapeStyle()
+            {
+                StrokeColor = "black",
+                StrokeWidth = 1
+            },
+        };
+        connectors.Add(Connector);
+    }
+
+    // To notify the target point changing event before the target point change
+    private void OnTargetPointChanging(EndPointChangingEventArgs args)
+    {
+        //sets true to cancel the target point change.
+        args.Cancel = true;
+    }
+
+    // To notify the target point changed event after target point has changed
+    private void OnTargetPointChanged(EndPointChangedEventArgs args)
+    {
+        //Action to be performed
+    }
+}
+```
+
 ## See also
 
 * [How to customize the connector properties](./customization)

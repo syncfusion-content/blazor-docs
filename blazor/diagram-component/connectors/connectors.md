@@ -473,6 +473,90 @@ The following code example illustrates how to create port to port connections.
 * When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect), the port accepts only an outgoing connection to dock in it.
 * When you set PortConstraints to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None), the port restricts connector to establish connection in it.
 
+## Avoid Overlapping
+
+The [Orthogonalsegments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html) are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following image illustrates how orthogonal segments are re-routed.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram"
+                    Width="100%"
+                    Height="500px"
+                    Connectors="@connectors"
+                    Nodes="@nodes">
+</SfDiagramComponent>
+
+@code
+{
+    SfDiagramComponent diagram;
+    DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
+    DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
+    protected override void OnInitialized()
+    {
+        Node node1 = new Node()
+        {
+            OffsetX = 100,
+            OffsetY = 200,
+            Height = 100,
+            Width = 100,
+            ID = "node1",
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "SourcePort",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5},
+                    Height = 20, Width = 20,
+                    Shape = PortShapes.Square
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        nodes.Add(node1);
+        Node node2 = new Node()
+        {
+            ID = "node2",
+            OffsetX = 300,
+            OffsetY = 200,
+            Height = 100,
+            Width = 100,
+            Ports = new DiagramObjectCollection<PointPort>()
+            {
+                new PointPort()
+                {
+                    ID = "TargetPort",
+                    Visibility = PortVisibility.Visible,
+                    Offset = new DiagramPoint() { X = 0, Y = 0.5 },
+                    Height = 20, Width = 20,
+                    Shape = PortShapes.Square,
+                }
+            },
+            Style = new ShapeStyle() { Fill = "#6495ED" }
+        };
+        nodes.Add(node2);
+
+        Connector connector = new Connector()
+        {
+            ID = "connector1",
+            //Source node id of the connector.
+            SourceID = "node1",
+            //source node port id.
+            SourcePortID = "SourcePort",
+            //Target node id of the connector.
+            TargetID = "node2",
+            //Target node port id.
+            TargetPortID = "TargetPort",
+            Type = ConnectorSegmentType.Orthogonal
+        };
+        connectors.Add(connector);
+    }
+}
+```
+![](../images/AvoidOverlapping.png)
+
 ## See also
 
 * [How to customize the connector properties](./customization)
