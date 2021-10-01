@@ -88,7 +88,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 ![ToolTip for Blaozr Icon Component](./images/icons/icon-title.png)
 
-## Customize icon
+## Customize icon appearence
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to customize color and size by overriding the `e-icons` class. 
 
@@ -114,7 +114,7 @@ The following example code demonstrates the custom font-size and color for icons
 
 ![Blaozr Icon Component Customization](./images/icons/custom-icon.png)
 
-## Initialize icons with IconCss
+## Initialize icons using IconCss
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to render custom font icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
 
@@ -135,7 +135,7 @@ The following code explains how to render `open-iconic` icons using `IconCss` pr
 
 ![Load custom icon in Blaozr Icon Component](./images/icons/icon-css.png)
 
-## Icon integration in Button component
+## Icon integration with Button component
 
 The built-in syncfusion icons can be integrated with other blazor components without defining the `<SfIcon>` tag. To use syncfusion icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#available-icons) with `e-` prefix.
 
@@ -150,7 +150,7 @@ The following example shows how to integrate the icons with syncfusion button co
 ![Using Icons with Blazor Button Component](./images/icons/button-integration.png)
 
 
-## Direct usage of icons
+## Using icons directly in HTML element
 
 The built-in syncfusion icons can be rendered directly in the HTML element by defining `e-icons` class that contains the font-family and common property of font icons, and defining the [available icon's](#available-icons) class with `e-` prefix. 
 
@@ -160,7 +160,7 @@ The following code example explains the direct rendering of syncfusion `search` 
 <span class="e-icons e-search"></span>
 ```
 
-## Available icons
+## Icons list
 
 The complete pack of Syncfusion Blazor icons is listed in the following table. The corresponding icon content can be referred to the content section.
 
