@@ -117,6 +117,10 @@ public static List<TaskData> GetTaskCollection()
 }
 ```
 
+> * Indent/Outdent is not supported for Hierarchy Data.
+> * ExpandCollapse State maintenance is not supported for Hierarchy Data.
+> * Row Drag and Drop feature is not supported for Hierarchy Data.
+
 ### Self-Referential / Flat Data Binding
 
 The Gantt Chart component can be bound with self-referential data by mapping the data source field values to the `Id` and `ParentID` properties.
@@ -453,7 +457,7 @@ You can use **WebApiAdaptor** to bind datagrid with Web API created using **ODat
 }
 ```
 
-![Alt text](images/remote-data.png)
+![Data Binding in Blazor Gantt Chart](images/blazor-gantt-chart-data-binding.png)
 
 ### Sending Additional Parameters to the Server
 

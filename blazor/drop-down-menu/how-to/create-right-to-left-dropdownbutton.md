@@ -47,4 +47,4 @@ The following example illustrates how to enable right-to-left support in Dropdow
 
 Output be like
 
-![Button Sample](./../images/ddb-rtl.png)
+![Right to Left in Blazor DropDownMenu](./../images/blazor-dropdownmenu-right-to-left.png)

@@ -54,7 +54,7 @@ You can set the size for heat map in a pixel.
 
 ```
 
-![Heatmap Sample](images/dimension/Px.png)
+![Changing Blazor Heatmap Chart Size in Pixel](images/dimension/blazor-heatmap-chart-size-in-pixel.png)
 
 ### In percentage
 
@@ -97,4 +97,4 @@ By setting value in percentage, heat map gets its dimension with respect to its 
 
 ```
 
-![Heatmap Sample](images/dimension/Percentage.png)
+![Changing Blazor HeatMap Chart Size in Percentage](images/dimension/blazor-heatmap-chart-size-in-percentage.png)

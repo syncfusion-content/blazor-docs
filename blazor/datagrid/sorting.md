@@ -195,6 +195,81 @@ During the sort action, the datagrid component triggers two events. The [OnActio
 }
 ```
 
+## Custom sort comparer
+
+You can customize the default sort action for a specific Grid column by defining the [SortComparer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ColumnModel.html#Syncfusion_Blazor_Grids_ColumnModel_SortComparer) property of GridColumn Directive. The SortComparer data type was the IComparer interface, so the custom sort comparer class should be implemented in the interface [IComparer<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.icomparer-1?view=net-5.).
+
+In the following code example, custom SortComparer class was defined in the CustomerID Column.
+
+```csharp
+
+@using Syncfusion.Blazor.Grids
+
+<SfGrid DataSource="@Orders" AllowSorting="true" Height="270">
+    <GridColumns>
+        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID"  Width="120"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name"  Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2"  Width="100"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Format="C2"  Width="80"></GridColumn>
+    </GridColumns>
+</SfGrid>
+
+@code{
+    public List<Order> Orders { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 10).Select(x => new Order()
+        {
+            OrderID = 1000 + x,
+            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
+            Freight = 2.1 * x,
+            OrderDate = DateTime.Now.AddDays(-x),
+            ShipCountry = (new string[] {"USA","UK","INDIA","CHINA","ENGLAND"})[new Random().Next(5)],
+        }).ToList();
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public string ShipCountry { get; set; }
+    }
+
+    public class CustomComparer : IComparer<Object>
+    {
+        public int Compare(object XRowDataToCompare, object YRowDataToCompare)
+        {
+            Order XRowData = XRowDataToCompare as Order;
+            Order YRowData = YRowDataToCompare as Order;
+            int XRowDataOrderID = (int)XRowData.OrderID;
+            int YRowDataOrderID = (int)YRowData.OrderID;
+            if (XRowDataOrderID < YRowDataOrderID)
+            {
+                return -1;
+            }
+            else if (XRowDataOrderID > YRowDataOrderID)
+            {
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }
+        }
+    }
+}
+```
+
+The following GIF represents custom SortComparer for CustomerID column. When the user clicks the CustomerID column's header, the custom SortComparer will sort the data according to the OrderID field value. So that custom SortComparer class sort the column data by using another column's value.
+
+![Custom sort comparer in Blazor DataGrid](./images/blazor-datagrid-custom-sort-comparer.gif)
+
+> The SortComparer property will work only for local data.
+
 ## Touch interaction
 
 When you tap the datagrid header on touchscreen devices, the selected column header is sorted. A popup ![sorting](./images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![msorting](./images/msorting.jpg), and then tap the desired datagrid headers.
@@ -203,6 +278,6 @@ When you tap the datagrid header on touchscreen devices, the selected column hea
 
 The following screenshot shows datagrid touch sorting.
 
-![Touch interaction](./images/touch-sorting.jpg)
+![Sorting in Blazor DataGrid using Touch Interaction](./images/blazor-datagrid-touch-sorting.jpg)
 
 > You can refer to our [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor DataGrid example](https://blazor.syncfusion.com/demos/datagrid/overview?theme=bootstrap4) to understand how to present and manipulate data.

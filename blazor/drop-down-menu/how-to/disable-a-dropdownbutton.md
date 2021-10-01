@@ -26,4 +26,4 @@ Dropdown Menu component can be enabled/disabled by giving [Disabled](https://hel
 
 Output be like
 
-![Button Sample](./../images/ddb-disable.png)
+![Blazor DropDownMenu with Disable State](./../images/blazor-dropdownmenu-in-disable-state.png)

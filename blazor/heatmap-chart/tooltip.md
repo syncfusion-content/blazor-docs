@@ -53,4 +53,4 @@ You can enable the tooltip by setting the `Enable` property to true inside the `
 
 ```
 
-![Heatmap Sample](images/Tooltip.png)
+![Blazor HeatMap Chart displays Tooltip](images/blazor-heatmap-chart-tooltip.png)

@@ -11,7 +11,7 @@ documentation: ug
 
 ## Print
 
-The rendered Linear Gauge can be printed directly from the browser by calling the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. To use the print functionality, set the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowPrint) property as "**true**".
+The rendered Linear Gauge can be printed directly from the browser by calling the [PrintAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. To use the print functionality, set the [AllowPrint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowPrint) property as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -40,13 +40,13 @@ The rendered Linear Gauge can be printed directly from the browser by calling th
 }
 ```
 
-![Linear Gauge with Print Sample](images/print.png)
+![Blazor Linear Gauge with Printing](images/blazor-linear-gauge-with-printing.png)
 
 ## Export
 
 ### Image Export
 
-To use the image export functionality, set the [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowImageExport) property as "**true**". The rendered Linear Gauge can be exported as an image using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. This method requires two parameters: export type and file name. The Linear Gauge can be exported as an image with the following formats.
+To use the image export functionality, set the [AllowImageExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowImageExport) property as **true**. The rendered Linear Gauge can be exported as an image using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. This method requires two parameters: export type and file name. The Linear Gauge can be exported as an image with the following formats.
 
 * JPEG
 * PNG
@@ -76,11 +76,11 @@ To use the image export functionality, set the [AllowImageExport](https://help.s
 }
 ```
 
-![Linear Gauge Image export](images/export.png)
+![Blazor Linear Gauge Image export](images/blazor-linear-gauge-image-export.png)
 
 ### PDF Export
 
-To use the PDF export functionality, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowPdfExport) property as "**true**". The rendered Linear Gauge can be exported as PDF using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. The [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method requires three parameters: export type, file name, and orientation of the PDF document. The orientation of the PDF document can be set as "**Portrait**" or "**Landscape**".
+To use the PDF export functionality, set the [AllowPdfExport](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#Syncfusion_Blazor_LinearGauge_SfLinearGauge_AllowPdfExport) property as **true**. The rendered Linear Gauge can be exported as PDF using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. The [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method requires three parameters: export type, file name, and orientation of the PDF document. The orientation of the PDF document can be set as **Portrait** or **Landscape**.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -106,11 +106,11 @@ To use the PDF export functionality, set the [AllowPdfExport](https://help.syncf
 }
 ```
 
-![Linear Gauge PDF export](images/export.png)
+![Blazor Linear Gauge PDF Export](images/blazor-linear-gauge-image-export.png)
 
 ### Exporting Linear Gauge as base64 string of the file
 
-The Linear Gauge can be exported as base64 string for the JPEG, PNG and PDF formats. The rendered Linear Gauge can be exported as base64 string of the exported image or PDF document using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. The arguments that are required for this method is export type, file name, orientation of the exported PDF document and "**allowDownload**" boolean value that is set as "**false**" to return base64 string. The value for the orientation of the exported PDF document is set as "**null**" for image export and "**Portrait**" or "**Landscape**" for the PDF document.
+The Linear Gauge can be exported as base64 string for the JPEG, PNG and PDF formats. The rendered Linear Gauge can be exported as base64 string of the exported image or PDF document using the [ExportAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.SfLinearGauge.html#methods) method. The arguments that are required for this method is export type, file name, orientation of the exported PDF document and **allowDownload** boolean value that is set as **false** to return base64 string. The value for the orientation of the exported PDF document is set as **null** for image export and **Portrait** or **Landscape** for the PDF document.
 
 ```cshtml
 @using Syncfusion.Blazor.LinearGauge
@@ -136,4 +136,4 @@ The Linear Gauge can be exported as base64 string for the JPEG, PNG and PDF form
 }
 ```
 
-> The exporting of the Linear Gauge as base64 string is not applicable for the SVG format.
+>The exporting of the Linear Gauge as base64 string is not applicable for the SVG format.

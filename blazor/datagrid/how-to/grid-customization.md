@@ -136,4 +136,4 @@ This is demonstrated in the following sample code,
 ``` -->
 
 The following image represents customized datagrid columns,
-![Grid Customization](../images/grid-customization.png)
+![Customizing Blazor DataGrid Columns](../images/blazor-datagrid-column-customization.png)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting Stared with Blazor DataGrid in Server Side | Syncfusion
+title: Getting Stared with Blazor DataGrid in WebAssembly | Syncfusion
 description: Learn here all about Getting Started with Syncfusion Blazor DataGrid in Blazor Server Side App using Visual Studio and more.
 platform: Blazor
 control: DataGrid
@@ -9,7 +9,7 @@ documentation: ug
 
  <!-- markdownlint-disable MD024 -->
 
-# Blazor DataGrid Component in Server Side App using Visual Studio
+# Blazor DataGrid Component in WebAssembly App using Visual Studio
 
 This article provides a step-by-step instructions to configure Syncfusion Blazor DataGrid in a simple Blazor WebAssembly application using [Visual Studio 2019](https://visualstudio.microsoft.com/vs/).
 
@@ -34,19 +34,19 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](../images/new-project.png)
+    ![Creating New Project in Blazor ASPNETCore](../images/blazor-create-new-project-in-aspnetcore.png)
 
 3. Select **Blazor App** from the template and click **Next** button.
 
-    ![blazor template](../images/blazor-template.png)
+    ![Selecting Blazor Application Template](../images/blazor-template.png)
 
 4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![asp.net core project configuration](../images/project-configuration.png)
+    ![Blazor ASP.NET Core Project Configuration](../images/blazor-aspnetcore-project-configuration.png)
 
 5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** are selected at the top.
 
-    ![select framework](../images/blazor-client-template.png)
+    ![Selecting Blazor WebAssembly App](../images/blazor-webassembly-app-selection.png)
 
     > ASP.NET Core 3.1 is available in Visual Studio 2019 version.
   
@@ -54,11 +54,11 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Selecting NuGet Package Manager in Blazor](../images/blazor-nuget-package-manager.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![select nuget](../images/select-nuget.png)
+    ![Selecting Blazor NuGet Package](../images/blazor-nuget-selection.png)
 
 3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
@@ -283,7 +283,7 @@ The grouping feature enables you to view the datagrid record in a grouped view. 
 
 Output will be like the below.
 
-![final output](../images/final-output.png)
+![Blazor DataGrid](../images/blazor-datagrid.png)
 
 ## See Also
 

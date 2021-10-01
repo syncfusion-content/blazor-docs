@@ -66,11 +66,11 @@ By default, the uploader processes the files to upload once the files are select
 
 The auto upload output will be as follows.
 
-![uploader](./images/Auto_Upload.png)
+![Auto Uploading File in Blazor FileUpload](./images/blazor-fileupload-with-auto-upload-file.png)
 
 The auto upload false output will be as follows.
 
-![uploader](./images/Auto_Upload_false.png)
+![Failing Auto Upload File in Blazor Upload](./images/blazor-fileupload-failed-auto-upload-file.png)
 
 ## Sequential upload
 
@@ -113,4 +113,4 @@ The uploader component allows you to pre load the list of files that are uploade
 
 The output will be as follows.
 
-![uploader](./images/PreloadFiles.png)
+![Blazor FileUpload displays Preloaded Files](./images/blazor-fileupload-with-preload-files.png)

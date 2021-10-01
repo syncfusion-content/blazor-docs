@@ -69,4 +69,4 @@ Please refer to the following link for more details,[EditForm Validation](https:
 
 The output will be as follows.
 
-![validation](./images/validation.png)
+![Validation in Blazor In-place Editor](./images/blazor-inplace-editor-validation.png)

@@ -11,7 +11,7 @@ documentation: ug
 
 This section briefly explains how to include a **ComboBox** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
-To get start quickly with Blazor ComboBox component, you can check on this video.
+To get started quickly with Blazor ComboBox component, you can check out this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=VYK2xHC_Lrg"%}
@@ -20,9 +20,7 @@ To get start quickly with Blazor ComboBox component, you can check on this video
 
 * Install `Syncfusion.Blazor.DropDowns` NuGet package to the application by using the `NuGet Package Manager`.
 
-  > Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
   ```html
   <head>
@@ -31,7 +29,7 @@ To get start quickly with Blazor ComboBox component, you can check on this video
   </head>
   ```
 
-  > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+  > For Internet Explorer 11, kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
   ```html
   <head>
@@ -81,7 +79,7 @@ namespace BlazorApplication
 
 ## Adding ComboBox component to the application
 
-To initialize the ComboBox component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
+To initialize the ComboBox component, add the following code to your `Index.razor` view page which is present under `~/Pages` folder.
 
 ```cshtml
 <SfComboBox TValue="string" Placeholder="Select a game"></SfComboBox>
@@ -93,7 +91,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![ComboBox](./images/default.png)
+![Blazor ComboBox Component](./images/blazor-combobox-component.png)
 
 ## Binding data source
 
@@ -129,12 +127,12 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![ComboBox](./images/data_binding.png)
+![Blazor ComboBox with Data Binding](./images/blazor-combobox-data-binding.png)
 
 ## Custom values
 
 The ComboBox allows the users to give input as custom value, which is not required to present in predefined
-set of values. By default, this support is enabled by [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, both text field and value field is considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
+set of values. By default, this support is enabled by [AllowCustom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfComboBox-2.html#Syncfusion_Blazor_DropDowns_SfComboBox_2_AllowCustom) property. In this case, both text field and value field are considered as same. The custom value will be sent to post back handler when a form is about to be submitted.
 
 ```cshtml
 <SfComboBox TValue="string"  TItem="Games" AllowCustom=true Placeholder="Select a game" DataSource="@LocalData">
@@ -164,7 +162,7 @@ set of values. By default, this support is enabled by [AllowCustom](https://help
 
 The output will be as follows.
 
-![ComboBox](./images/custom.png)
+![Blazor ComboBox with Custom Values](./images/blazor-combobox-custom-values.png)
 
 ## Configure the popup list
 
@@ -201,7 +199,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![ComboBox](./images/width_height.png)
+![Customizing Popup Height and Width in Blazor ComboBox](./images/blazor-combobox-popup-customization.png)
 
 ## See Also
 

@@ -11,9 +11,9 @@ documentation: ug
 
 # Getting Started with Blazor Toggle Switch Button Component
 
-This section briefly explains about how to include Toggle Switch Button Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include Toggle Switch Button Component in the Blazor server-side  application. Refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
-To get start quickly with Toggle Switch Button Component using Blazor, you can check on this video:
+To get start quickly with Toggle Switch Button Component using Blazor, check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=u_5050Ws9JM"%}
@@ -22,7 +22,7 @@ To get start quickly with Toggle Switch Button Component using Blazor, you can c
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
 > Please ensure to check the **Include prerelease** option.
 
@@ -74,7 +74,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN. Resource loading has to be disabled by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>
@@ -101,7 +101,7 @@ Now, add the Syncfusion Blazor Toggle Switch Button component in `razor` page in
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The Blazor Toggle Switch Button component will render in the web browser as shown below
+After successful compilation of the application, simply press F5 to run the application. The Blazor Toggle Switch Button component will render in the web browser as shown below.
 
 ![Switch Sample](./images/switch.png)
 
@@ -118,8 +118,6 @@ This section explains how to set `OnLabel` and `OffLabel` texts on Switch. In th
 ```
 
 > Switch does not have text support for material themes, and does not support long custom text.
-
-Output be like
 
 ![Switch Sample](./images/switch-label.png)
 

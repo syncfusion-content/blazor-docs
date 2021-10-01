@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Templates in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about templates in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Templates in Blazor TreeGrid Component
 
-Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Tree Grid is a templated razor component, that allow you to customize various part of the UI using template parameters. It allow you to render custom components or content based on your own logic.
+Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Tree Grid is a templated razor component, that allows to customize various part of the UI using template parameters. It allows to render custom components or content based on own logic.
 
 The available template options in tree grid are as follows,
 
@@ -98,15 +98,13 @@ public class Employee
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Template ModelType](images/temptype.png)
 
 ## Template Context
 
-Most of the templates used by tree grid are of type `RenderFragment<T>` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
+Most of the templates used by tree grid are of type `RenderFragment<T>` and they will be passed with parameters. The parameters passed can be accessed to the templates using implicit parameter named `context`. This implicit parameter name can also be changed using the `Context` attribute.
 
-For example, you can access the data of the column template using `context` as follows.
+For example, the data of the column template can be accessed using `context` as follows.
 
 {% tabs %}
 
@@ -182,15 +180,13 @@ public class Employee
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
 ![Template Context](images/columntemp.png)
 
 ## TreeGridTemplates component
 
 If a component contains any `RenderFragment` type property then it does not allow any child components other than the render fragment property, which is [by design in Blazor](https://github.com/aspnet/AspNetCore/issues/10836).
 
-This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendent of Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
+This prevents us from directly specifying templates such as `RowTemplate` and `DetailTemplate` as descendant of the Tree Grid component. Hence the templates such as `RowTemplate` and `DetailTemplate` should be wrapped around a component named `TreeGridTemplates` as follows.
 
 {% tabs %}
 
@@ -280,7 +276,5 @@ public class Employee
 {% endhighlight %}
 
 {% endtabs %}
-
-The following output is displayed as a result of the above code example.
 
 ![TreeGridTemplates Component](images/rowtemp.png)

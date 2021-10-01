@@ -17,7 +17,7 @@ This section briefly explains how to include a Kanban component in your Blazor S
 
 1. Install **Syncfusion.Blazor.Kanban** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side style resources from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>
@@ -113,7 +113,7 @@ After successful compilation of your application, run the application.
 
 The output will be as follows.
 
-![intialize](./images/initialize.png)
+![Blazor Kanban Component](./images/blazor-kanban-component.png)
 
 ## Populating cards
 
@@ -159,7 +159,7 @@ To populate the empty Kanban with cards, define the Enumerable object or remote 
 
 The output will be as follows.
 
-![default](./images/default.png)
+![Blazor Kanban with Cards](./images/blazor-kanban-with-cards.png)
 
 ## Enable Swimlane
 
@@ -226,7 +226,7 @@ The output will be as follows.
 
 The output will be as follows.
 
-![swimlane](./images/swimlane.png)
+![Blazor Kanban with Swimlane](./images/blazor-kanban-with-swimlane.png)
 
 ## See Also
 

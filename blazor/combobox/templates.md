@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Templates in Blazor ComboBox Component | Syncfusion
-description: Checkout and learn here all about Templates in Syncfusion Blazor ComboBox component and much more details.
+description: Checkout and learn here all about Templates in the Syncfusion Blazor ComboBox component and much more.
 platform: Blazor
 control: ComboBox
 documentation: ug
@@ -61,7 +61,7 @@ In the following sample, each list item is split into two columns to display rel
 
 The output will be as follows.
 
-![ComboBox](./images/item_template.png)
+![Blazor ComboBox with ItemTemplate](./images/blazor-combobox-item-template.png)
 
 ## Group template
 
@@ -112,7 +112,7 @@ In the following sample, employees are grouped according to their country.
 
 The output will be as follows.
 
-![ComboBox](./images/group_template.png)
+![Blazor ComboBox with GroupTemplate](./images/blazor-combobox-group-template.png)
 
 ## Header template
 
@@ -185,7 +185,7 @@ In the following sample, the list items and its headers are designed and display
 
 The output will be as follows.
 
-![ComboBox](./images/header_template.png)
+![Blazor ComboBox with HeaderTemplate](./images/blazor-combobox-header-template.png)
 
 ## Footer template
 
@@ -237,7 +237,7 @@ In the following sample, footer element displays the total number of list items 
 
 The output will be as follows.
 
-![ComboBox](./images/footer_template.png)
+![Blazor ComboBox with FooterTemplate](./images/blazor-combobox-footer-template.png)
 
 ## No records template
 
@@ -269,7 +269,7 @@ In the following sample, popup list content displays the notification of no data
 
 The output will be as follows.
 
-![ComboBox](./images/data_template.png)
+![Blazor ComboBox without Data](./images/blazor-combobox-without-data.png)
 
 ## Action failure template
 
@@ -305,4 +305,4 @@ In the following sample, when the data fetch request fails, the ComboBox display
 
 The output will be as follows.
 
-![ComboBox](./images/action_template.png)
+![Blazor ComboBox with Action Failure Template](./images/blazor-combobox-action-failure-template.png)

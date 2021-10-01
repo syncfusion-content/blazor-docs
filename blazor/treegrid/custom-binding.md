@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Binding in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Custom Binding in Syncfusion Blazor TreeGrid component and much more.
+description: Checkout and learn here all about custom binding in Syncfusion Blazor TreeGrid component and much more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Custom Binding in Blazor TreeGrid Component
 
-The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows you to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
+The [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager.html) has custom adaptor support which allows to perform manual operations on the data. This can be utilized for implementing custom data binding and editing operations in the Tree Grid component.
 
-For implementing custom data binding in Tree Grid, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
+For implementing custom data binding in the Tree Grid, the **DataAdaptor** class is used. This abstract class acts as a base class for the custom adaptor.
 
 The **DataAdaptor** abstract class has both synchronous and asynchronous method signatures which can be overridden in the custom adaptor. Following are the method signatures present in this class,
 
@@ -215,7 +215,7 @@ public class SelfReferenceData
 
 If you want to inject some of your service into Custom Adaptor and use the service, then you can achieve your requirement by using below way.
 
-Initially you need to add CustomAdaptor class as AddScoped in `StartUp.cs` file.
+Initially, the CustomAdaptor class must be added as AddScoped in `StartUp.cs` file.
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -294,7 +294,7 @@ The following sample code demonstrates injecting service into Custom Adaptor,
 
 ## Custom adaptor as Component
 
-Custom Adaptor can be created as a component when `DataAdaptor` is extended from `OwningComponentBase`. You can create Custom Adaptor from any of the two versions of the class, `DataAdaptor` and `DataAdaptor<T>`.
+Custom Adaptor can be created as a component when `DataAdaptor` is extended from `OwningComponentBase`. Custom Adaptor can be created from any of the two versions of the class, `DataAdaptor` and `DataAdaptor<T>`.
 
 Ensure to register your service in **Startup.cs** file.
 

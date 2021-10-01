@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Dashboard Layout component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor Dashboard Layout component of Syncfusion.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -17,9 +17,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-
-    > You can also add the client-side style resources through CDN.
+* You can add the client-side style resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
     <head>
@@ -35,7 +33,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
     </head>
     ```
 
-* For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+* For `Internet Explorer 11`, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
     <head>
@@ -50,7 +48,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
     W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+* You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
     <head>
@@ -145,7 +143,7 @@ It is easy to initialize a dashboard layout component with panel. To render a da
 
 ```
 
-> There is no need to assign default  value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
+> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
 
 ## Run the application
 

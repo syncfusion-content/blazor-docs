@@ -11,7 +11,7 @@ documentation: ug
 
 Task dependency or task relationship can be established between two tasks in Gantt Chart. This dependency affects the project schedule. If you change the predecessor of a task, it will affect the successor task, which will affect the next task, and so on.
 
-## Task Relationship Types
+## Task relationship types
 
 Task relationships are categorized into four types based on the start and finish dates of the task.
 
@@ -19,27 +19,27 @@ Task relationships are categorized into four types based on the start and finish
 
 You cannot start a task until the dependent task also starts.
 
-![Alt text](images/ss.png)
+![Blazor Gantt Chart displays Start to Start Task Relationship](images/blazor-gantt-chart-start-to-start-relation.png)
 
 ### Start to Finish (SF)
 
 You cannot finish a task until the dependent task is started.
 
-![Alt text](images/sf.png)
+![Blazor Gantt Chart displays Start to Finish Task Relationship](images/blazor-gantt-chart-start-to-finish-relation.png)
 
 ### Finish to Start (FS)
 
 You cannot start a task until the dependent task is completed.
 
-![Alt text](images/fs.png)
+![Blazor Gantt Chart displays Finish to Start Task Relationship](images/blazor-gantt-chart-finish-to-start-relation.png)
 
 ### Finish to Finish (FF)
 
 You cannot finish a task until the dependent task is completed.
 
-![Alt text](images/ff.png)
+![Blazor Gantt Chart displays Finish to Finish Task Relationship](images/blazor-gantt-chart-finish-to-finish-relation.png)
 
-## Define Task Relationship
+## Define task relationship
 
 Task relationship is defined in the data source as a string value, and this value is mapped to the Gantt Chart component by using the `GanttTaskFields.Dependency` property. The following code example demonstrates how to enable the predecessor in the Gantt Chart component.
 
@@ -143,7 +143,7 @@ Task relationship is defined in the data source as a string value, and this valu
 
 The following screenshot displays the output of the above code.
 
-![Alt text](images/enableDependency.png)
+![Blazor Gantt Chart displays Task Relationship](images/blazor-gantt-chart-task-relationship.png)
 
 ## Predecessor offset with duration units
 
@@ -245,7 +245,7 @@ You can define an offset with various offset duration units for predecessors by 
 
 The following screen shot depicts the duration unit support in the predecessor offset.
 
-![Alt text](images/predecessorWithOffsets.png)
+![Blazor Gantt Chart displays Predecessor Offset](images/blazor-gantt-chart-predecessor-with-offsets.png)
 
 ## Validate predecessor links on editing
 
@@ -255,7 +255,9 @@ In Gantt, task relationship link can be broken by editing the start date, end da
 
 ### Using actionBegin event
 
-When the task relationship link is broken on any edit action, then the `OnActionBegin` event will be triggered with `RequestType` argument as `ValidateLinkedTask`. You can validate the editing action within the actionBegin event using the `ValidateMode` event argument. The `ValidateMode` event argument has the following properties:
+#### On taskbar editing
+
+When the task relationship link is broken on any edit action, then the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event will be triggered with [`RequestType`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_RequestType) argument as `ValidateLinkedTask`. You can validate the editing action within the actionBegin event using the [`ValidateMode`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_ValidateMode) event argument. The `ValidateMode` event argument has the following properties:
 
 Argument |Default value |Description
 -----|-----|-----
@@ -273,7 +275,7 @@ The following sample explains enabling the `RespectLink` validation mode while e
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress"
         Dependency="Predecessor" ParentID="ParentId"></GanttTaskFields>
     <GanttEditSettings AllowTaskbarEditing="true"></GanttEditSettings>
-    <GanttEvents TValue="TaskData" OnActionBegin="actionbegin"></GanttEvents>
+    <GanttEvents TValue="TaskData" OnActionBegin="ActionBegin"></GanttEvents>
 </SfGantt>
 
 @code{
@@ -282,7 +284,7 @@ The following sample explains enabling the `RespectLink` validation mode while e
     {
         this.TaskCollection = GetTaskCollection();
     }
-    public void actionbegin(GanttActionEventArgs<TaskData> args) {
+    public void ActionBegin(GanttActionEventArgs<TaskData> args) {
         if(args.RequestType.ToString() == "ValidateLinkedTask") {
             args.ValidateMode.RespectLink = true;
         }
@@ -300,74 +302,85 @@ The following sample explains enabling the `RespectLink` validation mode while e
     }
 
     public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 2,
-            TaskName = "Identify Site location",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 3,
-            TaskName = "Perform soil test",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "4",
-            Progress = 40,
-            Predecessor = "2",
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 4,
-            TaskName = "Soil test approval",
-            StartDate = new DateTime(2019, 04, 02),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 1
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21)
-        },
-        new TaskData() {
-            TaskId = 6,
-            TaskName = "Develop floor plan for estimation",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "3",
-            Progress = 30,
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 7,
-            TaskName = "List materials",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "3",
-            Progress = 40,
-            Predecessor = "6",
-            ParentId = 5
-        },
-        new TaskData() {
-            TaskId = 8,
-            TaskName = "Estimation approval",
-            StartDate = new DateTime(2019, 04, 04),
-            Duration = "0",
-            Progress = 30,
-            ParentId = 5
-        }
-    };
-    return Tasks;
+        List <TaskData> Tasks = new List <TaskData> () {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21) },
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, Predecessor = "2", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, Predecessor = "6", ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04),  Duration = "0", Progress = 30, ParentId = 5 }
+        };
+        return Tasks;
     }
 }
 ```
+
+#### On drawing connector lines
+
+When the connector lines are drawn between tasks, the task date gets validated based on predecessor values. We can restrict this validation on predecessor drawing using the [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttEvents-1.html#Syncfusion_Blazor_Gantt_GanttEvents_1_OnActionBegin) event which gets triggered with the [`Action`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttActionEventArgs-1.html#Syncfusion_Blazor_Gantt_GanttActionEventArgs_1_Action) argument as `DrawConnectorLine`. You can enable/disable the validation using `EnableAutoLinkValidation` event argument. By default `EnableAutoLinkValidation` is true.
+
+```cshtml
+@using Syncfusion.Blazor.Gantt
+
+<SfGantt @ref="Gantt" DataSource="@TaskCollection" Height="450px" Width="1000px" ProjectStartDate="@ProjectStart" 
+    ProjectEndDate="@ProjectEnd"  Toolbar="@(new List<string>() { "Add",  "Edit", "Update", "Cancel", "Delete"})">
+
+	<GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate"
+		Duration="Duration" Dependency="Predecessor" ParentID="ParentId">
+	</GanttTaskFields>
+	<GanttEditSettings AllowTaskbarEditing="true" AllowEditing="true" AllowAdding="true"
+		AllowDeleting="true" ShowDeleteConfirmDialog="true">
+	</GanttEditSettings>
+    <GanttEvents OnActionBegin="ActionBegin" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code {
+	public SfGantt<TaskData> Gantt;
+	public DateTime ProjectStart = new DateTime(2019, 3, 24);
+    public DateTime ProjectEnd = new DateTime(2019, 7, 6);
+	public List<TaskData> TaskCollection { get; set; }
+	protected override void OnInitialized()
+	{
+		this.TaskCollection = GetTaskCollection();
+	}
+	
+    public void ActionBegin(GanttActionEventArgs<TaskData> args)
+    {
+        if(args.Action != null && args.Action.Equals("DrawConnectorLine", StringComparison.Ordinal)){
+			args.EnableAutoLinkValidation = false;
+		}
+    }
+	
+	public class TaskData
+	{
+		public int TaskId { get; set; }
+		public string TaskName { get; set; }
+		public DateTime StartDate { get; set; }
+		public string Duration { get; set; }
+		public string Predecessor { get; set; }
+		public int Progress { get; set; }
+		public int? ParentId { get; set; }
+	}
+
+	public static List<TaskData> GetTaskCollection()
+	{
+		List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02)},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Progress = 30, ParentId = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 40, Predecessor = "2fs", ParentId = 1 },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "1", Progress = 30, ParentId = 1 },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02) },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 5 },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40, ParentId = 5 },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "2", Progress = 30, ParentId = 5 }
+        };
+	    return Tasks;
+	}
+}
+```
+
+`Note:` `EnablePredecessorValidation` is used to enable/disable validation based on predecessor values both on load time and on edit actions like cell editing, dialog editing, and on predecessor drawing. Whereas, `EnableAutoLinkValidation` event argument is used to enable/disable validation only on predecessor drawing. 
 
 > You can refer to our [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap4) to knows how to render and configure the gantt.

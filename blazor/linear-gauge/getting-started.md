@@ -17,7 +17,7 @@ This section briefly explains how to include a Linear gauge in your Blazor serve
 
 1. Install **Syncfusion.Blazor.LinearGauge** NuGet package in the application using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -91,7 +91,7 @@ The Syncfusion Linear gauge component can be initialized in any razor page insid
 
 After the successful compilation of your application,  press F5 to run the application. The Blazor Linear gauge component will be rendered in the web browser as illustrated in the following screenshot.
 
-![Linear Gauge Sample](images/pixel.png)
+![Blazor Linear Gauge Component](images/blazor-linear-gauge-component.png)
 
 ## Set pointer value
 
@@ -114,7 +114,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 </SfLinearGauge>
 ```
 
-![Linear Gauge with pointer value](images/getting-pointers.png)
+![Blazor Linear Gauge with Pointer Value](images/blazor-linear-gauge-with-pointer.png)
 
 ## Add a title for Linear Gauge
 
@@ -134,7 +134,7 @@ The title can be added to the linear gauge to provide a piece of quick informati
 </SfLinearGauge>
 ```
 
-![Linear gauge with title](images/getting-title.png)
+![Blazor Linear Gauge with Title](images/blazor-linear-gauge-with-title.png)
 
 ## Add ranges in the Linear gauge
 
@@ -162,7 +162,7 @@ The range is used to specify a group of scale values in the gauge. We can set th
 </SfLinearGauge>
 ```
 
-![Linear gauge with range bar](images/getting-ranges.png)
+![Blazor Linear Gauge with Range Bar](images/blazor-linear-gauge-with-ranges.png)
 
 ## See also
 

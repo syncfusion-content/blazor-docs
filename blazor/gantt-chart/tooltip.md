@@ -128,19 +128,19 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 
 Taskbar Tooltip
 
-![Alt text](images/taskbar-tooltip.png)
+![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-taskbar-tooltip.png)
 
 Dependency Tooltip
 
-![Alt text](images/dependency-tooltip.png)
+![Blazor Gantt Chart displays Dependency Tooltip](images/blazor-gantt-chart-dependency-tooltip.png)
 
 Baseline Tooltip
 
-![Alt text](images/baseline-tooltip.png)
+![Blazor Gantt Chart displays Baseline Tooltip](images/blazor-gantt-chart-baseline-tooltip.png)
 
 Event Marker Tooltip
 
-![Alt text](images/event-marker-tooltip.png)
+![Blazor Gantt Chart displays Event Marker Tooltip](images/blazor-gantt-chart-event-marker-tooltip.png)
 
 > The default value of the `GanttTooltipSettings.ShowTooltip` property is true.
 
@@ -241,7 +241,7 @@ In the Gantt Chart component, you can enable or disable the mouse hover tooltip 
 }
 ```
 
-![Alt text](images/timelinecellTooltip.png)
+![Blazor Gantt Chart displays Timeline Cell Tooltip](images/blazor-gantt-chart-timeline-cell-tooltip.png)
 
 ## Cell Tooltip
 
@@ -467,7 +467,7 @@ The default tooltip in the Gantt Chart component can be customized using the `Ga
 
 The below screenshot shows the output of above code example.
 
-![Alt text](images/taskbarTemplate.png)
+![Blazor Gantt Chart displays Taskbar Tooltip](images/blazor-gantt-chart-with-taskbar-tooltip.png)
 
 <!-- Taskbar editing tooltip
 
@@ -674,7 +674,7 @@ A baseline tooltip can be customized using the `GanttTooltipSettings.BaselineTem
 
 The following screenshot shows the template for baseline in Gantt Chart.
 
-![Alt text](images/baselineTemplate.png)
+![Customizing Baseline Tooltip in Blazor Gantt Chart](images/blazor-gantt-chart-baseline-tooltip-customization.png)
 
 ### Manual Taskbar Tooltip
 
@@ -782,4 +782,4 @@ public static List <TaskData> GetTaskCollection() {
 }
 ```
 
-![Alt text](images/manualTaskbar.png)
+![Blazor Gantt Chart displays Manual Taskbar Tooltip](images/blazor-gantt-chart-manual-taskbar-tooltip.png)

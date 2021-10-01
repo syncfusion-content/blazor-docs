@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Stared with Blazor TreeMap in Server Side | Syncfusion
-description: Learn here all about Getting Started with Syncfusion Blazor TreeMap in Blazor Server Side App using Visual Studio and more.
+description: Learn here all about getting started with Syncfusion Blazor TreeMap in Blazor server-side app using Visual Studio and more.
 platform: Blazor
 control: TreeMap
 documentation: ug
@@ -15,7 +15,7 @@ This section briefly explains how to include a TreeMap component in the Blazor s
 
 1. Install **Syncfusion.Blazor.TreeMap** NuGet package in the application using the **NuGet Package Manager**.
 
-2. Add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
     <head>
@@ -100,8 +100,6 @@ Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tre
 }
 ```
 
-On successful compilation of the application, the Syncfusion Blazor TreeMap component will render in the web browser as following.
-
 ![TreeMap basic sample](images/treemap-basic.png)
 
 ## Adding labels in TreeMap items
@@ -116,7 +114,7 @@ Add label text to the leaf items in the TreeMap component by setting the field n
 </SfTreeMap>
 ```
 
-> Refer to [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 ![TreeMap with label](images/treemap-with-label.png)
 
@@ -133,7 +131,7 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component) to know the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know the property value of the **GrowthReport**.
 
 ![TreeMap with title](images/treemap-with-title.png)
 
@@ -156,7 +154,7 @@ The color mapping supports customization of item colors based on the underlying 
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 ![TreeMap with color mapping](images/Colormapping.png)
 
@@ -180,7 +178,7 @@ Legend items are used to denote the color mapping categories and show the legend
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 ![TreeMap with legend](images/Legend.png)
 
@@ -205,7 +203,7 @@ When space constraints prevents from displaying information using data labels, t
 </SfTreeMap>
 ```
 
-> Refer to the [code block](#adding-treemap-component) to know about the property value of **GrowthReport**.
+> Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
 ![TreeMap with legend](images/Tooltip.png)
 

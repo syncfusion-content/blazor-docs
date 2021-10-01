@@ -19,7 +19,7 @@ A node can be created and added to the diagram, either programmatically or inter
 
 ## Add node through nodes collection
 
-To create a node, define the `Node` object and add that to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.
+To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) object and add that to the nodes collection of the diagram. The following code example shows how to add a node to the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -43,7 +43,11 @@ To create a node, define the `Node` object and add that to the nodes collection 
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -55,12 +59,13 @@ To create a node, define the `Node` object and add that to the nodes collection 
 
 ## Add nodes at runtime
 
-You can add a Node at runtime by adding node to the nodes collection in the Diagram component.  The following code explains how to add nodes at runtime.
+You can add a Node at runtime by adding it to the nodes collection of the Diagram component. The following code explains how to add a node at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Add Node" @onclick="@AddNode">
+<SfButton Content="Add Node" OnClick="@AddNode" />
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
 @code
@@ -104,19 +109,19 @@ You can add a Node at runtime by adding node to the nodes collection in the Diag
 
 ## Add node from palette
 
-Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the `Symbol Palette`.
+Nodes can be predefined and added to the palette, and can be dropped into the diagram when needed. For more information about adding nodes from symbol palette, refer to the [Symbol Palette](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SymbolPalette.SfSymbolPaletteComponent.html).
 
 * Once you drag a node/connector from the palette to the diagram, the following events can be used to do the customization.
-* When a symbol is dragged into a diagram from symbol palette, the `DragEnter` event gets triggered.
-* When a symbol is dragged over a diagram, the `DragOver` event gets triggered.
-* When a symbol is dragged and dropped from symbol palette to diagram area, the `Drop` event gets triggered.
-* When a symbol is dragged outside of the diagram, the `DragLeave` event gets triggered.
+* When a symbol is dragged into a diagram from symbol palette, the [DragStart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragStart) event gets triggered. [DragStartEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragStartEventArgs.html) notifies when the element enters into the diagram from the symbol palette.
+* When a symbol is dragged over a diagram, the [Dragging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Dragging) event gets triggered. [DraggingEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DraggingEventArgs.html) notifies when an element drags over another diagram element.
+* When a symbol is dragged and dropped from symbol palette to diagram area, the [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event gets triggered. [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html) notifies when the element is dropped on the diagram.
+* When a symbol is dragged outside of the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event gets triggered. [DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html) notifies when the element leaves the diagram.
 
 ![Node](../images/node-add-palette.gif)
 
 ## Draw node using drawing object
 
-Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the `DrawingObject`.
+Nodes can be interactively drawn by clicking and dragging on the diagram surface by using the [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
 For more information about drawing node, refer to the `Draw Nodes`.
 
@@ -134,8 +139,9 @@ The following code shows how to remove a node at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Remove Node" @onclick="@RemoveNodes">
+<SfButton Content="Remove Node" OnClick="@RemoveNodes" />
 
 <SfDiagramComponent Width="1000px" Height="500px" Nodes="@nodes" />
 
@@ -156,7 +162,11 @@ The following code shows how to remove a node at runtime.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         // Add node
         nodes.Add(node);
@@ -187,8 +197,9 @@ The following code example explains how to change the node properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Update Node" @onclick="@UpdateNodes">
+<SfButton Content="Update Node" OnClick="@UpdateNodes" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Nodes="@nodes"/>
 
 @code
@@ -209,7 +220,11 @@ The following code example explains how to change the node properties.
             // Size of the node
             Width = 100,
             Height = 100,
-            Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "white" }
+            Style = new ShapeStyle() 
+            { 
+                Fill = "#6495ED", 
+                StrokeColor = "white" 
+            }
         };
         nodes.Add(node);
     }
@@ -224,7 +239,7 @@ The following code example explains how to change the node properties.
 }
 ```
 
-> BeginUpdate and EndUpdate method which allows you to stop the continuous update of control and resume it finally.
+> [BeginUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_BeginUpdate) and [EndUpdate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_EndUpdate) method which allows you to stop the continuous update of control and resume it finally.
 
 ## See Also
 

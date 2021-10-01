@@ -112,4 +112,4 @@ You can select the DataGrid row index based on the selected data in the DropDown
 ```
 
 Output will be like the below.
-![Final output](../images/dropdowntoolbar.PNG)
+![Blazor DataGrid with Dropdown ToolBar](../images/blazor-datagrid-dropdown-toolbar.PNG)

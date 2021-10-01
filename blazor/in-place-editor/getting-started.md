@@ -17,7 +17,7 @@ This section briefly explains how to include a In-Place Editor component in your
 
 * Install **Syncfusion.Blazor.InPlaceEditor** NuGet package to the application by using the **NuGet Package Manager**.
 
-* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml
 
@@ -170,9 +170,9 @@ After successful compilation of your application, run the application.
 
 Output be like the below.
 
-![Inplace-editor inline mode](./images/inline.png)
+![Blazor In-place Editor in Inline Mode](./images/blazor-inplace-editor-in-inline-mode.png)
 
-![Inplace-editor popup mode](./images/popup-mode.png)
+![Blazor In-place Editor in Popup Mode](./images/blazor-inplace-editor-in-popup-mode.png)
 
 ## Configuring DropDownList
 
@@ -331,7 +331,7 @@ In the following code, it is configured to render the `DatePicker`, `Dropdownlis
 
 Output be like the below.
 
-![Inplace-editor components](./images/components.png)
+![Integrating DatePicker in Blazor In-place Editor](./images/blazor-inplace-editor-integrate-datepicker.png)
 
 ## Submitting data to the server (save)
 
@@ -438,7 +438,7 @@ The edited data is submitted to the server and you can see the new values gettin
 
 The output will be as follows.
 
-![Getting started](./images/getting-started.png)
+![Refreshing Blazor In-place Editor Data](./images/blazor-inplace-editor-refresh-data.png)
 
 ## See Also
 

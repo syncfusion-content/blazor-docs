@@ -9,9 +9,7 @@ documentation: ug
 
 # Accessibility in Blazor TreeMap Component
 
-The TreeMap component provides built-in compliance with the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about the elements in a document for assistive technology.
-
-**Aria-label:**
+The TreeMap component provides built-in compliance with the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. The WAI-ARIA accessibility supports are achieved using attributes such as `aria-label`. It helps to provide information about the elements in a document for assistive technology.
 
 This attribute provides text label with some default description for the following elements in the TreeMap.
 
@@ -39,4 +37,4 @@ This attribute provides text label with some default description for the followi
 </tr>
 </table>
 
-Change this default description using the `Description` property available in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html), [TreeMapTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html), [TreeMapSubTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSubtitleSettings.html), and [SfTreeMap](https://help.syncfusion.com/cr/blazor). It helps screen readers to read for assistive purpose.
+Change this default description using the [`Description`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_Description) property available in the [TreeMapLegendSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.TreeMapLegendSettings.html), [TreeMapTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapTitleSettings.html), [TreeMapSubTitleSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapSubtitleSettings.html), and [SfTreeMap](https://help.syncfusion.com/cr/blazor). It helps screen readers to read for assistive purpose.
