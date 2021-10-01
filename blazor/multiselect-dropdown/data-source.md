@@ -325,7 +325,7 @@ The output will shown as follows,
 
 ![Blazor MultiSelect ValueTuple Data](./images/blazor_multiselect_valuetuple.png)
 
-### ExpandoObject data binding
+## Binding ExpandoObject
 
 You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the MultiSelect component. The following example `ExpandoObject` is bound to the collection of vehicles data.
 
@@ -358,7 +358,7 @@ The output will shown as follows,
 
 ![Blazor MultiSelect with expando object data binding](./images/blazor_multiselect_expando-object.png)
 
-### DynamicObject data binding
+## Binding DynamicObject
 
 You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the MultiSelect component. The following example `DynamicObject` is bound to the collection of customers data.
 
@@ -410,7 +410,7 @@ The output will shown as follows,
 
 ![Blazor MultiSelect with dynamic object data binding](./images/blazor_multiselect_dynamic-object.png)
 
-### ObservableCollection data binding
+## Binding ObservableCollection
 
 You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the MultiSelect component. The following example `Observable Data` is bound to a collection of colors data.
 
