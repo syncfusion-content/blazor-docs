@@ -56,7 +56,7 @@ To use checkbox, inject the `CheckBoxSelection` module in the MultiSelect.
 
 The output will be as follows.
 
-![MultiSelect](./images/checkbox_mode.png)
+![Blazor MultiSelect DropDown with CheckBox](./images/blazor-multiselect-dropdown-with-checkbox.png)
 
 ## Select All
 
@@ -107,7 +107,7 @@ For the unSelect All option, by default unSelect All text will show. You can cus
 
 The output will be as follows.
 
-![MultiSelect](./images/select_all.png)
+![Blazor MultiSelect DropDown with CheckBox Selection](./images/blazor-multiselect-dropdown-checkbox-selection.png)
 
 ## Selection Limit
 
@@ -154,7 +154,7 @@ Defines the limit of the selected items using [MaximumSelectionLength](https://h
 
 The output will be as follows.
 
-![MultiSelect](./images/max_select.png)
+![Blazor MultiSelect DropDown with Limit Selection in CheckBox](./images/blazor-multiselect-dropdown-limit-selection.png)
 
 ## Selection Reordering
 
@@ -201,4 +201,4 @@ Using [EnableSelectionOrder](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 The output will be as follows.
 
-![MultiSelect](./images/selection_order.png)
+![Changing Selection Order in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-change-selection-order.png)

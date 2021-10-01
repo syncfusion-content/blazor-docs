@@ -61,7 +61,7 @@ The primary progress button is styled with background color and it is used to re
 
 Output be like
 
-![Button Sample](./images/progress-button-types.png)
+![Blazor Primary ProgressButton](./images/blazor-primary-progress-button.png)
 
 ## Icons
 
@@ -86,4 +86,4 @@ The Progress Button can have an icon to provide the visual representation of the
 
 Output be like
 
-![Button Sample](./images/progress-button-icons.png)
+![Blazor ProgressButton with Icon](./images/blazor-progress-button-icon.png)

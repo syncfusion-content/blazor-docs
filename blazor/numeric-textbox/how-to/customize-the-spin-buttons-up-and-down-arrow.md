@@ -32,4 +32,4 @@ You can override the default icons of `e-spin-up` and `e-spin-down` classes usin
 
 The output will be as follows.
 
-![NumericTextBox Sample](../images/custom_icon.png)
+![Customizing Up and Down Arrow in Blazor NumericTextBox](../images/blazor-numerictextbox-custom-icon.png)

@@ -32,7 +32,7 @@ To get a linear progress bar, set the [Type](https://help.syncfusion.com/cr/blaz
 </SfProgressBar>
 ```
 
-![Progress Bar with linear type](images/linearType.png)
+![Blazor Linear ProgressBar](images/blazor-progressbar-with-linear.png)
 
 ## Circular
 
@@ -58,4 +58,4 @@ To get the circular progress bar, set the [Type](https://help.syncfusion.com/cr/
 </SfProgressBar>
 ```
 
-![Progress Bar with circular type](images/circularType.png)
+![Blazor Circular ProgressBar](images/blazor-progressbar-with-circular.png)

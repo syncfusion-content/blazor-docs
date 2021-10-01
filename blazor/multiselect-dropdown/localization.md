@@ -40,7 +40,7 @@ The **Localization** library allows you to localize default text content. The Mu
 
 In the following examples, demonstrate how to enable **Localization** for MultiSelect Dropdown in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -239,4 +239,4 @@ In the following sample, French culture is set to the MultiSelect and no data is
 
 The output will be as follows.
 
-![DropDownList](./images/localization.png)
+![Localization in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-localization.png)
