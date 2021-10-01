@@ -80,7 +80,7 @@ By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset*
 
 ##### Customization of zooming toolbar
 
-The `MapsZoomToolbarSettings` class can be used to customize the zooming toolbar. The following properties are available for customization in the `MapsZoomToolbarSettings` class.
+The [MapsZoomToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html) class can be used to customize the zooming toolbar. The following properties are available for customization in the `MapsZoomToolbarSettings` class.
 
 * [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_Orientation) - To customize the orientation of the zooming toolbar.
 * [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_HorizontalAlignment) - To customize the position type of toolbar when it is placed horizontally.
@@ -107,7 +107,7 @@ The `MapsZoomToolbarSettings` class can be used to customize the zooming toolbar
 
 ![Maps with custom zoom toolbar](./images/UserInteraction/custom-toolbar.png)
 
-The `MapsZoomToolbarButton` class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
+The [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html) class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
 
 * [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_ToolbarItems) - To customize the items that are to be shown in the zooming toolbar.
 * [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Color) - To apply the color to the icons in the buttons in the zooming toolbars.
@@ -141,7 +141,7 @@ The `MapsZoomToolbarButton` class can be used to customize the buttons in the zo
 
 ![Maps with custom zoom toolbar buttons](./images/UserInteraction/custom-toolbar-buttons.png)
 
-The `MapsZoomToolbarTooltipSettings` class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
+The [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html) class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
 
 * [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_Visible) - To enable or disable the tooltip in the zooming toolbar.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_Fill) - To set the fill color to the tooltip in the zooming toolbar.
