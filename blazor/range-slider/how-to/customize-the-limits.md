@@ -92,4 +92,4 @@ And on implementing the above code snippet in the below slider control's Blazor 
 </style>
 ```
 
-![Blazor- Slider - Limits](./../images/limits.gif)
+![Customizing Limits in Blazor RangeSlider](./../images/blazor-rangeslider-custom-limits.gif)

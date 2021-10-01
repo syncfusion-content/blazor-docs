@@ -204,4 +204,4 @@ namespace WebAssemblyLocale
 
 The output will be as follows.
 
-![Localizatio](./images/localization.gif)
+![Localization in Blazor RangeSlider](./images/blazor-rangeslider-localization.gif)
