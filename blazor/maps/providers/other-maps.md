@@ -127,7 +127,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer fo
 
 The Maps component can also render the following online map service providers, which are listed below.
 
-* Mapbox
+* MapBox
 * TomTom
 * ESRI
 
