@@ -32,7 +32,7 @@ The following code example shows the rendering of built-in syncfusion icons from
 
 ![Blaozr Icon Component](./images/icons/icon.png)
 
-## Set icon size
+## Icon size
 
 The font size of the icon can be changed using the [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Size) property. The icon displays `Medium` size by default. 
 
@@ -70,7 +70,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 > The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
-## Display tooltip for icons
+## Tooltip for icons
 
 `Title` property used to set title attribute for the icon to improve accessibility with screen readers and shows a tooltip on mouseover. The following example code displays tooltip text for appropriate icons.
 
@@ -88,7 +88,7 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 ![ToolTip for Blaozr Icon Component](./images/icons/icon-title.png)
 
-## Customize icon appearence
+## Icon appearence customization 
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to customize color and size by overriding the `e-icons` class. 
 
