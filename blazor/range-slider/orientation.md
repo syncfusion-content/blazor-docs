@@ -22,4 +22,4 @@ The Slider can be displayed, either in horizontal or vertical orientation. By de
 </style>
 ```
 
-![Blazor - Slider - Orientation](images/slider-orientation.png)
+![Blazor RangeSlider with Vertical Orientation](images/blazor-rangeslider-vertical-orientation.png)
