@@ -7,7 +7,7 @@ control: DatePicker
 documentation: ug
 ---
 
-# Render the Blazor DatePicker Component with Week Numbers
+# Week Number in Blazor DatePicker Component
 
 You can enable WeekNumber in the DatePicker by using the [WeekNumber](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.CalendarBase-1.html?&_ga=2.27644924.1192045546.1630297484-1815315561.1628088345#Syncfusion_Blazor_Calendars_CalendarBase_1_WeekNumber) property.
 
