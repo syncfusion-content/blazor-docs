@@ -51,7 +51,7 @@ In the following sample, each list item is split into two columns to display rel
 
 The output will be as follows.
 
-![MultiSelect](./images/item_template.png)
+![Blazor MultiSelect DropDown with Item Template](./images/blazor-multiselect-dropdown-item-template.png)
 
 ## Value template
 
@@ -94,7 +94,7 @@ In the following sample, the selected value is displayed as a combined text of b
 
 The output will be as follows.
 
-![MultiSelect](./images/value_template.png)
+![Blazor MultiSelect DropDown with Value Template](./images/blazor-multiselect-dropdown-value-template.png)
 
 ## Header template
 
@@ -160,7 +160,7 @@ In the following sample, the list items and its headers are designed and display
 
 The output will be as follows.
 
-![MultiSelect](./images/header_template.png)
+![Blazor MultiSelect DropDown with Header Template](./images/blazor-multiselect-dropdown-header-template.png)
 
 ## Footer template
 
@@ -205,7 +205,7 @@ In the following sample, footer element displays the total number of list items 
 
 The output will be as follows.
 
-![MultiSelect](./images/footer_template.png)
+![Blazor MultiSelect DropDown with Footer Template](./images/blazor-multiselect-dropdown-footer-template.png)
 
 ## No records template
 
@@ -234,7 +234,7 @@ In the following sample, popup list content displays the notification of no data
 
 The output will be as follows.
 
-![MultiSelect](./images/data_template.png)
+![Blazor MultiSelect DropDown without Data](./images/blazor-multiselect-dropdown-without-data.png)
 
 ## Action failure template
 
@@ -268,4 +268,4 @@ In the following sample, when the data fetch request fails, the MultiSelect disp
 
 The output will be as follows.
 
-![MultiSelect](./images/action_template.png)
+![Blazor MultiSelect DropDown with Action Template](./images/blazor-multiselect-dropdown-action-template.png)

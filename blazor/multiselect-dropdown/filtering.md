@@ -53,7 +53,7 @@ The MultiSelect has built-in support to filter data items when [AllowFiltering](
 
 The output will be as follows.
 
-![MultiSelect](./images/filter.png)
+![Filtering in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-filtering.png)
 
 ## Custom Filtering
 

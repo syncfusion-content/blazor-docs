@@ -24,7 +24,7 @@ The Ticks in Slider supports you to easily identify the current value/values of 
 }
 ```
 
-![Blazor- Slider - Ticks](images/ticks.gif)
+![Blazor RangeSlider with Ticks](images/blazor-rangeslider-ticks.gif)
 
 ## Step
 
@@ -42,7 +42,7 @@ When the Slider is moved, it increases/decreases the value based on the step val
 }
 ```
 
-![Blazor- Slider - Step](./images/step.gif)
+![Blazor RangeSlider with Step](./images/blazor-rangeslider-step.gif)
 
 ## Min and Max
 
@@ -61,4 +61,4 @@ Enables the minimum/starting and maximum/ending value of the Slider, by using th
 }
 ```
 
-![Blazor- Slider - Min and Max](./images/MinMax.gif)
+![Blazor RangeSlider with Minimum and Maximum Value](./images/blazor-rangeslider-min-max-value.gif)

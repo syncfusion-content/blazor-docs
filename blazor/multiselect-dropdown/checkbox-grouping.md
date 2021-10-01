@@ -50,4 +50,4 @@ You can arrange the datasource items by grouping them with checkbox mode in Mult
 
 The output will be as follows.
 
-![Blazor MultiSelect with checkbox grouping](./images/blazor-multiselect-checkbox-with-grouping.png)
+![Blazor MultiSelect DropDown with Checkbox Grouping](./images/blazor-multiselect-dropdown-checkbox-grouping.png)
