@@ -45,7 +45,7 @@ The following sample demonstrates configuration of custom value support with the
 
 The output will be as follows.
 
-![Blazor MultiSelect with custom value](./images/custom_value.png)
+![Blazor MultiSelect DropDown with Custom Value](./images/blazor-multiselect-dropdown-custom-value.png)
 
 ## Value as non-string type
 

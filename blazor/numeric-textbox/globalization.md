@@ -40,7 +40,7 @@ The **Localization** library allows you to localize default text content. The Nu
 
 In the following examples, demonstrate how to enable **Localization** for Numeric TextBox in server side Blazor samples. Here, we have used Resource file to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -196,7 +196,7 @@ The following steps explain how to render the NumericTextBox in German culture (
 
     The output will be as follows.
 
-    ![NumericTextBox Sample](./images/de_culture.png)
+    ![Localization in Blazor NumericTextBox](./images/blazor-numerictextbox-localization.png)
 
 ## Customize the localized text
 
@@ -217,7 +217,7 @@ The following steps explain how to render the NumericTextBox in German culture (
 
     The output will be as follows.
 
-    ![NumericTextBox Sample](./images/de_culture_02.png)
+    ![Customizing Localized Text in Blazor NumericTextBox](./images/blazor-numerictextbox-localize-text.png)
 
 ## Right to Left
 
@@ -243,4 +243,4 @@ The following code example initializes the NumericTextBox component in `Chinese`
 
 The output will be as follows.
 
-![Numerictextbox](./images/zh_culture.png)
+![Right to Left in Blazor NumericTextBox](./images/blazor-numerictextbox-right-to-left.png)

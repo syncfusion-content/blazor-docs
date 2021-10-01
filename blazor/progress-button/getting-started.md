@@ -93,7 +93,7 @@ Now, add the Syncfusion Blazor Progress Button component in `razor` page in the 
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Progress Button component will render in the web browser as shown below
 
-![ProgressButton Sample](./images/progress-button.png)
+![Blazor ProgressButton Component](./images/blazor-progressbutton-component.png)
 
 ## See Also
 
