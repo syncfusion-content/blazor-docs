@@ -478,7 +478,7 @@ The following code example illustrates how to create port to port connections.
 
 ## Avoid Overlapping
 
-The [Orthogonalsegments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html) are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following image illustrates how orthogonal segments are re-routed.
+The [Orthogonal segments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.OrthogonalSegment.html) are automatically re-routed, in order to avoid overlapping with the source and target nodes. The following image illustrates how orthogonal segments are re-routed.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -558,7 +558,7 @@ The [Orthogonalsegments](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
     }
 }
 ```
-![](../images/AvoidOverlapping.png)
+![AvoidOverlapping](../images/AvoidOverlapping.png)
 
 ## See also
 
