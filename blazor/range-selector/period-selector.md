@@ -70,7 +70,7 @@ An array of objects that allows the users to specify pre-defined time intervals.
 
 ```
 
-![Periods](images/period-selector/periods.png)
+![Blazor RangeNavigator with Periods Selection](images/period-selector/blazor-rangenavigator-periods-selection.png)
 
 ## Position
 
@@ -121,7 +121,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ra
 
 ```
 
-![Positioning](images/period-selector/position.png)
+![Changing Period Position in Blazor RangeNavigator](images/period-selector/blazor-rangenavigator-period-position.png)
 
 ## Height
 
@@ -172,7 +172,7 @@ The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Rang
 
 ```
 
-![Height](images/period-selector/height.png)
+![Blazor RangeNavigator with Specific Period Height](images/period-selector/blazor-rangenavigator-specific-period-height.png)
 
 ## Visibility
 

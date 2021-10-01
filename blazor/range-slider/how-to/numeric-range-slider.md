@@ -98,4 +98,4 @@ The complete code for the above Numeric Range Slider can be found below.
 </style>
 ```
 
-![Blazor- Slider - NumericSlider](./../images/numeric.gif)
+![Blazor RangeSlider with NumericSlider](./../images/blazor-rangeslider-with-numeric.gif)
