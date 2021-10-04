@@ -211,7 +211,6 @@ This section explains the list of events of the ComboBox component which will be
 }
 ```
 
-
 ## OnOpen
 
 `OnOpen` event triggers when the popup is opened. If you cancel this event, the popup remains closed.
@@ -355,14 +354,11 @@ This section explains the list of events of the ComboBox component which will be
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfComboBox TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
     <ComboBoxEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></ComboBoxEvents>
     <ComboBoxFieldSettings Text="CustomerID" Value="CustomerID"></ComboBoxFieldSettings>
 </SfComboBox>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -396,14 +392,11 @@ This section explains the list of events of the ComboBox component which will be
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
     <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></DropDownListEvents>
     <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
 </SfDropDownList>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -437,14 +430,11 @@ This section explains the list of events of the ComboBox component which will be
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfComboBox TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
     <ComboBoxEvents TValue="string" TItem="OrderDetails" OnActionFailure="@OnActionFailurehandler"></ComboBoxEvents>
     <ComboBoxFieldSettings Text="CustomerID" Value="CustomerID"></ComboBoxFieldSettings>
 </SfComboBox>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -482,7 +472,6 @@ This section explains the list of events of the ComboBox component which will be
     <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
 </SfComboBox>
 
-
 @code {
     public class GameFields
     {
@@ -516,7 +505,6 @@ This section explains the list of events of the ComboBox component which will be
     <ComboBoxFieldSettings Text="Text" Value="ID"></ComboBoxFieldSettings>
 </SfComboBox>
 
-
 @code {
     public class GameFields
     {
@@ -540,5 +528,3 @@ This section explains the list of events of the ComboBox component which will be
 ```
 
 > ComboBox is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
-
-

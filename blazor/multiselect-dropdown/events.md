@@ -324,7 +324,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -355,14 +354,11 @@ This section explains the list of events of the MultiSelect component which will
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfMultiSelect TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
         <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
         <MultiSelectEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></MultiSelectEvents>
         <MultiSelectFieldSettings Text="CustomerID" Value="CustomerID"></MultiSelectFieldSettings>
 </SfMultiSelect>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -396,14 +392,11 @@ This section explains the list of events of the MultiSelect component which will
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
  <SfMultiSelect TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
         <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
         <MultiSelectEvents TValue="string" TItem="OrderDetails" OnActionFailure="@OnActionFailurehandler"></MultiSelectEvents>
         <MultiSelectFieldSettings Text="CustomerID" Value="CustomerID"></MultiSelectFieldSettings>
  </SfMultiSelect>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -441,7 +434,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -474,7 +466,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectEvents TItem="GameFields" TValue="string[]" Opened="@Openedhandler"></MultiSelectEvents>
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
-
 
 @code {
     public class GameFields
@@ -510,7 +501,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -545,7 +535,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -578,7 +567,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectEvents TItem="GameFields" TValue="string[]" Cleared="@Clearedhandler"></MultiSelectEvents>
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
-
 
 @code {
     public class GameFields
@@ -614,7 +602,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -648,7 +635,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectEvents TItem="GameFields" TValue="string[]" ValueRemoved="@ValueRemovedhandler"></MultiSelectEvents>
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
-
 
 @code {
     public class GameFields
@@ -684,7 +670,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -719,7 +704,6 @@ This section explains the list of events of the MultiSelect component which will
     <MultiSelectFieldSettings Text="Text" Value="ID"></MultiSelectFieldSettings>
 </SfMultiSelect>
 
-
 @code {
     public class GameFields
     {
@@ -742,5 +726,3 @@ This section explains the list of events of the MultiSelect component which will
 ```
 
 > MultiSelect is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
-
-
