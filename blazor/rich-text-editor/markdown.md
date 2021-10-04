@@ -88,7 +88,7 @@ To insert the table in Rich Text Editor, click the `Table` toolbar option to ins
 
 The output will be as follows.
 
-![Table](./images/markdown-table.png)
+![Blazor RichTextEditor with Markdown Table](./images/blazor-richtexteditor-markdown-table.png)
 
 ### Changing table constants
 

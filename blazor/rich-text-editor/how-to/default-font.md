@@ -76,4 +76,4 @@ By using `Default` property, you can change the default font-family of the Rich 
 
 The output will be as follows.
 
-![Default Font](../images/default-font.png)
+![Changing Default Font in Blazor RichTextEditor](../images/blazor-richtexteditor-change-default-font.png)

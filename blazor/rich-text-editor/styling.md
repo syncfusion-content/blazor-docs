@@ -85,7 +85,7 @@ The following sample demonstrates the option to add the font name and font size 
 
 The output will be as follows.
 
-![Font Size](./images/font-size.png)
+![Changing Font Size in Blazor RichTextEditor](./images/blazor-richtexteditor-change-font-size.png)
 
 ## Custom font and size
 
@@ -158,9 +158,9 @@ If you want to add additional font names and font sizes to font drop-down, pass 
 
 The output will be as follows.
 
-![Custom Fonts](./images/custom-font.png)
+![Blazor RichTextEditor with Custom Fonts](./images/blazor-richtexteditor-custom-font.png)
 
-![Custom Font size](./images/custom-font-size.png)
+![Blazor RichTextEditor with Custom Font Size](./images/blazor-richtexteditor-custom-font-size.png)
 
 ## Formats
 
@@ -241,7 +241,7 @@ If you want to add additional formats to format drop-down, pass the format infor
 
 The output will be as follows.
 
-![Custom Formats](./images/custom-formats.png)
+![Blazor RichTextEditor with Custom Format](./images/blazor-richtexteditor-custom-format.png)
 
 ## Font and Background color
 
@@ -299,9 +299,9 @@ The RichTextEditorFontColor and RichTextEditorBackgroundColor tag has two `Mode`
 
 The output will be as follows.
 
-![Font Color](./images/font-color.png)
+![Displaying Font Color in Blazor RichTextEditor](./images/blazor-richtexteditor-font-color.png)
 
-![Background Color](./images/background-color.png)
+![Displaying Background Color in Blazor RichTextEditor](./images/blazor-richtexteditor-background-color.png)
 
 ## Editor content styles
 

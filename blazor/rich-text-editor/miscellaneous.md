@@ -41,7 +41,7 @@ The following sample demonstrates the placeholder option in Rich Text Editor.
 
 The output will be as follows.
 
-![Placeholder](./images/placeholder.png)
+![Blazor RichTextEditor with Placeholder](./images/blazor-richtexteditor-placeholder.png)
 
 ## Character count
 
@@ -72,7 +72,7 @@ The character count color will be modified based on the characters in the Rich T
 
 The output will be as follows.
 
-![Character Count](./images/charcount.png)
+![Displaying Character Count in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count.png)
 
 ## Code view
 
@@ -95,7 +95,7 @@ Rich Text Editor includes the ability for users to directly edit HTML code via `
 
 The output will be as follows.
 
-![Code View](./images/code-view.png)
+![Blazor RichTextEditor with Code View](./images/blazor-richtexteditor-code-view.png)
 
 ## Undo/Redo Manager
 
@@ -125,7 +125,7 @@ Customize the undo/redo step count using `UndoRedoSteps` property. By default, u
 
 The output will be as follows.
 
-![Undo Redo](./images/undo-redo.png)
+![Undo Redo Operation in Blazor RichTextEditor](./images/blazor-richtexteditor-undo-redo-operation.png)
 
 ## Resizable support
 
@@ -147,7 +147,7 @@ To render the Rich Text Editor in the resizable mode, set the `EnableResize` pro
 
 The output will be as follows.
 
-![Resizable support](./images/resizable.png)
+![Resizing in Blazor RichTextEditor](./images/blazor-richtexteditor-resizing.png)
 
 ### Specifying the Minimum and Maximum width and height for Resize
 

@@ -70,7 +70,7 @@ Render the Rich Text Editor in form as below.
 
 The output will be as follows.
 
-![Form](./images/default-validation.png)
+![Form Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-form-validation.png)
 
 ## Validation Rules
 
@@ -134,7 +134,7 @@ This sample is demonstrate form validation using the `DataAnnotationsValidator`.
 
 The output will be as follows.
 
-![Form validation](./images/validation-message.png)
+![Char Count Validation in Blazor RichTextEditor](./images/blazor-richtexteditor-char-count-validation.png)
 
 ## Validation Message
 
@@ -246,6 +246,6 @@ The Form Validation error message can be placed from default position to desired
 
 The output will be as follows.
 
-![Custom placement](./images/custom-placement.png)
+![Blazor RichTextEditor Validation in Custom placement](./images/blazor-richtexteditor-validation-placement.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
