@@ -68,7 +68,7 @@ In the following sample, icon classes are mapped with `IconCss` field.
 
 Output will be shown as,
 
-![ListBox](./images/icons.png)
+![Blazor ListBox with Icons](./images/blazor-listbox-icons.png)
 
 ## Templates
 
@@ -176,4 +176,4 @@ ListBox items can be customized according to the requirement using [ItemTemplate
 
 Output will be shown as,
 
-![ListBox](./images/listbox-template.png)
+![Blazor ListBox with Icon](./images/blazor-listbox-icon-template.png)

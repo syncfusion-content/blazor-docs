@@ -48,4 +48,4 @@ To bind the change event in the listbox [ValueChange](https://help.syncfusion.co
 
 Output will be shown as
 
-![ListBox](./../images/listbox.png)
+![Binding Events in Blazor ListBox](./../images/blazor-listbox.png)

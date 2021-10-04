@@ -65,7 +65,7 @@ In the following example, the **id**, **pId**, and **text** columns from self-re
 
 Output be like
 
-![Menu Sample](./images/menu-db2.png)
+![Data Binding in Blazor MenuBar](./images/blazor-menubar-data-binding.png)
 
 ## Custom Menu Bar Items
 
@@ -247,4 +247,4 @@ To customize Menu Bar items in your application, set your customized template us
 
 Output be like
 
-![Menu Sample](./images/menu-templates.png)
+![Blazor MenuBar with Custom Item](./images/blazor-menubar-custom-item.png)
