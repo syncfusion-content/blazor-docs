@@ -7,11 +7,11 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Paste from MS Word in Blazor RichTextEditor Component
+# Paste from Microsoft Word in Blazor RichTextEditor Component
 
 The Rich Text Editor allows you to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.
 
-## MS Word to HTML
+## Microsoft Word to HTML
 
 By default, the Rich Text Editor consider the following processes on paste content from Microsoft Word.
 
