@@ -15,7 +15,7 @@ This section provides performance guidelines for using the Syncfusion Gantt comp
 
 ## Avoid unnecessary component renders
 
- **PreventRender** method helps to avoid unnecessary re-rendering of the Gantt component. This method internally overrides the **ShouldRender** method of the Gantt to prevent rendering.
+**PreventRender** method helps to avoid unnecessary re-rendering of the Gantt component. This method internally overrides the **ShouldRender** method of the Gantt to prevent rendering.
 
 In the following example:
 
