@@ -42,7 +42,7 @@ The **Localization** library allows to localize default text content. The TimePi
 
 In the following examples, demonstrate how to enable **Localization** for TimePicker in server side Blazor samples. Here, Resource file is used to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different language. Refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different language. Refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
