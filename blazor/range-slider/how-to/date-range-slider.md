@@ -47,4 +47,4 @@ The date formatting can be achieved using `TicksRendering` and `TooltipChange` e
 
 The output will be as follows.
 
-![TimeSlider](../images/dateslider.gif)
+![Blazor RangeSlider with DateRange](../images/blazor-rangeslider-with-daterange.gif)

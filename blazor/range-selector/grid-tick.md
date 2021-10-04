@@ -46,7 +46,7 @@ The gridlines indicate axis divisions by drawing the chart plot. Gridlines inclu
 
 ```
 
-![Gridline customization](images/grid-tick/grid.png)
+![Blazor RangeNavigator with Grid Line](images/grid-tick/blazor-rangenavigator-grid-line.png)
 
 ## Tickline Customization
 
@@ -85,4 +85,4 @@ Ticklines are the small lines which is drawn on the axis line representing the a
 
 ```
 
-![Tickline customization](images/grid-tick/tick.png)
+![Blazor RangeNavigator with Tick Line](images/grid-tick/blazor-rangenavigator-tick-line.png)

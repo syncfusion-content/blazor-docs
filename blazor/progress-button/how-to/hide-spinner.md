@@ -20,4 +20,4 @@ You can hide spinner in the Progress Button by setting the `e-hide-spinner` prop
 
 Output be like
 
-![Progress Button Sample](./../images/pb-hide.png)
+![Hide Spinner in Blazor ProgressButton](./../images/blazor-progressbutton-hide-spinner.png)

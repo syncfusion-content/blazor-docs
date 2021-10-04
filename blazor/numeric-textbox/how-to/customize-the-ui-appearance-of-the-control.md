@@ -52,4 +52,4 @@ You can change the appearance of the NumericTextBox by adding custom [CssClass](
 
 The output will be as follows.
 
-![NumericTextBox Sample](../images/customization.png)
+![Customizing UI Appearance of Blazor NumericTextBox](../images/blazor-numerictextbox-ui-customization.png)

@@ -34,7 +34,7 @@ In this case, the key generated for those online map service providers can also 
 
 ![Syncfusion Maps with Google Maps provider](../images/MapProviders/Google-map.png)
 
-## Zooming and Panning
+**Enable zooming and panning**
 
 Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
 
@@ -58,7 +58,7 @@ Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 
 ![Google Maps with zooming](../images/MapProviders/google-map-zoom.png)
 
-## Adding markers and navigation line
+**Adding markers and navigation line**
 
 Markers can be added to the layers of tile Maps by setting the corresponding location's coordinates of latitude and longitude using [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class. Navigation lines can be added on top of the tile Maps layer for highlighting a path among various places by setting the corresponding location's coordinates of latitude and longitude in the [MapsNavigationLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsNavigationLine.html).
 
@@ -101,7 +101,7 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
 
 ![Google Maps with markers and navigation line](../images/MapProviders/google-map-marker-and-line.png)
 
-## Sublayer
+**Adding sublayer**
 
 Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer for highlighting a particular continent or country in tile maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) property of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 

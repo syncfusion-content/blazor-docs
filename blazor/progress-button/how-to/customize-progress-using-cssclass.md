@@ -34,4 +34,4 @@ You can also show reverse progress by adding custom class to the [CssClass](http
 
 Output be like
 
-![Progress Button Sample](./../images/pb-vertical.png)
+![Customizing Progress in Blazor ProgressButton](./../images/blazor-progressbutton-customization.png)

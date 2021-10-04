@@ -324,7 +324,6 @@ This section explains the list of events of the DropDown List component which wi
     <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
 </SfDropDownList>
 
-
 @code {
     public class GameFields
     {
@@ -355,14 +354,11 @@ This section explains the list of events of the DropDown List component which wi
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
     <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></DropDownListEvents>
     <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
 </SfDropDownList>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -395,8 +391,6 @@ This section explains the list of events of the DropDown List component which wi
 ```cshtml
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
-
-
 
 <SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
@@ -437,14 +431,11 @@ This section explains the list of events of the DropDown List component which wi
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfDropDownList TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
     <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
     <DropDownListEvents TValue="string" TItem="OrderDetails" OnActionFailure="@OnActionFailurehandler"></DropDownListEvents>
     <DropDownListFieldSettings Text="CustomerID" Value="CustomerID"></DropDownListFieldSettings>
 </SfDropDownList>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -516,7 +507,6 @@ This section explains the list of events of the DropDown List component which wi
     <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
 </SfDropDownList>
 
-
 @code {
     public class GameFields
     {
@@ -540,5 +530,3 @@ This section explains the list of events of the DropDown List component which wi
 ```
 
 > DropDown List is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
-
-

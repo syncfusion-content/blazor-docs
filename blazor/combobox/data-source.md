@@ -434,7 +434,7 @@ The output will shown as follows,
 
 ## Binding ObservableCollection
 
-You can bind [ObservableCollection<T>](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
+You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the ComboBox component. The following example `Observable Data` is bound to a collection of colors data.
 
 ```csharp
 
