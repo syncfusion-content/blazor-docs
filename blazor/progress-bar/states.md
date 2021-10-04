@@ -22,7 +22,7 @@ This is the default progress state, which can be used when the estimated progres
 </SfProgressBar>
 ```
 
-![Determinate - Progress Bar](images/determinate.png)
+![Blazor Determinate ProgressBar](images/blazor-determinate-progressbar.png)
 
 ## Indeterminate
 
@@ -35,7 +35,7 @@ This is the default progress state, which can be used when the estimated progres
 </SfProgressBar>
 ```
 
-![Indeterminate - Progress Bar](images/indeterminate.png)
+![Blazor Indeterminate ProgressBar](images/blazor-indeterminate-progressbar.png)
 
 ## Buffer
 
@@ -48,7 +48,7 @@ When the [SecondaryProgress](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 </SfProgressBar>
 ```
 
-![Buffer - Progress Bar](images/buffer.png)
+![Blazor Buffer ProgressBar](images/blazor-buffer-progressbar.png)
 
 ## Active
 
@@ -62,7 +62,7 @@ The active animate indicator for the estimated progress can be enabled by settin
 </SfProgressBar>
 ```
 
-![Active - Progress Bar](images/active.png)
+![Blazor Active ProgressBar](images/blazor-active-progressbar.png)
 
 ## Striped
 
@@ -77,4 +77,4 @@ The striped visual indicator for the estimated progress can be enabled by settin
 </SfProgressBar>
 ```
 
-![Striped - Progress Bar](images/striped.png)
+![Blazor Striped Progress Bar](images/blazor-striped-progressbar.png)

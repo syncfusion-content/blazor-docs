@@ -21,12 +21,12 @@ There are several commands available in the diagram as follows.
 
 ## Alignment commands
 
-Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the AlignmentOptions in `Align` commands which shows how to use align methods in the diagram.
+Alignment commands enable you to align the selected or defined objects such as nodes and connectors with respect to the selection boundary. Following are the [AlignmentOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.AlignmentOptions.html) in [SetAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetAlign_Syncfusion_Blazor_Diagram_AlignmentOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__Syncfusion_Blazor_Diagram_AlignmentMode_) commands which shows how to use align methods in the diagram.
 
 ### Align Left
 The following code example illustrates how to align all the selected objects at the left side of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Left" @onclick="@OnAlignLeft" />
@@ -48,7 +48,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -58,7 +58,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -68,24 +68,24 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnAlignLeft()
     {
-        diagram.Align(AlignmentOptions.Left);
+        //Aligns the selected objects at the left side of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Left);
     }      
 }
-
 ```
 
 ### Align Right
 
 The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Right" @onclick="@OnAlignRight" />
@@ -107,7 +107,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -117,7 +117,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -127,22 +127,23 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnAlignRight()
     {
-        diagram.Align(AlignmentOptions.Right);
+        //Aligns the selected objects at the right side of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Right);
     }     
 }
 ```
 
 ### Align Top
-The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
+The following code example illustrates how to align all the selected objects at the top of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Top" @onclick="@OnAlignTop" />
@@ -164,7 +165,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -174,7 +175,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -184,22 +185,23 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnAlignTop()
     {
-        diagram.Align(AlignmentOptions.Top);
+        //Aligns the selected objects at the top of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Top);
     }       
 }
 ```
 
 ### Align Bottom
-The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
+The following code example illustrates how to align all the selected objects at the bottom of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Bottom" @onclick="@OnAlignBottom" />
@@ -221,7 +223,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -231,7 +233,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -241,22 +243,23 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnAlignBottom()
     {
-        diagram.Align(AlignmentOptions.Bottom);
+        //Aligns the selected objects at the bottom of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Bottom);
     }     
 }
 ```
 
 ### Align Middle
-The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
+The following code example illustrates how to align all the selected objects at the middle of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Middle" @onclick="@OnAlignMiddle" />
@@ -278,7 +281,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -288,7 +291,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -298,23 +301,24 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnAlignMiddle()
     {
-        diagram.Align(AlignmentOptions.Middle);
+        //Aligns the selected objects at the middle of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Middle);
     }         
 }
 ```
 
 ### Align Center
 
-The following code example illustrates how to align all the selected objects at the right side of the selection boundary.
+The following code example illustrates how to align all the selected objects at the center of the selection boundary.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Center" @onclick="@OnAlignCenter" />
@@ -336,7 +340,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -346,7 +350,7 @@ The following code example illustrates how to align all the selected objects at 
             Height = 40,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -356,22 +360,23 @@ The following code example illustrates how to align all the selected objects at 
             Height = 50,
             OffsetX = 500,
             OffsetY = 500,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnAlignCenter()
     {
-        diagram.Align(AlignmentOptions.Center);
+        //Aligns the selected objects at the center of the selection boundary
+        diagram.SetAlign(AlignmentOptions.Center);
     }        
 }
 ```
 ## Distribute
 
-The `Distribute` commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
+The [SetDistribute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetDistribute_Syncfusion_Blazor_Diagram_DistributeOptions_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands enable to place the selected objects on the page at equal intervals from each other. The selected objects are equally spaced within the selection boundary.
 
-The factor to distribute the shapes `DistributeOptions` are listed as follows:
+The factor to distribute the shapes [DistributeOptions](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DistributeOptions.html) are listed as follows:
 
 * RightToLeft: Distributes the objects based on the distance between the right and left sides of the adjacent objects.
 * Left: Distributes the objects based on the distance between the left sides of the adjacent objects.
@@ -384,7 +389,7 @@ The factor to distribute the shapes `DistributeOptions` are listed as follows:
 
 The following code example illustrates how to execute the space commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Left" @onclick="@OnDistributeLeft" />
@@ -413,7 +418,7 @@ The following code example illustrates how to execute the space commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node1);
         Node node2 = new Node()
@@ -423,7 +428,7 @@ The following code example illustrates how to execute the space commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node2);
         Node node3 = new Node()
@@ -433,60 +438,74 @@ The following code example illustrates how to execute the space commands.
             Height = 50,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle }
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle }
         };
         nodes.Add(node3);
     }
 
     private void OnDistributeLeft()
     {
-        diagram.Distribute(DistributeOptions.Left);
+        //distributes the objects based on the distance between the left sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Left);
     }
+
     private void OnDistributeRight()
     {
-        diagram.Distribute(DistributeOptions.Right);
+        //distributes the objects based on the distance between the right sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Right);
     }
+
     private void OnDistributeTop()
     {
-        diagram.Distribute(DistributeOptions.Top);
+        //distributes the objects based on the distance between the top sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Top);
     }
+
     private void OnDistributeBottom()
     {
-        diagram.Distribute(DistributeOptions.Bottom);
+        //distributes the objects based on the distance between the bottom sides of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Bottom);
     }
+
     private void OnDistributeMiddle()
     {
-        diagram.Distribute(DistributeOptions.Middle);
+        //distributes the objects based on the distance between vertical centers of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Middle);
     }
+
     private void OnDistributeCenter()
     {
-        diagram.Distribute(DistributeOptions.Center);
+        //distributes the objects based on the distance between the centers of the adjacent objects.
+        diagram.SetDistribute(DistributeOptions.Center);
     }
+
     private void OnDistributeBottomToTop()
     {
-        diagram.Distribute(DistributeOptions.BottomToTop);
+        //distributes the objects based on the distance between bottom and top sides of adjacent objects.
+        diagram.SetDistribute(DistributeOptions.BottomToTop);
     }
+
     private void OnDistributeRightToLeft()
     {
-        diagram.Distribute(DistributeOptions.RightToLeft);
+        //distributes the objects based on the distance between right and left sides of adjacent objects.
+        diagram.SetDistribute(DistributeOptions.RightToLeft);
     }
 }
-
 ```
 
 ## Sizing Commands
 
- Sizing commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
+Sizing [SetSameSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SetSameSize_Syncfusion_Blazor_Diagram_SizingMode_Syncfusion_Blazor_Diagram_DiagramObjectCollection_Syncfusion_Blazor_Diagram_NodeBase__) commands are used to resize all selected object based on width, height, and size of the reference object (FirstSelectedItem).
 
-`SizingOptions` are as follows:
+[SizingMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html) are as follows:
 
-* `SameWidth` : Scales the width of the selected objects.
-* `SameHeight` : Scales the height of the selected objects.
-* `SameSize` : Scales the selected objects both vertically and horizontally.
+* [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Width) : Scales the width of the selected objects.
+* [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Height) : Scales the height of the selected objects.
+* [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SizingMode.html#Syncfusion_Blazor_Diagram_SizingMode_Size) : Scales the selected objects both vertically and horizontally.
 
 The following code example illustrates how to execute the size commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="SameSize" @onclick="@OnSameSize" />
@@ -511,7 +530,7 @@ The following code example illustrates how to execute the size commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -522,7 +541,7 @@ The following code example illustrates how to execute the size commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node2);
@@ -533,7 +552,7 @@ The following code example illustrates how to execute the size commands.
             Height = 50,
             OffsetX = 500,
             OffsetY = 300,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node3);
@@ -541,32 +560,36 @@ The following code example illustrates how to execute the size commands.
 
     private void OnSameSize()
     {
-        diagram.SameSize(SizingTypes.Size);
+        //Scales the selected objects both vertically and horizontally.
+        diagram.SetSameSize(SizingMode.Size);
     }
+
     private void OnSameWidth()
     {
-        diagram.SameSize(SizingTypes.Width);
+        //Scales the width of the selected objects.
+        diagram.SetSameSize(SizingMode.Width);
     }
+
     private void OnSameHeight()
     {
-        diagram.SameSize(SizingTypes.Height);
+        //Scales the height of the selected objects.
+        diagram.SetSameSize(SizingMode.Height);
     }
-}
 ```
 
 ## Clipboard
 
 Clipboard commands are used to cut, copy, or paste the selected elements.
 
-* Cuts the selected elements from the diagram to the diagram’s clipboard using `Cut` command.
+* Cuts the selected elements from the diagram to the diagram’s clipboard using [Cut](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Cut) command.
 
-* Copies the selected elements from the diagram to the diagram’s clipboard using `Copy` command.
+* Copies the selected elements from the diagram to the diagram’s clipboard using [Copy](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Copy) command.
 
-* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram using `Paste` command.
+* Pastes the diagram’s clipboard data (nodes/connectors) into the diagram using [Paste](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Paste) command.
 
 The following code illustrates how to execute the clipboard commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Cut" @onclick="@OnCut" />
@@ -591,7 +614,7 @@ The following code illustrates how to execute the clipboard commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -602,7 +625,7 @@ The following code illustrates how to execute the clipboard commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node2);
@@ -610,14 +633,19 @@ The following code illustrates how to execute the clipboard commands.
 
     private void OnCut()
     {
+        //Removes the selected objecte
         diagram.Cut();
     }
+
     private void OnCopy()
     {
+        //copies the selected object
         diagram.Copy();
     }
+
     private void OnPaste()
     {
+        //pastes the copied object
         diagram.Paste();
     }
 }
@@ -625,15 +653,15 @@ The following code illustrates how to execute the clipboard commands.
 
 ## Grouping
 
-**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using select all command and ungroup the selected group.
+**Grouping commands** are used to group/ungroup the selected elements on the diagram. To group the elements , select the elements using select all command and group the selected elements using group command.
 
-`Group` the selected nodes and connectors in the diagram.
+[Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) command is used to group the selected nodes and connectors in the diagram.
 
-`Ungroup` the selected nodes and connectors in the diagram.
+[UnGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnGroup) command is used to ungroup the selected nodes and connectors in the diagram.
 
 The following code illustrates how to execute the grouping commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Group" @onclick="@OnGroup" />
@@ -658,7 +686,7 @@ The following code illustrates how to execute the grouping commands.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -669,7 +697,7 @@ The following code illustrates how to execute the grouping commands.
             Height = 40,
             OffsetX = 400,
             OffsetY = 200,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node2);
@@ -677,14 +705,19 @@ The following code illustrates how to execute the grouping commands.
 
     private void OnGroup()
     {
+        //group the selected items in the diagram
         diagram.Group();
     }
+
     private void OnUnGroup()
     {
+        //ungroup the selected items in the diagram
         diagram.UnGroup();
     }
+
     private void OnSelectAll()
     {
+        //select all the items in the diagram
         diagram.SelectAll();
     }
 }
@@ -692,11 +725,11 @@ The following code illustrates how to execute the grouping commands.
 
 ## Zoom
 
-The `Zoom` command is used to zoom-in and zoom-out the diagram view.
+The [Zoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Zoom_System_Double_Syncfusion_Blazor_Diagram_DiagramPoint_) command is used to zoom-in and zoom-out the diagram view.
 
 The following code illustrates how to zoom-in/zoom out the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <input type="button" value="Zoom" @onclick="@OnZoom" />
@@ -719,7 +752,7 @@ The following code illustrates how to zoom-in/zoom out the diagram.
             Height = 30,
             OffsetX = 500,
             OffsetY = 100,
-            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapes.Rectangle },
+            Shape = new BasicShape() { Type = Shapes.Basic, Shape = BasicShapeType.Rectangle },
             Style = new ShapeStyle() { Fill = "#6495ED", StrokeColor = "#6495ED" }
         };
         nodes.Add(node1);
@@ -730,16 +763,56 @@ The following code illustrates how to zoom-in/zoom out the diagram.
         // Sets the ZoomFactor
         // Defines the FocusPoint to zoom the Diagram with respect to any point
         // When you do not set focus point, zooming is performed with reference to the center of current Diagram view.
-        diagram.Zoom(1.2, new Point() { X = 100, Y = 100 });
+        diagram.Zoom(1.2, new DiagramPoint() { X = 100, Y = 100 });
     }
 }
 ```
 
+## Nudge command
+
+The [Nudge](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nudge_Syncfusion_Blazor_Diagram_Direction_System_Nullable_System_Int32__) commands repositions the selected object by the specified delta in the given direction.
+
+[Direction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Direction.html) nudge command moves the selected elements towards the specified direction by 1 pixel, by default.
+
+The accepted values of the argument direction are as follows:
+
+* Up: Moves the selected elements towards up by the specified delta value.
+* Down: Moves the selected elements towards down by the specified delta value.
+* Left: Moves the selected elements towards left by the specified delta value.
+* Right: Moves the selected elements towards right by the specified delta value.
+
+The following code illustrates how to execute nudge command.
+
+```cshtml
+@using Syncfusion.Blazor.Diagram
+
+<SfDiagramComponent @ref="diagram" Height="600px" />
+
+@code
+{
+    SfDiagramComponent diagram;
+
+    private void NudgeLeft()
+    {
+        //Repositions the selected objects by 50 towards left direction.
+        diagram.Nudge(Direction.Left, 50);
+    }
+}
+```
+
+## Nudge by using arrow keys
+
+The corresponding arrow keys are used to move the selected elements towards up, down, left, or right direction by 1 pixel.
+
+![Nudge Command](images/Commands_img4.png)
+
+Nudge commands are particularly useful for accurate placement of elements.
+
 ## Undo and Redo command
 
-The `Undo` and `Redo` commands help you to revert/restore the changes.
+The [Undo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Undo) and [Redo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Redo) commands help you to revert/restore the changes.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px">
@@ -767,27 +840,31 @@ The `Undo` and `Redo` commands help you to revert/restore the changes.
 ## Command manager
 
 Diagram provides support to map or bind command execution with desired combination of key gestures. Diagram provides some built-in commands.
-The `CommandManager` provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
+The [CommandManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html) provides support to define custom commands. The custom commands are executed when the specified key gesture is recognized.
 
-### Command Execution Event
+### Command Execution
 
-You can use the `OnCommandExecuted` event to trigger when execute the custom command in diagram.
+The [Execute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Execute) event call back method will invoke when execute the custom command in the diagram.
+
+The [CanExecute](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_CanExecute) event determines whether this command can execute in its current state.
 
 ### Custom command
 
 To define a custom command, specify the following properties:
-* `Gesture`: A combination of `Keys` and `KeyModifiers`.
-* `Name`: Defines the name of the command.
+* [Gesture](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Gesture): A combination of [Keys](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Key) and [Modifiers](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyGesture.html#Syncfusion_Blazor_Diagram_KeyGesture_Modifiers).
+* [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.KeyboardCommand.html#Syncfusion_Blazor_Diagram_KeyboardCommand_Name): Defines the name of the command.
+
+To explore the properties of custom commands, refer to the [Commands](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.CommandManager.html#Syncfusion_Blazor_Diagram_CommandManager_Commands).
 
 The following code example shows how to define a custom command.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
-        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@canexe">
+        <CommandManager Commands="@command" Execute="@CommandExecute" CanExecute="@Canexe">
         </CommandManager>
     </CommandManager>
 </SfDiagramComponent>
@@ -796,17 +873,17 @@ The following code example shows how to define a custom command.
 {
     // Reference to diagram
     SfDiagramComponent diagram;
-    DiagramObjectCollection<Command> command = new DiagramObjectCollection<Command>()
+    DiagramObjectCollection<KeyboardCommand> command = new DiagramObjectCollection<KeyboardCommand>()
     {
-        new Command()
+        new KeyboardCommand()
         {
             Name = "CustomGroup",
-            Gesture = new KeyGesture() { Key = Keys.G, KeyModifiers = KeyModifiers.Control }
+            Gesture = new KeyGesture() { Key = Keys.G, Modifiers = ModifierKeys.Control }
         },
-        new Command()
+        new KeyboardCommand()
         {
             Name = "CustomUnGroup",
-            Gesture = new KeyGesture() { Key = Keys.U, KeyModifiers = KeyModifiers.Control }
+            Gesture = new KeyGesture() { Key = Keys.U, Modifiers = ModifierKeys.Control }
         },
      };
     // Defines diagram's nodes collection
@@ -844,28 +921,28 @@ The following code example shows how to define a custom command.
         nodes.Add(node2);
     }
 
-    public void canexe(CommandKeyArgs args)
+    public void Canexe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
 
     /// <summary>
-    /// Custom command execution event
+    /// Custom command execution
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
-        if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.G)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.G)
         {
             //Custom command to group the selected nodes
             diagram.Group();
         }
-        if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.U)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.U)
         {
-            Selector selector = diagram.SelectedItems;
+            DiagramSelectionSettings selector = diagram.SelectionSettings;
             //Custom command to ungroup the selected items
-            if (selector.Nodes.Count > 0 && selector.Nodes[0] is Group)
+            if (selector.Nodes.Count > 0 && selector.Nodes[0] is NodeGroup)
             {
-                if ((selector.Nodes[0] as Group).Children.Length > 0)
+                if ((selector.Nodes[0] as NodeGroup).Children.Length > 0)
                 {
                     diagram.UnGroup();
                 }
@@ -881,13 +958,13 @@ When any one of the default commands is not desired, they can be disabled. To ch
 
 The following code example shows how to disable a command and how to modify the built-in commands.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     @* Initializing the custom commands *@
     <CommandManager>
-        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@canexe">
+        <CommandManager Commands="@commands" Execute="@CommandExecute" CanExecute="@Canexe">
         </CommandManager>
     </CommandManager>
 </SfDiagramComponent>
@@ -898,17 +975,17 @@ The following code example shows how to disable a command and how to modify the 
     SfDiagramComponent diagram;
     // Defines diagram's nodes collection
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    DiagramObjectCollection<Command> commands = new DiagramObjectCollection<Command>()
+    DiagramObjectCollection<KeyboardCommand> commands = new DiagramObjectCollection<KeyboardCommand>()
     {
-        new Command()
+        new KeyboardCommand()
         {
             Name = "SelectAll",
-            Gesture = new KeyGesture() { Key = Keys.A, KeyModifiers = KeyModifiers.Control }
+            Gesture = new KeyGesture() { Key = Keys.A, Modifiers = ModifierKeys.Control }
         },
-        new Command()
+        new KeyboardCommand()
         {
             Name = "Copy",
-            Gesture = new KeyGesture() { Key = Keys.C, KeyModifiers = KeyModifiers.Control }
+            Gesture = new KeyGesture() { Key = Keys.C, Modifiers = ModifierKeys.Control }
         }
     };
 
@@ -944,7 +1021,7 @@ The following code example shows how to disable a command and how to modify the 
         nodes.Add(node2);
     }
 
-    public void canexe(CommandKeyArgs args)
+    public void Canexe(CommandKeyArgs args)
     {
         args.CanExecute = true;
     }
@@ -954,11 +1031,11 @@ The following code example shows how to disable a command and how to modify the 
     /// </summary>
     public void CommandExecute(CommandKeyArgs args)
     {
-        if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.A)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.A)
         {
             //to disable a built-in command and none of action execute
         }
-        if (args.Gesture.KeyModifiers == KeyModifiers.Control && args.Gesture.Key == Keys.C)
+        if (args.Gesture.Modifiers == ModifierKeys.Control && args.Gesture.Key == Keys.C)
         {
             //Modify the existing copy command to cut command
             diagram.Cut();

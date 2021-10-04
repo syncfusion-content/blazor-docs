@@ -13,25 +13,21 @@ The OpenStreetMap (OSM) is the online Maps provider built by a community of deve
 
 ## Adding OpenStreetMap
 
-The OSM Maps can be rendered using by setting the [LayerType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_LayerType) property value as **OSM**.
+The OSM Maps can be rendered using by setting the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property with the OSM tile server URL. For more details about the OSM tile server, refer [here](https://wiki.openstreetmap.org/wiki/Tiles).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string"></MapsLayer>
+        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string"></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
 
 ![Open street map](../images/MapProviders/OSM.png)
 
-### Changing the tile server of the OpenStreetMap
-
-The OSM tile server can be changed by setting the tile URL in the [UrlTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_UrlTemplate) property. For more details about the OSM tile server, refer [here](https://wiki.openstreetmap.org/wiki/Tiles).
-
-## Zooming and panning
+## Enable zooming and panning
 
 The OSM Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
 
@@ -40,12 +36,14 @@ The OSM Maps layer can be zoomed and panned. Zooming helps to get a closer look 
 
 <SfMaps>
     @* To zoom and pan *@
-    <MapsZoomSettings Enable="true"
-                      Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom, ToolbarItem.ZoomIn, ToolbarItem.ZoomOut,
+            ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
     </MapsZoomSettings>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
-        </MapsLayer>
+        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string"></MapsLayer>
     </MapsLayers>
 </SfMaps>
 ```
@@ -63,7 +61,7 @@ Markers can be added to the layers of OSM Maps by setting the corresponding loca
     <MapsZoomSettings ZoomFactor="4"></MapsZoomSettings>
     <MapsCenterPosition Latitude="29.394708" Longitude="-94.954653"></MapsCenterPosition>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
+        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string">
             @* Add marker *@
             <MapsMarkerSettings>
                 <MapsMarker Visible="true" Height="25" Width="15" DataSource="Cities" TValue="City">
@@ -95,16 +93,16 @@ Markers can be added to the layers of OSM Maps by setting the corresponding loca
 
 ![OpenStreetMap with markers and navigation line](../images/MapProviders/marker-and-line.png)
 
-## Sublayer
+## Adding sublayer
 
-Any GeoJSON shape can be rendered as a sublayer on top of the OSM Maps layer for highlighting a particular continent or country in Bing Maps by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
+Any GeoJSON shape can be rendered as a sublayer on top of the OSM Maps layer for highlighting a particular continent or country in the OSM map by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
+        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string">
         </MapsLayer>
         @* To add geometry shape as sublayer *@
         <MapsLayer ShapeData='new {dataOptions = "https://cdn.syncfusion.com/maps/map-data/africa.json"}'

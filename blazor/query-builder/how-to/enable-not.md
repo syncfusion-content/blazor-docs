@@ -48,4 +48,4 @@ The QueryBuilder provides `Not` operator along with AND, OR operators to filter 
 
 Output will be shown as
 
-![Query Builder Sample](./../images/not.png)
+![Displaying Not Operator in Blazor QueryBuilder](./../images/blazor-querybuilder-not-operator.png)

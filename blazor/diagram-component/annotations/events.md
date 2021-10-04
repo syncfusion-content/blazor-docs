@@ -9,16 +9,19 @@ documentation: ug
 
 # Events in Blazor Diagram Component
 
-## Text edit
+## Text Change
 
-The TextEdit event will notify the annotation content changes after editing. The `TextEditEventArgs` interface is used to get event arguments.
+* While editing the node's or connector's annotation, [TextChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_TextChanged) event can be used to do the customization.
+* When the node's or connector's annotation is changed in the diagram, this event is getting triggered. 
 
-The following code example shows how to register and get the notification from the TextEdit event.
+The [TextChangeEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.TextChangeEventArgs.html) notifies when the annotation of an element undergoes editing.
+
+The following code example shows how to register and get the notification from the TextChanged event.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 
-<SfDiagramComponent Height="600px" TextEdit="textedit" Nodes="@nodes" />
+<SfDiagramComponent Height="600px" TextChanged="OnTextChanged" Nodes="@nodes" />
 
 @code
 {
@@ -26,7 +29,7 @@ The following code example shows how to register and get the notification from t
     DiagramObjectCollection<Node> nodes;
 
     // Triggered this event when complete the editing for Annotation and update the old text and new text values.
-    private void textedit(TextEditEventArgs args)
+    private void OnTextChanged(TextChangeEventArgs args)
     {
         Console.WriteLine("Oldvalue", args.OldValue);
         Console.WriteLine("NewValue", args.NewValue);
@@ -45,59 +48,7 @@ The following code example shows how to register and get the notification from t
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
-            new ShapeAnnotation {Content = "Annotation" }
-        };
-        nodes.Add(node);
-    }
-}
-```
-
-## Key down
-
-The keydown event occurs when a keyboard key is pressed down and updated the respective keyboard key pressed.
-
-## Key up
-
-The keyup event occurs when a keyboard key is released and updated the respective keyboard key pressed.
-
-The following code example shows how to register and get the notification from the onkeydown and onkeyup events.
-
-```cshtml
-@using Syncfusion.Blazor.Diagram
-
-<SfDiagramComponent Height="600px" KeyDown="@OnKeyDown" KeyUp="@OnKeyUp" Nodes="@nodes" />
-
-@code
-{
-    // Defines diagram's nodes collection
-    DiagramObjectCollection<Node> nodes;
-
-    // Occurs when  click the annotation and enter the character in key down state
-    private void OnKeyDown(KeyEventArgs args)
-    {
-
-    }
-
-    // Occurs when click the annotation and enter the character in key release state
-    private void OnKeyUp(KeyEventArgs args)
-    {
-
-    }
-
-    protected override void OnInitialized()
-    {
-        nodes = new DiagramObjectCollection<Node>();
-        Node node = new Node()
-        {
-            Width = 100,
-            Height = 100,
-            OffsetX = 100,
-            OffsetY = 100,
-            Style = new ShapeStyle() { Fill = "#6BA5D7", StrokeColor = "white" },
-        };
-        node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
-            new ShapeAnnotation {Content = "Annotation" }
+            new ShapeAnnotation { Content = "Annotation" }
         };
         nodes.Add(node);
     }

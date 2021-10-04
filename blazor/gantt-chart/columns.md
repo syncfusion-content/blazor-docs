@@ -118,57 +118,81 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 ![Blazor Gantt Chart with Columns](images/blazor-gantt-chart-columns.png)
 
-<!-- Custom column header
+## Header template
 
-The column header text can be defined using the `HeaderText` property, and you can customize the column headers using the `HeaderTemplate` property.
+The column headers can be customize using the `HeaderTemplate` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Gantt
-@inject NavigationManager UriHelper
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="700px">
-    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" Child="SubTasks">
-    </GanttTaskFields>
-    <GanttSplitterSettings Position="80%"></GanttSplitterSettings>
+<SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" HighlightWeekends="true">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="Parent_Id"></GanttTaskFields>
     <GanttColumns>
-        <GanttColumn Field="TaskName" HeaderText="TaskName">
+
+        <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250">
             <HeaderTemplate>
-                <div class="custom-template">
-                    <img src="@UriHelper.ToAbsoluteUri($"images/Gantt/taskname.png")" />  TaskName
+                <div>
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Task%20name.png" width="20" height="20" style="margin-right: 8px">
+                    Job Name
                 </div>
             </HeaderTemplate>
         </GanttColumn>
-        <GanttColumn Field="StartDate">
+        <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250">
             <HeaderTemplate>
-                <div class="custom-template">
-                    <img src="@UriHelper.ToAbsoluteUri($"images/Gantt/startdate.png")" />  StartDate
+                <div>
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Start%20date.png" width="20" height="20" style="margin-right: 8px">
+                    Start Date
                 </div>
             </HeaderTemplate>
         </GanttColumn>
-        <GanttColumn Field="Duration" HeaderText="Duration">
+        <GanttColumn Field="EndDate" HeaderText="End Date" Width="250">
             <HeaderTemplate>
-                <div class="custom-template">
-                    <img src="@UriHelper.ToAbsoluteUri($"images/Gantt/duration.png")" />  Duration
+                <div>
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Start%20date.png" width="20" height="20" style="margin-right: 8px">
+                    End Date
                 </div>
             </HeaderTemplate>
         </GanttColumn>
-        <GanttColumn Field="Progress">
+        <GanttColumn Field="Duration" HeaderText="Duration" Width="250">
             <HeaderTemplate>
-                <div class="custom-template">
-                    <img src="@UriHelper.ToAbsoluteUri($"images/Gantt/progress.png")" />  Progress
+                <div>
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Duration.png" width="20" height="20" style="margin-right: 8px">
+                    Duration
+                </div>
+            </HeaderTemplate>
+        </GanttColumn>
+        <GanttColumn Field="Progress" HeaderText="Progress" Width="250">
+            <HeaderTemplate>
+                <div>
+                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Progress.png" width="20" height="20" style="margin-right: 8px">
+                    Progress
                 </div>
             </HeaderTemplate>
         </GanttColumn>
     </GanttColumns>
 </SfGantt>
 <style>
-    .custom-template img{
-        height: 20px;
-        width: 20px;
+
+    @@font-face {
+        font-family: 'ej2-headertemplate';
+        src: url(data:application/x-font-ttf;charset=utf-8;base64,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) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .e-grid .e-icon-userlogin::before {
+        font-family: 'ej2-headertemplate';
+        width: 15px !important;
+        content: '\e702';
+    }
+
+    .e-grid .e-icon-calender::before {
+        font-family: 'ej2-headertemplate';
+        width: 15px !important;
+        content: '\e960';
     }
 </style>
-
-@code{
+@code{ 
     public List<TaskData> TaskCollection { get; set; }
     protected override void OnInitialized()
     {
@@ -183,78 +207,30 @@ The column header text can be defined using the `HeaderText` property, and you c
         public DateTime EndDate { get; set; }
         public string Duration { get; set; }
         public int Progress { get; set; }
-        public List<TaskData> SubTasks { get; set; }
+        public int? Parent_Id { get; set; }
+
     }
 
-    public static List<TaskData> GetTaskCollection()
-    {
-        List<TaskData> Tasks = new List<TaskData>() {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30
-                },
-            })
-        },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                }
-            })
-        }
-    };
+        public static List<TaskData> GetTaskCollection()
+        {
+            List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21),},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 30, Parent_Id = 1},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 02), Duration = "4", Progress = 40, Parent_Id = 1},
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 30, Parent_Id =1},
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21),},
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 30, Parent_Id =5},
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 40, Parent_Id =5},
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 04), Duration = "0", Progress = 30, Parent_Id =5}
 
+        };
         return Tasks;
-    }
+        }
 }
+
 ```
 
-![Alt text](images/headerTemplate.png) -->
+![Alt text](images/headerTemplate.png) 
 
 ## Format
 

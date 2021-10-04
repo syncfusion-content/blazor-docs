@@ -9,19 +9,19 @@ documentation: ug
 
 # Data Binding in Blazor Diagram Component
 
-* Diagram can be populated with the `Nodes` and `Connectors` based on the information provided from an external data source.
+* [Diagram](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html) can be populated with the [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Nodes) and [Connectors](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Connectors) based on the information provided from an external data source.
 
 * Diagram exposes its specific data-related properties allowing you to specify the data source fields from where the node information has to be retrieved from.
 
-* The `DataSource` property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
+* The [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property is used to define the data source either as a collection of objects or as an instance of `DataSource` that needs to be populated in the diagram.
 
-* The `ID` property is used to define the unique field of each JSON data.
+* The [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ID) property is used to define the unique field of each JSON data.
 
-* The `ParentId` property is used to defines the parent field which builds the relationship between ID and parent field.
+* The [ParentID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_ParentID) property is used to define the parent field which builds the relationship between ID and parent field.
 
-* The `Root` property is used to define the root node for the diagram populated from the data source.
+* The [Root](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_Root) property is used to define the root node for the diagram populated from the data source.
 
-* To explore those properties, see `DataSourceSettings`.
+* To explore those properties, see [DataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html).
 
 * Diagram supports two types of data binding. They are:
 
@@ -34,47 +34,59 @@ Diagram can be populated based on the user defined JSON data (Local Data) by map
 
 To map the user defined JSON data with diagram, configure the fields of `DataSourceSettings`. The following code example illustrates how to bind local data with the diagram.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Diagram.Internal
 
-<SfDiagramComponent @ref="@Diagram" Height="499px" Tool="@DiagramTools.ZoomPan" ConnectorDefaults="@ConnectorDefaults" NodeDefaults="@NodeDefaults">
-    <DataSourceSettings Id="Name" ParentId="Category" DataSource="DataSource"> </DataSourceSettings>
-    <Layout @bind-Type="type" @bind-HorizontalSpacing="@HorizontalSpacing" @bind-Orientation="@orientation" @bind-VerticalSpacing="@VerticalSpacing" @bind-HorizontalAlignment="@horizontalAlignment" @bind-VerticalAlignment="@verticalAlignment" GetLayoutInfo="GetLayoutInfo">
-        <LayoutMargin @bind-Top="@top" @bind-Bottom="@bottom" @bind-Right="@right" @bind-Left="@left"></LayoutMargin>
+<SfDiagramComponent @ref="@Diagram" 
+                    Height="499px"
+                    InteractionController="InteractionController.ZoomPan" 
+                    ConnectorCreating="@ConnectorDefaults" 
+                    NodeCreating="@NodeDefaults">
+    <DataSourceSettings ID="Name" ParentID="Category" DataSource="DataSource"/>
+    <Layout @bind-Type="type" 
+            @bind-HorizontalSpacing="@HorizontalSpacing" 
+            @bind-Orientation="@orientation" 
+            @bind-VerticalSpacing="@VerticalSpacing" 
+            @bind-HorizontalAlignment="@horizontalAlignment" 
+            @bind-VerticalAlignment="@verticalAlignment" 
+            GetLayoutInfo="GetLayoutInfo">
+        <LayoutMargin Top="50" Bottom="50" Right="50" Left="50"/>
     </Layout>
 </SfDiagramComponent>
 
 @code
 {
     SfDiagramComponent Diagram;
-    double top = 50;
-    double bottom = 50;
-    double right = 50;
-    double left = 50;
+    // Specify the layout type.
     LayoutType type = LayoutType.HierarchicalTree;
+    // Specify the orientation of the layout.
     LayoutOrientation orientation = LayoutOrientation.TopToBottom;
     HorizontalAlignment horizontalAlignment = HorizontalAlignment.Auto;
     VerticalAlignment verticalAlignment = VerticalAlignment.Auto;
     int HorizontalSpacing = 30;
     int VerticalSpacing = 30;
 
+    // Defines the connector's default values.
     private void ConnectorDefaults(IDiagramObject connector)
     {
-        (connector as Connector).Type = Segments.Orthogonal;
-        (connector as Connector).TargetDecorator.Shape = DecoratorShapes.None;
+        (connector as Connector).Type = ConnectorSegmentType.Orthogonal;
+        (connector as Connector).TargetDecorator.Shape = DecoratorShape.None;
         (connector as Connector).Style = new ShapeStyle() { StrokeColor = "#6d6d6d" };
         (connector as Connector).Constraints = 0;
         (connector as Connector).CornerRadius = 5;
     }
 
+    // Create the layout info
     private TreeInfo GetLayoutInfo(IDiagramObject obj, TreeInfo options)
     {
-        options.CanEnableSubTree = true;
-        options.Orientation = SubTreeOrientation.Horizontal;
+        // Enable the sub-tree.
+        options.EnableSubTree = true;
+        // Specify the subtree orientation.
+        options.Orientation = Orientation.Horizontal;
         return options;
     }
 
+    // Defines the node's default values.
     private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -92,11 +104,12 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
             new ShapeAnnotation()
             {
                 Content = hierarchicalData.Name,
-                Style =new TextShapeStyle(){Color = "white"}
+                Style =new TextStyle(){Color = "white"}
             }
         };
     }
 
+    // Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
         public string Name { get; set; }
@@ -104,6 +117,7 @@ To map the user defined JSON data with diagram, configure the fields of `DataSou
         public string Category { get; set; }
     }
 
+    // Create the data source with node name and fill color values.
     public List<HierarchicalDetails> DataSource = new List<HierarchicalDetails>()
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
@@ -128,13 +142,13 @@ Local JSON data can be bound to the Diagram component by assigning the array of 
 
 The following sample code demonstrates binding local data through the SfDataManager to the Diagram component,
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
-                    NodeDefaults="NodeDefaults" SetNodeTemplate="SetTemplate">
-    <DataSourceSettings Id="Name" ParentId="Category">
+                    NodeCreating="NodeDefaults" SetNodeTemplate="SetTemplate">
+    <DataSourceSettings ID="Name" ParentID="Category">
         <SfDataManager Json="DataSource" Adaptor="Syncfusion.Blazor.Adaptors.JsonAdaptor"></SfDataManager>
     </DataSourceSettings>
     <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"></Layout>
@@ -147,6 +161,7 @@ The following sample code demonstrates binding local data through the SfDataMana
     float y = 100;
     Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
 
+    // Create the hierarchical details with needed properties.
     public class HierarchicalDetails
     {
         public string Name { get; set; }
@@ -154,6 +169,7 @@ The following sample code demonstrates binding local data through the SfDataMana
         public string Category { get; set; }
     }
 
+    // Create the data source with node name and fill color values.
     public HierarchicalDetails[] DataSource = new HierarchicalDetails[]
     {
         new HierarchicalDetails(){ Name ="Diagram", Category="",FillColor="#659be5"},
@@ -162,7 +178,8 @@ The following sample code demonstrates binding local data through the SfDataMana
         new HierarchicalDetails(){ Name ="Tree layout", Category="Layout",FillColor="#659be5"},
         new HierarchicalDetails(){ Name ="Hierarchical tree", Category="Tree layout",FillColor="#659be5"},
     };
-
+    
+    // Defines the node's default values.
     private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;
@@ -189,24 +206,25 @@ The following sample code demonstrates binding local data through the SfDataMana
 
 ## Remote Data
 
-To bind remote data to Diagram component, assign service data as an instance of SfDataManager to the DataSource property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
+To bind remote data to [Diagram component](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html), assign service data as an instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DataSourceSettings.html#Syncfusion_Blazor_Diagram_DataSourceSettings_DataSource) property or by using SfDataManager component. To interact with remote data source, provide the endpoint Url.
 
 When using SfDataManager for data binding then the TValue must be provided explicitly in the diagram component. By default, SfDataManager uses ODataAdaptor for remote data-binding.
 
 ### Binding with OData v4 services
 
-The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the OData documentation. To bind OData v4 service, use the ODataV4Adaptor.
+The ODataV4 is an improved version of OData protocols, and the SfDataManager can also retrieve and consume OData v4 services. For more details on OData v4 services, refer to the [OData documentation](http://docs.oasis-open.org/odata/odata/v4.0/errata03/os/complete/part1-protocol/odata-v4.0-errata03-os-part1-protocol-complete.html#_Toc453752197). To bind OData v4 service, use the ODataV4Adaptor.
 
-```csharp
+```cshtml
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Data
 
 <div style="width:100%">
     <div style="width:70%">
         <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px"
-                            NodeDefaults="NodeDefaults"  SetNodeTemplate="SetTemplate">
-            <DataSourceSettings Id="EmployeeID" ParentId="ReportsTo">
-                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"/>
+                            NodeCreating="NodeDefaults"  SetNodeTemplate="SetTemplate">
+            <DataSourceSettings ID="EmployeeID" ParentID="ReportsTo">
+                <SfDataManager Url="https://services.odata.org/V4/Northwind/Northwind.svc/Employees" 
+                               Adaptor="Syncfusion.Blazor.Adaptors.ODataV4Adaptor"/>
             </DataSourceSettings>
             <Layout HorizontalSpacing="40" VerticalSpacing="40" Type="LayoutType.HierarchicalTree"/>
         </SfDiagramComponent>
@@ -219,6 +237,7 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
     float x = 100;
     float y = 100;
 
+    // Create the employee details with needed properties.
     public class Employee
     {
         public int? EmployeeID { get; set; }
@@ -227,7 +246,8 @@ The ODataV4 is an improved version of OData protocols, and the SfDataManager can
     }
     
     Query Query = new Query().Select(new List<string>() { "EmployeeID", "ReportsTo", "FirstName" }).Take(9);
-   
+    
+    // Defines the node's default values.
     private void NodeDefaults(IDiagramObject obj)
     {
         Node node = obj as Node;
