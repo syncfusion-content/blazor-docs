@@ -131,7 +131,7 @@ Now, add the Blazor Menu Bar component in `razor` page in the `Pages` folder. Fo
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Menu Bar component will render in the web browser as shown below
 
-![Menu Sample](./images/menu.png)
+![Blazor MenuBar Component](./images/blazor-menubar.png)
 
 ## See Also
 
