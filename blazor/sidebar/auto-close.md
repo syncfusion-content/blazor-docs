@@ -52,4 +52,4 @@ In the following sample, mediaQuery has been used for specific resolution to clo
 
 Output be like the below.
 
-![output](./images/auto-close.gif)
+![Displaying Auto close in Blazor Sidebar](./images/blazor-sidebar-auto-close.gif)
