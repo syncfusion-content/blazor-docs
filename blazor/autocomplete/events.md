@@ -311,7 +311,7 @@ This section explains the list of events of the AutoComplete component which wil
 }
 ```
 
-### Filtering
+## Filtering
 
 `Filtering` event triggers on typing a character in the filter bar when the AllowFiltering is enabled.
 
@@ -347,7 +347,7 @@ This section explains the list of events of the AutoComplete component which wil
 
 ```
 
-### OnActionBegin
+## OnActionBegin
 
 `OnActionBegin` event triggers before fetching data from the remote server.
 
@@ -355,14 +355,11 @@ This section explains the list of events of the AutoComplete component which wil
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfAutoComplete TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
         <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
         <AutoCompleteEvents TValue="string" TItem="OrderDetails" OnActionBegin="@OnActionBeginhandler"></AutoCompleteEvents>
         <AutoCompleteFieldSettings Text="CustomerID" Value="CustomerID"></AutoCompleteFieldSettings>
     </SfAutoComplete>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -388,7 +385,7 @@ This section explains the list of events of the AutoComplete component which wil
 }
 ```
 
-### OnActionFailure
+## OnActionFailure
 
 `OnActionFailure` event triggers when the data fetch request from the remote server fails.
 
@@ -396,14 +393,11 @@ This section explains the list of events of the AutoComplete component which wil
 @using Syncfusion.Blazor.DropDowns
 @using Syncfusion.Blazor.Data
 
-
-
 <SfAutoComplete TValue="string" TItem="OrderDetails" Query="@RemoteDataQuery">
         <SfDataManager Url="https://js.syncfusion.com/demos/ejServices/Wcf/Northwind.svc/Orders" CrossDomain="true" Adaptor="Syncfusion.Blazor.Adaptors.ODataAdaptor"></SfDataManager>
         <AutoCompleteEvents TValue="string" TItem="OrderDetails" OnActionFailure="@OnActionFailurehandler"></AutoCompleteEvents>
         <AutoCompleteFieldSettings Text="CustomerID" Value="CustomerID"></AutoCompleteFieldSettings>
     </SfAutoComplete>
-
 
 @code {
     public Query RemoteDataQuery = new Query().Select(new List<string> { "CustomerID" }).Take(6).RequiresCount();
@@ -429,7 +423,7 @@ This section explains the list of events of the AutoComplete component which wil
 }
 ```
 
-### OnValueSelect
+## OnValueSelect
 
 `OnValueSelect` event triggers when a user selects an item in the popup using the mouse/tap or keyboard navigation.
 
@@ -440,7 +434,6 @@ This section explains the list of events of the AutoComplete component which wil
     <AutoCompleteEvents TItem="GameFields" TValue="string" OnValueSelect="@OnValueSelecthandler"></AutoCompleteEvents>
     <AutoCompleteFieldSettings Text="Text" Value="ID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
-
 
 @code {
     public class GameFields
@@ -463,7 +456,7 @@ This section explains the list of events of the AutoComplete component which wil
 }
 ```
 
-### Opened
+## Opened
 
 `Opened` event triggers when the popup opens.
 
@@ -474,7 +467,6 @@ This section explains the list of events of the AutoComplete component which wil
     <AutoCompleteEvents TItem="GameFields" TValue="string" Opened="@Openedhandler"></AutoCompleteEvents>
     <AutoCompleteFieldSettings Text="Text" Value="ID"></AutoCompleteFieldSettings>
 </SfAutoComplete>
-
 
 @code {
     public class GameFields
@@ -499,5 +491,3 @@ This section explains the list of events of the AutoComplete component which wil
 ```
 
 > AutoComplete is limited with these events and new events will be added in the future based on the user requests. If the event you are looking for is not on the list, then please request [here](https://www.syncfusion.com/feedback/blazor-components).
-
-
