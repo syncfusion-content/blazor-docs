@@ -213,4 +213,4 @@ ListDataModel item = context as ListDataModel;
 
 ```
 
-![ListView - Mobile layout](../images/list/create-mobile-contact-layout-from-listview.png)
+![Blazor ListView with Mobile Contact Layout](../images/list/blazor-listview-mobile-contact-layout.png)

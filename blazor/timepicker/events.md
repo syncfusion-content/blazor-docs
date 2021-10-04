@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor TimePicker component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor TimePicker component and much more details.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -159,7 +159,7 @@ This section explains the list of events of the TimePicker component which will 
 
 ## OnOpen
 
-`OnOpen` event triggers when popup is opened.
+`OnOpen` event triggers when the popup is opened.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

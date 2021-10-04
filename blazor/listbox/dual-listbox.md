@@ -96,4 +96,4 @@ The following example illustrates how to move items from `Group A` to `Group B` 
 
 Output will be shown as
 
-![ListBox](./images/duallistbox.png)
+![Blazor Dual ListBox](./images/blazor-dual-listbox.png)
