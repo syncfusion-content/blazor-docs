@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set the Disabled State in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Set the Disabled State in Syncfusion Blazor TextBox component and more.
+description: Checkout and learn here all about how to set the disabled state in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -18,7 +18,5 @@ The following example demonstrates the TextBox in a disabled state.
 
 <SfTextBox Placeholder='First Name' Enabled=false></SfTextBox>
 ```
-
-The output will be as follows.
 
 ![textbox](../images/disabled.png)
