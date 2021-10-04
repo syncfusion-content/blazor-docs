@@ -23,6 +23,4 @@ Based on [C# standard behaviour](https://docs.microsoft.com/en-us/dotnet/standar
 
 ```
 
-The output will be as follows.
-
 ![TimePicker](../images/timespan_format.png)

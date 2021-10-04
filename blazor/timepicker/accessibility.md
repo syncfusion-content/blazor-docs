@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Accessibility in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about  Accessibility in Syncfusion Blazor TimePicker component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor TimePicker component and more.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -13,7 +13,7 @@ The web accessibility makes web applications and its content more accessible to 
 
 The TimePicker component has covered the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications with the following list of WAI-ARIA attributes: `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`, `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
 
-In TimePicker, the `combobox` plays the role of input element, and the `listbox` plays the role of popup element.
+In the TimePicker, the `combobox` plays the role of input element, and the `listbox` plays the role of popup element.
 
 * **aria-haspopup**: Provides the information about whether this element display a pop-up window or not.
 
