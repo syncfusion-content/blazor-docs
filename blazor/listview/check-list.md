@@ -46,7 +46,7 @@ private DataModel[] Data = {
 }
 ```
 
-![ListView - Checklist](./images/list/checklist-default.png)
+![Blazor ListView with Checklist](./images/list/blazor-listview-with-checklist.png)
 
 ## Checkbox Position
 
@@ -83,4 +83,4 @@ private DataModel[] Data = {
 }
 ```
 
-![ListView - Checklist position](./images/list/checklist-position.png)
+![Changing Checklist Position in Blazor ListView](./images/list/blazor-listview-checklist-position.png)

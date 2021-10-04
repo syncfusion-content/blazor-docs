@@ -407,4 +407,4 @@ In the below sample, we have sorted in `Ascending` order. To sort it in descendi
 </style>
 ```
 
-![ListView - Grid layout](../images/list/customize-listview-as-grid-layout.png)
+![Blazor ListView with Grid Layout](../images/list/blazor-listview-with-grid-layout.png)
