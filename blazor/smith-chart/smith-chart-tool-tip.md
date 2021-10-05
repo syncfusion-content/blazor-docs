@@ -40,7 +40,7 @@ When the mouse is moved over a point in the Smith Chart, a tooltip will appear d
 }
 ```
 
-![Smith Chart with tooltip](./images/Tooltip/Tooltip.png)
+![Blazor Smith Chart with Tooltip](./images/Tooltip/blazor-smith-chart-tooltip.png)
 
 ## Tooltip Customization
 
@@ -81,7 +81,7 @@ The tooltip can be customized for each series using the following properties.
 }
 ```
 
-![Smith Chart with tooltip customization](./images/Tooltip/TooltipCustomization.png)
+![Blazor Smith Chart with Custom Tooltip](./images/Tooltip/blazor-smith-chart-custom-tooltip.png)
 
 ## Tooltip Template
 
@@ -123,4 +123,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart with tooltip template](./images/Tooltip/TooltipTemplate.png)
+![Blazor Smith Chart with Tooltip Template](./images/Tooltip/blazor-smith-chart-tooltip-template.png)
