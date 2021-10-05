@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started With Blazor Scheduler in Web Assembly | Syncfusion
-description: Helps you to get started of Syncfusion Blazor Scheduler component in Web Assembly (WASM) project. Also helps to bind appointments and set current view and date to it.
+description: Learn here about how to work with Syncfusion Blazor Scheduler component in Web Assembly project. Helps to bind appointments and set current view, date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug
