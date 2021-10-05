@@ -945,6 +945,7 @@ Using the column chooser template, you can customize the column chooser dialog u
 
  ```csharp
 @using Syncfusion.Blazor.Grids;
+@using Model
 
 <SfGrid ID="Grid" @ref="Grid" AllowPaging="true" DataSource="@Orders" ShowColumnChooser="true" Toolbar="@ToolbarItems">
     <GridColumnChooserSettings>
@@ -1017,9 +1018,10 @@ Using the column chooser template, you can customize the column chooser dialog u
 ```csharp
 @using Syncfusion.Blazor.Lists;
 @using Syncfusion.Blazor.Inputs;
+@using Model
 
 <div class="setMargin">
-    <SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
+    <SfTextBox Placeholder="Search" Input="@OnInput"></SfTextBox>
 </div>
 
 <SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@CloneData">
@@ -1104,6 +1106,35 @@ Using the column chooser template, you can customize the column chooser dialog u
         {
             await Grid.ShowColumnAsync(args.Text);
         }
+    }
+}
+```
+
+> * The model class used in the above example is enclosed in the Model.cs file.
+
+```csharp
+using System;
+
+namespace Model
+{
+    public class DataModel
+    {
+        public string Id { get; set; }
+        public string Text { get; set; }
+        public string Type { get; set; }
+    }
+
+    public class Order
+    {
+        public int? OrderID { get; set; }
+        public string CustomerID { get; set; }
+        public DateTime? OrderDate { get; set; }
+        public double? Freight { get; set; }
+        public int? EmployeeID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Title { get; set; }
+        public DateTime? HireDate { get; set; }
     }
 }
 ```
