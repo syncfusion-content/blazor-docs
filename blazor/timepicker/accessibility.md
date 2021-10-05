@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Accessibility in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about  Accessibility in Syncfusion Blazor TimePicker component and more.
+description: Checkout and learn here all about the accessibility in Syncfusion Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -11,9 +11,9 @@ documentation: ug
 
 The web accessibility makes web applications and its content more accessible to people with disabilities without any barriers. It especially tracks the dynamic value changes and DOM changes.
 
-The TimePicker component has covered the [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications with the following list of WAI-ARIA attributes: `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`, `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
+The TimePicker component has covered the [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications with the following list of WAI-ARIA attributes: `aria-haspopup`, `aria-selected`, `aria-disabled`, `aria-activedescendant`, `aria-expanded`, `aria-owns`, and `aria-autocomplete`.
 
-In TimePicker, the `combobox` plays the role of input element, and the `listbox` plays the role of popup element.
+In the TimePicker, the `combobox` plays the role of input element, and the `listbox` plays the role of popup element.
 
 * **aria-haspopup**: Provides the information about whether this element display a pop-up window or not.
 
@@ -35,7 +35,7 @@ In TimePicker, the `combobox` plays the role of input element, and the `listbox`
 
 Keyboard accessibility is one of the most important aspects of web accessibility. Disabled people like blind and those who have motor disabilities or birth defects use keyboard shortcuts more than the mouse.
 
-The TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
+The TimePicker component has built-in keyboard accessibility support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
 
 > It supports the following list of shortcut keys to interact with the TimePicker component:
 

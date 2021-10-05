@@ -44,7 +44,7 @@ In the following example, the `SortOrder` is set as `Descending`.
 
 Output will be shown as,
 
-![ListBox](images/sorting.png)
+![Sorting in Blazor ListBox](images/blazor-listbox-sorting.png)
 
 ## Grouping
 
@@ -84,4 +84,4 @@ In the following example, vegetables are grouped based on its category.
 
 Output will be shown as,
 
-![ListBox](images/grouping.png)
+![Grouping in Blazor ListBox](images/blazor-listbox-grouping.png)

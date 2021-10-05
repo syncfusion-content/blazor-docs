@@ -94,4 +94,4 @@ The available events are [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 Output be like
 
-![Menu Sample](./../images/menu-events.png)
+![Customizing Blazor MenuBar Items using Event](./../images/blazor-menubar-item-customization.png)

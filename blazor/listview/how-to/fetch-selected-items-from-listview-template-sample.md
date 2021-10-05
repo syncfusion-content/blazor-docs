@@ -122,4 +122,4 @@ So, we need to map id attribute to listview items using `ListViewFieldSettings` 
 </style>
 ```
 
-![ListView - Fetch from template](../images/list/fetch-selected-items-from-listview-template-sample.png)
+![Getting Selected Item from Blazor ListView](../images/list/blazor-listview-display-seleted-item.png)
