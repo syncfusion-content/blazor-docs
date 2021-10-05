@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Scrolling distance in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Customize the Scrolling distance in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about how to customize the scrolling distance in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Customize the Scrolling distance in Blazor Tabs Component
 
-The [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ScrollStep) property supports to customize the scrolling distance when you click the left and right side navigation icons. You can pass a required value through `ScrollStep` property to customize tab scrolling distance.
-
-Refer to the following code example.
+The [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_ScrollStep) property supports to customize the scrolling distance when you click the left and right side navigation icons. A required value can be passed through `ScrollStep` property to customize tab scrolling distance.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -79,7 +77,5 @@ Refer to the following code example.
     public string Content7 = "JavaScript (JS) is an interpreted computer programming language. It was originally implemented as part ofweb browsers so that client - side scripts could interact with the user, control the browser, communicateasynchronously, and alter the document content that was displayed.[5] More recently, however, it has become common inboth game development and the creation of desktop applications.";
 }
 ```
-
-Output be like the below.
 
 ![Tab ScrollStep](../images/tabScrollStep.gif)
