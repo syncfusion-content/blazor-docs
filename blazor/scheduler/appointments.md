@@ -249,7 +249,7 @@ The Scheduler allows the user to edit the following recurrence events by setting
 
 The following image depicts the edited recurrence following events.
 
-![Edit Following Events](images/edit-following-events.png)
+![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.png)
 
 ### Recurrence options and rules
 
@@ -566,7 +566,7 @@ By default, the scheduler will render the overlapping events based on the start 
     }
 }
 ```
-![Order of the overlapping events](images/customized-overlapping-events.png)
+![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
 ## Drag and drop appointments
 

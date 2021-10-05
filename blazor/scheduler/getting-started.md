@@ -132,7 +132,7 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 The output of the above code will display the empty scheduler as shown in the following image.
 
-![Empty Scheduler](images/scheduler.png)
+![Blazor Scheduler](images/blazor-scheduler.png)
 
 ## Populating appointments
 
@@ -177,7 +177,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 
 The scheduler with the appointments will be rendered as shown in the following image.
 
-![Scheduler with appointments](images/appointments.png)
+![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
 
 ## Setting date
 

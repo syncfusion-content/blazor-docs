@@ -796,7 +796,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 
 The following image depicts how the scheduler will render when `ByGroupID` sets as false.
 
-![Resources with one-one](images/bygroupid.png)
+![Grouping in Blazor Scheduler](images/blazor-scheduler-grouping.png)
 
 ### Grouping resources by date
 
@@ -860,7 +860,7 @@ It groups the number of resources under each date and is applicable only on the 
 
 The above code renders the scheduler as in the following image.
 
-![Resources by date](images/bydate.png)
+![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-grouping-resource-by-date.png)
 
 > This kind of grouping by date is not applicable on any of the **timeline views**.
 
@@ -1037,11 +1037,11 @@ It is possible to customize the resource header cells using built-in template op
 
 The output of the above code example in desktop mode will be as in the following image.
 
-![Resources header in desktop](images/resource-header.png)
+![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
 
 > To customize the resource header in compact mode properly make use of the class `e-device` as in the code example.
 
-![Resource header template in compact mode](images/header-template.png)
+![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.png)
 
 ## Customizing resource header with multiple columns
 
@@ -1262,7 +1262,7 @@ It is possible to customize the resource headers to display with multiple column
 
 The output of the above code example in desktop mode will be as in the following image.
 
-![Multiple columns](images/multiple-columns.png)
+![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.png)
 
 ## Expand and collapse resource fields
 
@@ -1555,7 +1555,7 @@ Different working days can be set for the resources of Scheduler using the `Work
 
 The above code renders the scheduler as in the following image.
 
-![Resources with different workdays](images/resourceworkdays.png)
+![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.png)
 
 ### Set different work hours
 
@@ -1624,7 +1624,7 @@ Although the Scheduler views are designed keeping in mind the responsiveness of 
 
 With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a TreeView at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
 
-![Resources in compact mode](images/resource.png)
+![Blazor Scheduler Resources in Compact Mode](images/blazor-scheduler-resource-in-compact-mode.png)
 
 ## Adaptive UI in desktop
 
