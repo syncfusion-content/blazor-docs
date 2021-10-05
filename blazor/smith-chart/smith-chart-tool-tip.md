@@ -85,7 +85,7 @@ The tooltip can be customized for each series using the following properties.
 
 ## Tooltip Template
 
-To access the aggregate values inside the template, the implicit named parameter context can be used. The context can be typecasted as the [SmithChartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to get aggregate values inside the template. The tooltip template using the context is as follows.
+To access the aggregate values inside the template, the implicit named parameter context can be used. The context can be typecast as the [SmithChartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to get aggregate values inside the template. The tooltip template using the context is as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
