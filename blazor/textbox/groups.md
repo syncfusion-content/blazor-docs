@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Groups in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Groups in Syncfusion Blazor TextBox component and much more details.
+description: Checkout and learn here all about groups in Syncfusion Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Groups in Blazor TextBox Component
 
-The following section explains you the steps required to create TextBox with `icon` and `floating label`.
+The following section explains the steps required to create TextBox with `icon` and `floating label`.
 
 **TextBox:**
 
@@ -35,7 +35,7 @@ Refer to the following sections to add the icons to the TextBox.
 
 ## With icon and floating label
 
-Create a TextBox with icon and the users can place the icon in either side of TextBox by using `AddIcon` method append the icon before/after the input. Based on the argument prepend or append, it will act as prefix or suffix icon.
+Create a TextBox with icon and the users can place the icon in either side of the TextBox by using `AddIcon` method append the icon before or after the input. Based on the argument prepend or append, it will act as prefix or suffix icon.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -83,15 +83,13 @@ Create a TextBox with icon and the users can place the icon in either side of Te
 </style>
 ```
 
-The output will be as follows.
-
 ![textbox](./images/float_with_icons.png)
 
 ## With clear button and floating label
 
 The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
 
-You can add the clear button to the TextBox by enabling the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API.
+The clear button can be added to the TextBox by enabling the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -102,20 +100,16 @@ You can add the clear button to the TextBox by enabling the [ShowClearButton](ht
 <SfTextBox Placeholder="FirstName" ShowClearButton=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-The output will be as follows.
-
 ![textbox](./images/clear_icon.png)
 
 ## Multi-line input with floating label
 
-The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with float label structure.
+The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with the float label structure.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
 <SfTextBox Placeholder="Enter text" Multiline=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
-
-The output will be as follows.
 
 ![textbox](./images/multiline.png)
