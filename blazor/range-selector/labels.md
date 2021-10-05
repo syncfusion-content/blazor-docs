@@ -17,13 +17,12 @@ The multi-level labels for the Range Selector can be enabled by setting the [Ena
 
 @using Syncfusion.Blazor.Charts
 
-<SfRangeNavigator DataSource="@StockInfo" XName="X" YName="Y" LabelPosition="AxisPosition.Outside"
+<SfRangeNavigator DataSource="@StockInfo" XName="X" YName="Y"      LabelPosition="AxisPosition.Outside"
                   EnableGrouping="true" IntervalType="RangeIntervalType.Quarter" Value="@Value" ValueType="RangeValueType.DateTime">
     <RangeNavigatorRangeTooltipSettings Enable="true"></RangeNavigatorRangeTooltipSettings>
 </SfRangeNavigator>
 
 @code {
-
     public class StockDetails
     {
         public DateTime X { get; set; }
@@ -45,7 +44,7 @@ The multi-level labels for the Range Selector can be enabled by setting the [Ena
 
 ```
 
-![Multilevel labels](images/labels/multi.png)
+![Blazor RangeNavigator with Multilevel Labels](images/labels/blazor-rangenavigator-multilevel-labels.png)
 
 ## Grouping
 
@@ -94,7 +93,7 @@ The multi-level labels can be grouped using the [GroupBy](https://help.syncfusio
 
 ```
 
-![Grouping](images/labels/group.png)
+![Grouping in Blazor RangeNavigator](images/labels/blazor-rangenavigator-grouping.png)
 
 ## Smart labels
 
@@ -135,7 +134,7 @@ The [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Smart labels](images/labels/smart.png)
+![Blazor RangeNavigator with Smart Labels](images/labels/blazor-rangenavigator-smart-labels.png)
 
 ## Position
 
@@ -175,7 +174,7 @@ By default, the labels can be placed outside the Range Selector. It can also be 
 
 ```
 
-![Label positioning](images/labels/position.png)
+![Changing Label Position in Blazor RangeNavigator](images/labels/blazor-rangenavigator-change-label-position.png)
 
 ## Labels Customization
 
@@ -213,4 +212,4 @@ The font size, color, family, etc. can be customized using the [RangeNavigatorLa
 
 ```
 
-![Labels Customization](images/labels/custom.png)
+![Blazor RangeNavigator with Custom Label](images/labels/blazor-rangenavigator-custom-label.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the expand & collapse icons in Blazor TreeView | Syncfusion
-description: Learn here all about Customize the expand and collapse icons in Syncfusion Blazor TreeView component and more.
+description: Learn here all about how to customize the expand and collapse icons in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the expand and collapse icons in Blazor TreeView Component
 
-You can customize TreeView expand and collapse icons by using the `CssClass` &nbsp;property of TreeView. Refer to the sample to customize expand/collapse icons.
+TreeView expand and collapse icons could be customized by using the `CssClass` &nbsp;property of TreeView. Refer to the sample to customize expand or collapse icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -132,13 +132,11 @@ You can customize TreeView expand and collapse icons by using the `CssClass` &nb
 
 ```
 
-Output be like the below.
-
 ![TreeView Sample](../images/customize.png)
 
 ## Customize expand/collapse icon's position and color
 
-You can also customize the expand/collapse icon's position and color using following CSS.
+The expand or collapse icon's position and color can also customized using following CSS.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -331,13 +329,11 @@ You can also customize the expand/collapse icon's position and color using follo
 </style>
 ```
 
-Output be like the below.
-
 ![TreeView Sample](../images/customize-icons.png)
 
 ## Increase the padding between the text, expand/collapse icon and custom icons
 
-You can increase the padding between the text, expand/collapse icon and custom icons using following CSS in the above sample.
+The padding between the text, expand or collapse icon and custom icons can be increased using the following CSS in the above sample.
 
 ```csharp
 
@@ -364,7 +360,5 @@ You can increase the padding between the text, expand/collapse icon and custom i
         padding-left: 25px;
     }
 ```
-
-Output be like the below.
 
 ![TreeView Sample](../images/customize-icons-space.png)

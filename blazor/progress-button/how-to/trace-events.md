@@ -49,4 +49,4 @@ The events available in Progress Button are [OnFailure](https://help.syncfusion.
 
 Output be like
 
-![Progress Button Sample](./../images/pb-event.png)
+![Tracing Events in Blazor ProgressButton](./../images/blazor-progressbutton-trace-event.png)

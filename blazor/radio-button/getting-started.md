@@ -22,7 +22,7 @@ To get start quickly with Radio Button Component using Blazor, you can check on 
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+2. You can add the client-side style resource through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
     > Please ensure to check the **Include prerelease** option.
 
@@ -102,7 +102,7 @@ Now, add the Syncfusion Blazor Radio Button component in `razor` page in the `Pa
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Radio Button component will render in the web browser as shown below
 
-![RadioButton Sample](./images/radio-button.png)
+![Blazor RadioButton Component](./images/blazor-radiobutton-component.png)
 
 ## See Also
 

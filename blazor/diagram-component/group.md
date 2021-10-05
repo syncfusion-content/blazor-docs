@@ -1,29 +1,29 @@
 ---
 layout: post
-title: Group in Blazor Diagram Component | Syncfusion
-description: Learn here all about how to create and update the group in Syncfusion Blazor Diagram component and more.
+title: NodeGroup in Blazor Diagram Component | Syncfusion
+description: Learn here all about how to create and update the NodeGroup in Syncfusion Blazor Diagram component and more.
 platform: Blazor
 control: Diagram Component
 documentation: ug
 ---
 
-# Group in Blazor Diagram Component
+# NodeGroup in Blazor Diagram Component
 
-Group is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, groups, and connectors). Every change made to the group also affects the children. Child elements can be edited individually.
+[NodeGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html) is used to cluster multiple nodes and connectors into a single element. It acts like a container for its children (nodes, nodegroups, and connectors). Every change made to the node group also affects the children. Child elements can be edited individually.
 
-## Create group
+## Create NodeGroup
 
-## Add group when initializing diagram
+## Add NodeGroup when initializing diagram
 
-A group can be added to the diagram model through `Nodes` collection. To define an object as group, add the child objects to the `Children` collection of the group. The following code illustrates how to create a group node.
+A node group can be added to the diagram model through [Nodes](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html) collection. To define an object as node group, add the child objects to the [Children](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeGroup.html#Syncfusion_Blazor_Diagram_NodeGroup_Children) collection of the node group. The following code illustrates how to create a node group.
 
-* While creating group, its child node needs to be declared before the group declaration.
+* While creating node group, its child node needs to be declared before the node group declaration.
 
-* Add a node to the existing group child by using the `diagram.Group` method.
+* Add a node to the existing node group child by using the [Group](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Group) method.
 
-* The group’s `diagram.UnGroup` method is used to define whether the group can be ungrouped or not.
+* The nodegroup’s [UnGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_UnGroup) method is used to define whether the node group can be ungrouped or not.
 
-* A group can be added into a child of another group.
+* A node group can be added into a child of another node group.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
@@ -46,8 +46,8 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
         Node node3 = createNode("node3", 200, 250, "Node3");
-        Group groupnode = new Group();
-        // Grouping node 1 and node 2 into a single group
+        NodeGroup groupnode = new NodeGroup();
+        // Grouping node 1 and node 2 into a single nodegroup
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -70,10 +70,15 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         {
             ID = "annotation1",
             Content = content,
-            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new TextStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
-        {
+    {
             annotation
         };
         return node;
@@ -85,7 +90,7 @@ A group can be added to the diagram model through `Nodes` collection. To define 
         {
             await Task.Delay(500);
             diagram.SelectAll();
-            // Adding the third node into the existing group
+            // Adding the third node into the existing nodegroup
             diagram.Group();
         }
     }
@@ -100,7 +105,7 @@ The following code illustrates how a ungroup  at runtime.
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize the diagram with nodes *@
-<SfDiagramComponent Height="500px" @ref="diagram" Nodes="@nodes"/>
+<SfDiagramComponent Height="500px" @ref="diagram" Nodes="@nodes" />
 
 @code
 {
@@ -110,8 +115,8 @@ The following code illustrates how a ungroup  at runtime.
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        Group groupnode = new Group();
-        // Grouping node 1 and node 2 into a single group
+        NodeGroup groupnode = new NodeGroup();
+        // Grouping node 1 and node 2 into a single nodegroup
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -133,7 +138,12 @@ The following code illustrates how a ungroup  at runtime.
         {
             ID = "annotation1",
             Content = content,
-            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new TextStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -155,29 +165,30 @@ The following code illustrates how a ungroup  at runtime.
 }
 ```
 
-## Add group at runtime
+## Add NodeGroup at runtime
 
-A group node can be added at runtime by using Nodes collection of diagram.
+A node group can be added at runtime by using Nodes collection of diagram.
 
-The following code illustrates how a group node is added at runtime
+The following code illustrates how a node group is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="AddGroup" @onclick="@AddGroup" />
+<SfButton Content="AddGroup" OnClick="@AddGroup" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 
 @code
 {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    Group groupnode = new Group();
+    NodeGroup groupnode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single nodegroup
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -198,7 +209,12 @@ The following code illustrates how a group node is added at runtime
         {
             ID = "annotation1",
             Content = content,
-            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new TextStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -209,17 +225,18 @@ The following code illustrates how a group node is added at runtime
 
     private void AddGroup()
     {
-        NodeCollection.Add(groupnode);
+        nodes.Add(groupnode);
     }
 }
 ```
 
-* Also, you can add the child to the group through `AddChild` method. The following code illustrates how to add child to the existing group through AddChild method.
+* Also, you can add the child to the node group through [AddChild](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_AddChild_Syncfusion_Blazor_Diagram_NodeGroup_Syncfusion_Blazor_Diagram_NodeBase_) method. The following code illustrates how to add child to the existing node group through AddChild method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="AddChildToGroup" @onclick="@AddChildToGroup" />
+<SfButton Content="AddChildToGroup" OnClick="@AddChildToGroup" />
 @* Initialize the diagram with nodes *@
 <SfDiagramComponent @ref="@diagram" Height="500px" Nodes="@nodes"/>
 
@@ -227,13 +244,13 @@ The following code illustrates how a group node is added at runtime
 {
     SfDiagramComponent diagram;
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    Group groupnode = new Group();
+    NodeGroup groupnode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single nodegroup
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -255,7 +272,12 @@ The following code illustrates how a group node is added at runtime
         {
             ID = "annotation1",
             Content = content,
-            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new TextStyle() 
+            { 
+                Color = "white", 
+                Fill = "transparent", 
+                StrokeColor = "None" 
+            },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -266,7 +288,7 @@ The following code illustrates how a group node is added at runtime
 
     private async void AddChildToGroup()
     {
-        Group group = diagram.SelectedItems.Nodes[0] as Group;
+        NodeGroup group = diagram.SelectionSettings.Nodes[0] as NodeGroup;
         Node node = new Node()
         {
             ID = "node" + nodes.Count.ToString(),
@@ -280,37 +302,43 @@ The following code illustrates how a group node is added at runtime
                 new ShapeAnnotation()
                 {
                     Content = "Node" + nodes.Count.ToString(),
-                    Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+                    Style = new TextStyle() 
+                    { 
+                        Color = "white", 
+                        Fill = "transparent", 
+                        StrokeColor = "None" 
+                    },
                 }
             }
         };
-        await diagram.AddChild(group as Group, node);
+        await diagram.AddChild(group as NodeGroup, node);
     }
 }
 ```
 
 ## Update position at runtime
 
-You can change the position of the group similar to node. For more information about node positioning, refer to [Positioning](../nodes/positioning).
+You can change the position of the node group similar to node. For more information about node positioning, refer to [Positioning](https://blazor.syncfusion.com/documentation/diagram-component/nodes/positioning).
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="UpdatePosition" @onclick="@UpdatePosition" />
+<SfButton Content="UpdatePosition" OnClick="@UpdatePosition" />
 @* Initialize the diagram with NodeCollection *@
-<SfDiagramComponent Height="500px" Nodes="@nodes"/>
+<SfDiagramComponent Height="500px" Nodes="@nodes" />
 
 @code
 {
     DiagramObjectCollection<Node> nodes = new DiagramObjectCollection<Node>();
-    Group groupnode = new Group();
+    NodeGroup groupnode = new NodeGroup();
 
     protected override void OnInitialized()
     {
         nodes = new DiagramObjectCollection<Node>();
         Node node1 = createNode("node1", 100, 100, "Node1");
         Node node2 = createNode("node2", 300, 100, "Node2");
-        // Grouping node 1 and node 2 into a single group
+        // Grouping node 1 and node 2 into a single nodegroup
         groupnode.Children = new string[] { "node1", "node2" };
         nodes.Add(node1);
         nodes.Add(node2);
@@ -332,7 +360,12 @@ You can change the position of the group similar to node. For more information a
         {
             ID = "annotation1",
             Content = content,
-            Style = new TextShapeStyle() { Color = "white", Fill = "transparent", StrokeColor = "None" },
+            Style = new TextStyle()
+            {
+                Color = "white",
+                Fill = "transparent",
+                StrokeColor = "None"
+            },
         };
         node.Annotations = new DiagramObjectCollection<ShapeAnnotation>()
         {
@@ -351,15 +384,15 @@ You can change the position of the group similar to node. For more information a
 
 ## Appearance
 
-You can change the appearance of the group similar to node. For more information about node appearance, refer to [Appearance](../nodes/customization).
+You can change the appearance of the node group similar to node. For more information about node appearance, refer to [Appearance](https://blazor.syncfusion.com/documentation/diagram-component/nodes/customization).
 
 ## Interaction
 
-You can edit the group and its children at runtime. We able to interact the group as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](../nodes/interaction).
+You can edit the node group and its children at runtime. We able to interact the nodegroup as like the node interaction like resize, rotate and drag. For more information about node interaction, refer to [Interaction](https://blazor.syncfusion.com/documentation/diagram-component/nodes/interaction).
 
-### Selecting a group
+### Selecting a NodeGroup
 
-When a child element of any group is clicked, its contained group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent Group to its children.
+When a child element of any node group is clicked, its contained node group is selected instead of the child element. With consecutive clicks on the selected element, selection is changed from top to bottom in the hierarchy of parent nodegroup to its children.
 
 ## See Also
 

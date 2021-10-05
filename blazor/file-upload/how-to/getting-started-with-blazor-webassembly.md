@@ -32,19 +32,19 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](../images/new-project.png)
+    ![Creating New Project in blazor ASPNETCore](../images/blazor-aspnet-creating-new-project.png)
 
 3. Select **Blazor App** from the template and click **Next** button.
 
-    ![blazor template](../images/blazor-template.png)
+    ![Crating Blazor Application](../images/blazor-template.png)
 
 4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![asp.net core project configuration](../images/project-configuration.png)
+    ![Blazor ASP.NET Core Project Configuration](../images/blazor-project-configuration.png)
 
 5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
 
-    ![select framework](../images/blazor-client-template.png)
+    ![Selecting Blazor WebAssembly Framework](../images/blazor-client-template.png)
 
     > ASP.NET Core 3.1 available in Visual Studio 2019 version.
 
@@ -52,11 +52,11 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![select nuget](../images/select-nuget.png)
+    ![Selecting Blazor NuGet Package](../images/blazor-nuget-package-selection.png)
 
 3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
@@ -132,7 +132,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![Uploader Sample](../images/uploader_getting_started.png)
+![Blazor Upload](../images/blazor-fileupload-component.png)
 
 ## Without server-side API endpoint
 
@@ -165,7 +165,7 @@ You can get the uploaded files as file stream in the [ValueChange](https://help.
 
 The output will be as follows.
 
-![Uploader Output](../images/uploader_output.png)
+![Blazor FileUpload displays Updated Files](../images/blazor-fileupload-with-updated-files.png)
 
 While clicking on the remove icon in the file list, you will get the [OnRemove](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.UploaderEvents.html#Syncfusion_Blazor_Inputs_UploaderEvents_OnRemove) event with removing file name as argument. So, you can write the remove handler inside OnRemove event to remove the particular file from desired location. Please find the remove action code on below.
 
@@ -274,10 +274,10 @@ You can allow the specific files alone to upload using the [AllowedExtensions](h
 
 The output will be as follows.
 
-![Uploader AllowedExtensions](../images/uploader_file_not_allowed.png)
+![Allowing Specific Files in Blazor FileUpload](../images/blazor-fileupload-allow-specific-file.png)
 
 ## See Also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/)
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../../getting-started/blazor-webassembly-dotnet-cli/)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](../../getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../../getting-started/blazor-server-side-dotnet-cli/)

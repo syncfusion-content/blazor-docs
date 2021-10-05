@@ -31,4 +31,4 @@ The following code allows you to select a date within the range of 7th to 27th d
 
 The output will be as follows.
 
-![calendar](./images/date_range.png)
+![DataRange in Blazor Calendar Component](./images/blazor-calendar-date-range.png)

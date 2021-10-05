@@ -18,5 +18,5 @@ Color Picker can be rendered without control buttons (Apply/Cancel). In this cas
 <SfColorPicker ShowButtons="false"></SfColorPicker>
 ```
 
-Output be like
-![color-picker](./../images/hide-control.png)
+Output will be as follows
+![Hide Control Buttons in Blazor ColorPicker](./../images/blazor-colorpicker-hide-control.png)

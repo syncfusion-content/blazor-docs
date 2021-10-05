@@ -9,9 +9,9 @@ documentation: ug
 
 # Change datasource dynamically in Blazor DataGrid Component
 
-You can change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) of the datagrid component dynamically through an external button.
+You can change the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) of the DataGrid component dynamically through an external button.
 
-This is demonstrated in the below sample code where the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) is dynamically modified using the bounded property,
+This is demonstrated in the following sample code where the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartSeries.html#Syncfusion_Blazor_Charts_ChartSeries_Type) is dynamically modified using the bound property,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -64,4 +64,4 @@ This is demonstrated in the below sample code where the [DataSource](https://hel
 ```
 
 The following GIF represents DataGrid data source modified dynamically on button click,
-![Update datasource dynamically](../images/grid-dynamic-datasource.gif)
+![Changing Datasource Dynamically in Blazor DataGrid](../images/blazor-datagrid-dynamic-datasource.gif)

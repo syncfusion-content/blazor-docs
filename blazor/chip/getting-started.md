@@ -9,22 +9,22 @@ documentation: ug
 
 # Getting Started with Blazor Chip Component
 
-This section briefly explains how to include a `Chip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a [Chip](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfChip.html) in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 ### Using Syncfusion.Blazor NuGet Package [New standard]
 
-1. Install **Syncfusion.Blazor.Buttons** NuGet package to the application by using the `NuGet Package Manager`.
+1. Install [Syncfusion.Blazor.Buttons](https://www.nuget.org/packages/Syncfusion.Blazor.Buttons) NuGet package to the application by using the `NuGet Package Manager`.
 Refer to the Individual NuGet Packages section for the available NuGet packages.
-![nuget explorer](images/nuget-explorer1.png)
+![Blazor NuGet Package Manager](images/blazor-nuget-package-manager.png)
 2. Search Syncfusion.Blazor.Buttons keyword in the Browse tab and install Syncfusion.Blazor.Buttons NuGet package in the application.
-![nuget-chip](images/nuget-chip.png)
+![Displaying NuGet Package for Blazor Chip](images/blazor-chip-nuget-package.png)
 3. Once the installation process is completed, the Syncfusion Blazor Buttons package will be installed in the project.
 
     W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
-    You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+    You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
     <head>
@@ -39,12 +39,10 @@ Refer to the Individual NuGet Packages section for the available NuGet packages.
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.Right-click the project and then select Manage NuGet Packages.
-![nuget explorer](images/nuget-explorer1.png)
+![Blazor NuGet Package Manager](images/blazor-nuget-package-manager.png)
 2. Search Syncfusion.Blazor keyword in the Browse tab and install Syncfusion.Blazor NuGet package in the application.
-![select-nuget](images/select-nuget1.png)
+![Selecting NuGet Package for Blazor](images/blazor-nuget-selection.png)
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-
-    > You can also add the client-side style resources through CDN.
 
     ```html
     <head>
@@ -151,7 +149,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Chip Sample](./images/chip.png)
+![Blazor Chip Component](./images/blazor-chip-component.png)
 
 ## See Also
 

@@ -57,7 +57,7 @@ The following sample code demonstrates binding local data through the [SfDataMan
 ```
 
 The following image represents DataGrid bound with local data through the `SfDataManager` component,
-![Local Data Binding](./images/grid-local-binding.png)
+![Data Binding in Blazor DataManager Component](./images/blazor-datamanager-binding.png)
 
 ## Remote data binding
 
@@ -91,4 +91,4 @@ The following sample code demonstrates binding remote data through the [SfDataMa
 ```
 
 The following image represents DataGrid bound with remote data through the `SfDataManager` component,
-![Remote Data Binding](./images/grid-remote-binding.png)
+![Remote Data Binding in Blazor DataManager](./images/blazor-datamanager-remote-binding.png)

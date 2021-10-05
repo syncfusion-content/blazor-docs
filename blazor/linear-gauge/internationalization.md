@@ -38,4 +38,4 @@ The text in axis labels and tooltip can be displayed in the numeric format such 
 </SfLinearGauge>
 ```
 
-![Linear Gauge with Internationalization Sample](images/locale.png)
+![Blazor Linear Gauge with Localization](images/blazor-linear-gauge-localization.png)

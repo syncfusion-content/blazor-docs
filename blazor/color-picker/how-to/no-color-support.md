@@ -13,7 +13,7 @@ The Color Picker component supports no color functionality. By clicking the no c
 
 ## Default no color
 
-To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property as true. In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile you can achieve the above functionalities.
+To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfColorPicker.html#Syncfusion_Blazor_Inputs_SfColorPicker_NoColor) property as true. In the following sample, the first tile of the color palette represents the no color tile. By clicking the no color tile, you can achieve the above functionalities.
 
 ```cshtml
 
@@ -41,12 +41,12 @@ To achieve this, set [NoColor](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-Output be like
-![color-picker](./../images/cp-nocolor.png)
+Output will be as follows
+![Blazor ColorPicker with Default No Color](./../images/blazor-colorpicker-nocolor.png)
 
 ## Custom No Color
 
-The following sample show the color palette with custom no color option.
+The following sample shows the color palette with custom no color option.
 
 ```cshtml
 
@@ -122,5 +122,5 @@ The following sample show the color palette with custom no color option.
 
 ```
 
-Output be like
-![color-picker](./../images/cp-custom-nocolor.png)
+Output will be as follows
+![Blazor ColorPicker with Custom No Color](./../images/blazor-colorpicker-custom-nocolor.png)

@@ -30,6 +30,7 @@ By using `Locale` property, you can set the culture dynamically in kanban compon
 | Kanban_Cancel | Cancel |
 | Kanban_Yes | Yes |
 | Kanban_No | No |
+| Kanban_No_Cards | No cards to display |
 
 ## Localization
 
@@ -95,7 +96,7 @@ The following example demonstrates the Kanban in `Deutsch` culture.
 
 Output be like the below.
 
-![localization](./images/localization.png)
+![Localization in Blazor Kanban](./images/blazor-kanban-localization.png)
 
 ## Right to left (RTL)
 
@@ -161,4 +162,4 @@ The Kanban provides an option to switch its text direction and layout from right
 
 Output be like the below.
 
-![rtl](./images/rtl.png)
+![Right to Left in Blazor Kanban](./images/blazor-kanban-right-to-left.png)

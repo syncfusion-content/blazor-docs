@@ -17,7 +17,7 @@ This section briefly explains about how to include Progress Button Component in 
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
     > Please ensure to check the **Include prerelease** option.
 
@@ -93,7 +93,7 @@ Now, add the Syncfusion Blazor Progress Button component in `razor` page in the 
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Progress Button component will render in the web browser as shown below
 
-![ProgressButton Sample](./images/progress-button.png)
+![Blazor ProgressButton Component](./images/blazor-progressbutton-component.png)
 
 ## See Also
 

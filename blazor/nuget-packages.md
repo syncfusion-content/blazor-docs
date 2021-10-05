@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Individual NuGet Packages in Blazor - Syncfusion
-description: Check out the documentation for Individual NuGet Packages in Blazor
+description: Learn here about the installing, managing and upgrading of NuGet packages of Syncfusion Blaor Components.
 platform: Blazor
 component: Common
 documentation: ug
@@ -11,19 +11,19 @@ documentation: ug
 
 * Starting with v18.4.0.30 (Volume 4, 2020), the Syncfusion Blazor UI components are separately available in individual NuGet packages. The NuGet packages are segregated based on the component usage and its namespace.
 
-* The complete NuGet package `Syncfusion.Blazor` will also be available along with individual NuGet packages. That is, we have not deprecated its support yet.
+* The complete NuGet package `Syncfusion.Blazor` will also be available along with the individual NuGet packages. It means its support is not deprecated yet.
 
 W> Do not use both `Syncfusion.Blazor` and individual NuGet packages in the same application. It will throw ambiguous errors while compiling the project.
 
 ## Benefits of using individual NuGet packages
 
-* These individual NuGet packages are extremely useful when you are rendering Syncfusion Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
+* These individual NuGet packages are extremely useful while rendering Syncfusion Blazor components in Blazor WebAssembly applications. These packages will reduce the initial loading time in Blazor WebAssembly applications.
 
-* When you install `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
+* While installing `Syncfusion.Blazor` NuGet package in a Blazor WebAssembly application, it will load the complete Syncfusion Blazor library in the web browser which takes more initial loading time. Whereas, the individual NuGet package installation will resolve this and load the required components assembly alone in the web browser.
 
-* You can utilize the [Blazor WebAssembly lazy loading](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0) functionality with our Syncfusion Blazor individual NuGet packages.
+* The [Blazor WebAssembly lazy loading](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-lazy-load-assemblies?view=aspnetcore-5.0) functionality can be utilized with the Syncfusion Blazor individual NuGet packages.
 
-* You can also use these individual NuGet packages in the Blazor Server application to reduce the application deployment size in production.
+* These individual NuGet packages can be used in the Blazor Server application to reduce the application deployment size in production.
 
 ## Available NuGet packages
 
@@ -71,7 +71,7 @@ SfBaseComponent
 
 ### Syncfusion.Blazor.BarcodeGenerator
 
-The Blazor BarcodeGenerator supports the most common 1D and 2D barcode and complete customization of its appearance.
+The Blazor BarcodeGenerator supports the most common 1D and 2D barcode, and complete customization of its appearance.
 
 <table>
 <tr>
@@ -110,7 +110,7 @@ Syncfusion.Blazor.BarcodeGenerator.dll
 
 ### Syncfusion.Blazor.BulletChart
 
-The Blazor Bullet Chart is used to visually compare measures, similar to the commonly used bar chart. A bullet chart displays one or more measures and compares them with a target value. You can also display the measures in a range of performance such as poor, satisfactory, and good.
+The Blazor Bullet Chart is used to visually compare measures, similar to the commonly used bar chart. A bullet chart displays one or more measures, and compares them with a target value. The measures can be displayed in a range of performance such as poor, satisfactory, and good.
 
 <table>
 <tr>
@@ -180,6 +180,7 @@ Syncfusion.Blazor.Buttons.dll
 <li>SfChip</li>
 <li>SfRadioButton</li>
 <li>SfSwitch</li>
+<li>SfIcon</li>
 </ul>
 </td>
 <td>
@@ -314,7 +315,7 @@ Syncfusion.Blazor.Charts.dll
 
 ### Syncfusion.Blazor.CircularGauge
 
-The Blazor Circular Gauge is used for visualizing numeric values on a circular scale with features like multiple axes, rounded corners, and more. We can completely customize the appearance of the gauge to simulate a speedometer, meter gauge, analog clock, etc.
+The Blazor Circular Gauge is used for visualizing numeric values on a circular scale with features like multiple axes, rounded corners, and more. The appearance of the gauge can be completely customized to simulate a speedometer, meter gauge, analog clock, etc.
 
 <table>
 <tr>
@@ -560,7 +561,7 @@ SfFileManager
 
 ### Syncfusion.Blazor.Gantt
 
-The Blazor Gantt is designed to visualize and edit the project schedule and track the project progress. It helps to organize and schedule the projects and also you can update the project schedule through interactions like editing, dragging, and resizing.
+The Blazor Gantt is designed to visualize and edit the project schedule, and track the project progress. It helps to organize and schedule the projects, and also the project schedule can be updated through interactions like editing, dragging, and resizing.
 
 <table>
 <tr>
@@ -738,7 +739,7 @@ SfInPlaceEditor
 
 ### Syncfusion.Blazor.Inputs
 
-A package of Blazor input components. It comes with a collection of form components.  They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.
+A package of Blazor input components comes with a collection of form components. They can be used to get different input values from the users such as text, numbers, patterns, color, and file inputs.
 
 <table>
 <tr>
@@ -871,7 +872,7 @@ Syncfusion.Blazor.Layouts.dll
 
 ### Syncfusion.Blazor.LinearGauge
 
-The Blazor Linear Gauge is used for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more. We can completely customize the appearance of the gauge to simulate a thermometer, pressure gauge, ruler, etc.
+The Blazor Linear Gauge is used for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more. The appearance of the gauge can be completely customized to simulate a thermometer, pressure gauge, ruler, etc.
 
 <table>
 <tr>
@@ -909,7 +910,7 @@ SfLinearGauge
 
 ### Syncfusion.Blazor.Lists
 
-Blazor ListView component allows you to select an item or multiple items from a list-like interface and represents the data in an interactive hierarchical structure across different layouts or views. Lists are used for displaying data, data navigation, and data entry.
+Blazor ListView component allows to select an item or multiple items from a list-like interface and represents the data in an interactive hierarchical structure across different layouts or views. Lists are used for displaying data, data navigation, and data entry.
 
 <table>
 <tr>
@@ -1157,7 +1158,7 @@ SfPdfViewerServer
 </tr>
 </table>
 
-> If you are developing for Linux or Mac (OSX) operating system, use the following corresponding libraries as follows:
+> For developing Linux or Mac (OSX) operating system, use the following corresponding libraries:
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
@@ -1215,7 +1216,7 @@ Syncfusion.Blazor.PivotTable.dll
 
 ### Syncfusion.Blazor.Popups
 
-A package of Blazor popup components Dialog and Tooltip. The components are used to display information or get input from the users in a popup.
+A package of Blazor popup components Dialog and Tooltip are used to display information or to get input from the users in a popup.
 
 <table>
 <tr>
@@ -1755,7 +1756,7 @@ SfTreeGrid
 
 ### Syncfusion.Blazor.TreeMap
 
-Blazor TreeMap is a feature-rich component used to visualize both hierarchical and flat data. We can customize the look and feel of the treemaps by using the built-in features like color mapping, legends, and label templates.
+Blazor TreeMap is a feature-rich component used to visualize both hierarchical and flat data.  The look and feel of the treemaps can be customized by using the built-in features like color mapping, legends, and label templates.
 
 <table>
 <tr>

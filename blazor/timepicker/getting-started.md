@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor TimePicker Component
 
-This section briefly explains about how to include a [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side TimePicker](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TimePicker](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor TimePicker](https://www.syncfusion.com/blazor-components/blazor-timepicker) component in the Blazor Server-Side and Client-Side application. Refer to the Getting Started with [Blazor Server-Side TimePicker](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TimePicker](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
-To get start quickly with Blazor TimePicker component, you can check on this video.
+To get start quickly with Blazor TimePicker component, check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=X6RsjJIJLIY"%}
@@ -20,9 +20,9 @@ To get start quickly with Blazor TimePicker component, you can check on this vid
 
 * Install `Syncfusion.Blazor.Calendars` NuGet package to the application by using the `NuGet Package Manager`.
 
-    > Please ensure to check the `Include prerelease` option for our Beta release.
+    > Please ensure to check the `Include prerelease` option for the Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* The client-side resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
     ```html
     <head>
@@ -80,7 +80,7 @@ namespace BlazorApplication
 
 ## Adding TimePicker component to the application
 
-To initialize the TimePicker component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
+To initialize the TimePicker component add the below code to the `Index.razor` view page which is present under `~/Pages` folder.
 
 The following code shows a basic TimePicker component.
 
@@ -90,16 +90,14 @@ The following code shows a basic TimePicker component.
 
 ## Run the application
 
-After successful compilation of your application, press `F5` to run the application.
-
-The output will be as follows.
+After successful compilation of the application, press `F5` to run the application.
 
 ![TimePicker](./images/default.png)
 
 ## Setting the time format
 
 Time format is a way of representing the time value in different string format in textbox and popup list. By default, the TimePicker’s Format is based on the culture.
-But you can customize the Format of the TimePicker using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property.
+But the Format of the TimePicker can be customized using the [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Format) property.
 
 The below code demonstrates how to render TimePicker component in 24 hours Format with 60 minutes interval. The time interval is set to 60 minutes by using the [Step](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Calendars.SfTimePicker-1.html#Syncfusion_Blazor_Calendars_SfTimePicker_1_Step) property.
 
@@ -110,8 +108,6 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
     public DateTime TimeValue { get; set; } = DateTime.Now;
 }
 ```
-
-The output will be as follows.
 
 ![TimePicker](./images/time_format.png)
 

@@ -51,15 +51,15 @@ Divider is used to separate the elements inside the card. You can add divider in
 
 <SfCard>
     <CardHeader Title="Explore Cities"></CardHeader>
-    <CardContent EnableSeperator="true">
+    <CardContent EnableSeparator="true">
         Sydney is a city on the east coast of Australia. Sydney is the capital city of New South
         Wales. About four million people live in Sydney which makes it the biggest cityin Oceania.
     </CardContent>
-    <CardContent EnableSeperator="true">
+    <CardContent EnableSeparator="true">
         New York City has been described as the cultural, financial, and media capital of the
         world, and exerts a significant impact upon commerce and etc.
     </CardContent>
-    <CardContent EnableSeperator="true">
+    <CardContent EnableSeparator="true">
         Malaysia is one of the Southeast Asian countries, on a peninsula of the Asian continent,
         to a certain extent; it can be recognized  as part of the Asian continent.
     </CardContent>

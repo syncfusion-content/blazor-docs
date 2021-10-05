@@ -17,7 +17,7 @@ This section briefly explains about how to include a **MultiSelect** Component i
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
 <head>
@@ -84,7 +84,7 @@ To initialize the MultiSelect component add the below code to your `Index.razor`
 
 Output be like below
 
-![MultiSelect](./images/default.png)
+![Blazor MultiSelect DropDown Component](./images/blazor-multiselect-dropdown.png)
 
 ## Binding data source
 
@@ -121,7 +121,7 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![DataBinding](./images/data_binding.png)
+![Data Binding in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-data-binding.png)
 
 ## Configure the popup list
 
@@ -160,7 +160,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![DataBinding](./images/width_height.png)
+![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
 
 ## See Also
 

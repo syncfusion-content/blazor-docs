@@ -102,6 +102,6 @@ You can `create` or `delete` conditions by interacting through the user interfac
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-filtering.png)
+![Filtering in Blazor QueryBuilder](./images/blazor-querybuilder-filtering.png)
 
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

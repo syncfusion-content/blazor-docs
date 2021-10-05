@@ -197,7 +197,7 @@ namespace WebAssemblyLocale
 
 The output will be as follows.
 
-![Calendar](./images/de_culture.png)
+![Localization in Blazor Calendar](./images/blazor-calendar-localization.png)
 
 ## Customize the localized text
 
@@ -219,7 +219,7 @@ The output will be as follows.
 
 The output will be as follows.
 
-![Calendar](./images/de_culture_02.png)
+![Changing Localized Text in Blazor Calendar](./images/blazor-calendar-localize-text.png)
 
 ## Right-To-Left
 
@@ -245,4 +245,4 @@ The following code example initializes the Calendar component in `Arabic` cultur
 
 The output will be as follows.
 
-![Calendar](./images/ar_culture.png)
+![Right to Left in Blazor Calendar](./images/blazor-calendar-right-to-left.png)

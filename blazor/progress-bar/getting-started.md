@@ -15,7 +15,7 @@ This section briefly explains how to include a Progress Bar component in the Bla
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. Add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources using through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml
     <head>
@@ -80,7 +80,7 @@ To initialize the Progress Bar component, add the following code to the **Index
 
 On successful compilation of the application, the Syncfusion Blazor Progress Bar component will render in the web browser as following.
 
-![progress bar](images/linear.png)
+![Blazor Linear ProgressBar](images/blazor-linear-progressbar.png)
 
 ## Progress Type
 
@@ -91,4 +91,4 @@ Change the type of the Progress Bar by using the [Type](https://help.syncfusion.
 </SfProgressBar>
 ```
 
-![progress bar](images/circular.png)
+![Blazor Circular ProgressBar](images/blazor-circular-progressbar.png)

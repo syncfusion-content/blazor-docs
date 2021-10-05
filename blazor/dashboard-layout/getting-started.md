@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Dashboard Layout Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Dashboard Layout component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor Dashboard Layout component of Syncfusion.
 platform: Blazor
 control: Dashboard Layout
 documentation: ug
@@ -17,9 +17,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
 * Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-
-    > You can also add the client-side style resources through CDN.
+* You can add the client-side style resources using [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
     <head>
@@ -35,7 +33,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
     </head>
     ```
 
-* For `Internet Explorer 11` kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+* For `Internet Explorer 11`, kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
     ```html
     <head>
@@ -50,7 +48,7 @@ This section briefly explains about how to include a `Dashboard Layout` componen
 
     W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+* You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
     <head>
@@ -145,7 +143,7 @@ It is easy to initialize a dashboard layout component with panel. To render a da
 
 ```
 
-> There is no need to assign default  value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
+> There is no need to assign default value for panels. Refer to the [Panels](./panels/position-sizing-of-panels/#panels) section to learn about default value.
 
 ## Run the application
 
@@ -153,7 +151,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 The simple Dashboard panel is rendered with whole dimension of parent element.
 
-![simple dashboard layout](images/defaults.png)
+![Blazor DashboardLayout Component](images/blazor-dashboard-layout-component.png)
 
 ## Defining panels
 
@@ -194,7 +192,7 @@ A dashboard layout panel is rendered with simple data. The header of a panel is 
 
 The Dashboard layout with simple content will be rendered in the web browser as demonstrated in the following screenshot.
 
-![Dashboard Layout Sample](images/single-content.png)
+![Blazor DashboardLayout with Single Data](images/blazor-dashboard-layout-single-content.png)
 
 ### Panels with components
 
@@ -361,7 +359,7 @@ These complex data (components) are placed as the panel content by assigning the
 
 Output for the Dashboard Layout Complex data (Blazor Components) will be as follows.
 
-![Content of other component](images/chart-components.png)
+![Blazor DashboardLayout displays Chart Component Content](images/blazor-dashboard-layout-with-chart-component.png)
 
 By default, the dashboard layout control is rendered with auto adjustable and [responsive](https://blazor.syncfusion.com/documentation/dashboard-layout/responsive-adaptive/) according to the parent dimensions.
 

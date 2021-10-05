@@ -63,8 +63,8 @@ In the following example, the **Display Settings** in parent items is disabled d
 
 ```
 
-Output be like
+Output will be as follows
 
-![Context Menu Sample](./../images/cm-disable.png)
+![Enabling or Disabling Items in Blazor ContextMenu](./../images/blazor-contextmenu-enable-disable-item.png)
 
-> To disable sub menu items, use the [OnOpen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~OnOpen.html) event.
+> To disable sub menu items, use the `OnOpen` event.

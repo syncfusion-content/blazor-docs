@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Linear Gauge Component
 
-This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed. The events should be provided to the Linear Gauge by using the [LinearGaugeEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html) class.
+This section describes the Linear Gauge component's event that gets triggered when corresponding operations are performed. The events should be provided to the Linear Gauge by using the [LinearGaugeEvents](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.LinearGauge.LinearGaugeEvents.html).
 
 ## AnnotationRendering
 
@@ -344,4 +344,4 @@ The [ValueChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Linear
 }
 ```
 
-![Bind event to linear gauge](./images/l-gauge-events.png)
+![Blazor Linear Gauge with Binding Events](./images/blazor-linear-gauge-events.png)

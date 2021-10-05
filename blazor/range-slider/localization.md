@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization in Blazor Range Slider Component | Syncfusion 
-description: Learn about Localization in Blazor Range Slider component of Syncfusion, and more details.
+description: Checkout and learn here all about Localization in Blazor Range Slider component of Syncfusion and more.
 platform: Blazor
 control: Range Slider
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor Range Slider Component
 
 The `Localization` library allows you to localize default text content of the Slider. The slider control has static text on some features (like increase and decrease button) that can be changed to other cultures (Arabic, Deutsch, French, etc.) by defining the `Locale` value.
 
@@ -82,7 +82,7 @@ namespace BlazorApplication
 }
 ```
 
-* Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
+* Create `~/Shared/SyncfusionLocalizer.cs` file. Then, write a **class** by inheriting **ISyncfusionStringLocalizer** interface and override the Manager property to get the resource file details from the application end.
 
 ```csharp
 using Syncfusion.Blazor;
@@ -109,7 +109,7 @@ namespace BlazorApplication
 }
 ```
 
-* Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
+* Add the resource files in the `~/Resources` folder. The locale resource files for different cultures are available in this [GitHub](https://github.com/syncfusion/blazor-locale) repository. You can get any culture resource file from there and utilize it in your application. Add **.resx** file to Resource folder and enter the key value (Locale Keywords) in the **Name** column and the translated string in the **Value** column as follows.
 
 | **Name** | **Value (in Deutsch culture)** |
 | --- | --- |
@@ -184,6 +184,16 @@ namespace WebAssemblyLocale
 }
 ```
 
+ > For .NET 5.0 Blazor WebAssembly globalization, we should configure the `BlazorWebAssemblyLoadAllGlobalizationData` in the project file when the application uses large resources and dynamic culture changes.
+
+    ```xml
+    <PropertyGroup>
+        <BlazorWebAssemblyLoadAllGlobalizationData>true</BlazorWebAssemblyLoadAllGlobalizationData>
+    </PropertyGroup>
+    ```
+
+    Refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/globalization-localization?view=aspnetcore-5.0#blazor-webassembly) for more details.
+
 * Now, Specify the culture for Slider using `Locale` property.
 
 ```cshtml
@@ -194,4 +204,4 @@ namespace WebAssemblyLocale
 
 The output will be as follows.
 
-![Localizatio](./images/localization.gif)
+![Localization in Blazor RangeSlider](./images/blazor-rangeslider-localization.gif)

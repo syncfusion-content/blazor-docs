@@ -27,7 +27,7 @@ To bind the menu event in the context menu [ItemSelected](https://help.syncfusio
 
 @code {
     public MenuItem SelectedItem;
-    // Triggers when item is selected
+    // Triggers when the item is selected
     private void selectedHandler(MenuEventArgs<MenuItem> args) {
         SelectedItem = args.Item;
     }
@@ -47,6 +47,6 @@ To bind the menu event in the context menu [ItemSelected](https://help.syncfusio
 
 ```
 
-Output be like
+Output will be as follows
 
-![Context Menu Sample](./../images/context-menu.png)
+![Binding Blazor ContextMenu Events](./../images/blazor-contextmenu-component.png)

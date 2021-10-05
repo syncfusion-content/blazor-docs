@@ -7,7 +7,7 @@ control: Datetime Picker
 documentation: ug
 ---
 
-# Getting Started with Blazor Datetime Picker Component
+# Getting Started with Blazor DateTime Picker Component
 
 This section briefly explains about how to include a [Blazor DateTimePicker](https://www.syncfusion.com/blazor-components/blazor-datetime-picker) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side DateTimePicker](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly DateTimePicker](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
@@ -20,9 +20,7 @@ To get start quickly with Blazor DateTimePicker component, you can check on this
 
 * Install `Syncfusion.Blazor.Calendars` NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
 <head>
@@ -94,7 +92,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![DateTimePicker](./images/default.png)
+![Blazor DateTimePicker Component](./images/blazor-datetimepicker-component.png)
 
 ## Setting the Value, Min and Max
 
@@ -114,7 +112,7 @@ The following code demonstrates how to set the `Min` and `Max` on initializing t
 
 The output will be as follows.
 
-![DateTimePicker](./images/min_max.png)
+![Setting Minimum and Maximum Value in Blazor DateTimePicker](./images/blazor-datetimepicker-min-max-value.png)
 
 ## See Also
 

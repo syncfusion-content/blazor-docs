@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Position in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about Position in Syncfusion Blazor Tooltip component and much more details.
+description: Checkout and learn here all about position in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Position in Blazor Tooltip Component
 
-Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, you can set the position property with any one of the following values:
+Tooltips can be attached to 12 static locations around the target. On initializing the Tooltip, set the position property with any one of the following values:
 
 * `TopLeft`
 * `TopCenter`
@@ -39,8 +39,6 @@ Tooltips can be attached to 12 static locations around the target. On initializi
     string Content = "Tooltip Content";
 }
 ```
-
-Output be like the below.
 
 ![Tooltip - Position](images/position.gif)
 
@@ -73,8 +71,6 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 </style>
 ```
 
-Output be like the below.
-
 ![Tooltip - Mouse Trail](images/mouse-trail.gif)
 
 > When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
@@ -85,8 +81,6 @@ Offset values are set to specify the distance between the target and tooltip ele
 
 * `OffsetX` specifies the distance between the target and Tooltip element in X axis.
 * `OffsetY` specifies the distance between the target and Tooltip element in Y axis.
-
-The following code example illustrates how to set offset values.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -113,8 +107,6 @@ The following code example illustrates how to set offset values.
 </style>
 
 ```
-
-Output be like the below.
 
 ![Tooltip - Offset Value](images/Offset.gif)
 

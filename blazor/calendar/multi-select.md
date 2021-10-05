@@ -27,4 +27,4 @@ public DateTime[] MultipleValues { get; set; } = new DateTime[] { new DateTime(D
 
 The output will be as follows.
 
-![calendar](./images/multi-selection.png)
+![Multi Selection in Blazor Calendar Component](./images/blazor-calendar-multi-selection.png)

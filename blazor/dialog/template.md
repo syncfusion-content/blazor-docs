@@ -223,7 +223,7 @@ The following example demonstrates the usage of header and footer template in th
 
 The output will be as follows.
 
-![dialog](./images/dialog-template.png)
+![Blazor Dialog with Header and Footer Template](./images/blazor-dialog-header-footer-template.png)
 
 ## See Also
 

@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer component allows you to localize the static text on formatting pane, toolbar, dialog and more. It can be achieved by setting the `Locale` property and providing the localized text through the `LoadLocaleData()` method.
 
-Also, this component provides support to render the user interface suitable for users who use **right-to-left (RTL)** languages (Arabic, Hebrew, Azeri, Farsi, Urdu). You can specify the control to render in RTL by setting the `EnableRtl` property to true.
+Also, this component provides support to render the user interface suitable for users who use **right-to-left (RTL)** languages (Arabic, Hebrew, Azerbaijani, Persian, Urdu). You can specify the control to render in RTL by setting the `EnableRtl` property to true.
 
 The following code snippet shows how to localize the component for Arabic language by setting the Locale and EnableRtl properties and providing the localized text.
 
@@ -150,3 +150,5 @@ The following table shows the default text values used in PDF Viewer in 'en-US' 
 |Page|Page|
 |Add a comment|Add a comment|
 |Add a reply|Add a reply|
+
+> You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.

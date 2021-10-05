@@ -13,18 +13,23 @@ Connectors can be selected, dragged, and routed over the diagram page.
 
 ## Select
 
-A connector can be selected at runtime by using the `Select` method and clear the selection in the diagram using the `ClearSelection`. The following code explains how to select and clear selection in the diagram.
+A connector can be selected at runtime by using the [Select](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Select_System_Collections_ObjectModel_ObservableCollection_Syncfusion_Blazor_Diagram_IDiagramObject__System_Nullable_System_Boolean__) method and clear the selection in the diagram using the [ClearSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_ClearSelection). The following code explains how to select and clear selection in the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
 @using System.Collections.ObjectModel
-<input type="button" value="Select" @onclick="OnSelect">
-<input type="button" value="UnSelect" @onclick="@UnSelect" />
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Select" OnClick="@OnSelect" />
+<SfButton Content="UnSelect" OnClick="@UnSelect" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Dictionary<string, object> ConnectorInfo = new Dictionary<string, object>();
@@ -32,20 +37,20 @@ A connector can be selected at runtime by using the `Select` method and clear th
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point()
+            SourcePoint = new DiagramPoint()
             {
                 X = 100,
                 Y = 100
             },
-            TargetPoint = new Point()
+            TargetPoint = new DiagramPoint()
             {
                 X = 200,
                 Y = 200
             },
-            Type = Segments.Orthogonal,
-            TargetDecorator = new Decorator()
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShapes.Arrow,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "#6495ED",
@@ -58,15 +63,17 @@ A connector can be selected at runtime by using the `Select` method and clear th
                 StrokeColor = "#6495ED",
                 StrokeWidth = 1
             },
-            AddInfo = ConnectorInfo
+            AdditionalInfo = ConnectorInfo
         };
         connectors.Add(Connector);
     }
+
     public void OnSelect()
     {
         // Select the Connector
         Diagram.Select(new ObservableCollection<IDiagramObject> { Diagram.GetObject(Diagram.Connectors[0].ID) as IDiagramObject });
     }
+
     public void UnSelect()
     {
         // clear selection in the diagram
@@ -78,22 +85,27 @@ A connector can be selected at runtime by using the `Select` method and clear th
 And also the selection can be enabled during the interaction.
 
 * An element can be selected by clicking that element.
-* When you select the elements in the diagram, the `SelectionChange` event gets triggered and do customization in this event.
+* When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and  [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) event gets triggered and do customization in this event.
 
 ![Select](../images/connector-select.gif)
 
 ## Drag
 
-A connector can be dragged at runtime by using the `Drag` method. The following code explains how to drag the connector by using the drag method.
+A connector can be dragged at runtime by using the [Drag](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_Drag_Syncfusion_Blazor_Diagram_IDiagramObject_System_Double_System_Double_) method. The following code explains how to drag the connector by using the drag method.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-<input type="button" value="Drag" @onclick="OnDrag">
+@using Syncfusion.Blazor.Buttons
+
+<SfButton Content="Drag" OnClick="@OnDrag" />
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Dictionary<string, object> ConnectorInfo = new Dictionary<string, object>();
@@ -101,20 +113,20 @@ A connector can be dragged at runtime by using the `Drag` method. The following 
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point()
+            SourcePoint = new DiagramPoint()
             {
                 X = 100,
                 Y = 100
             },
-            TargetPoint = new Point()
+            TargetPoint = new DiagramPoint()
             {
                 X = 200,
                 Y = 200
             },
-            Type = Segments.Orthogonal,
-            TargetDecorator = new Decorator()
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShapes.Arrow,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "black",
@@ -127,10 +139,11 @@ A connector can be dragged at runtime by using the `Drag` method. The following 
                 StrokeColor = "black",
                 StrokeWidth = 1
             },
-            AddInfo = ConnectorInfo
+            AdditionalInfo = ConnectorInfo
         };
         connectors.Add(Connector);
     }
+
     public void OnDrag()
     {
         // Drag the connector
@@ -142,7 +155,7 @@ A connector can be dragged at runtime by using the `Drag` method. The following 
 And also drag the connector during the interaction.
 
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
-* When you drag the elements in the diagram, the `PositionChange` event gets triggered and to do customization in this event.
+* When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) event gets triggered and to do customization in this event.
 
 ![Drag](../images/connector-drag.gif)
 
@@ -152,11 +165,15 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
 </SfDiagramComponent>
-@code{
+
+@code
+{
     SfDiagramComponent Diagram;
     DiagramObjectCollection<Connector> connectors = new DiagramObjectCollection<Connector>();
+
     protected override void OnInitialized()
     {
         Dictionary<string, object> ConnectorInfo = new Dictionary<string, object>();
@@ -164,20 +181,20 @@ The connector can be selected by clicking it. When the connector is selected, ci
         Connector Connector = new Connector()
         {
             ID = "connector1",
-            SourcePoint = new Point()
+            SourcePoint = new DiagramPoint()
             {
                 X = 100,
                 Y = 100
             },
-            TargetPoint = new Point()
+            TargetPoint = new DiagramPoint()
             {
                 X = 200,
                 Y = 200
             },
-            Type = Segments.Orthogonal,
-            TargetDecorator = new Decorator()
+            Type = ConnectorSegmentType.Orthogonal,
+            TargetDecorator = new DecoratorSettings()
             {
-                Shape = DecoratorShapes.Arrow,
+                Shape = DecoratorShape.Arrow,
                 Style = new ShapeStyle()
                 {
                     Fill = "black",
@@ -190,7 +207,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
                 StrokeColor = "black",
                 StrokeWidth = 1
             },
-            AddInfo = ConnectorInfo
+            AdditionalInfo = ConnectorInfo
         };
         connectors.Add(Connector);
     }

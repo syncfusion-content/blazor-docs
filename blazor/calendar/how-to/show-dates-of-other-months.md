@@ -35,4 +35,4 @@ The following code demonstrates how to show dates of other months. Using the sty
 
 The output will be as follows.
 
-![calendar](../images/other_month.png)
+![Displaying other Month Dates in Blazor Calendar](../images/blazor-calendar-other-month-dates.png)

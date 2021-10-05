@@ -75,7 +75,7 @@ The Menu Bar component supports horizontal and vertical scrolling to render larg
 
 Output be like
 
-![Menu Sample](./images/menu-scrollable.png)
+![Blazor MenuBar with Scroller](./images/blazor-menubar-scroller.png)
 
 ## Hamburger Menu
 
@@ -144,7 +144,7 @@ The following example demonstrates the use case of [HamburgerMenu](https://help.
 
 Output be like
 
-![Menu Sample](./images/menu-hamburger.png)
+![Blazor MenuBar with Hamburger Menu](./images/blazor-menubar-with-hamburger-menu.png)
 
 ## Mobile View
 
@@ -290,4 +290,4 @@ The following example demonstrates the use case of Menu Bar in Mobile mode with 
 
 Output be like
 
-![Menu Sample](./images/menu-mobile-view.png)
+![Blazor MenuBar with Mobile View](./images/blazor-menubar-mobile-view.png)

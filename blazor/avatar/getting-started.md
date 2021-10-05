@@ -11,14 +11,13 @@ documentation: ug
 
 # Getting Started with Blazor Avatar Component
 
-This section briefly explains about how to include a `Avatar` in your Blazor application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Avatar` in your Blazor application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 * Install [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package to the application by using the `NuGet Package Manager`.
 
-* You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor app.
-    > You can also add the client-side style resources through CDN.
+* You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor app.
 
     ```html
     <head>

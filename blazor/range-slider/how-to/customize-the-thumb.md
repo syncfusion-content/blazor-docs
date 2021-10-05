@@ -132,4 +132,4 @@ Slider appearance can be customized through CSS. By overriding the slider CSS cl
 </style>
 ```
 
-![Blazor- Slider - Thumb](./../images/thumb.gif)
+![Blazor RangeSlider with Custom Thumb](./../images/blazor-rangeslider-custom-thumb.gif)

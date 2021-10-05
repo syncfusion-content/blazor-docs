@@ -18,11 +18,9 @@ To get start quickly with Blazor Calendar component, you can check on this video
 
 ## Importing Syncfusion Blazor component in the application
 
-* Install `Syncfusion.Blazor.Calendars` NuGet package to the application by using the `NuGet Package Manager`.
+* Install [Syncfusion.Blazor.Calendars](https://www.nuget.org/packages/Syncfusion.Blazor.Calendars) NuGet package to the application by using the `NuGet Package Manager`.
 
-> Please ensure to check the `Include prerelease` option for our Beta release.
-
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
 <head>
@@ -94,7 +92,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![Calendar](./images/default.png)
+![Blazor Calendar Component](./images/blazor-calendar-component.png)
 
 ## Setting the Value, Min, and Max dates
 
@@ -114,7 +112,7 @@ Here, the Calendar allows you to select a date within the range from 5th to 27th
 
 The output will be as follows.
 
-![Calendar](./images/min_max.png)
+![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
 
 ## See Also
 

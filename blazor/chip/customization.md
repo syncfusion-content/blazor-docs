@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customization in Blazor Chip Component | Syncfusion
-description: Checkout and learn here all about Customization in Syncfusion Blazor Chip component and much more details.
+description: Checkout and learn here all about Customization in the Syncfusion Blazor Chip component and much more.
 platform: Blazor
 control: Chip
 documentation: ug
@@ -38,9 +38,9 @@ The Chip control has the following predefined styles that can be defined using t
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Chip Styles](./images/styleChip.png)
+![Customizing Blazor Chip Styles](./images/blazor-chip-style.png)
 
 ## Leading Icon
 
@@ -77,9 +77,9 @@ You can add and customize the leading icon of chip using the `LeadingIconCss` pr
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Chip LeadingIcon](./images/leadingIcon.gif)
+![Customizing LeadingIcon of Blazor Chip](./images/blazor-chip-leading-icon.gif)
 
 ## Avatar
 
@@ -116,9 +116,9 @@ You can add and customize the avatar of chip using the `LeadingIconCss` property
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Chip Avatar Icon](./images/avatar.gif)
+![Blazor Chip with Avatar Icon](./images/blazor-chip-avatar-icon.gif)
 
 ## Leading Content
 
@@ -137,9 +137,9 @@ You can add and customize the avatar content of chip using the `LeadingText` pro
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Chip Avatar Text](./images/avatarcontent.gif)
+![Customizing Avatar Text of Blazor Chip](./images/blazor-chip-avatar-content.gif)
 
 ## Trailing Icon
 
@@ -158,9 +158,9 @@ You can add and customize the trailing icon of chip using the `TrailingIconCss` 
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Chip TrailingIcon](./images/trailingIcon.png)
+![Customizing Blazor Chip TrailingIcon](./images/blazor-chip-trailing-icon.png)
 
 ## Outline Chip
 
@@ -179,6 +179,6 @@ Outline chip has the border with the background transparent. It can be set using
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Chip Outline](./images/outlinechip.gif)
+![Blazor Outline Chip with Transparent Background](./images/blazor-outline-chip-transparent-background.gif)

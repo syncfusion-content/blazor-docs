@@ -11,7 +11,7 @@ documentation: ug
 
 You can display custom tooltip in Grid column using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template) feature by rendering the [SfTooltip](https://blazor.syncfusion.com/documentation/tooltip/getting-started/) components inside the template.
 
-This is demonstrated in the below sample code we have render the tooltip for **FirstName** column using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template).
+This is demonstrated in the following sample code. We have rendered the tooltip for **FirstName** column using [Column Template](https://blazor.syncfusion.com/documentation/datagrid/columns/#column-template).
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

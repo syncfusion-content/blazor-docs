@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Circular Gauge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Circular Gauge component of Syncfusion, and more details.
+description: Checkout and learn more about getting started with the Blazor Circular Gauge component of Syncfusion.
 platform: Blazor
 control: Circular Gauge
 documentation: ug
@@ -15,7 +15,7 @@ This section briefly explains how to include a Circular Gauge component in your 
 
 1. Install **Syncfusion.Blazor.CircularGauge** NuGet package in the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -69,7 +69,7 @@ namespace BlazorApplication
 
 ## Adding Circular Gauge component
 
-The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+The Syncfusion Circular Gauge component can be initialized in any razor page inside the **~/Pages** folder. For example, the Circular Gauge component is added to the **~/Pages/Index.razor** page. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and the following code can be added.
 
 ```cshtml
 @page "/"
@@ -87,7 +87,7 @@ The Syncfusion Circular Gauge component can be initialized in any razor page ins
 
 On successful compilation of your application, the Syncfusion Blazor Circular Gauge component will render in the web browser as shown below.
 
-![Circular Gauge Sample](./images/getting-components.png)
+![Blazor Circular Gauge Component](./images/blazor-circulargauge-component.png)
 
 ## Set pointer value
 
@@ -108,7 +108,7 @@ Pointers are used to indicate values on an axis. You can change the pointer valu
 </SfCircularGauge>
 ```
 
-![Circular Gauge with pointer value](./images/getting-pointer.png)
+![Blazor Circular Gauge with Pointer Value](./images/blazor-circulargauge-pointer-value.png)
 
 ## Adding title for Circular Gauge
 
@@ -128,7 +128,7 @@ Title can be added to the circular gauge to provide a quick information to the u
 </SfCircularGauge>
 ```
 
-![Circular Gauge with title](./images/title.png)
+![Blazor Circular Gauge with Title](./images/blazor-circulargauge-title.png)
 
 ## Adding ranges in the Circular Gauge
 
@@ -147,12 +147,12 @@ Range is used to specify a group of scale values in the gauge. We can set the ra
 </SfCircularGauge>
 ```
 
-![Circular Gauge with custom range](./images/ranges.png)
+![Blazor Circular Gauge with Custom Range](./images/blazor-circulargauge-custom-range.png)
 
 ## See also
 
-* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor/)
+* [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
 * [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/dotnet-cli-blazor-server/)
+* [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)

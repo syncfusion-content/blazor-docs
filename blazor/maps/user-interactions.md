@@ -11,11 +11,11 @@ documentation: ug
 
 ## Zooming
 
-The zooming feature is used to zoom in and out the Maps to show in-depth information. It is controlled by the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The Maps can be zoomed in or out dynamically using the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property.
+The zooming feature is used to zoom in and out of Maps to show in-depth information. It is controlled by the [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) property of the [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The [ZoomFactor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomFactor) is increased or decrease dynamically based on zoom in and out interaction.
 
 <b>Enable zooming</b>
 
-Zooming of the Maps is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class to "**true**".
+Zooming of Maps is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -33,7 +33,7 @@ Zooming of the Maps is enabled by setting the [Enable](https://help.syncfusion.c
 
 <b>Enable panning</b>
 
-To enable the panning feature, set the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class to "**true**".
+To enable the panning feature, set the [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) to **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -53,32 +53,23 @@ Zooming can be performed in the following types:
 
 #### Zooming toolbar
 
-By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset** options when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class is set to "**true**".
+A toolbar is available in the Maps component to perform zooming and panning operation. The zooming toolbar appears when the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Enable) property of [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) is set to **true**.
 
 The following options are available in toolbar.
 
-1. Zoom - Provides selection zoom support.
-2. ZoomIn - Zooms in the Maps.
-3. ZoomOut - Zooms out the Maps.
+1. Zoom - Performs selection zooming.
+2. Zoom In - Zooms in the Maps.
+3. Zoom Out - Zooms out the Maps.
 4. Pan - Switches to panning if selection zoom is enabled.
 5. Reset -  Restores the Maps to the default view.
 
-The following properties are available in toolbars to customize the zooming toolbars.
-
-* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Color) - To apply the color for toolbars in Maps.
-* [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_HighlightColor) - To apply the color for the zooming toolbar when the mouse has hovered on the toolbar element in Maps.
-* [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_HorizontalAlignment) - To customize the position type of toolbar when it is placed horizontally.
-* [SelectionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_SelectionColor) - To apply the color for the zooming toolbar when clicking the zooming toolbar in Maps.
-* [ToolBarOrientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ToolBarOrientation) - To customize the orientation of the zooming toolbar.
-* [Toolbars](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_Toolbars) - To customize the items that are to be shown in the zooming toolbar in Maps.
-* [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_VerticalAlignment) - To customize the position type of toolbar when it is placed vertically.
+By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset** options.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
 
 <SfMaps>
-    <MapsZoomSettings Enable="true" Color="green" HighlightColor="blue" SelectionColor="orange" HorizontalAlignment="Alignment.Center"
-                      ToolBarOrientation="Orientation.Vertical" Toolbars='new string[]{"Zoom", "ZoomIn", "ZoomOut", "Pan", "Reset" }'>
+    <MapsZoomSettings Enable="true">
     </MapsZoomSettings>
     <MapsLayers>
         <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
@@ -87,9 +78,107 @@ The following properties are available in toolbars to customize the zooming tool
 </SfMaps>
 ```
 
+##### Customization of zooming toolbar
+
+The [MapsZoomToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html) class can be used to customize the zooming toolbar. The following properties are available for customization in the `MapsZoomToolbarSettings` class.
+
+* [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_Orientation) - To customize the orientation of the zooming toolbar.
+* [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_HorizontalAlignment) - To customize the position type of toolbar when it is placed horizontally.
+* [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_VerticalAlignment) - To customize the position type of toolbar when it is placed vertically.
+* [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BackgroundColor) - To customize the background color of the zooming toolbar.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BorderColor) - To apply the border color to the zooming toolbar.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BorderWidth) - To set width to the border of the zooming toolbar.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BorderOpacity) - To set opacity to the border of the zooming toolbar.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings BackgroundColor="black" BorderColor="red" BorderOpacity="1" BorderWidth="3" Orientation="Orientation.Horizontal"
+                                 HorizontalAlignment="Alignment.Far" VerticalAlignment="Alignment.Near"></MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Maps with custom zoom toolbar](./images/UserInteraction/custom-toolbar.png)
+
+The [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html) class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
+
+* [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_ToolbarItems) - To customize the items that are to be shown in the zooming toolbar.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Color) - To apply the color to the icons in the buttons in the zooming toolbars.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Fill) - To apply the fill color to the buttons in the zooming toolbars.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Opacity) - To apply the opacity for the buttons in the zooming toolbars.
+* [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_HighlightColor) - To apply the color for the buttons in the zooming toolbar when the mouse has hovered on the toolbar element.
+* [SelectionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_SelectionColor) - To apply the color for the buttons in the zooming toolbar when clicking the zooming toolbar.
+* [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Radius) - To set the radius for the buttons in the zooming toolbars.
+* [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Padding) - To set the spacing between the buttons in the zooming toolbars.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_BorderColor) - To set the color in the border of the buttons in the zooming toolbars.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_BorderOpacity) - To set the opacity in the border of the buttons in the zooming toolbars.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_BorderWidth) - To set the width of the border of the buttons in the zooming toolbars.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton BorderColor="yellow" BorderOpacity="1" BorderWidth="3" Color="yellow" Fill="green" HighlightColor="red" Opacity="1"
+                                   Padding="5" Radius="30" SelectionColor="red" ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+                                       ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Maps with custom zoom toolbar buttons](./images/UserInteraction/custom-toolbar-buttons.png)
+
+The [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html) class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
+
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_Visible) - To enable or disable the tooltip in the zooming toolbar.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_Fill) - To set the fill color to the tooltip in the zooming toolbar.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_BorderColor) - To set the color in the border of the tooltip in the zooming toolbar.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_BorderOpacity) - To set the opacity in the border of the tooltip in the zooming toolbar.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_BorderWidth) - To set the width of the border of the tooltip in the zooming toolbar.
+* [FontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontColor) - To set the text color in the tooltip of the zooming toolbar.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontFamily) - To set the font family in the tooltip of the zooming toolbar.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontStyle) - To set the font style in the tooltip of the zooming toolbar.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontWeight) - To set the font weight in the tooltip of the zooming toolbar.
+* [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontSize) - To set the font size in the tooltip of the zooming toolbar.
+* [FontOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontOpacity) - To set the font opacity in the tooltip of the zooming toolbar.
+
+```cshtml
+@using Syncfusion.Blazor.Maps
+
+<SfMaps>
+    <MapsZoomSettings Enable="true">
+        <MapsZoomToolbarSettings>
+            <MapsZoomToolbarButton ToolbarItems="new List<ToolbarItem>() { ToolbarItem.Zoom,
+                              ToolbarItem.ZoomIn, ToolbarItem.ZoomOut, ToolbarItem.Pan, ToolbarItem.Reset }"></MapsZoomToolbarButton>
+            <MapsZoomToolbarTooltipSettings Visible="true" BorderColor="red" BorderOpacity="1" BorderWidth="3" Fill="black" FontColor="red" FontFamily="Segoe UI"
+                                            FontOpacity="1" FontSize="12px" FontStyle="normal" FontWeight="normal"></MapsZoomToolbarTooltipSettings>
+        </MapsZoomToolbarSettings>
+    </MapsZoomSettings>
+    <MapsLayers>
+        <MapsLayer ShapeData='new {dataOptions ="https://cdn.syncfusion.com/maps/map-data/usa.json"}' TValue="string">
+        </MapsLayer>
+    </MapsLayers>
+</SfMaps>
+```
+
+![Maps with custom tooltip in zoom toolbar](./images/UserInteraction/custom-tooltip.png)
+
 #### Pinch zooming
 
-To enable or disable the pinch zooming, use the [PinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_PinchZooming) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
+To enable or disable the pinch zooming, use the [PinchZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_PinchZooming) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -105,7 +194,7 @@ To enable or disable the pinch zooming, use the [PinchZooming](https://help.sync
 
 #### Single-click zooming
 
-To enable or disable the single-click zooming using mouse, use the [ZoomOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnClick) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
+To enable or disable the single-click zooming using mouse, use the [ZoomOnClick](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_ZoomOnClick) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -121,7 +210,7 @@ To enable or disable the single-click zooming using mouse, use the [ZoomOnClick]
 
 #### Double-click zooming
 
-To enable or disable the double-click zooming using mouse, use the [DoubleClickZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_DoubleClickZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
+To enable or disable the double-click zooming using mouse, use the [DoubleClickZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_DoubleClickZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -137,7 +226,7 @@ To enable or disable the double-click zooming using mouse, use the [DoubleClickZ
 
 #### Mouse wheel zooming
 
-To enable or disable mouse wheel zooming, use the [MouseWheelZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MouseWheelZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class.
+To enable or disable mouse wheel zooming, use the [MouseWheelZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MouseWheelZoom) property in [`MapsZoomSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -153,7 +242,7 @@ To enable or disable mouse wheel zooming, use the [MouseWheelZoom](https://help.
 
 #### Selection zooming
 
-To enable or disable selection zooming, use the [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnableSelectionZooming) property in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property must be set to **false** to enable the selection zooming in Maps.
+To enable or disable selection zooming, use the [EnableSelectionZooming](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnableSelectionZooming) property in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). The [EnablePanning](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_EnablePanning) property must be set to **false** to enable the selection zooming in Maps.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -169,7 +258,7 @@ To enable or disable selection zooming, use the [EnableSelectionZooming](https:/
 
 ### Setting minimum and maximum values for zoom factor
 
-The zoom factor range can be adjusted using the [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MinZoom) and [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MaxZoom) properties in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html) class. The [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MinZoom) value is set to 1 by default, and the [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MaxZoom) value is set to 10.
+The zoom factor range can be adjusted using the [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MinZoom) and [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MaxZoom) properties in [MapsZoomSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html). The [MinZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MinZoom) value is set to 1 by default, and the [MaxZoom](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomSettings.html#Syncfusion_Blazor_Maps_MapsZoomSettings_MaxZoom) value is set to 10.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -185,7 +274,7 @@ The zoom factor range can be adjusted using the [MinZoom](https://help.syncfusio
 
 ### Zooming with animation
 
-To zoom in or zoom out the Maps with animation, use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) class.
+To zoom in or zoom out the Maps with animation, use the [AnimationDuration](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_AnimationDuration) property in [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -203,9 +292,9 @@ To zoom in or zoom out the Maps with animation, use the [AnimationDuration](http
 
 ## Selection
 
-Each shape in the Maps can be selected and deselected during interaction with the shapes. Selection is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html) class to "**true**".
+Each shape in the Maps can be selected and deselected during interaction with the shapes. Selection is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html) to **true**.
 
-The following properties and class are available to customize the selection of Map elements such as shapes, bubbles and markers.
+The following properties and class are available to customize the selection of Maps elements such as shapes, bubbles and markers.
 
 * [MapsLayerSelectionBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionBorder.html) - To customize the color and width of the border of which element is selected in Maps.
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Fill) - Applies the color for the element that is selected.
@@ -272,7 +361,7 @@ By tapping on the specific legend, the shapes which are bounded to the selected 
 
 ### Enable selection for bubbles
 
-To enable the selection for bubbles in Maps, set the [MapsBubbleSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSelectionSettings.html) class in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsBubbleSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSelectionSettings.html) class as "**true**".
+To enable the selection for bubbles in Maps, set the [MapsBubbleSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSelectionSettings.html) in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsBubbleSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleSelectionSettings.html) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -316,11 +405,11 @@ To enable the selection for bubbles in Maps, set the [MapsBubbleSelectionSetting
 }
 ```
 
-![Enable selection for bubble](./images/UserInteraction/bubble-selection.PNG)
+![Enable selection for bubble](./images/UserInteraction/selection-bubble.PNG)
 
 ### Enable selection for markers
 
-To enable the selection for markers in Maps, set the [MapsMarkerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSelectionSettings.html) class in the [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Enable) property of the [MapsLayerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html) property as "**true**".
+To enable the selection for markers in Maps, set the [MapsMarkerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSelectionSettings.html) in the [MapsMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerSettings.html) and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html#Syncfusion_Blazor_Maps_MapsLayerSelectionSettings_Enable) property of the [MapsLayerSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerSelectionSettings.html) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -361,11 +450,11 @@ To enable the selection for markers in Maps, set the [MapsMarkerSelectionSetting
 }
 ```
 
-![Enable selection for marker](./images/UserInteraction/marker-selection.PNG)
+![Enable selection for marker](./images/UserInteraction/selection-marker.PNG)
 
 ### Public method for the shape selection
 
-The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ShapeSelection_System_Int32_System_String_System_String_System_Boolean_) method can be used to select each shape in the Maps. "**layerIndex**", "**propertyName**", "**shapeDataPath**", and "**isSelect**" boolean value to select or deselect the shape are the input parameters for this method.
+The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_ShapeSelection_System_Int32_System_String_System_String_System_Boolean_) method can be used to select each shape in the Maps. **layerIndex**, **propertyName**, **shapeDataPath**, and **isSelect** boolean value to select or deselect the shape are the input parameters for this method.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -397,7 +486,7 @@ The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 
 ### Initial shape selection
 
-The shape is initially selected using the [MapsInitialShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html) class, and the values are mapped to the [ShapePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html#Syncfusion_Blazor_Maps_MapsInitialShapeSelection_ShapePath) and [ShapeValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html#Syncfusion_Blazor_Maps_MapsInitialShapeSelection_ShapeValue).
+The shape is initially selected using the [MapsInitialShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html), and the values are mapped to the [ShapePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html#Syncfusion_Blazor_Maps_MapsInitialShapeSelection_ShapePath) and [ShapeValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsInitialShapeSelection.html#Syncfusion_Blazor_Maps_MapsInitialShapeSelection_ShapeValue).
 
 ```cshtml
 <SfMaps>
@@ -419,7 +508,7 @@ The shape is initially selected using the [MapsInitialShapeSelection](https://he
 
 ### Initial marker selection
 
-Using the [InitialMarkerSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html) class, the marker shape can be selected initially. Markers render based on the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html#Syncfusion_Blazor_Maps_InitialMarkerSelection_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html#Syncfusion_Blazor_Maps_InitialMarkerSelection_Longitude) values.
+Using the [InitialMarkerSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html), the marker shape can be selected initially. Markers render based on the [Latitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html#Syncfusion_Blazor_Maps_InitialMarkerSelection_Latitude) and [Longitude](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.InitialMarkerSelection.html#Syncfusion_Blazor_Maps_InitialMarkerSelection_Longitude) values.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -455,13 +544,13 @@ Using the [InitialMarkerSelection](https://help.syncfusion.com/cr/blazor/Syncfus
 }
 ```
 
-![Enable initial marker selection](./images/UserInteraction/marker-selection.PNG)
+![Enable initial marker selection](./images/UserInteraction/selection-marker.PNG)
 
 ## Highlight
 
-Each shape in the Map can be highlighted during mouse hover on the Map elements such as shapes, bubbles, markers and legends. Highlight is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Enable) property of [MapsHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html) to "**true**".
+Each shape in the Maps can be highlighted during mouse hover on the Maps elements such as shapes, bubbles, markers and legends. Highlight is enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Enable) property of [MapsHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html) to **true**.
 
-The following properties and classes are available to customize the highlight of Map elements such as shapes, bubbles and markers.
+The following properties and classes are available to customize the highlight of Maps elements such as shapes, bubbles and markers.
 
 * [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Fill) - Applies the color for the element that is highlighted.
 * [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Opacity) - To customize the transparency for the element that is highlighted.
@@ -529,7 +618,7 @@ Hovering on the specific legend, the shapes which are bounded to the selected le
 
 ### Enable highlight for bubbles
 
-To enable the highlight for bubbles in Maps, set the [MapsBubbleHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightSettings.html) class in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsBubbleHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightSettings.html) class as "**true**".
+To enable the highlight for bubbles in Maps, set the [MapsBubbleHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightSettings.html) in [MapsBubble](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubble-1.html) and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsSelectionSettings.html#Syncfusion_Blazor_Maps_MapsSelectionSettings_Enable) property of [MapsBubbleHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleHighlightSettings.html) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -575,11 +664,11 @@ To enable the highlight for bubbles in Maps, set the [MapsBubbleHighlightSetting
 }
 ```
 
-![Enable highlight for bubbles](./images/UserInteraction/bubble-highlight.PNG)
+![Enable highlight for bubbles](./images/UserInteraction/selection-bubble.PNG)
 
 ### Enable highlight for markers
 
-To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightSettings.html) class in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) class and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Enable) property of [MapsMarkerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightSettings.html) class as "**true**".
+To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightSettings.html) in [MapsMarker](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarker-1.html) and set the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsHighlightSettings.html#Syncfusion_Blazor_Maps_MapsHighlightSettings_Enable) property of [MapsMarkerHighlightSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerHighlightSettings.html) as **true**.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -612,11 +701,11 @@ To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSetting
 }
 ```
 
-![Enable highlight for markers](./images/UserInteraction/marker-highlight.PNG)
+![Enable highlight for markers](./images/UserInteraction/selection-marker.PNG)
 
 ## Tooltip
 
-On mouse over or touch end event, the tooltip is used to get more information about the layer, bubble, or marker. It can be enabled separately for layer or bubble or marker by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property of [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) or [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html) or [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) classes respectively. The [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_TooltipDisplayMode) property is used to change the display mode of the tooltip in Maps. Following display modes of tooltip are available in the Maps component. By default, [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_TooltipDisplayMode) is set to "**MouseMove**".
+On mouse over or touch end event, the tooltip is used to get more information about the layer, bubble, or marker. It can be enabled separately for layer or bubble or marker by using the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsTooltipSettings.html#Syncfusion_Blazor_Maps_MapsTooltipSettings_Visible) property of [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) or [MapsBubbleTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsBubbleTooltipSettings.html) or [MapsMarkerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsMarkerTooltipSettings.html) respectively. The [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_TooltipDisplayMode) property is used to change the display mode of the tooltip in Maps. Following display modes of tooltip are available in the Maps component. By default, [TooltipDisplayMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_TooltipDisplayMode) is set to **MouseMove**.
 
 * MouseMove
 * Click
@@ -635,7 +724,7 @@ On mouse over or touch end event, the tooltip is used to get more information ab
 </SfMaps>
 ```
 
-![Maps with tooltip](./images/UserInteraction/default-tooltip.PNG)
+![Maps with tooltip](./images/UserInteraction/tooltip.PNG)
 
 ### Customization
 
@@ -693,11 +782,11 @@ The following properties are available to customize the tooltip of the Maps comp
 }
 ```
 
-![Maps with tooltip](./images/UserInteraction/tooltip.png)
+![Maps with tooltip](./images/UserInteraction/tooltip-customization.png)
 
 ### Tooltip template
 
-The HTML element can be rendered in the tooltip of the Maps using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html#Syncfusion_Blazor_Maps_MapsLayerTooltipSettings_TooltipTemplate) property of the [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html) property.
+The HTML element can be rendered in the tooltip of the Maps using the [TooltipTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html#Syncfusion_Blazor_Maps_MapsLayerTooltipSettings_TooltipTemplate) property of the [MapsLayerTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayerTooltipSettings.html).
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

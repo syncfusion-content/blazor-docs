@@ -9,7 +9,7 @@ documentation: ug
 
 # Change the Floating Label Color of the Blazor TextBox Component
 
-You can change the floating label color of the TextBox for both `success` and `warning` validation states by applying the following CSS styles.
+The floating label color of the TextBox can be changed for both `success` and `warning` validation states by applying the following CSS styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -75,7 +75,5 @@ You can change the floating label color of the TextBox for both `success` and `w
     }
 </style>
 ```
-
-The output will be as follows.
 
 ![textbox](../images/custom_floatlabel.png)

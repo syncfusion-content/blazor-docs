@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor CheckBox Component | Syncfusion
-description: Checkout and learn about getting started with Blazor CheckBox component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor CheckBox component of Syncfusion.
 platform: Blazor
 control: Checkbox
 documentation: ug
@@ -11,20 +11,18 @@ documentation: ug
 
 # Getting Started with Blazor CheckBox Component
 
-This section briefly explains about how to include Checkbox Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Checkbox](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfCheckBox-1.html) Component in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
-To get start quickly with CheckBox Component using Blazor, you can check on this video:
+To get started quickly with the CheckBox Component using Blazor, you can check out this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=a6HR1QGAvLo"%}
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
+1. Install the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor) NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
-
-> Please ensure to check the **Include prerelease** option.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
 ```html
 <head>
@@ -74,7 +72,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -87,7 +85,7 @@ namespace BlazorApplication
 
 ## Adding component package to the application
 
-Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages otherwise import these packages in the individual `razor` pages.
+Open `/_Imports.razor file` and import the Syncfusion.Blazor.Buttons packages. Otherwise, import these packages in the individual `razor` pages.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -111,7 +109,7 @@ Now, add the Syncfusion Blazor Checkbox component in `razor` page in the `Pages`
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Checkbox component will render in the web browser as shown below
 
-![CheckBox Sample](./images/check-box.png)
+![Blazor CheckBox Component](./images/blazor-checkbox-component.png)
 
 ## See Also
 

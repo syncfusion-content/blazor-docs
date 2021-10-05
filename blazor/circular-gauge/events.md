@@ -39,17 +39,17 @@ In the following example, the event [OnDragMove](https://help.syncfusion.com/cr/
 }
 ```
 
-![Event binding in Circular gauge](./images/c-gauge-events.png)
+![Event Binding in Blazor Circular Gauge](./images/blazor-circulargauge-binding-events.png)
 
 ## Available events
 
 ### AnimationCompleted
 
-Description: Triggers, after animation is completed.
+Description: Triggers after animation is completed.
 
 ### AnnotationRendering
 
-Description: Triggers, before rendering on each annotation. You can customize annotations using these arguments.
+Description: Triggers before rendering on each annotation. You can customize annotations using these arguments.
 
 |   Argument name      |   Description                               |
 |----------------------| --------------------------------------------|
@@ -60,11 +60,11 @@ Description: Triggers, before rendering on each annotation. You can customize an
 
 ### Loaded
 
-Description: Triggers, after the gauge component has been loaded.
+Description: Triggers after the gauge component has been loaded.
 
 ### OnDragEnd
 
-Description: Triggers, when you finished dragging the pointer needle.
+Description: Triggers when you finished dragging the pointer needle.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
@@ -75,7 +75,7 @@ Description: Triggers, when you finished dragging the pointer needle.
 
 ### OnDragMove
 
-Description: Triggers, when you dragging the pointer needle.
+Description: Triggers when you drag the pointer needle.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
@@ -87,7 +87,7 @@ Description: Triggers, when you dragging the pointer needle.
 
 ### OnDragStart
 
-Description: Triggers, when you start to drag the pointer needle.
+Description: Triggers when you start to drag the pointer needle.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
@@ -98,7 +98,7 @@ Description: Triggers, when you start to drag the pointer needle.
 
 ### OnGaugeMouseDown
 
-Description: Triggers, when you click the mouse on the gauge.
+Description: Triggers when you click the mouse on the gauge.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -109,7 +109,7 @@ Description: Triggers, when you click the mouse on the gauge.
 
 ### OnGaugeMouseLeave
 
-Description: Triggers, when the mouse pointer is moved out of the gauge.
+Description: Triggers when the mouse pointer is moved out of the gauge.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -120,7 +120,7 @@ Description: Triggers, when the mouse pointer is moved out of the gauge.
 
 ### OnGaugeMouseMove
 
-Description: Triggers on cursor moving on the gauge.
+Description: Triggers when the cursor moves over the gauge.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -132,7 +132,7 @@ Description: Triggers on cursor moving on the gauge.
 
 ### OnGaugeMouseUp
 
-Description: Triggers, when you releasing a mouse on the gauge.
+Description: Triggers when you release a mouse on the gauge.
 
 |   Argument name      |   Description                         |
 |----------------------| --------------------------------------|
@@ -143,11 +143,11 @@ Description: Triggers, when you releasing a mouse on the gauge.
 
 ### OnLoad
 
-Description: Triggers, before rendering the gauge. Gauge will trigger this event first.
+Description: Triggers before rendering the gauge. Gauge will trigger this event first.
 
 ### OnRadiusCalculate
 
-Description: Triggers, before the radius get calculated for the gauge. You can customize the gauge radius using these arguments.
+Description: Triggers before the radius is calculated for the gauge. You can customize the gauge radius using these arguments.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
@@ -158,7 +158,7 @@ Description: Triggers, before the radius get calculated for the gauge. You can c
 
 ### Resizing
 
-Description: Triggers, when you resize the gauges.
+Description: Triggers when you resize the gauges.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|
@@ -168,7 +168,7 @@ Description: Triggers, when you resize the gauges.
 
 ### TooltipRendering
 
-Description: Triggers, before rendering the gauge tooltip.
+Description: Triggers before rendering the gauge tooltip.
 
 |   Argument name      |   Description                          |
 |----------------------| ---------------------------------------|

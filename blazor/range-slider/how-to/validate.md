@@ -94,4 +94,4 @@ In Blazor Slider component, the DataAnnotation Validator is used here.
 </style>
 ```
 
-![Blazor- Slider - Validate](./../images/form.gif)
+![Validation in Blazor RangeSlider](./../images/blazor-rangeslider-validation.gif)

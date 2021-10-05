@@ -14,6 +14,7 @@ This section briefly explains how to bind the value to the TextBox component in 
 * One-way data binding
 * Two-way data binding
 * Dynamic value binding
+* Complex data binding
 
 ## One-way binding
 
@@ -59,7 +60,7 @@ public string Name { get; set; } = "Syncfusion";
 
 You can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor TextBox component** only. This method notifies the component that its state has changed and queues a re-render.
 
-There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Refer to the following code example.
+There is no need to call this method for native events since it’s called after any life cycle method has been called and can also be invoked manually to trigger a re-render. Refer to the following code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -79,6 +80,38 @@ There is no need to call this method for native events since it’s called after
             CssClass = "e-success";
         }
         this.StateHasChanged();
+    }
+}
+```
+
+## Complex data binding
+
+You can bind the complex data values to the TextBox component.The following code demonstrates how to bind complex data values to the TextBox component.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs; 
+
+<SfTextBox Value="@country.data.countryname"></SfTextBox>
+
+@code   {
+
+    Country country = new Country();
+
+    protected override void OnInitialized()
+    {
+        country.data = new Data();
+    }
+
+    public class Country
+    {
+
+        public string id { get; set; }
+        public Data data;
+    }
+
+    public class Data
+    {
+        public string countryname { get; set; } = "India";
     }
 }
 ```

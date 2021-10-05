@@ -193,4 +193,4 @@ The ListView component supports Nested list. For that, the child property should
 
 ```
 
-![ListView - Nested list](./images/list/nestedlist.png)
+![Blazor ListView with Nested List](./images/list/blazor-listview-with-nested-list.png)
