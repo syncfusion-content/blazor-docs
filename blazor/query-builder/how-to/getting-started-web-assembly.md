@@ -30,19 +30,19 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
 
 2. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](../images/new-project.png)
+    ![Creating New Project in Blazor ASPNETCore](../images/blazor-aspnetcore-create-new-project.png)
 
 3. Select **Blazor App** from the template and click **Next** button.
 
-    ![blazor template](../images/blazor-template.png)
+    ![Blazor Application Template](../images/blazor-template.png)
 
 4. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![asp.net core project configuration](../images/project-configuration.png)
+    ![Configuring Blazor Project](../images/blazor-project-configuration.png)
 
 5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application. Make sure **.NET Core** and **ASP.NET Core 3.1** is selected at the top.
 
-    ![select framework](../images/blazor-client-template.png)
+    ![Select Blazor Project Template](../images/blazor-client-template.png)
 
     > ASP.NET Core 3.1 available in Visual Studio 2019 version.
   
@@ -50,11 +50,11 @@ This article provides a step-by-step instructions to configure Syncfusion [Blazo
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browser tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![select nuget](../images/select-nuget.png)
+    ![Selecting Blazor NuGet Package](../images/blazor-nuget-package-selection.png)
 
 3. The Syncfusion Blazor package will be installed in the project, once the installation process is completed.
 
@@ -155,4 +155,4 @@ Now, add the [Blazor Query Builder](https://www.syncfusion.com/blazor-components
 
 After successful compilation of your application, simply press F5 to run the application. The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder) component will render in the web browser as shown below
 
-![QueryBuilder Sample](https://ej2.syncfusion.com/products/images/querybuilder/readme.gif)
+![Blazor QueryBuilder](../images/blazor-querybuilder.gif)

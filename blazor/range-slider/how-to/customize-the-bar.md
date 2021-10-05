@@ -208,4 +208,4 @@ Color bar can be customized in quite a number of ways.
 
 ```
 
-![Blazor- Slider - Bar](./../images/bar.gif)
+![Blazor RangeSlider with Bar](./../images/blazor-rangeslider-with-bar.gif)

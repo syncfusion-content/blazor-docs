@@ -27,7 +27,7 @@ The OSM Maps can be rendered using by setting the [UrlTemplate](https://help.syn
 
 ![Open street map](../images/MapProviders/OSM.png)
 
-## Zooming and panning
+## Enable zooming and panning
 
 The OSM Maps layer can be zoomed and panned. Zooming helps to get a closer look at a particular area on a Maps for in-depth analysis. Panning helps to move a Maps around to focus the targeted area.
 
@@ -93,7 +93,7 @@ Markers can be added to the layers of OSM Maps by setting the corresponding loca
 
 ![OpenStreetMap with markers and navigation line](../images/MapProviders/marker-and-line.png)
 
-## Sublayer
+## Adding sublayer
 
 Any GeoJSON shape can be rendered as a sublayer on top of the OSM Maps layer for highlighting a particular continent or country in the OSM map by adding another layer and specifying the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_Type) of [MapsLayer](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html) to **SubLayer**.
 

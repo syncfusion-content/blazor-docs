@@ -26,4 +26,4 @@ The following example illustrates how to enable right-to-left support in Radio B
 
 Output be like
 
-![Radio Button Sample](./../images/rb-rtl.png)
+![RIght to Left in Blazor RadioButton](./../images/blazor-radiobutton-right-to-left.png)

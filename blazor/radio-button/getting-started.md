@@ -102,7 +102,7 @@ Now, add the Syncfusion Blazor Radio Button component in `razor` page in the `Pa
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Radio Button component will render in the web browser as shown below
 
-![RadioButton Sample](./images/radio-button.png)
+![Blazor RadioButton Component](./images/blazor-radiobutton-component.png)
 
 ## See Also
 

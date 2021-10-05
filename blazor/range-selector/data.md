@@ -50,7 +50,7 @@ The numeric scale is used to represent the numeric values of data in a Range Sel
 
 ```
 
-![Numeric](images/data/double.png)
+![Blazor RangeNavigator with Numeric Scale](images/data/blazor-rangenavigator-numeric-scale.png)
 
 ### Range
 
@@ -100,7 +100,7 @@ The minimum and the maximum of the scale will be calculated automatically based 
 
 ```
 
-![Numeric range](images/data/numeric-range.png)
+![Blazor RangeNavigator with Numeric range](images/data/blazor-rangenavigator-numeric-range.png)
 
 ### Label Format
 
@@ -141,7 +141,7 @@ The numeric labels can be formatted using the [LabelFormat](https://help.syncfus
 
 ```
 
-![Numeric label format](images/data/format.png)
+![Blazor RangeNavigator with Numeric label format](images/data/blazor-rangenavigator-label-format.png)
 
 The following table shows the results of applying some commonly used label formats to numeric values.
 
@@ -241,7 +241,7 @@ The Range Selector also supports the Custom Label formats using the placeholders
 
 ```
 
-![Custom label format](images/data/custom-format.png)
+![Blazor RangeNavigator with Custom Label Format](images/data/blazor-rangenavigator-custom-label-format.png)
 
 ## Logarithmic
 
@@ -296,7 +296,7 @@ The Logarithmic supports the logarithmic scale, and it is used to visualize the 
 
 ```
 
-![Logarithmic](images/data/log.png)
+![Blazor RangeNavigator with Logarithmic](images/data/blazor-rangenavigator-with-logarithmic.png)
 
 ### Range
 
@@ -349,7 +349,7 @@ The minimum and the maximum of the Range Selector will be calculated automatical
 
 ```
 
-![Logarithmic range](images/data/log-range.png)
+![Blazor RangeNavigator with Logarithmic Range](images/data/blazor-rangenavigator-logarithmic-range.png)
 
 ### Logarithmic Base
 
@@ -402,7 +402,7 @@ The Logarithmic Base can be customized using the [LogBase](https://help.syncfusi
 
 ```
 
-![Logarithmic base](images/data/log-base.png)
+![Blazor RangeNavigator with Logarithmic Base](images/data/blazor-rangenavigator-logarithmic-base.png)
 
 ## DateTime
 
@@ -443,7 +443,7 @@ The Range Selector supports the DateTime scale and displays the DateTime values 
 
 ```
 
-![DateTime](images/data/datetime.png)
+![Blazor RangeNavigator with DateTime](images/data/blazor-rangenavigator-datetime.png)
 
 ### Interval Customization
 
@@ -494,7 +494,7 @@ DateTime supports the following interval types:
 
 ```
 
-![DateTime interval type](images/data/datetime-interval.png)
+![Customizing DateTime Interval in Blazor RangeNavigator](images/data/blazor-rangenavigator-datetime-interval.png)
 
 ### Label Format
 
@@ -534,7 +534,7 @@ The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![DateTime label format](images/data/datetime-format.png)
+![Blazor RangeNavigator with DateTime Label Format](images/data/blazor-rangenavigator-datetime-format.png)
 
 The following table shows the results of applying some common DateTime formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property.
 

@@ -23,7 +23,7 @@ The Slider displays the tooltip to indicate the current value by clicking the Sl
 }
 ```
 
-![Blazor - Slider - Tooltip](images/slider-tooltip.png)
+![Blazor RangeSlider displays Tooltip](images/blazor-rangeslider-tooltip.png)
 
 ## Buttons
 
@@ -43,4 +43,4 @@ The Slider value can be changed by using the Increase and Decrease buttons. In R
 }
 ```
 
-![Blazor - Slider - Buttons](images/slider-buttons.png)
+![Blazor RangeSlider with Buttons](images/blazor-rangeslider-buttons.png)

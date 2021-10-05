@@ -26,7 +26,7 @@ The `Format` feature used to customize the units of Slider values to desired for
 }
 ```
 
-![Blazor - Slider - Format](images/slider-format.gif)
+![Formating in Blazor RangeSlider](images/blazor-rangeslider-format.gif)
 
 ## Using format API
 
@@ -46,4 +46,4 @@ Slider provides different predefined formatting styles like Numeric (N), Percent
 
 ```
 
-![Blazor - Slider - Format API](images/slider-format-api.gif)
+![Blazor RangeSlider Format API](images/blazor-rangeslider-format-api.gif)

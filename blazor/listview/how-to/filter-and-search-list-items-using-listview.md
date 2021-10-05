@@ -102,4 +102,4 @@ The filtered data can be displayed in the ListView control depending upon on use
 
 ```
 
-![ListView - Filter and Search](../images/list/filter-and-search-list-items-using-listview.png)
+![Filter and Search Items in Blazor ListView](../images/list/blazor-listview-filter-and-search-items.png)

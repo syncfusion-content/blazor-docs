@@ -29,4 +29,4 @@ You can stop the progress indicator using [ProgressComplete](https://help.syncfu
 
 Output be like
 
-![Progress Button Sample](./../images/pb-stop.png)
+![Stop Progress Indicator in ProgressButton](./../images/blazor-progressbutton-stop-indicator.png)

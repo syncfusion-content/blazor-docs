@@ -56,7 +56,7 @@ The tooltip can be used to display information about the selected data and it is
 
 ```
 
-![Enable tooltip](images/tooltip/tooltip.png)
+![Blazor RangeNavigator displays Tooltip](images/tooltip/blazor-rangenavigator-tooltip.png)
 
 ## Tooltip Customization
 
@@ -108,7 +108,7 @@ The tooltip can be customized using the following properties:
 
 ```
 
-![Tooltip Customization](images/tooltip/tooltip-custom.png)
+![Blazor RangeNavigator with Custom Tooltip](images/tooltip/blazor-rangenavigator-custom-tooltip.png)
 
 ## Label Format
 
@@ -151,7 +151,7 @@ The [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Label Format](images/tooltip/tooltip-format.png)
+![Changing Tooltip Format in Blazor RangeNavigator](images/tooltip/blazor-rangenavigator-tooltip-format.png)
 
 The following table shows the results of applying some common date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfRangeNavigator.html#Syncfusion_Blazor_Charts_SfRangeNavigator_LabelFormat) property.
 

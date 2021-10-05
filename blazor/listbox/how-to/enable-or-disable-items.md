@@ -54,4 +54,4 @@ To enable or disable items in the listbox, [EnableItems](https://help.syncfusion
 
 Output will be shown as
 
-![ListBox](./../images/enableitems.png)
+![Disabling Items in Blazor ListBox](./../images/blazor-listbox-disable-items.png)

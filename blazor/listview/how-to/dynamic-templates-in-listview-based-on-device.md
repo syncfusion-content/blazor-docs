@@ -182,4 +182,4 @@ In the ListView control, template support is being used. In some cases, the cont
 
 ```
 
-![ListView - Dynamic layout](../images/list/dynamic-templates-in-listview-based-on-device.png)
+![Blazor ListView with Dynamic Layout](../images/list/blazor-listview-with-dynamic-layout.png)

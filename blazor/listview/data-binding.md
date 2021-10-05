@@ -72,7 +72,7 @@ ListView can generate its list items through an array of complex data. To get it
 
 Output be like the below.
 
-![ListView - Local Data](./images/list/data-binding-local-data.png)
+![Data Binding in Blazor ListView](./images/list/blazor-listview-data-binding.png)
 
 ## Bind to remote data
 
@@ -106,7 +106,7 @@ In the following sample, first 6 products from the Product table of NorthWind da
 
 Output be like the below.
 
-![ListView - Remote Data](./images/list/remotedata.png)
+![Data Binding in Blazor ListView](./images/list/blazor-listview-binding-data.png)
 
 ## Entity Framework
 
@@ -281,4 +281,4 @@ You can perform CRUD operations like Add and Delete by using the `AddItem`, `Rem
 > You can find the fully working sample [here](https://github.com/SyncfusionExamples/Blazor-ListView-Entity-Framework).
 
 The following GIF represents the ListView with Add, Delete the list items,
-![ListView CRUD operations](./images/EFListView.gif)
+![Blazor ListView with CRUD Operations](./images/blazor-listview-crud-operation.gif)
