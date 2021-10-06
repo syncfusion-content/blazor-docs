@@ -203,7 +203,7 @@ The output will be as follows.
 
 * You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
 
-* In the following code, we have modified the localized text of `today button` in `de` culture.
+* In the following code, modified the localized text of `today button` in `de` culture.
 
 [`wwwroot/blazor-locale/src/de.json`]
 
