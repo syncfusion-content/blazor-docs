@@ -82,4 +82,4 @@ In the following sample, more than one sidebar is rendered based on `Position` p
 
 Output be like the below.
 
-![output](./../images/multiple-sidebar.png)
+![Blazor Multiple Sidebars](./../images/blazor-multiple-sidebars.png)

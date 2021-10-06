@@ -33,7 +33,7 @@ When the `RichTextEditorIframeSettings` option is enabled, the Rich Text Editor 
 
 The output will be as follows.
 
-![Iframe](./images/iframe-default.png)
+![Blazor RichTextEditor with IFrame](./images/blazor-richtexteditor-iframe.png)
 
 ## IFrame attributes
 

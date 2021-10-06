@@ -132,4 +132,4 @@ In the following sample, click the toggle button to expand or collapse the sideb
 
 Output be like the below.
 
-![output](./images/target.png)
+![Blazor Sidebar with Custom Context](./images/blazor-sidebar-custom-context.png)
