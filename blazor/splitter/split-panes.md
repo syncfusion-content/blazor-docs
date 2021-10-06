@@ -64,7 +64,7 @@ By default, splitter will be rendered in horizontal orientation. Splitter contai
 
 The output will be as follows.
 
-![Horizontal orientation](./images/horizontal-orientation.png)
+![Blazor Splitter with Horizontal Orientation](./images/blazor-splitter-horizontal-orientation.png)
 
 ## Vertical layout
 
@@ -119,7 +119,7 @@ By setting value to `Orientation` API as `Vertical`, splitter will be rendered i
 
 The output will be as follows.
 
-![Vertical layout](./images/vertical-orientation.png)
+![Blazor Splitter with Vertical Orientation](./images/blazor-splitter-vertical-orientation.png)
 
 > You can also render multiple panes in splitter with both `Horizontal/Vertical` orientations.
 
@@ -178,7 +178,7 @@ By default, pane separator will be render with `1px` width/height. You can custo
 
 The output will be as follows.
 
-![Separator Size](./images/separator-size.png)
+![Blazor Splitter with Separator](./images/blazor-splitter-separator.png)
 
 ## Nested Splitter
 
@@ -256,7 +256,7 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 The output will be as follows.
 
-![Nested Splitter](./images/nested-splitter.png)
+![Blazor Nested Splitter](./images/blazor-nested-splitter.png)
 
 ## Add or remove pane
 

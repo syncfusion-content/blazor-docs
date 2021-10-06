@@ -50,7 +50,7 @@ In the following example, if either the value is changed in checkbox or splitter
 
 The output will be as follows.
 
-![Expand and Collapse](./images/two-way-binding.png)
+![Data Binding in Blazor Splitter](./images/blazor-splitter-data-binding.png)
 
 ## See Also
 
