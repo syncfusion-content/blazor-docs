@@ -23,11 +23,11 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * By default, navigation icon in the left direction is disabled, you can see the overflowed items by moving in the right direction.
 * By clicking the arrow or by holding the arrow continuously, you can see the overflowed items.
 
-![Scrollable tab](images/tabscroll.gif)
+![Scrolling in Blazor Tabs](images/blazor-tabs-scroll.gif)
 
 * In devices the navigation icons are not available. You can touch and swipe to see the overflowed items of the Tab header.
 
-![Touch scroll](images/touchscroll.gif)
+![Touch Scroll in Blazor Tabs](images/blazor-tabs-touch-scroll.gif)
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -80,7 +80,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 Output be like the below.
 
-![Tabs with Scrollable](./images/tabScrollable.png)
+![Scrolling in Blazor Tabs](./images/blazor-tabs-scrolling.png)
 
 ## Popup
 
@@ -90,7 +90,7 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 
 * If the popup height exceeds the height of the visible area, you can scroll through the popup items and select one.
 
-![Tab with popup](images/popup.gif)
+![Blazor Tabs with Popup](images/blazor-tabs-popup.gif)
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -143,4 +143,4 @@ The `Popup` is the another type of [OverflowMode](https://help.syncfusion.com/cr
 
 Output be like the below.
 
-![Tabs with Popup](./images/tabPopup.png)
+![Blazor Tabs with Popup](./images/blazor-tabs-popup.png)

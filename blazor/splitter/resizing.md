@@ -68,7 +68,7 @@ Splitter allows you to set the minimum and maximum sizes for each pane. Resizing
 
 The output will be as follows.
 
-![Min and Max](./images/min-max-size.png)
+![Changing Blazor Splitter Size](./images/blazor-splitter-size.png)
 
 ## Prevent resizing
 
@@ -125,7 +125,7 @@ You can disable the resizing for the pane by setting `false` to the `Resizable` 
 
 The output will be as follows.
 
-![Prevent resizing](./images/prevent-resize.png)
+![Prevent Resizing in Blazor Splitter](./images/blazor-splitter-prevent-resizing.png)
 
 ## Refresh content on resizing
 
@@ -194,7 +194,7 @@ You can customize the resize gripper icon and cursor in css level.
 
 The output will be as follows.
 
-![Custom Gripper](./images/resize-gripper.png)
+![Blazor Splitter with Custom Gripper](./images/blazor-splitter-custom-gripper.png)
 
 ## See Also
 

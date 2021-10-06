@@ -129,7 +129,7 @@ Now, add the Syncfusion Blazor Tabs component in any web page (razor) in the `Pa
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![Default Tabs](./images/browser-output.png)
+![Blazor Tabs](./images/blazor-tabs.png)
 
 ## Initialize Tab Content using Template
 
@@ -179,7 +179,7 @@ The following code explains how to initialize tab content using `ContentTemplate
 
 Output be like the below.
 
-![Tabs with template](./images/template.png)
+![Blazor Tabs with Template](./images/blazor-tabs-template.png)
 
 ## Two way binding of SelectedItem
 
@@ -229,7 +229,7 @@ Selected Tab
 
 Output be like the below.
 
-![Tabs with Two way binding](./images/two-way-binding.png)
+![Blazor Tabs with Data Binding](./images/blazor-tabs-data-binding.png)
 
 ## See Also
 

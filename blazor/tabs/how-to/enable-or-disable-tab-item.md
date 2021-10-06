@@ -50,4 +50,4 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 ```
 
-![Dynamic Enable/Disable tab item](../images/enableDisableItem.gif)
+![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-enable-disable-tabitem.gif)
