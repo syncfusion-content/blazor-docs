@@ -9,11 +9,11 @@ documentation: ug
 
 # Split Panes in Blazor Splitter Component
 
-This section explain split-panes behaviours.
+This section explain split-panes behaviors.
 
 ## Horizontal layout
 
-By default, splitter will be rendered in horizontal orientation. Splitter container will be splitted as panes in horizontal flow direction with vertical separator.
+By default, splitter will be rendered in horizontal orientation. Splitter container will be split as panes in horizontal flow direction with vertical separator.
 
 ```cshtml
 
@@ -68,7 +68,7 @@ The output will be as follows.
 
 ## Vertical layout
 
-By setting value to `Orientation` API as `Vertical`, splitter will be rendered in vertical orientation. Splitter container will be splitted as panes in vertical flow direction with horizontal separator.
+By setting value to `Orientation` API as `Vertical`, splitter will be rendered in vertical orientation. Splitter container will be split as panes in vertical flow direction with horizontal separator.
 
 ```cshtml
 

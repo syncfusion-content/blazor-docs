@@ -11,7 +11,7 @@ documentation: ug
 
 The splitter `SplitterPane` `Collapsed` property supports the two-way binding and it can be achieved by using the `bind-Collapsed` attribute. If the component value has been changed, it will affect all the places where we bind the variable for the bind-value attribute.
 
-In the following example, if either the value is changed in checkbox or splitter first pane collpased state, it will reflect in both the checkbox and splitter pane.
+In the following example, if either the value is changed in checkbox or splitter first pane collpases state, it will reflect in both the checkbox and splitter pane.
 
 ```cshtml
 

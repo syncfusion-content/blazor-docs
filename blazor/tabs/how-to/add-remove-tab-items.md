@@ -88,7 +88,7 @@ In the following demo, initially there are three tabs as the **TabItems** has th
 }
 ```
 
-![Dynamic Add/Remove TabItems using loop](../images/addRemoveItemUsingConditioalRendering.gif)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-items.gif)
 
 ## Using public methods
 
@@ -149,4 +149,4 @@ In the following demo, a tab item can be added as first tab and removed as the l
 </style>
 ```
 
-![Dynamic Add/Remove TabItems using method](../images/addRemoveItemUsingMethod.png)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-tabitems.png)
