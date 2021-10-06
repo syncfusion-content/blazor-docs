@@ -15,7 +15,7 @@ A hyperlink can be inserted into the editor for quick access to the related info
 
 Point the cursor anywhere within the editor where you would like to insert the link. It is also possible to select a text or an image within the editor and can be converted to the hyperlink. Click the Insert HyperLink tool on the toolbar. The Insert Link Dialog will open. The dialog has the following options.
 
-![RTE insert link](./images/insert-link.png)
+![Insert Link in Blazor RichTextEditor](./images/blazor-richtexteditor-insert-link.png)
 
 | Options | Description |
 |----------------|--------------------------------------|
@@ -56,7 +56,7 @@ Point the cursor anywhere within the editor where you would like to insert the l
 
 The output will be as follows.
 
-![Link](./images/link.png)
+![Displaying Link Icon in Blazor RichTextEditor](./images/blazor-richtexteditor-link-icon.png)
 
 ## Remove Link
 
@@ -70,7 +70,7 @@ When you type URL and enter key to the Rich Text Editor, the typed URL will be a
 
 Add the custom tools on the selected link inside the Rich Text Editor through the quick toolbar.
 
-![RTE quick toolbar link](./images/manipulation-link.png)
+![Blazor RichTextEditor with Quick Toolbar Link](./images/blazor-richtexteditor-quick-toolbar-link.png)
 
 The quick toolbar for the link has the following options.
 
@@ -111,7 +111,7 @@ The quick toolbar for the link has the following options.
 
 The output will be as follows.
 
-![Quick Link](./images/link-tool.png)
+![Quick Link in Blazor RichTextEditor Content](./images/blazor-richtexteditor-quick-link.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 

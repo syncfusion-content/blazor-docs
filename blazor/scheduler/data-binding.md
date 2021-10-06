@@ -644,7 +644,7 @@ To send an additional custom parameter to the server-side post, you need to make
 
 The value passed to the additional parameter is shown in the following image.
 
-![Passing additional parameters](./images/additional-parameters.png)
+![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
 
 > The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
 

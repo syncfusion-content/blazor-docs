@@ -50,4 +50,4 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigation
 
 ```
 
-![Dynamic Show/Hide tab item](../images/showHideItem.gif)
+![Showing or Hiding TabItem in Blazor Tabs](../images/blazor-tabs-hide-show-tabitem.gif)

@@ -516,4 +516,4 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 </style>
 ```
 
-![Tab Wizard](../images/wizard.png)
+![Blazor Tabs with Wizard](../images/blazor-tabs-wizard.png)

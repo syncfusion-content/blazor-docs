@@ -160,4 +160,4 @@ It is also adaptable to the available space when the tab items exceed the view s
 
 Output be like the below.
 
-![Orientation](./images/orientation.png)
+![Blazor Tabs with Horizontal Orientation](./images/blazor-tabs-horizontal-orientation.png)
