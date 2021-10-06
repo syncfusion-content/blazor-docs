@@ -34,7 +34,7 @@ The following code examples shows how to enable Data Label for all points.
 </SfSparkline>
 ```
 
-![Sparkline with Data Label](images/Datalabels/Datalabel.png)
+![Blazor Sparkline with Data Label](images/Datalabels/blazor-sparkline-data-label.png)
 
 ## Data Label customization
 
@@ -61,7 +61,7 @@ The following properties can be used to customize the Sparkline Data Label:
 </SfSparkline>
 ```
 
-![Sparkline with data label customization](images/Datalabels/LabelCustomization.png)
+![Blazor Sparkline with Custom Data Label](images/Datalabels/blazor-sparkline-custom-data-label.png)
 
 ## Format
 
@@ -99,4 +99,4 @@ The Data Label text can be formatted by specifying the property name from the da
 }
 ```
 
-![Sparkline with custom data label](images/Datalabels/LabelFormat.png)
+![Label Formatting in Blazor Sparkline](images/Datalabels/blazor-sparkline-label-format.png)
