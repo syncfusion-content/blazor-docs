@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Header in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about the Header in Syncfusion Blazor Tabs component and much more details.
+description: Checkout and learn here all about the header in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -13,7 +13,7 @@ This section explains about modifying the style of Tab header.
 
 ## Styles
 
-You can customize header styles by adding predefined classes in the Tab root element. The pre-defined CSS class names are as follows:
+The header styles can be customized by adding predefined classes in the Tab root element. The pre-defined CSS class names are as follows:
 
 * **e-fill**: The Selected Tab header background is set as solid fill.
 * **e-background**: Tab header has a solid fill background, and the selected header has a highlighted border.
@@ -105,13 +105,11 @@ You can customize header styles by adding predefined classes in the Tab root ele
 </style>
 ```
 
-Output be like the below.
-
 ![Icon Positions](./images/headerStyle.png)
 
 ## Icon positions
 
-You can customize the position of the Tab header icons using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header items [IconCSS](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, Tab header icon is placed on left position. The position values are as follows:
+The position of the Tab header icons can be customized using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconPosition) property. This property depends on the header items [IconCSS](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabHeader.html#Syncfusion_Blazor_Navigations_TabHeader_IconCss) property. By default, Tab header icon is placed on left position. The position values are as follows:
 
 * **Left**: Icon is placed on the left of the Tab header item.
 * **Right**: Icon is placed on the right of the Tab header item.
@@ -245,8 +243,6 @@ You can customize the position of the Tab header icons using the [IconPosition](
     }
 }
 ```
-
-Output be like the below.
 
 ![Icon Positions](./images/position.png)
 
