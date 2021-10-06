@@ -115,7 +115,7 @@ This section explains the list of events of the TextBox component which will be 
 
 ## ValueChanged
 
-`ValueChanged` event Specifies the callback to trigger when the value changes.
+`ValueChanged` event specifies the callback to trigger when the value changes.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
