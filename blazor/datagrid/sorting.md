@@ -205,13 +205,13 @@ In the following code example, custom SortComparer class was defined in the Cust
 
 @using Syncfusion.Blazor.Grids
 
-<SfGrid DataSource="@Orders" AllowSorting="true" Width="800" Height="270">
+<SfGrid DataSource="@Orders" AllowSorting="true" Width="600" Height="270">
     <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.OrderID) Visible="false" HeaderText="Order ID" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.CustomerID) SortComparer="new CustomComparer()" HeaderText="Customer Name" Width="120"></GridColumn>
         <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Format="C2" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" Width="80"></GridColumn>
+        <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="ShipCountry" Format="C2" Width="100"></GridColumn>
     </GridColumns>
 </SfGrid>
 
