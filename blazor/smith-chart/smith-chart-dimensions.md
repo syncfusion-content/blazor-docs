@@ -52,7 +52,7 @@ To set the size using CSS, add an [ID](https://help.syncfusion.com/cr/blazor/Syn
 }
 ```
 
-![Smith chart dimensions via CSS](./images/Dimension/smith-chart.png)
+![Dimensions in Blazor Smith Chart via CSS](./images/Dimension/blazor-smith-chart-dimensions.png)
 
 ## Using API
 
@@ -89,7 +89,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSmi
 }
 ```
 
-![Setting dimensions in pixel](./images/Dimension/smith-chart.png)
+![Changing Blazor Smith Chart Dimensions in pixel](./images/Dimension/blazor-smith-chart-dimensions.png)
 
 ### In percentage
 
@@ -125,4 +125,4 @@ The Smith Chart's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 }
 ```
 
-![Setting dimensions in percentage](./images/Dimension/smith-chart.png)
+![Changing Blazor Smith Chart Dimensions in Percentage](./images/Dimension/blazor-smith-chart-dimensions.png)

@@ -23,11 +23,11 @@ In mobile devices, you can open the detailed editor window in edit mode by click
 
 You can change the header title and the text of buttons displayed at the footer of the editor window by changing the appropriate localized word collection in the resx file of your culture file available in the following directory `Project root folder > Resources > SfResources-en-US.resx` like the below image.
 
-![Custom local words in resx file](images/custom-word-in-resx-file.png)
+![Customizing Local Words in resx file of Blazor Scheduler](images/blazor-scheduler-custom-word-in-resx-file.png)
 
 The editor window opening for creating new event will be displayed as in the following image after changing the localized words.
 
-![Editor window with custom local words](images/local-word.png)
+![Editing Window with Custom Local Words in Blazor Scheduler](images/blazor-scheduler-editing-local-word.png)
 
 ### How to change the label text of default editor fields
 
@@ -80,7 +80,7 @@ To change the default labels such as Title, Location and other field names in th
 
 The following screenshot represents the editor window with custom label.
 
-![Editor window with custom label](images/custom-label.png)
+![Editor Window with Custom Label in Blazor Scheduler](images/blazor-scheduler-custom-label.png)
 
 ### Field validation
 
@@ -135,7 +135,7 @@ It is possible to validate the required fields of the editor window before submi
 
 The following image shows the validation error message while saving the appointment without meeting the provided validation rules.
 
-![Editor window with validation](images/validation.png)
+![Editor window with Validation in Blazor Scheduler](images/blazor-scheduler-validation.png)
 
 ### Customizing the default time duration in editor window
 
@@ -1376,8 +1376,8 @@ You can also do different customization for quick popup on cell and event by che
 
 The following images shows how the quick popup on cell and event looks when we use template.
 
-![Quick popup on cell](images/cell-click-quick-popup.png)
-![Quick popup on event](images/event-click-quick-popup.png)
+![Quick Popup on Cell in Blazor Scheduler](images/blazor-scheduler-cell-click-quick-popup.png)
+![Quick Popup on Event in Blazor Scheduler](images/blazor-scheduler-event-click-quick-popup.png)
 
 ### How to enable/disable quick popup on selection end
 

@@ -230,4 +230,4 @@ The Data Annotation can be enabled by referencing the `System.ComponentModel.Dat
 
 The validation is applied on clicking the save button with empty fields as in the following image.
 
-![Custom-field validation](../images/custom-field-validation.png)
+![Custom Editor with Validation in Blazor Scheduler](../images/blazor-scheduler-custom-editor-with-validation.png)
