@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started With Blazor Scheduler in Web Assembly | Syncfusion
-description: Helps you to get started of Syncfusion Blazor Scheduler component in Web Assembly (WASM) project. Also helps to bind appointments and set current view and date to it.
+description: Learn here about how to work with Syncfusion Blazor Scheduler component in Web Assembly project. Helps to bind appointments and set current view, date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -24,23 +24,23 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](../images/new-project.png)
+    ![Creating New Project in Blazor ASPNETCore](../images/blazor-aspnetcore-new-project.png)
 
 2. Select **Blazor App** from the template, and then click **Next** button.
 
-    ![blazor template](../images/blazor-template.png)
+    ![Blazor Application Template](../images/blazor-template.png)
 
 3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![asp.net core project configuration](../images/project-configuration.png)
+    ![Blazor Project Configuration](../images/blazor-project-configuration.png)
 
 4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target.
 
-     ![select framework](../images/blazor-select-template.png)
+     ![Selecting Blazor Application Framework](../images/blazor-select-template.png)
 
 5. Choose **Blazor WebAssembly App** from the dashboard, and then click **Create** button to create a new Blazor WebAssembly application.
 
-    ![wasm template](../images/blazor-client-template.png)
+    ![Blazor WebAssembly Application Template](../images/blazor-client-template.png)
 
 ## Installing Syncfusion Blazor packages in the application
 
@@ -54,11 +54,11 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 2. Right-click the project,and then select Manage NuGet Packages.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
 3. Search **Syncfusion.Blazor.Schedule** keyword in the Browse tab and install **Syncfusion.Blazor.Schedule** NuGet package in the application.
 
-    ![select nuget](../images/select-nuget-schedule-package.png)
+    ![Searching Blazor Scheduler NuGet Package](../images/blazor-scheduler-search-nuget-package.png)
 
 4. The Syncfusion Blazor Schedule package will be included in the newly created project once the installation process is completed.
 
@@ -80,11 +80,11 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![select nuget](../images/select-nuget-schedule-package.png)
+    ![Searching Blazor Scheduler NuGet Package](../images/blazor-scheduler-search-nuget-package.png)
 
 3. The Syncfusion Blazor package will be installed in the project once the installation process is completed.
 
@@ -171,6 +171,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 The scheduler with the appointments will be rendered as shown in the following image.
 
-![Scheduler with appointments](../images/appointments.png)
+![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.png)
 
 > You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.

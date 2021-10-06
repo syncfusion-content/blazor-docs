@@ -29,7 +29,7 @@ Enabling the `ShowOnSelection` option of `RichTextEditorInlineMode` makes the in
 
 The output will be as follows.
 
-![Show Onselected](./images/show-onselect.png)
+![Enabling Selection in Blazor RichTextEditor](./images/blazor-richtexteditor-enable-selection.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 

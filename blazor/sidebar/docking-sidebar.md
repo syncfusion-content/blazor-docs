@@ -170,4 +170,4 @@ In the following sample, the list item has icon with text representation. On doc
 
 Output be like the below.
 
-![output](./images/dock.gif)
+![Docking in Blazor Sidebar](./images/blazor-sidebar-dock.gif)
