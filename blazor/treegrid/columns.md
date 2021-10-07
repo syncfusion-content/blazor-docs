@@ -1359,6 +1359,436 @@ public class TreeData
 
 > The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
 
+### Template support in column chooser
+
+We can render template in column chooser of tree grid. You can customize the column chooser dialog using **Template** and **FooterTemplate** of the [`TreeGridColumnChooserSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) Component.
+
+In this below example, we have rendered simple column chooser using [`TreeGridColumnChooserItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItem.html) inside the [`TreeGridColumnChooserSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) Component.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid;
+@inject WeatherForecastService ForecastService
+
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="1"
+            ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
+    <TreeGridColumnChooserSettings>
+        <Template>
+            @{
+                var cxt = context as ColumnChooserTemplateContext;
+                @foreach (var column in cxt.Columns)
+                {
+                    <TreeGridColumnChooserItem Column="column"></TreeGridColumnChooserItem>
+                }
+            }
+        </Template>
+        <FooterTemplate>
+            @{
+                var cxt = context as ColumnChooserFooterTemplateContext;
+                var visibles = cxt.Columns.Where(x => x.Visible).Select(x => x.HeaderText).ToArray();
+                var hiddens = cxt.Columns.Where(x => !x.Visible).Select(x => x.HeaderText).ToArray();
+            }
+            <SfButton IsPrimary="true" OnClick="@(async () => {
+                            await TreeGrid.ShowColumnsAsync(visibles);
+                            await TreeGrid.HideColumnsAsync(hiddens); })">Ok</SfButton>
+            <SfButton @onclick="@(async () => await cxt.CancelAsync())">Cancel</SfButton>
+        </FooterTemplate>
+    </TreeGridColumnChooserSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="70" IsPrimaryKey="true" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="70"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="70" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="80"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code
+    {
+    public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
+    private List<BusinessObject> GridData;
+    protected override void OnInitialized()
+    {
+        GridData = ForecastService.GetTree1();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace TreeGridComponent.Data
+{
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public List<BusinessObject> TreeGridData = new List<BusinessObject>();
+    public List<BusinessObject> GetTree1()
+    {
+        if (TreeGridData.Count == 0)
+        {
+            TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+        }
+        return TreeGridData;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+![Column Chooser Template Image](images/col-chooser-template.png)
+
+#### Custom component in column chooser template
+
+In below example, we have rendered ListView as custom component inside the Template of [`TreeGridColumnChooserSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserSettings.html) in tree grid. Inside the custom component, we have added image in ListView Template.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@inject WeatherForecastService ForecastService
+
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId"
+            TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
+    <TreeGridColumnChooserSettings>
+        <Template>
+            @{
+                var ContextData = context as ColumnChooserTemplateContext;
+                <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
+            }
+        </Template>
+    </TreeGridColumnChooserSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" IsPrimaryKey="true"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="90"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"
+                        Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+<style>
+    #TreeGrid .e-grid .e-ccdlg .e-cc-searchdiv,
+    #Grid_ccdlg div.e-footer-content {
+        display: none;
+    }
+
+    #TreeGrid .e-grid .e-ccdlg .e-dlg-content {
+        margin-top: 0px;
+    }
+
+    .e-list-item.e-level-1.e-checklist.e-focused {
+        background-color: none;
+    }
+
+    #TreeGrid_ccdlg .e-content {
+        overflow-y: unset;
+    }
+</style>
+
+@code
+{
+    public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
+    private List<BusinessObject> GridData;
+    protected override void OnInitialized()
+    {
+        GridData = ForecastService.GetTree1();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace TreeGridComponent.Data
+{
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public List<BusinessObject> TreeGridData = new List<BusinessObject>();
+    public List<BusinessObject> GetTree1()
+    {
+        if (TreeGridData.Count == 0)
+        {
+            TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+        }
+        return TreeGridData;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Lists;
+@using Syncfusion.Blazor.Inputs;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@inject WeatherForecastService ForecastService
+
+<div class="setMargin">
+    <SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
+</div>
+<SfListView @ref="ListView" Height="100%" ShowCheckBox="true" DataSource="@CloneData">
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" IsChecked="IsChecked"></ListViewFieldSettings>
+    <ListViewEvents Clicked="OnClicked" Created="@(()=>OnCreated(ColumnContext.Columns))" TValue="DataModel"></ListViewEvents>
+    <ListViewTemplates TValue="DataModel">
+        <Template>
+            @{
+                DataModel item = context as DataModel;
+                <img src="@UriHelper.ToAbsoluteUri($"images/{ item.Id}.png")" alt="@ item.Id" />
+            }
+            @context.Text
+        </Template>
+    </ListViewTemplates>
+</SfListView>
+<style>
+    .setMargin {
+        margin-bottom: 10px;
+    }
+</style>
+
+@code
+{
+    public List<DataModel> CloneData { get; set; } = new List<DataModel>();
+
+    [CascadingParameter]
+    public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
+
+    [Parameter]
+    public ColumnChooserTemplateContext ColumnContext { get; set; }
+
+    public SfListView<DataModel> ListView { get; set; }
+
+    async Task OnInput(InputEventArgs eventArgs)
+    {
+        if (eventArgs.Value == null)
+        {
+            CloneData = DataSource;
+        }
+        else
+        {
+            CloneData = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value.ToLower()));
+        }
+        await Task.Delay(100);
+        await Preselect();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        CloneData = DataSource;
+        await Task.Delay(100);
+        await Preselect();
+    }
+
+    List<DataModel> DataSource = new List<DataModel>
+    {
+            new DataModel() { Text = "Task ID", Id = "TaskId", IsChecked = true },
+            new DataModel() { Text = "Task Name", Id ="TaskName", IsChecked = true},
+            new DataModel() { Text = "Duration", Id = "Duration", IsChecked = true },
+            new DataModel() { Text = "Progress", Id ="Progress", IsChecked = true},
+            new DataModel() { Text = "Priority", Id = "Priority", IsChecked = true },
+    };
+
+    public async Task Preselect()
+    {
+        var cols = ColumnContext.Columns.FindAll(x => x.Visible == true).ToList();
+        var selectlist = new List<DataModel>();
+        foreach (var column in cols)
+        {
+            selectlist.Add(DataSource.Where(x => x.Text == column.HeaderText).FirstOrDefault());
+        }
+        if (selectlist.Count > 0)
+        {
+            if (ListView != null)
+            {
+                await ListView?.CheckItemsAsync(selectlist.AsEnumerable());
+            }
+        }
+    }
+
+    public async Task OnCreated(List<GridColumn> args)
+    {
+        await Preselect();
+    }
+
+    public async Task OnClicked(ClickEventArgs<DataModel> args)
+    {
+        if (args.IsChecked)
+        {
+            await TreeGrid.HideColumnAsync(args.Text);
+        }
+        else
+        {
+            await TreeGrid.ShowColumnAsync(args.Text);
+        }
+    }
+
+    public class DataModel
+    {
+        public string Text { get; set; }
+        public string Id { get; set; }
+        public bool IsChecked { get; set; }
+    }
+
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![Column Chooser Template](images/column-chooser-temp.png)
+
+#### Column Chooser with group template
+
+We can also group the columns inside the column chooser template with the help of Group Template. To group columns we need to wrap [`TreeGridColumnChooserItem`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItem.html) inside [`TreeGridColumnChooserItemGroup`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumnChooserItemGroup.html)  as shown in the below example code.
+
+{% tabs %}
+
+{% highlight razor %}
+
+@using TreeGridComponent.Data;
+@using Syncfusion.Blazor.TreeGrid;
+@inject WeatherForecastService ForecastService
+
+<SfTreeGrid ID="TreeGrid" @ref="TreeGrid" DataSource="@GridData" IdMapping="TaskId" ParentIdMapping="ParentId"
+            TreeColumnIndex="1" ShowColumnChooser="true" Toolbar="@(new List<string>() {"ColumnChooser" })" AllowPaging="true">
+    <TreeGridColumnChooserSettings>
+        <Template>
+            @{
+                var ContextData = context as ColumnChooserTemplateContext;
+                <CustomComponent @key="ContextData.Columns.Count" ColumnContext="ContextData"></CustomComponent>
+            }
+        </Template>
+    </TreeGridColumnChooserSettings>
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" Width="80" IsPrimaryKey="true"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="90"></TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"
+                        Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"
+                        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100"></TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+<style>
+    #TreeGrid .e-grid .e-ccdlg .e-cc-searchdiv,
+    #Grid_ccdlg div.e-footer-content {
+        display: none;
+    }
+
+    #TreeGrid .e-grid .e-ccdlg .e-dlg-content {
+        margin-top: 0px;
+    }
+
+    .e-list-item.e-level-1.e-checklist.e-focused {
+        background-color: none;
+    }
+
+    #TreeGrid_ccdlg .e-content {
+        overflow-y: unset;
+    }
+</style>
+
+@code
+{
+    public SfTreeGrid<BusinessObject> TreeGrid { get; set; }
+    private List<BusinessObject> GridData;
+    protected override void OnInitialized()
+    {
+        GridData = ForecastService.GetTree1();
+    }
+}
+
+{% endhighlight %}
+
+{% highlight c# %}
+
+namespace TreeGridComponent.Data
+{
+    public class BusinessObject
+    {
+        public int TaskId { get; set; }
+        public string TaskName { get; set; }
+        public int Duration { get; set; }
+        public int Progress { get; set; }
+        public string Priority { get; set; }
+        public int? ParentId { get; set; }
+    }
+    public List<BusinessObject> TreeGridData = new List<BusinessObject>();
+    public List<BusinessObject> GetTree1()
+    {
+        if (TreeGridData.Count == 0)
+        {
+            TreeGridData.Add(new BusinessObject() { TaskId = 1, TaskName = "Parent Task 1", Duration = 10, Progress = 70, ParentId = null, Priority = "High" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 2, TaskName = "Child task 1", Duration = 4, Progress = 80, ParentId = 1, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 3, TaskName = "Child Task 2", Duration = 5, Progress = 65, ParentId = 1, Priority = "Critical" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 4, TaskName = "Parent Task 2", Duration = 6, Progress = 77, ParentId = null, Priority = "Low" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5", Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6", Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3", Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7", Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+            TreeGridData.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8", Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+        }
+        return TreeGridData;
+    }
+}
+
+{% endhighlight %}
+
+{% endtabs %}
+
+The following output is displayed as a result of the above code example.
+
+![Column Chooser Group Template](images/column-chooser-grp-temp.png)
+
 ## Column menu
 
 The column menu has options to integrate features like sorting, filtering, and autofit. It will show a menu with the integrated feature when users click on multiple icon of the column. To enable column menu, define the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnMenu.html) property as true.
