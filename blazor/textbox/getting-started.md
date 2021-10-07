@@ -129,6 +129,8 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 
 ![TextBox with icon](./images/floatlabel.png)
 
+> You can also explore our [Blazor TextBox example](https://blazor.syncfusion.com/demos/textbox/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)

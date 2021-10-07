@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Spinner Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Spinner component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Blazor Spinner (Blazor Loading Spinner) component of Syncfusion, and more details.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Spinner Component
 
-This section briefly explains how to include a Spinner component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -123,3 +123,5 @@ After successful compilation of your application, simply press `F5` to run the a
 The output will be as follows.
 
 ![Spinner Default](./images/default.png)
+
+> You can also explore our [Blazor Spinner example](https://blazor.syncfusion.com/demos/spinner/overview?theme=bootstrap5) that shows how to present and manipulate data.

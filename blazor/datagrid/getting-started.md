@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor DataGrid Component
 
-This section briefly explains about how to include a DataGrid Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio/) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor DataGrid](https://www.syncfusion.com/blazor-components/blazor-datagrid) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side DataGrid](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly DataGrid](https://blazor.syncfusion.com/documentation/datagrid/how-to/blazor-webassembly-datagrid-using-visual-studio/) documentation pages for configuration specifications.
 
 To get start quickly with Blazor DataGrid component, you can check on this video.
 

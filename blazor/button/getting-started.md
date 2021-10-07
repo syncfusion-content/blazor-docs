@@ -107,6 +107,8 @@ After successful compilation of your application, simply press F5 to run the app
 
 ![Blazor Button Component](./images/blazor-button-component.png)
 
+> You can refer to our [Blazor Button](https://www.syncfusion.com/blazor-components/blazor-button) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Button example](https://blazor.syncfusion.com/demos/buttons/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)

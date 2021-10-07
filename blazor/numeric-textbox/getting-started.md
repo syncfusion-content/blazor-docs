@@ -106,7 +106,7 @@ The following example demonstrates range validation.
 
 The output will be as follows.
 
-![Blazor NumericTextBox with Range Value](./images/blazor-numerictextbox-range-value.png)
+![Inputnumber Blazor with Range Value](./images/blazor-numerictextbox-range-value.png)
 
 ## Formatting the value
 
@@ -137,6 +137,8 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 The output will be as follows.
 
 ![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
+
+> You can also explore our [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
 
 ## See Also
 

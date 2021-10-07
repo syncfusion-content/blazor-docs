@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Toggle Switch Button Component
 
-This section briefly explains about how to include Toggle Switch Button Component in the Blazor server-side  application. Refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include [Blazor Toggle Switch Button](https://www.syncfusion.com/blazor-components/blazor-toggle-switch-button) Component in the Blazor server-side  application. Refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Toggle Switch Button Component using Blazor, check on this video:
 
@@ -103,7 +103,7 @@ Now, add the Syncfusion Blazor Toggle Switch Button component in `razor` page in
 
 After successful compilation of the application, simply press F5 to run the application. The Blazor Toggle Switch Button component will render in the web browser as shown below.
 
-![Switch Sample](./images/switch.png)
+![Blazor Switch Sample](./images/switch.png)
 
 ## Set text on Switch
 
@@ -119,7 +119,9 @@ This section explains how to set `OnLabel` and `OffLabel` texts on Switch. In th
 
 > Switch does not have text support for material themes, and does not support long custom text.
 
-![Switch Sample](./images/switch-label.png)
+![Blazor Switch Label Sample](./images/switch-label.png)
+
+> You can also explore our [Blazor Toggle Switch Button example](https://blazor.syncfusion.com/demos/buttons/toggle-switch-button?theme=bootstrap5) that shows how to present and manipulate data.
 
 ## See Also
 
