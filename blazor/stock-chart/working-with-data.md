@@ -58,7 +58,7 @@ properties.
 
 ```
 
-![Local Data](images/common/local-data.png)
+![Binding Local Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-local-data.png)
 
 ## Remote Data
 
@@ -88,7 +88,7 @@ To bind remote data to stock chart component, assign service data as an instance
 
 ```
 
-![Remote Data](images/common/remote.png)
+![Binding Remote Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.png)
 
 ## Entity Framework
 
