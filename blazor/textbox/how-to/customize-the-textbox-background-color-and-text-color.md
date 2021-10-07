@@ -47,4 +47,4 @@ The text box styles can be customized such as background-color, text-color and b
 </style>
 ```
 
-![textbox](../images/back_customization.png)
+![Blazor TextBox with Custom Background and Text Color](../images/blazor-textbox-custom-style.png)

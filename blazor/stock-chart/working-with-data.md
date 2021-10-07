@@ -11,7 +11,7 @@ documentation: ug
 
 # Working with Data in Blazor Stock Chart Component
 
-Stock Chart can visualise data bound from local or remote data.
+Stock Chart can visualize data bound from local or remote data.
 
 ## Local Data
 
@@ -174,7 +174,7 @@ namespace EFChart.Data
 
 ### Creating Web API Controller
 
-A Web API Controller must be created which allows the chart to directly consume data from the Entity framework.
+A Web API Controller must be created which allows the chart to directly consume data from the Entity Framework.
 
 ```csharp
 using System;
@@ -286,7 +286,7 @@ For instance, to bind data directly from the data access layer class **OrderData
 }
 ```
 
-On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the chart using Web API, provide the appropriate endpoint Url within [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

@@ -97,7 +97,7 @@ To render a spline series, use series [Type](https://help.syncfusion.com/cr/blaz
 
 **HollowCandle**
 
-To render a hollowcandle series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle` and set `EnableSolidCandle` as false.
+To render a hollow candle series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle` and set `EnableSolidCandle` as false.
 
 **Hilo**
 
@@ -146,7 +146,7 @@ To render a hilo series, use series [Type](https://help.syncfusion.com/cr/blazor
 
 **HiloOpenClose**
 
-To render a HiloOpenClose series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
+To render a HiLoOpenClose series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
 
 ```cshtml
 
