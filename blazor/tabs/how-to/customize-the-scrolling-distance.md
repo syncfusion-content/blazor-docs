@@ -78,4 +78,4 @@ The [ScrollStep](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigat
 }
 ```
 
-![Tab ScrollStep](../images/tabScrollStep.gif)
+![Customizing Scrolling TabItems in Blazor Tabs](../images/blazor-tabs-custom-scroll.gif)

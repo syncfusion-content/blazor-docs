@@ -45,4 +45,4 @@ The Splitter allows you to customize the resize icon of the separator using the 
 
 The output will be as follows.
 
-![resize icon template](./images/resize-icon-template.png)
+![Blazor Splitter with Resize Icon Template](./images/blazor-splitter-resize-icon-template.png)
