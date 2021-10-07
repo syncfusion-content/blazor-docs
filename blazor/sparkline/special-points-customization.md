@@ -49,7 +49,7 @@ The color of special points can be changed by specifying the corresponding prope
 }
 ```
 
-![Blazor Sparkline with Custom Point](images/SpecialPoints/blazor-sparkline-custom-point.png)
+![Blazor Sparkline Chart with Custom Point](images/SpecialPoints/blazor-sparkline-custom-point.png)
 
 ## Tie point color
 
@@ -62,4 +62,4 @@ To highlight the tie area of the Y-axis value, use the [TiePointColor](https://h
 </SfSparkline>
 ```
 
-![Highlighting Tie Point Area in Blazor Sparkline](images/SpecialPoints/blazor-sparkline-tie-point-color.png)
+![Highlighting Tie Point Area in Blazor Sparkline Chart](images/SpecialPoints/blazor-sparkline-tie-point-color.png)

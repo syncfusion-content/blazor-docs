@@ -23,4 +23,4 @@ Globalization is the process of designing and developing a component that can wo
 
 On successful configuration, the Sparkline will be rendered as following.
 
-![Localization in Blazor Sparkline](./images/localization/blazor-sparkline-localization.png)
+![Localization in Blazor Sparkline Chart](./images/localization/blazor-sparkline-localization.png)
