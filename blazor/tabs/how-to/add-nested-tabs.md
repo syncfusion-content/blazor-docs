@@ -98,4 +98,4 @@ The tabs control supports to render the nested level of tabs by using the `Conte
 </SfTab>
 ```
 
-![Nested Tabs](../images/nested.png)
+![Adding Blazor Nested Tabs](../images/blazor-nested-tabs.png)
