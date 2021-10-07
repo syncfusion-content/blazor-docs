@@ -125,4 +125,4 @@ The sample demonstrates some types of animation that suits our Tabs. Check all t
 }
 ```
 
-![Custom Animation](./images/animation.png)
+![Blazor Tabs with Animation](./images/blazor-tabs-animation.png)

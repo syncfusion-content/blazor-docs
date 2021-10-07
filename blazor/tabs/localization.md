@@ -251,4 +251,4 @@ The following steps explain you to set `de-DE` culture for Tabs in web assembly 
     </SfTab>
     ```
 
-    ![Tab Localization](./images/localization.png)
+    ![Localization in Blazor Tabs](./images/blazor-tabs-localization.png)

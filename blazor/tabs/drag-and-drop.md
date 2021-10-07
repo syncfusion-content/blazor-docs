@@ -61,4 +61,4 @@ In the following sample, the `AllowDragAndDrop` property is enabled.
 
  ```
 
-![Tab drag and drop items](./images/dragdrop.gif)
+![Drag and Drop Items in Blazor Tabs](./images/blazor-tabs-drag-drop-items.gif)
