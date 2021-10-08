@@ -27,11 +27,11 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 * If device navigation icons are not available, touch swipe to see the hidden commands of the Toolbar.
 * Once the Toolbar reaches the last or first command, the  corresponding navigation icon will be disabled and it can be moved to the opposite direction.
 
-![Touch scroll](images/scrolling_touch.gif)
+![Blazor Toolbar with Touch Scroll](images/blazor-toolbar-scrolling-touch.gif)
 
 * The Toolbar content can be continuously scrolled by holding the navigation icon.
 
-![Long press scroll](images/scrolling_long_press.gif)
+![Blazor Toolbar with Long Press Scroll](images/blazor-toolbar-long-press-scrolling.gif)
 
 ```cshtml
 
@@ -67,7 +67,7 @@ The default [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 </SfToolbar>
 ```
 
-![Toolbar Scrollable Mode](./images/toolbar_scrollable_mode.png)
+![Scrolling in Blazor Toolbar](./images/blazor-toolbar-scrolling.png)
 
 ## Popup
 
@@ -76,7 +76,7 @@ the viewing area moves to the overflow popup container.
 
 The commands placed in the popup can be viewed by opening the popup using the drop down icon given at the end of the Toolbar.
 
-![Blazor Toolbar with overflow dropdown popup](./images/blazor-toolbar-with-overflow-dropdown-popup.png)
+![Blazor Toolbar with Overflow Dropdown Popup](./images/blazor-toolbar-with-overflow-dropdown-popup.png)
 
 > If the popup content overflows the height of the page, then the rest of the commands will be hidden.
 
@@ -102,7 +102,7 @@ The commands placed in the popup can be viewed by opening the popup using the dr
 </SfToolbar>
 ```
 
-![Toolbar Popup Mode](./images/toolbar_popup_mode.png)
+![Blazor Toolbar Item in Popup Mode](./images/blazor-toolbar-item-popup-mode.png)
 
 ### Priority of commands
 
@@ -158,7 +158,7 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-![Toolbar Item Overflow and ShowTextOn](./images/item_overflow_property.png)
+![Displaying Blazor Toolbar Item in Overflow](./images/blazor-toolbar-item-in-overflow.png)
 
 ## MultiRow
 
@@ -186,7 +186,7 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-![Toolbar MultiRow Mode](./images/toolbar_multirow_mode.png)
+![Blazor Toolbar Item with MultiRow](./images/blazor-toolbar-item-with-multirow.png)
 
 ## Extended
 
@@ -214,4 +214,4 @@ In the following code sample, text is only visible in the popup container and no
 </SfToolbar>
 ```
 
-![Toolbar Extended Mode](./images/toolbar_extended_mode.gif)
+![Blazor Toolbar Item with Extended Mode](./images/blazor-toolbar-item-extended-mode.gif)

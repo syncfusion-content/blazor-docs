@@ -49,4 +49,4 @@ Single or multiple CSS classes can be added to the Toolbar commands using the To
 
 ```
 
-![Toolbar command customization](../images/toolbar_command.png)
+![Blazor Toolbar with Custom Command](../images/blazor-toolbar-custom-command.png)
