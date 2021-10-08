@@ -254,7 +254,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 ## Moving Average
 
-A moving average trendline smoothens out fluctuations in data to show a pattern or trend more clearly. To render a moving average trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `MovingAverage`. 
+A moving average trendline smoothen out fluctuations in data to show a pattern or trend more clearly. To render a moving average trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `MovingAverage`. 
 
 `Period` property defines the period to find the moving average.
 
