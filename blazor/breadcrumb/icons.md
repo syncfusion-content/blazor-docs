@@ -1,7 +1,10 @@
 ---
-title: "Breadcrumb Icons"
-component: "Breadcrumb"
-description: "Breadcrumb allows the end user to place the icons on breadcrumb items and navigate to other webpages while clicking the Breadcrumb items."
+layout: post
+title: Breadcrumb Icons with Blazor Breadcrumb Component | Syncfusion
+description: Breadcrumb allows the end user to place the icons on breadcrumb items and navigate to other webpages while clicking the Breadcrumb items.
+platform: Blazor
+control: Breadcrumb
+documentation: ug
 ---
 
 # Icons

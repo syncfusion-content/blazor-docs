@@ -81,30 +81,3 @@ The feature enables the last item of the Breadcrumb component by setting the `En
 Output be like
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-enable-navigation.png)
-
-<!-- ## Open URL in new page or tab
-
-To open the breadcrumb item in a new page or tab, set the target property of the required item url to blank in the Breadcrumb component. In the following example, the target property of `All Component` item url was set to blank by using the `ItemRendering` event which locates to the path in the new tab.
-
-```cshtml
-@using Syncfusion.Blazor.Navigations
-
-<SfBreadcrumb EnableNavigation="false" ItemRendering="@ItemRendering">
-    <BreadcrumbItems>
-        <BreadcrumbItem Text="Home" Url="https://blazor.syncfusion.com/documentation/breadcrumb/introduction"></BreadcrumbItem>
-        <BreadcrumbItem Text="Getting" Url="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started"></BreadcrumbItem>
-        <BreadcrumbItem Text="Icons" Url="https://blazor.syncfusion.com/documentation/breadcrumb/icons"></BreadcrumbItem>
-        <BreadcrumbItem Text="Navigation" Url="https://blazor.syncfusion.com/documentation/breadcrumb/navigation"></BreadcrumbItem>
-        <BreadcrumbItem Text="Overflow" Url="https://blazor.syncfusion.com/documentation/breadcrumb/overflow"></BreadcrumbItem>
-    </BreadcrumbItems>
-</SfBreadcrumb>
-@code {
-    private void ItemRendering(BreadcrumbItemRenderingEventArgs args) {
-      
-    }
-}
-```
-
-Output be like
-
-![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-open-url.png) -->
