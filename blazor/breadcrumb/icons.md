@@ -7,7 +7,7 @@ control: Breadcrumb
 documentation: ug
 ---
 
-# Icons
+# Icons in Blazor Breadcrumb Component
 
 The Breadcrumb component contains an icon/image to provide a visual representation of an item.
 

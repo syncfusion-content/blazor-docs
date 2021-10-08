@@ -7,7 +7,7 @@ control: Breadcrumb
 documentation: ug
 ---
 
-# Navigation
+# Navigation in Blazor Breadcrumb Component
 
 The Breadcrumb item navigates to the path while clicking the item. To enable navigation, `Url` property was bound to the items.
 

@@ -7,7 +7,7 @@ control: Breadcrumb
 documentation: ug
 ---
 
-# Data Binding
+# Data Binding in Blazor Breadcrumb Component
 
 ## Items as tag directive
 
