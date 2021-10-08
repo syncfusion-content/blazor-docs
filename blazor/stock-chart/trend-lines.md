@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trendlines in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Trendlines in Syncfusion Blazor Stock Chart component and much more.
+description: Checkout and learn here all about trendlines in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Trendlines in Blazor Stock Chart Component
 
-Trendlines are used to show the direction and speed of price. Stock Chart supports 6 types of trendlines namely `Linear`, `Exponential`, `Logarithmic`, `Polynomial`, `Power`, `Moving Average`. By using trendline dropdown button you can add or remove the required trendline type.
+Trendlines are used to show the direction and speed of price. Stock Chart supports 6 types of trendlines namely `Linear`, `Exponential`, `Logarithmic`, `Polynomial`, `Power`, `Moving Average`. By using trendline dropdown button, the required trendline type can be added or removed.
 
 ## Linear
 
@@ -254,7 +254,7 @@ A power trendline is a curved line that is best used with data sets that compare
 
 ## Moving Average
 
-A moving average trendline smoothen out fluctuations in data to show a pattern or trend more clearly. To render a moving average trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `MovingAverage`. 
+A moving average trendline smoothens out fluctuations in data to show a pattern or trend more clearly. To render a moving average trendline, use trendline [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTrendline.html#Syncfusion_Blazor_Charts_StockChartTrendline_Type) as `MovingAverage`. 
 
 `Period` property defines the period to find the moving average.
 

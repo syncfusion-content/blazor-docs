@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Technical Indicators in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Technical Indicators in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about technical indicators in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 A technical indicator is a mathematical calculation based on historic price, volume or open interest information that aims to forecast financial market direction.
 
-Stock Chart supports 10 types of technical indicators namely `Accumulation Distribution`, `ATR`, `EMA`, `SMA`, `TMA`, `Momentum`, `MACD`, `RSI`, `Stochastic`, `Bollinger Band`. By using indicator dropdown box you can add an remove the required indicators types.
+Stock Chart supports 10 types of technical indicators namely `Accumulation Distribution`, `ATR`, `EMA`, `SMA`, `TMA`, `Momentum`, `MACD`, `RSI`, `Stochastic`, `Bollinger Band`. By using indicator dropdown box, add and remove the required indicators types.
 
 ## Accumulation Distribution
 
@@ -25,15 +25,15 @@ ATR measures the stock volatility by comparing the current value with the previo
 
 ## Exponential Moving Average (EMA)
 
-Moving average Indicators are used to define the direction of the trend. To render a EMA Indicator, use indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) as `Ema` .
+Moving average indicators are used to define the direction of the trend. To render a EMA indicator, use indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) as `Ema` .
 
 ## Momentum
 
-Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~Type.html) as `Momentum`. Momentum indicator will be represented by two lines (upperLine, signalLine). In momentum indicator the upperBand value is always renders at the value 100.
+Momentum shows the speed at which the price of the stock is changing. To render a Momentum indicator, use indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.ChartIndicator~Type.html) as `Momentum`. Momentum indicator will be represented by two lines (upperLine, signalLine). In momentum indicator the upperBand value is always rendered at the value 100.
 
 ## Moving Average Convergence Divergence (MACD)
 
-MACD is based on the difference between two EMA's. To render a MACD Indicator, use indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) as `Macd` .MACD indicator will be represented by MACD line,signal line, MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
+MACD is based on the difference between two EMA's. To render a MACD Indicator, use indicator [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartIndicator.html#Syncfusion_Blazor_Charts_StockChartIndicator_Type) as `Macd`. MACD indicator will be represented by MACD line,signal line, MACD histogram. MACD histogram is used to differentiate MACD line and signal line.
 
 ## Relative Strength Index (RSI)
 

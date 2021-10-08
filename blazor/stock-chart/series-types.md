@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series Types in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Series Types in Syncfusion Blazor Stock Chart component and much more.
+description: Checkout and learn here all about series types in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

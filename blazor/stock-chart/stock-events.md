@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stock Events in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Stock Events in Syncfusion Blazor Stock Chart component and much more.
+description: Checkout and learn here all about stock events in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
