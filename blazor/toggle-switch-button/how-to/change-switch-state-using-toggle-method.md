@@ -28,6 +28,6 @@ This section explains about how to toggle between the Toggle Switch Button state
 
 ```
 
-![Switch Sample](./../images/switch-toggle.png)
+![Changing Blazor Toggle Switch Button State](./../images/blazor-toggle-switch-button-state.png)
 
 > Switch triggers [OnChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfSwitch-1.html) event on every state stage to perform custom operations.

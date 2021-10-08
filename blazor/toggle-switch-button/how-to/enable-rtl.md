@@ -24,4 +24,4 @@ The following example illustrates how to enable right-to-left support in Toggle 
 
 ```
 
-![Switch Sample](./../images/switch-rtl.png)
+![Right to Left in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-in-right-to-left.png)
