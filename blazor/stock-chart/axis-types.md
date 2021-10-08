@@ -49,13 +49,13 @@ Date time axis uses date time scale and displays the date time values as axis la
 }
 ```
 
-![Datetime Axis](images/common/datetime.png)
+![Blazor Stock Chart with Datetime Axis](images/common/blazor-stock-chart-datetime-axis.png)
 
 ## Logarithmic Axis
 
 <!-- markdownlint-disable MD033 -->
 
-Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>) and set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of axis to `Lograthmic`.
+Logarithmic axis uses logarithmic scale and it is very useful in visualizing data, when it has numerical values in both lower order of magnitude (eg: 10<sup>-6</sup>) and higher order of magnitude (eg: 10<sup>6</sup>) and set the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_ValueType) of axis to `Logarithmic`.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -92,7 +92,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 }
 ```
 
-![Logarithmic Axis](images/common/logarithmic.png)
+![Blazor Stock Chart with Logarithmic Axis](images/common/blazor-stock-chart-logarithmic-axis.png)
 
 ## See Also
 

@@ -42,4 +42,4 @@ The following example illustrates how to enable right-to-left support in Split B
 
 Output be like
 
-![Split Button Sample](./../images/sb-rtl.png)
+![Right to Left in Blazor SplitButton](./../images/blazor-splitbutton-right-to-left.png)

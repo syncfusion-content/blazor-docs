@@ -92,7 +92,7 @@ The following code shows a basic TimePicker component.
 
 After successful compilation of the application, press `F5` to run the application.
 
-![TimePicker](./images/default.png)
+![Blazor TimePicker](./images/blazor-timepicker.png)
 
 ## Setting the time format
 
@@ -109,7 +109,7 @@ The below code demonstrates how to render TimePicker component in 24 hours Forma
 }
 ```
 
-![TimePicker](./images/time_format.png)
+![Blazor TimePicker with Time Format](./images/blazor-timepicker-time-format.png)
 
 ## See Also
 

@@ -83,7 +83,7 @@ Create a TextBox with icon and the users can place the icon in either side of th
 </style>
 ```
 
-![textbox](./images/float_with_icons.png)
+![Blazor TextBox with Icon and Floating Label](./images/blazor-textbox-float-label-and-icons.png)
 
 ## With clear button and floating label
 
@@ -100,7 +100,7 @@ The clear button can be added to the TextBox by enabling the [ShowClearButton](h
 <SfTextBox Placeholder="FirstName" ShowClearButton=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![textbox](./images/clear_icon.png)
+![Blazor TextBox with Clear Icon](./images/blazor-textbox-clear-icon.png)
 
 ## Multi-line input with floating label
 
@@ -112,4 +112,4 @@ The following example demonstrates how to set [Multiline](https://help.syncfusio
 <SfTextBox Placeholder="Enter text" Multiline=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![textbox](./images/multiline.png)
+![Blazor Multiline TextBox with Floating Label](./images/blazor-multiline-textbox-with-floating-label.png)

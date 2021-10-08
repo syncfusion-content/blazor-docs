@@ -32,4 +32,4 @@ Property   | Description
 <SfTextBox Placeholder="Focus the input" CssClass="e-small" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![TextBox](./images/sizing.png)
+![Changin Blazor TextBox Size](./images/blazor-textbox-change-size.png)

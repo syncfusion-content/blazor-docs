@@ -122,4 +122,4 @@ After successful compilation of your application, simply press `F5` to run the a
 
 The output will be as follows.
 
-![Spinner Default](./images/default.png)
+![Blazor Spinner](./images/blazor-spinner.png)
