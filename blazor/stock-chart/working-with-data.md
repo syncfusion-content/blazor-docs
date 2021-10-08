@@ -11,7 +11,7 @@ documentation: ug
 
 # Working with Data in Blazor Stock Chart Component
 
-Stock Chart can visualise data bound from local or remote data.
+Stock Chart can visualize data bound from local or remote data.
 
 ## Local Data
 
@@ -58,7 +58,7 @@ properties.
 
 ```
 
-![Local Data](images/common/local-data.png)
+![Binding Local Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-local-data.png)
 
 ## Remote Data
 
@@ -88,7 +88,7 @@ To bind remote data to stock chart component, assign service data as an instance
 
 ```
 
-![Remote Data](images/common/remote.png)
+![Binding Remote Data in Blazor Stock Chart](images/common/blazor-stock-chart-bind-remote-data.png)
 
 ## Entity Framework
 
@@ -174,7 +174,7 @@ namespace EFChart.Data
 
 ### Creating Web API Controller
 
-A Web API Controller must be created which allows the chart to directly consume data from the Entity framework.
+A Web API Controller must be created which allows the chart to directly consume data from the Entity Framework.
 
 ```csharp
 using System;

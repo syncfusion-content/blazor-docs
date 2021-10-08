@@ -76,4 +76,4 @@ The floating label color of the TextBox can be changed for both `success` and `w
 </style>
 ```
 
-![textbox](../images/custom_floatlabel.png)
+![Changing Float Label Color in Blazor TextBox](../images/blazor-textbox-custom-float-label-color.png)

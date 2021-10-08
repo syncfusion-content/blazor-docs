@@ -58,7 +58,7 @@ The rendered stock chart can be printed directly using print button in period se
 
 ```
 
-![Print](images/print/print-razor.png)
+![Printing in Blazor Stock Chart](images/print/blazor-stock-chart-printing.png)
 
 ## Disable Export and print
 
@@ -102,4 +102,4 @@ Empty the value of `ExportType` to disable the Export.
 
 ```
 
-![Disable Export Print](images/print/disable-razor.png)
+![Disabling Export and Print in Blazor Stock Chart](images/print/blazor-stock-chart-disable-print-export.png)

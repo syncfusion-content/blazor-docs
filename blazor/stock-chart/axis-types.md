@@ -49,7 +49,7 @@ Date time axis uses date time scale and displays the date time values as axis la
 }
 ```
 
-![Datetime Axis](images/common/datetime.png)
+![Blazor Stock Chart with Datetime Axis](images/common/blazor-stock-chart-datetime-axis.png)
 
 ## Logarithmic Axis
 
@@ -92,7 +92,7 @@ Logarithmic axis uses logarithmic scale and it is very useful in visualizing dat
 }
 ```
 
-![Logarithmic Axis](images/common/logarithmic.png)
+![Blazor Stock Chart with Logarithmic Axis](images/common/blazor-stock-chart-logarithmic-axis.png)
 
 ## See Also
 

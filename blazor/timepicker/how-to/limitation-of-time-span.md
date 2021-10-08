@@ -23,4 +23,4 @@ Based on [C# standard behavior](https://docs.microsoft.com/en-us/dotnet/standard
 
 ```
 
-![TimePicker](../images/timespan_format.png)
+![Blazor TimePicker with Time Span Format](../images/blazor-timepicker-time-span-format.png)

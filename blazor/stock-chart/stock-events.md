@@ -127,4 +127,4 @@ The [Description](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Stock Events in Stock Chart](images/stock-events.png)
+![Events in Blazor Stock Chart](images/blazor-stock-chart-events.png)

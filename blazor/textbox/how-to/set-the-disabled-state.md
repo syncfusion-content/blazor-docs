@@ -19,4 +19,4 @@ The following example demonstrates the TextBox in a disabled state.
 <SfTextBox Placeholder='First Name' Enabled=false></SfTextBox>
 ```
 
-![textbox](../images/disabled.png)
+![Blazor TextBox in Disabled State](../images/blazor-textbox-disable-state.png)

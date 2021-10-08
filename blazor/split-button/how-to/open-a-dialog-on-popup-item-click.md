@@ -67,4 +67,4 @@ In the following example, Dialog will open while selecting `Update` item.
 
 Output be like
 
-![Split Button Sample](./../images/sb-dialog.png)
+![Opening Dialog on Popup Item Click in Blazor SplitButton](./../images/blazor-splitbutton-dialog.png)

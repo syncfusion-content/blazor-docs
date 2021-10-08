@@ -50,7 +50,7 @@ A title can be added to the axis using the [Title](https://help.syncfusion.com/c
 
 ```
 
-![Title](images/common/title.png)
+![Blazor Stock Chart with Title](images/common/blazor-stock-chart-title.png)
 
 ## Tick Lines Customization
 
@@ -95,7 +95,7 @@ The `Width`, `Color` and `Size` of the minor and major tick lines can be cu
 
 ```
 
-![Tick Lines](images/common/ticklines.png)
+![Blazor Stock Chart with Tick Lines](images/common/blazor-stock-chart-tick-lines.png)
 
 ## Grid Lines Customization
 
@@ -145,7 +145,7 @@ The `Width`, `Color` and `DashArray` of the minor and major grid lines can 
 
 ```
 
-![Grid Lines](images/common/gridlines.png)
+![Blazor Stock Chart with Grid Lines](images/common/blazor-stock-chart-grid-lines.png)
 
 ## Multiple Axis
 
@@ -205,7 +205,7 @@ In addition to primary X and Y axis, n number of axis can be added to the chart.
 
 ```
 
-![Multiple Axis](images/common/multiple-axis.png)
+![Blazor Stock Chart with Multiple Axes](images/common/blazor-stock-chart-multiple-axes.png)
 
 ## Inversed Axis
 
@@ -254,7 +254,7 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
 ```
 
-![Inversed Axis](images/common/inversed-axis.png)
+![Blazor Stock Chart with Inversed Axis](images/common/blazor-stock-chart-inversed-axis.png)
 
 ## Opposed Position
 
@@ -301,4 +301,4 @@ To place an axis opposite from its original position, set [OpposedPosition](http
 
 ```
 
-![Opposed Position](images/common/opposed.png)
+![Blazor Stock Chart in Opposed Position](images/common/blazor-stock-chart-in-opposed-position.png)
