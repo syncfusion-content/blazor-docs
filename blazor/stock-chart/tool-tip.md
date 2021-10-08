@@ -59,7 +59,7 @@ By default, tooltip is not visible. Enable the tooltip by setting [Enable](https
 
 ```
 
-![Tooltip](images/common/tooltip.png)
+![Blazor Stock Chart with Tooltip](images/common/blazor-stock-chart-tooltip.png)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -157,4 +157,4 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 
-![Tooltip Customization](images/common/custom-tooltip.png)
+![Blazor Stock Chart with Custom Tooltip](images/common/blazor-stock-chart-custom-tooltip.png)

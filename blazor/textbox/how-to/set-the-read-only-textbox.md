@@ -17,4 +17,4 @@ The following example demonstrates how to set `Readonly` in TextBox Component. T
 <SfTextBox Placeholder='First Name' Readonly=true></SfTextBox>
 ```
 
-![textbox](../images/disabled.png)
+![Blazor TextBox in Readonly Mode](../images/blazor-textbox-disable-state.png)
