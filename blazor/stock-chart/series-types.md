@@ -52,7 +52,7 @@ To render a line series, use series [Type](https://help.syncfusion.com/cr/blazor
 
 ```
 
-![Line](images/series-types/line.png)
+![BLazor Line Stock Chart](images/series-types/blazor-line-stock-chart.png)
 
 **Spline**
 
@@ -93,11 +93,11 @@ To render a spline series, use series [Type](https://help.syncfusion.com/cr/blaz
 
 ```
 
-![Spline](images/series-types/spline.png)
+![Blazor Spline Stock Chart](images/series-types/blazor-spline-stock-chart.png)
 
 **HollowCandle**
 
-To render a hollowcandle series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle` and set `EnableSolidCandle` as false.
+To render a hollow candle series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `Candle` and set `EnableSolidCandle` as false.
 
 **Hilo**
 
@@ -142,11 +142,11 @@ To render a hilo series, use series [Type](https://help.syncfusion.com/cr/blazor
 
 ```
 
-![Hilo](images/series-types/hilo.png)
+![Blazor Hilo Stock Chart](images/series-types/blazor-hilo-stock-chart.png)
 
 **HiloOpenClose**
 
-To render a HiloOpenClose series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
+To render a HiLoOpenClose series, use series [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_Type) as `HiloOpenClose`.
 
 ```cshtml
 
@@ -187,7 +187,7 @@ To render a HiloOpenClose series, use series [Type](https://help.syncfusion.com/
 
 ```
 
-![Hilo Open Close](images/series-types/hiloopenclose.png)
+![Blazor Hilo Open Close Stock Chart](images/series-types/blazor-hilo-open-close-stock-chart.png)
 
 **Candle**
 
@@ -227,4 +227,4 @@ To render a candle series, use series [Type](https://help.syncfusion.com/cr/blaz
 
 ```
 
-![Candle](images/common/candle.png)
+![Blazor Candle Stock Chart](images/common/blazor-candle-stock-chart.png)

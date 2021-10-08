@@ -54,4 +54,4 @@ The following example illustrates how to group items in popup using ListView com
 
 Output be like
 
-![Split Button Sample](./../images/sb-listview.png)
+![Grouping in Blazor SplitButton](./../images/blazor-splitbutton-grouping.png)

@@ -31,7 +31,7 @@ The default textbox can be converted into the multiline textbox by setting the [
 </style>
 ```
 
-![textbox](./images/textbox_multiline.png)
+![Blazor Multiline TextBox](./images/blazor-multiline-textbox.png)
 
 ## Implementing floating label
 
@@ -63,7 +63,7 @@ The floating label behavior can be achieved in the multiline text box by setting
 </style>
 ```
 
-![textbox](./images/textbox_multiline_floatlabel.png)
+![Blazor Multiline TextBox with Floating Label](./images/blazor-textbox-multiline-float-label.png)
 
 ## Disable resizing
 
@@ -86,4 +86,4 @@ textarea.e-input,
 <SfTextBox Multiline=true FloatLabelType="@FloatLabelType.Auto" Placeholder="Enter your address"></SfTextBox>
 ```
 
-![textbox](./images/disable_resize.png)
+![Disable Resizing in Blazor TextBox](./images/blazor-textbox-disable-resizing.png)

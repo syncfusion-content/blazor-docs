@@ -49,7 +49,7 @@ The RenderTreeBuilder class will let to create required content or component in 
 
 ```
 
-![renderFragment](../images/renderFragment.png)
+![Blazor TextBox with Render TreeBuilder](../images/blazor-textbox-render-fragment.png)
 
 ## Dynamic rendering using RenderFragment
 
@@ -90,4 +90,4 @@ By using RenderFragment, the templated component can be reused in more than one 
 
 ```
 
-![renderFragment](../images/renderFragment.png)
+![Blazor TextBox with Render Fragment](../images/blazor-textbox-render-fragment.png)

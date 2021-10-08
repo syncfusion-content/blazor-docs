@@ -33,4 +33,4 @@ The color of the TextBox can be changed by validating its value using regular ex
 }
 ```
 
-![textbox](../images/validation.png)
+![Changing Validation Text Color in Blazor TextBox](../images/blazor-textbox-validation-text-color.png)

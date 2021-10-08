@@ -29,7 +29,7 @@ The following example demonstrates the TimePicker in `StrictMode` with `Min/Max`
 }
 ```
 
-![TimePicker](./images/strictmode.png)
+![Blazor TimePicker in Strict Mode](./images/blazor-timepicker-strict-mode.png)
 
 By default, the TimePicker act in `StrictMode` as `false` state, that allows to enter the invalid or out-of-range time in textbox.
 
@@ -51,6 +51,6 @@ The following example demonstrates the `StrictMode` as `false`. Here, it allows 
 }
 ```
 
-![TimePicker](./images/strictmode_false.png)
+![Blazor TimePicker without Strict Mode](./images/blazor-timepicker-without-strict-mode.png)
 
 > If the value of `Min` or `Max` property is changed through code behind, update the `Value` property to set within the range.
