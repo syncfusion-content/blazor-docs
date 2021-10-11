@@ -221,9 +221,9 @@ You can pause and resume the progress using the [Stop](https://help.syncfusion.c
 Output be like
 ![Blazor ProgressButton displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.png)
 
-### ProgressComplete Method
+### EndProgressAsync Method
 
-You can complete the progress by using ['ProgressComplete'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_ProgressComplete) method and it will also hides the spinner. In this example, I have added another button to complete the current progress of the progress button.
+You can complete the progress by using [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method and it will also hides the spinner. In this example, I have added another button to complete the current progress of the progress button.
 
 ```cshtml
 
@@ -241,7 +241,7 @@ You can complete the progress by using ['ProgressComplete'](https://help.syncfus
     SfProgressButton ProgressBtnObj;
     private async Task OnCompleteClick()
     {
-        await ProgressBtnObj.ProgressComplete();
+        await ProgressBtnObj.EndProgressAsync();
     }
 }
 
