@@ -83,7 +83,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Set Width and Height](images/setheight.png)
+![Scrolling in Blazor TreeGrid](images/blazor-treegrid-scrolling.png)
 
 ## Responsive with parent container
 
@@ -274,7 +274,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Frozen](images/Frozen.png)
+![Frozen Rows and Columns in Blazor TreeGrid](images/blazor-treegrid-frozen-rows-and-columns.png)
 
 ### Freeze particular columns
 
@@ -346,7 +346,7 @@ public class TreeData
 
 {% endtabs %}
 
-![IsFreeze](images/IsFreeze.png)
+![Freezing Specific Column in Blazor TreeGrid](images/blazor-treegrid-freeze-specific-column.png)
 
 ### Limitations
 

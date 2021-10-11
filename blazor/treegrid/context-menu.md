@@ -80,7 +80,7 @@ The following sample code demonstrates enabling context menu with its default it
 }
 ```
 
-![Tree Grid with context menu](images/context-menu.png)
+![Blazor TreeGrid with Context Menu](images/blazor-treegrid-context-menu.png)
 
 ## Custom context menu items
 
@@ -141,4 +141,4 @@ The following sample code demonstrates defining custom context menu item and its
 }
 ```
 
-![Tree Grid with custom context menu item](images/custom-context.png)
+![Blazor TreeGrid with Custom Context Menu Item](images/blazor-treegrid-custom-context-menu-item.png)

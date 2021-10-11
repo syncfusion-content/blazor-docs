@@ -159,7 +159,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Initial Sort](images/initialsort.png)
+![Sorting in Blazor TreeGrid](images/blazor-treegrid-sorting.png)
 
 ## Sorting events
 
@@ -248,5 +248,5 @@ public class TreeData
 When the tree grid header is tapped on the touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for the multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired tree grid headers.
 
 <!-- markdownlint-disable MD033 -->
-<img src="../images/touch-sorting.jpg" alt="Touch interaction" style="width:320px;height: 620px">
+<img src="images/blazor-treegrid-touch-sorting.jpg" alt="Sorting in Blazor TreeGrid" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->

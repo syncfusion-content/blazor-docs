@@ -96,7 +96,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Built-in Toolbar](images/inbuilt.png)
+![Blazor TreeGrid with Built-in Toolbar](images/blazor-treegrid-built-in-toolbar.png)
 
 > The [Toolbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Toolbar.html) has options to define both built-in and custom toolbar items.
 
@@ -192,7 +192,7 @@ The tool bar items can be enabled or disabled by using the [EnableToolbarItems](
 ```
 
 The following screenshots represent a Tree Grid with Enable/disable toolbar items,
-![Enable/disable Toolbar items](images/enabledisable.png)
+![Enabling or Disabling Toolbar Items in Blazor TreeGrid](images/blazor-treegrid-enable-disable-toolbar-items.png)
 
 <!--
 Custom toolbar items

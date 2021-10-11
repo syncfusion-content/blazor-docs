@@ -59,7 +59,7 @@ The complex data binding in the Tree Grid can be achieved by using the dot(.) op
 }
 ```
 
-![Complex Data](images/complexdata.png)
+![Blazor TreeGrid Columns with Data Binding](images/blazor-treegrid-column-data-binding.png)
 
 ### Expando data binding
 
@@ -129,7 +129,7 @@ Tree Grid supports Complex Data Binding with ExpandoObject. In the below example
 }
 ```
 
-![Expando Object Complex Data](images/expandocomplexdata.png)
+![Blazor TreeGrid Columns with Expando Data Binding](images/blazor-treegrid-column-expando-binding.png)
 
 ## Header template
 
@@ -223,7 +223,7 @@ public class Employee
 {% endtabs %}
 
 
-![Header Template](images/headertemp.png)
+![Blazor TreeGrid Column with Header Template](images/blazor-treegrid-column-header-template.png)
 
 > For Templated Tree Grid component, [ModelType](./templates/#template-modeltype) property of Tree Grid should be defined.
 
@@ -296,7 +296,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Header Text](images/headertext.png)
+![Blazor TreeGrid Column with Header Text](images/blazor-treegrid-column-header-text.png)
 
 > If both the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) and [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderText.html) are not defined in the column, the column renders with **empty** header text.
 
@@ -454,7 +454,7 @@ public class TreeDataFormat
 {% endtabs %}
 
 
-![Date Format](images/dateformat.png)
+![Date Formatting in Blazor TreeGrid Column](images/blazor-treegrid-column-date-format.png)
 
 ## AutoFit specific columns
 
@@ -532,7 +532,7 @@ public class TreeData
 
 {% endtabs %}
 
-![AutoFit Columns](images/autofitcolumn.png)
+![Blazor TreeGrid with AutoFit Columns](images/blazor-treegrid-autofit-column.png)
 
 > All the columns can be autofitted by invoking the **AutoFitColumns** method without column names.
 
@@ -988,7 +988,7 @@ public class ShipmentData
 When the right edge of the header cell is tapped, a floating handler will be visible over the right border of the column. To resize the column, tap and drag the floating handler as needed.
 
 <!-- markdownlint-disable MD033 -->
-<img src="./images/column-resizing.png" alt="Touch interaction" style="width:320px;height: 620px">
+<img src="./images/blazor-treegrid-column-resizing.png" alt="Column Resizing in Blazor TreeGrid" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->
 
 ## Column template
@@ -1071,7 +1071,7 @@ public class Employee
 
 {% endtabs %}
 
-![Column Template](images/columntemp.png)
+![Blazor TreeGrid with Column Template](images/blazor-treegrid-column-template.png)
 
 > * Tree Grid actions such as editing, filtering and sorting etc. will depend upon the column [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html). If the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) is not specified in the
 template column, the tree grid actions cannot be performed.
@@ -1274,7 +1274,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Column Chooser](images/columnchooser.png)
+![Show or Hide Columns in Blazor TreeGrid](images/blazor-treegrid-show-hide-column.png)
 
 > The column names can be hidden in the column chooser by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
 
@@ -1355,7 +1355,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Open Column Chooser](images/opencolumnchooser.png)
+![Opening Column Chooser in Blazor TreeGrid](images/blazor-treegrid-open-column-chooser.png)
 
 > The column names in column chooser can be hidden by defining the [ShowInColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowInColumnChooser.html) property as false.
 
@@ -1455,7 +1455,7 @@ namespace TreeGridComponent.Data
 
 {% endtabs %}
 
-![Column Chooser Template Image](images/col-chooser-template.png)
+![Column Chooser Template with Blazor TreeGrid](images/blazor-treegrid-column-chooser-template.png)
 
 #### Custom component in column chooser template
 
@@ -1682,7 +1682,7 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser Template](images/column-chooser-temp.png)
+![Column Chooser Template with Blazor TreeGrid](images/blazor-treegrid-column-with-chooser-template.png)
 
 #### Column Chooser with group template
 
@@ -1787,7 +1787,7 @@ namespace TreeGridComponent.Data
 
 The following output is displayed as a result of the above code example.
 
-![Column Chooser Group Template](images/column-chooser-grp-temp.png)
+![Column Chooser with Group in Blazor TreeGrid](images/blazor-treegrid-column-chooser-group-template.png)
 
 ## Column menu
 
@@ -1867,7 +1867,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Column Menu](images/columnmenu.png)
+![Blazor TreeGrid with Column Menu](images/blazor-treegrid-column-menu.png)
 
 > The column menu can be disabled for a particular column by defining the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnMenu.html) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper as false.
 
@@ -1941,7 +1941,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Checkbox Column](images/checkboxcolumn.png)
+![Blazor TreeGrid with CheckBox Column](images/blazor-treegrid-checkbox-column.png)
 
 ## Responsive columns
 
@@ -2010,7 +2010,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Responsive Columns](images/responscolumn.png)
+![Blazor TreeGrid displays Responsive Columns](images/blazor-treegrid-responsive-column.png)
 
 ## Controlling Tree Grid actions
 
@@ -2228,4 +2228,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Checkbox](images/boolcheckbox.png)
+![Blazor TreeGrid Column with CheckBox](images/blazor-treegrid-column-with-checkbox.png)
