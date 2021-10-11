@@ -227,6 +227,212 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 }
 ```
 
+## Binding ExpandoObject
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **ExpandoObject**.
+
+**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
+
+```csharp
+@using System.Dynamic
+@using Syncfusion.Blazor.Schedule
+<SfSchedule TValue="ExpandoObject" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+    <ScheduleEventSettings DataSource="@EventsCollection" AllowEditFollowingEvents="true"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2021, 8, 10);
+    public List<ExpandoObject> EventsCollection = new List<ExpandoObject>() { };
+    protected override void OnInitialized()
+    {
+        DateTime scheduleStart = new DateTime(2021, 8, 8, 10, 0, 0);
+        EventsCollection = Enumerable.Range(1, 5).Select((x) =>
+        {
+            scheduleStart = scheduleStart.AddDays(1);
+            dynamic d = new ExpandoObject();
+            d.Id = 1000 + x;
+            d.Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)];
+            d.StartTime = scheduleStart;
+            d.EndTime = scheduleStart.AddHours(1);
+            d.IsAllDay = false;
+            d.RecurrenceRule = null;
+            d.RecurrenceException = null;
+            d.RecurrenceID = null;
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+```
+
+## Binding DynamicObject
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **DynamicObject**.
+
+**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kind of supported data operations and editing in DynamicObject.
+
+> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+
+```csharp
+@using System.Dynamic
+@using System.Text.Json
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="DynamicDictionary" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+    <ScheduleEventSettings DataSource="@EventsCollection"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2021, 8, 10);
+    public List<DynamicDictionary> EventsCollection = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        DateTime scheduleStart = new DateTime(2021, 8, 8, 10, 0, 0);
+        EventsCollection = Enumerable.Range(1, 5).Select((x) =>
+        {
+            scheduleStart = scheduleStart.AddDays(1);
+            dynamic d = new DynamicDictionary();
+            d.Id = 1000 + x;
+            d.Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)];
+            d.StartTime = scheduleStart;
+            d.EndTime = scheduleStart.AddHours(1);
+            d.RecurrenceRule = null;
+            d.RecurrenceException = null;
+            d.RecurrenceID = null;
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+```
+
+## Binding ObservableCollection
+
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+Here, AppointmentData class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel
+@using System.ComponentModel
+
+<SfButton @onclick="AddRecord">Add Data</SfButton>
+<SfButton @onclick="UpdateRecord" Disabled="ObservableData.Count == 0">Update Data</SfButton>
+<SfButton @onclick="DeleteRecord" Disabled="ObservableData.Count == 0">Delete Data</SfButton>
+            
+<SfSchedule TValue="AppointmentData" @bind-SelectedDate="@CurrentDate" Width="100%" Height="550px">
+    <ScheduleEventSettings DataSource="@ObservableData"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public ObservableCollection<AppointmentData> ObservableData { get; set; }
+    List<AppointmentData> EventsCollection = new List<AppointmentData>();
+    int uniqueid = 1;
+    protected override void OnInitialized()
+    {
+        EventsCollection = Enumerable.Range(1, 4).Select(x => new AppointmentData()
+        {
+            Id = x,
+            Subject = (new string[] { "Project Discussion", "Work Flow Analysis", "Report", "Meeting", "Project Demo" })[new Random().Next(5)],
+            StartTime = new DateTime(2020, 3, 8 + x, 9, 0, 0),
+            EndTime = new DateTime(2020, 3, 8 + x, 11, 0, 0)
+        }).ToList();
+        ObservableData = new ObservableCollection<AppointmentData>(EventsCollection);
+    }
+    public void AddRecord()
+    {
+        uniqueid++;
+        ObservableData.Add(new AppointmentData() { Id = uniqueid, Subject = "Meeting", StartTime = new DateTime(2020, 3, 13, 9, 0, 0), EndTime = new DateTime(2020, 3, 13, 11, 0, 0) });
+    }
+    public void DeleteRecord()
+    {
+        if (ObservableData.Count != 0)
+        {
+            ObservableData.Remove(ObservableData.First());
+        }
+    }
+    public void UpdateRecord()
+    {
+        if (ObservableData.Count != 0)
+        {
+            var data = ObservableData.First();
+            data.Subject = "Event Updated";
+        }
+    }
+    public class AppointmentData : INotifyPropertyChanged
+    {
+        public int Id { get; set; }
+        private string subject { get; set; }
+        public string Subject
+        {
+            get { return subject; }
+            set
+            {
+                this.subject = value;
+                NotifyPropertyChanged("Subject");
+            }
+        }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+}
+```
+
 ## Performing CRUD using Entity Framework
 
 You need to follow the below steps to consume data from the **Entity Framework** in our Scheduler component.
@@ -438,7 +644,7 @@ To send an additional custom parameter to the server-side post, you need to make
 
 The value passed to the additional parameter is shown in the following image.
 
-![Passing additional parameters](./images/additional-parameters.png)
+![Passing Additional Parameters in Blazor Scheduler](./images/blazor-scheduler-additional-parameters.png)
 
 > The parameters added using the `Query` property will be sent along with the data request sent to the server on every scheduler actions.
 

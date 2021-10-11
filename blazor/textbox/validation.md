@@ -24,6 +24,4 @@ The TextBox supports three types of validation styles namely `error`, `warning`,
 <SfTextBox Placeholder="Enter your address" CssClass="e-warning"></SfTextBox>
 ```
 
-The output will be as follows.
-
-![textbox](./images/Error_states.png)
+![Validation in Blazor TextBox](./images/blazor-textbox-validation.png)

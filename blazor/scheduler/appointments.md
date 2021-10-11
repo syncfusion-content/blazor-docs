@@ -249,7 +249,7 @@ The Scheduler allows the user to edit the following recurrence events by setting
 
 The following image depicts the edited recurrence following events.
 
-![Edit Following Events](images/edit-following-events.png)
+![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.png)
 
 ### Recurrence options and rules
 
@@ -518,6 +518,55 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
     }
 }
 ```
+
+## Customize the order of the overlapping events
+
+By default, the scheduler will render the overlapping events based on the start and end time. Now we can customize the order of the overlapping events based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentSortData" Width="100%" EnableAutoRowHeight="true" @bind-SelectedDate="@CurrentDate" @bind-CurrentView="@SelectedView">
+    <ScheduleEventSettings SortBy="RankId" DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.TimelineDay"></ScheduleView>
+        <ScheduleView Option="View.TimelineWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineWorkWeek"></ScheduleView>
+        <ScheduleView Option="View.TimelineMonth"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 2, 14);
+    View SelectedView = View.Week;
+    DataSource = new List<AppointmentSortData>
+    {
+        new AppointmentSortData { Id = 1, Subject = "Rank A", RankId="A", StartTime = new DateTime(2020, 2, 13, 10, 0, 0) , EndTime = new DateTime(2020, 2, 13, 12, 0, 0) },
+        new AppointmentSortData { Id = 2, Subject = "Rank B", RankId="B", StartTime = new DateTime(2020, 2, 13, 7, 0, 0) , EndTime = new DateTime(2020, 2, 13, 15, 0, 0) },
+        new AppointmentSortData { Id = 3, Subject = "Rank C", RankId="C", StartTime = new DateTime(2020, 2, 13, 9, 0, 0) , EndTime = new DateTime(2020, 2, 13, 10, 30, 0) },
+        new AppointmentSortData { Id = 4, Subject = "Rank D", RankId="D", StartTime = new DateTime(2020, 2, 13, 9, 30, 0) , EndTime = new DateTime(2020, 2, 13, 14, 0, 0) }
+    };
+    public class AppointmentSortData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string RankId { get; set; }
+    }
+}
+```
+![Blazor Scheduler with Overlapping Events](images/blazor-scheduler-overlapping-events.png)
 
 ## Drag and drop appointments
 

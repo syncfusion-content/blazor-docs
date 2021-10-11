@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add/Remove Tab items in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Add/Remove Tab items in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about how to add or remove tab items in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -9,16 +9,16 @@ documentation: ug
 
 # Add/Remove Tab items in Blazor Tabs Component
 
-Tabs provides a support to Add/Remove the specified tab item using following ways.
+Tabs provides a support to add or remove the specified tab item using following ways.
 
 * Using conditional rendering.
 * Using public methods.
 
 ## Using conditional rendering
 
-Tab items can be added/removed dynamically by iteration of Tab Items using conditional **foreach** loop.
+Tab items can be added or removed dynamically by iteration of tab items using conditional **foreach** loop.
 
-In the following demo, initially we have three tabs as the **TabItems** has three items. On `Add Item` button click, new item is added to **TabItems** results in adding fourth tab to the Tabs component. On clicking the `Remove Item`, the first item of **TabItems** has been removed which results in removing first tab of our Tabs component.
+In the following demo, initially there are three tabs as the **TabItems** has three items. On `Add Item` button click, new item is added to the **TabItems** results in adding fourth tab to the Tabs component. On clicking the `Remove Item`, the first item of **TabItems** has been removed which results in removing first tab of our Tabs component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -88,15 +88,13 @@ In the following demo, initially we have three tabs as the **TabItems** has thre
 }
 ```
 
-Output be like the below.
-
-![Dynamic Add/Remove TabItems using loop](../images/addRemoveItemUsingConditioalRendering.gif)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-items.gif)
 
 ## Using public methods
 
-Tabs can be added dynamically by passing list of items and index value to the `AddTab` method. You can remove the tab items by passing the specified item through `RemoveTab` method. Tab items can also be removed by clicking the close icon which appears on the tab header on setting true to `ShowCloseButton` property.
+Tabs can be added dynamically by passing list of items and index value to the `AddTab` method. The tab items can be removed by passing the specified item through `RemoveTab` method. Tab items can also be removed by clicking the close icon which appears on the tab header on setting true to `ShowCloseButton` property.
 
-In the following demo, you can add a tab item as first tab and remove the last tab item by clicking the **Add Tab** and **Remove Last Tab** buttons respectively.
+In the following demo, a tab item can be added as first tab and removed as the last tab item by clicking the **Add Tab** and **Remove Last Tab** buttons respectively.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -151,6 +149,4 @@ In the following demo, you can add a tab item as first tab and remove the last t
 </style>
 ```
 
-Output be like the below.
-
-![Dynamic Add/Remove TabItems using method](../images/addRemoveItemUsingMethod.png)
+![Adding or Removing TabItems in Blazor Tabs](../images/blazor-tabs-add-remove-tabitems.png)

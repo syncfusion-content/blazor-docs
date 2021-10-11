@@ -128,4 +128,4 @@ The background and border color of the Radio Button is customized through the cu
 
 Output be like
 
-![Radio Button Sample](./../images/rb-custom.png)
+![Customizing Blazor RadioButton Appearance](./../images/blazor-radiobutton-customization.png)

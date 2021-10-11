@@ -58,4 +58,4 @@ The following example illustrates how to add and remove items in Split Button co
 
 Output be like
 
-![Split Button Sample](./../images/add-remove.png)
+![Adding or Removing Blazor SplitButton Items](./../images/blazor-splitbutton-add-remove-items.png)

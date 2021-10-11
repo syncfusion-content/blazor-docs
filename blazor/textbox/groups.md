@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Groups in Blazor TextBox Component | Syncfusion
-description: Checkout and learn here all about Groups in Syncfusion Blazor TextBox component and much more details.
+description: Checkout and learn here all about groups in Syncfusion Blazor TextBox component and much more details.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -9,120 +9,81 @@ documentation: ug
 
 # Groups in Blazor TextBox Component
 
-The following section explains you the steps required to create TextBox with `icon` and `floating label`.
+The following section explains the steps required to create TextBox with `icon` and `floating label`.
 
 **TextBox:**
 
-* Create a parent div element with the class `e-input-group`.
+Create a TextBox component.
 
-* Place input element with the class `e-input` inside the parent div element.
+```cshtml
+@using Syncfusion.Blazor.Inputs
 
-```html
-<div class="e-input-group">
-    <input class="e-input" name='input' type="text" Placeholder="Enter Date"/>
-</div>
+<SfTextBox Placeholder="Enter your name"></SfTextBox>
 ```
 
 **Floating label:**
 
-* Add the `e-float-input` class to the parent div element.
+Create a Floating label TextBox using [FloatLabelType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_FloatLabelType) API.
 
-* Remove the e-input class and add `required` attribute to the input element.
+```cshtml
+@using Syncfusion.Blazor.Inputs
 
-* Place the span element with class `e-float-line` after the input element.
-
-* Place the label element with class `e-float-text` after the above created span element. When you focus or filled with value in the TextBox, the label floats above the TextBox.
-
-> Creating the Floating label TextBox, you have to set the `required` attribute to the Input element to achieve the floating label functionality which is used for validating the value existence in TextBox.
-
-```html
-<div class="e-float-input e-input-group">
-    <input type="text" required/>
-    <span class="e-float-line"></span>
-    <label class="e-float-text">Enter Name </label>
-</div>
+<SfTextBox Placeholder="Enter your name" FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
 Refer to the following sections to add the icons to the TextBox.
 
 ## With icon and floating label
 
-Create an icon element as a span with the class `e-input-group-icon`, and the users can place the icon in either side of TextBox by adding the created icon element before/after the input.
-
-For the floating label enabled TextBox add the icon element as first or last element inside the TextBox wrapper, and based on the element position, it will act as prefix or suffix icon.
+Create a TextBox with icon and the users can place the icon in either side of the TextBox by using `AddIcon` method append the icon before or after the input. Based on the argument prepend or append, it will act as prefix or suffix icon.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<label> Input with icons </label>
-<div class="@(TextClass)">
-    <div class="e-input-in-wrap">
-        <input class="e-input" type="text" Placeholder="Enter Date" @onfocus="@Focus" @onblur="@Blur" />
-        <span class="e-input-group-icon e-input-date"></span>
-    </div>
+<div id="wrapper">
+    <label>TextBox with icon</label>
+    <SfTextBox @ref="TextBoxDateObj" Placeholder="Enter date" Created="@OnCreateDate"></SfTextBox>
+    <SfTextBox @ref="TextBoxSearchObj" Placeholder="Search here" Created="@OnCreateSearch"></SfTextBox>
+
+    <label>Floating TextBox with icon</label>
+    <SfTextBox @ref="FloatTextBoxDateObj" Placeholder="Enter date" FloatLabelType="@FloatLabelType.Auto" Created="@OnFloatCreateDate"></SfTextBox>
+    <SfTextBox @ref="FloatTextBoxSearchObj" Placeholder="Search here" FloatLabelType="@FloatLabelType.Auto" Created="@OnFloatCreateSearch"></SfTextBox>
 </div>
 
-<label> Floating label with icons </label>
-<div class="@(FloatTextClass) e-input-group e-float-icon-left">
-    <div class="e-input-in-wrap">
-        <input required type="text" @onfocus="@FlaotFocus" @onblur="@FloatBlur" />
-        <span class="e-float-line"></span>
-        <label class="e-float-text"> Enter Date </label>
-        <span class="e-input-group-icon e-input-date"></span>
-    </div>
-</div>
-
+@code{
+    SfTextBox TextBoxDateObj;
+    SfTextBox TextBoxSearchObj;
+    SfTextBox FloatTextBoxDateObj;
+    SfTextBox FloatTextBoxSearchObj;
+    public void OnCreateDate()
+    {
+        this.TextBoxDateObj.AddIconAsync("append", "e-date-icon");
+    }
+    public void OnCreateSearch()
+    {
+        this.TextBoxSearchObj.AddIconAsync("prepand", "e-search");
+    }
+    public void OnFloatCreateDate()
+    {
+        this.FloatTextBoxDateObj.AddIconAsync("append", "e-date-icon");
+    }
+    public void OnFloatCreateSearch()
+    {
+        this.FloatTextBoxSearchObj.AddIconAsync("prepand", "e-search");
+    }
+}
 <style>
-.e-input-group-icon:before {
-  font-family: e-icons;
-}
-
-.e-input-group .e-input-group-icon.e-input-date {
-  font-size:16px;
-}
-
-.e-input-group-icon.e-input-date:before {
-  content: "";
-}
+    .e-search::before {
+        content: '\e993';
+        font-family: e-icons;
+    }
+    #wrapper {
+        width: 30%;
+    }
 </style>
-
-@code {
-    private string FocusClass { get; set; } = " e-input-focus";
-    private string TextClass { get; set; } = "e-input-group";
-    private string FloatTextClass { get; set; } = "e-float-input";
-    private void Focus(FocusEventArgs args)
-    {
-        this.TextClass = this.TextClass + FocusClass;
-        StateHasChanged();
-    }
-
-    private void FlaotFocus(FocusEventArgs args)
-    {
-        this.FloatTextClass = this.FloatTextClass + FocusClass;
-        StateHasChanged();
-    }
-
-    private void Blur(FocusEventArgs args)
-    {
-       if (this.TextClass.Contains(FocusClass)) {
-            this.TextClass = this.TextClass.Replace(FocusClass, "");
-        }
-        StateHasChanged();
-    }
-
-    private void FloatBlur(FocusEventArgs args)
-    {
-       if (this.FloatTextClass.Contains(FocusClass)) {
-            this.FloatTextClass = this.FloatTextClass.Replace(FocusClass, "");
-        }
-        StateHasChanged();
-    }
-}
 ```
 
-The output will be as follows.
-
-![textbox](./images/float_with_icons.png)
+![Blazor TextBox with Icon and Floating Label](./images/blazor-textbox-float-label-and-icons.png)
 
 ## Binding events to icons
 
@@ -198,7 +159,7 @@ In the following example, the addicon method is called with multiple `touchstart
 
 The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
 
-You can add the clear button to the TextBox by enabling the `ShowClearButton` API.
+The clear button can be added to the TextBox by enabling the [ShowClearButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_ShowClearButton) API.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -209,13 +170,11 @@ You can add the clear button to the TextBox by enabling the `ShowClearButton` AP
 <SfTextBox Placeholder="FirstName" ShowClearButton=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-The output will be as follows.
-
-![textbox](./images/clear_icon.png)
+![Blazor TextBox with Clear Icon](./images/blazor-textbox-clear-icon.png)
 
 ## Multi-line input with floating label
 
-The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with float label structure.
+The following example demonstrates how to set [Multiline](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Inputs.SfTextBox.html#Syncfusion_Blazor_Inputs_SfTextBox_Multiline) in the `TextBox` component with the float label structure.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -223,6 +182,4 @@ The following example demonstrates how to set [Multiline](https://help.syncfusio
 <SfTextBox Placeholder="Enter text" Multiline=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-The output will be as follows.
-
-![textbox](./images/multiline.png)
+![Blazor Multiline TextBox with Floating Label](./images/blazor-multiline-textbox-with-floating-label.png)

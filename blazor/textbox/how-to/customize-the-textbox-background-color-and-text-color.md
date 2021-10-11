@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize Background and Text Color in Blazor TextBox Component
 
-You can customize the text box styles such as background-color, text-color and border-color by overriding its default styles.
+The text box styles can be customized such as background-color, text-color and border-color by overriding its default styles.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -47,6 +47,4 @@ You can customize the text box styles such as background-color, text-color and b
 </style>
 ```
 
-The output will be as follows.
-
-![textbox](../images/back_customization.png)
+![Blazor TextBox with Custom Background and Text Color](../images/blazor-textbox-custom-style.png)

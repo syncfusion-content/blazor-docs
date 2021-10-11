@@ -180,6 +180,7 @@ Syncfusion.Blazor.Buttons.dll
 <li>SfChip</li>
 <li>SfRadioButton</li>
 <li>SfSwitch</li>
+<li>SfIcon</li>
 </ul>
 </td>
 <td>

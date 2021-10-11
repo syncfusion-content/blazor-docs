@@ -75,4 +75,4 @@ Closes the popup.</td></tr>
 ```
 
 Output be like
-![Splitbutton Sample](./images/split-button.png)
+![Accessibility in Blazor SplitButton](./images/blazor-splitbutton.png)

@@ -23,11 +23,11 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application by using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor.Navigations** keyword in the Browse tab and install **Syncfusion.Blazor.Navigations** NuGet package in the application.
 
-    ![Individual Nuget](./images/individual-nuget.png)
+    ![Searching Blazor Sidebar NuGet Package](./images/blazor-sidebar-nuget-package.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor Navigation package will be installed in the project.
 
@@ -49,11 +49,11 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Right-click the project and then select `Manage NuGet Packages`.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![Blazor Nuget](./images/blazor-nuget.png)
+    ![Searching Blazor Nuget Package](./images/blazor-nuget.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
@@ -179,7 +179,7 @@ Now, add the Syncfusion Blazor Sidebar component in any web page (razor) in the 
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-![output](./images/browser-output.png)
+![Blazor Sidebar](./images/blazor-sidebar.png)
 
 ## Enable backdrop
 
@@ -241,7 +241,7 @@ The following example shows a Sidebar component with enabled backdrop.
 
 Output be like the below.
 
-![backdrop sample](./images/backdrop.png)
+![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
 
 ## Animate
 
@@ -298,7 +298,7 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 
 Output be like the below.
 
-![animate sample](./images/animate.png)
+![Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)
 
 ## Navigation with Sidebar
 
@@ -473,7 +473,7 @@ In the following example, the Sidebar is rendered with Accordion component in it
 
 Output be like the below.
 
-![output](./images/navigation.png)
+![Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)
 
 ## Blazor Sidebar vs native sidebar
 

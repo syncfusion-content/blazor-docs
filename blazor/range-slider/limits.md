@@ -35,7 +35,7 @@ Refer to the following snippet to enable the limits in the Slider.
 </SfSlider>
 ```
 
-![Blazor - Slider - Limits](images/minRange.gif)
+![Blazor RangeSlider with Minimum Range Limits](images/blazor-rangeslider-min-range-limit.gif)
 
 ## Range slider limits
 
@@ -53,7 +53,7 @@ In the range slider, both handles can be restricted and locked from the limit's 
 }
 ```
 
-![Blazor - Slider - Range Slider Limits](images/range.gif)
+![Blazor RangeSlider within Range](images/blazor-rangeslider-within-range.gif)
 
 ## Handle lock
 
@@ -74,4 +74,4 @@ In this sample, the movement of both slider handles has been locked.
 }
 ```
 
-![Blazor - Slider - Handle Lock](images/lock.gif)
+![Blazor RangeSlider with Handle Lock](images/blazor-rangeslider-handle-lock.gif)

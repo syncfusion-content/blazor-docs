@@ -51,4 +51,4 @@ In the following sample, vegetables are grouped according on its category using 
 
 The output will be as follows.
 
-![MultiSelect](./images/grouping.png)
+![Grouping in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-grouping.png)

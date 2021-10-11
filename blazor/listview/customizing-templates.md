@@ -58,7 +58,7 @@ In the following example, we have rendered Listview with customized header which
 }
 ```
 
-![ListView - Header template](./images/list/header-template.png)
+![Blazor ListView with Header Template](./images/list/blazor-listview-header-template.png)
 
 ## Template
 
@@ -230,7 +230,7 @@ In the following example, we have customized list items with built-in CSS classe
 
 ```
 
-![ListView - Item template](./images/list/item-template.png)
+![Blazor ListView with Item template](./images/list/blazor-listview-item-template.png)
 
 ## Group template
 
@@ -304,4 +304,4 @@ In the following example, we have grouped Listview based on the category. The ca
 
 ```
 
-![ListView - Group template](./images/list/grouping-template.png)
+![Blazor ListView with Group Template](./images/list/blazor-listview-group-template.png)

@@ -29,4 +29,4 @@ By using `e-rte-placeholder` class, you can customize the placeholder style.
 
 The output will be as follows.
 
-![Placeholder Edit](../images/placeholder-edit.png)
+![Customizing Placeholder Style in Blazor RichTextEditor](../images/blazor-richtexteditor-placeholder-style.png)
