@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Split Panes in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Split Panes in Syncfusion Blazor Splitter component and much more.
+description: Checkout and learn here all about split panes in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Split Panes in Blazor Splitter Component
 
-This section explain split-panes behaviors.
+This section explains split-panes behaviors.
 
 ## Horizontal layout
 
@@ -61,8 +61,6 @@ By default, splitter will be rendered in horizontal orientation. Splitter contai
 </style>
 
 ```
-
-The output will be as follows.
 
 ![Blazor Splitter with Horizontal Orientation](./images/blazor-splitter-horizontal-orientation.png)
 
@@ -117,15 +115,13 @@ By setting value to `Orientation` API as `Vertical`, splitter will be rendered i
 
 ```
 
-The output will be as follows.
-
 ![Blazor Splitter with Vertical Orientation](./images/blazor-splitter-vertical-orientation.png)
 
-> You can also render multiple panes in splitter with both `Horizontal/Vertical` orientations.
+> Multiple panes can also be rendered in splitter with both `Horizontal/Vertical` orientations.
 
 ## Separator
 
-By default, pane separator will be render with `1px` width/height. You can customize the separator size by using `SeparatorSize` API.
+By default, pane separator will be rendered with `1px` width or height. The separator size can be customized by using `SeparatorSize` API.
 
 > For horizontal orientation, it will be considered as separator width. For vertical orientation, it will be considered as separator height.
 
@@ -176,15 +172,13 @@ By default, pane separator will be render with `1px` width/height. You can custo
 
 ```
 
-The output will be as follows.
-
 ![Blazor Splitter with Separator](./images/blazor-splitter-separator.png)
 
 ## Nested Splitter
 
-Splitter provides support to render the nested pane to achieve the complex layouts. You can use the same `SplitterPane` tag for splitter pane and nested splitter.
+Splitter provides support to render the nested pane to achieve the complex layouts. The same `SplitterPane` tag can be used for splitter pane and nested splitter.
 
-> Also you can render the nested splitter using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
+> Also the nested splitter can be rendered using direct child of the splitter pane. For this, nested splitter should have `100%` width and height to match with the parent pane dimensions.
 
 ```cshtml
 
@@ -254,17 +248,15 @@ Splitter provides support to render the nested pane to achieve the complex layou
 
 ```
 
-The output will be as follows.
-
 ![Blazor Nested Splitter](./images/blazor-nested-splitter.png)
 
 ## Add or remove pane
 
-You can add the panes programmatic but it will makes you complex. For this, you can use the `AddPane/RemovePane` methods to add and remove the panes dynamically in the splitter.
+The panes can be added programmatically but it will be complex. For this, use the `AddPane/RemovePane` methods to add and remove the panes dynamically in the splitter.
 
 ### Add pane
 
-You can add the panes dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method
+The panescan be added dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method.
 
 ```cshtml
 
@@ -325,7 +317,7 @@ You can add the panes dynamically in the splitter by passing `PaneProperties` al
 
 ### Remove pane
 
-You can remove the split panes dynamically by passing the pane index to `RemovePane` method.
+The split panes can be removed dynamically by passing the pane index to `RemovePane` method.
 
 ```cshtml
 

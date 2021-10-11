@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Two way Binding in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Two way Binding in Syncfusion Blazor Splitter component and much more.
+description: Checkout and learn here all about two way binding in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -47,8 +47,6 @@ In the following example, if either the value is changed in checkbox or splitter
 }
 
 ```
-
-The output will be as follows.
 
 ![Data Binding in Blazor Splitter](./images/blazor-splitter-data-binding.png)
 
