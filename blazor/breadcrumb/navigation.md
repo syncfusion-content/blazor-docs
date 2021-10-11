@@ -24,12 +24,12 @@ The Breadcrumb items with relative URL contain only the path but do not locate t
 
 <SfBreadcrumb EnableNavigation="false">
     <BreadcrumbItems>
-        <BreadcrumbItem Text="Home" Url="https://blazor.syncfusion.com/demos/breadcrumb/default-functionalities"></BreadcrumbItem>
-        <BreadcrumbItem Text="Breadcrumb" Url="https://blazor.syncfusion.com/demos/breadcrumb/bind-to-location"></BreadcrumbItem>
-        <BreadcrumbItem Text="Default" Url="https://blazor.syncfusion.com/demos/breadcrumb/template-and-customization"></BreadcrumbItem>
-        <BreadcrumbItem Text="Icons" Url="https://blazor.syncfusion.com/demos/breadcrumb/events"></BreadcrumbItem>
-        <BreadcrumbItem Text="Navigation" Url="https://blazor.syncfusion.com/demos/breadcrumb/keyboard-navigation"></BreadcrumbItem>
-        <BreadcrumbItem Text="Overflow" Url="https://blazor.syncfusion.com/demos/breadcrumb/address-bar"></BreadcrumbItem>
+        <BreadcrumbItem Text="Home" Url="../"></BreadcrumbItem>
+        <BreadcrumbItem Text="Breadcrumb" Url="./breadcrumb/getting-started"></BreadcrumbItem>
+        <BreadcrumbItem Text="Default" Url="../"></BreadcrumbItem>
+        <BreadcrumbItem Text="Icons" Url="./breadcrumb/icons"></BreadcrumbItem>
+        <BreadcrumbItem Text="Navigation" Url="./breadcrumb/navigation"></BreadcrumbItem>
+        <BreadcrumbItem Text="Overflow" Url="./breadcrumb/overflow"></BreadcrumbItem>
     </BreadcrumbItems>
 </SfBreadcrumb>
 ```
