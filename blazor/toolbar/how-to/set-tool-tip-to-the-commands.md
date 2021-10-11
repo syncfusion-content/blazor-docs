@@ -32,4 +32,4 @@ Initialize the Tooltip with the Toolbar target.
 
 ```
 
-![Tooltip](../images/toolbar_tooltip.png)
+![Blazor Toolbar with Tooltip](../images/blazor-toolbar-with-tooltip.png)

@@ -98,7 +98,7 @@ public class Employee
 
 {% endtabs %}
 
-![Template ModelType](images/temptype.png)
+![Blazor TreeGrid with Model Template](images/blazor-treegrid-model-template.png)
 
 ## Template Context
 
@@ -180,7 +180,7 @@ public class Employee
 
 {% endtabs %}
 
-![Template Context](images/columntemp.png)
+![Blazor TreeGrid with Column Template](images/blazor-treegrid-column-template.png)
 
 ## TreeGridTemplates component
 
@@ -277,4 +277,4 @@ public class Employee
 
 {% endtabs %}
 
-![TreeGridTemplates Component](images/rowtemp.png)
+![Blazor TreeGrid with Row Template](images/blazor-treegrid-row-template.png)

@@ -203,4 +203,4 @@ On clicking the toggle Button, change the required icon and content based on cur
 
 ```
 
-![Toolbar Item Toggle Button](../images/item_toggle_button.gif)
+![Blazor Toolbar Item with Toggle Button](../images/blazor-toolbar-item-with-toggle-button.gif)

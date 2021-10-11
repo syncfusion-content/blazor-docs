@@ -27,4 +27,4 @@ set the [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Butto
 
 ```
 
-![Switch Sample](./../images/switch-size.png)
+![Changing Size of Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-size.png)

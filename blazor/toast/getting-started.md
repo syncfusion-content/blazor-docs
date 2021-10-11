@@ -133,7 +133,7 @@ The following code explains how to initialize a simple Toast in Razor page.
 
 After successful compilation of the application, run the application.
 
-![Toast Sample](./images/toast.png)
+![Blazor Toast](./images/blazor-toast.png)
 
 ## See Also
 

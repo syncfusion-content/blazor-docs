@@ -75,7 +75,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filtering](images/filter.png)
+![Filtering in Blazor TreeGrid](images/blazor-treegrid-filtering.png)
 
 > * Apply and clear filtering by using the [FilterByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~FilterByColumn.html) and [ClearFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearFiltering.html) methods.
 > * To disable filtering for a particular column, set the [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowFiltering.html) property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to false.
@@ -171,7 +171,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Initial Filter](images/initialfilter.png)
+![Blazor TreeGrid with Initial Filter](images/blazor-treegrid-initial-filter.png)
 
 ## Filter operators
 
@@ -381,7 +381,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filter Menu](images/filter-template.png)
+![Blazor TreeGrid with Filter Template](images/blazor-treegrid-filter-template.png)
 
 ## Filter menu
 
@@ -452,7 +452,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Filter Menu](images/filtermenu.png)
+![Displaying Filter Menu in Blazor TreeGrid](images/blazor-treegrid-filter-menu.png)
 
 > * [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) must be set as true to enable filter menu.
 > * Setting [AllowFiltering](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_AllowFiltering) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) as false will prevent filter menu rendering for a particular column.
@@ -539,7 +539,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}.
 
-![Filter Menu](images/filter-ui.png)
+![Blazor TreeGrid with Custom Filter Menu](images/blazor-treegrid-custom-filter-menu.png)
 
 ### Enable different filter for a column
 
@@ -683,4 +683,4 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Excel Filter](images/excelfilter.png)
+![Displaying Excel Filter in Blazor TreeGrid](images/blazor-treegrid-excel-filter.png)

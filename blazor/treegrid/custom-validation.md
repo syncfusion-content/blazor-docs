@@ -306,7 +306,7 @@ namespace TreeGridComponent.Data
 
 The output will be as follows.
 
-![Custom Validator](./images/custom-validator.png)
+![Blazor TreeGrid with Custom Validator](./images/blazor-treegrid-custom-validator.png)
 
 #### Display validation message using in-built tooltip
 
@@ -349,7 +349,7 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 The output will be as follows.
 
-![Custom Validator 2](./images/custom-validator3.png)
+![Blazor TreeGrid with Custom Validator](./images/blazor-treegrid-with-custom-validator.png)
 
 #### Disable in-built validator component
 
