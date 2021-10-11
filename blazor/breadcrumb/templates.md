@@ -7,7 +7,7 @@ control: Breadcrumb
 documentation: ug
 ---
 
-# Templates in Blazor Breadcrumb Component 
+# Templates in Blazor Breadcrumb Component
 
 The Breadcrumb component provides a way to customize the items using `ItemTemplate` and the separators using `SeparatorTemplate` properties.
 
