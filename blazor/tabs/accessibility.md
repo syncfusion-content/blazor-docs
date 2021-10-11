@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Tabs component and much more details.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -30,15 +30,15 @@ The following list of attributes are added in the Tab.
 
 ## Keyboard interaction
 
-By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the WAI-ARIA practices. Once focused on the active Tab element, you can use the following key combination for interacting with the Tab.
+By default, keyboard navigation is enabled. This component implements keyboard navigation support by following the WAI-ARIA practices. Once focused on the active Tab element, use the following key combination for interacting with the Tab.
 
 | Key           | Description                                                                         |
 |---------------|-------------------------------------------------------------------------------------|
 | <kbd>Left</kbd>    | Moves focus to the previous Tab. If focus is on the first Tab, the focus will not move to any Tab. |
 | <kbd>Right</kbd>   | Moves focus to the next Tab. If focus is on the last Tab element, the focus will not move to any Tab. |
-| <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focussed. Select the Tab item as active when popup item is focussed. |
+| <kbd>Enter</kbd> or <kbd> Space</kbd>  | Selects the Tab if it is not selected. Opens the popup dropdown icon if it is focused. Select the Tab item as active when popup item is focused. |
 | <kbd>Esc(Escape)</kbd>           | Closes the popup if popup is in opened state.       |
-| <kbd>Down</kbd> or <kbd>Up</kbd>   | When the popup is open and focused, it will move to previous/next Tab items of the popup in the vertical direction. |
+| <kbd>Down</kbd> or <kbd>Up</kbd>   | When the popup is open and focused, it will move to previous or next Tab items of the popup in the vertical direction. |
 |  <kbd>Home</kbd>    | Moves focus to the first Tab. |
 |  <kbd>End </kbd>   | Moves focus to the last Tab. |
 |  <kbd>Shift + F10 </kbd>   | If popup mode is enabled, it opens the popup when the Tab is focused. |
