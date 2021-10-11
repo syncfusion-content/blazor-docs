@@ -123,7 +123,7 @@ Now, add the Syncfusion Blazor Toolbar component in any web page (razor) in the 
 
 After successful compilation of the application, simply press `F5` to run the application.
 
-![Default Toolbar](./images/browser-output.png)
+![Blazor Toolbar](./images/blazor-toolbar.png)
 
 ## See Also
 

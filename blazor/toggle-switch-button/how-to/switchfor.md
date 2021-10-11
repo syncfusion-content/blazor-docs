@@ -44,4 +44,4 @@ In this sample, first check the option and click the submit button to post the s
 
 ```
 
-![Switch Sample](./../images/switch-form.png)
+![Model Binding in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.png)

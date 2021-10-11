@@ -64,4 +64,4 @@ Refer to the following code example to add and display a HTML page to the Toolti
 </style>
 ```
 
-![Blazor - Tooltip - Template](images/template.gif)
+![Blazor Tooltip with Template](images/blazor-tooltip-template.gif)

@@ -92,4 +92,4 @@ In the following demo, initially there are five toolbar as the **ToolbarItems** 
 
 ```
 
-![Dynamic Add/Remove ToolbarItems](../images/addRemoveItem.gif)
+![Adding or Removing Blazor Toolbar Items](../images/blazor-toolbar-add-or-remove-item.gif)

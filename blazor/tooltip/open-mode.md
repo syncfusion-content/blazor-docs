@@ -90,7 +90,7 @@ To open the Tooltip for multiple actions, say while hovering over or clicking on
 </style>
 ```
 
-![Tooltip - Open Mode](images/opensOn.gif)
+![Blazor Tooltip in Open Mode](images/blazor-tooltip-in-open-mode.gif)
 
 ## Sticky mode
 
@@ -122,7 +122,7 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 
 ```
 
-![Tooltip - Sticky Mode](images/Sticky.gif)
+![Blazor Tooltip in Sticky Mode](images/blazor-tooltip-sticky-mode.gif)
 
 ## Open or Close tooltip with delay
 
@@ -153,4 +153,4 @@ The Tooltips can be opened or closed after some delay by using the `OpenDelay` a
 </style>
 ```
 
-![Tooltip - Delay](images/delay.gif)
+![Blazor Tooltip with Delay](images/blazor-tooltip-delay.gif)
