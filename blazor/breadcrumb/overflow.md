@@ -12,10 +12,14 @@ documentation: ug
 ## Overflow Mode
 
 In the Breadcrumb component, `MaxItems` and `OverflowMode` properties were used to limit the number of breadcrumb items to be displayed.
+
 The following overflow modes are available in the Breadcrumb component.
-Default - Specified MaxItems count will be visible and the remaining items will be hidden. While clicking on the previous item, the hidden item will become visible.
-Collapsed - Only the first and last items will be visible, and the remaining items will be hidden in the collapsed icon. When the collapsed icon is clicked, all items will become visible.
-In the following example, the MaxItems is set as 3 with OverflowMode as Default. To prevent breadcrumb item navigation, the `EnableNavigation` property has been set to false in the Breadcrumb component.
+
+`Default` - Specified `MaxItems` count will be visible and the remaining items will be hidden. While clicking on the previous item, the hidden item will become visible.
+
+`Collapsed` - Only the first and last items will be visible, and the remaining items will be hidden in the collapsed icon. When the collapsed icon is clicked, all items will become visible.
+
+In the following example, the `MaxItems` is set as 3 with OverflowMode as Default. To prevent breadcrumb item navigation, the `EnableNavigation` property has been set to false in the Breadcrumb component.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
