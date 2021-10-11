@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pane Settings in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Pane Settings in Syncfusion Blazor Splitter component and much more.
+description: Checkout and learn here all about pane settings in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Pane Settings in Blazor Splitter Component
 
-This section explain pane settings behaviors.
+This section explains pane settings behaviors.
 
 ## Pane visibility
 
-The `Visible` property is enabled by default in the Blazor splitter. By using this property, you can show or hide the panes on initial load and in dynamic use case scenarios.
+The `Visible` property is enabled by default in the Blazor splitter. By using this property, the panes can be shown or hidden on initial load and in dynamic use case scenarios.
 
-In the following code example, bind the `Visible` property as mentioned below to show/hide the panes on CheckBox state change.
+In the following code example, bind the `Visible` property as mentioned below to show or hide the panes on CheckBox state change.
 
 ```cshtml
 
