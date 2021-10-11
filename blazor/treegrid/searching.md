@@ -73,7 +73,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Search](images/search.png)
+![Searching in Blazor TreeGrid](images/blazor-treegrid-search.png)
 
 ## Initial search
 
@@ -144,7 +144,7 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Initial Search](images/initialsearch.png)
+![Blazor TreeGri with Initial Search](images/blazor-treegrid-initial-search.png)
 
 > By default, tree grid searches all the bound column values. To customize this behavior define the [TreeGridSearchSettings.Fields](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSearchSettings~Fields.html) property.
 
