@@ -256,7 +256,7 @@ The panes can be added programmatically but it will be complex. For this, use th
 
 ### Add pane
 
-The panescan be added dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method.
+The panes can be added dynamically in the splitter by passing `PaneProperties` along with index to the `AddPane` method.
 
 ```cshtml
 
