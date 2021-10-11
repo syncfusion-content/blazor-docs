@@ -87,70 +87,50 @@ Create a TextBox with icon and the users can place the icon in either side of th
 
 ## Binding events to icons
 
-**Add the Icon with single Event in Blazor TextBox Component**
+You can bind the event to the icons by passing events as parameter to the AddIcon method. You can bind the single or multiple events to the icons.
 
-Add the icon to TextBox by `addicon` public method. Using public method we can add the events to the component by adding the third parameter value. 
-
-In the following example, the addicon method is called with single `touchstart` event binding on textbox `e-icon-pan` icon.
+The following sample demonstrates binding events to the icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
 
-<SfTextBox @ref="@TouchIcon" Created="@onCreateTouchIcon"></SfTextBox>
+<label>Single Event</label>
+<SfTextBox @ref="@TextBoxSearchObj" Created="@OnCreateSearch"></SfTextBox>
+
+<label>Multiple Events</label>
+<SfTextBox @ref="@TextBoxDateObj" Created="@OnCreateDate"></SfTextBox>
 @code {
-    SfTextBox TouchIcon;
-    public async Task onCreateTouchIcon()
-	{
-        // Event creation with event handler
-		var touchStart = EventCallback.Factory.Create<TouchEventArgs>(this, touchIconStart);
+    SfTextBox TextBoxSearchObj;
+	SfTextBox TextBoxDateObj;
 
-        // Touchstart event binding with addicon public method third argument 
-		await TouchIcon.AddIcon("prepend", "e-icon-pan", new Dictionary<string, object>() { { "ontouchstart", touchStart } });
+	public async Task OnCreateSearch()
+	{		 
+		var Click = EventCallback.Factory.Create<MouseEventArgs>(this, SearchClick);
+		// Event creation with event handler 
+		await TextBoxSearchObj.AddIcon("append", "e-search-icon", new Dictionary<string, object>() { { "onclick", Click }});
 	}
 
-    public void touchIconStart()
+	public void SearchClick()
 	{
-		// Icon touch start Event triggered
-	}
-}
-```
-
-**Add the Icon with multiple Event in Blazor TextBox Component**
-
-We can add the single icon with multiple event and multiple icons with multiple event support to the textbox component.
-
-In the following example, the addicon method is called with multiple `touchstart`, `mouseover` and `mouseleave` event binding on textbox `e-icon-pan` icon.
-
-```cshtml
-@using Syncfusion.Blazor.Inputs
-
-<SfTextBox @ref="@TouchIcon" Created="@onCreateTouchIcon"></SfTextBox>
-@code {
-    SfTextBox TouchIcon;
-    public async Task onCreateTouchIcon()
-	{
-        // Event creation with event handler
-		var touchStart = EventCallback.Factory.Create<TouchEventArgs>(this, touchIconStart);
-        var touchHover = EventCallback.Factory.Create<MouseEventArgs>(this, touchIconMouseHover);
-		var touchLeave = EventCallback.Factory.Create<MouseEventArgs>(this, touchIconLeave);\
-
-        // Event binding with addicon public method third argument 
-		await TouchIcon.AddIcon("prepend", "e-icon-pan", new Dictionary<string, object>() { { "ontouchstart", touchStart }, { "onmouseover", touchHover }, { "onmouseleave", touchLeave }, });
+		// Icon Click Event triggered
+		this.value += "Icon Click Event triggered \n";
 	}
 
-    public void touchIconStart()
+	public async Task OnCreateDate()
 	{
-		// Icon touch start Event triggered
-	}
+		var MouseDown = EventCallback.Factory.Create<MouseEventArgs>(this, DateMouseDown);
+		var MouseUp = EventCallback.Factory.Create<MouseEventArgs>(this, DateMouseUp);
+		// Event creation with event handler 
+		await TextBoxDateObj.AddIcon("prepend", "e-date-icon", new Dictionary<string, object>() {{ "onmouseup", MouseUp }, { "onmousedown", MouseDown } });
+	}	
 
-    public void touchIconMouseHover()
+	public void DateMouseDown()
 	{
-		// Icon mouse hover Event triggered
+		// Icon mouse down Event triggered
 	}
-
-	public void touchIconLeave()
+	public void DateMouseUp()
 	{
-		// Icon mouse leave Event triggered
+		// Icon mouse up Event triggered
 	}
 }
 ```
