@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Crosshair in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Crosshair in Syncfusion Blazor Stock Chart component and much more.
+description: Checkout and learn here all about crosshair in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug

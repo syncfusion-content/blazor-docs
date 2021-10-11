@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Keyboard Shortcuts | Syncfusion
-description: Checkout and learn here all about Keyboard shortcuts in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about keyboard shortcuts in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Keyboard interaction
 
-You can use the following key shortcuts to access the Splitter without interruptions:
+The following key shortcuts can be used to access the Splitter without interruptions:
 
 | **Keyboard shortcuts** | **Actions** |
 | --- | --- |
