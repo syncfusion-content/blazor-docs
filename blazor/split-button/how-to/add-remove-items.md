@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add and Remove Items in Blazor SplitButton Component | Syncfusion
-description: Checkout and learn here all about Add and Remove Items in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about how to add and remove items in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Add and Remove Items in Blazor SplitButton Component
 
-Split Button component can be dynamically add or remove items using  `AddItems`, `RemoveItems` method.
-
-The following example illustrates how to add and remove items in Split Button component.
+Split Button component can dynamically add or remove items using  `AddItems`, `RemoveItems` method.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -55,7 +53,5 @@ The following example illustrates how to add and remove items in Split Button co
 
   
 ```
-
-Output be like
 
 ![Adding or Removing Blazor SplitButton Items](./../images/blazor-splitbutton-add-remove-items.png)

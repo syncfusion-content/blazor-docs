@@ -11,13 +11,13 @@ documentation: ug
 
 # Getting Started with Blazor SplitButton Component
 
-This section briefly explains about how to include Split Button Component in your Blazor server-side  application. You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include Split Button Component in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 1. Install the **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
+2. The client-side style resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 
     > Please ensure to check the **Include prerelease** option.
 
@@ -68,7 +68,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN. Disable the resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>
@@ -95,7 +95,7 @@ Now, add the Syncfusion Blazor Split Button component in `razor` page in the `Pa
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The Blazor Split Button component will render in the web browser as shown below
+After successful compilation of the application, simply press F5 to run the application. The Blazor Split Button component will render in the web browser.
 
 ![Blazor SplitButton](./images/blazor-splitbutton.png)
 
