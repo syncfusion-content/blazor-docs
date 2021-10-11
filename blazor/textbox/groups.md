@@ -113,7 +113,6 @@ The following sample demonstrates binding events to the icons.
 	public void SearchClick()
 	{
 		// Icon Click Event triggered
-		this.value += "Icon Click Event triggered \n";
 	}
 
 	public async Task OnCreateDate()
