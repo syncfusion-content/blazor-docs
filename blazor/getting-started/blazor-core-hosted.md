@@ -157,7 +157,9 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     var app = builder.Build();
     ....
     ....
+    ```
 
+    ```c#
     // For .NET 5.0 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
 

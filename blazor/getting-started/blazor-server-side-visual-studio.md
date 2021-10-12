@@ -10,7 +10,7 @@ documentation: ug
 
 # Getting started with Blazor Server Side App in Visual Studio
 
-This article provides a step-by-step introduction to configure Syncfusion Blazor setup,and also to build and run a simple Blazor Server Side application using [Visual Studio](https://visualstudio.microsoft.com/vs/).
+This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
 > Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
 
@@ -79,7 +79,19 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 3. Once the installation process is completed, the Syncfusion Blazor Calendars package will be installed in the project.
 
-4. For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page. For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+4. Now, add the Syncfusion Blazor theme to the Blazor Server App.
+
+    a) For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
+
+    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -105,13 +117,25 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
-4. For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page. For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+4. Now, add the Syncfusion Blazor theme to the Blazor Server App.
+
+    a) For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
 
     ```html
     <head>
         ....
         ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    </head>
+    ```
+
+    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+
+    ```html
+    <head>
+        ....
+        ....
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
 
@@ -126,7 +150,9 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     @using Syncfusion.Blazor.Calendars
     ```
 
-2. For **.NET 6.0** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service. For **.NET 5.0** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+2. Now, register the Syncfusion Blazor Service to the Blazor Server App.
+
+    a) For **.NET 6.0** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
     // For .NET 6.0 project, add the Syncfusion Blazor Service in Program.cs file.
@@ -143,7 +169,11 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     var app = builder.Build();
     ....
     ....
+    ```
 
+    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+
+    ```c#
     // For .NET 5.0 or .NET Core SDK 3.1 project, add the Syncfusion Blazor Service in Startup.cs file.
     using Syncfusion.Blazor;
 
