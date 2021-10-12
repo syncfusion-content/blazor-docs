@@ -258,7 +258,7 @@ public class TreeData
 
 ## Row template
 
-To know about Row Template in Blazor treeg grid Component, you can check this video.
+To know about Row Template in Blazor tree grid Component, you can check this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
