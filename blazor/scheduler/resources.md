@@ -452,7 +452,7 @@ Resource grouping support allows the Scheduler to group the resources in a hiera
 To get start quickly about grouping multiple resource on scheduler, you can check on this video:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=XD3IYl9lkms"%}
+"youtube:https://www.youtube.com/watch?v=70qD6wycxAk"%}
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 
