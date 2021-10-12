@@ -87,7 +87,7 @@ Create a TextBox with icon and the users can place the icon in either side of th
 
 ## Binding events to icons
 
-You can bind the event to the icons by passing events as parameter to the AddIcon method. You can bind the single or multiple events to the icons.
+You can bind the event to the icons by passing events as a parameter to the AddIcon method. You can bind the single or multiple events to the icons.
 
 The following sample demonstrates binding events to the icons.
 
@@ -112,7 +112,7 @@ The following sample demonstrates binding events to the icons.
 
 	public void SearchClick()
 	{
-		// Icon Click Event triggered
+		// Icon Click event triggered
 	}
 
 	public async Task OnCreateDate()
@@ -125,11 +125,11 @@ The following sample demonstrates binding events to the icons.
 
 	public void DateMouseDown()
 	{
-		// Icon mouse down Event triggered
+		// Icon mouse down event triggered
 	}
 	public void DateMouseUp()
 	{
-		// Icon mouse up Event triggered
+		// Icon mouse up event triggered
 	}
 }
 ```
