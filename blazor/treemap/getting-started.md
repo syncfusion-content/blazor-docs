@@ -100,7 +100,7 @@ Use the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tre
 }
 ```
 
-![TreeMap basic sample](images/treemap-basic.png)
+![Blazor TreeMap](images/blazor-treemap.png)
 
 ## Adding labels in TreeMap items
 
@@ -116,7 +116,7 @@ Add label text to the leaf items in the TreeMap component by setting the field n
 
 > Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![TreeMap with label](images/treemap-with-label.png)
+![Blazor TreeMap with Label](images/blazor-treemap-with-label.png)
 
 ## Adding title to TreeMap
 
@@ -133,7 +133,7 @@ Add a title using the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Bl
 
 > Refer to the [code block](#adding-treemap-component) to know the property value of the **GrowthReport**.
 
-![TreeMap with title](images/treemap-with-title.png)
+![Blazor TreeMap with Title](images/blazor-treemap-with-title.png)
 
 ## Apply color mapping
 
@@ -156,7 +156,7 @@ The color mapping supports customization of item colors based on the underlying 
 
 > Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![TreeMap with color mapping](images/Colormapping.png)
+![Blazor TreeMap with Color Mapping](images/blazor-treemap-color-mapping.png)
 
 ## Enable legend
 
@@ -180,7 +180,7 @@ Legend items are used to denote the color mapping categories and show the legend
 
 > Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![TreeMap with legend](images/Legend.png)
+![Blazor TreeMap with Legend](images/blazor-treemap-legend.png)
 
 ## Enable tooltip
 
@@ -205,7 +205,7 @@ When space constraints prevents from displaying information using data labels, t
 
 > Refer to the [code block](#adding-treemap-component) to know about the property value of the **GrowthReport**.
 
-![TreeMap with legend](images/Tooltip.png)
+![Blazor TreeMap with Tooltip](images/blazor-treemap-tooltip.png)
 
 ## See also
 
