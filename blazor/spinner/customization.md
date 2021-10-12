@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize the Spinner in Blazor Spinner Component | Syncfusion
-description: Checkout and learn here all about Customize the Spinner in Syncfusion Blazor Spinner component and more.
+description: Checkout and learn here all about how to customize the Spinner in Syncfusion Blazor Spinner component and more.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize the Spinner in Blazor Spinner Component
 
-You can customize the Spinner component when initializing or after rendering it.
+The Spinner component can be customized when initializing or after rendering it.
 
 ## Customize when initializing the Spinner component
 
@@ -62,9 +62,7 @@ Add the customized `Class` name to a Spinner root element to customize the Blazo
 
 #### Modal Spinner
 
-You can initialize a modal spinner by adding the class `e-spin-overlay` to the `CssClass` property of the spinner.
-
-The following code explains how to render modal spinner.
+A modal spinner can be initialized by adding the class `e-spin-overlay` to the `CssClass` property of the spinner.
 
 ```cshtml
 
@@ -136,7 +134,7 @@ The following code explains how to set the `Label` on Spinner in Blazor Razor pa
 
 ### Type
 
-By default, the `Type` is `None` where the Blazor Spinner is loaded based on the theme used in the application. You can also customize the type and show it on Spinner using the `Type` property. The available types are:
+By default, the `Type` is `None` where the Blazor Spinner is loaded based on the theme used in the application. The type can also be customized and shown on Spinner using the `Type` property. The available types are:
 
 * None
 * Material
@@ -178,7 +176,7 @@ The following code explains how to use the `Type` property when initializing Spi
 
 ### Size
 
-By default, the Spinner size is `30px`.  You can change the size of the Spinner based on your application using the `Size` property.
+By default, the Spinner size is `30px`. The size of the Spinner can be changed based on the application using the `Size` property.
 
 The following code explains how to use the `Size` property when initializing Spinner in Blazor Razor page.
 
@@ -220,7 +218,7 @@ The Spinner component can be customized dynamically after initialize the Spinner
 
 ### Type
 
-You can dynamically change the type of the Spinner using the `Type` property.
+The type of the Spinner can dynamically be changed using the `Type` property.
 
 The following code explains how to use the `Type` property after creating the Spinner in Blazor Razor page.
 
