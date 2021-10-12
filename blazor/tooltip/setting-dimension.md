@@ -28,7 +28,7 @@ The Tooltip can either be assigned with auto height and width values or specific
 }
 ```
 
-![Tooltip - Dimension](images/dimension.gif)
+![Blazor Tooltip with Dimension](images/blazor-tooltip-dimension.gif)
 
 ### Scroll mode
 
@@ -55,6 +55,6 @@ When `Height` is specified with a certain pixel value and the Tooltip content ov
 }
 ```
 
-![Tooltip - Scroll Mode](images/scroll.gif)
+![Scrolling in Blazor Tooltip](images/blazor-tooltip-scrolling.gif)
 
 > The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the `IsSticky` property to true.

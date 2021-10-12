@@ -39,4 +39,4 @@ The Toolbar supports adding template commands using the  `Template` property. Te
 
 ```
 
-![Toolbar Item Custom Template](../images/toolbar_custom_template.png)
+![Blazor Toolbar Item with Custom Template](../images/blazor-toolbar-item-custom-template.png)

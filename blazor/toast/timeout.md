@@ -84,7 +84,7 @@ The toast can be expired based on the `Timeout` property. The toast can live til
 
 ```
 
-![TimeOut](./images/timeout.png)
+![TimeOut in Blazor Toast](./images/blazor-toast-timeout.png)
 
 ## Static toast
 
@@ -125,4 +125,4 @@ Auto hiding can be prevented in a toast as visible like static by setting zero (
 
 ```
 
-![TimeOut](./images/timeout-static.png)
+![TimeOut in Blazor Static Toast](./images/blazor-static-toast-timeout.png)

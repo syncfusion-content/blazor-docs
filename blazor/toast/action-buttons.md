@@ -66,7 +66,7 @@ In the following code, toast buttons are configured using `ToastButton` property
 
 ```
 
-![Action button](./images/action-button.png)
+![Blazor Toast with Action button](./images/blazor-toast-action-button.png)
 
 ## See Also
 

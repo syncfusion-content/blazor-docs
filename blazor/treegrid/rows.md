@@ -102,7 +102,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Customize Rows](images/row-styling.png)
+![Customizing Blazor TreeGrid Rows](images/blazor-treegrid-row-customization.png)
 
 ## Styling alternate rows
 
@@ -184,7 +184,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Styling Alternate Rows](images/styaltrows.png)
+![Customizing Alternate Rows in Blazor TreeGrid](images/blazor-treegrid-alternate-rows-customization.png)
 
 ## Row height
 
@@ -254,7 +254,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Row Height](images/rowheight.png)
+![Blazor TreeGrid with Custom Row Height](images/blazor-treegrid-custom-row-height.png)
 
 ## Row template
 
@@ -357,7 +357,7 @@ public class Employee
 
 {% endtabs %}
 
-![Row Template](images/rowtemp.png)
+![Blazor TreeGrid with Row Template](images/blazor-treegrid-row-template.png)
 
 ### Row template with formatting
 
@@ -461,7 +461,7 @@ public class Employee
 
 {% endtabs %}
 
-![RowTemplate with Formatting](images/rowtempformat.png)
+![Blazor TreeGrid Row Template with Formatting](images/blazor-treegrid-row-template-formatting.png)
 
 ### Limitations
 
@@ -560,7 +560,7 @@ public class Employee
 
 {% endtabs %}
 
-![Detail Template](images/dettemp.png)
+![Blazor TreeGrid with Detail Template](images/blazor-treegrid-detail-template.png)
 
 <!-- Customize row height for particular row
 
@@ -1132,7 +1132,7 @@ public class WrapData
 
 {% endtabs %}
 
-![Drag and drop within TreeGrid](images/draganddrop.png)
+![Drag and Drop within Blazor TreeGrid Rows](images/blazor-treegrid-drag-and-drop-rows.png)
 
 > Selection feature must be enabled for row drag and drop.
 > For multiple row selection, the type property must be set to multiple.
@@ -1667,7 +1667,7 @@ public class WrapData
 
 {% endtabs %}
 
-![ Drag and drop to another TreeGrid](images/dragdropanothergrid.png)
+![Drag and Drop Row between Different Blazor TreeGrid](images/blazor-treegrid-drag-drop-row.png)
 
 ### Drag and drop events
 

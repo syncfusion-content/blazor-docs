@@ -53,7 +53,7 @@ It specifies the location for aligning Toolbar items on the Toolbar. Each comman
 
 ```
 
-![Item Align](./images/item_align.png)
+![Aligning Blazor Toolbar Item](./images/blazor-toolbar-align-item.png)
 
 ## CssClass
 
@@ -86,7 +86,7 @@ It specifies the unique ID to be used with button or input element of the Toolba
 
 ```
 
-![Item Id](./images/item_align.png)
+![Blazor Toolbar Item with Id](./images/blazor-toolbar-align-item.png)
 
 ## Overflow
 
@@ -132,7 +132,7 @@ It defines the priority of items to display it in popup always. It allows to mai
 
 ```
 
-![Item ShowAlwaysInPopup](./images/item_alwaysinpopup.png)
+![Displaying Blazor Toolbar Item in Popup](./images/blazor-toolbar-item-in-popup.png)
 
 ## ShowTextOn
 
@@ -184,7 +184,7 @@ It defines single/multiple classes separated by space used to specify an icon fo
 </SfToolbar>
 ```
 
-![Item SuffixIcon](./images/item_suffixicon.png)
+![Blazor Toolbar displays Icon in Suffix Item](./images/blazor-toolbar-icon-in-suffix-item.png)
 
 >you can refer [here](https://blazor.syncfusion.com/documentation/appearance/icons#icon-integration-in-button-component) to integrate the syncfusion icons in toolbar component.
 
@@ -220,7 +220,7 @@ It is used to specify the text to be displayed on hovering the Toolbar button.
 
 ```
 
-![Item TooltipText](./images/item_tooltiptext.png)
+![Blazor Toolbar Item with Tooltip](./images/blazor-toolbar-item-tooltip.png)
 
 ## Type
 
@@ -269,7 +269,7 @@ The `Separator` type adds a vertical separation between the Toolbar's Single/Mul
 
 > If `Separator` is added as the first or the last item, it will not be visible.
 
-![Item Separator](./images/item_separator.png)
+![Blazor Toolbar Item with Separator](./images/blazor-toolbar-item-separator.png)
 
 ### Input
 
@@ -372,7 +372,7 @@ The following code explains how to add `NumericTextBox`, `DropDownList`, `RadioB
 }
 ```
 
-![Toolbar Control with item configuration](./images/toolbar_template.png)
+![Blazor Toolbar Item with Other Components](./images/blazor-toolbar-item-with-other-components.png)
 
 ## Visible
 
@@ -396,7 +396,7 @@ It specifies whether an item should be hidden or not.
 
 ```
 
-![Item Visible](./images/item_visible.png)
+![Hiding Blazor Toolbar Item](./images/blazor-toolbar-hidden-item.png)
 
 ## Width
 
@@ -420,4 +420,4 @@ It specifies the width of the Toolbar button commands.
 
 ```
 
-![Item Width](./images/item_width.png)
+![Blazor Toolbar Item with Custom Width](./images/blazor-toolbar-item-custom-width.png)

@@ -40,7 +40,7 @@ Tooltips can be attached to 12 static locations around the target. On initializi
 }
 ```
 
-![Tooltip - Position](images/position.gif)
+![Changing Blazor Tooltip Position](images/blazor-tooltip-position.gif)
 
 ## Mouse trailing
 
@@ -71,7 +71,7 @@ Tooltips can be positioned relative to the mouse pointer. This behavior can be e
 </style>
 ```
 
-![Tooltip - Mouse Trail](images/mouse-trail.gif)
+![Blazor Tooltip with Mouse Trail](images/blazor-tooltip-mouse-trail.gif)
 
 > When mouse trailing option is enabled, the tip pointer position gets auto adjusted based on the target, and other position values like start, end, and middle are not applied (to prevent the pointer from moving out of target).
 
@@ -108,6 +108,6 @@ Offset values are set to specify the distance between the target and tooltip ele
 
 ```
 
-![Tooltip - Offset Value](images/Offset.gif)
+![Blazor Tooltip with Offset Value](images/blazor-tooltip-offset-value.gif)
 
 > By default, collision is handled automatically and therefore when collision is detected the Tooltip fits horizontally and flips vertically.

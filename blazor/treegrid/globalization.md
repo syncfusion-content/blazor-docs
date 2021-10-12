@@ -519,7 +519,7 @@ public class TreeData
 {% endtabs %}
 
 
-![Localization](images/localization.png)
+![Localization in Blazor TreeGrid](images/blazor-treegrid-localization.png)
 
 ## Internationalization
 
@@ -2751,7 +2751,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Internationalization](images/international.png)
+![Internationalization in Blazor TreeGrid](images/blazor-treegrid-internationalization.png)
 
 > * In the above sample, **Duration** column is formatted by **NumberFormatOptions**.
 > * By default, **locale** value is **en-US**. In order to change the **en-US** culture to a different culture, set the **SetCulture** method accordingly.
@@ -2883,4 +2883,4 @@ public class TreeData
 {% endtabs %}
 
 
-![RTL](images/rtl.png)
+![Right to Left in Blazor TreeGrid](images/blazor-treegrid-right-to-left.png)
