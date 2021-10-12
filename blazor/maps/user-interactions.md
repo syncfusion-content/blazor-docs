@@ -80,15 +80,15 @@ By default, the toolbar is rendered with **Zoom In**, **Zoom Out**, and **Reset*
 
 ##### Customization of zooming toolbar
 
-The `MapsZoomToolbarSettings` class can be used to customize the zooming toolbar. The following properties are available for customization in the `MapsZoomToolbarSettings` class.
+The [MapsZoomToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html) class can be used to customize the zooming toolbar. The following properties are available for customization in the `MapsZoomToolbarSettings` class.
 
-* [Orientation]() - To customize the orientation of the zooming toolbar.
-* [HorizontalAlignment]() - To customize the position type of toolbar when it is placed horizontally.
-* [VerticalAlignment]() - To customize the position type of toolbar when it is placed vertically.
-* [BackgroundColor]() - To customize the background color of the zooming toolbar.
-* [BorderColor]() - To apply the border color to the zooming toolbar.
-* [BorderWidth]() - To set width to the border of the zooming toolbar.
-* [BorderOpacity]() - To set opacity to the border of the zooming toolbar.
+* [Orientation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_Orientation) - To customize the orientation of the zooming toolbar.
+* [HorizontalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_HorizontalAlignment) - To customize the position type of toolbar when it is placed horizontally.
+* [VerticalAlignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_VerticalAlignment) - To customize the position type of toolbar when it is placed vertically.
+* [BackgroundColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BackgroundColor) - To customize the background color of the zooming toolbar.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BorderColor) - To apply the border color to the zooming toolbar.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BorderWidth) - To set width to the border of the zooming toolbar.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarSettings_BorderOpacity) - To set opacity to the border of the zooming toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -107,19 +107,19 @@ The `MapsZoomToolbarSettings` class can be used to customize the zooming toolbar
 
 ![Maps with custom zoom toolbar](./images/UserInteraction/custom-toolbar.png)
 
-The `MapsZoomToolbarButton` class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
+The [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html) class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
 
-* [ToolbarItems]() - To customize the items that are to be shown in the zooming toolbar.
-* [Color]() - To apply the color to the icons in the buttons in the zooming toolbars.
-* [Fill]() - To apply the fill color to the buttons in the zooming toolbars.
-* [Opacity]() - To apply the opacity for the buttons in the zooming toolbars.
-* [HighlightColor]() - To apply the color for the buttons in the zooming toolbar when the mouse has hovered on the toolbar element.
-* [SelectionColor]() - To apply the color for the buttons in the zooming toolbar when clicking the zooming toolbar.
-* [Radius]() - To set the radius for the buttons in the zooming toolbars.
-* [Padding]() - To set the spacing between the buttons in the zooming toolbars.
-* [BorderColor]() - To set the color in the border of the buttons in the zooming toolbars.
-* [BorderOpacity]() - To set the opacity in the border of the buttons in the zooming toolbars.
-* [BorderWidth]() - To set the width of the border of the buttons in the zooming toolbars.
+* [ToolbarItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_ToolbarItems) - To customize the items that are to be shown in the zooming toolbar.
+* [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Color) - To apply the color to the icons in the buttons in the zooming toolbars.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Fill) - To apply the fill color to the buttons in the zooming toolbars.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Opacity) - To apply the opacity for the buttons in the zooming toolbars.
+* [HighlightColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_HighlightColor) - To apply the color for the buttons in the zooming toolbar when the mouse has hovered on the toolbar element.
+* [SelectionColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_SelectionColor) - To apply the color for the buttons in the zooming toolbar when clicking the zooming toolbar.
+* [Radius](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Radius) - To set the radius for the buttons in the zooming toolbars.
+* [Padding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_Padding) - To set the spacing between the buttons in the zooming toolbars.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_BorderColor) - To set the color in the border of the buttons in the zooming toolbars.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_BorderOpacity) - To set the opacity in the border of the buttons in the zooming toolbars.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html#Syncfusion_Blazor_Maps_MapsZoomToolbarButton_BorderWidth) - To set the width of the border of the buttons in the zooming toolbars.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -141,19 +141,19 @@ The `MapsZoomToolbarButton` class can be used to customize the buttons in the zo
 
 ![Maps with custom zoom toolbar buttons](./images/UserInteraction/custom-toolbar-buttons.png)
 
-The `MapsZoomToolbarTooltipSettings` class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
+The [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html) class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
 
-* [Visible]() - To enable or disable the tooltip in the zooming toolbar.
-* [Fill]() - To set the fill color to the tooltip in the zooming toolbar.
-* [BorderColor]() - To set the color in the border of the tooltip in the zooming toolbar.
-* [BorderOpacity]() - To set the opacity in the border of the tooltip in the zooming toolbar.
-* [BorderWidth]() - To set the width of the border of the tooltip in the zooming toolbar.
-* [FontColor]() - To set the text color in the tooltip of the zooming toolbar.
-* [FontFamily]() - To set the font family in the tooltip of the zooming toolbar.
-* [FontStyle]() - To set the font style in the tooltip of the zooming toolbar.
-* [FontWeight]() - To set the font weight in the tooltip of the zooming toolbar.
-* [FontSize]() - To set the font size in the tooltip of the zooming toolbar.
-* [FontOpacity]() - To set the font opacity in the tooltip of the zooming toolbar.
+* [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_Visible) - To enable or disable the tooltip in the zooming toolbar.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_Fill) - To set the fill color to the tooltip in the zooming toolbar.
+* [BorderColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_BorderColor) - To set the color in the border of the tooltip in the zooming toolbar.
+* [BorderOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_BorderOpacity) - To set the opacity in the border of the tooltip in the zooming toolbar.
+* [BorderWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_BorderWidth) - To set the width of the border of the tooltip in the zooming toolbar.
+* [FontColor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontColor) - To set the text color in the tooltip of the zooming toolbar.
+* [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontFamily) - To set the font family in the tooltip of the zooming toolbar.
+* [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontStyle) - To set the font style in the tooltip of the zooming toolbar.
+* [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontWeight) - To set the font weight in the tooltip of the zooming toolbar.
+* [FontSize](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontSize) - To set the font size in the tooltip of the zooming toolbar.
+* [FontOpacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html#Syncfusion_Blazor_Maps_MapsZoomToolbarTooltipSettings_FontOpacity) - To set the font opacity in the tooltip of the zooming toolbar.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps

@@ -69,4 +69,4 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 The output will be as follows.
 
-![multiselect](../images/tooltip.png)
+![Blazor MultiSelect DropDown displays Tooltip](../images/blazor-multiselect-dropdown-tooltip.png)

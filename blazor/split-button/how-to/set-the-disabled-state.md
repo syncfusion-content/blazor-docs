@@ -28,4 +28,4 @@ The following example illustrates how to set the disable state in Split Button c
 
 Output be like
 
-![Split Button Sample](./../images/sb-disabled.png)
+![Blazor SplitButton in Disabled State](./../images/blazor-splitbutton-disabled-state.png)

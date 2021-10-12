@@ -137,7 +137,7 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 
 On successful compilation of your application, the Syncfusion Blazor Stock Chart component will render in the web browser as shown below.
 
-![stock chart](images/stock-chart.png)
+![Blazor Stock Chart](images/blazor-stock-chart.png)
 
 ## Adding Title
 
@@ -180,7 +180,7 @@ You can add a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![StockChart Title](images/title.png)
+![Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)
 
 ## Adding Crosshair
 
@@ -220,7 +220,7 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 
 ```
 
-![Crosshair](images/crosshair.png)
+![Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)
 
 ## Adding Trackball
 
@@ -263,7 +263,7 @@ The trackball is used to track a closest data point  to the mouse or touch posit
 
 ```
 
-![Trackball](images/trackball.png)
+![Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)
 
 > You can find the fully working sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorApp491318120.zip).
 

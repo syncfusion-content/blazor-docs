@@ -18,9 +18,9 @@ This section briefly explains how to include a simple `Range Slider` in your Bla
 ### Using Syncfusion.Blazor NuGet Package [New standard]
 
 1. Install **Syncfusion.Blazor.Inputs** NuGet package to the application by using the `NuGet Package Manager`. Refer to the Individual NuGet Packages section for the available NuGet packages.
-![nuget explorer](images/nuget-explorer1.png)
+![Blazor RangeSlider NuGet Explorer](images/blazor-rangeslider-nuget-explorer.png)
 2. Search Syncfusion.Blazor.Inputs keyword in the Browse tab and install Syncfusion.Blazor.Inputs NuGet package in the application.
-![select nuget](images/individual-nuget.png)
+![Searching Blazor RangeSlider NuGet Package](images/blazor-rangeslider-search-nuget-package.png)
 3. Once the installation process is completed, the Syncfusion Blazor Inputs package will be installed in the project. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```html
@@ -49,9 +49,9 @@ This section briefly explains how to include a simple `Range Slider` in your Bla
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
-![nuget explorer](images/nuget-explorer1.png)
+![Blazor RangeSlider NuGet Explorer](images/blazor-rangeslider-nuget-explorer.png)
 2. Search Syncfusion.Blazor keyword in the Browse tab and install Syncfusion.Blazor NuGet package in the application.
-![select nuget](images/select-nuget2.png)
+![Searching Blazor NuGet Package](images/blazor-nuget-package.png)
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
     W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the below `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
@@ -145,7 +145,7 @@ After successful compilation of your application, simply press `F5` to run the a
 
 Output be like the below.
 
-![Slider Sample](images/slider.gif)
+![Blazor RangeSlider](images/blazor-rangeslider.gif)
 
 ## See Also
 

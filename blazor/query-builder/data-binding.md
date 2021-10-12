@@ -14,11 +14,11 @@ The [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-q
 * List Binding
 * Remote data
 
-> When using DataSource as `IEnumerable<T>` component type(TValue) will be inferred from its value. When using SfDataManager for data binding then the TValue must be provided explicitly in the querybuilder component.
+> When using DataSource as `IEnumerable<T>` component type(TValue) will be inferred from its value. When using SfDataManager for data binding then the TValue must be provided explicitly in the query builder component.
 
 ## List Binding
 
-To bind list datas to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), you can assign the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property with a list of datas.
+To bind list data's to the [Blazor Query Builder](https://www.syncfusion.com/blazor-components/blazor-query-builder), you can assign the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.SfQueryBuilder.html#Syncfusion_Blazor_QueryBuilder_SfQueryBuilder_DataSource) property with a list of data's.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -135,7 +135,7 @@ The ODataV4 is an improved version of OData protocols, and the `SfDataManager` c
 
 ### Web API
 
-You can use WebApiAdaptor to bind querybuilder with Web API created using OData endpoint.
+You can use WebApiAdaptor to bind query builder with Web API created using OData endpoint.
 
 ```cshtml
 
@@ -167,6 +167,6 @@ You can use WebApiAdaptor to bind querybuilder with Web API created using OData 
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-remotedata.png)
+![Data Binding in Blazor QueryBuilder](./images/blazor-querybuilder-data-binding.png)
 
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

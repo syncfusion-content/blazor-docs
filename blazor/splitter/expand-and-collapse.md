@@ -64,7 +64,7 @@ The following code shows how to enable collapsible behavior.
 
 The output will be as follows.
 
-![Expand and Collapse](./images/expand-collapse-default.png)
+![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse.png)
 
 ## Programmatically control the expand and collapse action
 
@@ -143,7 +143,7 @@ The Splitter provides public method to control the expand and collapse behavior 
 
 The output will be as follows.
 
-![Expand and Collapse](./images/expand-collapse-dynamic.png)
+![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-dynamic.png)
 
 ## Specify initial state to panes
 
@@ -204,7 +204,7 @@ You can render specific panes with collapsed state on page load. Specify a Boole
 
 The output will be as follows.
 
-![Expand and Collapse](./images/expand-collapse-initial.png)
+![Expand and Collapse in Blazor Splitter](./images/blazor-splitter-expand-collapse-initial.png)
 
 ## See Also
 

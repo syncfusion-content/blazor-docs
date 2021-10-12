@@ -13,16 +13,19 @@ The following list of themes are included in the Syncfusion Blazor components li
 
 |Theme	|Style Sheet Name| 
 |--------|--------|
-|Bootstrap	| bootstrap.css | 
-|Bootstrap Dark	| bootstrap-dark.css | 
-|Bootstrap4	| bootstrap4.css |
-|Microsoft Office Fabric | fabric.css |
-|Microsoft Office Fabric Dark | fabric-dark.css |
+|Bootstrap 5	| bootstrap5.css | 
+|Bootstrap 5 Dark	| bootstrap5-dark.css | 
+|Bootstrap 4	| bootstrap4.css |
+|Bootstrap 3	| bootstrap.css | 
+|Bootstrap 3 Dark	| bootstrap-dark.css | 
 |Google’s Material | material.css |
 |Google’s Material-Dark | material-dark.css |
-|High Contrast | highcontrast.css |
 |Tailwind CSS | tailwind.css |
 |TailwindDark CSS | tailwind-dark.css |
+|Microsoft Office Fabric | fabric.css |
+|Microsoft Office Fabric Dark | fabric-dark.css |
+|High Contrast | highcontrast.css |
+
 
 The Syncfusion Blazor Bootstrap Theme is designed based on Bootstrap v3, whereas the Bootsrap4 theme is designed based on Bootstrap v4.
 
@@ -53,7 +56,7 @@ When using individual NuGet packages in your application, add [Syncfusion.Blazor
 
  ```html
 <head>
-    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap5.css" rel="stylesheet" />
 </head>
 ```
 
@@ -61,7 +64,7 @@ When using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/
 
  ```html
 <head>
-    <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor/styles/bootstrap5.css" rel="stylesheet" />
 </head>
 ```
 
@@ -73,23 +76,24 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
  ```html
 <head>
-    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css" rel="stylesheet"/>
+    <link href="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css" rel="stylesheet"/>
 </head>
 ```
 
 | Theme Name | CDN Reference |
 |--- | --- |
-| Bootstrap | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css |
-| Bootstrap Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css |
-| Bootstrap4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
-| Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
-| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
-| Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
-| Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
-| High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
-| Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
-| Tailwind Dark CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
-
+| Bootstrap 5 | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css``` |
+| Bootstrap 5 Dark| ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css``` |
+| Bootstrap 4 | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css``` |
+| Bootstrap 3 | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css``` |
+| Bootstrap 3 Dark| ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css``` |
+| Google’s Material | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css``` |
+| Google’s Material Dark | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css``` |
+| Tailwind CSS | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css``` |
+| Tailwind Dark CSS | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css``` |
+| Microsoft Office Fabric  | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css``` |
+| Microsoft Office Fabric Dark | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css``` |
+| High Contrast  | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css``` |
 
 ## NPM Packages
 

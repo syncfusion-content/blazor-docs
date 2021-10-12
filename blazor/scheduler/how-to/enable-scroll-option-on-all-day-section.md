@@ -65,4 +65,4 @@ When you have larger number of appointments in all-day row, it is difficult to v
 
 The Scheduler with enable all-day scroll will be rendered as shown in the following image.
 
-![Scroller in all-day row](../images/all-day-scroll.png)
+![Scrolling in Blazor Scheduler](../images/blazor-scheduler-scrolling.png)

@@ -13,7 +13,7 @@ The following section explains the steps to include native events and pass data 
 
 ## Bind native events to textbox
 
-You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
+Any native event can be accessed by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
 In the following example, the KeyPressed method is called every time the key is pressed on textbox.
 
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is called every time the key is 
 }
 ```
 
-Also, you can rewrite the above example code as follows using Lambda expressions.
+Also, the above example code can be rewritten as follows using Lambda expressions.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -49,7 +49,7 @@ Blazor provides set of argument types for map to native events. The list of even
 * Touch Events – TouchEventArgs
 * Pointer Events – PointerEventArgs
 
-In the following example, the KeyPressed method is called every time any key is pressed inside textbox. But the message will be printed when you press "s" key.
+In the following example, the KeyPressed method is called every time any key is pressed inside textbox. But the message will be printed when the "s" key is pressed.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -65,7 +65,7 @@ In the following example, the KeyPressed method is called every time any key is 
 }
 ```
 
-Using Lambda expression also, you can pass the event data to the event handler.
+Using Lambda expression also, the event data can be passed to the event handler.
 
 ## List of Native events supported
 

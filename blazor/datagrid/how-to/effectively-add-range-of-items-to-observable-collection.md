@@ -9,11 +9,11 @@ documentation: ug
 
 # Add a range of items into ObservableCollection in Blazor DataGrid
 
-By default, you can use `Add` method to add a single item into `ObservableCollection`. To add a range of items you can call the Add method multiple times using `foreach` statement. For every single add action into ObservableCollection, Grid will be refreshed to display the DataSource changes. So calling Add repeatedly inside foreach might have performance impact in Grid.
+By default, you can use `Add` method to add a single item into `ObservableCollection`. To add a range of items, you can call the Add method multiple times using `foreach` statement. For every single add action into ObservableCollection, Grid will be refreshed to display the DataSource changes. So, calling Add repeatedly inside foreach might have performance impact in Grid.
 
-So, to effectively add a range of items into ObservableCollection bind to Grid, you can extend `ObservableCollection<T>` class and define an AddRange method. You can use this AddRange method to add a range of items and handle the `OnCollectionChanged` call occur one time for the multiple add actions.
+To effectively add a range of items into ObservableCollection bound to Grid, you can extend `ObservableCollection<T>` class and define an AddRange method. You can use this AddRange method to add a range of items and handle the `OnCollectionChanged` call occur one time for the multiple add actions.
 
-This is demonstrated in the below sample code,
+This is demonstrated in the following sample code,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create wizard in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Create wizard in Syncfusion Blazor Tabs component and much more details.
+description: Checkout and learn here all about how to create wizard in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -17,7 +17,7 @@ Create the following contents for each tab in the wizard.
 1. **Search tab:**
    Created with `DropDownList` to select the source, destination and type of ticket. A `DatePicker` for choosing the date of journey.
 2. **Train tab:**
-   Based on the selected start and end point, populated Grid with random list of available seats and train list. Initially define the columns and row selected event for validating, after the source and destination chosen update the `DataSource` for the Grid.
+   Based on the selected start and end point, populate the Grid with random list of available seats and train list. Initially define the columns and row selected event for validating, after the source and destination chosen update the `DataSource` for the Grid.
 3. **Passenger tab:**
    A table with Textbox, Numeric, DropDownList for adding passenger name, age, gender and preferred berth/seat. Add validation on entering passenger details to proceed.
 4. **Payment tab:**
@@ -516,6 +516,4 @@ You can go back on each tab using buttons available in it and tabs are disabled 
 </style>
 ```
 
-Output be like the below.
-
-![Tab Wizard](../images/wizard.png)
+![Blazor Tabs with Wizard](../images/blazor-tabs-wizard.png)

@@ -38,7 +38,7 @@ We can bind the value to the TimePicker component directly for `Value` property 
 
 ## Two-Way Data Binding
 
-Two-way binding can be achieved by using `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
+Two-way binding can be achieved by using `bind-Value` attribute and its support string, int, Enum, DateTime, bool types. If component value has been changed, it will affect all the places where we bind the variable for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -54,9 +54,9 @@ Two-way binding can be achieved by using `bind-Value` attribute and its supports
 
 ## Dynamic Value Binding
 
-We can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor TimePicker component** only. This method notifies the component that its state has changed and queues a re-render.
+The property value can be changed dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor TimePicker component** only. This method notifies the component that its state has changed and queues a re-render.
 
-There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
+There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

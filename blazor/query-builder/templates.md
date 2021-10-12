@@ -15,7 +15,7 @@ This section explains the list of templates available in the [Blazor Query Build
 
 Template allows you to define your own widgets for column values. Use the [ValueTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ValueTemplate), property to define templates.
 
-In the following sample, SFDropdownlist is used as value template.
+In the following sample, SFDropDownList is used as value template.
 
 ```cshtml
 @using Syncfusion.Blazor.QueryBuilder
@@ -87,13 +87,13 @@ In the following sample, SFDropdownlist is used as value template.
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-value-template.png)
+![Blazor QueryBuilder with Value Template](./images/blazor-querybuilder-value-template.png)
 
 ## Column Template
 
 Column Template allows you to define your own widgets for entire column. Use the [ColumnTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_ColumnTemplate) property to define templates.
 
-In the following sample, the SFDropdownlist component is used as the custom components for field and value in the `PaymentMode` column.
+In the following sample, the SFDropDownList component is used as the custom components for field and value in the `PaymentMode` column.
 
 ```cshtml
 
@@ -239,13 +239,13 @@ In the following sample, the SFDropdownlist component is used as the custom comp
 
 Output will be shown as
 
-![Query Builder Sample](./images/qb-column-template.png)
+![Blazor QueryBuilder with Column Template](./images/blazor-querybuilder-column-template.png)
 
 ## Header Template
 
 Header Template allows you to define your own widgets for group header. You can customize the AND/OR/NOT operators and add rules/groups buttons. Use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.QueryBuilder.QueryBuilderTemplates.html#Syncfusion_Blazor_QueryBuilder_QueryBuilderTemplates_HeaderTemplate) property to define templates.
 
-In the following sample, the SFDropdownlist component is used as the custom components for AND/OR operators and customized SfButtons for add rules and add groups button.
+In the following sample, the SFDropDownList component is used as the custom components for AND/OR operators and customized SfButtons for add rules and add groups button.
 
 ```cshtml
 
@@ -362,6 +362,6 @@ In the following sample, the SFDropdownlist component is used as the custom comp
 
 Output will be shown as
 
-![Query Builder Header template Sample](./images/header-template.png)
+![Blazor QueryBuilder with Header Template](./images/blazor-querybuilder-header-template.png)
 
 > You can also explore our [Blazor Query Builder example](https://blazor.syncfusion.com/demos/query-builder/default-functionalities?theme=bootstrap4) to knows how to render and configure the query builder.

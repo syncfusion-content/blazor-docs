@@ -26,7 +26,7 @@ The following example demonstrates percentage and currency formats.
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/standard_format.png)
+![Blazor NumericTextBox with Standard Format](./images/blazor-numerictextbox-standard-format.png)
 
 ## Custom formats
 
@@ -43,4 +43,4 @@ The following examples demonstrate format the value by using currency format str
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/custom_format.png)
+![Blazor NumericTextBox with Custom Format](./images/blazor-numerictextbox-custom-format.png)

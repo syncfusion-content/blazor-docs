@@ -106,4 +106,4 @@ delete icon list item to `OnDelete` method.
 </style>
 ```
 
-![ListView - Add or remove](../images/list/add-and-remove-list-items-from-listview.png)
+![Add or Remove List Items in Blazor ListView](../images/list/blazor-listview-add-and-remove-list-items.png)

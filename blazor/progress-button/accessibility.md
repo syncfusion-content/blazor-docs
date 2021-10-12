@@ -43,4 +43,4 @@ Starts the progress</td></tr>
 ```
 
 Output be like
-![ProgressButton Sample](./images/progress-button.png)
+![Accessibility in Blazor ProgressButton](./images/blazor-progressbutton-component.png)

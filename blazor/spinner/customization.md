@@ -58,7 +58,7 @@ Add the customized `Class` name to a Spinner root element to customize the Blazo
 
 ```
 
-![Spinner CssClass](./images/cssClass.png)
+![Blazor Spinner with Custom Class](./images/blazor-spinner-custom-class.png)
 
 #### Modal Spinner
 
@@ -97,7 +97,7 @@ The following code explains how to render modal spinner.
 
 ```
 
-![Modal Spinner](./images/modalSpinner.png)
+![Blazor Modal Spinner](./images/blazor-modal-spinner.png)
 
 ### Label
 
@@ -132,7 +132,7 @@ The following code explains how to set the `Label` on Spinner in Blazor Razor pa
 
 ```
 
-![Spinner Label](./images/label.png)
+![Blazor Spinner with Label](./images/blazor-spinner-with-label.png)
 
 ### Type
 
@@ -174,7 +174,7 @@ The following code explains how to use the `Type` property when initializing Spi
 
 ```
 
-![Spinner Type](./images/type.png)
+![Blazor Bootstrap Spinner](./images/blazor-bootstrap-spinner.png)
 
 ### Size
 
@@ -209,7 +209,7 @@ The following code explains how to use the `Size` property when initializing Spi
 
 ```
 
-![Spinner width](./images/width.png)
+![Changing Blazor Spinner Width](./images/blazor-spinner-width.png)
 
 ## Customize after creating the Spinner component
 
@@ -258,7 +258,7 @@ The following code explains how to use the `Type` property after creating the Sp
 
 ```
 
-![Spinner with type using SetSpinner](./images/setType.png)
+![Blazor Material Spinner](./images/blazor-material-spinner.png)
 
 ### CssClass
 
@@ -307,4 +307,4 @@ The following code explains how to dynamically add the `CssClass` property after
 
 ```
 
-![Spinner with cssClass using SetSpinner](./images/setClass.png)
+![Blazor Spinner with Custom Class](./images/blazor-spinner-with-custom-class.png)

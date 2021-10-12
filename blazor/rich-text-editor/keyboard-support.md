@@ -95,7 +95,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 The output will be as follows.
 
-![Keyconfig](./images/markdown-key.png)
+![Blazor RichTextEditor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
 
 ## Custom key config
 

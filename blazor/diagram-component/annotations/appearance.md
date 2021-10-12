@@ -319,8 +319,9 @@ You can change the font style of the annotations with the font specific properti
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input type="button" value="Update Style" @onclick="@UpdateStyle" />
+<SfButton Content="Update Style" OnClick="@UpdateStyle" />
 
 <SfDiagramComponent @ref="@Diagram" Height="600px" Nodes="@nodes" />
 

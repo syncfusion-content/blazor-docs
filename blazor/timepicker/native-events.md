@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Native Events in Blazor TimePicker Component | Syncfusion
-description: Checkout and learn here all about Native Events in Syncfusion Blazor TimePicker component and much more.
+description: Checkout and learn here all about native events in Syncfusion Blazor TimePicker component and much more.
 platform: Blazor
 control: TimePicker
 documentation: ug
@@ -13,7 +13,7 @@ The following section explains steps to include native events and pass data to e
 
 ## Bind native events to TimePicker
 
-You can access any native event by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
+Any native event can be accessed by using on `<event>` attribute with a component. The attribute's value is treated as an event handler.
 
 In the following example, the KeyPressed method is called every time the key is pressed on input.
 
@@ -29,7 +29,7 @@ In the following example, the KeyPressed method is called every time the key is 
 }
 ```
 
-Also, you can rewrite the above example code as follows using Lambda expressions.
+Also, the above example code can be rewritten as follows using Lambda expressions.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -66,7 +66,7 @@ In the following example, the KeyPressed method is called every time any key is 
 }
 ```
 
-Using Lambda expression also, you can pass the event data to the event handler.
+Using Lambda expression also, the event data can be passed to the event handler.
 
 ## List of Native events supported
 

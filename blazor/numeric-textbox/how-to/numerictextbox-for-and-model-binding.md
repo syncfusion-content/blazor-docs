@@ -43,4 +43,4 @@ In this sample, first click the submit button to post the selected value in the 
 
 The output will be as follows.
 
-![NumericTextBox Sample](../images/model_binding.png)
+![Validation in Blazor NumericTextBox](../images/blazor-numerictextbox-validation.png)

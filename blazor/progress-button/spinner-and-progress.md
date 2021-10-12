@@ -72,7 +72,7 @@ The following sample demonstrates the above functionalities of the spinner.
 
 Output be like
 
-![Button Sample](./images/pb-spinner.png)
+![Blazor ProgressButton with Spinner](./images/blazor-progressbutton-spinner.png)
 
 ## Progress
 
@@ -91,7 +91,7 @@ The [Content](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButto
 ```
 
 Output be like
-![ProgressButton Sample](./images/pb-animation.png)
+![Blazor ProgressButton with Animation](./images/blazor-progressbutton-animation.png)
 
 ### Change step of the Progress Button
 
@@ -115,7 +115,7 @@ The progress can be visualized at the specified interval by changing the [Step](
 ```
 
 Output be like
-![ProgressButton Sample](./images/pb-step.png)
+![Changing Step of Blazor ProgressButton](./images/blazor-progressbutton-step.png)
 
 > The class `e-hide-spinner` hides the spinner in the Progress Button, For more information, see [hide spinner](./how-to/hide-spinner) section.
 
@@ -154,7 +154,7 @@ The progress state can be changed dynamically by modifying the [Percent](https:/
 ```
 
 Output be like
-![ProgressButton Sample](./images/pb-dynamic.png)
+![Changing Blazor ProgressButton State](./images/blazor-progressbutton-state.png)
 
 ### Start and Stop Methods
 
@@ -219,11 +219,11 @@ You can pause and resume the progress using the [Stop](https://help.syncfusion.c
 ```
 
 Output be like
-![ProgressButton Sample](./images/pb-start-stop.png)
+![Blazor ProgressButton displays Start and Stop Process](./images/blazor-progressbutton-start-stop-process.png)
 
-### ProgressComplete Method
+### EndProgressAsync Method
 
-You can complete the progress by using ['ProgressComplete'](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_ProgressComplete) method and it will also hides the spinner. In this example, I have added another button to complete the current progress of the progress button.
+You can complete the progress by using [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method and it will also hides the spinner. In this example, I have added another button to complete the current progress of the progress button.
 
 ```cshtml
 
@@ -241,7 +241,7 @@ You can complete the progress by using ['ProgressComplete'](https://help.syncfus
     SfProgressButton ProgressBtnObj;
     private async Task OnCompleteClick()
     {
-        await ProgressBtnObj.ProgressComplete();
+        await ProgressBtnObj.EndProgressAsync();
     }
 }
 
