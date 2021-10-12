@@ -422,9 +422,9 @@ The DataGrid will render the row elements vertically while setting the RowRender
 
 ```
 
-![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-rendering.gif)
+![Blazor DataGrid with Adaptive Vertical Mode](./images/blazor-datagrid-adaptive-vertical-mode.gif)
 
-### Supported features in vertical mode 
+### Supported features in vertical mode
 
 The following features are only supported in vertical row rendering:
 
