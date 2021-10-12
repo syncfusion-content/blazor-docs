@@ -128,7 +128,7 @@ Toggle Switch Button bar and handle can be customized as per requirement using C
 </style>
   ```
 
-![Switch Sample](./../images/switch-custom.png)
+![Blazor Toggle Switch Button with Custom Bar](./../images/blazor-toggle-switch-button-custom-bar.png)
 
 ## Color the Toggle Switch Button
 
@@ -212,4 +212,4 @@ Toggle Switch Button colors can be customized as per the requirement using CSS r
 
 ```
 
-![Switch Sample](./../images/switch-color.png)
+![Blazor Toggle Switch Button with Custom Color](./../images/blazor-toggle-switch-button-custom-color.png)

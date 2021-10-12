@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor SplitButton Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -74,5 +74,4 @@ Closes the popup.</td></tr>
 
 ```
 
-Output be like
 ![Accessibility in Blazor SplitButton](./images/blazor-splitbutton.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pane Content in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Pane Content in Syncfusion Blazor Splitter component and much more.
+description: Checkout and learn here all about pane content in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -13,7 +13,7 @@ This section explains how to provide plain text content or HTML markup to splitt
 
 ## HTML Markup
 
-Splitter is a layout based container Component. You can render the pane contents from existing HTML markups. Converting HTML markup as splitter pane is easy way to add the panes content dynamically.
+Splitter is a layout based container component. The pane contents can be rendered from existing HTML markups. Converting HTML markup as splitter pane is easy way to add the panes content dynamically.
 
 ```cshtml
 
@@ -49,19 +49,17 @@ Splitter is a layout based container Component. You can render the pane contents
 
 ```
 
-The output will be as follows.
-
 ![Blazor Splitter Content with HTML Markup](./images/blazor-splitter-content-html-markup.png)
 
 ## Blazor UI components
 
-You can render any Blazor components along with their native and control events within splitter as pane content.
+Any Blazor components can be rendered along with their native and control events within splitter as pane content.
 
-You can refer [Listview within splitter](https://blazor.syncfusion.com/demos/splitter/details-view?theme=bootstrap4) example.
+Refer [Listview within splitter](https://blazor.syncfusion.com/demos/splitter/details-view?theme=bootstrap4) example.
 
 ## Plain content
 
-You can add the plain text as a pane contents using either inner HTML or `Content` API
+The plain text can be added as a pane contents using either inner HTML or `Content` API
 
 ```cshtml
 
@@ -91,21 +89,19 @@ You can add the plain text as a pane contents using either inner HTML or `Conten
 
 ```
 
-The output will be as follows.
-
 ![Blazor Splitter with Plain Content](./images/blazor-splitter-plain-content.png)
 
 ## Integrate other Blazor component inside the pane of the Splitter
 
-You can render another Blazor component inside the split pane using following solutions:
+Another Blazor component can be rendered inside the split pane using following solutions:
 
 ### Solution 1
 
-You can directly render the Blazor component as content to split pane.
+The Blazor component can be directly rendered as content to split pane.
 
 ### Solution 2
 
-You can integrate the Blazor component by rendering it as a separate page. (Each page is considered as a separate component in Blazor.)
+The Blazor component can be integrated by rendering it as a separate page. (Each page is considered as a separate component in Blazor.)
 
 The following example demonstrates the above two solutions. The first pane renders Grid as a direct child component, and the second pane renders Tab component from a separate page(SplitterContent.razor).
 
@@ -204,7 +200,5 @@ Other SplitterContent.razor page.
 </style>
 
 ```
-
-Output for above code will be shown as like in below image
 
 ![Blazor Splitter with Other Components](./images/blazor-splitter-other-components.png)
