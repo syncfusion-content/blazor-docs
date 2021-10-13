@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Localization in Blazor Sparkline Charts Component | Syncfusion 
-description: Learn about localization in Blazor Sparkline Charts component of Syncfusion, and more details.
+description: Checkout and learn here all about localization in Blazor Sparkline Charts component of Syncfusion, and more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Localization
+# Localization in Blazor
 
 The Sparkline Charts' component supports localization. The default culture for localization is `en-US`. Change the culture using the `LoadCldrData` and the `setCulture` method.
 
