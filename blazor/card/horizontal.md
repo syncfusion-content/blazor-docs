@@ -9,7 +9,7 @@ documentation: ug
 
 # Horizontal Card in Blazor Card Component
 
-By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using Orientation property.
+By default, all the card elements are aligned vertically one after the other as in the DOM. You can achieve the element to align horizontally as well by using the Orientation property.
 
 ## Stacked cards
 

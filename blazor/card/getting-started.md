@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Card Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Card component of Syncfusion, and more details.
+description: Checkout and learn about getting started with the Blazor Card component of Syncfusion and much more.
 platform: Blazor
 control: Card
 documentation: ug
@@ -58,7 +58,7 @@ Open `**~/_Imports.razor` file and import the `Syncfusion.Blazor.**`
 
 ## Add SyncfusionBlazor service in Startup.cs
 
-Open the **Startup.cs** file and add services required by Syncfusion components using **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
+Open the **Startup.cs** file and add services required by Syncfusion components by using the **service.AddSyncfusionBlazor()** method. Add this method in the **ConfigureServices** function as follows.
 
 ```csharp
 
@@ -89,7 +89,7 @@ To initialize the Card component, add the below code to your **Index.razor** vie
 
 ## Adding a header and content
 
-1. You can create Card with a header in a specific structure. For adding header you can use `CardHeader` tag and in that `Title` and `SubTitle` can be given.
+1. You can create Card with a header in a specific structure. For adding header, you can use `CardHeader` tag and in that `Title` and `SubTitle` can be given.
 
 2. Also content will be added by using `CardContent` tag.
 
