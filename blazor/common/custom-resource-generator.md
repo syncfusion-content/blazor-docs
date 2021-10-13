@@ -102,7 +102,7 @@ Refer to the following steps to download the custom resources in CRG:
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Services.AddRazorPages();
-    builder.Services.AddServerSideBlazor();
+    builder.Services.AddServerSideBlazor(options => { options.IgnoreScriptIsolation = true; });
     ....
     builder.Services.AddSyncfusionBlazor();
     var app = builder.Build();
