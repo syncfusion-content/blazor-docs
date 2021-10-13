@@ -9,7 +9,7 @@ documentation: ug
 
 # Breadcrumb Items in Blazor Breadcrumb component
 
-You can generate items using [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive where each [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) needs to be defined inside BreadcrumbItems tag. BreadcrumItem provide below properties for navigation and customization. 
+You can generate the items using [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive where each [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) needs to be defined inside BreadcrumbItems tag. BreadcrumbItem provide below properties for navigation and customization. 
 
 * [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) - To sets the Url of the Breadcrumb item and that will be navigated when clicked.
 
