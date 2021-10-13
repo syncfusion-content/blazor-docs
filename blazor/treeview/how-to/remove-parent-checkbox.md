@@ -112,4 +112,4 @@ By enabling the `ShowCheckBox` property, check box could be rendered before each
 </style>
 ```
 
-![TreeView Sample](../images/remove-parent-checkbox.png)
+![Removing Parent Node CheckBox in Blazor TreeView](../images/blazor-treeview-remove-parent-checkbox.png)

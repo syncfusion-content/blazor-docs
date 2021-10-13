@@ -127,4 +127,4 @@ In the TreeView component, get the original bound data using the `GetTreeData` m
 </style>
 ```
 
-![TreeView Sample](../images/IconCss.png)
+![Blazor TreeView with Dynamic Icon](../images/blazor-treeview-dynamic-icon.png)

@@ -96,4 +96,4 @@ TreeView control allows to set tooltip option to tree nodes using the `Tooltip` 
 }
 ```
 
-![TreeView Sample](../images/tooltip.png)
+![Blazor TreeView with Tooltip](../images/blazor-treeview-tooltip.png)

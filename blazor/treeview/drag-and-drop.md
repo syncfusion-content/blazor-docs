@@ -113,7 +113,7 @@ The following table explains the usage of indicator icons.
 
  ```
 
-![TreeView Sample](./images/dragdrop.png)
+![Drag and Drop Node in Blazor TreeView](./images/blazor-treeview-drag-drop-node.png)
 
 ## Multiple-node drag and drop
 
@@ -210,4 +210,4 @@ In the following sample,  the `AllowMultiSelection` property is enabled along wi
 
 ```
 
-![TreeView Sample](./images/multidrag.png)
+![Drag and Drop Multiple Node in Blazor TreeView](./images/blazor-treeview-drag-drop-multi-node.png)

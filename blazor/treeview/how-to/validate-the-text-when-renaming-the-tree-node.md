@@ -120,4 +120,4 @@ The tree node text could be validated while editing using `NodeEdited` event of 
 
 ```
 
-![TreeView Sample](../images/validate-text.png)
+![Renaming Tree Node in Blazor TreeView](../images/blazor-treeview-rename-tree-node.png)

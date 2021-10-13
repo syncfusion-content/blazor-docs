@@ -113,7 +113,7 @@ In the following example, **Id**, **FolderName**, and **SubFolders** columns fro
 
 ```
 
-![TreeView Sample](./images/local-data.png)
+![Blazor TreeView with Hierarchical Data](./images/blazor-treeview-hierarchical-data.png)
 
 ### Self-referential data
 
@@ -208,7 +208,7 @@ To render the root level nodes, specify the ParentID as null or no need to speci
 
 ```
 
-![TreeView Sample](./images/local-data.png)
+![Blazor TreeView with Self-Referential Data](./images/blazor-treeview-hierarchical-data.png)
 
 ## Remote data
 
@@ -262,7 +262,7 @@ The **OrderID**, **EmployeeID**, and **ShipName** columns from orders table have
 
 ```
 
-![TreeView Sample](./images/remote-data.png)
+![Blazor TreeView with Remote Data](./images/blazor-treeview-remote-data.png)
 
 ## Entity Framework
 
