@@ -58,7 +58,7 @@ To render adaptive dialog UI in the DataGrid, set the [EnableAdaptiveUI](https:/
 
 ```
 
-![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-render-adaptive-dialog.png)
+![Blazor DataGrid with Adaptive UI](./images/blazor-datagrid-render-adaptive-dialog.gif)
 
 > 1. This UI is common for both horizontal and vertical mode of rendering when EnableAdaptiveUI is enabled.
 
