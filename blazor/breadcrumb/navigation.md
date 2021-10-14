@@ -17,7 +17,7 @@ In the Breadcrumb component, the item represents the url. The Breadcrumb items c
 
 ### Relative URL
 
-The breadcrumb items contains the path and locate to the resource if the absolute url is specified. You can generate the breadcrumb items by adding url in [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) property. The following example represents the breadcrumb items with absolute url which can locate to the resouce.
+The breadcrumb items contains the path and locate to the resource if the absolute url is specified. You can generate the breadcrumb items by adding url in [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) property. The following example represents the breadcrumb items with absolute url which can locate to the resource.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
