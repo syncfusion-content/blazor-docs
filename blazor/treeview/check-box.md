@@ -99,4 +99,4 @@ By default, the checkbox state of parent and child nodes are dependent on each o
 }
 ```
 
-![TreeView Sample](./images/checkbox.png)
+![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)

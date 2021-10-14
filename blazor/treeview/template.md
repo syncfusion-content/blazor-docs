@@ -159,4 +159,4 @@ In the following sample, employee information such as employee photo, name, and 
 </style>
 ```
 
-![TreeView Sample](./images/template.png)
+![Blazor TreeView with Template](./images/blazor-treeview-template.png)
