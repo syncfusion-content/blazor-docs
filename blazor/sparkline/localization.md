@@ -1,19 +1,19 @@
 ---
 layout: post
 title: Localization in Blazor Sparkline Charts Component | Syncfusion 
-description: Checkout and learn here all about localization in Blazor Sparkline Charts component of Syncfusion, and more details.
+description: Learn about Localization in Blazor Sparkline Charts component of Syncfusion, and more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
 ---
 
-# Localization in Blazor
+# Localization
 
-The Sparkline Charts' component supports localization. The default culture for localization is `en-US`. Change the culture using the `LoadCldrData` and the `setCulture` method.
+The Sparkline Charts component supports localization. The default culture for localization is `en-US`. Change the culture using the `LoadCldrData` and the `setCulture` method.
 
 ## Tooltip format
 
-The Sparkline Charts' tooltip supports localization. The following code sample shows the tooltip text with currency format based on culture.
+The Sparkline Charts tooltip supports localization. The following code sample shows the tooltip text with currency format based on culture.
 
 ```cshtml
 <SfSparkline DataSource="@Numbers"
@@ -48,7 +48,7 @@ The Sparkline Charts' tooltip supports localization. The following code sample s
 
 If the `EnableRtl` property is set to true, then the Sparkline Charts will be rendered from right-to-left direction.
 
-The following example shows the Sparkline Charts' render from "Right-to-left".
+The following example shows the Sparkline Charts render from "Right-to-left".
 
 @using Microsoft.JSInterop;
 
