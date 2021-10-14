@@ -1,6 +1,6 @@
 ---
 layout: post
-Blazor ASP.NET Core Hosted App in .NET Core CLI - Syncfusion Blazor
+title: Blazor ASP.NET Core Hosted App in .NET Core CLI - Syncfusion Blazor
 description: Check out the documentation for Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in .NET Core CLI.
 platform: Blazor
 component: Common
