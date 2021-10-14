@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in .NET Core CLI
-description: Check out the documentation for Getting started with Syncfusion Blazor
+Blazor ASP.NET Core Hosted App in .NET Core CLI - Syncfusion Blazor
+description: Check out the documentation for Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in .NET Core CLI.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor components in Blazor ASP.NET Core Hosted App using .NET Core CLI
+# Getting started with Blazor ASP.NET Core Hosted App in .NET Core CLI
 
 This article provides step-by-step instructions about how to create Blazor ASP.NET Core Hosted application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/) with Syncfusion Blazor components setup pre-configured in it.
 

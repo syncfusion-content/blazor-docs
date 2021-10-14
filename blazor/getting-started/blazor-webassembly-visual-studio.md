@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor WebAssembly App in Visual Studio
+title: Getting started with Syncfusion Blazor WASM App in Visual Studio
 description: Check out the documentation for Getting started with Syncfusion Blazor, its elements, features, and more.
 platform: Blazor
 component: Common

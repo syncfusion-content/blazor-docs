@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in Visual Studio
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Blazor ASP.NET Core Hosted App in Visual Studio - Syncfusion Blazor
+description: Check out the documentation for Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in Visual Studio.
 platform: Blazor
 component: Common
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor components in Blazor ASP.NET Core Hosted App using Visual Studio
+# Getting started with Blazor ASP.NET Core Hosted App in Visual Studio
 
 This article provides step-by-step instructions about how to create Blazor ASP.NET Core Hosted application using [Visual Studio](https://visualstudio.microsoft.com/vs/) with Syncfusion Blazor components setup pre-configured in it.
 
