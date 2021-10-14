@@ -36,7 +36,7 @@ To place the font icon on the breadcrumb item, set the [IconCss](https://help.sy
 
 ### Breadcrumb with Image
 
-In the Breadcrumb component, images can be added for the items using the [class] attribute. In the following example, an image was added to the breadcrumb item by using the IconCss class `e-image` and specifying height and width.
+In the Breadcrumb component, images can be added for the items using the [class] attribute. In the following example, an image was added to the breadcrumb item by using the class `e-image` and specifying height and width.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -63,7 +63,7 @@ In the Breadcrumb component, images can be added for the items using the [class]
 
 ### Breadcrumb with SVG Image
 
-In the Breadcrumb component, SVG image can be added for the items using the [class] attribute. In the following example, SVG image was added to the breadcrumb item by using the IconCss class `e-image` and specifying height and width.
+In the Breadcrumb component, SVG image can be added for the items using the [class] attribute. In the following example, SVG image was added to the breadcrumb item by using the class `e-image` and specifying height and width.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
