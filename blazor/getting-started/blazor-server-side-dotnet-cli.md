@@ -47,7 +47,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 3. Now, add the Syncfusion Blazor theme to the Blazor Server App.
 
-    a) For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
+    a) For **.NET 6** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
 
     ```html
     <head>
@@ -57,7 +57,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+    b) For **.NET 5** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -84,7 +84,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. Now, add the Syncfusion Blazor theme to the Blazor Server App.
 
-    a) For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
+    a) For **.NET 6** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
 
     ```html
     <head>
@@ -94,7 +94,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     </head>
     ```
 
-    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+    b) For **.NET 5** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -117,10 +117,10 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 2. Now, register the Syncfusion Blazor Service to the Blazor Server App.
 
-    a) For **.NET 6.0** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+    a) For **.NET 6** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
-    // For .NET 6.0 project, add the Syncfusion Blazor Service in Program.cs file.
+    // For .NET 6 project, add the Syncfusion Blazor Service in Program.cs file.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -136,10 +136,10 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     ....
     ```
 
-    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+    b) For **.NET 5** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
-    // For .NET 5.0 or .NET Core SDK 3.1 project, add the Syncfusion Blazor Service in Startup.cs file.
+    // For .NET 5 or .NET Core SDK 3.1 project, add the Syncfusion Blazor Service in Startup.cs file.
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -156,7 +156,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     }
     ```
 
-    > We can disable the dynamic script rendering and refer the scripts from application end by using `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs` for `.NET 6.0` project and the `Startup.cs` for `.NET5.0` or `.NET Core SDK 3.1` project. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+    > We can disable the dynamic script rendering and refer the scripts from application end by using `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs` for `.NET 6` project and the `Startup.cs` for `.NET5` or `.NET Core SDK 3.1` project. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 3. Now, add the Syncfusion Blazor components in any .razor file in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
 

@@ -16,7 +16,7 @@ This section provides information about creating Razor Class Library with the Sy
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) / [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5.0** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6.0** requires Visual Studio 2022 Preview 4.1 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6** requires Visual Studio 2022 Preview 4.1 or later.
 
 ## Create a Razor Class Library using Syncfusion Blazor components in Visual Studio 2019
 
@@ -59,7 +59,7 @@ This section provides information about creating Razor Class Library with the Sy
 
     ![razor class project configuration](images/VS2022/razor-class-template-2022.png)
 
-4. Select the target Framework **.NET 6.0** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
+4. Select the target Framework **.NET 6** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Razor Class Library application.
 
     ![select framework](images/VS2022/blazor-select-template-rcl-2022.png)
 
@@ -127,47 +127,9 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     <SfCalendar TValue="DateTime"></SfCalendar>
     ```
 
-## Create a Blazor Server project in Visual Studio 2019 with Razor Class Library (RCL)
+## Create a Blazor Server project in Visual Studio with Razor Class Library (RCL)
 
-1. Choose **Create a new project** from the Visual Studio dashboard.
-
-    ![new project in aspnetcore blazor](images/new-project.png)
-
-2. Select **Blazor App** from the template, and then click the **Next** button.
-
-    ![blazor template](images/blazor-template.png)
-
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
-
-    ![asp.net core project configuration](images/blazorapp-template.png)
-
-4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target information.
-
-    ![select framework](images/blazor-select-template.png)
-
-5. Choose **Blazor Server App** from the dashboard, and then click **Create** button to create a new Blazor Server application.
-
-    ![select framework](images/blazor-server-template.png)
-
-    > ASP.NET Core 3.1 is available in Visual Studio 2019 version.
-
-## Create a Blazor Server project in Visual Studio 2022 with Razor Class Library (RCL)
-
-1. Choose **Create a new project** from the Visual Studio dashboard.
-
-    ![new project in aspnetcore blazor](images/VS2022/new-project-2022.png)
-
-2. Select **Blazor Server App** from the template, and then click the **Next** button.
-
-    ![blazor template](images/VS2022/blazor-template-2022.png)
-
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
-
-    ![asp.net core project configuration](images/VS2022/project-configuration-2022.png)
-
-4. Select the target Framework **.NET 6.0** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Blazor Server application.
-
-    ![select framework](images/VS2022/blazor-select-template-2022.png)
+Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
 
 ### Configure the Razor Class Library and Blazor Server Application
 
@@ -197,10 +159,10 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 2. Now, register the Syncfusion Blazor Service to the Blazor Server App.
 
-    a) For **.NET 6.0** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
+    a) For **.NET 6** project, open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
-    // For .NET 6.0 project, add the Syncfusion Blazor Service in Program.cs file.
+    // For .NET 6 project, add the Syncfusion Blazor Service in Program.cs file.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -216,10 +178,10 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     ....
     ```
 
-    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
+    b) For **.NET 5** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
-    // For .NET 5.0 or .NET Core SDK 3.1 project, add the Syncfusion Blazor Service in Startup.cs file.
+    // For .NET 5 or .NET Core SDK 3.1 project, add the Syncfusion Blazor Service in Startup.cs file.
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -238,7 +200,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. Now, add the Syncfusion Blazor theme to the Blazor Server App.
 
-    a) For **.NET 6.0** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
+    a) For **.NET 6** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Layout.cshtml** page.
 
     ```html
     <head>
@@ -254,7 +216,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     </head>
     ```
 
-    b) For **.NET 5.0** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+    b) For **.NET 5** or **.NET Core SDK 3.1** project, add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -285,47 +247,9 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
     ![RCL output](images/rcl-output.png)
 
-## Create a Blazor WebAssembly project in Visual Studio 2019 with Razor Class Library (RCL)
+## Create a Blazor WebAssembly project in Visual Studio with Razor Class Library (RCL)
 
-1. Choose **Create a new project** from the Visual Studio dashboard.
-
-    ![new project in aspnetcore blazor](images/new-project.png)
-
-2. Select **Blazor App** from the template, and then click the **Next** button.
-
-    ![blazor template](images/blazor-template.png)
-
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
-
-    ![asp.net core project configuration](images/blazorapp-template.png)
-
-4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target information.
-
-    ![select framework](images/blazor-select-template.png)
-
-5. Choose **Blazor WebAssembly App** from the dashboard, and then click **Create** button to create a new Blazor WebAssembly application.
-
-    ![select framework](images/webassembly-template.png)
-
-    > ASP.NET Core 3.1 is available in Visual Studio 2019 version.
-
-## Create a Blazor WebAssembly project in Visual Studio 2022 with Razor Class Library (RCL)
-
-1. Choose **Create a new project** from the Visual Studio dashboard.
-
-    ![new project in aspnetcore blazor](images/VS2022/new-project-2022.png)
-
-2. Select **Blazor WebAssembly App** from the template, and then click the **Next** button.
-
-    ![blazor template](images/VS2022/blazor-template-wasm-2022.png)
-
-3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
-
-    ![asp.net core project configuration](images/VS2022/project-configuration-wasm-2022.png)
-
-4. Select the target Framework **.NET 6.0** at the top of the Application based on your required target that you want and then click the **Create** button to create a new Blazor Server application.
-
-    ![select framework](images/VS2022/blazor-select-template-wasm-2022.png)
+Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
 
 ### Configure the Razor Class Library and Blazor WebAssembly Application
 
@@ -356,7 +280,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service from RCL.
 
     ```c#
-    // For .NET 6.0 project.
+    // For .NET 6 project.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -373,7 +297,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     ```
 
     ```c#
-    // For .NET 5.0 or .NET Core SDK 3.1 project.
+    // For .NET 5 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
 
     namespace BlazorApp

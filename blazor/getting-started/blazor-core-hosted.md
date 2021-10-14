@@ -20,59 +20,15 @@ This article provides step-by-step instructions about how to create Blazor ASP.N
 * [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) / [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview)
 * [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5.0** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6.0** requires Visual Studio 2022 Preview 4.1 or later.
+> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6** requires Visual Studio 2022 Preview 4.1 or later.
 
-## Create a Blazor ASP.NET Core Hosted project in Visual Studio 2019
+## Create a Blazor ASP.NET Core Hosted project in Visual Studio
 
-1. Choose **Create a new project** from the Visual Studio dashboard.
+Refer to the [Blazor Tooling documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/tooling?view=aspnetcore-5.0&pivots=windows) to create a new Blazor Server-Side Application using Visual Studio.
 
-    ![new project in aspnetcore blazor](images/core-hosted/new-project.png)
+* The application will have the following structure once project is created.
 
-2. Choose **Blazor WebAssembly App** from the dashboard, and then click the **Next** button to create a new Blazor WebAssembly application.
-
-    ![wasm template](images/core-hosted/blazor-client-template.png)
-
-3. Now, the project configuration window will popup. Click the **Next** button to create a new project with the default project configuration.
-
-    ![project configuration](images/core-hosted/project-configuration.png)
-
-4. Select the target Framework **.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target.
-
-    ![select framework](images/core-hosted/blazor-select-template.png)
-
-5. Then check the **ASP.NET Core Hosted** option and click **Create** button to create a new Blazor ASP.NET Core Hosted application.
-
-    ![select framework](images/core-hosted/core-hosted.png)
-
-6. The application will have the following structure once project is created.
-
-    ![project structure](images/core-hosted/core-hosted-structure.png)
-
-## Create a Blazor ASP.NET Core Hosted project in Visual Studio 2022
-
-1. Choose **Create a new project** from the Visual Studio dashboard.
-
-    ![new project in aspnetcore blazor](images/VS2022/new-project-2022.png)
-
-2. Choose **Blazor WebAssembly App** from the dashboard, and then click the **Next** button to create a new Blazor WebAssembly application.
-
-    ![wasm template](images/VS2022/blazor-template-wasm-2022.png)
-
-3. Now, the project configuration window will popup. Click the **Next** button to create a new project with the default project configuration.
-
-    ![project configuration](images/VS2022/project-configuration-host-2022.png)
-
-4. Select the target Framework **.NET 6.0** at the top of the Application based on your required target.
-
-    ![select framework](images/VS2022/blazor-select-template-wasm-2022.png)
-
-5. Then check the **ASP.NET Core Hosted** option and click **Create** button to create a new Blazor ASP.NET Core Hosted application.
-
-    ![select framework](images/VS2022/core-hosted-2022.png)
-
-6. The application will have the following structure once project is created.
-
-    ![project structure](images/VS2022/core-hosted-structure-2022.png)
+    ![project structure](images/core-hosted-structure-2022.png)
 
 ## Installing Syncfusion Blazor packages in the application
 
@@ -143,7 +99,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 2. Open the **~/Program.cs** file in the **`Client`[BlazorWasmHosted.Client]** project and register the Syncfusion Blazor Service.
 
     ```c#
-    // For .NET 6.0 project.
+    // For .NET 6 project.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -160,7 +116,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     ```
 
     ```c#
-    // For .NET 5.0 or .NET Core SDK 3.1 project.
+    // For .NET 5 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
 
     namespace BlazorWasmHosted.Client
