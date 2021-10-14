@@ -105,7 +105,7 @@ We can refer the Syncfusion Blazor scripts through the CDN resources by configur
 
 ### Types
 
-CDN Reference can be available in both version specific and unversioned links.
+CDN Reference can be available in both version specific and un versioned links.
 
 * Version based CDN
 * Global CDN
@@ -124,7 +124,7 @@ Version based CDN will contains the version specific contents (Scripts) for Sync
 
 > PdfViewer and DocumentEditor Component has a version specific separate CDN Script resources.
 
-* To add verison specific CDN script reference for PdfViewer Component.
+* To add version specific CDN script reference for PdfViewer Component.
 
     ```html
     <head>
@@ -134,7 +134,7 @@ Version based CDN will contains the version specific contents (Scripts) for Sync
     </head>
     ```
 
-* To add verison specific CDN script reference for DocumentEditor Component.
+* To add version specific CDN script reference for DocumentEditor Component.
 
     ```html
     <head>
@@ -194,7 +194,7 @@ The [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet
     </head>
     ```
 
-The Syncfusion Blazor individual Nuget packages contains [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor/) as dependent package. The [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package's Static Web Assets contains a combined scripts for all components.
+The Syncfusion Blazor individual NuGet packages contains [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor/) as dependent package. The [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package's Static Web Assets contains a combined scripts for all components.
 
 * If you are using Syncfusion Blazor individual NuGet package, the combined Scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package and refer to the below code snippet for Static Web Assets Script reference.
 
