@@ -538,4 +538,4 @@ public class WrapData
 
 {% endtabs %}
 
-![Customize column menu icon](../images/customize-column-menu-icon.png)
+![Customizing Column Menu Icon in Blazor TreeGrid](../images/blazor-treegrid-custom-column-menu-icon.png)

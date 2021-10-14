@@ -53,7 +53,7 @@ The [Squarified](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap
 }
 ```
 
-![TreeMap with squarified layout](images/Layout/Squarified.png)
+![Blazor TreeMap with Squarified Layout](images/Layout/blazor-treemap-squarified-layout.png)
 
 ### Slice and dice vertical
 
@@ -68,7 +68,7 @@ The [SliceAndDiceVertical](https://help.syncfusion.com/cr/aspnetcore-blazor/Sync
 
 > Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
-![TreeMap with slice and dice vertical layout](images/Layout/SliceAndDiceVertical.png)
+![Blazor TreeMap with Slice and DiceVertical Layout](images/Layout/blazor-treemap-slice-and-dicevertical-layout.png)
 
 ### Slice and dice horizontal
 
@@ -83,7 +83,7 @@ The [SliceAndDiceHorizontal](https://help.syncfusion.com/cr/aspnetcore-blazor/Sy
 
 > Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
-![TreeMap with slice and dice horizontal](images/Layout/SliceandDiceHorizontal.png)
+![Blazor TreeMap with Slice and DiceHorizontal Layout](images/Layout/blazor-treemap-slice-and-dicehorizontal.png)
 
 ### Slice and dice auto
 
@@ -98,7 +98,7 @@ The [SliceAndDiceAuto](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusi
 
 > Refer to the [code block](#squarified) to know about the property value of the **GrowthReports**.
 
-![TreeMap with slice and dice auto layout](images/Layout/SliceAndDiceAuto.png)
+![Blazor TreeMap with Slice and DiceAuto Layout](images/Layout/blazor-treemap-slice-and-diceauto.png)
 
 ## Rendering direction
 
@@ -141,7 +141,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 }
 ```
 
-![TreeMap with custom rendering direction](images/Internationalization/TopLeftBottomRight.png)
+![Blazor TreeMap in TopLeftBottomRight Direction](images/Internationalization/blazor-treemap-top-left-bottom-right-direction.png)
 
 The following example shows, how to render the TreeMap in the RTL direction with [TopRightBottomLeft](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
@@ -158,7 +158,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 > Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![TreeMap custom rendering direction](images/Internationalization/TopRightBottomLeft.png)
+![Blazor TreeMap in TopRightBottomLeft Direction](images/Internationalization/blazor-treemap-top-right-bottom-left-direction.png)
 
 The following example shows, how to render the TreeMap in the RTL direction with [BottomRightTopLeft](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
@@ -175,7 +175,7 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 > Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![TreeMap custom rendering direction](images/Internationalization/BottomRightTopLeft.png)
+![Blazor TreeMap with BottomRightTopLeft Direction](images/Internationalization/blazor-treemap-bottom-right-top-left-direction.png)
 
 The following example shows, how to render the TreeMap in the RTL direction with [BottomLeftTopRight](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.TreeMap.RenderingMode.html).
 
@@ -192,4 +192,4 @@ The following example shows, how to render the TreeMap in the RTL direction with
 
 > Refer to the [code block](#rendering-direction) to know about the property value of **Fruits**.
 
-![TreeMap custom rendering direction](images/Internationalization/BottomLeftTopRight.png)
+![Blazor TreeMap with BottomLeftTopRight Direction](images/Internationalization/blazor-treemap-bottom-left-top-right-direction.png)

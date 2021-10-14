@@ -110,4 +110,4 @@ In the following example, the `AllowMultiSelection` property is enabled.
 
 ```
 
-![TreeView Sample](./images/multiSelect.png)
+![MultiSelection in Blazor TreeView](./images/blazor-treeview-multi-selection.png)

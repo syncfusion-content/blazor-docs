@@ -583,4 +583,4 @@ namespace TreeGridComponent.Data {
 
 {% endtabs %}
 
-![Final output](../images/treegrid-in-tab.PNG)
+![Blazor TreeGrid Tab with Specific Height](../images/blazor-treegrid-tab-with-specific-height.PNG)

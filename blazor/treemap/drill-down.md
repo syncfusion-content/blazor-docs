@@ -58,7 +58,7 @@ The TreeMap items can be drilled by setting the [EnableDrillDown](https://help.s
 }
 ```
 
-![TreeMap with drill-down](images/drilldown/drilldown.png)
+![Blazor TreeMap with Drill-down](images/drilldown/blazor-treemap-drill-down.png)
 
 ## On-demand data loading
 
@@ -87,7 +87,7 @@ All the child items are rendered during the normal drill-down process, and visib
 
 > Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
-![TreeMap with on demand data loading](images/drilldown/drilldownView.png)
+![Blazor TreeMap with On Demand Data Loading](images/drilldown/blazor-treemap-on-demand-data-loading.png)
 
 ## Breadcrumb support
 
@@ -116,7 +116,7 @@ TreeMap items are drilled, up to any level of parent using breadcrumb navigation
 
 > Refer to the [code block](#perform-drill-down) to know about the property value of the **Employees**.
 
-![TreeMap with breadcrumb](images/drilldown/Breadcrumb.png)
+![Blazor TreeMap with Breadcrumb](images/drilldown/blazor-treemap-breadcrumb.png)
 
 ## Initial drill-down
 
@@ -146,4 +146,4 @@ TreeMap items can be drilled on initial rendering and it can be enabled by speci
 
 > Refer to the [code block](#perform-drill-down) to know about the property value of **Employees**.
 
-![TreeMap with initial drill-down](images/drilldown/Initial-drill-down.png)
+![Blazor TreeMap with Initial Drill-down](images/drilldown/blazor-treemap-initial-drill-down.png)
