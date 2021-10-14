@@ -86,4 +86,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Final output](../images/template-edit.PNG)
+![Editing with Template Column in Blazor TreeGrid](../images/blazor-treegrid-template-editing.PNG)

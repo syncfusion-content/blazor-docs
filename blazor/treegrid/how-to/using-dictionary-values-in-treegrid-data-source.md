@@ -82,4 +82,4 @@ This is demonstrated in the below sample code where **Designation** is defined a
 }
 
 ```
-![Dictionary Values](../images/dictionary-values-treegrid.png)
+![Dictionary Values in Blazor TreeGrid](../images/blazor-treegrid-dictionary-values.png)
