@@ -13,7 +13,8 @@ The Breadcrumb component contains an icon/image to provide a visual representati
 
 ## Icon in breadcrumb item
 
-To load the icon on the breadcrumb item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
+To load the icon/image on the breadcrumb item, set the [`iconCss`][IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
+
 
 ### Breadcrumb with Font Icon
 
@@ -36,7 +37,7 @@ To place the font icon on the breadcrumb item, set the [IconCss](https://help.sy
 
 ### Breadcrumb with Image
 
-In the Breadcrumb component, images can be added for the items using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, an image was added to the breadcrumb item by using the IconCss class `e-image` and specifying height and width.
+In the Breadcrumb component, images can be added for the items using the css class. In the following example, an image is added to the breadcrumb item by using the class name as `e-image-home` and specifying height and width for the css class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -63,7 +64,7 @@ In the Breadcrumb component, images can be added for the items using the [IconCs
 
 ### Breadcrumb with SVG Image
 
-In the Breadcrumb component, SVG image can be added for the items using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, SVG image was added to the breadcrumb item by using the IconCss class `e-image` and specifying height and width.
+In the Breadcrumb component, SVG image can be added for the items using the css class. In the following example, SVG image is added to the breadcrumb item by using the class name as `e-svg-home` and specifying height and width for the css class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -90,7 +91,7 @@ In the Breadcrumb component, SVG image can be added for the items using the [Ico
 
 ## Icon Only
 
-To display only icons for the items, add icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, breadcrumb items were demonstrated with only icons by providing the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
+To display only icons for the items, add icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, breadcrumb items are demonstrated with only icons by providing the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

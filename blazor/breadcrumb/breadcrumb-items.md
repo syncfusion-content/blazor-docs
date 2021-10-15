@@ -9,6 +9,8 @@ documentation: ug
 
 # Breadcrumb Items in Blazor Breadcrumb component
 
+The Breadcrumb supports to generate items based on the current URL by default. You can set the [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive or [`Url`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfBreadcrumb.html#Syncfusion_Blazor_Navigations_SfBreadcrumb_Url) property to generate the items.
+
 You can generate the items using [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive where each [BreadcrumbItem](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html) needs to be defined inside BreadcrumbItems tag. BreadcrumbItem provide below properties for navigation and customization. 
 
 * [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) - To sets the Url of the Breadcrumb item and that will be navigated when clicked.
@@ -34,7 +36,7 @@ You can generate the items using [BreadcrumbItems](https://help.syncfusion.com/c
 
 ## Items based on current Url
 
-The Breadcrumb items can be generated from the current URL of the page, if the [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_Url) property is not provided or when the user does not specify the breadcrumb items using the Breadcrumb property. The following example shows the breadcrumb items that are generated based on the current URL.
+The breadcrumb items can be generated based on the current URL of the page when the user does not specify the breadcrumb items using the [BreadcrumbItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItems.html) tag directive. The following example shows the breadcrumb items that are generated based on the current URL.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
