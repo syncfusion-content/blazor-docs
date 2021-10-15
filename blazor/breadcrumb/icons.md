@@ -13,7 +13,7 @@ The Breadcrumb component contains an icon/image to provide a visual representati
 
 ## Icon in Breadcrumb item
 
-To load the icon/image on the Breadcrumb item, set the [`IconCss`][IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property or `class` attribute.
+To load the icon/image on the Breadcrumb item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property or `class` attribute.
 
 
 ### Breadcrumb with Font Icon
