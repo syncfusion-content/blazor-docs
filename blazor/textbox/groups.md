@@ -141,6 +141,11 @@ The following sample demonstrates binding events to the icons.
 		content: '\e724';
 		font-family: e-icons;
 	}
+
+    .e-date-icon::before {
+		content: '\e901';
+		font-family: e-icons;
+	}
 </style>
 ```
 
