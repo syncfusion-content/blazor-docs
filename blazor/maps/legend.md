@@ -65,7 +65,7 @@ The legends can be made interactive with an arrow mark indicating the exact rang
 }
 ```
 
-![Maps with interactive legend](./images/Legend/interactive-legend.png)
+![Blazor Maps with Interactive Legend](./images/Legend/blazor-maps-interactive-legend.png)
 
 ## Positioning of the legend
 
@@ -112,7 +112,7 @@ The above four positions can be aligned with combination of **Near**, **Center**
 
 > Refer [code block](#legend-mode) to know the property value of `securityCouncilDetails`.
 
-![Positioning Maps legend](./images/Legend/legend-position.png)
+![Changing Legend Position in Blazor Maps](./images/Legend/blazor-maps-legend-position.png)
 
 ## Legend for shapes
 
@@ -157,7 +157,7 @@ The below code snippet demonstrate the equal color mapping legends for the shape
 }
 ```
 
-![Maps with legend](./images/Legend/Legend.png)
+![Blazor Maps with Legend](./images/Legend/blazor-maps-legend.png)
 
 ### Legend shape
 
@@ -233,7 +233,7 @@ The following properties and classes are available in legend to customize the le
 }
 ```
 
-![Maps with custom legend](./images/Legend/custom-legend.png)
+![Blazor Maps with Custom Legend](./images/Legend/blazor-maps-custom-legend.png)
 
 ### Legend for items excluded from color mapping
 
@@ -288,7 +288,7 @@ In the following example, color mapping is added for the ranges from **0** to **
 }
 ```
 
-![Maps legend for excluded color mapping range](./images/Legend/ExcludeLegend.png)
+![Blazor Maps Legend for Excluded Color Mapping Range](./images/Legend/blazor-maps-legend-exclude-color-mapping.png)
 
 ### Hiding desired legend items
 
@@ -317,7 +317,7 @@ Use the [ShowLegend](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 
 > Refer [code block](#legend-for-items-excluded-from-color-mapping) to know the property value of `PopulationDetails`.
 
-![Maps with specific legend hide option](./images/Legend/hidelegendDS.png)
+![Hiding Legend Item in Blazor Maps](./images/Legend/blazor-maps-hide-legend-item.png)
 
 ### Hide legend items based on data source value
 
@@ -368,7 +368,7 @@ Depending on the boolean values provided in the data source, the legend items wi
 }
 ```
 
-![Hide desired legends in maps using data source](./images/Legend/hide-desired-legend.png)
+![Hiding Legends Items based on DataSource in Blazor Maps](./images/Legend/blazor-maps-hide-desired-legend-item.png)
 
 ### Binding legend item text from data source
 
@@ -416,7 +416,7 @@ To show the legend text based on values provided in the data source, use the [Va
 }
 ```
 
-![Maps with legend item text from datasource](./images/Legend/legendtextDS.png)
+![Binding Legend Item in Blazor Maps](./images/Legend/blazor-maps-bind-legend-item.png)
 
 ### Hiding duplicate legend items
 
@@ -464,7 +464,7 @@ To hide the duplicate legend items in Maps, set the [RemoveDuplicateLegend](http
 }
 ```
 
-![Maps with duplicate legend hide option](./images/Legend/Duplicatelegend.png)
+![Hiding Duplicate Legend Items in Blazor Maps](./images/Legend/blazor-maps-hide-duplicate-legend.png)
 
 ### Toggle option in legend
 
@@ -524,7 +524,7 @@ The following properties and components are available to customize the toggle op
 }
 ```
 
-![Hide desired legends in maps using data source](./images/Legend/maps-legend-toggle.gif)
+![Customizing Toggle Option in Blazor Maps Legend](./images/Legend/blazor-maps-legend-toggle.gif)
 
 ## Enable legend for bubbles
 
@@ -573,7 +573,7 @@ To enable the legend for the bubble by setting the [Visible](https://help.syncfu
 }
 ```
 
-![Maps with bubble and legend](./images/Bubble/bubblelegend.png)
+![Blazor Maps with Bubble and Legend](./images/Bubble/blazor-maps-bubble-legend.png)
 
 ## Enable legend for markers
 
@@ -611,4 +611,4 @@ To enable legend for marker by setting the [Visible](https://help.syncfusion.com
 }
 ```
 
-![Markers with legend](./images/Marker/MarkerLegend.png)
+![Blazor Maps Marker with legend](./images/Marker/blazor-maps-marker-legend.png)

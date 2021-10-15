@@ -51,7 +51,7 @@ Bubbles in the Maps control represent the underlying data values of the Maps. It
 }
 ```
 
-![Maps with bubbles](./images/Bubble/Bubble.png)
+![Blazor Maps with Bubbles](./images/Bubble/blazor-maps-bubble.png)
 
 ## Bubble shapes
 
@@ -103,7 +103,7 @@ By default, bubbles are rendered in the **Circle** type. To change the type of t
 }
 ```
 
-![Maps with bubble shape](./images/Bubble/Bubble-shape.PNG)
+![Blazor Maps with Square Bubbles](./images/Bubble/blazor-maps-square-bubble.PNG)
 
 ## Customization
 
@@ -156,7 +156,7 @@ The following properties and a class are available in [MapsBubble](https://help.
 }
 ```
 
-![Customization for bubbles](./images/Bubble/Bubble-customization.PNG)
+![Blazor Maps with Custom Bubbles](./images/Bubble/blazor-maps-custom-bubble.PNG)
 
 ## Setting colors to the bubbles from the data source
 
@@ -203,7 +203,7 @@ The color for each bubble in the Maps can be set using the [ColorValuePath](http
 }
 ```
 
-![Setting color to the bubbles from the data source](./images/Bubble/Bubble-valuepath.PNG)
+![Changing Bubbles Color in Blazor Maps](./images/Bubble/blazor-maps-change-bubble-color.PNG)
 
 ## Setting the range of the bubble size
 
@@ -250,7 +250,7 @@ The size of the bubbles is calculated from the values got from the [ValuePath](h
 }
 ```
 
-![Maps with different size bubbles](./images/Bubble/population-density.png)
+![Blazor Maps with Different Bubble Size](./images/Bubble/blazor-maps-different-bubble-size.png)
 
 ## Multiple bubble groups
 
@@ -303,7 +303,7 @@ Multiple groups of bubbles can be added in the Maps by adding multiple [MapsBubb
 }
 ```
 
-![Maps with bubble groups](./images/Bubble/Bubble-group.png)
+![Blazor Maps with Multiple Bubble Groups](./images/Bubble/blazor-maps-multiple-bubble-group.png)
 
 ## Enable tooltip for bubble
 
@@ -351,4 +351,4 @@ The tooltip for the bubbles can be enabled by setting the [Visible](https://help
 }
 ```
 
-![Tooltip for bubbles](./images/Bubble/bubble-tooltip.PNG)
+![Displaying Tooltip for Bubbles in Blazor Maps](./images/Bubble/blazor-maps-bubble-tooltip.PNG)
