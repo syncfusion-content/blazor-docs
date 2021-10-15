@@ -183,7 +183,7 @@ In the above example, both **name** fields contain the same value as **Afghanist
 }
 ```
 
-![Maps with data source](./images/populatedata/Populatedata.png)
+![Blazor Maps with Data Binding](./images/populatedata/blazor-map-data-binding.png)
 
 ## Fetching data from JSON file
 
@@ -258,4 +258,4 @@ Here, the `PopulationDensity.json` file contains following data.
 ]
 ```
 
-![Maps with JSON data source](./images/populatedata/Populatedata.png)
+![Blazor Maps with JSON Data Source](./images/populatedata/blazor-map-data-binding.png)

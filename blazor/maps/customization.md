@@ -25,7 +25,7 @@ The width and height of the Maps can be set using the [Width](https://help.syncf
 </SfMaps>
 ```
 
-![Size for Maps](./images/Customization/Maps-size.PNG)
+![Blazor Maps with Custom Size](./images/Customization/blazor-maps-custom-size.PNG)
 
 ## Maps title
 
@@ -53,7 +53,7 @@ The title for the Maps can be set using the [MapsTitleSettings](https://help.syn
 </SfMaps>
 ```
 
-![Size for Maps](./images/Customization/Maps-title.PNG)
+![Customizing Blazor Maps Title](./images/Customization/blazor-maps-title-customization.PNG)
 
 ## Setting theme
 
@@ -84,7 +84,7 @@ By default, the Maps are rendered by the **Material** theme. The theme of the Ma
 </SfMaps>
 ```
 
-![Setting theme for Maps](./images/Customization/Maps-theme.PNG)
+![Applying Theme in Blazor Maps](./images/Customization/blazor-maps-theme.PNG)
 
 ## Customizing Maps container
 
@@ -108,7 +108,7 @@ The following property and classes are available to customize the container in t
 </SfMaps>
 ```
 
-![Customizing map container](./images/Customization/Maps-container.PNG)
+![Customizing Blazor Maps Container](./images/Customization/blazor-maps-container-customization.PNG)
 
 ## Customizing Maps area
 
@@ -130,7 +130,7 @@ By default, the background color of the shape maps is set as **white**. To modif
 </SfMaps>
 ```
 
-![Map area customization](./images/Customization/MapAreaSettings.PNG)
+![Customizing Blazor Maps Area](./images/Customization/blazor-maps-area-customization.PNG)
 
 ## Customizing the shapes
 
@@ -158,7 +158,7 @@ The following properties and class are available in [MapsShapeSettings](https://
 </SfMaps>
 ```
 
-![Maps with custom shape](./images/Customization/CustomizeShape.png)
+![Blazor Maps with Custom Shape](./images/Customization/blazor-maps-custom-shape.png)
 
 ## Setting color to the shapes from the data source
 
@@ -192,7 +192,7 @@ The color for each shape in the Maps can be set using the [ColorValuePath](https
 }
 ```
 
-![Setting color to  the shape from data source](./images/Customization/Shape-color.PNG)
+![Blazor Maps with Custom Shape Color](./images/Customization/blazor-maps-custom-shape-color.PNG)
 
 ## Projection type
 
@@ -221,4 +221,4 @@ By default, the Maps are rendered by the **Mercator** projection type in which t
 </SfMaps>
 ```
 
-![Maps with custom projection type](./images/Customization/ProjectionType.png)
+![Blazor Maps with Miller Projection](./images/Customization/blazor-maps-miller-projection.png)
