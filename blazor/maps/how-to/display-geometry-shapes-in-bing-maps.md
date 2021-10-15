@@ -35,7 +35,7 @@ To render Bing Maps in the Maps component, set the `UrlTemplate` property with�
 
 > In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Bing Maps](../images/bingmap.PNG)
+![Blazor Bing Maps](../images/blazor-bing-map.PNG)
 
 <b>Step 2</b>
 
@@ -68,4 +68,4 @@ Add geometry shape in the Bing Maps using sublayer concept. To add geometry shap
 
 The above code renders Africa continent as sublayer in the Bing Maps.
 
-![Bing Map with Sublayer](../images/BingMapSublayer.PNG)
+![Blazor Bing Maps with Sublayer](../images/blazor-bing-map-sublayer.PNG)
