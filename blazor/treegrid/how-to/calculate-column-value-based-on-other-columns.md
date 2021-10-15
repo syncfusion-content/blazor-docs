@@ -86,4 +86,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Column rendered based on other columns](../images/treegrid-columns-calculated.png)
+![Calculating Column Value based on Other Columns in Blazor TreeGrid](../images/blazor-treegrid-calculate-columns-value.png)

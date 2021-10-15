@@ -28,11 +28,11 @@ Use any one of the below standards to install the Syncfusion Blazor library in t
 
 1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application by using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor.Navigations** keyword in the Browse tab and install **Syncfusion.Blazor.Navigations** NuGet package in the application.
 
-    ![Individual Nuget](./images/individual-nuget.png)
+    ![Searching Blazor TreeView NuGet Package](./images/blazor-treeview-search-nuget-package.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor Navigation package will be installed in the project.
 
@@ -55,11 +55,11 @@ W> If the above new standard (individual NuGet packages) is preferred, then skip
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager` Right-click the project and then select `Manage NuGet Packages`.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![Blazor Nuget](./images/blazor-nuget.png)
+    ![Blazor NuGet Package](./images/blazor-nuget.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
@@ -204,7 +204,7 @@ Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the
 
 After successful compilation of the application, simply press `F5` to run the application.
 
-![TreeView Sample](./images/list-data.png)
+![Blazor TreeView](./images/blazor-treeview.png)
 
 > Refer to the [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) feature tour page for its groundbreaking feature representations. The [Blazor TreeView example](https://blazor.syncfusion.com/demos/treeview/default-functionalities?theme=bootstrap4) can also be explored to understand how to present and manipulate data.
 

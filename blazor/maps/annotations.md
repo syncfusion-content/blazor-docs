@@ -36,7 +36,7 @@ By using the `ContentTemplate` property of [MapsAnnotation](https://help.syncfus
 </SfMaps>
 ```
 
-![Maps with Annotation](./images/Annotation/Annotation.PNG)
+![Blazor Maps with Annotation](./images/Annotation/blazor-maps-annotation.PNG)
 
 ## Annotation customization
 
@@ -65,7 +65,7 @@ The stack order of an annotation element can be changed using the [ZIndex](http
 </SfMaps>
 ```
 
-![Annotation ZIndex](./images/Annotation/Annotation-zIndex.PNG)
+![Changing ZIndex in Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-zindex.PNG)
 
 ### Positioning an annotation
 
@@ -92,7 +92,7 @@ Annotations can be placed anywhere in the Maps by specifying percentage values t
 </SfMaps>
 ```
 
-![Annotation position](./images/Annotation/Annotation-position.PNG)
+![Changing Annotation Position in Blazor Maps](./images/Annotation/blazor-maps-annotation-position.PNG)
 
 ### Alignment of an annotation
 
@@ -119,7 +119,7 @@ Annotations can be aligned using the [HorizontalAlignment](https://help.syncfusi
 </SfMaps>
 ```
 
-![Annotation alignment](./images/Annotation/Annotation-alignment.PNG)
+![Changing Alignment of Blazor Maps Annotation](./images/Annotation/blazor-maps-annotation-alignment.PNG)
 
 ## Multiple Annotation
 
@@ -153,4 +153,4 @@ Multiple annotations can be added to the Maps by adding multiple [MapsAnnotation
 </SfMaps>
 ```
 
-![Annotation alignment](./images/Annotation/multiple-annotation.PNG)
+![Blazor Maps with Multiple Annotation](./images/Annotation/blazor-maps-multiple-annotation.PNG)

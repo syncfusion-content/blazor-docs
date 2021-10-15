@@ -41,7 +41,7 @@ Customize the labels for each item using the [LabelFormat](https://help.syncfusi
 }
 ```
 
-![TreeMap with data label](images/datalabel/Format.png)
+![Blazor TreeMap with Data Label](images/datalabel/blazor-treemap-data-label.png)
 
 ## Label position
 
@@ -67,7 +67,7 @@ Customize the label position using the [LabelPosition](https://help.syncfusion.c
 
 > Refer to the [code block](#formatting-labels) to know about the property value of **Cars**.
 
-![TreeMap label in custom position](images/datalabel/label-position.png)
+![Blazor TreeMap Label in Custom Position](images/datalabel/blazor-treemap-label-in-custom-position.png)
 
 ## Intersect action
 
@@ -101,4 +101,4 @@ When the label size in each item exceeds the actual size, use the [InterSectActi
 }
 ```
 
-![TreeMap label with intersect options](images/datalabel/IntersectAction.png)
+![Blazor TreeMap Label with Intersect Options](images/datalabel/blazor-treemap-label-intersect-action.png)

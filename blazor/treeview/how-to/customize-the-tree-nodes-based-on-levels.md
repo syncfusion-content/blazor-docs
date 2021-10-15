@@ -137,4 +137,4 @@ The tree nodes can be customized level wise by adding custom CssClass to the com
 
 ```
 
-![TreeView Sample](../images/customize-level.png)
+![Customizing Nodes based on Levels in Blazor TreeView](../images/blazor-treeview-with-custom-nodes.png)

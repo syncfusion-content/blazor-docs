@@ -214,4 +214,4 @@ Accordion is an interface where a list of items can be collapsed or expanded, bu
 </style>
 ```
 
-![TreeView Sample](../images/accordion-tree.png)
+![Customizing Blazor TreeView as Accordion](../images/blazor-treeview-with-custom-accordion.png)
