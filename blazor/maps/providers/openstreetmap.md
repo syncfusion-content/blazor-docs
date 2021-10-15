@@ -25,7 +25,7 @@ The OSM Maps can be rendered using by setting the [UrlTemplate](https://help.syn
 </SfMaps>
 ```
 
-![Open street map](../images/MapProviders/OSM.png)
+![Blazor OpenStreetMap](../images/MapProviders/blazor-open-sreet-map.png)
 
 ## Enable zooming and panning
 
@@ -48,7 +48,7 @@ The OSM Maps layer can be zoomed and panned. Zooming helps to get a closer look 
 </SfMaps>
 ```
 
-![OpenStreetMap with zooming](../images/MapProviders/osm-zooming.png)
+![Blazor OpenStreetMap with zooming](../images/MapProviders/blazor-open-street-map-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -91,7 +91,7 @@ Markers can be added to the layers of OSM Maps by setting the corresponding loca
 }
 ```
 
-![OpenStreetMap with markers and navigation line](../images/MapProviders/marker-and-line.png)
+![Blazor OpenStreetMap with Markers and Navigation Line](../images/MapProviders/blazor-open-street-map-marker-and-line.png)
 
 ## Adding sublayer
 
@@ -113,4 +113,4 @@ Any GeoJSON shape can be rendered as a sublayer on top of the OSM Maps layer for
 </SfMaps>
 ```
 
-![OpenStreetMap with sub layer](../images/MapProviders/sublayer.png)
+![Blazor OpenStreetMap with SubLayer](../images/MapProviders/blazor-open-street-map-sublayer.png)
