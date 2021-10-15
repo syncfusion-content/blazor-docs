@@ -151,4 +151,4 @@ documentation: ug
 }
 ```
 
-![TreeView Sample](../images/checkbox.png)
+![Checking or Unchecking CheckBox in Blazor TreeView](../images/blazor-treeview-checkbox.png)

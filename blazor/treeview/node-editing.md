@@ -122,4 +122,4 @@ When editing is completed by focus out or by pressing the **Enter** key, the mod
 
 ```
 
-![TreeView Sample](./images/node-editing.png)
+![Node Editing in Blazor TreeView](./images/blazor-treeview-node-editing.png)

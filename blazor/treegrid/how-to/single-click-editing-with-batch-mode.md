@@ -97,4 +97,4 @@ public class TreeData
 
 The following GIF represents the single click edit performed on the Tree Grid with Edit Mode as "Batch",
 
-![Custom control in toolbar](../images/single-click-edit.gif)
+![Single Click Editing in Blazor TreeGrid](../images/blazor-treegrid-single-click-editing.gif)

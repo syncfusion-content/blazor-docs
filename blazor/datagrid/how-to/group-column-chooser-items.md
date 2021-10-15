@@ -9,7 +9,7 @@ documentation: ug
 
 # How to Group the Column Chooser Items
 
-The <code>GridColumnChooserItemGroup</code> component helps to segregate the column chooser items as group. You can define column's group name by using the <code>Title</code> property of GridColumnChooserItemGroup directive.
+The [GridColumnChooserItemGroup](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html) component helps to segregate the column chooser items as group. You can define column's group name by using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridColumnChooserItemGroup.html#Syncfusion_Blazor_Grids_GridColumnChooserItemGroup_Title) property of GridColumnChooserItemGroup directive.
 
 The following code example demonstrates the default column chooser items as group.
 

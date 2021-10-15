@@ -47,7 +47,7 @@ In this example, the United States map shape is used as shape data by utilizing 
 </SfMaps>
 ```
 
-![Maps with sublayer](./images/Layers/layers.png)
+![Blazor Maps with Sublayer](./images/Layers/blazor-maps-sublayer.png)
 
 ## Displaying different layer in the view
 
@@ -65,7 +65,7 @@ Multiple shape files and map providers can be loaded simultaneously in Maps. The
 </SfMaps>
 ```
 
-![Maps with multiple layer](./images/Layers/multi-layer.png)
+![Blazor Maps with Multiple Layer](./images/Layers/blazor-maps-multiple-layer.png)
 
 ## See also
 
