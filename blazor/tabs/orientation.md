@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Orientation in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Orientation in Syncfusion Blazor Tabs component and much more details.
+description: Checkout and learn here all about orientation in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -18,7 +18,7 @@ It allows placing the header section inside the Tabs component at different posi
 * **Left**: Tab header items can be arranged vertically, and their content can be placed after the header.
 * **Right**: Tab header items can be arranged vertically, and their content can be placed before the header.
 
-It is also adaptable to the available space when the tab items exceed the view space. You can customize the modes by using [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) property. The available modes are as follows:
+It is also adaptable to the available space when the tab items exceed the view space. The modes can be customized by using [OverflowMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfTab.html#Syncfusion_Blazor_Navigations_SfTab_OverflowMode) property. The available modes are as follows:
 
 * Scrollable
 * Popup
@@ -157,7 +157,5 @@ It is also adaptable to the available space when the tab items exceed the view s
     }
 </style>
 ```
-
-Output be like the below.
 
 ![Blazor Tabs with Horizontal Orientation](./images/blazor-tabs-horizontal-orientation.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create right-to-left Blazor SplitButton Component | Syncfusion
-description: Learn here all about Create right-to-left Split Button in Syncfusion Blazor SplitButton component and more.
+description: Learn here all about how to create right-to-left Split Button in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -40,6 +40,4 @@ The following example illustrates how to enable right-to-left support in Split B
   
 ```
 
-Output be like
-
-![Split Button Sample](./../images/sb-rtl.png)
+![Right to Left in Blazor SplitButton](./../images/blazor-splitbutton-right-to-left.png)

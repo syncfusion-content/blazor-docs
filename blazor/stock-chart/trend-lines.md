@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Trendlines in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Trendlines in Syncfusion Blazor Stock Chart component and much more.
+description: Checkout and learn here all about trendlines in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Trendlines in Blazor Stock Chart Component
 
-Trendlines are used to show the direction and speed of price. Stock Chart supports 6 types of trendlines namely `Linear`, `Exponential`, `Logarithmic`, `Polynomial`, `Power`, `Moving Average`. By using trendline dropdown button you can add or remove the required trendline type.
+Trendlines are used to show the direction and speed of price. Stock Chart supports 6 types of trendlines namely `Linear`, `Exponential`, `Logarithmic`, `Polynomial`, `Power`, `Moving Average`. By using trendline dropdown button, the required trendline type can be added or removed.
 
 ## Linear
 
@@ -68,7 +68,7 @@ A linear trendline is a best fit straight line that is used with simpler data se
 
 ```
 
-![Linear](images/trendlines/linear.png)
+![Blazor Stock Chart with Linear Trendline](images/trendlines/blazor-stock-chart-linear-trendline.png)
 
 ## Logarithmic
 
@@ -128,7 +128,7 @@ To render a logarithmic trendline, use trendline [Type](https://help.syncfusion.
 
 ```
 
-![Logarithmic](images/trendlines/logarithmic.png)
+![Blazor Stock Chart with Logarithmic Trendline](images/trendlines/blazor-stock-chart-logarithmic-trendline.png)
 
 ## Exponential
 
@@ -188,7 +188,7 @@ To render a exponential trendline, use trendline [Type](https://help.syncfusion.
 
 ```
 
-![Exponential](images/trendlines/exponential.png)
+![Blazor Stock Chart with Exponential Trendline](images/trendlines/blazor-stock-chart-exponential-trendline.png)
 
 ## Polynomial
 
@@ -246,7 +246,7 @@ A polynomial trendline is a curved line that is used when data fluctuates. To re
 
 ```
 
-![Polynomial](images/trendlines/polynomial.png)
+![Blazor Stock Chart with Polynomial Trendline](images/trendlines/blazor-stock-chart-polynomial-trendline.png)
 
 ## Power
 
@@ -311,7 +311,7 @@ A moving average trendline smoothen out fluctuations in data to show a pattern o
 
 ```
 
-![Trendline](images/common/trendlines.png)
+![Blazor Stock Chart with Moving Average Trendline](images/common/blazor-stock-chart-moving-average-trendlines.png)
 
 ## Customization of Trendline
 
@@ -359,4 +359,4 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 
-![Trendline Customization](images/common/custom-trendlines.png)
+![Blazor Stock Chart with Custom Trendline](images/common/blazor-stock-chart-custom-trendline.png)

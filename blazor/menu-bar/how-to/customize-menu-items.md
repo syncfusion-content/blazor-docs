@@ -11,9 +11,9 @@ documentation: ug
 
 ## Add or Remove Menu Items
 
-Menu items can be added or removed using the [InsertAfter](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertAfter.html), [InsertBefore](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~InsertBefore.html) and [RemoveItems](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Navigations.SfContextMenu~RemoveItems.html) methods.
+Menu items can be added or removed directly by using Add or Remove methods.
 
-In the following example, the `Europe` menu items are added before the Oceania item, the `Africa` menu items are added after the Asia, and the South America and Mexico items are removed from menu.
+In the following example, the `Corporate` menu items are added and the `Company` items are removed from menu.
 
 ```cshtml
 
@@ -52,44 +52,19 @@ In the following example, the `Europe` menu items are added before the Oceania i
         public List<DataList> SubDatas { get; set; }
     }
 
-    private List<DataList> industries = new List<DataList>()
-    {
-        new DataList() { Data = "Industries", SubDatas = new List<DataList>()
-        {
-            new DataList() { Data = "Logistics"},
-            new DataList() { Data = "Insurance" }
-        }}
-    };
-
-    private List<DataList> addedItems = new List<DataList>()
-    {
-        new DataList() { Data = "Industries", SubDatas = new List<DataList>()
-        {
-            new DataList() { Data = "Logistics"},
-            new DataList() { Data = "Insurance" }
-        }}
-    };
-
-    private List<DataList> newItems = new List<DataList>
-    {
-        new DataList{ Data = "Corporate", SubDatas = new List<DataList>
-        {
-            new DataList{ Data = "Leadership"},
-            new DataList{ Data = "Vision"}
-        }
-    }
-    };
-
-    private List<string> removedItems = new List<string>()
-    {
-        "Education", "Hardware"
-    };
-
     public void Created()
     {
-        this.MenuObj.InsertBefore(addedItems, "Contact Us", false);
-        this.MenuObj.InsertAfter(newItems, "Products", false);
-        this.MenuObj.RemoveItems(removedItems);
+        this.MenuObj.Items.Add(new DataList
+        {
+            Data = "Corporate",
+            SubDatas = new List<DataList>
+            {
+                new DataList{ Data = "Leadership"},
+                new DataList{ Data = "Vision"}
+            }
+        });
+        var item = this.MenuObj.Items.First(x => x.Data == "Company");
+        this.MenuObj.Items.Remove(item);
     }
 }
 

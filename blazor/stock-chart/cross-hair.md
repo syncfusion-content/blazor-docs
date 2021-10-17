@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Crosshair in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Crosshair in Syncfusion Blazor Stock Chart component and much more.
+description: Checkout and learn here all about crosshair in Syncfusion Blazor Stock Chart component and much more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -51,7 +51,7 @@ Crosshair has a vertical and horizontal line to view the value of the axis at mo
 
 ```
 
-![Crosshair](images/common/crosshair.png)
+![Crosshair in Blazor Stock Chart](images/common/blazor-stock-chart-crosshair.png)
 
 ## Tooltip for axis
 
@@ -108,7 +108,7 @@ Tooltip label for an axis can be enabled by using [Enable](https://help.syncfus
 
 ```
 
-![Crosshair Tooltip](images/common/crosshair-tooltip.png)
+![Blazor Stock Chart with Crosshair Tooltip](images/common/blazor-stock-chart-crosshair-tooltip.png)
 
 ## Customization
 
@@ -167,7 +167,7 @@ The `Fill` and `TextStyle` property of the `CrosshairTooltip` is used to customi
 
 ```
 
-![Customization](images/common/crosshair-custom.png)
+![Blazor Stock Chart with Custom Crosshair](images/common/blazor-stock-chart-custom-crosshair.png)
 
 ## Add Trackball
 
@@ -217,4 +217,4 @@ Trackball can be enabled by setting the [Enable](https://help.syncfusion.com/cr/
 
 ```
 
-![Trackball](images/common/trackball.png)
+![Blazor Stock Chart with Trackball](images/common/blazor-stock-chart-trackball.png)

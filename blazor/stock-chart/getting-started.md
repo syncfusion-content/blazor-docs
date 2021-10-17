@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Stock Chart Component
 
-This section briefly explains how to include a Stock Chart component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a Stock Chart component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
 
-To get start quickly with Blazor Stock Chart component, you can check on this video.
+To get start quickly with Blazor Stock Chart component, check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=AxnqK2BnapM"%}
@@ -20,7 +20,7 @@ To get start quickly with Blazor Stock Chart component, you can check on this vi
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. The client-side resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -39,7 +39,7 @@ To get start quickly with Blazor Stock Chart component, you can check on this vi
     </head>
     ```
 
-3. Now add the lodash script **mandatorily** to the **HEAD** element of the **/Pages/Host.cshtml** page, since we have used it in our component.
+3. Now add the lodash script **mandatorily** to the **HEAD** element of the **/Pages/Host.cshtml** page, since it is used in the component.
 
     ```html
     <head>
@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 ## Adding Stock Chart component
 
-To initialize the Stock Chart component, add the below code to your **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
+To initialize the Stock Chart component, add the below code to **Index.razor** view page under **~/Pages** folder. In a new application, if **Index.razor** page has any default content template, then those content can be completely removed and following code can be added.
 
 ```cshtml
 @page "/"
@@ -96,7 +96,7 @@ To initialize the Stock Chart component, add the below code to your **Index.raz
 
 ## Populate Stock Chart with Data
 
-To bind data for the Stock Chart component, you can assign a `IEnumerable` object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
+To bind data for the Stock Chart component, assign a `IEnumerable` object to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. It can also be provided as an instance of the [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 ```cshtml
 @code{
@@ -125,7 +125,7 @@ To bind data for the Stock Chart component, you can assign a `IEnumerable` objec
 }
 ```
 
-Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. By default, Stock Chart will be rendered based on provided `Date` and `High` fields value from datasource without any mapping.
+Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartSeries.html#Syncfusion_Blazor_Charts_StockChartSeries_DataSource) property. By default, Stock Chart will be rendered based on the provided `Date` and `High` fields value from datasource without any mapping.
 
 ```cshtml
 <SfStockChart>
@@ -135,13 +135,13 @@ Now set the `StockDetails` to [DataSource](https://help.syncfusion.com/cr/blazor
 </SfStockChart>
 ```
 
-On successful compilation of your application, the Syncfusion Blazor Stock Chart component will render in the web browser as shown below.
+On successful compilation of the application, the Syncfusion Blazor Stock Chart component will render in the web browser as shown below.
 
-![stock chart](images/stock-chart.png)
+![Blazor Stock Chart](images/blazor-stock-chart.png)
 
 ## Adding Title
 
-You can add a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property in the Stock Chart, to provide quick information to the user about the data plotted in the component.
+A title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfStockChart.html#Syncfusion_Blazor_Charts_SfStockChart_Title) property can be added in the Stock Chart, to provide quick information to the user about the data plotted in the component.
 
 ```cshtml
 
@@ -180,7 +180,7 @@ You can add a title using [Title](https://help.syncfusion.com/cr/blazor/Syncfusi
 
 ```
 
-![StockChart Title](images/title.png)
+![Blazor Stock Chart with Title](images/blazor-stock-chart-title.png)
 
 ## Adding Crosshair
 
@@ -220,11 +220,11 @@ The crosshair is a vertical and horizontal line on the view that shows the value
 
 ```
 
-![Crosshair](images/crosshair.png)
+![Blazor Stock Chart with Crosshair](images/blazor-stock-chart-with-crosshair.png)
 
 ## Adding Trackball
 
-The trackball is used to track a closest data point  to the mouse or touch position. The trackball marker indicates the closest point and trackball tooltip displays the information about the point. It can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [StockChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html) to **true** and [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) property in the [StockChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html) to **true** in component.
+The trackball is used to track a closest data point to the mouse or touch position. The trackball marker indicates the closest point and trackball tooltip displays the information about the point. It can be enabled by setting the [Enable](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html#Syncfusion_Blazor_Charts_StockChartCrosshairSettings_Enable) property in the [StockChartCrosshairSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartCrosshairSettings.html) to **true** and [Shared](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html#Syncfusion_Blazor_Charts_StockChartTooltipSettings_Shared) property in the [StockChartTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartTooltipSettings.html) to **true** in component.
 
 ```cshtml
 
@@ -263,9 +263,9 @@ The trackball is used to track a closest data point  to the mouse or touch posit
 
 ```
 
-![Trackball](images/trackball.png)
+![Blazor Stock Chart with Trackball](images/blazor-stock-chart-trackball.png)
 
-> You can find the fully working sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorApp491318120.zip).
+> The fully working sample can be found [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorApp491318120.zip).
 
 ## See also
 

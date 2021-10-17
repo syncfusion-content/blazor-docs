@@ -135,4 +135,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Final output](../images/custom-toolbar-dd.PNG)
+![Creating Custom Toolbar with DropDownList in Blazor TreeGrid](../images/blazor-treegrid-custom-toolbar-with-dropdownlist.PNG)

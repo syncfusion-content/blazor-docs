@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons And Separator in Blazor SplitButton Component | Syncfusion
-description: Checkout and learn here all about Icons And Separator in Syncfusion Blazor SplitButton component and more.
+description: Checkout and learn here all about icons and separator in Syncfusion Blazor SplitButton component and more.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -11,9 +11,7 @@ documentation: ug
 
 ## Split Button Icons
 
-Split Button can have an icon to provide the visual representation of the action. To place the icon on a Split Button,set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Split Button. You can customize the icon's position by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconPosition) property
-
-The following example illustrates how to place icon in Split Button component.
+Split Button can have an icon to provide the visual representation of the action. To place the icon on a Split Button, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property to `e-icons` with the required icon CSS. By default, the icon is positioned to the left side of the Split Button. The icon's position can be customized by using the [IconPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconPosition) property.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -41,17 +39,13 @@ The following example illustrates how to place icon in Split Button component.
 
 ```
 
-Output be like
+![Blazor SplitButton with Icon](./images/blazor-splitbutton-icon.png)
 
-![Split Button Sample](./images/sb-icon.png)
-
-You can also use third party icons on the Split Button using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property.
+The third party icons on the Split Button can be used by the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_IconCss) property.
 
 ## Vertical Button
 
 Vertical Button in Split Button can be achieved by adding `e-vertical` class using [CssClass](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfSplitButton.html#Syncfusion_Blazor_SplitButtons_SfSplitButton_CssClass) property.
-
-The following example illustrates how to vertical support in Split Button component.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -72,9 +66,7 @@ The following example illustrates how to vertical support in Split Button compon
 
 ```
 
-Output be like
-
-![Split Button Sample](./images/sb-vertical.png)
+![Blazor SplitButton in Vertical](./images/blazor-splitbutton-vertical.png)
 
 ## Separator
 
@@ -102,9 +94,7 @@ The following example illustrates how to enable [Separator](https://help.syncfus
 
 ```
 
-Output be like
-
-![Split Button Sample](./images/sb-separator.png)
+![Blazor SplitButton with Separator](./images/blazor-splitbutton-separator.png)
 
 ## See Also
 

@@ -90,7 +90,7 @@ To initialize the TextBox component add the below code to the `Index.razor` view
 
 After successful compilation of the application, press `F5` to run the application.
 
-![TextBox Sample](./images/textbox_getting_started.png)
+![Blazor TextBox](./images/blazor-textbox.png)
 
 ## Adding icons to the TextBox
 
@@ -117,7 +117,7 @@ A TextBox can be created with icon as a group by creating the parent `div` eleme
 </style>
 ```
 
-![TextBox with icon](./images/textbox_adding_icons.png)
+![Blazor TextBox with Icon](./images/blazor-textbox-icons.png)
 
 ## Floating label
 
@@ -127,7 +127,7 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 <SfTextBox Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextBox>
 ```
 
-![TextBox with icon](./images/floatlabel.png)
+![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
 
 > You can also explore our [Blazor TextBox example](https://blazor.syncfusion.com/demos/textbox/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
 

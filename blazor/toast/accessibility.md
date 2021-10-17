@@ -44,4 +44,4 @@ The toast component implements the keyboard navigation support by using the foll
 
 ```
 
-![Accessibility](./images/accessibility.png)
+![Accessibility in Blazor Toast](./images/blazor-toast-accessibility.png)

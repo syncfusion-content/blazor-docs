@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Pane Sizing in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Pane Sizing in Syncfusion Blazor Splitter component and much more.
+description: Checkout and learn here all about pane sizing in Syncfusion Blazor Splitter component and much more.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Pane Sizing in Blazor Splitter Component
 
-Splitter allows you to provide pane sizes either in `Pixel` or `Percentage` formats.
+Splitter allows to provide pane sizes either in `Pixel` or `Percentage` formats.
 
 ## Auto size panes
 
@@ -62,13 +62,11 @@ using Syncfusion.Blazor.Layouts
 
 ```
 
-The output will be as follows.
-
 ![Blazor Splitter with Auto sizing Panes](./images/auto-sizing-panes.png)
 
 ## Fixed pane
 
-You can render the split panes with fixed size in both `Horizontal` and `Vertical` mode. Even if you provide fixed sizes to all the panes, the last pane is considered as a flexible pane.
+The split panes can be rendered with fixed size in both `Horizontal` and `Vertical` mode. Even if a fixed size is provided to all the panes, the last pane is considered as a flexible pane.
 
 ```cshtml
 
@@ -104,8 +102,6 @@ You can render the split panes with fixed size in both `Horizontal` and `Vertica
 
 ```
 
-The output will be as follows.
-
 ![Blazor Splitter with Fixed Pane Size in Pixel](./images/blazor-splitter-fixed-pane-size-in-pixel.png)
 
 Splitter pane Size in `Percentage`.
@@ -135,7 +131,5 @@ Splitter pane Size in `Percentage`.
 </SfSplitter>
 
 ```
-
-The output will be as follows.
 
 ![Blazor Splitter with Fixed Pane Size in Percentage](./images/blazor-splitter-fixed-pane-size-in-percentage.png)

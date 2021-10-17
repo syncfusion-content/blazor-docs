@@ -52,7 +52,7 @@ Toast can be created with the notification message. The message contains `Title`
 
 ```
 
-![Action button](./images/config-content-title.png)
+![Blazor Toast with Button](./images/blazor-toast-with-button.png)
 
 ## Specifying custom target
 
@@ -161,7 +161,7 @@ Here, the following sample demonstrates the combination of the `Target`, `ShowCl
 
 ```
 
-![Custom target](./images/config-custom-target.png)
+![Blazor Toast with ProgressBar](./images/blazor-toast-with-progressbar.png)
 
 ## Width and height
 
@@ -272,4 +272,4 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
 ```
 
-![Custom target](./images/width-height.png)
+![Changing Blazor Toast Size](./images/blazor-toast-size.png)

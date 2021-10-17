@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Popup Items in Blazor SplitButton Component | Syncfusion
-description: Checkout and learn here all about Popup Items in Syncfusion Blazor SplitButton component and much more.
+description: Checkout and learn here all about popup items in Syncfusion Blazor SplitButton component and much more.
 platform: Blazor
 control: Split Button
 documentation: ug
@@ -43,15 +43,13 @@ In the following sample, the icons for Cut, Copy, Paste menu items are added usi
 
 ```
 
-Output be like
-
-![Split Button Sample](./images/sb-icons.png)
+![Blazor SplitButton Items with Icon](./images/blazor-splitbutton-item-with-icon.png)
 
 ## Template
 
 ### Item Templating
 
-Popup items can be customized using the `CssClass` property. We have customize the items using CSS style..
+Popup items can be customized using the `CssClass` property. Customize the items using CSS style.
 
 ```cshtml
 
@@ -77,6 +75,4 @@ Popup items can be customized using the `CssClass` property. We have customize t
 
 ```
 
-Output be like
-
-![Split Button Sample](./images/sb-template.png)
+![Blazor SplitButton with Item Template](./images/blazor-splitbutton-item-template.png)

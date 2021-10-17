@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Stock Chart component and much more details.
+description: Checkout and learn here all about tooltip in Syncfusion Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -59,7 +59,7 @@ By default, tooltip is not visible. Enable the tooltip by setting [Enable](https
 
 ```
 
-![Tooltip](images/common/tooltip.png)
+![Blazor Stock Chart with Tooltip](images/common/blazor-stock-chart-tooltip.png)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -67,7 +67,7 @@ By default, tooltip is not visible. Enable the tooltip by setting [Enable](https
 
 <!-- markdownlint-disable MD013 -->
 
-By default, tooltip shows information of x and y value in points. In addition to that, you can show more information in tooltip. For example the format `${point.x} : ${point.high}` shows point x and high value.
+By default, tooltip shows information of x and y value in points. In addition to that, more information can be shown in tooltip. For example the format `${point.x} : ${point.high}` shows point x and high value.
 
 ```cshtml
 
@@ -157,4 +157,4 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockC
 
 ```
 
-![Tooltip Customization](images/common/custom-tooltip.png)
+![Blazor Stock Chart with Custom Tooltip](images/common/blazor-stock-chart-custom-tooltip.png)

@@ -74,4 +74,4 @@ The following code demonstrates customization of text appearance in a text box, 
 </style>
 ```
 
-![TimePicker](../images/customization.png)
+![Blazor TimePicker with Custom Style](../images/blazor-timepicker-custom-style.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Splitter component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor Splitter component and much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -97,7 +97,7 @@ This section explains the list of events of the splitter component which will be
 
 ## OnCollapse
 
-`OnCollapse` event triggers when before panes get collapsed.
+`OnCollapse` event triggers before the panes get collapsed.
 
 ```cshtml
 
@@ -118,7 +118,7 @@ This section explains the list of events of the splitter component which will be
 
 ## OnExpand
 
-`OnExpand` event triggers when before panes get expanded.
+`OnExpand` event triggers before the panes get expanded.
 
 ```cshtml
 
@@ -139,7 +139,7 @@ This section explains the list of events of the splitter component which will be
 
 ## Collapsed
 
-`Collapsed` event triggers when after panes get collapsed.
+`Collapsed` event triggers after the panes get collapsed.
 
 ```cshtml
 
@@ -160,7 +160,7 @@ This section explains the list of events of the splitter component which will be
 
 ## Expanded
 
-`Expanded` event triggers when after panes get expanded.
+`Expanded` event triggers after the panes get expanded.
 
 ```cshtml
 

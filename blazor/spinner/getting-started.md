@@ -122,6 +122,6 @@ After successful compilation of your application, simply press `F5` to run the a
 
 The output will be as follows.
 
-![Spinner Default](./images/default.png)
+![Blazor Spinner](./images/blazor-spinner.png)
 
 > You can also explore our [Blazor Spinner example](https://blazor.syncfusion.com/demos/spinner/overview?theme=bootstrap5) that shows how to present and manipulate data.

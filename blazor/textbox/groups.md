@@ -83,7 +83,71 @@ Create a TextBox with icon and the users can place the icon in either side of th
 </style>
 ```
 
-![textbox](./images/float_with_icons.png)
+![Blazor TextBox with Icon and Floating Label](./images/blazor-textbox-float-label-and-icons.png)
+
+### Binding events to icons
+
+You can bind the event to the icons by passing events as a parameter to the `AddIcon` method. You can bind the single or multiple events to the icons.
+
+The following sample demonstrates binding events to the icons.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<label>Single Event</label>
+<SfTextBox @ref="@TextBoxSearchObj" Created="@OnCreateSearch"></SfTextBox>
+
+<label>Multiple Events</label>
+<SfTextBox @ref="@TextBoxDateObj" Created="@OnCreateDate"></SfTextBox>
+
+@code {
+
+	SfTextBox TextBoxSearchObj;
+	SfTextBox TextBoxDateObj;
+
+	public async Task OnCreateSearch()
+	{
+		// Event creation with event handler
+		var Click = EventCallback.Factory.Create<MouseEventArgs>(this, SearchClick);
+		await TextBoxSearchObj.AddIcon("append", "e-search-icon", new Dictionary<string, object>() { { "onclick", Click } });
+	}
+
+	public void SearchClick()
+	{
+		// Icon Click event triggered
+	}
+
+	public async Task OnCreateDate()
+	{
+		// Event creation with event handler
+		var MouseDown = EventCallback.Factory.Create<MouseEventArgs>(this, DateMouseDown);
+		var MouseUp = EventCallback.Factory.Create<MouseEventArgs>(this, DateMouseUp);
+		await TextBoxDateObj.AddIcon("prepend", "e-date-icon", new Dictionary<string, object>() { { "onmouseup", MouseUp }, { "onmousedown", MouseDown } });
+	}
+
+	public void DateMouseDown()
+	{
+		// Icon mouse down event triggered
+	}
+	public void DateMouseUp()
+	{
+		// Icon mouse up event triggered
+	}
+
+}
+
+<style>
+	.e-search-icon::before {
+		content: '\e724';
+		font-family: e-icons;
+	}
+
+    .e-date-icon::before {
+		content: '\e901';
+		font-family: e-icons;
+	}
+</style>
+```
 
 ## With clear button and floating label
 
@@ -100,7 +164,7 @@ The clear button can be added to the TextBox by enabling the [ShowClearButton](h
 <SfTextBox Placeholder="FirstName" ShowClearButton=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![textbox](./images/clear_icon.png)
+![Blazor TextBox with Clear Icon](./images/blazor-textbox-clear-icon.png)
 
 ## Multi-line input with floating label
 
@@ -112,4 +176,4 @@ The following example demonstrates how to set [Multiline](https://help.syncfusio
 <SfTextBox Placeholder="Enter text" Multiline=true FloatLabelType="@FloatLabelType.Auto"></SfTextBox>
 ```
 
-![textbox](./images/multiline.png)
+![Blazor Multiline TextBox with Floating Label](./images/blazor-multiline-textbox-with-floating-label.png)

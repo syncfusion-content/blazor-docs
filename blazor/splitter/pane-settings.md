@@ -7,15 +7,15 @@ control: Splitter
 documentation: ug
 ---
 
-# Pane Settings in Blazor Splitter Component
+# Pane Settings in the Blazor Splitter Component
 
-This section explain pane settings behaviors.
+This section explains the pane settings behavior.
 
 ## Pane visibility
 
-The `Visible` property is enabled by default in the Blazor splitter. By using this property, you can show or hide the panes on initial load and in dynamic use case scenarios.
+You can show or hide the Splitter panes using the `Visible` property based on the application’s demand like initial load or dynamic cases. The `Visible` property is enabled by default in the Blazor splitter.
 
-In the following code example, bind the `Visible` property as mentioned below to show/hide the panes on CheckBox state change.
+In the following code example, the `Visible` property binds to the second `SplitterPane` to show/hide the pane on CheckBox state change.
 
 ```cshtml
 

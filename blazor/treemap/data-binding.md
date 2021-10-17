@@ -48,7 +48,7 @@ The following code example shows, how to bind a flat collection as data source t
 }
 ```
 
-![TreeMap with flat data](images/Databinding/flatcollection.png)
+![Blazor TreeMap with Flat Data](images/Databinding/blazor-treemap-flat-data.png)
 
 ### Hierarchical data
 
@@ -180,7 +180,7 @@ The following code example shows, how to bind a hierarchical collection as data 
 }
 ```
 
-![TreeMap with hierarchical data](images/Databinding/Hierarchical.png)
+![Blazor TreeMap with Hierarchical Data](images/Databinding/blazor-treemap-hierarchical-data.png)
 
 ## Local data
 
@@ -221,7 +221,7 @@ The following code example shows, how to bind a `IEnumerable` object to the Tree
 }
 ```
 
-![TreeMap with local data](images/Databinding/ListCollection.png)
+![Blazor TreeMap with Local Data](images/Databinding/blazor-treemap-local-data.png)
 
 ### Fetching data from the JSON file
 
@@ -261,7 +261,7 @@ else
 }
 ```
 
-![Load TreeMap data from JSON file](images/Databinding/flatcollection.png)
+![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.png)
 
 ## Remote data
 
@@ -303,7 +303,7 @@ To interact with the remote data source, provide the endpoint [Url](https://help
 }
 ```
 
-![Data binding with OData service](images/Databinding/OData.png)
+![Data Binding with OData Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odata.png)
 
 ### Binding with OData V4 services
 
@@ -339,7 +339,7 @@ The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav
 }
 ```
 
-![Data binding with OData V4 service](images/Databinding/ODatav4.png)
+![Data Binding with OData V4 Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odatav4.png)
 
 ### Web API
 
@@ -375,7 +375,7 @@ Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?n
 }
 ```
 
-![Data binding with web API data](images/Databinding/RemoteData.png)
+![Data binding with Web API Adaptor in Blazor TreeMap](images/Databinding/blazor-treemap-webapiadaptor.png)
 
 ## Entity Framework
 

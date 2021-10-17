@@ -195,7 +195,7 @@ namespace WebAssemblyLocale
 }
 ```
 
-![TimePicker](./images/de_culture.png)
+![Localization in Blazor TimePicker](./images/blazor-timepicker-localization.png)
 
 ## Customize the localized text
 
@@ -215,7 +215,7 @@ namespace WebAssemblyLocale
 }
 ```
 
-![TimePicker](./images/de_culture_02.png)
+![Customizing Localized Text in Blazor TimePicker](./images/blazor-timepicker-localize-text-customization.png)
 
 ## Right-To-Left
 
@@ -240,4 +240,4 @@ The following code example initializes the TimePicker component in `Arabic` cult
 ```
 
 
-![TimePicker](./images/ar_culture.png)
+![Right to Left in Blazor TimePicker](./images/blazor-timepicker-right-to-left.png)
