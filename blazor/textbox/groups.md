@@ -85,6 +85,70 @@ Create a TextBox with icon and the users can place the icon in either side of th
 
 ![Blazor TextBox with Icon and Floating Label](./images/blazor-textbox-float-label-and-icons.png)
 
+### Binding events to icons
+
+You can bind the event to the icons by passing events as a parameter to the `AddIcon` method. You can bind the single or multiple events to the icons.
+
+The following sample demonstrates binding events to the icons.
+
+```cshtml
+@using Syncfusion.Blazor.Inputs
+
+<label>Single Event</label>
+<SfTextBox @ref="@TextBoxSearchObj" Created="@OnCreateSearch"></SfTextBox>
+
+<label>Multiple Events</label>
+<SfTextBox @ref="@TextBoxDateObj" Created="@OnCreateDate"></SfTextBox>
+
+@code {
+
+	SfTextBox TextBoxSearchObj;
+	SfTextBox TextBoxDateObj;
+
+	public async Task OnCreateSearch()
+	{
+		// Event creation with event handler
+		var Click = EventCallback.Factory.Create<MouseEventArgs>(this, SearchClick);
+		await TextBoxSearchObj.AddIcon("append", "e-search-icon", new Dictionary<string, object>() { { "onclick", Click } });
+	}
+
+	public void SearchClick()
+	{
+		// Icon Click event triggered
+	}
+
+	public async Task OnCreateDate()
+	{
+		// Event creation with event handler
+		var MouseDown = EventCallback.Factory.Create<MouseEventArgs>(this, DateMouseDown);
+		var MouseUp = EventCallback.Factory.Create<MouseEventArgs>(this, DateMouseUp);
+		await TextBoxDateObj.AddIcon("prepend", "e-date-icon", new Dictionary<string, object>() { { "onmouseup", MouseUp }, { "onmousedown", MouseDown } });
+	}
+
+	public void DateMouseDown()
+	{
+		// Icon mouse down event triggered
+	}
+	public void DateMouseUp()
+	{
+		// Icon mouse up event triggered
+	}
+
+}
+
+<style>
+	.e-search-icon::before {
+		content: '\e724';
+		font-family: e-icons;
+	}
+
+    .e-date-icon::before {
+		content: '\e901';
+		font-family: e-icons;
+	}
+</style>
+```
+
 ## With clear button and floating label
 
 The clear button is added to the input for clearing the value given in the TextBox. It is shown only when the input field has a value, otherwise not shown.
