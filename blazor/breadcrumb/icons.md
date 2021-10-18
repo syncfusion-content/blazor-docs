@@ -9,16 +9,11 @@ documentation: ug
 
 # Icons in Blazor Breadcrumb component
 
-The Breadcrumb component contains an icon/image to provide a visual representation of an item.
+The Breadcrumb component contains an icon, image, and SVG to provide a visual representation of an item.
 
-## Icon in Breadcrumb item
+## Breadcrumb with font icon
 
-To load the icon/image on the Breadcrumb item, set the [`IconCss`][IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property or `class` attribute.
-
-
-### Breadcrumb with Font Icon
-
-To place the font icon on the Breadcrumb item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property to `e-icons` with the required icon's class name. By default, the icon is positioned to the left side of the item.
+To place the font icon on the Breadcrumb item, set the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property to `e-icons` with the required icon's class name.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -35,16 +30,18 @@ To place the font icon on the Breadcrumb item, set the [IconCss](https://help.sy
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-items.png)
 
-### Breadcrumb with Image
+> By default, the icon is positioned to the left side of the item.
 
-In the Breadcrumb component, images can be added for the items using the `class` attribute. In the following example, an image is added to the Breadcrumb item with height and width by using `e-image-home` class.
+## Breadcrumb with image
+
+In the Breadcrumb component, we can add images to the items using [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, an image is added to the Breadcrumb item with height and width by using `e-image-home` class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfBreadcrumb>
     <BreadcrumbItems>
-        <BreadcrumbItem class="e-image-home" Url="https://blazor.syncfusion.com/demos/"></BreadcrumbItem>
+        <BreadcrumbItem IconCss="e-image-home" Url="https://blazor.syncfusion.com/demos/"></BreadcrumbItem>
         <BreadcrumbItem Text="Components" Url="https://blazor.syncfusion.com/demos/datagrid/overview"></BreadcrumbItem>
         <BreadcrumbItem Text="Navigations" Url="https://blazor.syncfusion.com/demos/menu-bar/default-functionalities"></BreadcrumbItem>
         <BreadcrumbItem Text="Breadcrumb" Url="./breadcrumb/default-functionalities"></BreadcrumbItem>
@@ -62,16 +59,16 @@ In the Breadcrumb component, images can be added for the items using the `class`
 
 ![Blazor Breadcrumb Component](./images/image.png)
 
-### Breadcrumb with SVG image
+## Breadcrumb with SVG image
 
-In the Breadcrumb component, SVG image can be added for the items using the `class` attribute. In the following example, SVG image is added to the Breadcrumb item with height and width by using `e-svg-home` class.
+In the Breadcrumb component, SVG image can be added for the items using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, SVG image is added to the Breadcrumb item with height and width by using `e-svg-home` class.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
 
 <SfBreadcrumb>
     <BreadcrumbItems>
-        <BreadcrumbItem class="e-svg-home" Url="https://blazor.syncfusion.com/demos/"></BreadcrumbItem>
+        <BreadcrumbItem IconCss="e-svg-home" Url="https://blazor.syncfusion.com/demos/"></BreadcrumbItem>
         <BreadcrumbItem Text="Components" Url="https://blazor.syncfusion.com/demos/datagrid/overview"></BreadcrumbItem>
         <BreadcrumbItem Text="Navigations" Url="https://blazor.syncfusion.com/demos/menu-bar/default-functionalities"></BreadcrumbItem>
         <BreadcrumbItem Text="Breadcrumb" Url="./breadcrumb/default-functionalities"></BreadcrumbItem>
@@ -91,7 +88,9 @@ In the Breadcrumb component, SVG image can be added for the items using the `cla
 
 ## Icon only
 
-To display only icons for the items, add icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, Breadcrumb items are demonstrated with only icons by providing the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
+Use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property to display icon for an item. 
+
+In the following example, Breadcrumb items are demonstrated with only icons by providing the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -109,7 +108,7 @@ To display only icons for the items, add icons using the [IconCss](https://help.
 
 ## Show icon only for first item
 
-To show icon only for the first item in the Breadcrumb component, add icons to the first item using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, the icon was provided only for the first item by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
+To show icon only for the first item in the Breadcrumb component, add icons to the first item using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property. In the following example, the icon provided only for the first item by setting the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbItem.html#Syncfusion_Blazor_Navigations_BreadcrumbItem_IconCss) property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
