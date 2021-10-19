@@ -145,7 +145,7 @@ When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion
 
 ## Axis Labels Positioning
 
-The axis labels can be put **Outside** of the axis line by default, however the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPosition) property can also be used to position them **Inside** the axis line.
+The axis labels are placed **Outside** of the axis line by default, however the [LabelPosition](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelPosition) property can also be used to position them **Inside** the axis line.
 
 ```cshtml
 
@@ -594,7 +594,7 @@ The label can be trimmed using the [EnableTrim](https://help.syncfusion.com/cr/b
 
 ## Line Break
 
-The `<br>` tag can used to separate the long axis label into multiple lines.
+The `<br>` tag can be used to separate the long axis label into multiple lines.
 
 ```cshtml
 
