@@ -52,7 +52,7 @@ documentation: ug
 
 ``` 
 
-> Refer to the [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
+> Refer to our [Blazor Column Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Column Charts Example](https://blazor.syncfusion.com/demos/chart/column?theme=bootstrap4) to compare **Frequency**, **Count**, **Total**, or **Average** of data in different categories.
 
 ## Column Space and Width
 

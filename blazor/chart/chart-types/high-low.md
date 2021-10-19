@@ -56,7 +56,7 @@ documentation: ug
 
 ![Hilo](../images/financial-types/hilo.png)
 
-> Refer to the [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore the [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
+> Refer to our [Blazor Hilo Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/hilo-chart) feature tour page to know about its other groundbreaking feature representations and also explore our [Blazor Hilo Chart Example](https://blazor.syncfusion.com/demos/chart/hilo) to know how to render and configure the Hilo type series.
 
 ## Series Customization
 

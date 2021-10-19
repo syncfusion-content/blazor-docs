@@ -52,7 +52,7 @@ documentation: ug
 
 ![Box and Whisker Charts](../images/othertypes/box.png)
 
-> Refer to the [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker) to know how to render and configure the box and whisker type charts.
+> Refer to our [Blazor Box and Whisker Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/box-and-whisker-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Box and Whisker Chart Example](https://blazor.syncfusion.com/demos/chart/box-and-whisker) to know how to render and configure the box and whisker type charts.
 
 ## Box Plot
 

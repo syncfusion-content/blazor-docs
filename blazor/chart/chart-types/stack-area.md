@@ -55,7 +55,7 @@ documentation: ug
 
 ![The 100 percent Stacked Area Chart](../images/chart-types-images/stackedarea100.png)
 
-> Refer to the [Blazor 100% Stacked Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor 100% Stacked Area Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-area?theme=bootstrap4) to know how to render and configure the 100% Stacked Area type chart.
+> Refer to our [Blazor 100% Stacked Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/100-stacked-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor 100% Stacked Area Chart Example](https://blazor.syncfusion.com/demos/chart/percent-stacked-area?theme=bootstrap4) to know how to render and configure the 100% Stacked Area type chart.
 
 ## Series Customization
 

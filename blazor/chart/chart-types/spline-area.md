@@ -54,7 +54,7 @@ documentation: ug
 
 ![Spline Area](../images/chart-types-images/splinearea.png)
 
-> Refer to the [Blazor Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Spline Area Chart Example](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap4) to know how to connect the data points with smooth curves.
+> Refer to our [Blazor Spline Area Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-area-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Area Chart Example](https://blazor.syncfusion.com/demos/chart/spline-area?theme=bootstrap4) to know how to connect the data points with smooth curves.
 
 ## Series Customization
 

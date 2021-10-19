@@ -53,7 +53,7 @@ documentation: ug
 
 ![Scatter Chart](../images/chart-types-images/scatter.png)
 
-> Refer to the [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap4) to know how to plot data with two numeric parameters.
+> Refer to our [Blazor Scatter Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/scatter-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Scatter Chart Example](https://blazor.syncfusion.com/demos/chart/scatter?theme=bootstrap4) to know how to plot data with two numeric parameters.
 
 ## Series Customization
 

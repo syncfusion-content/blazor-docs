@@ -49,7 +49,7 @@ documentation: ug
 
 ``` 
 
-> Refer to the [Blazor Bar Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore the [Blazor Bar Chart Example](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
+> Refer to our [Blazor Bar Charts](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/bar-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Bar Chart Example](https://blazor.syncfusion.com/demos/chart/bar?theme=bootstrap4) to compare values across categories by using horizontal bars.
 
 ## Bar Space and Width
 
