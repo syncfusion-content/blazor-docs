@@ -32,7 +32,7 @@ In this case, the key generated for those online map service providers can also 
 </SfMaps>
 ```
 
-![Syncfusion Maps with Google Maps provider](../images/MapProviders/Google-map.png)
+![Blazor Google Maps](../images/MapProviders/blazor-google-map.png)
 
 **Enable zooming and panning**
 
@@ -56,7 +56,7 @@ Tile Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 </SfMaps>
 ```
 
-![Google Maps with zooming](../images/MapProviders/google-map-zoom.png)
+![Blazor Google Maps with Zooming](../images/MapProviders/blazor-google-maps-zoom.png)
 
 **Adding markers and navigation line**
 
@@ -99,7 +99,7 @@ Markers can be added to the layers of tile Maps by setting the corresponding loc
 }
 ```
 
-![Google Maps with markers and navigation line](../images/MapProviders/google-map-marker-and-line.png)
+![Blazor Google Maps with Markers and Navigation Line](../images/MapProviders/blazor-google-maps-marker-and-line.png)
 
 **Adding sublayer**
 
@@ -121,7 +121,7 @@ Any GeoJSON shape can be rendered as a sublayer on top of the tile Maps layer fo
 </SfMaps>
 ```
 
-![Google Maps with sublayer](../images/MapProviders/google-map-sublayer.png)
+![Blazor Google Maps with Sublayer](../images/MapProviders/blazor-google-maps-sublayer.png)
 
 ## Other supportive online map service providers
 
@@ -149,6 +149,6 @@ The Maps component can also render the following online map service providers, w
 </SfMaps>
 ```
 
-![MapBox Map](../images/MapProviders/mapbox.png)
+![Blazor MapBox Map](../images/MapProviders/blazor-mapbox-map.png)
 
-![TomTom Map](../images/MapProviders/tomtom.png)
+![Blazor TomTom Map](../images/MapProviders/blazor-tomtom-map.png)

@@ -121,4 +121,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Final output](../images/showhidecolumn.PNG)
+![Show or Hide Blazor TreeGrid Columns in Dialog Editing](../images/blazor-treegrid-show-or-hide-column.PNG)

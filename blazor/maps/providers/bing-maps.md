@@ -35,7 +35,7 @@ The Bing Maps can be rendered by setting the [UrlTemplate](https://help.syncfusi
 
 > In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Bing Maps](../images/MapProviders/Bing-map.png)
+![Blazor Bing Maps](../images/MapProviders/blazor-bing-maps.png)
 
 ## Types of Bing Maps
 
@@ -70,7 +70,7 @@ The above types can also be rendered in the Maps component by specifying their U
 
 > In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Bing Maps with CanvasLight](../images/MapProviders/Bing-map-with-canvas.png)
+![Blazor Bing Maps with CanvasLight](../images/MapProviders/blazor-bing-maps-with-canvas.png)
 
 ## Enable zooming and panning
 
@@ -103,7 +103,7 @@ Bing Maps layer can be zoomed and panned. Zooming helps to get a closer look at 
 
 > In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Bing Maps with zooming](../images/MapProviders/bing-zooming.png)
+![Blazor Bing Maps with Zooming](../images/MapProviders/blazor-bing-maps-zooming.png)
 
 ## Adding markers and navigation line
 
@@ -153,7 +153,7 @@ Markers can be added to the layers of Bing Maps by setting the corresponding loc
 
 > In the above URL passed to the `GetBingUrlTemplate` method, specify the Bing Maps key.
 
-![Bing Maps with markers and navigation line](../images/MapProviders/bing-marker-and-line.png)
+![Blazor Bing Maps with Markers and Navigation Line](../images/MapProviders/blazor-bing-maps-marker-and-line.png)
 
 ## Adding sublayer
 

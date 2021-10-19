@@ -51,7 +51,7 @@ To add the markers, the [DataSource](https://help.syncfusion.com/cr/blazor/Syncf
 }
 ```
 
-![Maps with marker](./images/Marker/Marker.png)
+![Blazor Maps with Marker](./images/Marker/blazor-maps-marker.png)
 
 ## Adding marker template
 
@@ -108,7 +108,7 @@ The marker can be added as a template in the Maps component. The [MarkerTemplate
 }
 ```
 
-![Maps with marker template](./images/Marker/MarkerTemplate.PNG)
+![Blazor Maps with Marker Template](./images/Marker/blazor-maps-marker-template.PNG)
 
 ## Customization
 
@@ -153,7 +153,7 @@ The following properties and class are available in [MapsMarker](https://help.sy
 }
 ```
 
-![Maps with marker customization](./images/Marker/marker-customization.PNG)
+![Blazor Maps with Custom Marker](./images/Marker/blazor-maps-custom-marker.PNG)
 
 ## Marker shapes
 
@@ -203,7 +203,7 @@ To render a marker as an image in Maps, set the [Shape](https://help.syncfusion.
 }
 ```
 
-![Markers with image](./images/Marker/marker-image.PNG)
+![Blazor Maps Marker with Image](./images/Marker/blazor-maps-marker-image.PNG)
 
 ## Multiple marker groups
 
@@ -247,7 +247,7 @@ Multiple groups of markers can be added in the Maps by adding multiple [MapsMark
 }
 ```
 
-![Markers with multiple group](./images/Marker/marker-group.png)
+![Blazor Maps with Multiple Marker Group](./images/Marker/blazor-maps-multiple-marker-group.png)
 
 ## Customize marker shapes from data source
 
@@ -285,7 +285,7 @@ Using the [ShapeValuePath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 }
 ```
 
-![Markers with color](./images/Marker/marker-bind.PNG)
+![Blazor Maps with Custom Marker Shape](./images/Marker/blazor-maps-custom-marker-shape.PNG)
 
 ### Setting value path from the data source
 
@@ -319,7 +319,7 @@ The latitude and longitude values are used to determine the location of each mar
 }
 ```
 
-![Setting marker from value path](./images/Marker/marker.PNG)
+![Setting Value Path from DataSource in Blazor Maps Marker](./images/Marker/blazor-maps-marker.PNG)
 
 ## Marker zooming
 
@@ -354,7 +354,7 @@ The Maps can be initially scaled to the center value based on the marker distanc
 }
 ```
 
-![Markers with zoom](./images/Marker/should-zoom.PNG)
+![Blazor Maps Marker with Zooming](./images/Marker/blazor-maps-marker-zooming.PNG)
 
 ## Marker clustering
 
@@ -402,7 +402,7 @@ To enable clustering in markers, set the [AllowClustering](https://help.syncfusi
 }
 ```
 
-![Markers with clustering](./images/Marker/MarkerClustering.png)
+![Blazr Maps Marker with Clustering](./images/Marker/blazor-maps-marker-clustering.png)
 
 ## Customization of marker cluster
 
@@ -462,7 +462,7 @@ The following properties and classes are available to customize the marker clust
 }
 ```
 
-![Marker cluster customization](./images/Marker/Cluster-customization.PNG)
+![Blazor Maps Marker with Custom Cluster](./images/Marker/Cluster-customization.PNG)
 
 ## Expanding the marker cluster
 
@@ -505,7 +505,7 @@ The cluster is formed by grouping an identical and non-identical marker from the
 }
 ```
 
-![Markers with cluster](./images/Marker/cluster-expand.PNG)
+![Expanding Marker Cluster in Blazor Maps](./images/Marker/blazor-maps-marker-expand-cluster.PNG)
 
 ## Tooltip for marker
 
@@ -541,7 +541,7 @@ Tooltip is used to display more information about a marker on mouse over or touc
 }
 ```
 
-![Maps with marker Tooltip](./images/MarkerTooltip.png)
+![Blazor Maps with Marker Tooltip](./images/blazor-maps-marker-tooltip.png)
 
 ## See also
 
