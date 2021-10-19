@@ -7,7 +7,7 @@ control: Tree Grid
 documentation: ug
 ---
 
-# Paste
+# Paste in Blazor TreeGrid Component
 
 The content of a cell or a group of cells can be copied by selecting the cells and pressing <kbd>Ctrl + C</kbd> shortcut key and paste it to another set of cells by selecting the cells, and pressing <kbd>Ctrl + V</kbd> shortcut key.
 
