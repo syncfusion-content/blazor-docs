@@ -138,6 +138,11 @@ Tree Grid supports Complex Data Binding with ExpandoObject. In the below example
 
 ## Header template
 
+To know about **Header Template** in Blazor tree grid Component, you can check this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
+
 The header element can be customized by using the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderTemplate.html) property.
 
 {% tabs %}
@@ -996,6 +1001,11 @@ When the right edge of the header cell is tapped, a floating handler will be vis
 <!-- markdownlint-enable MD033 -->
 
 ## Column template
+
+To know about **Column Template** in Blazor tree grid Component, you can check this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PnM11O-BPVU"%}
 
 The column [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Template.html) has options to display custom element instead of a field value in the column.
 
