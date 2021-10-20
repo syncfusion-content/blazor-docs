@@ -9,23 +9,21 @@ documentation: ug
 
 # Reference scripts in Blazor Application
 
-This section provides information about the Script Isolation process and how to add CDN, Static Web Assets & Custom resource generator (CRG) script references for Syncfusion Blazor Components.
+This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion Blazor Components.
 
-## JavaScript Isolation
+## JavaScript isolation
 
-Syncfusion Blazor enables JavaScript (JS) isolation in standard JavaScript modules and loaded scripts internally using JavaScript Isolation. It allows to load JavaScript code for a specific component alone. One of the goals of JavaScript (JS) isolation is to make components reusable that are not impacted by the global scope.
+Syncfusion Blazor components supports javaScript isolation where the needed scripts are loaded by the component itself when its rendered. So, you don't have to reference scripts externally in application. 
 
-## IgnoreScript Isolation
+> Syncfusion recommends to reference scripts using CDN over static web assets for better loading performance of the blazor application. 
 
-The Syncfusion Blazor provides an `IgnoreScriptIsolation` option to refer the required component scripts externally from the application-end to increase initial load performance and better performance. If `IgnoreScriptIsolation` option is set to `true` in `AddSyncfusionBlazor()` service, the Syncfusion Blazor components will disable the dynamic script loading, instead of this it uses the external scripts reference from the application.
+## Disable JavaScript isolation
 
-> The `IgnoreScriptIsolation` support is applicable only from 19.2.* version.
+The Syncfusion Blazor components supports to refer scripts externally at the application-end by disabling default javaScript isolation approach for better initial loading performance which explained in the previous section. You can disable JS isolation by setting [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`. 
 
-### Refer component scripts externally on Blazor Application
+### Blazor Server App
 
-Set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service to add script externally.
-
-* If you're using `.NET 6` Blazor Server App, set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service in `~/Program.cs` file.
+* If you're using `.NET 6` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
     ```c#
     // For .NET 6 project, add the IgnoreScriptIsolation in Syncfusion Blazor Service in Program.cs file.
@@ -44,7 +42,7 @@ Set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service to a
     ....
     ```
 
-* If you're using `.NET 5 or .NET Core SDK 3.1 project` Blazor Server App, set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service in `~/Startup.cs` file.
+* If you're using `.NET 5 or .NET Core SDK 3.1 project` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
 
      ```c#
     using Syncfusion.Blazor;
@@ -63,7 +61,9 @@ Set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service to a
     }
     ```
 
-* If you're using Blazor WebAssembly App, set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service in `~/Program.cs` file.
+### Blazor WASM App
+
+* If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
     ```c#
     // For .NET 6 project.
@@ -97,96 +97,47 @@ Set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service to a
     }
     ```
 
-> If you configure the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service, you need to manually add the external script reference in `~/Pages/_Layout.cshtml` for `.NET 6` project and in `~/Pages/_Host.cshtml` for `.NET 5 or .NET Core SDK 3.1 project` in Blazor Server app or `~/wwwroot/index.html` in Blazor WebAssembly app.
+> If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via CDN Reference or Static Web Assets. 
 
 ## CDN Reference
 
-You can refer the Syncfusion Blazor scripts through the CDN resources by configuring the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service.
+You can refer the Syncfusion Blazor scripts through the CDN resources by configuring the [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true`. The external script reference can be added as follows,
 
-### Types
+* For Blazor Server App, reference scripts in `~/Pages/_Layout.cshtml` file for `.NET 6` project and in `~/Pages/_Host.cshtml` file for `.NET 5 and .NET Core 3.1` project.
+* For Blazor WASM App, reference scripts in `~/wwwroot/index.html` file. 
 
-CDN Reference can be available in both version specific and un versioned links.
+Syncfusion Blazor components are available in CDN for each version. Make sure that the version in the URLs matches the version of the Syncfusion Blazor Package you are using.
 
-* Version based CDN
-* Global CDN
-
-#### Version based CDN
-
-Version based CDN will contains the version specific contents (Scripts) for Syncfusion Blazor Components.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
-> PdfViewer and DocumentEditor Component has a version specific separate CDN Script resources.
-
-* To add version specific CDN script reference for PdfViewer Component.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
-* To add version specific CDN script reference for DocumentEditor Component.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
-| Component's Script Name | CDN Reference |
+| Component  | CDN Script Reference |
 | --- | --- |
-| For all component scripts except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js |
+| All components except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js |
 | PDF Viewer | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js |
 
-#### Global CDN
+```html
+<head>
+    ....
+    ....
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
+</head>
+```
 
-Global CDN will contains the latest release contents (Scripts) for Syncfusion Blazor Components.
+If you are using `PDFViewer` or `DocumentEditor`, ensure to add additional script references as follows,
 
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js" type="text/javascript"></script>
-    </head>
-    ```
+```html
+<head>
+    ....
+    ....
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
+    <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
+</head>
+```
 
-> PdfViewer and DocumentEditor Component has a separate CDN Script resources.
+In addition to above, Syncfusion Blazor components provides latest scripts in CDN without versioning. You can use this in development environment if you want to always use the latest version of scripts. It is not recommended to use this in production environment. 
 
-* To add global CDN script reference for PdfViewer Component.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
-* To add global CDN script reference for DocumentEditor Component.
-
-    ```html
-    <head>
-        ....
-        ....
-        <script src="https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
-    </head>
-    ```
-
-| Component's Script Name | CDN Reference |
+| Component | CDN Script Reference |
 | --- | --- |
-| For all component scripts except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+|  All components except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
 | PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
 
