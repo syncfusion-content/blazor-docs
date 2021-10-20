@@ -9,7 +9,7 @@ documentation: ug
 
 # Localization in Blazor Charts Component
 
-The static text of the Chart was translated using a Resource file (**.resx**).
+The static text of the Chart is translated using a Resource file (**.resx**).
 
 The Resource file is an XML file that contains the strings (key and value pairs) that you want to translate. For further information on how to configure and use localization in the ASP.NET Core application framework, see the [Localization](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/localization?view=aspnetcore-3.0) link.
 
@@ -19,7 +19,7 @@ The Resource file is an XML file that contains the strings (key and value pairs)
 
 In the server side Blazor samples, the following examples show how to activate **Localization** for charts.
 
-* Open the **Startup.cs** file and, in the **ConfigureServices** function, add the following configuration.
+* Open the **Startup.cs** file and add the following configuration to the **ConfigureServices** function.
 
 ```csharp
 using Syncfusion.Blazor;

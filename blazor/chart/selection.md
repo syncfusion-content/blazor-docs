@@ -13,7 +13,7 @@ documentation: ug
 
 The chart provides selection support for the series and its data points on mouse or touch action.
 
-> When clicked on the data points, the corresponding series legend will also be selected.
+> When you click on the data points, the corresponding series legend will also be selected.
 
 The chart offers a variety of selection mode for selecting the data. They are,
 
