@@ -97,7 +97,7 @@ Set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service to a
     }
     ```
 
-> If you configure the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service, yot need to manually add the external script reference in `~/Pages/_Layout.cshtml` for `.NET 6` project and in `~/Pages/_Host.cshtml` for `.NET 5 or .NET Core SDK 3.1 project` in Blazor Server app or `~/wwwroot/index.html` in Blazor WebAssembly app.
+> If you configure the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service, you need to manually add the external script reference in `~/Pages/_Layout.cshtml` for `.NET 6` project and in `~/Pages/_Host.cshtml` for `.NET 5 or .NET Core SDK 3.1 project` in Blazor Server app or `~/wwwroot/index.html` in Blazor WebAssembly app.
 
 ## CDN Reference
 
