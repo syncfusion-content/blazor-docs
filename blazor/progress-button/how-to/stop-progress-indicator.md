@@ -9,7 +9,7 @@ documentation: ug
 
 # Stop Progress Indicator in Blazor ProgressButton Component
 
-You can stop the progress indicator using [ProgressComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_ProgressComplete) method. In the following sample, the progress is stopped by clicking the `STOP` button.
+You can stop the progress indicator using [EndProgressAsync](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.SplitButtons.SfProgressButton.html#Syncfusion_Blazor_SplitButtons_SfProgressButton_EndProgressAsync) method. In the following sample, the progress is stopped by clicking the `STOP` button.
 
 ```cshtml
 @using Syncfusion.Blazor.SplitButtons
@@ -22,7 +22,7 @@ You can stop the progress indicator using [ProgressComplete](https://help.syncfu
     SfProgressButton ProgressBtnObj;
     private async Task clicked()
     {
-      await ProgressBtnObj.ProgressComplete();
+      await ProgressBtnObj.EndProgressAsync();
     }
 }
 ```

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Calendar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Calendar component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor Calendar component of Syncfusion.
 platform: Blazor
 control: Calendar
 documentation: ug
@@ -48,7 +48,7 @@ Open `~/_Imports.razor` file and import the `Syncfusion.Blazor.Calendars` packag
 
 ## Add SyncfusionBlazor service in Program.cs
 
-Open the **Program.cs** file and add services required by Syncfusion components using  **builder.Services.AddSyncfusionBlazor()** method
+Open the **Program.cs** file and add services required by Syncfusion components by using the **builder.Services.AddSyncfusionBlazor()** method
 
 ```csharp
 using Syncfusion.Blazor;
@@ -68,7 +68,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/wwwroot/index.html** page.
+> To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by `AddSyncfusionBlazor(true)` and load the scripts in the **HEAD** element of the **~/wwwroot/index.html** page.
 
  ```html
 <head>
@@ -78,7 +78,7 @@ namespace BlazorApplication
 
 ## Adding Calendar component to the application
 
-To initialize the Calendar component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
+To initialize the Calendar component, add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
 
 The following code shows a basic Calendar component.
 

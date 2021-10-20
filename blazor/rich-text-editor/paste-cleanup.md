@@ -7,11 +7,11 @@ control: RichTextEditor
 documentation: ug
 ---
 
-# Paste from MS Word in Blazor RichTextEditor Component
+# Paste from Microsoft Word in Blazor RichTextEditor Component
 
 The Rich Text Editor allows you to reduce the effort while converting the Microsoft Word content to HTML format with format and styles.
 
-## MS Word to HTML
+## Microsoft Word to HTML
 
 By default, the Rich Text Editor consider the following processes on paste content from Microsoft Word.
 
@@ -115,6 +115,6 @@ In the following example, the paste cleanup related settings are explained with 
 
 The output will be as follows.
 
-![Paste CleanUp](./images/paste-cleanup.png)
+![Blazor RichTextEditor with Paste CleanUp](./images/blazor-richtexteditor-paste-cleanup.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.

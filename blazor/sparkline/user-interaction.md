@@ -41,7 +41,7 @@ When the mouse is hovered over a data point, the Sparkline provides the option t
 }
 ```
 
-![Sparkline Chart with tooltip](images/UserInteraction/Tooltip.png)
+![Blazor Sparkline Chart with Tooltip](images/UserInteraction/blazor-sparkline-tooltip.png)
 
 ### Tooltip Customization
 
@@ -69,7 +69,7 @@ The following code example shows customizing tooltip format, text color and fill
 
 > Refer to the [code block](#tooltip) to know about the property value of **WorkLogs**.
 
-![Sparkline Chart with custom tooltip](images/UserInteraction/TooltipCustomization.png)
+![Blazor Sparkline Chart with Custom Tooltip](images/UserInteraction/blazor-sparkline-custom-tooltip.png)
 
 ### Tooltip Template
 
@@ -103,7 +103,7 @@ The tooltip can be rendered as a custom component by specifying the [Template](h
 
 > Refer to the [code block](#tooltip) to know about the property value of the **WorkLogs**.
 
-![Sparkline Chart with tooltip template](images/UserInteraction/tooltiptemplate.png)
+![Blazor Sparkline Chart with Tooltip Template](images/UserInteraction/blazor-sparkline-tooltip-template.png)
 
 ## Track Line
 
@@ -123,4 +123,4 @@ The track line tracks data points that are closest to the mouse position or touc
 </SfSparkline>
 ```
 
-![Sparkline Chart with Track Line](images/UserInteraction/Trackline.png)
+![Blazor Sparkline Chart with Track Line](images/UserInteraction/blazor-sparkline-with-track-line.png)

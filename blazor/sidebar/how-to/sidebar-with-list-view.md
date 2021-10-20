@@ -180,4 +180,4 @@ In the following example, the Sidebar is rendered with ListView component in its
 
 Output be like the below.
 
-![output](./../images/sidebar-listview.png)
+![Blazor Sidebar with ListView](./../images/blazor-sidebar-listview.png)

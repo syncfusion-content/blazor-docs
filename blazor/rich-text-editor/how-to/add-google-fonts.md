@@ -69,7 +69,7 @@ To use web fonts in Rich Text Editor, the web fonts need not to be present in th
 
 The output will be as follows.
 
-![Custom Font](../images/add-font.png)
+![Blazor RichTextEditor with Custom Font](../images/blazor-richtexteditor-with-custom-font.png)
 
 The following font style links are referred in the page.
 
