@@ -9,7 +9,14 @@ documentation: ug
 
 # Editing in Blazor TreeGrid Component
 
-The Tree Grid component has options to dynamically insert, delete and update records. Editing feature is enabled by using the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations. To define the primary key, set the [TreeGridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
+The Tree Grid component has options to dynamically insert, delete and update records. Editing feature is enabled by using the [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html) property and it requires a primary key column for CRUD operations. 
+
+To know more about editing feature in Blazor tree grid component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=5_g3yr8ASys"%}
+
+To define the primary key, set the [TreeGridColumn.IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) to **true** in particular column.
 
 {% tabs %}
 
@@ -653,6 +660,11 @@ namespace TreeGridComponent.Data {
 {% endtabs %}
 
 ## Dialog template
+
+To know about customizing the Dialog Template in Blazor tree grid component, you can check this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=TxHrtyVwY4A"%}
 
 The dialog template editing provides an option to customize the default behavior of dialog editing. Using the dialog template, render your own editors by defining the [TreeGridEditSettings.Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Mode.html) as **Dialog** and [Template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings~Template.html) using the **Template** of the **TreeGridEditSettings**.
 

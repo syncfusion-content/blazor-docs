@@ -84,7 +84,7 @@ To initialize the MultiSelect component add the below code to your `Index.razor`
 
 Output be like below
 
-![MultiSelect](./images/default.png)
+![Blazor MultiSelect DropDown Component](./images/blazor-multiselect-dropdown.png)
 
 ## Binding data source
 
@@ -121,7 +121,7 @@ The following example illustrates the output in your browser.
 
 The output will be as follows.
 
-![DataBinding](./images/data_binding.png)
+![Data Binding in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-data-binding.png)
 
 ## Configure the popup list
 
@@ -160,7 +160,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![DataBinding](./images/width_height.png)
+![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
 
 ## See Also
 

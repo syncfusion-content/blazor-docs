@@ -42,4 +42,4 @@ In this sample, first check the male value and click the submit button to post t
 
 Output be like
 
-![Radio Button Sample](./../images/rb-form.png)
+![Data Binding in Blazor RadioButton](./../images/blazor-radiobutton-data-binding.png)

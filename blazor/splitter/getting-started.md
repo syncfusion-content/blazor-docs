@@ -120,7 +120,7 @@ After successful compilation of your application, run the application.
 
 The output will be as follows.
 
-![splitter Sample](./images/getting-started-horizontal.png)
+![Blazor Splitter](./images/blazor-splitter.png)
 
 ## See Also
 

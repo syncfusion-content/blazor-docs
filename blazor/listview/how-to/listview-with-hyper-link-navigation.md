@@ -96,4 +96,4 @@ In the below sample, we have rendered `ListView` with search engines URL.
 </style>
 ```
 
-![ListView - Hyperlink](../images/list/listview-with-hyper-link-navigation.png)
+![Blazor ListView with Hyperlink](../images/list/blazor-listview-with-hyperlink.png)

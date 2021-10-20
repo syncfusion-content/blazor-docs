@@ -97,7 +97,7 @@ Now, add the Syncfusion Blazor Split Button component in `razor` page in the `Pa
 
 After successful compilation of your application, simply press F5 to run the application. The Blazor Split Button component will render in the web browser as shown below
 
-![Splitbutton Sample](./images/split-button.png)
+![Blazor SplitButton](./images/blazor-splitbutton.png)
 
 ## See Also
 

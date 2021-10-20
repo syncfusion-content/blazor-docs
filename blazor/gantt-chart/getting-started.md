@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Gantt Chart Component
 
-This section briefly explains about how to include a **Gantt Chart** Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly](https://blazor.syncfusion.com/documentation/gantt-chart/how-to/web-assembly/) documentation pages for configuration specifications.
+This section briefly explains about how to include a **Gantt Chart** Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly](/blazor/gantt-chart/how-to/blazor-webassembly-gantt-using-visual-studio) documentation pages for configuration specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

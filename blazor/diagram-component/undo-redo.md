@@ -83,8 +83,9 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
+<SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">    
@@ -178,8 +179,9 @@ The purpose of custom undo redo process is to store actions which are not done t
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
-<input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
+<SfButton Content="CustomEntry" OnClick="@OnCustomEntry" />
 
 @* Initialize Diagram *@
 <SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">

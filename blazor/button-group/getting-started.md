@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor ButtonGroup Component | Syncfusion
-description: Checkout and learn about getting started with Blazor ButtonGroup component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor ButtonGroup component of Syncfusion.
 platform: Blazor
 control: ButtonGroup
 documentation: ug
@@ -66,7 +66,7 @@ namespace BlazorApplication
 }
 ```
 
-> To enable custom client side resource loading from CRG or CDN. You need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
+> To enable custom client side resource loading from CRG or CDN, you need to disable resource loading by **AddSyncfusionBlazor(true)** and load the scripts in the HEAD element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 <head>
@@ -79,7 +79,7 @@ namespace BlazorApplication
 
 ## Adding component package to the application
 
-Open `/_Imports.razor file` and import the Syncfusion.Blazor.SplitButtons packages otherwise import these packages in the individual `razor` pages.
+Open `/_Imports.razor file` and import the Syncfusion.Blazor.SplitButtons packages. Otherwise, import these packages in the individual `razor` pages.
 
 ```cshtml
 @using Syncfusion.Blazor

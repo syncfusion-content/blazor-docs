@@ -127,4 +127,4 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
 
 Output be like the below.
 
-![Custom Animation](./images/animation.png)
+![Blazor Tabs with Animation](./images/blazor-tabs-animation.png)

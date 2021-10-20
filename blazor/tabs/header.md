@@ -107,7 +107,7 @@ You can customize header styles by adding predefined classes in the Tab root ele
 
 Output be like the below.
 
-![Icon Positions](./images/headerStyle.png)
+![Blazor Tabs with Header](./images/blazor-tabs-header.png)
 
 ## Icon positions
 
@@ -248,7 +248,7 @@ You can customize the position of the Tab header icons using the [IconPosition](
 
 Output be like the below.
 
-![Icon Positions](./images/position.png)
+![Blazor Tabs with Icon](./images/blazor-tabs-icon.png)
 
 ## See Also
 

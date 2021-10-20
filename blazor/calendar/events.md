@@ -11,7 +11,7 @@ documentation: ug
 
 This section explains the list of events of the Calendar component which will be triggered for appropriate Calendar actions.
 
-> From `v17.2.*` added only the limited number of events for the Calendar component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
+> From `v17.2.*`, we have added only a limited number of events to the Calendar component. The event names are different from the previous releases and also removed several events. The following are the event name changes from `v17.1.*` to `v17.2.*`
 
 Event Name(`v17.1.*`) |Event Name(`v17.2.*`)
 -----|-----
@@ -33,7 +33,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void onRenderDayCellHandler(RenderDayCellEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -53,7 +53,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void ValuechangeHandler(ChangedEventArgs<DateTime?> args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -73,7 +73,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void createdHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -93,7 +93,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void DestroyHandler(object args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```
@@ -113,7 +113,7 @@ renderDayCell |[OnRenderDayCell](events/#onrenderdaycell)
 
     public void NavigatedHandler(NavigatedEventArgs args)
     {
-        // Here you can customize your code
+        // Here, you can customize your code.
     }
 }
 ```

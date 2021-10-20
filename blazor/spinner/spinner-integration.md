@@ -89,4 +89,4 @@ The following code explains the above behavior.
 
 ```
 
-![Tab Spinner](./images/tabSpinner.png)
+![Blazor Tab Spinner](./images/blazor-tab-spinner.png)

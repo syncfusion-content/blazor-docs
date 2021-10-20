@@ -504,7 +504,7 @@ The Year view shows a year calendar, where clicking on a particular day will dis
 
 The output of the code example is shown below.
 
-![Year-view](images/year-view.png)
+![Displaying Year View in Blazor Scheduler](images/blazor-scheduler-year-view.png)
 
 ## Extending view intervals
 

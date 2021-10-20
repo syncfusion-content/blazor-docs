@@ -31,4 +31,4 @@ The following properties are used for the customization of the range band:
 </SfSparkline>
 ```
 
-![Sparkline Charts with multiple range band](./images/rangeband/MultipleRangeBand.png)
+![Blazor Sparkline Chart with Multiple Range Band](./images/rangeband/blazor-sparkline-chart-multiple-range-band.png)

@@ -42,4 +42,4 @@ In the following sample, `Height` of the listbox is restricted to `290px`.
 
 Output will be shown as
 
-![ListBox](./../images/scroller.png)
+![Enabling Scroller in Blazor ListBox](./../images/blazor-listbox-enable-scroller.png)

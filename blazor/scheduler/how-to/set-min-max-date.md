@@ -50,4 +50,4 @@ In Scheduler, by default all the date ranges are available. We can render partic
 
 The Scheduler with min-max date will be rendered as shown in the following image.
 
-![Min-Max Date](../images/min-max-date.png)
+![Setting Minimum and Maximum Date in Blazor Scheduler](../images/blazor-scheduler-min-max-date.png)

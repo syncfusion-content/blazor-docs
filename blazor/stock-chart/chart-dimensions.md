@@ -53,7 +53,7 @@ Stock Chart can render to its container size. You can set the size via inline o
 
 ```
 
-![Size](images/size/size.png)
+![Changing Blazor Stock Chart Size](images/size/blazor-stock-chart-size.png)
 
 ## Size for Stock Chart
 
@@ -103,7 +103,7 @@ You can set the size of chart in pixel as demonstrated below.
 
 ```
 
-![Size](images/size/size-pixel.png)
+![Changing Blazor Stock Chart Size in Pixel](images/size/blazor-stock-chart-size-in-pixel.png)
 
 **In Percentage**
 
@@ -147,6 +147,6 @@ By setting value in percentage, stock chart gets its dimension with respect to 
 
 ```
 
-![Size](images/size/size-percentage.png)
+![Changing Blazor Stock Chart Size in Percentage](images/size/blazor-stock-chart-size-in-percentage.png)
 
 > When you do not specify the size, it takes `450px` as the height and window size as its width.

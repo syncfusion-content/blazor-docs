@@ -50,7 +50,7 @@ The following code shows how to customize the appearance of the shape.
 
 ![Node appearance in Blazor Diagram](../images/node_appearance.png)
 
-> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
+> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization. Don't use `_` when assigning node ID and nodegroup ID.
 
 ## NodeCreating
 
@@ -117,6 +117,7 @@ We can define node style using template in [NodeTemplate](https://help.syncfusio
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
+@using Syncfusion.Blazor.Buttons
 
 <SfDiagramComponent @ref="diagram" Width="1200px" Height="1000px" Nodes="@nodes">
     <DiagramTemplates>
@@ -155,7 +156,7 @@ We can define node style using template in [NodeTemplate](https://help.syncfusio
                                 <tr><td class="c1">node0</td><td class="c2">100</td></tr>
                             </tbody>
                         </table>
-                        <input type="button" value="Button2" @onclick="@OnClick" />
+                        <SfButton Content="Button2" OnClick="@OnClick" />
                     </div>
                 </div>
             }

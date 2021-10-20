@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Show different types of toast in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about Show different types of toast in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about how to show different types of toast in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -17,8 +17,6 @@ The Blazor toast has the following predefined styles that can be defined using t
 | `e-toast-info` | Represents an informative toast |
 | `e-toast-warning` | Represents a toast with caution |
 | `e-toast-danger` | Represents a negative toast |
-
-The following sample demonstrates the different types of toast.
 
 ```cshtml
 

@@ -57,7 +57,7 @@ The following sample illustrates how to drag and drop an item within the same li
 
 Output will be shown as
 
-![ListBox](./images/drag-drop.png)
+![Dragging Item within Blazor ListBox](./images/blazor-listbox-dragging-item.png)
 
 ## Multiple ListBox
 
@@ -130,4 +130,4 @@ The following sample illustrates how to drag and drop an item between two listbo
 
 Output will be shown as,
 
-![ListBox](./images/multiple-drag.png)
+![Dragging Item between Multiple Blazor ListBox](./images/blazor-listbox-multiple-drag-item.png)

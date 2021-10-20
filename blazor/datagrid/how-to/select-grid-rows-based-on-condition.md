@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Select rows based on certain condition in Blazor DataGrid | Syncfusion
-description: Learn here all about Select datagrid rows based on certain condition in Syncfusion Blazor DataGrid component and more.
+description: Learn here all about Select DataGrid rows based on certain condition in Syncfusion Blazor DataGrid component and more.
 platform: Blazor
 control: DataGrid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Select rows based on certain condition in Blazor DataGrid Component
 
-You can select specific rows in the datagrid based on some conditions by using the [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid component.
+You can select specific rows in the DataGrid based on some conditions by using the [SelectRows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_SelectRows_System_Double___) method in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event of the DataGrid component.
 
-This is demonstrated in the below sample code where the index value of datagrid rows with **Freight** column value greater than 10 are stored in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event and then selected in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event,
+This is demonstrated in the following sample code where the index value of DataGrid rows with **Freight** column value greater than 10 are stored in the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_RowDataBound) event and then selected in the [DataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_DataBound) event,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

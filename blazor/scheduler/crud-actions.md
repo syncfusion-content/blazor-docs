@@ -148,7 +148,7 @@ if (param.action == "insert" || (param.action == "batch" && param.added != null)
 }
 ```
 
-![adding event](images/add.png)
+![Adding Events in Blazor Scheduler](images/blazor-scheduler-add-events.png)
 
 ### Restricting add action based on specific criteria
 
@@ -396,7 +396,7 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 }
 ```
 
-![updating event](images/edit.png)
+![Updating Blazor Scheduler Events](images/blazor-scheduler-updating-events.png)
 
 ### How to edit a single occurrence or entire series and update it in database at server-side
 
@@ -726,7 +726,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 }
 ```
 
-![removing event](images/remove.png)
+![Removing Blazor Scheduler Event](images/blazor-scheduler-remove-events.png)
 
 ### How to delete a single occurrence or entire series from Scheduler and update it in database at server-side
 

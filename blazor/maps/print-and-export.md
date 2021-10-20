@@ -127,7 +127,7 @@ services.AddServerSideBlazor().AddHubOptions(o => { o.MaximumReceiveMessageSize 
 
 ### Export the tile Maps
 
-The rendered Maps with providers such as OSM, Bing and Google static Maps can be exported using the [Export](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method. It supports the following export formats.
+The rendered Maps with providers such as OSM, Bing and other map providers can be exported using the [Export](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.SfMaps.html#Syncfusion_Blazor_Maps_SfMaps_Export_Syncfusion_Blazor_Maps_ExportType_System_String_System_Nullable_Syncfusion_PdfExport_PdfPageOrientation__System_Boolean_) method. It supports the following export formats.
 
 * JPEG
 * PNG
@@ -139,7 +139,7 @@ The rendered Maps with providers such as OSM, Bing and Google static Maps can be
 <button @onclick="ExportMap">Export</button>
 <SfMaps @ref="Maps" AllowPdfExport="true" AllowImageExport="true">
     <MapsLayers>
-        <MapsLayer LayerType="ShapeLayerType.OSM" TValue="string">
+        <MapsLayer UrlTemplate="https://tile.openstreetmap.org/level/tileX/tileY.png" TValue="string">
         </MapsLayer>
     </MapsLayers>
 </SfMaps>

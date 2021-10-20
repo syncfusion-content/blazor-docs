@@ -50,4 +50,4 @@ The following code will configure the InsertCode button in toolbar and set the b
 
 The output will be as follows.
 
-![Format Code Block](../images/richtexteditor-format-code.png)
+![Format Code Block in Blazor RichTextEditor](../images/blazor-richtexteditor-format-code-block.png)

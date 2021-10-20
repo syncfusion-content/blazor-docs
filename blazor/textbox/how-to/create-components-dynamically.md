@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Create Blazor TextBox component dynamically | Syncfusion
-description: Learn here all about Create TextBox component dynamically in Syncfusion Blazor TextBox component and more.
+description: Learn here all about how to create TextBox component dynamically in Syncfusion Blazor TextBox component and more.
 platform: Blazor
 control: TextBox
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Create TextBox component dynamically in Blazor TextBox Component
 
-You can render the TextBox component at runtime in the following ways:
+The TextBox component can be rendered at runtime in the following ways:
 
 1. Using RenderTreeBuilder
 
@@ -17,7 +17,7 @@ You can render the TextBox component at runtime in the following ways:
 
 ## Dynamic rendering using RenderTreeBuilder
 
-The RenderTreeBuilder class will let you create required content or component in dynamic manner at runtime. In the following code example, the TextBox Component has been created at runtime through button click.
+The RenderTreeBuilder class will let to create required content or component in dynamic manner at runtime. In the following code example, the TextBox Component has been created at runtime through button click.
 
 ```cshtml
 
@@ -49,12 +49,11 @@ The RenderTreeBuilder class will let you create required content or component in
 
 ```
 
-You will get the output as follows.
-![renderFragment](../images/renderFragment.png)
+![Blazor TextBox with Render TreeBuilder](../images/blazor-textbox-render-fragment.png)
 
 ## Dynamic rendering using RenderFragment
 
-By using RenderFragment, you can reuse the Templated component in more than one place. You can change the specific fragment value alone without re-rendering the entire component. In the following example, a single text box has been created and updated the placeholder value at runtime.
+By using RenderFragment, the templated component can be reused in more than one place. The specific fragment value alone can be changed without re-rendering the entire component. In the following example, a single text box has been created and updated the placeholder value at runtime.
 
 ```csharp
 
@@ -91,5 +90,4 @@ By using RenderFragment, you can reuse the Templated component in more than one 
 
 ```
 
-You will get the output as follows.
-![renderFragment](../images/renderFragment.png)
+![Blazor TextBox with Render Fragment](../images/blazor-textbox-render-fragment.png)

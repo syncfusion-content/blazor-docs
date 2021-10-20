@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Accessibility in Blazor Toggle Switch Button Component | Syncfusion
-description: Checkout and learn here all about Accessibility in Syncfusion Blazor Toggle Switch Button component and more.
+description: Checkout and learn here all about accessibility in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
@@ -11,12 +11,12 @@ documentation: ug
 
 The web accessibility makes web content and web applications more accessible for people with disabilities. It especially helps in dynamic content change and development of advanced user interface controls with AJAX, HTML, JavaScript, and related technologies.
 
-Toggle Switch Button provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-checked` and `aria-disabled`. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers, such as screen readers.
+Toggle Switch Button provides built-in compliance with `WAI-ARIA` specifications. `WAI-ARIA` support is achieved through the attributes like `aria-checked` and `aria-disabled`. It helps the people with disabilities by providing information about the widget for assistive technology in the screen readers.
 
 | Properties | Functionality |
 | ------------ | ----------------------- |
 | role | Indicates the Toggle Switch Button component. |
-| aria-checked | Indicates whether the input is checked, unchecked. |
+| aria-checked | Indicates whether the input is checked or unchecked. |
 | aria-disabled | Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable. |
 
 ## Keyboard interaction

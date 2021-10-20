@@ -33,4 +33,4 @@ contains two handles that is used to select a range of values and a shadow is co
 }
 ```
 
-![Blazor - Slider - Types](images/slider-types.png)
+![Displaying Different Blazor RangeSliders](images/blazor-rangeslider-types.png)
