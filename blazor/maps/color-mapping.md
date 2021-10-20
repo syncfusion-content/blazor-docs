@@ -73,7 +73,7 @@ Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.
 }
 ```
 
-![Maps with range color mapping](./images/Colormapping/RangeColor.png)
+![Blazor Maps with Range Color Mapping](./images/Colormapping/blazor-maps-range-color-mapping.png)
 
 ### Equal color mapping
 
@@ -115,7 +115,7 @@ The following example demonstrates the permanent and non-permanent countries in 
 }
 ```
 
-![Maps with equal color mapping](./images/Colormapping/EqualColor.png)
+![Blazor Maps with Equal Color Mapping](./images/Colormapping/blazor-maps-equal-color-mapping.png)
 
 ### Desaturation color mapping
 
@@ -141,7 +141,7 @@ Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.
 </SfMaps>
 ```
 
-![Maps with desaturation color mapping](./images/Colormapping/Desaturation.png)
+![Blazor Maps with Desaturation Color Mapping](./images/Colormapping/blazor-maps-desaturation-color-mapping.png)
 
 ## Multiple colors for a single shape
 
@@ -169,7 +169,7 @@ Bind the **PopulationDetails** data to the [DataSource](https://help.syncfusion.
 </SfMaps>
 ```
 
-![Maps with multi color mapping](./images/Colormapping/DesaturationMultiColor.png)
+![Blazor Maps with Multi Color Mapping](./images/Colormapping/blazor-maps-multi-color-mapping.png)
 
 ## Color for items excluded from color mapping
 
@@ -198,7 +198,7 @@ In the following example, color mapping is added for the ranges from 0 to 300. I
 </SfMaps>
 ```
 
-![Color mapping for exculded colors](./images/Colormapping/ExcludeColor.png)
+![Blazor Maps with Exculde Color Mapping](./images/Colormapping/blazor-maps-exclude-color-mapping.png)
 
 ## Color mapping for bubbles
 
@@ -240,4 +240,4 @@ The color mapping types such as range color mapping, equal color mapping and des
 }
 ```
 
-![Color mapping for bubbles](./images/Colormapping/bubble-colormapping.PNG)
+![Blazor Maps with Bubbles Color Mapping](./images/Colormapping/blazor-maps-bubble-color-mapping.PNG)

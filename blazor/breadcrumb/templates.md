@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Breadcrumb Templates with Blazor Breadcrumb component | Syncfusion
-description: Breadcrumb section explain how to customize the item template and separator template to the breadcrumb items.
+description: Breadcrumb section explain how to customize the item template and separator template to the Breadcrumb items.
 platform: Blazor
 control: Breadcrumb
 documentation: ug
@@ -9,13 +9,21 @@ documentation: ug
 
 # Templates in Blazor Breadcrumb component
 
-The Breadcrumb component provides a way to customize the items using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) and the separators using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) properties.
+Blazor has templated components which accepts one or more UI segments as input that can be rendered as part of the component during component rendering. Breadcrumb is a templated blazor component, that allow you to customize various part of the UI using template parameters. It allows you to render custom components or content based on your own logic.
 
-## Item Template
+The available template options in Breadcrumb are as follows,
 
-Most of the templates used by breadcrumb are of type RenderFragment and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named context. You can also change this implicit parameter name using Context attribute. You can get the current item in this Context attribute.
+[Item template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) - Used to customize the items.
 
-In the following example, Shopping Cart details are used as breadcrumb Items and the items are customized by the chips component using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate).
+[Separator template](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate)- Used to customize the separators.
+
+## Template context
+
+The templates used by Breadcrumb are of type `RenderFragment` and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named `context`. You can also change this implicit parameter name using `Context` attribute.
+
+## Item template
+
+In the following example, shopping cart details are used as Breadcrumb items and each item is rendered as Chip component using [ItemTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_ItemTemplate) tag directive. You can get the current item in `context` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -42,11 +50,9 @@ In the following example, Shopping Cart details are used as breadcrumb Items and
 
 ![Blazor Breadcrumb Component](./images/blazor-Breadcrumb-item-template.png)
 
-## Separator Template
+## Separator template
 
-Most of the templates used by breadcrumb are of type RenderFragment and they will be passed with parameters. You can access the parameters passed to the templates using implicit parameter named context. You can also change this implicit parameter name using Context attribute. You can get the previous and next item in this Context attribute.
-
-In the  following example, the separators are customized with icons using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate).
+In the  following example, the separators are customized with icons using [SeparatorTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.BreadcrumbTemplates.html#Syncfusion_Blazor_Navigations_BreadcrumbTemplates_SeparatorTemplate) tag directive. You can get the previous and next item in `context` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations

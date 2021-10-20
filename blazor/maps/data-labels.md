@@ -29,7 +29,7 @@ To display data labels in the Maps, the [LabelPath](https://help.syncfusion.com/
 </SfMaps>
 ```
 
-![Maps with data label](./images/DataLabel/data-label.png)
+![Blazor Maps with Data Label](./images/DataLabel/blazor-maps-data-label.png)
 
 In the following example, the value of [LabelPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsDataLabelSettings.html#Syncfusion_Blazor_Maps_MapsDataLabelSettings_LabelPath) property is set from the field name in the data source of the layer settings.
 
@@ -74,7 +74,7 @@ In the following example, the value of [LabelPath](https://help.syncfusion.com/c
 }
 ```
 
-![Label path value from datasource](./images/DataLabel/label-datasource.PNG)
+![Getting Blazor Maps Label Path Value from Datasource](./images/DataLabel/blazor-maps-label-path-datasource.PNG)
 
 ## Customization
 
@@ -103,7 +103,7 @@ The following properties and classes are available in the [MapsDataLabelSettings
 </SfMaps>
 ```
 
-![Maps with data label customization](./images/DataLabel/label-customization.PNG)
+![Blazor Maps with Custom Data Label](./images/DataLabel/blazor-maps-custom-data-label.PNG)
 
 ## Smart labels
 
@@ -128,7 +128,7 @@ The Maps component provides an option to handle the labels when they intersect w
 </SfMaps>
 ```
 
-![Maps with smart data label](./images/DataLabel/smart-label.png)
+![Blazor Maps with Smart Data Label](./images/DataLabel/blazor-maps-smart-data-label.png)
 
 ## Intersect action
 
@@ -153,7 +153,7 @@ The Maps component provides an option to handle the labels when a label intersec
 </SfMaps>
 ```
 
-![Maps with intersect action for data label](./images/DataLabel/data-label-trim.png)
+![Blazor Maps Label with Intersect Action](./images/DataLabel/blazor-maps-data-label-trim.png)
 
 ## Adding data label as a template
 
@@ -179,4 +179,4 @@ The data label can be added as a template in the Maps component. The [LabelTempl
 </SfMaps>
 ```
 
-![Maps with data label template](./images/DataLabel/label-template.PNG)
+![Blazor Maps with Data Label Template](./images/DataLabel/blazor-maps-data-label-template.PNG)
