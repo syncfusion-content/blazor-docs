@@ -9,7 +9,7 @@ documentation: ug
 
 # Reference scripts in Blazor Application
 
-This section provides information about the Script Isolation process and how to add CDN, Static Web Assets & Customer resource generator script references for Syncfusion Blazor Components.
+This section provides information about the Script Isolation process and how to add CDN, Static Web Assets & Custom resource generator (CRG) script references for Syncfusion Blazor Components.
 
 ## JavaScript Isolation
 
@@ -97,11 +97,11 @@ Set `IgnoreScriptIsolation` option as true in `AddSyncfusionBlazor` service to a
     }
     ```
 
-> If we configure the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service, we need to manually add the external script reference in `~/Pages/_Layout.cshtml` for `.NET 6` project and in `~/Pages/_Host.cshtml` for `.NET 5 or .NET Core SDK 3.1 project` in Blazor Server app or `~/wwwroot/index.html` in Blazor WebAssembly app.
+> If you configure the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service, yot need to manually add the external script reference in `~/Pages/_Layout.cshtml` for `.NET 6` project and in `~/Pages/_Host.cshtml` for `.NET 5 or .NET Core SDK 3.1 project` in Blazor Server app or `~/wwwroot/index.html` in Blazor WebAssembly app.
 
 ## CDN Reference
 
-We can refer the Syncfusion Blazor scripts through the CDN resources by configuring the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service.
+You can refer the Syncfusion Blazor scripts through the CDN resources by configuring the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service.
 
 ### Types
 
@@ -144,6 +144,12 @@ Version based CDN will contains the version specific contents (Scripts) for Sync
     </head>
     ```
 
+| Component's Script Name | CDN Reference |
+| --- | --- |
+| For all component scripts except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js |
+| PDF Viewer | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js |
+| Document Editor | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js |
+
 #### Global CDN
 
 Global CDN will contains the latest release contents (Scripts) for Syncfusion Blazor Components.
@@ -178,9 +184,15 @@ Global CDN will contains the latest release contents (Scripts) for Syncfusion Bl
     </head>
     ```
 
+| Component's Script Name | CDN Reference |
+| --- | --- |
+| For all component scripts except PDF Viewer & Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor.min.js |
+| PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
+| Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
+
 ## Static Web Assets
 
-We can refer the Syncfusion Blazor scripts through the NuGet package's Static Web Assets by configuring the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service.
+You can refer the Syncfusion Blazor scripts through the NuGet package's Static Web Assets by configuring the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service.
 
 The [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package's Static Web Assets contains a combined scripts for all components except PDF Viewer and Document Editor component.
 
@@ -206,7 +218,7 @@ The Syncfusion Blazor individual NuGet packages contains [Syncfusion.Blazor.Core
     </head>
     ```
 
-    > PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If we use the PDF viewer or document editor component refer the below script reference in your application end.
+* PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If You use the PDF viewer or document editor component refer the below script reference in your application end.
 
     ```html
     <head>
@@ -219,6 +231,6 @@ The Syncfusion Blazor individual NuGet packages contains [Syncfusion.Blazor.Core
 
     > PDF Viewer and Document Editor component scripts are only available after 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically refer the dynamic script in our application end.
 
-## Customer Resource Generator
+## Custom Resource Generator
 
-The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components. Refer [here for how to generate the component wise scripts manually using CRG](./custom-resource-generator)
+The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components. Refer [here for how to generate the component wise scripts manually using CRG](./custom-resource-generator).
