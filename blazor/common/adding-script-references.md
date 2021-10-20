@@ -141,13 +141,11 @@ In addition to above, Syncfusion Blazor components provides latest scripts in CD
 | PDF Viewer | https://cdn.syncfusion.com/blazor/syncfusion-blazor-pdfviewer.min.js |
 | Document Editor | https://cdn.syncfusion.com/blazor/syncfusion-blazor-documenteditor.min.js |
 
-## Static Web Assets
+## Static web assets
 
-You can refer the Syncfusion Blazor scripts through the NuGet package's Static Web Assets by configuring the `IgnoreScriptIsolation` as `true` in our Syncfusion Blazor Service.
+You can refer the Syncfusion Blazor scripts through the NuGet package's static web assets using [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` in our Syncfusion Blazor Service.
 
-The [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package's Static Web Assets contains a combined scripts for all components except PDF Viewer and Document Editor component.
-
-* If you are using Syncfusion Blazor overall NuGet package ([Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/)), refer to the below code snippet for Static Web Assets Script reference.
+* If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) overall NuGet package, refer to the below code snippet for static web assets script reference.
 
     ```html
     <head>
@@ -157,9 +155,7 @@ The [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet
     </head>
     ```
 
-The Syncfusion Blazor individual NuGet packages contains [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor/) as dependent package. The [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package's Static Web Assets contains a combined scripts for all components.
-
-* If you are using Syncfusion Blazor individual NuGet package, the combined Scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package and refer to the below code snippet for Static Web Assets Script reference.
+* If you are using Syncfusion Blazor individual NuGet package, the combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. You refer to the below code snippet for static web assets script reference.
 
     ```html
     <head>
@@ -169,7 +165,7 @@ The Syncfusion Blazor individual NuGet packages contains [Syncfusion.Blazor.Core
     </head>
     ```
 
-* PDF Viewer and Document Editor component scripts are not available in `syncfusion-blazor.min.js` file. If You use the PDF viewer or document editor component refer the below script reference in your application end.
+* If you are using the PDF viewer or Document Editor component, refer the below script reference in your application end.
 
     ```html
     <head>
@@ -180,8 +176,8 @@ The Syncfusion Blazor individual NuGet packages contains [Syncfusion.Blazor.Core
     </head>
     ```
 
-    > PDF Viewer and Document Editor component scripts are only available after 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically refer the dynamic script in our application end.
+    > The PDF Viewer and Document Editor component scripts are  available in static web assets from 19.3.* version. If you are using PDF Viewer or Document Editor component with 19.2.* version, it automatically switch to the JavaScript isolation in the application end.
 
 ## Custom Resource Generator
 
-The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) web tool for Blazor components. Refer [here for how to generate the component wise scripts manually using CRG](./custom-resource-generator).
+The Syncfusion Blazor provides an option to generate a component's interop scripts using the [Custom Resource Generator](https://blazor.syncfusion.com/crg) (CRG) tool for the Blazor components. Refer [here to generate the component-wise scripts externally using CRG](./custom-resource-generator).
