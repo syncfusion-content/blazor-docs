@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Avatar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Avatar component of Syncfusion, and more details.
+description: Checkout and learn here all about getting started with Blazor Avatar component of Syncfusion and more.
 platform: Blazor
 control: Avatar
 documentation: ug
@@ -65,6 +65,6 @@ Now, add the Syncfusion Avatar component in any web page `razor` in the `Pages` 
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-Output be like the below.
+Output will be like the below.
 
 ![Blazor Avatar Component](./images/blazor-avatar-component.PNG)

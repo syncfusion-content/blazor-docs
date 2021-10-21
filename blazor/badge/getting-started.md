@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Badge Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Badge component of Syncfusion, and more details.
+description: Checkout and learn here all about getting started with Blazor Badge component of Syncfusion and more.
 platform: Blazor
 control: Badge
 documentation: ug
@@ -52,6 +52,6 @@ Now, add the Syncfusion Blazor Badge component in any web page `razor` in the `P
 
 After successful compilation of your application, simply press `F5` to run the application.
 
-Output be like the below.
+Output will be like the below.
 
 ![Blazor Badge Component](images/blazor-badge-component.png)
