@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Version Compatibility in Blazor - Syncfusion
-description: Check out the documentation for Version Compatibility in Syncfusion Blazor
+description: Check out here the documentation for Version Compatibility support in Syncfusion Blazor NuGet packages
 platform: Blazor
 component: Common
 documentation: ug
