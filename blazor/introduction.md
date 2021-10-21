@@ -9,7 +9,7 @@ documentation: ug
 
 # Welcome to Syncfusion Blazor Components
 
-Syncfusion Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular, and touch-friendly.
+Syncfusion Blazor Components is a modern enterprise native UI components library for creating Blazor WebAssembly and Server applications. Syncfusion Blazor components library has been built from the ground up to be lightweight, responsive, modular, and touch-friendly. The Syncfusion Blazor components are native Blazor components and not wrappers over EJ2 components.
 
 ## How to best read this user guide
 
@@ -150,6 +150,7 @@ border:0 !important;
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toolbar/getting-started">Toolbar</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/treeview/getting-started">TreeView</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/file-manager/getting-started">File Manager</a></div>
+        <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/breadcrumb/getting-started">Breadcrumb [Preview]</a></div>
         <div><p class="controlcategory">NOTIFICATION</p></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/toast/getting-started">Toast</a></div>
         <div class="controlanchorlink"><a target="_self" href="https://blazor.syncfusion.com/documentation/progress-bar/getting-started">Progress Bar</a></div>

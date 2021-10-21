@@ -17,7 +17,7 @@ This article provides a step-by-step introduction to configure Syncfusion Blazor
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ## Create a Blazor WebAssembly project using .NET Core CLI
 
@@ -96,6 +96,24 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 2. Open the **~/Program.cs** file and register the Syncfusion Blazor Service.
 
     ```c#
+    // For .NET 6 project.
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    ....
+    builder.Services.AddSyncfusionBlazor();
+    var app = builder.Build();
+    ....
+    ....
+    ```
+
+    ```c#
+    // For .NET 5 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
 
     namespace WebApplication1
@@ -113,7 +131,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     }
     ```
 
-    > We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+    > You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 3. Now, add the Syncfusion Blazor component in any .razor file in the `~/Pages` folder. For example, the calendar component is added in the **~/Pages/Index.razor** page.
 
