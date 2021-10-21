@@ -11,7 +11,7 @@ documentation: ug
 
 The PDF Viewer control provides the options to add, edit, and delete text markup annotations such as highlight, underline, and strikethrough annotations in the PDF document.
 
-![TextMarkupAnnotation](../../pdfviewer/images/text_markup_annotation.png)
+![Blazor PDFViewer with Text Markup Annotation](../../pdfviewer/images/blazor-pdfviewer-text-markup-annotation.png)
 
 ## Adding text markup annotation to the PDF Document
 
@@ -25,7 +25,7 @@ There are two ways to highlight a text in the PDF document.
 
 * Select a text in the PDF document and right-click it
 * Select **Highlight** option in the context menu that appears
-![HighlightContext](../../pdfviewer/images/highlight_context.png)
+![Highlighting Context in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-context.png)
 
 **Using the annotation toolbar.**
 
@@ -34,7 +34,7 @@ There are two ways to highlight a text in the PDF document.
 * Select the text and the highlight annotation will be added.
 * You can also select the text and apply the highlight annotation using the **Highlight** button
 
-![HighlightText](../../pdfviewer/images/highlight_text.png)
+![Highlighting Text in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-highlight-text.png)
 
 In the pan mode, if the highlight mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for highlighting the text.
 
@@ -69,7 +69,7 @@ There are two ways to underline a text in the PDF document:
 * Select a text in the PDF document and right-click it
 * Select **Underline** option in the context menu that appears.
 
-![UnderlineContext](../../pdfviewer/images/underline_context.png)
+![Displaying Underline in Blazor PDFViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-underline-context-menu.png)
 
 **Using the annotation toolbar.**
 
@@ -78,7 +78,7 @@ There are two ways to underline a text in the PDF document:
 * Select the text and the underline annotation will be added.
 * You can also select the text and apply the underline annotation using the **Underline** button
 
-![UnderlineText](../../pdfviewer/images/underline_text.png)
+![Blazor PDFViewer with Underline Text](../../pdfviewer/images/blazor-pdfviewer-underline-text.png)
 
 In the pan mode, if the underline mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection for underlining the text.
 
@@ -113,7 +113,7 @@ Using the context menu.
 * Select a text in the PDF document and right-click it
 * Select **strikethrough** option in the context menu that appears.
 
-![StrikeThrough](../../pdfviewer/images/strikethrough_context.png)
+![Displaying Strike Through in Blazor PDFViewer ContextMenu](../../pdfviewer/images/blazor-pdfviewer-strike-through-in-contextmenu.png)
 
 **Using the annotation toolbar.**
 
@@ -122,7 +122,7 @@ Using the context menu.
 * Select the text and the strikethrough annotation will be added.
 * You can also select the text and apply the strikethrough annotation using the **Strikethrough** button
 
-![StrikeThroughText](../../pdfviewer/images/strike_through.png)
+![Blazor PDFViewer with StrikeThrough Text](../../pdfviewer/images/blazor-pdfviewer-strike-through-text.png)
 
 In the pan mode, if the strikethrough mode is entered, the PDF Viewer control will switch to text select mode to enable the text selection to strike through the text.
 
@@ -156,13 +156,13 @@ The color and the opacity of the text markup annotation can be edited using the 
 
 The color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![TextMarkupEditColor](../../pdfviewer/images/textmarkup_editcolor.png)
+![Editing Text Color in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-editing-text-color.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![TextMarkupEditOpacity](../../pdfviewer/images/textmarup_editopacity.png)
+![Editing Text Opacity in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-text-opacity.png)
 
 ## Text markup annotation settings
 

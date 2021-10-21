@@ -21,7 +21,7 @@ The Free text annotations can be added to the PDF document using the annotation 
 
 In the pan mode, if the free text annotation mode is entered, the PDF Viewer control will switch to text select mode.
 
-![FreeTextAnnotation](../../pdfviewer/images/freetext_tool.png)
+![Free Text Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-free-text-annotation.png)
 
 Refer to the following code snippet to switch to Free Text annotation mode.
 
@@ -53,55 +53,55 @@ The font family, font size, font styles, font color, text alignment, fill color,
 
 The font family of the annotation can be edited by selecting the desired font in the Font Family tool.
 
-![FontFamily](../../pdfviewer/images/fontfamily.png)
+![Editing Font Family of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-edit-font-family.png)
 
 ### Editing font size
 
 The font size of the annotation can be edited by selecting the desired size in the Font Size tool.
 
-![FontSize](../../pdfviewer/images/fontsize.png)
+![Editing Font Size of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-edit-font-size.png)
 
 ### Editing font color
 
 The font color of the annotation can be edited using the color palette provided in the Font Color tool.
 
-![FontColor](../../pdfviewer/images/fontcolor.png)
+![Editing Font Color of Blazor PDFViewer Text](../../pdfviewer/images/fontcolor.png)
 
 ### Editing the text alignment
 
 The text in the annotation can be aligned by selecting the desired styles in the dropdown pop-up in the Text Align tool.
 
-![FreeTextAnnotation](../../pdfviewer/images/textalign.png)
+![Editing Free Text Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-text-alignment.png)
 
 ### Editing text styles
 
 The style of the text in the annotation can be by edited by selecting the desired styles in the dropdown pop-up in the Font Style tool.
 
-![FontStyle](../../pdfviewer/images/fontstyle.png)
+![Editing Font Style in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-font-style.png)
 
 ### Editing fill color
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![FillColor](../../pdfviewer/images/fillcolor.png)
+![Editing Fill Color in Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-text-fill-color.png)
 
 ### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![StrokeColor](../../pdfviewer/images/fontstroke.png)
+![Editing Stroke Color of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-font-stroke.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![FontThickness](../../pdfviewer/images/fontthickness.png)
+![Editing Font Border Thickness of Blazor PDFViewer Text](../../pdfviewer/images/blazor-pdfviewer-font-border-thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![FontOpacity](../../pdfviewer/images/fontopacity.png)
+![Editing Font Opacity in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-font-opacity.png)
 
 ## Setting default properties during control initialization
 
