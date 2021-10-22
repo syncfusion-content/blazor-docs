@@ -101,6 +101,224 @@ If you need to change your application theme and UI design in the future, do not
 
 The following list of common variables is used in the Syncfusion Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 
+### Syncfusion Blazor Bootstrap 5 Theme
+
+<table>
+    <style>
+        .circle-color-indicator {
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid rgba(0, 0, 0, .08);
+            vertical-align: middle;
+        }
+        th, td {
+        text-align: left;
+        padding: 5px 15px;
+        vertical-align: top;
+        }
+    </style>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Value (Default Theme) </th>
+            <th>Value (Dark Theme) </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>$black</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #000"></span> #000
+            </td>
+        </tr>
+        <tr>
+            <td>$white</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fff"></span> #fff
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-100</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8f9fa"></span> #f8f9fa
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #f8f9fa"></span> #f8f9fa
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-200</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #e9ecef"></span> #e9ecef
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #e9ecef"></span> #e9ecef
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-300</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dee2e6"></span> #dee2e6
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dee2e6"></span> #dee2e6
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-400</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ced4da"></span> #ced4da
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ced4da"></span> #ced4da
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-500</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #adb5bd"></span> #adb5bd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #adb5bd"></span> #adb5bd
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-600</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6c757d"></span> #6c757d
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6c757d"></span> #6c757d
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-700</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #495057"></span> #495057
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #495057"></span> #495057
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-800</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #343a40"></span> #343a40
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #343a40"></span> #343a40
+            </td>
+        </tr>
+        <tr>
+            <td>$gray-900</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #212529"></span> #212529
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #212529"></span> #212529
+            </td>
+        </tr>
+        <tr>
+            <td>$blue</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0d6efd"></span> #0d6efd
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0d6efd"></span> #0d6efd
+            </td>
+        </tr>
+        <tr>
+            <td>$indigo</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6610f2"></span> #6610f2
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6610f2"></span> #6610f2
+            </td>
+        </tr>
+        <tr>
+            <td>$purple</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6f42c1"></span> #6f42c1
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #6f42c1"></span> #6f42c1
+            </td>
+        </tr>
+        <tr>
+            <td>$pink</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d63384"></span> #d63384
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #d63384"></span> #d63384
+            </td>
+        </tr>
+        <tr>
+            <td>$red</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dc3545"></span> #dc3545
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #dc3545"></span> #dc3545
+            </td>
+        </tr>
+        <tr>
+            <td>$orange</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fd7e14"></span> #fd7e14
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #fd7e14"></span> #fd7e14
+            </td>
+        </tr>
+        <tr>
+            <td>$yellow</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffc107"></span> #ffc107
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #ffc107"></span> #ffc107
+            </td>
+        </tr>
+        <tr>
+            <td>$green</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #198754"></span> #198754
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #198754"></span> #198754
+            </td>
+        </tr>
+        <tr>
+            <td>$teal</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #20c997"></span> #20c997
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #20c997"></span> #20c997
+            </td>
+        </tr>
+        <tr>
+            <td>$cyan</td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0dcaf0"></span> #0dcaf0
+            </td>
+            <td>
+                <span class="circle-color-indicator" style="background: #0dcaf0"></span> #0dcaf0
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 ### Syncfusion Blazor Bootstrap 4 Theme
 
 <table>
@@ -1663,7 +1881,6 @@ The following list of common variables is used in the Syncfusion Blazor library 
     </tbody>
 </table>
 
-
 ### Syncfusion Blazor Tailwind CSS Theme
 
 <table>
@@ -2106,4 +2323,3 @@ The following list of common variables is used in the Syncfusion Blazor library 
         </tr>
     </tbody>
 </table>
-
