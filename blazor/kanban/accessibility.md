@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Web Accessibility in Blazor Kanban Component | Syncfusion
-description: This section describes how the Kanban in Blazor has been built keeping web accessibility in mind, thus allowing to interact with assistive technologies.
+description: This section explains the web accessibility functionalities in Blazor Kanban that allow interaction with assistive technologies.
 platform: Blazor
 control: Kanban
 documentation: ug
@@ -33,7 +33,7 @@ Keys | Description |
 
 ## Disable keyboard interaction
 
-Disables all the functionalities in the Kanban board performed using keyboard by setting the `AllowKeyboard` properties to `false`.
+Disables all the keyboard functionalities that perform the kanban actions when setting the `AllowKeyboard` property to `false`.
 
 ```cshtml
 
@@ -94,6 +94,6 @@ Disables all the functionalities in the Kanban board performed using keyboard by
 
 ```
 
-Output be like the below.
+Output will be like the below.
 
-![Blazor Kanban with Disabled Keyboard Interaction](./images/blazor-kanban-with-keyboard-disabled.png)
+![Kanban with Disabled Keyboard Interaction in Blazor](./images/blazor-kanban-with-keyboard-disabled.png)
