@@ -11,7 +11,9 @@ documentation: ug
 
 ## Keyboard interaction
 
-All the Kanban actions can be controlled by keyboard keys using the `AllowKeyboard` property, which is set to `true` by default. The following are the standard keys that work on Kanban:
+All the Kanban actions can be controlled by keyboard keys using the `AllowKeyboard` property, which is set to `true` by default.
+
+The following are the standard keys that work on Kanban:
 
 Keys | Description |
 |-----|-----|
