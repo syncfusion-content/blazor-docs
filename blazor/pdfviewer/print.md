@@ -21,7 +21,7 @@ The PDF Viewer supports printing the loaded PDF file by default. You can enable 
 }
 ```
 
-![Print](../pdfviewer/images/print.png)
+![Printing in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-print.png)
 
 You can programmatically invoke print action as follows.
 

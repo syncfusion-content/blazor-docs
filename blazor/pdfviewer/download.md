@@ -21,7 +21,7 @@ The PDF Viewer supports downloading the loaded PDF file from the toolbar by defa
 }
 ```
 
-![Download](../pdfviewer/images/download.png)
+![Blazor PDFViewer with Download Option](../pdfviewer/images/blazor-pdfviewer-download-option.png)
 
 And, you can programmatically invoke download action as follows.
 
