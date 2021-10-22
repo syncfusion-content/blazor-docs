@@ -51,7 +51,7 @@ In-order to bind local JSON data to the pivot table user can assign the local va
 
 ```
 
- ![output](images/localdata.png)
+ ![Blazor PivotTable with DataBinding](images/blazor-pivottable-data-binding.png)
 
 Using local variable, the JSON data can also be bound to the pivot table using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) option with the help of `JsonAdaptor`. Here the instance of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) holding JSON data is assigned to [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html). The use of [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is optional here.
 
@@ -92,7 +92,7 @@ Using local variable, the JSON data can also be bound to the pivot table using [
 
 ```
 
- ![output](images/localdata.png)
+ ![Blazor PivotTable with Local Data Binding](images/blazor-pivottable-data-binding.png)
 
 In the meantime, the JSON data from the local *.json file type can also be connected to the pivot table. Here, the file can be read by the **StreamReader** option, which will give the result in the string form. And the resulting string needs to be converted to JSON data that can be assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html). The following code example illustrates the same.
 
@@ -150,7 +150,7 @@ In the meantime, the JSON data from the local *.json file type can also be conne
 }
 ```
 
-![output](images/remote-json.png)
+![Blazor PivotTable with JSON Data Binding](images/blazor-pivottable-json-data-binding.png)
 
 ### Binding JSON data via remote
 
@@ -190,7 +190,7 @@ In-order to bind remote JSON data, mention the endpoint [Url](https://help.syncf
 }
 ```
 
-![output](images/remote-json.png)
+![Blazor PivotTable with Remote JSON Data Binding](images/blazor-pivottable-json-data-binding.png)
 
 ## CSV
 
@@ -256,7 +256,7 @@ In-order to bind local CSV data to the pivot table, user needs to convert it as 
 }
 ```
 
-![output](images/csv-data.png)
+![Blazor PivotTable with CSV Data Binding](images/blazor-pivottable-csv-data-binding.png)
 
 In the meantime, the CSV data from the local *. csv file type can also be connected to the pivot table. Here, the file can be read by the **StreamReader** option, which will give the result in the string form. And the resulting string needs to be converted to string array that can be assigned to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewDataSourceSettings-1.html#Syncfusion_Blazor_PivotView_PivotViewDataSourceSettings_1_DataSource) property under [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html). The following code example illustrates the same.
 
@@ -324,7 +324,7 @@ In the meantime, the CSV data from the local *. csv file type can also be connec
 
 ```
 
-![output](images/csv-data.png)
+![Blazor PivotTable with Local CSV Data Binding](images/blazor-pivottable-csv-data-binding.png)
 
 ### Binding CSV data via remote
 
@@ -369,7 +369,7 @@ In-order to bind remote CSV data, mention the endpoint [Url](https://help.syncfu
 }
 ```
 
-![output](images/csv-data.png)
+![Blazor PivotTable with Remote CSV Data Binding](images/blazor-pivottable-csv-data-binding.png)
 
 ## Remote Data Binding
 
@@ -541,7 +541,7 @@ The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-piv
 
 ```
 
-![output](images/expando-list-binding.png)
+![Blazor PivotTable with Expando List Binding](images/blazor-pivottable-expando-list-binding.png)
 
 ### DynamicObject
 
@@ -605,7 +605,7 @@ The [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-piv
 
 ```
 
-![output](images/dynamic-list-binding.png)
+![Blazor PivotTable with Dynamic List Binding](images/blazor-pivottable-dynamic-list-binding.png)
 
 ## Mapping
 
@@ -670,7 +670,7 @@ In the below code sample, visibility of the field button icons are configured.
 
 ```
 
-![output](images/fieldmapping.png)
+![Blazor PivotTable with Mapping](images/blazor-pivottable-mapping.png)
 
 ## Entity Framework
 
@@ -924,7 +924,7 @@ By default, the value fields are plotted in column axis. To plot those fields in
 
 ```
 
-![output](images/valueaxis.png)
+![Blazor PivotTable with Value in Row Axis](images/blazor-pivottable-value-in-row-axis.png)
 
 ## Show 'no data' items
 
@@ -964,7 +964,7 @@ By default, the pivot table only shows the field item if it has data in its row 
 
 ```
 
-![output](images/nodata.png)
+![Blazor PivotTable without Data](images/blazor-pivottable-without-data.png)
 
 ## Show value headers always
 
@@ -1003,7 +1003,7 @@ To show value header always in pivot table, even if it holds a single value, use
 
 ```
 
-![output](images/valuesheader.png)
+![Blazor PivotTable with Values Header](images/blazor-pivottable-values-header.png)
 
 ## Customize empty value cells
 
@@ -1040,7 +1040,7 @@ User can show custom string in empty value cells using the [EmptyCellsTextConten
 
 ```
 
-![output](images/emptyvalues.png)
+![Empty Values in Blazor PivotTable](images/blazor-pivottable-empty-values.png)
 
 ## Event
 
@@ -1087,6 +1087,6 @@ The event [OnLoad](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Pivot
 
 ```
 
-![output](images/load_event.png)
+![Loading Event in Blazor PivotTable](images/blazor-pivottable-load-event.png)
 
 > You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
