@@ -193,6 +193,8 @@ File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/96305500
 > \{{"{{"}} code block here {{}}}}
 
 
+### Loading Code Snippet
+* Refer [this page](https://syncfusion.sharepoint.com/sites/Install/SitePages/How-to-Load-Code-Snippet-from-the-file-into-the-MD-file.aspx) to load the code snippet from the other file.
 
 
 ### YouTube
