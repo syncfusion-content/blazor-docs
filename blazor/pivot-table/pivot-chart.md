@@ -56,7 +56,7 @@ The below sample displays the pivot chart component based on the pivot report bo
 
 ```
 
-![output](images/pivot-chart.png)
+![Blazor PivotChart](images/blazor-pivotchart.png)
 
 ## Data Binding
 
@@ -125,7 +125,7 @@ In the below code sample, the pivot chart type is set as [ChartSeriesType.Bar](h
 
 ```
 
-![output](images/charttype.png)
+![Blazor Pivot Bar Chart](images/blazor-pivot-bar-chart.png)
 
 ## Accumulation Charts
 
@@ -221,7 +221,7 @@ In the below code sample, the **Pie** chart is rendered, and the other accumulat
 
 ```
 
-![output](images/accumulation.png)
+![Blazor Accumulation Chart](images/blazor-accumulation-chart.png)
 
 ### Drill Down/Up
 
@@ -274,7 +274,7 @@ In the accumulation charts, drill down and drill up operations can be performed 
 
 ```
 
-![output](images/accumulation-drill.png)
+![Blazor Pie Chart with Drill Down and Up](images/blazor-pie-chart-drill-down-up.png)
 
 ### Column Headers and Delimiters
 
@@ -325,7 +325,7 @@ If the column has more than one header, then need to mention all the headers sep
 }
 ```
 
-![output](images/accumulation-column.png)
+![Blazor Doughnut Chart with Column Header](images/blazor-doughnut-chart-column-header.png)
 
 ### Label Customization
 
@@ -380,7 +380,7 @@ In the following code sample, the data labels are placed inside.
 
 ```
 
-![output](images/accumulation-label.png)
+![Blazor Pyramid Chart with Label](images/blazor-pyramid-chart-label.png)
 
 The **Connector Line** will be visible when the data label is placed outside the chart. It can be customized using the `ConnectorStyle` property in `PivotChartDataLabel` class for its color, length, width etc. In the following code sample, the connector line is customized.
 
@@ -428,7 +428,7 @@ The **Connector Line** will be visible when the data label is placed outside the
 
 ```
 
-![output](images/accumulation-connector.png)
+![Blazor Funnel Chart with Connector](images/blazor-funnel-chart-connector.png)
 
 ### Pie and Doughnut Customization
 
