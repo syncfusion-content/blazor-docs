@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides information about the script isolation process and how to reference scripts from CDN, Static Web Assets and Custom resource generator (CRG) for Syncfusion Blazor Components.
 
-> Syncfusion Blazor components are native blazor components and not wrappers. Still, the javascript interop files needs to be added to support the features that can't be implemented in native blazor. 
+> The javascript interop files needs to be added to support the features that can't be implemented in native blazor. 
 
 ## JavaScript isolation
 
