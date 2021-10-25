@@ -195,7 +195,7 @@ File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/96305500
 
 ### Loading code snippet from a file
 * Refer the below page to know more about committing a code snippet file in the repository and syntax for using the code snippet file in the MD files.
-* https://syncfusion.sharepoint.com/sites/Install/SitePages/How-to-Load-Code-Snippet-from-the-file-into-the-MD-file.aspx
+* https://syncfusion.sharepoint.com/sites/Install/SitePages/Support%20for%20loading%20code%20snippet%20from%20a%20file.aspx
 
 
 ### YouTube
