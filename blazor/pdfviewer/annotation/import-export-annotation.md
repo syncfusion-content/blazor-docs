@@ -13,17 +13,17 @@ The PDF Viewer control provides the support to import and export annotations usi
 
 * Click the Add or Edit annotation button in the PDF Viewer toolbar.
 
-![EditButton](../../pdfviewer/images/edittool.png)
+![Blazor PDFViewer with Edit Button](../../pdfviewer/images/blazor-pdfviewer-edit-button.png)
 
 * The annotation toolbar will appear.
 * Click the Comment Panel button in the annotation toolbar.
 
-![CommentPanel](../../pdfviewer/images/commentPanel.png)
+![Blazor PDFViewer with Comment Panel](../../pdfviewer/images/blazor-pdfviewer-edit-sticknotes-comment.png)
 
 * The comments panel will displayed.
 * Click the **More Option** button in the comment panel container.
 
-![MoreOption](../../pdfviewer/images/Importandexport.png)
+![Displaying More Option in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-show-more-option.png)
 
 ## Importing annotation to the PDF document
 
@@ -34,11 +34,11 @@ The PDF Viewer control provides the support to import and export annotations usi
 * Click the **More Option** button in the comment panel container.
 * Select the Import Annotations Option.
 
-![ImportAnnotation](../../pdfviewer/images/Importannotation.png)
+![Importing Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-import-annotation.png)
 
 * Then the file explorer dialog will opened. Choose the JSON file to be imported in to the loaded PDF document.
 
-![ImportedAnnotation](../../pdfviewer/images/importedannotation.png)
+![Blazor PDFViewer with Imported Annotation](../../pdfviewer/images/blazor-pdfviewer-imported-annotation.png)
 
 ## Importing annotation using PDF Viewer API
 
@@ -73,7 +73,7 @@ The PDF Viewer control provides the support to export the annotations as JSON fi
 * Click the **More Option** button in the comment panel container.
 * Select the Export Annotations Option.
 
-![ExportAnnotation](../../pdfviewer/images/exportannotation.png)
+![Exporting Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-export-annotation.png)
 
 >Export annotations will be in the disabled state when the loaded PDF document does not contain any annotations.
 

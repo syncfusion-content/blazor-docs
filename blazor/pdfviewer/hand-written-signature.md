@@ -18,20 +18,20 @@ The handwritten signature can be added to the PDF document using the annotation 
 * Click the **Edit Annotation** button in the PDF Viewer toolbar. A toolbar appears below it.
 * Select the **HandWritten Signature** button in the annotation toolbar. The signature panel will appear.
 
-![HandWrittenSignature](../pdfviewer/images/handwritten_sign.png)
+![HandWritten Signature in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-handwritten-sign.png)
 
 * Draw the signature in the signature panel.
 
-![SignaturePanel](../pdfviewer/images/signature_panel.png)
+![Displaying Signature Panel in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-sign-panel.png)
 
 * Then click **Create** button and move the signature using the mouse and place them in the desired location.
 
-![SignatureAdded](../pdfviewer/images/signature_added.png)
+![Adding Signature in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-adding-signature.png)
 
 ## Editing the properties of handwritten signature
 
 The stroke color, border thickness, and opacity of the handwritten signature can be edited using the edit stroke color tool, edit thickness tool, and edit opacity tool in the annotation toolbar.
 
-![SignatureProperties](../pdfviewer/images/signature_properties.png)
+![Editing Signature Properties in Blazor PDFViewer](../pdfviewer/images/blazor-pdfviewer-signature-properties.png)
 
 > You can refer to our [Blazor PDF Viewer](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor PDF Viewer example](https://blazor.syncfusion.com/demos/pdf-viewer/default-functionalities?theme=bootstrap4) to understand how to explains core features of PDF Viewer.
