@@ -5,29 +5,29 @@ This section contains guidelines on naming files, sections, documents and other 
 > **NOTE**: Some of the items are marked as TODO which will be documented later.
 
 
-## Hotfix and Master branch usage
+## HotFix and Master branch usage
 
-The hotfix branch name will be in the below pattern:  
+The HotFix branch name will be in the below pattern:  
 
 https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v{last major release version}
  
-For example the latest hotfix branch is:
+For example the latest HotFix branch is:
 https://gitlab.syncfusion.com/content/blazor-docs/tree/hotfix/hotfix-v19.2.0.55
 
 
 **For Daily UG publishing to live**
 
-hotfix branch has been created for blazor-docs repository. hereafter use this hotfix branch to commit your daily changes as like ES.
+HotFix branch has been created for blazor-docs repository. hereafter use this HotFix branch to commit your daily changes as like ES.
 
 https://gitlab.synthofusion.com/content/blazor-docs/tree/hotfix/hotfix-v19.2.0.55
 
-We will merge the changes from hotfix to Master and publish to live from Master branch hereafter.
+We will merge the changes from HotFix to Master and publish to live from Master branch hereafter.
 
 **For release UG publishing (Main\SP)**
 
 You can use the development branch to commit the changes for Main\SP release.
 
-We will merge development branch to Master during release time as like other ES platforms and publish to live from Master branch and create hotfix for next version
+We will merge development branch to Master during release time as like other ES platforms and publish to live from Master branch and create HotFix for next version
 
 
 ## Publishing Automation details 
@@ -55,7 +55,7 @@ We will merge development branch to Master during release time as like other ES 
 
 ## FrontMatter / (Title and description):
 
-All the md files in the documentation must contain the frontmatter. Front matter must be given with following fields.
+All the md files in the documentation must contain the FrontMatter. FrontMatter must be given with following fields.
 
 ```
 ---
@@ -193,8 +193,9 @@ File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/96305500
 > \{{"{{"}} code block here {{}}}}
 
 
-### Loading Code Snippet
-* Refer [this page](https://syncfusion.sharepoint.com/sites/Install/SitePages/How-to-Load-Code-Snippet-from-the-file-into-the-MD-file.aspx) to load the code snippet from the other file.
+### Loading code snippet from a file
+* Refer the below page to know more about committing a code snippet file in the repository and syntax for using the code snippet file in the MD files.
+* https://syncfusion.sharepoint.com/sites/Install/SitePages/How-to-Load-Code-Snippet-from-the-file-into-the-MD-file.aspx
 
 
 ### YouTube
