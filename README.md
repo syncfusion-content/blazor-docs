@@ -46,7 +46,7 @@ We will merge development branch to Master during release time as like other ES 
 
 | Topic 	| Detail |
 |----------|:-------------:|
-| Branch to commit 	| latest hotfix before 2 PM |
+| Branch to commit 	| latest HotFix before 2 PM |
 | Publishing URL	| https://blazor.syncfusion.com/documentation/introduction  |
 | Automation Starting time | 2:30 PM daily	 |
 | Publishing time |  3:30 PM  |
