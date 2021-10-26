@@ -20,9 +20,9 @@ Syncfusion Blazor components follows sequence-based identifiers to process softw
 
 ## Version Compatibility
 
-The following table represents the supported .NET version supported by different Syncfusion Blazor components releases.
+The following table represents the supported .NET framework by different Syncfusion Blazor components releases.
 
-| .NET Core SDK Version | Syncfusion.Blazor NuGet version |
+| .NET Version | Syncfusion Blazor Components Version |
 | ------------- | ------------- |
 | [.NET 6.0 - RC1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-rc-1/) | 19.3.0.43 and above |
 | [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 19.2.0.55 and above  |
