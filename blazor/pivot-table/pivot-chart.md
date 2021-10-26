@@ -473,7 +473,7 @@ User can draw pie and doughnut charts within the specified range using the `Star
 
 ```
 
-![output](images/accumulation-angle.png)
+![Blazor Doughnut Chart with Custom Angle](images/blazor-dougnut-chart-custom-angle.png)
 
 Users can get doughnut chart from pie chart and vice-versa using the `InnerRadius` property in [PivotChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html) class. If the property is greater than **0** percent, the doughnut chart will appear from the pie chart.
 
@@ -519,7 +519,7 @@ Users can get doughnut chart from pie chart and vice-versa using the `InnerRadiu
 
 ```
 
-![output](images/accumulation-radius.png)
+![Blazor Pie Chart with Custom Radius](images/blazor-pie-chart-custom-radius.png)
 
 ### Exploding Series Points
 
@@ -565,7 +565,7 @@ Exploding can be enabled by setting the `Explode` property in [PivotChartSeries]
 
 ```
 
-![output](images/accumulation-explode.png)
+![Blazor PivotChart with Explode Series Point](images/blazor-pivotchart-explode-series-point.png)
 
 ## Field List
 
@@ -611,7 +611,7 @@ By using this, user can customize the report dynamically and view the result in 
 
 ```
 
-![output](images/pivotchart-FL.png)
+![Blazor PivotChart with FieldList](images/blazor-pivotchart-field-list.png)
 
 ## Grouping Bar
 
@@ -657,7 +657,7 @@ User can enable the grouping bar by setting the property [ShowGroupingBar](https
 
 ```
 
-![output](images/pivotchart-gbar.png)
+![Blazor PivotChart with GroupBar](images/blazor-pivotchart-groupbar.png)
 
 For accumulation charts alone, a drop-down list will be placed in the column axis instead of the buttons. The drop-down list shows the column headers available in the pivot table. Users can dynamically switch column headers with the help of the drop-down list, and the accumulation chart will be updated accordingly.
 
@@ -701,7 +701,7 @@ For accumulation charts alone, a drop-down list will be placed in the column axi
 
 ```
 
-![output](images/accumulation-group.png)
+![Grouping in Blazor PivotChart](images/blazor-pivotchart-group.png)
 
 ## Single Axis
 
@@ -744,7 +744,7 @@ By default, the pivot chart will be drawn with the value field (measure) which i
 }
 ```
 
-![output](images/chart_single_axis.png)
+![Blazor PivotChart with Single Axis](images/blazor-pivotchart-single-axis.png)
 
 ## Multi Axis
 
@@ -784,7 +784,7 @@ User can draw the pivot chart with multiple value fields by setting the property
 }
 ```
 
-![output](images/multi-axis.png)
+![Blazor PivotChart with Multiple Axis](images/blazor-pivotchart-multi-axis.png)
 
 If the user binds more value fields, the result will be multiple pivot charts, and each chart will shrink within the parent container height. To avoid this, set the [EnableScrollOnMultiAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableScrollOnMultiAxis) property in [PivotChartSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html) to **true**. By doing so, each pivot chart will only shrink to a minimal "160px" – "180px" height showing a vertical scrollbar for a clear view.
 
@@ -820,7 +820,7 @@ If the user binds more value fields, the result will be multiple pivot charts, a
 }
 ```
 
-![output](images/chart-scrollbar.png)
+![Blazor PivotChart with ScrollBar](images/blazor-pivotchart-scrollbar.png)
 
 Meanwhile, there is another way to display multiple values in a chart. In this approach, the series drawn from multiple values are grouped and displayed in a single chart. And, based on the values, multiple Y axis scales will be framed with different ranges. This can be achieved by setting the properties [EnableMultipleAxis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_EnableMultipleAxis) as `true` and [MultipleAxisMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSettings.html#Syncfusion_Blazor_PivotView_PivotChartSettings_MultipleAxisMode) as `Grouped` in `PivotChartSettings`.
 
@@ -860,7 +860,7 @@ In the following code sample, the pivot chart can be seen as a single chart with
 }
 ```
 
-![output](images/multiple-axis-mode.png)
+![Multiple Axis Mode in Blazor PivotChart](images/blazor-pivotchart-multiple-axis-mode.png)
 
 ## Series Customization
 
@@ -906,7 +906,7 @@ User can customize series of the pivot chart using [PivotChartSeries](https://he
 
 ```
 
-![output](images/chart-series.png)
+![Blazor PivotChart with Custom Series](images/blazor-pivotchart-custom-series.png)
 
 ## Data Label Customization
 
@@ -962,7 +962,7 @@ User can customize data label of the pivot chart markers in terms of angle, alig
 
 ```
 
-![Data Label Customization](images/data-label.png)
+![Blazor PivotChart with Custom Data Label](images/blazor-pivotchart-custom-data-label.png)
 
 ## Axis Customization
 
@@ -1008,7 +1008,7 @@ User can customize axis of the pivot chart using [PivotChartPrimaryXAxis](https:
 
 ```
 
-![output](images/axis-customization.png)
+![Blazor PivotChart with Custom Axis](images/blazor-pivotchart-custom-axis.png)
 
 ## Legend Customization
 
@@ -1076,7 +1076,7 @@ Also user can set the position of the legend in pivot chart using the property [
 
 ```
 
-![output](images/legend-settings.png)
+![Blazor PivotChart with Pentagon Legend](images/blazor-pivotchart-pentagon-legend.png)
 
 ## User Interaction
 
@@ -1131,7 +1131,7 @@ Also user can enable and customize the crosshair tooltip for axes using [PivotCh
 
 ```
 
-![output](images/marker-crosshair.png)
+![Blazor PivotChart with Marker and Crosshair](images/blazor-pivotchart-marker-crosshair.png)
 
 ### Zooming and Panning
 
@@ -1197,7 +1197,7 @@ This can be set using the property [Mode](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![output](images/zooming.png)
+![Zooming in Blazor PivotChart](images/blazor-pivotchart-zooming.png)
 
 ### Tooltip
 
@@ -1242,7 +1242,7 @@ By default, tooltip for the pivot chart is enabled. User can customize it by usi
 
 ```
 
-![output](images/tooltip.png)
+![Blazor PivotChart with Tooltip](images/blazor-pivotchart-tooltip.png)
 
 ## Export
 
@@ -1304,7 +1304,7 @@ In the following code sample, exporting can be done using an external button nam
 
 ```
 
-![output](images/chart-export.png)
+![Blazor PivotChart with PDF Export](images/blazor-pivotchart-pdf-export.png)
 
 ## Print
 
@@ -1357,6 +1357,6 @@ In the following code sample, printing can be done using an external button name
 
 ```
 
-![output](images/print-chart.png)
+![Printing in Blazor PivotChart](images/blazor-pivotchart-printing.png)
 
 > You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
