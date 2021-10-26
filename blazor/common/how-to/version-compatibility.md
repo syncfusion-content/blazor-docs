@@ -20,7 +20,7 @@ Syncfusion Blazor components follows sequence-based identifiers to process softw
 
 ## Version Compatibility
 
-The following table represents the supported .NET framework by different Syncfusion Blazor components releases.
+The following table represents the supported .NET and .NET Core by different Syncfusion Blazor components releases.
 
 | Version | Syncfusion Blazor Components Version | 
 | ------------- | ------------- |
@@ -38,3 +38,4 @@ The following table represents the supported .NET framework by different Syncfus
 ## See also
 
 [Product Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
+[.NET and .NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
