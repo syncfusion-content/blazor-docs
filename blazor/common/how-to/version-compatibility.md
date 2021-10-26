@@ -11,12 +11,12 @@ documentation: ug
 
 ## Version Information
 
-Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Build.Revision** format to track all the release changes. It helps other developers to keep track of our changes in every release. For example, if we release a package version as `19.3.0.43`, the version numbers will be indicated like below.
+Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Build.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release. For example, if the release a package version is `19.3.0.43`, the version numbers indicates the details as follows,
 
- > * **19** as `Major release` – Which changes every year.
- > * **3** as `Volume release` – We release a new Volume once every three months, and this is the fourth release for this year.
- > * **0** as `Build Number` - Particular Build Number is mentioned and it will always be marked as zero.
- > * **43** as `Patch Number` - Particular Service Pack release or Patch release number, it increases every release.
+* **19** as `Major release` – Indicates major version which changes every year.
+* **3** as `Volume release` – Syncfusion releases a new volume once every three months. Here `3` represents the third release of the year.
+* **0** as `Build Number` - Particular Build Number is mentioned and it will always be marked as zero.
+* **43** as `Patch Number` - Indicates revision number which increases for each Service Pack release or Patch release.
 
 ## Version Compatibility
 
