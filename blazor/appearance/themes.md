@@ -45,7 +45,7 @@ Using the below approaches the themes can be referenced in the Blazor applicatio
 
 Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages) or [LibMan](#libman). 
 
-## Static Web Assets
+## Static web assets
 
 Syncfusion Blazor themes are available as Static web Assets in the [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) and [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) NuGet Packages.
 
@@ -151,7 +151,7 @@ Library Manager (LibMan) is a client-side library acquisition tool that is simpl
 LibMan offers the following advantages,
 
 1. Only the library files you need are downloaded.
-2. Additional tooling, such as Node.js, npm, and WebPack, isn't necessary to acquire a subset of files in a library.
+2. Additional tooling, such as Node.js, npm, and WebPack isn't necessary to acquire a subset of files in a library.
 3. Files can be placed in a specific location without resorting to build tasks or manual file copying.
 
 In the server application root, add the `lib man.json` file with the following content:
@@ -237,7 +237,7 @@ The following example demonstrates how to change a theme dynamically in Blazor S
     </html>
     ```
 
-2. In `MainLayout.razor` page add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
+2. In `MainLayout.razor` page, add dropdown list with themes and in `ValueChange` event handler, the page is refreshed by changing query string to change the theme in application.
     
     ```cshtml
     @inherits LayoutComponentBase

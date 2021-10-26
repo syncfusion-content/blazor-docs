@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Theme Studio in Blazor - Syncfusion
-description: Check out and learn here all about Theme Studio for Syncfusion Blazor Components and how touse theme studio.
+description: Check out and learn here all about Theme Studio for Syncfusion Blazor Components and how to use Theme Studio.
 platform: Blazor
 component: Common
 documentation: ug
@@ -97,7 +97,7 @@ If you need to change your application theme and UI design in the future, do not
 
 **Step 5:** The exported file contains your latest changes. You can just replace the older custom style with a new style to refresh your application.
 
-## Common Variables
+## Common variables
 
 The following list of common variables is used in the Syncfusion Blazor library themes for all UI components. You can change these variables to customize the corresponding theme.
 

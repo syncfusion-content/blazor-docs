@@ -8,9 +8,9 @@ component: Common
 documentation: ug
 ---
 
-# Bind data from RESTful web services to Syncfusion Blazor components and perform CRUD operations
+# Bind Data from RESTful Web Services to Syncfusion Blazor Components and Perform CRUD Operations
 
-In this topic, we are going to learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, we have fetched data from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
+In this topic, you will learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, we have fetched data from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
 
 It is recommended to choose the suitable adaptor based on the RESTful service which you are using to bind data for the Syncfusion Blazor component. Please refer to the following documentation to know about the available Adaptors of SfDataManager.
  * [Adaptors](https://blazor.syncfusion.com/documentation/data/adaptors/)
@@ -371,7 +371,7 @@ public class OrdersController : ODataController
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-We can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
+You can enable editing in the Grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
 
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.

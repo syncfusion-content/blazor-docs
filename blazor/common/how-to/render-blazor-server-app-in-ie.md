@@ -17,7 +17,7 @@ The Microsoft Internet Explorer doesn't support with `WebAssembly`. So, Blazor C
 
 ## Blazor Server App
 
-The Microsoft Internet Explorer supports `Blazor Server` app with additional polyfills in .NET Core 3.1 apps. However, it is not support with .NET 5.0 or later versions. Refer to [Blazor updated browser support](https://docs.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/blazor-browser-support-updated) for more information.
+The Microsoft Internet Explorer supports `Blazor Server` app with additional polyfills in .NET Core 3.1 apps. However, it does not support .NET 5.0 or later versions. Refer to [Blazor updated browser support](https://docs.microsoft.com/en-us/dotnet/core/compatibility/aspnet-core/5.0/blazor-browser-support-updated) for more information.
 
 Find the following steps to add the polyfills in the Blazor server application.
 

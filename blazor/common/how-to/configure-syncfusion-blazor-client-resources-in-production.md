@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+description: Check out the documentation for configuring Syncfusion Blazor client resources in production environment in Blazor
 platform: Blazor
 component: Common
 documentation: ug
@@ -41,7 +41,7 @@ documentation: ug
         ....
         ....
 
-        // Set IgnoreScriptIsolation as true to load custom  scripts
+        // Set IgnoreScriptIsolation as true to load custom scripts
         builder.Services.AddSyncfusionBlazor(options => {
             options.IgnoreScriptIsolation = true;
             });
@@ -63,7 +63,7 @@ documentation: ug
 
 ### How to use CDN resources in the Blazor application
 
-* The same theme and script files can be referred through the CDN version by set `IgnoreScriptIsolation` as `true` in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
+* The same theme and script files can be referred through the CDN version by setting `IgnoreScriptIsolation` as `true` in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app.
 
 * After that add the CDN interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
 
@@ -78,6 +78,6 @@ documentation: ug
 
 * Now, publish the application with the production environment in the server.
 
-## Creating custom themes for Syncfusion Blazor UI Components
+## Creating custom themes for Syncfusion Blazor UI components
 
 [ThemeStudio](http://ej2.syncfusion.com/themestudio/) is an online web application where you can customize the Syncfusion built-in themes and generate custom theme files for a specific set of Syncfusion Blazor UI components. It will reduce the theme file size for production environment. Refer to [here](https://blazor.syncfusion.com/documentation/appearance/theme-studio/) for more details about ThemeStudio.

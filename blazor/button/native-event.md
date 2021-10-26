@@ -20,6 +20,8 @@ The different event argument types for each event are,
 
 ## List of native events supported
 
+The native events support provided to the Button component are as follows:
+
 | List of native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |

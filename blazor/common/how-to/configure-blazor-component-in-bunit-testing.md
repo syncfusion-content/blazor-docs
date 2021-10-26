@@ -161,13 +161,13 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
     ```
 
-5. Right-click on the xUnit project and select `Run Tests`. The test cases will be run and reports the output.
+5. Right-click on the xUnit project and select `Run Tests`. The test cases will be run and the output will be reported.
 
     ![xUnit test case result](images/bunit/xunit-test-run.png)
 
-## Configure bUnit with NUnit Test Project
+## Configure bUnit with NUnit test project
 
-### Create NUnit Test Project
+### Create NUnit test project
 
 1. Open Visual Studio 2019 and create a new `NUnit 3 Text Project`.
 
@@ -189,7 +189,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Installing bunit NuGet package](images/bunit/nunit-bunit-install.png)
 
-### Add Existing Blazor App and Configure it on NUnit Project
+### Add existing Blazor app and configure it on NUnit project
 
 1. Right-click on the Solution and select `Add -> Existing Project`. Browse and add your existing project from the local machine.
 
@@ -316,13 +316,13 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
     span.MarkupMatches("<span class=\"alert alert-info\">Count: 1</span>");
     ```
 
-5. Right-click on the NUnit project and select `Run Tests`. The test cases will be run and reports the output.
+5. Right-click on the NUnit project and select `Run Tests`. The test cases will be run and the output will be reported.
 
     ![NUnit test case result](images/bunit/nunit-test-run.png)
 
-## Passing Parameters to the Blazor Component Testing
+## Passing parameters to the Blazor component testing
 
-You can set the Blazor component parameter using `SetParametersAndRender` method.
+You can set the Blazor component parameter using the `SetParametersAndRender` method.
 
 ```c#
 [Fact]

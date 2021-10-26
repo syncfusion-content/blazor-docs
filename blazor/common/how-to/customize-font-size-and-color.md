@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Customize the Blazor Components in Blazor - Syncfusion
-description: Check out the documentation for Customize the Blazor Components in Blazor
+description: Check out and learn here all about how to customize the Blazor components in the Blazor and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# How to customize the font size and color in Syncfusion Blazor components
+# How to Customize the Font Size and Color in Syncfusion Blazor Components
 
 ## Install Web Compiler
 
@@ -15,7 +15,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 ## Steps to install the Web Compiler in Visual Studio 2019**
 
-1. Open the Visual Studio 2019 and click the **Extensions** in the visual studio toolbar.
+1. Open the Visual Studio 2019 and click the **Extensions** in the Visual Studio toolbar.
 
     ![Extension](../images/extensions.png)
 
@@ -23,7 +23,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
     ![WebCompiler](../images/webcompiler.png)
 
-## Create a Blazor Server Application in Visual Studio 2019
+## Create a Blazor server application in Visual Studio 2019
 
 1. Create a Blazor server application by referring [Blazor Server](../../getting-started/blazor-server-side-visual-studio-2019/) documentation.
 

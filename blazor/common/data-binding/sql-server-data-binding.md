@@ -7,7 +7,7 @@ component: DataGrid component and DataManager
 documentation: ug
 ---
 
-# SQL server data binding and performing CRUD operations using Syncfusion Blazor component
+# SQL Server Data Binding and Performing CRUD Operations Using Syncfusion Blazor Component
 
 ## Introduction
 
@@ -39,9 +39,9 @@ Now, in the Browse tab, search and install the Syncfusion.Blazor.Grid NuGet pack
 
 > For this demo, use Syncfusion.Blazor.Grid(19.1.0.66) NuGet package. A new Syncfusion.Blazor.Grid NuGet package with new enhancement will be released in our every-week release and main release. So, check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor.Grid).
 
-## Adding Syncfusion Blazor DataGrid Component into the application
+## Adding Syncfusion Blazor DataGrid component into the application
 
-Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
+Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor DataGrid component in this application.
 
 ```cshtml
 
@@ -83,7 +83,7 @@ To add the theme, open the **Pages/_Host.cshtml** file and add the following CSS
 
 ```
 
-In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid Component to the **Index.razor**.
+In previous steps, Syncfusion Blazor DataGrid package is successfully configured in the application. Now, add the DataGrid component to the **Index.razor**.
 
 ```cshtml
 
@@ -124,7 +124,7 @@ Grid columns can be defined using the [GridColumn](https://blazor.syncfusion.com
 
 ```
 
-In the custom adaptor’s **Read** method, you can get the Grid action details like paging,filtering,sorting information, etc., using **DataManagerRequest**.
+In the custom adaptor’s **Read** method, you can get the Grid action details like paging, filtering, sorting information, etc., using **DataManagerRequest**.
 
 * Based on the DataManagerRequest, form a SQL query string (to perform paging) and execute the SQL query. Retrieve the data from the database using SqlDataAdapter.
 
@@ -218,7 +218,7 @@ While running the application, the grid will be displayed as follows.
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-Enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Kindly refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing) documentation for reference.
+Enable editing in the Grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog and Batch editing. Kindly refer the [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing) documentation for reference.
 
 Here, inline edit mode and [Toolbar](https://blazor.syncfusion.com/documentation/datagrid/tool-bar/) property are used to show toolbar items for editing.
 

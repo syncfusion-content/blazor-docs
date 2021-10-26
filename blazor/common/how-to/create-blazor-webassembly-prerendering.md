@@ -15,7 +15,7 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
 
 [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) or later.
 
-## Create a New Project for Blazor WebAssembly ASP.NET Core Hosted Application
+## Create a new project for Blazor WebAssembly ASP.NET Core Hosted Application
 
 1. Create a new [Blazor WebAssembly ASP.NET Core Hosted application](../../visual-studio-2019/#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application).
 
@@ -96,17 +96,17 @@ This section explains how to enable prerendering to a Blazor WebAssembly applica
     }
     ```
 
-8. If you don't inject and use `HttpClient` DI on your index page, you can run the application and the component will render in the web browser with prerendering mode.
+8. If you don't inject and use `HttpClient` DI on your index page, you can run the application and the component will be rendered in the web browser with prerendering mode.
 
-    The created [Blazor WebAssembly ASP.NET Core Hosted application](../../visual-studio-2019/#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application) has injected the `HttpClient` DI and fetch the data from server for SfGrid component data source. So, refer to the next topic to resolve the `HttpClient` error on prerendering mode.
+    The created [Blazor WebAssembly ASP.NET Core Hosted application](../../visual-studio-2019/#create-a-new-project-for-blazor-webassembly-aspnet-core-hosted-application) will inject the `HttpClient` DI and fetch the data from server for SfGrid component data source. So, refer to the next topic to resolve the `HttpClient` error on prerendering mode.
 
-### Resolving HttpClient Errors on WebAssembly Prerendering
+### Resolving HttpClient errors on WebAssembly prerendering
 
-When the index page has injected with the `HttpClient` and tried to prerender on the server, the client will not establish its connection on that time. So, it will throws the runtime exceptions.
+When the index page is injected with the `HttpClient` and tried to prerender on the server, the client will not establish its connection at that time. So, it will throw runtime exceptions.
 
-E> ***InvalidOperationException***: An invalid request URI was provided. The request URI must either be an absolute URI or BaseAddress must be set.
+E> ***InvalidOperationException***: An invalid request URI is provided. The request URI must either be an absolute URI or BaseAddress must be set.
 
-The Syncfusion Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, the it tried to get the WebAPI with its absolute URI or BaseAddress.
+The Syncfusion Blazor service has registered the HttpClient service itself by default. When you run the `WebAssemblyPrerendered` mode application, it will try to get the WebAPI with its absolute URI or BaseAddress.
 
 If you configure with absolute URI in the `~/Client/Pages/Index.razor` file, you will face another runtime error.
 
@@ -276,7 +276,7 @@ Refer to the below steps to resolve these issues and make the app running with H
     }
     ```
 
-7. Run the application by pressing `F5` key. The Server prerendering will get the data from its local service and when it will render on the Client, the HTTP Get request sent to get the data.
+7. Run the application by pressing `F5` key. The Server prerendering will get the data from its local service and when it is rendered on the Client, the HTTP Get request will be sent to get the data.
 
 ## See Also
 

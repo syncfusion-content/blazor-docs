@@ -1,15 +1,15 @@
 ---
 layout: post
 title: "How to bind data to the Syncfusion Blazor components using gRPC service | Syncfusion"
-description: "How to consume data from gRPC service and bind it to the Syncfusion Component."
+description: "Checkout and learn how to consume data from the gRPC service and bind it to the Syncfusion Component."
 platform: "Blazor"
 component: Common
 documentation: ug
 ---
 
-# How to bind data to the Syncfusion Blazor components using gRPC service
+# How to Bind Data to the Syncfusion Blazor Components Using gRPC Service
 
-In this topic, we are going to discuss how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion Blazor Component.
+In this topic, you will learn how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion Blazor Component.
 
 ## Prerequisite software
 
@@ -149,7 +149,7 @@ public class OrdersService : BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBas
 
 > The **OrdersService** class is inherited from **BlazorAPPgRPC.Shared.OrdersService.OrdersServiceBase**, which is generated automatically from the `.proto` file.
 
-## Configure gRPC and gRPC-Web in the Server
+## Configure gRPC and gRPC-Web in the server
 
 You need to register the **gRPC service** in your `Startup.cs` file. This enables you to use dependency injection to consume the service across the app. Add the following code to your `ConfigureServices` method in the **Server Startup.cs** file:
 
@@ -212,11 +212,11 @@ In the **Browse** tab, search and install the `Syncfusion.Blazor.Grid` NuGet pac
 
 ![Manage NuGet packages](../images/browse-nuget.png)
 
-> For this demo, we have used `Syncfusion.Blazor`(19.1.0.66) NuGet package.  We will release a new `Syncfusion.Blazor` NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
+> For this demo, `Syncfusion.Blazor`(19.1.0.66) NuGet package is used.  A new `Syncfusion.Blazor` NuGet package will be released with new enhancement in our every-week release and main release. So, you can check and update to the [latest versions](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 ## Adding Syncfusion Blazor DataGrid component
 
-Open `_Import.razor` file and add the following namespaces which are required to use Syncfusion Blazor DataGrid Component in this application.
+Open `_Import.razor` file and add the following namespaces which are required to use Syncfusion Blazor DataGrid component in this application.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -319,6 +319,6 @@ The **Orders** data will be loaded, and you will see the name of the method **Ge
 
 In the ``Index.razor`` page, we have rendered **Grid with gRPC service**, and in the `FetchData.razor` page, we have rendered **Grid with normal REST service**.
 
-You can see both page **payload size** and **traffic time** in the following screenshot. In the screenshot above, you can see that the **REST service** has sent **616 B**, but the **gRPC service** has sent only **14.4 kB** Also **traffic time** for **REST** is **244ms** and the traffic time for **gRPC** is **15ms** only.
+You can see both page **payload size** and **traffic time** in the following screenshot. In the screenshot above, you can see that the **REST service** has sent **616 B**, but the **gRPC service** has sent only **14.4 kB**. Also **traffic time** for **REST** is **244ms** and the traffic time for **gRPC** is **15ms** only.
 
 ![Difference between gRPC service and REST service](../images/difference-grpc.png)

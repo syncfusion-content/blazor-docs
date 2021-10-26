@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Icons Library in Blazor - Syncfusion
-description: Learn here all about that how to using Icons in the Syncfusion Blazor Component and its type of icons.
+description: Learn here all about how to use Icons in the Syncfusion Blazor Component and the different types of icons.
 platform: Blazor
 component: Common
 documentation: ug
@@ -68,11 +68,11 @@ The font size of the icon can be changed using the [Size](https://help.syncfusio
 
 ![Icon size customization Blazor Icon Component](./images/icons/icon-size.png)
 
-> The `Size` property is applicable only when defining the icon using `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
+> The `Size` property is applicable only when defining the icon using the `Name` property. Otherwise, use [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property to customize the icon.
 
 ### Tooltip for icons
 
-`Title` property used to set title attribute for the icon to improve accessibility with screen readers and shows a tooltip on mouseover. The following example code displays tooltip text for appropriate icons.
+`Title` property is used to set title attribute for the icon to improve accessibility with screen readers and shows a tooltip on mouseover. The following example code displays tooltip text for appropriate icons.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -118,7 +118,7 @@ The following example code demonstrates the custom font-size and color for icons
 
 The [SfIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html) supports to render custom font icons using the [IconCss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_IconCss) property. To render custom font icons define the required font CSS that provides the required font name, font size, and content for the icon.
 
-The following code explains how to render `open-iconic` icons using `IconCss` property.
+The following code explains how to render `open-iconic` icons using the `IconCss` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons
@@ -158,7 +158,7 @@ The following example shows the icon font size customization using `@attributes`
 
 The built-in Syncfusion icons can be integrated with other Blazor components without defining the `<SfIcon>` tag. To use Syncfusion icons, add `e-icons` class that contains the font-family and common property of the font icons. Add the icon class with the corresponding icon name from the [available icons](#icons-list) with `e-` prefix.
 
-The following example shows how to integrate the icons with Syncfusion button component by defining the icon class in the `IconCss` property of button.
+The following example shows how to integrate the icons with Syncfusion Button component by defining the icon class in the `IconCss` property of button.
 
 ```cshtml
 @using Syncfusion.Blazor.Buttons

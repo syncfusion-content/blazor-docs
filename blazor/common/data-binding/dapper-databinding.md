@@ -8,9 +8,9 @@ component: Common
 documentation: ug
 ---
 
-# How to bind data to the Syncfusion Blazor components using Dapper and perform CRUD operations
+# How to Bind Data to the Syncfusion Blazor Components Using Dapper and Perform CRUD Operations
 
-In this topic, we are going to discuss how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a Syncfusion Blazor Component, and perform CRUD operations.
+In this topic, you will learn how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a Syncfusion Blazor Component, and perform CRUD operations.
 
 ## Prerequisite software
 
@@ -47,7 +47,7 @@ Now, the table design will look like below.
 
 ## Adding Dapper package and creating a model class
 
-To use Dapper and access database in our application, we need to install the following `NuGet` packages.
+To use Dapper and access database in our application, you need to install the following `NuGet` packages.
 
 Run the following commands in the Package Manager Console.
 
@@ -57,19 +57,19 @@ Run the following commands in the Package Manager Console.
     Install-Package Dapper -Version 2.0.90
     ```
 
-* The following command provide database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
+* The following command provides database access classes such as  `SqlConnection`, `SqlCommand`, etc. Also provides data provider for MS SQL Server.
 
     ```
     Install-Package Microsoft.Data.SqlClient -Version 2.1.3
     ```
 
-Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, we need to create model class manually. Here, we are creating a class named `Bug.cs` in the `Data` folder as follows.
+Most of the ORMs provide scaffolding options to create model classes. Dapper doesn’t have any in-built scaffolding option. So, you need to create model class manually. Here, we are creating a class named `Bug.cs` in the `Data` folder as follows.
 
 ![Bug Model Class](../images/bug-model-class.png)
 
 ## Creating data access layer
 
-Before creating a data access layer, we need to set the connection string of our database in the `appsettings.json` file as follows.
+Before creating a data access layer, you need to set the connection string of the database in the `appsettings.json` file as follows.
 
 ![Connection String in appsettings](../images/connection-string-appsettings.png)
 
@@ -77,7 +77,7 @@ Now, right-click the `Data` folder and select `Class` to create a new class name
 
 In the following example,
 
-* In the constructor of the `BugDataAccessLayer`, we have injected `IConfiguration` which helps us to get the connection string provided in the `appsettings.json`.
+* In the constructor of the `BugDataAccessLayer`, `IConfiguration` has been injected which helps us to get the connection string provided in the `appsettings.json`.
 * `GetBugsAsync` method performs select operation and returns a list of bugs from the Bugs table.
 * `AddBugAsync` method inserts a new bug into the Bugs table.
 * `UpdateBugAsync` method updates the given bug object in the table.
@@ -147,7 +147,7 @@ Now, register `BugDataAccessLayer` as scoped service in the `Startup.cs` as foll
 
 ![Adding data access layer as service](../images/adding-data-access-layer-as-service.png)
 
-## Adding Syncfusion Blazor components Package
+## Adding Syncfusion Blazor components package
 
 We are going to explain this data binding process (using dapper) using the Syncfusion DataGrid component and perform CRUD operations in it.
 
@@ -299,7 +299,7 @@ Now, the DataGrid will look like this while running the application. The display
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-We can enable editing in the grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
+You can enable editing in the Grid component using the [GridEditSettings](https://blazor.syncfusion.com/documentation/datagrid/editing/) component. Grid provides various modes of editing options such as Inline/Normal, Dialog, and Batch editing. Kindly refer to the following documentation for your reference.
 
 [Grid Editing](https://blazor.syncfusion.com/documentation/datagrid/editing/#editing)
 
@@ -345,7 +345,7 @@ Clicking the `Update` toolbar button will call the `InsertAsync` method of our `
 
 ## Update a row
 
-Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to  perform update operation.
+Add the following codes (`UpdateAsync`) in the `BugDataAdaptor`(CustomAdaptor) class to perform update operation.
 
 ```c#
 public override async Task<object> UpdateAsync(DataManager dataManager, object data, string keyField, string key)

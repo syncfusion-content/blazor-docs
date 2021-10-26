@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configure Syncfusion Blazor Client Resources in Production Environment in Blazor - Syncfusion
-description: Check out the documentation for Configure Syncfusion Blazor Client Resources in Production Environment in Blazor
+description: Check out the documentation for configuring Syncfusion Blazor client resources in production environment in Blazor
 platform: Blazor
 component: Common
 documentation: ug
@@ -50,7 +50,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     }
     ```
 
-6. Create `~/_Imports.razor` file in the root of your application and add the below namespaces.
+6. Create `~/_Imports.razor` file in the root of your application and add the following namespaces.
 
     ```cshtml
     @using System.Net.Http
@@ -120,7 +120,7 @@ This section explains how to add Syncfusion Blazor component on an existing ASP.
     }
     ```
 
-10. Now, add the razor component in the `~/Views/Home/Index.cshtml` page using `component` tag helper. The `.razor` file name will be consider as a Razor component. For example, the above SfGrid component is added on `~/Components/MyGrid.razor` file.
+10. Now, add the razor component in the `~/Views/Home/Index.cshtml` page using `component` tag helper. The `.razor` file name will be considered as a Razor component. For example, the above SfGrid component is added on `~/Components/MyGrid.razor` file.
 
     ```cshtml
     @using AspCoreMvcApp.Components;

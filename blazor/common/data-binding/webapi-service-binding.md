@@ -6,9 +6,9 @@ component: General
 platform: Blazor
 ---
 
-# Bind data to the Syncfusion Blazor components using WebApiAdaptor of SfDataManager and perform CRUD operations
+# Bind Data to the Syncfusion Blazor Components Using WebApiAdaptor of SfDataManager and Perform CRUD Operations
 
-In this topic, we are going to learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
+In this topic, you will learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
 You can use the WebApiAdaptor of SfDataManager to interact with Web APIs created with OData endpoint. The WebApiAdaptor is extended from the ODataAdaptor. Hence, to use WebApiAdaptor, the endpoint should understand the OData formatted queries sent along with the request.
 
@@ -187,7 +187,7 @@ Now, in the **Browse** tab, search and install the Syncfusion.Blazor.Grid NuGet 
 
 ![Add Syncfusion package](../images/odata-syncfusion-package.png)
 
-> For this demo, we have used Syncfusion.Blazor(**19.1.0.66**) NuGet package. We have released a new **Syncfusion.Blazor** NuGet package with new enhancement in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
+> For this demo, Syncfusion.Blazor(**19.1.0.66**) NuGet package is used. A new **Syncfusion.Blazor** NuGet package has been released with new enhancement in our every-week release and main release. So, you can check and update to the latest versions by using this [link](https://www.nuget.org/packages/Syncfusion.Blazor).
 
 Open **_Import.razor** file and add the following namespaces which are required to use Syncfusion Blazor components in this application.
 
@@ -318,7 +318,7 @@ The sample response object should look like this:
 
 ## Handling CRUD operations with our Syncfusion Blazor DataGrid component
 
-We can enable editing in the grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
+You can enable editing in the Grid component using the [GridEditSettings](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridEditSettings.html) component. Grid provides various modes of editing options such as [Inline/Normal](https://blazor.syncfusion.com/documentation/datagrid/editing/#normal), [Dialog](https://blazor.syncfusion.com/documentation/datagrid/editing/#dialog), and [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) editing.
 
 Here, we are using **Inline** edit mode and used Toolbar property to show toolbar items for editing.
 We have added the DataGrid Editing and Toolbar code with previous Grid model.

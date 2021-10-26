@@ -9,7 +9,7 @@ documentation: ug
 
 # Size Mode for Blazor Components
 
-Syncfusion blazor components supports touch (bigger theme) and normal size modes. Below topics explains how to enable the same in your application.
+Syncfusion blazor components supports touch (bigger theme) and normal size modes. The following topics explain how to enable the same in your application.
 
 ## Size mode for application
 
@@ -196,7 +196,7 @@ Refer to the following code, in which the `e-bigger` class is added for enabling
 
 ## See Also
 
-Refer below topics to learn about responsiveness components based on available size in Syncfusion Blazor Components.
+Refer the following topics to learn about responsiveness components based on available size in Syncfusion Blazor Components.
 
 * [Sidebar Responsiveness](https://blazor.syncfusion.com/documentation/sidebar/auto-close)
 * [DataGrid Responsiveness](https://blazor.syncfusion.com/documentation/datagrid/columns#responsive-columns)
