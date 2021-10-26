@@ -22,7 +22,7 @@ Syncfusion Blazor components follows sequence-based identifiers to process softw
 
 The following table represents the supported .NET framework by different Syncfusion Blazor components releases.
 
-| .NET Version | Syncfusion Blazor Components Version |
+| Version | Syncfusion Blazor Components Version | 
 | ------------- | ------------- |
 | [.NET 6.0 - RC1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-rc-1/) | 19.3.0.43 and above |
 | [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 18.4.0.30 and above  |
@@ -33,3 +33,8 @@ The following table represents the supported .NET framework by different Syncfus
 | [.NET Core 3.1.2](https://devblogs.microsoft.com/dotnet/net-core-february-2020/) | 18.1.0.42 and above  |
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46  and above |
 | [.NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 and above |
+
+
+## See also
+
+[Product Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
