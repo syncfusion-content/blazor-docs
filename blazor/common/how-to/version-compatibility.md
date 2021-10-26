@@ -37,5 +37,5 @@ The following table represents the supported .NET and .NET Core by different Syn
 
 ## See also
 
-* [Syncfusion Product Life Cycle](https://www.syncfusion.com/support/product-lifecycle/)
-* [.NET and .NET Core Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
+* [Syncfusion Product release lifecycle](https://www.syncfusion.com/support/product-lifecycle/)
+* [.NET and .NET Core release lifecycle](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)
