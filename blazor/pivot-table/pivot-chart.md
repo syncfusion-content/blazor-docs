@@ -910,7 +910,7 @@ User can customize series of the pivot chart using [PivotChartSeries](https://he
 
 ## Data Label Customization
 
-User can customize data label of the pivot chart markers in terms of angle, alignment, border, color, margin, position, visibility, and more using [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html#Syncfusion_Blazor_PivotView_PivotChartMarkerSettings_DataLabel) in [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Marker) class. The changes handled in the property will be reflected commonly in all chart series.
+You can customize data label of the pivot chart markers in terms of angle, alignment, border, color, margin, position, visibility, and more using [PivotChartMarkerDataLabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartMarkerSettings.html#Syncfusion_Blazor_PivotView_PivotChartMarkerSettings_DataLabel) in [PivotChartMarkerSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotChartSeries.html#Syncfusion_Blazor_PivotView_PivotChartSeries_Marker) class. The changes handled in the property will be reflected commonly in all chart series.
 
 ```cshtml
     @using Syncfusion.Blazor.PivotView

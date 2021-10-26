@@ -23,7 +23,6 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spa
 * [Negative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) - Data label for negative points are enabled.
 * [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) - Data label for all points are disabled.
 
-The following code examples shows how to enable Data Label for all points.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
