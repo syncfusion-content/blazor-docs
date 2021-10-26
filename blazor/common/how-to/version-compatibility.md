@@ -25,11 +25,6 @@ The following table represents the supported .NET framework by different Syncfus
 | .NET Version | Syncfusion Blazor Components Version |
 | ------------- | ------------- |
 | [.NET 6.0 - RC1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-6-rc-1/) | 19.3.0.43 and above |
-| [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 19.2.0.55 and above  |
-| [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 19.2.0.44 and above  |
-| [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 19.1.0.63 and above  |
-| [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 19.1.0.54 and above  |
-| [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 18.4.0.39 and above  |
 | [.NET 5.0](https://devblogs.microsoft.com/aspnet/announcing-asp-net-core-in-net-5/) | 18.4.0.30 and above  |
 | [.NET 5.0 - RC2](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-release-candidate-2/) | 18.3.0.47 and above  |
 | [.NET 5.0 - RC1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-5-release-candidate-1/) | 18.3.0.35 and above  |
