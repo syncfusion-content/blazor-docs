@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Globalization in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Globalization in Syncfusion Blazor Sparkline component and much more.
+description: Checkout and learn here all about globalization in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
