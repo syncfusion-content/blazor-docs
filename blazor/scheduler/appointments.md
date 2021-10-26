@@ -81,6 +81,40 @@ You can make use of the CSS customization to prevent the display of all-day row 
 }
 ```
 
+## Customize the rendering of the spanned events
+
+By default, the scheduler will render the spanned events with more than 24 hours duration in the all-day row. Now we can customize rendering of the that events inside the work cells itself by setting `true` to the `InlineSpannedEvent` option within the `ScheduleEventSettings` tag helper. In this following example, shows how to render the spanned appointments inside the work cells as follows.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleEventSettings DataSource="@DataSource" InlineSpannedEvent="true">
+    </ScheduleEventSettings>
+</SfSchedule>
+
+@code{
+    public DateTime CurrentDate = new DateTime(2020, 1, 8);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+        {
+            new AppointmentData { Id = 1, Subject = "Paris", IsAllDay=false, StartTime = new DateTime(2020, 1, 8, 10, 0, 0), EndTime = new DateTime(2020, 1, 9, 12, 0, 0) },
+            new AppointmentData { Id = 2, Subject = "Germany", IsAllDay=false, StartTime = new DateTime(2020, 1, 10, 10, 0, 0), EndTime = new DateTime(2020, 1, 12, 12, 0, 0) }
+        };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+    }
+}
+```
+
 ## Recurring events
 
 Represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
