@@ -39,8 +39,8 @@ You can open the PDF file from Cloud storage.
 The following code example shows how to open and load the PDF file stored in Azure Blob Storage.
 
 ```cshtml
-@using Microsoft.Azure.Storage;
-@using Microsoft.Azure.Storage.Blob;
+@using Azure.Storage.Blobs
+@using Azure.Storage.Blobs.Specialized
 @using System.IO;
 @using Syncfusion.Blazor.PdfViewerServer
 
@@ -48,65 +48,58 @@ The following code example shows how to open and load the PDF file stored in Azu
 
 @code {
     public string DocumentPath { get; set; }
-    protected override void OnInitialized()
+    public void blobLoad(MouseEventArgs args)
     {
         //Connection String of Storage Account
         string connectionString = "Here Place Your Connection string";
+        BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
         //Container Name
-        string containerName = "pdf";
+        string containerName = "pdf-file";
         //File Name to be loaded into Syncfusion PDF Viewer
-        string fileName = "PDF_Succinctly.pdf";
-        CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(connectionString);
-        CloudBlobClient cloudBlobClient = cloudStorageAccount.CreateCloudBlobClient();
-        CloudBlobContainer cloudBlobContainer = cloudBlobClient.GetContainerReference(containerName);
-        CloudBlockBlob cloudBlockBlob = cloudBlobContainer.GetBlockBlobReference(fileName);
+        string fileName = "Python_Succinctly.pdf";
+        BlobContainerClient blobContainerClient = blobServiceClient.GetBlobContainerClient(containerName);
+        BlockBlobClient blockBlobClient = blobContainerClient.GetBlockBlobClient(fileName);
         MemoryStream memoryStream = new MemoryStream();
-        cloudBlockBlob.DownloadToStream(memoryStream);
+        blockBlobClient.DownloadTo(memoryStream);
         DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(memoryStream.ToArray());
     }
 }
 ```
 
-> The **Microsoft.Azure.Storage.Blob** NuGet package must be installed in your application to use the previous code example.
+> The **Azure.Storage.Blobs** NuGet package must be installed in your application to use the previous code example.
 
 You can open the PDF file from Azure File Storage using the following code example.
 
 ```cshtml
-@using Microsoft.Azure.Storage;
-@using Microsoft.Azure.Storage.File;
+@using Azure.Storage.Files.Shares
 @using System.IO;
 @using Syncfusion.Blazor.PdfViewerServer
 
 <SfPdfViewerServer DocumentPath="@DocumentPath" Width="1060px" Height="500px" />
 
 @code {
-    public string DocumentPath { get; set; }
+    public string DocumentPath { get; set; } = "wwwroot/data/PDF_Succinctly.pdf";
     protected override void OnInitialized()
     {
         //Connection String of Storage Account
         string connectionString = "Here Place Your Connection string";
-        string shareReference = "document";
-        string directoryReference = "pdf";
+        string shareName = "pdfdocument";
         //File Name to be loaded into Syncfusion PDF Viewer
-        string fileReference = "Python_Succinctly.pdf";
-        CloudStorageAccount cloudStorageAccount = CloudStorageAccount.Parse(connectionString);
-        CloudFileClient fileClient = cloudStorageAccount.CreateCloudFileClient();
-        //Get File Share
-        CloudFileShare cloudFileShare = fileClient.GetShareReference(shareReference);
-        //Get the related directory
-        CloudFileDirectory root = cloudFileShare.GetRootDirectoryReference();
-        CloudFileDirectory dir = root.GetDirectoryReference(directoryReference);
-        //Get the file reference
-        CloudFile file = dir.GetFileReference(fileReference);
-        MemoryStream memoryStream = new MemoryStream();
-        //Download file to local disk
-        file.DownloadToStream(memoryStream);
-        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(memoryStream.ToArray());
+        string filePath = "Hive_Succinctly.pdf";
+        ShareFileClient shareFileClient = new ShareFileClient(connectionString, shareName, filePath);
+        Stream stream = shareFileClient.OpenRead();
+        byte[] bytes;
+        using (var memoryStream = new MemoryStream())
+        {
+            stream.CopyTo(memoryStream);
+            bytes = memoryStream.ToArray();
+        }
+        DocumentPath = "data:application/pdf;base64," + Convert.ToBase64String(bytes);
     }
 }
 ```
 
-> The **Microsoft.Azure.Storage.File** NuGet package must be installed in your application to use the previous code example.
+> The **Azure.Storage.Files.Shares** NuGet package must be installed in your application to use the previous code example.
 
 ## Opening a PDF from database
 

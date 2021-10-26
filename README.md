@@ -72,11 +72,11 @@ documentation: ug
 
 Refer the below guidelines for adding description, title and h1 tags.
 
-[Format+of+meta+elements+for+UG+pages](https://syncfusion.atlassian.net/wiki/spaces/SEO/pages/2878079677/Format+of+meta+elements+for+UG+pages)
+[Format+of+meta+elements+for+UG+pages](https://syncfusion.sharepoint.com/sites/GH/SEO/SitePages/Format%20of%20meta%20elements%20for%20UG%20pages.aspx)
 
 Also refer the below link for common validation errors and solution for this errors in below.
 
-[Front+Matter+validation+-+Guide](https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/412681710/Front+Matter+validation+-+Guide)
+[Front+Matter+validation+-+Guide](https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/Front%20Matter%20validation%20-%20Guide.aspx)
 
 
 ## Notes and Warning Syntax:
@@ -97,9 +97,9 @@ For Notes, warning, information syntax refer the below table
 
 Refer the below guidelines to resolve spelling errors in the documentation.
 
-Spelling -  https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/689768804/Spell+Checker+Automation+-+Guide
+Spelling -  https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/Spell%20Checker%20Automation%20-%20Guide.aspx
 
-File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/963055005/File+Path+Validation-+Guidelines
+File name - https://syncfusion.sharepoint.com/sites/DOCINFRA/SitePages/File%20Path%20Validation%20%20Guidelines.aspx
 
 
 ## File naming Convention:
@@ -314,7 +314,7 @@ File name - https://syncfusion.atlassian.net/wiki/spaces/DOCINFRA/pages/96305500
 ## API Reference Guideline
 
 ### Naming Standards
-* Use the JS API naming standards mentioned in the following page - [API Naming Standards](https://syncfusion.atlassian.net/wiki/display/JS/API+Naming+Standards)
+* Use the JS API naming standards mentioned in the following page - [API Naming Standards](https://syncfusion.sharepoint.com/sites/EJ1/SitePages/API%20Naming%20Standards.aspx)
 
 # See Also
 [Style Guide](/style-guide.md)
