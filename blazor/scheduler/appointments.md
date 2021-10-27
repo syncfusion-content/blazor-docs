@@ -83,13 +83,13 @@ You can make use of the CSS customization to prevent the display of all-day row 
 
 ## Customize the rendering of the spanned events
 
-By default, the scheduler will render the spanned events with more than 24 hours duration in the all-day row. Now we can customize rendering of the that events inside the work cells itself by setting `true` to the `InlineSpannedEvent` option within the `ScheduleEventSettings` tag helper. In this following example, shows how to render the spanned appointments inside the work cells as follows.
+By default, Scheduler will renders the spanned events (appointment with more than 24 hours duration) in the all-day row by setting `AllDayRow` will the default type renders to the `SpannedEventPlacement` option within the `ScheduleEventSettings` tag helper.Now we can customize rendering of the that events inside the work cells itself by modifing the `SpannedEventPlacement` option as `TimeSlot`. In this following example, shows how to render the spanned appointments inside the work cells as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleEventSettings DataSource="@DataSource" InlineSpannedEvent="true">
+    <ScheduleEventSettings DataSource="@DataSource" SpannedEventPlacement=SpannedEventFormat.TimeSlot>
     </ScheduleEventSettings>
 </SfSchedule>
 
