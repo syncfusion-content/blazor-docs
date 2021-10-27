@@ -9,48 +9,13 @@ documentation: ug
 
 # Right-To-Left support in Syncfusion Blazor Components
 
-The right-to-left (RTL) support can be enabled for Syncfusion Blazor components by setting `EnableRtl` to `true`. This will render all the Syncfusion Blazor components in the right-to-left direction.
-
-## Enable RTL to individual component
-
-To control a component’s direction, set the component’s `EnableRtl` property to true directly. For illustration, the RTL support has been enabled for the DropDownList component in the following code snippet.
-
-```cshtml
-
-@using Syncfusion.Blazor.DropDowns
-
-<SfDropDownList TValue="string" Placeholder="Select the country" TItem="Countries" DataSource="@CountryList" EnableRtl="true">
-    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
-</SfDropDownList>
-
-@code {
-
-    SfDropDownList<string, Countries> dropdownObj;
-
-    public class Countries
-    {
-        public string Name { get; set; }
-
-        public string Code { get; set; }
-    }
-    List<Countries> CountryList = new List<Countries>
-    {
-        new Countries() { Name = "Australia", Code = "AU" },
-        new Countries() { Name = "Bermuda", Code = "BM" },
-        new Countries() { Name = "Canada", Code = "CA" },
-        new Countries() { Name = "Cameroon", Code = "CM" }
-    };
-}
-
-```
-
-After the successful compilation, press F5 to run the application. The following screenshot illustrates the output.
-
-![Blazor component is rendered from the right-to-left](images/rightToLeft.png)
+The right-to-left (RTL) support can be enabled for Syncfusion Blazor components by setting `EnableRtl` property to `true`. This will render all the Syncfusion Blazor components in the right-to-left direction.
 
 ## Enable RTL for all components
 
-To control the direction of all Syncfusion Blazor components in an application, set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`.
+You can enable right to left (RTL) for all Syncfusion components used in the application by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`.
+
+### Blazor Server App
 
 * If you're using `.NET 6` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
@@ -68,10 +33,9 @@ To control the direction of all Syncfusion Blazor components in an application, 
     builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
     var app = builder.Build();
     ....
-    ....
     ```
 
-* If you're using `.NET 5 or .NET Core SDK 3.1 project` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
+* If you're using `.NET 5 or .NET Core 3.1 ` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
 
     ```c#
     // For .NET 5 or .NET Core SDK 3.1 project, add the EnableRtl in Syncfusion Blazor Service in Startup.cs file.
@@ -83,17 +47,22 @@ To control the direction of all Syncfusion Blazor components in an application, 
             public void ConfigureServices(IServiceCollection services)
             {
                 ....
-                ....
                 services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
             }
         }
     }
     ```
+    
+The above configuration enables the Right-To-Left (RTL) support globally for all the Syncfusion Blazor components. For illustration, the Syncfusion Blazor DataGrid component is displayed with Right-To-Left (RTL) support.
+![Blazor Grid component is rendered from the right to left](images/rteGrid.png)
+
+### Blazor WebAssembly App
 
 * If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+    
+    .NET 6 Blazor WebAssembly App
 
     ```c#
-    // For .NET 6 project.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -106,19 +75,18 @@ To control the direction of all Syncfusion Blazor components in an application, 
     builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
     var app = builder.Build();
     ....
-    ....
-
+    ```
+    
+    .NET 5 or .NET Core 3.1 Blazor WebAssembly App
+    ```c#
     // For .NET 5 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
-    ....
     ....
     public static async Task Main(string[] args)
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
         ....
-        ....
 
-        // Set IgnoreScriptIsolation as true to load custom  scripts
         builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
         await builder.Build().RunAsync();
     }
@@ -166,3 +134,40 @@ The above configuration enables the Right-To-Left (RTL) support globally for all
     ```
 
 ![Blazor Grid component is rendered from the right to left](images/rteGrid.png)
+
+## Enable RTL to individual component
+
+You can enable right to left (RTL) for particular component by setting component's `EnableRtl` property to `true`.
+
+```cshtml
+
+@using Syncfusion.Blazor.DropDowns
+
+<SfDropDownList TValue="string" Placeholder="Select the country" TItem="Countries" DataSource="@CountryList" EnableRtl="true">
+    <DropDownListFieldSettings Text="Name" Value="Code"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+
+    SfDropDownList<string, Countries> dropdownObj;
+
+    public class Countries
+    {
+        public string Name { get; set; }
+
+        public string Code { get; set; }
+    }
+    List<Countries> CountryList = new List<Countries>
+    {
+        new Countries() { Name = "Australia", Code = "AU" },
+        new Countries() { Name = "Bermuda", Code = "BM" },
+        new Countries() { Name = "Canada", Code = "CA" },
+        new Countries() { Name = "Cameroon", Code = "CM" }
+    };
+}
+
+```
+
+![Blazor component is rendered from the right-to-left](images/rightToLeft.png)
+
+
