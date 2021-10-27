@@ -1688,6 +1688,233 @@ Using the `GanttColumns` property, you can define the Custom Columns in Gantt Ch
 
 ![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-custom-column.png)
 
+## Column Chooser
+
+The column chooser has options to show or hide columns dynamically. It can be enabled by defining the [ShowColumnChooser](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) as true.
+
+```cshtml
+
+@using Syncfusion.Blazor.Gantt;
+
+ <SfGantt DataSource="@TaskCollections" Toolbar="@Toolbaritems" ShowColumnChooser="true" ProjectStartDate="new DateTime(2019,4,1)" ID="GanttChart" Width="1200px" Height="450px" @ref="Gantt" HighlightWeekends="true" AllowReordering="true" TreeColumnIndex=1 GridLines="Syncfusion.Blazor.Gantt.GridLine.None">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" ParentID="ParentId" Dependency="Predecessor"></GanttTaskFields>
+    <GanttEvents OnToolbarClick="ToolbarClickHandler" TValue="TaskData"></GanttEvents>
+</SfGantt>
+
+@code{
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<TaskData> TaskCollections { get; set; }
+    public void ToolbarClickHandler(Syncfusion.Blazor.Navigations.ClickEventArgs args)
+    {
+        if (args.Item.Id == "columnchooser")
+        {
+            this.Gantt.OpenColumnChooser(100,50);
+        }
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollections = GetTaskCollection();
+    }
+
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation" StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = false, Done = "Yes"},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location",StartDate = new DateTime(2019, 04, 02), Duration = "10", Progress = 30, ParentId = 1, IsExpanded = true, Done = "No"},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test",StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2", IsExpanded = true, Done = "No",IsMilestone = true },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval",StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1, Predecessor = "3", IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019,04, 21), IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3",Progress = 30, ParentId = 5, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "13", Progress = 40,ParentId = 5, IsExpanded = true, //6+2 - predecessor task + 2 days lags Done = "No", Predecessor = "6+2", IsMilestone = true },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval",StartDate = new DateTime(2019, 04, 04), Duration = "25", Progress = 30, ParentId = 5, IsExpanded = true, Predecessor="7-2", Done = "No" },
+            new TaskData() { TaskId = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21),IsExpanded = true, Done = "Yes" }, 
+            new TaskData() { TaskId = 10, TaskName = "Customer Strength",StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 9, IsExpanded = false, Done = "Yes" },
+        };
+        return Tasks;
+    }
+`````````
+
+![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-column-chooser.png)
+
+## Custom component in column chooser template
+
+In below example, we have rendered ListView as custom component inside the Template of [`GanttColumnChooserSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.SfGantt-1.html#Syncfusion_Blazor_Gantt_SfGantt_1_ShowColumnChooser) in gantt. Inside the custom component, we have grouped the items.
+
+```cshtml
+
+@using Syncfusion.Blazor.Gantt;
+
+<SfGantt DataSource="@TaskCollections" ShowColumnChooser="true" Toolbar="@Toolbaritems" ProjectStartDate="new DateTime(2019,4,1)" ID="GanttChart" Width="1200px" Height="450px" @ref="Gantt" HighlightWeekends="true" AllowReordering="true" TreeColumnIndex=1 GridLines="Syncfusion.Blazor.Gantt.GridLine.None">
+    <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" ParentID="ParentId" Dependency="Predecessor"></GanttTaskFields>
+    <GanttColumnChooserSettings>
+    <Template>
+        @{
+            var ct = context as ColumnChooserTemplateContext;
+            <CustomColumnChooser @ref="ins" ActionCompleted="AftterCompletion" @key="ct.Columns.Count" ColumnContext="ct" Gantt="Gantt"></CustomColumnChooser>
+        }
+    </Template>
+    <FooterTemplate></FooterTemplate>
+    </GanttColumnChooserSettings>
+    <GanttColumns>
+        <GanttColumn Field=@nameof(TaskData.TaskId) HeaderText="TaskID" TextAlign="TextAlign.Right" Width="120">
+        <HeaderTemplate>
+        @{
+            var a = "TaskId";
+        }
+        <span style="width:20px;height:20px;border-color:red" @onclick="(e)=>onclick(e,a)" class="e-icons e-plus-icon"></span>@a
+        </HeaderTemplate>
+        </GanttColumn>
+        <GanttColumn Field=@nameof(TaskData.TaskName) HeaderText="TaskName" Width="150"></GanttColumn>
+        <GanttColumn Field=@nameof(TaskData.StartDate) HeaderText="StartDate"  Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GanttColumn>
+    </GanttColumns>
+</SfGantt>
+
+<style>
+     #treeGridGanttChart .e-cc-searchdiv {
+        display: none;
+    }
+
+    #treeGridGanttChart .e-dlg-content {
+        margin-top: 0px;
+    }
+
+    #treeGridGanttChart div.e-footer-content {
+        display: none;
+    }
+</style>
+
+@code
+{
+    
+    public string[] ToolbarItems = new string[] { "ColumnChooser" };
+    public List<TaskData> TaskCollections { get; set; }
+   public async Task onclick(MouseEventArgs e, string ColName)
+    {
+         await this.Gantt.OpenColumnChooser(e.ClientX - 450, e.ClientY - 100);
+    }
+    protected override void OnInitialized()
+    {
+        this.TaskCollections = GetTaskCollection();
+    }
+
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+            new TaskData() { TaskId = 1, TaskName = "Project initiation" StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), IsExpanded = false, Done = "Yes"},
+            new TaskData() { TaskId = 2, TaskName = "Identify Site location",StartDate = new DateTime(2019, 04, 02), Duration = "10", Progress = 30, ParentId = 1, IsExpanded = true, Done = "No"},
+            new TaskData() { TaskId = 3, TaskName = "Perform soil test",StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40, ParentId = 1, Predecessor = "2", IsExpanded = true, Done = "No",IsMilestone = true },
+            new TaskData() { TaskId = 4, TaskName = "Soil test approval",StartDate = new DateTime(2019, 04, 02), Duration = "3", Progress = 30, ParentId = 1, Predecessor = "3", IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019,04, 21), IsExpanded = true, Done = "Yes" },
+            new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3",Progress = 30, ParentId = 5, IsExpanded = true, Done = "No" },
+            new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "13", Progress = 40,ParentId = 5, IsExpanded = true, //6+2 - predecessor task + 2 days lags Done = "No", Predecessor = "6+2", IsMilestone = true },
+            new TaskData() { TaskId = 8, TaskName = "Estimation approval",StartDate = new DateTime(2019, 04, 04), Duration = "25", Progress = 30, ParentId = 5, IsExpanded = true, Predecessor="7-2", Done = "No" },
+            new TaskData() { TaskId = 9, TaskName = "Demand Analysis", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21),IsExpanded = true, Done = "Yes" }, 
+            new TaskData() { TaskId = 10, TaskName = "Customer Strength",StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30, ParentId = 9, IsExpanded = false, Done = "Yes" },
+        };
+        return Tasks;
+    }
+}
+
+````
+
+```cshtml
+@using Syncfusion.Blazor.Grids
+@using Syncfusion.Blazor.TreeGrid
+@using Syncfusion.Blazor.Lists;
+@using Syncfusion.Blazor.Inputs;
+@inject Microsoft.AspNetCore.Components.NavigationManager UriHelper
+@inject WeatherForecastService ForecastService
+
+<SfTextBox Placeholder="Search" ShowClearButton="true" Input="@OnInput"></SfTextBox>
+<SfListView @ref="ListView" ID="ListViewCtl" Height="100%" ShowCheckBox="true" DataSource="@DataSourceCopy">
+    <ListViewFieldSettings TValue="DataModel" Id="Id" Text="Text" GroupBy="Type"></ListViewFieldSettings>
+    <ListViewEvents Clicked="OnClicked" TValue="DataModel"></ListViewEvents>
+</SfListView>
+
+@code{
+    public List<DataModel> DataSourceCopy { get; set; } = new List<DataModel>();
+
+    [Parameter]
+    public SfGantt<TaskData> Gantt { get; set; }
+
+    [Parameter]
+    public Action<string> ActionCompleted { get; set; }
+
+    [Parameter]
+    public ColumnChooserTemplateContext ColumnContext { get; set; }
+
+    public SfListView<DataModel> ListView { get; set; }
+
+    async Task OnInput(InputEventArgs eventArgs)
+    {
+        DataSourceCopy = DataSource.FindAll(e => e.Text.ToLower().StartsWith(eventArgs.Value.ToLower()));
+        await Task.Delay(100);
+        await Preselect();
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        DataSourceCopy = DataSource;
+        await Task.Delay(100);
+        await Preselect();
+    }
+
+    static List<DataModel> DataSource = new List<DataModel>
+    {
+        new DataModel() { Text = nameof(TaskData.TaskId), Id = nameof(TaskData.TaskId), Type = "Task" },
+        new DataModel() { Text = nameof(TaskData.TaskName), Id =nameof(TaskData.TaskName), Type = "Task" },
+        new DataModel() { Text =nameof(TaskData.StartDate), Id = nameof(TaskData.StartDate), Type = "Date" },
+        new DataModel() { Text = nameof(TaskData.EndDate), Id = nameof(TaskData.EndDate), Type = "Date" },
+        new DataModel() { Text = nameof(TaskData.Progress), Id = nameof(TaskData.Progress), Type = "status"  },
+        new DataModel() { Text = nameof(TaskData.Duration), Id = nameof(TaskData.Duration), Type = "Date" },
+        new DataModel() { Text = nameof(TaskData.Predecessor), Id = nameof(TaskData.Predecessor), Type = "status" },
+        new DataModel() { Text = nameof(TaskData.Done), Id = nameof(TaskData.Done), Type = "status"},
+    };
+
+    public async Task loadData()
+    {
+        await Preselect();
+    }
+
+    public async Task Preselect()
+    {
+        var cols = ColumnContext.Columns.FindAll(x => x.Visible == true).ToList();
+        var selectlist = new List<DataModel>();
+        foreach (var column in cols)
+        {
+            selectlist.Add(DataSource.Where(x => x.Text == column.Field).FirstOrDefault());
+        }
+        if (selectlist.Count > 0)
+        {
+            if (ListView != null)
+            {
+                await ListView?.CheckItemsAsync(selectlist.AsEnumerable());
+            }
+        }
+    }
+
+    public async Task OnClicked(ClickEventArgs<DataModel> args)
+    {
+        if (args.IsChecked)
+        {
+            await Gantt.HideColumnAsync(args.Text, "field");
+        }
+        else
+        {
+            await Gantt.ShowColumnAsync(args.Text, "field");
+            await Task.Delay(500);
+            ActionCompleted.Invoke(args.Text);
+        }
+    }
+}
+
+````
+
+The following output is displayed as a result of the above code example.
+
+![Blazor Gantt Chart with Custom Column](images/blazor-gantt-chart-custom-column-chooser.png)
+
 <!-- Column Spanning
 
 The gantt has option to span the adjacent cells. You need to define the `ColSpan` attribute to span cells in the `QueryCellInfo` event.
