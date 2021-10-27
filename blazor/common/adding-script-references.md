@@ -17,7 +17,7 @@ This section provides information about the script isolation process and how to 
 
 Syncfusion Blazor components supports JavaScript isolation where the needed scripts are loaded by the component itself when its rendered. So, you don't have to reference scripts externally in application. 
 
-> Syncfusion recommends to reference scripts using [static web assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) for better loading performance of the blazor application. 
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) by disabling JavaScript isolation for better loading performance of the blazor application. 
 
 ## Disable JavaScript isolation
 
