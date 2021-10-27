@@ -57,7 +57,7 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
             {
                 ....
                 ....
-                services.AddSyncfusionBlazor();
+                services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             }
         }
     }
