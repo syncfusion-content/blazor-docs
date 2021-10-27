@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Dimensions in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Dimensions in Syncfusion Blazor Sparkline component and much more.
+description: Checkout and learn here all about dimensions in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -50,7 +50,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSpa
 
 ### In Pixel
 
-The Sparkline Chart can be sized in pixels, as shown in the following code.
+The Sparkline Chart can be sized in pixels.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

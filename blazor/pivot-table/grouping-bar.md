@@ -53,7 +53,7 @@ Similar to Field List, Grouping Bar UI also comes with basic interactions like,
 
 ```
 
-![output](images/gs_groupingbar.png)
+![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
 
 ## Show or hide fields panel
 
@@ -87,7 +87,7 @@ The fields panel, which is positioned above the grouping bar, displays the field
 }
 ```
 
-![output](images/showfieldspanel.png)
+![Displaying Fields Panel in Blazor PivotTable](images/blazor-pivottable-show-fields-panel.png)
 
 ## Show or hide all filter icon
 
@@ -127,7 +127,7 @@ The Grouping Bar has an option to filter members of particular fields at runtime
 }
 ```
 
-![output](images/groupingbar-filter.png)
+![Hiding All Filter Icon in GroupBar in Blazor PivotTable](images/blazor-pivottable-hide-filter-icon-in-group-bar.png)
 
 ## Show or hide specific filter icon
 
@@ -168,7 +168,7 @@ In the below sample, the filter icon of "Quarter" and "Products" fields have bee
 }
 ```
 
-![output](images/groupingbar-filter-specific.png)
+![Hiding Specific Filter Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-filter-icon.png)
 
 ## Show or hide all sort icon
 
@@ -209,7 +209,7 @@ The Grouping Bar has an option to order members of a particular fields either in
 
 ```
 
-![output](images/groupingbar-sort.png)
+![Hiding All Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-sort-icon.png)
 
 ## Show or hide specific sort icon
 
@@ -251,7 +251,7 @@ In the below sample, the sort icon of "Quarter" and "Country" fields have been h
 
 ```
 
-![output](images/groupingbar-sort-specific.png)
+![Hiding Specific Sort Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-sort-icon.png)
 
 ## Show or hide all remove icon
 
@@ -291,7 +291,7 @@ The Grouping Bar has an option to remove any field at runtime. To remove a field
 }
 ```
 
-![output](images/groupingbar-remove.png)
+![Hiding All Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-all-remove-icon.png)
 
 ## Show or hide specific remove icon
 
@@ -332,7 +332,7 @@ In the below sample, the remove icon of fields "Year", "Units Sold" and "Product
 }
 ```
 
-![output](images/groupingbar-remove-specific.png)
+![Hiding Specific Remove Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-remove-icon.png)
 
 ## Disable all fields from dragging
 
@@ -372,7 +372,7 @@ The Grouping Bar has an option to drag-and-drop fields between row, column, valu
 }
 ```
 
-![output](images/gbar_drag.png)
+![Disabling All Fields while Dragging in Blazor PivotTable](images/blazor-pivottable-disable-all-field-while-dragging.png)
 
 ## Disable specific field from dragging
 
@@ -452,11 +452,11 @@ End user can perform calculations over a group of values using the aggregation o
 ```
 
 <!-- markdownlint-disable MD012 -->
-![output](images/aggregation_gb_icon.png "Icon to change aggregation type")
+![Changing Aggregation Type Icon in Blazor PivotTable](images/aggregation_gb_icon.png)
 <br/>
 <br/>
 <br/>
-![output](images/aggregation_gb_menu.png "List of pre-defined aggregation types")
+![Changing Aggregation Type in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.png)
 
 ## Show or hide specific dropdown icon
 
@@ -497,7 +497,7 @@ In the below sample, the dropdown icon of field "Units Sold" is hidden.
 }
 ```
 
-![output](images/groupingbar-dropdown-specific.png)
+![Hiding Specific DropDown Icon in Blazor PivotTable](images/blazor-pivottable-hide-specific-dropdown-icon.png)
 
  >The property [ShowFilterIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowFilterIcon), [ShowSortIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowSortIcon), [ShowValueTypeIcon](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_ShowValueTypeIcon) and [AllowDragAndDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewRow.html#Syncfusion_Blazor_PivotView_PivotViewRow_AllowDragAndDrop) in fields of [PivotViewDataSourceSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.DataSourceSettingsModel-1.html) are applicable for both grouping bar and field list.
 
