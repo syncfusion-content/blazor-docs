@@ -85,7 +85,7 @@ Allows to load the large amounts of data without any performance degradation by 
 
 ```
 
-![output](images/virtualscrolling.png)
+![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scroll.png)
 
 **Limitations for virtual scrolling**
 

@@ -54,7 +54,7 @@ Allows end user to set the pivot table's height and width by using [Height](http
 
 ```
 
-![output](images/height-width.png)
+![Setting Height and Width in Blazor PivotTable](images/blazor-pivottable-set-height-width.png)
 
 ## Row Height
 
@@ -99,7 +99,7 @@ In the below code sample, the [RowHeight](https://help.syncfusion.com/cr/blazor/
 
 ```
 
-![output](images/row-height.png)
+![Changing Row Height in Blazor PivotTable](images/blazor-pivottable-change-row-height.png)
 
 ## Column Width
 
@@ -143,7 +143,7 @@ In the below example, the [ColumnWidth](https://help.syncfusion.com/cr/blazor/Sy
 
 ```
 
-![output](images/column-width.png)
+![Changing Column Width in Blazor PivotTable](images/blazor-pivottable-change-column-width.png)
 
 ### Adjust width based on columns
 
@@ -182,7 +182,7 @@ By default, if the component width set in code-behind is more than the width of 
 
 ```
 
-![output](images/autofit.png)
+![AutoFit Column in Blazor PivotTable](images/blazor-pivottable-autofit-column.png)
 
 ## Reorder
 
@@ -222,7 +222,7 @@ Allows end user to reorder a particular column header from one index to another 
 
 ```
 
-![output](images/reorder.png)
+![Reordering Specific Column in Blazor PivotTable](images/blazor-pivottable-reorder-specific-column.png)
 
 ## Column Resizing
 
@@ -262,7 +262,7 @@ Allows end user to resize the columns by clicking and dragging the right edge of
 
 ```
 
-![output](images/resize.png)
+![Column Resizing in Blazor PivotTable](images/blazor-pivottable-column-resizing.png)
 
 ## Text Wrap
 
@@ -302,7 +302,7 @@ Allows end user to wrap the cell content to the next line when it exceeds the bo
 
 ```
 
-![output](images/textwrap.png)
+![Text Wrapping in Blazor PivotTable](images/blazor-pivottable-text-wrap.png)
 
 ## Grid Lines
 
@@ -354,7 +354,7 @@ Available mode of grid lines are:
 
 ```
 
-![output](images/gridlines.png)
+![Blazor PivotGrid with GridLines](images/blazor-pivotgrid-gridlines.png)
 
 ## Selection
 
@@ -402,7 +402,7 @@ To perform multi-selection, press and hold "CTRL" key and click the desired rows
 
 ```
 
-![output](images/selection.png)
+![Selection in Blazor PivotTable](images/blazor-pivottable-selection.png)
 
 ### Selection Mode
 
@@ -449,7 +449,7 @@ The pivot table supports four types of selection mode that can be set using [Mod
 
 ```
 
-![output](images/selection2.png)
+![Blazor PivotTable with Row and Column Selection](images/blazor-pivottable-row-column-selection.png)
 
 ### Cell Selection Mode
 
@@ -496,7 +496,7 @@ The pivot table supports two types of cell selection mode that can be set using 
 
 > Cell selection requires [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_Mode) property in [PivotViewSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html) class to be [SelectionMode.Cell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SelectionMode.html) or [SelectionMode.Both](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SelectionMode.html), and [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewSelectionSettings.html#Syncfusion_Blazor_PivotView_PivotViewSelectionSettings_Type) property should be [PivotSelectionType.Multiple](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotTableSelectionType.html).
 
-![output](images/cell-selection.png)
+![Cell Selection in Blazor PivotTable](images/blazor-pivottable-cell-selection.png)
 
 ### Changing background color of the selected cell
 
@@ -544,7 +544,7 @@ background-color: greenYellow !important;
 
 ```
 
-![output](images/cell-selection-color.png)
+![Changing Cell Selection Background Color in Blazor PivotTable](images/blazor-pivottable-cell-selection-color.png)
 
 ### Event
 
@@ -617,7 +617,7 @@ The event `CellSelected` is triggered when cell selection gets completed. It pro
 
 ```
 
-![output](images/cellselected_event.png)
+![Displaying Selection Event Details in Blazor PivotTable](images/blazor-pivottable-selection-event-details.png)
 
 ## Clip Mode
 
@@ -662,7 +662,7 @@ The clip mode provides options to display its overflow cell content in the pivot
 }
 ```
 
-![output](images/clipmode.png)
+![Blazor PivotTable with Clip Mode](images/blazor-pivottable-clip-mode.png)
 
 
 ## Cell Template
@@ -729,6 +729,6 @@ In this demo, the revenue cost for each year is represented with trend icons.
 
 ```
 
-![output](images/cell_template.png)
+![Blazor PivotTable with Cell Template](images/blazor-pivottable-cell-template.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
