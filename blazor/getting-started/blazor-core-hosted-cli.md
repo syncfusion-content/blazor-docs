@@ -1,14 +1,14 @@
 ---
 layout: post
-title: Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in .NET Core CLI
-description: Check out the documentation for Getting started with Syncfusion Blazor
+title: Blazor ASP.NET Core Hosted App in .NET Core CLI - Syncfusion Blazor
+description: Check out the documentation for Getting started with Syncfusion Blazor - Blazor ASP.NET Core Hosted App in .NET Core CLI.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 <!-- markdownlint-disable MD024 -->
 
-# Getting started with Syncfusion Blazor components in Blazor ASP.NET Core Hosted App using .NET Core CLI
+# Getting started with Blazor ASP.NET Core Hosted App in .NET Core CLI
 
 This article provides step-by-step instructions about how to create Blazor ASP.NET Core Hosted application using [.NET Core CLI](https://dotnet.microsoft.com/download/dotnet/) with Syncfusion Blazor components setup pre-configured in it.
 
@@ -16,7 +16,7 @@ This article provides step-by-step instructions about how to create Blazor ASP.N
 
 ## Prerequisites
 
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0)
+* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 
 ## Create a Blazor ASP.NET Core Hosted project using .NET Core CLI
 
@@ -102,6 +102,24 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 2. Open the **~/Program.cs** file in the **`Client`[BlazorWasmHosted.Client]** project and register the Syncfusion Blazor Service.
 
     ```c#
+    // For .NET 6 project.
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    ....
+    builder.Services.AddSyncfusionBlazor();
+    var app = builder.Build();
+    ....
+    ....
+    ```
+
+    ```c#
+    // For .NET 5 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
 
     namespace BlazorWasmHosted.Client
@@ -119,7 +137,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     }
     ```
 
-    > We can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
+    > You can disable the dynamic script loading and refer to the scripts from the application end by using the `IgnoreScriptIsolation` parameter in `AddSyncfusionBlazor()` at the `Program.cs`. For more details, please refer here for [how to refer custom/CDN resources](../common/custom-resource-generator/#how-to-use-custom-resources-in-the-blazor-application).
 
 3. Now, add the Syncfusion Blazor component in any web page (razor) in the `Pages` folder of **`Client`[BlazorWasmHosted.Client]** project. For example, the calendar component is added to the **~/Pages/Index.razor** page.
 
