@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Tooltip in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Tooltip in Syncfusion Blazor Smith Chart component and much more details.
+description: Checkout and learn here all about tooltip in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
