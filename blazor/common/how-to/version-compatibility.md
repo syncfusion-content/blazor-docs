@@ -1,26 +1,15 @@
 ---
 layout: post
-title: Version Compatibility in Blazor - Syncfusion
-description: Check out here the documentation for Version Compatibility support in Syncfusion Blazor NuGet packages
+title: Version Compatibility of Syncfusion Blazor Components
+description: Learn here all about supported .NET and .NET Core versions by Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Version Convention For Blazor
+# Version Compatibility of Syncfusion Blazor Components
 
-## Version Information
-
-Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Build.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release. For example, if the release a package version is `19.3.0.43`, the version numbers indicates the details as follows,
-
-* **19** as `Major release` – Indicates major version which changes every year.
-* **3** as `Volume release` – Syncfusion releases a new volume once every three months. Here `3` represents the third release of the year.
-* **0** as `Build Number` - Particular Build Number is mentioned and it will always be marked as zero.
-* **43** as `Patch Number` - Indicates revision number which increases for each Service Pack release or Patch release.
-
-## Version Compatibility
-
-The following table represents the supported .NET and .NET Core by different Syncfusion Blazor components releases.
+The following table represents the supported .NET and .NET Core versions by different Syncfusion Blazor components releases.
 
 | Version | Syncfusion Blazor Components Version | 
 | ------------- | ------------- |
@@ -34,6 +23,14 @@ The following table represents the supported .NET and .NET Core by different Syn
 | [.NET Core 3.1.1](https://devblogs.microsoft.com/dotnet/net-core-january-2020/) | 17.4.0.46  and above |
 | [.NET Core 3.1](https://devblogs.microsoft.com/aspnet/asp-net-core-updates-in-net-core-3-1/) | 17.4.0.39 and above |
 
+## Version Information
+
+Syncfusion Blazor components follows sequence-based identifiers to process software releases based on the **Major.Minor.Build.Revision** format to track all the release changes. It helps developers to keep track of the changes in every release. For example, if the release a package version is `19.3.0.43`, the version numbers indicates the details as follows,
+
+* **19** as `Major release` – Indicates major version which changes every year.
+* **3** as `Volume release` – Syncfusion releases a new volume once every three months. Here `3` represents the third release of the year.
+* **0** as `Build Number` - Particular Build Number is mentioned and it will always be marked as zero.
+* **43** as `Patch Number` - Indicates revision number which increases for each Service Pack release or Patch release.
 
 ## See also
 
