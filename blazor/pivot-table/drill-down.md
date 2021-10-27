@@ -15,7 +15,7 @@ documentation: ug
 
 The drill down and drill up action helps to view the bound data in detailed and abstract view respectively. By default, if member(s) has children, then expand and collapse icon will be displayed in the respective row/column header. On clicking the icon, expand or collapse action will be performed automatically through built-in source code. Meanwhile, leaf member(s) does not contain expand and collapse icon.
 
-![output](images/drill.png)
+![DrillDown in Blazor PivotTable](images/blazor-pivottable-drill-down.png)
 
 ## Drill position
 
@@ -23,7 +23,7 @@ Allows to drill only the current position of the selected member and exclude the
 
 > This feature is built-in and occurs every time when expand or collapse action is done for better performance.
 
-![output](images/drill_position.png)
+![Blazor PivotTable with Custom DrillDown Position](images/blazor-pivottable-custom-drill-position.png)
 
 ## Expand all
 
@@ -65,7 +65,7 @@ headers, set the property [ExpandAll](https://help.syncfusion.com/cr/blazor/Sync
 }
 ```
 
-![output](images/expandall.png)
+![Blazor PivotTable with Expanded Items](images/blazor-pivottable-expanded-items.png)
 
 ## Expand all except specific member(s)
 
@@ -115,7 +115,7 @@ In addition to the previous topic, there is an enhancement to expand all headers
 
 ```
 
-![output](images/expandall_except.png)
+![Expanding All Except Specific Items in Blazor PivotTable](images/blazor-pivottable-expandall-except-specific-items.png)
 
 ## Expand specific member(s)
 
@@ -162,6 +162,6 @@ End user can also manually expand or collapse specific member(s) in each fields 
 }
 ```
 
-![output](images/drill_position_code.png)
+![Expanding Specific Item in Blazor PivotTable](images/blazor-pivottable-expand-specific-item.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

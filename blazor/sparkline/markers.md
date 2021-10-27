@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markers in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Markers in Syncfusion Blazor Sparkline component and much more details.
+description: Checkout and learn here all about markers in Syncfusion Blazor Sparkline component and much more details.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -38,7 +38,6 @@ The markers can be enabled for specific points as a collection. The following sp
 * [Negative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) - Markers for negative points are enabled.
 * [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) - Markers for all points are disabled.
 
-The following code example shows how to enable high and low point markers.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
