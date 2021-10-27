@@ -89,7 +89,7 @@ By default, Scheduler will renders the spanned events (appointment with more tha
 @using Syncfusion.Blazor.Schedule
 
 <SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleEventSettings DataSource="@DataSource" SpannedEventPlacement=SpannedEventFormat.TimeSlot>
+    <ScheduleEventSettings DataSource="@DataSource" SpannedEventPlacement=SpannedEventPlacement.TimeSlot>
     </ScheduleEventSettings>
 </SfSchedule>
 
