@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to troubleshoot server and client exceptions in Blazor | Syncfusion
+title: How to troubleshoot server & client exceptions in Blazor | Syncfusion
 description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
 platform: Blazor
 component: Common
@@ -219,4 +219,7 @@ documentation: ug
     > The trailing slash is must for '_Host.cshtml' base path configuration.
 
     For further details, please refer this [MSDN documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) for your reference.
-<!-- markdownlint-enable MD036 -->
+
+## See also
+
+* [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
