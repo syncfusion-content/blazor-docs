@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Syncfusion Blazor Components Version Compatibility with .NET and .NET Core
+title: Syncfusion Blazor Components Compatibility with .NET Versions
 description: Learn here all about supported .NET and .NET Core versions by Syncfusion Blazor Components and much more.
 platform: Blazor
 component: Common
