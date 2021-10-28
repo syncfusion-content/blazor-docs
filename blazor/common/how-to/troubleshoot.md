@@ -219,4 +219,7 @@ documentation: ug
     > The trailing slash is must for '_Host.cshtml' base path configuration.
 
     For further details, please refer this [MSDN documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) for your reference.
-<!-- markdownlint-enable MD036 -->
+
+## See also
+
+* [AOT publish fails for Syncfusion.Blazor.dll](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
