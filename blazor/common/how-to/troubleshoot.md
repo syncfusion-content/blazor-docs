@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to troubleshoot server and client exceptions in Blazor | Syncfusion
+title: How to troubleshoot server & client exceptions in Blazor | Syncfusion
 description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
 platform: Blazor
 component: Common
@@ -222,4 +222,4 @@ documentation: ug
 
 ## See also
 
-* [AOT publish fails for Syncfusion.Blazor.dll](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
+* [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)
