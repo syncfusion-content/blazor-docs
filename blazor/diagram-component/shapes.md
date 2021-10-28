@@ -58,7 +58,7 @@ The following code illustrates how an image node is created.
 }
 ```
 
-![Image node in Blazor Diagram](images/Imagenode.png)
+![Image Node in Blazor Diagram](images/blazor-diagram-image-node.png)
 
 ### Base64 encoded image into the image node
 
@@ -100,7 +100,7 @@ The following code illustrates how add Base64 image into image node.
 }
 ```
 
-![Image node in Blazor Diagram](images/base64.png)
+![Base64 Image Node in Blazor Diagram](images/blazor-diagram-base64-image-node.png)
 
 > Deploy your HTML file in the web application and export the diagram (image node) or else the image node will not be exported in the Chrome and Firefox due to security issues.
 
@@ -149,13 +149,13 @@ Stretch and align the image content anywhere but within the node boundary. The [
 
 |Scale |ImageAlign |Result|
 |---|---|---|
-|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/MeetXminYmax.png)|
-|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/MeetXinYmin.png)|
-|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/Meetxmaxymax.png)|
-|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/NoneXminYmax.png)|
-|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/NoneXminYmin.png)|
-|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/Slicexminymax.png)|
-|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/Slicexminymin.png)|
+|   Meet  |     XMinYMax  |![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmin-ymax.png)|
+|Meet|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xin-ymin.png)|
+|Meet|XMaxYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-meet-xmax-ymax.png)|
+|None|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymax.png)|
+|None|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-none-xmin-ymin.png)|
+|Slice|XMinYMax|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymax.png)|
+|Slice|XMinYMin|![Node Image alignment in Blazor Diagram](images/blazor-diagram-slice-xmin-ymin.png)|
 
 ## HTML template shape
 
@@ -249,7 +249,7 @@ Html elements can be embedded in the diagram through [HTML](https://help.syncfus
 }
 ```
 
-![HTML node in Blazor Diagram](images/Htmlnode.png)
+![HTML Node Template in Blazor Diagram](images/blazor-diagram-html-node-template.png)
 
 > HTML node cannot be exported to image format, like JPEG, PNG and BMP. It is by design, while exporting the diagram is drawn in a canvas. Further, this canvas is exported into image formats. Currently, drawing in a canvas equivalent from all possible HTML is not feasible. Hence, this limitation. Also , HTML node always appears as topmost layer ( whose index is the higher index, even though it is defined at the last).
 
@@ -302,7 +302,7 @@ The following code example illustrates how to create a basic shape.
 
 The list of basic shapes are as follows.
 
-![BasicShape node in Blazor Diagram](images/Basic.png)
+![BasicShape Node in Blazor Diagram](images/blazor-diagram-basic-shape-node.png)
 
 ## Path shape
 
@@ -345,7 +345,7 @@ To create a path node, specify the shape as **Path**. The [Data](https://help.sy
 }
 ```
 
-![Path shape node in Blazor Diagram](images/Pathnode.png)
+![Path Shape Node in Blazor Diagram](images/blazor-diagram-path-shape-node.png)
 
 ## Flow Shapes
 
@@ -387,7 +387,7 @@ The [Flow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.FlowS
 
 The list of flow shapes are as follows.
 
-![FlowShape node in Blazor Diagram](images/FlowShapes.png)
+![FlowShape Node in Blazor Diagram](images/blazor-diagram-flow-shapes-node.png)
 
 ## SVG template shape
 
@@ -441,6 +441,6 @@ Diagram provides support to embed SVG element into a node. The Shape property of
 }
 ```
 
-![Svg node in Blazor Diagram](images/svgnode.png)
+![SVG Node in Blazor Diagram](images/blazor-diagram-svg-node.png)
 
 > Like HTML node, the SVG node also cannot be exported to image format. Fill color of SVG node can be overridden by the inline style or fill of the SVG element specified in the template.
