@@ -53,7 +53,7 @@ For numbers, the formatting settings required to apply through code behind are:
 
 ```
 
-![output](images/number-formatting.png)
+![Number Formatting in Blazor PivotTable](images/blazor-pivottable-number-formatting.png)
 
 ## Date and time formatting
 
@@ -94,7 +94,7 @@ For date and time, the formatting settings required to apply through code behind
 
 ```
 
-![output](images/date-formatting.png)
+![Date Formatting in Blazor PivotTable](images/blazor-pivottable-date-formatting.png)
 
 ## Limitations of date formatting
 
