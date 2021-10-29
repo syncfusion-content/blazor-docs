@@ -56,7 +56,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
 }
 ```
 
-![Connector Straight Segment](../images/connector-straight.png)
+![Connector with Straight Segment in Blazor Diagram](../images/blazor-diagram-connector-with-straight-segment.png)
 
 ## Orthogonal
 
@@ -161,7 +161,7 @@ The [Length](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Ort
 }
 ```
 
-![Connector Orthogonal Segment](../images/connector-orthogonal.png)
+![Connector with Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-connector-with-orthogonal.png)
 
 > You need to mention the segment type as same as what you mentioned in connector type. There should be no contradiction between connector type and segment type.
 
@@ -210,7 +210,7 @@ Bezier segments are used to create curve segments and the curves are configurabl
 }
 ```
 
-![Connector Bezier Segment](../images/connector-bezier.png)
+![Connector with Bezier Segment in Blazor Diagram](../images/blazor-diagram-connector-with-bezier.png)
 
 We have properties called [Point1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point1) and [Point2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Point2) which is used to control the points of the bezier connector . And also we have properties called [vector1](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector1) and [Vector2](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html#Syncfusion_Blazor_Diagram_BezierSegment_Vector2) which is used to defines the length and angle between the source point and target point respectively .The following code example illustrates how to use these properties in our control  .
 
@@ -301,7 +301,7 @@ Multiple segments can be defined one after another. To create a connector with m
 }
 ```
 
-![MultipleSegment](../images/Multiplesegment.png)
+![Blazor Diagram with Multiple Segment](../images/blazor-diagram-multiple-segment.png)
 
 * Similarly, you can create multiple segments for all the connector type.
 
@@ -347,7 +347,7 @@ Multiple segments can be defined one after another. To create a connector with m
 }
 ```
 
-![Straight Segment Editing Addition](../images/straight-segment-add.gif)
+![Editing Straight Segment in Blazor Diagram](../images/blazor-diagram-edit-straight-segment.gif)
 
 ### Orthogonal Segment Editing
 
@@ -381,13 +381,13 @@ Multiple segments can be defined one after another. To create a connector with m
 }
 ```
 
-![Orthogonal Segment Edit](../images/orthogonal-segment-edit.gif)
+![Editing Orthogonal Segment in Blazor Diagram](../images/blazor-diagram-edit-orthogonal-segment.gif)
 
 ### Bezier Segment Editing
 
 * A segment control point of the Bezier connector is used to change the bezier vectors, points of the connector.
 
-![Bezier](../images/bezieredit.gif)
+![Editing Bezier Segment in Blazor Diagram](../images/blazor-diagram-edit-bezier-segment.gif)
 
 ## See also
 
