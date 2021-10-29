@@ -1140,6 +1140,7 @@ public class WrapData
 
 > Selection feature must be enabled for row drag and drop.
 > For multiple row selection, the type property must be set to multiple.
+> [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) is necessary to perform row drag and drop operation.
 
 ### Drag and drop to another TreeGrid
 
