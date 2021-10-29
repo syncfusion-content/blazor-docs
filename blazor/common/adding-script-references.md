@@ -146,7 +146,7 @@ You can refer the Syncfusion Blazor scripts through the NuGet package's static w
 
 * If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, refer to the below code to refer script from static web assets.
 
-    It is not recommended to use [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet for production environment. Use indivitual NuGet packages for production.  
+    It is not recommended to use [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet for production environment. Use individual NuGet packages for production.  
 
     ```html
     <head>
