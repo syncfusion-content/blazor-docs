@@ -6,20 +6,14 @@ platform: Blazor
 component: Common
 documentation: ug
 ---
-<!-- markdownlint-disable MD024 -->
 
 # Getting started with Blazor Server Side App in Visual Studio
 
 This article provides a step-by-step introduction to configure Syncfusion Blazor setup, and also to build and run a simple Blazor Server Side application using [Visual Studio](https://visualstudio.microsoft.com/vs/).
 
-> Starting with version 17.4.0.39 (2019 Volume 4), you need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.
-
 ## Prerequisites
 
-* [Visual Studio 2019](https://visualstudio.microsoft.com/vs/) / [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/vs/preview)
-* [.NET Core SDK 3.1.8](https://dotnet.microsoft.com/download/dotnet/3.1) / [.NET 5.0 SDK](https://dotnet.microsoft.com/download/dotnet/5.0) / [.NET 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
-
-> **.NET Core SDK 3.1.8** requires Visual Studio 2019 16.7 or later. <br /> **.NET 5** requires Visual Studio 2019 16.8 or later. <br /> **.NET 6** requires Visual Studio 2022 Preview 4.1 or later.
+* [System requirements for Blazor Components](https://blazor.syncfusion.com/documentation/system-requirements)
 
 ## Create a new Blazor Server side project in Visual Studio
 
@@ -88,7 +82,6 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     ```html
     <head>
         ....
-        ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
     ```
@@ -97,7 +90,6 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
     ```html
     <head>
-        ....
         ....
         <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     </head>
@@ -132,7 +124,6 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
     builder.Services.AddSyncfusionBlazor();
     var app = builder.Build();
     ....
-    ....
     ```
 
     b) For **.NET 5** or **.NET Core SDK 3.1** project, open the **~/Startup.cs** file and register the Syncfusion Blazor Service.
@@ -166,3 +157,5 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 4. Run the application. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
     ![output](images/browser-output.png)
+
+> You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.

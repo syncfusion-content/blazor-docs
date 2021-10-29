@@ -17,7 +17,7 @@ This section provides information about the script isolation process and how to 
 
 Syncfusion Blazor components supports JavaScript isolation where the needed scripts are loaded by the component itself when its rendered. So, you don't have to reference scripts externally in application. 
 
-> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) by disabling JavaScript isolation for better loading performance of the blazor application. 
+> Syncfusion recommends to reference scripts using [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets), [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) by disabling JavaScript isolation for better loading performance of the blazor application. 
 
 ## Disable JavaScript isolation
 
@@ -28,7 +28,6 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
 * If you're using `.NET 6` Blazor Server App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
     ```c#
-    // For .NET 6 project, add the IgnoreScriptIsolation in Syncfusion Blazor Service in Program.cs file.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -38,9 +37,9 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
     builder.Services.AddRazorPages();
     builder.Services.AddServerSideBlazor();
     ....
+    // Set IgnoreScriptIsolation as true to load scripts externally.
     builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
     var app = builder.Build();
-    ....
     ....
     ```
 
@@ -56,7 +55,7 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
             public void ConfigureServices(IServiceCollection services)
             {
                 ....
-                ....
+                // Set IgnoreScriptIsolation as true to load scripts externally.
                 services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
             }
         }
@@ -65,10 +64,11 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
 
 ### Blazor WASM App
 
-* If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+If you're using Blazor WebAssembly App, set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+
+* .NET 6 Blazor WebAssembly App
 
     ```c#
-    // For .NET 6 project.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -78,28 +78,26 @@ The Syncfusion Blazor components supports to refer scripts externally at the app
     builder.Services.AddRazorPages();
     builder.Services.AddServerSideBlazor();
     ....
+    // Set IgnoreScriptIsolation as true to load scripts externally.
     builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
     var app = builder.Build();
     ....
-    ....
-
-    // For .NET 5 or .NET Core SDK 3.1 project.
+    ```
+* .NET 5 or .NET Core 3.1 Blazor WebAssembly App
+    ```c#
     using Syncfusion.Blazor;
-    ....
     ....
     public static async Task Main(string[] args)
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
         ....
-        ....
-
-        // Set IgnoreScriptIsolation as true to load custom  scripts
+        // Set IgnoreScriptIsolation as true to load scripts externally.
         builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
         await builder.Build().RunAsync();
     }
     ```
 
-> If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via CDN Reference or Static Web Assets. 
+> If you set [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) property as `true`, You need to reference scripts externally via [Static Web Assets](https://blazor.syncfusion.com/documentation/common/adding-script-references#static-web-assets) or [CDN](https://blazor.syncfusion.com/documentation/common/adding-script-references#cdn-reference) or and [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator). 
 
 ## CDN Reference
 
@@ -119,7 +117,6 @@ Syncfusion Blazor components are available in CDN for each version. Make sure th
 ```html
 <head>
     ....
-    ....
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor.min.js" type="text/javascript"></script>
 </head>
 ```
@@ -128,7 +125,6 @@ If you are using `PDFViewer` or `DocumentEditor`, ensure to add additional scrip
 
 ```html
 <head>
-    ....
     ....
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-pdfviewer.min.js" type="text/javascript"></script>
     <script src="https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/syncfusion-blazor-documenteditor.min.js" type="text/javascript"></script>
@@ -147,31 +143,31 @@ In addition to above, Syncfusion Blazor components provides latest scripts in CD
 
 You can refer the Syncfusion Blazor scripts through the NuGet package's static web assets using [IgnoreScriptIsolation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_IgnoreScriptIsolation) as `true` in our Syncfusion Blazor Service.
 
-* If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) overall NuGet package, refer to the below code snippet for static web assets script reference.
+
+* If you are using [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet package, refer to the below code to refer script from static web assets.
+
+    It is not recommended to use [Syncfusion.Blazor](https://www.nuget.org/packages/Syncfusion.Blazor/) NuGet for production environment. Use individual NuGet packages for production.  
 
     ```html
     <head>
-        ...
         ...
         <script  src="_content/Syncfusion.Blazor/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
     </head>
     ```
 
-* If you are using Syncfusion Blazor individual NuGet package, the combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. You refer to the below code snippet for static web assets script reference.
+* If you are using Syncfusion [Blazor individual NuGet package](https://blazor.syncfusion.com/documentation/nuget-packages), the combined scripts available in [Syncfusion.Blazor.Core](https://www.nuget.org/packages/Syncfusion.Blazor.Core/) package. You refer to the below code to refer script from static web assets
 
     ```html
     <head>
-        ...
         ...
         <script  src="_content/Syncfusion.Blazor.Core/scripts/syncfusion-blazor.min.js"  type="text/javascript"></script>
     </head>
     ```
 
-* If you are using the PDF viewer or Document Editor component, refer the below script reference in your application end.
+* If you are using the PDF viewer or Document Editor component, refer to the below code to refer script from static web assets
 
     ```html
     <head>
-        ...
         ...
        <script  src="_content/Syncfusion.Blazor.PdfViewer/scripts/syncfusion-blazor-pdfviewer.min.js"  type="text/javascript"></script>
        <script  src="_content/Syncfusion.Blazor.WordProcessor/scripts/syncfusion-blazor-documenteditor.min.js"  type="text/javascript"></script>
