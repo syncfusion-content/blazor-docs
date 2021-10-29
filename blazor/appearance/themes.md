@@ -42,8 +42,8 @@ Using the below approaches the themes can be referenced in the Blazor applicatio
 2. [CDN](#cdn-reference) - Used to reference complete css via static web assests. 
 3. [CRG](https://blazor.syncfusion.com/documentation/common/custom-resource-generator) - Used to generate resources only for the selected (used) components. 
 4. [Theme Studio](https://blazor.syncfusion.com/documentation/appearance/theme-studio) - Used to customize and generate themes only for the selected (used) components. 
-5. [NPM packages](#npm-packages) - Used to customize and bundle with other style sheets in application.
-6. [LibMan](#libman) - Used to customize and bundle with other style sheets in application.
+5. [NPM packages](#npm-packages) - Used to customize the existing themes and bundle stylesheet's in an application.
+6. [LibMan](#libman) - Used to customize the existing themes and bundle stylesheet's in an application.
 
 Instead of using [Static Web assets](#static-web-assets) or a [CDN reference](#cdn-reference), you can reference the style sheet into your projects to customize the theme or bundle it with the other style sheets using [NPM packages](#npm-packages) or [LibMan](#libman). 
 
