@@ -20,7 +20,6 @@ You can enable right to left (RTL) for all Syncfusion components used in the app
 * If you're using `.NET 6` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
 
     ```c#
-    // For .NET 6 project, add the EnableRtl in Syncfusion Blazor Service in Program.cs file.
     using Microsoft.AspNetCore.Components;
     using Microsoft.AspNetCore.Components.Web;
     using Syncfusion.Blazor;
@@ -38,7 +37,6 @@ You can enable right to left (RTL) for all Syncfusion components used in the app
 * If you're using `.NET 5 or .NET Core 3.1 ` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
 
     ```c#
-    // For .NET 5 or .NET Core SDK 3.1 project, add the EnableRtl in Syncfusion Blazor Service in Startup.cs file.
     using Syncfusion.Blazor;
     namespace WebApplication1
     {
@@ -53,14 +51,11 @@ You can enable right to left (RTL) for all Syncfusion components used in the app
     }
     ```
     
-The above configuration enables the Right-To-Left (RTL) support globally for all the Syncfusion Blazor components. For illustration, the Syncfusion Blazor DataGrid component is displayed with Right-To-Left (RTL) support.
-![Blazor Grid component is rendered from the right to left](images/rteGrid.png)
-
 ### Blazor WebAssembly App
 
-* If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
     
-    .NET 6 Blazor WebAssembly App
+* For .NET 6 Blazor WebAssembly App
 
     ```c#
     using Microsoft.AspNetCore.Components;
@@ -77,9 +72,8 @@ The above configuration enables the Right-To-Left (RTL) support globally for all
     ....
     ```
     
-    .NET 5 or .NET Core 3.1 Blazor WebAssembly App
+* For .NET 5 or .NET Core 3.1 Blazor WebAssembly App
     ```c#
-    // For .NET 5 or .NET Core SDK 3.1 project.
     using Syncfusion.Blazor;
     ....
     public static async Task Main(string[] args)
@@ -99,6 +93,8 @@ The above configuration enables the Right-To-Left (RTL) support globally for all
 ## Enable RTL to individual component
 
 You can enable right to left (RTL) for particular component by setting component's `EnableRtl` property to `true`.
+
+In the below code example, right to left enabled for `SfDropDownList` component by directly setting `EnableRtl` property.
 
 ```cshtml
 
