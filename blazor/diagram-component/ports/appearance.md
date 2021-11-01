@@ -70,7 +70,7 @@ The following code explains how to change the appearance of the port.
 }
 ```
 
-![Appearance](../images/port_Appearance.png)
+![Changing Port Appearance in Blazor Diagram](../images/blazor-diagram-port-appearance.png)
 
 ## Visibility
 
@@ -142,7 +142,7 @@ We have provided some basic built-in [PortShapes](https://help.syncfusion.com/cr
 }
 ```
 
-![Port Drag](../images/port_customport.png)
+![Blazor Diagram Port with Custom Shape](../images/blazor-diagram-port-custom-shape.png)
 
 ## Constraints
 
