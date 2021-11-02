@@ -221,6 +221,58 @@ The Scheduler layout and its behavior can be changed as per the common RTL (Righ
 }
 ```
 
+## Localization support for timezone collection
+
+By default, when the locale is set to another culture, the scheduler loads with the default timezone data in the editor window. Now we can translate the default dropdown values to the respective locale culture by binding custom datasource to the property 'TimezoneDataSource' in the 'SfSchedule' tag. The following example shows how to the custom datasource is bind to the property.
+
+```cshtml
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule @ref="@ScheduleObj" TValue="AppointmentData" Height="600px" @bind-SelectedDate="@SelectedDate" TimezoneDataSource="@Data">
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+</SfSchedule>
+
+@code
+{
+    public SfSchedule<AppointmentData> ScheduleObj;
+    DateTime SelectedDate = new DateTime(2020, 1, 15);
+    List<AppointmentData> DataSource = new List<AppointmentData>
+        {
+            new AppointmentData { Id = 1, Subject = "Explosion of Betelgeuse Star", IsAllDay=false, StartTime = new DateTime(2020, 1, 15, 10, 0, 0), EndTime = new DateTime(2020, 1, 15, 12, 0, 0) },
+            new AppointmentData { Id = 2, Subject = "Blue Moon Eclipse", IsAllDay=false, StartTime = new DateTime(2020, 1, 16, 12, 0, 0), EndTime = new DateTime(2020, 1, 16, 13, 0, 0) }
+        };
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
+    }
+    List<TimezoneFields> Data = new List<TimezoneFields>
+    {
+        new TimezoneFields() { Value = "Pacific/Niue", Text = "(UTC-11:00) Niue" },
+        new TimezoneFields() { Value = "Pacific/Pago_Pago", Text = "(UTC-11:00) Pago Pago" },
+        new TimezoneFields() { Value = "Pacific/Honolulu", Text = "(UTC-10:00) Hawaii Time" },
+        new TimezoneFields() { Value = "Pacific/Rarotonga", Text = "(UTC-10:00) Rarotonga" },
+        new TimezoneFields() { Value = "Pacific/Tahiti", Text = "(UTC-10:00) Tahiti" },
+    };
+}
+```
+
 ## See Also
 
 * [How to change first day of the week in the Scheduler](./working-hours/#setting-start-day-of-the-week)
