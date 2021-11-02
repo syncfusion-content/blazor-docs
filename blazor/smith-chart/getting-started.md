@@ -15,7 +15,7 @@ This section briefly explains how to include a Smith Chart component in the Blaz
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. Add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -81,7 +81,7 @@ To initialize the Smith Chart component, add the below code to the **Index.razo
 
 On successful compilation of the application, the Syncfusion Blazor Smith Chart component will render in the web browser as following.
 
-![Smith Chart](./images/browser-output.png)
+![Blazor Smith Chart](./images/blazor-smith-chart.png)
 
 ## Adding series to Smith Chart
 
@@ -149,7 +149,7 @@ The following sample demonstrates adding two series to Smith Chart in both ways.
 }
 ```
 
-![Smith chart with transmission series](./images/SeriesSMC.png)
+![Blazor Smith Chart with Transmission Series](./images/blazor-smith-chart-series.png)
 
 ## Adding Title
 
@@ -174,7 +174,7 @@ Title can be added to the Smith Chart to provide a quick information to the user
 
 > Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-![Smith chart with title](./images/Title.png)
+![Blazor Smith Chart with Title](./images/blazor-smith-chart-with-title.png)
 
 ## Enable Marker
 
@@ -202,7 +202,7 @@ To display marker for particular series, set the [Visible](https://help.syncfusi
 
 > Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-![Smith chart with marker](./images/marker.png)
+![Blazor Smith Chart with Marker](./images/blazor-smith-chart-marker.png)
 
 ## Enable Data Label
 
@@ -232,7 +232,7 @@ To display data label for particular marker series, set the [Visible](https://he
 
 > Refer to the [code block](#adding-series-to-smith-chart) to know the property value of `FirstTransmissionSeries` and `SecondTransmissionSeries`.
 
-![Smith chart with data label and marker](./images/datalabel.png)
+![Blazor Smith Chart with Data Label](./images/blazor-smith-chart-data-label.png)
 
 ## Enable Legend
 
@@ -260,7 +260,7 @@ Use legend for the Smith Chart by setting the [Visible](https://help.syncfusion.
 
 > Refer to the [code block](#adding-series-to-smith-chart) to know the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-![Smith chart with legend](./images/legend.png)
+![Blazor Smith Chart with Legend](./images/blazor-smith-chart-legend.png)
 
 ## Enable Tooltip
 
@@ -290,7 +290,7 @@ When space constraints prevents from displaying information using data labels, t
 
 > Refer to the [code block](#adding-series-to-smith-chart) to know about the property value of the `FirstTransmissionSeries` and the `SecondTransmissionSeries`.
 
-![Smith chart with tooltip](./images/tooltip.png)
+![Blazor Smith Chart with Tooltip](./images/blazor-smith-chart-tooltip.png)
 
 ## See also
 

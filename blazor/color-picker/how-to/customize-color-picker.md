@@ -77,7 +77,7 @@ By default, the Palette will be rendered with default colors. To load custom col
 
 ```
 
-Output be like
+Output will be as follows
 ![Blazor ColorPicker with Custom Palette](./../images/blazor-colorpicker-with-custom-palette.png)
 
 ## Hide input area from picker
@@ -93,14 +93,14 @@ In the following sample, the Color Picker is rendered without input area.
 <SfColorPicker ModeSwitcher="false" CssClass="e-hide-value"></SfColorPicker>
 ```
 
-Output be like
+Output will be as follows
 ![Hide Input Area in Blazor ColorPicker](./../images/blazor-colorpicker-hide-input.png)
 
 ## Custom Handle
 
-Color Picker handle shape and UI can be customized. Here, we have customized the handle as svg icon. The same way you can customize the handle based on your requirement.
+Color Picker handle shape and UI can be customized. Here, we have customized the handle as svg icon. Similarly, you can customize the handle based on your requirement.
 
-The following sample show the customized Color Picker handle.
+The following sample shows the customized Color Picker handle.
 
 ```cshtml
 
@@ -127,5 +127,5 @@ The following sample show the customized Color Picker handle.
 
 ```
 
-Output be like
+Output will be as follows
 ![Customizing Blazor ColorPicker Handle Shape](./../images/blazor-colorpicker-handle-customization.png)

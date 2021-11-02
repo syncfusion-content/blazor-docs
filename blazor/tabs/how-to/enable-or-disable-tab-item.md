@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable/Disable Tab item in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Enable/Disable Tab item in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about how to enable/disable tab item in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Enable/Disable Tab item in Blazor Tabs Component
 
-The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Disabled) property of the Tab item is used to enable/disable the item by setting false/true value to the property. In the following demo, specified tab item is enabled and disabled dynamically when you click **Enable/Disable First Item** button.
+The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.TabItem.html#Syncfusion_Blazor_Navigations_TabItem_Disabled) property of the Tab item is used to enable or disable the item by setting false or true value to the property. In the following demo, specified tab item is enabled and disabled dynamically when you click **Enable/Disable First Item** button.
 
 ```cshtml
 
@@ -50,6 +50,4 @@ The [Disabled](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigatio
 
 ```
 
-Output be like the below.
-
-![Dynamic Enable/Disable tab item](../images/enableDisableItem.gif)
+![Enabling or Disabling TabItem in Blazor Tabs](../images/blazor-tabs-enable-disable-tabitem.gif)

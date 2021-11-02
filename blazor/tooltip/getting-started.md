@@ -9,16 +9,16 @@ documentation: ug
 
 # Getting Started with Blazor Tooltip Component
 
-This section briefly explains how to include a `Tooltip` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a `Tooltip` in the Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
-To get start quickly with Blazor Tooltip, you can check on this video
+To get start quickly with the Blazor Tooltip, check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=Lzpm6x6TXO8"%}
 
 ## Importing Syncfusion Blazor component in the application
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+Any one of the below standards can be used to install the Syncfusion Blazor library in the application.
 
 ### Using Syncfusion Blazor Individual NuGet Packages [New standard]
 
@@ -26,15 +26,15 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Install **Syncfusion.Blazor.Popups** NuGet package to the application by using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor.Popups** keyword in the Browse tab and install **Syncfusion.Blazor.Popups** NuGet package in the application.
 
-    ![Individual Nuget](./images/individual-nuget.png)
+    ![Searching Blazor Tooltip NuGet Package](./images/blazor-tooltip-nuget-package.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor Popups package will be installed in the project.
 
-4. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+4. The client-side style resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -44,25 +44,23 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
 W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
-1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager` Right-click the project and then select `Manage NuGet Packages`.
+1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager`. Right-click the project and then select `Manage NuGet Packages`.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![Blazor Nuget](./images/blazor-nuget.png)
+    ![Blazor NuGet Package](./images/blazor-nuget.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
-4. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-
-> You can also add the client-side style resources through CDN.
+4. The client-side style resources can be added using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
 ```html
 <head>
@@ -163,9 +161,7 @@ Now, add the Syncfusion Blazor Tooltip component in any web page `razor` in the 
 
  After successful compilation of your application, simply press `F5` to run the application.
 
-Output be like the below.
-
-![Tooltip Sample](./images/Tooltip.gif)
+![Blazor Tooltip](./images/blazor-tooltip.gif)
 
 ## See Also
 

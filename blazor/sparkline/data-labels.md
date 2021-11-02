@@ -23,7 +23,6 @@ The [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Spa
 * [Negative](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_Negative) - Data label for negative points are enabled.
 * [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.VisibleType.html#Syncfusion_Blazor_Charts_VisibleType_None) - Data label for all points are disabled.
 
-The following code examples shows how to enable Data Label for all points.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -34,7 +33,7 @@ The following code examples shows how to enable Data Label for all points.
 </SfSparkline>
 ```
 
-![Sparkline with Data Label](images/Datalabels/Datalabel.png)
+![Blazor Sparkline Chart with Data Label](images/Datalabels/blazor-sparkline-data-label.png)
 
 ## Data Label customization
 
@@ -61,7 +60,7 @@ The following properties can be used to customize the Sparkline Data Label:
 </SfSparkline>
 ```
 
-![Sparkline with data label customization](images/Datalabels/LabelCustomization.png)
+![Blazor Sparkline Chart with Custom Data Label](images/Datalabels/blazor-sparkline-custom-data-label.png)
 
 ## Format
 
@@ -99,4 +98,4 @@ The Data Label text can be formatted by specifying the property name from the da
 }
 ```
 
-![Sparkline with custom data label](images/Datalabels/LabelFormat.png)
+![Label Formatting in Blazor Sparkline Chart](images/Datalabels/blazor-sparkline-label-format.png)

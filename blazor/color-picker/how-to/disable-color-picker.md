@@ -20,5 +20,5 @@ The following example shows the `Disabled` state of Color Picker component.
 <SfColorPicker Disabled="true"></SfColorPicker>
 ```
 
-Output be like
+Output will be as follows
 ![Disable State in Blazor ColorPicker](./../images/blazor-colorpicker-disable-state.png)

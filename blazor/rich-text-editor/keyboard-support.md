@@ -37,7 +37,8 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Indents| <kbd>CTRL</kbd> + <kbd>]</kbd> |
 | Outdents| <kbd>CTRL</kbd> + <kbd>[</kbd> |
 | HTML source | <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>H</kbd> |
-| Fullscreen| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd> |
+| Full screen| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd> |
+| Exit Full screen| <kbd>Esc</kbd> |
 | Justify center| <kbd>CTRL</kbd> + <kbd>E</kbd> |
 | Justify full | <kbd>CTRL</kbd> + <kbd>`J</kbd> |
 | Justify left | <kbd>CTRL</kbd> + <kbd>L</kbd> |
@@ -68,7 +69,8 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 | Lowercase| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>L</kbd> |
 | Superscript| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>=</kbd> |
 | Subscript| <kbd>CTRL</kbd> + <kbd>=</kbd> |
-| Fullscreen| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd> |
+| Full screen| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>F</kbd> |
+| Exit Full screen| <kbd>Esc</kbd> |
 | Ordered list| <kbd>CTRL</kbd> + <kbd>SHIFT</kbd> + <kbd>O</kbd> |
 | Unordered list| <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>O</kbd> |
 
@@ -93,7 +95,7 @@ You can use the following key shortcuts when the Rich Text Editor renders with `
 
 The output will be as follows.
 
-![Keyconfig](./images/markdown-key.png)
+![Blazor RichTextEditor with Key Configuration](./images/blazor-richtexteditor-key-configuration.png)
 
 ## Custom key config
 

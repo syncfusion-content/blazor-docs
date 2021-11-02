@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Enable RTL in Blazor Toggle Switch Button Component | Syncfusion
-description: Checkout and learn here all about Enable RTL in Syncfusion Blazor Toggle Switch Button component and more.
+description: Checkout and learn here all about how to enable RTL in Syncfusion Blazor Toggle Switch Button component and more.
 platform: Blazor
 control: Toggle Switch Button 
 documentation: ug
@@ -24,6 +24,4 @@ The following example illustrates how to enable right-to-left support in Toggle 
 
 ```
 
-  Output be like
-
-![Switch Sample](./../images/switch-rtl.png)
+![Right to Left in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-in-right-to-left.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Print and Export in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Print and Export in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about print and export in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug

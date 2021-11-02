@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Axis Customization in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about axis customization in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -13,7 +13,7 @@ documentation: ug
 
 ## Title
 
-You can add a title to the axis using [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide quick information to the user about the data plotted in the axis. Title style can be customized using [TitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_TitleStyle) property of the axis.
+A title can be added to the axis using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Title) property to provide quick information to the user about the data plotted in the axis. Title style can be customized using the [TitleStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_TitleStyle) property of the axis.
 
 ```cshtml
 
@@ -50,11 +50,11 @@ You can add a title to the axis using [Title](https://help.syncfusion.com/cr/bla
 
 ```
 
-![Title](images/common/title.png)
+![Blazor Stock Chart with Title](images/common/blazor-stock-chart-title.png)
 
 ## Tick Lines Customization
 
-You can customize the  `Width`, `Color` and `Size` of the minor and major tick lines, using [MajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MajorTickLines) and [MinorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MinorTickLines) properties in the axis.
+The `Width`, `Color` and `Size` of the minor and major tick lines can be customized using the [MajorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MajorTickLines) and the [MinorTickLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_MinorTickLines) properties in the axis.
 
 ```cshtml
 
@@ -95,11 +95,11 @@ You can customize the  `Width`, `Color` and `Size` of the minor and major 
 
 ```
 
-![Tick Lines](images/common/ticklines.png)
+![Blazor Stock Chart with Tick Lines](images/common/blazor-stock-chart-tick-lines.png)
 
 ## Grid Lines Customization
 
-You can customize the  `Width`, `Color` and `DashArray` of the minor and major grid lines, using [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MajorGridLines.html) and [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MinorGridLines.html) properties in the axis.
+The `Width`, `Color` and `DashArray` of the minor and major grid lines can be customized using the [MajorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MajorGridLines.html) and the [MinorGridLines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Charts.AxisModel~MinorGridLines.html) properties in the axis.
 
 ```cshtml
 
@@ -145,11 +145,11 @@ You can customize the  `Width`, `Color` and `DashArray` of the minor and m
 
 ```
 
-![Grid Lines](images/common/gridlines.png)
+![Blazor Stock Chart with Grid Lines](images/common/blazor-stock-chart-grid-lines.png)
 
 ## Multiple Axis
 
-In addition to primary X and Y axis, we can add n number of axis to the chart. Series can be associated with this [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html), by mapping with axis's unique name.
+In addition to primary X and Y axis, n number of axis can be added to the chart. Series can be associated with this [Axis](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html), by mapping with axis's unique name.
 
 ```cshtml
 
@@ -205,13 +205,13 @@ In addition to primary X and Y axis, we can add n number of axis to the chart. S
 
 ```
 
-![Multiple Axis](images/common/multiple-axis.png)
+![Blazor Stock Chart with Multiple Axes](images/common/blazor-stock-chart-multiple-axes.png)
 
 ## Inversed Axis
 
 <!-- markdownlint-disable MD033 -->
 
-When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property  [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_IsInversed) to `true`.
+When an axis is inversed, highest value of the axis comes closer to origin and vice versa. To place an axis in inversed manner set this property [IsInversed](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartAxis.html#Syncfusion_Blazor_Charts_StockChartAxis_IsInversed) to `true`.
 
  ```cshtml
 
@@ -254,7 +254,7 @@ When an axis is inversed, highest value of the axis comes closer to origin and v
 
 ```
 
-![Inversed Axis](images/common/inversed-axis.png)
+![Blazor Stock Chart with Inversed Axis](images/common/blazor-stock-chart-inversed-axis.png)
 
 ## Opposed Position
 
@@ -301,4 +301,4 @@ To place an axis opposite from its original position, set [OpposedPosition](http
 
 ```
 
-![Opposed Position](images/common/opposed.png)
+![Blazor Stock Chart in Opposed Position](images/common/blazor-stock-chart-in-opposed-position.png)

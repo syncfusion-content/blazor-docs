@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Stock Chart Dimensions in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Stock Chart Dimensions in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about stock chart dimensions in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -53,17 +53,15 @@ Stock Chart can render to its container size. You can set the size via inline o
 
 ```
 
-![Size](images/size/size.png)
+![Changing Blazor Stock Chart Size](images/size/blazor-stock-chart-size.png)
 
 ## Size for Stock Chart
 
-You can also set size for stock chart directly through [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Height) properties.
+The size can be set for stock chart directly through [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Width) and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_Height) properties.
 
 <!-- markdownlint-disable MD036 -->
 **In Pixel**
 <!-- markdownlint-disable MD036 -->
-
-You can set the size of chart in pixel as demonstrated below.
 
 ```cshtml
 
@@ -103,7 +101,7 @@ You can set the size of chart in pixel as demonstrated below.
 
 ```
 
-![Size](images/size/size-pixel.png)
+![Changing Blazor Stock Chart Size in Pixel](images/size/blazor-stock-chart-size-in-pixel.png)
 
 **In Percentage**
 
@@ -147,6 +145,6 @@ By setting value in percentage, stock chart gets its dimension with respect to 
 
 ```
 
-![Size](images/size/size-percentage.png)
+![Changing Blazor Stock Chart Size in Percentage](images/size/blazor-stock-chart-size-in-percentage.png)
 
 > When you do not specify the size, it takes `450px` as the height and window size as its width.

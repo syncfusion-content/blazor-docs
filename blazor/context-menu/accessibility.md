@@ -49,9 +49,9 @@ Navigates down or to the next menu item.</td></tr>
 <tr>
 <td>
 <kbd>Left</kbd></td><td>
-Close the current sub menu and navigates to the parent menu.</td></tr>
+Closes the current sub menu and navigates to the parent menu.</td></tr>
 <tr>
 <td>
 <kbd>Right</kbd></td><td>
-Navigates and open the next sub menu.</td></tr>
+Navigates and opens the next sub menu.</td></tr>
 </table>

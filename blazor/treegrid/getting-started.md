@@ -11,14 +11,14 @@ documentation: ug
 
 # Getting Started with Blazor TreeGrid Component
 
-This section briefly explains about how to include a **Tree Grid** Component in your Blazor server-side application. It also includes initializing Tree Grid Blazor component and usage of features such as paging and sorting using the [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/). You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://ej2.syncfusion.com/aspnet-core-blazor/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a **Tree Grid** Component in the Blazor server-side application. It also includes initializing Tree Grid Blazor component and usage of features such as paging and sorting using the [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/). Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://ej2.syncfusion.com/aspnet-core-blazor/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 <!-- markdownlint-disable MD033 -->
 
 1. Install **Syncfusion.Blazor.TreeGrid** NuGet package to the application by using the **NuGet Package Manager**. Please ensure to check the **Include prerelease** option.
-2. You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. The client-side resources can be added through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -80,12 +80,12 @@ Now, add the Syncfusion Blazor Tree Grid component in any web page (razor) in th
 
 ## Defining columns
 
-The Tree Grid has an option to define columns using [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) directive. In **TreeGridColumn** directive we have properties to customize columns.
+The Tree Grid has an option to define columns using the [TreeGridColumns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumns.html) directive. In the **TreeGridColumn** directive there are properties to customize columns.
 
 Let’s check the properties used here:
-* We have added [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) to map with a property name in datasource.
-* We have added [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderText.html) to change the title of columns.
-* We have used [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~TextAlign.html) to change the alignment of columns. By default, columns will be left aligned. To change columns to right align, we need to define **TextAlign** as *Right*.
+* [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Field.html) to map with a property name in datasource is been added.
+* [HeaderText](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~HeaderText.html) to change the title of columns is been added.
+* [TextAlign](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~TextAlign.html) to change the alignment of columns is been used. By default, columns will be left aligned. To change columns to right align, define **TextAlign** as *Right*.
 
 ```cshtml
 
@@ -128,7 +128,7 @@ Let’s check the properties used here:
 }
 ```
 
-In the above code example, the [Self-Referential](../../treegrid/data-binding/#self-referential-data-binding-flat-data) data binding is represented in which the [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IDMapping.html) and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ParentIdMapping.html) properties denotes the hierarchy relationship; whereas in [Hierarchical](../../treegrid/data-binding/#hierarchy-data-source-binding) data binding [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ChildMapping.html) denotes the hierarchy relationship.
+In the above code example, the [Self-Referential](https://blazor.syncfusion.com/documentation/treegrid/data-binding/#self-referential-data-binding-flat-data) data binding is represented in which the [IdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IDMapping.html) and [ParentIdMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ParentIdMapping.html) properties denotes the hierarchy relationship; whereas in [Hierarchical](https://blazor.syncfusion.com/documentation/treegrid/data-binding/#hierarchy-data-source-binding) data binding [ChildMapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ChildMapping.html) denotes the hierarchy relationship.
 
 ## Enable paging
 
@@ -181,7 +181,7 @@ In root-level paging mode, paging is based on the root-level rows only, i.e., it
 
 ## Enable sorting
 
-The sorting feature enables you to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSorting.html) property to **true**.
+The sorting feature enables to order the records. It can be enabled by setting the  [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSorting.html) property to **true**.
 
 ```cshtml
 
@@ -229,9 +229,9 @@ The sorting feature enables you to order the records. It can be enabled by setti
 
 ## Run the application
 
-After successful compilation of your application, simply press F5 to run the application. The Blazor Tree Grid component will render in the web browser as shown below.
+After successful compilation of the application, simply press F5 to run the application. The Blazor Tree Grid component will render in the web browser as shown below.
 
-![TreeGrid Output](images/treegrid.png)
+![Blazor TreeGrid](images/blazor-treegrid.png)
 
 ## See also
 

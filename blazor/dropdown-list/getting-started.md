@@ -22,7 +22,7 @@ To get start quickly with Blazor DropDownList component, you can check on this v
 
 > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
  ```html
 <head>
@@ -89,7 +89,7 @@ To initialize the DropDownList component add the below code to your `Index.razor
 
 Output be like below
 
-![DropDownList](./images/default.png)
+![Blazor DropDownList Component](./images/blazor-dropdownlist-component.png)
 
 ## Binding data source
 
@@ -123,7 +123,7 @@ After initialization, populate the DropDownList with data using the [DataSource]
 
 The output will be as follows.
 
-![DropdownList](./images/data_binding.png)
+![Data Binding in Blazor DropDownList](./images/blazor-dropdownlist-data-binding.png)
 
 ## Configure the popup list
 
@@ -159,7 +159,7 @@ In the following sample, popup list's width and height are configured.
 
 The output will be as follows.
 
-![DropdownList](./images/width_height.png)
+![Changing Popup List Height in Blazor DropDownList](./images/blazor-dropdownlist-popup-height.png)
 
 ## See Also
 

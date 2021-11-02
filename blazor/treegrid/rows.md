@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rows in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Rows in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about rows in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,11 +9,11 @@ documentation: ug
 
 # Rows in Blazor TreeGrid Component
 
-The row represents record details fetched from data source.
+The row represents record details fetched from the data source.
 
 ## Customize rows
 
-You can customize the appearance of a row by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event. The [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event triggers for every row. In the event handler, you can get the **args** which contains details of the row.
+The appearance of a row can be customized by using the [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event. The [RowDataBound](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowDataBound.html) event triggers for every row. In the event handler, the **args** is achieved which contains the details of the row.
 
 {% tabs %}
 
@@ -102,13 +102,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Customize Rows](images/row-styling.png)
+![Customizing Blazor TreeGrid Rows](images/blazor-treegrid-row-customization.png)
 
 ## Styling alternate rows
 
- You can change the tree grid's alternative rows' background color by overriding the **.e-altrow** class.
+ The tree grid's alternative rows' background color can be changed by overriding the **.e-altrow** class.
 
 ```css
 .e-treegrid .e-altrow {
@@ -186,13 +184,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Styling Alternate Rows](images/styaltrows.png)
+![Customizing Alternate Rows in Blazor TreeGrid](images/blazor-treegrid-alternate-rows-customization.png)
 
 ## Row height
 
-You can customize the row height of tree grid rows through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowHeight.html) property. The [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowHeight.html) property is used to change the row height of entire tree grid rows.
+The row height of tree grid rows can be customized through the [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowHeight.html) property. The [RowHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowHeight.html) property is used to change the row height of the entire tree grid rows.
 
 In the below example, the **RowHeight** is set as *60px*.
 
@@ -258,14 +254,16 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Row Height](images/rowheight.png)
+![Blazor TreeGrid with Custom Row Height](images/blazor-treegrid-custom-row-height.png)
 
 ## Row template
 
-The **RowTemplate** has an option to customise the look and behavior of the tree grid rows. The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) property accepts either
-the **template** string or HTML elements.
+To know about Row Template in Blazor tree grid Component, you can check this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=cB4NjwFya_U"%}
+
+The **RowTemplate** has an option to customize the look and behavior of the tree grid rows. The [RowTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~RowTemplate.html) property accepts either the **template** string or HTML elements.
 
 {% tabs %}
 
@@ -363,9 +361,7 @@ public class Employee
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Row Template](images/rowtemp.png)
+![Blazor TreeGrid with Row Template](images/blazor-treegrid-row-template.png)
 
 ### Row template with formatting
 
@@ -469,13 +465,11 @@ public class Employee
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![RowTemplate with Formatting](images/rowtempformat.png)
+![Blazor TreeGrid Row Template with Formatting](images/blazor-treegrid-row-template-formatting.png)
 
 ### Limitations
 
-Row template feature is not compatible with all the features which are available in tree grid and it has limited features support. Here we have listed out the features which are compatible with row template feature.
+Row template feature is not compatible with all the features which are available in the tree grid and it has limited features support. Here the features which are compatible with row template feature are listed out.
 
 * Filtering
 * Paging
@@ -570,9 +564,7 @@ public class Employee
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Detail Template](images/dettemp.png)
+![Blazor TreeGrid with Detail Template](images/blazor-treegrid-detail-template.png)
 
 <!-- Customize row height for particular row
 
@@ -627,7 +619,7 @@ The Tree Grid rows can be reordered, dropped to another Tree Grid or custom cont
 
 ### Drag and drop within TreeGrid
 
-The Tree Grid row drag and drop allows you to drag and drop Tree Grid rows on the same Tree Grid using drag icon. To enable row drag and drop, set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~AllowRowDragAndDrop.html) to true. It provides the way to drop the row above, below or child to the target row with respective to the target row position.
+The Tree Grid row drag and drop allows to drag and drop Tree Grid rows on the same Tree Grid using drag icon. To enable row drag and drop, set the [AllowRowDragAndDrop](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridModel%601~AllowRowDragAndDrop.html) to true. It provides the way to drop the row above, below or child to the target row with respective to the target row position.
 
 {% tabs %}
 
@@ -1144,9 +1136,7 @@ public class WrapData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Drag and drop within TreeGrid](images/draganddrop.gif)
+![Drag and Drop within Blazor TreeGrid Rows](images/blazor-treegrid-drag-and-drop-rows.png)
 
 > Selection feature must be enabled for row drag and drop.
 > For multiple row selection, the type property must be set to multiple.
@@ -1681,9 +1671,7 @@ public class WrapData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![ Drag and drop to another TreeGrid](images/dragdropanothergrid.gif)
+![Drag and Drop Row between Different Blazor TreeGrid](images/blazor-treegrid-drag-drop-row.png)
 
 ### Drag and drop events
 

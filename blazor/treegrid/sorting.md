@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sorting in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Sorting in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about sorting in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Sorting in Blazor TreeGrid Component
 
-Sorting enables you to sort data in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header.  You can clear sorting of any one of the multi-sorted columns by pressing and holding the SHIFT key and clicking the specific column header.
+Sorting enables to sort data in the **Ascending** or **Descending** order. To sort a column, click the column header. To sort multiple columns, press and hold the CTRL key and click the column header. Sorting of any one of the multi-sorted columns can be cleared by pressing and holding the SHIFT key and clicking the specific column header.
 
 To enable sorting in the Tree Grid, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSorting.html) to true. Sorting options can be configured through the [TreeGridSortSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortSettings.html).
 
@@ -83,7 +83,7 @@ public class TreeData
 {% endtabs %}
 
 > * Tree Grid columns are sorted in the **Ascending** order. If you click the already sorted column, the sort direction toggles.
-> * You can apply and clear sorting by invoking [SortByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortByColumn.html) and [ClearSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearSorting.html) methods.
+> * Apply and clear sorting by invoking [SortByColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~SortByColumn.html) and [ClearSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ClearSorting.html) methods.
 > * To disable sorting for a particular column, set the [AllowSorting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~AllowSorting.html) property of [Column](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) to **false**.
 
 ## Initial sort
@@ -159,13 +159,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Initial Sort](images/initialsort.png)
+![Sorting in Blazor TreeGrid](images/blazor-treegrid-sorting.png)
 
 ## Sorting events
 
-During the sort action, the tree grid component triggers two events. The [ActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionBegin.html) event triggers before the sort action starts, and the [ActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html) event triggers after the sort action is completed. Using these events you can perform the needed actions.
+During the sort action, the tree grid component triggers two events. The [ActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionBegin.html) event triggers before the sort action starts, and the [ActionComplete](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEvents%601~OnActionComplete.html) event triggers after the sort action is completed. Using these events the needed actions can be performed.
 
 {% tabs %}
 
@@ -247,10 +245,8 @@ public class TreeData
 
 ## Touch interaction
 
-When you tap the tree grid header on touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired tree grid headers.
-
-The following screenshot shows tree grid touch sorting.
+When the tree grid header is tapped on the touchscreen devices, the selected column header is sorted. A popup ![Multi column sorting](images/sorting.jpg) is displayed for the multi-column sorting. To sort multiple columns, tap the popup![Multi sorting](images/msorting.jpg), and then tap the desired tree grid headers.
 
 <!-- markdownlint-disable MD033 -->
-<img src="../images/touch-sorting.jpg" alt="Touch interaction" style="width:320px;height: 620px">
+<img src="images/blazor-treegrid-touch-sorting.jpg" alt="Sorting in Blazor TreeGrid" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->

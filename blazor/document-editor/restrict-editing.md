@@ -37,8 +37,8 @@ The following code example shows how to restrict or protect editing for the enti
 
 Also, at some situations, you might need to allow changes for a certain portion of the document alone. Microsoft Word allows you to [make changes to parts of a Word document](https://support.office.com/en-gb/article/allow-changes-to-parts-of-a-protected-document-187ed01c-8795-43e1-9fd0-c9fca419dadf). Likewise, the document editor control allows the users to make changes to certain parts of a document using similar user interface.
 
-![Restrict Editing](./images/protection-enforced.png)
+![Disabling Restrict Editing in Blazor DocumentEditor](./images/blazor-document-editor-disable-edit-restriction.png)
 
-![Restrict Editing Enabled](./images/protection-not-enforced.png)
+![Enabling Restrict Editing in Blazor DocumentEditor](./images/blazor-document-editor-enable-edit-restriction.png)
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

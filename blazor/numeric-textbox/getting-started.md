@@ -22,7 +22,7 @@ To get start quickly with Blazor NumericTextBox component, you can check on this
 
     > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
     ```html
     <head>
@@ -92,7 +92,7 @@ After successful compilation of your application, press `F5` to run the applicat
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/numeric_getting_started.png)
+![Blazor NumericTextBox Component](./images/blazor-numerictextbox-component.png)
 
 ## Range validation
 
@@ -106,7 +106,7 @@ The following example demonstrates range validation.
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/range.png)
+![Blazor NumericTextBox with Range Value](./images/blazor-numerictextbox-range-value.png)
 
 ## Formatting the value
 
@@ -120,7 +120,7 @@ The following example demonstrates format the value by using currency format val
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/format.png)
+![Blazor NumericTextBox with Formatting Value](./images/blazor-numerictextbox-format-value.png)
 
 ## Precision of numbers
 
@@ -136,7 +136,7 @@ If `ValidateDecimalOnType` is false, number of decimals will not be restricted. 
 
 The output will be as follows.
 
-![NumericTextBox Sample](./images/precision.png)
+![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
 
 ## See Also
 

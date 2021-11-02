@@ -11,32 +11,33 @@ documentation: ug
 
 # Getting Started with Blazor TreeView Component
 
-This section briefly explains about how to include a `TreeView` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `TreeView` in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
-To get start quickly with Blazor TreeView, you can check on this video:
+To get started quickly with Blazor TreeView, check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=mScCY8cgyM0"%}
 
 ## Importing Syncfusion Blazor component in the application
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+Use any one of the below standards to install the Syncfusion Blazor library in the application.
 
 ### Using Syncfusion Blazor Individual NuGet Packages [New standard]
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for the Syncfusion Blazor components. This new standard is highly recommended for the Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application by using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor.Navigations** keyword in the Browse tab and install **Syncfusion.Blazor.Navigations** NuGet package in the application.
 
-    ![Individual Nuget](./images/individual-nuget.png)
+    ![Searching Blazor TreeView NuGet Package](./images/blazor-treeview-search-nuget-package.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor Navigation package will be installed in the project.
 
-4. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+
+4. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -46,24 +47,23 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, the above `Syncfusion.Blazor.Themes` static web assets have to be added (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+W> If the above new standard (individual NuGet packages) is preferred, then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the `NuGet Package Manager` Right-click the project and then select `Manage NuGet Packages`.
 
-    ![Nuget Explorer](./images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](./images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![Blazor Nuget](./images/blazor-nuget.png)
+    ![Blazor NuGet Package](./images/blazor-nuget.png)
 
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
-4. You can add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
-    > You can also add the client-side style resources through CDN.
+4. Add the client-side style resources using NuGet package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
 ```html
 <head>
@@ -202,11 +202,11 @@ Now, add the Syncfusion Blazor TreeView component in any web page `razor` in the
 
 ## Run the application
 
-After successful compilation of your application, simply press `F5` to run the application.
+After successful compilation of the application, simply press `F5` to run the application.
 
-![TreeView Sample](./images/list-data.png)
+![Blazor TreeView](./images/blazor-treeview.png)
 
-> You can refer to our [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor TreeView example](https://blazor.syncfusion.com/demos/treeview/default-functionalities?theme=bootstrap4) to understand how to present and manipulate data.
+> Refer to the [Blazor TreeView](https://www.syncfusion.com/blazor-components/blazor-treeview) feature tour page for its groundbreaking feature representations. The [Blazor TreeView example](https://blazor.syncfusion.com/demos/treeview/default-functionalities?theme=bootstrap4) can also be explored to understand how to present and manipulate data.
 
 ## See Also
 

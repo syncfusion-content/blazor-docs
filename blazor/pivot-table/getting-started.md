@@ -24,7 +24,7 @@ To get start quickly with Blazor Pivot Table component, you can check out this v
 ## Importing Syncfusion Blazor Pivot Table component in the application
 
 1. Install the **Syncfusion.Blazor.PivotTable** NuGet package to the application by using the **NuGet Package Manager**.
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
  ```html
 <head>
@@ -330,7 +330,7 @@ Formatting defines a way in which values should be displayed. For example, forma
 
 After successful compilation of the application, simply press F5 to run the same. The pivot table component will render in the default web browser like below.
 
- ![output](images/gs_formatting.png)
+ ![Blazor PivotTable with Formatting](images/blazor-pivottable-formatting.png)
 
 ## Enable Field List
 
@@ -370,9 +370,9 @@ The field list allows to add or remove fields and also rearrange the fields betw
 
 ```
 
-![output](images/gs_fieldlist_icon.png)
+![Blazor PivotTable with FieldList Icon](images/blazor-pivottable-fieldlist-icon.png)
 <br/>
-![output](images/gs_fieldlist_dialog.png)
+![Blazor PivotTable with FieldList Dialog](images/blazor-pivottabel-fieldlist-dialog.png)
 
 ## Enable Grouping Bar
 
@@ -412,7 +412,7 @@ The grouping bar feature automatically populates fields from the bound data sour
 
 ```
 
-![output](images/gs_groupingbar.png)
+![Blazor PivotTable with Grouping Bar](images/blazor-pivottable-grouping-bar.png)
 
 ## Exploring Filter Axis
 
@@ -454,11 +454,11 @@ The filter axis contains collection of fields that would act as master filter ov
 
 ```
 
-![output](images/gs_slicer_fieldlist.png "Filter axis in field list")
+![Blazor PivotTable with FieldList](images/blazor-pivottable-fieldlist.png)
 <br/>
 <br/>
 <br/>
-![output](images/gs_slicer.png "Filter axis in grouping bar")
+![Blazor PivotTable with Formatting](images/blazor-pivottable-format.png)
 
 ## Calculated Field
 
@@ -504,11 +504,11 @@ The calculated field feature allows user to insert or add a new calculated field
 
 ```
 
-![output](images/gs_calc_button.png "Enabling calculated field in field list UI")
+![Blazor PivotTable with Caluclation Button](images/blazor-pivottable-calculate-button.png)
 <br/>
-![output](images/gs_calc_dialog.png "Creating new calculated field through dialog")
+![Blazor PivotTable with Calculate Dialog Field](images/blazor-pivottable-calculate-dialog.png)
 <br/>
-![output](images/gs_calc_grid.png "New calculated field 'Total Amount' added in pivot table")
+![Blazor PivotGrid with Calculation](images/blazor-pivotgrid-calculation.png)
 
 > You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
 

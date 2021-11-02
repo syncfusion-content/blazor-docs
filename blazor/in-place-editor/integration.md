@@ -69,7 +69,7 @@ In the following template sample, before submitting data to the server, the even
 
 The output will be as follows.
 
-![html-template](./images/html-template.png)
+![Integrating HTML Template in Blazor In-place Editor](./images/blazor-inplace-editor-html-template.png)
 
 ## See Also
 

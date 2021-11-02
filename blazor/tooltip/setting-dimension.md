@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Setting Dimension in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about Setting Dimension in Syncfusion Blazor Tooltip component and more.
+description: Checkout and learn here all about setting dimension in Syncfusion Blazor Tooltip component and more.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -11,9 +11,8 @@ documentation: ug
 
 ## Height and width
 
-The Tooltip can either be assigned auto height and width values or specific pixel values. The `Width` and `Height` properties are used to  set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
+The Tooltip can either be assigned with auto height and width values or specific pixel values. The `Width` and `Height` properties are used to set the outer dimension of the Tooltip element. The default value for both the properties is `auto`. It also accepts string and number values in pixels.
 
-The following sample explains how to set dimensions for the Tooltip.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -29,9 +28,7 @@ The following sample explains how to set dimensions for the Tooltip.
 }
 ```
 
-Output be like the below.
-
-![Tooltip - Dimension](images/dimension.gif)
+![Blazor Tooltip with Dimension](images/blazor-tooltip-dimension.gif)
 
 ### Scroll mode
 
@@ -58,8 +55,6 @@ When `Height` is specified with a certain pixel value and the Tooltip content ov
 }
 ```
 
-Output be like the below.
-
-![Tooltip - Scroll Mode](images/scroll.gif)
+![Scrolling in Blazor Tooltip](images/blazor-tooltip-scrolling.gif)
 
 > The scrolling mode can best be seen when the sticky mode of the Tooltip is enabled. To enable sticky mode, set the `IsSticky` property to true.

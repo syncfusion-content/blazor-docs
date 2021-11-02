@@ -60,4 +60,4 @@ The time formatting can be achieved same as the date formatting using `TicksRend
 
 The output will be as follows.
 
-![TimeSlider](../images/timeslider.gif)
+![Blazor RangeSlider with TimeRange](../images/blazor-rangeslider-with-timerange.gif)

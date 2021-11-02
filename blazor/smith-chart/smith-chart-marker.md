@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Marker and Data labels in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Marker and Data labels in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about marker and data labels in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Marker and Data labels in Blazor Smith Chart Component
 
-Markers and datalabels are used to provide information about the data points in the series. Both the marker and the datalabel are disabled by default in the Smith Chart. Both can be enabled by making the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property in the marker and the datalabel settings to **true**.
+Markers and data labels are used to provide information about the data points in the series. Both the marker and the datalabel are disabled by default in the Smith Chart. Both can be enabled by making the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesMarker.html#Syncfusion_Blazor_Charts_SmithChartSeriesMarker_Visible) property in the marker and the datalabel settings to **true**.
 
 ## Marker
 
@@ -43,7 +43,7 @@ By default, the visibility of the marker is **false**. It can be enabled by sett
 }
 ```
 
-![Smith Chart with marker](./images/Marker/Marker.png)
+![Blazor Smith Chart with Marker](./images/Marker/blazor-smith-chart-marker.png)
 
 ### Marker Customization
 
@@ -92,11 +92,11 @@ Using the [SmithChartSeriesMarker](https://help.syncfusion.com/cr/blazor/Syncfus
 }
 ```
 
-![Smith Chart with marker customization](./images/Marker/MarkerCustomization.png)
+![Blazor Smith Chart with Custom Marker](./images/Marker/blazor-smith-chart-custom-marker.png)
 
-## Datalabels
+## Data labels
 
-By default, the datalabels are disabled. It can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Visible) property to **true** in the [SmithChartSeriesDatalabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#properties). For each point in the series, a datalabel is created.
+By default, the data labels are disabled. It can be enabled by setting the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Visible) property to **true** in the [SmithChartSeriesDatalabel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#properties). For each point in the series, a datalabel is created.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -128,14 +128,14 @@ By default, the datalabels are disabled. It can be enabled by setting the [Visib
 }
 ```
 
-![Smith Chart with datalabel](./images/Marker/DataLabel.png)
+![Blazor Smith Chart with Data Label](./images/Marker/blazor-smith-chart-data-label.png)
 
-### Datalabels customization
+### Data labels customization
 
-The datalabels can be customized using the following properties.
+The data labels can be customized using the following properties.
 
-* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Fill) - Used to change the fill color of the datalabels.
-* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Opacity) - Used to control the opacity of the datalabels.
+* [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Fill) - Used to change the fill color of the data labels.
+* [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDatalabel.html#Syncfusion_Blazor_Charts_SmithChartSeriesDatalabel_Opacity) - Used to control the opacity of the data labels.
 * [SmithChartSeriesDataLabelBorder](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDataLabelBorder.html#properties) - Used to customize width and color of the border using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDataLabelBorder.html#Syncfusion_Blazor_Charts_SmithChartSeriesDataLabelBorder_Width) and the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeriesDataLabelBorder.html#Syncfusion_Blazor_Charts_SmithChartSeriesDataLabelBorder_Color) properties.
 * [SmithChartDataLabelTextStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelTextStyle.html#properties) - Used to customize properties such as [FontFamily](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontFamily), [FontWeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontWeight), [FontStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_FontStyle), [Opacity](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Opacity), [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Color), and [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartCommonFont.html#Syncfusion_Blazor_Charts_SmithChartCommonFont_Size) for datalabel font.
 
@@ -173,11 +173,11 @@ The datalabels can be customized using the following properties.
 }
 ```
 
-![Smith Chart datalabel customization](./images/Marker/DataLabelCustomization.png)
+![Blazor Smith Chart with Custom Data Label](./images/Marker/blazor-smith-chart-custom-data-label.png)
 
 ### Smart Labels
 
-Datalabels can be placed smartly by setting the [EnableSmartLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_EnableSmartLabels) to **true** in the Smith Chart series. A line will be connected for smartly aligned labels. It's color and width can be customized using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelConnectorLine.html#Syncfusion_Blazor_Charts_SmithChartDataLabelConnectorLine_Color) and the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelConnectorLine.html#Syncfusion_Blazor_Charts_SmithChartDataLabelConnectorLine_Width) properties in the [SmithChartDataLabelConnectorLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelConnectorLine.html#properties).
+Data labels can be placed smartly by setting the [EnableSmartLabels](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartSeries.html#Syncfusion_Blazor_Charts_SmithChartSeries_EnableSmartLabels) to **true** in the Smith Chart series. A line will be connected for smartly aligned labels. It's color and width can be customized using the [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelConnectorLine.html#Syncfusion_Blazor_Charts_SmithChartDataLabelConnectorLine_Color) and the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelConnectorLine.html#Syncfusion_Blazor_Charts_SmithChartDataLabelConnectorLine_Width) properties in the [SmithChartDataLabelConnectorLine](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartDataLabelConnectorLine.html#properties).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -211,11 +211,11 @@ Datalabels can be placed smartly by setting the [EnableSmartLabels](https://help
 }
 ```
 
-![Smith Chart smart datalabels](./images/Marker/SmartLabels.png)
+![Blazor Smith Chart with Smart Data Labels](./images/Marker/blazor-smith-chart-with-smart-data-labels.png)
 
 ### Datalabel Template
 
-To access the aggregate values inside the template, the implicit named parameter context can be used. The context can be typecasted as [SmithChartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to get aggregate values inside the template. The datalabel template using the context is shown as following.
+To access the aggregate values inside the template, the implicit named parameter context can be used. The context can be typecast as [SmithChartPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartPoint.html) to get aggregate values inside the template. The datalabel template using the context is shown as following.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -254,4 +254,4 @@ To access the aggregate values inside the template, the implicit named parameter
 }
 ```
 
-![Smith Chart datalabel template](./images/Marker/DataLabelTemplate.png)
+![Blazor Smith Chart with Data Label Template](./images/Marker/blazor-smith-chart-data-label-template.png)

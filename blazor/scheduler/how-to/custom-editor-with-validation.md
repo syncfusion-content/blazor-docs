@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Custom Editor With Validation in Blazor Scheduler | Syncfusion
-description: Learn here all about Custom Editor With Validation in Syncfusion Blazor Scheduler component using DataAnnotations and Syncfusion Blazor Dialog.
+description: Learn here all about custom editor with validation in Syncfusion Blazor Scheduler component using Data Annotations and Syncfusion Blazor Dialog.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Custom Editor With Validation in Blazor Scheduler Component
 
-By default in Blazor Scheduler field validation is available for built-in fields, if in case you want to validate a custom field you can go with custom editor and achieve validation using Data Annotations. Data Annotations helps you to define rules to the model classes or properties to perform data validation and display suitable messages to end users.
+By default, in Blazor Scheduler field validation is available for built-in fields, if in case you want to validate a custom field you can go with custom editor and achieve validation using Data Annotations. Data Annotations helps you to define rules to the model classes or properties to perform data validation and display suitable messages to end users.
 
 The Data Annotation can be enabled by referencing the `System.ComponentModel.DataAnnotations` namespace which maps the data annotations to the corresponding appointment fields. In the following code example, Syncfusion Blazor Dialog is used to render the custom editor and save/update the appointments using public methods.
 
@@ -230,4 +230,4 @@ The Data Annotation can be enabled by referencing the `System.ComponentModel.Dat
 
 The validation is applied on clicking the save button with empty fields as in the following image.
 
-![Custom-field validation](../images/custom-field-validation.png)
+![Custom Editor with Validation in Blazor Scheduler](../images/blazor-scheduler-custom-editor-with-validation.png)

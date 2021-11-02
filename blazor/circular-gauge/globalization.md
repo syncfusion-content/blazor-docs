@@ -28,7 +28,7 @@ Circular Gauge provides internationalization support for below elements.
 * Axis label.
 * Tooltip.
 
-In the below example axis labels are `globalized` to EUR.
+In the below example, axis labels are `globalized` to EUR.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -54,4 +54,4 @@ In the below example axis labels are `globalized` to EUR.
 }
 ```
 
-![Circular Gauge with internationalization](./images/localization.png)
+![Localization in Blazor Circular Gauge](./images/blazor-circulargauge-localization.png)

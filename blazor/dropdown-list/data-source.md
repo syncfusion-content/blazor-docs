@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Source in Blazor DropDown List Component
 
-The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.Data.SfDataManager_members.html).
+The DropDownList loads the data either from local data sources or remote data services using the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DropDowns.SfDropDownBase-1.html#Syncfusion_Blazor_DropDowns_SfDropDownBase_1_DataSource) property. It supports the data type of `array` or [DataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
 
 The DropDownList also supports different kinds of data services such as OData, OData V4, and Web API, and data formats such as XML, JSON, and JSONP with the help of [DataManager](https://help.syncfusion.com/cr/aspnetcore-js2) adaptors.
 
@@ -75,7 +75,7 @@ In the following example, `Name` column from complex data have been mapped to th
 
 The output will be as follows.
 
-![DropdownList](./images/data_binding_02.png)
+![Binding BLazor DropdownList Items](./images/blazor-dropdownlist-binding-items.png)
 
 ### Array of complex data
 
@@ -125,7 +125,7 @@ In the following example, `Code.ID` column and `Country.CountryID` column from c
 
 The output will be as follows.
 
-![DropdownList](./images/complex_data.png)
+![Binding Complex Items with Blazor DropdownList](./images/blazor-dropdownlist-complex-data.png)
 
 ## Binding remote data
 
@@ -164,7 +164,7 @@ The following sample displays the first 6 contacts from **Customers** table of t
 
 The output will be as follows.
 
-![DropdownList](./images/remote_data.png)
+![Blazor DropdownList with Data Binding](./images/blazor-dropdownlist-binding-data.png)
 
 ### Web API Adaptor
 
@@ -194,7 +194,7 @@ Use the `WebApiAdaptor` to bind DropDownList with Web API created using OData.
 
 The output will be as follows.
 
-![DropdownList](./images/api_data.png)
+![Blazor DropdownList with Web API Data](./images/blazor-dropdownlist-web-api-data.png)
 
 ### Custom Adaptor
 
@@ -303,7 +303,7 @@ The following example for remote data binding and enabled offline mode.
 
 The output will be as follows.
 
-![DropdownList](./images/api_data.png)
+![Blazor DropdownList in Offline Mode](./images/blazor-dropdownlist-web-api-data.png)
 
 ### Enum data binding
 
@@ -337,7 +337,156 @@ You can bind enum data to DropDownList component. The following code helps you g
 
 The output will shown as follows,
 
-![Enum data](./images/drop-down-enum-data.png)
+![Blazor DropDownList with Enum Data](./images/blazor-dropdownlist-enum-data.png)
+
+### ValueTuple data binding
+
+You can bind [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0) data to the DropDownList component. The following code helps you to get a string value from the enumeration data by using [ValueTuple](https://docs.microsoft.com/en-us/dotnet/api/system.valuetuple-2?view=net-5.0).
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns;
+
+<SfDropDownList TItem="(DayOfWeek, string)" Width="250px" TValue="DayOfWeek"
+                DataSource="@(Enum.GetValues<DayOfWeek>().Select(e => (e, e.ToString())))">
+    <DropDownListFieldSettings Value="Item1" Text="Item2" />
+</SfDropDownList>
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList ValueTuple Data](./images/blazor-dropdown-valuetuple.png)
+
+## Binding ExpandoObject
+
+You can bind [ExpandoObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.expandoobject?view=net-5.0) data to the DropDownList component. The following example `ExpandoObject` is bound to the collection of vehicles data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfDropDownList TItem="ExpandoObject" TValue="string" PopupHeight="230px" Placeholder="Select a vehicle" DataSource="@VehicleData" >
+    <DropDownListFieldSettings Text="Text" Value="ID"></DropDownListFieldSettings>
+ </SfDropDownList>
+
+@code{
+    public List<ExpandoObject> VehicleData { get; set; } = new List<ExpandoObject>();
+    protected override void OnInitialized()
+    {
+        VehicleData = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new ExpandoObject();
+            d.ID = (1000 + x).ToString();
+            d.Text = (new string[] { "Hennessey Venom", "Bugatti Chiron", "Bugatti Veyron Super Sport", "SSC Ultimate Aero", "Koenigsegg CCR", "McLaren F1", "Aston Martin One- 77", "Jaguar XJ220", "McLaren P1", "Ferrari LaFerrari", "Mahindra Jaguar", "Hyundai Toyota", "Jeep Volkswagen", "Tata Maruti Suzuki", "Audi Mercedes Benz" }[x - 1]);
+            return d;
+        }).Cast<ExpandoObject>().ToList<ExpandoObject>();
+    }
+}
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList with expando object data binding](./images/blazor_dropdown_expando-object.png)
+
+## Binding DynamicObject
+
+You can bind [DynamicObject](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject?view=net-5.0) data to the DropDownList component. The following example `DynamicObject` is bound to the collection of customers data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Dynamic
+
+<SfDropDownList TValue="string" TItem="DynamicDictionary" Placeholder="Select a name" DataSource="@Orders">
+    <DropDownListFieldSettings Text="CustomerName" Value="CustomerName"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code{
+    public List<DynamicDictionary> Orders = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        Orders = Enumerable.Range(1, 15).Select((x) =>
+        {
+            dynamic d = new DynamicDictionary();
+            d.OrderID = 1000 + x;
+            d.CustomerName = (new string[] { "Nancy", "Andrew", "Janet", "Margaret", "Steven", "Michael", "Robert", "Anne", "Nige", "Fuller", "Dodsworth", "Leverling", "Callahan", "Suyama", "Davolio" }[x - 1]);
+            return d;
+        }).Cast<DynamicDictionary>().ToList<DynamicDictionary>();
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        //The GetDynamicMemberNames method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+}
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList with dynamic object data binding](./images/blazor_dropdown_dynamic-object.png)
+
+## Binding ObservableCollection
+
+You can bind [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=net-5.0) data to the DropDownList component. The following example `Observable Data` is bound to a collection of colors data.
+
+```csharp
+
+@using Syncfusion.Blazor.DropDowns
+@using System.Collections.ObjectModel;
+
+ <SfDropDownList  TValue="string" TItem="Colors" PopupHeight="230px" Placeholder="Select a color" DataSource="@ColorsData">
+    <DropDownListFieldSettings Text="Color" Value="Code"></DropDownListFieldSettings>
+</SfDropDownList>
+
+@code {
+public class Colors
+    {
+        public string Code { get; set; }
+        public string Color { get; set; }
+    }
+    private ObservableCollection<Colors> ColorsData = new ObservableCollection<Colors>() 
+    {
+        new Colors() { Color = "Chocolate", Code = "#75523C" }, 
+        new Colors() { Color = "CadetBlue", Code = "#3B8289" },
+        new Colors() { Color = "DarkOrange", Code = "#FF843D" },
+        new Colors() { Color = "DarkRed", Code = "#CA3832"},
+        new Colors() { Color = "Fuchsia", Code = "#D44FA3" },
+        new Colors() { Color = "HotPink", Code = "#F23F82" },
+        new Colors() { Color = "Indigo", Code = "#2F5D81" },
+        new Colors() { Color = "LimeGreen", Code = "#4CD242" },
+        new Colors() { Color = "OrangeRed", Code = "#FE2A00" },
+        new Colors() { Color = "Tomato", Code = "#FF745C" },
+        new Colors() { Color = "Brown", Code = "#A52A2A" },
+        new Colors() { Color = "Maroon", Code = "#800000" },
+        new Colors() { Color = "Green", Code = "#008000" },
+        new Colors() { Color = "Pink", Code = "#FFC0CB" },
+        new Colors() { Color = "Purple", Code = "#800080" }
+    };
+}
+
+```
+
+The output will shown as follows,
+
+![Blazor DropDownList with observable collection data binding](./images/blazor_dropdown_observable-collection.png)
 
 ## Entity Framework
 

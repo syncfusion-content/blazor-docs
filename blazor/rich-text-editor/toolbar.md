@@ -84,7 +84,7 @@ The default mode of `RichTextEditorToolbarSettings` - `Type` as `Expand` to hide
 
 The output will be as follows.
 
-![output](./images/expand-toolbar.png)
+![Blazor RichTextEditor with Expand Toolbar](./images/blazor-richtexteditor-expand-toolbar.png)
 
 ## Multi-row Toolbar
 
@@ -156,7 +156,7 @@ Set the `RichTextEditorToolbarSettings` - `Type` as `MultiRow` to display the to
 
 The output will be as follows.
 
-![output](./images/multirow-toolbar.png)
+![Blazor RichTextEditor with MultiRow Toolbar](./images/blazor-richtexteditor-multirow-toolbar.png)
 
 ## Floating Toolbar
 
@@ -373,9 +373,9 @@ The following sample demonstrates the option to insert the image to the Rich Tex
 
 The output will be as follows.
 
-![Image toolbar](./images/image-toolbar.png)
+![Blazor RichTextEditor with Image Toolbar](./images/blazor-richtexteditor-image-toolbar.png)
 
-![Link toolbar](./images/link-toolbar.png)
+![Blazor RichTextEditor with Link Toolbar](./images/blazor-richtexteditor-link-toolbar.png)
 
 > You can refer to our [Blazor Rich Text Editor](https://www.syncfusion.com/blazor-components/blazor-wysiwyg-rich-text-editor) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Rich Text Editor](https://blazor.syncfusion.com/demos/rich-text-editor/overview?theme=bootstrap4) example to knows how to render and configure the rich text editor tools.
 

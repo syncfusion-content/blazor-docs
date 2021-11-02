@@ -17,7 +17,7 @@ The file manager UI is comprised of several sections like view, toolbar, breadcr
 * [View](#view) (For browsing files and folders using large icon view or details view)
 * [Context Menu](#context-menu) (For accessing file operations)
 
-![File Manager Overview](./images/user-interface.png "File Manager Overview")
+![User Interface in Blazor FileManager](./images/blazor-filemanager-user-interface.png)
 
 The basic file manager is a light weight component with all the basic functions. The basic file manager have the following sections in its UI to browse files and folders and manage them with file operations.
 
@@ -25,7 +25,7 @@ The basic file manager is a light weight component with all the basic functions.
 * [View](#view) (Large Icons view for browsing files and folders)
 * [Context Menu](#context-menu) (For accessing file operations)
 
-![Basic File Manager](./images/default-ui.png "Basic File Manager")
+![Blazor FileManager](./images/blazor-filemanager.png)
 
 ## Toolbar
 
@@ -35,7 +35,7 @@ If the toolbar items exceed the size of the toolbar, then the exceeding toolbar 
 
 Refer [Toolbar](./file-operations/#toolbar) section in file operations to know more about the buttons present in toolbar.
 
-![Toolbar](./images/toolbar.png "Responsiveness of Toolbar")
+![Blazor FileManager with Toolbar](./images/blazor-filemanager-toolbar.png)
 
 ## Files and folders navigation
 
@@ -52,7 +52,7 @@ The navigation pane displays the folder hierarchy of the file system and provide
 
 The file manager provides breadcrumb for navigating to the parent folders. The breadcrumb the in file manager is responsible for resizing. Whenever the path length exceeds the breadcrumb length, a dropdown button will be added at the starting of the breadcrumb to hold the parent folders adjacent to root.
 
-![BreadCrumb](./images/breadcrumb.png "Responsiveness of BreadCrumb Bar")
+![Blazor FileManager with BreadCrumb](./images/blazor-filemanager-with-breadcrumb.png)
 
 ## View
 
@@ -67,13 +67,13 @@ The `Large Icons View` is the default starting view in the file manager. The vie
 
 In the large icons view, the thumbnail icons will be shown in a larger size, which displays the data in a form that best suits their content.  For image and video type files, a **preview** will be displayed. Extension thumbnails will be displayed for other type files.
 
-![LargeIconView](./images/largeiconsview.png "File Manager Large Icon View")
+![Blazor FileManager with LargeIconView](./images/blazor-filemanager-largeiconsview.png)
 
 ### Details view
 
 In the details view, the files are displayed in a sorted list order. This file list comprises of several columns of information about the files such as **Name**, **Date Modified**, **Type**, and **Size**. Each file has its own small icon representing the file type. Additional columns can be added using `DetailsViewSettings` API. The details view allows you to perform sorting using column header.
 
-![DetailsView](./images/detailsview.png "File Manager Details View")
+![Blazor FileManger with DetailsView](./images/blazor-filemanager-detailsview.png)
 
 ## Context menu
 
@@ -83,4 +83,4 @@ Context menu can be customized using the `ContextMenuSettings`, `MenuOpened`, an
 
 Refer [Context Menu](./file-operations/#context-menu) section in file operations to know more about the menu items present in context menu.
 
-![Context Menu](./images/contextmenu.png "Context Menu")
+![Blazor FileManager with Context Menu](./images/blazor-filemanager-contextmenu.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Selection in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Selection in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about selection in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -11,11 +11,16 @@ documentation: ug
 
 Selection provides an option to highlight a row or a cell. It can be done through simple mouse down or arrow keys. To disable selection in the Tree Grid, set the [AllowSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~AllowSelection.html) to false.
 
+To know more about selection feature in Blazor tree grid component, you can check on this video.
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=0RkHAO5pS5s"%}
+
 The tree grid supports two types of selection that can be set by using the [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Type.html) property in [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html). They are:
 
 * **Single**: The Single value is set by default, and it only allows selection of a single row or a cell.
 
-* **Multiple**: Allows you to select multiple rows or cells.
+* **Multiple**: It allows to select multiple rows or cells.
 To perform the multi-selection, press and hold CTRL key and click the desired rows or cells. To select range of rows or cells, press and hold the SHIFT key and click the rows or cells.
 
 {% tabs %}
@@ -85,11 +90,11 @@ public class TreeData
 
 ## Selection mode
 
-The tree grid supports three types of selection mode that can be set by using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Mode.html) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html). They are:
+The tree grid supports three types of selection mode that can be set by using the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Mode.html) property of the [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html). They are:
 
-* **Row**: The Row value is set by default, and allows you to select only rows.
-* **Cell**: Allows you to select only cells.
-* **Both**: Allows you to select rows and cells at the same time.
+* **Row**: The Row value is set by default, and allows to select only rows.
+* **Cell**: It allows to select only cells.
+* **Both**: It allows to select rows and cells at the same time.
 
 {% tabs %}
 
@@ -158,9 +163,7 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Selection Mode](images/selectionmode.png)
+![Selection in Blazor TreeGrid](images/blazor-treegrid-selection.png)
 
 ## Cell selection
 
@@ -237,16 +240,13 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
+![Multiple Selection in Blazor TreeGrid](images/blazor-treegrid-multiple-selection.png)
 
-![Cell Selection](images/selectmultiple.png)
-
-> Cell selection requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Mode.html) to be **Cell** or **Both**, and
-**Type** should be **Multiple**.
+> Cell selection requires the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Mode.html) to be **Cell** or **Both**, and **Type** should be **Multiple**.
 
 ## Checkbox selection
 
-Checkbox selection provides an option to select multiple tree grid records with help of checkbox in each row. To render the checkbox in each tree grid row, you need to use checkbox column with type as **checkbox** using the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Type.html) property.
+Checkbox selection provides an option to select multiple tree grid records with the help of checkbox in each row. To render the checkbox in each tree grid row, use the checkbox column with type as **checkbox** using the column [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~Type.html) property.
 
 {% tabs %}
 
@@ -310,11 +310,9 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
+![Blazor TreeGrid with Checkbox Selection](images/blazor-treegrid-checkbox-selection.png)
 
-![Checkbox Selection](images/checkbox.png)
-
-> * By default, selection is allowed by clicking a tree grid row or checkbox in that row. To allow selection only through checkbox, you can set the
+> * By default, selection is allowed by clicking a tree grid row or checkbox in that row. To allow selection only through checkbox, set the
 [CheckboxOnly](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~CheckboxOnly.html) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html) to true.
 > * Selection can be persisted in all the operations using the [PersistSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~PersistSelection.html) property of [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html).
 For persisting selection on the tree grid, any one of the columns should be defined as a primary key using the [IsPrimaryKey](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~IsPrimaryKey.html) property of [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html).
@@ -324,7 +322,7 @@ For persisting selection on the tree grid, any one of the columns should be defi
 In checkbox selection, selection can also be done by clicking on rows. This selection provides two types of Checkbox Selection mode which can be set by using the following API, [CheckboxMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~CheckboxMode.html) in [TreeGridSelectionSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings.html). The modes are;
 
 * **Default**: This is the default value of the checkboxMode. In this mode, user can select multiple rows by clicking rows one by one.
-* **ResetOnRowClick**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also you can perform multiple-selection in this mode by press and hold CTRL key and click the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
+* **ResetOnRowClick**: In ResetOnRowClick mode, when user clicks on a row it will reset previously selected row. Also, multiple-selection can be performed in this mode by pressing and holding CTRL key, and clicking the desired rows. To select range of rows, press and hold the SHIFT key and click the rows.
 
 {% tabs %}
 
@@ -389,13 +387,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Initial Select](images/checkbox-mode.gif)
+![CheckBox Selection in Blazor TreeGrid](images/blazor-treegrid-checkbox-selection.gif)
 
 ## Toggle Selection
 
-The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~EnableToggle.html) property of TreeGridSelectionSettings as true. If you click on the selected row or cell then it will be unselected and vice versa.
+The Toggle selection allows to perform selection and unselection of the particular row or cell. To enable toggle selection, set [EnableToggle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~EnableToggle.html) property of the TreeGridSelectionSettings as true. If the selected row or cell is clicked, then it will be unselected and vice versa.
 
 {% tabs %}
 
@@ -464,9 +460,7 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Toggle Select](images/Toggleselect.gif)
+![Toggle Selection in Blazor TreeGrid](images/blazor-treegrid-toggle-selection.gif)
 
 > If multi selection is enabled, then first click on any selected row (without pressing Ctrl key), it will clear the multi selection and in second click on the same row, it will be unselected.
 
@@ -538,13 +532,11 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Initial Select](images/initialselect.png)
+![Blazor TreeGrid with Initial Selection](images/blazor-treegrid-initial-selection.png)
 
 ## Get selected row indexes
 
-You can get the selected row indexes by using the GetSelectedRowIndexes method.
+The selected row indexes is got by using the GetSelectedRowIndexes method.
 
 {% tabs %}
 
@@ -631,12 +623,12 @@ public class TreeData
 
 ## Touch interaction
 
-When you tap a tree grid row on touchscreen device, the tapped row is selected. It also shows a popup ![Multi Row selection](images/selection.jpg)  for multi-row selection. To select multiple rows or cells, tap the popup![Multi Row or Cells](images/mselection.jpg)  and then tap the desired rows or cells.
+When a tree grid row is tapped on the touchscreen device, the tapped row is selected. It also shows a popup ![Multi Row selection](images/selection.jpg)  for multi-row selection. To select multiple rows or cells, tap the popup![Multi Row or Cells](images/mselection.jpg)  and then tap the desired rows or cells.
 
 > Multi-selection requires the selection [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridSelectionSettings~Type.html) to be **Multiple**.
 
 The following screenshot represents a tree grid touch selection in the device.
 
 <!-- markdownlint-disable MD033 -->
-<img src="../images/touch-selection.png" alt="Touch interaction" style="width:320px;height: 620px">
+<img src="./images/blazor-treegrid-touch-selection.png" alt="Blazor TreeGrid Selection with Touch Interaction" style="width:320px;height: 620px">
 <!-- markdownlint-enable MD033 -->

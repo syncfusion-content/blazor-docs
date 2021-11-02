@@ -26,7 +26,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Install **Syncfusion.Blazor.Schedule** NuGet package to the application using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -44,7 +44,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -132,7 +132,7 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 
 The output of the above code will display the empty scheduler as shown in the following image.
 
-![Empty Scheduler](images/scheduler.png)
+![Blazor Scheduler](images/blazor-scheduler.png)
 
 ## Populating appointments
 
@@ -177,7 +177,7 @@ To populate the Scheduler with appointments, bind the event data to it by assign
 
 The scheduler with the appointments will be rendered as shown in the following image.
 
-![Scheduler with appointments](images/appointments.png)
+![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
 
 ## Setting date
 

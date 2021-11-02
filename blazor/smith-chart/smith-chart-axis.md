@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Axis in Syncfusion Blazor Smith Chart component and much more details.
+description: Checkout and learn here all about axis in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -66,7 +66,7 @@ Axis labels are used to indicate what type of data is bound for the Smith Chart.
 }
 ```
 
-![Smith chart axis label customization](./images/Axis/AxisLabelCustomize.png)
+![Blazor Smith Chart Axis with Custom Label](./images/Axis/blazor-smith-chart-axis-with-custom-label.png)
 
 ## Gridlines
 
@@ -120,7 +120,7 @@ The following properties can be customized in both the major and minor gridlines
 }
 ```
 
-![Smith Chart grid line customization](./images/Axis/Gridline.png)
+![Blazor Smith Chart with GridLines](./images/Axis/blazor-smith-chart-with-gridlines.png)
 
 ## Axis Line
 
@@ -166,4 +166,4 @@ By default, the visibility of the axis line is **true**. Its visibility can be c
 }
 ```
 
-![Smith Chart with axis line customization](./images/Axis/Axisline.png)
+![Blazor Smith Chart with Custom Axis Line](./images/Axis/blazor-smith-chart-custom-axis-line.png)

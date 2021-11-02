@@ -11,8 +11,6 @@ documentation: ug
 
 It is possible to customize the default styles of the Tree Grid component. This can be achieved by adding class dynamically to the columns using the `AddClass` method of the [QueryCellInfo](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridEvents-1.html#Syncfusion_Blazor_TreeGrid_TreeGridEvents_1_QueryCellInfo) event. Then the required styles are added to this class.
 
-This is demonstrated in the below sample code,
-
 {% tabs %}
 
 {% highlight razor %}
@@ -113,5 +111,4 @@ public class TreeData
 
 {% endtabs %}
 
-The following image represents customized Tree Grid columns,
-![Tree Grid Customization](../images/treegrid-customization.png)
+![Customizing Blazor TreeGrid Items](../images/blazor-treegrid-customization.png)

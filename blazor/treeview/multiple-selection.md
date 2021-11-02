@@ -9,7 +9,7 @@ documentation: ug
 
 # MultiSelection in Blazor TreeView Component
 
-Selection provides an interactive support and highlights the node that you select. Selection can be done through simple mouse down or keyboard interaction. The TreeView also supports selection of multiple nodes by setting `AllowMultiSelection` to **true**. To multi-select, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
+Selection provides an interactive support and highlights the node that is selected. Selection can be done through simple mouse down or keyboard interaction. The TreeView also supports selection of multiple nodes by setting `AllowMultiSelection` to **true**. To multi-select, press and hold **CTRL** key and click the desired nodes. To select range of nodes, press and hold the **SHIFT** key and click the nodes.
 
 In the following example, the `AllowMultiSelection` property is enabled.
 
@@ -110,6 +110,4 @@ In the following example, the `AllowMultiSelection` property is enabled.
 
 ```
 
-Output be like the below.
-
-![TreeView Sample](./images/multiSelect.png)
+![MultiSelection in Blazor TreeView](./images/blazor-treeview-multi-selection.png)

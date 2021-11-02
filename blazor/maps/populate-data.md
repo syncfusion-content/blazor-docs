@@ -80,7 +80,7 @@ The [ShapePropertyPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 </SfMaps>
 ```
 
-> `world-map.json` file contains following data and its field **name** value is used to map the corresponding shape with the provided data source.
+>`world-map.json` file contains following data and its field **name** value is used to map the corresponding shape with the provided data source.
 
 ```json
 [
@@ -131,7 +131,7 @@ The [ShapeDataPath](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps
 }
 ```
 
-In the above example, both "**name**" fields contain the same value as "**Afghanistan**", this value is matched in both shape data and data source, so that the details associated with "**Afghanistan**" will be mapped to the corresponding shape and used to color the corresponding shape, display data labels, display tooltips, and more.
+In the above example, both **name** fields contain the same value as **Afghanistan**, this value is matched in both shape data and data source, so that the details associated with **Afghanistan** will be mapped to the corresponding shape and used to color the corresponding shape, display data labels, display tooltips, and more.
 
 ```cshtml
 @using Syncfusion.Blazor.Maps
@@ -183,13 +183,13 @@ In the above example, both "**name**" fields contain the same value as "**Afghan
 }
 ```
 
-![Maps with data source](./images/populatedata/Populatedata.png)
+![Blazor Maps with Data Binding](./images/populatedata/blazor-map-data-binding.png)
 
 ## Fetching data from JSON file
 
 To read the JSON file data, convert it to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsLayer-1.html#Syncfusion_Blazor_Maps_MapsLayer_1_DataSource) property.
 
-Refer to the following sample for fetching data from JSON file. The **Http.GetJsonAsync** is used in the **OnInitAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
+The **Http.GetJsonAsync** is used in the **OnInitAsync** lifecycle method to load JSON file data. As this will be executed asynchronously, check whether **populationDensity** is available, render the Maps component, or display the loading statement.
 
 ```cshtml
 @inject HttpClient Http;
@@ -258,4 +258,4 @@ Here, the `PopulationDensity.json` file contains following data.
 ]
 ```
 
-![Maps with JSON data source](./images/populatedata/Populatedata.png)
+![Blazor Maps with JSON Data Source](./images/populatedata/blazor-map-data-binding.png)

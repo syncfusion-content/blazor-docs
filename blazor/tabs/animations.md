@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Animations in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Animations in Syncfusion Blazor Tabs component and much more details.
+description: Checkout and learn here all about animations in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Animations in Blazor Tabs Component
 
-The Tabs component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows you to set `Easing`, `Duration` and various other effects.
+The tabs component supports custom animations for both previous and next actions from the provided animation option of `Animation` library. The animation property also allows to set `Easing`, `Duration` and various other effects.
 
-Default animation is given as `SlideLeftIn` for previous tab animation and `SlideRightIn` for next tab animation. You can also disable the animation by setting the animation `Effect` as `None`. Also, please use the following CSS to disable indicator animation for animation `Effect` as `None`.
+Default animation is given as `SlideLeftIn` for previous tab animation and `SlideRightIn` for next tab animation. Disable the animation by setting the animation `Effect` as `None`. Also, please use the following CSS to disable indicator animation for animation `Effect` as `None`.
 
 ```CSS
 
@@ -21,7 +21,7 @@ Default animation is given as `SlideLeftIn` for previous tab animation and `Slid
 
 ```
 
-The sample demonstrates some types of animation that suits our Tabs. You can check all the animation effects here.
+The sample demonstrates some types of animation that suits our Tabs. Check all the animation effects here.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -125,6 +125,4 @@ The sample demonstrates some types of animation that suits our Tabs. You can che
 }
 ```
 
-Output be like the below.
-
-![Custom Animation](./images/animation.png)
+![Blazor Tabs with Animation](./images/blazor-tabs-animation.png)

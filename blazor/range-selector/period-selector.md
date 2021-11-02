@@ -13,7 +13,7 @@ The period selector allows to choose a time range with specific periods.
 
 ## Periods
 
-An array of objects that allows the users to specify pre-defined time intervals. The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_Interval) property specifies the count value of the button, the [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_Selected) property allows the users to select the period button initially, and the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_Text) property specifies the text to be displayed on the button. The [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_IntervalType) property allows the users to customize the interval type, and it supports the following types:
+An array of objects that allows the users to specify pre-defined time intervals. The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_Interval) property specifies the count value of the button, the [Selected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_Selected) property allows the users to select the period button initially, and the [Text](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_Text) property specifies the text to be displayed on the button. The [IntervalType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.RangeNavigatorPeriod.html#Syncfusion_Blazor_Charts_RangeNavigatorPeriod_IntervalType) property allows the users to customize the interval type and it supports the following types:
 
 * Auto
 * Years
@@ -70,7 +70,7 @@ An array of objects that allows the users to specify pre-defined time intervals.
 
 ```
 
-![Periods](images/period-selector/periods.png)
+![Blazor RangeNavigator with Periods Selection](images/period-selector/blazor-rangenavigator-periods-selection.png)
 
 ## Position
 
@@ -121,7 +121,7 @@ The [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ra
 
 ```
 
-![Positioning](images/period-selector/position.png)
+![Changing Period Position in Blazor RangeNavigator](images/period-selector/blazor-rangenavigator-period-position.png)
 
 ## Height
 
@@ -172,7 +172,7 @@ The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Rang
 
 ```
 
-![Height](images/period-selector/height.png)
+![Blazor RangeNavigator with Specific Period Height](images/period-selector/blazor-rangenavigator-specific-period-height.png)
 
 ## Visibility
 

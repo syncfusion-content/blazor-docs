@@ -9,7 +9,7 @@ documentation: ug
 
 # Tooltip in Blazor TreeMap Component
 
-Tooltip is used to display details about the items in the TreeMap. When space constraints prevent us from displaying the information using Data Labels, the tooltip comes in handy.
+Tooltip is used to display details about the items in the TreeMap. When space constraints prevents from displaying the information using Data Labels, the tooltip comes in handy.
 
 ## Default tooltip
 
@@ -41,7 +41,7 @@ The tooltip is not visible by default, to make it visible, set the [Visible](htt
 }
 ```
 
-![TreeMap with tooltip](images/Tooltip/Tooltip.png)
+![Blazor TreeMap with Tooltip](images/Tooltip/blazor-treemap-tooltip.png)
 
 ## Customization
 
@@ -66,7 +66,7 @@ Customize the TreeMap tooltip using the following properties.
 
 > Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![TreeMap with custom tooltip](images/Tooltip/custom-tooltip.png)
+![Blazor TreeMap with Custom Tooltip](images/Tooltip/blazor-treemap-custom-tooltip.png)
 
 ## Formatting tooltip content
 
@@ -83,7 +83,7 @@ The tooltip content is displayed by default based on the [WeightValuePath](https
 
 > Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![TreeMap with tooltip format](images/Tooltip/TooltipFormat.png)
+![Changing Tooltip Format in Blazor TreeMap](images/Tooltip/blazor-treemap-tooltip-format.png)
 
 ## Tooltip template
 
@@ -112,4 +112,4 @@ Tooltip can be rendered as a custom component using the [TooltipTemplate](https:
 
 > Refer to the [code block](#default-tooltip) to know about the property value of **Fruits**.
 
-![TreeMap with tooltip template](images/Tooltip/Template.png)
+![Blazor TreeMap with Tooltip Template](images/Tooltip/blazor-treemap-tooltip-template.png)

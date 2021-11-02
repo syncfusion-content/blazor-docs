@@ -82,7 +82,7 @@ For each value field, the aggregation type can be set using the property [Type](
 
 ```
 
-![output](images/aggregation_differencefrom.png)
+![Aggregation in Blazor PivotTable](images/blazor-pivottable-aggregation.png)
 
 > By default, the aggregation will be considered as [SummaryTypes.Sum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html) to the value fields which had number type and for the value fields which had non-number type such as string, date, datetime, boolean, etc., the aggregation type will be considered as [SummaryTypes.Count](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.SummaryTypes.html).
 
@@ -129,17 +129,17 @@ By default, all the aggregation types are displayed in the dropdown menu availab
 
 ```
 
-![output](images/aggregateTypes.png)
+![Displaying Aggregation in Blazor PivotTable DropDown Menu](images/blazor-pivottable-aggregation-in-dropdown-menu.png)
 
 ## Modifying aggregation type for value fields at runtime
 
 Aggregation types can be changed easily through UI at runtime. The value fields bound to grouping bar and field list appears with a dropdown icon which helps to select an appropriate aggregation type for the respective value field. On selection, the values in the pivot table will be changed dynamically.
 
 <!-- markdownlint-disable MD012 -->
-![output](images/aggregation_fl_menu.png "List of pre-defined aggregation types to be changed via Field List")
+![Modifying Aggregation Types via FieldList in Blazor PivotTable](images/blazor-pivottable-aggregation-fieldlist-menu.png)
 <br/>
 <br/>
-![output](images/aggregation_gb_menu.png "List of pre-defined aggregation types to be changed via Grouping Bar")
+![Modifying Aggregation Types via GroupBar in Blazor PivotTable](images/blazor-pivottable-aggregation-groupbar-menu.png)
 
 ## Hiding aggregation type from button text
 
@@ -179,9 +179,9 @@ By default, in value axis each field would be displayed by its name and aggregat
 
 ```
 
-![output](images/aggregation_fl_value.png "Aggregation name hidden in button UI - Field List")
+![Hiding Aggregation Types via FieldList in Blazor PivotTable](images/blazor-pivottable-hide-aggregation-via-fieldlist.png)
 <br/>
-![output](images/aggregation_gb_value.png "Aggregation name hidden in button UI - Grouping Bar")
+![Hiding Aggregation Types via GroupBar in Blazor PivotTable](images/blazor-pivottable-hide-aggregation-via-groupbar.png)
 
 ## Hiding aggregation type icon from UI
 
@@ -223,6 +223,6 @@ By default, the icon to set aggregation type is enabled in the grouping bar. To 
 }
 ```
 
-![output](images/value-type-icon-gb.png)
+![Hiding Aggregation Types Icon in Blazor PivotTable](images/blazor-pivottable-hide-aggregation-icon.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

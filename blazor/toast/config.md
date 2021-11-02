@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Configuring options in Blazor Toast Component | Syncfusion
-description: Checkout and learn here all about Configuring options in Syncfusion Blazor Toast component and more.
+description: Checkout and learn here all about configuring options in Syncfusion Blazor Toast component and more.
 platform: Blazor
 control: Toast
 documentation: ug
@@ -15,7 +15,7 @@ This section explains the steps required to customize the appearance of the toas
 
 Toast can be created with the notification message. The message contains `Title` and content of the toasts. The title and contents are adaptable in any resolution.
 
-> The Title or `Content` property can be given as HTMLElement/element ID to a string that can be displayed as a toast.
+> The Title or `Content` property can be given as HTML Element/element ID to a string that can be displayed as a toast.
 
 ```cshtml
 
@@ -52,31 +52,29 @@ Toast can be created with the notification message. The message contains `Title`
 
 ```
 
-The output will be as follows.
-
-![Action button](./images/config-content-title.png)
+![Blazor Toast with Button](./images/blazor-toast-with-button.png)
 
 ## Specifying custom target
 
-By default, the toast can be rendered in the document body. You can change the target position for toast rendering using the `Target` property. Based on the target, the `Position` will be updated.
+By default, the toast can be rendered in the document body. The target position can be changed for the toast rendering using the `Target` property. Based on the target, the `Position` will be updated.
 
 ## Close button
 
-By default, the `ShowCloseButton` is not enabled. You can enable it by setting the true value. Before expiring the toast, you can use this button to close or destroy toasts manually.
+By default, the `ShowCloseButton` is not enabled. It can be enabled by setting the true value. Before expiring the toast, use this button to close or destroy toasts manually.
 
 ## Progress bar
 
-By default, the `ShowProgressBar` is not enabled. If it is enabled, it can visually indicate how long to get toast expires. Based on the `Timeout` property, progress bar will appear.
+By default, the `ShowProgressBar` is not enabled. If it is enabled, it can visually indicate how long it gets for the toast to expire. Based on the `Timeout` property, progress bar will appear.
 
 ### Progress bar direction
 
-By default, the `ProgressDirection` is set to "Rtl" and it will appear from right to left direction. You can change the progressDirection to "Ltr" to make it appear from left to right direction.
+By default, the `ProgressDirection` is set to "Rtl" and it will appear from right to left direction. The progressDirection can be changed to "Ltr" to make it appear from left to right direction.
 
 ## Newest on top
 
-By default, the newly created toasts will append next with existing toasts. You can change the sequence like inserting before the toast by enabling the `NewestOnTop`.
+By default, the newly created toasts will append next with existing toasts. The sequence can be changed like inserting before the toast by enabling the `NewestOnTop`.
 
-Here, The following sample demonstrates the combination of the `Target`, `ShowCloseButton`, `ShowProgressBar` and `NewestOnTop` properties in toast.
+Here, the following sample demonstrates the combination of the `Target`, `ShowCloseButton`, `ShowProgressBar` and `NewestOnTop` properties in toast.
 
 ```cshtml
 
@@ -163,17 +161,15 @@ Here, The following sample demonstrates the combination of the `Target`, `ShowCl
 
 ```
 
-The output will be as follows.
-
-![Custom target](./images/config-custom-target.png)
+![Blazor Toast with ProgressBar](./images/blazor-toast-with-progressbar.png)
 
 ## Width and height
 
-The dimensions of the toast can be set using the `Width` and `Height` properties. This will individually set all toasts. You can create different custom dimension toasts.
+The dimensions of the toast can be set using the `Width` and `Height` properties. This will individually set all toasts. Different custom dimension toasts can be created.
 
 By default, the toast can be rendered with `300px` width with `auto` height.
 
-> In mobile devices, the default width of the toast gets '100%' width of the page. When you set toast width as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
+> In mobile devices, the default width of the toast gets '100%' width of the page. When the toast width is set as '100%', the toast occupies full width and will be displayed at the top or bottom based on the position `Y` property.
 
 Both the width and height properties allow setting pixels/numbers/percentage. The number value is considered as pixels.
 
@@ -276,6 +272,4 @@ Both the width and height properties allow setting pixels/numbers/percentage. Th
 
 ```
 
-The output will be as follows.
-
-![Custom target](./images/width-height.png)
+![Changing Blazor Toast Size](./images/blazor-toast-size.png)

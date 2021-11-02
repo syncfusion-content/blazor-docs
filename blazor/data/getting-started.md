@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor DataManager Component | Syncfusion
-description: Checkout and learn about getting started with Blazor DataManager component of Syncfusion, and more details.
+description: Checkout and learn more details about getting started with the Blazor DataManager component of Syncfusion.
 platform: Blazor
 control: DataManager
 documentation: ug
@@ -17,7 +17,7 @@ This section explains about how to connect the [SfDataManager](https://help.sync
 
  1. Install the **Syncfusion.Blazor**  NuGet package to the application by using the **NuGet Package Manager**.
 
- 2. You can add the client-side resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+ 2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml
     <head>
@@ -41,7 +41,7 @@ Open **~/_Imports.razor** file and import the **Syncfusion.Blazor.Data** package
 
 ## Add Data Manager Component
 
-To initialize the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
+To initialize the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
 
 ```cshtml
 
@@ -132,9 +132,9 @@ The following sample code demonstrates binding OData through the [SfDataManager]
 
 ## Component binding
 
-As mentioned the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used with Syncfusion components which supports data binding.
+As mentioned, the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) can be used with Syncfusion components which supports data binding.
 
-Here the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) is bound with DropDownList component to demonstrate data binding for the components.
+Here, the [SfDataManager](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Data.SfDataManager.html) is bound with DropDownList component to demonstrate data binding for the components.
 
 ### Local data binding
 

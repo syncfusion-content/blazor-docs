@@ -15,7 +15,7 @@ This section briefly explains how to include a Maps component in your Blazor ser
 
 1. Install **Syncfusion.Blazor.Maps** NuGet package in the application using the **NuGet Package Manager**.
 
-2. You can add the client-side resources through CDN or local npm package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
 ```html
 <head>
@@ -97,7 +97,7 @@ You can use the [ShapeData](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </SfMaps>
 ```
 
-![Map with GeoJSON layer](./images/browser-output.png)
+![Blazor Maps with GeoJSON Layer](./images/blazor-map.png)
 
 > The "world-map.json" file contains the World map GeoJSON data.
 
@@ -177,7 +177,7 @@ The color mapping supports customization of shape colors based on the underlying
 </SfMaps>
 ```
 
-![Map with color mapping](./images/Colormap.png)
+![Blazor Maps with Color Mapping](./images/blazor-map-color-mapping.png)
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
@@ -207,7 +207,7 @@ Label provides information to users about the shapes, and you can enable label t
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Map with labels](./images/shape-label.png)
+![Blazor Maps with Label](./images/blazor-map-label.png)
 
 ## Adding title for Maps
 
@@ -236,7 +236,7 @@ Title can be added to the Maps to provide quick information to the users about t
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Map with title](./images/Title.png)
+![Blazor Maps with Title](./images/blazor-map-title.png)
 
 ## Enable legend
 
@@ -266,7 +266,7 @@ The legend items are used to denote color mapping categories, and you can show l
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Map with legend](./images/Legend.png)
+![Blazor Maps with Legend](./images/blazor-map-legend.png)
 
 ## Enable tooltip
 
@@ -297,7 +297,7 @@ The tooltip can be used when you cannot display information using the data label
 
 > Refer [code block](#bind-data-source) to know the property value of **SecurityCouncilDetails**.
 
-![Map with tooltip](./images/tooltip.png)
+![Blazor Maps with Tooltip](./images/blazor-map-tooltip.png)
 
 ## See also
 

@@ -48,7 +48,7 @@ The following code example shows, how to bind a flat collection as data source t
 }
 ```
 
-![TreeMap with flat data](images/Databinding/flatcollection.png)
+![Blazor TreeMap with Flat Data](images/Databinding/blazor-treemap-flat-data.png)
 
 ### Hierarchical data
 
@@ -180,7 +180,7 @@ The following code example shows, how to bind a hierarchical collection as data 
 }
 ```
 
-![TreeMap with hierarchical data](images/Databinding/Hierarchical.png)
+![Blazor TreeMap with Hierarchical Data](images/Databinding/blazor-treemap-hierarchical-data.png)
 
 ## Local data
 
@@ -221,13 +221,13 @@ The following code example shows, how to bind a `IEnumerable` object to the Tree
 }
 ```
 
-![TreeMap with local data](images/Databinding/ListCollection.png)
+![Blazor TreeMap with Local Data](images/Databinding/blazor-treemap-local-data.png)
 
 ### Fetching data from the JSON file
 
-Read the JSON file data and it can be convert to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of the TreeMap component.
+Read the JSON file data and it can be converted to the C# object, and assign it to the [DataSource](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.SfTreeMap-1.html#Syncfusion_Blazor_TreeMap_SfTreeMap_1_DataSource) property of the TreeMap component.
 
-The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` lifecycle method to load the JSON file data.
+The `Http.GetJsonAsync` method is used in the  `OnInitializedAsync` life cycle method to load the JSON file data.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -261,19 +261,17 @@ else
 }
 ```
 
-![Load TreeMap data from JSON file](images/Databinding/flatcollection.png)
+![Loading Blazor TreeMap Data from JSON File](images/Databinding/blazor-treemap-flat-data.png)
 
 ## Remote data
 
 To interact with the remote data source, provide the endpoint [Url](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html#Syncfusion_Blazor_DataManager_Url) within the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) class along with an appropriate [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). By default, the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) uses [ODataAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) for remote data-binding.
 
-> When using [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) for data binding then the **TValue** must be provided explicitly to the TreeMap component.
+> If [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) is used for data binding then the **TValue** must be provided explicitly to the TreeMap component.
 
 ### Binding with OData services
 
 [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) is a standardized protocol for creating and consuming data. User can retrieve data from [OData](https://blazor.syncfusion.com/documentation/data/adaptors/#odata-adaptor) service using the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html).
-
-Refer to the following code example for remote data binding using OData service.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -305,7 +303,7 @@ Refer to the following code example for remote data binding using OData service.
 }
 ```
 
-![Data binding with OData service](images/Databinding/OData.png)
+![Data Binding with OData Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odata.png)
 
 ### Binding with OData V4 services
 
@@ -341,11 +339,11 @@ The [OData V4](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav
 }
 ```
 
-![Data binding with OData V4 service](images/Databinding/ODatav4.png)
+![Data Binding with OData V4 Service in Blazor TreeMap](images/Databinding/blazor-treemap-binding-with-odatav4.png)
 
 ### Web API
 
-Using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
+Use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) to bind TreeMap with Web API, created using OData endpoint.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -377,7 +375,7 @@ Using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/
 }
 ```
 
-![Data binding with web API data](images/Databinding/RemoteData.png)
+![Data binding with Web API Adaptor in Blazor TreeMap](images/Databinding/blazor-treemap-webapiadaptor.png)
 
 ## Entity Framework
 
@@ -458,7 +456,7 @@ Now create a class called **OrderDataAccessLayer**, which acts as a data access 
 
 ### Creating Web API Controller
 
-A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity framework.
+A Web API Controller must be created, which allows the TreeMap to directly consume data from the Entity Framework.
 
 ```csharp
     using System;
@@ -570,7 +568,7 @@ For instance, bind the data directly from the **OrderDataAccessLayer** class and
     }
 ```
 
-On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, need to use [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) in-order to interact with the Web API to consume data from the entity framework appropriately.
+On the other hand, to configure the TreeMap using Web API, provide the appropriate endpoint URL in the [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.DataManager.html) along with [Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors). Here, [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/?no-cache=1#web-api-adaptor) is used to interact with the Web API to consume data from the Entity Framework appropriately.
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Range Selector in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Range Selector in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about range selector in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -11,17 +11,17 @@ documentation: ug
 
 # Range Selector in Blazor Stock Chart Component
 
-The range selector allows to select a range with specified periods. By default the range selector is enabled in stock chart.
+The range selector allows to select a range with specified periods. By default, the range selector is enabled in stock chart.
 
 ## Selecting Range
 
-The left and right thumb of RangeNavigator are used to indicate the selected range in the large collection of data. Following are the ways you can select a range.
+The left and right thumb of RangeNavigator are used to indicate the selected range in the large collection of data. Following are the ways to select a range.
 
 * By dragging the thumbs.
 * By tapping on the labels.
 * By setting the start and end through Date Range button.
 
-Following code example shows the [EnableSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnableSelector) property allows users to toggle the visibility of enable selector.
+Following code example shows the [EnableSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.StockChartModel.html#Syncfusion_Blazor_Charts_StockChartModel_EnableSelector) property that allows users to toggle the visibility of enable selector.
 
 ```cshtml
 
@@ -61,4 +61,4 @@ Following code example shows the [EnableSelector](https://help.syncfusion.com/cr
 
 ```
 
-![Selecting Range](images/common/range.png)
+![Range Selection in Blazor Stock Chart](images/common/blazor-stock-chart-range-selection.png)

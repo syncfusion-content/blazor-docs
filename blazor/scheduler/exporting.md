@@ -60,7 +60,7 @@ The Scheduler allows you to export all its events into an Excel format file by u
 
 Exported Excel file be like below
 
-![Excel Exporting](images/excel-export.png)
+![Excel Exporting in Blazor Scheduler](images/blazor-scheduler-excel-export.png)
 
 ### Exporting with custom fields
 
@@ -107,7 +107,7 @@ By default, Scheduler exports all the default event fields that are mapped to it
 
 Exported Excel file with custom fields be like below
 
-![Excel Exporting with custom fields](images/excel-export-customfields.png)
+![Excel Exporting with custom Fields in Blazor Scheduler](images/blazor-scheduler-excel-export-custom-fields.png)
 
 ### Exporting individual occurrences of a recurring series
 
@@ -367,7 +367,7 @@ You can export the Scheduler data with specific date format, by defining the `Da
 
 Exported Excel file with 24 hour date format be like below
 
-![Excel Exporting with 24 hour date format](images/excel-dateformat.png)
+![Excel Exporting with Date Format in Blazor Scheduler](images/blazor-scheduler-excel-date-format.png)
 
 ## Exporting calendar events as ICS file
 

@@ -63,7 +63,7 @@ documentEditor.Editor.InsertTableOfContents(tableOfContentsSettings);
 
 You can update or edit the table of contents using the built-in context menu shown up by right-clicking it. Refer to the following screenshot.
 
-![Table of Contents](images/table-of-contents.jpeg)
+![Updating Table Contents in Blazor DocumentEditor](images/blazor-documenteditor-table-contents.jpeg)
 
 * **Update Field**: Updates the headings in table of contents with same settings by searching the entire document.
 * **Edit Field**: Opens the built-in table of contents dialog and allows you to modify its settings.

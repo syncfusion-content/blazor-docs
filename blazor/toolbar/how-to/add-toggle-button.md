@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Add Toggle Button in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about Add Toggle Button in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about how to add toggle button in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Add Toggle Button in Blazor Toolbar Component
 
-Toolbar supports to add a toggle Button by using the `Template` property. Refer below steps
+Toolbar supports adding a toggle button by using the `Template` property.
 
-* By using Toolbar template property, pass required HTML String to render toggle button.
+* By using Toolbar template property, pass required HTML String to render the toggle button.
 
 ```cshtml
 <Template>
@@ -19,7 +19,7 @@ Toolbar supports to add a toggle Button by using the `Template` property. Refer 
 </Template>
 ```
 
-* Now render the toggle Button into the targeted element in Toolbar created event handler and bind click event for it.
+* Now render the toggle Button into the targeted element in the Toolbar created event handler and bind click event for it.
 On clicking the toggle Button, change the required icon and content based on current active state.
 
 ```csharp
@@ -62,7 +62,7 @@ On clicking the toggle Button, change the required icon and content based on cur
 </SfToolbar>
 <br />
 <div id="content" style="display:@DisplayValue">
-    This content will be hidden, when you click on hide button and toggle get an active state as show, otherwise it will be visible.
+    This content will be hidden, when you click on hide button and toggle will get an active state as shown, otherwise it will be visible.
 </div>
 
 <style>
@@ -203,6 +203,4 @@ On clicking the toggle Button, change the required icon and content based on cur
 
 ```
 
-Output be like the below.
-
-![Toolbar Item Toggle Button](../images/item_toggle_button.gif)
+![Blazor Toolbar Item with Toggle Button](../images/blazor-toolbar-item-with-toggle-button.gif)

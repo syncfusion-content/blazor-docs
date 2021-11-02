@@ -315,4 +315,4 @@ The `Clicked` event is triggered when clicking a list item in the ListView. The 
 </style>
 ```
 
-![ListView - dual list](../images/list/create-dual-list-from-listview.png)
+![Displaying Dual List in Blazor ListView](../images/list/blazor-listview-with-dual-list.png)

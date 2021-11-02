@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customize column menu icon in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Customize column menu icon in Syncfusion Blazor TreeGrid component and more.
+description: Checkout and learn here all about how to customize column menu icon in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Customize column menu icon in Blazor TreeGrid Component
 
-You can customize the column menu icon by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.
+The column menu icon can be customized by overriding the default icon class `.e-icons.e-columnmenu` with the `content` property.
 
 ```css
 .e-grid .e-columnheader .e-icons.e-columnmenu::before {
@@ -538,5 +538,4 @@ public class WrapData
 
 {% endtabs %}
 
-The following image represents Tree Grid with customized column menu icon
-![Customize column menu icon](../images/customize-column-menu-icon.png)
+![Customizing Column Menu Icon in Blazor TreeGrid](../images/blazor-treegrid-custom-column-menu-icon.png)

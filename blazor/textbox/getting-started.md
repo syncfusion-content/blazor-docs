@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor TextBox Component
 
-This section briefly explains about how to include a [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TextBox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) Component in the Blazor Server-Side and Client-Side application. Refer to Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TextBox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
-To get start quickly with Blazor TextBox component, you can check on this video.
+To get start quickly with Blazor TextBox component, check on this video.
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=vzBKF4Gs-Mc"%}
@@ -20,9 +20,9 @@ To get start quickly with Blazor TextBox component, you can check on this video.
 
 * Install `Syncfusion.Blazor.Inputs` NuGet package to the application by using the `NuGet Package Manager`.
 
-  > Please ensure to check the `Include prerelease` option for our Beta release.
+  > Please ensure to check the `Include prerelease` option for the Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* The client-side resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
   ```html
     <head>
@@ -80,7 +80,7 @@ public class Program
 
 ## Adding TextBox component to the application
 
-To initialize the TextBox component add the below code to your `Index.razor` view page which is present under `~/Pages` folder.
+To initialize the TextBox component add the below code to the `Index.razor` view page which is present under `~/Pages` folder.
 
 ```cshtml
 <SfTextBox Placeholder='First Name'></SfTextBox>
@@ -88,15 +88,13 @@ To initialize the TextBox component add the below code to your `Index.razor` vie
 
 ## Run the application
 
-After successful compilation of your application, press `F5` to run the application.
+After successful compilation of the application, press `F5` to run the application.
 
-The output will be as follows.
-
-![TextBox Sample](./images/textbox_getting_started.png)
+![Blazor TextBox](./images/blazor-textbox.png)
 
 ## Adding icons to the TextBox
 
-You can create a TextBox with icon as a group by creating the parent `div` element with the class `e-input-group` and add the icon element as span with the class `e-input-group-icon`.
+A TextBox can be created with icon as a group by creating the parent `div` element with the class `e-input-group` and add the icon element as span with the class `e-input-group-icon`.
 
 ```cshtml
 <div class='e-input-group'>
@@ -119,21 +117,17 @@ You can create a TextBox with icon as a group by creating the parent `div` eleme
 </style>
 ```
 
-The output will be as follows.
-
-![TextBox with icon](./images/textbox_adding_icons.png)
+![Blazor TextBox with Icon](./images/blazor-textbox-icons.png)
 
 ## Floating label
 
-The floating label TextBox floats the label above the TextBox after focusing, or filled with value in the TextBox. You can create the floating label TextBox by using the `FloatLabelType` API.
+The floating label TextBox floats the label above the TextBox after focusing, or filled with value in the TextBox. The floating label TextBox can be created by using the `FloatLabelType` API.
 
 ```cshtml
 <SfTextBox Placeholder='First Name' FloatLabelType='@FloatLabelType.Auto'></SfTextBox>
 ```
 
-The output will be as follows.
-
-![TextBox with icon](./images/floatlabel.png)
+![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
 
 ## See Also
 

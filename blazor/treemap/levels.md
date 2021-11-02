@@ -60,7 +60,7 @@ In the following example, three levels are added and each level is configured us
 }
 ```
 
-![TreeMap with multiple levels](images/Levels/grouppath.png)
+![Multiple Blazor TreeMap Levels with Group](images/Levels/blazor-treemap-levels-with-group-path.png)
 
 ## Gap between groups
 
@@ -89,11 +89,11 @@ The [GroupGap](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.T
 
 > Refer to the [code block](#group-path) to know about the property value of the **Employees**.
 
-![TreeMap levels with group gap](images/Levels/groupgap.png)
+![Blazor TreeMap Levels with Group Gap](images/Levels/blazor-treemap-levels-with-group-gap.png)
 
 ## Header height and style
 
-Customize the font color, family, weight, opacity and size using the [TreeMapHeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHeaderStyle.html). Based on the font settings, the header height is given using the [HeaderHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in [TreeMapLevel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
+Customize the font color, family, weight, opacity and size using the [TreeMapHeaderStyle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapHeaderStyle.html). Based on the font settings, the header height is given using the [HeaderHeight](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html#Syncfusion_Blazor_TreeMap_TreeMapLevel_HeaderHeight) property in the [TreeMapLevel](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeMap.TreeMapLevel.html).
 
 ```cshtml
 @using Syncfusion.Blazor.TreeMap
@@ -121,7 +121,7 @@ Customize the font color, family, weight, opacity and size using the [TreeMapHea
 
 > Refer to the [code block](#group-path) to know about the property value of **Employees**.
 
-![TreeMap with custom header height and style](images/Levels/headerHeight.png)
+![Blazor TreeMap with Custom Header Height and Style](images/Levels/blazor-treemap-custom-header-height.png)
 
 ## Customization
 
@@ -156,4 +156,4 @@ The following properties are available to customize the header content in the [T
 
 > Refer to the [code block](#group-path) to know about the property value of `Employees`.
 
-![TreeMap with customized header](images/Levels/headeralignment.png)
+![Customizing Header Alignment in Blazor TreeMap](images/Levels/blazor-treemap-header-alignment.png)

@@ -76,4 +76,4 @@ The following code demonstrates how to display a tooltip when hovering over the 
 
 The output will be as follows.
 
-![dropdownlist](../images/tooltip.png)
+![Blazor DropDownList displays ToolTip](../images/blazor-dropdownlist-tooltip.png)

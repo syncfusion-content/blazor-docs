@@ -68,7 +68,7 @@ Other properties include:
 
 ```
 
-![output](images/formatting.png)
+![Number Formatting in Blazor PivotTable](images/blazor-pivottable-number-formatting.png)
 
 You can also format the values at runtime using the formatting dialog. This option can be enabled by setting the [AllowNumberFormatting](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.PivotView.PivotViewModel-1.html#Syncfusion_Blazor_PivotView_PivotViewModel_1_AllowNumberFormatting) property to **true**. The same has been discussed in some of the upcoming topics.
 
@@ -123,7 +123,7 @@ You can add any custom format directly to the [Format](https://help.syncfusion.c
 
 ```
 
-![output](images/formatting-custom.png)
+![Blazor PivotTable with Custom Format](images/blazor-pivottable-custom-format.png)
 
 ## Toolbar
 
@@ -178,6 +178,6 @@ You can enable formatting dialog option in the toolbar by adding `NumberFormatti
 
 ```
 
-![output](images/formatting-toolbar.png)
+![Blazor PivotTable with Toolbar](images/blazor-pivottable-toolbar.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

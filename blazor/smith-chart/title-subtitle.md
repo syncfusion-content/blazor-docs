@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Title and Subtitle in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Title and Subtitle in Syncfusion Blazor Smith Chart component and more.
+description: Checkout and learn here all about title and subtitle in Syncfusion Blazor Smith Chart component and more.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -43,7 +43,7 @@ The information about the data plotted in the Smith Chart is depicted using the 
 }
 ```
 
-![Smith Chart with title and subtitle](./images/Title/Title.png)
+![Blazor Smith Chart with Title and Subtitle](./images/Title/blazor-smith-chart-title-and-subtitle.png)
 
 ## Trim Title
 
@@ -84,7 +84,7 @@ Both the title and the subtitle of the Smith Chart can be trimmed if it exceeds 
 }
 ```
 
-![Smith Chart with title trim](./images/Title/TitleTrim.png)
+![Blazor Smith Chart with Trim Title](./images/Title/blazor-smith-chart-trim-title.png)
 
 ## Title Customization
 
@@ -126,4 +126,4 @@ Title and subtitle can be customized using the following properties.
 }
 ```
 
-![Smith Chart with title customization](./images/Title/TitleCustomization.png)
+![Blazor Smith Chart with Custom Title](./images/Title/blazor-smith-chart-with-custom-title.png)

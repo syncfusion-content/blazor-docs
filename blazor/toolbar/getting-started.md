@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Toolbar Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Toolbar component of Syncfusion, and more details.
+description: Checkout and learn here all about getting started with Blazor Toolbar component of Syncfusion, and more details.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -9,24 +9,24 @@ documentation: ug
 
 # Getting Started with Blazor Toolbar Component
 
-This section briefly explains about how to include a `Toolbar` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Toolbar` in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
-To get start quickly with Blazor Toolbar, you can check on this video:
+To get started quickly with Blazor Toolbar, check on this video:
 
 {% youtube
 "youtube:https://www.youtube.com/watch?v=3brT3ztZErE"%}
 
 ## Importing Syncfusion Blazor component in the application
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+Use any one of the below standards to install the Syncfusion Blazor library in the application.
 
 ### Using Syncfusion Blazor individual NuGet Packages [New standard]
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for the Syncfusion Blazor components. This new standard is highly recommended for the Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -36,15 +36,15 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, the above `Syncfusion.Blazor.Themes` static web assets (styles) have to be added in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+W> If the above new standard (individual NuGet packages) is preferred, then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through CDN or from NuGet package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. The client-side style resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -121,9 +121,9 @@ Now, add the Syncfusion Blazor Toolbar component in any web page (razor) in the 
 
 ## Run the application
 
-After successful compilation of your application, simply press `F5` to run the application.
+After successful compilation of the application, simply press `F5` to run the application.
 
-![Default Toolbar](./images/browser-output.png)
+![Blazor Toolbar](./images/blazor-toolbar.png)
 
 ## See Also
 

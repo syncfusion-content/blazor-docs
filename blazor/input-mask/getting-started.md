@@ -22,7 +22,7 @@ To get start quickly with Blazor MaskedTextBox component, you can check on this 
 
     > Please ensure to check the `Include prerelease` option for our Beta release.
 
-* You can add the client-side resources through CDN or from NuGet package in the  **HEAD** element of the **~/wwwroot/index.html** page.
+* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the  **HEAD** element of the **~/wwwroot/index.html** page.
 
     ```html
     <head>
@@ -88,7 +88,7 @@ To initialize the MaskedTextBox component add the below code to your `Index.razo
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/default.png)
+![Blazor MaskedTextBox Component](./images/blazor-maskedtextbox-component.png)
 
 ## Set the mask
 
@@ -102,7 +102,7 @@ The following example demonstrates the usage of mask element `0` that allows any
 
 The output will be as follows.
 
-![MaskedTextBox Sample](./images/SetMask.png)
+![Blazor MaskedTextBox with Mask](./images/blazor-maskedtextbox-with-mask.png)
 
 ## See Also
 

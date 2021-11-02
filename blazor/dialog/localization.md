@@ -48,4 +48,4 @@ In the following sample, `French` culture is set to Dialog and change the close 
 
 The output will be as follows.
 
-![dialog](./images/dialog-locale.png)
+![Localization in Blazor Dialog](./images/blazor-dialog-localization.png)

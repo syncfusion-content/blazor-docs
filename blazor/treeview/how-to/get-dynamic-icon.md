@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Get iconCss dynamically in Blazor TreeView Component | Syncfusion
-description: Learn here all about Get iconCss dynamically in treeview in Syncfusion Blazor TreeView component and more.
+description: Learn here all about how to get iconCss dynamically in treeview in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Get iconCss dynamically in Blazor TreeView Component
 
-In TreeView component, you can get the original bound data using the `GetTreeData` method. For this method, if you pass the id of the tree node, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. You can use this method to get the bound IconCss class in the `NodeChecking` event. Please refer to the following sample.
+In the TreeView component, get the original bound data using the `GetTreeData` method. For this method, if the id of the tree node is passed, it returns the corresponding node information, or otherwise the overall tree nodes information will be returned. This method can be used to get the bound IconCss class in the `NodeChecking` event.
 
 ```csharp
 
@@ -127,6 +127,4 @@ In TreeView component, you can get the original bound data using the `GetTreeDat
 </style>
 ```
 
-Output be like the below.
-
-![TreeView Sample](../images/IconCss.png)
+![Blazor TreeView with Dynamic Icon](../images/blazor-treeview-dynamic-icon.png)

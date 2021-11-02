@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Mode in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about Open Mode in Syncfusion Blazor Tooltip component and much more details.
+description: Checkout and learn here all about open mode in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Open Mode in Blazor Tooltip Component
 
-You can decide the mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements.
+The mode on which the Tooltip is to be opened on a page, i.e., on hovering, focusing, or clicking on the target elements can be decided.
 
 > On mobile devices, Tooltips appear when you tap and hold the element, even if the `OpensOn` option is assigned with `Hover`.
-> Tooltips are also displayed as long as you continue to tap and hold the element. On lift, it  disappears in the next 1.5 seconds.
+> Tooltips are also displayed as long as the element is continued to tap and hold. On lift, it disappears in the next 1.5 seconds.
 > If there is another action before that time ends, then the Tooltip disappears.
 
-The `OpensOn` property can take either a single or a combination of multiple values, separated by space from the following options. The table  below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `OpensOn` property. By default, it takes `Auto` value.
+The `OpensOn` property can take either a single or a combination of multiple values, separated by space from the following options. The table below explains how the Tooltip opens on both desktop and mobile based on the value(s) assigned to the `OpensOn` property. By default, it takes `Auto` value.
 
 | Values | Desktop | Mobile |
 | ------------- | ------------- | ------------- |
@@ -28,8 +28,6 @@ The `OpensOn` property can take either a single or a combination of multiple val
 To open the Tooltip for multiple actions, say while hovering over or clicking on a target element, the `OpensOn` property can be assigned with multiple values, separated by space as `Hover Click`.
 
 > `Auto` value cannot be used with any combination for multiple values.
-
-The following code example shows how to set the open mode for Tooltips.
 
 ```cshtml
 @using Syncfusion.Blazor.Popups
@@ -92,9 +90,7 @@ The following code example shows how to set the open mode for Tooltips.
 </style>
 ```
 
-Output be like the below.
-
-![Tooltip - Open Mode](images/opensOn.gif)
+![Blazor Tooltip in Open Mode](images/blazor-tooltip-in-open-mode.gif)
 
 ## Sticky mode
 
@@ -126,9 +122,7 @@ With this mode set to `true`, Tooltips can be made to show up on the screen as l
 
 ```
 
-Output be like the below.
-
-![Tooltip - Sticky Mode](images/Sticky.gif)
+![Blazor Tooltip in Sticky Mode](images/blazor-tooltip-sticky-mode.gif)
 
 ## Open or Close tooltip with delay
 
@@ -159,6 +153,4 @@ The Tooltips can be opened or closed after some delay by using the `OpenDelay` a
 </style>
 ```
 
-Output be like the below.
-
-![Tooltip - Delay](images/delay.gif)
+![Blazor Tooltip with Delay](images/blazor-tooltip-delay.gif)

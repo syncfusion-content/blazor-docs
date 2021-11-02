@@ -53,4 +53,4 @@ documentEditor.Editor.ClearList();
 
 Document editor restarts the numbering or continue numbering for a numbered list. These options are found in the built-in context menu, if the list value is selected. Refer to the following screenshot.
 
-![Image](images/list.jpeg)
+![Blazor DocumentEditor with List](images/blazor-document-editor-list.jpeg)

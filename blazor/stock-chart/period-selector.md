@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Period Selector in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Period Selector in Syncfusion Blazor Stock Chart component and more.
+description: Checkout and learn here all about period selector in Syncfusion Blazor Stock Chart component and more.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -88,7 +88,7 @@ Periods is an array of objects that allows users to specify the range of [Period
 
 ```
 
-![Period Selector](images/common/period-razor.png)
+![Blazor Stock Chart with Period Selector](images/common/blazor-stock-chart-period-selector.png)
 
 ## Visibility of period selector
 
@@ -132,4 +132,4 @@ The [EnablePeriodSelector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blaz
 
 ```
 
-![Period Selector Visibility](images/common/visibilityperiod-razor.png)
+![Visibility of Period Selector in Blazor Stock Chart](images/common/blazor-stock-chart-visibility-period-selector.png)

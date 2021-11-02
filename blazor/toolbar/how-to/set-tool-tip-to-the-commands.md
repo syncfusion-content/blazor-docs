@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set Tooltip to the commands in Blazor Toolbar Component | Syncfusion
-description: Learn here all about Set Blazor Tooltip to the commands in Syncfusion Blazor Toolbar component and more.
+description: Learn here all about how to set Blazor Tooltip to the commands in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -11,7 +11,7 @@ documentation: ug
 
 The `TooltipText` property of the Toolbar item is used to set the HTML Tooltip to the commands that can be viewed as hint texts on mouse hover.
 
-Initialize the Tooltip with the Toolbar target. Refer to the following code example:
+Initialize the Tooltip with the Toolbar target.
 
 ```csharp
 
@@ -32,6 +32,4 @@ Initialize the Tooltip with the Toolbar target. Refer to the following code exam
 
 ```
 
-Output be like the below.
-
-![Tooltip](../images/toolbar_tooltip.png)
+![Blazor Toolbar with Tooltip](../images/blazor-toolbar-with-tooltip.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set tooltip for tree nodes in Blazor TreeView Component | Syncfusion
-description: Checkout and learn here all about Set tooltip for tree nodes in Syncfusion Blazor TreeView component and more.
+description: Checkout and learn here all about how to set tooltip for tree nodes in Syncfusion Blazor TreeView component and more.
 platform: Blazor
 control: TreeView
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Set tooltip for tree nodes in Blazor TreeView Component
 
-TreeView control allows you to set tooltip option to tree nodes using the `Tooltip` property. The following code example demonstrates how to set tooltip for TreeView nodes.
+TreeView control allows to set tooltip option to tree nodes using the `Tooltip` property. The following code example demonstrates how to set tooltip for TreeView nodes.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -96,6 +96,4 @@ TreeView control allows you to set tooltip option to tree nodes using the `Toolt
 }
 ```
 
-Output be like the below.
-
-![TreeView Sample](../images/tooltip.png)
+![Blazor TreeView with Tooltip](../images/blazor-treeview-tooltip.png)

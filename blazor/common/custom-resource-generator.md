@@ -73,8 +73,48 @@ Refer to the following steps to download the custom resources in CRG:
     }
     ```
 
+    > If you are using Blazor Server App with net6.0 SDK, the **Startup.cs** file is not available in the Application. Set `IgnoreScriptIsolation` as true in `AddSyncfusionBlazor` service in `~/Program.cs` file for Blazor Server app.
+
+    ```c#
+    // For .NET 6 project, add the Syncfusion Blazor Service in Program.cs file.
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    ....
+    builder.Services.AddSyncfusionBlazor(options => { options.IgnoreScriptIsolation = true; });
+    var app = builder.Build();
+    ....
+    ....
+    ```
+
     **Blazor WebAssembly App (~/Program.cs)**
     ```c#
+    // For .NET 6 project.
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor(options => { options.IgnoreScriptIsolation = true; });
+    ....
+    builder.Services.AddSyncfusionBlazor();
+    var app = builder.Build();
+    ....
+    ....
+    ```
+
+    ```c#
+    // For .NET 5 or .NET Core SDK 3.1 project.
+    using Syncfusion.Blazor;
+    ....
+    ....
     public static async Task Main(string[] args)
     {
         var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
@@ -90,7 +130,13 @@ Refer to the following steps to download the custom resources in CRG:
     }
     ```
 
-3. Now, manually add the custom interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
+3. Now, manually add the custom interop script and styles in the Blazor App.
+
+    a) For `.NET 6` Blazor Server app, add the custom interop script and styles in the `~/Pages/_Layout.cshtml` page.
+
+    b) For `.NET 5 / .NET Core SDK 3.1` Blazor Server app, add the custom interop script and styles in the `~/Pages/_Host.cshtml` page.
+
+    c) For Blazor WebAssembly app, add the custom interop script and styles in the `~/wwwroot/index.html` page.
 
     ```html
     <head>
@@ -100,11 +146,16 @@ Refer to the following steps to download the custom resources in CRG:
         <script src="syncfusion-blazor.min.js" type="text/javascript"></script>
     </head>
     ```
+
     ***How to use CDN resources in the Blazor application***
-    
+
     The same theme and script files can be referred through the CDN version by setting the `IgnoreScriptIsolation` to true in `AddSyncfusionBlazor` service in `~/Startup.cs` file for Blazor Server app or `~/Program.cs` file for Blazor WebAssembly app which is in step 2.
-    
-    After that add the CDN interop script and styles in the `~/Pages/_Host.cshtml` for Blazor Server app or `~/wwwroot/index.html` for Blazor WebAssembly app.
+
+    a) For `.NET 6` Blazor Server app, add the CDN interop script and styles in the `~/Pages/_Layout.cshtml` page.
+
+    b) For `.NET 5 / .NET Core SDK 3.1` Blazor Server app, add the CDN interop script and styles in the `~/Pages/_Host.cshtml` page.
+
+    c) For Blazor WebAssembly app, add the CDN interop script and styles in the `~/wwwroot/index.html` page.
 
     ```html
     <head>

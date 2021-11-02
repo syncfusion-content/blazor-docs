@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Series in Blazor Smith Chart Component | Syncfusion
-description: Checkout and learn here all about Series in Syncfusion Blazor Smith Chart component and much more details.
+description: Checkout and learn here all about series in Syncfusion Blazor Smith Chart component and much more details.
 platform: Blazor
 control: Smith Chart
 documentation: ug
@@ -50,7 +50,7 @@ The [SmithChartSeries](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 }
 ```
 
-![Smith Chart with series customization](./images/SmithChartSeries/SeriesCustomization.png)
+![Blazor Smith Chart with Series](./images/SmithChartSeries/blazor-smith-chart-series.png)
 
 ## Animation
 

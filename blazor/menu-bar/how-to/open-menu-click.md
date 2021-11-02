@@ -52,4 +52,4 @@ In the following sample, Sub Menu will open while clicking `File` menu.
 
 Output be like
 
-![Menu Sample](./../images/open-menu-onclick.png)
+![Opening Menu Item in Blazor MenuBar](./../images/blazor-menubar-with-menu-item.png)

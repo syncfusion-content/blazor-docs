@@ -88,6 +88,297 @@ The following code example depicts how to bind the list of object collection to 
 }
 ```
 
+### Binding ExpandoObject
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **ExpandoObject**.
+
+**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
+
+```csharp
+@using System.Dynamic
+@using Syncfusion.Blazor.Schedule
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ExpandoObject" TValue="int" DataSource="@ResourceCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2020, 3, 9);
+    public string[] Resources { get; set; } = { "Owners" };
+    public List<ExpandoObject> ResourceCollection = new List<ExpandoObject>() { };
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1  }
+    };
+    protected override void OnInitialized()
+    {
+        var colors = new string[] { "#ff8787", "#9775fa", "#748ffc" };
+        for (int a = 1; a <= 3; a++)
+        {
+            dynamic d = new ExpandoObject();
+            d.Id = a;
+            d.OwnerText = "Resource" + a;
+            d.OwnerColor = colors[a - 1];
+            ResourceCollection.Add(d);
+        }
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public string StartTimezone { get; set; }
+        public string EndTimezone { get; set; }
+        public int OwnerId { get; set; }
+    }
+}
+```
+
+## Binding DynamicObject
+
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **DynamicObject**.
+
+**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in DynamicObject.
+
+> The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
+
+```csharp
+@using System.Dynamic
+@using Syncfusion.Blazor.Schedule
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="DynamicDictionary" TValue="int" DataSource="@ResourceCollection" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" ColorField="OwnerColor" AllowMultiple="false"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+@code {
+    DateTime CurrentDate = new DateTime(2020, 3, 10);
+    public string[] Resources { get; set; } = { "Owners" };
+    List<AppointmentData> DataSource = new List<AppointmentData> 
+    {
+    new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 3, 9, 9, 0, 0) , EndTime = new DateTime(2020, 3, 9, 11, 0, 0), OwnerId = 1  }
+    };
+    public List<DynamicDictionary> ResourceCollection = new List<DynamicDictionary>() { };
+    protected override void OnInitialized()
+    {
+        var colors = new string[] { "#ff8787", "#9775fa", "#748ffc" };
+        for (int a = 1; a <= 3; a++)
+        {
+            dynamic d = new DynamicDictionary();
+            d.Id = a;
+            d.OwnerText = "Resource" + a;
+            d.OwnerColor = colors[a - 1];
+            ResourceCollection.Add(d);
+        }
+    }
+    public class DynamicDictionary : System.Dynamic.DynamicObject
+    {
+        Dictionary<string, object> dictionary = new Dictionary<string, object>();
+        public override bool TryGetMember(GetMemberBinder binder, out object result)
+        {
+            string name = binder.Name;
+            return dictionary.TryGetValue(name, out result);
+        }
+        public override bool TrySetMember(SetMemberBinder binder, object value)
+        {
+            dictionary[binder.Name] = value;
+            return true;
+        }
+        public override System.Collections.Generic.IEnumerable<string> GetDynamicMemberNames()
+        {
+            return this.dictionary?.Keys;
+        }
+    }
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+    }
+}
+```
+
+## Binding ObservableCollection
+
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+Here, ResourceData class implements the interface of **INotifyPropertyChanged** and it raises the event when RoomText and OwnerText property value was changed.
+
+```csharp
+@using Syncfusion.Blazor.Schedule
+@using Syncfusion.Blazor.Buttons
+@using System.Collections.ObjectModel;
+@using System.ComponentModel;
+
+<SfButton @onclick="AddRecord">Add Data</SfButton>
+<SfButton @onclick="DeleteRecord">Delete Data</SfButton>
+<SfButton @onclick="UpdateRecord">Update Data</SfButton>
+
+<SfSchedule TValue="AppointmentData" Height="550px" @bind-SelectedDate="@CurrentDate">
+    <ScheduleGroup Resources="@Resources"></ScheduleGroup>
+    <ScheduleResources>
+        <ScheduleResource TItem="ResourceData" TValue="int" DataSource="@ObservableRoomData" Field="RoomId" Title="Room" Name="Rooms" TextField="RoomText" IdField="Id" ColorField="RoomColor" AllowMultiple="false"></ScheduleResource>
+        <ScheduleResource TItem="ResourceData" TValue="int[]" DataSource="@ObservableOwnersData" Field="OwnerId" Title="Owner" Name="Owners" TextField="OwnerText" IdField="Id" GroupIDField="OwnerGroupId" ColorField="OwnerColor" AllowMultiple="true"></ScheduleResource>
+    </ScheduleResources>
+    <ScheduleEventSettings DataSource="@DataSource"></ScheduleEventSettings>
+    <ScheduleViews>
+        <ScheduleView Option="View.Day"></ScheduleView>
+        <ScheduleView Option="View.Week"></ScheduleView>
+        <ScheduleView Option="View.WorkWeek"></ScheduleView>
+        <ScheduleView Option="View.Month"></ScheduleView>
+        <ScheduleView Option="View.Agenda"></ScheduleView>
+    </ScheduleViews>
+</SfSchedule>
+
+
+@code{
+    DateTime CurrentDate = new DateTime(2020, 1, 31);
+    int roomId = 2;
+    int ownerId = 3;
+    public string[] Resources { get; set; } = { "Rooms", "Owners" };
+    public ObservableCollection<ResourceData> ObservableRoomData { get; set; }
+    public ObservableCollection<ResourceData> ObservableOwnersData { get; set; }
+
+    protected override void OnInitialized()
+    {
+        ObservableRoomData = new ObservableCollection<ResourceData>(GetRoomData());
+        ObservableOwnersData = new ObservableCollection<ResourceData>(GetOwnersData());
+    }
+    private static List<ResourceData> GetRoomData()
+    {
+        List<ResourceData> roomData = new List<ResourceData>
+        {
+            new ResourceData{ RoomText = "ROOM 1", Id = 1, RoomColor = "#cb6bb2" },
+            new ResourceData{ RoomText = "ROOM 2", Id = 2, RoomColor = "#56ca85" }
+        };
+        return roomData;
+    }
+
+    private static List<ResourceData> GetOwnersData()
+    {
+        List<ResourceData> ownersData = new List<ResourceData>
+        {
+            new ResourceData{ OwnerText = "Nancy", Id = 1, OwnerGroupId = 1, OwnerColor = "#ffaa00" },
+            new ResourceData{ OwnerText = "Steven", Id = 2, OwnerGroupId = 2, OwnerColor = "#f8a398" },
+            new ResourceData{ OwnerText = "Michael", Id = 3, OwnerGroupId = 1, OwnerColor = "#7499e1" }
+        };
+        return ownersData;
+    }
+
+    List<AppointmentData> DataSource = new List<AppointmentData>
+    {
+        new AppointmentData { Id = 1, Subject = "Meeting", StartTime = new DateTime(2020, 1, 31, 9, 30, 0) , EndTime = new DateTime(2020, 1, 31, 11, 0, 0), OwnerId = 1, RoomId = 1 }
+    };
+
+    public void AddRecord()
+    {
+        ownerId++;
+        ObservableOwnersData.Add(new ResourceData() { OwnerText = "Nancy", Id = ownerId, OwnerGroupId = 1, OwnerColor = "#ffaa00" });
+    }
+    public void DeleteRecord()
+    {
+        if (ObservableOwnersData.Count() != 0)
+        {
+            ObservableOwnersData.Remove(ObservableOwnersData.First());
+        }
+    }
+    public void UpdateRecord()
+    {
+        if (ObservableOwnersData.Count() != 0)
+        {
+            var data = ObservableOwnersData.First();
+            data.OwnerText = "Updated Name";
+        }
+    }
+
+    public class AppointmentData
+    {
+        public int Id { get; set; }
+        public string Subject { get; set; }
+        public string Location { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
+        public string Description { get; set; }
+        public bool IsAllDay { get; set; }
+        public string RecurrenceRule { get; set; }
+        public string RecurrenceException { get; set; }
+        public Nullable<int> RecurrenceID { get; set; }
+        public int OwnerId { get; set; }
+        public int RoomId { get; set; }
+    }
+    public class ResourceData : INotifyPropertyChanged
+    {
+        public int Id { get; set; }
+        private string roomText { get; set; }
+        public string RoomText
+        {
+            get { return roomText; }
+            set
+            {
+                this.roomText = value;
+                NotifyPropertyChanged("RoomText");
+            }
+        }
+        public string RoomColor { get; set; }
+        private string ownerText { get; set; }
+        public string OwnerText
+        {
+            get { return ownerText; }
+            set
+            {
+                this.ownerText = value;
+                NotifyPropertyChanged("OwnerText");
+            }
+        }
+        public string OwnerColor { get; set; }
+        public int OwnerGroupId { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged(string propertyName)
+        {
+            var handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+}
+```
+
 ## Scheduler with multiple resources
 
 It is possible to display the Scheduler in default mode without visually showcasing all the resources in it, but allowing to assign the required resources to the appointments through the event editor resource options.
@@ -161,7 +452,7 @@ Resource grouping support allows the Scheduler to group the resources in a hiera
 To get start quickly about grouping multiple resource on scheduler, you can check on this video:
 
 {% youtube
-"youtube:https://www.youtube.com/watch?v=XD3IYl9lkms"%}
+"youtube:https://www.youtube.com/watch?v=70qD6wycxAk"%}
 
 Scheduler supports both single and multiple levels of resource grouping that can be customized both in timeline and vertical Scheduler views.
 
@@ -505,7 +796,7 @@ In multi-level grouping, Scheduler usually groups the resources on the child lev
 
 The following image depicts how the scheduler will render when `ByGroupID` sets as false.
 
-![Resources with one-one](images/bygroupid.png)
+![Grouping in Blazor Scheduler](images/blazor-scheduler-grouping.png)
 
 ### Grouping resources by date
 
@@ -569,7 +860,7 @@ It groups the number of resources under each date and is applicable only on the 
 
 The above code renders the scheduler as in the following image.
 
-![Resources by date](images/bydate.png)
+![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-grouping-resource-by-date.png)
 
 > This kind of grouping by date is not applicable on any of the **timeline views**.
 
@@ -746,11 +1037,11 @@ It is possible to customize the resource header cells using built-in template op
 
 The output of the above code example in desktop mode will be as in the following image.
 
-![Resources header in desktop](images/resource-header.png)
+![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
 
 > To customize the resource header in compact mode properly make use of the class `e-device` as in the code example.
 
-![Resource header template in compact mode](images/header-template.png)
+![Resource Header Template in Compact Mode of Blazor Scheduler](images/blazor-scheduler-header-template.png)
 
 ## Customizing resource header with multiple columns
 
@@ -971,7 +1262,7 @@ It is possible to customize the resource headers to display with multiple column
 
 The output of the above code example in desktop mode will be as in the following image.
 
-![Multiple columns](images/multiple-columns.png)
+![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.png)
 
 ## Expand and collapse resource fields
 
@@ -1264,7 +1555,7 @@ Different working days can be set for the resources of Scheduler using the `Work
 
 The above code renders the scheduler as in the following image.
 
-![Resources with different workdays](images/resourceworkdays.png)
+![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.png)
 
 ### Set different work hours
 
@@ -1333,7 +1624,7 @@ Although the Scheduler views are designed keeping in mind the responsiveness of 
 
 With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a TreeView at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
 
-![Resources in compact mode](images/resource.png)
+![Blazor Scheduler Resources in Compact Mode](images/blazor-scheduler-resource-in-compact-mode.png)
 
 ## Adaptive UI in desktop
 

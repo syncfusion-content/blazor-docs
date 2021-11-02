@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Axis Customization in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about axis customization in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -41,7 +41,7 @@ The numeric axis value can be provided by specifying the [ValueType](https://hel
 }
 ```
 
-![Sparkline with numeric value type](images/Axis/Numeric.png)
+![Blazor Sparkline Chart with Numeric Value](images/Axis/blazor-sparkline-numeric-value.png)
 
 ### Category
 
@@ -72,11 +72,11 @@ The category axis value can be provided by specifying the [ValueType](https://he
 }
 ```
 
-![Sparkline with category value type](images/Axis/Category.png)
+![Blazor Sparkline Chart with Category Value](images/Axis/blazor-sparkline-category-value.png)
 
 ### DateTime
 
-The DateTime axis value can be provide by specifying the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to the [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
+The DateTime axis value can be provided by specifying the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to the [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -104,7 +104,7 @@ The DateTime axis value can be provide by specifying the [ValueType](https://hel
 }
 ```
 
-![Sparkline with date time value type](images/Axis/Datetime.png)
+![Blazor Sparkline Chart with DateTime Value](images/Axis/blazor-sparkline-datetime-value.png)
 
 ## Change the min and the max values of axis
 
@@ -120,7 +120,7 @@ The min and the max values of the X-axis can be customized using the [MinX](http
 
 > Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
 
-![Sparkline axis with min and max value](images/Axis/minmaxvalue.png)
+![Changing Minimum and Maximum Values of Blazor Sparkline Chart Axis](images/Axis/blazor-sparkline-min-max-value.png)
 
 ## Change value of axis
 
@@ -136,11 +136,11 @@ The horizontal axis line value can be customized by setting the [Value](https://
 
 > Refer to the [code block](#numeric) to know about the property value of the **ExpenditureReport**.
 
-![Sparkline with axis value](images/Axis/AxisValue.png)
+![Blazor Sparkline Chart with Axis Value](images/Axis/blazor-sparkline-axis-value.png)
 
 ## Axis Line Customization
 
-The axis line can be enabled by specifying the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property **true** in the [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
+The axis line can be enabled by specifying the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property to **true** in the [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
 
 > The axis line is not applicable for the [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type.
 
@@ -163,4 +163,4 @@ The axis line can be customized using the following properties.
 
 > Refer to the [code block](#numeric) to know about the property value of **ExpenditureReport**.
 
-![Sparkline with axis line customization](images/Axis/LineCustomization.png)
+![Blazor Sparkline Chart with Custom Axis Line](images/Axis/blazor-sparkline-custom-axis-line.png)

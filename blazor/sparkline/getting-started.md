@@ -15,7 +15,7 @@ This section briefly explains how to include a Sparkline component in the Blazor
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. Add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -122,7 +122,7 @@ Now map the `Month` and the `Celsius` fields from the datasource to [XName](http
 
 On successful compilation of the application, the Syncfusion Blazor Sparkline component will render in the web browser as following.
 
-![Sparkline Sample](./images/Sparkline.png)
+![Blazor Sparkline Chart](./images/blazor-sparkline.png)
 
 ## Change the type of Sparkline
 
@@ -140,7 +140,7 @@ Change the Sparkline type using the [Type](https://help.syncfusion.com/cr/blazor
 </SfSparkline>
 ```
 
-![Sparkline Sample](./images/Areatype.png)
+![Blazor Sparkline Area Chart](./images/blazor-area-sparkline.png)
 
 > Refer to [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
@@ -172,7 +172,7 @@ Available types are:
 
 > Refer to the [code block](#populate-sparkline-with-data) to know about the property value of **ClimateData**.
 
-![Sparkline with data label](./images/data-label.png)
+![Blazor Sparkline Chart with Data Label](./images/blazor-sparkline-data-label.png)
 
 ## Enable tooltip
 
@@ -194,7 +194,7 @@ When space constraints prevent from displaying information using Data Labels, th
 
 > Refer to the [code block](#populate-sparkline-with-data) to know about the property value of the **ClimateData**.
 
-![Sparkline with tooltip](./images/sparkline-with-tooltip.png)
+![Blazor Sparkline Chart with Tooltip](./images/blazor-sparkline-tooltip.png)
 
 ## See also
 

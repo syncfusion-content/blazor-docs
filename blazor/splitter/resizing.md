@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resize in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Resize in Syncfusion Blazor Splitter component and much more details.
+description: Checkout and learn here all about how to resize in Syncfusion Blazor Splitter component and much more details.
 platform: Blazor
 control: Splitter
 documentation: ug
@@ -9,15 +9,15 @@ documentation: ug
 
 # Resize in Blazor Splitter Component
 
-By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to makes the resize easy.
+By default, resizing will be enabled for split panes. Resizing gripper element will be added to the separator to make the resize easy.
 
-> Horizontal splitter allows you to resize in horizontal directions. Vertical splitter allows you to resize in vertical directions.
+> Horizontal splitter allows to resize in horizontal directions. Vertical splitter allows to resize in vertical directions.
 
 While resizing, previous and next panes will adjust its dimensions automatically.
 
 ## Min and Max validation
 
-Splitter allows you to set the minimum and maximum sizes for each pane. Resizing will not be occurred over the minimum and maximum values.
+Splitter allows to set the minimum and maximum sizes for each pane. Resizing will not be occurred over the minimum and maximum values.
 
 ```cshtml
 
@@ -66,13 +66,11 @@ Splitter allows you to set the minimum and maximum sizes for each pane. Resizing
 
 ```
 
-The output will be as follows.
-
-![Min and Max](./images/min-max-size.png)
+![Changing Blazor Splitter Size](./images/blazor-splitter-size.png)
 
 ## Prevent resizing
 
-You can disable the resizing for the pane by setting `false` to the `Resizable` API within `SplitterPane`.
+The resizing for the pane can be disabled by setting `false` to the `Resizable` API within `SplitterPane`.
 
 > Splitter resizing will be enabled only when the target of the adjacent pane's `Resizable` api should also be in `true` state.
 
@@ -123,17 +121,15 @@ You can disable the resizing for the pane by setting `false` to the `Resizable` 
 
 ```
 
-The output will be as follows.
-
-![Prevent resizing](./images/prevent-resize.png)
+![Prevent Resizing in Blazor Splitter](./images/blazor-splitter-prevent-resizing.png)
 
 ## Refresh content on resizing
 
-While resizing the panes, you can refresh the pane contents by using either `OnResizeStart`, `Resizing` or `OnResizeStop`.
+While resizing the panes, the pane contents can be refreshed by using either `OnResizeStart`, `Resizing` or `OnResizeStop`.
 
 ## Customize the resize grip and cursor
 
-You can customize the resize gripper icon and cursor in css level.
+The resize gripper icon and cursor can be customized in css level.
 
 ```cshtml
 
@@ -192,9 +188,7 @@ You can customize the resize gripper icon and cursor in css level.
 
 ```
 
-The output will be as follows.
-
-![Custom Gripper](./images/resize-gripper.png)
+![Blazor Splitter with Custom Gripper](./images/blazor-splitter-custom-gripper.png)
 
 ## See Also
 

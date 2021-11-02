@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Special Points Customization in Blazor Sparkline | Syncfusion
-description: Learn here all about Special Points Customization in Syncfusion Blazor Sparkline component and more.
+description: Learn here all about special points customization in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -49,7 +49,7 @@ The color of special points can be changed by specifying the corresponding prope
 }
 ```
 
-![Sparkline with point customization](images/SpecialPoints/SpecialPointCustomization.png)
+![Blazor Sparkline Chart with Custom Point](images/SpecialPoints/blazor-sparkline-custom-point.png)
 
 ## Tie point color
 
@@ -62,4 +62,4 @@ To highlight the tie area of the Y-axis value, use the [TiePointColor](https://h
 </SfSparkline>
 ```
 
-![Sparkline with tie point color](images/SpecialPoints/TiePoint.png)
+![Highlighting Tie Point Area in Blazor Sparkline Chart](images/SpecialPoints/blazor-sparkline-tie-point-color.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Content in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about Content in Syncfusion Blazor Tooltip component and much more details.
+description: Checkout and learn here all about content in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -38,6 +38,4 @@ Refer to the following code example to add formatted HTML content to the Tooltip
 }
 ```
 
-Output be like the below.
-
-![Blazor - Tooltip - Content](images/content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-with-content.gif)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Template in Blazor Tooltip Component | Syncfusion
-description: Checkout and learn here all about Template in Syncfusion Blazor Tooltip component and much more details.
+description: Checkout and learn here all about template in Syncfusion Blazor Tooltip component and much more details.
 platform: Blazor
 control: Tooltip
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Template in Blazor Tooltip Component
 
-Tooltip Template property can be used to customize the tooltip layout or to add any custom elements within the tooltip. You can add any content or HTML elements as tooltip content by specifying them in the `<content>` tag of the tooltip templates.
+Tooltip Template property can be used to customize the tooltip layout or to add any custom elements within the tooltip. Any content or HTML elements can be added as tooltip content by specifying them in the `<content>` tag of the tooltip templates.
 
 Refer to the following code example to add and display a HTML page to the Tooltip.
 
@@ -64,6 +64,4 @@ Refer to the following code example to add and display a HTML page to the Toolti
 </style>
 ```
 
-Output be like the below.
-
-![Blazor - Tooltip - Template](images/template.gif)
+![Blazor Tooltip with Template](images/blazor-tooltip-template.gif)

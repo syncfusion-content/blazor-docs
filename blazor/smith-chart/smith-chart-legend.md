@@ -53,7 +53,7 @@ By default, the visibility of the legend is **false**. To enable the legend, kin
 }
 ```
 
-![Smith Chart with legend](./images/Legend/Position.png)
+![Changing Legend Position in Blazor Smith Chart](./images/Legend/blazor-smith-chart-legend-position.png)
 
 Other than these positions, the legend can be placed anywhere in the Smith Chart. To achieve this, set the [Position](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Position) as **Custom** in the [SmithChartLegendSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#properties) and specify the X and Y coordinates using the [X](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#Syncfusion_Blazor_Charts_SmithChartLegendLocation_X) and [Y](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#Syncfusion_Blazor_Charts_SmithChartLegendLocation_Y) properties in the [SmithChartLegendLocation](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendLocation.html#properties).
 
@@ -96,7 +96,7 @@ Other than these positions, the legend can be placed anywhere in the Smith Chart
 }
 ```
 
-![Smith Chart with legend custom position](./images/Legend/LegendLocation.png)
+![Blazor Smith Chart Legend with Custom Position](./images/Legend/blazor-smith-chart-legend-with-custom-position.png)
 
 ## Legend Alignment
 
@@ -142,7 +142,7 @@ Other than positioning the legend in the Smith Chart, its alignment also can be 
 }
 ```
 
-![Smith Chart with legend alignment](./images/Legend/Alignment.png)
+![Changing Legend Alignment in Blazor Smith Chart](./images/Legend/blazor-smith-chart-legend-alignment.png)
 
 ## Customization
 
@@ -190,11 +190,11 @@ By default, the legend is rendered in **Circle** shape and the color of the shap
 }
 ```
 
-![Smith Chart with legend shape](./images/Legend/Shape.png)
+![Blazor Smith Chart Legend with Custom Shape](./images/Legend/blazor-smith-chart-legend-custom-shape.png)
 
 ### Legend Size
 
-By default, the legend takes 20% - 25% of the Smith Chart's height horizontally, when it is placed on the top or the bottom position and 20% - 25% of the width vertically, when it is placed on the left or the right position of the Chart. It can be changed by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Height) property of the legend settings. It can be in pixel or in percentage.
+By default, the legend takes 20% - 25% of the Smith Chart's height horizontally when it is placed on the top or the bottom position, and 20% - 25% of the width vertically when it is placed on the left or the right position of the Chart. It can be changed by using the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Width) and the [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SmithChartLegendSettings.html#Syncfusion_Blazor_Charts_SmithChartLegendSettings_Height) property of the legend settings. It can be in pixel or in percentage.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -234,7 +234,7 @@ By default, the legend takes 20% - 25% of the Smith Chart's height horizontally,
 }
 ```
 
-![Smith Chart with legend size](./images/Legend/Size.png)
+![Blazor Smith Chart Legend with Custom Size](./images/Legend/blazor-smith-chart-legend-custom-size.png)
 
 ### Padding
 
@@ -281,7 +281,7 @@ The space between two legend items can be customized using the [ItemPadding](htt
 }
 ```
 
-![Smith Chart with legend padding](./images/Legend/Padding.png)
+![Blazor Smith Chart Legend with Padding](./images/Legend/blazor-smith-chart-legend-with-padding.png)
 
 ### Other customization
 
@@ -332,7 +332,7 @@ Each legend item's style, border, and text can be customized in the Smith Chart 
 }
 ```
 
-![Smith Chart with legend customization](./images/Legend/Customization.png)
+![Customizing Legend in Blazor Smith Chart](./images/Legend/blazor-smith-chart-custom-legend.png)
 
 ## Toggle Visibility
 
@@ -421,7 +421,7 @@ The legend can also be placed in rows and columns using the [RowCount](https://h
 }
 ```
 
-![Smith Chart with legend row and column](./images/Legend/ColumnCount.png)
+![Blazor Smith Chart with Legend Row and Column](./images/Legend/blazor-smith-chart-legend-row-and-column.png)
 
 ## Title
 
@@ -473,4 +473,4 @@ The title depicts the information about the legend collection in the Smith Chart
 }
 ```
 
-![Smith Chart with legend title](./images/Legend/LegendTitle.png)
+![Blazor Smith Chart with Legend Title](./images/Legend/blazor-smith-chart-legend-title.png)

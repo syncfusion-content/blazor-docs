@@ -9,7 +9,7 @@ documentation: ug
 
 # Model binding in Blazor Toggle Switch Button Component
 
-This section demonstrates the Strongly typed extension support in Toggle Switch Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. You can access model properties on that view. You can use data associated with model to render the component.
+This section demonstrates the strongly typed extension support in Toggle Switch Button. The view that can bind with any model is called as strongly typed view. You can bind any class as model to view. The model properties can be accessed on that view. The data associated with model can be used to render the component.
 
 In this sample, first check the option and click the submit button to post the selected value in the Toggle Switch Button. When value is not checked, validation error message will be shown below the Toggle Switch Button.
 
@@ -44,6 +44,4 @@ In this sample, first check the option and click the submit button to post the s
 
 ```
 
-Output be like
-
-![Switch Sample](./../images/switch-form.png)
+![Model Binding in Blazor Toggle Switch Button](./../images/blazor-toggle-switch-button-model-binding.png)

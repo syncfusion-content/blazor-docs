@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Set item-wise custom template in Blazor Toolbar Component | Syncfusion
-description: Checkout and learn here all about Set item-wise custom template in Syncfusion Blazor Toolbar component and more.
+description: Checkout and learn here all about how to set item-wise custom template in Syncfusion Blazor Toolbar component and more.
 platform: Blazor
 control: Toolbar
 documentation: ug
@@ -39,6 +39,4 @@ The Toolbar supports adding template commands using the  `Template` property. Te
 
 ```
 
-Output be like the below.
-
-![Toolbar Item Custom Template](../images/toolbar_custom_template.png)
+![Blazor Toolbar Item with Custom Template](../images/blazor-toolbar-item-custom-template.png)

@@ -13,10 +13,10 @@ documentation: ug
 
 The following properties can be used to customize [MajorTicklines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMajorTickLines.html) and [MinorTicklines](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.BulletChartMinorTickLines.html).
 
-* **Width** - Specifies the width of the ticklines.
-* **Height** - Specifies the height of the ticklines.
-* **Color** - Specifies the color of the ticklines.
-* **EnableRangeColor** - Specifies the color of the ticklines and represents the color from corresponding range colors.
+* **Width** - Specifies the width of ticklines.
+* **Height** - Specifies the height of ticklines.
+* **Color** - Specifies the color of ticklines.
+* **EnableRangeColor** - Specifies the color of ticklines and represents the color from corresponding range colors.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -178,7 +178,7 @@ To separate the groups of thousands, set the [EnableGroupSeparator](https://help
 
 ## Custom Label Format
 
-Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_LabelFormat) property, axis labels can be specified with a custom defined format in addition to the axis value. The label format uses a placeholder such as **${value}K**, the value of which represents the axis label.
+Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfBulletChart-1.html#Syncfusion_Blazor_Charts_SfBulletChart_1_LabelFormat) property, axis labels can be specified with a custom defined format in addition to the axis value. The label format uses a placeholder such as **${value}K**, which represents the axis label.
 
 ```cshtml
 @using Syncfusion.Blazor.Charts

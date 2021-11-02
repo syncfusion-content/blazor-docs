@@ -9,7 +9,7 @@ documentation: ug
 
 # Globalization in Blazor TimePicker Component
 
-Globalization is the combination of  adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
+Globalization is the combination of adapting the control to various languages by means of parsing and formatting the date or number `Internationalization` and also by adding cultural specific customizations and translating the text `localization`.
 
 ## Blazor server side
 
@@ -38,11 +38,11 @@ namespace BlazorApplication
 }
 ```
 
-The **Localization** library allows you to localize default text content. The TimePicker component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
+The **Localization** library allows to localize default text content. The TimePicker component has static text that can be changed to other cultures (Arabic, Deutsch, French, etc.).
 
-In the following examples, demonstrate how to enable **Localization** for TimePicker in server side Blazor samples. Here, we have used Resource file to translate the static text.
+In the following examples, demonstrate how to enable **Localization** for TimePicker in server side Blazor samples. Here, Resource file is used to translate the static text.
 
-The Resource file is an XML file which contains the strings(key and value pairs) that you want to translate into different language. You can also refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.Net Core application framework.
+The Resource file is an XML file which contains the strings(key and value pairs) that has to be translated into different language. Refer Localization [link](https://blazor.syncfusion.com/documentation/common/localization/) to know more about how to configure and use localization in the ASP.NET Core application framework.
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -75,7 +75,7 @@ namespace BlazorApplication
                 options.SupportedCultures = supportedCultures;
                 options.SupportedUICultures = supportedCultures;
                 options.RequestCultureProviders = new List<IRequestCultureProvider>() {
-                 new QueryStringRequestCultureProvider() // Here, You can also use other localization provider
+                 new QueryStringRequestCultureProvider() // Here, you can also use other localization provider
                 };
             });
             services.AddSingleton(typeof(ISyncfusionStringLocalizer), typeof(SampleLocalizer));
@@ -116,7 +116,7 @@ namespace blazorCalendars
 | --- | --- |
 | TimePicker_Placeholder | Wähle eine Zeit |
 
-* Finally, Specify the culture for TimePicker using `locale` property.
+* Finally, specify the culture for TimePicker using `locale` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -195,13 +195,11 @@ namespace WebAssemblyLocale
 }
 ```
 
-The output will be as follows.
-
-![TimePicker](./images/de_culture.png)
+![Localization in Blazor TimePicker](./images/blazor-timepicker-localization.png)
 
 ## Customize the localized text
 
-* You can change the localized text of particular component by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
+* The localized text of particular component can be changed by editing the `wwwroot/blazor-locale/src/{{locale name}}.json` file.
 
 * In the following code, modified the localized text of `placeholder` in `de` culture.
 
@@ -217,9 +215,7 @@ The output will be as follows.
 }
 ```
 
-The output will be as follows.
-
-![TimePicker](./images/de_culture_02.png)
+![Customizing Localized Text in Blazor TimePicker](./images/blazor-timepicker-localize-text-customization.png)
 
 ## Right-To-Left
 
@@ -243,6 +239,5 @@ The following code example initializes the TimePicker component in `Arabic` cult
 }
 ```
 
-The output will be as follows.
 
-![TimePicker](./images/ar_culture.png)
+![Right to Left in Blazor TimePicker](./images/blazor-timepicker-right-to-left.png)

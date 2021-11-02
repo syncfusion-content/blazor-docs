@@ -15,7 +15,7 @@ This section briefly explains how to include a Range Navigator component in the 
 
 1. Install **Syncfusion.Blazor** NuGet package to the application by using the **NuGet Package Manager**.
 
-2. Add the client-side resources through CDN or from the NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -116,7 +116,7 @@ Now map `Date` and `Close` fields from the datasource to [XName](https://help.sy
 
 On successful compilation of the application, the Syncfusion Blazor Range Navigator component will render in the web browser as shown below.
 
-![range navigator](images/range-navigator.png)
+![Blazor RangeNavigator Component](images/blazor-range-navigator.png)
 
 ## See also
 

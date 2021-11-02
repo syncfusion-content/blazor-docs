@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Appearance in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Appearance in Syncfusion Blazor Sparkline component and much more.
+description: Checkout and learn here all about appearance in Syncfusion Blazor Sparkline component and much more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -24,7 +24,7 @@ The Sparkline supports the right-to-left (RTL) rendering that can be enabled by 
 </SfSparkline>
 ```
 
-![Sparkline with RTL](images/Appearance/Rtl.png)
+![Right to Left in Blazor Sparkline Chart](images/Appearance/blazor-sparkline-right-to-left.png)
 
 ## Border
 
@@ -41,7 +41,7 @@ The border can be enabled and customized by specifying the [Color](https://help.
 </SfSparkline>
 ```
 
-![Sparkline with border](images/Appearance/border.png)
+![Blazor Sparkline Chart with Border](images/Appearance/blazor-sparkline-with-border.png)
 
 ## Padding
 
@@ -59,7 +59,7 @@ The Sparkline supports padding between the container and the component using the
 </SfSparkline>
 ```
 
-![Sparkline with padding](images/Appearance/Padding.png)
+![Blazor Sparkline Chart with Padding](images/Appearance/blazor-sparkline-with-padding.png)
 
 ## Background
 
@@ -78,4 +78,4 @@ The background color of the Sparkline area can be changed using the [Background]
 </SfSparkline>
 ```
 
-![Sparkline with background customization](images/Appearance/ContainerBackground.png)
+![Blazor Sparkline Chart with Custom Background](images/Appearance/blazor-sparkline-custom-background.png)

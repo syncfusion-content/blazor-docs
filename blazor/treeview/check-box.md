@@ -9,7 +9,7 @@ documentation: ug
 
 # CheckBox in Blazor TreeView Component
 
-The Blazor TreeView component allows you to check more than one node in TreeView without affecting the UI's appearance by enabling the `ShowCheckBox` property. When this property is enabled, checkbox appears before each TreeView node text.
+The Blazor TreeView component allows to check more than one node in TreeView without affecting the UI's appearance by enabling the `ShowCheckBox` property. When this property is enabled, checkbox appears before each TreeView node text.
 
 * If one of the child nodes is not in a checked state, then the parent node will be in an intermediate state.
 
@@ -17,7 +17,7 @@ The Blazor TreeView component allows you to check more than one node in TreeView
 
 * If a parent node is checked, then all the child nodes' state will also be checked.
 
-By default, the checkbox state of parent and child nodes are dependent on each other. If you need independent checked state, you can achieve it using the `AutoCheck` property.
+By default, the checkbox state of parent and child nodes are dependent on each other. For independent checked state, achieve it using the `AutoCheck` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Navigations
@@ -99,6 +99,4 @@ By default, the checkbox state of parent and child nodes are dependent on each o
 }
 ```
 
-Output be like the below.
-
-![TreeView Sample](./images/checkbox.png)
+![Blazor TreeView with CheckBox](./images/blazor-treeview-checkbox.png)

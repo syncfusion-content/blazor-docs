@@ -9,9 +9,9 @@ documentation: ug
 
 # Getting Started with Blazor Toast Component
 
-This section briefly explains how to include a Toast component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Toast component in the Blazor Server-side application. Refer to Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
-To get start quickly with Blazor Toast component, you can check on this video:
+To get start quickly with Blazor Toast component, check on this video:
 {% youtube
 "youtube:https://www.youtube.com/watch?v=tMa7JvcfNcY"%}
 
@@ -19,7 +19,7 @@ To get start quickly with Blazor Toast component, you can check on this video:
 
 * Install **Syncfusion.Blazor.Notifications** NuGet package to the application by using the **NuGet Package Manager**.
 
-* You can add the client-side resources through CDN or from NuGet package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* The client-side resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
 ```cshtml
 
@@ -84,7 +84,7 @@ namespace BlazorApplication
 
 ## Add Toast component
 
-To initialize the Toast component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
+To initialize the Toast component, add the below code to **Index.razor** view page which is present under **~/Pages** folder.
 
 The following code explains how to initialize a simple Toast in Razor page.
 
@@ -131,11 +131,9 @@ The following code explains how to initialize a simple Toast in Razor page.
 
 ## Run the application
 
-After successful compilation of your application, run the application.
+After successful compilation of the application, run the application.
 
-The output will be as follows.
-
-![Toast Sample](./images/toast.png)
+![Blazor Toast](./images/blazor-toast.png)
 
 ## See Also
 

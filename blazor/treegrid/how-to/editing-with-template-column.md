@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Editing with template column in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Editing with template column in Syncfusion Blazor TreeGrid component and more.
+description: Checkout and learn here all about editing with template column in Syncfusion Blazor TreeGrid component and more.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,9 +9,7 @@ documentation: ug
 
 # Editing with template column in Blazor TreeGrid Component
 
-You can edit a template column value by defining the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for that particular [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component
-
-In the below demo, the **TaskName** column is rendered with the template.
+A template column value can be edited by defining the [Field](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_Field) property for that particular [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) component.
 
 {% tabs %}
 
@@ -88,5 +86,4 @@ public class TreeData
 
 {% endtabs %}
 
-Output be like the below.
-![Final output](../images/template-edit.PNG)
+![Editing with Template Column in Blazor TreeGrid](../images/blazor-treegrid-template-editing.PNG)

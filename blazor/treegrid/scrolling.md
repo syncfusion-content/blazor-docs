@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Scrolling in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about Scrolling in Syncfusion Blazor TreeGrid component and much more details.
+description: Checkout and learn here all about scrolling in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
@@ -9,9 +9,9 @@ documentation: ug
 
 # Scrolling in Blazor TreeGrid Component
 
-The scrollbar will be displayed in the tree grid when content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html). The vertical and horizontal scrollbars will be displayed based on the following criteria:
+The scrollbar will be displayed in the tree grid when the content exceeds the element [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) or [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html). The vertical and horizontal scrollbars will be displayed based on the following criteria:
 
-The vertical scrollbar appears when the total height of rows present in the tree grid exceeds its element height. The horizontal scrollbar appears when the sum of columns width exceeds the tree grid element width. The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) are used to set the tree grid height and width, respectively.
+The vertical scrollbar appears when the total height of rows present in the tree grid exceeds its element height. The horizontal scrollbar appears when the sum of the columns' width exceeds the tree grid element width. The [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) are used to set the tree grid height and width, respectively.
 
 > The default value for [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Height.html) and [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~Width.html) is **auto**.
 
@@ -83,9 +83,7 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Set Width and Height](images/setheight.png)
+![Scrolling in Blazor TreeGrid](images/blazor-treegrid-scrolling.png)
 
 ## Responsive with parent container
 
@@ -276,15 +274,13 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![Frozen](images/Frozen.png)
+![Frozen Rows and Columns in Blazor TreeGrid](images/blazor-treegrid-frozen-rows-and-columns.png)
 
 ### Freeze particular columns
 
 To freeze particular column in the tree grid, the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IsFrozen.html) property can be used.
 
-In this demo, the columns with field name **TaskName** and **Duration** is frozen using the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IsFrozen.html) property.
+In this demo, the columns with the field name **TaskName** and **Duration** is frozen using the [IsFrozen](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~IsFrozen.html) property.
 
 {% tabs %}
 
@@ -350,9 +346,7 @@ public class TreeData
 
 {% endtabs %}
 
-The following output is displayed as a result of the above code example.
-
-![IsFreeze](images/IsFreeze.png)
+![Freezing Specific Column in Blazor TreeGrid](images/blazor-treegrid-freeze-specific-column.png)
 
 ### Limitations
 

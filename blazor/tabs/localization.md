@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Localization in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Localization in Syncfusion Blazor Tabs component and much more details.
+description: Checkout and learn here all about localization in Syncfusion Blazor Tabs component and much more details.
 platform: Blazor
 control: Tabs
 documentation: ug
@@ -17,7 +17,7 @@ Localization library allows to localize the default text content of Tab. In Tab,
 
 ## Blazor Server Side
 
-The static local texts in the Tabs component can be changed to other culture by referring the Resource file. You can refer more details about localization [here](../../common/localization/). By default, Tabs is set to follow the English culture ('en-US'). The following steps explains how to render the Tabs in German culture ('de-DE').
+The static local texts in the Tabs component can be changed to other culture by referring the Resource file. Refer more details about localization [here](../../common/localization/). By default, Tabs is set to follow the English culture ('en-US'). The following steps explains how to render the Tabs in German culture ('de-DE').
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -251,6 +251,4 @@ The following steps explain you to set `de-DE` culture for Tabs in web assembly 
     </SfTab>
     ```
 
-    Output be like the below.
-
-    ![Tab Localization](./images/localization.png)
+    ![Localization in Blazor Tabs](./images/blazor-tabs-localization.png)
