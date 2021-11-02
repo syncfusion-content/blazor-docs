@@ -129,7 +129,7 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 
 ![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
 
-> You can also explore our [Blazor TextBox example](https://blazor.syncfusion.com/demos/textbox/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
+> You can also explore our [Blazor TextBox example](https://blazor.syncfusion.com/demos/textbox/default-functionalities?theme=bootstrap5) that shows how to configure the textbox in Blazor.
 
 ## See Also
 

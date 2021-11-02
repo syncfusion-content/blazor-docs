@@ -104,7 +104,7 @@ After successful compilation of your application, simply press F5 to run the app
 
 ![Blazor RadioButton Component](./images/blazor-radiobutton-component.png)
 
-> You can also explore our [Blazor RadioButton example](https://blazor.syncfusion.com/demos/buttons/radio-button?theme=bootstrap5) that shows how to present and manipulate data.
+> You can also explore our [Blazor RadioButton example](https://blazor.syncfusion.com/demos/buttons/radio-button?theme=bootstrap5) that shows how to configure the radio button in Blazor.
 
 ## See Also
 

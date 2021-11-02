@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Spinner Component
 
-This section briefly explains how to include a Spinner component in the Blazor Server-side application. Refer to  Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in the Blazor Server-side application. Refer to  Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -121,3 +121,5 @@ The following code explains how to initialize a simple Spinner in the Blazor Raz
 After successful compilation of the application, simply press `F5` to run the application.
 
 ![Blazor Spinner](./images/blazor-spinner.png)
+
+> You can also explore our [Blazor Spinner example](https://blazor.syncfusion.com/demos/spinner/overview?theme=bootstrap5) that shows how to configure the spinner in Blazor.

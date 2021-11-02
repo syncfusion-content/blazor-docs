@@ -114,7 +114,7 @@ The output will be as follows.
 
 ![Selection in Blazor Calendar Component](./images/blazor-calendar-selection.png)
 
-> You can also explore our [Blazor Calendar example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
+> You can also explore our [Blazor Calendar example](https://blazor.syncfusion.com/demos/calendar/default-functionalities?theme=bootstrap5) that shows how to configure the calendar in Blazor.
 
 ## See Also
 

@@ -138,7 +138,7 @@ The output will be as follows.
 
 ![Blazor NumericTextBox with Precision Value](./images/blazor-numerictextbox-precision-value.png)
 
-> You can also explore our [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
+> You can also explore our [Blazor NumericTextBox example](https://blazor.syncfusion.com/demos/numeric-textbox/default-functionalities?theme=bootstrap5) that shows how to configure the numeric textbox in Blazor.
 
 ## See Also
 
