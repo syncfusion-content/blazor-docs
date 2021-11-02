@@ -107,7 +107,7 @@ Usually string sorting is applied to field members even if it starts with number
 
 ```
 
-![AlphaNumericSorting in Blazor PivotTable](images/blazor-pivottable-alpha-numberic-sorting.png)
+![Alpha Numeric Sorting in Blazor PivotTable](images/blazor-pivottable-alpha-numberic-sorting.png)
 
 ## Value sorting
 
