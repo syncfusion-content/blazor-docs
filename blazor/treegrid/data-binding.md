@@ -392,7 +392,7 @@ Similarly, if the user navigates to a new page, the root nodes of that specific 
 ```
 
 > * By default, **SfDataManager** uses **ODataAdaptor** for remote data-binding.
-> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://ej2.syncfusion.com/documentation/data/adaptors/?no-cache=1) for more details.
+> * Based on the RESTful web services, set the corresponding adaptor to SfDataManager. Refer [here](https://blazor.syncfusion.com/documentation/data/adaptors) for more details.
 > * Filtering and searching server-side data operations are not supported in load on demand.
 
 ### Offline mode

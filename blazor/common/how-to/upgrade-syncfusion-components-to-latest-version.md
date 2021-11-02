@@ -33,7 +33,7 @@ Ensure your CSS files have been properly configured in your application.
     <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
     ```
 
-> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](http://ej2.syncfusion.com/themestudio/) for more details on ThemeStudio.
+> For production purpose and minimal requirement, Syncfusion provides an option to generate custom styles of selective components by using the ThemeStudio web application. Refer to this [link](https://blazor.syncfusion.com/themestudio/) for more details on ThemeStudio.
 
 ## Breaking changes
 

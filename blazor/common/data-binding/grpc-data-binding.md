@@ -22,7 +22,7 @@ The following software are needed,
 
 Open Visual Studio 2019 and follow the steps in the below documentation to **create the Blazor WebAssembly(Hosted) Application**.
 
-[Create Blazor WebAssembly Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/)
+[Create Blazor WebAssembly Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio/)
 
 Finally, ensure to select the **ASP.NET Core Hosted** application.
 

@@ -80,4 +80,4 @@ documentation: ug
 
 ## Creating custom themes for Syncfusion Blazor UI Components
 
-[ThemeStudio](http://ej2.syncfusion.com/themestudio/) is an online web application where you can customize the Syncfusion built-in themes and generate custom theme files for a specific set of Syncfusion Blazor UI components. It will reduce the theme file size for production environment. Refer to [here](https://blazor.syncfusion.com/documentation/appearance/theme-studio/) for more details about ThemeStudio.
+[ThemeStudio](https://blazor.syncfusion.com/themestudio/) is an online web application where you can customize the Syncfusion built-in themes and generate custom theme files for a specific set of Syncfusion Blazor UI components. It will reduce the theme file size for production environment. Refer to [here](https://blazor.syncfusion.com/documentation/appearance/theme-studio/) for more details about ThemeStudio.

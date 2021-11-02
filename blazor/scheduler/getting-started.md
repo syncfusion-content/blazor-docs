@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Scheduler Component
 
-This section briefly explains about how to include a simple Scheduler Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side Scheduler](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications..
+This section briefly explains about how to include a simple Scheduler Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side Scheduler](../getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly Scheduler](how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications..
 
 To get start quickly with Blazor Scheduler, you can check on this video:
 
@@ -297,5 +297,5 @@ Each individual Scheduler views can be customized with its own options such as s
 ## See Also
 
 1. [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
-2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/)
+2. [Getting Started with Syncfusion Blazor for client-side in Visual Studio](../getting-started/blazor-webassembly-visual-studio/)
 3. [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)

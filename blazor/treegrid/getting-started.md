@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor TreeGrid Component
 
-This section briefly explains about how to include a **Tree Grid** Component in the Blazor server-side application. It also includes initializing Tree Grid Blazor component and usage of features such as paging and sorting using the [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/). Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://ej2.syncfusion.com/aspnet-core-blazor/documentation/getting-started/vs-blazor-server/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a **Tree Grid** Component in the Blazor server-side application. It also includes initializing Tree Grid Blazor component and usage of features such as paging and sorting using the [Visual Studio](https://visualstudio.microsoft.com/vs/preview/). Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -28,7 +28,7 @@ This section briefly explains about how to include a **Tree Grid** Component in 
 </head>
 ```
 
-> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+> For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie) for more information.
 
  ```html
 <head>
@@ -236,5 +236,5 @@ After successful compilation of the application, simply press F5 to run the appl
 ## See also
 
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Client-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)

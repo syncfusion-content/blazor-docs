@@ -21,7 +21,7 @@ In this topic, we are going to discuss how to consume data from a database using
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 
 ## Creating the database
 

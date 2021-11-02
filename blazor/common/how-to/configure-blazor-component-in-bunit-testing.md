@@ -41,7 +41,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Add existing Blazor project](images/bunit/xunit-add-existing-project.png)
 
-    > Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
+    > Refer to [Blazor Server Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation, if you don't have any existing application.
 
 2. Now, right-click on the xUnit project and select `Add -> Project Reference` and select the added project reference.
 
@@ -195,7 +195,7 @@ This section explains how to configure Syncfusion Blazor component in bUnit test
 
     ![Add existing Blazor project](images/bunit/nunit-add-existing-project.png)
 
-    > Refer to [Blazor Server Getting Started](../../getting-started/visual-studio-2019/#getting-started-with-blazor-server-application) documentation, if you don't have any existing application.
+    > Refer to [Blazor Server Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation, if you don't have any existing application.
 
 2. Now, right-click on the NUnit project and select `Add -> Project Reference` and select the added project reference.
 

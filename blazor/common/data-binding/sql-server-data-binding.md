@@ -23,7 +23,7 @@ The following software are needed:
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) to create the Blazor Server Application.
+Open Visual Studio and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) to create the Blazor Server Application.
 
 ## Add Syncfusion Blazor DataGrid package
 

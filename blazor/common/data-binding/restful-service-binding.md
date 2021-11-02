@@ -249,7 +249,7 @@ namespace ODataServiceProject
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 
 ### Add Syncfusion Blazor DataGrid package
 
