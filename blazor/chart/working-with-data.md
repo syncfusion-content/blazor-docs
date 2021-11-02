@@ -55,7 +55,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 
 ```
 
-![Local Data](images/working-data/local-data.png)
+![Blazor Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
 
 > By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -92,7 +92,7 @@ Chart is a generic component which is strongly bound to a model type. There are 
 }
 ```
 
-![ExpandoObject Binding](images/working-data/expandoObject.png)
+![Blazor Chart with ExpandoObject Binding](images/working-data/blazor-chart-expando-object-binding.png)
 
 ## Remote Data
 
@@ -116,7 +116,7 @@ Assign service data as an instance of [SfDataManager](https://help.syncfusion.co
 
 ```
 
-![Remote Data](images/working-data/remote-data.png)
+![Remote Data Binding in Blazor Chart](images/working-data/blazor-chart-remote-data-binding.png)
 
 ### Binding with OData services
 
@@ -146,7 +146,7 @@ The [WebApiAdaptor](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data
 </SfChart>
 ```
 
-![Web API](images/working-data/webapi.png)
+![Blazor Chart with Web API Binding](images/working-data/blazor-chart-web-api-binding.png)
 
 ### Sending additional parameters to the server
 
@@ -491,7 +491,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 
 ```
 
-![Empty points](images/working-data/custom-emptypoint.png)
+![Blazor Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

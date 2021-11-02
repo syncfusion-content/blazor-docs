@@ -17,33 +17,33 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 1. Choose **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in aspnetcore blazor](images/getting-started/createproject.png)
+    ![Creating New Project in Blazor](images/getting-started/blazor-create-project.png)
 
 2. Select **Blazor App** from the template and click **Next** button.
 
-    ![blazor template](images/getting-started/blazorapp.png)
+    ![blazor Application Template](images/getting-started/blazor-application-template.png)
 
 3. Now, the project configuration window will popup. Click **Create** button to create a new project with the default project configuration.
 
-    ![asp.net core project configuration](images/getting-started/blazorconfig.png)
+    ![Blazor Project Configuration](images/getting-started/blazor-project-configuration.png)
 
 4. Depending on the requirement, select **.NET Core 3.1 or higher** as the target framework.
 
-    ![asp.net core target](images/getting-started/blazor-select-template.png)
+    ![Selecting Target Framework in Blazor Template](images/getting-started/blazor-select-template.png)
 
 5. Choose **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor WebAssembly application.
 
-    ![select framework](images/getting-started/webassembly.png)
+    ![Selecting Blazor WebAssembly App](images/getting-started/blazor-webassembly-app.png)
 
 ## Importing Syncfusion Blazor component in the application
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the **NuGet Package Manager**. Right-click the project and select **Manage NuGet Packages**.
 
-    ![nuget explorer](images/getting-started/nugetconfig.png)
+    ![Blazor NuGet Explorer](images/getting-started/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the **Browser** tab and install Syncfusion.Blazor NuGet package in the application.
 
-    ![select nuget](images/getting-started/nugetinstall.png)
+    ![Select Blazor NuGet Package](images/getting-started/blazor-nuget-package-selection.png)
 
 3. You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/wwwroot/index.html** page. For Internet Explorer 11, kindly refer the polyfills.
 
@@ -111,7 +111,7 @@ To initialize the chart component add the below code to your **Index.razor** vi
 
 On successful compilation of your application, the Syncfusion Blazor Chart component will render in the web browser.
 
-![Getting Started](images/getting-started/chart.png)
+![Blazor Chart](images/getting-started/blazor-chart.png)
 
 ## Populate Chart with Data
 
@@ -170,7 +170,7 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 }
 ```
 
-![chart](images/getting-started/column.png)
+![Blazor Chart with Column](images/getting-started/blazor-chart-column.png)
 
 ## Add Titles
 
@@ -209,7 +209,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 }
 ```
 
-![chart](images/getting-started/columntitle.png)
+![Blazor Chart with Title](images/getting-started/blazor-chart-title.png)
 
 ## Add Data Label
 
@@ -251,7 +251,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 }
 ```
 
-![chart](images/getting-started/data-label.png)
+![Blazor Chart with Data Label](images/getting-started/blazor-chart-data-label.png)
 
 ## Enable Tooltip
 
@@ -291,7 +291,7 @@ When space constraints prevent you from displaying information using data labels
 }
 ```
 
-![chart](images/getting-started/tooltip.png)
+![Blazor Chart with Tooltip](images/getting-started/blazor-chart-tooltip.png)
 
 ## Enable Legend
 
@@ -331,7 +331,7 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 }
 ```
 
-![Legend](images/getting-started/legend.png)
+![Blazor Chart with Legend](images/getting-started/blazor-chart-legend.png)
 
 > You can find the fully working sample for chart [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/WASM1504645919.zip). And also you can refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 
