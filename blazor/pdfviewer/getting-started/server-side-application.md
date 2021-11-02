@@ -83,7 +83,7 @@ W>If you prefer the above new standard (individual NuGet packages), then skip th
 <head>
     ....
     ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 ```
 
