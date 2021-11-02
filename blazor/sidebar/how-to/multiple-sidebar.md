@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Multiple Sidebar in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about Multiple Sidebar in Syncfusion Blazor Sidebar component and much more.
+description: Checkout and learn here all about multiple sidebar in Syncfusion Blazor Sidebar component and much more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -79,7 +79,5 @@ In the following sample, more than one sidebar is rendered based on `Position` p
 </style>
 
 ```
-
-Output be like the below.
 
 ![Blazor Multiple Sidebars](./../images/blazor-multiple-sidebars.png)

@@ -36,7 +36,7 @@ The rendered Maps can be printed directly from the browser by calling the [Print
 }
 ```
 
-![Maps with print option](./images/Print/print.png)
+![Printing in Blazor Maps](./images/Print/blazor-maps-printing.png)
 
 ## Export
 
@@ -68,7 +68,7 @@ To use the image export functionality, set the [AllowImageExport](https://help.s
 }
 ```
 
-![Maps with export option](./images/Print/export.png)
+![Exporting in Blazor Maps](./images/Print/blazor-maps-exporting.png)
 
 ### PDF Export
 
@@ -94,7 +94,7 @@ To use the PDF export functionality, set the [AllowPdfExport](https://help.syncf
 }
 ```
 
-![Maps with export option](./images/Print/export.png)
+![Blazor Maps with PDF Export](./images/Print/blazor-maps-exporting.png)
 
 ### Exporting Maps as base64 string of the file
 
@@ -153,4 +153,4 @@ The rendered Maps with providers such as OSM, Bing and other map providers can b
 }
 ```
 
-![Maps with export option](./images/Print/osm-export.png)
+![Blazor Maps with OSM Export](./images/Print/blazor-maps-osm-export.png)

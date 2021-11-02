@@ -21,7 +21,7 @@ Image files will be internally converted to base64 string. Whereas, online image
 
 Document editor provides built-in image resizer that can be injected into your application based on the requirements. This allows you to resize the image by dragging the resizing points using mouse or touch interactions. This resizer appears as follows.
 
-![Image](images/image.jpeg)
+![Image Resizing in Blazor DocumentEditor](images/blazor-document-editor-image-resizing.jpeg)
 
 ## Changing size
 

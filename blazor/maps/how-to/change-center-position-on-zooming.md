@@ -24,4 +24,4 @@ Blazor Maps component provides support to change the center position of the Maps
 </SfMaps>
 ```
 
-![Maps with zoom Factor](../images/ZoomFactor.PNG)
+![Blazor Maps with Zooming Factor](../images/blazor-maps-zooming.PNG)

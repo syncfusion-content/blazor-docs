@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Open Editor Window on Single Click in Blazor Scheduler | Syncfusion
-description: Learn here all about opening the Editor Window on Single Click in Syncfusion Blazor Scheduler component using methods and events.
+description: Learn here all about opening the editor window on single click in Syncfusion Blazor Scheduler component using methods and events.
 platform: Blazor
 control: Scheduler
 documentation: ug

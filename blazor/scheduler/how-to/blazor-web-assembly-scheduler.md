@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started With Blazor Scheduler in Web Assembly | Syncfusion
-description: Learn here about how to work with Syncfusion Blazor Scheduler component in Web Assembly project. Helps to bind appointments and set current view, date to it.
+description: Learn to work with Syncfusion Blazor Scheduler component in Web Assembly project and how it helps to bind appointments and set current view, date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -34,7 +34,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
     ![Blazor Project Configuration](../images/blazor-project-configuration.png)
 
-4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the Application based on your required target.
+4. Select the target Framework **ASP.NET Core 3.1** or **.NET 5.0** at the top of the application based on the required target.
 
      ![Selecting Blazor Application Framework](../images/blazor-select-template.png)
 
@@ -72,7 +72,7 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, the above `Syncfusion.Blazor.Themes` static web assets (styles) has to be added in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
@@ -169,8 +169,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
 }
 ```
 
-The scheduler with the appointments will be rendered as shown in the following image.
-
 ![Blazor Scheduler with Appointments](../images/blazor-scheduler-appointments.png)
 
-> You can refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.
+> Refer to our [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Scheduler example](https://blazor.syncfusion.com/demos/scheduler/overview?theme=bootstrap4/) to understand how to manage appointments with multiple resources.

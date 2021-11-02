@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Axis Customization in Blazor Sparkline Component | Syncfusion
-description: Checkout and learn here all about Axis Customization in Syncfusion Blazor Sparkline component and more.
+description: Checkout and learn here all about axis customization in Syncfusion Blazor Sparkline component and more.
 platform: Blazor
 control: Sparkline Charts
 documentation: ug
@@ -76,7 +76,7 @@ The category axis value can be provided by specifying the [ValueType](https://he
 
 ### DateTime
 
-The DateTime axis value can be provide by specifying the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to the [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
+The DateTime axis value can be provided by specifying the [ValueType](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfSparkline-1.html#Syncfusion_Blazor_Charts_SfSparkline_1_ValueType) property to the [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineValueType.html#Syncfusion_Blazor_Charts_SparklineValueType_DateTime).
 
 ```cshtml
 @using Syncfusion.Blazor.Charts
@@ -140,7 +140,7 @@ The horizontal axis line value can be customized by setting the [Value](https://
 
 ## Axis Line Customization
 
-The axis line can be enabled by specifying the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property **true** in the [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
+The axis line can be enabled by specifying the [Visible](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html#Syncfusion_Blazor_Charts_SparklineAxisLineSettings_Visible) property to **true** in the [SparklineAxisLineSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineAxisLineSettings.html).
 
 > The axis line is not applicable for the [WinLoss](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SparklineType.html#Syncfusion_Blazor_Charts_SparklineType_WinLoss) chart type.
 

@@ -21,24 +21,24 @@ Steps to get started with Word processor component for Blazor:
 
 2. Select **Create a new project** from the Visual Studio dashboard.
 
-    ![new project in blazor](../images/new-project.png)
+    ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
 
 3. Select **Blazor App** from the template and click the **Next** button.
 
-    ![Blazor app](../images/blazor-template.png)
+    ![Creating Blazor Application](../images/blazor-template.png)
 
 4. In the project configuration window, click the **Create** button to create a new project with the default project configuration.
 
-    ![Blazor project configuration](../images/project-configuration.png)
+    ![Blazor Project Configuration](../images/blazor-project-configuration.png)
 
 5. Select **Blazor WebAssembly App** from the dashboard and click **Create** button to create a new Blazor client-side application. Make sure that **.NET Core** and **ASP.NET Core 3.1** are selected at the top.
 
-    ![select framework](../images/blazor-client-template.png)
+    ![Selecting Blazor WebAssembly Framework](../images/blazor-client-template.png)
 
 6. Install the [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/) NuGet package from NuGet.org to the newly created application by using the **NuGet Package Manager**. Right-click the project and select Manage NuGet Packages.
 
 7. Search **Syncfusion.Blazor.WordProcessor** keyword in the Browse tab and install [Syncfusion.Blazor.WordProcessor](https://www.nuget.org/packages/Syncfusion.Blazor.WordProcessor/) NuGet package in the application.
-    ![select nuget](../images/select-nuget.png)
+    ![Searching Blazor DocumentEditor NuGet Package](../images/blazor-document-editor-nuget.png)
 
 8. Open the **~/_Imports.razor** file and import the ``Syncfusion.Blazor.DocumentEditor``.
 
@@ -85,6 +85,6 @@ Steps to get started with Word processor component for Blazor:
 
 12. Run the application. The Word processor component will be rendered in the web browser.
 
-    ![DocumentEditor Sample](../images/browser-output.png)
+    ![Blazor DocumentEditor](../images/blazor-document-editor.png)
 
 You can also explore our [Blazor Word Processor](https://blazor.syncfusion.com/demos/document-editor/default-functionalities) example to know how to render and configure the document editor.

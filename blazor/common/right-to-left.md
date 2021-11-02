@@ -1,19 +1,100 @@
 ---
 layout: post
-title: Right-To-Left in Blazor - Syncfusion
-description: Check out the documentation for Right-To-Left in Blazor
+title: Right-To-Left (RTL) support in Blazor components | Syncfusion
+description: Check out the documentation to enable the Right-To-Left (RTL) support for Syncfusion Blazor Components.
 platform: Blazor
 component: Common
 documentation: ug
 ---
 
-# Right-To-Left
+# Right-To-Left support in Syncfusion Blazor Components
 
-The right-to-left (RTL) support can be enabled for Syncfusion Blazor components by setting `EnableRtl` to `true`. This will render all the Syncfusion Blazor components in the right-to-left direction.
+The right-to-left (RTL) support can be enabled for Syncfusion Blazor components by setting `EnableRtl` property to `true`. This will render all the Syncfusion Blazor components in the right-to-left direction.
+
+## Enable RTL for all components
+
+You can enable right to left (RTL) for all Syncfusion components used in the application by setting [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) global option as `true` while adding Syncfusion blazor service using `AddSyncfusionBlazor()`.
+
+### Blazor Server App
+
+* If you're using `.NET 6` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+
+    ```c#
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    ....
+    builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+    var app = builder.Build();
+    ....
+    ```
+
+* If you're using `.NET 5 or .NET Core 3.1 ` Blazor Server App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Startup.cs` file.
+
+    ```c#
+    using Syncfusion.Blazor;
+    namespace WebApplication1
+    {
+        public class Startup
+        {
+            public void ConfigureServices(IServiceCollection services)
+            {
+                ....
+                services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+            }
+        }
+    }
+    ```
+    
+### Blazor WebAssembly App
+
+If you're using Blazor WebAssembly App, set [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.GlobalOptions.html#Syncfusion_Blazor_GlobalOptions_EnableRtl) property as `true` using `AddSyncfusionBlazor` service method in `~/Program.cs` file.
+    
+* For .NET 6 Blazor WebAssembly App
+
+    ```c#
+    using Microsoft.AspNetCore.Components;
+    using Microsoft.AspNetCore.Components.Web;
+    using Syncfusion.Blazor;
+
+    var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddRazorPages();
+    builder.Services.AddServerSideBlazor();
+    ....
+    builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+    var app = builder.Build();
+    ....
+    ```
+    
+* For .NET 5 or .NET Core 3.1 Blazor WebAssembly App
+    ```c#
+    using Syncfusion.Blazor;
+    ....
+    public static async Task Main(string[] args)
+    {
+        var builder = WebAssemblyHostBuilder.CreateDefault(args)    ;
+        ....
+
+        builder.Services.AddSyncfusionBlazor(options => { options.EnableRtl = true; });
+        await builder.Build().RunAsync();
+    }
+    ```
+
+The above configuration enables the Right-To-Left (RTL) support globally for all the Syncfusion Blazor components. For illustration, the Syncfusion Blazor DataGrid component is displayed with Right-To-Left (RTL).
+
+![Blazor Grid component is rendered from the right to left](images/rteGrid.png)
 
 ## Enable RTL to individual component
 
-To control a component’s direction, set the component’s `EnableRtl` property to true directly. For illustration, the RTL support has been enabled for the DropDownList component in the following code snippet.
+You can enable right to left (RTL) for particular component by setting component's `EnableRtl` property to `true`.
+
+In the below code example, right to left enabled for `SfDropDownList` component by directly setting `EnableRtl` property.
 
 ```cshtml
 
@@ -44,58 +125,6 @@ To control a component’s direction, set the component’s `EnableRtl` property
 
 ```
 
-After the successful compilation, press F5 to run the application. The following screenshot illustrates the output.
-
 ![Blazor component is rendered from the right-to-left](images/rightToLeft.png)
 
-## Enable RTL for all components
 
-To control the direction of all Syncfusion Blazor components in an application, import `Syncfusion.Blazor`, inject  and the `SyncfusionBlazorService` in your `@code` section and invoke `EnableRtl` method. In the following code snippet, the RTL support has been enabled for all Syncfusion Blazor components.
-
-```cshtml
-
-@using Syncfusion.Blazor;
-@using Syncfusion.Blazor.Grids;
-
-<SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowFiltering="true" AllowGrouping="true"  EnablePersistence="true">
-    <GridPageSettings PageSize="8"></GridPageSettings>
-    <GridColumns>
-        <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="120"></GridColumn>
-        <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign. Right" Width="100"></GridColumn>
-        <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></    GridColumn>
-    </GridColumns>
-</SfGrid>
-
-@code {
-    [Inject]
-    SyncfusionBlazorService SyncfusionService { get; set; }
-    public List<Order> Orders { get; set; }
-
-    protected override async Task OnInitializedAsync()
-    {
-        await base.OnInitializedAsync();
-        Orders = Enumerable.Range(1, 25).Select(x => new Order()
-        {
-            OrderID = 1000 + x,
-            CustomerID = (new string[] { "ALFKI", "ANANTR", "ANTON", "BLONP", "BOLID" })[new Random().Next(5)],
-            Freight = 2.1 * x,
-            OrderDate = DateTime.Now.AddDays(-x),
-        }).ToList();
-
-        //Set EnableRtl to all Syncfusion Blazor Components
-        SyncfusionService.EnableRtl();
-    }
-
-    public class Order
-    {
-        public int? OrderID { get; set; }
-        public string CustomerID { get; set; }
-        public DateTime? OrderDate { get; set; }
-        public double? Freight { get; set; }
-    }
-}
-
-```
-
-![Blazor Grid component is rendered from the right to left](images/rteGrid.png)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Styles and Appearance in Blazor Sidebar Component | Syncfusion
-description: Checkout and learn here all about Styles and Appearance in Syncfusion Blazor Sidebar component and more.
+description: Checkout and learn here all about styles and appearance in Syncfusion Blazor Sidebar component and more.
 platform: Blazor
 control: Sidebar
 documentation: ug
@@ -89,7 +89,7 @@ Use the below CSS to customize the closed state of the right positioned sidebar.
 
 ## Customizing the sidebar with dock state
 
-When you enable the Dock support, the "e-dock" class will be added to the root element. Based on that class, you can also customize all the above stated customization. Use the following CSS to customize the sidebar element with a dock state.
+When the Dock support is enabled, the "e-dock" class will be added to the root element. Based on that class, all the above stated customization can also be done. Use the following CSS to customize the sidebar element with a dock state.
 
 ```css
 
@@ -155,7 +155,7 @@ Use the below CSS to customize the backdrop of the sidebar.
 
 ## Customizing the sidebar in the RTL direction
 
-When you enable the RTL (right to left direction) support, the "e-rtl" class will be added to the root element. Based on that class, you can also customize all the above stated customization. Use the following CSS to customize the sidebar element in the RTL (right to left direction) mode.
+When the RTL (right to left direction) support is enabled, the "e-rtl" class will be added to the root element. Based on that class, all the above stated customization can also be done. Use the following CSS to customize the sidebar element in the RTL (right to left direction) mode.
 
 ```css
 

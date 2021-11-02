@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Spinner Component | Syncfusion
-description: Checkout and learn about getting started with Blazor Spinner (Blazor Loading Spinner) component of Syncfusion, and more details.
+description: Checkout and learn about getting started with Blazor Spinner component of Syncfusion, and more details.
 platform: Blazor
 control: Spinner
 documentation: ug
@@ -9,13 +9,13 @@ documentation: ug
 
 # Getting Started with Blazor Spinner Component
 
-This section briefly explains how to include a [Blazor Spinner](https://www.syncfusion.com/blazor-components/blazor-spinner) component in your Blazor Server-side application. You can refer to our Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Spinner component in the Blazor Server-side application. Refer to  Getting Started with [Syncfusion Blazor for Server-Side Spinner in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
 * Install **Syncfusion.Blazor.Spinner** NuGet package to the application by using the **NuGet Package Manager**.
 
-* You can add the client-side resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
+* The client-side resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the **HEAD** element of the **~/Pages/_Host.cshtml** page.
 
     ```cshtml
 
@@ -80,7 +80,7 @@ namespace BlazorApplication
 
 ## Add Spinner component
 
-To initialize the Spinner component, add the below code to your **Index.razor** view page which is present under **~/Pages** folder.
+To initialize the Spinner component, add the below code to the **Index.razor** view page which is present under **~/Pages** folder.
 
 The Blazor Spinner component is used to display the loading indication with a specified target area while loading.
 
@@ -118,10 +118,6 @@ The following code explains how to initialize a simple Spinner in the Blazor Raz
 
 ## Run the application
 
-After successful compilation of your application, simply press `F5` to run the application.
-
-The output will be as follows.
+After successful compilation of the application, simply press `F5` to run the application.
 
 ![Blazor Spinner](./images/blazor-spinner.png)
-
-> You can also explore our [Blazor Spinner example](https://blazor.syncfusion.com/demos/spinner/overview?theme=bootstrap5) that shows how to present and manipulate data.

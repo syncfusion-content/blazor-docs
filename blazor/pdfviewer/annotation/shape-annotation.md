@@ -17,7 +17,7 @@ The PDF Viewer control provides the options to add, edit and delete the shape an
 * Circle
 * Polygon
 
-![ShapeAnnotation](../../pdfviewer/images/shape_annot.png)
+![Shape Annotation in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-shape-annotation.png)
 
 ## Adding a shape annotation to the PDF document
 
@@ -30,7 +30,7 @@ Shape annotations can be added to the PDF document using the annotation toolbar.
 
 In the pan mode, if the shape annotation mode is entered, the PDF Viewer control will switch to text select mode.
 
-![ShapeTool](../../pdfviewer/images/shape_toolbar.png)
+![Adding Shapes in Blazor PDFViewer Toolbar](../../pdfviewer/images/blazor-pdfviewer-add-shape-in-toolbar.png)
 
 Refer to the following code snippet to switch to circle annotation mode.
 
@@ -62,25 +62,25 @@ The fill color, stroke color, thickness and opacity of the shape annotation can 
 
 The fill color of the annotation can be edited using the color palette provided in the Edit Color tool.
 
-![ShapeFillColor](../../pdfviewer/images/shape_fillColor.png)
+![Editing Fill Color in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-fill-color.png)
 
 ### Editing stroke color
 
 The stroke color of the annotation can be edited using the color palette provided in the Edit Stroke Color tool.
 
-![ShapeStrokeColor](../../pdfviewer/images/shape_strokecolor.png)
+![Editing Shape Stroke Color in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-shape-stroke-color.png)
 
 ### Editing thickness
 
 The thickness of the border of the annotation can be edited using the range slider provided in the Edit Thickness tool.
 
-![ShapeThickness](../../pdfviewer/images/shape_thickness.png)
+![Editing Shape Thickness in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-shape-thickness.png)
 
 ### Editing opacity
 
 The opacity of the annotation can be edited using the range slider provided in the Edit Opacity tool.
 
-![ShapeOpacity](../../pdfviewer/images/shape_opacity.png)
+![Editing Shape Opacity in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-shape-opacity.png)
 
 ### Editing the line properties
 
@@ -88,7 +88,7 @@ The properties of the line shapes such as line and arrow annotations can be edit
 
 Refer to the following code snippet to set the default annotation settings.
 
-![ShapeProperty](../../pdfviewer/images/shape_lineprty.png)
+![Editing Line Property in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-edit-line-property.png)
 
 ## Setting default properties during control initialization
 

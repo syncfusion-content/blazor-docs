@@ -55,7 +55,7 @@ Maps component using [Format](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 }
 ```
 
-![Maps Sample](./images/Internationalization/International.PNG)
+![Blazor Maps with Gloabalization](./images/Internationalization/blazor-maps-globalization.PNG)
 
 ## Numeric Format
 
@@ -97,7 +97,7 @@ The numeric formats such as currency, percentage and so on can be displayed in t
 }
 ```
 
-![Maps Sample](./images/Internationalization/Internationalization.png)
+![Blazor Maps with Numeric Format](./images/Internationalization/blazor-maps-numeric-format.png)
 
 ## See also
 
