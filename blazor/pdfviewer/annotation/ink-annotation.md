@@ -1,5 +1,5 @@
 ---
-title: "Ink Annotation"
+title: "Ink Annotation in Blazor PDF Viewer Component | Syncfusion"
 component: "PDF Viewer"
 description: "This page helps you to learn about the Ink Annotation support with a code example in the Syncfusion's Blazor PDF Viewer."
 ---
