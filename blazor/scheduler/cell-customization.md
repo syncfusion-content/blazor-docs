@@ -197,7 +197,7 @@ The `CellTemplate` is used to customize the cell background with specific images
 
 ## Customizing cells using OnRenderCell event
 
-We can also customize the cells by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `WorkCells` and `AllDayCells` when the cell is rendering. In the following example, we customized the cell's background color.
+The cells can also be customized by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `WorkCells` and `AllDayCells` when the cell is rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
