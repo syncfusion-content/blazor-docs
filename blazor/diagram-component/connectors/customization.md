@@ -135,7 +135,7 @@ The following code example illustrates how to customize the appearance of the de
 }
 ```
 
-![Decorator Appearance](../images/Decorator.png)
+![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
 
 ## Padding
 
@@ -210,7 +210,7 @@ Padding is used to leave the space between the Connector's end point and the obj
 }
 ```
 
-![Connector Padding](../images/ConnectorPadding.png)
+![Blazor Diagram Connector with Padding](../images/blazor-diagram-connector-padding.png)
 
 ## Bridging
 
@@ -302,7 +302,7 @@ The [BridgeSpace](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 Limitation: [BezierSegment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.BezierSegment.html) do not support bridging.
 
-![Connector Corner Radius](../images/Bridging.png)
+![Blazor Diagram Connector with Line Bridge](../images/blazor-diagram-connector-with-bridging.png)
 
 ## Corner radius
 
@@ -358,7 +358,7 @@ Corner radius allows to create connectors with rounded corners. The radius of th
 }
 ```
 
-![Connector Corner Radius](../images/CornerRadious.png)
+![Blazor Diagram Connector with Corner Radius](../images/blazor-diagram-connector-with-corner-radious.png)
 
 ## Appearance
 
@@ -488,7 +488,7 @@ The following code example illustrates how to customize the appearance of the de
 }
 ```
 
-![Decorator Appearance](../images/Decorator.png)
+![Blazor Diagram Connector with Decorator](../images/blazor-diagram-decorator.png)
 
 ## Constraints
 

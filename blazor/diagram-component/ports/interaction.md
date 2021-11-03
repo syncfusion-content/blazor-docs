@@ -67,7 +67,7 @@ The following code explains how to draw the connector by using the port constrai
 }
 ```
 
-![Port Draw](../images/port_draw.gif)
+![Drawing Port Connection in Blazor Diagram](../images/blazor-diagram-draw-port-connection.gif)
 
 ## See also
 

@@ -804,7 +804,7 @@ The following code illustrates how to execute nudge command.
 
 The corresponding arrow keys are used to move the selected elements towards up, down, left, or right direction by 1 pixel.
 
-![Nudge Command](images/Commands_img4.png)
+![Nudge Command in Blazor Diagram](images/blazor-diagram-nudge-command.png)
 
 Nudge commands are particularly useful for accurate placement of elements.
 

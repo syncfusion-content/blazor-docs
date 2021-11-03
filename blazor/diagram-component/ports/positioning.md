@@ -65,21 +65,21 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Poi
 }
 ```
 
-![Offset](../images/port_offset.png)
+![Blazor Diagram with Port based on Offset](../images/blazor-diagram-port-offset.png)
 
 The following table shows the relationship between the shape port position and path port offset (fraction values).
 
 | Offset values | Output |
 |---|---|
-| (0,0) | ![Left](../images/offset1.png) |
-| (0,0.5) | ![Left](../images/offset2.png) |
-| (0,1) | ![Left](../images/offset3.png) |
-| (0.5,0) | ![Left](../images/offset4.png) |
-| (0.5,0.5) | ![Left](../images/offset5.png) |
-| (0.5,1) | ![Left](../images/offset6.png) |
-| (1,0) | ![Left](../images/offset7.png) |
-| (1,0.5) | ![Left](../images/offset8.png) |
-| (1,1) | ![Left](../images/offset9.png) |
+| (0,0) | ![Blazor Diagram Port in Left Top Offset Values](../images/blazor-diagram-port-in-lefttop-offset-values.png) |
+| (0,0.5) | ![Blazor Diagram Port in Left Center Offset Values](../images/blazor-diagram-port-in-leftcenter-offset-values.png) |
+| (0,1) | ![Blazor Diagram Port in Left Bottom Offset Values](../images/blazor-diagram-port-in-leftbottom-offset-values.png) |
+| (0.5,0) | ![Blazor Diagram Port in Center Top Offset Values](../images/blazor-diagram-port-in-centertop-offset-values.png) |
+| (0.5,0.5) | ![Blazor Diagram Port in Center Offset Values](../images/blazor-diagram-port-in-center-offset-values.png) |
+| (0.5,1) | ![Blazor Diagram Port in Center Bottom Offset Values](../images/blazor-diagram-port-in-centerbottom-offset-values.png) |
+| (1,0) | ![Blazor Diagram Port in Right Top Offset Values](../images/blazor-diagram-port-in-righttop-offset-values.png) |
+| (1,0.5) | ![Blazor Diagram Port in Right Center Offset Values](../images/blazor-diagram-port-in-rightcenter-offset-values.png) |
+| (1,1) | ![Blazor Diagram Port in Right Bottom Offset Values](../images/blazor-diagram-port-in-rightbottom-offset-values.png) |
 
 
 
@@ -91,15 +91,15 @@ The following table shows all the possible alignments visually with `offset (0, 
 
 | Horizontal Alignment | Vertical Alignment | Output with Offset(0,0) |
 | -------- | -------- | -------- |
-| Left | Top | ![Left Top Port Alignment](../images/aligment_port1.png) |
-| Center | Top | ![Center Top Port Alignment](../images/aligment_port2.png) |
-| Right | Top |  ![Right Top Port Alignment](../images/aligment_port3.png) |
-| Left | Center | ![Left Center Port Alignment](../images/aligment_port4.png) |
-| Center | Center| ![Center Center Port Alignment](../images/aligment_port5.png) |
-| Right | Center | ![Right Center Port Alignment](../images/aligment_port6.png) |
-| Left | Bottom | ![Left Bottom Port Alignment](../images/aligment_port7.png) |
-| Center | Bottom | ![Center Bottom Port Alignment](../images/aligment_port8.png) |
-| Right |Bottom |![Right Bottom Port Alignment](../images/aligment_port9.png) |
+| Left | Top | ![Blazor Diagram Port in Left Top Position](../images/blazor-diagram-port-in-lefttop-position.png) |
+| Center | Top | ![Blazor Diagram Port in Center Top Position](../images/blazor-diagram-port-in-centertop-position.png) |
+| Right | Top |  ![Blazor Diagram Port in Right Top Position](../images/blazor-diagram-port-in-righttop-position.png) |
+| Left | Center | ![Blazor Diagram Port in Left Center Position](../images/blazor-diagram-port-in-leftcenter-position.png) |
+| Center | Center| ![Blazor Diagram Port in Center Center Position](../images/blazor-diagram-port-in-centercenter-position.png) |
+| Right | Center | ![Blazor Diagram Port in Right Center Position](../images/blazor-diagram-port-in-rightcenter-position.png) |
+| Left | Bottom | ![Blazor Diagram Port in Left Bottom Position](../images/blazor-diagram-port-in-leftbottom-position.png) |
+| Center | Bottom | ![Blazor Diagram Port in Center Bottom Position](../images/blazor-diagram-port-in-centerbottom-position.png) |
+| Right |Bottom |![Blazor Diagram Port in Right Bottom Position](../images/blazor-diagram-port-in-rightbottom-position.png) |
 
 The following code explains how to align ports.
 
@@ -149,7 +149,7 @@ The following code explains how to align ports.
 }
 ```
 
-![Horizontal and Vertical Alignment](../images/HorizontalVerticalaligment.png)
+![Changin Port Position in Blazor Diagram](../images/blazor-diagram-port-position.png)
 
 
 > The value of the `HorizontalAlignment` is `Center` by default. The value of the `VerticalAlignment` is `Center` by default. Alignment positioned based on the offset value.
@@ -205,7 +205,7 @@ The following code explains how to align ports.
 }
 ```
 
-![Margin](../images/port_margin.png)
+![Blazor Diagram Port with Margin](../images/blazor-diagram-port-margin.png)
 
 ## See also
 

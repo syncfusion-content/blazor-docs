@@ -164,7 +164,7 @@ The following example shows how to disable rotate constraint from the default no
 }
 ```
 
-![Nodeconstraints in Blazor Diagram](images/Nodeconstraints.png)
+![Node Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
 
 The following example shows how to add Shadow constraint to the default constraints of node.
 
@@ -481,7 +481,7 @@ The following code shows how to hide rotator.
 }
 ```
 
-![Selectorconstraints in Blazor Diagram](images/Nodeconstraints.png)
+![Selector Constraints in Blazor Diagram](images/blazor-diagram-node-constraints.png)
 
 > Element should be in selected state, then only Rotator, UserHandle and Resizer thumbs will be visible.
 

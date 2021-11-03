@@ -59,15 +59,15 @@ The following code shows the relationship between the shape annotation position 
 
 | Offset values | Output |
 |---|---|
-| (0,0) | ![Left](../images/Offset0,0.png) |
-| (0,0.5) | ![Left](../images/Offset0,5.png) |
-| (0,1) | ![Left](../images/Offset0,1.png) |
-| (0.5,0) | ![Left](../images/Offset5,0.png) |
-| (0.5,0.5) | ![Left](../images/Offset5,5.png) |
-| (0.5,1) | ![Left](../images/Offset5,1.png) |
-| (1,0) | ![Left](../images/Offset1,0.png) |
-| (1,0.5) | ![Left](../images/Offset1,5.png) |
-| (1,1) | ![Left](../images/Offset1,1.png) |
+| (0,0) | ![Blazor Diagram with Annotation in Left Top Position](../images/blazor-diagram-annotation-in-lefttop-position.png) |
+| (0,0.5) | ![Blazor Diagram with Annotation in Left Center Position](../images/blazor-diagram-annotation-in-leftcenter-position.png) |
+| (0,1) | ![Blazor Diagram with Annotation in Left Bottom Position](../images/blazor-diagram-annotation-in-leftbottom-position.png) |
+| (0.5,0) | ![Blazor Diagram with Annotation in Center Top Position](../images/blazor-diagram-annotation-in-centertop-position.png) |
+| (0.5,0.5) | ![Blazor Diagram with Annotation in Center Position](../images/blazor-diagram-annotation-in-center-position.png) |
+| (0.5,1) | ![Blazor Diagram with Annotation in Center Bottom Position](../images/blazor-diagram-annotation-in-centerbottom-position.png) |
+| (1,0) | ![Blazor Diagram with Annotation in Top Right Position](../images/blazor-diagram-annotation-in-topright-position.png) |
+| (1,0.5) | ![Blazor Diagram with Annotation in Right Center Position](../images/blazor-diagram-annotation-in-rightcenter-position.png) |
+| (1,1) | ![Blazor Diagram with Annotation in Right Bottom Position](../images/blazor-diagram-annotation-in-rightbottom-position.png) |
 
 
 >* Type of the offset property for node’s shape annotation is [DiagramPoint](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DiagramPoint.html).
@@ -81,15 +81,15 @@ The following table shows all the possible alignments visually with 'offset (0, 
 
 | Horizontal Alignment | Vertical Alignment | Output with Offset(0,0) |
 | -------- | -------- | -------- |
-| Left | Top | ![Left Top Label Alignment](../images/Label1.png) |
-| Center | Top | ![Center Top Label Alignment](../images/Label2.png) |
-| Right | Top |  ![Right Top Label Alignment](../images/Label3.png) |
-| Left | Center | ![Left Center Label Alignment](../images/Label4.png) |
-| Center | Center| ![Center Center Label Alignment](../images/Label5.png) |
-| Right | Center | ![Right Center Label Alignment](../images/Label6.png) |
-| Left | Bottom | ![Left Bottom Label Alignment](../images/Label7.png) |
-| Center | Bottom | ![Center Bottom Label Alignment](../images/Label8.png) |
-| Right |Bottom |![Right Bottom Label Alignment](../images/Label9.png) |
+| Left | Top | ![Blazor Diagram Label in Left Top Position](../images/blazor-diagram-label-in-lefttop-position.png) |
+| Center | Top | ![Blazor Diagram Label in Center Top Position](../images/blazor-diagram-label-in-centertop-position.png) |
+| Right | Top |  ![Blazor Diagram Label in Right Top Position](../images/blazor-diagram-label-in-righttop-position.png) |
+| Left | Center | ![Blazor Diagram Label in Left Center Position](../images/blazor-diagram-label-in-leftcenter-position.png) |
+| Center | Center| ![Blazor Diagram Label in Center Center Position](../images/blazor-diagram-label-in-centercenter-position.png) |
+| Right | Center | ![Blazor Diagram Label in Right Center Position](../images/blazor-diagram-label-in-rightcenter-position.png) |
+| Left | Bottom | ![Blazor Diagram Label in Left Bottom Position](../images/blazor-diagram-label-in-leftbottom-position.png) |
+| Center | Bottom | ![Blazor Diagram Label in Center Bottom Position](../images/blazor-diagram-label-in-centerbottom-position.png) |
+| Right |Bottom |![Blazor Diagram Label in Right Bottom Position](../images/blazor-diagram-label-in-rightbottom-position.png) |
 
 The following code explains how to align annotations.
 

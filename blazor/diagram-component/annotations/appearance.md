@@ -48,7 +48,7 @@ Diagram allows you set size for annotations by using the Height and Width proper
 }
 ```
 
-![Connector Annotation in Blazor Diagram](../images/connector_size_customization.png)
+![Changing Annotation Size in Blazor Diagram](../images/blazor-diagram-annotation-size.png)
 
 ## Hyperlink
 
@@ -93,7 +93,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 }
 ```
 
-![HyperLink](../images/hyperlink.png)
+![Annotation with Hyperlink in Blazor Diagram](../images/blazor-diagram-annotation-with-hyperlink.png)
 
 ### Hyperlink with content
 
@@ -137,7 +137,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 }
 ```
 
-![HyperLink with content](../images/hyperlink-content.png)
+![HyperLink with Content in Blazor Diagram](../images/blazor-diagram-hyperlink-content.png)
 
 ## Text wrapping
 
@@ -185,9 +185,9 @@ The [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagr
 
 | TextWrapping | Description | Image |
 | -------- | -------- | -------- |
-| No Wrap | Text will not be wrapped. | ![Label No Wrap](../images/Wrap1.png) |
-| Wrap | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Label Wrap](../images/Wrap2.png) |
-| WrapWithOverflow (Default) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Label WrapWith Overflow](../images/Wrap3.png) |
+| No Wrap | Text will not be wrapped. | ![Blazor Diagram Text without Wrap](../images/blazor-diagram-label-without-wrap.png) |
+| Wrap | Text-wrapping occurs, when the text overflows beyond the available node width. | ![Text Wrapping in Blazor Diagram](../images/blazor-diagram-text-wrapping.png) |
+| WrapWithOverflow (Default) | Text-wrapping occurs, when the text overflows beyond the available node width. However, the text may overflow beyond the node width in the case of a very long word. | ![Blazor Diagram Text Wrapping with Overflow](../images/blazor-diagram-text-wrap-with-overflow.png) |
 
 ### Text overflow
 
@@ -242,15 +242,15 @@ The following code sample shows how the different types of overflow property wor
 
 | TextOverflow | Wrapping | Image |
 | -------- | -------- | -------- |
-| Wrap | No Wrap | ![Label No Wrap](../images/flowwrap_nowrap.png) |
-| Wrap| Wrap | ![Label Wrap](../images/flowwrap_wrap.png) |
-| Wrap | WrapWithOverflow | ![Label WrapWith Overflow](../images/flowwrap_wrapwithoverflow.png) |
-| Ellipsis | No Wrap | ![Label No Wrap](../images/flowEllipsis_nowrap.png) |
-| Ellipsis| Wrap | ![Label Wrap](../images/flowEllipsis_wrap.png) |
-| Ellipsis | WrapWithOverflow | ![Label WrapWith Overflow](../images/flowEllipsis_wrapwithoverflow.png) |
-| Clip | No Wrap | ![Label No Wrap](../images/flowClip_nowrap.png) |
-| Clip| Wrap | ![Label Wrap](../images/flowClip_wrap.png) |
-| Clip | WrapWithOverflow | ![Label WrapWith Overflow](../images/flowClip_wrapwithoverflow.png) |
+| Wrap | No Wrap | ![Blazor Diagram Without Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-nowrap.png) |
+| Wrap| Wrap | ![Blazor Diagram With Text Wrap in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrap.png) |
+| Wrap | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextWrapOverflow](../images/blazor-diagram-flowwrap-wrapwithoverflow.png) |
+| Ellipsis | No Wrap | ![Blazor Diagram Without Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-nowrap.png) |
+| Ellipsis| Wrap | ![Blazor Diagram With Text Wrap in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrap.png) |
+| Ellipsis | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextEllipsisOverflow](../images/blazor-diagram-flowellipsis-wrapwithoverflow.png) |
+| Clip | No Wrap | ![Blazor Diagram Without Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-nowrap.png) |
+| Clip| Wrap | ![Blazor Diagram With Text Wrap in TextClipOverflow](../images/blazor-diagram-flowclip-wrap.png) |
+| Clip | WrapWithOverflow | ![Blazor Diagram Text Wrap with Overflow in TextClipOverflow](../images/blazor-diagram-flowclip-wrapwithoverflow.png) |
 
 >**Note :** All the customization over the overflow is also applicable to connector’s annotation.
 
@@ -311,7 +311,7 @@ The Fill, Border, and Opacity appearances of the text can also be customized wit
 }
 ```
 
-![Label WrapWith Overflow](../images/Annotation_appearance.png)
+![Blazor Diagram Label with Custom Annotation](../images/blazor-diagram-label-with-custom-annotation.png)
 
 ## Update the annotation style at runtime
 
@@ -507,7 +507,7 @@ You can add any number of annotations to a node or connector. The following code
 }
 ```
 
-![Multiple Annotations](../images/Annotations.png)
+![Blazor Diagram with Multiple Annotations](../images/blazor-diagram-multiple-annotations.png)
 
 >* Type of the annotation’s property of the node or connector was ObservableCollection.
 >* Default value of the annotation will be null.
