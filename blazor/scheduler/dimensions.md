@@ -17,7 +17,7 @@ The Scheduler dimensions refers to both height and width of the entire layout an
 
 ## Auto Height and Width
 
-When height and width of the Scheduler are set to `auto`, it will try as hard as possible to keep an element the same width as its parent container. In other words, the parent container that holds Scheduler, it's width/height will be the sum of its children. By default, Scheduler is assigned with `auto` values for both height and width properties.
+When height and width of the Scheduler are set to `auto`, it will try hard to keep an element the same width as its parent container. In other words, for the parent container that holds Scheduler, it's width or height will be the sum of its children. By default, Scheduler is assigned with `auto` values for both height and width properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

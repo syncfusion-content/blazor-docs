@@ -9,9 +9,9 @@ documentation: ug
 
 # Context Menu in Blazor Scheduler Component
 
-You can display context menu on work cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is get by using `GetTargetCellAsync` public method in Blazor.
+The context menu can be displayed on work cells and appointments of Scheduler by making use of the `ContextMenu` control manually from the application end. In the following code example, context menu control is being added from sample end and set its target as `Scheduler` and the target element is got by using `GetTargetCellAsync` public method in Blazor.
 
-On Scheduler cells, you can display the menu items such as `New Event`, `New Recurring Event` and `Today` option. For appointments, you can display its related options such as `Edit Event` and `Delete Event`. The default event window can be opened for appointment creation and editing using the `OpenEditorAsync` method of Scheduler.
+On Scheduler cells, the menu items can be displayed such as `New Event`, `New Recurring Event` and `Today` option. For appointments, its related options can be displayed such as `Edit Event` and `Delete Event`. The default event window can be opened for appointment creation and editing using the `OpenEditorAsync` method of Scheduler.
 
 The deletion of appointments can be done by using the `DeleteEventAsync` public method. Also, the `SelectedDate` property can be used to navigate between different dates.
 
