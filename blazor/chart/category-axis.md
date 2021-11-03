@@ -47,7 +47,7 @@ The category axis is used to represent string values instead of integers.
 
 ```
 
-![Blazor Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
+![Blazor Column Chart with Default Axis](images/category-axis/blazor-chart-default-axis.png)
 
 ## Labels Placement
 
@@ -131,7 +131,7 @@ The [Minimum](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Cha
 
 ```
 
-![Changing Blazor Chart Axis Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
+![Changing Blazor Column Chart Axis based on Range and Interval](images/category-axis/blazor-chart-axis-range-and-interval.png)
 
 ## Indexed Category Axis
 

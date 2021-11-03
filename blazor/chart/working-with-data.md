@@ -55,7 +55,7 @@ An IEnumerable object can be assigned to the [DataSource](https://help.syncfusio
 
 ```
 
-![Blazor Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
+![Blazor Line Chart with Data Binding](images/working-data/blazor-chart-data-binding.png)
 
 > By default, [SfDataManager](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Data.SfDataManager.html) uses **BlazorAdaptor** for list data-binding.
 
@@ -491,7 +491,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartE
 
 ```
 
-![Blazor Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
+![Blazor Column Chart with Empty Points](images/working-data/blazor-chart-empty-point.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
