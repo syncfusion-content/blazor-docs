@@ -97,7 +97,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
 }
 ```
 
-![Create Group](images/CreateGroup.png)
+![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
 
 The following code illustrates how a ungroup  at runtime.
 

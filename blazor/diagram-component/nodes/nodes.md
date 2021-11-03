@@ -11,7 +11,7 @@ documentation: ug
 
 Nodes are graphical objects that are used to visually represent the geometrical information, process flow, internal business procedure, entity, or any other kind of data and it represents the functions of a complete system in regards to how it interacts with external entities.
 
-![Node](../images/node.png)
+![Node in Blazor Diagram](../images/blazor-diagram-node.png)
 
 ## Create node
 
@@ -55,7 +55,7 @@ To create a node, define the [Node](https://help.syncfusion.com/cr/blazor/Syncfu
 }
 ```
 
-![Node default](../images/node_default.png)
+![Adding Node from Node Collection in Blazor Diagram](../images/blazor-diagram-add-node-from-collection.png)
 
 ## Add nodes at runtime
 
@@ -116,7 +116,7 @@ Nodes can be predefined and added to the palette, and can be dropped into the di
 * When a symbol is dragged and dropped from symbol palette to diagram area, the [DragDrop](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragDrop) event gets triggered. [DropEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DropEventArgs.html) notifies when the element is dropped on the diagram.
 * When a symbol is dragged outside of the diagram, the [DragLeave](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DragLeave) event gets triggered. [DragLeaveEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.DragLeaveEventArgs.html) notifies when the element leaves the diagram.
 
-![Node](../images/node-add-palette.gif)
+![Adding Nodes from Palette in Blazor Diagram](../images/blazor-diagram-add-node-from-palette.gif)
 
 ## Draw node using drawing object
 
@@ -124,7 +124,7 @@ Nodes can be interactively drawn by clicking and dragging on the diagram surface
 
 For more information about drawing node, refer to the `Draw Nodes`.
 
-![Drawing Node](../images/node-drawing.gif)
+![Drawing Node in Blazor Diagram](../images/blazor-diagram-node-drawing.gif)
 
 ## Create node through data source
 

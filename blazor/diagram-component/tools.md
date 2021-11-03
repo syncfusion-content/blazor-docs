@@ -71,7 +71,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 }
 ```
 
-![Node Tool in Blazor Diagram](images/NodeTool.gif)
+![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
 ## Connectors
 
@@ -131,7 +131,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 }
 ```
 
-![Connector Tool in Blazor Diagram](images/ConnectorTool.gif)
+![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
 ## Polygon shape
 
@@ -198,7 +198,7 @@ The following code illustrates how to draw a polygon shape.
 }
 ```
 
-![Polygon Tool in Blazor Diagram](images/PolygonTool.gif)
+![Polygon Tool in Blazor Diagram](images/blazor-diagram-polygon-tool.gif)
 
 ## Tool selection
 

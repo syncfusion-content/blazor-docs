@@ -205,7 +205,7 @@ Let us create and add a [Node](https://help.syncfusion.com/cr/blazor/Syncfusion.
 }
 ```
 
-![Flow chart in Blazor Diagram](images/Diagram.png)
+![Blazor Diagram Component](images/blazor-diagram-component.png)
 
 ## See Also
 
