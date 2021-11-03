@@ -86,7 +86,7 @@ And also the selection can be enabled during the interaction.
 * An element can be selected by clicking that element.
 * When you select the elements in the diagram, the [SelectionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanging) and  [SelectionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_SelectionChanged) event gets triggered and do customization in this event.
 
-![Select](../images/connector-select.gif)
+![Selection in Blazor Diagram Connector](../images/blazor-diagram-connector-selection.gif)
 
 ## Drag
 
@@ -155,7 +155,7 @@ And also drag the connector during the interaction.
 * An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
 * When you drag the elements in the diagram, the [PositionChanging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanging) and [PositionChanged](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_PositionChanged) event gets triggered and to do customization in this event.
 
-![Drag](../images/connector-drag.gif)
+![Dragging Connector in Blazor Diagram](../images/blazor-diagram-drag-connector.gif)
 
 ## End Point Dragging
 
@@ -212,7 +212,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 }
 ```
 
-![End point dragging](../images/connector-end-point.gif)
+![Dragging Connector End Point in Blazor Diagram](../images/blazor-diagram-drag-connector-end-point.gif)
 
 ## See also
 

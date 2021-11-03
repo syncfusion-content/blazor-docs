@@ -52,7 +52,7 @@ The [Constraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 }
 ```
 
-![Gridlinesdefault in Blazor Diagram](images/Gridlinesdefault.png)
+![GridLines in Blazor Diagram](images/blazor-diagram-gridlines.png)
 
 To show only horizontal/vertical gridlines or to hide gridlines, refer to [SnapConstraints](constraints#snap-constraints).
 
@@ -108,7 +108,7 @@ The appearance of the grid lines can be changed into dots by using the [GridType
 
 ```
 
-![Dotgrid in Blazor Diagram](images/Dotgrid.png)
+![Dot Grid in Blazor Diagram](images/blazor-diagram-dot-grid.png)
 
 ## Line intervals
 
@@ -139,7 +139,7 @@ The following code example illustrates how to customize the thickness of lines a
 }
 ```
 
-![Gridlines appearance in Blazor Diagram](images/Gridlines.png)
+![Blazor Diagram with Custom Thickness of GridLines](images/blazor-diagram-custom-gridlines-thickness.png)
 
 ## Snapping
 
@@ -177,7 +177,7 @@ Snapping to gridlines can be enabled/disabled with the [SnapConstraints](https:/
 }
 ```
 
-![Snaptogrid in Blazor Diagram](images/snaptogrid.gif)
+![Snapping to GridLines in Blazor Diagram](images/blazor-diagram-snap-to-gridlines.gif)
 
 ### Customization of snap intervals
 
@@ -270,4 +270,4 @@ The snap to object provides visual cues to assist with aligning and spacing diag
 }
 ```
 
-![Guidelines in Blazor Diagram](images/guidelines.gif)
+![GuideLines in Blazor Diagram](images/blazor-diagram-guidelines.gif)

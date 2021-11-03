@@ -15,7 +15,7 @@ You can adapt the Scheduler to various languages by parsing and formatting the d
 
 ## Blazor Server Side
 
-The static local texts in the Scheduler component can be changed to other culture by referring the Resource file. You can refer more details about localization [here](../../common/localization/). By default, Scheduler is set to follow the English culture ('en-US'). The following steps explains how to render the Scheduler in German culture ('de-DE').
+The static local texts in the Scheduler component can be changed to other culture by referring the Resource file. You can refer more details about localization [here](https://blazor.syncfusion.com/documentation/common/localization/). By default, Scheduler is set to follow the English culture ('en-US'). The following steps explains how to render the Scheduler in German culture ('de-DE').
 
 * Open the **Startup.cs** file and add the below configuration in the **ConfigureServices** function as follows.
 
@@ -118,7 +118,7 @@ namespace SchedulerLocalization
 
 ## Blazor Web Assembly
 
-You can refer [here] (../../common/localization/#enable-localization-in-blazor-webassembly-application) to enable the localization in Blazor Web Assembly.
+You can refer [here] (https://blazor.syncfusion.com/documentation/common/localization/#enable-localization-in-blazor-webassembly-application) to enable the localization in Blazor Web Assembly.
 
 ## Setting date format
 
