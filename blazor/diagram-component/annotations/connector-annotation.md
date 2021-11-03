@@ -71,7 +71,7 @@ The [Offset](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Pat
 
 The following image shows the relationship between the annotation position and offset (fraction values).
 
-![Annotation](../images/ConnectorAnnotation_Offset.png)
+![Displaying Annotation based on Offset in Blazor Diagram](../images/blazor-diagram-annotation-basedon-offset.png)
 
 > By default, offset value of the connector annotation is 0.5.
 
@@ -121,7 +121,7 @@ The connector’s annotation can be aligned over its segment path using the [Ali
 
 The following screenshot shows how the annotation of the connector aligned over its path.
 
-![Annotation](../images/ConnectorAnnotation_Alignment.png)
+![Changing Annotation Alignment in Blazor Diagram](../images/blazor-diagram-change-annotation-alignment.png)
 
 > By default, Alignment value of the connector annotation is `Center`.
 
@@ -211,8 +211,8 @@ The following code example shows how the connector annotation rotated in its pat
 
 | SegmentAngle | Output |
 |---|---|
-| True | ![Source](../images/SegmentAngle_True.png) |
-| False | ![Center](../images/SegmentAngle_False.png) |
+| True | ![Blazor Diagram Annotation in Vertical Position](../images/blazor-diagram-annotation-in-vertical-position.png) |
+| False | ![Blazor Diagram Annotation in Horizontal Position](../images/blazor-diagram-annotation-in-horizontal-position.png) |
 
 > By default, the SegmentAngle will be disabled.
 

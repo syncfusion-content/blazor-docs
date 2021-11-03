@@ -72,7 +72,7 @@ A mind map is a diagram that displays the nodes as a spider diagram organizes in
 }
 ```
 
-![Mind Map](../images/mind_map.png)
+![Blazor Mind Map Diagram](../images/blazor-mind-map-diagram.png)
 
 You can also decide the branch for mind map using [GetBranch](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Layout.html#Syncfusion_Blazor_Diagram_Layout_GetBranch) method. The following code demonstrates how to set all branches on the right side for mind map layout using GetBranch method.
 
@@ -154,7 +154,7 @@ You can also decide the branch for mind map using [GetBranch](https://help.syncf
 }
 ```
 
-![Mindmap](../images/Mindmapgetbranch.png)
+![Blazor Mind Map Diagram with Branches](../images/blazor-mind-map-diagram-with-branches.png)
 
 ## See also
 

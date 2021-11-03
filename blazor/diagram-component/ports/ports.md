@@ -11,7 +11,7 @@ documentation: ug
 
 Port is a special connection point in a Node that you can glue the connectors. When you glue a connector to a node or port, they stay connected, even if one of the node is moved.
 
-![Port](../images/Port1.png)
+![Port in Blazor Diagram](../images/blazor-diagram-port.png)
 
 ## Connections
 
@@ -19,11 +19,11 @@ There are two main types of connections, node to node and port to port. The diff
 
 A node to node connection is one where the connector will move around the node as you move the node. Diagram will always ensure the connector is the shortest, most direct line possible. You can create a node to node connection by selecting the entire node (rather than the port) and connect it to another shape (rather than to a port).
 
-![node to node](../images/Node_Connection.gif)
+![Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-connection.gif)
 
 Ports act as the connection points of the node and allows creating connections with only those specific points as shown in the following image.
 
-![port to port](../images/Node_RunTimeConnection.gif)
+![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-connection.gif)
 
 ## Create Ports
 
@@ -68,7 +68,7 @@ To add a connection port, define the port object and add it to node’s ports co
 }
 ```
 
-![Port Image](../images/Nodeport.png)
+![Creating Port in Blazor Diagram](../images/blazor-diagram-create-port.png)
 
 ## Add Ports at runtime
 
@@ -138,7 +138,7 @@ public async void AddPorts()
 }
 ```
 
-![Add Port Image](../images/Addport.png)
+![Adding Port in Blazor Diagram](../images/blazor-diagram-add-port.png)
 
 ## Add Multiple Ports at runtime
 
@@ -215,7 +215,7 @@ The port’s [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 }
 ```
 
-![Add Multiple Port Image](../images/AddMultiport.png)
+![Adding Multiple Ports in Blazor Diagram](../images/blazor-diagram-add-multiple-ports.png)
 
 ## Remove ports at runtime
 

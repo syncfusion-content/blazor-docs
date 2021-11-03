@@ -17,7 +17,7 @@ documentation: ug
 
 An element can be selected by clicking that element. During single click, all previously selected items are cleared. The following image shows how the selected elements are visually represented.
 
-![Single Selection in Blazor Diagram](images/selection.gif)
+![Single Selection in Blazor Diagram](images/blazor-diagram-single-selection.gif)
 
 * While selecting the diagram elements, the following events can be used to do your customization.
 * When selecting/unselecting the diagram elements, the following events are gets triggered and to do customization on those events.
@@ -77,7 +77,7 @@ During single click, any existing item in the selection list be cleared, and onl
 
 Clicking and dragging the diagram area allows to create a rectangular region. The elements that are covered under the rectangular region are selected at the end.
 
-![Multiple Selection in Blazor Diagram](images/multiselect.gif)
+![Multiple Selection in Blazor Diagram](images/blazor-diagram-multiple-selection.gif)
 
 ## Select/Unselect elements using program
 
@@ -492,7 +492,7 @@ The appearance of the user handle can be customized by using the [Size](https://
 * When a large diagram is loaded, only certain portion of the diagram is visible. The remaining portions are clipped. Clipped portions can be explored by scrolling the scrollbars or panning the diagram.
 * Diagram can be zoomed in or out by using Ctrl + mouse wheel.
 
-![Zoom Pan in Blazor Diagram](images/zoompan.gif)
+![Zoom Pan in Blazor Diagram](images/blazor-diagram-zoom-pan.gif)
 
 ## Keyboard
 

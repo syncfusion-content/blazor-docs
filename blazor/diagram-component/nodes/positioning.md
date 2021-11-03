@@ -74,7 +74,7 @@ The following code shows how to change the Pivot value.
 }
 ```
 
-![Node Pivot](../images/node_pivot.png)
+![Arranging Node Position in Blazor Diagram](../images/blazor-diagram-node-position.png)
 
 Rotation of a node is controlled by using the [RotationAngle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Node.html#Syncfusion_Blazor_Diagram_Node_RotationAngle) property. The following code shows how to change the RotationAngle value.
 
@@ -114,7 +114,7 @@ Rotation of a node is controlled by using the [RotationAngle](https://help.syncf
 }
 ```
 
-![RotateAngle](../images/NodeRotateAngle.png)
+![Changing Node Rotation Angle in Blazor Diagram](../images/blazor-diagram-node-rotation-angle.png)
 
 ## Minimum Size and Maximum Size
 
@@ -160,7 +160,7 @@ The [MinWidth](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.N
 }
 ```
 
-![MaxMinSize](../images/Maxminsize.gif)
+![Displaying Maximum and Minimum Size of Blazor Diagram Node](../images/blazor-diagram-show-max-min-size-node.gif)
 
 ## See also
 
