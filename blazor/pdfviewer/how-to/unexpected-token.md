@@ -7,7 +7,7 @@ control: PDF Viewer
 documentation: ug
 ---
 
-# Resolve "Unexpected token T in JSON at position 0" error Linux platform
+# Resolve "Unexpected token T in JSON at position 0" error
 
 We suspect that the "Unexpected token T in JSON at position 0" error occurs in the Linux platform due to the missing of the Pdfium.dll in your environment. We have embedded the Pdfium rendering engine in our PDF Viewer, so the Pdfium.dll will be generated on runtime within your project location.
 
