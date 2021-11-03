@@ -83,7 +83,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 ```
 
-![HierarchicalTree layout manager](../images/HierarchicalTree.png)
+![Blazor Hierarchical Diagram](../images/blazor-hierarchical-diagram.png)
 
 ## Customizing the properties
 

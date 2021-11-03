@@ -79,7 +79,7 @@ The user handle can enables for the selected nodes/connectors by setting a [Sele
 }
 ```
 
-![User handle for node in blazor diagram](images/userhandle1.png)
+![Blazor Diagram Node with User Handle](images/blazor-diagram-with-user-handle.png)
 
 ## Customization
 
@@ -91,14 +91,14 @@ The following table shows all the possible alignments visually shows the user ha
 
 | Offset | Side | Output |
 | -------- | -------- | -------- |
-|0|Left|![User handle for node in blazor diagram](images/userhandle2.png)|
-|0|Right|![User handle for node in blazor diagram](images/userhandle3.png)|
-|0|Top|![User handle for node in blazor diagram](images/userhandle4.png)|
-|0|Bottom|![User handle for node in blazor diagram](images/userhandle5.png)|
-|1|Left|![User handle for node in blazor diagram](images/userhandle6.png)|
-|1|Right|![User handle for node in blazor diagram](images/userhandle7.png)|
-|1|Top|![User handle for node in blazor diagram](images/userhandle8.png)|
-|1|Bottom|![User handle for node in blazor diagram](images/userhandle9.png)|
+|0|Left|![Blazor Diagram Node with User Handle at TopLeft Corner](images/blazor-diagram-user-handle-at-topleft-corner.png)|
+|0|Right|![Blazor Diagram Node with User Handle at TopRight Corner](images/blazor-diagram-user-handle-at-topright-corner.png)|
+|0|Top|![Blazor Diagram Node with User Handle at Top Corner](images/blazor-diagram-user-handle-at-top-corner.png)|
+|0|Bottom|![Blazor Diagram Node with User Handle at LeftBottom Corner](images/blazor-diagram-user-handle-at-leftbottom-corner.png)|
+|1|Left|![Blazor Diagram Node with User Handle at Left Corner](images/blazor-diagram-user-handle-at-left-corner.png)|
+|1|Right|![Blazor Diagram Node with User Handle at RightBottom Corner](images/blazor-diagram-user-handle-at-rightbottom-corner.png)|
+|1|Top|![Blazor Diagram Node with User Handle at RightTop Corner](images/blazor-diagram-user-handle-at-righttop-corner.png)|
+|1|Bottom|![Blazor Diagram Node with User Handle at Bottom Corner](images/blazor-diagram-user-handle-at-bottom-corner.png)|
 
 ### Size
 
@@ -189,7 +189,7 @@ The following code explains how to customize the appearance of the user handle.
 }
 ```
 
-![Customized appearance of Userhandle](images/userhandle10.png)
+![Customizing Appearance of Userhandle in Blazor Diagram](images/blazor-diagram-custom-user-handle-appearance.png)
 
 ## Fixed user handles
 
@@ -329,14 +329,14 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Margin | Output |
 | -------- | -------- | -------- |
-| (0,0) | Right = 20 |![fixed user handle for node in blazor diagram](images/topleft.png)|
-| (0.5,0) | Bottom = 20 |![fixed user handle for node in blazor diagram](images/topcenter.png)|
-| (1,0) | Left = 20 |![fixed user handle for node in blazor diagram](images/topright.png)|
-| (0,0.5) | Right = 20 |![fixed user handle for node in blazor diagram](images/leftcenter.png)|
-| (1,0.5) | Left = 20 |![fixed user handle for node in blazor diagram](images/rightcenter.png)|
-| (0,1) | Right = 20 |![fixed user handle for node in blazor diagram](images/bottomleft.png)|
-| (0.5,1) | Top = 20 |![fixed user handle for node in blazor diagram](images/bottomcenter.png)|
-| (1,1) | Left = 20 |![fixed user handle for node in blazor diagram](images/bottomright.png)|
+| (0,0) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftTop Position](images/blazor-diagram-user-handle-at-topleft-position.png)|
+| (0.5,0) | Bottom = 20 |![Blazor Diagram with Fixed User Handle at CenterTop Position](images/blazor-diagram-user-handle-at-topcenter-position.png)|
+| (1,0) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightTop Position](images/blazor-diagram-user-handle-at-topright-position.png)|
+| (0,0.5) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftCenter Position](images/blazor-diagram-user-handle-at-leftcenter-position.png)|
+| (1,0.5) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightCenter Position](images/blazor-diagram-user-handle-at-rightcenter-position.png)|
+| (0,1) | Right = 20 |![Blazor Diagram with Fixed User Handle at LeftBottom Position](images/blazor-diagram-user-handle-at-bottomleft-position.png)|
+| (0.5,1) | Top = 20 |![Blazor Diagram with Fixed User Handle at CenterBottom Position](images/blazor-diagram-user-handle-at-bottomcenter-position.png)|
+| (1,1) | Left = 20 |![Blazor Diagram with Fixed User Handle at RightBottom Position](images/blazor-diagram-user-handle-at-bottomright-position.png)|
 
 The following code explains how to customize the node fixed user handle.
 
@@ -405,9 +405,9 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Offset | Alignment | Output |
 | -------- | -------- | -------- |
-| 0 | Before |![fixed user handle for node in blazor diagram](images/before.png)|
-| 0.5 | Center |![fixed user handle for node in blazor diagram](images/center.png)|
-| 1 | After |![fixed user handle for node in blazor diagram](images/after.png)|
+| 0 | Before |![Displaying Fixed User Handle in Before Blazor Diagram Connector](images/blazor-diagram-user-handle-in-before-connector.png)|
+| 0.5 | Center |![Displaying Fixed User Handle in Center of Blazor Diagram Connector](images/blazor-diagram-user-handle-in-center-of-connector.png)|
+| 1 | After |![Displaying Fixed User Handle in After Blazor Diagram Connector](images/blazor-diagram-user-handle-in-after-connector.png)|
 
 ### Displacement
 
@@ -417,8 +417,8 @@ The following table shows all the possible alignments visually shows the fixed u
 
 | Displacement | Alignment | Output |
 | -------- | -------- | -------- |
-| y = 10 | Before |![fixed user handle for node in blazor diagram](images/ybefore.png)|
-| y = 10 | After |![fixed user handle for node in blazor diagram](images/yafter.png)|
+| y = 10 | Before |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-before-node.png)|
+| y = 10 | After |![Displaying Fixed User Handle Before Blazor Diagram Node](images/blazor-diagram-user-handle-in-after-node.png)|
 
 > Displacement will not be done if the alignment is set to be center.
 
