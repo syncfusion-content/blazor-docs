@@ -11,7 +11,7 @@ documentation: ug
 
 # Getting Started with Blazor Range Slider Component
 
-This section briefly explains how to include a simple `Range Slider` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a simple `Range Slider` in your Blazor Server-Side application. Refer to the [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

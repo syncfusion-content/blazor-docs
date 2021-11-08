@@ -25,7 +25,7 @@ Install the Web Compiler to compile the `SCSS` files in the Blazor Applications.
 
 ## Create a Blazor Server Application in Visual Studio 2019
 
-1. Create a Blazor server application by referring [Blazor Server](../../getting-started/blazor-server-side-visual-studio-2019/) documentation.
+1. Create a Blazor server application by referring [Blazor Server](../../getting-started/blazor-server-side-visual-studio/) documentation.
 
 2. Install the Syncfusion `node_modules` in this application using this command.
 

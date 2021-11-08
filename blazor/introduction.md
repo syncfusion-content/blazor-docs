@@ -172,7 +172,7 @@ border:0 !important;
 
     Visual Studio
 
-* [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019)
+* [Getting started with Syncfusion Blazor Components in Server App](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio)
 * [Getting started with Syncfusion Blazor Components in WebAssembly App](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-visual-studio-2019)
 
     .NET CLI
