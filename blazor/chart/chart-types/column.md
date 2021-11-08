@@ -97,7 +97,7 @@ The [ColumnSpacing](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Char
 
 ```
 
-![Column Chart with space and width](../images/chart-types-images/column-space.png)
+![Blazor Column Chart with Space and Width](../images/chart-types-images/blazor-column-chart-space-and-width.png)
 
 ## Series Customization
 
@@ -148,7 +148,7 @@ The following properties can be used to customize the [Column](https://help.sync
 
 ```
 
-![Column Chart with series customization](../images/chart-types-images/column-custom.png)
+![Blazor Column Chart with Custom Series](../images/chart-types-images/blazor-column-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
