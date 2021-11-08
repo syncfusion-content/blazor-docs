@@ -11,7 +11,7 @@ documentation: ug
 
 To modify the Kanban appearance, you need to override the default CSS of Kanban. Also, you have an option to create your own custom theme using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material). Please find the list of CSS classes in Kanban.
 
-| Css class | Purpose |
+| CSS class | Purpose |
 |-------|---------|
 | .e-kanban .e-kanban-table | customize the kanban. |
 | .e-kanban .e-kanban-header .e-header-cells | Header cells of kanban. |
