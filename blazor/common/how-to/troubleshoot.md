@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to troubleshoot server and client exceptions in Blazor | Syncfusion
+title: Troubleshoot server and client exceptions in Blazor | Syncfusion
 description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
 platform: Blazor
 component: Common

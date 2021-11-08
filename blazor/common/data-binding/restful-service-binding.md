@@ -2,13 +2,13 @@
 layout: post
 title: "Bind data from RESTful web services to Syncfusion Blazor components and perform CRUD operations"
 component: "General"
-description: "Learn how to retrieve data from RESTful service(For example: ODataV4 service), bind it to Syncfusion DataGrid component using ODataV4Adaptor of SfDataManager, and perform CRUD operations."
-platform: "Blazor"
+description: "Learn how to retrieve data from RESTful service(e.g. ODataV4 service), bind it to DataGrid using ODataV4Adaptor of SfDataManager, and perform CRUD operations."
 component: Common
 documentation: ug
+platform: Blazor
 ---
 
-# Bind data from RESTful web services to Syncfusion Blazor components and perform CRUD operations
+# How to bind data from RESTful web services and perform CRUD operations
 
 In this topic, we are going to learn how to retrieve data from RESTful web services, bind data to a Grid component, and perform CRUD operations. Here, we have fetched data from the ODataV4 service using [ODataV4Adaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#odatav4-adaptor) of `SfDataManger`.
 
