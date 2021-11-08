@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "How to bind data to the Syncfusion Blazor components using gRPC service | Syncfusion"
-description: "How to consume data from gRPC service and bind it to the Syncfusion Component."
-platform: "Blazor"
+title: "How to bind data to the components using gRPC service | Syncfusion"
+description: "How to consume data from gRPC service and bind it to the Syncfusion Blazor Component."
+platform: "blazor-components"
 component: Common
 documentation: ug
 ---
 
-# How to bind data to the Syncfusion Blazor components using gRPC service
+# How to bind data to the Blazor components using gRPC service
 
 In this topic, we are going to discuss how to consume data from [gRPC](https://grpc.io/) service and bind it to a Syncfusion Blazor Component.
 

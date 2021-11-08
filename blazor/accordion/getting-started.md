@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Accordion Component
 
-This section briefly explains about how to include a [Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html) in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a [Accordion](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Navigations.SfAccordion.html) in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](../getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Accordion, check on the following video:
 
@@ -22,11 +22,11 @@ Any one of the following standards can be used to install the Syncfusion Blazor 
 
 ### Using Syncfusion Blazor individual NuGet Packages [New standard]
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages) for the Syncfusion Blazor components. This new standard is highly recommended for the Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](../nuget-packages) for the Syncfusion Blazor components. This new standard is highly recommended for the Blazor production applications. Refer to [this section](../nuget-packages#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Install [Syncfusion.Blazor.Navigations](https://www.nuget.org/packages/Syncfusion.Blazor.Navigations/) NuGet package to the application using the `NuGet Package Manager`.
 
-2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from the [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side style resources through [CDN](../appearance/themes#cdn-reference) or from the [NuGet](../appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -36,15 +36,15 @@ Any one of the following standards can be used to install the Syncfusion Blazor 
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with the [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages). Hence, add the above [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with the [individual NuGet packages](../nuget-packages). Hence, add the above [Syncfusion.Blazor.Themes](https://www.nuget.org/packages/Syncfusion.Blazor.Themes/) static web assets (styles) in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
-W> If the above new standard ([individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages)) is preferred , then skip this section. Using both the old and new standards in the same application will throw ambiguous compilation errors.
+W> If the above new standard ([individual NuGet packages](../nuget-packages)) is preferred , then skip this section. Using both the old and new standards in the same application will throw ambiguous compilation errors.
 
 1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
 
-2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side style resources through [CDN]../appearance/themes#cdn-reference) or from [NuGet](../appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>

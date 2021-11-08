@@ -11,7 +11,7 @@ documentation: ug
 
 # Blazor Accumulation Chart in Server Side App using Visual Studio
 
-This section briefly explains about how to include a [Accumulation Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) in the Blazor Server-Side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a [Accumulation Chart](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.SfAccumulationChart.html) in the Blazor Server-Side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](../getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 

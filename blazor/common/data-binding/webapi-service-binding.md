@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Bind data to the Syncfusion Blazor components using WebApiAdaptor of SfDataManager and perform CRUD operations
-description: Learn how to retrieve data from WebApi controller, bind it to the Syncfusion DataGrid component using WebApiAdaptor of SfDataManager, and perform CRUD operations.
+title: Bind data using WebApiAdaptor and perform CRUD operations
+description: Learn how to retrieve data from WebApi controller, bind it to the DataGrid using WebApiAdaptor of SfDataManager, and perform CRUD operations.
 component: General
 platform: Blazor
 ---
 
-# Bind data to the Syncfusion Blazor components using WebApiAdaptor of SfDataManager and perform CRUD operations
+# How to bind data using WebApiAdaptor and perform CRUD operations
 
 In this topic, we are going to learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
