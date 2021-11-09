@@ -156,6 +156,6 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 4. Run the application. Then, the Syncfusion Blazor Calendar component will be rendered in the default web browser.
 
-    ![output](images/browser-output.png)
+    ![Blazor getting started output](images/browser-output.png)
 
 > You need to include a valid license key (either paid or trial key) within your applications. Please refer to this [help topic](https://help.syncfusion.com/common/essential-studio/licensing/license-key#blazor) for more information.

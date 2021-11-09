@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor MultiSelect Dropdown Component
 
-This section briefly explains about how to include a **MultiSelect** Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
+This section briefly explains about how to include a [Blazor MultiSelect](https://www.syncfusion.com/blazor-components/blazor-multiselect-dropdown) Component in your Blazor client-side application. You can refer to the [Getting Started with Syncfusion Blazor for Client-side in Visual Studio 2019](../getting-started/blazor-webassembly-visual-studio-2019/) page for introduction and configure the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -161,6 +161,8 @@ In the following sample, popup list's width and height are configured.
 The output will be as follows.
 
 ![Configuring Popup List in Blazor MultiSelect DropDown](./images/blazor-multiselect-dropdown-configure-poup-list.png)
+
+> You can also explore our [Blazor MultiSelect Dropdown example](https://blazor.syncfusion.com/demos/multiselect-dropdown/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
 
 ## See Also
 
