@@ -9,7 +9,7 @@ documentation: ug
 
 # Styles and Appearances in Blazor Toggle Switch Button Component
 
-To modify the Switch appearance, the default CSS of Switch component has to be overridden. Please find the list of CSS classes and its corresponding section in Switch. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material).
+To modify the Switch appearance, the default CSS of Switch component has to be overridden. Please find the list of CSS classes and its corresponding section in Switch. Also, you have an option to create your own custom theme for the controls using our [Theme Studio](https://blazor.syncfusion.com/themestudio/?theme=material).
 
 |CSS Class | Purpose of Class |
 |-----|-----|
