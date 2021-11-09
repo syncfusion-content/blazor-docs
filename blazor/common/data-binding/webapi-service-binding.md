@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Bind data using WebApiAdaptor of SfDataManager | Syncfusion
-description: Learn how to retrieve data from WebApi controller, bind it to the Syncfusion DataGrid using WebApiAdaptor of SfDataManager, and perform CRUD operations.
+title: Bind data to the Syncfusion Blazor components using WebApiAdaptor of SfDataManager and perform CRUD operations
+description: Learn how to retrieve data from WebApi controller, bind it to the Syncfusion DataGrid component using WebApiAdaptor of SfDataManager, and perform CRUD operations.
 component: General
 platform: Blazor
 ---
 
-# Bind data using WebApiAdaptor and perform CRUD operations
+# Bind data to the Syncfusion Blazor components using WebApiAdaptor of SfDataManager and perform CRUD operations
 
 In this topic, we are going to learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
@@ -56,7 +56,7 @@ Now, click on **Update Database**.
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
+[Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 
 ### Generate DbContext and model class from the database
 
