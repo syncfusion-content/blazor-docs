@@ -6,7 +6,7 @@ component: General
 platform: Blazor
 ---
 
-# How to bind data using WebApiAdaptor and perform CRUD operations
+# Bind data using WebApiAdaptor and perform CRUD operations
 
 In this topic, we are going to learn how to retrieve data from WebApi Controller, bind to Grid component using [WebApiAdaptor](https://blazor.syncfusion.com/documentation/data/adaptors/#web-api-adaptor) of `SfDataManger`, and perform CRUD operations.
 
