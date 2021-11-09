@@ -71,7 +71,7 @@ In the below example, axis, point and tooltip labels are globalized to EUR.
 
 ```
 
-![Globalization](images/internationalization.png)
+![Globalization in Blazor Column Chart](images/blazor-column-chart-globalization.png)
 
 ## Label Format
 
