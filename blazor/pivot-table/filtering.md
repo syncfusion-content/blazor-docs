@@ -537,7 +537,7 @@ The value filtering dialog can be enabled by setting the [AllowValueFilter](http
 
 ![Label Filter with Icon in Blazor PivotTable](images/blazor-pivottable-label-filtering-with-icon.png)
 <br/>
-![Filter Icon in Blazor PivotTable Grouping Bar](images/blazor-pivottable-filtering-with-icon.png "Filter icon in grouping bar")
+![Filter Icon in Blazor PivotTable Grouping Bar](images/blazor-pivottable-filtering-with-icon.png)
 <br/>
 <br/>
 ![Value Filter Tab in Blazor PivotTable](images/blazor-pivottable-value-filtering-dialog.png)
