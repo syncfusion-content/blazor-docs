@@ -55,7 +55,7 @@ When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion
 
 ```
 
-![Smart Axis Labels - Hide](images/axis-labels/hide.png)
+![Hiding Smart Axis Label in Blazor Column Chart](images/axis-labels/blazor-column-chart-hide-smart-axis-label.png)
 
 **Case 2:** When [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Rotate45**.
 
@@ -98,7 +98,7 @@ When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion
 
 ```
 
-![Smart Axis Labels - Rotate45](images/axis-labels/rotate45.png)
+![Blazor Column Chart with Smart Axis Label in Rotate45](images/axis-labels/blazor-column-chart-axis-label-in-rotate45.png)
 
 **Case 3:** When [LabelIntersectAction](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelIntersectAction) is set to **Rotate90**.
 
@@ -141,7 +141,7 @@ When the axis labels overlap, the [LabelIntersectAction](https://help.syncfusion
 
 ```
 
-![Smart Axis Labels - Rotate90](images/axis-labels/rotate90.png)
+![Blazor Column Chart with Smart Axis Label in Rotate90](images/axis-labels/blazor-column-chart-axis-label-in-rotate90.png)
 
 ## Axis Labels Positioning
 
@@ -186,7 +186,7 @@ The axis labels can be put **Outside** of the axis line by default, however the 
 
 ```
 
-![Axis Labels Positioning - Inside](images/axis-labels/position.png)
+![Changing Axis Label Position in Blazor Column Chart](images/axis-labels/blazor-column-chart-axis-label-position.png)
 
 ## Multilevel Labels
 
@@ -242,7 +242,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ```
 
-![Multilevel Labels - Categories](images/axis-labels/categories.png)
+![Blazor Column Chart with Multilevel Labels](images/axis-labels/blazor-column-chart-multi-labels.png)
 
 ### Overflow
 
@@ -295,7 +295,7 @@ Using the [Overflow](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Cha
 
 ```
 
-![Multilevel Labels - Overflow](images/axis-labels/overflow.png)
+![Blazor Column Chart Multilevel Labels with Overflow](images/axis-labels/blazor-column-chart-axis-label-overflow.png)
 
 ### Alignment
 
@@ -348,7 +348,7 @@ The [Alignment](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.C
 
 ```
 
-![Multilevel Labels - Alignment](images/axis-labels/alignment.png)
+![Changing Multilevel Labels Alignment in Blazor Column Chart](images/axis-labels/blazor-column-chart-axis-label-alignment.png)
 
 ### Text Customization
 
@@ -402,7 +402,7 @@ The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartA
 
 ```
 
-![Multilevel Labels - Text Customization](images/axis-labels/textcustom.png)
+![Customizing Multilevel Labels Text in Blazor Column Chart](images/axis-labels/blazor-column-chart-custom-axis-label.png)
 
 ### Border Customization
 
@@ -456,7 +456,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ```
 
-![Multilevel Labels - Border Customization](images/axis-labels/border-custom.png)
+![Customizing Multilevel Labels Border in Blazor Column Chart](images/axis-labels/blazor-column-chart-label-with-custom-border.png)
 
 ## Edge Label Placement
 
@@ -505,7 +505,7 @@ The longer text labels at the axes edges may only be partially visible in the c
 
 ```
 
-![Edge Label Placement](images/axis-labels/edge.png)
+![Displaying Blazor Chart Axis Label in Edge Position](images/axis-labels/blazor-chart-axis-label-in-edge.png)
 
 ## Labels Customization
 
@@ -548,7 +548,7 @@ The label [Color](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 
 ```
 
-![Axis labels with style applied](images/axis-labels/label-style.png)
+![Blazor Column Chart Axis with Custom Label](images/axis-labels/blazor-column-chart-axis-custom-label.png)
 
 ## Trim Label
 
@@ -590,7 +590,7 @@ The label can be trimmed using the [EnableTrim](https://help.syncfusion.com/cr/b
 
 ```
 
-![Trimming and maximum label width support](images/axis-labels/labels-trim.png)
+![Label Trimming in Blazor Column Chart Axis](images/axis-labels/blazor-column-chart-axis-label-trim.png)
 
 ## Line Break
 
@@ -633,7 +633,7 @@ The `<br>` tag can used to separate the long axis label into multiple lines.
 
 ```
 
-![Line break support](images/axis-labels/line-break.png)
+![Blazor Column Chart Axis with Line break Label](images/axis-labels/blazor-column-chart-axis-line-break-label.png)
 
 ## Label Format
 

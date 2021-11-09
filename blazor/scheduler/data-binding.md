@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Scheduler Component
 
-The Scheduler uses `DataManager`, which supports both RESTful data service binding and datasource collections. The `DataSource` property of Scheduler can be assigned either with the instance of `DataManager` or List of datasource collection, as it supports the following two kind of data binding methods:
+The Scheduler uses `DataManager`, which supports both RESTful data service binding and datasource collections. The `DataSource` property of Scheduler can be assigned either with the instance of `DataManager` or list of datasource collection, as it supports the following two kinds of data binding methods:
 
 * Local data
 * Remote data
@@ -21,7 +21,7 @@ You can check out the following video to bind the appointments in the Blazor Sch
 
 ## Binding local data
 
-To bind local data to the Scheduler, you can simply assign a List of datasource collections to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. The local data source can also be provided as an instance of the `DataManager`.
+To bind local data to the Scheduler, you can simply assign a list of datasource collections to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. The local data source can also be provided as an instance of the `DataManager`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -229,9 +229,9 @@ It is possible to create your own `CustomAdaptor` by extending the built-in avai
 
 ## Binding ExpandoObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **ExpandoObject**.
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases, bind the data to the scheduler as list of  **ExpandoObject**.
 
-**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
+**ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in ExpandoObject.
 
 ```csharp
 @using System.Dynamic
@@ -272,9 +272,9 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 ## Binding DynamicObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **DynamicObject**.
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases, bind the data to the scheduler as list of  **DynamicObject**.
 
-**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kind of supported data operations and editing in DynamicObject.
+**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleEventSettings` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
 > The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
@@ -336,7 +336,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 ## Binding ObservableCollection
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
 Here, AppointmentData class implements the interface of **INotifyPropertyChanged** and it raises the event when Subject property value was changed.
 
 ```csharp
@@ -603,7 +603,7 @@ namespace Restful_Services.Controllers
 
 ### Configure Scheduler component using ODataV4Adaptor
 
-Now you can configure the Scheduler using the `SfDataManager` to interact with the created OData service and consume the data appropriately. To interact with OData, you need to use `ODataV4Adaptor`.
+Now, the Scheduler can be configured using the `SfDataManager` to interact with the created OData service and consume the data appropriately. To interact with OData, use `ODataV4Adaptor`.
 
 ```cshtml
 @using Syncfusion.Blazor
@@ -624,7 +624,7 @@ Now you can configure the Scheduler using the `SfDataManager` to interact with t
 
 ## Passing additional parameters to the server
 
-To send an additional custom parameter to the server-side post, you need to make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
+To send an additional custom parameter to the server-side post, make use of the `AddParams` method of `Query`. Now, assign this `Query` object with additional parameters to the `Query` property of Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor

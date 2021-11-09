@@ -75,7 +75,7 @@ Use the chart's [Rows](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.C
 
 ```
 
-![Multiple Panes - Rows](images/multiple-panes/row.png)
+![Rows with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-rows.png)
 
 The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Span) property of the axis can be used to span the vertical axis across multiple rows.
 
@@ -134,7 +134,7 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartC
 
 ```
 
-![Multiple Panes - Row Spanning](images/multiple-panes/row-span.png)
+![Row spanning with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-span-with-rows-span.png)
 
 ## Columns
 
@@ -199,7 +199,7 @@ Use the chart's [Columns](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazo
 
 ```
 
-![Multiple Panes - Columns](images/multiple-panes/Column.png)
+![Columns with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column.png)
 
 The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_Span) property of the axis can be used to span the horizontal axis across multiple column.
 
@@ -256,7 +256,7 @@ The [Span](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartC
 
 ```
 
-![Multiple Panes - Column Spanning](images/multiple-panes/Column-span.png)
+![Column Spanning with Multiple Panes in Blazor Chart](images/multiple-panes/blazor-chart-multiple-panes-with-column-span.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

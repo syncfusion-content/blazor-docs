@@ -59,7 +59,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-![Horizontal Striplines](images/strip-line/horizontal.png)
+![Blazor Chart with Horizontal Striplines](images/strip-line/blazor-chart-horizontal-strip-line.png)
 
 ## Vertical Striplines
 
@@ -104,7 +104,7 @@ By adding the [ChartStripline](https://help.syncfusion.com/cr/blazor/Syncfusion.
 
 ```
 
-![Vertical Striplines](images/strip-line/vertical.png)
+![Blazor Chart with Vertical Striplines](images/strip-line/blazor-chart-vertical-stripline.png)
 
 ## Striplines Customization
 
@@ -149,7 +149,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ```
 
-![Striplines Customization](images/strip-line/custom-stripline.png)
+![Blazor Chart with Custom Striplines](images/strip-line/blazor-chart-custom-stripline.png)
 
 ## Text Customization
 
@@ -197,7 +197,7 @@ The [Start](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Chart
 
 ```
 
-![Striplines - Text Customization](images/strip-line/custom-striptext.png)
+![Blazor Chart with Custom Stripline Text](images/strip-line/blazor-chart-custom-strip-text.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
