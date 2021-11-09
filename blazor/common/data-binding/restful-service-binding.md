@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Bind data from RESTful web services to Syncfusion Blazor components and perform CRUD operations"
+title: Bind data from RESTful web services and perform CRUD operations | Syncfusion
 component: "General"
 description: "Learn how to retrieve data from RESTful service(e.g. ODataV4 service), bind it to DataGrid using ODataV4Adaptor of SfDataManager, and perform CRUD operations."
 component: Common
