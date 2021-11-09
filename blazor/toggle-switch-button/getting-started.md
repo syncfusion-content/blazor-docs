@@ -103,7 +103,7 @@ Now, add the Syncfusion Blazor Toggle Switch Button component in `razor` page in
 
 After successful compilation of the application, simply press F5 to run the application. The Blazor Toggle Switch Button component will render in the web browser as shown below.
 
-![Blazor Toggle Switch Button](./images/blazor-toggle-switch-button.png)
+![Blazor Toggle Switch Button Sample](./images/blazor-toggle-switch-button.png)
 
 ## Set text on Switch
 
@@ -119,7 +119,7 @@ This section explains how to set `OnLabel` and `OffLabel` texts on Switch. In th
 
 > Switch does not have text support for material themes, and does not support long custom text.
 
-![Blazor Toggle Switch Button With Label](./images/blazor-toggle-switch-button-label.png)
+![Blazor Toggle Switch Button With Label Sample](./images/blazor-toggle-switch-button-label.png)
 
 ## See Also
 

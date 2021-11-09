@@ -9,7 +9,7 @@ documentation: ug
 
 # Features in Blazor PDF Viewer Component
 
-The PDF Viewer control for Blazor allows you to view, print, and annotate the PDF files in your Blazor applications and its key features are
+The [PDF Viewer control for Blazor](https://www.syncfusion.com/blazor-components/blazor-pdf-viewer) allows you to view, print, and annotate the PDF files in your Blazor applications and its key features are
 * Accurate and reliable rendering of PDF pages.
 * Provides easy page navigation with:
     * Thumbnail page view
