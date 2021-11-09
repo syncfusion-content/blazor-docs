@@ -1,13 +1,91 @@
 ---
 layout: post
-title: Custom Validation in Blazor TreeGrid Component | Syncfusion
-description: Checkout and learn here all about custom validation in Syncfusion Blazor TreeGrid component and much more details.
+title: Column Validation in Blazor TreeGrid Component | Syncfusion
+description: Checkout and learn here all about column validation in Syncfusion Blazor TreeGrid component and much more details.
 platform: Blazor
 control: Tree Grid
 documentation: ug
 ---
 
-# Custom validation in Blazor TreeGrid Component
+# Column validation in Blazor TreeGrid Component
+
+Column validation allows to validate the edited or added row data and it displays errors for invalid fields before saving data. Tree Grid uses **Form Validator** component for column validation. The validation rules can be set by defining the [TreeGridColumn. ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn~ValidationRules.html).
+
+```cshtml
+@using TreeGridComponent.Data; 
+@using Syncfusion. Blazor.TreeGrid; 
+
+<SfTreeGrid DataSource="@TreeGridData" IdMapping="TaskId" 
+ParentIdMapping="ParentId" TreeColumnIndex="1" 
+Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })">
+    <TreeGridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"
+    ShowDeleteConfirmDialog="true" />
+    <TreeGridColumns>
+        <TreeGridColumn Field="TaskId" HeaderText="Task ID" IsPrimaryKey="true" 
+        Width="80" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="160">
+        </TreeGridColumn>
+        <TreeGridColumn Field="Duration" HeaderText="Duration" Width="100"
+        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100" 
+        ValidationRules="@(new Syncfusion.Blazor.Grids.ValidationRules { Number = true,
+        Min = 0 })" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit"
+        TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right">
+        </TreeGridColumn>
+    </TreeGridColumns>
+</SfTreeGrid>
+
+@code{
+
+    public List<TreeData.BusinessObject> TreeGridData { get; set; }
+
+    protected override void OnInitialized()
+    {       
+        this.TreeGridData = TreeData.GetSelfDataSource().ToList();
+    }
+
+    public class TreeData
+    {
+        public class BusinessObject
+        {
+            public int TaskId { get; set;}
+            public string TaskName { get; set;}
+            public int? Duration { get; set;}
+            public int? Progress { get; set;}
+            public int? ParentId { get; set;}
+        }
+
+        public static List<BusinessObject> GetSelfDataSource()
+        {
+            List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,
+            TaskName = "Parent Task 1",Duration = 10,Progress = 70,ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,
+            TaskName = "Child task 1",Progress = 80,ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,
+            TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,
+            TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5,
+            TaskName = "Parent Task 2",Duration = 10,Progress = 70,ParentId = null,
+            IsParent = true,});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6,
+            TaskName = "Child task 1",Duration = 4,Progress = 80,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7,
+            TaskName = "Child Task 2",Duration = 5,Progress = 65,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8,
+            TaskName = "Child task 3",Duration = 6,Progress = 77,ParentId = 5});
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9,
+            TaskName = "Child task 4",Duration = 6,Progress = 77,ParentId = 5});
+            return BusinessObjectCollection;
+        }
+    }
+}
+```
+
+![Column Validation in Blazor TreeGrid](images/blazor-treegrid-column-validation.png)
 
 ## Data annotation
 
@@ -15,7 +93,7 @@ Data Annotation validation attributes are used to validate the fields in the tre
 
 | Attribute Name | Functionality |
 |-------|---------|
-| Validations are,<br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>9. DataTypeAttribute<br>10.  DataType.Custom<br>11. DataType.Date<br>12. DataType.DateTime<br>13. DataType.EmailAddress<br>14. DataType.ImageUrl<br>15. DataType.Url | The data annotation validation attributes are used as **validation rules** in the tree grid CRUD operations |
+| Validations are, <br><br>1. RequiredAttribute<br>2. StringLengthAttribute<br>3. RangeAttribute<br>4. RegularExpressionAttribute<br>5. MinLengthAttribute<br>6. MaxLengthAttribute<br>7. EmailAddressAttribute<br>8. CompareAttribute<br>9. DataTypeAttribute<br>10.  DataType. Custom<br>11. DataType. Date<br>12. DataType. DateTime<br>13. DataType. EmailAddress<br>14. DataType. ImageUrl<br>15. DataType. Url | The data annotation validation attributes are used as `validation rules` in the tree grid CRUD operations |
 
 More information on the data annotation can be found in this [documentation](https://blazor.syncfusion.com/documentation/datagrid/data-annotation/) section.
 
@@ -23,20 +101,17 @@ More information on the data annotation can be found in this [documentation](htt
 
 Custom validation allows the users to customize the validations manually according to the user's criteria.
 
-Custom validation can be used by overriding the IsValid method inside the class that inherits the Validation Attribute. All the validations are done inside the IsValid method.The same class should be set as a attribute to the specific field property of the tree grid's datasource model class.
+Custom validation can be used by overriding the IsValid method inside the class that inherits the Validation Attribute. All the validations are done inside the IsValid method. The same class should be set as a attribute to the specific field property of the tree grid's datasource model class.
 
-The following sample code demonstrates custom validations implemented in the fields **Duration** and **Priority**.
+The following sample code demonstrates custom validations implemented in the fields `Duration` and `Priority` .
 
-{% tabs %}
-
-{% highlight razor %}
-
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
-@using System.ComponentModel.DataAnnotations;
+```cshtml
+@using TreeGridComponent. Data; 
+@using Syncfusion. Blazor. TreeGrid; 
+@using System. ComponentModel. DataAnnotations; 
 
 <SfTreeGrid TValue="BusinessObject" DataSource="@TreeData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
-            Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
+Toolbar="@(new List<string>() { "Edit", "Update", "Cancel" })">
     <TreeGridEditSettings Mode="Syncfusion.Blazor.TreeGrid.EditMode.Cell" NewRowPosition="RowPosition.Child"
                           AllowEditing="true" AllowAdding="true" AllowDeleting="true" ShowDeleteConfirmDialog="true" />
     <TreeGridColumns>
@@ -46,9 +121,11 @@ The following sample code demonstrates custom validations implemented in the fie
         <TreeGridColumn Field="Progress" HeaderText="Progress" Width="100"></TreeGridColumn>
         <TreeGridColumn Field="Priority" HeaderText="Priority" Width="100" EditType="Syncfusion.Blazor.Grids.EditType.DefaultEdit" TextAlign="Syncfusion.Blazor.Grids.TextAlign.Right"></TreeGridColumn>
     </TreeGridColumns>
+
 </SfTreeGrid>
 
 @code{
+
     public List<BusinessObject> TreeData = new List<BusinessObject>();
     protected override void OnInitialized()
     {
@@ -106,14 +183,16 @@ The following sample code demonstrates custom validations implemented in the fie
             }
         }
     }
+
 }
 
-{% endhighlight %}
+```
 
-{% highlight c# %}
+```cshtml
 
-namespace TreeGridComponent.Data
+namespace TreeGridComponent. Data
 {
+
     public class BusinessObject
     {
         [Required]
@@ -124,38 +203,40 @@ namespace TreeGridComponent.Data
 
         public int Progress { get; set; }
         [CustomValidationPriority]
+
         public string Priority { get; set; }
+
         public int? ParentId { get; set; }
     }
+
 }
 
-{% endhighlight %}
+```
 
-{% endtabs %}
+## Custom validator component
 
-### Custom validator component
-
-Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the **Validator** property of the **TreeGridEditSettings** component which accepts a validation component and inject it inside the **EditForm** of the tree grid. Inside the **Validator**, you can access the data using the implicit named parameter context which is of type [`ValidatorTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
+Apart from using default validation and custom validation, there are cases where you might want to use your validator component to validate the tree grid edit form. Such cases can be achieved using the `Validator` property of the `TreeGridEditSettings` component which accepts a validation component and inject it inside the `EditForm` of the tree grid. Inside the `Validator` , you can access the data using the implicit named parameter context which is of type [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html).
 
 For creating a form validator component you can refer [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/forms-validation?view=aspnetcore-5.0#validator-components).
 
 In the below code example, the following things have been done.
 
-* Created a form validator component named `MyCustomValidator` which accepts [`ValidatorTemplateContext`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) value as parameter.
-* Used the `MyCustomValidator` component inside the **Validator** property.
+* Created a form validator component named `MyCustomValidator` which accepts [ValidatorTemplateContext](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.ValidatorTemplateContext.html) value as parameter.
+* Used the `MyCustomValidator` component inside the `Validator` property.
 * This validator component will check whether Duration value is in between 0 to 30.
-* Displayed the validation error messages using **ValidationMessage** component.
+* Displayed the validation error messages using `ValidationMessage` component.
 
 {% tabs %}
 
 {% highlight c# %}
 
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Forms;
-using Syncfusion.Blazor.Grids;
+using Microsoft. AspNetCore. Components; 
+using Microsoft. AspNetCore. Components. Forms; 
+using Syncfusion. Blazor. Grids; 
 
 public class MyCustomValidator : ComponentBase
 {
+
     [Parameter]
     public ValidatorTemplateContext context { get; set; }
 
@@ -231,11 +312,12 @@ public class MyCustomValidator : ComponentBase
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
+@using TreeGridComponent. Data; 
+@using Syncfusion. Blazor. TreeGrid; 
 @inject WeatherForecastService ForecastService
 
 <SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
+
             Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
     <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"
                           Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog">
@@ -253,6 +335,7 @@ public class MyCustomValidator : ComponentBase
         <TreeGridColumn Field=@nameof(Tree.Priority) HeaderText="Priority" Width="120"></TreeGridColumn>
         <TreeGridColumn Field=@nameof(Tree.Duration) HeaderText="Duration" TextAlign="TextAlign.Right" Width="120"></TreeGridColumn>
     </TreeGridColumns>
+
 </SfTreeGrid>
 
 @code{
@@ -263,14 +346,16 @@ public class MyCustomValidator : ComponentBase
     {
         GridData = ForecastService.GetTree();
     }
+
 }
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data
+namespace TreeGridComponent. Data
 {
+
     public class Tree
     {
         [Required(ErrorMessage = "Task ID  should not be empty")]
@@ -298,6 +383,7 @@ namespace TreeGridComponent.Data
         }
         return list;
     }
+
 }
 
 {% endhighlight %}
@@ -306,11 +392,11 @@ namespace TreeGridComponent.Data
 
 The output will be as follows.
 
-![Custom Validator](./images/custom-validator.png)
+![Blazor TreeGrid with Custom Validator](./images/blazor-treegrid-custom-validator.png)
 
-#### Display validation message using in-built tooltip
+## Display validation message using in-built tooltip
 
-In the above code example, you can see that **ValidationMessage** component is used, this might be not suitable when using Inline editing or batch editing. In such cases, you can use the in-built validation tooltip to show those error messages by using `ValidatorTemplateContext.ShowValidationMessage(fieldName, IsValid, Message)` method.
+In the above code example, you can see that `ValidationMessage` component is used, this might be not suitable when using Inline editing or batch editing. In such cases, you can use the in-built validation tooltip to show those error messages by using `ValidatorTemplateContext.ShowValidationMessage(fieldName, IsValid, Message)` method.
 
 Now, HandleValidation method of the MyCustomValidator component would be changed like below.
 
@@ -320,6 +406,7 @@ Now, HandleValidation method of the MyCustomValidator component would be changed
 
 protected void HandleValidation(FieldIdentifier identifier)
 {
+
     //validate your requirment column
     if (identifier.FieldName.Equals("Duration"))
     {
@@ -341,6 +428,7 @@ protected void HandleValidation(FieldIdentifier identifier)
             context.ShowValidationMessage("Duration", true, null);
         }
     }
+
 }
 
 {% endhighlight %}
@@ -349,23 +437,23 @@ protected void HandleValidation(FieldIdentifier identifier)
 
 The output will be as follows.
 
-![Custom Validator 2](./images/custom-validator3.png)
+![Blazor TreeGrid with Custom Validator](./images/blazor-treegrid-with-custom-validator.png)
 
-#### Disable in-built validator component
+## Disable in-built validator component
 
-**Validator** property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, **DataAnnotationValidator** and an internal [`ValidationRules`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the **DataAnnotationValidator** component, then it could be simply achieved by using the **Validator** component inside [`TreeGridEditSettings`](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
+`Validator` property can also be used to disable the in-built validator component used by the tree grid. For instance, by default, the tree grid uses two validator components, `DataAnnotationValidator` and an internal [ValidationRules](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.TreeGridColumn.html#Syncfusion_Blazor_TreeGrid_TreeGridColumn_ValidationRules) property, for handling edit form validation. If you are willing to use only the `DataAnnotationValidator` component, then it could be simply achieved by using the `Validator` component inside [TreeGridEditSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridEditSettings.html).
 
 {% tabs %}
 
 {% highlight razor %}
 
-@using TreeGridComponent.Data;
-@using Syncfusion.Blazor.TreeGrid;
+@using TreeGridComponent. Data; 
+@using Syncfusion. Blazor. TreeGrid; 
 
-<SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0"
-            Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
-    <TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"
-                          Mode="Syncfusion.Blazor.TreeGrid.EditMode.Dialog">
+<SfTreeGrid @ref="TreeGrid" TValue="Tree" DataSource="GridData" IdMapping="TaskId" ParentIdMapping="ParentId" TreeColumnIndex="0" 
+Toolbar="@(new List<string>() { "Add", "Edit", "Update", "Cancel", "Delete" })">
+<TreeGridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"
+                          Mode="Syncfusion. Blazor. TreeGrid. EditMode. Dialog">
         <Validator>
             <DataAnnotationsValidator></DataAnnotationsValidator>
         </Validator>
@@ -375,6 +463,7 @@ The output will be as follows.
         <TreeGridColumn Field=@nameof(Tree.Priority) HeaderText="Priority" Width="120"></TreeGridColumn>
         <TreeGridColumn Field=@nameof(Tree.Duration) HeaderText="Duration" TextAlign="TextAlign.Right" Width="120"></TreeGridColumn>
     </TreeGridColumns>
+
 </SfTreeGrid>
 
 @code{
@@ -385,14 +474,16 @@ The output will be as follows.
     {
         GridData = ForecastService.GetTree();
     }
+
 }
 
 {% endhighlight %}
 
 {% highlight c# %}
 
-namespace TreeGridComponent.Data
+namespace TreeGridComponent. Data
 {
+
     public class Tree
     {
         [Required(ErrorMessage = "Task ID  should not be empty")]
@@ -420,6 +511,7 @@ namespace TreeGridComponent.Data
         }
         return list;
     }
+
 }
 
 {% endhighlight %}
