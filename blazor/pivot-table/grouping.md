@@ -222,7 +222,7 @@ The "**Interval by**" option is used to separate the selected date fields into y
 
 ![Interval Grouping in Blazor PivotTable](images/blazor-pivottable-interval-grouping.png)
 <br/>
-![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-group.png "Grouping settings options applied for date grouping")
+![Date Grouping in Blazor PivotTable](images/blazor-pivottable-date-group.png)
 <br/>
 ![Displaying Updated Date Group in Blazor PivotTable](images/blazor-pivottable-update-date-group.png)
 
