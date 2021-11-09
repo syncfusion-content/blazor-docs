@@ -56,7 +56,7 @@ The chart can be zoomed in three different ways.
 
 ```
 
-![Enable Zooming](images/zoom/default-razor.png)
+![Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-zooming.png)
 
 A zooming toolbar will show after zooming the chart, featuring options for **Zoom**, **Zoom In**, **Zoom Out**, **Pan**, and **Reset**. The **Pan** option allows you to pan the chart, while the **Reset** option allows you to reset the zoomed chart.
 
@@ -106,7 +106,7 @@ There are three types of modes.
 
 ```
 
-![Zooming Mode](images/zoom/mode.png)
+![Horizontal Zooming in Blazor Column Chart](images/zoom/blazor-column-chart-horizontal-zooming.png)
 
 ## Toolbar
 
@@ -152,7 +152,7 @@ By default, zoom in, zoom out, pan, and reset buttons are available in the toolb
 
 ```
 
-![Zooming - Toolbar Items](images/zoom/toolbar.png)
+![Zooming Option in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-in-toolbar.png)
 
 ## Enable Pan
 
@@ -194,7 +194,7 @@ By using the [EnablePan](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Zooming with Pan enabled](images/zoom/pan.png)
+![Zooming with Pan in Blazor Column Chart Toolbar](images/zoom/blazor-column-chart-zoom-pan.png)
 
 ## Enable Scrollbar
 
@@ -259,7 +259,7 @@ The [EnableScrollbar](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Ch
 
 ```
 
-![Zooming with Scrollbar enabled](images/zoom/scrollbar-razor.png)
+![Zooming with Scrollbar in Blazor Area Chart](images/zoom/blazor-area-chart-zoom-with-scrollbar.png)
 
 ## Auto interval on zooming
 
@@ -324,7 +324,7 @@ The axis interval will be calculated automatically with respect to the zoomed ra
 
 ```
 
-![Auto interval on zooming](images/zoom/auto_interval.png)
+![Auto Interval on Zooming in Blazor Area Chart](images/zoom/blazor-area-chart-auto-interval-zooming.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

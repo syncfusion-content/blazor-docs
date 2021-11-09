@@ -55,7 +55,7 @@ When space constraints prevent displaying information using data labels, the too
 
 ```
 
-![Enable Tooltip](images/tooltip/default-razor.png)
+![Blazor Column Chart with Tooltip](images/tooltip/blazor-column-chart-tooltip.png)
 
 ## Tooltip Format
 
@@ -99,7 +99,7 @@ By default, the tooltip displays information in points for the x and y values. I
 
 ```
 
-![Tooltip Format](images/tooltip/format-razor.png)
+![Blazor Column Chart with Tooltip Format](images/tooltip/blazor-column-chart-tooltip-format.png)
 
 <!-- markdownlint-disable MD013 -->
 
@@ -147,7 +147,7 @@ The [Fill](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartT
 
 ```
 
-![Tooltip Customization](images/tooltip/appearance-razor.png)
+![Blazor Column Chart with Custom Tooltip](images/tooltip/blazor-column-chart-custom-tooltip.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
