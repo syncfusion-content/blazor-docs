@@ -1,13 +1,13 @@
 ---
 layout: post
-title: SQL server data binding and performing CRUD operations using Syncfusion Blazor component | Syncfusion
+title: SQL server data binding and performing CRUD operations | Syncfusion
 description: Learn about consuming data from SQL Server using Microsoft SQL Client, binding it to Syncfusion Component, and performing CRUD operations
 platform: Blazor
 component: DataGrid component and DataManager
 documentation: ug
 ---
 
-# SQL server data binding and performing CRUD operations using Syncfusion Blazor component
+# SQL server data binding and performing CRUD operations
 
 ## Introduction
 
@@ -23,7 +23,7 @@ The following software are needed:
 
 ## Create Blazor Server Application
 
-Open Visual Studio 2019 and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) to create the Blazor Server Application.
+Open Visual Studio 2019 and follow the steps in the [documentation](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) to create the Blazor Server Application.
 
 ## Add Syncfusion Blazor DataGrid package
 

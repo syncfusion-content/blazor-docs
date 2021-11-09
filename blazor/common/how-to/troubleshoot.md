@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to troubleshoot server and client exceptions in Blazor | Syncfusion
+title: Troubleshoot server and client exceptions in Blazor | Syncfusion
 description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
 platform: Blazor
 component: Common
@@ -88,7 +88,7 @@ documentation: ug
 
     **Cause:**
 
-    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/?#prerequisites) documentation.
+    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/?#prerequisites) documentation.
 
     **Solution:**
 

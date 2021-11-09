@@ -11,7 +11,7 @@ documentation: ug
 
 The Blazor Linear Gauge is an ideal component for visualizing numeric values in a linear scale with features like multiple axes, different orientations, and more.
 
-This section briefly explains how to include a Linear gauge in your Blazor server-Side application. Refer to this [Getting Started with Syncfusion Blazor for Serve-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) documentation for the introduction and configuring the common specifications.
+This section briefly explains how to include a Linear gauge in your Blazor server-Side application. Refer to this [Getting Started with Syncfusion Blazor for Serve-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) documentation for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor Linear Gauge component in the application
 
@@ -168,6 +168,6 @@ The range is used to specify a group of scale values in the gauge. We can set th
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli)
