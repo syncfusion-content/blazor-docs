@@ -13,7 +13,7 @@ This section explains the list of textbox type attributes.
 
 ## Text
 
-Set the `Text` type to TextBox component.
+Set the `Text` type to TextBox component. It defines a single-line text field, it is the default value of the Textbox component.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -25,7 +25,7 @@ Set the `Text` type to TextBox component.
 
 ## Number
 
-Set the `Number` type to TextBox component.
+Set the `Number` type to TextBox component. It defines an input field for entering a number which will allow only numeric values to be entered, displays a spinner when hover or focus the control.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -37,7 +37,7 @@ Set the `Number` type to TextBox component.
 
 ## Password
 
-Set the `Password` type to TextBox component.
+Set the `Password` type to TextBox component. It defines a single-line text field whose value is obscured.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -49,7 +49,7 @@ Set the `Password` type to TextBox component.
 
 ## Email
 
-Set the `Email` type to TextBox component.
+Set the `Email` type to TextBox component. It defines an input field for entering an email address.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -61,7 +61,7 @@ Set the `Email` type to TextBox component.
 
 ## URL
 
-Set the `URL` type to TextBox component.
+Set the `URL` type to TextBox component. It defines an input field for entering url.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -73,7 +73,7 @@ Set the `URL` type to TextBox component.
 
 ## Tel
 
-Set the `Tel` type to TextBox component.
+Set the `Tel` type to TextBox component. It defines an input field for entering telephone number.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
@@ -85,7 +85,7 @@ Set the `Tel` type to TextBox component.
 
 ## Search
 
-Set the `Search` type to TextBox component.
+Set the `Search` type to TextBox component. It defines a single line text field for entering a search string.
 
 ```cshtml
 @using Syncfusion.Blazor.Inputs
