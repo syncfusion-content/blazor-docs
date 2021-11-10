@@ -40,4 +40,4 @@ The `Visible` property of the Toolbar item is used to show or hide the item by s
 }
 ```
 
-![Dynamic Show/Hide ToolbarItems](../images/showHideItem.png)
+![Showing or Hiding Blazor Toolbar Items](../images/blazor-toolbar-show-or-hide-item.png)

@@ -38,4 +38,4 @@ Refer to the following code example to add formatted HTML content to the Tooltip
 }
 ```
 
-![Blazor - Tooltip - Content](images/content.gif)
+![Blazor Tooltip with Content](images/blazor-tooltip-with-content.gif)

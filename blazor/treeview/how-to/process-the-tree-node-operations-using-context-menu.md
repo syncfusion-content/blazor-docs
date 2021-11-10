@@ -244,4 +244,4 @@ Following example demonstrates the above cases which are used to manipulate Tree
 }
 ```
 
-![TreeView Sample](../images/context-menu.png)
+![Displaying Context Menu in Blazor TreeView Node](../images/blazor-treeview-node-with-context-menu.png)

@@ -18,7 +18,7 @@ The PDF Viewer control provides options to add, edit, and delete the comments to
 * Text markup annotation
 * Free text annotation
 
-![Comments](../../pdfviewer/images/commentannot.png)
+![Comments in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-comments.png)
 
 ## Adding a comment to the annotation
 
@@ -50,7 +50,7 @@ If the comment panel is already in open state, you can select the annotations an
 * Selected annotation comment container is highlighted in the comment panel.
 * Now, you can add comment and comment replies using comment panel.
 
-![AddingComments](../../pdfviewer/images/stickycomment.png)
+![Adding Comments in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-add-new-comment.png)
 
 ### Adding Comment Replies
 
@@ -64,7 +64,7 @@ If the comment panel is already in open state, you can select the annotations an
 * Select Set Status option in the context menu that appears.
 * Select the status of the annotation comment in the context menu that appears.
 
-![CommentStatus](../../pdfviewer/images/commentstatus.png)
+![Blazor PDFViewer with Comment Status](../../pdfviewer/images/blazor-pdfviewer-comment-status.png)
 
 ### Editing the comments and comments replies of the annotations
 
@@ -95,7 +95,7 @@ The annotation comment and comment replies can be edited by the following ways:
 * Select the status of the annotation comment in the context menu that appears.
 * Status ‘None’ is the default state. If status set to ‘None’, the comments or reply does not appear.
 
-![CommentEdit](../../pdfviewer/images/commentsedit.png)
+![Editing Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-comment-editing.png)
 
 ### Delete Comment or Comment Replies
 
@@ -103,7 +103,7 @@ The annotation comment and comment replies can be edited by the following ways:
 * Click the more options button shown in Comments or reply container.
 * Select Delete option in the context menu that appears.
 
-![CommentEdit](../../pdfviewer/images/commentsdelete.png)
+![Deleting Comment in Blazor PDFViewer](../../pdfviewer/images/blazor-pdfviewer-delete-comments.png)
 
 > The annotation will be deleted on deleting the comment using comment panel.
 

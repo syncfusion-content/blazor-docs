@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Events in Blazor Stock Chart Component | Syncfusion
-description: Checkout and learn here all about Events in Syncfusion Blazor Stock Chart component and much more details.
+description: Checkout and learn here all about events in Syncfusion Blazor Stock Chart component and much more details.
 platform: Blazor
 control: Stock Chart 
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Stock Chart Component
 
-In this section, we have provided the list of events of Stock Chart component which will be triggered for appropriate stock chart actions. The events should be provided to the Stock Chart using **StockChartEvents** component.
+In this section, the list of events of Stock Chart component is provided which will be triggered for appropriate stock chart actions. The events should be provided to the Stock Chart using **StockChartEvents** component.
 
 The following are the number of events supported for Stock Chart component.
 

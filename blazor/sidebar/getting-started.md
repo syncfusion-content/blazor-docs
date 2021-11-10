@@ -11,15 +11,15 @@ documentation: ug
 
 # Getting Started with Blazor Sidebar Component
 
-This section briefly explains about how to include a `Sidebar` in your Blazor server-side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Sidebar` in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
-You can use any one of the below standards to install the Syncfusion Blazor library in your application.
+Any one of the below standards can be used to install the Syncfusion Blazor library in the application.
 
 ### Using Syncfusion Blazor Individual NuGet Packages [New standard]
 
-> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
+> Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for the Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
 1. Install **Syncfusion.Blazor.Navigations** NuGet package to the application by using the `NuGet Package Manager`. Refer to the [Individual NuGet Packages](https://blazor.syncfusion.com/documentation/nuget-packages/) section for the available NuGet packages.
 
@@ -31,7 +31,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 3. Once the installation process is completed, the Syncfusion Blazor Navigation package will be installed in the project.
 
-4. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+4. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -41,7 +41,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
     </head>
     ```
 
-    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, you have to add the above `Syncfusion.Blazor.Themes` static web assets (styles) in the application.
+    W> `Syncfusion.Blazor` package should not be installed along with [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/). Hence, the above `Syncfusion.Blazor.Themes` static web assets (styles) have to be added in the application.
 
 ### Using Syncfusion.Blazor NuGet Package [Old standard]
 
@@ -57,7 +57,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. Once the installation process is completed, the Syncfusion Blazor package will be installed in the project.
 
-4. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
+4. The client-side style resources can be added through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package to the `<head>` element of the `~/wwwroot/index.html` page in Blazor WebAssembly app or `~/Pages/_Host.cshtml` page in Blazor Server app.
 
     ```cshtml
     <head>
@@ -177,7 +177,7 @@ Now, add the Syncfusion Blazor Sidebar component in any web page (razor) in the 
 
 ## Run the application
 
-After successful compilation of your application, simply press `F5` to run the application.
+After successful compilation of the application, simply press `F5` to run the application.
 
 ![Blazor Sidebar](./images/blazor-sidebar.png)
 
@@ -239,7 +239,6 @@ The following example shows a Sidebar component with enabled backdrop.
 
 >**Note** Class can be added to the sidebar element using `HtmlAttributes` property. In that class, you have to add new styles or override existing styles of sidebar element.
 
-Output be like the below.
 
 ![Enabling Backdrop in Blazor Sidebar](./images/blazor-sidebar-enable-backdrop.png)
 
@@ -295,8 +294,6 @@ Animation transitions can be set while expanding or collapsing the Sidebar using
 </style>
 
 ```
-
-Output be like the below.
 
 ![Blazor Sidebar with Animation](./images/blazor-sidebar-animation.png)
 
@@ -470,8 +467,6 @@ In the following example, the Sidebar is rendered with Accordion component in it
 </style>
 
 ```
-
-Output be like the below.
 
 ![Navigation with Blazor Sidebar](./images/blazor-sidebar-navigation.png)
 

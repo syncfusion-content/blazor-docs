@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and Appearance in Blazor Tabs Component | Syncfusion
-description: Checkout and learn here all about Style and Appearance in Syncfusion Blazor Tabs component and more.
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor Tabs component and more.
 platform: Blazor
 control: Tabs
 documentation: ug

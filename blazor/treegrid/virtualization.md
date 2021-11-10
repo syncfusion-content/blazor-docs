@@ -189,7 +189,7 @@ public class VirtualData
 
 {% endtabs %}
 
-![Virtualization](images/virtualization.gif)
+![Virtualization in Blazor TreeGrid](images/blazor-treegrid-virtualization.gif)
 
 ## Limitations for Virtualization
 

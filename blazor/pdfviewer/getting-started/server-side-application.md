@@ -17,19 +17,19 @@ This section briefly explains how to include a PDF Viewer in your  Blazor server
 
 **Step 1:** Choose **Create a new project** from the Visual Studio dashboard.Click Next.
 
-![new project](../images/new-project.png)
+![Creating New Project in Blazor](../images/blazor-create-new-project.png)
 
 **Step 2:** Select **Blazor Server App** from the template, and then click **Next** button..
 
-![blazor template](../images/blazor-template-serve.png)
+![Blazor Application Template](../images/blazor-application-template.png)
 
 **Step 3:** Now, the project configuration window will popup. Click **Next** button to modify the additional information.
 
- ![project-configuration](../images/project-configurations-server.png)
+ ![Blazor Project Configuration](../images/blazor-project-configurations.png)
 
  **Step 4:** Select the target Framework **.NET 5.0** at the top of the Application based on your required target and then click **Create** button to create a new Blazor Server application.
 
-  ![Add info](../images/addition-information-server.png)
+  ![Blazor Server Application with Additional Information](../images/blazor-server-app-with-addition-information.png)
 
 **Step 5:** Installing Syncfusion Blazor packages in the application
 
@@ -43,11 +43,11 @@ You can use any one of the below standard to install the Syncfusion Blazor libra
 
 2. Right-click the project,and then select `Manage NuGet Packages`.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
 3. Search **Syncfusion.Blazor.PdfViewerServer.Windows** keyword in the Browse tab and install **Syncfusion.Blazor.PdfViewerServer.Windows** NuGet package in the application.
 
-    ![select nuget](../images/individual-nuget-server.png)
+    ![Searching Blazor PDFViewer NuGet Package](../images/blazor-pdfviewer-nuget-package.png)
 
 4. The `Syncfusion.Blazor.PdfViewerServer.Windows` package will be included in the newly created project once the installation process is completed.
 
@@ -61,11 +61,11 @@ W>If you prefer the above new standard (individual NuGet packages), then skip th
 
 1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
 
-    ![nuget explorer](../images/nuget-explorer.png)
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
 
 2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
 
-    ![select nuget](../images/select-nugets.png)
+    ![Searching Blazor NuGet Package](../images/blazor-nuget-package.png)
 
 3. The `Syncfusion Blazor` package will be installed in the project once the installation process is completed.
 
@@ -83,7 +83,7 @@ W>If you prefer the above new standard (individual NuGet packages), then skip th
 <head>
     ....
     ....
-        <link href="_content/Syncfusion.Blazor/styles/bootstrap4.css" rel="stylesheet" />
+        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
 </head>
 ```
 
@@ -135,7 +135,7 @@ private string DocumentPath { get; set; } = "wwwroot/Data/PDF_Succinctly.pdf";
 
 **Step 10:** Run the application, the PDF Viewer component will be rendered in the web browser as shown in the following screenshot.
 
-![output image](../images/browser-output.png)
+![Blazor PDFViewer](../images/blazor-pdfviewer.png)
 
 Download the Server side application from [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorServer1089926850.zip)
 

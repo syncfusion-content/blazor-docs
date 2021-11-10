@@ -95,7 +95,7 @@ The following is the list of properties that is available in the **.resx** file 
 }
 ```
 
-![Maps with localization](./images/Localization/Localization.png)
+![Blazor Maps with Localization](./images/Localization/blazor-maps-localization.png)
 
 ## See also
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Style and appearance in Blazor Splitter Component | Syncfusion
-description: Checkout and learn here all about Style and appearance in Syncfusion Blazor Splitter component and more.
+description: Checkout and learn here all about style and appearance in Syncfusion Blazor Splitter component and more.
 platform: Blazor
 control: Splitter
 documentation: ug

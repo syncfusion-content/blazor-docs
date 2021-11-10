@@ -96,4 +96,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Final output](../images/custom-toolbar-text.PNG)
+![Custom Toolbar Items in Blazor TreeGrid](../images/blazor-treegrid-custom-toolbar-item.PNG)

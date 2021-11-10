@@ -101,4 +101,4 @@ public class TreeData
 
 {% endtabs %}
 
-![Update datasource dynamically](../images/change-datasource.gif)
+![Updating Datasource Dynamically in Blazor TreeGrid](../images/blazor-treegrid-update-datasource.gif)

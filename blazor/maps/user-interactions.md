@@ -29,7 +29,7 @@ Zooming of Maps is enabled by setting the [Enable](https://help.syncfusion.com/c
 </SfMaps>
 ```
 
-![Maps with zoom toolbar](./images/UserInteraction/Zoom.png)
+![Blazor Maps with Zooming](./images/UserInteraction/blazor-maps-zooming.png)
 
 <b>Enable panning</b>
 
@@ -105,7 +105,7 @@ The [MapsZoomToolbarSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 </SfMaps>
 ```
 
-![Maps with custom zoom toolbar](./images/UserInteraction/custom-toolbar.png)
+![Blazor Maps with Custom Zooming Toolbar](./images/UserInteraction/blazor-maps-custom-zooming-toolbar.png)
 
 The [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarButton.html) class can be used to customize the buttons in the zooming toolbar. The `MapsZoomToolbarButton` class has the following properties.
 
@@ -139,7 +139,7 @@ The [MapsZoomToolbarButton](https://help.syncfusion.com/cr/blazor/Syncfusion.Bla
 </SfMaps>
 ```
 
-![Maps with custom zoom toolbar buttons](./images/UserInteraction/custom-toolbar-buttons.png)
+![Blazor Maps with Custom Zoom Toolbar Buttons](./images/UserInteraction/blazor-maps-custom-zoom-toolbar-buttons.png)
 
 The [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Maps.MapsZoomToolbarTooltipSettings.html) class can be used to customize the tooltip in the zooming toolbar. The `MapsZoomToolbarTooltipSettings` class has the following properties.
 
@@ -174,7 +174,7 @@ The [MapsZoomToolbarTooltipSettings](https://help.syncfusion.com/cr/blazor/Syncf
 </SfMaps>
 ```
 
-![Maps with custom tooltip in zoom toolbar](./images/UserInteraction/custom-tooltip.png)
+![Blazor Maps with Custom Tooltip in Zoom Toolbar](./images/UserInteraction/blazor-maps-custom-tooltip-in-zoom-toolbar.png)
 
 #### Pinch zooming
 
@@ -315,7 +315,7 @@ The following properties and class are available to customize the selection of M
 </SfMaps>
 ```
 
-![Maps with shape selection](./images/UserInteraction/Selection.png)
+![Blazor Maps with Shape Selection](./images/UserInteraction/blazor-maps-shape-selection.png)
 
 By tapping on the specific legend, the shapes which are bounded to the selected legend is also selected and vice versa.
 
@@ -357,7 +357,7 @@ By tapping on the specific legend, the shapes which are bounded to the selected 
 }
 ```
 
-![Maps with shape selection using legend](./images/UserInteraction/highlight-with-legend.png)
+![Blazor Maps with Shape Selection using Legend](./images/UserInteraction/blazor-maps-shape-selection-using-legend.png)
 
 ### Enable selection for bubbles
 
@@ -405,7 +405,7 @@ To enable the selection for bubbles in Maps, set the [MapsBubbleSelectionSetting
 }
 ```
 
-![Enable selection for bubble](./images/UserInteraction/selection-bubble.PNG)
+![Enabling Bubble Selection in Blazor Maps](./images/UserInteraction/blazor-maps-bubble-selection.PNG)
 
 ### Enable selection for markers
 
@@ -450,7 +450,7 @@ To enable the selection for markers in Maps, set the [MapsMarkerSelectionSetting
 }
 ```
 
-![Enable selection for marker](./images/UserInteraction/selection-marker.PNG)
+![Enabling Marker Selection in Blazor Maps](./images/UserInteraction/blazor-maps-marker-selection.PNG)
 
 ### Public method for the shape selection
 
@@ -482,7 +482,7 @@ The [ShapeSelection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Map
 }
 ```
 
-![Markers with cluster](./images/Marker/public-method.PNG)
+![Blazor Maps Marker with Cluster](./images/Marker/blazor-maps-marker-cluster.PNG)
 
 ### Initial shape selection
 
@@ -504,7 +504,7 @@ The shape is initially selected using the [MapsInitialShapeSelection](https://he
 </SfMaps>
 ```
 
-![initial with selection](./images/Marker/initial-selection.PNG)
+![Blazor Maps with Initial Shape Selection](./images/Marker/blazor-maps-initial-shape-selection.PNG)
 
 ### Initial marker selection
 
@@ -544,7 +544,7 @@ Using the [InitialMarkerSelection](https://help.syncfusion.com/cr/blazor/Syncfus
 }
 ```
 
-![Enable initial marker selection](./images/UserInteraction/selection-marker.PNG)
+![Blazor Maps with Initial Marker Selection](./images/UserInteraction/blazor-maps-marker-selection.PNG)
 
 ## Highlight
 
@@ -572,7 +572,7 @@ The following properties and classes are available to customize the highlight of
 </SfMaps>
 ```
 
-![Maps with highlighting shape](./images/UserInteraction/Highlight.png)
+![Highlighting Blazor Maps Shape](./images/UserInteraction/blazor-maps-highlight-shape.png)
 
 Hovering on the specific legend, the shapes which are bounded to the selected legend is also highlighted and vice versa.
 
@@ -614,7 +614,7 @@ Hovering on the specific legend, the shapes which are bounded to the selected le
 }
 ```
 
-![Maps with highlighting shape using legend](./images/UserInteraction/highlight-with-legend.png)
+![Highlighting Blazor Maps Shape with Legend](./images/UserInteraction/blazor-maps-shape-selection-using-legend.png)
 
 ### Enable highlight for bubbles
 
@@ -664,7 +664,7 @@ To enable the highlight for bubbles in Maps, set the [MapsBubbleHighlightSetting
 }
 ```
 
-![Enable highlight for bubbles](./images/UserInteraction/selection-bubble.PNG)
+![Enabling Bubble Selection in Blazor Maps](./images/UserInteraction/blazor-maps-bubble-selection.PNG)
 
 ### Enable highlight for markers
 
@@ -701,7 +701,7 @@ To enable the highlight for markers in Maps, set the [MapsMarkerHighlightSetting
 }
 ```
 
-![Enable highlight for markers](./images/UserInteraction/selection-marker.PNG)
+![Highlighting Marker Selection in Blazor Maps](./images/UserInteraction/blazor-maps-marker-selection.PNG)
 
 ## Tooltip
 
@@ -724,7 +724,7 @@ On mouse over or touch end event, the tooltip is used to get more information ab
 </SfMaps>
 ```
 
-![Maps with tooltip](./images/UserInteraction/tooltip.PNG)
+![Blazor Maps with Tooltip](./images/UserInteraction/blazor-maps-tooltip.PNG)
 
 ### Customization
 
@@ -782,7 +782,7 @@ The following properties are available to customize the tooltip of the Maps comp
 }
 ```
 
-![Maps with tooltip](./images/UserInteraction/tooltip-customization.png)
+![Blazor Maps with Custom Tooltip](./images/UserInteraction/blazor-maps-custom-tooltip.png)
 
 ### Tooltip template
 
@@ -886,7 +886,7 @@ The HTML element can be rendered in the tooltip of the Maps using the [TooltipTe
 </style>
 ```
 
-![Maps with tooltip template](./images/UserInteraction/tooltip-template.PNG)
+![Blazor Maps with Tooltip Template](./images/UserInteraction/blazor-maps-tooltip-template.PNG)
 
 ## See also
 

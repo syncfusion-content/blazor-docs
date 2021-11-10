@@ -40,7 +40,7 @@ To navigate the line between two cities on the world map, [Latitude](https://hel
 </SfMaps>
 ```
 
-![Maps with navigation lines](./images/NavigationLine/Navigationline.png)
+![Blazor Maps with Navigation Lines](./images/NavigationLine/blazor-maps-navigation-line.png)
 
 ## Enabling the arrows
 
@@ -69,4 +69,4 @@ To enable the arrow in the navigation line, set the [ShowArrow](https://help.syn
 </SfMaps>
 ```
 
-![Maps with navigation line arrow](./images/NavigationLine/arrow.PNG)
+![Blazor Maps with Navigation Line Arrow](./images/NavigationLine/blazor-maps-navigation-line-arrow.PNG)

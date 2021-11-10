@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Troubleshoot server and client exceptions in Blazor | Syncfusion
+title: How to troubleshoot server & client exceptions in Blazor | Syncfusion
 description: Checkout and learn here all about troubleshooting server and client exceptions in Blazor and much more.
 platform: Blazor
 component: Common
@@ -88,7 +88,7 @@ documentation: ug
 
     **Cause:**
 
-    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/?#prerequisites) documentation.
+    You may have .NET Core SDK older than version 3.1.2, but Syncfusion Blazor components need the latest version of .NET Core SDK as stated in the [pre-requisite](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/?#prerequisites) documentation.
 
     **Solution:**
 
@@ -219,4 +219,7 @@ documentation: ug
     > The trailing slash is must for '_Host.cshtml' base path configuration.
 
     For further details, please refer this [MSDN documentation](https://docs.microsoft.com/en-us/aspnet/core/blazor/host-and-deploy/?view=aspnetcore-5.0&tabs=visual-studio#app-base-path) for your reference.
-<!-- markdownlint-enable MD036 -->
+
+## See also
+
+* [How to solve AOT publish failure when using Syncfusion.Blazor](https://www.syncfusion.com/forums/169884/aot-publish-fails-for-syncfusion-blazor-dll)

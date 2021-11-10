@@ -113,4 +113,4 @@ To setup the column virtualization, set the [EnableVirtualization](https://help.
 > Column's [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.SfTreeGrid-1.html#Syncfusion_Blazor_TreeGrid_SfTreeGrid_1_Width) is required for column virtualization. If column's width is not defined then Tree Grid will consider its value as **200px**.
 
 The following GIF represent a Tree Grid with Column virtualization.
-![Column Virtualization in Blazor TreeGrid](./images/virtualColumn.gif)
+![Column Virtualization in Blazor TreeGrid](./images/blazor-treegrid-column-virtualization.gif)

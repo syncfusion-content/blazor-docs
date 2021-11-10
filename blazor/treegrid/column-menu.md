@@ -85,6 +85,6 @@ public class TreeData
 
 {% endtabs %}
 
-![Blazor TreeGrid with Column Menu](images/columnmenu.png)
+![Blazor TreeGrid with Column Menu](images/blazor-treegrid-column-menu.png)
 
 > The column menu can be disabled for a particular column by defining the [ShowColumnMenu](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.SfTreeGrid~ShowColumnMenu.html) property of the [TreeGridColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor~Syncfusion.Blazor.TreeGrid.TreeGridColumn.html) tag helper as false.

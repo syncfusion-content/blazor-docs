@@ -41,4 +41,4 @@ The `Disabled` property of the toolbar item is used to enable or disable the ite
 ```
 
 
-![Enable/Disable item](../images/disable_item.gif)
+![Enabling or Disabling Blazor Toolbar Item](../images/blazor-toolbar-disable-item.gif)

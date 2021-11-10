@@ -231,7 +231,7 @@ The sorting feature enables to order the records. It can be enabled by setting t
 
 After successful compilation of the application, simply press F5 to run the application. The Blazor Tree Grid component will render in the web browser as shown below.
 
-![TreeGrid Output](images/treegrid.png)
+![Blazor TreeGrid](images/blazor-treegrid.png)
 
 ## See also
 

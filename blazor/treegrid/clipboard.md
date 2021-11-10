@@ -25,13 +25,17 @@ Interaction keys |Description
 @using TreeGridComponent.Data;
 @using Syncfusion.Blazor.TreeGrid;
 
-<SfTreeGrids DataSource="@TreeData" IdMapping="TaskID" ParentIdMapping="ParentID" TreeColumnIndex="1">
+<SfTreeGrids DataSource="@TreeData" IdMapping="TaskID" 
+ParentIdMapping="ParentID" TreeColumnIndex="1">
     <TreeGridColumns>
         <TreeGridColumn Field="TaskID" HeaderText="Task ID" Width="60" TextAlign="TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="80"></TreeGridColumn>
-        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="90" TextAlign="TextAlign.Right"></TreeGridColumn>
+        <TreeGridColumn Field="TaskName" HeaderText="Task Name" Width="80">
+        </TreeGridColumn>
+        <TreeGridColumn Field="StartDate" HeaderText="Start Date" Format="d" Type=ColumnType.Date Width="90" TextAlign="TextAlign.Right">
+        </TreeGridColumn>
         <TreeGridColumn Field="Duration" HeaderText="Duration" Width="80" TextAlign="TextAlign.Right"></TreeGridColumn>
-        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80"></TreeGridColumn>
+        <TreeGridColumn Field="Progress" HeaderText="Progress" Width="80">
+        </TreeGridColumn>
     </TreeGridColumns>
 </SfTreeGrids>
 
@@ -146,15 +150,33 @@ namespace TreeGridComponent.Data {
         public static List<BusinessObject> GetSelfDataSource()
         {
             List<BusinessObject> BusinessObjectCollection = new List<BusinessObject>();
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),Duration = 12,Progress = 80,Priority = "Low",ParentId = 1 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, TaskName = "Child Task 5",StartDate = new DateTime(2017, 10, 26), Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, TaskName = "Child Task 6",StartDate = new DateTime(2017, 10, 27), Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, TaskName = "Parent Task 3",StartDate = new DateTime(2017, 10, 28), Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, TaskName = "Child Task 7",StartDate = new DateTime(2017, 10, 29), Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
-            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, TaskName = "Child Task 8",StartDate = new DateTime(2017, 10, 30), Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 1,
+            TaskName = "Parent Task 1",StartDate = new DateTime(2017, 10, 23),
+            Duration = 10,Progress = 70,Priority = "Critical",ParentId = null });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 2,
+            TaskName = "Child task 1",StartDate = new DateTime(2017, 10, 23),
+            Duration = 12,Progress = 80,Priority = "Low",ParentId = 1 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 3,
+            TaskName = "Child Task 2",StartDate = new DateTime(2017, 10, 24),
+            Duration = 5,Progress = 65,Priority = "Critical",ParentId = 2 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 4,
+            TaskName = "Child task 3",StartDate = new DateTime(2017, 10, 25),
+            Duration = 6,Priority = "High",Progress = 77,ParentId = 3 });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 5, 
+            TaskName = "Child Task 5",StartDate = new DateTime(2017, 10, 26), 
+            Duration = 9, Progress = 25, ParentId = 4, Priority = "Normal" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 6, 
+            TaskName = "Child Task 6",StartDate = new DateTime(2017, 10, 27), 
+            Duration = 9, Progress = 7, ParentId = 5, Priority = "Normal" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 7, 
+            TaskName = "Parent Task 3",StartDate = new DateTime(2017, 10, 28), 
+            Duration = 4, Progress = 45, ParentId = null, Priority = "High" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 8, 
+            TaskName = "Child Task 7",StartDate = new DateTime(2017, 10, 29), 
+            Duration = 3, Progress = 38, ParentId = 7, Priority = "Critical" });
+            BusinessObjectCollection.Add(new BusinessObject() { TaskId = 9, 
+            TaskName = "Child Task 8",StartDate = new DateTime(2017, 10, 30), 
+            Duration = 7, Progress = 70, ParentId = 7, Priority = "Low" });
             return BusinessObjectCollection;
         }
     }
@@ -167,7 +189,7 @@ namespace TreeGridComponent.Data {
 
 ## Copy Hierarchy Modes
 
-Tree Grid provides support for a set of copy modes with `CopyHierarchyMode` property. The below are the type of filter mode available in the Tree Grid.
+Tree Grid provides support for a set of copy modes with [CopyHierarchyMode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.TreeGrid.CopyHierarchyType.html) property. The below are the type of filter mode available in the Tree Grid.
 
 * **Parent** : This is the default copy hierarchy mode in the Tree Grid. Clipboard value will have the selected records with its parent records, if the selected records does not have any parent record then the selected record will be in clipboard.
 

@@ -55,7 +55,7 @@ In the default mode, the legends have symbols with legend labels that are used t
 }
 ```
 
-![TreeMap with default legend mode](images/Legend/DefaultLegend.png)
+![Blazor TreeMap with Legend](images/Legend/blazor-treemap-legend.png)
 
 ### Interactive legend
 
@@ -79,7 +79,7 @@ The legends can be made interactive with an arrow mark that indicates exact rang
 
 > Refer to the [code block](#default-legend) to know about the property value of **Cars**.
 
-![TreeMap with interactive legend](images/Legend/InteractiveLegend.png)
+![Blazor TreeMap with Interactive Legend](images/Legend/blazor-treemap-interactive-legend.png)
 
 ## Position and Alignment
 
@@ -125,7 +125,7 @@ The following options are available to customize the legend position:
 }
 ```
 
-![TreeMap with legend on top](images/Legend/LegendPosition.png)
+![Blazor TreeMap with Legend on Top](images/Legend/blazor-treemap-legend-position.png)
 
 The legend alignment is used to align the legend items in a specific location. The following options are available to customize the legend alignment:
 
@@ -150,7 +150,7 @@ The legend alignment is used to align the legend items in a specific location. T
 
 > Refer to the [code block](#position-and-alignment) to know about the property value of **Fruits**.
 
-![TreeMap with legend alignment](images/Legend/LegendAlignment.png)
+![Changing Legend Alignment in Blazor TreeMap](images/Legend/blazor-treemap-legend-alignment.png)
 
 ## Legend size
 
@@ -190,7 +190,7 @@ Customize the legend size by modifying the [Height](https://help.syncfusion.com/
 }
 ```
 
-![TreeMap with custom legend size](images/Legend/legendSize.png)
+![Blazor TreeMap with Custom Legend Size](images/Legend/blazor-treemap-custom-legend-size.png)
 
 ### Legend with paging support
 
@@ -231,7 +231,7 @@ TreeMap supports legend paging, if the legend items cannot be placed within the 
 }
 ```
 
-![TreeMap legend with paging](images/Legend/Paging.png)
+![Blazor TreeMap Legend with Paging](images/Legend/blazor-treemap-legend-paging.png)
 
 ## Excluded legend items from the color mapping
 
@@ -270,7 +270,7 @@ Based on the mapping ranges in the data source, get the excluded ranges from the
 }
 ```
 
-![TreeMap legend for excluded items](images/Legend/ExcludeLegend.png)
+![Blazor TreeMap Legend for Excluded Items](images/Legend/blazor-treemap-exclude-legend.png)
 
 ## Hide desired legend items
 
@@ -309,7 +309,7 @@ To enable or disable the desired legend item for each color mapping, set the [Sh
 }
 ```
 
-![Hide specific legend item in TreeMap](images/Legend/HideLegendDS.png)
+![Hiding Specific Legend Item in Blazor TreeMap](images/Legend/blazor-treemap-hide-legend-item.png)
 
 ## Hide legend items based on the data source value
 
@@ -345,7 +345,7 @@ To enable or disable the legend visibility for each item through the data source
 }
 ```
 
-![Hide TreeMap legend based on datasource](images/Legend/HideLegendDS.png)
+![Hiding Blazor TreeMap Legend Based on Datasource](images/Legend/blazor-treemap-hide-legend-item.png)
 
 ## Bind legend item text from the data source
 
@@ -380,7 +380,7 @@ To show the legend item text from the data source, bind the property name from t
 }
 ```
 
-![TreeMap legend text from datasource](images/Legend/legendTextDS.png)
+![Blazor TreeMap Legend Text with Data Binding](images/Legend/blazor-treemap-legend-text-with-binding.png)
 
 ## Hide duplicate legend items
 
@@ -416,7 +416,7 @@ To enable or disable the duplicate legend items, set the [RemoveDuplicateLegend]
 }
 ```
 
-![Remove duplicate legend item](images/Legend/DuplicateLegend.png)
+![Hiding Duplicate Legend Item in Blazor TreeMap](images/Legend/blazor-treemap-hide-duplicate-legend.png)
 
 ## Positioning based on size
 
@@ -450,7 +450,7 @@ Use a responsive legend that switches positions between the right and the bottom
 }
 ```
 
-![TreeMap legend with responsive](images/Legend/LegendResponsive.png)
+![Displaying Blazor TreeMap Legend Position based on Size](images/Legend/blazor-treemap-legend-position-based-on-size.png)
 
 ## Legend with RTL support
 
@@ -485,4 +485,4 @@ Set the [EnableRtl](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Tree
 }
 ```
 
-![TreeMap with RTL](images/Internationalization/LegendRTL.png)
+![Right to Left in Blazor TreeMap Legend](images/Internationalization/blazor-treemap-legend-right-to-left.png)

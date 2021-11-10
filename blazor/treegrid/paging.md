@@ -78,7 +78,7 @@ public class TreeData
 {% endtabs %}
 
 
-![Paging](images/page.png)
+![Paging in Blazor TreeGrid](images/blazor-treegrid-paging.png)
 
 > Better performance can be achieved by using tree grid paging to fetch only a pre-defined number of records from the data source.
 
@@ -157,7 +157,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Page Size Mode](images/pagesizemode.png)
+![Changing Page Size Mode in Blazor TreeGrid](images/blazor-treegrid-page-size-mode.png)
 
 <!-- Template
 
@@ -236,7 +236,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Page Dropdown](images/pagedropdown.png)
+![Displaying Page Dropdown in Blazor TreeGrid](images/blazor-treegrid-page-drop-down.png)
 
 <!--How to render Pager at the Top of the Tree Grid
 

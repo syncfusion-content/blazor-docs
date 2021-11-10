@@ -170,7 +170,7 @@ public class TreeData
 {% endtabs %}
 
 
-![Toolbar Edit](images/tooledit.png)
+![Displaying Edit Option in Blazor TreeGrid Toolbar](images/blazor-treegrid-edit-in-toolbar.png)
 
 ## Cell edit type and its params
 
@@ -279,7 +279,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Celledit Type](images/celledittype.png)
+![Cell Editing in Blazor TreeGrid](images/blazor-treegrid-cell-editing.png)
 
 > If edit type is not defined in the column, then it will be considered as the **stringedit** type (Textbox component).
 
@@ -363,7 +363,7 @@ public class TreeData
 
 {% endtabs %}
 
-![CellEdit Template](images/edit-template.png)
+![Blazor TreeGrid with Cell Edit Template](images/blazor-treegrid-cell-edit-template.png)
 
 ## Edit Modes
 
@@ -443,7 +443,7 @@ public class TreeData
 
 {% endtabs %}
 
-![CellEdit Mode](images/celleditmode.png)
+![Cell Editing in Blazor TreeGrid](images/blazor-treegrid-cell-edit.png)
 
 > Cell edit mode is default mode of editing.
 
@@ -516,7 +516,7 @@ public class TreeData
 
 {% endtabs %}
 
-![RowEdit mode](images/roweditmode.png)
+![Row Editing in Blazor TreeGrid](images/blazor-treegrid-row-editing.png)
 
 ### Dialog
 
@@ -587,7 +587,7 @@ public class TreeData
 
 {% endtabs %}
 
-![DialogEdit Mode](images/dialogeditmode.png)
+![Dialog Editing in Blazor TreeGrid](images/blazor-treegrid-dialog-editing.png)
 
 ### Batch
 
@@ -788,7 +788,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Dialog Template](images/dlg-template.png)
+![Blazor TreeGrid with Dialog Template](images/blazor-treegrid-dialog-template.png)
 
 > The template form editors should have **name** attribute.
 
@@ -948,7 +948,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Command Column](images/commandcolumn.png)
+![Blazor TreeGrid with Command Column](images/blazor-treegrid-command-column.png)
 
 ### Custom command
 
@@ -1017,7 +1017,7 @@ The following sample code demonstrates adding custom command in the **Manage Rec
 ```
 
 The following image represents the custom command added in the **Manage Records** column of the Tree Grid component,
-![Custom Command](./images/custom-command.png)
+![Blazor TreeGrid with Custom Command](./images/blazor-treegrid-custom-command.png)
 
 ## Confirmation messages
 
@@ -1088,7 +1088,7 @@ public class TreeData
 
 {% endtabs %}
 
-![Delete Confirmation](images/delconfirm.png)
+![Displaying Delete Confirmation Dialog in Blazor TreeGrid](images/blazor-treegrid-delete-confirmation.png)
 
 > The **ShowDeleteConfirmDialog** supports all type of edit modes.
 
