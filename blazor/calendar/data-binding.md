@@ -9,7 +9,7 @@ documentation: ug
 
 # Data Binding in Blazor Calendar Component
 
-This section briefly explains how to bind the value to the Calendar component in different ways listed below.
+This section briefly explains how to bind the value to the Calendar component in the below different ways.
 
 * One-Way Data Binding
 * Two-Way Data Binding
@@ -38,7 +38,7 @@ We can bind the value to the Calendar component directly for `Value` property as
 
 ## Two-Way Data Binding
 
-Two-way binding can be achieved by using `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If the component value is changed, it will affect all the places where we bind the variable for the **bind-value** attribute.
+Two-way binding can be achieved by using `bind-Value` attribute and its supports string, int, Enum, DateTime, bool types. If component value has been changed, it will affect the all places where we bind the variable for the **bind-value** attribute.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars
@@ -56,7 +56,7 @@ public DateTime? DateValue { get; set; } = DateTime.Now;
 
 We can change the property value dynamically by manually calling the `StateHasChanged()` method inside public event of **Blazor Calendar component** only. This method notifies the component that its state has changed and queues a re-render.
 
-There is no need to call this method for native events since it’s called after any lifecycle method is called. It can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
+There is no need to call this method for native events since it’s called after any lifecycle method has been called and can also be invoked manually to trigger a re-render. Please refer the below mentioned code example.
 
 ```cshtml
 @using Syncfusion.Blazor.Calendars

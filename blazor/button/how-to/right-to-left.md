@@ -25,6 +25,6 @@ The following example illustrates how to enable right-to-left support in Button 
 </style>
 ```
 
-Output will be as follows
+Output be like
 
 ![Right to Left in Blazor Button](./../images/blazor-button-in-right-to-left.png)

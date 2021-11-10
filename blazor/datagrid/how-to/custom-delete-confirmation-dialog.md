@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the appearance and contents of delete confirmation dialog by rendering a customized [SfDialog](https://blazor.syncfusion.com/documentation/dialog/getting-started/) instead of the default grid delete confirmation dialog.
 
-This is demonstrated in the following sample code,
+This is demonstrated in the below sample code,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids
@@ -71,7 +71,7 @@ This is demonstrated in the following sample code,
     }
     private void OkClick()
     {
-        Grid.DeleteRecord();   //delete the record programatically while clicking OK button
+        Grid.DeleteRecord();   //delete the record programatically while clikcing OK button
         Dialog.Hide();
     }
     private void CancelClick()

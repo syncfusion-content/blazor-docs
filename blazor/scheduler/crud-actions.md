@@ -20,13 +20,13 @@ Any kind of appointments such as normal, all-day, spanned or recurring events ca
 
 ### Creation using editor window
 
-The default editor window opens when you double click on the Scheduler cells. It provides you with event related options such as Subject, Location, Start and End time, All-day, Timezone, Description and other recurrence options. With these available fields, you can choose to provide detailed information to the events. Once the fields are filled with proper values, enter the `Save` button to add an event.
+The default editor window opens when you double click on the Scheduler cells. It provides with event related options such as Subject, Location, Start and End time, All-day, Timezone, Description and other recurrence options. With these available fields, you can choose to provide detailed information to the events. Once the fields are filled with proper values, enter the `Save` button to add an event.
 
 In case, if you want to simply provide the Subject alone for appointments, just single click on the required cells which will open the quick popup expecting you to enter subject alone and save it. You can also select multiple cells and press `Enter` key to open the quick popup for selected time range and save the appointment for that time range.
 
 ### Creation using AddEventAsync method
 
-The appointments can be created dynamically by using `AddEventAsync` method. The following code example let you know how to use the `AddEventAsync` method to create an appointment.
+The appointments can be created dynamically by using `AddEventAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -81,7 +81,7 @@ The appointments can be created dynamically by using `AddEventAsync` method. The
 
 ### Inline creation
 
-Another easier way to create the appointments is enabling the `AllowInline` property. By single clicking on the scheduler cells or press `enter` key on selected cells, the appointment like textbox will be displayed in which you can enter the Subject of the appointment. Pressing enter key or clicking out of the text box will create the appointment in the scheduler.
+Another easier way to create the appointments is enabling the `AllowInline` property. By single clicking on the scheduler cells or pressing `enter` key on selected cells, the appointment like textbox will be displayed in which you can enter the Subject of the appointment. Pressing enter key or clicking out of the text box will create the appointment in the scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -267,13 +267,13 @@ The same way the appointments such as normal, all-day, spanned or recurring even
 
 ### Update using editor window
 
-You can open the default editor window filled with appointment details by double clicking on the required events. It gets pre-filled with event options such as Subject, Location, Start and End time, All-day, timezone, description and other recurrence options, from which you can edit the desired field values and, then enter the `Save` button to update it.
+The default editor window filled with appointment details can be opened by double clicking on the required events. It gets pre-filled with event options such as Subject, Location, Start and End time, All-day, timezone, description and other recurrence options, from which you can edit the desired field values and, then enter the `Save` button to update it.
 
 > You can also single click on appointments, which opens the quick info popup with edit and delete options. Clicking on the `Edit` option will open the default editor filled with event details and `Delete` option will prompt for delete confirmation.
 
 ### Update using SaveEventAsync method
 
-The appointments can be edited and updated manually using the `SaveEventAsync` method. The following code examples shows how to edit the events.
+The appointments can be edited and updated manually using the `SaveEventAsync` method.
 
 Here, an event with ID `1` is edited and its subject is changed with a new text. When the modified data object is passed onto the `SaveEventAsync` method, the changes gets reflected onto the original event. The `Id` field is mandatory in this edit process, where the modified event object should hold the valid `Id` value that exists in the Scheduler data source.
 
@@ -405,7 +405,7 @@ The recurring appointments can be edited in either of the following two ways.
 * Single occurrence
 * Entire series
 
-**Editing single occurrence** - When you double click on a recurring event, a popup prompts you to choose either to edit the single event or entire series. From this, if you choose to select **EDIT EVENT** option, a single occurrence of the recurring appointment alone will be edited. The following process takes place while editing a single occurrence,
+**Editing single occurrence** - When a recurring event is double clicked, a popup prompts to choose either to edit the single event or entire series. From this, if you choose to select **EDIT EVENT** option, a single occurrence of the recurring appointment alone will be edited. The following process takes place while editing a single occurrence,
 
 * A new event will be created from the parent event data and added to the Scheduler dataSource, with all its default field values overwritten with the newly modified data and additionally, the `RecurrenceID` field will be added to it, that holds the `id` value of the parent recurring event. Also, a new `Id` will be generated for this event in the dataSource.
 
@@ -461,7 +461,7 @@ if (param.action == "update" || (param.action == "batch" && param.changed != nul
 }
 ```
 
-**Editing entire series** - When you select an option **EDIT SERIES** from the popup that opens on double clicking the recurring event, the whole recurring series will be updated with the newly provided value. When this option is chosen explicitly, if a parent event holds any edited occurrences - then all its child occurrences will be removed from the dataSource and simply the single parent data will be updated.
+**Editing entire series** - When an option **EDIT SERIES** is selected from the popup that opens on double clicking the recurring event, the whole recurring series will be updated with the newly provided value. When this option is chosen explicitly, if a parent event holds any edited occurrences - then all its child occurrences will be removed from the dataSource and simply the single parent data will be updated.
 
 This action of editing entire series also leads to the batch process, as both the `Delete` and `Edit` action takes place together.
 
@@ -592,7 +592,7 @@ While performing all these above mentioned actions, a pop-up with a delete confi
 
 ### Deletion using editor window
 
-When you double click an event, the default editor window will be opened which includes a `Delete` button at the bottom left position to allow you to delete that particular appointment. When deleting an appointment through this editor window, the delete alert confirmation will not be asked and the event will be deleted immediately.
+When you double click an event, the default editor window will be opened which includes a `Delete` button at the bottom left position which allows to delete that particular appointment. When deleting an appointment through this editor window, the delete alert confirmation will not be asked and the event will be deleted immediately.
 
 ### Deletion using DeleteEventAsync method
 
@@ -644,7 +644,7 @@ The appointments can be removed manually using the `DeleteEventAsync` method. Th
 }
 ```
 
-**Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the `DeleteEventAsync` method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters. The following code example shows how to delete entire series.
+**Recurring Event** - The recurring events can be removed as an entire series or simply removing single occurrence by using the `DeleteEventAsync` method which takes in either the `DeleteSeries` or `DeleteOccurrence` parameters.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -793,7 +793,7 @@ if (param.action == "remove" || (param.action == "batch" && param.deleted != nul
 
 ## Drag and drop
 
-When you drag and drop a normal event on the Scheduler, the event editing action takes place. When a recurring event is drag and dropped on a desired time range, the batch action explained in `Editing a single occurrence` process will takes place - thus allowing both the `Add` and `Edit` action to take place together.
+When you drag and drop a normal event on the Scheduler, the event editing action takes place. When a recurring event is drag and dropped on a desired time range, the batch action explained in `Editing a single occurrence` process will take place - thus allowing both the `Add` and `Edit` action to take place together.
 
 > By default, when you drag a recurring instance, only the occurrence of the event gets edited and not a whole series.
 

@@ -11,7 +11,7 @@ documentation: ug
 
 The web accessibility makes web content and web applications more accessible for disabled people. It especially helps in dynamic content change and development of advanced user interface components with AJAX, HTML, JavaScript, and related technologies.
 
-Calendar provides built-in compliance with [WAI-ARIA](https://www.w3.org/TR/wai-aria-practices/) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disable and active day cells.
+Calendar provides built-in compliance with [WAI-ARIA](http://www.w3.org/WAI/PF/aria-practices) specifications. WAI-ARIA support is achieved through attributes like `aria-label`, `aria-selected`, `aria-disabled`, and `aria-activedescendant` applied for navigation buttons, and disable and active day cells.
 
 It helps disabled persons by providing information about the widget for assistive technology  in the screen readers. Calendar component contains grid role and grid cell for each day cell.
 
@@ -25,11 +25,11 @@ It helps disabled persons by providing information about the widget for assistiv
 
 * **role**: Gives information to assistive technologies about how to handle each element in a widget.
 
-* **grid-cell**: Defines the individual cell that can be focused and selected.
+* **grid-cell**: Defines the individual cell that can be focussed and selected.
 
 ## Keyboard interaction
 
-You can use the following keys to interact with the Calendar. This control implements keyboard navigation support by following the [WAI-ARIA practices](https://www.w3.org/TR/wai-aria-practices/).
+You can use the following keys to interact with the Calendar. This control implements keyboard navigation support by following the [WAI-ARIA practices](http://www.w3.org/WAI/PF/aria-practices).
 
 It supports the following list of shortcut keys:
 
@@ -37,7 +37,7 @@ It supports the following list of shortcut keys:
 | --- | --- |
 | <kbd>Upper Arrow</kbd>  | Focuses the same day of the previous week. |
 | <kbd>Down Arrow</kbd>  | Focuses the same day of the next week. |
-| <kbd>Left Arrow</kbd>  | Focuses the previous day. |
+| <kbd>Left Arrow</kbd>  | Focuses the day before. |
 | <kbd>Right Arrow</kbd>  | Focuses the next day. |
 | <kbd>Home</kbd>  | Focuses the first day of the month. |
 | <kbd>End</kbd>  | Focuses the last day of the month. |

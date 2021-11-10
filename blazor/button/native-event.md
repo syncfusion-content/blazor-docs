@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Native events in Blazor Button component | Syncfusion
-description: Checkout and learn here all about native events in Syncfusion Blazor Button component and much more.
+title: Native Events in Blazor Button Component | Syncfusion
+description: Checkout and learn here all about Native Events in Syncfusion Blazor Button component and much more.
 platform: Blazor
 control: Button
 documentation: ug
 ---
 
-# Native events in Blazor Button component
+# Native Events in Blazor Button Component
 
-You can define the native event by using the `event` attribute in the component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
+You can define the native event using on `event` attribute in component. The value of attribute is treated as an event handler. The event specific data will be available in event arguments.
 
 The different event argument types for each event are,
 
@@ -18,11 +18,11 @@ The different event argument types for each event are,
 * Keyboard Events - UIKeyboardEventArgs
 * Touch Events – UITouchEventArgs
 
-## List of native events supported
+## List of Native events supported
 
 We have provided the following native event support to the Button component:
 
-| List of native events |  |  | |
+| List of Native events |  |  | |
 | --- | --- | --- | --- |
 | onclick | onblur | onfocus | onfocusout |
 |onmousemove|onmouseover|onmouseout|onmousedown|onmouseup|

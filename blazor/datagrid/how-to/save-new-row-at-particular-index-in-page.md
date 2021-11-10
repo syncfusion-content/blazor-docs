@@ -7,9 +7,9 @@ control: DataGrid
 documentation: ug
 ---
 
-# Saving a new row at a particular index of the blazor DataGrid
+# Saving a new row at a particular index of the blazor datagrid
 
-By default, a newly added row will be saved at the top of the DataGrid. You can change it by setting the `args.Index` in [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) handler.
+By default, a newly added row will be saved at the top of the datagrid. You can change it by setting the `args.Index` in [OnActionBegin](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html) handler.
 
 The following sample code demonstrates changing the save index of the new row that gets added in the DataGrid component,
 
@@ -47,7 +47,7 @@ The following sample code demonstrates changing the save index of the new row th
     {
         if (args.RequestType.Equals(Action.Save) && args.Action == "Add")
         {
-            //Here, you can set the custom index for the saved new row. The following calculation saves the new row as last row of current page.
+            //Here you can set the custom index for the saved new row. Below calculation save the new row as last row of current page.
             args.Index = (GridInstance.PageSettings.CurrentPage * GridInstance.PageSettings.PageSize) - 1;
         }
     }

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Themes in Blazor and How to Use? - Syncfusion
+title: How to Use Blazor Material Themes? | Syncfusion
 description: Check out the documentation for built-in-themes in Blazor and learn here about how to use it in Blazor
 platform: Blazor
 component: Appearance
@@ -84,18 +84,18 @@ Syncfusion Blazor Themes are available in the CDN. Make sure that the version in
 
 | Theme Name | CDN Reference |
 |--- | --- |
-| Bootstrap 5 | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css``` |
-| Bootstrap 5 Dark| ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css``` |
-| Bootstrap 4 | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css``` |
-| Bootstrap 3 | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css``` |
-| Bootstrap 3 Dark| ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css``` |
-| Google’s Material | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css``` |
-| Google’s Material Dark | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css``` |
-| Tailwind CSS | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css``` |
-| Tailwind Dark CSS | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css``` |
-| Microsoft Office Fabric  | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css``` |
-| Microsoft Office Fabric Dark | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css``` |
-| High Contrast  | ```https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css``` |
+| Bootstrap 5 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5.css |
+| Bootstrap 5 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap5-dark.css |
+| Bootstrap 4 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap4.css |
+| Bootstrap 3 | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap.css |
+| Bootstrap 3 Dark| https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/bootstrap-dark.css |
+| Google’s Material | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material.css |
+| Google’s Material Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/material-dark.css |
+| Tailwind CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind.css |
+| Tailwind Dark CSS | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/tailwind-dark.css |
+| Microsoft Office Fabric  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric.css |
+| Microsoft Office Fabric Dark | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/fabric-dark.css |
+| High Contrast  | https://cdn.syncfusion.com/blazor/{{ site.blazorversion }}/styles/highcontrast.css |
 
 ## NPM Packages
 

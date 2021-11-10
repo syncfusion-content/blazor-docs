@@ -63,9 +63,9 @@ An annotation can be added to a node or connector by defining the annotation obj
 }
 ```
 
-![Annotation](../images/Annotation.png)
+![Blazor Diagram Node with Annotation](../images/blazor-diagram-node-with-annotation.png)
 
->* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization. Don't use `_` when assigning annotation ID.
+>* [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Annotation.html#Syncfusion_Blazor_Diagram_Annotation_ID) for each annotation should be unique and so it is further used to find the annotation at runtime and do any customization.
 >* By default, node’s annotation positioned in center point of the shape.
 >* By default, connector’s path annotation positioned in center point of its path.
 
@@ -77,9 +77,8 @@ The following code explains how to add an annotation to a node at runtime by usi
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Addlabel" OnClick="@AddLabel"/>
+<input value="Addlabel" type="button" @onclick="@AddLabel" name="Addlabel" />
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes">
 </SfDiagramComponent>
 
@@ -127,7 +126,7 @@ public async void AddLabel()
 }
 ```
 
-![Annotation](../images/Annotation_Add.png)
+![Adding Annotation in Blazor Diagram](../images/blazor-diagram-add-annotation.png)
 
 ## Remove Annotations
 
@@ -135,9 +134,8 @@ A collection of annotations can be removed from the node by using the `RemoveAt`
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Removelabel" OnClick="@RemoveLabel" />
+<input value="Removelabel" type="button" @onclick="@RemoveLabel" name="Removelabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 
@@ -197,9 +195,8 @@ The following code sample shows how the annotation of the node changed at runtim
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Updatelabel" OnClick="@UpdateLabel" />
+<input value="Updatelabel" type="button" @onclick="@UpdateLabel" name="Updatelabel" />
 
 <SfDiagramComponent Height="600px" @ref="@diagram" Nodes="@nodes" />
 

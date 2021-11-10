@@ -67,13 +67,13 @@ Represents an appointment that is created for more than 24 hours, and usually di
 
 ## All-day events
 
-Represents an appointment that is created for an entire day such as holiday events. It is usually displayed separately in an all-day row, a separate row for all-day appointments below the date header section. In Timeline views, the all-day appointments displays in the working space area, and no separate all-day row is present in that view.
+It represents an appointment that is created for an entire day such as holiday events. It is usually displayed separately in an all-day row, a separate row for all-day appointments below the date header section. In Timeline views, the all-day appointments displays in the working space area, and no separate all-day row is present in that view.
 
 > To change normal appointment into all-day event, set `IsAllDay` field to true.
 
 ### Hide all-day row events
 
-You can make use of the CSS customization to prevent the display of all-day row appointments on the Scheduler UI.
+The CSS customization can be used to prevent the display of all-day row appointments on the Scheduler UI.
 
 ```css
 .e-schedule .e-date-header-wrap .e-schedule-table thead {
@@ -81,43 +81,9 @@ You can make use of the CSS customization to prevent the display of all-day row 
 }
 ```
 
-## Customize the rendering of the spanned events
-
-By default, Scheduler will renders the spanned events (appointment with more than 24 hours duration) in the all-day row by setting `AllDayRow` will the default type renders to the `SpannedEventPlacement` option within the `ScheduleEventSettings` tag helper. Now we can customize rendering of the that events inside the work cells itself by modifying the `SpannedEventPlacement` option as `TimeSlot`. In this following example, shows how to render the spanned appointments inside the work cells as follows.
-
-```cshtml
-@using Syncfusion.Blazor.Schedule
-
-<SfSchedule TValue="AppointmentData" Height="650px" @bind-SelectedDate="@CurrentDate">
-    <ScheduleEventSettings DataSource="@DataSource" SpannedEventPlacement=SpannedEventPlacement.TimeSlot>
-    </ScheduleEventSettings>
-</SfSchedule>
-
-@code{
-    public DateTime CurrentDate = new DateTime(2020, 1, 8);
-    List<AppointmentData> DataSource = new List<AppointmentData>
-        {
-            new AppointmentData { Id = 1, Subject = "Paris", IsAllDay=false, StartTime = new DateTime(2020, 1, 8, 10, 0, 0), EndTime = new DateTime(2020, 1, 9, 12, 0, 0) },
-            new AppointmentData { Id = 2, Subject = "Germany", IsAllDay=false, StartTime = new DateTime(2020, 1, 10, 10, 0, 0), EndTime = new DateTime(2020, 1, 12, 12, 0, 0) }
-        };
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-    }
-}
-```
-
 ## Recurring events
 
-Represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
+It represents an appointment that is created for a certain time interval and occurring repeatedly on a daily, weekly, monthly or yearly basis at the same time interval based on the provided recurrence rule. Usually, the recurring events are indicated by a repeat marker added at the bottom-right position.
 
 ### Creating a recurring event
 
@@ -243,7 +209,7 @@ In this example, a recurring instance that displays on the date 30th January 202
 
 ### Edit/Delete following recurrence events
 
-The Scheduler allows the user to edit the following recurrence events by setting true value to `AllowEditFollowingEvents` within the `ScheduleEventSettings` tag. Once we have edited/ deleted the recurrence events as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if we edit or delete any of the recurrence event with following events option, then the edit or delete action is applied to further recurrence events.
+The Scheduler allows the user to edit the following recurrence events by setting true value to `AllowEditFollowingEvents` within the `ScheduleEventSettings` tag. Once the recurrence events are edited/ deleted as following events, then the following recurrence events will be considered as separate series, the changes will not reflect to parent series. In the following code example, if any of the recurrence event is edited or deleted with the following events option, then the edit or delete action is applied to further recurrence events.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -281,8 +247,6 @@ The Scheduler allows the user to edit the following recurrence events by setting
 }
 ```
 
-The following image depicts the edited recurrence following events.
-
 ![Editing Events in Blazor Scheduler](images/blazor-scheduler-editing-events.png)
 
 ### Recurrence options and rules
@@ -310,13 +274,13 @@ There are four repeat types available namely,
 | Property | Purpose | Example |
 |-------|---------| --------- |
 | FREQ | Maintains the repeat type (Daily, Weekly, Monthly, Yearly) value of the appointment. | FREQ=DAILY;INTERVAL=1|
-| INTERVAL | Maintains the interval value of the appointments. When you create the daily appointment at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday (Creates an appointment on all days by leaving the interval of one day gap). | FREQ=DAILY;INTERVAL=2|
+| INTERVAL | Maintains the interval value of the appointments. When the daily appointment is created at an interval of 2, the appointments are rendered on the days Monday, Wednesday and Friday (Creates an appointment on all days by leaving the interval of one day gap). | FREQ=DAILY;INTERVAL=2|
 | COUNT | It holds the appointment’s count value. When the COUNT value is 10, then 10 instances of appointments are created in the recurrence series. | FREQ=DAILY;INTERVAL=1;COUNT=10|
 | UNTIL | This property holds the end date value (in ISO format) denoting when the recurrence actually ends. | FREQ=DAILY;INTERVAL=1;UNTIL=20200530T041343Z;|
 | BYDAY | It holds the day value(s), representing on which the appointments actually renders. Create the weekly appointment, and select the day(s) from the day options (Monday/Tuesday/Wednesday/Thursday/Friday/Saturday/Sunday). When Monday is selected, the first two letters of the selected day "MO" is saved in the BYDAY property. When multiple days are selected, the values are separated by commas. | FREQ=WEEKLY;INTERVAL=1;BYDAY=MO,WE;COUNT=10|
-| BYMONTHDAY | This property is used to store the date value of the Month, while creating the Month recurrence appointment. When you create a Monthly recurrence appointment for every 3rd day of the month, then BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. | FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10|
-| BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. When you create the yearly appointment on June month, the index value of June month 6 will get stored in the BYMONTH field. The appointment is created on every 6th month of a year. | FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10|
-| BYSETPOS | This property is used to store the index value of the week. When you create the monthly appointment in second week of a month, the index value of the second week (2) is stored in BYSETPOS. | FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;COUNT=10|
+| BYMONTHDAY | This property is used to store the date value of the Month, while creating the Month recurrence appointment. When a Monthly recurrence appointment is created for every 3rd day of the month, then BYMONTHDAY holds the value 3 and creates the appointment on 3rd day of every month. | FREQ=MONTHLY;BYMONTHDAY=3;INTERVAL=1;COUNT=10|
+| BYMONTH | This property is used to store the index value of the selected Month while creating the yearly appointments. When the yearly appointment is created on June month, the index value of June month 6 will get stored in the BYMONTH field. The appointment is created on every 6th month of a year. | FREQ=YEARLY;BYMONTHDAY=16;BYMONTH=6;INTERVAL=1;COUNT=10|
+| BYSETPOS | This property is used to store the index value of the week. When the monthly appointment is created in second week of a month, the index value of the second week (2) is stored in BYSETPOS. | FREQ=MONTHLY;BYDAY=MO;BYSETPOS=2;COUNT=10|
 
 > The default recurrence related validation has been included for recurrence appointments similar to the one available in Outlook. The validation usually occurs during the recurrence appointment creation, editing, drag and drop or resizing of the recurrence appointments and also if any single occurrence changes.
 
@@ -555,7 +519,7 @@ Apart from the default Scheduler fields, the user can include 'n' number of cust
 
 ## Customize the order of the overlapping events
 
-By default, the scheduler will render the overlapping events based on the start and end time. Now we can customize the order of the overlapping events based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
+By default, the scheduler will render the overlapping events based on the start and end time. Now, the order of the overlapping events can be customized based on the custom fields by using the `SortBy` property grouped under the `EventSettings` property. The following code example shows how to sort the appointments based on the custom field **RankId** as follows.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -615,9 +579,9 @@ To get start quickly about drag options available in our Scheduler, you can chec
 
 ### Drag and drop multiple appointments
 
-We can drag and drop multiple appointments by enabling the `AllowMultiDrag` property. We can select multiple appointments by holding the CTRL key. Once the events are selected, we can leave the CTRL key and start dragging the event.
+Multiple appointments can be dragged and dropped by enabling the `AllowMultiDrag` property. Multiple appointments can be selected by holding the CTRL key. Once the events are selected, leave the CTRL key and start dragging the event.
 
-We can also drag multiple events from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
+Multiple events can also be dragged from one resource to another resource. In this case, if all the selected events are in the different resources, then all the events should be moved to the single resource that is related to the target event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -658,7 +622,7 @@ We can also drag multiple events from one resource to another resource. In this 
 
 ### Disable the drag action
 
-By default, you can drag and drop the events within any of the applicable scheduler views, and to disable it, set **false** to the `AllowDragAndDrop` property.
+By default, the events can be dragged and dropped within any of the applicable scheduler views, and to disable it, set **false** to the `AllowDragAndDrop` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -698,7 +662,7 @@ By default, you can drag and drop the events within any of the applicable schedu
 
 ### Preventing drag and drop on specific targets
 
-It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `ExcludeSelectors` option within `OnDragStart` event. In this example, we have prevented the drag action on all-day row.
+It is possible to prevent the drag action on particular target, by passing the target to be excluded in the `ExcludeSelectors` option within `OnDragStart` event. 
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -788,7 +752,7 @@ By default, while dragging an appointment to the edges, either top/bottom in the
 
 ### Controlling scroll speed while dragging an event
 
-The speed of the scrolling action while dragging an appointment to the Scheduler edges, can be controlled within the `OnDragStart` event by setting the desired value to the `ScrollBy` and `TimeDelay` option whereas its default value is 30 minutes and 100ms.
+The speed of the scrolling action while dragging an appointment to the Scheduler edges can be controlled within the `OnDragStart` event by setting the desired value to the `ScrollBy` and `TimeDelay` option, whereas its default value is 30 minutes and 100ms.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -834,7 +798,7 @@ The speed of the scrolling action while dragging an appointment to the Scheduler
 
 ### Auto navigation of date ranges on dragging an event
 
-When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, you need to set `Navigation` to true within the `OnDragStart` event.
+When an event is dragged either to the left or right extreme edges of the Scheduler and kept hold for few seconds without dropping, the auto navigation of date ranges will be enabled allowing the Scheduler to navigate from current date range to back and forth respectively. This action is set to `false` by default and to enable it, set `Navigation` to true within the `OnDragStart` event.
 
 By default, the navigation delay is set to 2000ms. The navigation delay decides how long the user needs to drag and hold the appointments at the extremities. You can also set your own delay value for letting the users to navigate based on it, using the `TimeDelay` within the `OnDragStart` event.
 
@@ -934,7 +898,7 @@ To get start quickly about dropping items from external source to our Scheduler,
 {% youtube
 "youtube:https://www.youtube.com/watch?v=QxBBZYef6cg"%}
 
-In this example, we have used the tree view control as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where we can form an event object and save it using the `AddEventAsync` method.
+In this example, the tree view control is used as an external source and the child nodes from the tree view component are dragged and dropped onto the Scheduler. Therefore, it is necessary to make use of the `OnNodeDragStop` event of the TreeView component, where an event object can be formed and save it using the `AddEventAsync` method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1037,7 +1001,7 @@ In this example, we have used the tree view control as an external source and th
 
 ### Drag and drop items to external source
 
-You can drag and drop the events to external source by setting the target to the property `EventDragArea`. In the following code example, we have two Scheduler and events from the first scheduler can be dropped to second scheduler. In the `Dragged` event of the first scheduler, the dragged event has been deleted from the first scheduler and added to the second scheduler.
+You can drag and drop the events to external source by setting the target to the property `EventDragArea`. In the following code example, we have two Scheduler and events from the first scheduler that can be dropped to the second scheduler. In the `Dragged` event of the first scheduler, the dragged event has been deleted from the first scheduler and added to the second scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1106,7 +1070,7 @@ You can drag and drop the events to external source by setting the target to the
 
 ### Opening the editor window on drag stop
 
-There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. On clicking the cancel button should revert these changes. This can be achieved using the `Dragged` event of Scheduler.
+There are scenarios where you want to open the editor filled with data on newly dropped location and may need to proceed to save it, only when `Save` button is clicked on the editor. Clicking on the cancel button should revert these changes. This can be achieved using the `Dragged` event of Scheduler.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1596,7 +1560,7 @@ Also, the customization of events can be achieved using `CssClass` property of t
 </style>
 ```
 
-> We can't customize the events using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
+> The events can't be customized using the styles that are `height`, `width`, `top`, `left`, `right`, and `display`.
 
 ## Block Date and Time
 
@@ -1817,9 +1781,9 @@ In the following code example, the appointments beyond current date of the sched
 
 ## Appointments occupying entire cell
 
-The Scheduler allows the event to occupies the full height of the cell without its header part by setting `true` for `EnableMaxHeight` Property.
+The Scheduler allows the event to occupy the full height of the cell without its header part by setting `true` for `EnableMaxHeight` Property.
 
-We can show more indicator if more than one appointment is available in a same cell by setting `true` to `EnableIndicator` property whereas its default value is false.
+More indicator can be shown if more than one appointment is available in a same cell by setting `true` to `EnableIndicator` property whereas its default value is false.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1856,7 +1820,7 @@ We can show more indicator if more than one appointment is available in a same c
 }
 ```
 
-> The `EnableIndicator` property will work, Only when the `EnableMaxHeight` property value is set to true.
+> The `EnableIndicator` property will work, only when the `EnableMaxHeight` property value is set to true.
 
 ## Display tooltip for appointments
 
@@ -2185,7 +2149,7 @@ It is possible to access the information about the event fields of an appointmen
 
 ## Get the current view appointments
 
-To retrieve the appointments present in the current view of the Scheduler, you can make use of the `GetCurrentViewEvents` public method. In the following example, current view appointment collection rendered has been traced in `DataBound` event.
+To retrieve the appointments present in the current view of the Scheduler, the `GetCurrentViewEvents` public method can be used. In the following example, current view appointment collection rendered has been traced in `DataBound` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -2282,7 +2246,7 @@ The entire collection of appointments rendered on the Scheduler can be accessed 
 
 ## Refresh appointments
 
-If your requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from your application end, make use of the `RefreshEventsAsync` public method.
+If the requirement is to simply refresh the appointments instead of refreshing the entire Scheduler elements from the application end, make use of the `RefreshEventsAsync` public method.
 
 ```csharp
 ScheduleRef.RefreshEventsAsync();

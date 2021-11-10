@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Gantt Chart Component
 
-This section briefly explains about how to include a **Gantt Chart** Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly](/blazor/gantt-chart/how-to/blazor-webassembly-gantt-using-visual-studio) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor Gantt Chart](https://www.syncfusion.com/blazor-components/blazor-gantt-chart) Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly](/blazor/gantt-chart/how-to/blazor-webassembly-gantt-using-visual-studio) documentation pages for configuration specifications.
 
 ## Importing Syncfusion Blazor component in the application
 
@@ -543,8 +543,10 @@ You can find the full information regarding Predecessors from [here](https://bla
 The following image represents Gantt with Editing, Sorting, Filtering and Predecessors.
 ![Blazor Gantt Chart](images/blazor-gantt-chart.gif)
 
+> You can also explore our [Blazor Gantt Chart example](https://blazor.syncfusion.com/demos/gantt-chart/default-functionalities?theme=bootstrap5) that shows how to present and manipulate data.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

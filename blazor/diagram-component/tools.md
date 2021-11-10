@@ -19,9 +19,8 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="addNode" OnClick="@AddNode" />
+<input Type="button" value="addNode" @onclick="AddNode" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
@@ -72,7 +71,7 @@ To draw a [shape](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagra
 }
 ```
 
-![Node Tool in Blazor Diagram](images/NodeTool.gif)
+![Node Tool in Blazor Diagram](images/blazor-diagram-node-tool.gif)
 
 ## Connectors
 
@@ -80,9 +79,8 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="AddConnector" OnClick="@AddConnector" />
+<input Type="button" value="AddConnector" @onclick="AddConnector" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px" />
 
 @code
@@ -133,7 +131,7 @@ To draw a [Connector](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 }
 ```
 
-![Connector Tool in Blazor Diagram](images/ConnectorTool.gif)
+![Connector Tool in Blazor Diagram](images/blazor-diagram-connector-tool.gif)
 
 ## Polygon shape
 
@@ -143,9 +141,8 @@ The following code illustrates how to draw a polygon shape.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Polygon" OnClick="@Polygon" />
+<input Type="button" value="Polygon" @onclick="Polygon" />
 <SfDiagramComponent @ref="diagram" Nodes="@nodes" Height="600px">
     <SnapSettings Constraints="SnapConstraints.None"></SnapSettings>
 </SfDiagramComponent>
@@ -201,7 +198,7 @@ The following code illustrates how to draw a polygon shape.
 }
 ```
 
-![Polygon Tool in Blazor Diagram](images/PolygonTool.gif)
+![Polygon Tool in Blazor Diagram](images/blazor-diagram-polygon-tool.gif)
 
 ## Tool selection
 

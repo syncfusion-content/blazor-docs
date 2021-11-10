@@ -131,7 +131,7 @@ To initialize the chart component add the below code to your **Index.razor** vi
 
 On successful compilation of your application, the Syncfusion Blazor Chart component will render in the web browser.
 
-![Getting Started](images/getting-started/chart.png)
+![Blazor Chart](images/getting-started/blazor-chart.png)
 
 ## Populate Chart with Data
 
@@ -190,7 +190,7 @@ Now, map the data fields  `Month` and `Sales` to the series [XName](https://help
 }
 ```
 
-![chart](images/getting-started/column.png)
+![Blazor Column Chart](images/getting-started/blazor-chart-column.png)
 
 ## Add Titles
 
@@ -229,7 +229,7 @@ Using the [Title](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts
 }
 ```
 
-![chart](images/getting-started/columntitle.png)
+![Blazor Column Chart with Title](images/getting-started/blazor-chart-title.png)
 
 ## Add Data Label
 
@@ -271,7 +271,7 @@ You can add data labels to improve the readability of the chart. This can be ach
 }
 ```
 
-![chart](images/getting-started/data-label.png)
+![Blazor Column Chart with DataLabel](images/getting-started/blazor-chart-data-label.png)
 
 ## Enable Tooltip
 
@@ -311,7 +311,7 @@ When space constraints prevent you from displaying information using data labels
 }
 ```
 
-![chart](images/getting-started/tooltip.png)
+![Blazor Column Chart with Tooltip](images/getting-started/blazor-chart-tooltip.png)
 
 ## Enable Legend
 
@@ -351,7 +351,7 @@ You can use legend for the chart by setting the [Visible](https://help.syncfusio
 }
 ```
 
-![chart](images/getting-started/legend.png)
+![Blazor Column Chart with Legend](images/getting-started/blazor-chart-legend.png)
 
 > You can find the fully working sample [here](https://www.syncfusion.com/downloads/support/directtrac/general/ze/BlazorDocAppChart1351059325.zip). And also you can refer to our [Blazor Chart](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to knows various chart types and how to represent time-dependent data, showing trends in data at equal intervals.
 

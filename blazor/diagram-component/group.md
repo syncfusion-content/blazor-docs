@@ -97,7 +97,7 @@ A node group can be added to the diagram model through [Nodes](https://help.sync
 }
 ```
 
-![Create Group](images/CreateGroup.png)
+![Grouping in Blazor Diagram](images/blazor-diagram-grouping.png)
 
 The following code illustrates how a ungroup  at runtime.
 
@@ -173,9 +173,8 @@ The following code illustrates how a node group is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="AddGroup" OnClick="@AddGroup" />
+<input type="button" value="AddGroup" @onclick="@AddGroup" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 
@@ -234,9 +233,8 @@ The following code illustrates how a node group is added at runtime
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="AddChildToGroup" OnClick="@AddChildToGroup" />
+<input type="button" value="AddChildToGroup" @onclick="@AddChildToGroup" />
 @* Initialize the diagram with nodes *@
 <SfDiagramComponent @ref="@diagram" Height="500px" Nodes="@nodes"/>
 
@@ -322,9 +320,8 @@ You can change the position of the node group similar to node. For more informat
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="UpdatePosition" OnClick="@UpdatePosition" />
+<input type="button" value="UpdatePosition" @onclick="@UpdatePosition" />
 @* Initialize the diagram with NodeCollection *@
 <SfDiagramComponent Height="500px" Nodes="@nodes" />
 

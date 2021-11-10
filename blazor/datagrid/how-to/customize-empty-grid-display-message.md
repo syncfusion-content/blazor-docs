@@ -11,7 +11,7 @@ documentation: ug
 
 You can customize the message shown when rendering an empty grid by using the `EmptyRecordTemplate` feature.
 
-This is demonstrated in the following sample code,
+This is demonstrated in the below sample code,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

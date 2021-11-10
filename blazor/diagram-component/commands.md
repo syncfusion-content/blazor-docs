@@ -28,9 +28,8 @@ The following code example illustrates how to align all the selected objects at 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Left" OnClick="@OnAlignLeft" />
+<input type="button" value="Left" @onclick="@OnAlignLeft" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -88,9 +87,8 @@ The following code example illustrates how to align all the selected objects at 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Right" OnClick="@OnAlignRight" />
+<input type="button" value="Right" @onclick="@OnAlignRight" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -147,9 +145,8 @@ The following code example illustrates how to align all the selected objects at 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Top" OnClick="@OnAlignTop" />
+<input type="button" value="Top" @onclick="@OnAlignTop" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -206,9 +203,8 @@ The following code example illustrates how to align all the selected objects at 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Bottom" OnClick="@OnAlignBottom" />
+<input type="button" value="Bottom" @onclick="@OnAlignBottom" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -265,9 +261,8 @@ The following code example illustrates how to align all the selected objects at 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Middle" OnClick="@OnAlignMiddle" />
+<input type="button" value="Middle" @onclick="@OnAlignMiddle" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -325,9 +320,8 @@ The following code example illustrates how to align all the selected objects at 
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Center" OnClick="@OnAlignCenter" />
+<input type="button" value="Center" @onclick="@OnAlignCenter" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -397,16 +391,15 @@ The following code example illustrates how to execute the space commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Left" OnClick="@OnDistributeLeft" />
-<SfButton Content="Right" OnClick="@OnDistributeRight" />
-<SfButton Content="Top" OnClick="@OnDistributeTop" />
-<SfButton Content="Bottom" OnClick="@OnDistributeBottom" />
-<SfButton Content="Center" OnClick="@OnDistributeCenter" />
-<SfButton Content="Middle" OnClick="@OnDistributeMiddle" />
-<SfButton Content="BottomToTop" OnClick="@OnDistributeBottomToTop" />
-<SfButton Content="RightToLeft" OnClick="@OnDistributeRightToLeft" />
+<input type="button" value="Left" @onclick="@OnDistributeLeft" />
+<input type="button" value="Right" @onclick="@OnDistributeRight" />
+<input type="button" value="Top" @onclick="@OnDistributeTop" />
+<input type="button" value="Bottom" @onclick="@OnDistributeBottom" />
+<input type="button" value="Center" @onclick="@OnDistributeCenter" />
+<input type="button" value="Middle" @onclick="@OnDistributeMiddle" />
+<input type="button" value="BottomToTop" @onclick="@OnDistributeBottomToTop" />
+<input type="button" value="RightToLeft" @onclick="@OnDistributeRightToLeft" />
 
 <SfDiagramComponent @ref="diagram" Width="1000px" Height="500px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -514,11 +507,10 @@ The following code example illustrates how to execute the size commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="SameSize" OnClick="@OnSameSize" />
-<SfButton Content="SameWidth" OnClick="@OnSameWidth" />
-<SfButton Content="SameHeight" OnClick="@OnSameHeight" />
+<input type="button" value="SameSize" @onclick="@OnSameSize" />
+<input type="button" value="SameWidth" @onclick="@OnSameWidth" />
+<input type="button" value="SameHeight" @onclick="@OnSameHeight" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@connectors" />
 
@@ -599,11 +591,10 @@ The following code illustrates how to execute the clipboard commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Cut" OnClick="@OnCut" />
-<SfButton Content="Copy" OnClick="@OnCopy" />
-<SfButton Content="Paste" OnClick="@OnPaste" />
+<input type="button" value="Cut" @onclick="@OnCut" />
+<input type="button" value="Copy" @onclick="@OnCopy" />
+<input type="button" value="Paste" @onclick="@OnPaste" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -672,11 +663,10 @@ The following code illustrates how to execute the grouping commands.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Group" OnClick="@OnGroup" />
-<SfButton Content="UnGroup" OnClick="@OnUnGroup" />
-<SfButton Content="SelectAll" OnClick="@OnSelectAll" />
+<input type="button" value="Group" @onclick="@OnGroup" />
+<input type="button" value="UnGroup" @onclick="@OnUnGroup" />
+<input type="button" value="SelectAll" @onclick="@OnSelectAll" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors" />
 
@@ -741,9 +731,8 @@ The following code illustrates how to zoom-in/zoom out the diagram.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Zoom" OnClick="@OnZoom" />
+<input type="button" value="Zoom" @onclick="@OnZoom" />
 
 <SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes" Connectors="@Connectors"/>
 
@@ -815,7 +804,7 @@ The following code illustrates how to execute nudge command.
 
 The corresponding arrow keys are used to move the selected elements towards up, down, left, or right direction by 1 pixel.
 
-![Nudge Command](images/Commands_img4.png)
+![Nudge Command in Blazor Diagram](images/blazor-diagram-nudge-command.png)
 
 Nudge commands are particularly useful for accurate placement of elements.
 

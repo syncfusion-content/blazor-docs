@@ -50,9 +50,9 @@ The following code example illustrates how to add a connector through connector 
 }
 ```
 
-![Connector default](../images/connector-default.png)
+![Blazor Diagram Connector](../images/blazor-diagram-connector.png)
 
-> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization. Don't use `_` when assigning connector ID.
+> [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each connector should be unique and so it is further used to find the connector at runtime and do any customization.
 
 ## Add connectors at runtime
 
@@ -60,9 +60,8 @@ You can add a connector at runtime by adding connector to the connectors collect
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Add Connector" OnClick="@AddConnector" />
+<input type="button" value="Add Connector" @onclick="@AddConnector">
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors"></SfDiagramComponent>
 
 @code
@@ -177,13 +176,13 @@ Connectors can be predefined and added to the symbol palette. You can drop those
 }
 ```
 
-![Connector From Palette](../images/connector-palette.gif)
+![Connector from Palette in Blazor Diagram](../images/blazor-diagram-connector-from-palette.gif)
 
 ## Draw connectors using drawing object
 
 Connectors can be interactively drawn by clicking and dragging on the diagram surface by using [DrawingObject](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.SfDiagramComponent.html#Syncfusion_Blazor_Diagram_SfDiagramComponent_DrawingObject).
 
-![Drawing Connector](../images/connectorDrawing.gif)
+![Drawing Connector in Blazor Diagram](../images/blazor-diagram-draw-connector.gif)
 
 ## Remove connectors at runtime
 
@@ -193,9 +192,8 @@ The following code shows how to remove a connector at runtime.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Remove Connector" OnClick="@RemoveConnector" />
+<input type="button" value="Remove Connector" @onclick="@RemoveConnector">
 <SfDiagramComponent Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
@@ -252,9 +250,8 @@ The following code example explains how to change the connector properties.
 
 ```cshtml
 @using Syncfusion.Blazor.Diagram
-@using Syncfusion.Blazor.Buttons
 
-<SfButton Content="Update Connector" OnClick="@UpdateConnector" />
+<input type="button" value="Update Connector" @onclick="@UpdateConnector">
 <SfDiagramComponent @ref="Diagram" Width="1000px" Height="500px" Connectors="@connectors">
     <SnapSettings Constraints="@snapConstraints"></SnapSettings>
 </SfDiagramComponent>
@@ -368,7 +365,7 @@ The following code example illustrates how to connect two nodes.
 }
 ```
 
-![Node to Node Connection](../images/NodeToNodeConnection.png)
+![Displaying Connection between Nodes in Blazor Diagram](../images/blazor-diagram-node-to-node-connection.png)
 
 * When you remove [NodeConstraints.InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_InConnect) from Default, the node accepts only an outgoing connection to dock in it. Similarly, when you remove [NodeConstraints.OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeConstraints.html#Syncfusion_Blazor_Diagram_NodeConstraints_OutConnect) from Default, the node accepts only an incoming connection to dock in it.
 
@@ -471,7 +468,7 @@ The following code example illustrates how to create port to port connections.
 }
 ```
 
-![Port to Port Connection](../images/PortToPortConnection.png)
+![Connection between Ports in Blazor Diagram](../images/blazor-diagram-port-to-port-connection.png)
 
 * When you set [PortConstraints](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html) to [InConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_InConnect), the port accepts only an incoming connection to dock in it. Similarly, when you set PortConstraints to [OutConnect](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_OutConnect), the port accepts only an outgoing connection to dock in it.
 * When you set PortConstraints to [None](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.PortConstraints.html#Syncfusion_Blazor_Diagram_PortConstraints_None), the port restricts connector to establish connection in it.

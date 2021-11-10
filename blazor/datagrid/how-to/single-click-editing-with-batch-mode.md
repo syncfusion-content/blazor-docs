@@ -9,11 +9,11 @@ documentation: ug
 
 # Single click editing with Batch mode in Blazor DataGrid Component
 
-You can make a cell editable on a single click with a [Batch](https://blazor.syncfusion.com/documentation/datagrid/editing/#batch) mode of editing in DataGrid by using the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditCell_System_Double_System_String_) method.
+You can make a cell editable on a single click with a [Batch](https://blazor.syncfusion.com/blazor/documentation/datagrid/editing/#batch) mode of editing in DataGrid, by using the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditCell_System_Double_System_String_) method.
 
 Set the [Mode](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridSelectionSettings.html#Syncfusion_Blazor_Grids_GridSelectionSettings_Mode) property of **GridSelectionSettings** component to **Both** and bind the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) event to DataGrid. In the [CellSelected](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.GridEvents-1.html#Syncfusion_Blazor_Grids_GridEvents_1_CellSelected) event handler, call the [EditCell](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_EditCell_System_Double_System_String_) method based on the clicked cell.
 
-This is demonstrated in the following sample code,
+This is demonstrated in the below sample code,
 
 ```cshtml
 @using Syncfusion.Blazor.Grids

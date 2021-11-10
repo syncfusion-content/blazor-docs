@@ -30,7 +30,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
 
 ## Importing Syncfusion Blazor component in the application
 
-1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the following command line.
+1. Now, add **Syncfusion.Blazor** NuGet package to the new application using the below command line.
 
     ```bash
         dotnet add package Syncfusion.Blazor -v '{:nuget-version:}'
@@ -96,7 +96,7 @@ This article provides a step-by-step instructions to configure Syncfusion Blazor
     ```
 ## Add DataGrid Component
 
-To initialize the DataGrid component add the following code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
+To initialize the DataGrid component add the below code to your **Index.razor** view page which is present under **~/Pages** folder. For example, the DataGrid component is added in the **~/Pages/Index.razor** page.
 
 ```csharp
 
@@ -130,7 +130,7 @@ To bind data for the DataGrid component, you can assign a IEnumerable object to 
 
 The columns are automatically generated when columns declaration is empty or undefined while initializing the datagrid.
 
-The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component, we have properties to customize columns.
+The DataGrid has an option to define columns using [GridColumns](https://help.syncfusion.com/cr/aspnetcore-blazor/Syncfusion.Blazor.Grids.GridColumns.html) component. In `GridColumn` component we have properties to customize columns.
 
 Let’s check the properties used here:
 
@@ -163,7 +163,7 @@ Let’s check the properties used here:
 
 ## Enable Paging
 
-The paging feature enables users to view the DataGrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
+The paging feature enables users to view the datagrid record in a paged view. It can be enabled by setting the [AllowPaging](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowPaging) property to true. Pager can be customized using the [GridPageSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_PageSettings) component.
 
 ```csharp
 
@@ -244,7 +244,7 @@ The filtering feature enables you to view reduced amount of records based on fil
 
 ## Enable Grouping
 
-The grouping feature enables you to view the DataGrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
+The grouping feature enables you to view the datagrid record in a grouped view. It can be enabled by setting the [AllowGrouping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_AllowGrouping) property as true. Grouping feature can be customized using the [GridGroupSettings](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Grids.SfGrid-1.html#Syncfusion_Blazor_Grids_SfGrid_1_GroupSettings) component.
 
 ```csharp
 
@@ -269,7 +269,7 @@ The grouping feature enables you to view the DataGrid record in a grouped view. 
 
 ```
 
-Output will be like the below.
+Output be like the below.
 
 ![Blazor DataGrid](../images/blazor-datagrid.png)
 

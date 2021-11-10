@@ -148,7 +148,7 @@ The [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Symb
 
 ```
 
-![Node as symbol in Blazor Diagram](images/Addnodetopalette.png)
+![Adding Node to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-node-to-palette.png)
 
 ### Add connector to palette
 
@@ -216,7 +216,7 @@ The following code example illustrates how to add connector to a palette.
 }
 ```
 
-![Connector as symbol in Blazor Diagram](images/Addconnectortopalette.png)
+![Adding Connector to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-connector-to-palette.png)
 
 ### Add nodegroup to palette
 
@@ -303,7 +303,7 @@ The following code example illustrates how to add nodegroup to a palette.
 }
 ```
 
-![Group as symbol in Blazor Diagram](images/Addgrouptopalette.png)
+![Adding NodeGroup to Symbol Palette in Blazor Diagram](images/blazor-diagram-add-node-group-to-palette.png)
 
 ## Add palette to SymbolPalette
 
@@ -459,7 +459,7 @@ Palettes = new DiagramObjectCollection<Palette>()
 }
 ```
 
-![Symbol in Blazor Diagram](images/Addnode.png)
+![Adding Palette to SymbolPalette in Blazor Diagram](images/blazor-diagram-add-palette-to-symbol-palette.png)
 
 ## How to drag and drop symbols from palette to diagram
 
@@ -613,7 +613,7 @@ To initialize drag and drop, you must add the diagram to the [Targets](https://h
 }
 ```
 
-![Drag and Drop in Blazor Diagram](images/DragDrop.gif)
+![Drag and Drop in Blazor Diagram](images/blazor-diagram-drag-and-drop.gif)
 
 ## Customize the palette header
 
@@ -718,11 +718,12 @@ The following code example illustrates how to change the size of a symbol and ho
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.Diagram.SymbolPalette
-@using Syncfusion.Blazor.Buttons
 
 <div class="control-section">
     <div class="properties">
-       <SfButton Content="UpdateSize" OnClick="@UpdateSize" />
+        <button @onclick="UpdateSize">
+            UpdateSize
+        </button>
     </div>
     <div style="width:20%">
         <div id="palette-space" class="sb-mobile-palette" style="border: 2px solid #b200ff">
@@ -883,7 +884,7 @@ The following code example illustrates how to change the preview size of a palet
 }
 ```
 
-![SymbolPreview in Blazor Diagram](images/Symbolpreview.gif)
+![SymbolPreview in Blazor Diagram](images/blazor-diagram-symbol-preview.gif)
 
 ## Default settings
 
@@ -961,7 +962,7 @@ The diagram provides support to add symbol description below each symbol of a pa
 }
 ```
 
-![Symbol with Description in Blazor Diagram](images/Symboldescription.png)
+![Symbol with Description in Blazor Diagram](images/blazor-diagram-symbol-description.png)
 
 ## Palette interaction
 

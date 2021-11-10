@@ -26,7 +26,7 @@ For adding action buttons you can create a  `CardFooterContent` component within
 
 ## Vertical
 
-By default, action buttons are aligned horizontally. They can also be aligned vertically by adding the `Orientation` property.
+By default, action buttons positioned in horizontal alignment , and also it can be aligned to show in vertical alignment by adding `Orientation` property.
 
 ```cshtml
 @using Syncfusion.Blazor.Cards
