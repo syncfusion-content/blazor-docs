@@ -9,20 +9,20 @@ documentation: ug
 
 # WebAssembly Performance in Blazor Scheduler Component
 
-This section provides performance guidelines for using Syncfusion Scheduler component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
+This section provides performance guidelines for using Syncfusion Scheduler component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance's best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
 > You can refer to our Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](scheduler/how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
-During Blazor Diffing Algorithm, every views of the Scheduler component and its child component will be checked for re-rendering.  For instance, having **EventCallBack** on the application or Scheduler will check every child component once event callback is completed.
+During Blazor Diffing Algorithm, every views of the Scheduler component and its child component will be checked for re-rendering. For instance, having **EventCallBack** on the application or Scheduler will check every child component, once event callback is completed.
 
-You can have fine-grained control over Scheduler component rendering. **PreventRender** method help you to avoid unnecessary re-rendering of the Scheduler component. This method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
+You can have fine-grained control over Scheduler component rendering. **PreventRender** method helps to avoid unnecessary re-rendering of the Scheduler component. This method internally overrides the **ShouldRender** method of the Scheduler to prevent rendering.
 
 In the following example:
 
 * **PreventRender** method is called in the **IncrementCount** method which is a click callback.
-* Now Scheduler component will not be a part of the rendering which happens as result of the click event and **currentCount** alone will get updated.
+* Now, Scheduler component will not be a part of the rendering which happens as result of the click event and **currentCount** alone will get updated.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

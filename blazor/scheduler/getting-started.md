@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Getting Started with Blazor Scheduler Component | Syncfusion
-description: Checkout and learn about getting started with Syncfusion Blazor Scheduler component. Also helps you to bind appointments and set current view and date to it.
+description: Checkout and learn about getting started with Syncfusion Blazor Scheduler component. Also helps you to bind appointments, set current view and date to it.
 platform: Blazor
 control: Scheduler
 documentation: ug
@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Scheduler Component
 
-This section briefly explains about how to include a simple Scheduler Component in your Blazor Server-Side and Client-Side application. You can refer to our Getting Started with [Blazor Server-Side Scheduler](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications..
+This section briefly explains about how to include a simple Scheduler Component in the Blazor Server-Side and Client-Side application. Refer to Getting Started with [Blazor Server-Side Scheduler](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications..
 
 To get start quickly with Blazor Scheduler, you can check on this video:
 
@@ -26,7 +26,7 @@ You can use any one of the below standards to install the Syncfusion Blazor libr
 
 1. Install **Syncfusion.Blazor.Schedule** NuGet package to the application using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -44,7 +44,7 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 1. Install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`.
 
-2. You can add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
+2. Add the client-side style resources through [CDN](https://blazor.syncfusion.com/documentation/appearance/themes#cdn-reference) or from [NuGet](https://blazor.syncfusion.com/documentation/appearance/themes#static-web-assets) package in the `<head>` element of the **~/Pages/_Host.cshtml** page.
 
     ```html
     <head>
@@ -99,7 +99,7 @@ namespace BlazorApplication
 
 ## Initialize the Scheduler component
 
-The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) component can be rendered on the page by defining the `SfSchedule` tag helper. And also, define the required Scheduler views in the `ScheduleView` tag helper. Add the following code example to your `index.razor` page which is available within the `~/Pages/` folder, to initialize the Scheduler component.
+The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-scheduler/) component can be rendered on the page by defining the `SfSchedule` tag helper. And also, define the required Scheduler views in the `ScheduleView` tag helper. Add the following code example to the `index.razor` page which is available within the `~/Pages/` folder, to initialize the Scheduler component.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -129,8 +129,6 @@ The [Blazor Scheduler](https://www.syncfusion.com/blazor-components/blazor-sched
     }
 }
 ```
-
-The output of the above code will display the empty scheduler as shown in the following image.
 
 ![Blazor Scheduler](images/blazor-scheduler.png)
 
@@ -174,8 +172,6 @@ To populate the Scheduler with appointments, bind the event data to it by assign
     }
 }
 ```
-
-The scheduler with the appointments will be rendered as shown in the following image.
 
 ![Blazor Scheduler with Appointments](images/blazor-scheduler-appointments.png)
 

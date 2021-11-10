@@ -24,8 +24,6 @@ To get start quickly on customizing the header rows of timeline views on schedul
 
 > The `Hour` row is not applicable for Timeline month view.
 
-The following example shows the Scheduler displaying all the available header rows on timeline views.
-
 ```cshtml
 @using Syncfusion.Blazor.Schedule
 
@@ -162,7 +160,7 @@ It is possible to display a complete year in a timeline view by setting `Interva
 
 ## Customizing the header rows using template
 
-You can customize the text of the header rows and display any images or formatted text on each individual header rows using the built-in `Template` option available within the `ScheduleHeaderRow`.
+The text of the header rows can customize and display any images or format text on each individual header rows using the built-in `Template` option available within the `ScheduleHeaderRow`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

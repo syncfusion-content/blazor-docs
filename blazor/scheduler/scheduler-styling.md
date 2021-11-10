@@ -9,7 +9,7 @@ documentation: ug
 
 # Style And Appearance in Blazor Scheduler Component
 
-To modify the Scheduler appearance, you need to override the default CSS of Scheduler. Also, you have an option to create your own custom theme using our [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material). Please find the list of CSS classes in Scheduler.
+To modify the Scheduler appearance, you need to override the default CSS of Scheduler. Also, there is an option to create our own custom theme using [Theme Studio](https://ej2.syncfusion.com/themestudio/?theme=material). Please find the list of CSS classes in Scheduler.
 
 | CSS class | Purpose |
 |-------|---------|
@@ -42,7 +42,7 @@ To modify the Scheduler appearance, you need to override the default CSS of Sche
 | .e-schedule .e-block-appointment | Block appointment in scheduler |
 | .e-schedule .e-read-only | Read only appointment in scheduler. |
 | e-appointment-border | Appointment which are currently selected, use the appointment class hierarchical based on your views. |
-| e-selected-cells | work cells which are currently selected, use the work cell class hierarchical based on your views. |
+| e-selected-cells | Work cells which are currently selected, use the work cell class hierarchical based on your views. |
 | e-header-cells | Header cells of scheduler, use the work cells hierarchical based on your views. |
 | .e-schedule .e-vertical-view .e-resource-cells| Resource cells in vertical views of scheduler. |
 | .e-schedule .e-month-view .e-resource-cells| Resource cells in month view of scheduler. |

@@ -15,7 +15,7 @@ Scheduler makes use of popups and dialog to display the required notifications, 
 
 The editor window usually opens on the Scheduler, when a cell or event is double clicked. When a cell is double clicked, the detailed editor window opens in "Add new" mode, whereas when an event is double clicked, the same is opened in an "Edit" mode.
 
-In mobile devices, you can open the detailed editor window in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
+In mobile devices, the detailed editor window can be opened in edit mode by clicking the edit icon on the popup, that opens on single tapping an event. You can also open it in add mode by single tapping a cell, which will display a `+` indication, clicking on it again will open the editor window.
 
 > You can also prevent the editor window from opening, by rendering Scheduler in a `Readonly` mode or by doing code customization within the `OnPopupOpen` event.
 
@@ -78,8 +78,6 @@ To change the default labels such as Title, Location and other field names in th
 }
 ```
 
-The following screenshot represents the editor window with custom label.
-
 ![Editor Window with Custom Label in Blazor Scheduler](images/blazor-scheduler-custom-label.png)
 
 ### Field validation
@@ -133,13 +131,11 @@ It is possible to validate the required fields of the editor window before submi
 }
 ```
 
-The following image shows the validation error message while saving the appointment without meeting the provided validation rules.
-
 ![Editor window with Validation in Blazor Scheduler](images/blazor-scheduler-validation.png)
 
 ### Customizing the default time duration in editor window
 
-In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start/end time duration within the event editor will be in a 30 minutes time difference. You can change this duration value by changing the `Duration` option within the `OnPopupOpen` event as shown in the following code example.
+In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start or end time duration within the event editor will be in a 30 minutes time difference. This duration value can be changed by changing the `Duration` option within the `OnPopupOpen` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -231,7 +227,7 @@ It is possible to prevent the display of editor and quick popup windows by passi
 }
 ```
 
-In case, if you need to prevent only specific popups on Scheduler, then you can check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupOpen` event are as follows.
+In case, in order to prevent only specific popups on Scheduler, check the condition based on the popup type. The types of the popup that can be checked within the `OnPopupOpen` event are as follows.
 
 | Type | Description |
 |------|-------------|
@@ -247,7 +243,7 @@ In case, if you need to prevent only specific popups on Scheduler, then you can 
 
 ### How to open editor window manually
 
-It is possible to open the editor window by manually for on specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as a parameters.
+It is possible to open the editor window manually for a specific time or certain events by using the `OpenEditorAsync` method which allows the [TValue](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor__0_Syncfusion_Blazor_Schedule_CurrentAction_) or [CellClickEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Schedule.SfSchedule-1.html#Syncfusion_Blazor_Schedule_SfSchedule_1_OpenEditor_Syncfusion_Blazor_Schedule_CellClickEventArgs_Syncfusion_Blazor_Schedule_CurrentAction_System_Nullable_Syncfusion_Blazor_Schedule_RepeatType__) and `CurrentAction` as parameters.
 
 > [Here](https://blazor.syncfusion.com/documentation/scheduler/how-to/open-editor-window-on-single-click/) is the example to open the editor window on a single click.
 
@@ -442,11 +438,9 @@ The resource field can be added within editor template with the following code e
 }
 ```
 
-> EditorTemplate is not applicable when we set `AllowMutiple` as true without `AllowGroupEdit` is enabled, so in that case you need to use custom editor window.
+> EditorTemplate is not applicable when we set `AllowMutiple` as true without enabling `AllowGroupEdit`, so in that case use custom editor window.
 
 ## How to add recurrence options within editor template
-
-The following code example shows how to add recurrence options within the editor template.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1374,8 +1368,6 @@ You can also do different customization for quick popup on cell and event by che
 </style>
 ```
 
-The following images shows how the quick popup on cell and event looks when we use template.
-
 ![Quick Popup on Cell in Blazor Scheduler](images/blazor-scheduler-cell-click-quick-popup.png)
 ![Quick Popup on Event in Blazor Scheduler](images/blazor-scheduler-event-click-quick-popup.png)
 
@@ -1463,7 +1455,7 @@ By default, the Scheduler allows the user to select multiple days. We can preven
 
 ### How to close quick info popup manually
 
-You can close the quick info popup in scheduler by using the `CloseQuickInfoPopupAsync` public method. The following code example demonstrates the how to close quick info popup manually.
+The quick info popup can be closed in scheduler by using the `CloseQuickInfoPopupAsync` public method.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1517,8 +1509,6 @@ When the number of appointments count that lies on a particular time range * def
 > To disable this option of showing popup with all hidden appointments, while clicking on the text indicator, you can do code customization within the `OnPopupOpen` event.
 
 The same indicator is displayed on all-day row in calendar views such as day, week and work week views alone, when the number of appointment count present in a cell exceeds three. Clicking on the text indicator here will not open a popup, but will allow the expand/collapse option for viewing the remaining appointments present in the all-day row.
-
-The following code example shows how to disable the display of such popups while clicking on the more text indicator.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
