@@ -54,7 +54,7 @@ To enable deferred updates in the pivot table, set the property [AllowDeferLayou
 
 ```
 
-![output](images/fieldlist_deferupdate.png)
+![Blazor PivotTable with Defer Layout Update](images/blazor-pivottable-defer-layout-update.png)
 
 ## Stand-alone Field List (Fixed)
 
@@ -119,6 +119,6 @@ To enable deferred updates in the static fieldlist, set the property [AllowDefer
 
 ```
 
-![output](images/defer-update-static.png)
+![Blazor PivotTable with Defer Static Update](images/blazor-pivottable-defer-static-update.png)
 
 > You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

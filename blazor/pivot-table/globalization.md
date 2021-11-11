@@ -421,7 +421,7 @@ In the following example, we have demonstrate how to enable **Localization** for
 
     ```
 
-![output](images/localization.png)
+![Localization in Blazor PivotTable](images/blazor-pivottable-localization.png)
 
 ### Blazor WebAssembly
 
@@ -520,7 +520,7 @@ In the following examples, demonstrate how to enable **Localization** for pivot 
 
     ```
 
-![output](images/localization.png)
+![Localization in Blazor PivotTable](images/blazor-pivottable-localization.png)
 
 ## Internationalization
 
@@ -576,7 +576,7 @@ Internationalization library is used to globalize number, date, and time values 
 > * Default culture is **en-US**. If you want to change the **en-US** culture to a different culture, you have to set accordingly in `SetCulture` method.
 > * The decimal separators of pivot table values varies based on the culture applied to the component.
 
-![output](images/pivot-globalization.png)
+![Globalization in Blazor PivotChart](images/blazor-pivotchart-globalization.png)
 
 ## Right-to-left (RTL)
 
@@ -616,6 +616,6 @@ Right-to-left (RTL) provides an option to switch the text direction and layout o
 
 ```
 
-![output](images/pivot-rtl.png)
+![Right to Left in Blazor PivotChart](images/blazor-pivottable-right-to-left.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

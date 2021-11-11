@@ -85,7 +85,7 @@ Allows to load the large amounts of data without any performance degradation by 
 
 ```
 
-![output](images/virtualscrolling.png)
+![Virtual Scrolling in Blazor PivotTable](images/blazor-pivottable-virtual-scroll.png)
 
 **Limitations for virtual scrolling**
 
@@ -141,12 +141,12 @@ When we bind one million raw data, the pivot table will process all raw data to 
 
 * The following aggregation types will not be supported.
     * Average
-    * Populationstdev
+    * Populationsdev
     * Samplestdev
     * Populationvar
     * Samplevar
 * If you use any of the aggregations above, it will result in an aggregation type **"Sum"**.
-* Distinctcount will act as **"Count"** aggregation type.
+* Distinct count will act as **"Count"** aggregation type.
 * In the calculated field, an existing field can be inserted without altering its default aggregation type Even if we change it, it would use the default aggregation type back for calculation.
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
