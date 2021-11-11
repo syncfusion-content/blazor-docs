@@ -120,53 +120,71 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 ## Header template
 
-The column headers can be customize using the `HeaderTemplate` property.
+> Before adding header template to the Gantt Chart, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+
+The Header Template has options to display custom element value or content in the header. You can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component to specify the custom content.
 
 ```cshtml
+@page "/header-Template"
 @using Syncfusion.Blazor.Gantt
+@using Syncfusion.Blazor.Grids
 
-<SfGantt DataSource="@TaskCollection" Height="450px" Width="100%" HighlightWeekends="true">
+<SfGantt DataSource="@TaskCollection" Width="700px" Height="400px">
     <GanttTaskFields Id="TaskId" Name="TaskName" StartDate="StartDate" EndDate="EndDate" Duration="Duration" Progress="Progress" ParentID="Parent_Id"></GanttTaskFields>
     <GanttColumns>
-
         <GanttColumn Field="TaskName" HeaderText="Job Name" Width="250">
             <HeaderTemplate>
-                <div>
-                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Task%20name.png" width="20" height="20" style="margin-right: 8px">
-                    Job Name
-                </div>
+                @{
+                    var headerText = (context as GridColumn).HeaderText;
+                    <div>
+                        <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Task%20name.png" width="20" height="20" style="margin-right: 8px">
+                        @headerText
+                    </div>
+                }
             </HeaderTemplate>
         </GanttColumn>
         <GanttColumn Field="StartDate" HeaderText="Start Date" Width="250">
             <HeaderTemplate>
-                <div>
-                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Start%20date.png" width="20" height="20" style="margin-right: 8px">
-                    Start Date
-                </div>
+                @{
+                    var headerText = (context as GridColumn).HeaderText;
+                    <div>
+                        <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Start%20date.png" width="20" height="20" style="margin-right: 8px">
+                        @headerText
+                    </div>
+                }
             </HeaderTemplate>
         </GanttColumn>
         <GanttColumn Field="EndDate" HeaderText="End Date" Width="250">
             <HeaderTemplate>
-                <div>
-                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Start%20date.png" width="20" height="20" style="margin-right: 8px">
-                    End Date
-                </div>
+                @{
+                    var headerText = (context as GridColumn).HeaderText;
+                    <div>
+                        <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Start%20date.png" width="20" height="20" style="margin-right: 8px">
+                        @headerText
+                    </div>
+                }
             </HeaderTemplate>
         </GanttColumn>
         <GanttColumn Field="Duration" HeaderText="Duration" Width="250">
             <HeaderTemplate>
-                <div>
-                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Duration.png" width="20" height="20" style="margin-right: 8px">
-                    Duration
-                </div>
+                @{
+                    var headerText = (context as GridColumn).HeaderText;
+                    <div>
+                        <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Duration.png" width="20" height="20" style="margin-right: 8px">
+                        @headerText
+                    </div>
+                }
             </HeaderTemplate>
         </GanttColumn>
         <GanttColumn Field="Progress" HeaderText="Progress" Width="250">
             <HeaderTemplate>
-                <div>
-                    <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Progress.png" width="20" height="20" style="margin-right: 8px">
-                    Progress
-                </div>
+                @{
+                    var headerText = (context as GridColumn).HeaderText;
+                    <div>
+                        <img src="https://ej2.syncfusion.com/demos/src/gantt/images/Progress.png" width="20" height="20" style="margin-right: 8px">
+                        @headerText
+                    </div>
+                }
             </HeaderTemplate>
         </GanttColumn>
     </GanttColumns>
@@ -191,9 +209,11 @@ The column headers can be customize using the `HeaderTemplate` property.
         width: 15px !important;
         content: '\e960';
     }
+
 </style>
-@code{ 
+@code{
     public List<TaskData> TaskCollection { get; set; }
+
     protected override void OnInitialized()
     {
         this.TaskCollection = GetTaskCollection();
@@ -211,23 +231,23 @@ The column headers can be customize using the `HeaderTemplate` property.
 
     }
 
-        public static List<TaskData> GetTaskCollection()
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() 
         {
-            List<TaskData> Tasks = new List<TaskData>() {
-            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21),},
+            new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21)},
             new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 30, Parent_Id = 1},
             new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2022, 04, 02), Duration = "4", Progress = 40, Parent_Id = 1},
             new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2022, 04, 02), Duration = "0", Progress = 30, Parent_Id =1},
-            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21),},
+            new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2022, 04, 02), EndDate = new DateTime(2022, 04, 21)},
             new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 30, Parent_Id =5},
             new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2022, 04, 04), Duration = "3", Progress = 40, Parent_Id =5},
             new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2022, 04, 04), Duration = "0", Progress = 30, Parent_Id =5}
 
         };
         return Tasks;
-        }
+    }
 }
-
 ```
 
 ![Alt text](images/headerTemplate.png) 
