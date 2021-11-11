@@ -61,7 +61,7 @@ documentation: ug
 
 ``` 
 
-![Range Column](../images/chart-types-images/rangecolumn.png)
+![Blazor Range Column Chart](../images/chart-types-images/blazor-range-column-chart.png)
 
 > Refer to our [Blazor Range Column Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/range-column-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Range Column Chart Example](https://blazor.syncfusion.com/demos/chart/range-column?theme=bootstrap4) to know how to show variations in the data values for a given time.
 
@@ -126,7 +126,7 @@ The following properties can be used to customize the [Range Column](https://hel
 
 ``` 
 
-![Range Column with series customization](../images/chart-types-images/custom-range-column.png)
+![Blazor Range Column Chart with Custom Series](../images/chart-types-images/blazor-range-column-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

@@ -63,7 +63,7 @@ The [Size](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartS
 
 ``` 
 
-![Bubble Chart with size mapping](../images/chart-types-images/bubblesize.png)
+![Blazor Bubble Chart with Size Mapping](../images/chart-types-images/blazor-bubble-chart-size-mapping.png)
 
 ## Series Customization
 
@@ -117,7 +117,7 @@ The following properties can be used to customize the [Bubble](https://help.sync
 
 ```
 
-![Bubble Charts with series customization](../images/chart-types-images/custom-bubble.png)
+![Blazor Bubble Chart with Custom Series](../images/chart-types-images/blazor-bubble-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 

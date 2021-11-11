@@ -52,7 +52,7 @@ documentation: ug
 
 ``` 
 
-![Spline Chart](../images/chart-types-images/spline.png)
+![Blazor Spline Chart](../images/chart-types-images/blazor-spline-chart.png)
 
 > Refer to our [Blazor Spline Chart](https://www.syncfusion.com/blazor-components/blazor-charts/chart-types/spline-chart) feature tour page to know about its other groundbreaking feature representations. Explore our [Blazor Spline Chart Example](https://blazor.syncfusion.com/demos/chart/spline?theme=bootstrap4) to know how to connect the data points with smooth curves.
 
@@ -99,7 +99,7 @@ To specify the type of [Spline Chart](https://help.syncfusion.com/cr/blazor/Sync
 
 ``` 
 
-![Type of spline](../images/chart-types-images/cardinal.png)
+![Blazor Cardinal Spline Chart](../images/chart-types-images/blazor-cardinal-spline-chart.png)
 
 ## Series Customization
 
@@ -150,7 +150,7 @@ The following properties can be used to customize the [Spline](https://help.sync
 
 ``` 
 
-![Spline with series customization](../images/chart-types-images/custom-spline.png)
+![Blazor Spline Chart with Custom Series](../images/chart-types-images/blazor-spline-chart-custom-series.png)
 
 > Refer to our [Blazor Charts](https://www.syncfusion.com/blazor-components/blazor-charts) feature tour page for its groundbreaking feature representations and also explore our [Blazor Chart Example](https://blazor.syncfusion.com/demos/chart/line?theme=bootstrap4) to know various chart types and how to represent time-dependent data, showing trends at equal intervals.
 
