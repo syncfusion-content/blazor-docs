@@ -120,9 +120,9 @@ Using the `GanttColumns` property, you can define the columns in Gantt Chart. If
 
 ## Header template
 
-> Before adding header template to the Gantt Chart, we strongly recommend you to go through the [template](./templates/#templates) section topic to configure the template.
+> Before adding the header template to the Gantt Chart, it is strongly recommended to go through the [template](./templates/#templates) section topic to configure the template.
 
-The Header Template has options to display custom element value or content in the header. You can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component to specify the custom content.
+The Header Template has options to display custom element values or content in the header. You can use the [HeaderTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html#Syncfusion_Blazor_Gantt_GanttColumn_HeaderTemplate) of the [GanttColumn](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Gantt.GanttColumn.html) component to specify the custom content.
 
 ```cshtml
 @page "/header-Template"
@@ -250,7 +250,7 @@ The Header Template has options to display custom element value or content in th
 }
 ```
 
-![Alt text](images/headerTemplate.png) 
+![Header Template](images/headerTemplate.png) 
 
 ## Format
 
