@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Toast Component
 
-This section briefly explains how to include a Toast component in the Blazor Server-side application. Refer to Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio 2019 page](../getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+This section briefly explains how to include a Toast component in the Blazor Server-side application. Refer to Getting Started with [Syncfusion Blazor for Server-Side in Visual Studio page](../getting-started/blazor-server-side-visual-studio/) for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Toast component, check on this video:
 {% youtube
@@ -139,6 +139,6 @@ After successful compilation of the application, run the application.
 
 * [Getting Started with Syncfusion Blazor for client-side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
 
-* [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 
 * [Getting Started with Syncfusion Blazor for server-side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)

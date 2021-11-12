@@ -48,7 +48,7 @@ The following code shows how to customize the appearance of the shape.
 }
 ```
 
-![Node appearance in Blazor Diagram](../images/node_appearance.png)
+![Node appearance in Blazor Diagram](../images/blazor-diagram-node-appearance.png)
 
 > [ID](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.NodeBase.html#Syncfusion_Blazor_Diagram_NodeBase_ID) for each node should be unique and so it is further used to find the node at runtime and do any customization.
 
@@ -193,7 +193,7 @@ We can define node style using template in [NodeTemplate](https://help.syncfusio
 
 > In the above example, node's background color is updated using the click event of the button defined in the template.
 
-![Node Template](../images/nodetemplate.gif)
+![Blazor Diagram with Node Template](../images/blazor-diagram-node-template.gif)
 
 ## SetNodeTemplate
 
@@ -307,7 +307,7 @@ The [SetNodeTemplate](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Di
 }
 ```
 
-![SetNodeTemplate](../images/SetTemplate.png)
+![Blazor Diagram with SetNodeTemplate](../images/blazor-diagram-set-node-template.png)
 
 ## Shadow
 
@@ -346,7 +346,7 @@ Diagram provides support to add [Shadow](https://help.syncfusion.com/cr/blazor/S
 }
 ```
 
-![Node shadow](../images/node_shadow.png)
+![Blazor Diagram Node with shadow](../images/blazor-diagram-node-shadow.png)
 
 ### Customizing shadow
 
@@ -393,7 +393,7 @@ The [Angle](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagram.Shad
 }
 ```
 
-![Shadow](../images/customshadow.png)
+![Blazor Diagram Node with Custom Shadow](../images/blazor-diagram-node-custom-shadow.png)
 
 ## Gradient
 
@@ -454,7 +454,7 @@ There are two types of gradients as follows:
 }
 ```
 
-![Node LinearGradient](../images/node_lineargradient.png)
+![Blazor Diagram Node with LinearGradient](../images/blazor-diagram-node-linear-gradient.png)
 
 ### Radial gradient brush
 
@@ -511,7 +511,7 @@ There are two types of gradients as follows:
 }
 ```
 
-![Node RadialGradient](../images/node_radialgradient.png)
+![Blazor Diagram Node with RadialGradient](../images/blazor-diagram-node-radial-gradient.png)
 
 ## Custom properties
 

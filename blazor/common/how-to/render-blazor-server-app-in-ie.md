@@ -21,7 +21,7 @@ The Microsoft Internet Explorer supports `Blazor Server` app with additional pol
 
 Find the following steps to add the polyfills in the Blazor server application.
 
-1. Create a Blazor server application using [Blazor Server Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019) documentation.
+1. Create a Blazor server application using [Blazor Server Getting Started](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio) documentation.
 
 2. Add the polyfill script reference in the `<head>` element of the `~/Pages/_Host.cshtml` page.
 

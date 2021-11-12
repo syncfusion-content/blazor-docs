@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor TextBox Component
 
-This section briefly explains about how to include a [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) Component in the Blazor Server-Side and Client-Side application. Refer to Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly TextBox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
+This section briefly explains about how to include a [Blazor TextBox](https://www.syncfusion.com/blazor-components/blazor-textbox) Component in the Blazor Server-Side and Client-Side application. Refer to Getting Started with [Blazor Server-Side TextBox](../getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly TextBox](../getting-started/blazor-webassembly-visual-studio-2019/) documentation pages for configuration specifications.
 
 To get start quickly with Blazor TextBox component, check on this video.
 
@@ -31,7 +31,7 @@ To get start quickly with Blazor TextBox component, check on this video.
     </head>
   ```
 
-  > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://ej2.syncfusion.com/blazor/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
+  > For Internet Explorer 11 kindly refer the polyfills. Refer the [documentation](https://blazor.syncfusion.com/documentation/common/how-to/render-blazor-server-app-in-ie/) for more information.
 
   ```html
     <head>
@@ -129,8 +129,10 @@ The floating label TextBox floats the label above the TextBox after focusing, or
 
 ![Blazor TextBox with Floating Label](./images/blazor-textbox-float-label.png)
 
+> You can also explore our [Blazor TextBox example](https://blazor.syncfusion.com/demos/textbox/default-functionalities?theme=bootstrap5) that shows how to configure the textbox in Blazor.
+
 ## See Also
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](../getting-started/blazor-webassembly-dotnet-cli/)
-* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-side in Visual Studio](../getting-started/blazor-server-side-visual-studio/)
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](../getting-started/blazor-server-side-dotnet-cli/)

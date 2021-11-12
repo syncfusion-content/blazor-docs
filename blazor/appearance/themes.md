@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Themes in Blazor and How to Use? - Syncfusion
+title: How to Use Blazor Material Themes? | Syncfusion
 description: Check out the documentation for built-in-themes in Blazor and learn here about how to use it in Blazor
 platform: Blazor
 component: Appearance

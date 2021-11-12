@@ -1,14 +1,14 @@
 ---
 layout: post
-title: "How to bind data to the Syncfusion Blazor components using Dapper and perform CRUD operations | Syncfusion"
+title: Bind data using Dapper and perform CRUD operations | Syncfusion
 component: "DataGrid component and DataManager"
-description: "How to consume data from SQL database using Dapper, bind it to a Syncfusion Component, and perform CRUD operations."
-platform: "Blazor"
+description: How to consume data from SQL database using Dapper, bind it to a Syncfusion Component, and perform CRUD operations.
 component: Common
 documentation: ug
+platform: Blazor
 ---
 
-# How to bind data to the Syncfusion Blazor components using Dapper and perform CRUD operations
+# How to bind data using Dapper and perform CRUD operations
 
 In this topic, we are going to discuss how to consume data from a database using [Dapper](https://github.com/DapperLib/Dapper), bind it to a Syncfusion Blazor Component, and perform CRUD operations.
 
@@ -21,7 +21,7 @@ In this topic, we are going to discuss how to consume data from a database using
 
 Open Visual Studio 2019 and follow the steps in the below documentation to create the Blazor Server Application.
 
-[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+[Creating Blazor Server Application](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 
 ## Creating the database
 

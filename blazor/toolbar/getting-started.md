@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Toolbar Component
 
-This section briefly explains about how to include a `Toolbar` in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](../getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a `Toolbar` in the Blazor server-side application. Refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](../getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
 
 To get started quickly with Blazor Toolbar, check on this video:
 

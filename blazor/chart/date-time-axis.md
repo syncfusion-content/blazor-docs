@@ -47,7 +47,7 @@ The [DateTime](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Va
 
 ```
 
-![DateTime Axis](images/datetime/datetime.png)
+![Blazor Chart with DateTime Axis](images/datetime/blazor-line-chart-datetime-axis.png)
 
 ## DateTime Category Axis
 
@@ -85,7 +85,7 @@ The [DateTime Category](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![DateTime Category Axis](images/datetime/category.png)
+![Blazor Line Chart with DateTime Axis](images/datetime/blazor-line-chart-with-datetime-axis.png)
 
 ### Range
 
@@ -126,7 +126,7 @@ The axis range will be calculated automatically based on the provided data; howe
 
 ```
 
-![DateTime Axis - Range](images/datetime/range.png)
+![Changing Blazor Line Chart DateTime Axis based on Range](images/datetime/blazor-line-chart-axis-based-on-range.png)
 
 ### Interval Customization
 
@@ -176,7 +176,7 @@ The [Interval](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.Ch
 
 ```
 
-![DateTime Axis with interval customized](images/datetime/interval.png)
+![Changing Blazor Line Chart DateTime Axis based on Interval](images/datetime/blazor-line-chart-axis-based-on-interval.png)
 
 **Applying padding to the Range**
 
@@ -222,7 +222,7 @@ When the [RangePadding](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor
 
 ```
 
-![Range Padding - None](images/datetime/range.png)
+![Blazor Line Chart without RangePadding](images/datetime/blazor-line-chart-axis-based-on-range.png)
 
 **DateTime - Round**
 
@@ -330,7 +330,7 @@ Using the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.
 
 ```
 
-![DateTime axis with label format](images/datetime/labelformat.png)
+![Axis Label Formatting in Blazor Line Chart](images/datetime/blazor-line-chart-axis-label-format.png)
 
 The table below shows the results of applying various popular date and time formats to the [LabelFormat](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Charts.ChartCommonAxis.html#Syncfusion_Blazor_Charts_ChartCommonAxis_LabelFormat) property.
 
