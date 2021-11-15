@@ -51,7 +51,7 @@ End user can also hide grand totals for row or columns separately by setting the
 
 ```
 
-![output](images/grandtotal.png)
+![Hiding Grand Total in Blazor PivotTable](images/blazor-pivottable-hide-grand-total.png)
 
 ## Show or hide sub-totals
 
@@ -93,7 +93,7 @@ Allows to show or hide sub-totals in rows and columns using the [ShowSubTotals](
 
 ```
 
-![output](images/sub-total.png)
+![Hiding Sub Totals in Blazor PivotTable](images/blazor-pivottable-hide-sub-total.png)
 
 ## Show or hide sub-totals for specific fields
 
@@ -135,7 +135,7 @@ Allows to show or hide sub-totals for specific fields in rows and columns using 
 
 ```
 
-![output](images/subtotal2.png)
+![Hiding Sub Total for Specific Field in Blazor PivotTable](images/blazor-pivottable-hide-sub-total-for-specific-field.png)
 
 ## Show or hide totals using toolbar
 
@@ -180,9 +180,9 @@ It can also be achieved using built-in toolbar options by setting the [ShowToolb
 ```
 
 <!-- markdownlint-disable MD012 -->
-![output](images/grand_toolbar.png)
+![Displaying Grand Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-total-using-toolbar.png)
 <br/>
 <br/>
-![output](images/sub_toolbar.png)
+![Displaying Specific Total using Toolbar in Blazor PivotTable](images/blazor-pivottable-show-sub-total-using-toolbar.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.

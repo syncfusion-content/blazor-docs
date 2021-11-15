@@ -53,7 +53,7 @@ The PDF export allows Pivot Table data to be exported as PDF document. To enable
 }
 ```
 
-![output](images/pdf-export.png)
+![PDF Export in Blazor PivotTable](images/blazor-pivottable-pdf-export.png)
 
 ## Changing the pivot table style while exporting
 
@@ -127,7 +127,7 @@ The PDF export provides an option to change colors for headers, caption and reco
 }
 ```
 
-![output](images/pdf-formatting.png)
+![Changing Blazor PivotTable Style while Exporting](images/blazor-pivottable-pdf-formatting.png)
 
 ## Changing the file name while exporting
 
@@ -174,7 +174,7 @@ The PDF export provides an option to change file name of the document before exp
 }
 ```
 
-![output](images/pdf-name.png)
+![Changing Blazor PivotTable File Name while Exporting](images/blazor-pivottable-change-pdf-file-name.png)
 
 ## Changing page size while exporting
 
@@ -224,7 +224,7 @@ Arche, Flsa, HalfLetter, Letter11x17, Ledger.
 }
 ```
 
-![output](images/pdf-a3.png)
+![Changing Blazor PivotTable Page Size while Exporting](images/blazor-pivottable-change-pdf-page-size.png)
 
 ## Changing page orientation while exporting
 
@@ -271,6 +271,6 @@ The PDF export provides an option to change page orientation of the document bef
 }
 ```
 
-![output](images/pdf-landscape.png)
+![Changing Blazor PivotTable Page Orientation while Exporting](images/blazor-pivottable-change-pdf-orientation.png)
 
 > You can refer to our [Blazor Pivot Table](https://www.syncfusion.com/blazor-components/blazor-pivot-table) feature tour page for its groundbreaking feature representations. You can also explore our [Blazor Pivot Table example](https://blazor.syncfusion.com/demos/pivot-table/default-functionalities?theme=bootstrap4) to knows how to render and configure the pivot table.
