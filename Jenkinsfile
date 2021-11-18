@@ -17,7 +17,8 @@ timestamps
            {
 		     checkout scm
 			 
-			 def branchCommit = '"' + 'https://api.gitlab.com/repos/syncfusion-content/blazor-docs/pulls/' + env.pullRequestId + '/files'
+			// def branchCommit = '"' + 'https://gitlab.syncfusion.com/api/v4/projects/' + env.projectId + '/merge_requests/' + env.MergeRequestId + '/changes'
+                         def branchCommit = '"'+'https://api.github.com/repos/syncfusion-content/blazor-docs/pulls/'+env.pullRequestId+'/changes'
             String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
 
             def ChangeFiles= branchCommitDetails.split('"filename": ');
@@ -28,7 +29,7 @@ timestamps
             Content += env.WORKSPACE + "\\Spell-Checker\\" + ChangeFile + "\r\n";
             }
 
-		    
+ 
 		      if (Content) {  
                  writeFile file: env.WORKSPACE+"/cireports/content.txt", text: Content
               }
@@ -42,7 +43,7 @@ timestamps
 	  checkout([$class: 'GitSCM', branches: [[name: '*/development']], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'ug_spellchecker']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: env.githubCredentialId, url: 'https://github.com/syncfusion-content/ug_spellchecker.git']]])
 		 
 	  }
-	  
+	
 	 
 	
 	
