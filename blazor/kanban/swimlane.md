@@ -148,6 +148,11 @@ Customize the swimlane row header text by using the `TextField` property mapped 
 
 You can customize the Kanban swimlane row by using `Template`, which is specified within the `KanbanSwimlaneSettings` property. In this demo, the swimlane header is customized with HTML element.
 
+To get start quickly with Blazor Kanban component using Templates, you can check on this video
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Kanban

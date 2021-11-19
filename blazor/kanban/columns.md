@@ -153,6 +153,11 @@ You can provide the column header text of Kanban columns using the `HeaderText` 
 
 You can customize the column header with `Template` property as shown in the following code.
 
+To get start quickly with Blazor Kanban component using Templates, you can check on this video
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Kanban
