@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Actions of connectors in Blazor Diagram Component
+# Actions of Connectors in Blazor Diagram Component
 
 Connectors are objects used to create link between two points, nodes or ports to represent the relationships between them.
 
@@ -330,7 +330,7 @@ The following code example explains how to change the connector properties.
 
 ## Connections
 
-A connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
+The connectors are used to create a link between two points, nodes or ports to represent the relationships between them.
 
 ### Connections with nodes
 

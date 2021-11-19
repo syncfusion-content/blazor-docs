@@ -11,7 +11,7 @@ documentation: ug
 
 ## Decorator
 
-Diagram allows you to customize the connector appearances . The following topics shows how the customize several properties of the connectors.
+Diagram allows you to customize the connector appearances. The following topics shows how to customize several properties of the connectors.
 
 * Starting and ending points of a connector can be decorated with some customizable shapes like arrows, circles, diamond, or path. The connection end points can be decorated with the [SourceDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_SourceDecorator) and [TargetDecorator](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnector.html#Syncfusion_Blazor_Diagrams_DiagramConnector_TargetDecorator) properties of the connector.
 
@@ -238,7 +238,7 @@ The flip types are as follows:
 
 ## Bridging
 
-Line bridging creates a bridge for lines to smartly cross over the other lines, at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BridgeDirection) is set to `Top`. Depending upon the direction given bridging direction appears. Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. 
+Line bridging creates a bridge for lines to smartly cross over the other lines at points of intersection. By default, [BridgeDirection](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_BridgeDirection) is set to `Top`. Depending on the given direction, the bridging direction appears. Bridging can be enabled/disabled either with the `Connector.Constraints` or `Diagram.Constraints`. 
 
 The following code example illustrates how to enable line bridging.
 
@@ -426,7 +426,7 @@ The following code example illustrates how to customize the segment appearance.
 
 * To set the border stroke color, stroke width, and stroke dash array for the target decorator, use `StrokeColor`, `StrokeWidth`, and `StrokeDashArray`.
 
-* To set the size for source and target decorator, use width and height property.
+* To set the size for source and target decorator, use width and height properties.
 
 The following code example illustrates how to customize the appearance of the decorator.
 

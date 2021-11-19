@@ -131,12 +131,12 @@ A connector can be dragged at runtime by using the [Drag](https://help.syncfusio
 
 And also drag the connector during the interaction.
 
-* An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements move all the selected elements.
+* An object can be dragged by clicking and dragging it. When multiple elements are selected, dragging any one of the selected elements moves all the selected elements.
 * When you drag the elements in the diagram, the [OnPositionChange](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramEvents.html#Syncfusion_Blazor_Diagrams_DiagramEvents_OnPositionChange) event gets triggered and to do customization in this event.
 
 ![Drag](../images/connector-drag.gif)
 
-## End Point Dragging
+## End point dragging
 
 The connector can be selected by clicking it. When the connector is selected, circles will be added on the starting and ending of the connector that is represented by Thumbs. Clicking and dragging those handles helps you to adjust the source and target points.
 
@@ -184,7 +184,7 @@ The connector can be selected by clicking it. When the connector is selected, ci
 
 ![End point dragging](../images/connector-end-point.gif)
 
-## How to Route Connectors
+## How to route connectors
 
 The connectors in the diagram can be overlapped with any neighboring nodes when the node is placed in contact with the connector. This will make less clarity about the connector path flow. This can be avoided using the Routing process. The routing is the process of updating the connector’s geometry to avoid the overlapping with any neighboring nodes in their path.
 
@@ -308,7 +308,7 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
 
 ![Connector Routing](../images/LineRouting.gif)
 
-## Segment Editing
+## Segment editing
 
 ### Straight segment editing
 
@@ -328,7 +328,7 @@ This behavior can be enabled by adding the `DiagramConstraints.LineRouting` enum
 
 ![Orthogonal Segment Edit](../images/orthogonal-segment-edit.gif)
 
-### Bezier Segment Editing
+### Bezier segment editing
 
 * A segment control point of the Bezier connector is used to change the bezier vectors, points of the connector.
 
