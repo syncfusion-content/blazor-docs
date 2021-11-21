@@ -51,7 +51,7 @@ To create a straight line, specify the [Type](https://help.syncfusion.com/cr/bla
                 StrokeWidth = 1
             },
 
-            //Specify the segments typs as straight.
+            //Specify the segment type as straight.
             Type = Segments.Straight,
         };
         ConnectorCollection.Add(diagramConnector);

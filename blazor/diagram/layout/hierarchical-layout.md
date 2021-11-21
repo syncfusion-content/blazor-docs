@@ -7,7 +7,7 @@ control: Diagram
 documentation: ug
 ---
 
-# Hierarchical layout in Blazor Diagram Component
+# Hierarchical Layout in Blazor Diagram Component
 
 The hierarchical tree layout arranges nodes in a tree-like structure, where the nodes in the hierarchical layout may have multiple parents. There is no need to specify the layout root. To arrange the nodes in a hierarchical structure, specify the layout [Type](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramLayout.html#Syncfusion_Blazor_Diagrams_DiagramLayout_Type) as `HierarchicalTree`. The following example shows how to arrange the nodes in a hierarchical structure.
 
@@ -79,7 +79,7 @@ The hierarchical tree layout arranges nodes in a tree-like structure, where the 
 
 ### Orientation
 
-You can change the orientation at runtime. The following code is used to how to change the layout.
+You can change the orientation at runtime. The following code shows how to change the layout.
 
 ```csharp
 
@@ -231,7 +231,7 @@ Diagram allows to expand or collapse the subtrees of a layout. The node’s isEx
 
 ![Expand and Collapse Icon](../images/layout-expand-collapse-icon.png)
 
-> You can use the `EnableAnimation` property to enables or disables animation option when a node is expanded or collapsed.
+> You can use the `EnableAnimation` property to enable or disable animation option when a node is expanded or collapsed.
 
 ## Complex hierarchical tree
 

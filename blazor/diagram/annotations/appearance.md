@@ -11,7 +11,7 @@ documentation: ug
 
 ## Customize the size for an annotation
 
-Diagram allows you set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Width), and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Height) properties are 0, and it takes the node or connector size as default.
+Diagram allows you to set size for annotations by using the Height and Width properties. The default value of the [Width](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Width), and [Height](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.DiagramConnectorAnnotation.html#Syncfusion_Blazor_Diagrams_DiagramConnectorAnnotation_Height) properties are 0, and it takes the node or connector size as default.
 
 The following code example shows how the annotation size is customized.
 
@@ -142,7 +142,7 @@ Diagram provides support to add a [Hyperlink](https://help.syncfusion.com/cr/bla
 
 ## Wrapping
 
-When text overflows node boundaries, you can control it by using the [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_TextWrapping). So, it is wrapped into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. 
+When text overflows node boundaries, you can control it by using the [TextWrapping](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.AnnotationStyle.html#Syncfusion_Blazor_Diagrams_AnnotationStyle_TextWrapping) which wraps text into multiple lines. The wrapping property of the annotation defines how the text should be wrapped. 
 
 The following code explains how to wrap a text in a node.
 
@@ -384,7 +384,7 @@ You can change the font style of the annotations with the font specific properti
 
 Diagram provides support to edit an annotation at runtime, either programmatically or interactively. By default, the annotation is in view mode. But it can be brought to edit mode in two ways.
 
-* You can edit the annotation Programmatically by using the [StartTextEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_StartTextEdit_System_Object_System_String_) method.
+* You can edit the annotation programmatically by using the [StartTextEdit](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Diagrams.SfDiagram.html#Syncfusion_Blazor_Diagrams_SfDiagram_StartTextEdit_System_Object_System_String_) method.
 * Also, you can edit the annotation interactively.
 * By double-clicking the annotation.
 * By selecting the item and pressing the F2 key.
