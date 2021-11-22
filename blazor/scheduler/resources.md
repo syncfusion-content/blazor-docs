@@ -9,7 +9,7 @@ documentation: ug
 
 # Resources and Grouping in Blazor Scheduler Component
 
-[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources/) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column/row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
+[Resources and grouping](https://www.syncfusion.com/blazor-components/blazor-scheduler/multiple-resources/) support allows the Scheduler to be shared by multiple resources. Also, the appointments of each resources are displayed under relevant resources. Each resource in the Scheduler is arranged in a column or row wise order, with individual spacing to display all its respective appointments on a single page. It also supports the multiple levels of grouping of resources, thus enabling the categorization of resources in a hierarchical structure and shows it either in expandable groups (Timeline views) or else vertical hierarchy one after the other (Calendar views).
 
 It is also possible to assign one or more resources to the same appointment, by allowing multiple selection of resource options available in the event editor window.
 
@@ -90,7 +90,7 @@ The following code example depicts how to bind the list of object collection to 
 
 ### Binding ExpandoObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **ExpandoObject**.
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  **ExpandoObject**.
 
 **ExpandoObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in ExpandoObject.
 
@@ -153,9 +153,9 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 ## Binding DynamicObject
 
-Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases you can bound data to the scheduler as list of  **DynamicObject**.
+Scheduler is a generic component which is strongly bound to a model type. There are cases when the model type is unknown during compile type. In such cases data can be bound to the scheduler as list of  **DynamicObject**.
 
-**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kind of supported data operations and editing in DynamicObject.
+**DynamicObject** can be bound to the `DataSource` option of the scheduler within the `ScheduleResource` tag. Scheduler can also perform all kinds of supported data operations and editing in DynamicObject.
 
 > The [`GetDynamicMemberNames`](https://docs.microsoft.com/en-us/dotnet/api/system.dynamic.dynamicobject.getdynamicmembernames?view=netcore-3.1) method of DynamicObject class must be overridden and return the property names to perform data operation and editing while using DynamicObject.
 
@@ -234,7 +234,7 @@ Scheduler is a generic component which is strongly bound to a model type. There 
 
 ## Binding ObservableCollection
 
-This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8)(dynamic data collection) provides notifications when items added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
+This [ObservableCollection](https://docs.microsoft.com/en-us/dotnet/api/system.collections.objectmodel.observablecollection-1?view=netframework-4.8) (dynamic data collection) provides notifications when items are added, removed and moved. The implement [INotifyCollectionChanged](https://docs.microsoft.com/en-us/dotnet/api/system.collections.specialized.inotifycollectionchanged?view=netframework-4.8) notifies when dynamic changes of add,remove, move and clear the collection. The implement [INotifyPropertyChanged](https://docs.microsoft.com/en-us/dotnet/api/system.componentmodel.inotifypropertychanged?view=netframework-4.8) notifies when property value has changed in client side.
 Here, ResourceData class implements the interface of **INotifyPropertyChanged** and it raises the event when RoomText and OwnerText property value was changed.
 
 ```csharp
@@ -443,7 +443,7 @@ To get start quickly about multiple resource on scheduler, you can check on this
 }
 ```
 
-> Setting `AllowMultiple` to `true` in the above code example allows you to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
+> Setting `AllowMultiple` to `true` in the above code example allows to select multiple resources from the event editor and also creates multiple copies of the same appointment in the Scheduler for each resources while rendering.
 
 ## Resource grouping
 
@@ -730,7 +730,7 @@ It is possible to group the resources of Scheduler in multiple levels, by mappin
 
 ### One-to-One grouping
 
-In multi-level grouping, Scheduler usually groups the resources on the child level based on the `GroupIDField` that maps with the `IdField` field of parent level resources (as `ByGroupID` set to true by default). There are also option which allows you to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the `ByGroupID` option within the `Group` property. In the following code example, there are two levels of resources, on which all the resources at the child level is mapped one to one with each resource on the first level.
+In multi-level grouping, Scheduler usually groups the resources on the child level based on the `GroupIDField` that maps with the `IdField` field of parent level resources (as `ByGroupID` set to true by default). There are also option which allows to group all the child resource(s) against each of its parent resource(s). To enable this kind of grouping, set `false` to the `ByGroupID` option within the `Group` property. In the following code example, there are two levels of resources, on which all the resources at the child level is mapped one to one with each resource on the first level.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -857,8 +857,6 @@ It groups the number of resources under each date and is applicable only on the 
     }
 }
 ```
-
-The above code renders the scheduler as in the following image.
 
 ![Grouping Resources by Date in Blazor Scheduler](images/blazor-scheduler-grouping-resource-by-date.png)
 
@@ -1034,8 +1032,6 @@ It is possible to customize the resource header cells using built-in template op
     }
 </style>
 ```
-
-The output of the above code example in desktop mode will be as in the following image.
 
 ![Customizing Resources Header in Desktop of Blazor Scheduler](images/blazor-scheduler-custom-resource-header.png)
 
@@ -1260,13 +1256,11 @@ It is possible to customize the resource headers to display with multiple column
 </style>
 ```
 
-The output of the above code example in desktop mode will be as in the following image.
-
 ![Blazor Scheduler with Multiple columns](images/blazor-scheduler-multiple-columns.png)
 
 ## Expand and collapse resource fields
 
-It is possible to expand and collapse the resource field. By default, resource fields are expanded with their child fields. We can customize this behavior using `ExpandedField` property. When set `ExpandedField` property in resources dataSource to `false`, It restricts the resource fields from expanding. By default, `ExpandedField` value set to `true`
+It is possible to expand and collapse the resource field. By default, resource fields are expanded with their child fields. This behavior can be customized using the `ExpandedField` property. When `ExpandedField` property in resources dataSource is set to `false`, it restricts the resource fields from expanding. By default, `ExpandedField` value set to `true`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1405,8 +1399,6 @@ It is possible to display tooltip over the resource headers showing the resource
 ## Choosing between resource colors for appointments
 
 By default, the colors defined on the top level resources collection will be applied for the events. In case, if you want to apply specific resource color to events irrespective of its top-level parent resource color, it can be achieved by defining `ResourceColorField` option within the `EventSettings` property.
-
-In the following example, the colors mentioned in the second level will get applied over the events.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -1553,8 +1545,6 @@ Different working days can be set for the resources of Scheduler using the `Work
 }
 ```
 
-The above code renders the scheduler as in the following image.
-
 ![Resources with Different Workdays in Blazor Scheduler](images/blazor-scheduler-resource-workdays.png)
 
 ### Set different work hours
@@ -1620,7 +1610,7 @@ In this example, a resource named `Will Smith` is depicted with working hours ra
 
 ## Compact view in mobile
 
-Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, we have introduced a new compact mode specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on mobile devices. If in case, you need to disable this compact mode, set `false` to the `EnableCompactView` option within the `ScheduleGroup`. Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
+Although the Scheduler views are designed keeping in mind the responsiveness of the control in mobile devices, however when using Scheduler with multiple resources - it is difficult to view all the resources and its relevant events at once on the mobile. Therefore, a new compact mode has been introduced specially for displaying multiple resources of Scheduler on mobile devices. By default, this mode is enabled while using Scheduler with multiple resources on the mobile devices. If in case, you need to disable this compact mode, set `false` to the `EnableCompactView` option within the `ScheduleGroup`. Disabling this option will display the exact desktop mode of Scheduler view on mobile devices.
 
 With this compact view enabled on mobile, you can view only single resource at a time and to switch to other resources, there is a TreeView at the left listing out all other available resources - clicking on which will display that particular resource and its related appointments.
 
