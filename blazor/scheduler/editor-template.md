@@ -135,7 +135,7 @@ It is possible to validate the required fields of the editor window before submi
 
 ### Customizing the default time duration in editor window
 
-In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start or end time duration within the event editor will be in a 30 minutes time difference. This duration value can be changed by changing the `Duration` option within the `OnPopupOpen` event.
+In default event editor window, start and end time duration are processed based on the `Interval` value set within the `ScheduleTimeScale` property. By default, `Interval` value is set to 30, and therefore the start and end time duration within the event editor will be in a 30 minutes time difference. This duration value can be changed by changing the `Duration` option within the `OnPopupOpen` event.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
