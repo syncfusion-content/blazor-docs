@@ -9,7 +9,7 @@ documentation: ug
 
 # Blazor TreeMap Component in Server Side App using Visual Studio
 
-This section briefly explains how to include a TreeMap component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a TreeMap component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor TreeMap component in the application
 
@@ -211,6 +211,6 @@ When space constraints prevents from displaying information using data labels, t
 
 * [Getting Started with Syncfusion Blazor for Client-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
-* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 
 * [Getting Started with Syncfusion Blazor for Server-Side in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

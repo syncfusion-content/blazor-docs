@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Maps Component
 
-This section briefly explains how to include a Maps component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a Maps component in your Blazor server-side application. You can refer to our [Getting Started with Syncfusion Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor Maps component in the application
 
@@ -303,6 +303,6 @@ The tooltip can be used when you cannot display information using the data label
 
 * [Getting Started with Syncfusion Blazor for WebAssembly application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-webassembly-dotnet-cli/)
 
-* [Getting Started with Syncfusion Blazor for server-side application in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/)
+* [Getting Started with Syncfusion Blazor for server-side application in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/)
 
 * [Getting Started with Syncfusion Blazor for server-side application in .NET Core CLI](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-dotnet-cli/)

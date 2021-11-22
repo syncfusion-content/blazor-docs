@@ -15,7 +15,7 @@ The Syncfusion Blazor library provides the set of `base64` formatted font icons 
 
 Syncfusion Icon component provides support to render predefined Syncfusion icons or custom font icons.
 
-You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio 2019 page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) for the introduction and configuring the common specifications.
+You can refer [Getting Started with Syncfusion Blazor for Server-side in Visual Studio page](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) for the introduction and configuring the common specifications.
 
 The following code example shows the rendering of built-in Syncfusion icons from predefined [IconName](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.IconName.html) options using [Name](https://help.syncfusion.com/cr/blazor/Syncfusion.Blazor.Buttons.SfIcon.html#Syncfusion_Blazor_Buttons_SfIcon_Name) property by defining them in `SfIcon` tag.
 

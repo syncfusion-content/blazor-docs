@@ -380,6 +380,11 @@ The output will be as follows.
 
 You can customize the default card layout using template as per your application needs. This can be achieved by template of the `KanbanCardSettings` property.
 
+To get start quickly with Blazor Kanban component using Templates, you can check on this video
+
+{% youtube
+"youtube:https://www.youtube.com/watch?v=PjTgXuibei8" %}
+
 ```cshtml
 
 @using Syncfusion.Blazor.Kanban

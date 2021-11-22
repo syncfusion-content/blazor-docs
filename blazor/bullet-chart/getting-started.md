@@ -9,7 +9,7 @@ documentation: ug
 
 # Getting Started with Blazor Bullet Chart Component
 
-This section briefly explains how to include a Bullet Chart component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for introduction and configuring common specifications.
+This section briefly explains how to include a Bullet Chart component in the Blazor server-side application. Refer to [Getting Started with Syncfusion Blazor for server-side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for introduction and configuring common specifications.
 
 ## Importing Syncfusion Blazor Bullet Chart component in the application
 

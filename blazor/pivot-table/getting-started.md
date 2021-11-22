@@ -14,7 +14,7 @@ documentation: ug
 
 # Getting Started with Blazor Pivot Table Component
 
-This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio 2019](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) page for the introduction and configuring the common specifications.
+This section briefly explains about how to include a **Pivot Table** in your Blazor Server-Side application. You can refer [Getting Started with Syncfusion Blazor for Server-Side in Visual Studio](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) page for the introduction and configuring the common specifications.
 
 To get start quickly with Blazor Pivot Table component, you can check out this video.
 

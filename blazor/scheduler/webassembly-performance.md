@@ -11,7 +11,7 @@ documentation: ug
 
 This section provides performance guidelines for using Syncfusion Scheduler component efficiently in Blazor WebAssembly application. The general framework Blazor WebAssembly performance's best practice/guidelines can be found [here](https://docs.microsoft.com/en-us/aspnet/core/blazor/webassembly-performance-best-practices).
 
-> You can refer to our Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio-2019/) and [Blazor WebAssembly Scheduler](scheduler/how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications.
+> You can refer to our Getting Started with [Blazor Server-Side Scheduler](https://blazor.syncfusion.com/documentation/getting-started/blazor-server-side-visual-studio/) and [Blazor WebAssembly Scheduler](scheduler/how-to/blazor-web-assembly-scheduler) documentation pages for configuration specifications.
 
 ## Avoid unnecessary component renders
 
