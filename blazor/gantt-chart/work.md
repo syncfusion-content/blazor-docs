@@ -36,7 +36,7 @@ The work is the total hours required to complete a task. Work can be mapped from
     {
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
-        public int Unit { get; set; }
+        public double Unit { get; set; }
 
     }
     List<ResourceData> GetResources = new List<ResourceData>() {  
@@ -179,7 +179,7 @@ The work, duration and resource unit fields of a task depends upon each other an
     {
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
-        public int Unit { get; set; }
+        public double Unit { get; set; }
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {
