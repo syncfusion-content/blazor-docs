@@ -49,7 +49,7 @@ The resource collection contains details about resources that are used in the pr
     {
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
-        public int Unit { get; set; }
+        public double Unit { get; set; }
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {
@@ -218,7 +218,7 @@ The following code snippet shows how to assign the resource for each task and ma
     {
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
-        public int Unit { get; set; }
+        public double Unit { get; set; }
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {
@@ -381,7 +381,7 @@ By using cell editing or dialog editing, we can add/remove the resource for part
     {
         public int ResourceId { get; set; }
         public string ResourceName { get; set; }
-        public int Unit { get; set; }
+        public double Unit { get; set; }
     }
     public static List<ResourceAlloacteData> GetResources = new List<ResourceAlloacteData>()
     {
