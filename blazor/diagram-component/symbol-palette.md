@@ -479,6 +479,7 @@ To initialize drag and drop, you must add the diagram to the [Targets](https://h
 ```
 
 * Complete code to drag and drop symbols from palette to diagram.
+
 ```csharp
 @using Syncfusion.Blazor.Diagram
 @using Syncfusion.Blazor.SymbolPalette
