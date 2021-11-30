@@ -62,7 +62,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600" HistoryChanged="@Onhistorychange">
+<SfDiagramComponent @ref="@diagram" Height="600px" HistoryChanged="@Onhistorychange">
 </SfDiagramComponent>
 
 @code
@@ -87,7 +87,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 <input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">    
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">    
 </SfDiagramComponent>
 
 @code
@@ -134,7 +134,7 @@ The [HistoryChangedEventArgs](https://help.syncfusion.com/cr/blazor/Syncfusion.B
 @using Syncfusion.Blazor.Diagram
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     <DiagramHistoryManager HistoryAdding="@OnHistoryAdding"/>
 </SfDiagramComponent>
 
@@ -182,7 +182,7 @@ The purpose of custom undo redo process is to store actions which are not done t
 <input value="CustomEntry" type="button" @onclick="@OnCustomEntry" name="CustomEntry" />
 
 @* Initialize Diagram *@
-<SfDiagramComponent @ref="@diagram" Height="600" Nodes="@nodes">
+<SfDiagramComponent @ref="@diagram" Height="600px" Nodes="@nodes">
     <DiagramHistoryManager Undo="@onCustomUndo" Redo="@onCustomRedo"/>
 </SfDiagramComponent>
 
