@@ -13,6 +13,8 @@ documentation: ug
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
 
+This section briefly explains how to include a PDF Viewer in your Blazor WebAssembly application.
+
 **Step 1:** Choose **Create a new project** from the Visual Studio dashboard. Click Next.
 
 ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
