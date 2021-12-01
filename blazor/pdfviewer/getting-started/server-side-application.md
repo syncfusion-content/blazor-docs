@@ -19,7 +19,7 @@ This section briefly explains how to include a PDF Viewer in your  Blazor server
 
 ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
 
-**Step 2:** Select **Blazor Server App** from the template, and then click **Next** button..
+**Step 2:** Select **Blazor Server App** from the template, and then click **Next** button.
 
 ![Blazor Application Template](../images/blazor-application-template.png)
 
