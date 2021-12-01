@@ -1254,7 +1254,7 @@ Component |Example
         <GanttColumn Field="Duration"></GanttColumn>
         <GanttColumn Field="Progress" EditorSettings="NumericParams" EditType="Syncfusion.Blazor.Grids.EditType.NumericEdit"></GanttColumn>
     </GanttColumns>
-    <GanttEditSettings AllowEditing="true"></GanttEditSettings>
+    <GanttEditSettings AllowEditing="true" AllowAdding="true"></GanttEditSettings>
 </SfGantt>
 
 @code{
@@ -1262,12 +1262,12 @@ Component |Example
     public List<TaskData> TaskCollection { get; set; }
     public Syncfusion.Blazor.Grids.NumericEditCellParams NumericParams = new Syncfusion.Blazor.Grids.NumericEditCellParams()
     {
-        Params = new Syncfusion.Blazor.Inputs.NumericTextBoxModel<object>(){ Format = "N2"  }
+        Params = new Syncfusion.Blazor.Inputs.NumericTextBoxModel<object>() { Format = "N2" }
     };
 
     public Syncfusion.Blazor.Grids.DateEditCellParams DateParams = new Syncfusion.Blazor.Grids.DateEditCellParams()
     {
-        Params = new Syncfusion.Blazor.Calendars.DatePickerModel(){ Format = "d" }
+        Params = new Syncfusion.Blazor.Calendars.DatePickerModel() { Format = "d" }
     };
     protected override void OnInitialized()
     {
@@ -1284,68 +1284,21 @@ Component |Example
         public List<TaskData> SubTasks { get; set; }
     }
 
-    public static List <TaskData> GetTaskCollection() {
-    List <TaskData> Tasks = new List <TaskData> () {
-        new TaskData() {
-            TaskId = 1,
-            TaskName = "Project initiation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 2,
-                    TaskName = "Identify Site location",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 3,
-                    TaskName = "Perform soil test",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "4",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 4,
-                    TaskName = "Soil test approval",
-                    StartDate = new DateTime(2019, 04, 02),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+    public static List<TaskData> GetTaskCollection()
+    {
+        List<TaskData> Tasks = new List<TaskData>() {
+        new TaskData() { TaskId = 1, TaskName = "Project initiation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), SubTasks = (new List <TaskData> () {
+                new TaskData() { TaskId = 2, TaskName = "Identify Site location", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30},
+                new TaskData() { TaskId = 3, TaskName = "Perform soil test", StartDate = new DateTime(2019, 04, 02), Duration = "4", Progress = 40},
+                new TaskData() { TaskId = 4, TaskName = "Soil test approval", StartDate = new DateTime(2019, 04, 02), Duration = "0", Progress = 30} })
         },
-        new TaskData() {
-            TaskId = 5,
-            TaskName = "Project estimation",
-            StartDate = new DateTime(2019, 04, 02),
-            EndDate = new DateTime(2019, 04, 21),
-            SubTasks = (new List <TaskData> () {
-                new TaskData() {
-                    TaskId = 6,
-                    TaskName = "Develop floor plan for estimation",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 30,
-                },
-                new TaskData() {
-                    TaskId = 7,
-                    TaskName = "List materials",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "3",
-                    Progress = 40,
-                },
-                new TaskData() {
-                    TaskId = 8,
-                    TaskName = "Estimation approval",
-                    StartDate = new DateTime(2019, 04, 04),
-                    Duration = "0",
-                    Progress = 30,
-                },
-            })
+        new TaskData() { TaskId = 5, TaskName = "Project estimation", StartDate = new DateTime(2019, 04, 02), EndDate = new DateTime(2019, 04, 21), SubTasks = (new List <TaskData> () {
+                new TaskData() { TaskId = 6, TaskName = "Develop floor plan for estimation", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 30},
+                new TaskData() { TaskId = 7, TaskName = "List materials", StartDate = new DateTime(2019, 04, 04), Duration = "3", Progress = 40},
+                new TaskData() { TaskId = 8, TaskName = "Estimation approval", StartDate = new DateTime(2019, 04, 04), Duration = "0", Progress = 30} })
         }
     };
-    return Tasks;
+        return Tasks;
     }
 }
 ```
