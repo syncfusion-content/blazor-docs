@@ -189,7 +189,7 @@ The Scheduler UI that displays the date text on all views are considered as the 
 
 ### Customization using OnRenderCell event
 
-We can also customize the date header by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `DateHeader` when the date header is rendering. In the following example, we customized the date header's background color.
+The date header can be customized by using `OnRenderCell` event. In the `OnRenderCell`, the argument `RenderCellEventArgs` returns the `ElementType` as `DateHeader` when the date header is rendering.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -244,7 +244,7 @@ We can also customize the date header by using `OnRenderCell` event. In the `OnR
 
 ## TimelineYear header customization
 
-We can customize the day header cells and month header cells in the TimelineYear view of the Scheduler using `DayHeaderTemplate` and `MonthHeaderTemplate`. The `DayHeaderTemplate` option is used to customize the day header cells of the TimelineYear view in both Vertical and Horizontal orientations. The `MonthHeaderTemplate` option is used to customize the month header cells of the TimelineYear view in both Vertical and Horizontal orientations.
+The day header cells and month header cells can be customized in the TimelineYear view of the Scheduler using `DayHeaderTemplate` and `MonthHeaderTemplate`. The `DayHeaderTemplate` option is used to customize the day header cells of the TimelineYear view in both Vertical and Horizontal orientations. The `MonthHeaderTemplate` option is used to customize the month header cells of the TimelineYear view in both Vertical and Horizontal orientations.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
@@ -306,7 +306,7 @@ We can customize the day header cells and month header cells in the TimelineYear
 
 ## Customizing header indent cells
 
-It is possible to customize the header indent cells using the `HeaderIndentTemplate` option and change the look and appearance in both the vertical and timeline views. In vertical views, You can customize the header indent cells at the hierarchy level and you can customize the resource header left indent cell in timeline views using the template option.
+It is possible to customize the header indent cells using the `HeaderIndentTemplate` option and change the look and appearance in both the vertical and timeline views. In vertical views, the header indent cells can be customized at the hierarchy level and the resource header left indent cell can be customized in timeline views using the template option.
 
 **Example:** To customize the header left indent cell to display resources text, refer to the below code example.
 

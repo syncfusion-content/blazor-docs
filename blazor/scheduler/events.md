@@ -9,7 +9,7 @@ documentation: ug
 
 # Events in Blazor Scheduler Component
 
-In this section, we have provided the list of events of the Scheduler component which will be
+In this section, the list of events of the Scheduler component have been provided which will be
 triggered for appropriate Scheduler actions.
 
 The events should be provided to the Scheduler using **ScheduleEvents** tag. When using events of Scheduler, **TValue** must be provided in the **ScheduleEvents** tag.
