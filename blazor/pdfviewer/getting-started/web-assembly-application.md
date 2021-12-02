@@ -13,9 +13,7 @@ documentation: ug
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
 
-This section briefly explains how to include a PDF Viewer in your Blazor WebAssembly application.
-
-**Step 1:** Choose **Create a new project** from the Visual Studio dashboard. Click Next.
+**Step 1:** Choose **Create a new project** from the Visual Studio dashboard.Click Next.
 
 ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
 
@@ -65,31 +63,14 @@ W> If you prefer the above new standard (individual NuGet packages), then skip t
 
 3. The Syncfusion Blazor package will be installed in the project once the installation process is completed.
 
-**Step 6:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.PdfViewer` when new standard is followed or import the `Syncfusion.Blazor` namespace when old standard is followed.
-
-```csharp
-@using Syncfusion.Blazor.PdfViewer
-```
-
-(or)
+**Step 6:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 ```csharp
 @using Syncfusion.Blazor
+@using Syncfusion.Blazor.PdfViewer
 ```
 
 **Step 7:** Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/wwwroot/index.html** page.
-
-When `Syncfusion.Blazor.PdfViewer` is used, use the following code.
-
-```html
-<head>
-    ....
-    ....
-        <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
-</head>
-```
-
-When `Syncfusion.Blazor` is used, use the following code.
 
 ```html
 <head>

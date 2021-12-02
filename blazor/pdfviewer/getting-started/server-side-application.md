@@ -13,13 +13,13 @@ documentation: ug
 >* The `SfPdfViewerServer` control is for Blazor server-side application. This control resides with Syncfusion.Blazor.PdfViewerServer.Windows NuGet package. This server-side control is highly recommended.
 >* The `SfPdfViewer` control is for Blazor WebAssembly application. This control requires server-side processing to render the PDF files through web service. It resides with Syncfusion.Blazor.PdfViewer NuGet package.
 
-This section briefly explains how to include a PDF Viewer in your Blazor server-side application.
+This section briefly explains how to include a PDF Viewer in your  Blazor server-side application.
 
 **Step 1:** Choose **Create a new project** from the Visual Studio dashboard.Click Next.
 
 ![Creating New Project in Blazor](../images/blazor-create-new-project.png)
 
-**Step 2:** Select **Blazor Server App** from the template, and then click **Next** button.
+**Step 2:** Select **Blazor Server App** from the template, and then click **Next** button..
 
 ![Blazor Application Template](../images/blazor-application-template.png)
 
@@ -33,7 +33,9 @@ This section briefly explains how to include a PDF Viewer in your Blazor server-
 
 **Step 5:** Installing Syncfusion Blazor packages in the application
 
-You can install the Syncfusion Blazor individual NuGet Packages in your application.
+You can use any one of the below standard to install the Syncfusion Blazor library in your application.
+
+* **Using Syncfusion Blazor individual NuGet Packages [New standard]**
 
 > Starting with Volume 4, 2020 (v18.4.0.30) release, Syncfusion provides [individual NuGet packages](https://blazor.syncfusion.com/documentation/nuget-packages/) for our Syncfusion Blazor components. We highly recommend this new standard for your Blazor production applications. Refer to [this section](https://blazor.syncfusion.com/documentation/nuget-packages/#benefits-of-using-individual-nuget-packages) to know the benefits of the individual NuGet packages.
 
@@ -53,10 +55,26 @@ You can install the Syncfusion Blazor individual NuGet Packages in your applicat
 >* For Linux, use [Syncfusion.Blazor.PdfViewerServer.Linux](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.Linux)
 >* For Mac (OSX), use [Syncfusion.Blazor.PdfViewerServer.OSX](https://www.nuget.org/packages/Syncfusion.Blazor.PdfViewerServer.OSX)
 
-**Step 6:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor.PdfViewerServer` namespace.
+* **Using Syncfusion.Blazor NuGet Package [Old standard]**
+
+W>If you prefer the above new standard (individual NuGet packages), then skip this section. Using both old and new standards in the same application will throw ambiguous compilation errors.
+
+1. Now, install **Syncfusion.Blazor** NuGet package to the newly created application by using the `NuGet Package Manager`. Right-click the project and then select Manage NuGet Packages.
+
+    ![Blazor NuGet Explorer](../images/blazor-nuget-explorer.png)
+
+2. Search **Syncfusion.Blazor** keyword in the Browse tab and install **Syncfusion.Blazor** NuGet package in the application.
+
+    ![Searching Blazor NuGet Package](../images/blazor-nuget-package.png)
+
+3. The `Syncfusion Blazor` package will be installed in the project once the installation process is completed.
+
+**Step 6:** Open **~/_Imports.razor** file and import the `Syncfusion.Blazor` namespace.
 
 ```csharp
+@using Syncfusion.Blazor
 @using Syncfusion.Blazor.PdfViewerServer
+@using Syncfusion.Blazor.PdfViewer
 ```
 
 **Step 7:** Add the Syncfusion bootstrap4 theme in the `<head>` element of the **~/Pages/_Host.html** page.

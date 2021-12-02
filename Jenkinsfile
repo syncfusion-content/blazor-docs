@@ -18,12 +18,7 @@ timestamps
 		     checkout scm
 			 
 
-<<<<<<< HEAD
-			 def branchCommit = '"' + 'https://api.github.com/repos/syncfusion-content/blazor-docs/pulls/' + env.pullRequestId + '/files'
-=======
 		def branchCommit = '"' + 'https://api.github.com/repos/syncfusion-content/blazor-docs/pulls/' + env.pullRequestId + '/files'
-
->>>>>>> ea22f6cf2f8d83c17cae8623339c7c1ecfe14990
             String branchCommitDetails = bat returnStdout: true, script: 'curl -H "Accept: application/vnd.github.v3+json" -u SyncfusionBuild:' + env.GithubBuildAutomation_PrivateToken + " " + branchCommit
 
             def ChangeFiles= branchCommitDetails.split('"filename": ');
