@@ -160,7 +160,7 @@ It is possible to display a complete year in a timeline view by setting `Interva
 
 ## Customizing the header rows using template
 
-The text of the header rows can customize and display any images or format text on each individual header rows using the built-in `Template` option available within the `ScheduleHeaderRow`.
+The text of the header rows can be customized and display any images or format text on each individual header rows using the built-in `Template` option available within the `ScheduleHeaderRow`.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule

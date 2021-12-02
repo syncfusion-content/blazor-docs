@@ -52,8 +52,8 @@ The `Interval` and `SlotCount` properties can be used together on the Scheduler 
 
 The template option is available to allow customization of time slots which are as follows,
 
-* `MajorSlotTemplate` - The template option to be applied for major time slots. Here, the template accepts HTML Element as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
-* `MinorSlotTemplate` - The template option to be applied for minor time slots. Here, the template accepts HTML Element as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
+* `MajorSlotTemplate` - The template option to be applied for major time slots. Here, the template accepts HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
+* `MinorSlotTemplate` - The template option to be applied for minor time slots. Here, the template accepts HTMLElement as template design and then the parsed design is displayed onto the time cells. The time details can be accessed within this template.
 
 ```cshtml
 @using Syncfusion.Blazor.Schedule
